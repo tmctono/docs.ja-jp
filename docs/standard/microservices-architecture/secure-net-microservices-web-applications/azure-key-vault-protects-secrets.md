@@ -4,55 +4,55 @@ description: .NET マイクロサービスと Web アプリケーションのセ
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: fd2bff04e06bf0561ee0c95d87978f834f192172
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362420"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664043"
 ---
-# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="d1309-104">実稼働時にシークレットを保護するために Azure Key Vault を使用する</span><span class="sxs-lookup"><span data-stu-id="d1309-104">Use Azure Key Vault to protect secrets at production time</span></span>
+# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a><span data-ttu-id="ea02d-104">実稼働時にシークレットを保護するために Azure Key Vault を使用する</span><span class="sxs-lookup"><span data-stu-id="ea02d-104">Use Azure Key Vault to protect secrets at production time</span></span>
 
-<span data-ttu-id="d1309-105">環境変数として保存されているシークレットまたは Secret Manager ツールによって保存されたシークレットは、マシンのローカルに暗号化されていない状態で保存されています。</span><span class="sxs-lookup"><span data-stu-id="d1309-105">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="d1309-106">シークレットを保存する上でより安全な選択肢として [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) があります。Azure Key Vault には、キーとシークレットを保存するためのセキュリティで保護された中央の場所が用意されています。</span><span class="sxs-lookup"><span data-stu-id="d1309-106">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
+<span data-ttu-id="ea02d-105">環境変数として保存されているシークレットまたは Secret Manager ツールによって保存されたシークレットは、マシンのローカルに暗号化されていない状態で保存されています。</span><span class="sxs-lookup"><span data-stu-id="ea02d-105">Secrets stored as environment variables or stored by the Secret Manager tool are still stored locally and unencrypted on the machine.</span></span> <span data-ttu-id="ea02d-106">シークレットを保存する上でより安全な選択肢として [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) があります。Azure Key Vault には、キーとシークレットを保存するためのセキュリティで保護された中央の場所が用意されています。</span><span class="sxs-lookup"><span data-stu-id="ea02d-106">A more secure option for storing secrets is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), which provides a secure, central location for storing keys and secrets.</span></span>
 
-<span data-ttu-id="d1309-107">**Microsoft.Extensions.Configuration.AzureKeyVault** パッケージを使用すると、ASP.NET Core アプリケーションから Azure Key Vault の構成情報を読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="d1309-107">The **Microsoft.Extensions.Configuration.AzureKeyVault** package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="d1309-108">Azure Key Vault のシークレットを初めて使用する場合は、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="d1309-108">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
+<span data-ttu-id="ea02d-107">**Microsoft.Extensions.Configuration.AzureKeyVault** パッケージを使用すると、ASP.NET Core アプリケーションから Azure Key Vault の構成情報を読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="ea02d-107">The **Microsoft.Extensions.Configuration.AzureKeyVault** package allows an ASP.NET Core application to read configuration information from Azure Key Vault.</span></span> <span data-ttu-id="ea02d-108">Azure Key Vault のシークレットを初めて使用する場合は、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="ea02d-108">To start using secrets from an Azure Key Vault, you follow these steps:</span></span>
 
-1. <span data-ttu-id="d1309-109">アプリケーションを Azure AD アプリケーションとして登録します</span><span class="sxs-lookup"><span data-stu-id="d1309-109">Register your application as an Azure AD application.</span></span> <span data-ttu-id="d1309-110">(キー コンテナーへのアクセスは Azure AD で管理されます)。この操作は、Azure 管理ポータルで実行できます。\\</span><span class="sxs-lookup"><span data-stu-id="d1309-110">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.\\</span></span>
+1. <span data-ttu-id="ea02d-109">アプリケーションを Azure AD アプリケーションとして登録します</span><span class="sxs-lookup"><span data-stu-id="ea02d-109">Register your application as an Azure AD application.</span></span> <span data-ttu-id="ea02d-110">(キー コンテナーへのアクセスは Azure AD で管理されます)。この操作は、Azure 管理ポータルで実行できます。\\</span><span class="sxs-lookup"><span data-stu-id="ea02d-110">(Access to key vaults is managed by Azure AD.) This can be done through the Azure management portal.\\</span></span>
 
-   <span data-ttu-id="d1309-111">アプリケーションでパスワードまたはクライアント シークレットの代わりに証明書を使用して認証する場合は、[New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell コマンドレットを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d1309-111">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="d1309-112">Azure Key Vault に登録する証明書には、公開キーのみが必要です</span><span class="sxs-lookup"><span data-stu-id="d1309-112">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="d1309-113">(アプリケーションでは秘密キーが使用されます)。</span><span class="sxs-lookup"><span data-stu-id="d1309-113">(Your application will use the private key.)</span></span>
+   <span data-ttu-id="ea02d-111">アプリケーションでパスワードまたはクライアント シークレットの代わりに証明書を使用して認証する場合は、[New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell コマンドレットを使用できます。</span><span class="sxs-lookup"><span data-stu-id="ea02d-111">Alternatively, if you want your application to authenticate using a certificate instead of a password or client secret, you can use the [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet.</span></span> <span data-ttu-id="ea02d-112">Azure Key Vault に登録する証明書には、公開キーのみが必要です</span><span class="sxs-lookup"><span data-stu-id="ea02d-112">The certificate that you register with Azure Key Vault needs only your public key.</span></span> <span data-ttu-id="ea02d-113">(アプリケーションでは秘密キーが使用されます)。</span><span class="sxs-lookup"><span data-stu-id="ea02d-113">(Your application will use the private key.)</span></span>
 
-2. <span data-ttu-id="d1309-114">新しいサービス プリンシパルを作成して、登録されたアプリケーションにキー コンテナーへのアクセス権を付与します。</span><span class="sxs-lookup"><span data-stu-id="d1309-114">Give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="d1309-115">この処理を実行するには、次の PowerShell コマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="d1309-115">You can do this using the following PowerShell commands:</span></span>
+2. <span data-ttu-id="ea02d-114">新しいサービス プリンシパルを作成して、登録されたアプリケーションにキー コンテナーへのアクセス権を付与します。</span><span class="sxs-lookup"><span data-stu-id="ea02d-114">Give the registered application access to the key vault by creating a new service principal.</span></span> <span data-ttu-id="ea02d-115">この処理を実行するには、次の PowerShell コマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="ea02d-115">You can do this using the following PowerShell commands:</span></span>
 
    ```powershell
    $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
    Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. <span data-ttu-id="d1309-116"><xref:Microsoft.Extensions.Configuration.IConfigurationRoot> インスタンスを作成するときに <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 拡張メソッドを呼び出して、アプリケーションの構成ソースとしてキー コンテナーを含めます。</span><span class="sxs-lookup"><span data-stu-id="d1309-116">Include the key vault as a configuration source in your application by calling the <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> extension method when you create an <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> instance.</span></span> <span data-ttu-id="d1309-117">`AddAzureKeyVault` を呼び出すには、前の手順で登録し、キー コンテナーへのアクセス権が付与されたアプリケーション ID が必要です。</span><span class="sxs-lookup"><span data-stu-id="d1309-117">Note that calling `AddAzureKeyVault` requires the application ID that was registered and given access to the key vault in the previous steps.</span></span>
+3. <span data-ttu-id="ea02d-116"><xref:Microsoft.Extensions.Configuration.IConfigurationRoot> インスタンスを作成するときに <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 拡張メソッドを呼び出して、アプリケーションの構成ソースとしてキー コンテナーを含めます。</span><span class="sxs-lookup"><span data-stu-id="ea02d-116">Include the key vault as a configuration source in your application by calling the <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> extension method when you create an <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> instance.</span></span> <span data-ttu-id="ea02d-117">`AddAzureKeyVault` を呼び出すには、前の手順で登録し、キー コンテナーへのアクセス権が付与されたアプリケーション ID が必要です。</span><span class="sxs-lookup"><span data-stu-id="ea02d-117">Note that calling `AddAzureKeyVault` requires the application ID that was registered and given access to the key vault in the previous steps.</span></span>
 
-   <span data-ttu-id="d1309-118">[Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) パッケージへの参照を含めるだけで、クライアント シークレットの代わりに証明書を受け取る `AddAzureKeyVault` のオーバーロードを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="d1309-118">You can also use an overload of `AddAzureKeyVault` that takes a certificate in place of the client secret by just including a reference to the [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) package.</span></span>
+   <span data-ttu-id="ea02d-118">[Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) パッケージへの参照を含めるだけで、クライアント シークレットの代わりに証明書を受け取る `AddAzureKeyVault` のオーバーロードを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="ea02d-118">You can also use an overload of `AddAzureKeyVault` that takes a certificate in place of the client secret by just including a reference to the [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) package.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d1309-119">Azure Key Vault を最後の構成プロバイダーとして登録して、以前のプロバイダーの構成値をオーバーライドできるようにすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d1309-119">We recommend you to register Azure Key Vault as the last configuration provider, so it can override configuration values from previous providers.</span></span>
+> <span data-ttu-id="ea02d-119">Azure Key Vault を最後の構成プロバイダーとして登録して、以前のプロバイダーの構成値をオーバーライドできるようにすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="ea02d-119">We recommend you to register Azure Key Vault as the last configuration provider, so it can override configuration values from previous providers.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="d1309-120">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="d1309-120">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="ea02d-120">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="ea02d-120">Additional resources</span></span>
 
-- <span data-ttu-id="d1309-121">**Azure Key Vault を使用したアプリケーション シークレットの保護** \\</span><span class="sxs-lookup"><span data-stu-id="d1309-121">**Using Azure Key Vault to protect application secrets** \\</span></span>
+- <span data-ttu-id="ea02d-121">**Azure Key Vault を使用したアプリケーション シークレットの保護** \\</span><span class="sxs-lookup"><span data-stu-id="ea02d-121">**Using Azure Key Vault to protect application secrets** \\</span></span>
   [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-- <span data-ttu-id="d1309-122">**開発中のアプリ シークレットの安全な保存** \\</span><span class="sxs-lookup"><span data-stu-id="d1309-122">**Safe storage of app secrets during development** \\</span></span>
+- <span data-ttu-id="ea02d-122">**開発中のアプリ シークレットの安全な保存** \\</span><span class="sxs-lookup"><span data-stu-id="ea02d-122">**Safe storage of app secrets during development** \\</span></span>
   [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
 
-- <span data-ttu-id="d1309-123">**データ保護の構成** \\</span><span class="sxs-lookup"><span data-stu-id="d1309-123">**Configuring data protection** \\</span></span>
+- <span data-ttu-id="ea02d-123">**データ保護の構成** \\</span><span class="sxs-lookup"><span data-stu-id="ea02d-123">**Configuring data protection** \\</span></span>
   [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
-- <span data-ttu-id="d1309-124">**キー管理と有効期間** \\</span><span class="sxs-lookup"><span data-stu-id="d1309-124">**Key management and lifetime** \\</span></span>
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+- <span data-ttu-id="ea02d-124">**ASP.NET Core でのデータ保護のキー管理と有効期間** \\</span><span class="sxs-lookup"><span data-stu-id="ea02d-124">**Data Protection key management and lifetime in ASP.NET Core** \\</span></span>
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings*](/aspnet/core/security/data-protection/configuration/default-settings)
 
-- <span data-ttu-id="d1309-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub リポジトリ。</span><span class="sxs-lookup"><span data-stu-id="d1309-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repo.</span></span> \
+- <span data-ttu-id="ea02d-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub リポジトリ。</span><span class="sxs-lookup"><span data-stu-id="ea02d-125">**Microsoft.Extensions.Configuration.KeyPerFile** GitHub repository.</span></span> \
   [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
-><span data-ttu-id="d1309-126">[前へ](developer-app-secrets-storage.md)
->[次へ](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="d1309-126">[Previous](developer-app-secrets-storage.md)
+><span data-ttu-id="ea02d-126">[前へ](developer-app-secrets-storage.md)
+>[次へ](../key-takeaways.md)</span><span class="sxs-lookup"><span data-stu-id="ea02d-126">[Previous](developer-app-secrets-storage.md)
 [Next](../key-takeaways.md)</span></span>
