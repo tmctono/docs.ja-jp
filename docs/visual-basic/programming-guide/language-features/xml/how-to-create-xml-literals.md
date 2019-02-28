@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560595"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974251"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="3878c-102">方法: XML リテラル (Visual Basic) を作成します。</span><span class="sxs-lookup"><span data-stu-id="3878c-102">How to: Create XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="3878c-103">XML リテラルを使用して、XML ドキュメント、フラグメント、または要素をコード内で直接作成できます。</span><span class="sxs-lookup"><span data-stu-id="3878c-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="3878c-104">このトピックの例では、次の 3 つの子要素を持つ XML 要素を作成する方法と、XML ドキュメントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3878c-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
+# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="5d92f-102">方法: XML リテラル (Visual Basic) を作成します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-102">How to: Create XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="5d92f-103">XML リテラルを使用して、XML ドキュメント、フラグメント、または要素をコード内で直接作成できます。</span><span class="sxs-lookup"><span data-stu-id="5d92f-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="5d92f-104">このトピックの例では、次の 3 つの子要素を持つ XML 要素を作成する方法と、XML ドキュメントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
   
- <span data-ttu-id="3878c-105">使用することも、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api を作成する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3878c-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="3878c-106">詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3878c-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="5d92f-105">使用することも、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Api を作成する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5d92f-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="5d92f-106">詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d92f-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-### <a name="to-create-an-xml-element"></a><span data-ttu-id="3878c-107">XML 要素を作成するには</span><span class="sxs-lookup"><span data-stu-id="3878c-107">To create an XML element</span></span>  
+### <a name="to-create-an-xml-element"></a><span data-ttu-id="5d92f-107">XML 要素を作成するには</span><span class="sxs-lookup"><span data-stu-id="5d92f-107">To create an XML element</span></span>  
   
--   <span data-ttu-id="3878c-108">実際の XML 構文と同じでは、XML リテラル構文を使用して XML インラインを作成します。</span><span class="sxs-lookup"><span data-stu-id="3878c-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
+-   <span data-ttu-id="5d92f-108">実際の XML 構文と同じでは、XML リテラル構文を使用して XML インラインを作成します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     <span data-ttu-id="3878c-109">コードを実行します。</span><span class="sxs-lookup"><span data-stu-id="3878c-109">Run the code.</span></span> <span data-ttu-id="3878c-110">このコードの出力は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="3878c-110">The output of this code is:</span></span>  
+     <span data-ttu-id="5d92f-109">コードを実行します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-109">Run the code.</span></span> <span data-ttu-id="5d92f-110">このコードの出力は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="5d92f-110">The output of this code is:</span></span>  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "54560595"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a><span data-ttu-id="3878c-111">XML ドキュメントを作成するには</span><span class="sxs-lookup"><span data-stu-id="3878c-111">To create an XML document</span></span>  
+### <a name="to-create-an-xml-document"></a><span data-ttu-id="5d92f-111">XML ドキュメントを作成するには</span><span class="sxs-lookup"><span data-stu-id="5d92f-111">To create an XML document</span></span>  
   
--   <span data-ttu-id="3878c-112">XML ドキュメントのインラインを作成します。</span><span class="sxs-lookup"><span data-stu-id="3878c-112">Create the XML document inline.</span></span> <span data-ttu-id="3878c-113">次のコードは、リテラルの構文、XML 宣言、処理命令、コメント、および別の要素を格納する要素を含む XML ドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="3878c-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
+-   <span data-ttu-id="5d92f-112">XML ドキュメントのインラインを作成します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-112">Create the XML document inline.</span></span> <span data-ttu-id="5d92f-113">次のコードは、リテラルの構文、XML 宣言、処理命令、コメント、および別の要素を格納する要素を含む XML ドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     <span data-ttu-id="3878c-114">コードを実行します。</span><span class="sxs-lookup"><span data-stu-id="3878c-114">Run the code.</span></span> <span data-ttu-id="3878c-115">このコードの出力は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="3878c-115">The output of this code is:</span></span>  
+     <span data-ttu-id="5d92f-114">コードを実行します。</span><span class="sxs-lookup"><span data-stu-id="5d92f-114">Run the code.</span></span> <span data-ttu-id="5d92f-115">このコードの出力は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="5d92f-115">The output of this code is:</span></span>  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -52,8 +52,8 @@ ms.locfileid: "54560595"
   
      `</books>`  
   
-## <a name="see-also"></a><span data-ttu-id="3878c-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3878c-116">See also</span></span>
-- [<span data-ttu-id="3878c-117">XML</span><span class="sxs-lookup"><span data-stu-id="3878c-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="3878c-118">Visual Basic での XML の作成</span><span class="sxs-lookup"><span data-stu-id="3878c-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="3878c-119">XML 要素リテラル</span><span class="sxs-lookup"><span data-stu-id="3878c-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="3878c-120">XML ドキュメント リテラル</span><span class="sxs-lookup"><span data-stu-id="3878c-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a><span data-ttu-id="5d92f-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d92f-116">See also</span></span>
+- [<span data-ttu-id="5d92f-117">XML</span><span class="sxs-lookup"><span data-stu-id="5d92f-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="5d92f-118">Visual Basic での XML の作成</span><span class="sxs-lookup"><span data-stu-id="5d92f-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="5d92f-119">XML 要素リテラル</span><span class="sxs-lookup"><span data-stu-id="5d92f-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="5d92f-120">XML ドキュメント リテラル</span><span class="sxs-lookup"><span data-stu-id="5d92f-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
