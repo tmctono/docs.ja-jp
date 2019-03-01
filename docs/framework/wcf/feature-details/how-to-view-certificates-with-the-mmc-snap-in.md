@@ -1,61 +1,86 @@
 ---
 title: '方法: MMC スナップインで証明書の表示'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521583"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200287"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="4cc8b-102">方法: MMC スナップインで証明書の表示</span><span class="sxs-lookup"><span data-stu-id="4cc8b-102">How to: View Certificates with the MMC Snap-in</span></span>
-<span data-ttu-id="4cc8b-103">X.509 証明書は、広く使用されている資格情報です。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-103">A common type of credential is the X.509 certificate.</span></span> <span data-ttu-id="4cc8b-104">セキュリティで保護されたサービスやクライアントを作成する場合、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> メソッドなどのメソッドを使用して、クライアントやサービスの資格情報として使用する証明書を指定できます。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-104">When creating secure services or clients, you can specify a certificate be used as the client or service credential by using methods such as the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="4cc8b-105">このメソッドでは、証明書を格納するストアや証明書を検索するときに使用する値など、さまざまなパラメーターが必要になります。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-105">The method requires various parameters, such as the store where the certificate is stored and a value to use when searching for the certificate.</span></span> <span data-ttu-id="4cc8b-106">次の手順では、コンピューター上のストアを調べて適切な証明書を検索する方法を示します。 </span><span class="sxs-lookup"><span data-stu-id="4cc8b-106">The following procedure demonstrates how to examine the stores on a computer to find an appropriate certificate.</span></span> <span data-ttu-id="4cc8b-107">証明書の拇印を検索の例は、次を参照してください。[方法。証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-107">For an example of finding the certificate thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span></span>  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="0dd41-102">方法: MMC スナップインで証明書の表示</span><span class="sxs-lookup"><span data-stu-id="0dd41-102">How to: View certificates with the MMC snap-in</span></span>
+<span data-ttu-id="0dd41-103">使用することができますをセキュリティで保護されたクライアントまたはサービスを作成するときに、[証明書](working-with-certificates.md)資格情報として。</span><span class="sxs-lookup"><span data-stu-id="0dd41-103">When you create a secure client or service, you can use a [certificate](working-with-certificates.md) as the credential.</span></span> <span data-ttu-id="0dd41-104">たとえば、資格情報の一般的な種類は、X.509 証明書を作成する、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="0dd41-104">For example, a common type of credential is the X.509 certificate, which you create with the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> method.</span></span> 
+
+<span data-ttu-id="0dd41-105">Windows システムで Microsoft 管理コンソール (MMC) とを確認する証明書ストアの 3 つの異なる種類があります。</span><span class="sxs-lookup"><span data-stu-id="0dd41-105">There are three different types of certificate stores that you can examine with the Microsoft Management Console (MMC) on Windows systems:</span></span>
+
+- <span data-ttu-id="0dd41-106">ローカル コンピューターの場合:ストアは、デバイスのローカルと、デバイス上のすべてのユーザーにグローバルです。</span><span class="sxs-lookup"><span data-stu-id="0dd41-106">Local computer: The store is local to the device and global to all users on the device.</span></span>
+
+- <span data-ttu-id="0dd41-107">現在のユーザー:ストアでは、デバイス上の現在のユーザー アカウントにローカルです。</span><span class="sxs-lookup"><span data-stu-id="0dd41-107">Current user: The store is local to the current user account on the device.</span></span>
+
+- <span data-ttu-id="0dd41-108">サービス アカウント:ストアでは、デバイスの特定のサービスにローカルです。</span><span class="sxs-lookup"><span data-stu-id="0dd41-108">Service account: The store is local to a particular service on the device.</span></span>
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="4cc8b-108">MMC スナップインで証明書を参照するには</span><span class="sxs-lookup"><span data-stu-id="4cc8b-108">To view certificates in the MMC snap-in</span></span>  
+## <a name="view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="0dd41-109">MMC スナップインで証明書の表示</span><span class="sxs-lookup"><span data-stu-id="0dd41-109">View certificates in the MMC snap-in</span></span> 
+
+<span data-ttu-id="0dd41-110">次の手順では、適切な証明書を検索するローカル デバイス上のストアを確認する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="0dd41-110">The following procedure demonstrates how to examine the stores on your local device to find an appropriate certificate:</span></span> 
   
-1.  <span data-ttu-id="4cc8b-109">コマンド プロンプト ウィンドウを開きます。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-109">Open a Command Prompt window.</span></span>  
+1. <span data-ttu-id="0dd41-111">選択**実行**から、**開始**] メニューの [し、入力*mmc*します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-111">Select **Run** from the **Start** menu, and then enter *mmc*.</span></span> 
+
+    <span data-ttu-id="0dd41-112">MMC が表示されます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-112">The MMC appears.</span></span> 
   
-2.  <span data-ttu-id="4cc8b-110">`mmc` と入力して、ENTER キーを押します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-110">Type `mmc` and press the ENTER key.</span></span> <span data-ttu-id="4cc8b-111">ローカル コンピューターのストアにある証明書を表示するには、管理者のロールが必要です。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-111">Note that to view certificates in the local machine store, you must be in the Administrator role.</span></span>  
+2. <span data-ttu-id="0dd41-113">**ファイル**メニューの **スナップインの追加/削除**します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-113">From the **File** menu, select **Add/Remove Snap In**.</span></span> 
+    
+    <span data-ttu-id="0dd41-114">**スナップインを追加または**ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-114">The **Add or Remove Snap-ins** window appears.</span></span>
   
-3.  <span data-ttu-id="4cc8b-112">**ファイル** メニューから **スナップインの追加/削除** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-112">On the **File** menu, click **Add/Remove Snap In**.</span></span>  
+3. <span data-ttu-id="0dd41-115">**利用できるスナップイン**一覧で、選択**証明書**を選択し、**追加**します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-115">From the **Available snap-ins** list, choose **Certificates**, then select **Add**.</span></span>  
+
+    ![証明書スナップインの追加します。](./media/mmc-add-certificate-snap-in.png)
   
-4.  <span data-ttu-id="4cc8b-113">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-113">Click **Add**.</span></span>  
+4. <span data-ttu-id="0dd41-117">**証明書スナップイン**ウィンドウで、**コンピューター アカウント**、し、**次**します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-117">In the **Certificates snap-in** window, select **Computer account**, and then select **Next**.</span></span> 
   
-5.  <span data-ttu-id="4cc8b-114">**スタンドアロン スナップインの追加**ダイアログ ボックスで **証明書**を選択します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-114">In the **Add Standalone Snap-in** dialog box, select **Certificates**.</span></span>  
+    <span data-ttu-id="0dd41-118">必要に応じて、選択**ユーザー アカウント**、現在のユーザーまたは**サービス アカウント**特定のサービスです。</span><span class="sxs-lookup"><span data-stu-id="0dd41-118">Optionally, you can select **My user account** for the current user or **Service account** for a particular service.</span></span> 
+
+    > [!NOTE]
+    > <span data-ttu-id="0dd41-119">ない場合、管理者のデバイス、ユーザー アカウントに対してのみ証明書を管理できます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-119">If you're not an administrator for your device, you can manage certificates only for your user account.</span></span>
   
-6.  <span data-ttu-id="4cc8b-115">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-115">Click **Add**.</span></span>  
+5. <span data-ttu-id="0dd41-120">**コンピューターの選択**] ウィンドウのままに**ローカル コンピューター**を選択し、[**完了**します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-120">In the **Select Computer** window, leave **Local computer** selected, and then select **Finish**.</span></span>  
   
-7.  <span data-ttu-id="4cc8b-116">**証明書スナップイン**ダイアログ ボックスで **コンピューター アカウント** を選択し **次** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-116">In the **Certificates snap-in** dialog box, select **Computer account** and click **Next**.</span></span> <span data-ttu-id="4cc8b-117">必要に応じて、**ユーザー アカウント** または　**サービス アカウント** を選択できます。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-117">Optionally, you can select **My User account** or **Service account**.</span></span> <span data-ttu-id="4cc8b-118">そのコンピューターの管理者でない場合は、自分のユーザー アカウントの証明書のみを管理できます。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-118">If you are not an administrator of the computer, you can manage certificates only for your user account.</span></span>  
+6. <span data-ttu-id="0dd41-121">**スナップインの追加または削除**ウィンドウで、 **OK**します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-121">In the **Add or Remove Snap-in** window, select **OK**.</span></span>  
   
-8.  <span data-ttu-id="4cc8b-119">**コンピューターの選択** ダイアログ ボックスで **完了** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-119">In the **Select Computer** dialog box, click **Finish**.</span></span>  
+    ![証明書スナップインの追加します。](./media/mmc-certificate-snap-in-selected.png)
+
+7. <span data-ttu-id="0dd41-123">省略可能:**ファイル**メニューの **保存**または**名前を付けて保存**後で使用できる MMC コンソール ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-123">Optional: From the **File** menu, select **Save** or **Save As** to save the MMC console file for later use.</span></span>  
+
+8. <span data-ttu-id="0dd41-124">MMC スナップインで証明書を表示する選択**コンソール ルート**左側のウィンドウでを展開し、**証明書 (ローカル コンピューター)** します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-124">To view your certificates in the MMC snap-in, select **Console Root** in the left pane, then expand **Certificates (Local Computer)**.</span></span>
+
+    <span data-ttu-id="0dd41-125">証明書の種類ごとのディレクトリの一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-125">A list of directories for each type of certificate appears.</span></span> <span data-ttu-id="0dd41-126">各証明書のディレクトリからすることができますを表示、エクスポート、インポート、およびその証明書を削除します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-126">From each certificate directory, you can view, export, import, and delete its certificates.</span></span>
   
-9. <span data-ttu-id="4cc8b-120">**スタンドアロン スナップインの追加** ダイアログ ボックスで **閉じる** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-120">In the **Add Standalone Snap-in** dialog box, click **Close**.</span></span>  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a><span data-ttu-id="0dd41-127">証明書マネージャー ツールを使用して証明書の表示</span><span class="sxs-lookup"><span data-stu-id="0dd41-127">View certificates with the Certificate Manager tool</span></span>
+
+<span data-ttu-id="0dd41-128">ことができますも表示、エクスポート、インポート、および証明書マネージャー ツールを使用して証明書を削除します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-128">You can also view, export, import, and delete certificates by using the Certificate Manager tool.</span></span>
+
+### <a name="to-view-certificates-for-the-local-device"></a><span data-ttu-id="0dd41-129">ローカルのデバイス用の証明書を表示するには</span><span class="sxs-lookup"><span data-stu-id="0dd41-129">To view certificates for the local device</span></span>
+
+1. <span data-ttu-id="0dd41-130">選択**実行**から、**開始**] メニューの [し、入力*certlm.msc*します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-130">Select **Run** from the **Start** menu, and then enter *certlm.msc*.</span></span> 
+
+    <span data-ttu-id="0dd41-131">ローカルのデバイスの証明書マネージャー ツールが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-131">The Certificate Manager tool for the local device appears.</span></span> 
   
-10. <span data-ttu-id="4cc8b-121">**スナップインの追加と削除** ダイアログ ボックスで **OK** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-121">On the **Add/Remove Snap-in** dialog box, click **OK**.</span></span>  
+2. <span data-ttu-id="0dd41-132">下に、証明書を表示する**証明書 - ローカル コンピューター**左側のウィンドウで表示する証明書の種類のディレクトリを展開します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-132">To view your certificates, under **Certificates - Local Computer** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
+### <a name="to-view-certificates-for-the-current-user"></a><span data-ttu-id="0dd41-133">現在のユーザーの証明書を表示するには</span><span class="sxs-lookup"><span data-stu-id="0dd41-133">To view certificates for the current user</span></span>
+
+1. <span data-ttu-id="0dd41-134">選択**実行**から、**開始**] メニューの [し、入力*certmgr.msc*します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-134">Select **Run** from the **Start** menu, and then enter *certmgr.msc*.</span></span> 
+
+    <span data-ttu-id="0dd41-135">現在のユーザーの証明書マネージャー ツールが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0dd41-135">The Certificate Manager tool for the current user appears.</span></span> 
   
-11. <span data-ttu-id="4cc8b-122">**コンソール ルート** ウィンドウで **証明書 (ローカル コンピューター)** をクリックして、コンピューターの証明書ストアを表示します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-122">In the **Console Root** window, click **Certificates (Local Computer)** to view the certificate stores for the computer.</span></span>  
+2. <span data-ttu-id="0dd41-136">下に、証明書を表示する**証明書 - 現在のユーザー**左側のウィンドウで表示する証明書の種類のディレクトリを展開します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-136">To view your certificates, under **Certificates - Current User** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+
   
-12. <span data-ttu-id="4cc8b-123">任意。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-123">Optional.</span></span> <span data-ttu-id="4cc8b-124">必要に応じて、自分のアカウントの証明書を表示する場合は、手順 3. ～ 6. を繰り返します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-124">To view certificates for your account, repeat steps 3 to 6.</span></span> <span data-ttu-id="4cc8b-125">手順 7. では **コンピューター アカウント** を選択する代わりに **ユーザー アカウント** をクリックして、手順 8. ~ 10. を繰り返します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-125">In step 7, instead of selecting **Computer account**, click **My User account** and repeat steps 8 to 10.</span></span>  
-  
-13. <span data-ttu-id="4cc8b-126">任意。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-126">Optional.</span></span> <span data-ttu-id="4cc8b-127">**ファイル** メニューのをクリックして**保存**または**付けて**します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-127">On the **File** menu, click **Save** or **Save As**.</span></span> <span data-ttu-id="4cc8b-128">再利用できるようにコンソール ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-128">Save the console file for later reuse.</span></span>  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a><span data-ttu-id="4cc8b-129">Internet Explorer を使用した証明書の表示</span><span class="sxs-lookup"><span data-stu-id="4cc8b-129">Viewing Certificates with Internet Explorer</span></span>  
- <span data-ttu-id="4cc8b-130">Internet Explorer を使用して、証明書を表示、エクスポート、インポート、または削除することもできます。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-130">You can also view, export, import, and delete certificates by using Internet Explorer.</span></span>  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a><span data-ttu-id="4cc8b-131">Internet Explorer で証明書を表示するには</span><span class="sxs-lookup"><span data-stu-id="4cc8b-131">To view certificates with Internet Explorer</span></span>  
-  
-1.  <span data-ttu-id="4cc8b-132">Internet Explorer で、次のようにクリックします。**ツール**、 をクリックし、**インターネット オプション**を表示する、**インターネット オプション** ダイアログ ボックス。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-132">In Internet Explorer, click **Tools**, then click **Internet Options** to display the **Internet Options** dialog box.</span></span>  
-  
-2.  <span data-ttu-id="4cc8b-133">をクリックして、**コンテンツ**タブ。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-133">Click the **Content** tab.</span></span>  
-  
-3.  <span data-ttu-id="4cc8b-134">[**証明書**、] をクリックして**証明書**します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-134">Under **Certificates**, click **Certificates**.</span></span>  
-  
-4.  <span data-ttu-id="4cc8b-135">任意の証明書の詳細を表示し、証明書を選択し、クリックして**ビュー**します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-135">To view details of any certificate, select the certificate and click **View**.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="4cc8b-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="4cc8b-136">See also</span></span>
-- [<span data-ttu-id="4cc8b-137">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="4cc8b-137">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="4cc8b-138">方法: 開発中に使用するための一時的な証明書を作成します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-138">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [<span data-ttu-id="4cc8b-139">方法: 証明書のサムプリントを取得します。</span><span class="sxs-lookup"><span data-stu-id="4cc8b-139">How to: Retrieve the Thumbprint of a Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a><span data-ttu-id="0dd41-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="0dd41-137">See also</span></span>
+- [<span data-ttu-id="0dd41-138">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="0dd41-138">Working with certificates</span></span>](working-with-certificates.md)
+- [<span data-ttu-id="0dd41-139">方法: 開発中に使用するための一時的な証明書を作成します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-139">How to: Create temporary certificates for use during development</span></span>](how-to-create-temporary-certificates-for-use-during-development.md)
+- [<span data-ttu-id="0dd41-140">方法: 証明書のサムプリントを取得します。</span><span class="sxs-lookup"><span data-stu-id="0dd41-140">How to: Retrieve the thumbprint of a certificate</span></span>](how-to-retrieve-the-thumbprint-of-a-certificate.md)

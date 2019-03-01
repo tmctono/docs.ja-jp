@@ -6,210 +6,210 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: e036792cf33082fa78cf243887b8ac7db7f8ad5a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 634e39e3e274b919f63ff1b4f3c7b0cd311beaf1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981492"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201177"
 ---
-# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="5a1b8-102">Visual Basic のコーディング規則</span><span class="sxs-lookup"><span data-stu-id="5a1b8-102">Visual Basic Coding Conventions</span></span>
-<span data-ttu-id="5a1b8-103">Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="5a1b8-104">同じコーディング規則に従うと、次のような利点があります。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
+# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="ae021-102">Visual Basic のコーディング規則</span><span class="sxs-lookup"><span data-stu-id="ae021-102">Visual Basic Coding Conventions</span></span>
+<span data-ttu-id="ae021-103">Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。</span><span class="sxs-lookup"><span data-stu-id="ae021-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="ae021-104">同じコーディング規則に従うと、次のような利点があります。</span><span class="sxs-lookup"><span data-stu-id="ae021-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
   
--   <span data-ttu-id="5a1b8-105">コードの見た目が統一されるため、コードを読むときに、レイアウトではなく内容に重点を置くことができます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
+-   <span data-ttu-id="ae021-105">コードの見た目が統一されるため、コードを読むときに、レイアウトではなく内容に重点を置くことができます。</span><span class="sxs-lookup"><span data-stu-id="ae021-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
   
--   <span data-ttu-id="5a1b8-106">これまでの経験に基づいて推測できるようになるため、コードをすばやく理解できます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
+-   <span data-ttu-id="ae021-106">これまでの経験に基づいて推測できるようになるため、コードをすばやく理解できます。</span><span class="sxs-lookup"><span data-stu-id="ae021-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
   
--   <span data-ttu-id="5a1b8-107">コードのコピー、変更、保守がより簡単になります。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-107">You can copy, change, and maintain the code more easily.</span></span>  
+-   <span data-ttu-id="ae021-107">コードのコピー、変更、保守がより簡単になります。</span><span class="sxs-lookup"><span data-stu-id="ae021-107">You can copy, change, and maintain the code more easily.</span></span>  
   
--   <span data-ttu-id="5a1b8-108">コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
+-   <span data-ttu-id="ae021-108">コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。</span><span class="sxs-lookup"><span data-stu-id="ae021-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
   
-## <a name="naming-conventions"></a><span data-ttu-id="5a1b8-109">命名規則</span><span class="sxs-lookup"><span data-stu-id="5a1b8-109">Naming Conventions</span></span>  
+## <a name="naming-conventions"></a><span data-ttu-id="ae021-109">命名規則</span><span class="sxs-lookup"><span data-stu-id="ae021-109">Naming Conventions</span></span>  
   
--   <span data-ttu-id="5a1b8-110">名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
+-   <span data-ttu-id="ae021-110">名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="ae021-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
   
--   <span data-ttu-id="5a1b8-111">"My" または "my" を変数名の一部として使用しないようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="5a1b8-112">
-  `My\` オブジェクトとの混同を招くからです。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-112">This practice creates confusion with the `My` objects.</span></span>  
+-   <span data-ttu-id="ae021-111">"My" または "my" を変数名の一部として使用しないようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="ae021-112">
+  `My\` オブジェクトとの混同を招くからです。</span><span class="sxs-lookup"><span data-stu-id="ae021-112">This practice creates confusion with the `My` objects.</span></span>  
   
--   <span data-ttu-id="5a1b8-113">自動生成されたコードに含まれるオブジェクトの名前をこのガイドラインに合わせて変更する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
+-   <span data-ttu-id="ae021-113">自動生成されたコードに含まれるオブジェクトの名前をこのガイドラインに合わせて変更する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="ae021-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
   
-## <a name="layout-conventions"></a><span data-ttu-id="5a1b8-114">レイアウト規則</span><span class="sxs-lookup"><span data-stu-id="5a1b8-114">Layout Conventions</span></span>  
+## <a name="layout-conventions"></a><span data-ttu-id="ae021-114">レイアウト規則</span><span class="sxs-lookup"><span data-stu-id="ae021-114">Layout Conventions</span></span>  
   
--   <span data-ttu-id="5a1b8-115">タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
+-   <span data-ttu-id="ae021-115">タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
   
--   <span data-ttu-id="5a1b8-116">コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="5a1b8-117">詳細については、次を参照してください。[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)です。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
+-   <span data-ttu-id="ae021-116">コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="ae021-117">詳細については、次を参照してください。[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)です。</span><span class="sxs-lookup"><span data-stu-id="ae021-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
   
--   <span data-ttu-id="5a1b8-118">1 つの行には 1 つのステートメントのみを記述します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-118">Use only one statement per line.</span></span> <span data-ttu-id="5a1b8-119">Visual Basic の行区切り記号 (:) は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-119">Don't use the Visual Basic line separator character (:).</span></span>  
+-   <span data-ttu-id="ae021-118">1 つの行には 1 つのステートメントのみを記述します。</span><span class="sxs-lookup"><span data-stu-id="ae021-118">Use only one statement per line.</span></span> <span data-ttu-id="ae021-119">Visual Basic の行区切り記号 (:) は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="ae021-119">Don't use the Visual Basic line separator character (:).</span></span>  
   
--   <span data-ttu-id="5a1b8-120">言語で許可される場所では、明示的な行継続文字 "_" ではなく暗黙的な行継続を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
+-   <span data-ttu-id="ae021-120">言語で許可される場所では、明示的な行継続文字 "_" ではなく暗黙的な行継続を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
   
--   <span data-ttu-id="5a1b8-121">1 つの行には 1 つの宣言のみを記述します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-121">Use only one declaration per line.</span></span>  
+-   <span data-ttu-id="ae021-121">1 つの行には 1 つの宣言のみを記述します。</span><span class="sxs-lookup"><span data-stu-id="ae021-121">Use only one declaration per line.</span></span>  
   
--   <span data-ttu-id="5a1b8-122">**コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="5a1b8-123">ただし、リストの項目は常に左揃えにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-123">However, always left-align items in a list.</span></span>  
+-   <span data-ttu-id="ae021-122">**コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。</span><span class="sxs-lookup"><span data-stu-id="ae021-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="ae021-123">ただし、リストの項目は常に左揃えにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-123">However, always left-align items in a list.</span></span>  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
--   <span data-ttu-id="5a1b8-124">メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-124">Add at least one blank line between method and property definitions.</span></span>  
+-   <span data-ttu-id="ae021-124">メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。</span><span class="sxs-lookup"><span data-stu-id="ae021-124">Add at least one blank line between method and property definitions.</span></span>  
   
-## <a name="commenting-conventions"></a><span data-ttu-id="5a1b8-125">コメント規則</span><span class="sxs-lookup"><span data-stu-id="5a1b8-125">Commenting Conventions</span></span>  
+## <a name="commenting-conventions"></a><span data-ttu-id="ae021-125">コメント規則</span><span class="sxs-lookup"><span data-stu-id="ae021-125">Commenting Conventions</span></span>  
   
--   <span data-ttu-id="5a1b8-126">コメントは、コード行の末尾ではなく別の行に記述します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
+-   <span data-ttu-id="ae021-126">コメントは、コード行の末尾ではなく別の行に記述します。</span><span class="sxs-lookup"><span data-stu-id="ae021-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
   
--   <span data-ttu-id="5a1b8-127">英語でコメントを記述する場合、コメント テキストの始まりには英大文字を使用し、終わりにはピリオドを使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
+-   <span data-ttu-id="ae021-127">英語でコメントを記述する場合、コメント テキストの始まりには英大文字を使用し、終わりにはピリオドを使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
   
--   <span data-ttu-id="5a1b8-128">コメント デリミター (') とコメント テキストの間に空白を 1 つ挿入します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
+-   <span data-ttu-id="ae021-128">コメント デリミター (') とコメント テキストの間に空白を 1 つ挿入します。</span><span class="sxs-lookup"><span data-stu-id="ae021-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   <span data-ttu-id="5a1b8-129">整形されたアスタリスク (\*) のブロックでコメントを囲まないようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
+-   <span data-ttu-id="ae021-129">整形されたアスタリスク (\*) のブロックでコメントを囲まないようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
   
-## <a name="program-structure"></a><span data-ttu-id="5a1b8-130">プログラムの構造</span><span class="sxs-lookup"><span data-stu-id="5a1b8-130">Program Structure</span></span>  
+## <a name="program-structure"></a><span data-ttu-id="ae021-130">プログラムの構造</span><span class="sxs-lookup"><span data-stu-id="ae021-130">Program Structure</span></span>  
   
--   <span data-ttu-id="5a1b8-131">
-  `Main\` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My\` を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
+-   <span data-ttu-id="ae021-131">
+  `Main\` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My\` を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
-## <a name="language-guidelines"></a><span data-ttu-id="5a1b8-132">言語ガイドライン</span><span class="sxs-lookup"><span data-stu-id="5a1b8-132">Language Guidelines</span></span>  
+## <a name="language-guidelines"></a><span data-ttu-id="ae021-132">言語ガイドライン</span><span class="sxs-lookup"><span data-stu-id="ae021-132">Language Guidelines</span></span>  
   
-### <a name="string-data-type"></a><span data-ttu-id="5a1b8-133">文字列型 (String)</span><span class="sxs-lookup"><span data-stu-id="5a1b8-133">String Data Type</span></span>  
+### <a name="string-data-type"></a><span data-ttu-id="ae021-133">文字列型 (String)</span><span class="sxs-lookup"><span data-stu-id="ae021-133">String Data Type</span></span>  
   
--   <span data-ttu-id="5a1b8-134">文字列を連結するには、アンパサンド (&) を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-134">To concatenate strings, use an ampersand (&).</span></span>  
+-   <span data-ttu-id="ae021-134">文字列を連結するには、アンパサンド (&) を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-134">To concatenate strings, use an ampersand (&).</span></span>  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
--   <span data-ttu-id="5a1b8-135">ループ内での文字列の追加には <xref:System.Text.StringBuilder> オブジェクトを使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
+-   <span data-ttu-id="ae021-135">ループ内での文字列の追加には <xref:System.Text.StringBuilder> オブジェクトを使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="5a1b8-136">イベント ハンドラー内の厳密でないデリゲート</span><span class="sxs-lookup"><span data-stu-id="5a1b8-136">Relaxed Delegates in Event Handlers</span></span>  
- <span data-ttu-id="5a1b8-137">イベント ハンドラーの引数 (Object および EventArgs) は明示的に修飾しません。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="5a1b8-138">イベントに渡されるイベント引数 (sender as Object、e as EventArgs など) を使用しない場合は、厳密でないデリゲートを使用して、コードでイベント引数を省略します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
+### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="ae021-136">イベント ハンドラー内の厳密でないデリゲート</span><span class="sxs-lookup"><span data-stu-id="ae021-136">Relaxed Delegates in Event Handlers</span></span>  
+ <span data-ttu-id="ae021-137">イベント ハンドラーの引数 (Object および EventArgs) は明示的に修飾しません。</span><span class="sxs-lookup"><span data-stu-id="ae021-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="ae021-138">イベントに渡されるイベント引数 (sender as Object、e as EventArgs など) を使用しない場合は、厳密でないデリゲートを使用して、コードでイベント引数を省略します。</span><span class="sxs-lookup"><span data-stu-id="ae021-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
-### <a name="unsigned-data-type"></a><span data-ttu-id="5a1b8-139">Unsigned データ型</span><span class="sxs-lookup"><span data-stu-id="5a1b8-139">Unsigned Data Type</span></span>  
+### <a name="unsigned-data-type"></a><span data-ttu-id="ae021-139">Unsigned データ型</span><span class="sxs-lookup"><span data-stu-id="ae021-139">Unsigned Data Type</span></span>  
   
--   <span data-ttu-id="5a1b8-140">特に必要でない限り、unsigned 型ではなく `Integer` を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
+-   <span data-ttu-id="ae021-140">特に必要でない限り、unsigned 型ではなく `Integer` を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
   
-### <a name="arrays"></a><span data-ttu-id="5a1b8-141">配列</span><span class="sxs-lookup"><span data-stu-id="5a1b8-141">Arrays</span></span>  
+### <a name="arrays"></a><span data-ttu-id="ae021-141">配列</span><span class="sxs-lookup"><span data-stu-id="ae021-141">Arrays</span></span>  
   
--   <span data-ttu-id="5a1b8-142">宣言行で配列を初期化するときは短い構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="5a1b8-143">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-143">For example, use the following syntax.</span></span>  
+-   <span data-ttu-id="ae021-142">宣言行で配列を初期化するときは短い構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="ae021-143">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-143">For example, use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     <span data-ttu-id="5a1b8-144">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-144">Do not use the following syntax.</span></span>  
+     <span data-ttu-id="ae021-144">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="ae021-144">Do not use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
--   <span data-ttu-id="5a1b8-145">配列指定子は、変数ではなく型に指定します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="5a1b8-146">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-146">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="ae021-145">配列指定子は、変数ではなく型に指定します。</span><span class="sxs-lookup"><span data-stu-id="ae021-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="ae021-146">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-146">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     <span data-ttu-id="5a1b8-147">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-147">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="ae021-147">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="ae021-147">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
--   <span data-ttu-id="5a1b8-148">基本データ型の配列の宣言と初期化では、{ } 構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="5a1b8-149">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-149">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="ae021-148">基本データ型の配列の宣言と初期化では、{ } 構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="ae021-149">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-149">For example, use the following syntax:</span></span>  
   
-     [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
+     [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     <span data-ttu-id="5a1b8-150">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-150">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="ae021-150">次のような構文は使用しません。</span><span class="sxs-lookup"><span data-stu-id="ae021-150">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a><span data-ttu-id="5a1b8-151">With キーワードの使用</span><span class="sxs-lookup"><span data-stu-id="5a1b8-151">Use the With Keyword</span></span>  
- <span data-ttu-id="5a1b8-152">同じオブジェクトの呼び出しを複数回使用する場合には、`With` キーワードの使用を検討します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
+### <a name="use-the-with-keyword"></a><span data-ttu-id="ae021-151">With キーワードの使用</span><span class="sxs-lookup"><span data-stu-id="ae021-151">Use the With Keyword</span></span>  
+ <span data-ttu-id="ae021-152">同じオブジェクトの呼び出しを複数回使用する場合には、`With` キーワードの使用を検討します。</span><span class="sxs-lookup"><span data-stu-id="ae021-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="5a1b8-153">例外処理を使用する場合の Try...Catch/Using ステートメントの使用</span><span class="sxs-lookup"><span data-stu-id="5a1b8-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
- <span data-ttu-id="5a1b8-154">`On Error Goto`は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-154">Do not use `On Error Goto`.</span></span>  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="ae021-153">例外処理を使用する場合の Try...Catch/Using ステートメントの使用</span><span class="sxs-lookup"><span data-stu-id="ae021-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
+ <span data-ttu-id="ae021-154">`On Error Goto`は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="ae021-154">Do not use `On Error Goto`.</span></span>  
   
-### <a name="use-the-isnot-keyword"></a><span data-ttu-id="5a1b8-155">IsNot キーワードの使用</span><span class="sxs-lookup"><span data-stu-id="5a1b8-155">Use the IsNot Keyword</span></span>  
- <span data-ttu-id="5a1b8-156">`Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。 </span><span class="sxs-lookup"><span data-stu-id="5a1b8-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
+### <a name="use-the-isnot-keyword"></a><span data-ttu-id="ae021-155">IsNot キーワードの使用</span><span class="sxs-lookup"><span data-stu-id="ae021-155">Use the IsNot Keyword</span></span>  
+ <span data-ttu-id="ae021-156">`Not...Is Nothing` の代わりに `IsNot` キーワードを使用します。 </span><span class="sxs-lookup"><span data-stu-id="ae021-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
   
-### <a name="new-keyword"></a><span data-ttu-id="5a1b8-157">New キーワード</span><span class="sxs-lookup"><span data-stu-id="5a1b8-157">New Keyword</span></span>  
+### <a name="new-keyword"></a><span data-ttu-id="ae021-157">New キーワード</span><span class="sxs-lookup"><span data-stu-id="ae021-157">New Keyword</span></span>  
   
--   <span data-ttu-id="5a1b8-158">短い形式のインスタンス化を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-158">Use short instantiation.</span></span> <span data-ttu-id="5a1b8-159">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-159">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="ae021-158">短い形式のインスタンス化を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-158">Use short instantiation.</span></span> <span data-ttu-id="ae021-159">たとえば、次のような構文を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-159">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="5a1b8-160">この行は次の行と同じ結果をもたらします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-160">The preceding line is equivalent to this:</span></span>  
+     <span data-ttu-id="ae021-160">この行は次の行と同じ結果をもたらします。</span><span class="sxs-lookup"><span data-stu-id="ae021-160">The preceding line is equivalent to this:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
--   <span data-ttu-id="5a1b8-161">新しいオブジェクトには、パラメーターなしのコンストラクターの代わりにオブジェクト初期化子を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
+-   <span data-ttu-id="ae021-161">新しいオブジェクトには、パラメーターなしのコンストラクターの代わりにオブジェクト初期化子を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
-### <a name="event-handling"></a><span data-ttu-id="5a1b8-162">イベント処理</span><span class="sxs-lookup"><span data-stu-id="5a1b8-162">Event Handling</span></span>  
+### <a name="event-handling"></a><span data-ttu-id="ae021-162">イベント処理</span><span class="sxs-lookup"><span data-stu-id="ae021-162">Event Handling</span></span>  
   
--   <span data-ttu-id="5a1b8-163">`AddHandler` ではなく `Handles` を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-163">Use `Handles` rather than `AddHandler`:</span></span>  
+-   <span data-ttu-id="ae021-163">`AddHandler` ではなく `Handles` を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-163">Use `Handles` rather than `AddHandler`:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   <span data-ttu-id="5a1b8-164">
-  `AddressOf\` を使用し、デリゲートの明示的なインスタンス化は避けます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
+-   <span data-ttu-id="ae021-164">
+  `AddressOf\` を使用し、デリゲートの明示的なインスタンス化は避けます。</span><span class="sxs-lookup"><span data-stu-id="ae021-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
--   <span data-ttu-id="5a1b8-165">イベントを定義するときには、短い構文を使用し、デリゲートの定義はコンパイラに任せます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
+-   <span data-ttu-id="ae021-165">イベントを定義するときには、短い構文を使用し、デリゲートの定義はコンパイラに任せます。</span><span class="sxs-lookup"><span data-stu-id="ae021-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
--   <span data-ttu-id="5a1b8-166">`RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="5a1b8-167">`RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
+-   <span data-ttu-id="ae021-166">`RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="ae021-167">`RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。</span><span class="sxs-lookup"><span data-stu-id="ae021-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
   
-### <a name="using-shared-members"></a><span data-ttu-id="5a1b8-168">共有メンバーの使用</span><span class="sxs-lookup"><span data-stu-id="5a1b8-168">Using Shared Members</span></span>  
- <span data-ttu-id="5a1b8-169">
-  `Shared\` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
+### <a name="using-shared-members"></a><span data-ttu-id="ae021-168">共有メンバーの使用</span><span class="sxs-lookup"><span data-stu-id="ae021-168">Using Shared Members</span></span>  
+ <span data-ttu-id="ae021-169">
+  `Shared\` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
   
-### <a name="use-xml-literals"></a><span data-ttu-id="5a1b8-170">XML リテラルの使用</span><span class="sxs-lookup"><span data-stu-id="5a1b8-170">Use XML Literals</span></span>  
- <span data-ttu-id="5a1b8-171">XML リテラルを使用すると、XML 操作時に行う最も一般的なタスク (読み込み、クエリ、変換など) を簡素化できます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="5a1b8-172">XML を使用して開発を行う場合は、次のガイドラインに従います。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-172">When you develop with XML, follow these guidelines:</span></span>  
+### <a name="use-xml-literals"></a><span data-ttu-id="ae021-170">XML リテラルの使用</span><span class="sxs-lookup"><span data-stu-id="ae021-170">Use XML Literals</span></span>  
+ <span data-ttu-id="ae021-171">XML リテラルを使用すると、XML 操作時に行う最も一般的なタスク (読み込み、クエリ、変換など) を簡素化できます。</span><span class="sxs-lookup"><span data-stu-id="ae021-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="ae021-172">XML を使用して開発を行う場合は、次のガイドラインに従います。</span><span class="sxs-lookup"><span data-stu-id="ae021-172">When you develop with XML, follow these guidelines:</span></span>  
   
--   <span data-ttu-id="5a1b8-173">XML API を直接呼び出す代わりに XML リテラルを使用して XML ドキュメントおよびフラグメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
+-   <span data-ttu-id="ae021-173">XML API を直接呼び出す代わりに XML リテラルを使用して XML ドキュメントおよびフラグメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="ae021-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
   
--   <span data-ttu-id="5a1b8-174">ファイル レベルまたはプロジェクト レベルで XML 名前空間をインポートし、XML リテラルによるパフォーマンスの最適化を利用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
+-   <span data-ttu-id="ae021-174">ファイル レベルまたはプロジェクト レベルで XML 名前空間をインポートし、XML リテラルによるパフォーマンスの最適化を利用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
   
--   <span data-ttu-id="5a1b8-175">XML 軸プロパティを使用して XML ドキュメント内の要素と属性にアクセスします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
+-   <span data-ttu-id="ae021-175">XML 軸プロパティを使用して XML ドキュメント内の要素と属性にアクセスします。</span><span class="sxs-lookup"><span data-stu-id="ae021-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
   
--   <span data-ttu-id="5a1b8-176">
-  `Add\` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
+-   <span data-ttu-id="ae021-176">
+  `Add\` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。</span><span class="sxs-lookup"><span data-stu-id="ae021-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
-### <a name="linq-queries"></a><span data-ttu-id="5a1b8-177">LINQ クエリ</span><span class="sxs-lookup"><span data-stu-id="5a1b8-177">LINQ Queries</span></span>  
+### <a name="linq-queries"></a><span data-ttu-id="ae021-177">LINQ クエリ</span><span class="sxs-lookup"><span data-stu-id="ae021-177">LINQ Queries</span></span>  
   
--   <span data-ttu-id="5a1b8-178">クエリ変数にはわかりやすい名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-178">Use meaningful names for query variables:</span></span>  
+-   <span data-ttu-id="ae021-178">クエリ変数にはわかりやすい名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-178">Use meaningful names for query variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
--   <span data-ttu-id="5a1b8-179">クエリ内で要素の名前を指定して、匿名型のプロパティ名の大文字と小文字の使用が正しい Pascal 形式になるようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
+-   <span data-ttu-id="ae021-179">クエリ内で要素の名前を指定して、匿名型のプロパティ名の大文字と小文字の使用が正しい Pascal 形式になるようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
--   <span data-ttu-id="5a1b8-180">結果のプロパティ名があいまいになる場合は、プロパティ名を変更します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="5a1b8-181">たとえば、クエリが顧客名と注文 ID を返す場合、それらの名前を結果の `Name` と `ID` のままにはせずに変更します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
+-   <span data-ttu-id="ae021-180">結果のプロパティ名があいまいになる場合は、プロパティ名を変更します。</span><span class="sxs-lookup"><span data-stu-id="ae021-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="ae021-181">たとえば、クエリが顧客名と注文 ID を返す場合、それらの名前を結果の `Name` と `ID` のままにはせずに変更します。</span><span class="sxs-lookup"><span data-stu-id="ae021-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
--   <span data-ttu-id="5a1b8-182">クエリ変数と範囲変数の宣言で型の推論を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-182">Use type inference in the declaration of query variables and range variables:</span></span>  
+-   <span data-ttu-id="ae021-182">クエリ変数と範囲変数の宣言で型の推論を使用します。</span><span class="sxs-lookup"><span data-stu-id="ae021-182">Use type inference in the declaration of query variables and range variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
--   <span data-ttu-id="5a1b8-183">各クエリ句を `From` ステートメントの下に揃えます。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-183">Align query clauses under the `From` statement:</span></span>  
+-   <span data-ttu-id="ae021-183">各クエリ句を `From` ステートメントの下に揃えます。</span><span class="sxs-lookup"><span data-stu-id="ae021-183">Align query clauses under the `From` statement:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   <span data-ttu-id="5a1b8-184">
-  `Where\` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
+-   <span data-ttu-id="ae021-184">
+  `Where\` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。</span><span class="sxs-lookup"><span data-stu-id="ae021-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
--   <span data-ttu-id="5a1b8-185">`Where` 句を使用して暗黙的に結合操作を定義する代わりに、`Join` 句を使用して明示的に結合操作を定義します。</span><span class="sxs-lookup"><span data-stu-id="5a1b8-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
+-   <span data-ttu-id="ae021-185">`Where` 句を使用して暗黙的に結合操作を定義する代わりに、`Join` 句を使用して明示的に結合操作を定義します。</span><span class="sxs-lookup"><span data-stu-id="ae021-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a><span data-ttu-id="5a1b8-186">関連項目</span><span class="sxs-lookup"><span data-stu-id="5a1b8-186">See also</span></span>
-- [<span data-ttu-id="5a1b8-187">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="5a1b8-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="ae021-186">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae021-186">See also</span></span>
+- [<span data-ttu-id="ae021-187">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="ae021-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
