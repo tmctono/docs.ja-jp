@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHandleValue Interface1
+title: ICorDebugHandleValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHandleValue
@@ -16,37 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 102fcff6120822c5de0ede45d43a9cd064270085
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dddc1665dff5c1a0629d25aa99066ce6eeca94a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715479"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981440"
 ---
-# <a name="icordebughandlevalue-interface1"></a><span data-ttu-id="6ca02-102">ICorDebugHandleValue Interface1</span><span class="sxs-lookup"><span data-stu-id="6ca02-102">ICorDebugHandleValue Interface1</span></span>
-<span data-ttu-id="6ca02-103">参照値が、デバッガーにガベージ コレクションのハンドルが作成を表すサブクラスです。</span><span class="sxs-lookup"><span data-stu-id="6ca02-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
+# <a name="icordebughandlevalue-interface"></a><span data-ttu-id="65e0a-102">ICorDebugHandleValue インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65e0a-102">ICorDebugHandleValue Interface</span></span>
+
+<span data-ttu-id="65e0a-103">参照値が、デバッガーにガベージ コレクションのハンドルが作成を表すサブクラスです。</span><span class="sxs-lookup"><span data-stu-id="65e0a-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6ca02-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6ca02-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="65e0a-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="65e0a-104">Methods</span></span>  
   
-|<span data-ttu-id="6ca02-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6ca02-105">Method</span></span>|<span data-ttu-id="6ca02-106">説明</span><span class="sxs-lookup"><span data-stu-id="6ca02-106">Description</span></span>|  
+|<span data-ttu-id="65e0a-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="65e0a-105">Method</span></span>|<span data-ttu-id="65e0a-106">説明</span><span class="sxs-lookup"><span data-stu-id="65e0a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6ca02-107">Dispose メソッド</span><span class="sxs-lookup"><span data-stu-id="6ca02-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="6ca02-108">これによって参照されるハンドルを解放`ICorDebugHandleValue`インターフェイス ポインターを明示的に解放しないままオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="6ca02-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
-|[<span data-ttu-id="6ca02-109">GetHandleType メソッド</span><span class="sxs-lookup"><span data-stu-id="6ca02-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="6ca02-110">これによって参照されるハンドルの種類を記述する CorDebugHandleType 値を取得します`ICorDebugHandleValue`します。</span><span class="sxs-lookup"><span data-stu-id="6ca02-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
+|[<span data-ttu-id="65e0a-107">Dispose メソッド</span><span class="sxs-lookup"><span data-stu-id="65e0a-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="65e0a-108">これによって参照されるハンドルを解放`ICorDebugHandleValue`インターフェイス ポインターを明示的に解放しないままオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="65e0a-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
+|[<span data-ttu-id="65e0a-109">GetHandleType メソッド</span><span class="sxs-lookup"><span data-stu-id="65e0a-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="65e0a-110">これによって参照されるハンドルの種類を記述する CorDebugHandleType 値を取得します`ICorDebugHandleValue`します。</span><span class="sxs-lookup"><span data-stu-id="65e0a-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6ca02-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="6ca02-111">Remarks</span></span>  
- <span data-ttu-id="6ca02-112">`ICorDebugReferenceValue`オブジェクトがデバッグ対象のコードの実行の中断によって無効にします。</span><span class="sxs-lookup"><span data-stu-id="6ca02-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="6ca02-113">`ICorDebugHandleValue`明示的に解放されるまでの区切りと継続のうち、その参照を保持します。</span><span class="sxs-lookup"><span data-stu-id="6ca02-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65e0a-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="65e0a-111">Remarks</span></span>  
+ <span data-ttu-id="65e0a-112">`ICorDebugReferenceValue`オブジェクトがデバッグ対象のコードの実行の中断によって無効にします。</span><span class="sxs-lookup"><span data-stu-id="65e0a-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="65e0a-113">`ICorDebugHandleValue`明示的に解放されるまでの区切りと継続のうち、その参照を保持します。</span><span class="sxs-lookup"><span data-stu-id="65e0a-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6ca02-114">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="6ca02-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="65e0a-114">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="65e0a-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ca02-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="6ca02-115">Requirements</span></span>  
- <span data-ttu-id="6ca02-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6ca02-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65e0a-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="65e0a-115">Requirements</span></span>  
+ <span data-ttu-id="65e0a-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="65e0a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ca02-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ca02-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="65e0a-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65e0a-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6ca02-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ca02-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="65e0a-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65e0a-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ca02-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ca02-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="65e0a-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65e0a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ca02-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ca02-120">See also</span></span>
-- [<span data-ttu-id="6ca02-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6ca02-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="65e0a-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="65e0a-120">See also</span></span>
+- [<span data-ttu-id="65e0a-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65e0a-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,36 +7,36 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5828e28b84ec62c7ed674757090806d73c61caea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522441"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966737"
 ---
-# <a name="erase-statement-visual-basic"></a><span data-ttu-id="56ea0-102">Erase ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56ea0-102">Erase Statement (Visual Basic)</span></span>
-<span data-ttu-id="56ea0-103">配列変数を解放し、その要素に使用されるメモリの割り当てを解除するために使用します。</span><span class="sxs-lookup"><span data-stu-id="56ea0-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  
+# <a name="erase-statement-visual-basic"></a><span data-ttu-id="b0305-102">Erase ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0305-102">Erase Statement (Visual Basic)</span></span>
+<span data-ttu-id="b0305-103">配列変数を解放し、その要素に使用されるメモリの割り当てを解除するために使用します。</span><span class="sxs-lookup"><span data-stu-id="b0305-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56ea0-104">構文</span><span class="sxs-lookup"><span data-stu-id="56ea0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0305-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0305-104">Syntax</span></span>  
   
 ```  
 Erase arraylist  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="56ea0-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="56ea0-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="b0305-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="b0305-105">Parts</span></span>  
  `arraylist`  
- <span data-ttu-id="56ea0-106">必須。</span><span class="sxs-lookup"><span data-stu-id="56ea0-106">Required.</span></span> <span data-ttu-id="56ea0-107">消去する配列変数の一覧。</span><span class="sxs-lookup"><span data-stu-id="56ea0-107">List of array variables to be erased.</span></span> <span data-ttu-id="56ea0-108">複数の変数を指定するときは、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="56ea0-108">Multiple variables are separated by commas.</span></span>  
+ <span data-ttu-id="b0305-106">必須。</span><span class="sxs-lookup"><span data-stu-id="b0305-106">Required.</span></span> <span data-ttu-id="b0305-107">消去する配列変数の一覧。</span><span class="sxs-lookup"><span data-stu-id="b0305-107">List of array variables to be erased.</span></span> <span data-ttu-id="b0305-108">複数の変数を指定するときは、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="b0305-108">Multiple variables are separated by commas.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56ea0-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="56ea0-109">Remarks</span></span>  
- <span data-ttu-id="56ea0-110">`Erase`ステートメントは、プロシージャ レベルでのみ表示できます。</span><span class="sxs-lookup"><span data-stu-id="56ea0-110">The `Erase` statement can appear only at procedure level.</span></span> <span data-ttu-id="56ea0-111">これは、クラスまたはモジュール レベルではなく、プロシージャ内部では配列を解放することを意味します。</span><span class="sxs-lookup"><span data-stu-id="56ea0-111">This means you can release arrays inside a procedure but not at class or module level.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0305-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0305-109">Remarks</span></span>  
+ <span data-ttu-id="b0305-110">`Erase`ステートメントは、プロシージャ レベルでのみ表示できます。</span><span class="sxs-lookup"><span data-stu-id="b0305-110">The `Erase` statement can appear only at procedure level.</span></span> <span data-ttu-id="b0305-111">これは、クラスまたはモジュール レベルではなく、プロシージャ内部では配列を解放することを意味します。</span><span class="sxs-lookup"><span data-stu-id="b0305-111">This means you can release arrays inside a procedure but not at class or module level.</span></span>  
   
- <span data-ttu-id="56ea0-112">`Erase`ステートメントは割り当てることと同じ`Nothing`各配列変数にします。</span><span class="sxs-lookup"><span data-stu-id="56ea0-112">The `Erase` statement is equivalent to assigning `Nothing` to each array variable.</span></span>  
+ <span data-ttu-id="b0305-112">`Erase`ステートメントは割り当てることと同じ`Nothing`各配列変数にします。</span><span class="sxs-lookup"><span data-stu-id="b0305-112">The `Erase` statement is equivalent to assigning `Nothing` to each array variable.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="56ea0-113">例</span><span class="sxs-lookup"><span data-stu-id="56ea0-113">Example</span></span>  
- <span data-ttu-id="56ea0-114">次の例では、`Erase`を 2 つの配列をクリアし、そのメモリを解放ステートメント (1,000 と 100 のストレージ要素それぞれ)。</span><span class="sxs-lookup"><span data-stu-id="56ea0-114">The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively).</span></span> <span data-ttu-id="56ea0-115">`ReDim`ステートメントし、配列の新しいインスタンスを 3 次元の配列に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="56ea0-115">The `ReDim` statement then assigns a new array instance to the three-dimensional array.</span></span>  
+## <a name="example"></a><span data-ttu-id="b0305-113">例</span><span class="sxs-lookup"><span data-stu-id="b0305-113">Example</span></span>  
+ <span data-ttu-id="b0305-114">次の例では、`Erase`を 2 つの配列をクリアし、そのメモリを解放ステートメント (1,000 と 100 のストレージ要素それぞれ)。</span><span class="sxs-lookup"><span data-stu-id="b0305-114">The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively).</span></span> <span data-ttu-id="b0305-115">`ReDim`ステートメントし、配列の新しいインスタンスを 3 次元の配列に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="b0305-115">The `ReDim` statement then assigns a new array instance to the three-dimensional array.</span></span>  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a><span data-ttu-id="56ea0-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="56ea0-116">See also</span></span>
-- [<span data-ttu-id="56ea0-117">Nothing</span><span class="sxs-lookup"><span data-stu-id="56ea0-117">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
-- [<span data-ttu-id="56ea0-118">ReDim ステートメント</span><span class="sxs-lookup"><span data-stu-id="56ea0-118">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
+## <a name="see-also"></a><span data-ttu-id="b0305-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0305-116">See also</span></span>
+- [<span data-ttu-id="b0305-117">Nothing</span><span class="sxs-lookup"><span data-stu-id="b0305-117">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="b0305-118">ReDim ステートメント</span><span class="sxs-lookup"><span data-stu-id="b0305-118">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596736"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965060"
 ---
-# <a name="typeof-operator-visual-basic"></a><span data-ttu-id="6cd0f-102">TypeOf 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6cd0f-102">TypeOf Operator (Visual Basic)</span></span>
-<span data-ttu-id="6cd0f-103">オブジェクト参照変数をデータ型と比較します。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-103">Compares an object reference variable to a data type.</span></span>  
+# <a name="typeof-operator-visual-basic"></a><span data-ttu-id="2ac0a-102">TypeOf 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ac0a-102">TypeOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="2ac0a-103">オブジェクト参照変数をデータ型と比較します。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-103">Compares an object reference variable to a data type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6cd0f-104">構文</span><span class="sxs-lookup"><span data-stu-id="6cd0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ac0a-104">構文</span><span class="sxs-lookup"><span data-stu-id="2ac0a-104">Syntax</span></span>  
   
 ```  
 result = TypeOf objectexpression Is typename  
@@ -32,40 +32,45 @@ result = TypeOf objectexpression Is typename
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="6cd0f-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="6cd0f-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="2ac0a-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="2ac0a-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="6cd0f-106">必須。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-106">Returned.</span></span> <span data-ttu-id="6cd0f-107">`Boolean` 値。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-107">A `Boolean` value.</span></span>  
+ <span data-ttu-id="2ac0a-106">必須。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-106">Returned.</span></span> <span data-ttu-id="2ac0a-107">`Boolean` 値。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-107">A `Boolean` value.</span></span>  
   
  `objectexpression`  
- <span data-ttu-id="6cd0f-108">必須。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-108">Required.</span></span> <span data-ttu-id="6cd0f-109">参照型に評価される任意の式。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-109">Any expression that evaluates to a reference type.</span></span>  
+ <span data-ttu-id="2ac0a-108">必須。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-108">Required.</span></span> <span data-ttu-id="2ac0a-109">参照型に評価される任意の式。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-109">Any expression that evaluates to a reference type.</span></span>  
   
  `typename`  
- <span data-ttu-id="6cd0f-110">必須。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-110">Required.</span></span> <span data-ttu-id="6cd0f-111">任意のデータ型名。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-111">Any data type name.</span></span>  
+ <span data-ttu-id="2ac0a-110">必須。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-110">Required.</span></span> <span data-ttu-id="2ac0a-111">任意のデータ型名。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-111">Any data type name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6cd0f-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="6cd0f-112">Remarks</span></span>  
- <span data-ttu-id="6cd0f-113">`TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-113">The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`.</span></span> <span data-ttu-id="6cd0f-114">互換性は、`typename` の型のカテゴリに依存します。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-114">The compatibility depends on the type category of `typename`.</span></span> <span data-ttu-id="6cd0f-115">互換性を決定する方法を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-115">The following table shows how compatibility is determined.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ac0a-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="2ac0a-112">Remarks</span></span>  
+ <span data-ttu-id="2ac0a-113">
+  `TypeOf\` 演算子は、`objectexpression\` の実行時の型が `typename\` と互換性があるかどうかを調べます。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-113">The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`.</span></span> <span data-ttu-id="2ac0a-114">互換性は、`typename` の型のカテゴリに依存します。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-114">The compatibility depends on the type category of `typename`.</span></span> <span data-ttu-id="2ac0a-115">互換性を決定する方法を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-115">The following table shows how compatibility is determined.</span></span>  
   
-|<span data-ttu-id="6cd0f-116">`typename` の型のカテゴリ</span><span class="sxs-lookup"><span data-stu-id="6cd0f-116">Type category of `typename`</span></span>|<span data-ttu-id="6cd0f-117">互換性の条件</span><span class="sxs-lookup"><span data-stu-id="6cd0f-117">Compatibility criterion</span></span>|  
+|<span data-ttu-id="2ac0a-116">
+  `typename\` の型のカテゴリ</span><span class="sxs-lookup"><span data-stu-id="2ac0a-116">Type category of `typename`</span></span>|<span data-ttu-id="2ac0a-117">互換性の条件</span><span class="sxs-lookup"><span data-stu-id="2ac0a-117">Compatibility criterion</span></span>|  
 |---------------------------------|-----------------------------|  
-|<span data-ttu-id="6cd0f-118">クラス</span><span class="sxs-lookup"><span data-stu-id="6cd0f-118">Class</span></span>|<span data-ttu-id="6cd0f-119">`objectexpression` が `typename` 型である、または `typename` を継承する</span><span class="sxs-lookup"><span data-stu-id="6cd0f-119">`objectexpression` is of type `typename` or inherits from `typename`</span></span>|  
-|<span data-ttu-id="6cd0f-120">構造体</span><span class="sxs-lookup"><span data-stu-id="6cd0f-120">Structure</span></span>|<span data-ttu-id="6cd0f-121">`objectexpression` が `typename` 型である</span><span class="sxs-lookup"><span data-stu-id="6cd0f-121">`objectexpression` is of type `typename`</span></span>|  
-|<span data-ttu-id="6cd0f-122">Interface</span><span class="sxs-lookup"><span data-stu-id="6cd0f-122">Interface</span></span>|<span data-ttu-id="6cd0f-123">`objectexpression` が `typename` を実装する、または `typename` を実装するクラスを継承する</span><span class="sxs-lookup"><span data-stu-id="6cd0f-123">`objectexpression` implements `typename` or inherits from a class that implements `typename`</span></span>|  
+|<span data-ttu-id="2ac0a-118">クラス</span><span class="sxs-lookup"><span data-stu-id="2ac0a-118">Class</span></span>|<span data-ttu-id="2ac0a-119">`objectexpression` が `typename` 型である、または `typename` を継承する</span><span class="sxs-lookup"><span data-stu-id="2ac0a-119">`objectexpression` is of type `typename` or inherits from `typename`</span></span>|  
+|<span data-ttu-id="2ac0a-120">構造体</span><span class="sxs-lookup"><span data-stu-id="2ac0a-120">Structure</span></span>|<span data-ttu-id="2ac0a-121">`objectexpression` が `typename` 型である</span><span class="sxs-lookup"><span data-stu-id="2ac0a-121">`objectexpression` is of type `typename`</span></span>|  
+|<span data-ttu-id="2ac0a-122">Interface</span><span class="sxs-lookup"><span data-stu-id="2ac0a-122">Interface</span></span>|<span data-ttu-id="2ac0a-123">`objectexpression` が `typename` を実装する、または `typename` を実装するクラスを継承する</span><span class="sxs-lookup"><span data-stu-id="2ac0a-123">`objectexpression` implements `typename` or inherits from a class that implements `typename`</span></span>|  
   
- <span data-ttu-id="6cd0f-124">`objectexpression` の実行時の型が互換性の条件を満たす場合、`result` は `True` です。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-124">If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`.</span></span> <span data-ttu-id="6cd0f-125">それ以外の場合、`result` は `False` です。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-125">Otherwise, `result` is `False`.</span></span>  <span data-ttu-id="6cd0f-126">`objectexpression` が null の場合、`TypeOf`...`Is` は `False` を返し、...`IsNot` は `True` を返します。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-126">If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.</span></span>  
+ <span data-ttu-id="2ac0a-124">
+  `objectexpression\` の実行時の型が互換性の条件を満たす場合、`result` は `True\` です。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-124">If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`.</span></span> <span data-ttu-id="2ac0a-125">それ以外の場合、`result` は `False` です。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-125">Otherwise, `result` is `False`.</span></span>  <span data-ttu-id="2ac0a-126">
+  `objectexpression\` が null の場合、`TypeOf`...`Is` は `False\` を返し、...`IsNot` は `True\` を返します。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-126">If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.</span></span>  
   
- <span data-ttu-id="6cd0f-127">`TypeOf` は、常に `Is` キーワードと共に `TypeOf`...`Is` 式を構築するか、または `IsNot` キーワードと共に `TypeOf`...`IsNot` 式を構築します。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-127">`TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.</span></span>  
+ <span data-ttu-id="2ac0a-127">`TypeOf` は、常に `Is` キーワードと共に `TypeOf`...`Is` 式を構築するか、または `IsNot` キーワードと共に `TypeOf`...`IsNot` 式を構築します。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-127">`TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6cd0f-128">例</span><span class="sxs-lookup"><span data-stu-id="6cd0f-128">Example</span></span>  
- <span data-ttu-id="6cd0f-129">次の例では、`TypeOf`...`Is` 式でさまざまなデータ型を使用して、2 つのオブジェクト参照変数の型の互換性をテストしています。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-129">The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.</span></span>  
+## <a name="example"></a><span data-ttu-id="2ac0a-128">例</span><span class="sxs-lookup"><span data-stu-id="2ac0a-128">Example</span></span>  
+ <span data-ttu-id="2ac0a-129">次の例では、`TypeOf`...`Is` 式でさまざまなデータ型を使用して、2 つのオブジェクト参照変数の型の互換性をテストしています。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-129">The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.</span></span>  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- <span data-ttu-id="6cd0f-130">変数 `refInteger` は、実行時の型 `Integer` を持ちます。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-130">The variable `refInteger` has a run-time type of `Integer`.</span></span> <span data-ttu-id="6cd0f-131">`Integer` と互換性がありますが、`Double` との互換性はありません。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-131">It is compatible with `Integer` but not with `Double`.</span></span> <span data-ttu-id="6cd0f-132">変数 `refForm` は、実行時の型 <xref:System.Windows.Forms.Form> を持ちます。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-132">The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>.</span></span> <span data-ttu-id="6cd0f-133">この変数は、<xref:System.Windows.Forms.Form> (同じ型)、<xref:System.Windows.Forms.Control> (<xref:System.Windows.Forms.Form> は <xref:System.Windows.Forms.Control> を継承する)、および <xref:System.ComponentModel.IComponent> (<xref:System.Windows.Forms.Form> は <xref:System.ComponentModel.IComponent> を実装する <xref:System.ComponentModel.Component> を継承する) と互換性があります。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-133">It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="6cd0f-134">ただし、`refForm` には <xref:System.Windows.Forms.Label> との互換性はありません。</span><span class="sxs-lookup"><span data-stu-id="6cd0f-134">However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.</span></span>  
+ <span data-ttu-id="2ac0a-130">変数 `refInteger` は、実行時の型 `Integer` を持ちます。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-130">The variable `refInteger` has a run-time type of `Integer`.</span></span> <span data-ttu-id="2ac0a-131">
+  `Integer\` と互換性がありますが、`Double\` との互換性はありません。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-131">It is compatible with `Integer` but not with `Double`.</span></span> <span data-ttu-id="2ac0a-132">変数 `refForm` は、実行時の型 <xref:System.Windows.Forms.Form> を持ちます。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-132">The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>.</span></span> <span data-ttu-id="2ac0a-133">この変数は、<xref:System.Windows.Forms.Form> (同じ型)、<xref:System.Windows.Forms.Control> (<xref:System.Windows.Forms.Form> は <xref:System.Windows.Forms.Control> を継承する)、および <xref:System.ComponentModel.IComponent> (<xref:System.Windows.Forms.Form> は <xref:System.ComponentModel.IComponent> を実装する <xref:System.ComponentModel.Component> を継承する) と互換性があります。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-133">It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="2ac0a-134">ただし、`refForm` には <xref:System.Windows.Forms.Label> との互換性はありません。</span><span class="sxs-lookup"><span data-stu-id="2ac0a-134">However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6cd0f-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="6cd0f-135">See also</span></span>
-- [<span data-ttu-id="6cd0f-136">Is 演算子</span><span class="sxs-lookup"><span data-stu-id="6cd0f-136">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="6cd0f-137">IsNot 演算子</span><span class="sxs-lookup"><span data-stu-id="6cd0f-137">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="6cd0f-138">Visual Basic における比較演算子</span><span class="sxs-lookup"><span data-stu-id="6cd0f-138">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="6cd0f-139">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="6cd0f-139">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="6cd0f-140">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="6cd0f-140">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="6cd0f-141">演算子および式</span><span class="sxs-lookup"><span data-stu-id="6cd0f-141">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="2ac0a-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="2ac0a-135">See also</span></span>
+- [<span data-ttu-id="2ac0a-136">Is 演算子</span><span class="sxs-lookup"><span data-stu-id="2ac0a-136">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="2ac0a-137">IsNot 演算子</span><span class="sxs-lookup"><span data-stu-id="2ac0a-137">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="2ac0a-138">Visual Basic における比較演算子</span><span class="sxs-lookup"><span data-stu-id="2ac0a-138">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="2ac0a-139">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="2ac0a-139">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="2ac0a-140">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="2ac0a-140">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="2ac0a-141">演算子および式</span><span class="sxs-lookup"><span data-stu-id="2ac0a-141">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

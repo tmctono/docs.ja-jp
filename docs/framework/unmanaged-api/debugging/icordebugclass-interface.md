@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass Interface1
+title: ICorDebugClass インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,40 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710216"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972054"
 ---
-# <a name="icordebugclass-interface1"></a><span data-ttu-id="712d5-102">ICorDebugClass Interface1</span><span class="sxs-lookup"><span data-stu-id="712d5-102">ICorDebugClass Interface1</span></span>
-<span data-ttu-id="712d5-103">基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。</span><span class="sxs-lookup"><span data-stu-id="712d5-103">Represents a type, which can be either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="712d5-104">型がジェネリックの場合、`ICorDebugClass` はインスタンス化されないジェネリック型を表します。</span><span class="sxs-lookup"><span data-stu-id="712d5-104">If the type is generic, `ICorDebugClass` represents the uninstantiated generic type.</span></span>  
+# <a name="icordebugclass-interface"></a><span data-ttu-id="e7c08-102">ICorDebugClass インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7c08-102">ICorDebugClass Interface</span></span>
+
+<span data-ttu-id="e7c08-103">基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-103">Represents a type, which can be either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="e7c08-104">型がジェネリックの場合、`ICorDebugClass` はインスタンス化されないジェネリック型を表します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-104">If the type is generic, `ICorDebugClass` represents the uninstantiated generic type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="712d5-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="712d5-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e7c08-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c08-105">Methods</span></span>  
   
-|<span data-ttu-id="712d5-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="712d5-106">Method</span></span>|<span data-ttu-id="712d5-107">説明</span><span class="sxs-lookup"><span data-stu-id="712d5-107">Description</span></span>|  
+|<span data-ttu-id="e7c08-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c08-106">Method</span></span>|<span data-ttu-id="e7c08-107">説明</span><span class="sxs-lookup"><span data-stu-id="e7c08-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="712d5-108">GetModule メソッド</span><span class="sxs-lookup"><span data-stu-id="712d5-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|<span data-ttu-id="712d5-109">このクラスを定義するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="712d5-109">Gets the module that defines this class.</span></span>|  
-|[<span data-ttu-id="712d5-110">GetStaticFieldValue メソッド</span><span class="sxs-lookup"><span data-stu-id="712d5-110">GetStaticFieldValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|<span data-ttu-id="712d5-111">指定された静的フィールドの値を取得します。</span><span class="sxs-lookup"><span data-stu-id="712d5-111">Gets the value of the specified static field.</span></span>|  
-|[<span data-ttu-id="712d5-112">GetToken メソッド</span><span class="sxs-lookup"><span data-stu-id="712d5-112">GetToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|<span data-ttu-id="712d5-113">取得、`TypeDef`このクラスのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="712d5-113">Gets the `TypeDef` metadata token for this class.</span></span>|  
+|[<span data-ttu-id="e7c08-108">GetModule メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c08-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|<span data-ttu-id="e7c08-109">このクラスを定義するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-109">Gets the module that defines this class.</span></span>|  
+|[<span data-ttu-id="e7c08-110">GetStaticFieldValue メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c08-110">GetStaticFieldValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|<span data-ttu-id="e7c08-111">指定された静的フィールドの値を取得します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-111">Gets the value of the specified static field.</span></span>|  
+|[<span data-ttu-id="e7c08-112">GetToken メソッド</span><span class="sxs-lookup"><span data-stu-id="e7c08-112">GetToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|<span data-ttu-id="e7c08-113">取得、`TypeDef`このクラスのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="e7c08-113">Gets the `TypeDef` metadata token for this class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="712d5-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="712d5-114">Remarks</span></span>  
- <span data-ttu-id="712d5-115">`ICorDebugClass`インターフェイスは、インスタンス化されていないジェネリック型を表します。</span><span class="sxs-lookup"><span data-stu-id="712d5-115">The `ICorDebugClass` interface represents an uninstantiated generic type.</span></span> <span data-ttu-id="712d5-116">ICorDebugType インターフェイスは、ジェネリック型のインスタンスを表します。</span><span class="sxs-lookup"><span data-stu-id="712d5-116">The ICorDebugType interface represents an instantiated generic type.</span></span> <span data-ttu-id="712d5-117">たとえば、`Hashtable<K, V>`で表されます`ICorDebugClass`であるのに対し`Hashtable<Int32, String>`で表されます`ICorDebugType`します。</span><span class="sxs-lookup"><span data-stu-id="712d5-117">For example, `Hashtable<K, V>` would be represented by `ICorDebugClass`, whereas `Hashtable<Int32, String>` would be represented by `ICorDebugType`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7c08-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="e7c08-114">Remarks</span></span>  
+ <span data-ttu-id="e7c08-115">`ICorDebugClass`インターフェイスは、インスタンス化されていないジェネリック型を表します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-115">The `ICorDebugClass` interface represents an uninstantiated generic type.</span></span> <span data-ttu-id="e7c08-116">ICorDebugType インターフェイスは、ジェネリック型のインスタンスを表します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-116">The ICorDebugType interface represents an instantiated generic type.</span></span> <span data-ttu-id="e7c08-117">たとえば、`Hashtable<K, V>`で表されます`ICorDebugClass`であるのに対し`Hashtable<Int32, String>`で表されます`ICorDebugType`します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-117">For example, `Hashtable<K, V>` would be represented by `ICorDebugClass`, whereas `Hashtable<Int32, String>` would be represented by `ICorDebugType`.</span></span>  
   
- <span data-ttu-id="712d5-118">非ジェネリック型は型が両方によって表される`ICorDebugClass`と`ICorDebugType`します。</span><span class="sxs-lookup"><span data-stu-id="712d5-118">Non-generic types are represented by both `ICorDebugClass` and `ICorDebugType`.</span></span> <span data-ttu-id="712d5-119">後者のインターフェイスは、型のインスタンス化を処理するには、.NET Framework version 2.0 で導入されました。</span><span class="sxs-lookup"><span data-stu-id="712d5-119">The latter interface was introduced in the .NET Framework version 2.0 to deal with type instantiation.</span></span>  
+ <span data-ttu-id="e7c08-118">非ジェネリック型は型が両方によって表される`ICorDebugClass`と`ICorDebugType`します。</span><span class="sxs-lookup"><span data-stu-id="e7c08-118">Non-generic types are represented by both `ICorDebugClass` and `ICorDebugType`.</span></span> <span data-ttu-id="e7c08-119">後者のインターフェイスは、型のインスタンス化を処理するには、.NET Framework version 2.0 で導入されました。</span><span class="sxs-lookup"><span data-stu-id="e7c08-119">The latter interface was introduced in the .NET Framework version 2.0 to deal with type instantiation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="712d5-120">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="712d5-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="e7c08-120">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="e7c08-120">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="712d5-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="712d5-121">Requirements</span></span>  
- <span data-ttu-id="712d5-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="712d5-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7c08-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="e7c08-121">Requirements</span></span>  
+ <span data-ttu-id="e7c08-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7c08-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="712d5-123">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="712d5-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e7c08-123">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7c08-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="712d5-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="712d5-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e7c08-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7c08-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="712d5-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="712d5-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e7c08-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7c08-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="712d5-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="712d5-126">See also</span></span>
-- [<span data-ttu-id="712d5-127">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="712d5-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e7c08-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7c08-126">See also</span></span>
+- [<span data-ttu-id="e7c08-127">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e7c08-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
