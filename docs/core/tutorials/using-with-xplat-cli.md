@@ -5,93 +5,94 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605956"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212171"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a><span data-ttu-id="f4007-103">Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要</span><span class="sxs-lookup"><span data-stu-id="f4007-103">Getting started with .NET Core on Windows/Linux/macOS using the command line</span></span>
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a><span data-ttu-id="795e2-103">Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要</span><span class="sxs-lookup"><span data-stu-id="795e2-103">Getting started with .NET Core on Windows/Linux/macOS using the command line</span></span>
 
-<span data-ttu-id="f4007-104">このトピックでは、.NET Core CLI ツールを利用し、自分のコンピューターでプラットフォームに依存しないアプリを開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f4007-104">This topic will show you how to start developing cross-platforms apps in your machine using the .NET Core CLI tools.</span></span>
+<span data-ttu-id="795e2-104">このトピックでは、.NET Core CLI ツールを利用し、自分のコンピューターでプラットフォームに依存しないアプリを開発する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="795e2-104">This topic will show you how to start developing cross-platforms apps in your machine using the .NET Core CLI tools.</span></span>
 
-<span data-ttu-id="f4007-105">.NET Core CLI ツールセットに慣れていない場合は、「[.NET Core SDK overview](../tools/index.md)」(.NET Core SDK の概要) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4007-105">If you're unfamiliar with the .NET Core CLI toolset, read the [.NET Core SDK overview](../tools/index.md).</span></span>
+<span data-ttu-id="795e2-105">.NET Core CLI ツールセットに慣れていない場合は、「[.NET Core SDK overview](../tools/index.md)」(.NET Core SDK の概要) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="795e2-105">If you're unfamiliar with the .NET Core CLI toolset, read the [.NET Core SDK overview](../tools/index.md).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f4007-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="f4007-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="795e2-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="795e2-106">Prerequisites</span></span>
 
-- <span data-ttu-id="f4007-107">[.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="f4007-107">[.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).</span></span>
-- <span data-ttu-id="f4007-108">ユーザーが選んだテキスト エディターまたはコード エディター。</span><span class="sxs-lookup"><span data-stu-id="f4007-108">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="795e2-107">[.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="795e2-107">[.NET Core SDK 2.1](https://www.microsoft.com/net/download/core).</span></span>
+- <span data-ttu-id="795e2-108">ユーザーが選んだテキスト エディターまたはコード エディター。</span><span class="sxs-lookup"><span data-stu-id="795e2-108">A text editor or code editor of your choice.</span></span>
 
-## <a name="hello-console-app"></a><span data-ttu-id="f4007-109">Hello コンソール アプリ</span><span class="sxs-lookup"><span data-stu-id="f4007-109">Hello, Console App!</span></span>
+## <a name="hello-console-app"></a><span data-ttu-id="795e2-109">Hello コンソール アプリ</span><span class="sxs-lookup"><span data-stu-id="795e2-109">Hello, Console App!</span></span>
 
-<span data-ttu-id="f4007-110">GitHub の dotnet/samples レポジトリから、[サンプル コードを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)することができます。</span><span class="sxs-lookup"><span data-stu-id="f4007-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="f4007-111">ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4007-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="795e2-110">GitHub の dotnet/samples レポジトリから、[サンプル コードを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)することができます。</span><span class="sxs-lookup"><span data-stu-id="795e2-110">You can [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) from the dotnet/samples GitHub repository.</span></span> <span data-ttu-id="795e2-111">ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="795e2-111">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-<span data-ttu-id="f4007-112">コマンド プロンプトを開き、*Hello* という名前のフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4007-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="f4007-113">作成したフォルダーに移動して、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="f4007-113">Navigate to the folder you created and type the following:</span></span>
+<span data-ttu-id="795e2-112">コマンド プロンプトを開き、*Hello* という名前のフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="795e2-112">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="795e2-113">作成したフォルダーに移動して、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="795e2-113">Navigate to the folder you created and type the following:</span></span>
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
-<span data-ttu-id="f4007-114">簡単に説明します。</span><span class="sxs-lookup"><span data-stu-id="f4007-114">Let's do a quick walkthrough:</span></span>
+<span data-ttu-id="795e2-114">簡単に説明します。</span><span class="sxs-lookup"><span data-stu-id="795e2-114">Let's do a quick walkthrough:</span></span>
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
-   <span data-ttu-id="f4007-115">[`dotnet new`](../tools/dotnet-new.md) は、コンソール アプリのビルドに必要な依存関係を含む最新の `Hello.csproj` プロジェクト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4007-115">[`dotnet new`](../tools/dotnet-new.md) creates an up-to-date `Hello.csproj` project file with the dependencies necessary to build a console app.</span></span>  <span data-ttu-id="f4007-116">また、アプリケーションのエントリ ポイントを含む基本的なファイルである `Program.cs` も作成します。</span><span class="sxs-lookup"><span data-stu-id="f4007-116">It also creates a `Program.cs`, a basic file containing the entry point for the application.</span></span>
+   <span data-ttu-id="795e2-115">[`dotnet new`](../tools/dotnet-new.md) は、コンソール アプリのビルドに必要な依存関係を含む最新の `Hello.csproj` プロジェクト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="795e2-115">[`dotnet new`](../tools/dotnet-new.md) creates an up-to-date `Hello.csproj` project file with the dependencies necessary to build a console app.</span></span>  <span data-ttu-id="795e2-116">また、アプリケーションのエントリ ポイントを含む基本的なファイルである `Program.cs` も作成します。</span><span class="sxs-lookup"><span data-stu-id="795e2-116">It also creates a `Program.cs`, a basic file containing the entry point for the application.</span></span>
 
-   <span data-ttu-id="f4007-117">`Hello.csproj`:</span><span class="sxs-lookup"><span data-stu-id="f4007-117">`Hello.csproj`:</span></span>
+   <span data-ttu-id="795e2-117">`Hello.csproj`:</span><span class="sxs-lookup"><span data-stu-id="795e2-117">`Hello.csproj`:</span></span>
 
    [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
-   <span data-ttu-id="f4007-118">プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。</span><span class="sxs-lookup"><span data-stu-id="f4007-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
+   <span data-ttu-id="795e2-118">プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。</span><span class="sxs-lookup"><span data-stu-id="795e2-118">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
 
-   * <span data-ttu-id="f4007-119">`OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。</span><span class="sxs-lookup"><span data-stu-id="f4007-119">The `OutputType` tag specifies that we're building an executable, in other words a console application.</span></span>
-   * <span data-ttu-id="f4007-120">`TargetFramework` タグは、対象の .NET 実装を指定します。</span><span class="sxs-lookup"><span data-stu-id="f4007-120">The `TargetFramework` tag specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="f4007-121">高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。</span><span class="sxs-lookup"><span data-stu-id="f4007-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="f4007-122">このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。</span><span class="sxs-lookup"><span data-stu-id="f4007-122">In this tutorial, we'll stick to building only for .NET Core 2.1.</span></span>
+   * <span data-ttu-id="795e2-119">`OutputType` タグは、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることを示します。</span><span class="sxs-lookup"><span data-stu-id="795e2-119">The `OutputType` tag specifies that we're building an executable, in other words a console application.</span></span>
+   * <span data-ttu-id="795e2-120">`TargetFramework` タグは、対象の .NET 実装を指定します。</span><span class="sxs-lookup"><span data-stu-id="795e2-120">The `TargetFramework` tag specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="795e2-121">高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。</span><span class="sxs-lookup"><span data-stu-id="795e2-121">In an advanced scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="795e2-122">このチュートリアルでは、.NET Core 2.1 の場合のビルドについてのみ説明します。</span><span class="sxs-lookup"><span data-stu-id="795e2-122">In this tutorial, we'll stick to building only for .NET Core 2.1.</span></span>
 
-   <span data-ttu-id="f4007-123">`Program.cs`:</span><span class="sxs-lookup"><span data-stu-id="f4007-123">`Program.cs`:</span></span>
+   <span data-ttu-id="795e2-123">`Program.cs`:</span><span class="sxs-lookup"><span data-stu-id="795e2-123">`Program.cs`:</span></span>
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   <span data-ttu-id="f4007-124">プログラムは `using System` で始まります。これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。</span><span class="sxs-lookup"><span data-stu-id="f4007-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="f4007-125">`System` 名前空間には、`string` などの基本的な構造、または数値型が含まれます。</span><span class="sxs-lookup"><span data-stu-id="f4007-125">The `System` namespace includes basic constructs such as `string`, or numeric types.</span></span>
+   <span data-ttu-id="795e2-124">プログラムは `using System` で始まります。これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。</span><span class="sxs-lookup"><span data-stu-id="795e2-124">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="795e2-125">`System` 名前空間には、`string` などの基本的な構造、または数値型が含まれます。</span><span class="sxs-lookup"><span data-stu-id="795e2-125">The `System` namespace includes basic constructs such as `string`, or numeric types.</span></span>
 
-   <span data-ttu-id="f4007-126">次に、`Hello` という名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="f4007-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="f4007-127">これを必要なものに変更できます。</span><span class="sxs-lookup"><span data-stu-id="f4007-127">You can change this to anything you want.</span></span> <span data-ttu-id="f4007-128">`Program` という名前のクラスは、引数として文字列配列を使用する `Main` メソッドで、その名前空間内に定義されます。</span><span class="sxs-lookup"><span data-stu-id="f4007-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings as its argument.</span></span> <span data-ttu-id="f4007-129">この配列には、コンパイル済みプログラムの呼び出し時に渡される引数のリストが含まれます。</span><span class="sxs-lookup"><span data-stu-id="f4007-129">This array contains the list of arguments passed in when the compiled program is called.</span></span> <span data-ttu-id="f4007-130">実際は、この配列は使用されません。プログラムはコンソールに "Hello World!" と</span><span class="sxs-lookup"><span data-stu-id="f4007-130">As it is, this array is not used: all the program is doing is to write "Hello World!"</span></span> <span data-ttu-id="f4007-131">記述するだけです。</span><span class="sxs-lookup"><span data-stu-id="f4007-131">to the console.</span></span> <span data-ttu-id="f4007-132">後に、この引数を利用するようにコードを変更します。</span><span class="sxs-lookup"><span data-stu-id="f4007-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
+   <span data-ttu-id="795e2-126">次に、`Hello` という名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="795e2-126">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="795e2-127">これを必要なものに変更できます。</span><span class="sxs-lookup"><span data-stu-id="795e2-127">You can change this to anything you want.</span></span> <span data-ttu-id="795e2-128">`Program` という名前のクラスは、引数として文字列配列を使用する `Main` メソッドで、その名前空間内に定義されます。</span><span class="sxs-lookup"><span data-stu-id="795e2-128">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings as its argument.</span></span> <span data-ttu-id="795e2-129">この配列には、コンパイル済みプログラムの呼び出し時に渡される引数のリストが含まれます。</span><span class="sxs-lookup"><span data-stu-id="795e2-129">This array contains the list of arguments passed in when the compiled program is called.</span></span> <span data-ttu-id="795e2-130">実際は、この配列は使用されません。プログラムはコンソールに "Hello World!" と</span><span class="sxs-lookup"><span data-stu-id="795e2-130">As it is, this array is not used: all the program is doing is to write "Hello World!"</span></span> <span data-ttu-id="795e2-131">記述するだけです。</span><span class="sxs-lookup"><span data-stu-id="795e2-131">to the console.</span></span> <span data-ttu-id="795e2-132">後に、この引数を利用するようにコードを変更します。</span><span class="sxs-lookup"><span data-stu-id="795e2-132">Later, we'll make changes to the code that will make use of this argument.</span></span>
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   <span data-ttu-id="f4007-133">`dotnet new` は [`dotnet restore`](../tools/dotnet-restore.md) を暗黙的に呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f4007-133">`dotnet new` calls [`dotnet restore`](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="f4007-134">`dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。</span><span class="sxs-lookup"><span data-stu-id="f4007-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="f4007-135">NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。</span><span class="sxs-lookup"><span data-stu-id="f4007-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span> 
-   
+   <span data-ttu-id="795e2-133">`dotnet new` は [`dotnet restore`](../tools/dotnet-restore.md) を暗黙的に呼び出します。</span><span class="sxs-lookup"><span data-stu-id="795e2-133">`dotnet new` calls [`dotnet restore`](../tools/dotnet-restore.md) implicitly.</span></span> <span data-ttu-id="795e2-134">`dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。</span><span class="sxs-lookup"><span data-stu-id="795e2-134">`dotnet restore` calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="795e2-135">NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。</span><span class="sxs-lookup"><span data-stu-id="795e2-135">NuGet analyzes the *Hello.csproj* file, downloads the dependencies defined in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file, which is necessary to compile and run the sample.</span></span>
+
    > [!IMPORTANT]
-   > <span data-ttu-id="f4007-136">.NET Core 1.x バージョンの SDK を使用している場合は、`dotnet new` の呼び出し後に `dotnet restore` を自分で呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="f4007-136">If you're using a .NET Core 1.x version of the SDK, you'll have to call `dotnet restore` yourself after calling `dotnet new`.</span></span>
+   > <span data-ttu-id="795e2-136">.NET Core 1.x バージョンの SDK を使用している場合は、`dotnet new` の呼び出し後に `dotnet restore` を自分で呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="795e2-136">If you're using a .NET Core 1.x version of the SDK, you'll have to call `dotnet restore` yourself after calling `dotnet new`.</span></span>
 
-2. `$ dotnet run`
+2. `dotnet run`
 
-   <span data-ttu-id="f4007-137">[`dotnet run`](../tools/dotnet-run.md) は、[`dotnet build`](../tools/dotnet-build.md) を呼び出してビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` を呼び出してターゲット アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="f4007-137">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
+   <span data-ttu-id="795e2-137">[`dotnet run`](../tools/dotnet-run.md) は、[`dotnet build`](../tools/dotnet-build.md) を呼び出してビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` を呼び出してターゲット アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="795e2-137">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
 
     ```console
     $ dotnet run
     Hello World!
     ```
 
-    <span data-ttu-id="f4007-138">[`dotnet build`](../tools/dotnet-build.md) を実行し、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。</span><span class="sxs-lookup"><span data-stu-id="f4007-138">Alternatively, you can also execute [`dotnet build`](../tools/dotnet-build.md) to compile the code without running the build console applications.</span></span> <span data-ttu-id="f4007-139">これで、Windows で `dotnet bin\Debug\netcoreapp2.1\Hello.dll` を使用して (Windows 以外のシステムの場合は `/` を使用して) 実行できる DLL ファイルとしてアプリケーションがコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="f4007-139">This results in a compiled application as a DLL file that can be run with `dotnet bin\Debug\netcoreapp2.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span> <span data-ttu-id="f4007-140">アプリケーションには引数を指定することもできます。それについてはこのトピックの後半で説明します。</span><span class="sxs-lookup"><span data-stu-id="f4007-140">You may also specify arguments to the application as you'll see later on the topic.</span></span>
+    <span data-ttu-id="795e2-138">[`dotnet build`](../tools/dotnet-build.md) を実行し、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。</span><span class="sxs-lookup"><span data-stu-id="795e2-138">Alternatively, you can also execute [`dotnet build`](../tools/dotnet-build.md) to compile the code without running the build console applications.</span></span> <span data-ttu-id="795e2-139">これで、Windows で `dotnet bin\Debug\netcoreapp2.1\Hello.dll` を使用して (Windows 以外のシステムの場合は `/` を使用して) 実行できる DLL ファイルとしてアプリケーションがコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="795e2-139">This results in a compiled application as a DLL file that can be run with `dotnet bin\Debug\netcoreapp2.1\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span> <span data-ttu-id="795e2-140">アプリケーションには引数を指定することもできます。それについてはこのトピックの後半で説明します。</span><span class="sxs-lookup"><span data-stu-id="795e2-140">You may also specify arguments to the application as you'll see later on the topic.</span></span>
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
     ```
 
-    <span data-ttu-id="f4007-141">高度なシナリオでは、展開可能なプラットフォーム固有のファイルの自己完結型セットとしてアプリケーションをビルドし、.NET Core が必ずしもインストールされているとは限らないコンピューターに対して実行することができます。</span><span class="sxs-lookup"><span data-stu-id="f4007-141">As an advanced scenario, it's possible to build the application as a self-contained set of platform-specific files that can be deployed and run to a machine that doesn't necessarily have .NET Core installed.</span></span> <span data-ttu-id="f4007-142">詳細については、「[.NET Core アプリケーション展開](../deploying/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4007-142">See [.NET Core Application Deployment](../deploying/index.md) for details.</span></span>
+    <span data-ttu-id="795e2-141">高度なシナリオでは、展開可能なプラットフォーム固有のファイルの自己完結型セットとしてアプリケーションをビルドし、.NET Core が必ずしもインストールされているとは限らないコンピューターに対して実行することができます。</span><span class="sxs-lookup"><span data-stu-id="795e2-141">As an advanced scenario, it's possible to build the application as a self-contained set of platform-specific files that can be deployed and run to a machine that doesn't necessarily have .NET Core installed.</span></span> <span data-ttu-id="795e2-142">詳細については、「[.NET Core アプリケーション展開](../deploying/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="795e2-142">See [.NET Core Application Deployment](../deploying/index.md) for details.</span></span>
 
-### <a name="augmenting-the-program"></a><span data-ttu-id="f4007-143">プログラムの拡張</span><span class="sxs-lookup"><span data-stu-id="f4007-143">Augmenting the program</span></span>
+### <a name="augmenting-the-program"></a><span data-ttu-id="795e2-143">プログラムの拡張</span><span class="sxs-lookup"><span data-stu-id="795e2-143">Augmenting the program</span></span>
 
-<span data-ttu-id="f4007-144">プログラムを少し変更してみましょう。</span><span class="sxs-lookup"><span data-stu-id="f4007-144">Let's change the program a bit.</span></span> <span data-ttu-id="f4007-145">フィボナッチ数は面白いです。アプリを実行した人に挨拶をする引数を使用するためにフィボナッチ数も追加しましょう。</span><span class="sxs-lookup"><span data-stu-id="f4007-145">Fibonacci numbers are fun, so let's add that in addition to use the argument to greet the person running the app.</span></span>
+<span data-ttu-id="795e2-144">プログラムを少し変更してみましょう。</span><span class="sxs-lookup"><span data-stu-id="795e2-144">Let's change the program a bit.</span></span> <span data-ttu-id="795e2-145">フィボナッチ数は面白いです。アプリを実行した人に挨拶をする引数を使用するためにフィボナッチ数も追加しましょう。</span><span class="sxs-lookup"><span data-stu-id="795e2-145">Fibonacci numbers are fun, so let's add that in addition to use the argument to greet the person running the app.</span></span>
 
-1. <span data-ttu-id="f4007-146">*Program.cs* ファイルの内容を次のコードで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="f4007-146">Replace the contents of your *Program.cs*  file with the following code:</span></span>
+1. <span data-ttu-id="795e2-146">*Program.cs* ファイルの内容を次のコードで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="795e2-146">Replace the contents of your *Program.cs*  file with the following code:</span></span>
 
    [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
-2. <span data-ttu-id="f4007-147">[`dotnet build`](../tools/dotnet-build.md) を実行し、変更内容をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="f4007-147">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
+2. <span data-ttu-id="795e2-147">[`dotnet build`](../tools/dotnet-build.md) を実行し、変更内容をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="795e2-147">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-3. <span data-ttu-id="f4007-148">アプリにパラメーターを渡すプログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="f4007-148">Run the program passing a parameter to the app:</span></span>
+3. <span data-ttu-id="795e2-148">アプリにパラメーターを渡すプログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="795e2-148">Run the program passing a parameter to the app:</span></span>
 
    ```console
    $ dotnet run -- John
@@ -114,23 +115,23 @@ $ dotnet run
    15: 377
    ```
 
-<span data-ttu-id="f4007-149">以上です。</span><span class="sxs-lookup"><span data-stu-id="f4007-149">And that's it!</span></span>  <span data-ttu-id="f4007-150">自由に `Program.cs` を拡張できます。</span><span class="sxs-lookup"><span data-stu-id="f4007-150">You can augment `Program.cs` any way you like.</span></span>
+<span data-ttu-id="795e2-149">以上です。</span><span class="sxs-lookup"><span data-stu-id="795e2-149">And that's it!</span></span>  <span data-ttu-id="795e2-150">自由に `Program.cs` を拡張できます。</span><span class="sxs-lookup"><span data-stu-id="795e2-150">You can augment `Program.cs` any way you like.</span></span>
 
-## <a name="working-with-multiple-files"></a><span data-ttu-id="f4007-151">複数のファイルの操作</span><span class="sxs-lookup"><span data-stu-id="f4007-151">Working with multiple files</span></span>
+## <a name="working-with-multiple-files"></a><span data-ttu-id="795e2-151">複数のファイルの操作</span><span class="sxs-lookup"><span data-stu-id="795e2-151">Working with multiple files</span></span>
 
-<span data-ttu-id="f4007-152">単純な 1 回だけのプログラムには 1 つのファイルで十分ですが、より複雑なアプリを開発する場合、プロジェクトに複数のソース ファイルを用意する必要があるでしょう。先のフィボナッチのサンプルから作成してみましょう。いくつかのフィボナッチ値をキャッシュしてから、再帰機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="f4007-152">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple source files on your project Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
+<span data-ttu-id="795e2-152">単純な 1 回だけのプログラムには 1 つのファイルで十分ですが、より複雑なアプリを開発する場合、プロジェクトに複数のソース ファイルを用意する必要があるでしょう。先のフィボナッチのサンプルから作成してみましょう。いくつかのフィボナッチ値をキャッシュしてから、再帰機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="795e2-152">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple source files on your project Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span>
 
-1. <span data-ttu-id="f4007-153">次のコードを利用し、*FibonacciGenerator.cs* という名前の *Hello* ディレクトリ内に新しいファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="f4007-153">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
+1. <span data-ttu-id="795e2-153">次のコードを利用し、*FibonacciGenerator.cs* という名前の *Hello* ディレクトリ内に新しいファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="795e2-153">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
 
    [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
-2. <span data-ttu-id="f4007-154">*Program.cs* ファイルの `Main` メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f4007-154">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
+2. <span data-ttu-id="795e2-154">*Program.cs* ファイルの `Main` メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="795e2-154">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
 
    [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
-3. <span data-ttu-id="f4007-155">[`dotnet build`](../tools/dotnet-build.md) を実行し、変更内容をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="f4007-155">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
+3. <span data-ttu-id="795e2-155">[`dotnet build`](../tools/dotnet-build.md) を実行し、変更内容をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="795e2-155">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-4. <span data-ttu-id="f4007-156">[`dotnet run`](../tools/dotnet-run.md) を実行し、アプリを実行します。</span><span class="sxs-lookup"><span data-stu-id="f4007-156">Run your app by executing [`dotnet run`](../tools/dotnet-run.md).</span></span> <span data-ttu-id="f4007-157">プログラムの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="f4007-157">The following shows the program output:</span></span>
+4. <span data-ttu-id="795e2-156">[`dotnet run`](../tools/dotnet-run.md) を実行し、アプリを実行します。</span><span class="sxs-lookup"><span data-stu-id="795e2-156">Run your app by executing [`dotnet run`](../tools/dotnet-run.md).</span></span> <span data-ttu-id="795e2-157">プログラムの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="795e2-157">The following shows the program output:</span></span>
 
    ```console
    $ dotnet run
@@ -151,10 +152,10 @@ $ dotnet run
    377
    ```
 
-<span data-ttu-id="f4007-158">以上です。</span><span class="sxs-lookup"><span data-stu-id="f4007-158">And that's it!</span></span> <span data-ttu-id="f4007-159">これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。</span><span class="sxs-lookup"><span data-stu-id="f4007-159">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
+<span data-ttu-id="795e2-158">以上です。</span><span class="sxs-lookup"><span data-stu-id="795e2-158">And that's it!</span></span> <span data-ttu-id="795e2-159">これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。</span><span class="sxs-lookup"><span data-stu-id="795e2-159">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
 
-<span data-ttu-id="f4007-160">このチュートリアルで紹介した、アプリケーションを実行するコマンドと手順は、開発時にのみ利用されます。</span><span class="sxs-lookup"><span data-stu-id="f4007-160">Note that the commands and steps shown in this tutorial to run your application are used during development time only.</span></span> <span data-ttu-id="f4007-161">アプリの展開に進むときは、.NET Core アプリの別の[展開方法](../deploying/index.md)や [`dotnet publish`](../tools/dotnet-publish.md) コマンドを利用した方が効果的な場合もあります。</span><span class="sxs-lookup"><span data-stu-id="f4007-161">Once you're ready to deploy your app, you'll want to take a look at the different [deployment strategies](../deploying/index.md) for .NET Core apps and the [`dotnet publish`](../tools/dotnet-publish.md) command.</span></span>
+<span data-ttu-id="795e2-160">このチュートリアルで紹介した、アプリケーションを実行するコマンドと手順は、開発時にのみ利用されます。</span><span class="sxs-lookup"><span data-stu-id="795e2-160">Note that the commands and steps shown in this tutorial to run your application are used during development time only.</span></span> <span data-ttu-id="795e2-161">アプリの展開に進むときは、.NET Core アプリの別の[展開方法](../deploying/index.md)や [`dotnet publish`](../tools/dotnet-publish.md) コマンドを利用した方が効果的な場合もあります。</span><span class="sxs-lookup"><span data-stu-id="795e2-161">Once you're ready to deploy your app, you'll want to take a look at the different [deployment strategies](../deploying/index.md) for .NET Core apps and the [`dotnet publish`](../tools/dotnet-publish.md) command.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f4007-162">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4007-162">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="795e2-162">関連項目</span><span class="sxs-lookup"><span data-stu-id="795e2-162">See also</span></span>
 
-- [<span data-ttu-id="f4007-163">.NET Core CLI ツールを使用したプロジェクトの整理およびテスト</span><span class="sxs-lookup"><span data-stu-id="f4007-163">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="795e2-163">.NET Core CLI ツールを使用したプロジェクトの整理およびテスト</span><span class="sxs-lookup"><span data-stu-id="795e2-163">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
