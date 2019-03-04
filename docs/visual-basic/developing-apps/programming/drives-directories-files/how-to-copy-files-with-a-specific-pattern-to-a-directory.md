@@ -7,59 +7,59 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 9c2ed926d21bf73b9b93863e5c3a3ed9ccc950aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d607b1a132cd84aa2763b8e7b4c642f868abcd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634078"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968778"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a><span data-ttu-id="510ac-102">方法: Visual Basic で特定のパターンを持つファイルをディレクトリにコピーする</span><span class="sxs-lookup"><span data-stu-id="510ac-102">How to: Copy Files with a Specific Pattern to a Directory in Visual Basic</span></span>
-<span data-ttu-id="510ac-103"><xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> メソッドは、ファイルのパス名を表す文字列の読み取り専用のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="510ac-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="510ac-104">`wildCards` パラメーターを使用して、特定のパターンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="510ac-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span>  
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a><span data-ttu-id="1d3be-102">方法: Visual Basic で特定のパターンを持つファイルをディレクトリにコピーする</span><span class="sxs-lookup"><span data-stu-id="1d3be-102">How to: Copy Files with a Specific Pattern to a Directory in Visual Basic</span></span>
+<span data-ttu-id="1d3be-103"><xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> メソッドは、ファイルのパス名を表す文字列の読み取り専用のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="1d3be-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="1d3be-104">`wildCards` パラメーターを使用して、特定のパターンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="1d3be-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span>  
   
- <span data-ttu-id="510ac-105">一致するファイルが見つからない場合は、空のコレクションが返されます。</span><span class="sxs-lookup"><span data-stu-id="510ac-105">An empty collection is returned if no matching files are found.</span></span>  
+ <span data-ttu-id="1d3be-105">一致するファイルが見つからない場合は、空のコレクションが返されます。</span><span class="sxs-lookup"><span data-stu-id="1d3be-105">An empty collection is returned if no matching files are found.</span></span>  
   
- <span data-ttu-id="510ac-106"><xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> メソッドを使用して、ファイルをディレクトリにコピーできます。</span><span class="sxs-lookup"><span data-stu-id="510ac-106">You can use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> method to copy the files to a directory.</span></span>  
+ <span data-ttu-id="1d3be-106"><xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> メソッドを使用して、ファイルをディレクトリにコピーできます。</span><span class="sxs-lookup"><span data-stu-id="1d3be-106">You can use the <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> method to copy the files to a directory.</span></span>  
   
-### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a><span data-ttu-id="510ac-107">特定のパターンを持つファイルをディレクトリにコピーするには</span><span class="sxs-lookup"><span data-stu-id="510ac-107">To copy files with a specific pattern to a directory</span></span>  
+### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a><span data-ttu-id="1d3be-107">特定のパターンを持つファイルをディレクトリにコピーするには</span><span class="sxs-lookup"><span data-stu-id="1d3be-107">To copy files with a specific pattern to a directory</span></span>  
   
-1.  <span data-ttu-id="510ac-108">`GetFiles` メソッドを使用して、ファイルの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="510ac-108">Use the `GetFiles` method to return the list of files.</span></span> <span data-ttu-id="510ac-109">この例は、指定したディレクトリ内のすべての .rtf ファイルを返します。</span><span class="sxs-lookup"><span data-stu-id="510ac-109">This example returns all .rtf files in the specified directory.</span></span>  
+1.  <span data-ttu-id="1d3be-108">`GetFiles` メソッドを使用して、ファイルの一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="1d3be-108">Use the `GetFiles` method to return the list of files.</span></span> <span data-ttu-id="1d3be-109">この例は、指定したディレクトリ内のすべての .rtf ファイルを返します。</span><span class="sxs-lookup"><span data-stu-id="1d3be-109">This example returns all .rtf files in the specified directory.</span></span>  
   
-     [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_1.vb)]  
+     [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2.  <span data-ttu-id="510ac-110">`CopyFile` メソッドを使用して、ファイルをコピーします。</span><span class="sxs-lookup"><span data-stu-id="510ac-110">Use the `CopyFile` method to copy the files.</span></span> <span data-ttu-id="510ac-111">この例では、 `testdirectory`という名前のディレクトリにファイルをコピーします。</span><span class="sxs-lookup"><span data-stu-id="510ac-111">This example copies the files to the directory named `testdirectory`.</span></span>  
+2.  <span data-ttu-id="1d3be-110">`CopyFile` メソッドを使用して、ファイルをコピーします。</span><span class="sxs-lookup"><span data-stu-id="1d3be-110">Use the `CopyFile` method to copy the files.</span></span> <span data-ttu-id="1d3be-111">この例では、 `testdirectory`という名前のディレクトリにファイルをコピーします。</span><span class="sxs-lookup"><span data-stu-id="1d3be-111">This example copies the files to the directory named `testdirectory`.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3.  <span data-ttu-id="510ac-112">`For` ステートメントを `Next` ステートメントで閉じます。</span><span class="sxs-lookup"><span data-stu-id="510ac-112">Close the `For` statement with a `Next` statement.</span></span>  
+3.  <span data-ttu-id="1d3be-112">`For` ステートメントを `Next` ステートメントで閉じます。</span><span class="sxs-lookup"><span data-stu-id="1d3be-112">Close the `For` statement with a `Next` statement.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
-## <a name="example"></a><span data-ttu-id="510ac-113">例</span><span class="sxs-lookup"><span data-stu-id="510ac-113">Example</span></span>  
- <span data-ttu-id="510ac-114">次の例は、上記のスニペットを完全な形で示したもので、指定したディレクトリのすべての .rtf ファイルを `testdirectory`という名前のディレクトリにコピーします。</span><span class="sxs-lookup"><span data-stu-id="510ac-114">The following example, which presents the above snippets in complete form, copies all .rtf files in the specified directory to the directory named `testdirectory`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1d3be-113">例</span><span class="sxs-lookup"><span data-stu-id="1d3be-113">Example</span></span>  
+ <span data-ttu-id="1d3be-114">次の例は、上記のスニペットを完全な形で示したもので、指定したディレクトリのすべての .rtf ファイルを `testdirectory`という名前のディレクトリにコピーします。</span><span class="sxs-lookup"><span data-stu-id="1d3be-114">The following example, which presents the above snippets in complete form, copies all .rtf files in the specified directory to the directory named `testdirectory`.</span></span>  
   
- [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
+ [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="510ac-115">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="510ac-115">.NET Framework Security</span></span>  
- <span data-ttu-id="510ac-116">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="510ac-116">The following conditions may cause an exception:</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="1d3be-115">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="1d3be-115">.NET Framework Security</span></span>  
+ <span data-ttu-id="1d3be-116">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1d3be-116">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="510ac-117">パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="510ac-117">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="1d3be-117">パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="1d3be-117">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="510ac-118">パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="510ac-118">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+-   <span data-ttu-id="1d3be-118">パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="1d3be-118">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="510ac-119">ディレクトリが存在しない (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="510ac-119">The directory does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
+-   <span data-ttu-id="1d3be-119">ディレクトリが存在しない (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="1d3be-119">The directory does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   <span data-ttu-id="510ac-120">ディレクトリが既存のファイルを指している (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="510ac-120">The directory points to an existing file (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="1d3be-120">ディレクトリが既存のファイルを指している (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="1d3be-120">The directory points to an existing file (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="510ac-121">パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="510ac-121">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="1d3be-121">パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="1d3be-121">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="510ac-122">パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)</span><span class="sxs-lookup"><span data-stu-id="510ac-122">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+-   <span data-ttu-id="1d3be-122">パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)</span><span class="sxs-lookup"><span data-stu-id="1d3be-122">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   <span data-ttu-id="510ac-123">ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)</span><span class="sxs-lookup"><span data-stu-id="510ac-123">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span> <span data-ttu-id="510ac-124">ユーザーに必要な権限がない (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="510ac-124">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
+-   <span data-ttu-id="1d3be-123">ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)</span><span class="sxs-lookup"><span data-stu-id="1d3be-123">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span> <span data-ttu-id="1d3be-124">ユーザーに必要な権限がない (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="1d3be-124">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="510ac-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="510ac-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d3be-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d3be-125">See also</span></span>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [<span data-ttu-id="510ac-126">方法: 特定のパターンに一致するサブディレクトリを検索する</span><span class="sxs-lookup"><span data-stu-id="510ac-126">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [<span data-ttu-id="510ac-127">トラブルシューティング : テキスト ファイルの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="510ac-127">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [<span data-ttu-id="510ac-128">方法: ディレクトリにあるファイルのコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="510ac-128">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [<span data-ttu-id="1d3be-126">方法: 特定のパターンに一致するサブディレクトリを検索する</span><span class="sxs-lookup"><span data-stu-id="1d3be-126">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [<span data-ttu-id="1d3be-127">トラブルシューティング : テキスト ファイルの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="1d3be-127">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [<span data-ttu-id="1d3be-128">方法: ディレクトリにあるファイルのコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="1d3be-128">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
