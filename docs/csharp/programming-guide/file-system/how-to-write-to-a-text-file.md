@@ -9,32 +9,32 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ce0321d91835fbdf6c37f4b7736f0de900e9f838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666801"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968804"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="6ba43-102">方法: テキスト ファイルに書き込む (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="6ba43-102">How to: Write to a Text File (C# Programming Guide)</span></span>
-<span data-ttu-id="6ba43-103">テキストをファイルに書き込むさまざまな方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="6ba43-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="6ba43-104">最初の 2 つの例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの便利な静的メソッドを使用して、すべての `IEnumerable<string>` の各要素と文字列をテキスト ファイルに記述しています。</span><span class="sxs-lookup"><span data-stu-id="6ba43-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="6ba43-105">例 3 は、ファイルに書き込むときに各行を個別に処理する必要がある場合にテキストをファイルに追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6ba43-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="6ba43-106">例 1 ～ 3 ではすべての既存の内容が上書きされます。例 4 に、既存のファイルにテキストを追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6ba43-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="92988-102">方法: テキスト ファイルに書き込む (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="92988-102">How to: Write to a Text File (C# Programming Guide)</span></span>
+<span data-ttu-id="92988-103">テキストをファイルに書き込むさまざまな方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="92988-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="92988-104">最初の 2 つの例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの便利な静的メソッドを使用して、すべての `IEnumerable<string>` の各要素と文字列をテキスト ファイルに記述しています。</span><span class="sxs-lookup"><span data-stu-id="92988-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="92988-105">例 3 は、ファイルに書き込むときに各行を個別に処理する必要がある場合にテキストをファイルに追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="92988-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="92988-106">例 1 ～ 3 ではすべての既存の内容が上書きされます。例 4 に、既存のファイルにテキストを追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="92988-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
   
- <span data-ttu-id="6ba43-107">これらの例はいずれもリテラル文字列をファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="6ba43-107">These examples all write string literals to files.</span></span> <span data-ttu-id="6ba43-108">ファイルに書き込まれるテキストの書式を設定する場合は、<xref:System.String.Format%2A> メソッドまたは C# の[文字列補間](../../../csharp/language-reference/tokens/interpolated.md)機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="6ba43-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../../csharp/language-reference/tokens/interpolated.md) feature.</span></span>  
+ <span data-ttu-id="92988-107">これらの例はいずれもリテラル文字列をファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="92988-107">These examples all write string literals to files.</span></span> <span data-ttu-id="92988-108">ファイルに書き込まれるテキストの書式を設定する場合は、<xref:System.String.Format%2A> メソッドまたは C# の[文字列補間](../../../csharp/language-reference/tokens/interpolated.md)機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="92988-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../../csharp/language-reference/tokens/interpolated.md) feature.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6ba43-109">例</span><span class="sxs-lookup"><span data-stu-id="6ba43-109">Example</span></span>  
- [!code-csharp[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-write-to-a-text-file_1.cs)]  
+## <a name="example"></a><span data-ttu-id="92988-109">例</span><span class="sxs-lookup"><span data-stu-id="92988-109">Example</span></span>  
+ [!code-csharp[csFilesandFolders#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#3)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="6ba43-110">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="6ba43-110">Robust Programming</span></span>  
- <span data-ttu-id="6ba43-111">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="6ba43-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="92988-110">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="92988-110">Robust Programming</span></span>  
+ <span data-ttu-id="92988-111">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="92988-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="6ba43-112">ファイルは存在するが、読み取り専用である。</span><span class="sxs-lookup"><span data-stu-id="6ba43-112">The file exists and is read-only.</span></span>  
+-   <span data-ttu-id="92988-112">ファイルは存在するが、読み取り専用である。</span><span class="sxs-lookup"><span data-stu-id="92988-112">The file exists and is read-only.</span></span>  
   
--   <span data-ttu-id="6ba43-113">パス名が長すぎる。</span><span class="sxs-lookup"><span data-stu-id="6ba43-113">The path name may be too long.</span></span>  
+-   <span data-ttu-id="92988-113">パス名が長すぎる。</span><span class="sxs-lookup"><span data-stu-id="92988-113">The path name may be too long.</span></span>  
   
--   <span data-ttu-id="6ba43-114">ディスクがいっぱいになっている。</span><span class="sxs-lookup"><span data-stu-id="6ba43-114">The disk may be full.</span></span>  
+-   <span data-ttu-id="92988-114">ディスクがいっぱいになっている。</span><span class="sxs-lookup"><span data-stu-id="92988-114">The disk may be full.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ba43-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ba43-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92988-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="92988-115">See also</span></span>
 
-- [<span data-ttu-id="6ba43-116">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="6ba43-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="6ba43-117">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="6ba43-117">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
-- [<span data-ttu-id="6ba43-118">サンプル: コレクションをアプリケーション ストレージに保存する</span><span class="sxs-lookup"><span data-stu-id="6ba43-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
+- [<span data-ttu-id="92988-116">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="92988-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="92988-117">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="92988-117">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+- [<span data-ttu-id="92988-118">サンプル: コレクションをアプリケーション ストレージに保存する</span><span class="sxs-lookup"><span data-stu-id="92988-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
