@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551968"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371945"
 ---
-# <a name="expander"></a><span data-ttu-id="40c37-102">Expander</span><span class="sxs-lookup"><span data-stu-id="40c37-102">Expander</span></span>
-<span data-ttu-id="40c37-103"><xref:System.Windows.Controls.Expander>により、ユーザーは、ヘッダーを表示し、詳細については、さらに参照してください。 または、まで、ヘッダー セクションを折りたたむには、そのヘッダーを展開します。</span><span class="sxs-lookup"><span data-stu-id="40c37-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="16986-102">Expander</span><span class="sxs-lookup"><span data-stu-id="16986-102">Expander</span></span>
+<span data-ttu-id="16986-103"><xref:System.Windows.Controls.Expander>ヘッダーを表示し、詳細は、さらに参照してください。 または、ヘッダーまでのセクションを折りたたむには、そのヘッダーを展開できます。</span><span class="sxs-lookup"><span data-stu-id="16986-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="40c37-104">次の図は、展開された位置では、このコントロールの例を示します。</span><span class="sxs-lookup"><span data-stu-id="40c37-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="16986-104">次の図は、展開された位置では、このコントロールの例を示します。</span><span class="sxs-lookup"><span data-stu-id="16986-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="40c37-105">![Expander の例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="40c37-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="40c37-106">Expander コントロール</span><span class="sxs-lookup"><span data-stu-id="40c37-106">Expander control</span></span>  
+ <span data-ttu-id="16986-105">![Expander の例](./media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="16986-105">![Expander example](./media/expanderexample.JPG "ExpanderExample")</span></span>  
+<span data-ttu-id="16986-106">Expander コントロール</span><span class="sxs-lookup"><span data-stu-id="16986-106">Expander control</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="40c37-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="40c37-107">In This Section</span></span>  
- [<span data-ttu-id="40c37-108">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="40c37-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [<span data-ttu-id="40c37-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="40c37-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="16986-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="16986-107">In This Section</span></span>  
+ [<span data-ttu-id="16986-108">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="16986-108">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="16986-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="16986-109">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="40c37-110">参照</span><span class="sxs-lookup"><span data-stu-id="40c37-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="16986-110">参照</span><span class="sxs-lookup"><span data-stu-id="16986-110">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="40c37-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="40c37-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="16986-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="16986-111">Related Sections</span></span>

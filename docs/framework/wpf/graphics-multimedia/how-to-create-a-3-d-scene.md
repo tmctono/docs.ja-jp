@@ -8,34 +8,34 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 23e01934eac0d9e1ea9fb5fbbbc5d8c9d8aabbc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9aec78bdda4f9f122b6dbefe0956ba649adf22
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494381"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370749"
 ---
-# <a name="how-to-create-a-3-d-scene"></a><span data-ttu-id="74b0a-102">方法: 3-D シーンを作成する</span><span class="sxs-lookup"><span data-stu-id="74b0a-102">How to: Create a 3-D Scene</span></span>
-<span data-ttu-id="74b0a-103">この例では、回転紙のフラットなシートのような 3-D オブジェクトを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-103">This example shows how to create a 3-D object that looks like a flat sheet of paper which has been rotated.</span></span> <span data-ttu-id="74b0a-104">A<xref:System.Windows.Controls.Viewport3D>次のコンポーネントと共にこのシンプルな 3-D シーンを作成に使用されます。</span><span class="sxs-lookup"><span data-stu-id="74b0a-104">A <xref:System.Windows.Controls.Viewport3D> along with the following components are used to create this simple 3-D scene:</span></span>  
+# <a name="how-to-create-a-3-d-scene"></a><span data-ttu-id="faa9e-102">方法: 3-D シーンを作成する</span><span class="sxs-lookup"><span data-stu-id="faa9e-102">How to: Create a 3-D Scene</span></span>
+<span data-ttu-id="faa9e-103">この例では、回転紙のフラットなシートのような 3-D オブジェクトを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-103">This example shows how to create a 3-D object that looks like a flat sheet of paper which has been rotated.</span></span> <span data-ttu-id="faa9e-104">A<xref:System.Windows.Controls.Viewport3D>次のコンポーネントと共にこのシンプルな 3-D シーンを作成に使用されます。</span><span class="sxs-lookup"><span data-stu-id="faa9e-104">A <xref:System.Windows.Controls.Viewport3D> along with the following components are used to create this simple 3-D scene:</span></span>  
   
--   <span data-ttu-id="74b0a-105">使用して、カメラを作成、<xref:System.Windows.Media.Media3D.PerspectiveCamera>します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-105">A camera is created using a <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="74b0a-106">カメラでは、表示可能な 3-D シーンの部分を指定します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-106">The camera specifies what part of the 3-D scene is viewable.</span></span>  
+-   <span data-ttu-id="faa9e-105">使用して、カメラを作成、<xref:System.Windows.Media.Media3D.PerspectiveCamera>します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-105">A camera is created using a <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="faa9e-106">カメラでは、表示可能な 3-D シーンの部分を指定します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-106">The camera specifies what part of the 3-D scene is viewable.</span></span>  
   
--   <span data-ttu-id="74b0a-107">使用して 3-D オブジェクト (枚の用紙) の形状を指定するメッシュが作成、<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-107">A mesh is created to specify the shape of 3-D object (sheet of paper) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+-   <span data-ttu-id="faa9e-107">使用して 3-D オブジェクト (枚の用紙) の形状を指定するメッシュが作成、<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-107">A mesh is created to specify the shape of 3-D object (sheet of paper) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
--   <span data-ttu-id="74b0a-108">使用して、オブジェクト (このサンプルでの線形グラデーション) の表面に表示される素材が指定されて、<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-108">A material is specified to be displayed on the surface of the object (linear gradient in this sample) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+-   <span data-ttu-id="faa9e-108">使用して、オブジェクト (このサンプルでの線形グラデーション) の表面に表示される素材が指定されて、<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-108">A material is specified to be displayed on the surface of the object (linear gradient in this sample) using the <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> property of <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
--   <span data-ttu-id="74b0a-109">オブジェクトを使用して、洗練するため、ライトが作成された<xref:System.Windows.Media.Media3D.DirectionalLight>します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-109">A light is created to shine on the object using <xref:System.Windows.Media.Media3D.DirectionalLight>.</span></span>  
+-   <span data-ttu-id="faa9e-109">オブジェクトを使用して、洗練するため、ライトが作成された<xref:System.Windows.Media.Media3D.DirectionalLight>します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-109">A light is created to shine on the object using <xref:System.Windows.Media.Media3D.DirectionalLight>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="74b0a-110">例</span><span class="sxs-lookup"><span data-stu-id="74b0a-110">Example</span></span>  
- <span data-ttu-id="74b0a-111">次のコードでは、XAML で 3-D シーンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-111">The code below shows how to create a 3-D scene in XAML.</span></span>  
+## <a name="example"></a><span data-ttu-id="faa9e-110">例</span><span class="sxs-lookup"><span data-stu-id="faa9e-110">Example</span></span>  
+ <span data-ttu-id="faa9e-111">次のコードでは、XAML で 3-D シーンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-111">The code below shows how to create a 3-D scene in XAML.</span></span>  
   
- [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#Basic3DShapeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/Basic3DShapeExample.xaml#basic3dshapeexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="74b0a-112">例</span><span class="sxs-lookup"><span data-stu-id="74b0a-112">Example</span></span>  
- <span data-ttu-id="74b0a-113">次のコードでは、手続き型コードで同じ 3-D シーンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="74b0a-113">The code below shows how to create the same 3-D scene in procedural code.</span></span>  
+## <a name="example"></a><span data-ttu-id="faa9e-112">例</span><span class="sxs-lookup"><span data-stu-id="faa9e-112">Example</span></span>  
+ <span data-ttu-id="faa9e-113">次のコードでは、手続き型コードで同じ 3-D シーンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="faa9e-113">The code below shows how to create the same 3-D scene in procedural code.</span></span>  
   
- [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
- [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
+ [!code-csharp[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexamplewholepage)]
+ [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="74b0a-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="74b0a-114">See also</span></span>
-- [<span data-ttu-id="74b0a-115">3-D グラフィックスの概要</span><span class="sxs-lookup"><span data-stu-id="74b0a-115">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="faa9e-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="faa9e-114">See also</span></span>
+- [<span data-ttu-id="faa9e-115">3-D グラフィックスの概要</span><span class="sxs-lookup"><span data-stu-id="faa9e-115">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)

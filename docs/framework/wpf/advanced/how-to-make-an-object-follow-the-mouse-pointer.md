@@ -9,27 +9,27 @@ helpviewer_keywords:
 - mouse pointer (cursor), making objects follow
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-ms.openlocfilehash: 3e39b9459fbc94c9b7684ffd7c597363e46ad717
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b86cadba19e82c487be88bcfb08edb51f93c540
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358302"
 ---
-# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a><span data-ttu-id="ee2d4-102">方法: オブジェクトをマウス ポインターに追従させる</span><span class="sxs-lookup"><span data-stu-id="ee2d4-102">How to: Make an Object Follow the Mouse Pointer</span></span>
-<span data-ttu-id="ee2d4-103">この例では、マウス ポインターを画面に移動すると、オブジェクトのサイズを変更する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="ee2d4-103">This example shows how to change the dimensions of an object when the mouse pointer moves on the screen.</span></span>  
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a><span data-ttu-id="6d6b6-102">方法: オブジェクトをマウス ポインターに追従させる</span><span class="sxs-lookup"><span data-stu-id="6d6b6-102">How to: Make an Object Follow the Mouse Pointer</span></span>
+<span data-ttu-id="6d6b6-103">この例では、マウス ポインターを画面に移動すると、オブジェクトのサイズを変更する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6d6b6-103">This example shows how to change the dimensions of an object when the mouse pointer moves on the screen.</span></span>  
   
- <span data-ttu-id="ee2d4-104">例では、含まれています、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルを作成する、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]および分離コード ファイルをイベント ハンドラーを作成します。</span><span class="sxs-lookup"><span data-stu-id="ee2d4-104">The example includes an [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file that creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] and a code-behind file that creates the event handler.</span></span>  
+ <span data-ttu-id="6d6b6-104">例では、含まれています、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルを作成する、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]および分離コード ファイルをイベント ハンドラーを作成します。</span><span class="sxs-lookup"><span data-stu-id="6d6b6-104">The example includes an [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file that creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] and a code-behind file that creates the event handler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ee2d4-105">例</span><span class="sxs-lookup"><span data-stu-id="ee2d4-105">Example</span></span>  
- <span data-ttu-id="ee2d4-106">次[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]を作成、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]から構成される、<xref:System.Windows.Shapes.Ellipse>内の<xref:System.Windows.Controls.StackPanel>、イベントのイベント ハンドラーをアタッチします、<xref:System.Windows.UIElement.MouseMove>イベント。</span><span class="sxs-lookup"><span data-stu-id="ee2d4-106">The following [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] creates the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], which consists of an <xref:System.Windows.Shapes.Ellipse> inside of a <xref:System.Windows.Controls.StackPanel>, and attaches the event handler for the <xref:System.Windows.UIElement.MouseMove> event.</span></span>  
+## <a name="example"></a><span data-ttu-id="6d6b6-105">例</span><span class="sxs-lookup"><span data-stu-id="6d6b6-105">Example</span></span>  
+ <span data-ttu-id="6d6b6-106">次[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]を作成、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]から構成される、<xref:System.Windows.Shapes.Ellipse>内の<xref:System.Windows.Controls.StackPanel>、イベントのイベント ハンドラーをアタッチします、<xref:System.Windows.UIElement.MouseMove>イベント。</span><span class="sxs-lookup"><span data-stu-id="6d6b6-106">The following [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] creates the [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], which consists of an <xref:System.Windows.Shapes.Ellipse> inside of a <xref:System.Windows.Controls.StackPanel>, and attaches the event handler for the <xref:System.Windows.UIElement.MouseMove> event.</span></span>  
   
- [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
+ [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- <span data-ttu-id="ee2d4-107">次のコードを作成、<xref:System.Windows.UIElement.MouseMove>イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="ee2d4-107">The following code behind creates the <xref:System.Windows.UIElement.MouseMove> event handler.</span></span>  <span data-ttu-id="ee2d4-108">マウス ポインターを置いたとき、高さと幅、<xref:System.Windows.Shapes.Ellipse>して増減されます。</span><span class="sxs-lookup"><span data-stu-id="ee2d4-108">When the mouse pointer moves, the height and the width of the <xref:System.Windows.Shapes.Ellipse> are increased and decreased.</span></span>  
+ <span data-ttu-id="6d6b6-107">次のコードを作成、<xref:System.Windows.UIElement.MouseMove>イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="6d6b6-107">The following code behind creates the <xref:System.Windows.UIElement.MouseMove> event handler.</span></span>  <span data-ttu-id="6d6b6-108">マウス ポインターを置いたとき、高さと幅、<xref:System.Windows.Shapes.Ellipse>して増減されます。</span><span class="sxs-lookup"><span data-stu-id="6d6b6-108">When the mouse pointer moves, the height and the width of the <xref:System.Windows.Shapes.Ellipse> are increased and decreased.</span></span>  
   
- [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
- [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
+ [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
+ [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
-## <a name="see-also"></a><span data-ttu-id="ee2d4-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee2d4-109">See also</span></span>
-- [<span data-ttu-id="ee2d4-110">入力の概要</span><span class="sxs-lookup"><span data-stu-id="ee2d4-110">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6d6b6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="6d6b6-109">See also</span></span>
+- [<span data-ttu-id="6d6b6-110">入力の概要</span><span class="sxs-lookup"><span data-stu-id="6d6b6-110">Input Overview</span></span>](input-overview.md)

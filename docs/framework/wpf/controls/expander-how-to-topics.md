@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], how-to topics
 ms.assetid: c31e85e3-963f-4693-b463-a29adc433fcd
-ms.openlocfilehash: 772f5cdc4f9f1b33e040d252a1308b9ce646611e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab53f0164c5623c93132d29045498ccffaf9712
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550164"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357548"
 ---
-# <a name="expander-how-to-topics"></a><span data-ttu-id="7d384-102">エキスパンダーに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="7d384-102">Expander How-to Topics</span></span>
-<span data-ttu-id="7d384-103">このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.Expander>コントロール。</span><span class="sxs-lookup"><span data-stu-id="7d384-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
+# <a name="expander-how-to-topics"></a><span data-ttu-id="65c35-102">エキスパンダーに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="65c35-102">Expander How-to Topics</span></span>
+<span data-ttu-id="65c35-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Expander>コントロール。</span><span class="sxs-lookup"><span data-stu-id="65c35-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7d384-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7d384-104">In This Section</span></span>  
- [<span data-ttu-id="7d384-105">ScrollViewer を持つエキスパンダーを作成する</span><span class="sxs-lookup"><span data-stu-id="7d384-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="65c35-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="65c35-104">In This Section</span></span>  
+ [<span data-ttu-id="65c35-105">ScrollViewer を持つエキスパンダーを作成する</span><span class="sxs-lookup"><span data-stu-id="65c35-105">Create an Expander with a ScrollViewer</span></span>](how-to-create-an-expander-with-a-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="7d384-106">参照</span><span class="sxs-lookup"><span data-stu-id="7d384-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="65c35-106">参照</span><span class="sxs-lookup"><span data-stu-id="65c35-106">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="7d384-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d384-107">Related Sections</span></span>  
- [<span data-ttu-id="7d384-108">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="7d384-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="65c35-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="65c35-107">Related Sections</span></span>  
+ [<span data-ttu-id="65c35-108">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="65c35-108">Expander Overview</span></span>](expander-overview.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371815"
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="d141c-102">WPF XAML 拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="d141c-103">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d141c-103">In This Section</span></span>  
- [<span data-ttu-id="d141c-104">バインドのマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-104">Binding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [<span data-ttu-id="d141c-105">ColorConvertedBitmap マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-105">ColorConvertedBitmap Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="d141c-106">ComponentResourceKey マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-106">ComponentResourceKey Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="d141c-107">DynamicResource マークアップ拡張</span><span class="sxs-lookup"><span data-stu-id="d141c-107">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="d141c-108">RelativeSource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-108">RelativeSource MarkupExtension</span></span>](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [<span data-ttu-id="d141c-109">StaticResource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-109">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [<span data-ttu-id="d141c-110">TemplateBinding マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-110">TemplateBinding Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [<span data-ttu-id="d141c-111">ThemeDictionary マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="d141c-111">ThemeDictionary Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [<span data-ttu-id="d141c-112">PropertyPath の XAML 構文</span><span class="sxs-lookup"><span data-stu-id="d141c-112">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="d141c-113">PresentationOptions:Freeze 属性</span><span class="sxs-lookup"><span data-stu-id="d141c-113">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="ab461-102">WPF XAML 拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="ab461-103">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ab461-103">In This Section</span></span>  
+ [<span data-ttu-id="ab461-104">バインドのマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
+  [<span data-ttu-id="ab461-105">ColorConvertedBitmap マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="ab461-106">ComponentResourceKey マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="ab461-107">DynamicResource マークアップ拡張</span><span class="sxs-lookup"><span data-stu-id="ab461-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="ab461-108">RelativeSource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
+  [<span data-ttu-id="ab461-109">StaticResource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+  [<span data-ttu-id="ab461-110">TemplateBinding マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
+  [<span data-ttu-id="ab461-111">ThemeDictionary マークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="ab461-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
+  [<span data-ttu-id="ab461-112">PropertyPath の XAML 構文</span><span class="sxs-lookup"><span data-stu-id="ab461-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="ab461-113">PresentationOptions:Freeze 属性</span><span class="sxs-lookup"><span data-stu-id="ab461-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)

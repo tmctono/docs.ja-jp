@@ -8,36 +8,36 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355806"
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="164aa-102">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="164aa-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="164aa-103">WPF プログラミングの各要素は、多くの場合、ある種の相互ツリー リレーションシップにあります。</span><span class="sxs-lookup"><span data-stu-id="164aa-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="164aa-104">たとえば、XAML で作成するアプリケーション UI は、オブジェクト ツリーとして概念化できます。</span><span class="sxs-lookup"><span data-stu-id="164aa-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="164aa-105">要素のツリーはさらに、論理ツリーとビジュアル ツリーという 2 つのツリーに分割できます。これらのツリーは異なるものですが、同時に並列関係である場合もありまます。</span><span class="sxs-lookup"><span data-stu-id="164aa-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="164aa-106">WPF でのシリアル化には、これら 2 つのツリーの状態およびアプリケーション状態の保存と、ファイル (通常は XAML) へのその書き込みが含まれます。</span><span class="sxs-lookup"><span data-stu-id="164aa-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="1b267-102">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="1b267-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="1b267-103">WPF プログラミングの各要素は、多くの場合、ある種の相互ツリー リレーションシップにあります。</span><span class="sxs-lookup"><span data-stu-id="1b267-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="1b267-104">たとえば、XAML で作成するアプリケーション UI は、オブジェクト ツリーとして概念化できます。</span><span class="sxs-lookup"><span data-stu-id="1b267-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="1b267-105">要素のツリーはさらに、論理ツリーとビジュアル ツリーという 2 つのツリーに分割できます。これらのツリーは異なるものですが、同時に並列関係である場合もありまます。</span><span class="sxs-lookup"><span data-stu-id="1b267-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="1b267-106">WPF でのシリアル化には、これら 2 つのツリーの状態およびアプリケーション状態の保存と、ファイル (通常は XAML) へのその書き込みが含まれます。</span><span class="sxs-lookup"><span data-stu-id="1b267-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="164aa-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="164aa-107">In This Section</span></span>  
- [<span data-ttu-id="164aa-108">WPF のツリー</span><span class="sxs-lookup"><span data-stu-id="164aa-108">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [<span data-ttu-id="164aa-109">XamlWriter.Save のシリアル化の制限</span><span class="sxs-lookup"><span data-stu-id="164aa-109">Serialization Limitations of XamlWriter.Save</span></span>](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="164aa-110">オブジェクト ツリーに存在しないオブジェクト要素の初期化</span><span class="sxs-lookup"><span data-stu-id="164aa-110">Initialization for Object Elements Not in an Object Tree</span></span>](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="164aa-111">方法トピック</span><span class="sxs-lookup"><span data-stu-id="164aa-111">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1b267-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1b267-107">In This Section</span></span>  
+ [<span data-ttu-id="1b267-108">WPF のツリー</span><span class="sxs-lookup"><span data-stu-id="1b267-108">Trees in WPF</span></span>](trees-in-wpf.md)  
+ [<span data-ttu-id="1b267-109">XamlWriter.Save のシリアル化の制限</span><span class="sxs-lookup"><span data-stu-id="1b267-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="1b267-110">オブジェクト ツリーに存在しないオブジェクト要素の初期化</span><span class="sxs-lookup"><span data-stu-id="1b267-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="1b267-111">方法トピック</span><span class="sxs-lookup"><span data-stu-id="1b267-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="164aa-112">参照</span><span class="sxs-lookup"><span data-stu-id="164aa-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1b267-112">参照</span><span class="sxs-lookup"><span data-stu-id="1b267-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="164aa-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="164aa-113">Related Sections</span></span>  
- [<span data-ttu-id="164aa-114">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="164aa-114">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="164aa-115">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="164aa-115">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="164aa-116">基本要素</span><span class="sxs-lookup"><span data-stu-id="164aa-116">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="164aa-117">プロパティ</span><span class="sxs-lookup"><span data-stu-id="164aa-117">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="164aa-118">イベント</span><span class="sxs-lookup"><span data-stu-id="164aa-118">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="164aa-119">入力</span><span class="sxs-lookup"><span data-stu-id="164aa-119">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="164aa-120">リソース</span><span class="sxs-lookup"><span data-stu-id="164aa-120">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="164aa-121">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="164aa-121">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="164aa-122">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="164aa-122">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="1b267-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b267-113">Related Sections</span></span>  
+ [<span data-ttu-id="1b267-114">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="1b267-114">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="1b267-115">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="1b267-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="1b267-116">基本要素</span><span class="sxs-lookup"><span data-stu-id="1b267-116">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="1b267-117">Properties</span><span class="sxs-lookup"><span data-stu-id="1b267-117">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="1b267-118">イベント</span><span class="sxs-lookup"><span data-stu-id="1b267-118">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="1b267-119">入力</span><span class="sxs-lookup"><span data-stu-id="1b267-119">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="1b267-120">リソース</span><span class="sxs-lookup"><span data-stu-id="1b267-120">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="1b267-121">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="1b267-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="1b267-122">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="1b267-122">Threading Model</span></span>](threading-model.md)

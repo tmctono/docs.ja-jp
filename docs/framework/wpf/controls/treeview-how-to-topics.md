@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555401"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357756"
 ---
-# <a name="treeview-how-to-topics"></a><span data-ttu-id="b6715-102">TreeView に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="b6715-102">TreeView How-to Topics</span></span>
-<span data-ttu-id="b6715-103">このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.TreeView>階層構造の情報を表示するコントロール。</span><span class="sxs-lookup"><span data-stu-id="b6715-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
+# <a name="treeview-how-to-topics"></a><span data-ttu-id="c4f0e-102">TreeView に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="c4f0e-102">TreeView How-to Topics</span></span>
+<span data-ttu-id="c4f0e-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.TreeView>階層構造で情報を表示するコントロール。</span><span class="sxs-lookup"><span data-stu-id="c4f0e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b6715-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b6715-104">In This Section</span></span>  
- [<span data-ttu-id="b6715-105">単純または複雑な TreeView を作成する</span><span class="sxs-lookup"><span data-stu-id="b6715-105">Create Simple or Complex TreeViews</span></span>](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [<span data-ttu-id="b6715-106">SelectedValue、SelectedValuePath、および SelectedItem を使用する</span><span class="sxs-lookup"><span data-stu-id="b6715-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [<span data-ttu-id="b6715-107">深度がわからないデータに TreeView をバインドする</span><span class="sxs-lookup"><span data-stu-id="b6715-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [<span data-ttu-id="b6715-108">TreeView のパフォーマンスを改善する</span><span class="sxs-lookup"><span data-stu-id="b6715-108">Improve the Performance of a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [<span data-ttu-id="b6715-109">TreeView での TreeViewItem の検索</span><span class="sxs-lookup"><span data-stu-id="b6715-109">Find a TreeViewItem in a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c4f0e-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c4f0e-104">In This Section</span></span>  
+ [<span data-ttu-id="c4f0e-105">単純または複雑な TreeView を作成する</span><span class="sxs-lookup"><span data-stu-id="c4f0e-105">Create Simple or Complex TreeViews</span></span>](how-to-create-simple-or-complex-treeviews.md)  
+  [<span data-ttu-id="c4f0e-106">SelectedValue、SelectedValuePath、および SelectedItem を使用する</span><span class="sxs-lookup"><span data-stu-id="c4f0e-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [<span data-ttu-id="c4f0e-107">深度がわからないデータに TreeView をバインドする</span><span class="sxs-lookup"><span data-stu-id="c4f0e-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [<span data-ttu-id="c4f0e-108">TreeView のパフォーマンスを改善する</span><span class="sxs-lookup"><span data-stu-id="c4f0e-108">Improve the Performance of a TreeView</span></span>](how-to-improve-the-performance-of-a-treeview.md)  
+  [<span data-ttu-id="c4f0e-109">TreeView での TreeViewItem の検索</span><span class="sxs-lookup"><span data-stu-id="c4f0e-109">Find a TreeViewItem in a TreeView</span></span>](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
-## <a name="reference"></a><span data-ttu-id="b6715-110">参照</span><span class="sxs-lookup"><span data-stu-id="b6715-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c4f0e-110">参照</span><span class="sxs-lookup"><span data-stu-id="c4f0e-110">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   
  <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="b6715-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6715-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c4f0e-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c4f0e-111">Related Sections</span></span>

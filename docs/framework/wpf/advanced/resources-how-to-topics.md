@@ -7,24 +7,25 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356224"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="6ef01-102">リソースに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="6ef01-102">Resources How-to Topics</span></span>
-<span data-ttu-id="6ef01-103">このセクションのトピックでは、Windows Presentation Foundation (WPF) のリソースを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6ef01-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="35bbf-102">リソースに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="35bbf-102">Resources How-to Topics</span></span>
+<span data-ttu-id="35bbf-103">このセクションのトピックでは、Windows Presentation Foundation (WPF) のリソースを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="35bbf-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6ef01-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6ef01-104">In This Section</span></span>  
- [<span data-ttu-id="6ef01-105">リソースを定義および参照する</span><span class="sxs-lookup"><span data-stu-id="6ef01-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="6ef01-106">アプリケーション リソースを使用する</span><span class="sxs-lookup"><span data-stu-id="6ef01-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="6ef01-107">SystemFonts を使用する</span><span class="sxs-lookup"><span data-stu-id="6ef01-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="6ef01-108">システム フォント キーを使用する</span><span class="sxs-lookup"><span data-stu-id="6ef01-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="6ef01-109">SystemParameters を使用する</span><span class="sxs-lookup"><span data-stu-id="6ef01-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="6ef01-110">システム パラメーター キーを使用する</span><span class="sxs-lookup"><span data-stu-id="6ef01-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="35bbf-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="35bbf-104">In This Section</span></span>  
+ [<span data-ttu-id="35bbf-105">リソースを定義および参照する</span><span class="sxs-lookup"><span data-stu-id="35bbf-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="35bbf-106">アプリケーション リソースを使用する</span><span class="sxs-lookup"><span data-stu-id="35bbf-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="35bbf-107">SystemFonts を使用する</span><span class="sxs-lookup"><span data-stu-id="35bbf-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="35bbf-108">システム フォント キーを使用する</span><span class="sxs-lookup"><span data-stu-id="35bbf-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="35bbf-109">SystemParameters を使用する</span><span class="sxs-lookup"><span data-stu-id="35bbf-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="35bbf-110">システム パラメーター キーを使用する</span><span class="sxs-lookup"><span data-stu-id="35bbf-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="6ef01-111">参照</span><span class="sxs-lookup"><span data-stu-id="6ef01-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="35bbf-111">参照</span><span class="sxs-lookup"><span data-stu-id="35bbf-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -33,5 +34,5 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="6ef01-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ef01-112">Related Sections</span></span>  
- [<span data-ttu-id="6ef01-113">XAML リソース</span><span class="sxs-lookup"><span data-stu-id="6ef01-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="35bbf-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="35bbf-112">Related Sections</span></span>  
+ [<span data-ttu-id="35bbf-113">XAML リソース</span><span class="sxs-lookup"><span data-stu-id="35bbf-113">XAML Resources</span></span>](xaml-resources.md)

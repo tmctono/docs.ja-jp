@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550366"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377678"
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="2498b-102">グリッドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="2498b-102">Grid How-to Topics</span></span>
-<span data-ttu-id="2498b-103">このセクションのトピックを使用して要素を配置する方法について説明、<xref:System.Windows.Controls.Grid>要素。</span><span class="sxs-lookup"><span data-stu-id="2498b-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="4d858-102">グリッドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="4d858-102">Grid How-to Topics</span></span>
+<span data-ttu-id="4d858-103">このセクションのトピックを使用して要素を配置する方法を説明する、<xref:System.Windows.Controls.Grid>要素。</span><span class="sxs-lookup"><span data-stu-id="4d858-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2498b-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2498b-104">In This Section</span></span>  
- [<span data-ttu-id="2498b-105">グリッドを使用して標準 UI ダイアログ ボックスをビルドする</span><span class="sxs-lookup"><span data-stu-id="2498b-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="2498b-106">複雑なグリッドを作成する</span><span class="sxs-lookup"><span data-stu-id="2498b-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="2498b-107">グリッド要素を作成する</span><span class="sxs-lookup"><span data-stu-id="2498b-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="2498b-108">GridLengthConverter オブジェクトを作成および使用する</span><span class="sxs-lookup"><span data-stu-id="2498b-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="2498b-109">ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する</span><span class="sxs-lookup"><span data-stu-id="2498b-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="2498b-110">グリッドの子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="2498b-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="2498b-111">グリッド間でサイズ設定プロパティを共有する</span><span class="sxs-lookup"><span data-stu-id="2498b-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4d858-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4d858-104">In This Section</span></span>  
+ [<span data-ttu-id="4d858-105">グリッドを使用して標準 UI ダイアログ ボックスをビルドする</span><span class="sxs-lookup"><span data-stu-id="4d858-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="4d858-106">複雑なグリッドを作成する</span><span class="sxs-lookup"><span data-stu-id="4d858-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="4d858-107">グリッド要素を作成する</span><span class="sxs-lookup"><span data-stu-id="4d858-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="4d858-108">GridLengthConverter オブジェクトを作成および使用する</span><span class="sxs-lookup"><span data-stu-id="4d858-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="4d858-109">ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する</span><span class="sxs-lookup"><span data-stu-id="4d858-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="4d858-110">グリッドの子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="4d858-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="4d858-111">グリッド間でサイズ設定プロパティを共有する</span><span class="sxs-lookup"><span data-stu-id="4d858-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="2498b-112">参照</span><span class="sxs-lookup"><span data-stu-id="2498b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4d858-112">参照</span><span class="sxs-lookup"><span data-stu-id="4d858-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -41,9 +41,9 @@ ms.locfileid: "33550366"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="2498b-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="2498b-113">Related Sections</span></span>  
- [<span data-ttu-id="2498b-114">レイアウト</span><span class="sxs-lookup"><span data-stu-id="2498b-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="4d858-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d858-113">Related Sections</span></span>  
+ [<span data-ttu-id="4d858-114">レイアウト</span><span class="sxs-lookup"><span data-stu-id="4d858-114">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="2498b-115">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="2498b-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="4d858-115">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="4d858-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="2498b-116">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="2498b-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="4d858-116">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="4d858-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

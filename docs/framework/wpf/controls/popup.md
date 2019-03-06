@@ -9,26 +9,26 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551753"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370658"
 ---
-# <a name="popup"></a><span data-ttu-id="7acc9-102">ポップアップ</span><span class="sxs-lookup"><span data-stu-id="7acc9-102">Popup</span></span>
-<span data-ttu-id="7acc9-103"><xref:System.Windows.Controls.Primitives.Popup>コントロールは、現在のアプリケーション ウィンドウで別のウィンドウでコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="7acc9-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="3cb69-102">ポップアップ</span><span class="sxs-lookup"><span data-stu-id="3cb69-102">Popup</span></span>
+<span data-ttu-id="3cb69-103"><xref:System.Windows.Controls.Primitives.Popup>コントロールは、現在のアプリケーション ウィンドウから浮遊した別のウィンドウにコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="3cb69-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="7acc9-104">次の図は、<xref:System.Windows.Controls.Primitives.Popup>に関連する配置されるコントロール、<xref:System.Windows.Controls.Button>親されています。</span><span class="sxs-lookup"><span data-stu-id="7acc9-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
+ <span data-ttu-id="3cb69-104">次の図は、<xref:System.Windows.Controls.Primitives.Popup>コントロールを配置した、<xref:System.Windows.Controls.Button>つまり親。</span><span class="sxs-lookup"><span data-stu-id="3cb69-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
   
- <span data-ttu-id="7acc9-105">![ポップアップの図](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="7acc9-105">![Popup illustration](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span></span>  
+ <span data-ttu-id="3cb69-105">![ポップアップの図](./media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="3cb69-105">![Popup illustration](./media/popuppicture.JPG "PopupPicture")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7acc9-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7acc9-106">In This Section</span></span>  
- [<span data-ttu-id="7acc9-107">ポップアップの概要</span><span class="sxs-lookup"><span data-stu-id="7acc9-107">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [<span data-ttu-id="7acc9-108">ポップアップの配置動作</span><span class="sxs-lookup"><span data-stu-id="7acc9-108">Popup Placement Behavior</span></span>](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [<span data-ttu-id="7acc9-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="7acc9-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3cb69-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="3cb69-106">In This Section</span></span>  
+ [<span data-ttu-id="3cb69-107">ポップアップの概要</span><span class="sxs-lookup"><span data-stu-id="3cb69-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="3cb69-108">ポップアップの配置動作</span><span class="sxs-lookup"><span data-stu-id="3cb69-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="3cb69-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="3cb69-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7acc9-110">参照</span><span class="sxs-lookup"><span data-stu-id="7acc9-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3cb69-110">参照</span><span class="sxs-lookup"><span data-stu-id="3cb69-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="7acc9-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="7acc9-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="3cb69-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3cb69-111">Related Sections</span></span>

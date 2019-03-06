@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating add-ins [WPF]
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
-ms.openlocfilehash: 2dcddc42ec1f9f3b16e5b4465be2e4194819a736
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546004"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358588"
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="58d66-102">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="58d66-102">How-to Topics</span></span>
-<span data-ttu-id="58d66-103">次のトピックでは、Windows Presentation Foundation (WPF)、アドインを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="58d66-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="940a7-102">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="940a7-102">How-to Topics</span></span>
+<span data-ttu-id="940a7-103">次のトピックでは、Windows Presentation Foundation (WPF) アドインを作成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="940a7-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="58d66-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="58d66-104">In This Section</span></span>  
- [<span data-ttu-id="58d66-105">UI を返すアドインを作成する</span><span class="sxs-lookup"><span data-stu-id="58d66-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="58d66-106">UI であるアドインを作成する</span><span class="sxs-lookup"><span data-stu-id="58d66-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="940a7-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="940a7-104">In This Section</span></span>  
+ [<span data-ttu-id="940a7-105">UI を返すアドインを作成する</span><span class="sxs-lookup"><span data-stu-id="940a7-105">Create an Add-In That Returns a UI</span></span>](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="940a7-106">UI であるアドインを作成する</span><span class="sxs-lookup"><span data-stu-id="940a7-106">Create an Add-In That Is a UI</span></span>](how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="58d66-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="58d66-107">Related Sections</span></span>  
- [<span data-ttu-id="58d66-108">WPF のアドインの概要</span><span class="sxs-lookup"><span data-stu-id="58d66-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="940a7-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="940a7-107">Related Sections</span></span>  
+ [<span data-ttu-id="940a7-108">WPF のアドインの概要</span><span class="sxs-lookup"><span data-stu-id="940a7-108">WPF Add-Ins Overview</span></span>](wpf-add-ins-overview.md)

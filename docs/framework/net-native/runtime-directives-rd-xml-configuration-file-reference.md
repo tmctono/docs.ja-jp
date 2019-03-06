@@ -4,461 +4,416 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fed8097c472be487256840f289c1d8252d978a93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637109"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356105"
 ---
-# <a name="runtime-directives-rdxml-configuration-file-reference"></a><span data-ttu-id="3c5d9-102">ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス</span><span class="sxs-lookup"><span data-stu-id="3c5d9-102">Runtime Directives (rd.xml) Configuration File Reference</span></span>
-<span data-ttu-id="3c5d9-103">ランタイム ディレクティブ (.rd.xml) ファイルは、指定されたプログラム要素をリフレクションに使用できるかどうかを示す XML 構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-103">A runtime directives (.rd.xml) file is an XML configuration file that specifies whether designated program elements are available for reflection.</span></span> <span data-ttu-id="3c5d9-104">ランタイム ディレクティブ ファイルの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-104">Here’s an example of a runtime directives file:</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-<Application>  
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />  
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />  
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />  
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />  
-  
-  <Namespace Name="System.Collections.ObjectModel" >  
-    <TypeInstantiation Name="ObservableCollection"   
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />  
-    <TypeInstantiation Name="ReadOnlyObservableCollection"   
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />  
-  </Namespace>  
-</Application>  
-</Directives>  
-```  
-  
-## <a name="the-structure-of-a-runtime-directives-file"></a><span data-ttu-id="3c5d9-105">ランタイム ディレクティブ ファイルの構造</span><span class="sxs-lookup"><span data-stu-id="3c5d9-105">The structure of a runtime directives file</span></span>  
- <span data-ttu-id="3c5d9-106">ランタイム ディレクティブ ファイルは `http://schemas.microsoft.com/netfx/2013/01/metadata` 名前空間を使用します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-106">The runtime directives file uses the `http://schemas.microsoft.com/netfx/2013/01/metadata` namespace.</span></span>  
-  
- <span data-ttu-id="3c5d9-107">ルート要素は [Directives](../../../docs/framework/net-native/directives-element-net-native.md) 要素です。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-107">The root element is the [Directives](../../../docs/framework/net-native/directives-element-net-native.md) element.</span></span> <span data-ttu-id="3c5d9-108">これには、次の構造に示すように、0 個以上の [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素と 0 または 1 個の [Application](../../../docs/framework/net-native/application-element-net-native.md) 要素を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-108">It can contain zero or more [Library](../../../docs/framework/net-native/library-element-net-native.md) elements, and zero or one [Application](../../../docs/framework/net-native/application-element-net-native.md) element, as shown in the following structure.</span></span> <span data-ttu-id="3c5d9-109">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素の属性は、アプリケーション全体のランタイム リフレクション ポリシーを定義できるか、子要素のコンテナーとして機能できます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-109">The attributes of the [Application](../../../docs/framework/net-native/application-element-net-native.md) element can define application-wide runtime reflection policy, or it can serve as a container for child elements.</span></span> <span data-ttu-id="3c5d9-110">一方、[Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は単にコンテナーです。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-110">The [Library](../../../docs/framework/net-native/library-element-net-native.md) element, on the other hand, is simply a container.</span></span> <span data-ttu-id="3c5d9-111">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素と [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素の子は、リフレクションで使用できる型、メソッド、フィールド、プロパティ、およびイベントを定義します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-111">The children of the [Application](../../../docs/framework/net-native/application-element-net-native.md) and [Library](../../../docs/framework/net-native/library-element-net-native.md) elements define the types, methods, fields, properties, and events that are available for reflection.</span></span>  
-  
- <span data-ttu-id="3c5d9-112">参照情報については、次の構造から要素を選択するか、「[ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-112">For reference information, choose elements from the following structure or see [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md).</span></span> <span data-ttu-id="3c5d9-113">次の階層で、省略記号は再帰構造を示します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-113">In the following hierarchy, the ellipsis marks a recursive structure.</span></span> <span data-ttu-id="3c5d9-114">角かっこ内の情報は、その要素が省略可能または必須のいずれであるか、および使用される場合に許可されるインスタンスの数 (1 つまたは複数) を示します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-114">The information in brackets indicates whether that element is optional or required, and if it is used, how many instances (one or many) are allowed.</span></span>  
-  
- <span data-ttu-id="3c5d9-115">[Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-115">[Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1]</span></span>  
- <span data-ttu-id="3c5d9-116">[Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-116">[Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]</span></span>  
- <span data-ttu-id="3c5d9-117">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-117">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-118">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-118">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-119">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-119">.</span></span> <span data-ttu-id="3c5d9-120">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-120">.</span></span> <span data-ttu-id="3c5d9-121">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-121">.</span></span>  
- <span data-ttu-id="3c5d9-122">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-122">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-123">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-123">.</span></span> <span data-ttu-id="3c5d9-124">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-124">.</span></span> <span data-ttu-id="3c5d9-125">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-125">.</span></span>  
- <span data-ttu-id="3c5d9-126">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-126">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-127">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-127">.</span></span> <span data-ttu-id="3c5d9-128">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-128">.</span></span> <span data-ttu-id="3c5d9-129">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-129">.</span></span>  
- <span data-ttu-id="3c5d9-130">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-130">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-131">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-131">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-132">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-132">.</span></span> <span data-ttu-id="3c5d9-133">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-133">.</span></span> <span data-ttu-id="3c5d9-134">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-134">.</span></span>  
- <span data-ttu-id="3c5d9-135">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-135">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-136">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-136">.</span></span> <span data-ttu-id="3c5d9-137">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-137">.</span></span> <span data-ttu-id="3c5d9-138">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-138">.</span></span>  
- <span data-ttu-id="3c5d9-139">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-139">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-140">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-140">.</span></span> <span data-ttu-id="3c5d9-141">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-141">.</span></span> <span data-ttu-id="3c5d9-142">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-142">.</span></span>  
- <span data-ttu-id="3c5d9-143">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-143">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-144">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-144">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1]</span></span>  
- <span data-ttu-id="3c5d9-145">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-145">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-146">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-146">.</span></span> <span data-ttu-id="3c5d9-147">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-147">.</span></span> <span data-ttu-id="3c5d9-148">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-148">.</span></span>  
- <span data-ttu-id="3c5d9-149">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-149">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-150">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-150">.</span></span> <span data-ttu-id="3c5d9-151">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-151">.</span></span> <span data-ttu-id="3c5d9-152">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-152">.</span></span>  
- <span data-ttu-id="3c5d9-153">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-153">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1]</span></span>  
- <span data-ttu-id="3c5d9-154">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-154">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-155">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-155">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-156">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-156">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-157">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-157">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-158">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-158">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-159">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-159">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-160">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-160">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-161">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-161">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-162">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-162">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-163">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-163">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-164">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-164">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-165">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-165">.</span></span> <span data-ttu-id="3c5d9-166">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-166">.</span></span> <span data-ttu-id="3c5d9-167">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-167">.</span></span>  
- <span data-ttu-id="3c5d9-168">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-168">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-169">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-169">.</span></span> <span data-ttu-id="3c5d9-170">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-170">.</span></span> <span data-ttu-id="3c5d9-171">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-171">.</span></span>  
- <span data-ttu-id="3c5d9-172">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-172">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-173">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-173">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-174">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-174">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-175">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-175">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-176">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-176">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-177">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-177">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-178">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-178">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-179">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-179">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-180">[Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-180">[Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-181">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-181">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-182">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-182">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-183">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-183">.</span></span> <span data-ttu-id="3c5d9-184">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-184">.</span></span> <span data-ttu-id="3c5d9-185">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-185">.</span></span>  
- <span data-ttu-id="3c5d9-186">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-186">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-187">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-187">.</span></span> <span data-ttu-id="3c5d9-188">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-188">.</span></span> <span data-ttu-id="3c5d9-189">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-189">.</span></span>  
- <span data-ttu-id="3c5d9-190">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-190">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-191">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-191">.</span></span> <span data-ttu-id="3c5d9-192">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-192">.</span></span> <span data-ttu-id="3c5d9-193">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-193">.</span></span>  
- <span data-ttu-id="3c5d9-194">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-194">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-195">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-195">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-196">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-196">.</span></span> <span data-ttu-id="3c5d9-197">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-197">.</span></span> <span data-ttu-id="3c5d9-198">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-198">.</span></span>  
- <span data-ttu-id="3c5d9-199">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-199">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-200">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-200">.</span></span> <span data-ttu-id="3c5d9-201">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-201">.</span></span> <span data-ttu-id="3c5d9-202">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-202">.</span></span>  
- <span data-ttu-id="3c5d9-203">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-203">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-204">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-204">.</span></span> <span data-ttu-id="3c5d9-205">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-205">.</span></span> <span data-ttu-id="3c5d9-206">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-206">.</span></span>  
- <span data-ttu-id="3c5d9-207">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-207">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-208">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-208">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1]</span></span>  
- <span data-ttu-id="3c5d9-209">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-209">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-210">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-210">.</span></span> <span data-ttu-id="3c5d9-211">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-211">.</span></span> <span data-ttu-id="3c5d9-212">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-212">.</span></span>  
- <span data-ttu-id="3c5d9-213">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-213">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-214">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-214">.</span></span> <span data-ttu-id="3c5d9-215">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-215">.</span></span> <span data-ttu-id="3c5d9-216">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-216">.</span></span>  
- <span data-ttu-id="3c5d9-217">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-217">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1]</span></span>  
- <span data-ttu-id="3c5d9-218">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-218">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-219">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-219">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-220">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-220">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-221">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-221">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-222">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-222">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-223">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-223">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-224">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-224">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-225">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-225">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-226">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-226">.</span></span> <span data-ttu-id="3c5d9-227">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-227">.</span></span> <span data-ttu-id="3c5d9-228">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-228">.</span></span>  
- <span data-ttu-id="3c5d9-229">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-229">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-230">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-230">.</span></span> <span data-ttu-id="3c5d9-231">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-231">.</span></span> <span data-ttu-id="3c5d9-232">.</span><span class="sxs-lookup"><span data-stu-id="3c5d9-232">.</span></span>  
- <span data-ttu-id="3c5d9-233">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-233">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-234">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-234">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-235">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-235">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-236">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-236">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
- <span data-ttu-id="3c5d9-237">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="3c5d9-237">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
-  
- <span data-ttu-id="3c5d9-238">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素は属性を持たないか、「[ランタイム ディレクティブとポリシー](#Directives)」セクションで説明しているポリシー属性を持つことができます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-238">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element can have no attributes, or it can have the policy attributes discussed in the [Runtime directive and policy section](#Directives).</span></span>  
-  
- <span data-ttu-id="3c5d9-239">[Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は、ライブラリまたはアセンブリの名前をファイル拡張子なしで指定する、`Name` 属性 1 つを持ちます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-239">A [Library](../../../docs/framework/net-native/library-element-net-native.md) element has a single attribute, `Name`, that specifies the name of a library or assembly, without its file extension.</span></span> <span data-ttu-id="3c5d9-240">たとえば、次の [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は、Extensions.dll という名前のアセンブリに適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-240">For example, the following [Library](../../../docs/framework/net-native/library-element-net-native.md) element applies to an assembly named Extensions.dll.</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-  <Application>  
-     <!-- Child elements go here -->    
-  </Application>  
-  <Library Name="Extensions">  
-     <!-- Child elements go here -->    
-  </Library>  
-</Directives>  
-```  
-  
-<a name="Directives"></a>   
-## <a name="runtime-directives-and-policy"></a><span data-ttu-id="3c5d9-241">ランタイム ディレクティブとポリシー</span><span class="sxs-lookup"><span data-stu-id="3c5d9-241">Runtime directives and policy</span></span>  
- <span data-ttu-id="3c5d9-242">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素自体と [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素と [Application](../../../docs/framework/net-native/application-element-net-native.md) 要素の子要素はポリシーを表します。つまり、アプリがプログラム要素にリフレクションを適用できる方法を定義します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-242">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element itself and the child elements of the [Library](../../../docs/framework/net-native/library-element-net-native.md) and [Application](../../../docs/framework/net-native/application-element-net-native.md) elements express policy; that is, they define the way in which an app can apply reflection to a program element.</span></span> <span data-ttu-id="3c5d9-243">ポリシーの種類は要素の属性 (たとえば、`Serialize`) により定義されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-243">The policy type is defined by an attribute of the element (for example, `Serialize`).</span></span> <span data-ttu-id="3c5d9-244">ポリシーの値は属性の値 (たとえば、`Serialize="Required"`) により定義されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-244">The policy value is defined by the attribute’s value (for example, `Serialize="Required"`).</span></span>  
-  
- <span data-ttu-id="3c5d9-245">要素の属性により指定されるすべてのポリシーは、そのポリシーの値を指定しないすべての子要素に適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-245">Any policy specified by an attribute of an element applies to all child elements that don’t specify a value for that policy.</span></span> <span data-ttu-id="3c5d9-246">たとえば、[Type](../../../docs/framework/net-native/type-element-net-native.md) 要素で指定されたポリシーは、ポリシーが明示的に指定されていない、その要素に含まれる型とメンバーすべてに適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-246">For example, if a policy is specified by a [Type](../../../docs/framework/net-native/type-element-net-native.md) element, that policy applies to all contained types and members for which a policy is not explicitly specified.</span></span>  
-  
- <span data-ttu-id="3c5d9-247">[Application](../../../docs/framework/net-native/application-element-net-native.md)、[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)、[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)、[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md)、[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)、および [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素で表すことができるポリシーは、個々のメンバーについて ([Method](../../../docs/framework/net-native/method-element-net-native.md)、[Property](../../../docs/framework/net-native/property-element-net-native.md)、[Field](../../../docs/framework/net-native/field-element-net-native.md)、および [Event](../../../docs/framework/net-native/event-element-net-native.md) 要素で) 表すことができるポリシーとは異なります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-247">The policy that can be expressed by the [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements differs from the policy that can be expressed for individual members (by the [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md), and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements).</span></span>  
-  
-### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a><span data-ttu-id="3c5d9-248">アセンブリ、名前空間、型に対するポリシーの指定</span><span class="sxs-lookup"><span data-stu-id="3c5d9-248">Specifying policy for assemblies, namespaces, and types</span></span>  
- <span data-ttu-id="3c5d9-249">[Application](../../../docs/framework/net-native/application-element-net-native.md)、[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)、[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)、[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md)、[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)、および [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素は、次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-249">The [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements support the following policy types:</span></span>  
-  
--   <span data-ttu-id="3c5d9-250">`Activate`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-250">`Activate`.</span></span> <span data-ttu-id="3c5d9-251">コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-251">Controls runtime access to constructors, to enable activation of instances.</span></span>  
-  
--   <span data-ttu-id="3c5d9-252">`Browse`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-252">`Browse`.</span></span> <span data-ttu-id="3c5d9-253">プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-253">Controls querying for information about program elements but does not enable any runtime access.</span></span>  
-  
--   <span data-ttu-id="3c5d9-254">`Dynamic`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-254">`Dynamic`.</span></span> <span data-ttu-id="3c5d9-255">コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-255">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>  
-  
--   <span data-ttu-id="3c5d9-256">`Serialize`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-256">`Serialize`.</span></span> <span data-ttu-id="3c5d9-257">コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-257">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and serialized by third-party libraries such as the Newtonsoft JSON serializer.</span></span>  
-  
--   <span data-ttu-id="3c5d9-258">`DataContractSerializer`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-258">`DataContractSerializer`.</span></span> <span data-ttu-id="3c5d9-259"><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-259">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>  
-  
--   <span data-ttu-id="3c5d9-260">`DataContractJsonSerializer`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-260">`DataContractJsonSerializer`.</span></span> <span data-ttu-id="3c5d9-261"><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-261">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>  
-  
--   <span data-ttu-id="3c5d9-262">`XmlSerializer`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-262">`XmlSerializer`.</span></span> <span data-ttu-id="3c5d9-263"><xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-263">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>  
-  
--   <span data-ttu-id="3c5d9-264">`MarshalObject`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-264">`MarshalObject`.</span></span> <span data-ttu-id="3c5d9-265">WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-265">Controls policy for marshaling reference types to WinRT and COM.</span></span>  
-  
--   <span data-ttu-id="3c5d9-266">`MarshalDelegate`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-266">`MarshalDelegate`.</span></span> <span data-ttu-id="3c5d9-267">ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-267">Controls policy for marshaling delegate types as function pointers to native code.</span></span>  
-  
--   <span data-ttu-id="3c5d9-268">`MarshalStructure` .</span><span class="sxs-lookup"><span data-stu-id="3c5d9-268">`MarshalStructure` .</span></span> <span data-ttu-id="3c5d9-269">ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-269">Controls policy for marshaling structures to native code.</span></span>  
-  
- <span data-ttu-id="3c5d9-270">これらのポリシーの種類に関連付けられている設定を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-270">The settings associated with these policy types are:</span></span>  
-  
--   <span data-ttu-id="3c5d9-271">`All`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-271">`All`.</span></span> <span data-ttu-id="3c5d9-272">ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-272">Enable the policy for all types and members that the tool chain does not remove.</span></span>  
-  
--   <span data-ttu-id="3c5d9-273">`Auto`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-273">`Auto`.</span></span> <span data-ttu-id="3c5d9-274">既定の動作を使用します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-274">Use the default behavior.</span></span> <span data-ttu-id="3c5d9-275">(親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)</span><span class="sxs-lookup"><span data-stu-id="3c5d9-275">(Not specifying a policy is equivalent to setting that policy to `Auto` unless that policy is overridden, for example by a parent element.)</span></span>  
-  
--   <span data-ttu-id="3c5d9-276">`Excluded`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-276">`Excluded`.</span></span> <span data-ttu-id="3c5d9-277">プログラム要素のポリシーを無効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-277">Disable the policy for the program element.</span></span>  
-  
--   <span data-ttu-id="3c5d9-278">`Public`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-278">`Public`.</span></span> <span data-ttu-id="3c5d9-279">ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-279">Enable the policy for public types or members unless the tool chain determines that the member is unnecessary and therefore removes it.</span></span> <span data-ttu-id="3c5d9-280">(後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)</span><span class="sxs-lookup"><span data-stu-id="3c5d9-280">(In the latter case, you must use `Required Public` to ensure that the member is kept and has reflection capabilities.)</span></span>  
-  
--   <span data-ttu-id="3c5d9-281">`PublicAndInternal`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-281">`PublicAndInternal`.</span></span> <span data-ttu-id="3c5d9-282">パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-282">Enable the policy for public and internal types or members if the tool chain doesn't remove them.</span></span>  
-  
--   <span data-ttu-id="3c5d9-283">`Required Public`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-283">`Required Public`.</span></span> <span data-ttu-id="3c5d9-284">使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-284">Require the tool chain to keep public types and members whether or not they are used, and enable the policy for them.</span></span>  
-  
--   <span data-ttu-id="3c5d9-285">`Required PublicAndInternal`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-285">`Required PublicAndInternal`.</span></span> <span data-ttu-id="3c5d9-286">使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-286">Require the tool chain to keep both public and internal types and members whether or not they are used, and enable the policy for them.</span></span>  
-  
--   <span data-ttu-id="3c5d9-287">`Required All`。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-287">`Required All`.</span></span> <span data-ttu-id="3c5d9-288">使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-288">Require the tool chain to keep all types and members whether or not they are used, and enable the policy for them.</span></span>  
-  
- <span data-ttu-id="3c5d9-289">たとえば、次のランタイム ディレクティブ ファイルは、DataClasses.dll アセンブリ内のすべての型とメンバーのポリシーを定義します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-289">For example, the following runtime directives file defines policy for all types and members in the assembly DataClasses.dll.</span></span> <span data-ttu-id="3c5d9-290">これは、すべてのパブリック プロパティのシリアル化のリフレクションを有効にし、すべての型と型のメンバーの参照を有効にし、すべての型のアクティブ化を (`Dynamic` 属性により) 有効にして、すべてのパブリック型とメンバーのリフレクションを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-290">It enables reflection for serialization of all public properties, enables browsing for all types and type members, enables activation for all types (because of the `Dynamic` attribute), and enables reflection for all public types and members.</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-   <Application>  
-      <Assembly Name="DataClasses" Serialize="Required Public"   
-                Browse="All" Activate="PublicAndInternal"   
-                Dynamic="Public"  />  
-   </Application>  
-   <Library Name="UtilityLibrary">  
-     <!-- Child elements go here -->    
-   </Library>  
-</Directives>  
-```  
-  
-### <a name="specifying-policy-for-members"></a><span data-ttu-id="3c5d9-291">メンバーのポリシーの指定</span><span class="sxs-lookup"><span data-stu-id="3c5d9-291">Specifying policy for members</span></span>  
- <span data-ttu-id="3c5d9-292">[Property](../../../docs/framework/net-native/property-element-net-native.md) 要素と [Field](../../../docs/framework/net-native/field-element-net-native.md) 要素は次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-292">The [Property](../../../docs/framework/net-native/property-element-net-native.md) and [Field](../../../docs/framework/net-native/field-element-net-native.md) elements support the following policy types:</span></span>  
-  
--   <span data-ttu-id="3c5d9-293">`Browse`: このメンバーに関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-293">`Browse` - Controls querying for information about this member but does not enable any runtime access.</span></span>  
-  
--   <span data-ttu-id="3c5d9-294">`Dynamic`: コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-294">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="3c5d9-295">また、それを含む型に関する情報の照会も制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-295">Also controls querying for information about the containing type.</span></span>  
-  
--   <span data-ttu-id="3c5d9-296">`Serialize`: メンバーへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-296">`Serialize` - Controls runtime access to the member to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span> <span data-ttu-id="3c5d9-297">このポリシーは、コンストラクター、フィールド、およびプロパティに適用できます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-297">This policy can be applied to constructors, fields, and properties.</span></span>  
-  
- <span data-ttu-id="3c5d9-298">[Method](../../../docs/framework/net-native/method-element-net-native.md) 要素と [Event](../../../docs/framework/net-native/event-element-net-native.md) 要素は次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-298">The [Method](../../../docs/framework/net-native/method-element-net-native.md) and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements support the following policy types:</span></span>  
-  
--   <span data-ttu-id="3c5d9-299">`Browse`: このメンバーに関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-299">`Browse` - Controls querying for information about this member but doesn’t enable any runtime access.</span></span>  
-  
--   <span data-ttu-id="3c5d9-300">`Dynamic`: コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-300">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="3c5d9-301">また、それを含む型に関する情報の照会も制御します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-301">Also controls querying for information about the containing type.</span></span>  
-  
- <span data-ttu-id="3c5d9-302">これらのポリシーの種類に関連付けられている設定を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-302">The settings associated with these policy types are:</span></span>  
-  
--   <span data-ttu-id="3c5d9-303">`Auto`: 既定の動作を使用します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-303">`Auto` - Use the default behavior.</span></span> <span data-ttu-id="3c5d9-304">(何かにオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)</span><span class="sxs-lookup"><span data-stu-id="3c5d9-304">(Not specifying a policy is equivalent to setting that policy to `Auto` unless something overrides it.)</span></span>  
-  
--   <span data-ttu-id="3c5d9-305">`Excluded`: メンバーのメタデータを含めません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-305">`Excluded` - Never include metadata for the member.</span></span>  
-  
--   <span data-ttu-id="3c5d9-306">`Included`: 親型が出力に存在する場合、ポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-306">`Included` - Enable the policy if the parent type is present in the output.</span></span>  
-  
--   <span data-ttu-id="3c5d9-307">`Required`: このメンバーが未使用と見なされる場合でもこれを保持し、そのメンバーのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-307">`Required` - Require the tool chain to keep this member even if appears to be unused, and enable policy for it.</span></span>  
-  
-## <a name="runtime-directives-file-semantics"></a><span data-ttu-id="3c5d9-308">ランタイム ディレクティブ ファイルのセマンティクス</span><span class="sxs-lookup"><span data-stu-id="3c5d9-308">Runtime directives file semantics</span></span>  
- <span data-ttu-id="3c5d9-309">ポリシーは、上位レベルと下位レベルの要素両方に同時に定義できます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-309">Policy can be defined simultaneously for both higher-level and lower-level elements.</span></span> <span data-ttu-id="3c5d9-310">たとえば、アセンブリと、そのアセンブリに含まれる型の一部にポリシーを定義できます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-310">For example, policy can be defined for an assembly, and for some of the types contained in that assembly.</span></span> <span data-ttu-id="3c5d9-311">特定の下位レベル要素が表されていない場合、その親のポリシーを継承します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-311">If a particular lower-level element is not represented, it inherits the policy of its parent.</span></span> <span data-ttu-id="3c5d9-312">たとえば、`Assembly` 要素は存在するが `Type` 要素は存在しない場合、`Assembly` 要素で指定されるポリシーはアセンブリ内のすべての型に適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-312">For example, if an `Assembly` element is present but `Type` elements are not, the policy specified in the `Assembly` element applies to each type in the assembly.</span></span> <span data-ttu-id="3c5d9-313">複数の要素が同じプログラム要素にポリシーを適用することもできます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-313">Multiple elements can also apply policy to the same program element.</span></span> <span data-ttu-id="3c5d9-314">たとえば、個別の [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) 要素が、同じアセンブリの同じポリシー要素を別々に定義するとします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-314">For example, separate [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) elements might define the same policy element for the same assembly differently.</span></span> <span data-ttu-id="3c5d9-315">次のセクションで、このような場合に特定の型のポリシーがどのように解決されるかを説明します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-315">The following sections explain how the policy for a particular type is resolved in those cases.</span></span>  
-  
- <span data-ttu-id="3c5d9-316">ジェネリック型またはメソッドの [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素または [Method](../../../docs/framework/net-native/method-element-net-native.md) 要素は、独自のポリシーを持たないすべてのインスタンス化にそのポリシーを適用します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-316">A [Type](../../../docs/framework/net-native/type-element-net-native.md) or [Method](../../../docs/framework/net-native/method-element-net-native.md) element of a generic type or method applies its policy to all instantiations that do not have their own policy.</span></span> <span data-ttu-id="3c5d9-317">たとえば、`Type` のポリシーを指定する <xref:System.Collections.Generic.List%601> 要素は、構築された特定のジェネリック型 (`List<Int32>` など) について `TypeInstantiation` 要素によってオーバーライドされない限り、そのジェネリック型のすべての構築されたインスタンスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-317">For example, a `Type` element that specifies policy for <xref:System.Collections.Generic.List%601> applies to all constructed instances of that generic type, unless it's overridden for a particular constructed generic type (such as a `List<Int32>`) by a `TypeInstantiation` element.</span></span> <span data-ttu-id="3c5d9-318">そうでない場合、要素は指定されたプログラム要素のポリシーを定義します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-318">Otherwise, elements define policy for the program element named.</span></span>  
-  
- <span data-ttu-id="3c5d9-319">要素があいまいな場合、エンジンが一致を検索し、完全一致が見つかるとそれを使用します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-319">When an element is ambiguous, the engine looks for matches, and if it finds an exact match, it will use it.</span></span> <span data-ttu-id="3c5d9-320">複数の一致が見つかった場合は警告またはエラーになります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-320">If it finds multiple matches, there will be a warning or error.</span></span>  
-  
-### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a><span data-ttu-id="3c5d9-321">2 つのディレクティブが同じプログラム要素にポリシーを適用する場合</span><span class="sxs-lookup"><span data-stu-id="3c5d9-321">If two directives apply policy to the same program element</span></span>  
- <span data-ttu-id="3c5d9-322">別のランタイム ディレクティブ ファイルにある 2 つの要素が同じプログラム要素 (アセンブリや型など) の同じポリシーの種類を異なる値に設定しようとした場合、次のように競合が解決されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-322">If two elements in different runtime directives files try to set the same policy type for the same program element (such as an assembly or type) to different values, the conflict is resolved as follows:</span></span>  
-  
-1.  <span data-ttu-id="3c5d9-323">`Excluded` 要素が存在する場合はこれが優先されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-323">If the `Excluded` element is present, it has precedence.</span></span>  
-  
-2.  <span data-ttu-id="3c5d9-324">`Required` は `Required` 以外より優先されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-324">`Required` has precedence over not `Required`.</span></span>  
-  
-3.  <span data-ttu-id="3c5d9-325">`All` は `PublicAndInternal` (`Public` より優先) より優先されされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-325">`All` has precedence over `PublicAndInternal`, which has precedence over `Public`.</span></span>  
-  
-4.  <span data-ttu-id="3c5d9-326">明示的な設定はいずれも `Auto` より優先されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-326">Any explicit setting has precedence over `Auto`.</span></span>  
-  
- <span data-ttu-id="3c5d9-327">たとえば、1 つのプロジェクトに次の 2 つのランタイム ディレクティブ ファイルが含まれている場合、DataClasses.dll のシリアル化ポリシーは `Required Public` と `All` の両方に設定されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-327">For example, if a single project includes the following two runtime directives files, the serialization policy for DataClasses.dll is set to both `Required Public` and `All`.</span></span> <span data-ttu-id="3c5d9-328">この場合、シリアル化ポリシーは `Required All` として解決されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-328">In this case, the serialization policy would be resolved as `Required All`.</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-   <Application>  
-      <Assembly Name="DataClasses" Serialize="Required Public"/>  
-   </Application>  
-   <Library Name="DataClasses">  
-      <!-- any other elements -->  
-   </Library>  
-</Directives>  
-```  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-   <Application>  
-      <Assembly Name="DataClasses" Serialize="All" />  
-   </Application>  
-   <Library Name="DataClasses">  
-      <!-- any other elements -->  
-   </Library>  
-</Directives>  
-```  
-  
- <span data-ttu-id="3c5d9-329">ただし、1 つのランタイム ディレクティブ ファイル内の 2 つのディレクティブが同じプログラム要素に同じポリシーの種類を設定しようとした場合、XML スキーマ定義ツールからエラー メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-329">However, if two directives in a single runtime directives file try to set the same policy type for the same program element, the XML Scheme Definition tool displays an error message.</span></span>  
-  
-### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a><span data-ttu-id="3c5d9-330">子要素と親要素が同じポリシーの種類を適用する場合</span><span class="sxs-lookup"><span data-stu-id="3c5d9-330">If child and parent elements apply the same policy type</span></span>  
- <span data-ttu-id="3c5d9-331">`Excluded` 設定を含め、子要素はその親要素をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-331">Child elements override their parent elements, including the `Excluded` setting.</span></span> <span data-ttu-id="3c5d9-332">オーバーライドは、`Auto` を指定する必要がある主な理由です。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-332">Overriding is the main reason you would want to specify `Auto`.</span></span>  
-  
- <span data-ttu-id="3c5d9-333">次の例では、`DataClasses` にはあるが `DataClasses.ViewModels` にはないものすべてのシリアル化ポリシー設定が `Required Public` になり、`DataClasses` と `DataClasses.ViewModels` の両方にあるものすべてのシリアル化ポリシー設定は `All` になります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-333">In the following example, the serialization policy setting for everything in `DataClasses` that’s not in `DataClasses.ViewModels` would be `Required Public`, and everything that's in both `DataClasses` and `DataClasses.ViewModels` would be `All`.</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-   <Application>  
-      <Assembly Name="DataClasses" Serialize="Required Public" >  
-         <Namespace Name="DataClasses.ViewModels" Seralize="All" />  
-      </Assembly>  
-   </Appliction>  
-   <Library Name="DataClasses">  
-      <!-- any other elements -->  
-   </Library>  
-</Directives>  
-```  
-  
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a><span data-ttu-id="3c5d9-334">オープン ジェネリックとインスタンス化された要素が同じポリシーの種類を適用する場合</span><span class="sxs-lookup"><span data-stu-id="3c5d9-334">If open generics and instantiated elements apply the same policy type</span></span>  
- <span data-ttu-id="3c5d9-335">次の例では、`Dictionary<int,int>` には、特に `Browse` ポリシーを割り当てる理由がエンジンにある場合にのみ、`Browse` ポリシーが割り当てられます (通常は、これが既定の動作です)。それ以外の <xref:System.Collections.Generic.Dictionary%602> のすべてのインスタンス化では、そのメンバーのすべてが参照可能になります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-335">In the following example, `Dictionary<int,int>` is assigned the `Browse` policy only if the engine has another reason to give it the `Browse` policy (which would otherwise be the default behavior); every other instantiation of <xref:System.Collections.Generic.Dictionary%602> will have all of its members browsable.</span></span>  
-  
-```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
-   <Application>  
-      <Assembly Name="DataClasses" Serialize="Required Public" >  
-         <Namespace Name="DataClasses.ViewModels" Seralize="All" />  
-      </Assembly>  
-      <Namespace Name="DataClasses.Generics" />  
-      <Type Name="Dictionary" Browse="All" />  
-      <TypeInstantiation Name="Dictionary"   
-                         Arguments="System.Int32,System.Int32" Browse="Auto" />  
-   </Application>  
-   <Library Name="DataClasses">  
-      <!-- any other elements -->  
-   </Library>  
-</Directives>  
-```  
-  
-### <a name="how-policy-is-inferred"></a><span data-ttu-id="3c5d9-336">ポリシーの推論方法</span><span class="sxs-lookup"><span data-stu-id="3c5d9-336">How policy is inferred</span></span>  
- <span data-ttu-id="3c5d9-337">ポリシーの種類ごとに、そのポリシーの種類の存在が他の構造体にどう影響するかを決定する一連のルールが異なります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-337">Each policy type has a different set of rules that determine how the presence of that policy type affects other constructs.</span></span>  
-  
-#### <a name="the-effect-of-browse-policy"></a><span data-ttu-id="3c5d9-338">Browse ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="3c5d9-338">The effect of Browse policy</span></span>  
- <span data-ttu-id="3c5d9-339">`Browse` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-339">Applying the `Browse` policy to a type involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-340">型の基本型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-340">The base type of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-341">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-341">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-342">型がデリゲートの場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-342">If the type is a delegate, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-343">型の各インターフェイスが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-343">Each interface of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-344">型に適用されている各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-344">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-345">型がジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-345">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-346">型がジェネリックの場合、その型のインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-346">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-347">メソッドに `Browse` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-347">Applying the `Browse` policy to a method involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-348">メソッドの各パラメーター型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-348">Each parameter type of the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-349">メソッドの戻り型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-349">The return type of the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-350">メソッドを含む型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-350">The containing type of the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-351">メソッドがインスタンス化されたジェネリック メソッドである場合、インスタンス化されていないジェネリック メソッドが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-351">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-352">メソッドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-352">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-353">メソッドがジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-353">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-354">メソッドがジェネリックの場合、そのメソッドのインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-354">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-355">フィールドに `Browse` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-355">Applying the `Browse` policy to a field involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-356">フィールドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-356">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-357">フィールドの型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-357">The type of the field is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-358">フィールドが属する型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-358">The type to which the field belongs is marked with the `Browse` policy.</span></span>  
-  
-#### <a name="the-effect-of-dynamic-policy"></a><span data-ttu-id="3c5d9-359">Dynamic ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="3c5d9-359">The effect of Dynamic policy</span></span>  
- <span data-ttu-id="3c5d9-360">`Dynamic` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-360">Applying the `Dynamic` policy to a type involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-361">型の基本型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-361">The base type of the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-362">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-362">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-363">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-363">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-364">型の各インターフェイスが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-364">Each interface of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-365">型に適用されている各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-365">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-366">型がジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-366">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-367">型がジェネリックの場合、その型のインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-367">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-368">メソッドに `Dynamic` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-368">Applying the `Dynamic` policy to a method involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-369">メソッドの各パラメーター型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-369">Each parameter type of the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-370">メソッドの戻り型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-370">The return type of the method is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-371">メソッドを含む型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-371">The containing type of the method is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-372">メソッドがインスタンス化されたジェネリック メソッドである場合、インスタンス化されていないジェネリック メソッドが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-372">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-373">メソッドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-373">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-374">メソッドがジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-374">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-375">メソッドがジェネリックの場合、そのメソッドのインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-375">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-376">メソッドを `MethodInfo.Invoke` により呼び出すことができ、<xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType> によりデリゲートの作成が可能になります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-376">The method can be invoked by `MethodInfo.Invoke`, and delegate creation becomes possible by <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.</span></span>  
-  
- <span data-ttu-id="3c5d9-377">フィールドに `Dynamic` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-377">Applying the `Dynamic` policy to a field involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-378">フィールドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-378">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-379">フィールドの型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-379">The type of the field is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-380">フィールドが属する型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-380">The type to which the field belongs is marked with the `Dynamic` policy.</span></span>  
-  
-#### <a name="the-effect-of-activation-policy"></a><span data-ttu-id="3c5d9-381">Activation ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="3c5d9-381">The effect of Activation policy</span></span>  
- <span data-ttu-id="3c5d9-382">型に Activation ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-382">Applying the Activation policy to a type involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-383">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-383">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-384">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-384">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-385">型のコンストラクターが `Activation` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-385">Constructors of the type are marked with the `Activation` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-386">メソッドに `Activation` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-386">Applying the `Activation` policy to a method involves the following policy change:</span></span>  
-  
--   <span data-ttu-id="3c5d9-387">コンストラクターを <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> メソッドと <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> メソッドにより呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-387">The constructor can be invoked by the <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> and <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="3c5d9-388">メソッドに関しては、`Activation` ポリシーはコンストラクターにのみ影響します。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-388">For methods, the `Activation` policy affects constructors only.</span></span>  
-  
- <span data-ttu-id="3c5d9-389">フィールドに `Activation` ポリシーを適用しても効果はありません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-389">Applying the `Activation` policy to a field has no effect.</span></span>  
-  
-#### <a name="the-effect-of-serialize-policy"></a><span data-ttu-id="3c5d9-390">Serialize ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="3c5d9-390">The effect of Serialize policy</span></span>  
- <span data-ttu-id="3c5d9-391">`Serialize` ポリシーにより、一般的なリフレクション ベースのシリアライザーを使用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-391">The `Serialize` policy enables the use of common reflection-based serializers.</span></span> <span data-ttu-id="3c5d9-392">ただし、Microsoft では、Microsoft 以外のシリアライザーの正確なリフレクション アクセス パターンを認識していないため、このポリシーが常に効果的であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-392">However, because the exact reflection access patterns of non-Microsoft serializers are not known to Microsoft, this policy may not be entirely effective.</span></span>  
-  
- <span data-ttu-id="3c5d9-393">`Serialize` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-393">Applying the `Serialize` policy to a type involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-394">型の基本型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-394">The base type of the type is marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-395">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-395">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-396">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-396">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-397">型が列挙の場合、型の配列が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-397">If the type is an enumeration, an array of the type is marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-398">型が <xref:System.Collections.Generic.IEnumerable%601> を実装する場合、`T` が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-398">If the type implements <xref:System.Collections.Generic.IEnumerable%601>, `T` is marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-399">型が <xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IList%601>、<xref:System.Collections.Generic.ICollection%601>、<xref:System.Collections.Generic.IReadOnlyCollection%601>、または <xref:System.Collections.Generic.IReadOnlyList%601> の場合、`T[]` と <xref:System.Collections.Generic.List%601> が `Serialize` ポリシーでマークされますが、インターフェイス型のメンバーは `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-399">If the type is <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601>, or <xref:System.Collections.Generic.IReadOnlyList%601>, then `T[]` and <xref:System.Collections.Generic.List%601> marked with the `Serialize` policy., but no members of the interface type are marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-400">型が <xref:System.Collections.Generic.List%601> の場合、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-400">If the type is <xref:System.Collections.Generic.List%601>, no members of the type are marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-401">型が <xref:System.Collections.Generic.IDictionary%602> の場合、<xref:System.Collections.Generic.Dictionary%602> が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-401">If the type is <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> is marked with the `Serialize` policy.</span></span> <span data-ttu-id="3c5d9-402">ただし、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-402">but no members of the type are marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-403">型が <xref:System.Collections.Generic.Dictionary%602> の場合、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-403">If the type is <xref:System.Collections.Generic.Dictionary%602>, no members of the type are marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-404">型が <xref:System.Collections.Generic.IDictionary%602> を実装している場合、`TKey` と `TValue` が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-404">If the type implements <xref:System.Collections.Generic.IDictionary%602>, `TKey` and `TValue` are marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-405">各コンストラクター、各プロパティ アクセサー、および各フィールドが `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-405">Each constructor, each property accessor, and each field is marked with the `Serialize` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-406">メソッドに `Serialize` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-406">Applying the `Serialize` policy to a method involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-407">それを含む型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-407">The containing type is marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-408">メソッドの戻り型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-408">The return type of the method is marked with the `Serialize` policy.</span></span>  
-  
- <span data-ttu-id="3c5d9-409">フィールドに `Serialize` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-409">Applying the `Serialize` policy to a field involves the following policy changes:</span></span>  
-  
--   <span data-ttu-id="3c5d9-410">それを含む型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-410">The containing type is marked with the `Serialize` policy.</span></span>  
-  
--   <span data-ttu-id="3c5d9-411">フィールドの型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-411">The type of the field is marked with the `Serialize` policy.</span></span>  
-  
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserialier-policies"></a><span data-ttu-id="3c5d9-412">XmlSerializer、DataContractSerializer、および DataContractJsonSerialier ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="3c5d9-412">The effect of XmlSerializer, DataContractSerializer, and DataContractJsonSerialier policies</span></span>  
- <span data-ttu-id="3c5d9-413">リフレクション ベースのシリアライザーを対象とした `Serialize` ポリシーとは異なり、`XmlSerializer`、`DataContractSerializer`、および `DataContractJsonSerializer` ポリシーは、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンで認識されている一連のシリアライザーを有効にするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-413">Unlike the `Serialize` policy, which is intended for reflection-based serializers, the `XmlSerializer`, `DataContractSerializer`, and `DataContractJsonSerializer` policies are used to enable a set of serializers that are known to the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="3c5d9-414">これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-414">These serializers are not implemented by using reflection, but the set of types that can be serialized at run time is determined in a similar manner as types that are reflectable.</span></span>  
-  
- <span data-ttu-id="3c5d9-415">これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-415">Applying one of these policies to a type enables the type to be serialized with the matching serializer.</span></span> <span data-ttu-id="3c5d9-416">また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-416">Also, any types that the serialization engine can statically determine as needing serialization will also be serializable.</span></span>  
-  
- <span data-ttu-id="3c5d9-417">これらのポリシーは、メソッドとフィールドには影響しません。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-417">These policies have no effect on methods or fields.</span></span>  
-  
- <span data-ttu-id="3c5d9-418">詳細については、「[Windows ストア アプリの .NET ネイティブへの移行](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)」の「シリアライザーの違い」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c5d9-418">For more information, see the "Differences in Serializers" section in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="3c5d9-419">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c5d9-419">See also</span></span>
-- [<span data-ttu-id="3c5d9-420">ランタイム ディレクティブ要素</span><span class="sxs-lookup"><span data-stu-id="3c5d9-420">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [<span data-ttu-id="3c5d9-421">リフレクションおよび .NET ネイティブ</span><span class="sxs-lookup"><span data-stu-id="3c5d9-421">Reflection and .NET Native</span></span>](../../../docs/framework/net-native/reflection-and-net-native.md)
+# <a name="runtime-directives-rdxml-configuration-file-reference"></a><span data-ttu-id="63113-102">ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス</span><span class="sxs-lookup"><span data-stu-id="63113-102">Runtime Directives (rd.xml) Configuration File Reference</span></span>
+
+<span data-ttu-id="63113-103">ランタイム ディレクティブ (.rd.xml) ファイルは、指定されたプログラム要素をリフレクションに使用できるかどうかを示す XML 構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="63113-103">A runtime directives (.rd.xml) file is an XML configuration file that specifies whether designated program elements are available for reflection.</span></span> <span data-ttu-id="63113-104">ランタイム ディレクティブ ファイルの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="63113-104">Here’s an example of a runtime directives file:</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+<Application>
+  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+
+  <Namespace Name="System.Collections.ObjectModel" >
+    <TypeInstantiation Name="ObservableCollection"
+          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+    <TypeInstantiation Name="ReadOnlyObservableCollection"
+          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+  </Namespace>
+</Application>
+</Directives>
+```
+
+## <a name="the-structure-of-a-runtime-directives-file"></a><span data-ttu-id="63113-105">ランタイム ディレクティブ ファイルの構造</span><span class="sxs-lookup"><span data-stu-id="63113-105">The structure of a runtime directives file</span></span>
+
+<span data-ttu-id="63113-106">ランタイム ディレクティブ ファイルは `http://schemas.microsoft.com/netfx/2013/01/metadata` 名前空間を使用します。</span><span class="sxs-lookup"><span data-stu-id="63113-106">The runtime directives file uses the `http://schemas.microsoft.com/netfx/2013/01/metadata` namespace.</span></span>
+
+<span data-ttu-id="63113-107">ルート要素は [Directives](../../../docs/framework/net-native/directives-element-net-native.md) 要素です。</span><span class="sxs-lookup"><span data-stu-id="63113-107">The root element is the [Directives](../../../docs/framework/net-native/directives-element-net-native.md) element.</span></span> <span data-ttu-id="63113-108">これには、次の構造に示すように、0 個以上の [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素と 0 または 1 個の [Application](../../../docs/framework/net-native/application-element-net-native.md) 要素を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="63113-108">It can contain zero or more [Library](../../../docs/framework/net-native/library-element-net-native.md) elements, and zero or one [Application](../../../docs/framework/net-native/application-element-net-native.md) element, as shown in the following structure.</span></span> <span data-ttu-id="63113-109">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素の属性は、アプリケーション全体のランタイム リフレクション ポリシーを定義できるか、子要素のコンテナーとして機能できます。</span><span class="sxs-lookup"><span data-stu-id="63113-109">The attributes of the [Application](../../../docs/framework/net-native/application-element-net-native.md) element can define application-wide runtime reflection policy, or it can serve as a container for child elements.</span></span> <span data-ttu-id="63113-110">一方、[Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は単にコンテナーです。</span><span class="sxs-lookup"><span data-stu-id="63113-110">The [Library](../../../docs/framework/net-native/library-element-net-native.md) element, on the other hand, is simply a container.</span></span> <span data-ttu-id="63113-111">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素と [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素の子は、リフレクションで使用できる型、メソッド、フィールド、プロパティ、およびイベントを定義します。</span><span class="sxs-lookup"><span data-stu-id="63113-111">The children of the [Application](../../../docs/framework/net-native/application-element-net-native.md) and [Library](../../../docs/framework/net-native/library-element-net-native.md) elements define the types, methods, fields, properties, and events that are available for reflection.</span></span>
+
+<span data-ttu-id="63113-112">参照情報については、次の構造から要素を選択するか、「[ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="63113-112">For reference information, choose elements from the following structure or see [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md).</span></span> <span data-ttu-id="63113-113">次の階層で、省略記号は再帰構造を示します。</span><span class="sxs-lookup"><span data-stu-id="63113-113">In the following hierarchy, the ellipsis marks a recursive structure.</span></span> <span data-ttu-id="63113-114">角かっこ内の情報は、その要素が省略可能または必須のいずれであるか、および使用される場合に許可されるインスタンスの数 (1 つまたは複数) を示します。</span><span class="sxs-lookup"><span data-stu-id="63113-114">The information in brackets indicates whether that element is optional or required, and if it is used, how many instances (one or many) are allowed.</span></span>
+
+<span data-ttu-id="63113-115">[ディレクティブ](../../../docs/framework/net-native/directives-element-net-native.md)1:1[アプリケーション](../../../docs/framework/net-native/application-element-net-native.md)[0:1][アセンブリ](../../../docs/framework/net-native/assembly-element-net-native.md)[0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-115">[Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-116">.</span><span class="sxs-lookup"><span data-stu-id="63113-116">.</span></span> <span data-ttu-id="63113-117">.</span><span class="sxs-lookup"><span data-stu-id="63113-117">.</span></span>
+<span data-ttu-id="63113-118">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-118">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-119">.</span><span class="sxs-lookup"><span data-stu-id="63113-119">.</span></span> <span data-ttu-id="63113-120">.</span><span class="sxs-lookup"><span data-stu-id="63113-120">.</span></span>
+<span data-ttu-id="63113-121">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-121">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-122">.</span><span class="sxs-lookup"><span data-stu-id="63113-122">.</span></span> <span data-ttu-id="63113-123">.</span><span class="sxs-lookup"><span data-stu-id="63113-123">.</span></span>
+<span data-ttu-id="63113-124">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-124">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-125">.</span><span class="sxs-lookup"><span data-stu-id="63113-125">.</span></span> <span data-ttu-id="63113-126">.</span><span class="sxs-lookup"><span data-stu-id="63113-126">.</span></span>
+<span data-ttu-id="63113-127">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-127">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-128">.</span><span class="sxs-lookup"><span data-stu-id="63113-128">.</span></span> <span data-ttu-id="63113-129">.</span><span class="sxs-lookup"><span data-stu-id="63113-129">.</span></span>
+<span data-ttu-id="63113-130">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-130">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-131">.</span><span class="sxs-lookup"><span data-stu-id="63113-131">.</span></span> <span data-ttu-id="63113-132">.</span><span class="sxs-lookup"><span data-stu-id="63113-132">.</span></span>
+<span data-ttu-id="63113-133">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m][サブタイプ](../../../docs/framework/net-native/subtypes-element-net-native.md)(含んでいる型のサブクラス) [O:1][型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-133">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1] [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-134">.</span><span class="sxs-lookup"><span data-stu-id="63113-134">.</span></span> <span data-ttu-id="63113-135">.</span><span class="sxs-lookup"><span data-stu-id="63113-135">.</span></span>
+<span data-ttu-id="63113-136">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-136">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-137">.</span><span class="sxs-lookup"><span data-stu-id="63113-137">.</span></span> <span data-ttu-id="63113-138">.</span><span class="sxs-lookup"><span data-stu-id="63113-138">.</span></span>
+<span data-ttu-id="63113-139">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (属性は、型を含む) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m][メソッド](../../../docs/framework/net-native/method-element-net-native.md)[0: m][パラメーター](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0: m][プロパティ](../../../docs/framework/net-native/property-element-net-native.md)[0: m][フィールド](../../../docs/framework/net-native/field-element-net-native.md)[0: m][イベント](../../../docs/framework/net-native/event-element-net-native.md)[0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m][型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-139">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M] [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-140">.</span><span class="sxs-lookup"><span data-stu-id="63113-140">.</span></span> <span data-ttu-id="63113-141">.</span><span class="sxs-lookup"><span data-stu-id="63113-141">.</span></span>
+<span data-ttu-id="63113-142">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-142">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-143">.</span><span class="sxs-lookup"><span data-stu-id="63113-143">.</span></span> <span data-ttu-id="63113-144">.</span><span class="sxs-lookup"><span data-stu-id="63113-144">.</span></span>
+<span data-ttu-id="63113-145">[メソッド](../../../docs/framework/net-native/method-element-net-native.md)[0: m][パラメーター](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0: m][プロパティ](../../../docs/framework/net-native/property-element-net-native.md)[0: m][フィールド](../../../docs/framework/net-native/field-element-net-native.md)[0: m][イベント](../../../docs/framework/net-native/event-element-net-native.md)[0: m][ライブラリ](../../../docs/framework/net-native/library-element-net-native.md)[0: m] [アセンブリ](../../../docs/framework/net-native/assembly-element-net-native.md)[0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-145">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M] [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-146">.</span><span class="sxs-lookup"><span data-stu-id="63113-146">.</span></span> <span data-ttu-id="63113-147">.</span><span class="sxs-lookup"><span data-stu-id="63113-147">.</span></span>
+<span data-ttu-id="63113-148">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-148">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-149">.</span><span class="sxs-lookup"><span data-stu-id="63113-149">.</span></span> <span data-ttu-id="63113-150">.</span><span class="sxs-lookup"><span data-stu-id="63113-150">.</span></span>
+<span data-ttu-id="63113-151">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-151">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-152">.</span><span class="sxs-lookup"><span data-stu-id="63113-152">.</span></span> <span data-ttu-id="63113-153">.</span><span class="sxs-lookup"><span data-stu-id="63113-153">.</span></span>
+<span data-ttu-id="63113-154">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-154">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-155">.</span><span class="sxs-lookup"><span data-stu-id="63113-155">.</span></span> <span data-ttu-id="63113-156">.</span><span class="sxs-lookup"><span data-stu-id="63113-156">.</span></span>
+<span data-ttu-id="63113-157">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-157">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-158">.</span><span class="sxs-lookup"><span data-stu-id="63113-158">.</span></span> <span data-ttu-id="63113-159">.</span><span class="sxs-lookup"><span data-stu-id="63113-159">.</span></span>
+<span data-ttu-id="63113-160">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-160">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-161">.</span><span class="sxs-lookup"><span data-stu-id="63113-161">.</span></span> <span data-ttu-id="63113-162">.</span><span class="sxs-lookup"><span data-stu-id="63113-162">.</span></span>
+<span data-ttu-id="63113-163">[型](../../../docs/framework/net-native/type-element-net-native.md)[0: m][サブタイプ](../../../docs/framework/net-native/subtypes-element-net-native.md)(含んでいる型のサブクラス) [O:1][型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-163">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1] [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-164">.</span><span class="sxs-lookup"><span data-stu-id="63113-164">.</span></span> <span data-ttu-id="63113-165">.</span><span class="sxs-lookup"><span data-stu-id="63113-165">.</span></span>
+<span data-ttu-id="63113-166">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-166">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-167">.</span><span class="sxs-lookup"><span data-stu-id="63113-167">.</span></span> <span data-ttu-id="63113-168">.</span><span class="sxs-lookup"><span data-stu-id="63113-168">.</span></span>
+<span data-ttu-id="63113-169">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (属性は、型を含む) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m][メソッド](../../../docs/framework/net-native/method-element-net-native.md)[0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリックメソッド) [0: m][プロパティ](../../../docs/framework/net-native/property-element-net-native.md)[0: m][フィールド](../../../docs/framework/net-native/field-element-net-native.md)[0: m][イベント](../../../docs/framework/net-native/event-element-net-native.md)[0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0。M][型](../../../docs/framework/net-native/type-element-net-native.md)[0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-169">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M] [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M] .</span></span> <span data-ttu-id="63113-170">.</span><span class="sxs-lookup"><span data-stu-id="63113-170">.</span></span> <span data-ttu-id="63113-171">.</span><span class="sxs-lookup"><span data-stu-id="63113-171">.</span></span>
+<span data-ttu-id="63113-172">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0: m]。</span><span class="sxs-lookup"><span data-stu-id="63113-172">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M] .</span></span> <span data-ttu-id="63113-173">.</span><span class="sxs-lookup"><span data-stu-id="63113-173">.</span></span> <span data-ttu-id="63113-174">.</span><span class="sxs-lookup"><span data-stu-id="63113-174">.</span></span>
+<span data-ttu-id="63113-175">[メソッド](../../../docs/framework/net-native/method-element-net-native.md)[0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0: m][プロパティ](../../../docs/framework/net-native/property-element-net-native.md)[0: m][フィールド](../../../docs/framework/net-native/field-element-net-native.md)[0: m][イベント](../../../docs/framework/net-native/event-element-net-native.md)[0: m]</span><span class="sxs-lookup"><span data-stu-id="63113-175">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M] [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>
+
+<span data-ttu-id="63113-176">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素は属性を持たないか、「[ランタイム ディレクティブとポリシー](#Directives)」セクションで説明しているポリシー属性を持つことができます。</span><span class="sxs-lookup"><span data-stu-id="63113-176">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element can have no attributes, or it can have the policy attributes discussed in the [Runtime directive and policy section](#Directives).</span></span>
+
+<span data-ttu-id="63113-177">[Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は、ライブラリまたはアセンブリの名前をファイル拡張子なしで指定する、`Name` 属性 1 つを持ちます。</span><span class="sxs-lookup"><span data-stu-id="63113-177">A [Library](../../../docs/framework/net-native/library-element-net-native.md) element has a single attribute, `Name`, that specifies the name of a library or assembly, without its file extension.</span></span> <span data-ttu-id="63113-178">たとえば、次の [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素は、Extensions.dll という名前のアセンブリに適用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-178">For example, the following [Library](../../../docs/framework/net-native/library-element-net-native.md) element applies to an assembly named Extensions.dll.</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Application>
+     <!-- Child elements go here -->
+  </Application>
+  <Library Name="Extensions">
+     <!-- Child elements go here -->
+  </Library>
+</Directives>
+```
+
+<a name="Directives"></a>
+
+## <a name="runtime-directives-and-policy"></a><span data-ttu-id="63113-179">ランタイム ディレクティブとポリシー</span><span class="sxs-lookup"><span data-stu-id="63113-179">Runtime directives and policy</span></span>
+
+<span data-ttu-id="63113-180">[Application](../../../docs/framework/net-native/application-element-net-native.md) 要素自体と [Library](../../../docs/framework/net-native/library-element-net-native.md) 要素と [Application](../../../docs/framework/net-native/application-element-net-native.md) 要素の子要素はポリシーを表します。つまり、アプリがプログラム要素にリフレクションを適用できる方法を定義します。</span><span class="sxs-lookup"><span data-stu-id="63113-180">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element itself and the child elements of the [Library](../../../docs/framework/net-native/library-element-net-native.md) and [Application](../../../docs/framework/net-native/application-element-net-native.md) elements express policy; that is, they define the way in which an app can apply reflection to a program element.</span></span> <span data-ttu-id="63113-181">ポリシーの種類は要素の属性 (たとえば、`Serialize`) により定義されます。</span><span class="sxs-lookup"><span data-stu-id="63113-181">The policy type is defined by an attribute of the element (for example, `Serialize`).</span></span> <span data-ttu-id="63113-182">ポリシーの値は属性の値 (たとえば、`Serialize="Required"`) により定義されます。</span><span class="sxs-lookup"><span data-stu-id="63113-182">The policy value is defined by the attribute’s value (for example, `Serialize="Required"`).</span></span>
+
+<span data-ttu-id="63113-183">要素の属性により指定されるすべてのポリシーは、そのポリシーの値を指定しないすべての子要素に適用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-183">Any policy specified by an attribute of an element applies to all child elements that don’t specify a value for that policy.</span></span> <span data-ttu-id="63113-184">たとえば、[Type](../../../docs/framework/net-native/type-element-net-native.md) 要素で指定されたポリシーは、ポリシーが明示的に指定されていない、その要素に含まれる型とメンバーすべてに適用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-184">For example, if a policy is specified by a [Type](../../../docs/framework/net-native/type-element-net-native.md) element, that policy applies to all contained types and members for which a policy is not explicitly specified.</span></span>
+
+<span data-ttu-id="63113-185">[Application](../../../docs/framework/net-native/application-element-net-native.md)、[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)、[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)、[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md)、[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)、および [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素で表すことができるポリシーは、個々のメンバーについて ([Method](../../../docs/framework/net-native/method-element-net-native.md)、[Property](../../../docs/framework/net-native/property-element-net-native.md)、[Field](../../../docs/framework/net-native/field-element-net-native.md)、および [Event](../../../docs/framework/net-native/event-element-net-native.md) 要素で) 表すことができるポリシーとは異なります。</span><span class="sxs-lookup"><span data-stu-id="63113-185">The policy that can be expressed by the [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements differs from the policy that can be expressed for individual members (by the [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md), and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements).</span></span>
+
+### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a><span data-ttu-id="63113-186">アセンブリ、名前空間、型に対するポリシーの指定</span><span class="sxs-lookup"><span data-stu-id="63113-186">Specifying policy for assemblies, namespaces, and types</span></span>
+
+<span data-ttu-id="63113-187">[Application](../../../docs/framework/net-native/application-element-net-native.md)、[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)、[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)、[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md)、[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)、および [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素は、次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="63113-187">The [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements support the following policy types:</span></span>
+
+- <span data-ttu-id="63113-188">`Activate`。</span><span class="sxs-lookup"><span data-stu-id="63113-188">`Activate`.</span></span> <span data-ttu-id="63113-189">コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-189">Controls runtime access to constructors, to enable activation of instances.</span></span>
+
+- <span data-ttu-id="63113-190">`Browse`。</span><span class="sxs-lookup"><span data-stu-id="63113-190">`Browse`.</span></span> <span data-ttu-id="63113-191">プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="63113-191">Controls querying for information about program elements but does not enable any runtime access.</span></span>
+
+- <span data-ttu-id="63113-192">`Dynamic`。</span><span class="sxs-lookup"><span data-stu-id="63113-192">`Dynamic`.</span></span> <span data-ttu-id="63113-193">コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-193">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>
+
+- <span data-ttu-id="63113-194">`Serialize`。</span><span class="sxs-lookup"><span data-stu-id="63113-194">`Serialize`.</span></span> <span data-ttu-id="63113-195">コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。</span><span class="sxs-lookup"><span data-stu-id="63113-195">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and serialized by third-party libraries such as the Newtonsoft JSON serializer.</span></span>
+
+- <span data-ttu-id="63113-196">`DataContractSerializer`。</span><span class="sxs-lookup"><span data-stu-id="63113-196">`DataContractSerializer`.</span></span> <span data-ttu-id="63113-197"><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-197">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>
+
+- <span data-ttu-id="63113-198">`DataContractJsonSerializer`。</span><span class="sxs-lookup"><span data-stu-id="63113-198">`DataContractJsonSerializer`.</span></span> <span data-ttu-id="63113-199"><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-199">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>
+
+- <span data-ttu-id="63113-200">`XmlSerializer`。</span><span class="sxs-lookup"><span data-stu-id="63113-200">`XmlSerializer`.</span></span> <span data-ttu-id="63113-201"><xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-201">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>
+
+- <span data-ttu-id="63113-202">`MarshalObject`。</span><span class="sxs-lookup"><span data-stu-id="63113-202">`MarshalObject`.</span></span> <span data-ttu-id="63113-203">WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-203">Controls policy for marshaling reference types to WinRT and COM.</span></span>
+
+- <span data-ttu-id="63113-204">`MarshalDelegate`。</span><span class="sxs-lookup"><span data-stu-id="63113-204">`MarshalDelegate`.</span></span> <span data-ttu-id="63113-205">ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-205">Controls policy for marshaling delegate types as function pointers to native code.</span></span>
+
+- <span data-ttu-id="63113-206">`MarshalStructure` .</span><span class="sxs-lookup"><span data-stu-id="63113-206">`MarshalStructure` .</span></span> <span data-ttu-id="63113-207">ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-207">Controls policy for marshaling structures to native code.</span></span>
+
+<span data-ttu-id="63113-208">これらのポリシーの種類に関連付けられている設定を次に示します。</span><span class="sxs-lookup"><span data-stu-id="63113-208">The settings associated with these policy types are:</span></span>
+
+- <span data-ttu-id="63113-209">`All`。</span><span class="sxs-lookup"><span data-stu-id="63113-209">`All`.</span></span> <span data-ttu-id="63113-210">ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-210">Enable the policy for all types and members that the tool chain does not remove.</span></span>
+
+- <span data-ttu-id="63113-211">`Auto`。</span><span class="sxs-lookup"><span data-stu-id="63113-211">`Auto`.</span></span> <span data-ttu-id="63113-212">既定の動作を使用します。</span><span class="sxs-lookup"><span data-stu-id="63113-212">Use the default behavior.</span></span> <span data-ttu-id="63113-213">(親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)</span><span class="sxs-lookup"><span data-stu-id="63113-213">(Not specifying a policy is equivalent to setting that policy to `Auto` unless that policy is overridden, for example by a parent element.)</span></span>
+
+- <span data-ttu-id="63113-214">`Excluded`。</span><span class="sxs-lookup"><span data-stu-id="63113-214">`Excluded`.</span></span> <span data-ttu-id="63113-215">プログラム要素のポリシーを無効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-215">Disable the policy for the program element.</span></span>
+
+- <span data-ttu-id="63113-216">`Public`。</span><span class="sxs-lookup"><span data-stu-id="63113-216">`Public`.</span></span> <span data-ttu-id="63113-217">ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-217">Enable the policy for public types or members unless the tool chain determines that the member is unnecessary and therefore removes it.</span></span> <span data-ttu-id="63113-218">(後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)</span><span class="sxs-lookup"><span data-stu-id="63113-218">(In the latter case, you must use `Required Public` to ensure that the member is kept and has reflection capabilities.)</span></span>
+
+- <span data-ttu-id="63113-219">`PublicAndInternal`。</span><span class="sxs-lookup"><span data-stu-id="63113-219">`PublicAndInternal`.</span></span> <span data-ttu-id="63113-220">パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-220">Enable the policy for public and internal types or members if the tool chain doesn't remove them.</span></span>
+
+- <span data-ttu-id="63113-221">`Required Public`。</span><span class="sxs-lookup"><span data-stu-id="63113-221">`Required Public`.</span></span> <span data-ttu-id="63113-222">使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="63113-222">Require the tool chain to keep public types and members whether or not they are used, and enable the policy for them.</span></span>
+
+- <span data-ttu-id="63113-223">`Required PublicAndInternal`。</span><span class="sxs-lookup"><span data-stu-id="63113-223">`Required PublicAndInternal`.</span></span> <span data-ttu-id="63113-224">使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="63113-224">Require the tool chain to keep both public and internal types and members whether or not they are used, and enable the policy for them.</span></span>
+
+- <span data-ttu-id="63113-225">`Required All`。</span><span class="sxs-lookup"><span data-stu-id="63113-225">`Required All`.</span></span> <span data-ttu-id="63113-226">使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="63113-226">Require the tool chain to keep all types and members whether or not they are used, and enable the policy for them.</span></span>
+
+<span data-ttu-id="63113-227">たとえば、次のランタイム ディレクティブ ファイルは、DataClasses.dll アセンブリ内のすべての型とメンバーのポリシーを定義します。</span><span class="sxs-lookup"><span data-stu-id="63113-227">For example, the following runtime directives file defines policy for all types and members in the assembly DataClasses.dll.</span></span> <span data-ttu-id="63113-228">これは、すべてのパブリック プロパティのシリアル化のリフレクションを有効にし、すべての型と型のメンバーの参照を有効にし、すべての型のアクティブ化を (`Dynamic` 属性により) 有効にして、すべてのパブリック型とメンバーのリフレクションを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-228">It enables reflection for serialization of all public properties, enables browsing for all types and type members, enables activation for all types (because of the `Dynamic` attribute), and enables reflection for all public types and members.</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+   <Application>
+      <Assembly Name="DataClasses" Serialize="Required Public"
+                Browse="All" Activate="PublicAndInternal"
+                Dynamic="Public"  />
+   </Application>
+   <Library Name="UtilityLibrary">
+     <!-- Child elements go here -->
+   </Library>
+</Directives>
+```
+
+### <a name="specifying-policy-for-members"></a><span data-ttu-id="63113-229">メンバーのポリシーの指定</span><span class="sxs-lookup"><span data-stu-id="63113-229">Specifying policy for members</span></span>
+
+<span data-ttu-id="63113-230">[Property](../../../docs/framework/net-native/property-element-net-native.md) 要素と [Field](../../../docs/framework/net-native/field-element-net-native.md) 要素は次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="63113-230">The [Property](../../../docs/framework/net-native/property-element-net-native.md) and [Field](../../../docs/framework/net-native/field-element-net-native.md) elements support the following policy types:</span></span>
+
+- <span data-ttu-id="63113-231">`Browse`: このメンバーに関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="63113-231">`Browse` - Controls querying for information about this member but does not enable any runtime access.</span></span>
+
+- <span data-ttu-id="63113-232">`Dynamic`: コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-232">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="63113-233">また、それを含む型に関する情報の照会も制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-233">Also controls querying for information about the containing type.</span></span>
+
+- <span data-ttu-id="63113-234">`Serialize`: メンバーへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。</span><span class="sxs-lookup"><span data-stu-id="63113-234">`Serialize` - Controls runtime access to the member to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span> <span data-ttu-id="63113-235">このポリシーは、コンストラクター、フィールド、およびプロパティに適用できます。</span><span class="sxs-lookup"><span data-stu-id="63113-235">This policy can be applied to constructors, fields, and properties.</span></span>
+
+<span data-ttu-id="63113-236">[Method](../../../docs/framework/net-native/method-element-net-native.md) 要素と [Event](../../../docs/framework/net-native/event-element-net-native.md) 要素は次のポリシーの種類をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="63113-236">The [Method](../../../docs/framework/net-native/method-element-net-native.md) and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements support the following policy types:</span></span>
+
+- <span data-ttu-id="63113-237">`Browse`: このメンバーに関する情報の照会を制御しますが、実行時アクセスは有効にしません。</span><span class="sxs-lookup"><span data-stu-id="63113-237">`Browse` - Controls querying for information about this member but doesn’t enable any runtime access.</span></span>
+
+- <span data-ttu-id="63113-238">`Dynamic`: コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-238">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="63113-239">また、それを含む型に関する情報の照会も制御します。</span><span class="sxs-lookup"><span data-stu-id="63113-239">Also controls querying for information about the containing type.</span></span>
+
+ <span data-ttu-id="63113-240">これらのポリシーの種類に関連付けられている設定を次に示します。</span><span class="sxs-lookup"><span data-stu-id="63113-240">The settings associated with these policy types are:</span></span>
+
+- <span data-ttu-id="63113-241">`Auto`: 既定の動作を使用します。</span><span class="sxs-lookup"><span data-stu-id="63113-241">`Auto` - Use the default behavior.</span></span> <span data-ttu-id="63113-242">(何かにオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)</span><span class="sxs-lookup"><span data-stu-id="63113-242">(Not specifying a policy is equivalent to setting that policy to `Auto` unless something overrides it.)</span></span>
+
+- <span data-ttu-id="63113-243">`Excluded`: メンバーのメタデータを含めません。</span><span class="sxs-lookup"><span data-stu-id="63113-243">`Excluded` - Never include metadata for the member.</span></span>
+
+- <span data-ttu-id="63113-244">`Included`: 親型が出力に存在する場合、ポリシーを有効にします。</span><span class="sxs-lookup"><span data-stu-id="63113-244">`Included` - Enable the policy if the parent type is present in the output.</span></span>
+
+- <span data-ttu-id="63113-245">`Required`: このメンバーが未使用と見なされる場合でもこれを保持し、そのメンバーのポリシーを有効にするためにツール チェーンを要求します。</span><span class="sxs-lookup"><span data-stu-id="63113-245">`Required` - Require the tool chain to keep this member even if appears to be unused, and enable policy for it.</span></span>
+
+## <a name="runtime-directives-file-semantics"></a><span data-ttu-id="63113-246">ランタイム ディレクティブ ファイルのセマンティクス</span><span class="sxs-lookup"><span data-stu-id="63113-246">Runtime directives file semantics</span></span>
+
+<span data-ttu-id="63113-247">ポリシーは、上位レベルと下位レベルの要素両方に同時に定義できます。</span><span class="sxs-lookup"><span data-stu-id="63113-247">Policy can be defined simultaneously for both higher-level and lower-level elements.</span></span> <span data-ttu-id="63113-248">たとえば、アセンブリと、そのアセンブリに含まれる型の一部にポリシーを定義できます。</span><span class="sxs-lookup"><span data-stu-id="63113-248">For example, policy can be defined for an assembly, and for some of the types contained in that assembly.</span></span> <span data-ttu-id="63113-249">特定の下位レベル要素が表されていない場合、その親のポリシーを継承します。</span><span class="sxs-lookup"><span data-stu-id="63113-249">If a particular lower-level element is not represented, it inherits the policy of its parent.</span></span> <span data-ttu-id="63113-250">たとえば、`Assembly` 要素は存在するが `Type` 要素は存在しない場合、`Assembly` 要素で指定されるポリシーはアセンブリ内のすべての型に適用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-250">For example, if an `Assembly` element is present but `Type` elements are not, the policy specified in the `Assembly` element applies to each type in the assembly.</span></span> <span data-ttu-id="63113-251">複数の要素が同じプログラム要素にポリシーを適用することもできます。</span><span class="sxs-lookup"><span data-stu-id="63113-251">Multiple elements can also apply policy to the same program element.</span></span> <span data-ttu-id="63113-252">たとえば、個別の [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) 要素が、同じアセンブリの同じポリシー要素を別々に定義するとします。</span><span class="sxs-lookup"><span data-stu-id="63113-252">For example, separate [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) elements might define the same policy element for the same assembly differently.</span></span> <span data-ttu-id="63113-253">次のセクションで、このような場合に特定の型のポリシーがどのように解決されるかを説明します。</span><span class="sxs-lookup"><span data-stu-id="63113-253">The following sections explain how the policy for a particular type is resolved in those cases.</span></span>
+
+<span data-ttu-id="63113-254">ジェネリック型またはメソッドの [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素または [Method](../../../docs/framework/net-native/method-element-net-native.md) 要素は、独自のポリシーを持たないすべてのインスタンス化にそのポリシーを適用します。</span><span class="sxs-lookup"><span data-stu-id="63113-254">A [Type](../../../docs/framework/net-native/type-element-net-native.md) or [Method](../../../docs/framework/net-native/method-element-net-native.md) element of a generic type or method applies its policy to all instantiations that do not have their own policy.</span></span> <span data-ttu-id="63113-255">たとえば、`Type` のポリシーを指定する <xref:System.Collections.Generic.List%601> 要素は、構築された特定のジェネリック型 (`List<Int32>` など) について `TypeInstantiation` 要素によってオーバーライドされない限り、そのジェネリック型のすべての構築されたインスタンスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-255">For example, a `Type` element that specifies policy for <xref:System.Collections.Generic.List%601> applies to all constructed instances of that generic type, unless it's overridden for a particular constructed generic type (such as a `List<Int32>`) by a `TypeInstantiation` element.</span></span> <span data-ttu-id="63113-256">そうでない場合、要素は指定されたプログラム要素のポリシーを定義します。</span><span class="sxs-lookup"><span data-stu-id="63113-256">Otherwise, elements define policy for the program element named.</span></span>
+
+<span data-ttu-id="63113-257">要素があいまいな場合、エンジンが一致を検索し、完全一致が見つかるとそれを使用します。</span><span class="sxs-lookup"><span data-stu-id="63113-257">When an element is ambiguous, the engine looks for matches, and if it finds an exact match, it will use it.</span></span> <span data-ttu-id="63113-258">複数の一致が見つかった場合は警告またはエラーになります。</span><span class="sxs-lookup"><span data-stu-id="63113-258">If it finds multiple matches, there will be a warning or error.</span></span>
+
+### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a><span data-ttu-id="63113-259">2 つのディレクティブが同じプログラム要素にポリシーを適用する場合</span><span class="sxs-lookup"><span data-stu-id="63113-259">If two directives apply policy to the same program element</span></span>
+
+<span data-ttu-id="63113-260">別のランタイム ディレクティブ ファイルにある 2 つの要素が同じプログラム要素 (アセンブリや型など) の同じポリシーの種類を異なる値に設定しようとした場合、次のように競合が解決されます。</span><span class="sxs-lookup"><span data-stu-id="63113-260">If two elements in different runtime directives files try to set the same policy type for the same program element (such as an assembly or type) to different values, the conflict is resolved as follows:</span></span>
+
+1. <span data-ttu-id="63113-261">`Excluded` 要素が存在する場合はこれが優先されます。</span><span class="sxs-lookup"><span data-stu-id="63113-261">If the `Excluded` element is present, it has precedence.</span></span>
+
+2. <span data-ttu-id="63113-262">`Required` は `Required` 以外より優先されます。</span><span class="sxs-lookup"><span data-stu-id="63113-262">`Required` has precedence over not `Required`.</span></span>
+
+3. <span data-ttu-id="63113-263">`All` は `PublicAndInternal` (`Public` より優先) より優先されされます。</span><span class="sxs-lookup"><span data-stu-id="63113-263">`All` has precedence over `PublicAndInternal`, which has precedence over `Public`.</span></span>
+
+4. <span data-ttu-id="63113-264">明示的な設定はいずれも `Auto` より優先されます。</span><span class="sxs-lookup"><span data-stu-id="63113-264">Any explicit setting has precedence over `Auto`.</span></span>
+
+<span data-ttu-id="63113-265">たとえば、1 つのプロジェクトに次の 2 つのランタイム ディレクティブ ファイルが含まれている場合、DataClasses.dll のシリアル化ポリシーは `Required Public` と `All` の両方に設定されます。</span><span class="sxs-lookup"><span data-stu-id="63113-265">For example, if a single project includes the following two runtime directives files, the serialization policy for DataClasses.dll is set to both `Required Public` and `All`.</span></span> <span data-ttu-id="63113-266">この場合、シリアル化ポリシーは `Required All` として解決されます。</span><span class="sxs-lookup"><span data-stu-id="63113-266">In this case, the serialization policy would be resolved as `Required All`.</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+   <Application>
+      <Assembly Name="DataClasses" Serialize="Required Public"/>
+   </Application>
+   <Library Name="DataClasses">
+      <!-- any other elements -->
+   </Library>
+</Directives>
+```
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+   <Application>
+      <Assembly Name="DataClasses" Serialize="All" />
+   </Application>
+   <Library Name="DataClasses">
+      <!-- any other elements -->
+   </Library>
+</Directives>
+```
+
+<span data-ttu-id="63113-267">ただし、1 つのランタイム ディレクティブ ファイル内の 2 つのディレクティブが同じプログラム要素に同じポリシーの種類を設定しようとした場合、XML スキーマ定義ツールからエラー メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="63113-267">However, if two directives in a single runtime directives file try to set the same policy type for the same program element, the XML Scheme Definition tool displays an error message.</span></span>
+
+### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a><span data-ttu-id="63113-268">子要素と親要素が同じポリシーの種類を適用する場合</span><span class="sxs-lookup"><span data-stu-id="63113-268">If child and parent elements apply the same policy type</span></span>
+
+<span data-ttu-id="63113-269">`Excluded` 設定を含め、子要素はその親要素をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="63113-269">Child elements override their parent elements, including the `Excluded` setting.</span></span> <span data-ttu-id="63113-270">オーバーライドは、`Auto` を指定する必要がある主な理由です。</span><span class="sxs-lookup"><span data-stu-id="63113-270">Overriding is the main reason you would want to specify `Auto`.</span></span>
+
+<span data-ttu-id="63113-271">次の例では、`DataClasses` にはあるが `DataClasses.ViewModels` にはないものすべてのシリアル化ポリシー設定が `Required Public` になり、`DataClasses` と `DataClasses.ViewModels` の両方にあるものすべてのシリアル化ポリシー設定は `All` になります。</span><span class="sxs-lookup"><span data-stu-id="63113-271">In the following example, the serialization policy setting for everything in `DataClasses` that’s not in `DataClasses.ViewModels` would be `Required Public`, and everything that's in both `DataClasses` and `DataClasses.ViewModels` would be `All`.</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+   <Application>
+      <Assembly Name="DataClasses" Serialize="Required Public" >
+         <Namespace Name="DataClasses.ViewModels" Serialize="All" />
+      </Assembly>
+   </Application>
+   <Library Name="DataClasses">
+      <!-- any other elements -->
+   </Library>
+</Directives>
+```
+
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a><span data-ttu-id="63113-272">オープン ジェネリックとインスタンス化された要素が同じポリシーの種類を適用する場合</span><span class="sxs-lookup"><span data-stu-id="63113-272">If open generics and instantiated elements apply the same policy type</span></span>
+
+<span data-ttu-id="63113-273">次の例では、`Dictionary<int,int>` には、特に `Browse` ポリシーを割り当てる理由がエンジンにある場合にのみ、`Browse` ポリシーが割り当てられます (通常は、これが既定の動作です)。それ以外の <xref:System.Collections.Generic.Dictionary%602> のすべてのインスタンス化では、そのメンバーのすべてが参照可能になります。</span><span class="sxs-lookup"><span data-stu-id="63113-273">In the following example, `Dictionary<int,int>` is assigned the `Browse` policy only if the engine has another reason to give it the `Browse` policy (which would otherwise be the default behavior); every other instantiation of <xref:System.Collections.Generic.Dictionary%602> will have all of its members browsable.</span></span>
+
+```xml
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+   <Application>
+      <Assembly Name="DataClasses" Serialize="Required Public" >
+         <Namespace Name="DataClasses.ViewModels" Serialize="All" />
+      </Assembly>
+      <Namespace Name="DataClasses.Generics" />
+      <Type Name="Dictionary" Browse="All" />
+      <TypeInstantiation Name="Dictionary"
+                         Arguments="System.Int32,System.Int32" Browse="Auto" />
+   </Application>
+   <Library Name="DataClasses">
+      <!-- any other elements -->
+   </Library>
+</Directives>
+```
+
+### <a name="how-policy-is-inferred"></a><span data-ttu-id="63113-274">ポリシーの推論方法</span><span class="sxs-lookup"><span data-stu-id="63113-274">How policy is inferred</span></span>
+
+<span data-ttu-id="63113-275">ポリシーの種類ごとに、そのポリシーの種類の存在が他の構造体にどう影響するかを決定する一連のルールが異なります。</span><span class="sxs-lookup"><span data-stu-id="63113-275">Each policy type has a different set of rules that determine how the presence of that policy type affects other constructs.</span></span>
+
+#### <a name="the-effect-of-browse-policy"></a><span data-ttu-id="63113-276">Browse ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="63113-276">The effect of Browse policy</span></span>
+
+<span data-ttu-id="63113-277">`Browse` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-277">Applying the `Browse` policy to a type involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-278">型の基本型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-278">The base type of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-279">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-279">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-280">型がデリゲートの場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-280">If the type is a delegate, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-281">型の各インターフェイスが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-281">Each interface of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-282">型に適用されている各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-282">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-283">型がジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-283">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-284">型がジェネリックの場合、その型のインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-284">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>
+
+<span data-ttu-id="63113-285">メソッドに `Browse` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-285">Applying the `Browse` policy to a method involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-286">メソッドの各パラメーター型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-286">Each parameter type of the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-287">メソッドの戻り型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-287">The return type of the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-288">メソッドを含む型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-288">The containing type of the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-289">メソッドがインスタンス化されたジェネリック メソッドである場合、インスタンス化されていないジェネリック メソッドが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-289">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-290">メソッドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-290">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-291">メソッドがジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-291">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-292">メソッドがジェネリックの場合、そのメソッドのインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-292">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>
+
+<span data-ttu-id="63113-293">フィールドに `Browse` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-293">Applying the `Browse` policy to a field involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-294">フィールドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-294">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-295">フィールドの型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-295">The type of the field is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-296">フィールドが属する型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-296">The type to which the field belongs is marked with the `Browse` policy.</span></span>
+
+#### <a name="the-effect-of-dynamic-policy"></a><span data-ttu-id="63113-297">Dynamic ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="63113-297">The effect of Dynamic policy</span></span>
+
+<span data-ttu-id="63113-298">`Dynamic` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-298">Applying the `Dynamic` policy to a type involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-299">型の基本型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-299">The base type of the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-300">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-300">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-301">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-301">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-302">型の各インターフェイスが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-302">Each interface of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-303">型に適用されている各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-303">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-304">型がジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-304">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-305">型がジェネリックの場合、その型のインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-305">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>
+
+<span data-ttu-id="63113-306">メソッドに `Dynamic` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-306">Applying the `Dynamic` policy to a method involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-307">メソッドの各パラメーター型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-307">Each parameter type of the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-308">メソッドの戻り型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-308">The return type of the method is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-309">メソッドを含む型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-309">The containing type of the method is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-310">メソッドがインスタンス化されたジェネリック メソッドである場合、インスタンス化されていないジェネリック メソッドが `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-310">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-311">メソッドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-311">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-312">メソッドがジェネリックの場合、各制約型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-312">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-313">メソッドがジェネリックの場合、そのメソッドのインスタンス化対象である型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-313">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-314">メソッドを `MethodInfo.Invoke` により呼び出すことができ、<xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType> によりデリゲートの作成が可能になります。</span><span class="sxs-lookup"><span data-stu-id="63113-314">The method can be invoked by `MethodInfo.Invoke`, and delegate creation becomes possible by <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.</span></span>
+
+<span data-ttu-id="63113-315">フィールドに `Dynamic` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-315">Applying the `Dynamic` policy to a field involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-316">フィールドに適用される各属性の型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-316">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-317">フィールドの型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-317">The type of the field is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-318">フィールドが属する型が `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-318">The type to which the field belongs is marked with the `Dynamic` policy.</span></span>
+
+#### <a name="the-effect-of-activation-policy"></a><span data-ttu-id="63113-319">Activation ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="63113-319">The effect of Activation policy</span></span>
+
+<span data-ttu-id="63113-320">型に Activation ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-320">Applying the Activation policy to a type involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-321">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-321">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-322">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-322">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-323">型のコンストラクターが `Activation` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-323">Constructors of the type are marked with the `Activation` policy.</span></span>
+
+<span data-ttu-id="63113-324">メソッドに `Activation` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-324">Applying the `Activation` policy to a method involves the following policy change:</span></span>
+
+- <span data-ttu-id="63113-325">コンストラクターを <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> メソッドと <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> メソッドにより呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="63113-325">The constructor can be invoked by the <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> and <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="63113-326">メソッドに関しては、`Activation` ポリシーはコンストラクターにのみ影響します。</span><span class="sxs-lookup"><span data-stu-id="63113-326">For methods, the `Activation` policy affects constructors only.</span></span>
+
+<span data-ttu-id="63113-327">フィールドに `Activation` ポリシーを適用しても効果はありません。</span><span class="sxs-lookup"><span data-stu-id="63113-327">Applying the `Activation` policy to a field has no effect.</span></span>
+
+#### <a name="the-effect-of-serialize-policy"></a><span data-ttu-id="63113-328">Serialize ポリシーの効果</span><span class="sxs-lookup"><span data-stu-id="63113-328">The effect of Serialize policy</span></span>
+
+<span data-ttu-id="63113-329">`Serialize` ポリシーにより、一般的なリフレクション ベースのシリアライザーを使用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="63113-329">The `Serialize` policy enables the use of common reflection-based serializers.</span></span> <span data-ttu-id="63113-330">ただし、Microsoft では、Microsoft 以外のシリアライザーの正確なリフレクション アクセス パターンを認識していないため、このポリシーが常に効果的であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="63113-330">However, because the exact reflection access patterns of non-Microsoft serializers are not known to Microsoft, this policy may not be entirely effective.</span></span>
+
+<span data-ttu-id="63113-331">`Serialize` ポリシーを型に適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-331">Applying the `Serialize` policy to a type involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-332">型の基本型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-332">The base type of the type is marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-333">型がインスタンス化されたジェネリックである場合、インスタンス化されていないその型が `Browse` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-333">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>
+
+- <span data-ttu-id="63113-334">型がデリゲート型の場合、型の `Invoke` メソッドが `Dynamic` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-334">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>
+
+- <span data-ttu-id="63113-335">型が列挙の場合、型の配列が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-335">If the type is an enumeration, an array of the type is marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-336">型が <xref:System.Collections.Generic.IEnumerable%601> を実装する場合、`T` が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-336">If the type implements <xref:System.Collections.Generic.IEnumerable%601>, `T` is marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-337">型が <xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IList%601>、<xref:System.Collections.Generic.ICollection%601>、<xref:System.Collections.Generic.IReadOnlyCollection%601>、または <xref:System.Collections.Generic.IReadOnlyList%601> の場合、`T[]` と <xref:System.Collections.Generic.List%601> が `Serialize` ポリシーでマークされますが、インターフェイス型のメンバーは `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="63113-337">If the type is <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601>, or <xref:System.Collections.Generic.IReadOnlyList%601>, then `T[]` and <xref:System.Collections.Generic.List%601> marked with the `Serialize` policy., but no members of the interface type are marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-338">型が <xref:System.Collections.Generic.List%601> の場合、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="63113-338">If the type is <xref:System.Collections.Generic.List%601>, no members of the type are marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-339">型が <xref:System.Collections.Generic.IDictionary%602> の場合、<xref:System.Collections.Generic.Dictionary%602> が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-339">If the type is <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> is marked with the `Serialize` policy.</span></span> <span data-ttu-id="63113-340">ただし、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="63113-340">but no members of the type are marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-341">型が <xref:System.Collections.Generic.Dictionary%602> の場合、型のどのメンバーも `Serialize` ポリシーでマークされません。</span><span class="sxs-lookup"><span data-stu-id="63113-341">If the type is <xref:System.Collections.Generic.Dictionary%602>, no members of the type are marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-342">型が <xref:System.Collections.Generic.IDictionary%602> を実装している場合、`TKey` と `TValue` が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-342">If the type implements <xref:System.Collections.Generic.IDictionary%602>, `TKey` and `TValue` are marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-343">各コンストラクター、各プロパティ アクセサー、および各フィールドが `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-343">Each constructor, each property accessor, and each field is marked with the `Serialize` policy.</span></span>
+
+<span data-ttu-id="63113-344">メソッドに `Serialize` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-344">Applying the `Serialize` policy to a method involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-345">それを含む型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-345">The containing type is marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-346">メソッドの戻り型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-346">The return type of the method is marked with the `Serialize` policy.</span></span>
+
+<span data-ttu-id="63113-347">フィールドに `Serialize` ポリシーを適用すると、ポリシーが次のように変更されます。</span><span class="sxs-lookup"><span data-stu-id="63113-347">Applying the `Serialize` policy to a field involves the following policy changes:</span></span>
+
+- <span data-ttu-id="63113-348">それを含む型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-348">The containing type is marked with the `Serialize` policy.</span></span>
+
+- <span data-ttu-id="63113-349">フィールドの型が `Serialize` ポリシーでマークされます。</span><span class="sxs-lookup"><span data-stu-id="63113-349">The type of the field is marked with the `Serialize` policy.</span></span>
+
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a><span data-ttu-id="63113-350">XmlSerializer、DataContractSerializer、および DataContractJsonSerializer のポリシーの影響</span><span class="sxs-lookup"><span data-stu-id="63113-350">The effect of XmlSerializer, DataContractSerializer, and DataContractJsonSerializer policies</span></span>
+
+<span data-ttu-id="63113-351">リフレクション ベースのシリアライザーを対象とした `Serialize` ポリシーとは異なり、`XmlSerializer`、`DataContractSerializer`、および `DataContractJsonSerializer` ポリシーは、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンで認識されている一連のシリアライザーを有効にするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="63113-351">Unlike the `Serialize` policy, which is intended for reflection-based serializers, the `XmlSerializer`, `DataContractSerializer`, and `DataContractJsonSerializer` policies are used to enable a set of serializers that are known to the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="63113-352">これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。</span><span class="sxs-lookup"><span data-stu-id="63113-352">These serializers are not implemented by using reflection, but the set of types that can be serialized at run time is determined in a similar manner as types that are reflectable.</span></span>
+
+<span data-ttu-id="63113-353">これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。</span><span class="sxs-lookup"><span data-stu-id="63113-353">Applying one of these policies to a type enables the type to be serialized with the matching serializer.</span></span> <span data-ttu-id="63113-354">また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="63113-354">Also, any types that the serialization engine can statically determine as needing serialization will also be serializable.</span></span>
+
+<span data-ttu-id="63113-355">これらのポリシーは、メソッドとフィールドには影響しません。</span><span class="sxs-lookup"><span data-stu-id="63113-355">These policies have no effect on methods or fields.</span></span>
+
+<span data-ttu-id="63113-356">詳細については、「[Windows ストア アプリの .NET ネイティブへの移行](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)」の「シリアライザーの違い」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="63113-356">For more information, see the "Differences in Serializers" section in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="63113-357">関連項目</span><span class="sxs-lookup"><span data-stu-id="63113-357">See also</span></span>
+
+- [<span data-ttu-id="63113-358">ランタイム ディレクティブ要素</span><span class="sxs-lookup"><span data-stu-id="63113-358">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [<span data-ttu-id="63113-359">リフレクションおよび .NET ネイティブ</span><span class="sxs-lookup"><span data-stu-id="63113-359">Reflection and .NET Native</span></span>](../../../docs/framework/net-native/reflection-and-net-native.md)

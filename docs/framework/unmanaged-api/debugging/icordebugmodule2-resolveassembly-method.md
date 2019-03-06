@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359693"
 ---
-# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="2cd1d-102">ICorDebugModule2::ResolveAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="2cd1d-102">ICorDebugModule2::ResolveAssembly Method</span></span>
-<span data-ttu-id="2cd1d-103">指定したメタデータ トークンによって参照されるアセンブリを解決します。</span><span class="sxs-lookup"><span data-stu-id="2cd1d-103">Resolves the assembly referenced by the specified metadata token.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="2cd1d-104">構文</span><span class="sxs-lookup"><span data-stu-id="2cd1d-104">Syntax</span></span>  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="2cd1d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2cd1d-105">Parameters</span></span>  
- `tkAsemblyRef`  
- <span data-ttu-id="2cd1d-106">[in]`mdToken`アセンブリが参照する値。</span><span class="sxs-lookup"><span data-stu-id="2cd1d-106">[in] An `mdToken` value that references the assembly.</span></span>  
-  
- `ppAssembly`  
- <span data-ttu-id="2cd1d-107">[out]アセンブリを表す ICorDebugAssembly オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2cd1d-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="2cd1d-108">コメント</span><span class="sxs-lookup"><span data-stu-id="2cd1d-108">Remarks</span></span>  
- <span data-ttu-id="2cd1d-109">アセンブリは既に読み込まれていない場合場合`ResolveAssembly`が呼び出されると、HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY の値が返されます。</span><span class="sxs-lookup"><span data-stu-id="2cd1d-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="2cd1d-110">要件</span><span class="sxs-lookup"><span data-stu-id="2cd1d-110">Requirements</span></span>  
- <span data-ttu-id="2cd1d-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="2cd1d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2cd1d-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2cd1d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="2cd1d-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2cd1d-113">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="2cd1d-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cd1d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="3e7fc-102">ICorDebugModule2::ResolveAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="3e7fc-102">ICorDebugModule2::ResolveAssembly Method</span></span>
+
+<span data-ttu-id="3e7fc-103">指定したメタデータ トークンによって参照されるアセンブリを解決します。</span><span class="sxs-lookup"><span data-stu-id="3e7fc-103">Resolves the assembly referenced by the specified metadata token.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="3e7fc-104">構文</span><span class="sxs-lookup"><span data-stu-id="3e7fc-104">Syntax</span></span>
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="3e7fc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3e7fc-105">Parameters</span></span>
+
+`tkAssemblyRef`\
+<span data-ttu-id="3e7fc-106">[in]`mdToken`アセンブリを参照する値。</span><span class="sxs-lookup"><span data-stu-id="3e7fc-106">[in] An `mdToken` value that references the assembly.</span></span>
+
+`ppAssembly`\
+<span data-ttu-id="3e7fc-107">[out]アセンブリを表す ICorDebugAssembly オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3e7fc-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="3e7fc-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="3e7fc-108">Remarks</span></span>
+
+<span data-ttu-id="3e7fc-109">場合は、アセンブリが既に読み込まれていない場合に`ResolveAssembly`が呼び出され、HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY の値が返されます。</span><span class="sxs-lookup"><span data-stu-id="3e7fc-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="3e7fc-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="3e7fc-110">Requirements</span></span>
+
+<span data-ttu-id="3e7fc-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3e7fc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="3e7fc-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e7fc-112">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="3e7fc-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e7fc-113">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="3e7fc-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e7fc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -7,34 +7,34 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 2a201eefba6e2623cfd7f733b85e271ce1c4e177
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4a93ffdf7c9cf2737c41a7fd196d8cfff716ea1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377201"
 ---
-# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a><span data-ttu-id="19e4b-102">方法: ListView の各項目の MouseDoubleClick イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="19e4b-102">How to: Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>
-<span data-ttu-id="19e4b-103">内の項目のイベントを処理するために、 <xref:System.Windows.Controls.ListView>、それぞれにイベント ハンドラーを追加する必要がある<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="19e4b-103">To handle an event for an item in a <xref:System.Windows.Controls.ListView>, you need to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span> <span data-ttu-id="19e4b-104">ときに、<xref:System.Windows.Controls.ListView>がバインドされているデータ ソースに明示的に作成しない、 <xref:System.Windows.Controls.ListViewItem>、追加することで各項目のイベントを処理することができますが、<xref:System.Windows.EventSetter>のスタイルを<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="19e4b-104">When a <xref:System.Windows.Controls.ListView> is bound to a data source, you don't explicitly create a <xref:System.Windows.Controls.ListViewItem>, but you can handle the event for each item by adding an <xref:System.Windows.EventSetter> to a style of a <xref:System.Windows.Controls.ListViewItem>.</span></span>  
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a><span data-ttu-id="6e1aa-102">方法: ListView の各項目の MouseDoubleClick イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="6e1aa-102">How to: Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>
+<span data-ttu-id="6e1aa-103">内の項目のイベントを処理するために、 <xref:System.Windows.Controls.ListView>、それぞれにイベント ハンドラーを追加する必要がある<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-103">To handle an event for an item in a <xref:System.Windows.Controls.ListView>, you need to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span> <span data-ttu-id="6e1aa-104">ときに、<xref:System.Windows.Controls.ListView>がバインドされているデータ ソースに明示的に作成しない、 <xref:System.Windows.Controls.ListViewItem>、追加することで各項目のイベントを処理することができますが、<xref:System.Windows.EventSetter>のスタイルを<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-104">When a <xref:System.Windows.Controls.ListView> is bound to a data source, you don't explicitly create a <xref:System.Windows.Controls.ListViewItem>, but you can handle the event for each item by adding an <xref:System.Windows.EventSetter> to a style of a <xref:System.Windows.Controls.ListViewItem>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="19e4b-105">例</span><span class="sxs-lookup"><span data-stu-id="19e4b-105">Example</span></span>  
- <span data-ttu-id="19e4b-106">次の例は、データ バインドを作成します。<xref:System.Windows.Controls.ListView>を作成し、<xref:System.Windows.Style>各にイベント ハンドラーを追加する<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="19e4b-106">The following example creates a data-bound <xref:System.Windows.Controls.ListView> and creates a <xref:System.Windows.Style> to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span>  
+## <a name="example"></a><span data-ttu-id="6e1aa-105">例</span><span class="sxs-lookup"><span data-stu-id="6e1aa-105">Example</span></span>  
+ <span data-ttu-id="6e1aa-106">次の例は、データ バインドを作成します。<xref:System.Windows.Controls.ListView>を作成し、<xref:System.Windows.Style>各にイベント ハンドラーを追加する<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-106">The following example creates a data-bound <xref:System.Windows.Controls.ListView> and creates a <xref:System.Windows.Style> to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span>  
   
- [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xaml[ListViewHowTos#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
-[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
+[!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- <span data-ttu-id="19e4b-107">次の例のハンドル、<xref:System.Windows.Controls.Control.MouseDoubleClick>イベント。</span><span class="sxs-lookup"><span data-stu-id="19e4b-107">The following example handles the <xref:System.Windows.Controls.Control.MouseDoubleClick> event.</span></span>  
+ <span data-ttu-id="6e1aa-107">次の例のハンドル、<xref:System.Windows.Controls.Control.MouseDoubleClick>イベント。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-107">The following example handles the <xref:System.Windows.Controls.Control.MouseDoubleClick> event.</span></span>  
   
- [!code-csharp[ListViewHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
- [!code-vb[ListViewHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
+ [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  <span data-ttu-id="19e4b-108">バインドする最も一般的な<xref:System.Windows.Controls.ListView>各にイベント ハンドラーを追加するスタイルを使用するデータ ソースに<xref:System.Windows.Controls.ListViewItem>、非データ バインドで<xref:System.Windows.Controls.ListView>明示的に作成するかどうかに関係なく、<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="19e4b-108">Although it is most common to bind a <xref:System.Windows.Controls.ListView> to a data source, you can use a style to add an event handler to each <xref:System.Windows.Controls.ListViewItem> in a non-data-bound <xref:System.Windows.Controls.ListView> regardless of whether you explicitly create a <xref:System.Windows.Controls.ListViewItem>.</span></span>  <span data-ttu-id="19e4b-109">明示的および暗黙的が作成の詳細については<xref:System.Windows.Controls.ListViewItem>コントロールを参照してください<xref:System.Windows.Controls.ItemsControl>します。</span><span class="sxs-lookup"><span data-stu-id="19e4b-109">For more information about explicitly and implicitly created <xref:System.Windows.Controls.ListViewItem> controls, see <xref:System.Windows.Controls.ItemsControl>.</span></span>  
+>  <span data-ttu-id="6e1aa-108">バインドする最も一般的な<xref:System.Windows.Controls.ListView>各にイベント ハンドラーを追加するスタイルを使用するデータ ソースに<xref:System.Windows.Controls.ListViewItem>、非データ バインドで<xref:System.Windows.Controls.ListView>明示的に作成するかどうかに関係なく、<xref:System.Windows.Controls.ListViewItem>します。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-108">Although it is most common to bind a <xref:System.Windows.Controls.ListView> to a data source, you can use a style to add an event handler to each <xref:System.Windows.Controls.ListViewItem> in a non-data-bound <xref:System.Windows.Controls.ListView> regardless of whether you explicitly create a <xref:System.Windows.Controls.ListViewItem>.</span></span>  <span data-ttu-id="6e1aa-109">明示的および暗黙的が作成の詳細については<xref:System.Windows.Controls.ListViewItem>コントロールを参照してください<xref:System.Windows.Controls.ItemsControl>します。</span><span class="sxs-lookup"><span data-stu-id="6e1aa-109">For more information about explicitly and implicitly created <xref:System.Windows.Controls.ListViewItem> controls, see <xref:System.Windows.Controls.ItemsControl>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19e4b-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="19e4b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e1aa-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e1aa-110">See also</span></span>
 - <xref:System.Xml.XmlElement>
-- [<span data-ttu-id="19e4b-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="19e4b-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="19e4b-112">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="19e4b-112">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [<span data-ttu-id="19e4b-113">XMLDataProvider と XPath クエリを使用して XML データにバインドする</span><span class="sxs-lookup"><span data-stu-id="19e4b-113">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [<span data-ttu-id="19e4b-114">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="19e4b-114">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [<span data-ttu-id="6e1aa-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="6e1aa-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)
+- [<span data-ttu-id="6e1aa-112">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="6e1aa-112">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="6e1aa-113">XMLDataProvider と XPath クエリを使用して XML データにバインドする</span><span class="sxs-lookup"><span data-stu-id="6e1aa-113">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [<span data-ttu-id="6e1aa-114">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="6e1aa-114">ListView Overview</span></span>](listview-overview.md)

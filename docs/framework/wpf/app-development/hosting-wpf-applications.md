@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546892"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352271"
 ---
-# <a name="hosting-wpf-applications"></a><span data-ttu-id="3fcaa-102">WPF アプリケーションのホスト</span><span class="sxs-lookup"><span data-stu-id="3fcaa-102">Hosting WPF Applications</span></span>
-<span data-ttu-id="3fcaa-103">WPF XAML ブラウザー アプリケーション (Xbap) は、リッチ クライアント アプリケーションを Web サーバーに配置し、ブラウザーで起動されたことができます。</span><span class="sxs-lookup"><span data-stu-id="3fcaa-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="3fcaa-104">WPF ホスト (PresentationHost.exe) は、シェルと XBAP と XAML ファイルの MIME ハンドラーとして登録されます。</span><span class="sxs-lookup"><span data-stu-id="3fcaa-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="3fcaa-105">したがって、Internet Explorer では、ホストを開始、WPF XBAP が起動されたときに認識しています。</span><span class="sxs-lookup"><span data-stu-id="3fcaa-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="3fcaa-106">Firefox のユーザーには、ホストの Xbap Firefox を有効にする Firefox アドオンをインストールできます。</span><span class="sxs-lookup"><span data-stu-id="3fcaa-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="3fcaa-107">XBAP は、WPF によって提供されているホスティング Api ネイティブ ブラウザーを使用して、他のブラウザーやスタンドアロンのアプリケーションでホストできます。</span><span class="sxs-lookup"><span data-stu-id="3fcaa-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
+# <a name="hosting-wpf-applications"></a><span data-ttu-id="a3529-102">WPF アプリケーションのホスト</span><span class="sxs-lookup"><span data-stu-id="a3529-102">Hosting WPF Applications</span></span>
+<span data-ttu-id="a3529-103">WPF XAML ブラウザー アプリケーション (Xbap) は、Web サーバーに展開して、ブラウザーで起動が可能なリッチ クライアント アプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="a3529-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="a3529-104">WPF ホスト (PresentationHost.exe) は、シェルと XBAP と XAML ファイルの MIME ハンドラとして登録されます。</span><span class="sxs-lookup"><span data-stu-id="a3529-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="a3529-105">そのため、Internet Explorer は、XBAP を起動するときに、WPF ホストを開始する認識しています。</span><span class="sxs-lookup"><span data-stu-id="a3529-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="a3529-106">Firefox ユーザーは、ホストの Xbap を Firefox を有効にする Firefox アドオンをインストールできます。</span><span class="sxs-lookup"><span data-stu-id="a3529-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="a3529-107">XBAP は、WPF では、ホスティング Api が提供される、ネイティブ ブラウザーを使用して、その他のブラウザーやスタンドアロン アプリケーションでホストできます。</span><span class="sxs-lookup"><span data-stu-id="a3529-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3fcaa-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="3fcaa-108">In This Section</span></span>  
- [<span data-ttu-id="3fcaa-109">WPF XAML ブラウザー アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="3fcaa-109">WPF XAML Browser Applications Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-   [<span data-ttu-id="3fcaa-110">WPF ホスト (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="3fcaa-110">WPF Host (PresentationHost.exe)</span></span>](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [<span data-ttu-id="3fcaa-111">.NET アプリケーションの配置をサポートするための Firefox のアドオン</span><span class="sxs-lookup"><span data-stu-id="3fcaa-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [<span data-ttu-id="3fcaa-112">WPF のブラウザーのホスト処理をサポートするネイティブ API</span><span class="sxs-lookup"><span data-stu-id="3fcaa-112">Native WPF Browser Hosting Support APIs</span></span>](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a3529-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a3529-108">In This Section</span></span>  
+ [<span data-ttu-id="a3529-109">WPF XAML ブラウザー アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="a3529-109">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+   [<span data-ttu-id="a3529-110">WPF ホスト (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="a3529-110">WPF Host (PresentationHost.exe)</span></span>](wpf-host-presentationhost-exe.md)  
+  [<span data-ttu-id="a3529-111">.NET アプリケーションの配置をサポートするための Firefox のアドオン</span><span class="sxs-lookup"><span data-stu-id="a3529-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](firefox-add-ons-to-support-net-application-deployment.md)  
+  [<span data-ttu-id="a3529-112">WPF のブラウザーのホスト処理をサポートするネイティブ API</span><span class="sxs-lookup"><span data-stu-id="a3529-112">Native WPF Browser Hosting Support APIs</span></span>](native-wpf-browser-hosting-support-apis.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="3fcaa-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="3fcaa-113">Related Sections</span></span>  
- [<span data-ttu-id="3fcaa-114">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="3fcaa-114">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="3fcaa-115">WPF のウィンドウ</span><span class="sxs-lookup"><span data-stu-id="3fcaa-115">Windows in WPF</span></span>](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [<span data-ttu-id="3fcaa-116">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="3fcaa-116">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="3fcaa-117">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="3fcaa-117">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="a3529-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3529-113">Related Sections</span></span>  
+ [<span data-ttu-id="a3529-114">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="a3529-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="a3529-115">WPF のウィンドウ</span><span class="sxs-lookup"><span data-stu-id="a3529-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="a3529-116">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="a3529-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="a3529-117">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="a3529-117">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

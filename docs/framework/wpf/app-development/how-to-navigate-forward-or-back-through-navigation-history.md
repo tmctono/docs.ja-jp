@@ -1,5 +1,5 @@
 ---
-title: '方法: 移動履歴を前後へ移動する'
+title: '方法: 移動履歴の前後への移動'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: ac3b8b71b6adf04d71cf35edbb042b82c57d8e1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366661"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a><span data-ttu-id="41131-102">方法: 移動履歴を前後へ移動する</span><span class="sxs-lookup"><span data-stu-id="41131-102">How to: Navigate Forward or Back Through Navigation History</span></span>
-<span data-ttu-id="41131-103">この例では、ナビゲーション履歴のエントリに前後を移動する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="41131-103">This example illustrates how to navigate forward or back to entries in navigation history.</span></span>  
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a><span data-ttu-id="bbdd6-102">方法: 移動履歴の前後への移動</span><span class="sxs-lookup"><span data-stu-id="bbdd6-102">How to: Navigate Forward or Back Through Navigation History</span></span>
+<span data-ttu-id="bbdd6-103">この例では、ナビゲーション履歴にエントリに前後を移動する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-103">This example illustrates how to navigate forward or back to entries in navigation history.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="41131-104">例</span><span class="sxs-lookup"><span data-stu-id="41131-104">Example</span></span>  
- <span data-ttu-id="41131-105">次のホストのコンテンツから実行されるコードは、ナビゲーション履歴、一度に 1 つのエントリを前後に移動できます。</span><span class="sxs-lookup"><span data-stu-id="41131-105">Code that runs from content in the following hosts can navigate forward or back through navigation history, one entry at a time.</span></span>  
+## <a name="example"></a><span data-ttu-id="bbdd6-104">例</span><span class="sxs-lookup"><span data-stu-id="bbdd6-104">Example</span></span>  
+ <span data-ttu-id="bbdd6-105">次のホスト内のコンテンツから実行するコードは、ナビゲーション履歴、一度に 1 つのエントリを前後に移動できます。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-105">Code that runs from content in the following hosts can navigate forward or back through navigation history, one entry at a time.</span></span>  
   
--   <span data-ttu-id="41131-106"><xref:System.Windows.Navigation.NavigationWindow> 使用します。 <xref:System.Windows.Navigation.NavigationService></span><span class="sxs-lookup"><span data-stu-id="41131-106"><xref:System.Windows.Navigation.NavigationWindow> using <xref:System.Windows.Navigation.NavigationService></span></span>  
+-   <span data-ttu-id="bbdd6-106"><xref:System.Windows.Navigation.NavigationWindow> 使用してください。 <xref:System.Windows.Navigation.NavigationService></span><span class="sxs-lookup"><span data-stu-id="bbdd6-106"><xref:System.Windows.Navigation.NavigationWindow> using <xref:System.Windows.Navigation.NavigationService></span></span>  
   
--   <span data-ttu-id="41131-107"><xref:System.Windows.Controls.Frame> 使用します。 <xref:System.Windows.Navigation.NavigationService></span><span class="sxs-lookup"><span data-stu-id="41131-107"><xref:System.Windows.Controls.Frame> using <xref:System.Windows.Navigation.NavigationService></span></span>  
+-   <span data-ttu-id="bbdd6-107"><xref:System.Windows.Controls.Frame> 使用してください。 <xref:System.Windows.Navigation.NavigationService></span><span class="sxs-lookup"><span data-stu-id="bbdd6-107"><xref:System.Windows.Controls.Frame> using <xref:System.Windows.Navigation.NavigationService></span></span>  
   
 -   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
- <span data-ttu-id="41131-108">前方の 1 つのエントリを移動することができます、前にする必要があります最初ことを確認エントリ"進む"ナビゲーション履歴を調べることによって、 **CanGoForward**プロパティです。</span><span class="sxs-lookup"><span data-stu-id="41131-108">Before you can navigate forward one entry, you must first check that there are entries in forward navigation history by inspecting the **CanGoForward** property.</span></span> <span data-ttu-id="41131-109">転送の 1 つのエントリを移動するを呼び出す、 **GoForward**メソッドです。</span><span class="sxs-lookup"><span data-stu-id="41131-109">To navigate forward one entry, you call the **GoForward** method.</span></span> <span data-ttu-id="41131-110">これは、次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="41131-110">This is illustrated in the following example:</span></span>  
+ <span data-ttu-id="bbdd6-108">前方の 1 つのエントリを移動する前にする必要があります最初ことを確認エントリ"進む"ナビゲーション履歴を調べることによって、 **CanGoForward**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-108">Before you can navigate forward one entry, you must first check that there are entries in forward navigation history by inspecting the **CanGoForward** property.</span></span> <span data-ttu-id="bbdd6-109">転送の 1 つのエントリを移動するを呼び出す、 **GoForward**メソッド。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-109">To navigate forward one entry, you call the **GoForward** method.</span></span> <span data-ttu-id="bbdd6-110">これは、次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-110">This is illustrated in the following example:</span></span>  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- <span data-ttu-id="41131-111">移動する前に 1 つのエントリには、する必要がありますまずことを確認エントリ ナビゲーション履歴を調べることによって、 **CanGoBack**プロパティです。</span><span class="sxs-lookup"><span data-stu-id="41131-111">Before you can navigate back one entry, you must first check that there are entries in back navigation history by inspecting the **CanGoBack** property.</span></span> <span data-ttu-id="41131-112">バックアップ 1 つのエントリを移動するを呼び出す、 **GoBack**メソッドです。</span><span class="sxs-lookup"><span data-stu-id="41131-112">To navigate back one entry, you call the **GoBack** method.</span></span> <span data-ttu-id="41131-113">これは、次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="41131-113">This is illustrated in the following example:</span></span>  
+ <span data-ttu-id="bbdd6-111">1 つのエントリをバックアップ移動するを調べることによって"戻る"ナビゲーション履歴にエントリが表示されている最初に確認する必要があります、 **CanGoBack**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-111">Before you can navigate back one entry, you must first check that there are entries in back navigation history by inspecting the **CanGoBack** property.</span></span> <span data-ttu-id="bbdd6-112">1 つ戻りますエントリを移動するを呼び出す、 **GoBack**メソッド。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-112">To navigate back one entry, you call the **GoBack** method.</span></span> <span data-ttu-id="bbdd6-113">これは、次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-113">This is illustrated in the following example:</span></span>  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- <span data-ttu-id="41131-114">**CanGoForward**、 **GoForward**、 **CanGoBack**、および**GoBack**によって実装される<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>です。</span><span class="sxs-lookup"><span data-stu-id="41131-114">**CanGoForward**, **GoForward**, **CanGoBack**, and **GoBack** are implemented by <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, and <xref:System.Windows.Navigation.NavigationService>.</span></span>  
+ <span data-ttu-id="bbdd6-114">**CanGoForward**、 **GoForward**、 **CanGoBack**、および**GoBack**によって実装される<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>します。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-114">**CanGoForward**, **GoForward**, **CanGoBack**, and **GoBack** are implemented by <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, and <xref:System.Windows.Navigation.NavigationService>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="41131-115">呼び出す場合**GoForward**、ナビゲーション履歴にエントリがないとを呼び出す場合、または**GoBack**、ナビゲーション履歴にエントリがないと、<xref:System.InvalidOperationException>がスローされます。</span><span class="sxs-lookup"><span data-stu-id="41131-115">If you call **GoForward**, and there are no entries in forward navigation history, or if you call **GoBack**, and there are no entries in back navigation history, an <xref:System.InvalidOperationException> is thrown.</span></span>
+>  <span data-ttu-id="bbdd6-115">呼び出す場合**GoForward**、"進む"ナビゲーション履歴にエントリがないと、または呼び出す場合**GoBack**、戻るナビゲーション履歴にエントリがないと、<xref:System.InvalidOperationException>がスローされます。</span><span class="sxs-lookup"><span data-stu-id="bbdd6-115">If you call **GoForward**, and there are no entries in forward navigation history, or if you call **GoBack**, and there are no entries in back navigation history, an <xref:System.InvalidOperationException> is thrown.</span></span>

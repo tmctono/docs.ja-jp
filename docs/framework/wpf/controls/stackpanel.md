@@ -8,20 +8,20 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553742"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361232"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="966f5-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="966f5-102">StackPanel</span></span>
-<span data-ttu-id="966f5-103"><xref:System.Windows.Controls.StackPanel>要素は水平方向または垂直方向には、子要素をスタックに使用します。</span><span class="sxs-lookup"><span data-stu-id="966f5-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="93217-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="93217-102">StackPanel</span></span>
+<span data-ttu-id="93217-103"><xref:System.Windows.Controls.StackPanel>要素の子要素を水平方向または垂直方向にスタックを使用します。</span><span class="sxs-lookup"><span data-stu-id="93217-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="966f5-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="966f5-104">In This Section</span></span>  
- [<span data-ttu-id="966f5-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="966f5-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="93217-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="93217-104">In This Section</span></span>  
+ [<span data-ttu-id="93217-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="93217-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="966f5-106">参照</span><span class="sxs-lookup"><span data-stu-id="966f5-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="93217-106">参照</span><span class="sxs-lookup"><span data-stu-id="93217-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553742"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="966f5-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="966f5-107">Related Sections</span></span>  
- [<span data-ttu-id="966f5-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="966f5-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="93217-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="93217-107">Related Sections</span></span>  
+ [<span data-ttu-id="93217-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="93217-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="966f5-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="966f5-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="93217-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="93217-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="966f5-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="966f5-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="93217-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="93217-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

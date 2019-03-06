@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357561"
 ---
-# <a name="image"></a><span data-ttu-id="7cf0f-102">イメージ</span><span class="sxs-lookup"><span data-stu-id="7cf0f-102">Image</span></span>
-<span data-ttu-id="7cf0f-103"><xref:System.Windows.Controls.Image>ビットマップ画像を表示する要素が使用される[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="7cf0f-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="40292-102">イメージ</span><span class="sxs-lookup"><span data-stu-id="40292-102">Image</span></span>
+<span data-ttu-id="40292-103"><xref:System.Windows.Controls.Image>ビットマップ画像を表示する要素が使用される[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="40292-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7cf0f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7cf0f-104">In This Section</span></span>  
- [<span data-ttu-id="7cf0f-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="7cf0f-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="40292-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="40292-104">In This Section</span></span>  
+ [<span data-ttu-id="40292-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="40292-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7cf0f-106">参照</span><span class="sxs-lookup"><span data-stu-id="7cf0f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="40292-106">参照</span><span class="sxs-lookup"><span data-stu-id="40292-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="7cf0f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="7cf0f-107">See also</span></span>
-- [<span data-ttu-id="7cf0f-108">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="7cf0f-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="7cf0f-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="7cf0f-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="40292-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="40292-107">See also</span></span>
+- [<span data-ttu-id="40292-108">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="40292-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="40292-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="40292-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

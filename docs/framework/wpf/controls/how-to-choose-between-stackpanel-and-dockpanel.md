@@ -11,27 +11,27 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 458ba2fe23ecde28b3eb15400e7a9fa49c4cca68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13353212589f99c9ad735761af60ab3eff6c9ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357587"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a><span data-ttu-id="394a3-102">方法: StackPanel または DockPanel を選択する</span><span class="sxs-lookup"><span data-stu-id="394a3-102">How to: Choose Between StackPanel and DockPanel</span></span>
-<span data-ttu-id="394a3-103">この例では、使用するか、<xref:System.Windows.Controls.StackPanel>または<xref:System.Windows.Controls.DockPanel>でコンテンツをスタックする、<xref:System.Windows.Controls.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="394a3-103">This example shows how to choose between using a <xref:System.Windows.Controls.StackPanel> or a <xref:System.Windows.Controls.DockPanel> when you stack content in a <xref:System.Windows.Controls.Panel>.</span></span>  
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a><span data-ttu-id="aa52f-102">方法: StackPanel または DockPanel を選択する</span><span class="sxs-lookup"><span data-stu-id="aa52f-102">How to: Choose Between StackPanel and DockPanel</span></span>
+<span data-ttu-id="aa52f-103">この例では、使用するか、<xref:System.Windows.Controls.StackPanel>または<xref:System.Windows.Controls.DockPanel>でコンテンツをスタックする、<xref:System.Windows.Controls.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="aa52f-103">This example shows how to choose between using a <xref:System.Windows.Controls.StackPanel> or a <xref:System.Windows.Controls.DockPanel> when you stack content in a <xref:System.Windows.Controls.Panel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="394a3-104">例</span><span class="sxs-lookup"><span data-stu-id="394a3-104">Example</span></span>  
- <span data-ttu-id="394a3-105">いずれかを使用できますが、<xref:System.Windows.Controls.DockPanel>または<xref:System.Windows.Controls.StackPanel>を子要素をスタックには、2 つのコントロールは、常に結果を生成しない、同じです。</span><span class="sxs-lookup"><span data-stu-id="394a3-105">Although you can use either <xref:System.Windows.Controls.DockPanel> or <xref:System.Windows.Controls.StackPanel> to stack child elements, the two controls do not always produce the same results.</span></span> <span data-ttu-id="394a3-106">たとえば、子要素を配置する順序は内の子要素のサイズに影響を<xref:System.Windows.Controls.DockPanel>ではなく、<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="394a3-106">For example, the order that you place child elements can affect the size of child elements in a <xref:System.Windows.Controls.DockPanel> but not in a <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="394a3-107">このさまざまな問題の原因<xref:System.Windows.Controls.StackPanel>で積み重ねの方向にメジャー <xref:System.Double>.<xref:System.Double.PositiveInfinity>。 ただし、<xref:System.Windows.Controls.DockPanel>のみ使用可能なサイズを測定します。</span><span class="sxs-lookup"><span data-stu-id="394a3-107">This different behavior occurs because <xref:System.Windows.Controls.StackPanel> measures in the direction of stacking at <xref:System.Double>.<xref:System.Double.PositiveInfinity>; however, <xref:System.Windows.Controls.DockPanel> measures only the available size.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa52f-104">例</span><span class="sxs-lookup"><span data-stu-id="aa52f-104">Example</span></span>  
+ <span data-ttu-id="aa52f-105">いずれかを使用できますが、<xref:System.Windows.Controls.DockPanel>または<xref:System.Windows.Controls.StackPanel>を子要素をスタックには、2 つのコントロールは、常に結果を生成しない、同じです。</span><span class="sxs-lookup"><span data-stu-id="aa52f-105">Although you can use either <xref:System.Windows.Controls.DockPanel> or <xref:System.Windows.Controls.StackPanel> to stack child elements, the two controls do not always produce the same results.</span></span> <span data-ttu-id="aa52f-106">たとえば、子要素を配置する順序は内の子要素のサイズに影響を<xref:System.Windows.Controls.DockPanel>ではなく、<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="aa52f-106">For example, the order that you place child elements can affect the size of child elements in a <xref:System.Windows.Controls.DockPanel> but not in a <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="aa52f-107">このさまざまな問題の原因<xref:System.Windows.Controls.StackPanel>で積み重ねの方向にメジャー <xref:System.Double>.<xref:System.Double.PositiveInfinity>。 ただし、<xref:System.Windows.Controls.DockPanel>のみ使用可能なサイズを測定します。</span><span class="sxs-lookup"><span data-stu-id="aa52f-107">This different behavior occurs because <xref:System.Windows.Controls.StackPanel> measures in the direction of stacking at <xref:System.Double>.<xref:System.Double.PositiveInfinity>; however, <xref:System.Windows.Controls.DockPanel> measures only the available size.</span></span>  
   
- <span data-ttu-id="394a3-108">次の例では、この主な違い<xref:System.Windows.Controls.DockPanel>と<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="394a3-108">The following example demonstrates this key difference between <xref:System.Windows.Controls.DockPanel> and <xref:System.Windows.Controls.StackPanel>.</span></span>  
+ <span data-ttu-id="aa52f-108">次の例では、この主な違い<xref:System.Windows.Controls.DockPanel>と<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="aa52f-108">The following example demonstrates this key difference between <xref:System.Windows.Controls.DockPanel> and <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
- [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
- [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
- [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
+ [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
+ [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
+ [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="394a3-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="394a3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa52f-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa52f-109">See also</span></span>
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>
-- [<span data-ttu-id="394a3-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="394a3-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="aa52f-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="aa52f-110">Panels Overview</span></span>](panels-overview.md)

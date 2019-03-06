@@ -7,37 +7,37 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361435"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="993d0-102">キー フレーム アニメーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="993d0-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="993d0-103">このセクションのトピックでは、キー フレーム アニメーションを使用して、2 つのプロパティ値とコントロールの補間をアニメーション化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="993d0-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="95d5c-102">キー フレーム アニメーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="95d5c-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="95d5c-103">このセクションのトピックでは、キー フレーム アニメーションを使用して、2 つのプロパティ値とコントロールの補間をアニメーション化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="95d5c-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="993d0-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="993d0-104">In This Section</span></span>  
- [<span data-ttu-id="993d0-105">キー フレームを使用してオブジェクトをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-106">キー フレームを使用してブール値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-107">キー フレームを使用して Double 値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-108">キー フレームを使用して行列をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-109">キー フレームを使用して点をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-110">キー フレームを使用して四角形のジオメトリをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-111">キー フレームを使用して文字列をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-112">キー フレームを使用して色をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-113">キー フレームを使用してサイズの変更をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-114">キー フレームを使用して境界線の太さをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="993d0-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="993d0-115">キー フレーム アニメーションのタイミングを制御する</span><span class="sxs-lookup"><span data-stu-id="993d0-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="95d5c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="95d5c-104">In This Section</span></span>  
+ [<span data-ttu-id="95d5c-105">キー フレームを使用してオブジェクトをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-106">キー フレームを使用してブール値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-107">キー フレームを使用して Double 値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-108">キー フレームを使用して行列をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-109">キー フレームを使用して点をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-110">キー フレームを使用して四角形のジオメトリをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-111">キー フレームを使用して文字列をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-112">キー フレームを使用して色をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-113">キー フレームを使用してサイズの変更をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-114">キー フレームを使用して境界線の太さをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="95d5c-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="95d5c-115">キー フレーム アニメーションのタイミングを制御する</span><span class="sxs-lookup"><span data-stu-id="95d5c-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="993d0-116">参照</span><span class="sxs-lookup"><span data-stu-id="993d0-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="95d5c-116">参照</span><span class="sxs-lookup"><span data-stu-id="95d5c-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="993d0-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="993d0-117">See also</span></span>
-- [<span data-ttu-id="993d0-118">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="993d0-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="993d0-119">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="993d0-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [<span data-ttu-id="993d0-120">キー フレーム アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="993d0-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="95d5c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="95d5c-117">See also</span></span>
+- [<span data-ttu-id="95d5c-118">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="95d5c-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="95d5c-119">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="95d5c-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="95d5c-120">キー フレーム アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="95d5c-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

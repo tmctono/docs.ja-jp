@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580786"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376859"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="b5e6a-102">ビジュアル層のプログラミング</span><span class="sxs-lookup"><span data-stu-id="b5e6a-102">Visual Layer Programming</span></span>
-<span data-ttu-id="b5e6a-103"><xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b5e6a-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="b5e6a-104">などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。</span><span class="sxs-lookup"><span data-stu-id="b5e6a-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="3f2b9-102">ビジュアル層のプログラミング</span><span class="sxs-lookup"><span data-stu-id="3f2b9-102">Visual Layer Programming</span></span>
+<span data-ttu-id="3f2b9-103"><xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3f2b9-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="3f2b9-104">などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。</span><span class="sxs-lookup"><span data-stu-id="3f2b9-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b5e6a-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b5e6a-105">In This Section</span></span>  
- [<span data-ttu-id="b5e6a-106">ビジュアル層でのヒット テスト</span><span class="sxs-lookup"><span data-stu-id="b5e6a-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="b5e6a-107">DrawingVisual オブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="b5e6a-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="b5e6a-108">チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト</span><span class="sxs-lookup"><span data-stu-id="b5e6a-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="b5e6a-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="b5e6a-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3f2b9-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="3f2b9-105">In This Section</span></span>  
+ [<span data-ttu-id="3f2b9-106">ビジュアル層でのヒット テスト</span><span class="sxs-lookup"><span data-stu-id="3f2b9-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="3f2b9-107">DrawingVisual オブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="3f2b9-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
+ [<span data-ttu-id="3f2b9-108">チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト</span><span class="sxs-lookup"><span data-stu-id="3f2b9-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="3f2b9-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="3f2b9-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b5e6a-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b5e6a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f2b9-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f2b9-110">See also</span></span>
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="b5e6a-111">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="b5e6a-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="b5e6a-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="b5e6a-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="3f2b9-111">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="3f2b9-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="3f2b9-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="3f2b9-112">Graphics and Multimedia</span></span>](index.md)
