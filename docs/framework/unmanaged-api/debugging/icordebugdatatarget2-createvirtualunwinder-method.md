@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3782686f3caad6859aa81957f10e585265be340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 387dc484b3ada63d62ddc27318e735dfc4ea93b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585485"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492271"
 ---
-# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="2e560-102">ICorDebugDataTarget2::CreateVirtualUnwinder メソッド</span><span class="sxs-lookup"><span data-stu-id="2e560-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
-<span data-ttu-id="2e560-103">初期コンテキストからアンワインドを開始する新しいスタック アンワインダーを作成します (これは、必ずしもスレッドのリーフではありません)。</span><span class="sxs-lookup"><span data-stu-id="2e560-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
+# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="3ec23-102">ICorDebugDataTarget2::CreateVirtualUnwinder メソッド</span><span class="sxs-lookup"><span data-stu-id="3ec23-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
+<span data-ttu-id="3ec23-103">初期コンテキストからアンワインドを開始する新しいスタック アンワインダーを作成します (これは、必ずしもスレッドのリーフではありません)。</span><span class="sxs-lookup"><span data-stu-id="3ec23-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e560-104">構文</span><span class="sxs-lookup"><span data-stu-id="2e560-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ec23-104">構文</span><span class="sxs-lookup"><span data-stu-id="3ec23-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateVirtualUnwinder(  
@@ -26,39 +26,39 @@ HRESULT CreateVirtualUnwinder(
 };  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2e560-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2e560-105">Parameters</span></span>  
- <span data-ttu-id="2e560-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="2e560-106">nativeThreadID</span></span>  
- <span data-ttu-id="2e560-107">[入力] スタックをアンワインドするスレッドのネイティブ スレッド ID。</span><span class="sxs-lookup"><span data-stu-id="2e560-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3ec23-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3ec23-105">Parameters</span></span>  
+ <span data-ttu-id="3ec23-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="3ec23-106">nativeThreadID</span></span>  
+ <span data-ttu-id="3ec23-107">[入力] スタックをアンワインドするスレッドのネイティブ スレッド ID。</span><span class="sxs-lookup"><span data-stu-id="3ec23-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
   
- <span data-ttu-id="2e560-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="2e560-108">contextFlags</span></span>  
- <span data-ttu-id="2e560-109">[入力] コンテキストのどの部分が `initialContext` で定義されるかを指定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="2e560-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
+ <span data-ttu-id="3ec23-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="3ec23-108">contextFlags</span></span>  
+ <span data-ttu-id="3ec23-109">[入力] コンテキストのどの部分が `initialContext` で定義されるかを指定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="3ec23-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
   
- <span data-ttu-id="2e560-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="2e560-110">cbContext</span></span>  
- <span data-ttu-id="2e560-111">[入力] `initialContext` のサイズ。</span><span class="sxs-lookup"><span data-stu-id="2e560-111">[in] The size of `initialContext`.</span></span>  
+ <span data-ttu-id="3ec23-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="3ec23-110">cbContext</span></span>  
+ <span data-ttu-id="3ec23-111">[入力] `initialContext` のサイズ。</span><span class="sxs-lookup"><span data-stu-id="3ec23-111">[in] The size of `initialContext`.</span></span>  
   
- <span data-ttu-id="2e560-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="2e560-112">initialContext</span></span>  
- <span data-ttu-id="2e560-113">[入力] コンテキストのデータ。</span><span class="sxs-lookup"><span data-stu-id="2e560-113">[in] The data in the context.</span></span>  
+ <span data-ttu-id="3ec23-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="3ec23-112">initialContext</span></span>  
+ <span data-ttu-id="3ec23-113">[入力] コンテキストのデータ。</span><span class="sxs-lookup"><span data-stu-id="3ec23-113">[in] The data in the context.</span></span>  
   
- <span data-ttu-id="2e560-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="2e560-114">ppUnwinder</span></span>  
- <span data-ttu-id="2e560-115">[出力] ICorDebugVirtualUnwinder インターフェイス オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2e560-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
+ <span data-ttu-id="3ec23-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="3ec23-114">ppUnwinder</span></span>  
+ <span data-ttu-id="3ec23-115">[出力] ICorDebugVirtualUnwinder インターフェイス オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3ec23-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2e560-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="2e560-116">Return Value</span></span>  
- <span data-ttu-id="2e560-117">正常終了した場合は、`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="2e560-117">`S_OK` if successful.</span></span> <span data-ttu-id="2e560-118">それ以外の `HRESULT` は失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="2e560-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="2e560-119">失敗した`HRESULT`mscordbi によって受信は致命的と見なされ、により[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)メソッドを返す`CORDBG_E_DATA_TARGET_ERROR`します。</span><span class="sxs-lookup"><span data-stu-id="2e560-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3ec23-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="3ec23-116">Return Value</span></span>  
+ <span data-ttu-id="3ec23-117">正常終了した場合は、`S_OK`。</span><span class="sxs-lookup"><span data-stu-id="3ec23-117">`S_OK` if successful.</span></span> <span data-ttu-id="3ec23-118">それ以外の `HRESULT` は失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="3ec23-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="3ec23-119">失敗した`HRESULT`mscordbi によって受信は致命的と見なされ、により[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)メソッドを返す`CORDBG_E_DATA_TARGET_ERROR`します。</span><span class="sxs-lookup"><span data-stu-id="3ec23-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2e560-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="2e560-120">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ec23-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="3ec23-120">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2e560-121">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="2e560-121">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="3ec23-121">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="3ec23-121">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e560-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="2e560-122">Requirements</span></span>  
- <span data-ttu-id="2e560-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e560-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ec23-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="3ec23-122">Requirements</span></span>  
+ <span data-ttu-id="3ec23-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3ec23-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e560-124">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2e560-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3ec23-124">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3ec23-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2e560-125">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e560-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3ec23-125">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3ec23-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e560-126">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e560-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="3ec23-126">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ec23-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e560-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e560-127">See also</span></span>
-- [<span data-ttu-id="2e560-128">ICorDebugDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e560-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="2e560-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e560-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3ec23-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ec23-127">See also</span></span>
+- [<span data-ttu-id="3ec23-128">ICorDebugDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3ec23-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="3ec23-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3ec23-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

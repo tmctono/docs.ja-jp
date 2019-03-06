@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412348"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475594"
 ---
-# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="d5f0b-102">ICorDebugHandleValue::GetHandleType メソッド</span><span class="sxs-lookup"><span data-stu-id="d5f0b-102">ICorDebugHandleValue::GetHandleType Method</span></span>
-<span data-ttu-id="d5f0b-103">ICorDebugHandleValue オブジェクトによって参照されているハンドルの種類を示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="d5f0b-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
+# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="92a8b-102">ICorDebugHandleValue::GetHandleType メソッド</span><span class="sxs-lookup"><span data-stu-id="92a8b-102">ICorDebugHandleValue::GetHandleType Method</span></span>
+<span data-ttu-id="92a8b-103">ICorDebugHandleValue オブジェクトによって参照されているハンドルの種類を示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="92a8b-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5f0b-104">構文</span><span class="sxs-lookup"><span data-stu-id="d5f0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92a8b-104">構文</span><span class="sxs-lookup"><span data-stu-id="92a8b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandleType (  
@@ -35,15 +35,15 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5f0b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d5f0b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="92a8b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="92a8b-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="d5f0b-106">[out]このハンドルの種類を示す CorDebugHandleType 列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d5f0b-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
+ <span data-ttu-id="92a8b-106">[out]このハンドルの種類を示す CorDebugHandleType 列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="92a8b-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5f0b-107">要件</span><span class="sxs-lookup"><span data-stu-id="d5f0b-107">Requirements</span></span>  
- <span data-ttu-id="d5f0b-108">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="d5f0b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="92a8b-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="92a8b-107">Requirements</span></span>  
+ <span data-ttu-id="92a8b-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="92a8b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5f0b-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5f0b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="92a8b-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="92a8b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5f0b-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5f0b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="92a8b-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92a8b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5f0b-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5f0b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="92a8b-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92a8b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
