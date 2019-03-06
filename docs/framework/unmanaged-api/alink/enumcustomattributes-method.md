@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e351c61f7e8bfc254a6fc8ea12c8a94fc393e3fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529490"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478155"
 ---
-# <a name="enumcustomattributes-method"></a><span data-ttu-id="23590-102">EnumCustomAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="23590-102">EnumCustomAttributes Method</span></span>
-<span data-ttu-id="23590-103">アセンブリ レベルのカスタム属性を取得します。</span><span class="sxs-lookup"><span data-stu-id="23590-103">Retrieves assembly-level custom attributes.</span></span>  
+# <a name="enumcustomattributes-method"></a><span data-ttu-id="d21a1-102">EnumCustomAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="d21a1-102">EnumCustomAttributes Method</span></span>
+<span data-ttu-id="d21a1-103">アセンブリ レベルのカスタム属性を取得します。</span><span class="sxs-lookup"><span data-stu-id="d21a1-103">Retrieves assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23590-104">構文</span><span class="sxs-lookup"><span data-stu-id="23590-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d21a1-104">構文</span><span class="sxs-lookup"><span data-stu-id="d21a1-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumCustomAttributes(  
@@ -39,29 +39,29 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="23590-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="23590-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d21a1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d21a1-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="23590-106">列挙子のハンドル。</span><span class="sxs-lookup"><span data-stu-id="23590-106">Handle of enumerator.</span></span>  
+ <span data-ttu-id="d21a1-106">列挙子のハンドル。</span><span class="sxs-lookup"><span data-stu-id="d21a1-106">Handle of enumerator.</span></span>  
   
  `tkType`  
- <span data-ttu-id="23590-107">列挙する属性の型。</span><span class="sxs-lookup"><span data-stu-id="23590-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="23590-108">使用`mdTokenNill`すべての属性。</span><span class="sxs-lookup"><span data-stu-id="23590-108">Use `mdTokenNill` for all attributes.</span></span>  
+ <span data-ttu-id="d21a1-107">列挙する属性の型。</span><span class="sxs-lookup"><span data-stu-id="d21a1-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="d21a1-108">使用`mdTokenNill`すべての属性。</span><span class="sxs-lookup"><span data-stu-id="d21a1-108">Use `mdTokenNill` for all attributes.</span></span>  
   
  `rCustomValues`  
- <span data-ttu-id="23590-109">カスタム属性のトークンを受信します。</span><span class="sxs-lookup"><span data-stu-id="23590-109">Receives custom attributes tokens.</span></span>  
+ <span data-ttu-id="d21a1-109">カスタム属性のトークンを受信します。</span><span class="sxs-lookup"><span data-stu-id="d21a1-109">Receives custom attributes tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="23590-110">サイズを指定`rCustomValues`配列。</span><span class="sxs-lookup"><span data-stu-id="23590-110">Specifies size of `rCustomValues` array.</span></span>  
+ <span data-ttu-id="d21a1-110">サイズを指定`rCustomValues`配列。</span><span class="sxs-lookup"><span data-stu-id="d21a1-110">Specifies size of `rCustomValues` array.</span></span>  
   
  `pcCustomValues`  
- <span data-ttu-id="23590-111">必要に応じてトークンの値の数を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="23590-111">Optionally receives count of token values.</span></span>  
+ <span data-ttu-id="d21a1-111">必要に応じてトークンの値の数を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d21a1-111">Optionally receives count of token values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="23590-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="23590-112">Return Value</span></span>  
- <span data-ttu-id="23590-113">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="23590-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d21a1-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="d21a1-112">Return Value</span></span>  
+ <span data-ttu-id="d21a1-113">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="d21a1-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23590-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="23590-114">Requirements</span></span>  
- <span data-ttu-id="23590-115">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="23590-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d21a1-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="d21a1-114">Requirements</span></span>  
+ <span data-ttu-id="d21a1-115">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="d21a1-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23590-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="23590-116">See also</span></span>
-- [<span data-ttu-id="23590-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="23590-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="23590-118">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="23590-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="23590-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="23590-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="d21a1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="d21a1-116">See also</span></span>
+- [<span data-ttu-id="d21a1-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d21a1-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="d21a1-118">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d21a1-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="d21a1-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="d21a1-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

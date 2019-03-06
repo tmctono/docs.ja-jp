@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501450"
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="8ed15-102">ICorDebugAppDomain::GetId メソッド</span><span class="sxs-lookup"><span data-stu-id="8ed15-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="8ed15-103">アプリケーション ドメインの一意識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="8ed15-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="025fe-102">ICorDebugAppDomain::GetId メソッド</span><span class="sxs-lookup"><span data-stu-id="025fe-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="025fe-103">アプリケーション ドメインの一意の識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="025fe-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ed15-104">構文</span><span class="sxs-lookup"><span data-stu-id="8ed15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="025fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="025fe-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -35,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8ed15-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8ed15-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="025fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="025fe-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="8ed15-106">[out]アプリケーション ドメインの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="8ed15-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="025fe-106">[out]アプリケーション ドメインの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="025fe-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8ed15-107">コメント</span><span class="sxs-lookup"><span data-stu-id="8ed15-107">Remarks</span></span>  
- <span data-ttu-id="8ed15-108">アプリケーション ドメインの識別子は、格納しているプロセス内で一意です。</span><span class="sxs-lookup"><span data-stu-id="8ed15-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="025fe-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="025fe-107">Remarks</span></span>  
+ <span data-ttu-id="025fe-108">アプリケーション ドメインの識別子は、格納しているプロセス内で一意です。</span><span class="sxs-lookup"><span data-stu-id="025fe-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8ed15-109">要件</span><span class="sxs-lookup"><span data-stu-id="8ed15-109">Requirements</span></span>  
- <span data-ttu-id="8ed15-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="8ed15-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="025fe-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="025fe-109">Requirements</span></span>  
+ <span data-ttu-id="025fe-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="025fe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ed15-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8ed15-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="025fe-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="025fe-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8ed15-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ed15-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="025fe-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="025fe-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8ed15-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ed15-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="025fe-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="025fe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
