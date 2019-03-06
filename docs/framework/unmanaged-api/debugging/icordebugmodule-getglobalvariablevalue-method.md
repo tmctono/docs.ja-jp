@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa558bf58f3033cc39a2b52d99e3a5329d9e99bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 00e747e43f67533771665313f4d420e4725945cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485353"
 ---
-# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="ae83b-102">ICorDebugModule::GetGlobalVariableValue メソッド</span><span class="sxs-lookup"><span data-stu-id="ae83b-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
-<span data-ttu-id="ae83b-103">指定のグローバル変数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="ae83b-103">Gets the value of the specified global variable.</span></span>  
+# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="80208-102">ICorDebugModule::GetGlobalVariableValue メソッド</span><span class="sxs-lookup"><span data-stu-id="80208-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
+<span data-ttu-id="80208-103">指定されたグローバル変数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="80208-103">Gets the value of the specified global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae83b-104">構文</span><span class="sxs-lookup"><span data-stu-id="ae83b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80208-104">構文</span><span class="sxs-lookup"><span data-stu-id="80208-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGlobalVariableValue(  
@@ -36,18 +36,18 @@ HRESULT GetGlobalVariableValue(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ae83b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ae83b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80208-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="80208-105">Parameters</span></span>  
  `fieldDef`  
- <span data-ttu-id="ae83b-106">[in]`mdFieldDef`グローバル変数を記述するメタデータを参照するトークン。</span><span class="sxs-lookup"><span data-stu-id="ae83b-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
+ <span data-ttu-id="80208-106">[in]`mdFieldDef`グローバル変数を記述するメタデータを参照するトークン。</span><span class="sxs-lookup"><span data-stu-id="80208-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ae83b-107">[out]指定のグローバル変数の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ae83b-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
+ <span data-ttu-id="80208-107">[out]指定されたグローバル変数の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="80208-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae83b-108">要件</span><span class="sxs-lookup"><span data-stu-id="ae83b-108">Requirements</span></span>  
- <span data-ttu-id="ae83b-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="ae83b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80208-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="80208-108">Requirements</span></span>  
+ <span data-ttu-id="80208-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="80208-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ae83b-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ae83b-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="80208-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="80208-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ae83b-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ae83b-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="80208-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="80208-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ae83b-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae83b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="80208-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80208-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fd0cf4f47781afb397c1fdd4b42715c710982e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83461f89be9a16305da2732536dcc6847b45027d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482562"
 ---
-# <a name="ihostcontrolsetappdomainmanager-method"></a><span data-ttu-id="e2a95-102">IHostControl::SetAppDomainManager メソッド</span><span class="sxs-lookup"><span data-stu-id="e2a95-102">IHostControl::SetAppDomainManager Method</span></span>
-<span data-ttu-id="e2a95-103">アプリケーション ドメインが作成されたことをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="e2a95-103">Notifies the host that an application domain has been created.</span></span>  
+# <a name="ihostcontrolsetappdomainmanager-method"></a><span data-ttu-id="582fb-102">IHostControl::SetAppDomainManager メソッド</span><span class="sxs-lookup"><span data-stu-id="582fb-102">IHostControl::SetAppDomainManager Method</span></span>
+<span data-ttu-id="582fb-103">アプリケーション ドメインが作成されたことをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="582fb-103">Notifies the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2a95-104">構文</span><span class="sxs-lookup"><span data-stu-id="e2a95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="582fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="582fb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAppDomainManager (  
@@ -36,39 +36,39 @@ HRESULT SetAppDomainManager (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e2a95-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e2a95-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="582fb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="582fb-105">Parameters</span></span>  
  `dwAppDomainID`  
- <span data-ttu-id="e2a95-106">[in]選択した数値識別子<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="e2a95-106">[in] The numeric identifier of the selected <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="582fb-106">[in]選択した数値識別子<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="582fb-106">[in] The numeric identifier of the selected <xref:System.AppDomain>.</span></span>  
   
  `pUnkAppDomainManager`  
- <span data-ttu-id="e2a95-107">[in]ポインター、<xref:System.AppDomainManager>としてホストを実装するオブジェクト`IUnknown`します。</span><span class="sxs-lookup"><span data-stu-id="e2a95-107">[in] A pointer to the <xref:System.AppDomainManager> object that the host implements as `IUnknown`.</span></span>  
+ <span data-ttu-id="582fb-107">[in]ポインター、<xref:System.AppDomainManager>としてホストを実装するオブジェクト`IUnknown`します。</span><span class="sxs-lookup"><span data-stu-id="582fb-107">[in] A pointer to the <xref:System.AppDomainManager> object that the host implements as `IUnknown`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e2a95-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="e2a95-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="582fb-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="582fb-108">Return Value</span></span>  
   
-|<span data-ttu-id="e2a95-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e2a95-109">HRESULT</span></span>|<span data-ttu-id="e2a95-110">説明</span><span class="sxs-lookup"><span data-stu-id="e2a95-110">Description</span></span>|  
+|<span data-ttu-id="582fb-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="582fb-109">HRESULT</span></span>|<span data-ttu-id="582fb-110">説明</span><span class="sxs-lookup"><span data-stu-id="582fb-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e2a95-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e2a95-111">S_OK</span></span>|<span data-ttu-id="e2a95-112">`SetAppDomainManager` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="e2a95-112">`SetAppDomainManager` returned successfully.</span></span>|  
-|<span data-ttu-id="e2a95-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e2a95-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e2a95-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="e2a95-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e2a95-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e2a95-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e2a95-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="e2a95-116">The call timed out.</span></span>|  
-|<span data-ttu-id="e2a95-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e2a95-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e2a95-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="e2a95-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e2a95-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e2a95-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e2a95-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="e2a95-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e2a95-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e2a95-121">E_FAIL</span></span>|<span data-ttu-id="e2a95-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="e2a95-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e2a95-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="e2a95-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e2a95-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="e2a95-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="582fb-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="582fb-111">S_OK</span></span>|<span data-ttu-id="582fb-112">`SetAppDomainManager` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="582fb-112">`SetAppDomainManager` returned successfully.</span></span>|  
+|<span data-ttu-id="582fb-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="582fb-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="582fb-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="582fb-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="582fb-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="582fb-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="582fb-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="582fb-116">The call timed out.</span></span>|  
+|<span data-ttu-id="582fb-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="582fb-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="582fb-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="582fb-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="582fb-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="582fb-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="582fb-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="582fb-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="582fb-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="582fb-121">E_FAIL</span></span>|<span data-ttu-id="582fb-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="582fb-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="582fb-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="582fb-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="582fb-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="582fb-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e2a95-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="e2a95-125">Remarks</span></span>  
- <span data-ttu-id="e2a95-126"><xref:System.AppDomainManager>により、ホストにマネージ コードをブートス トラップを作成およびそれぞれの設定を制御するメカニズムで<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="e2a95-126">The <xref:System.AppDomainManager> provides the host with a mechanism to bootstrap into managed code and to control the creation and settings of each <xref:System.AppDomain>.</span></span> <span data-ttu-id="e2a95-127"><xref:System.AppDomainManager>それぞれに読み込まれる<xref:System.AppDomain>ときを<xref:System.AppDomain>が作成されます。</span><span class="sxs-lookup"><span data-stu-id="e2a95-127">The <xref:System.AppDomainManager> is loaded into each <xref:System.AppDomain> when that <xref:System.AppDomain> is created.</span></span> <span data-ttu-id="e2a95-128">選択した場合、CLR をホストに通知の値を設定して、アプリケーション ドメインが作成されたこと、`pUnkAppDomainManager`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="e2a95-128">If it chooses, the CLR notifies the host that the application domain has been created by setting the value of the `pUnkAppDomainManager` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="582fb-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="582fb-125">Remarks</span></span>  
+ <span data-ttu-id="582fb-126"><xref:System.AppDomainManager>により、ホストにマネージ コードをブートス トラップを作成およびそれぞれの設定を制御するメカニズムで<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="582fb-126">The <xref:System.AppDomainManager> provides the host with a mechanism to bootstrap into managed code and to control the creation and settings of each <xref:System.AppDomain>.</span></span> <span data-ttu-id="582fb-127"><xref:System.AppDomainManager>それぞれに読み込まれる<xref:System.AppDomain>ときを<xref:System.AppDomain>が作成されます。</span><span class="sxs-lookup"><span data-stu-id="582fb-127">The <xref:System.AppDomainManager> is loaded into each <xref:System.AppDomain> when that <xref:System.AppDomain> is created.</span></span> <span data-ttu-id="582fb-128">選択した場合、CLR をホストに通知の値を設定して、アプリケーション ドメインが作成されたこと、`pUnkAppDomainManager`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="582fb-128">If it chooses, the CLR notifies the host that the application domain has been created by setting the value of the `pUnkAppDomainManager` parameter.</span></span>  
   
- <span data-ttu-id="e2a95-129">実装で、`SetAppDomainManager`メソッド、ホスト設定できますアセンブリの名前と種類のアプリケーション ドメイン マネージャー。</span><span class="sxs-lookup"><span data-stu-id="e2a95-129">In its implementation of the `SetAppDomainManager` method, the host can set the assembly name and type for the application domain manager.</span></span>  
+ <span data-ttu-id="582fb-129">実装で、`SetAppDomainManager`メソッド、ホスト設定できますアセンブリの名前と種類のアプリケーション ドメイン マネージャー。</span><span class="sxs-lookup"><span data-stu-id="582fb-129">In its implementation of the `SetAppDomainManager` method, the host can set the assembly name and type for the application domain manager.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e2a95-130">必要条件</span><span class="sxs-lookup"><span data-stu-id="e2a95-130">Requirements</span></span>  
- <span data-ttu-id="e2a95-131">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e2a95-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="582fb-130">必要条件</span><span class="sxs-lookup"><span data-stu-id="582fb-130">Requirements</span></span>  
+ <span data-ttu-id="582fb-131">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="582fb-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2a95-132">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e2a95-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="582fb-132">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="582fb-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e2a95-133">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="e2a95-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="582fb-133">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="582fb-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e2a95-134">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2a95-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="582fb-134">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="582fb-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2a95-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2a95-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="582fb-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="582fb-135">See also</span></span>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainManager>
-- [<span data-ttu-id="e2a95-136">IHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e2a95-136">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="582fb-136">IHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="582fb-136">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

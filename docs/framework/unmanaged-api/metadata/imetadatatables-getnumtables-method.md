@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dc7d8c339e5f77bad44960092198035e13735b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b627a09db595cfbeb38aa605259eb42bdb77cc0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621293"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477063"
 ---
-# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="6f29f-102">IMetaDataTables::GetNumTables メソッド</span><span class="sxs-lookup"><span data-stu-id="6f29f-102">IMetaDataTables::GetNumTables Method</span></span>
-<span data-ttu-id="6f29f-103">現在のスコープ内のテーブルの数を取得`IMetaDataTables`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="6f29f-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
+# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="f906b-102">IMetaDataTables::GetNumTables メソッド</span><span class="sxs-lookup"><span data-stu-id="f906b-102">IMetaDataTables::GetNumTables Method</span></span>
+<span data-ttu-id="f906b-103">現在のスコープ内のテーブルの数を取得`IMetaDataTables`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="f906b-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f29f-104">構文</span><span class="sxs-lookup"><span data-stu-id="6f29f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f906b-104">構文</span><span class="sxs-lookup"><span data-stu-id="f906b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNumTables (  
@@ -35,19 +35,19 @@ HRESULT GetNumTables (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6f29f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6f29f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f906b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f906b-105">Parameters</span></span>  
  `pcTables`  
- <span data-ttu-id="6f29f-106">[out]現在のインスタンスのスコープ内のテーブルの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6f29f-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
+ <span data-ttu-id="f906b-106">[out]現在のインスタンスのスコープ内のテーブルの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f906b-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f29f-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="6f29f-107">Requirements</span></span>  
- <span data-ttu-id="6f29f-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6f29f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f906b-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="f906b-107">Requirements</span></span>  
+ <span data-ttu-id="f906b-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f906b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f29f-109">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6f29f-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f906b-109">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f906b-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6f29f-110">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="6f29f-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f906b-110">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="f906b-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6f29f-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f29f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f906b-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f906b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f29f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6f29f-112">See also</span></span>
-- [<span data-ttu-id="6f29f-113">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6f29f-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="6f29f-114">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6f29f-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f906b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="f906b-112">See also</span></span>
+- [<span data-ttu-id="f906b-113">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f906b-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="f906b-114">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f906b-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

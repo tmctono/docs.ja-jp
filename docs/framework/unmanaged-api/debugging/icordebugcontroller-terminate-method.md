@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 362ae813846ab31f170ae49288735996eb1e9555
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a374f942697ee670507987c4a97a7977970b69
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481094"
 ---
-# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="daad5-102">ICorDebugController::Terminate メソッド</span><span class="sxs-lookup"><span data-stu-id="daad5-102">ICorDebugController::Terminate Method</span></span>
-<span data-ttu-id="daad5-103">指定した終了コードを使用して、プロセスを終了します。</span><span class="sxs-lookup"><span data-stu-id="daad5-103">Terminates the process with the specified exit code.</span></span>  
+# <a name="icordebugcontrollerterminate-method"></a><span data-ttu-id="21bca-102">ICorDebugController::Terminate メソッド</span><span class="sxs-lookup"><span data-stu-id="21bca-102">ICorDebugController::Terminate Method</span></span>
+<span data-ttu-id="21bca-103">指定した終了コードを使用して、プロセスを終了します。</span><span class="sxs-lookup"><span data-stu-id="21bca-103">Terminates the process with the specified exit code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="daad5-104">このメソッドは、win32 ラッパー`TerminateProcess`関数。</span><span class="sxs-lookup"><span data-stu-id="daad5-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="daad5-105">したがって、`Terminate`終了コードを使用して、同じ方法、Win32`TerminateProcess`関数では使用します。</span><span class="sxs-lookup"><span data-stu-id="daad5-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
+>  <span data-ttu-id="21bca-104">このメソッドは、win32 ラッパー`TerminateProcess`関数。</span><span class="sxs-lookup"><span data-stu-id="21bca-104">This method is a wrapper for the Win32 `TerminateProcess` function.</span></span> <span data-ttu-id="21bca-105">したがって、`Terminate`終了コードを使用して、同じ方法、Win32`TerminateProcess`関数では使用します。</span><span class="sxs-lookup"><span data-stu-id="21bca-105">Thus, `Terminate` uses the exit code in the same way that the Win32 `TerminateProcess` function uses it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="daad5-106">構文</span><span class="sxs-lookup"><span data-stu-id="daad5-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21bca-106">構文</span><span class="sxs-lookup"><span data-stu-id="21bca-106">Syntax</span></span>  
   
 ```  
 HRESULT Terminate (  
@@ -38,24 +38,24 @@ HRESULT Terminate (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="daad5-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="daad5-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21bca-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="21bca-107">Parameters</span></span>  
  `exitCode`  
- <span data-ttu-id="daad5-108">[in]終了コードを示す数値。</span><span class="sxs-lookup"><span data-stu-id="daad5-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="daad5-109">有効な数値の値は、Winbase.h で定義されます。</span><span class="sxs-lookup"><span data-stu-id="daad5-109">The valid numeric values are defined in Winbase.h.</span></span>  
+ <span data-ttu-id="21bca-108">[in]終了コードを示す数値。</span><span class="sxs-lookup"><span data-stu-id="21bca-108">[in] A numeric value that is the exit code.</span></span> <span data-ttu-id="21bca-109">有効な数値の値は、Winbase.h で定義されます。</span><span class="sxs-lookup"><span data-stu-id="21bca-109">The valid numeric values are defined in Winbase.h.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="daad5-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="daad5-110">Remarks</span></span>  
- <span data-ttu-id="daad5-111">プロセスが停止している場合`Terminate`が呼び出されると、プロセスを続行するかを使用して、 [icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)メソッド、デバッガーを使用して、終了の確認を受信するように、 [Icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)または[icordebugmanagedcallback::exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="daad5-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="21bca-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="21bca-110">Remarks</span></span>  
+ <span data-ttu-id="21bca-111">プロセスが停止している場合`Terminate`が呼び出されると、プロセスを続行するかを使用して、 [icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)メソッド、デバッガーを使用して、終了の確認を受信するように、 [Icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)または[icordebugmanagedcallback::exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="21bca-111">If the process is stopped when `Terminate` is called, the process should be continued by using the [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) method so that the debugger receives confirmation of the termination through the [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) or [ICorDebugManagedCallback::ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) callback.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="daad5-112">このメソッドは、アプリケーション ドメインによって実装されていません。</span><span class="sxs-lookup"><span data-stu-id="daad5-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="daad5-113">実装されていない、つまり、<xref:System.AppDomain>レベル。</span><span class="sxs-lookup"><span data-stu-id="daad5-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
+>  <span data-ttu-id="21bca-112">このメソッドは、アプリケーション ドメインによって実装されていません。</span><span class="sxs-lookup"><span data-stu-id="21bca-112">This method is not implemented by an application domain.</span></span> <span data-ttu-id="21bca-113">実装されていない、つまり、<xref:System.AppDomain>レベル。</span><span class="sxs-lookup"><span data-stu-id="21bca-113">That is, it is not implemented at the <xref:System.AppDomain> level.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="daad5-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="daad5-114">Requirements</span></span>  
- <span data-ttu-id="daad5-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="daad5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21bca-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="21bca-114">Requirements</span></span>  
+ <span data-ttu-id="21bca-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="21bca-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="daad5-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="daad5-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="21bca-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="21bca-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="daad5-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="daad5-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="21bca-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21bca-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="daad5-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daad5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="21bca-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21bca-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="daad5-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="daad5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21bca-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="21bca-119">See also</span></span>
 

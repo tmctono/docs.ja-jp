@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493584"
 ---
-# <a name="icordebugprocessenumnext-method"></a><span data-ttu-id="95e7b-102">ICorDebugProcessEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="95e7b-102">ICorDebugProcessEnum::Next Method</span></span>
-<span data-ttu-id="95e7b-103">列挙体の現在位置から ICorDebugProcess インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="95e7b-103">Gets the specified number of ICorDebugProcess instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugprocessenumnext-method"></a><span data-ttu-id="82ee3-102">ICorDebugProcessEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="82ee3-102">ICorDebugProcessEnum::Next Method</span></span>
+<span data-ttu-id="82ee3-103">現在の位置から始まり、列挙体から ICorDebugProcess インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="82ee3-103">Gets the specified number of ICorDebugProcess instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95e7b-104">構文</span><span class="sxs-lookup"><span data-stu-id="95e7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82ee3-104">構文</span><span class="sxs-lookup"><span data-stu-id="82ee3-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95e7b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="95e7b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="82ee3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="82ee3-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="95e7b-106">[in]数`ICorDebugProcess`を取得するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="95e7b-106">[in] The number of `ICorDebugProcess` instances to be retrieved.</span></span>  
+ <span data-ttu-id="82ee3-106">[in]数`ICorDebugProcess`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="82ee3-106">[in] The number of `ICorDebugProcess` instances to be retrieved.</span></span>  
   
  `processess`  
- <span data-ttu-id="95e7b-107">[out]それぞれが指すポインターの配列、`ICorDebugProcess`プロセスを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="95e7b-107">[out] An array of pointers, each of which points to an `ICorDebugProcess` object that represents a process.</span></span>  
+ <span data-ttu-id="82ee3-107">[out]それぞれが指すポインターの配列、`ICorDebugProcess`プロセスを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="82ee3-107">[out] An array of pointers, each of which points to an `ICorDebugProcess` object that represents a process.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="95e7b-108">[out]数へのポインター`ICorDebugProcess`実際に返されるインスタンス。</span><span class="sxs-lookup"><span data-stu-id="95e7b-108">[out] Pointer to the number of `ICorDebugProcess` instances actually returned.</span></span> <span data-ttu-id="95e7b-109">この値を null にすることがある場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="95e7b-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="82ee3-108">[out]数へのポインター`ICorDebugProcess`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="82ee3-108">[out] Pointer to the number of `ICorDebugProcess` instances actually returned.</span></span> <span data-ttu-id="82ee3-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="82ee3-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95e7b-110">要件</span><span class="sxs-lookup"><span data-stu-id="95e7b-110">Requirements</span></span>  
- <span data-ttu-id="95e7b-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="95e7b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82ee3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="82ee3-110">Requirements</span></span>  
+ <span data-ttu-id="82ee3-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="82ee3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95e7b-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="95e7b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="82ee3-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="82ee3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="95e7b-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="95e7b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="82ee3-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="82ee3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="95e7b-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95e7b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="82ee3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82ee3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

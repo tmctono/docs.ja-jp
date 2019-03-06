@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1407bbcbb5bfa351a38f7627f2a89106c7d5136f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a619bf2a98b2140ab126745305a85f4e1fd05c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537661"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484291"
 ---
-# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="87763-102">ICLRStrongName::GetHashFromFile メソッド</span><span class="sxs-lookup"><span data-stu-id="87763-102">ICLRStrongName::GetHashFromFile Method</span></span>
-<span data-ttu-id="87763-103">指定したファイルの内容に対してハッシュが生成されます。</span><span class="sxs-lookup"><span data-stu-id="87763-103">Generates a hash over the contents of the specified file.</span></span>  
+# <a name="iclrstrongnamegethashfromfile-method"></a><span data-ttu-id="9f541-102">ICLRStrongName::GetHashFromFile メソッド</span><span class="sxs-lookup"><span data-stu-id="9f541-102">ICLRStrongName::GetHashFromFile Method</span></span>
+<span data-ttu-id="9f541-103">指定したファイルの内容に対してハッシュが生成されます。</span><span class="sxs-lookup"><span data-stu-id="9f541-103">Generates a hash over the contents of the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87763-104">構文</span><span class="sxs-lookup"><span data-stu-id="87763-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f541-104">構文</span><span class="sxs-lookup"><span data-stu-id="9f541-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFile (  
@@ -39,37 +39,37 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="87763-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="87763-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f541-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9f541-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="87763-106">[in]ハッシュするファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="87763-106">[in] The name of the file to hash.</span></span>  
+ <span data-ttu-id="9f541-106">[in]ハッシュするファイルの名前。</span><span class="sxs-lookup"><span data-stu-id="9f541-106">[in] The name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="87763-107">[入力、出力]ハッシュを生成するときに使用するアルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="87763-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="87763-108">有効なアルゴリズムを使用して、Win32 CryptoAPI で定義されています。</span><span class="sxs-lookup"><span data-stu-id="87763-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="87763-109">場合`piHashAlg`CALG_SHA 1 が使用される既定のアルゴリズムを 0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="87763-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="9f541-107">[入力、出力]ハッシュを生成するときに使用するアルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="9f541-107">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="9f541-108">有効なアルゴリズムを使用して、Win32 CryptoAPI で定義されています。</span><span class="sxs-lookup"><span data-stu-id="9f541-108">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="9f541-109">場合`piHashAlg`CALG_SHA 1 が使用される既定のアルゴリズムを 0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="9f541-109">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="87763-110">[out]生成されたハッシュを含むバイト配列。</span><span class="sxs-lookup"><span data-stu-id="87763-110">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="9f541-110">[out]生成されたハッシュを含むバイト配列。</span><span class="sxs-lookup"><span data-stu-id="9f541-110">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="87763-111">[in]バッファーの最大サイズを`pbHash`を指します。</span><span class="sxs-lookup"><span data-stu-id="87763-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
+ <span data-ttu-id="9f541-111">[in]バッファーの最大サイズを`pbHash`を指します。</span><span class="sxs-lookup"><span data-stu-id="9f541-111">[in] The maximum size of the buffer that `pbHash` points to.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="87763-112">[out]サイズ (バイト単位)、返された`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="87763-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="9f541-112">[out]サイズ (バイト単位)、返された`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="9f541-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="87763-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="87763-113">Return Value</span></span>  
- <span data-ttu-id="87763-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="87763-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f541-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="9f541-113">Return Value</span></span>  
+ <span data-ttu-id="9f541-114">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="9f541-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="87763-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="87763-115">Remarks</span></span>  
- <span data-ttu-id="87763-116">このメソッドは同じ、 [iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッド、名前を指定する点を除いては Unicode ではなく ANSI です。</span><span class="sxs-lookup"><span data-stu-id="87763-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f541-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="9f541-115">Remarks</span></span>  
+ <span data-ttu-id="9f541-116">このメソッドは同じ、 [iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッド、名前を指定する点を除いては Unicode ではなく ANSI です。</span><span class="sxs-lookup"><span data-stu-id="9f541-116">This method is the same as the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method, except that the file name specification is ANSI instead of Unicode.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87763-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="87763-117">Requirements</span></span>  
- <span data-ttu-id="87763-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="87763-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f541-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="9f541-117">Requirements</span></span>  
+ <span data-ttu-id="9f541-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f541-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87763-119">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="87763-119">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9f541-119">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9f541-119">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="87763-120">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="87763-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9f541-120">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="9f541-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="87763-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87763-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9f541-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f541-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87763-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="87763-122">See also</span></span>
-- [<span data-ttu-id="87763-123">GetHashFromFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="87763-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [<span data-ttu-id="87763-124">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="87763-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9f541-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f541-122">See also</span></span>
+- [<span data-ttu-id="9f541-123">GetHashFromFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="9f541-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
+- [<span data-ttu-id="9f541-124">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f541-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

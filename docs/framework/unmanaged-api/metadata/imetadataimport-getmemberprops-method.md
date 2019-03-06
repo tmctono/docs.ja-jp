@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487643"
 ---
-# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="9c96c-102">IMetaDataImport::GetMemberProps メソッド</span><span class="sxs-lookup"><span data-stu-id="9c96c-102">IMetaDataImport::GetMemberProps Method</span></span>
-<span data-ttu-id="9c96c-103">名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。</span><span class="sxs-lookup"><span data-stu-id="9c96c-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="9c96c-104">これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9c96c-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="9c96c-105">他の方法の詳細を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9c96c-105">See these other methods for details.</span></span> 
+# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="98a7a-102">IMetaDataImport::GetMemberProps メソッド</span><span class="sxs-lookup"><span data-stu-id="98a7a-102">IMetaDataImport::GetMemberProps Method</span></span>
+<span data-ttu-id="98a7a-103">名前、バイナリ シグネチャ、および相対仮想アドレスを含む、指定したメンバーの定義のメタデータに格納されている情報の取得、<xref:System.Type>指定したメタデータ トークンによって参照されるメンバー。</span><span class="sxs-lookup"><span data-stu-id="98a7a-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="98a7a-104">これは単純なヘルパー メソッド: 場合*mb*は、MethodDef **GetMethodProps**が呼び出されます場合*mb*は、の FieldDef **GetFieldProps** 。呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="98a7a-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="98a7a-105">他の方法の詳細を参照してください。</span><span class="sxs-lookup"><span data-stu-id="98a7a-105">See these other methods for details.</span></span> 
   
-## <a name="syntax"></a><span data-ttu-id="9c96c-106">構文</span><span class="sxs-lookup"><span data-stu-id="9c96c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98a7a-106">構文</span><span class="sxs-lookup"><span data-stu-id="98a7a-106">Syntax</span></span>  
   
 ```  
 HRESULT GetMemberProps (  
@@ -47,55 +47,55 @@ HRESULT GetMemberProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9c96c-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9c96c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98a7a-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98a7a-107">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="9c96c-108">[in]関連付けられているメタデータを取得するメンバーを参照するトークンです。</span><span class="sxs-lookup"><span data-stu-id="9c96c-108">[in] The token that references the member to get the associated metadata for.</span></span>  
+ <span data-ttu-id="98a7a-108">[in]関連付けられているメタデータを取得するメンバーを参照するトークンです。</span><span class="sxs-lookup"><span data-stu-id="98a7a-108">[in] The token that references the member to get the associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="9c96c-109">[out]メンバーのクラスを表すメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="9c96c-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
+ <span data-ttu-id="98a7a-109">[out]メンバーのクラスを表すメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="98a7a-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="9c96c-110">[out]メンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="9c96c-110">[out] The name of the member.</span></span>  
+ <span data-ttu-id="98a7a-110">[out]メンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="98a7a-110">[out] The name of the member.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="9c96c-111">[in]ワイド文字のサイズ、`szMember`バッファー。</span><span class="sxs-lookup"><span data-stu-id="9c96c-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
+ <span data-ttu-id="98a7a-111">[in]ワイド文字のサイズ、`szMember`バッファー。</span><span class="sxs-lookup"><span data-stu-id="98a7a-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="9c96c-112">[out]返される名前のワイド文字単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="9c96c-112">[out] The size in wide characters of the returned name.</span></span>  
+ <span data-ttu-id="98a7a-112">[out]返される名前のワイド文字単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="98a7a-112">[out] The size in wide characters of the returned name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="9c96c-113">[out]いずれかのフラグ値がメンバーに適用します。</span><span class="sxs-lookup"><span data-stu-id="9c96c-113">[out] Any flag values applied to the member.</span></span>  
+ <span data-ttu-id="98a7a-113">[out]いずれかのフラグ値がメンバーに適用します。</span><span class="sxs-lookup"><span data-stu-id="98a7a-113">[out] Any flag values applied to the member.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="9c96c-114">[out]メンバーのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="9c96c-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="98a7a-114">[out]メンバーのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="98a7a-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="9c96c-115">[out]バイト サイズ`ppvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="9c96c-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="98a7a-115">[out]バイト サイズ`ppvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="98a7a-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="9c96c-116">[out]メンバーの相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="9c96c-116">[out] A pointer to the relative virtual address of the member.</span></span>  
+ <span data-ttu-id="98a7a-116">[out]メンバーの相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="98a7a-116">[out] A pointer to the relative virtual address of the member.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="9c96c-117">[out]メンバーに関連付けられているすべてメソッド実装フラグ。</span><span class="sxs-lookup"><span data-stu-id="9c96c-117">[out] Any method implementation flags associated with the member.</span></span>  
+ <span data-ttu-id="98a7a-117">[out]メンバーに関連付けられているすべてメソッド実装フラグ。</span><span class="sxs-lookup"><span data-stu-id="98a7a-117">[out] Any method implementation flags associated with the member.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="9c96c-118">[out]マークするフラグを<xref:System.ValueType>します。</span><span class="sxs-lookup"><span data-stu-id="9c96c-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="9c96c-119">1 つは、`ELEMENT_TYPE_*`値。</span><span class="sxs-lookup"><span data-stu-id="9c96c-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
+ <span data-ttu-id="98a7a-118">[out]マークするフラグを<xref:System.ValueType>します。</span><span class="sxs-lookup"><span data-stu-id="98a7a-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="98a7a-119">1 つは、`ELEMENT_TYPE_*`値。</span><span class="sxs-lookup"><span data-stu-id="98a7a-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
   
  `ppValue`  
- <span data-ttu-id="9c96c-120">[out]このメンバーが返される定数文字列値。</span><span class="sxs-lookup"><span data-stu-id="9c96c-120">[out] A constant string value returned by this member.</span></span>  
+ <span data-ttu-id="98a7a-120">[out]このメンバーが返される定数文字列値。</span><span class="sxs-lookup"><span data-stu-id="98a7a-120">[out] A constant string value returned by this member.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="9c96c-121">[out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。</span><span class="sxs-lookup"><span data-stu-id="9c96c-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="98a7a-121">[out]サイズの文字で`ppValue`、または場合は 0`ppValue`文字列を保持しません。</span><span class="sxs-lookup"><span data-stu-id="98a7a-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c96c-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="9c96c-122">Requirements</span></span>  
- <span data-ttu-id="9c96c-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9c96c-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98a7a-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="98a7a-122">Requirements</span></span>  
+ <span data-ttu-id="98a7a-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="98a7a-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c96c-124">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9c96c-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="98a7a-124">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="98a7a-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9c96c-125">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="9c96c-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="98a7a-125">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="98a7a-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9c96c-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c96c-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="98a7a-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98a7a-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c96c-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="9c96c-127">See also</span></span>
-- [<span data-ttu-id="9c96c-128">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9c96c-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="9c96c-129">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9c96c-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="98a7a-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="98a7a-127">See also</span></span>
+- [<span data-ttu-id="98a7a-128">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98a7a-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="98a7a-129">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98a7a-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

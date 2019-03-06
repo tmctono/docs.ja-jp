@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6364f9091b399182a44f143cef9e47a4fe667913
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691751"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485032"
 ---
-# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="562d1-102">IMetaDataImport::FindTypeRef メソッド</span><span class="sxs-lookup"><span data-stu-id="562d1-102">IMetaDataImport::FindTypeRef Method</span></span>
-<span data-ttu-id="562d1-103">トークンにポインターを取得、<xref:System.Type>参照を指定されたスコープ内にあるし、指定した名前を持ちます。</span><span class="sxs-lookup"><span data-stu-id="562d1-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
+# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="b72a5-102">IMetaDataImport::FindTypeRef メソッド</span><span class="sxs-lookup"><span data-stu-id="b72a5-102">IMetaDataImport::FindTypeRef Method</span></span>
+<span data-ttu-id="b72a5-103">トークンにポインターを取得、<xref:System.Type>参照を指定されたスコープ内にあるし、指定した名前を持ちます。</span><span class="sxs-lookup"><span data-stu-id="b72a5-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="562d1-104">構文</span><span class="sxs-lookup"><span data-stu-id="562d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b72a5-104">構文</span><span class="sxs-lookup"><span data-stu-id="b72a5-104">Syntax</span></span>  
   
 ```  
 HRESULT FindTypeRef (  
@@ -37,25 +37,25 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="562d1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="562d1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b72a5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b72a5-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="562d1-106">[in]モジュール、アセンブリ、または型を指定する ModuleRef、AssemblyRef、または TypeRef トークンそれぞれ、型参照を定義します。</span><span class="sxs-lookup"><span data-stu-id="562d1-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
+ <span data-ttu-id="b72a5-106">[in]モジュール、アセンブリ、または型を指定する ModuleRef、AssemblyRef、または TypeRef トークンそれぞれ、型参照を定義します。</span><span class="sxs-lookup"><span data-stu-id="b72a5-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
   
  `szName`  
- <span data-ttu-id="562d1-107">[in]検索する型参照の名前。</span><span class="sxs-lookup"><span data-stu-id="562d1-107">[in] The name of the type reference to search for.</span></span>  
+ <span data-ttu-id="b72a5-107">[in]検索する型参照の名前。</span><span class="sxs-lookup"><span data-stu-id="b72a5-107">[in] The name of the type reference to search for.</span></span>  
   
  `ptr`  
- <span data-ttu-id="562d1-108">[out]一致する TypeRef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="562d1-108">[out] A pointer to the matching TypeRef token.</span></span>  
+ <span data-ttu-id="b72a5-108">[out]一致する TypeRef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b72a5-108">[out] A pointer to the matching TypeRef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="562d1-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="562d1-109">Requirements</span></span>  
- <span data-ttu-id="562d1-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="562d1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b72a5-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="b72a5-109">Requirements</span></span>  
+ <span data-ttu-id="b72a5-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b72a5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="562d1-111">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="562d1-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b72a5-111">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b72a5-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="562d1-112">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="562d1-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b72a5-112">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="b72a5-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="562d1-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="562d1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b72a5-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b72a5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="562d1-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="562d1-114">See also</span></span>
-- [<span data-ttu-id="562d1-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="562d1-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="562d1-116">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="562d1-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b72a5-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b72a5-114">See also</span></span>
+- [<span data-ttu-id="b72a5-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b72a5-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b72a5-116">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b72a5-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

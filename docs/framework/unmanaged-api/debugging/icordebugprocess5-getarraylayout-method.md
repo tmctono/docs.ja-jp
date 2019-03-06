@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6f739902738f05e103cce9365a3afc0379f9b0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5cff3f3f577a0c7ef04a226ec70a2722c89b5c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646985"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496886"
 ---
-# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="3389d-102">ICorDebugProcess5::GetArrayLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="3389d-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
-<span data-ttu-id="3389d-103">配列型のレイアウトに関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="3389d-103">Provides information about the layout of array types.</span></span>  
+# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="c9737-102">ICorDebugProcess5::GetArrayLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="c9737-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
+<span data-ttu-id="c9737-103">配列型のレイアウトに関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="c9737-103">Provides information about the layout of array types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3389d-104">構文</span><span class="sxs-lookup"><span data-stu-id="3389d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9737-104">構文</span><span class="sxs-lookup"><span data-stu-id="c9737-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3389d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3389d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9737-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c9737-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="3389d-106">[in]A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)トークンを持つレイアウトが必要な配列を指定します。</span><span class="sxs-lookup"><span data-stu-id="3389d-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
+ <span data-ttu-id="c9737-106">[in]A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)トークンを持つレイアウトが必要な配列を指定します。</span><span class="sxs-lookup"><span data-stu-id="c9737-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
   
  `pLayout`  
- <span data-ttu-id="3389d-107">[out]ポインターを[COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)メモリ内の配列のレイアウトに関する情報を含む構造体。</span><span class="sxs-lookup"><span data-stu-id="3389d-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
+ <span data-ttu-id="c9737-107">[out]ポインターを[COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md)メモリ内の配列のレイアウトに関する情報を含む構造体。</span><span class="sxs-lookup"><span data-stu-id="c9737-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3389d-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="3389d-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9737-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="c9737-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3389d-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="3389d-109">Requirements</span></span>  
- <span data-ttu-id="3389d-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3389d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9737-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c9737-109">Requirements</span></span>  
+ <span data-ttu-id="c9737-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9737-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3389d-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3389d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9737-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9737-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3389d-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3389d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9737-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9737-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3389d-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3389d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c9737-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9737-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3389d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="3389d-114">See also</span></span>
-- [<span data-ttu-id="3389d-115">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3389d-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="3389d-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3389d-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c9737-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9737-114">See also</span></span>
+- [<span data-ttu-id="c9737-115">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9737-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="c9737-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9737-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

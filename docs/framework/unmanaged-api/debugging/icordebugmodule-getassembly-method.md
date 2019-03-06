@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce1e42d74dc611032d941e833bb8f248a56488b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486254"
 ---
-# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="ac965-102">ICorDebugModule::GetAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="ac965-102">ICorDebugModule::GetAssembly Method</span></span>
-<span data-ttu-id="ac965-103">このモジュールを含むアセンブリを取得します。</span><span class="sxs-lookup"><span data-stu-id="ac965-103">Gets the containing assembly for this module.</span></span>  
+# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="1fb2b-102">ICorDebugModule::GetAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="1fb2b-102">ICorDebugModule::GetAssembly Method</span></span>
+<span data-ttu-id="1fb2b-103">このモジュールを格納しているアセンブリを取得します。</span><span class="sxs-lookup"><span data-stu-id="1fb2b-103">Gets the containing assembly for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac965-104">構文</span><span class="sxs-lookup"><span data-stu-id="ac965-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1fb2b-104">構文</span><span class="sxs-lookup"><span data-stu-id="1fb2b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssembly(  
@@ -35,15 +35,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ac965-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ac965-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1fb2b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1fb2b-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="ac965-106">[out]このモジュールを含むアセンブリを表す ICorDebugAssembly オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ac965-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
+ <span data-ttu-id="1fb2b-106">[out]このモジュールを含むアセンブリを表す ICorDebugAssembly オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1fb2b-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac965-107">要件</span><span class="sxs-lookup"><span data-stu-id="ac965-107">Requirements</span></span>  
- <span data-ttu-id="ac965-108">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="ac965-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1fb2b-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="1fb2b-107">Requirements</span></span>  
+ <span data-ttu-id="1fb2b-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1fb2b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac965-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac965-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1fb2b-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1fb2b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ac965-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac965-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1fb2b-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1fb2b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac965-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac965-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="1fb2b-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fb2b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

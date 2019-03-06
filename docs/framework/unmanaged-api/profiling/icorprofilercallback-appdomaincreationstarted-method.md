@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98fac8630403107f96f2fa86e5bcc9b0e60d0d08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bffa383734a96a32595b018fd6d9b3dc62d5526
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484759"
 ---
-# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="b6e15-102">ICorProfilerCallback::AppDomainCreationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="b6e15-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
-<span data-ttu-id="b6e15-103">アプリケーション ドメインが作成されていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b6e15-103">Notifies the profiler that an application domain is being created.</span></span>  
+# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="6bba4-102">ICorProfilerCallback::AppDomainCreationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="6bba4-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
+<span data-ttu-id="6bba4-103">アプリケーション ドメインが作成されていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="6bba4-103">Notifies the profiler that an application domain is being created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6e15-104">構文</span><span class="sxs-lookup"><span data-stu-id="b6e15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6bba4-104">構文</span><span class="sxs-lookup"><span data-stu-id="6bba4-104">Syntax</span></span>  
   
 ```  
 HRESULT AppDomainCreationStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b6e15-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b6e15-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6bba4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6bba4-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="b6e15-106">[in]作成されるドメインを識別します。</span><span class="sxs-lookup"><span data-stu-id="b6e15-106">[in] Identifies the domain which is being created.</span></span>  
+ <span data-ttu-id="6bba4-106">[in]作成されるドメインを識別します。</span><span class="sxs-lookup"><span data-stu-id="6bba4-106">[in] Identifies the domain which is being created.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6e15-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="b6e15-107">Remarks</span></span>  
- <span data-ttu-id="b6e15-108">ID が、情報の要求までの有効な[icorprofilercallback::appdomaincreationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="b6e15-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6bba4-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="6bba4-107">Remarks</span></span>  
+ <span data-ttu-id="6bba4-108">ID が、情報の要求までの有効な[icorprofilercallback::appdomaincreationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="6bba4-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6e15-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="b6e15-109">Requirements</span></span>  
- <span data-ttu-id="b6e15-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6e15-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6bba4-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="6bba4-109">Requirements</span></span>  
+ <span data-ttu-id="6bba4-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6bba4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6e15-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b6e15-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6bba4-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6bba4-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b6e15-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6e15-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6bba4-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6bba4-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6e15-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6e15-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6bba4-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bba4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6e15-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6e15-114">See also</span></span>
-- [<span data-ttu-id="b6e15-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b6e15-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6bba4-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6bba4-114">See also</span></span>
+- [<span data-ttu-id="6bba4-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6bba4-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

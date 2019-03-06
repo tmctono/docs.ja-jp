@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403417"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502255"
 ---
-# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="b7305-102">ICorDebugArrayValue::GetElementAtPosition メソッド</span><span class="sxs-lookup"><span data-stu-id="b7305-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
-<span data-ttu-id="b7305-103">0 から始まる 1 次元の配列として、配列を扱う方法の指定された位置に要素を取得します。</span><span class="sxs-lookup"><span data-stu-id="b7305-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
+# <a name="icordebugarrayvaluegetelementatposition-method"></a><span data-ttu-id="2f47a-102">ICorDebugArrayValue::GetElementAtPosition メソッド</span><span class="sxs-lookup"><span data-stu-id="2f47a-102">ICorDebugArrayValue::GetElementAtPosition Method</span></span>
+<span data-ttu-id="2f47a-103">0 から始まる 1 次元の配列として、配列を扱う方法の指定された位置に要素を取得します。</span><span class="sxs-lookup"><span data-stu-id="2f47a-103">Gets the element at the given position, treating the array as a zero-based, single-dimensional array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7305-104">構文</span><span class="sxs-lookup"><span data-stu-id="b7305-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f47a-104">構文</span><span class="sxs-lookup"><span data-stu-id="2f47a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElementAtPosition (  
@@ -36,21 +36,21 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b7305-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b7305-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2f47a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2f47a-105">Parameters</span></span>  
  `nPosition`  
- <span data-ttu-id="b7305-106">[in]取得する要素の位置。</span><span class="sxs-lookup"><span data-stu-id="b7305-106">[in] The position of the element to be retrieved.</span></span>  
+ <span data-ttu-id="2f47a-106">[in]取得する要素の位置。</span><span class="sxs-lookup"><span data-stu-id="2f47a-106">[in] The position of the element to be retrieved.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="b7305-107">[out]要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b7305-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
+ <span data-ttu-id="2f47a-107">[out]要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2f47a-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the element.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b7305-108">コメント</span><span class="sxs-lookup"><span data-stu-id="b7305-108">Remarks</span></span>  
- <span data-ttu-id="b7305-109">多次元配列のレイアウトには、配列のレイアウトの C++ のスタイルが次に示します。</span><span class="sxs-lookup"><span data-stu-id="b7305-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f47a-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="2f47a-108">Remarks</span></span>  
+ <span data-ttu-id="2f47a-109">多次元配列のレイアウトでは、C++ スタイルの配列のレイアウトに従います。</span><span class="sxs-lookup"><span data-stu-id="2f47a-109">The layout of a multi-dimension array follows the C++ style of array layout.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7305-110">要件</span><span class="sxs-lookup"><span data-stu-id="b7305-110">Requirements</span></span>  
- <span data-ttu-id="b7305-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="b7305-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f47a-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="2f47a-110">Requirements</span></span>  
+ <span data-ttu-id="2f47a-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2f47a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7305-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b7305-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2f47a-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2f47a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b7305-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b7305-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2f47a-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2f47a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b7305-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7305-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2f47a-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f47a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
