@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82dad6af545464baade2b82d65e7ad4dba19fe3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491361"
 ---
-# <a name="icordebugbreakpointactivate-method"></a><span data-ttu-id="55bef-102">ICorDebugBreakpoint::Activate メソッド</span><span class="sxs-lookup"><span data-stu-id="55bef-102">ICorDebugBreakpoint::Activate Method</span></span>
-<span data-ttu-id="55bef-103">これのアクティブな状態を設定`ICorDebugBreakpoint`です。</span><span class="sxs-lookup"><span data-stu-id="55bef-103">Sets the active state of this `ICorDebugBreakpoint`.</span></span>  
+# <a name="icordebugbreakpointactivate-method"></a><span data-ttu-id="9b933-102">ICorDebugBreakpoint::Activate メソッド</span><span class="sxs-lookup"><span data-stu-id="9b933-102">ICorDebugBreakpoint::Activate Method</span></span>
+<span data-ttu-id="9b933-103">このアクティブな状態を設定`ICorDebugBreakpoint`します。</span><span class="sxs-lookup"><span data-stu-id="9b933-103">Sets the active state of this `ICorDebugBreakpoint`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55bef-104">構文</span><span class="sxs-lookup"><span data-stu-id="55bef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b933-104">構文</span><span class="sxs-lookup"><span data-stu-id="9b933-104">Syntax</span></span>  
   
 ```  
 HRESULT Activate (  
@@ -35,15 +35,15 @@ HRESULT Activate (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="55bef-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="55bef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9b933-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9b933-105">Parameters</span></span>  
  `bActive`  
- <span data-ttu-id="55bef-106">[in]この値を設定`true`としてアクティブになった状態を指定するそれ以外の場合、この値を設定`false`です。</span><span class="sxs-lookup"><span data-stu-id="55bef-106">[in] Set this value to `true` to specify the state as active; otherwise, set this value to `false`.</span></span>  
+ <span data-ttu-id="9b933-106">[in]この値に設定`true`; アクティブな状態を指定する場合は、この値に設定`false`。</span><span class="sxs-lookup"><span data-stu-id="9b933-106">[in] Set this value to `true` to specify the state as active; otherwise, set this value to `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55bef-107">要件</span><span class="sxs-lookup"><span data-stu-id="55bef-107">Requirements</span></span>  
- <span data-ttu-id="55bef-108">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="55bef-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b933-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="9b933-107">Requirements</span></span>  
+ <span data-ttu-id="9b933-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9b933-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55bef-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55bef-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9b933-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b933-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="55bef-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55bef-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9b933-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b933-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55bef-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55bef-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9b933-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b933-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

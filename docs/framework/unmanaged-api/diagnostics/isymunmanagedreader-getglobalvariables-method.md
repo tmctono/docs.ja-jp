@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61dd9f8a668904bb9b9e0b6b4d1d84d1ed07045d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00078d1d405eb2abc0d34f7b455fa045ac17c261
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737885"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485836"
 ---
-# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="d5a30-102">ISymUnmanagedReader::GetGlobalVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="d5a30-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
-<span data-ttu-id="d5a30-103">すべてのグローバル変数を返します。</span><span class="sxs-lookup"><span data-stu-id="d5a30-103">Returns all global variables.</span></span>  
+# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="ab853-102">ISymUnmanagedReader::GetGlobalVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="ab853-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
+<span data-ttu-id="ab853-103">すべてのグローバル変数を返します。</span><span class="sxs-lookup"><span data-stu-id="ab853-103">Returns all global variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5a30-104">構文</span><span class="sxs-lookup"><span data-stu-id="d5a30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab853-104">構文</span><span class="sxs-lookup"><span data-stu-id="ab853-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGlobalVariables(  
@@ -37,21 +37,21 @@ HRESULT GetGlobalVariables(
         length_is(*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5a30-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d5a30-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab853-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ab853-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="d5a30-106">[in]バッファーの長さが指す`pcVars`します。</span><span class="sxs-lookup"><span data-stu-id="d5a30-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
+ <span data-ttu-id="ab853-106">[in]バッファーの長さが指す`pcVars`します。</span><span class="sxs-lookup"><span data-stu-id="ab853-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="d5a30-107">[out]ポインター、`ULONG32`変数の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="d5a30-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
+ <span data-ttu-id="ab853-107">[out]ポインター、`ULONG32`変数の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="ab853-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
   
  `pVars`  
- <span data-ttu-id="d5a30-108">[out]変数を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="d5a30-108">[out] A buffer that contains the variables.</span></span>  
+ <span data-ttu-id="ab853-108">[out]変数を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="ab853-108">[out] A buffer that contains the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d5a30-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="d5a30-109">Return Value</span></span>  
- <span data-ttu-id="d5a30-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="d5a30-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ab853-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="ab853-109">Return Value</span></span>  
+ <span data-ttu-id="ab853-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="ab853-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5a30-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="d5a30-111">Requirements</span></span>  
- <span data-ttu-id="d5a30-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d5a30-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab853-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="ab853-111">Requirements</span></span>  
+ <span data-ttu-id="ab853-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ab853-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5a30-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5a30-113">See also</span></span>
-- [<span data-ttu-id="d5a30-114">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d5a30-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ab853-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab853-113">See also</span></span>
+- [<span data-ttu-id="ab853-114">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab853-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

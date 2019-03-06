@@ -8,19 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 02d5d23ec44d9fb7a244fc635ac174cf81ead173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b1914b9a0e478c7ab15fca77b7df952123153ac
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362189"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502290"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="b14e4-102">ForwardTranslateAccelerator 関数 (WPF のアンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b14e4-102">ForwardTranslateAccelerator Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="b14e4-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="b14e4-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="3ad93-102">ForwardTranslateAccelerator 関数 (WPF のアンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3ad93-102">ForwardTranslateAccelerator Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="3ad93-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="3ad93-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="b14e4-104">Windows Presentation Foundation (WPF) インフラストラクチャによって windows の管理に使用します。</span><span class="sxs-lookup"><span data-stu-id="b14e4-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="3ad93-104">Windows Presentation Foundation (WPF) インフラストラクチャによって windows の管理に使用します。</span><span class="sxs-lookup"><span data-stu-id="3ad93-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b14e4-105">構文</span><span class="sxs-lookup"><span data-stu-id="b14e4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ad93-105">構文</span><span class="sxs-lookup"><span data-stu-id="3ad93-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ForwardTranslateAccelerator(  
@@ -29,23 +29,23 @@ HRESULT ForwardTranslateAccelerator(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b14e4-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b14e4-106">Parameters</span></span>  
- <span data-ttu-id="b14e4-107">pMsg</span><span class="sxs-lookup"><span data-stu-id="b14e4-107">pMsg</span></span>  
- <span data-ttu-id="b14e4-108">メッセージへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b14e4-108">A pointer to a message.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3ad93-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3ad93-106">Parameters</span></span>  
+ <span data-ttu-id="3ad93-107">pMsg</span><span class="sxs-lookup"><span data-stu-id="3ad93-107">pMsg</span></span>  
+ <span data-ttu-id="3ad93-108">メッセージへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3ad93-108">A pointer to a message.</span></span>  
   
- <span data-ttu-id="b14e4-109">appUnhandled</span><span class="sxs-lookup"><span data-stu-id="b14e4-109">appUnhandled</span></span>  
- <span data-ttu-id="b14e4-110">`true` アプリが、入力メッセージを処理する機会が与えられた既にがそれを処理していません。それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="b14e4-110">`true` when the app has already been given a chance to handle the input message, but has not handled it; otherwise, `false`.</span></span>  
+ <span data-ttu-id="3ad93-109">appUnhandled</span><span class="sxs-lookup"><span data-stu-id="3ad93-109">appUnhandled</span></span>  
+ <span data-ttu-id="3ad93-110">`true` アプリが、入力メッセージを処理する機会が与えられた既にがそれを処理していません。それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="3ad93-110">`true` when the app has already been given a chance to handle the input message, but has not handled it; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b14e4-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="b14e4-111">Requirements</span></span>  
- <span data-ttu-id="b14e4-112">**プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。</span><span class="sxs-lookup"><span data-stu-id="b14e4-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ad93-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="3ad93-111">Requirements</span></span>  
+ <span data-ttu-id="3ad93-112">**プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。</span><span class="sxs-lookup"><span data-stu-id="3ad93-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b14e4-113">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="b14e4-113">**DLL:**</span></span>  
+ <span data-ttu-id="3ad93-113">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="3ad93-113">**DLL:**</span></span>  
   
- <span data-ttu-id="b14e4-114">.NET framework 3.0 および 3.5。PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="b14e4-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="3ad93-114">.NET framework 3.0 および 3.5。PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="3ad93-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="b14e4-115">.NET framework 4 以降では。PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="b14e4-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="3ad93-115">.NET framework 4 以降では。PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="3ad93-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="b14e4-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b14e4-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="3ad93-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ad93-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b14e4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="b14e4-117">See also</span></span>
-- [<span data-ttu-id="b14e4-118">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="b14e4-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="3ad93-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ad93-117">See also</span></span>
+- [<span data-ttu-id="3ad93-118">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="3ad93-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

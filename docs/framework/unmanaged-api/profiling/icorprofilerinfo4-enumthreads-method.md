@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8cfb474eaa0a770c2bb101787d34072e4ed98714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c4d754ea00dae3893b8630e248523b97ae96d78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496782"
 ---
-# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="0bc12-102">ICorProfilerInfo4::EnumThreads メソッド</span><span class="sxs-lookup"><span data-stu-id="0bc12-102">ICorProfilerInfo4::EnumThreads Method</span></span>
-<span data-ttu-id="0bc12-103">プロファイリングされたプロセスのすべてのマネージ スレッドのコレクションを順番に反復処理するメソッドを提供する列挙子を返します。</span><span class="sxs-lookup"><span data-stu-id="0bc12-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
+# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="0f303-102">ICorProfilerInfo4::EnumThreads メソッド</span><span class="sxs-lookup"><span data-stu-id="0f303-102">ICorProfilerInfo4::EnumThreads Method</span></span>
+<span data-ttu-id="0f303-103">プロファイリングされたプロセスのすべてのマネージ スレッドのコレクションを順番に反復処理するメソッドを提供する列挙子を返します。</span><span class="sxs-lookup"><span data-stu-id="0f303-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bc12-104">構文</span><span class="sxs-lookup"><span data-stu-id="0bc12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f303-104">構文</span><span class="sxs-lookup"><span data-stu-id="0f303-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumThreads([out]  
             ICorProfilerThreadEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0bc12-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0bc12-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0f303-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0f303-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="0bc12-106">[out]ポインター、 [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="0bc12-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="0f303-106">[out]ポインター、 [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="0f303-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0bc12-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="0bc12-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f303-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="0f303-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bc12-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="0bc12-108">Requirements</span></span>  
- <span data-ttu-id="0bc12-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0bc12-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f303-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="0f303-108">Requirements</span></span>  
+ <span data-ttu-id="0f303-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f303-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0bc12-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0bc12-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0f303-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0f303-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0bc12-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0bc12-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f303-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f303-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0bc12-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0bc12-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0f303-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f303-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bc12-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0bc12-113">See also</span></span>
-- [<span data-ttu-id="0bc12-114">ICorProfilerThreadEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0bc12-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="0bc12-115">ICorProfilerInfo4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0bc12-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="0bc12-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="0bc12-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="0bc12-117">プロファイル</span><span class="sxs-lookup"><span data-stu-id="0bc12-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="0f303-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0f303-113">See also</span></span>
+- [<span data-ttu-id="0f303-114">ICorProfilerThreadEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0f303-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="0f303-115">ICorProfilerInfo4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0f303-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="0f303-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="0f303-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0f303-117">プロファイル</span><span class="sxs-lookup"><span data-stu-id="0f303-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

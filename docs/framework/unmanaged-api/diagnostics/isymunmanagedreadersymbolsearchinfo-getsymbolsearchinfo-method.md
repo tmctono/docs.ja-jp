@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86c28cdfe171b0b2bde1d28fa4c06ceaf7b26e18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb290314328023c95d0028dd90687b1a6926ff5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667032"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501072"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a><span data-ttu-id="65ee9-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="65ee9-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Method</span></span>
-<span data-ttu-id="65ee9-103">シンボルの検索情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="65ee9-103">Gets symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a><span data-ttu-id="5abaf-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="5abaf-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Method</span></span>
+<span data-ttu-id="5abaf-103">シンボルの検索情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="5abaf-103">Gets symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65ee9-104">構文</span><span class="sxs-lookup"><span data-stu-id="65ee9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5abaf-104">構文</span><span class="sxs-lookup"><span data-stu-id="5abaf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolSearchInfo(  
@@ -37,21 +37,21 @@ HRESULT GetSymbolSearchInfo(
         ISymUnmanagedSymbolSearchInfo **rgpSearchInfo);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="65ee9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="65ee9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5abaf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5abaf-105">Parameters</span></span>  
  `cSearchInfo`  
- <span data-ttu-id="65ee9-106">[in]A`ULONG32`のサイズを示す`rgpSearchInfo`します。</span><span class="sxs-lookup"><span data-stu-id="65ee9-106">[in] A `ULONG32` that indicates the size of `rgpSearchInfo`.</span></span>  
+ <span data-ttu-id="5abaf-106">[in]A`ULONG32`のサイズを示す`rgpSearchInfo`します。</span><span class="sxs-lookup"><span data-stu-id="5abaf-106">[in] A `ULONG32` that indicates the size of `rgpSearchInfo`.</span></span>  
   
  `pcSearchInfo`  
- <span data-ttu-id="65ee9-107">[out]ポインター、`ULONG32`検索情報の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="65ee9-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="5abaf-107">[out]ポインター、`ULONG32`検索情報の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="5abaf-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
  `rgpSearchInfo`  
- <span data-ttu-id="65ee9-108">[out]設定されているポインターに返された[ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="65ee9-108">[out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.</span></span>  
+ <span data-ttu-id="5abaf-108">[out]設定されているポインターに返された[ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="5abaf-108">[out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="65ee9-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="65ee9-109">Return Value</span></span>  
- <span data-ttu-id="65ee9-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="65ee9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5abaf-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="5abaf-109">Return Value</span></span>  
+ <span data-ttu-id="5abaf-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="5abaf-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="65ee9-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="65ee9-111">Requirements</span></span>  
- <span data-ttu-id="65ee9-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="65ee9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5abaf-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="5abaf-111">Requirements</span></span>  
+ <span data-ttu-id="5abaf-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5abaf-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65ee9-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="65ee9-113">See also</span></span>
-- [<span data-ttu-id="65ee9-114">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65ee9-114">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5abaf-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="5abaf-113">See also</span></span>
+- [<span data-ttu-id="5abaf-114">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5abaf-114">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

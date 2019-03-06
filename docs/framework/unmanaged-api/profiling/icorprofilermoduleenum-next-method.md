@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc33936735c40e2f30189066d80444b9fcb075ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b16a351897b06db74602f1d5b097acd7e03425e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494247"
 ---
-# <a name="icorprofilermoduleenumnext-method"></a><span data-ttu-id="8b37e-102">ICorProfilerModuleEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="8b37e-102">ICorProfilerModuleEnum::Next Method</span></span>
-<span data-ttu-id="8b37e-103">モジュールのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="8b37e-103">Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilermoduleenumnext-method"></a><span data-ttu-id="a99b2-102">ICorProfilerModuleEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="a99b2-102">ICorProfilerModuleEnum::Next Method</span></span>
+<span data-ttu-id="a99b2-103">モジュールのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。</span><span class="sxs-lookup"><span data-stu-id="a99b2-103">Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b37e-104">構文</span><span class="sxs-lookup"><span data-stu-id="8b37e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a99b2-104">構文</span><span class="sxs-lookup"><span data-stu-id="a99b2-104">Syntax</span></span>  
   
 ```  
 HRESULT Next([in]  ULONG      celt,  
@@ -36,33 +36,34 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8b37e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b37e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a99b2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a99b2-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="8b37e-106">[in] 取得するモジュールの数。</span><span class="sxs-lookup"><span data-stu-id="8b37e-106">[in] The number of modules to retrieve.</span></span>  
+ <span data-ttu-id="a99b2-106">[in] 取得するモジュールの数。</span><span class="sxs-lookup"><span data-stu-id="a99b2-106">[in] The number of modules to retrieve.</span></span>  
   
  `ids`  
- <span data-ttu-id="8b37e-107">[out] それぞれが取得されたモジュールを表す、`ModuleID` 値の配列。</span><span class="sxs-lookup"><span data-stu-id="8b37e-107">[out] An array of `ModuleID` values, each of which represents a retrieved module.</span></span>  
+ <span data-ttu-id="a99b2-107">[out] それぞれが取得されたモジュールを表す、`ModuleID` 値の配列。</span><span class="sxs-lookup"><span data-stu-id="a99b2-107">[out] An array of `ModuleID` values, each of which represents a retrieved module.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="8b37e-108">[out] `ids` 配列で実際に返されるモジュールの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="8b37e-108">[out] A pointer to the number of elements actually returned in the `ids` array.</span></span>  
+ <span data-ttu-id="a99b2-108">[out] `ids` 配列で実際に返されるモジュールの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a99b2-108">[out] A pointer to the number of elements actually returned in the `ids` array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8b37e-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="8b37e-109">Return Value</span></span>  
- <span data-ttu-id="8b37e-110">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="8b37e-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a99b2-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="a99b2-109">Return Value</span></span>  
+ <span data-ttu-id="a99b2-110">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="a99b2-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="8b37e-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8b37e-111">HRESULT</span></span>|<span data-ttu-id="8b37e-112">説明</span><span class="sxs-lookup"><span data-stu-id="8b37e-112">Description</span></span>|  
+|<span data-ttu-id="a99b2-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a99b2-111">HRESULT</span></span>|<span data-ttu-id="a99b2-112">説明</span><span class="sxs-lookup"><span data-stu-id="a99b2-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8b37e-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="8b37e-113">S_OK</span></span>|<span data-ttu-id="8b37e-114">`celt` 要素が返されました。</span><span class="sxs-lookup"><span data-stu-id="8b37e-114">`celt` elements were returned.</span></span>|  
-|<span data-ttu-id="8b37e-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="8b37e-115">S_FALSE</span></span>|<span data-ttu-id="8b37e-116">`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。</span><span class="sxs-lookup"><span data-stu-id="8b37e-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
+|<span data-ttu-id="a99b2-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="a99b2-113">S_OK</span></span>|<span data-ttu-id="a99b2-114">`celt` 要素が返されました。</span><span class="sxs-lookup"><span data-stu-id="a99b2-114">`celt` elements were returned.</span></span>|  
+|<span data-ttu-id="a99b2-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="a99b2-115">S_FALSE</span></span>|<span data-ttu-id="a99b2-116">
+  `celt\` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。</span><span class="sxs-lookup"><span data-stu-id="a99b2-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8b37e-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b37e-117">Requirements</span></span>  
- <span data-ttu-id="8b37e-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b37e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a99b2-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="a99b2-117">Requirements</span></span>  
+ <span data-ttu-id="a99b2-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a99b2-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b37e-119">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8b37e-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a99b2-119">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a99b2-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8b37e-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b37e-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a99b2-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a99b2-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8b37e-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b37e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a99b2-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a99b2-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b37e-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b37e-122">See also</span></span>
-- [<span data-ttu-id="8b37e-123">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b37e-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="8b37e-124">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b37e-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="a99b2-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="a99b2-122">See also</span></span>
+- [<span data-ttu-id="a99b2-123">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a99b2-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="a99b2-124">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="a99b2-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
