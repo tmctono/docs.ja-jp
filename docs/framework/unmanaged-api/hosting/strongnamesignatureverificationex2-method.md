@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 641aaa42dca173de41afa099c91f78fecf691a7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc8b3096bd0c60e826fec4c8daf535c3c4086630
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689943"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482783"
 ---
-# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="d838e-102">StrongNameSignatureVerificationEx2 メソッド</span><span class="sxs-lookup"><span data-stu-id="d838e-102">StrongNameSignatureVerificationEx2 Method</span></span>
-<span data-ttu-id="d838e-103">厳密な名前付きのアセンブリの署名を検証し、ECMA キーから実際のキーへのマッピングを提供します。</span><span class="sxs-lookup"><span data-stu-id="d838e-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
+# <a name="strongnamesignatureverificationex2-method"></a><span data-ttu-id="7750f-102">StrongNameSignatureVerificationEx2 メソッド</span><span class="sxs-lookup"><span data-stu-id="7750f-102">StrongNameSignatureVerificationEx2 Method</span></span>
+<span data-ttu-id="7750f-103">厳密な名前付きのアセンブリの署名を検証し、ECMA キーから実際のキーへのマッピングを提供します。</span><span class="sxs-lookup"><span data-stu-id="7750f-103">Verifies the signature of a strongly named assembly, and provides a mapping from the ECMA key to a real key.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d838e-104">構文</span><span class="sxs-lookup"><span data-stu-id="d838e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7750f-104">構文</span><span class="sxs-lookup"><span data-stu-id="7750f-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -38,35 +38,35 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d838e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d838e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7750f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7750f-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="d838e-106">[in]検証するアセンブリのポータブル実行可能 (.exe または .dll) ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="d838e-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="7750f-106">[in]検証するアセンブリのポータブル実行可能 (.exe または .dll) ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="7750f-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="d838e-107">[in]`true` 。 それ以外のレジストリ設定を上書きする必要がある場合でも、検証を実行する`false`します。</span><span class="sxs-lookup"><span data-stu-id="d838e-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="7750f-107">[in]`true` 。 それ以外のレジストリ設定を上書きする必要がある場合でも、検証を実行する`false`します。</span><span class="sxs-lookup"><span data-stu-id="7750f-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pbEcmaPublicKey`  
- <span data-ttu-id="d838e-108">[in]実際のキーを ECMA の公開キーからのマッピングへのポインターの検証に使用します。</span><span class="sxs-lookup"><span data-stu-id="d838e-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
+ <span data-ttu-id="7750f-108">[in]実際のキーを ECMA の公開キーからのマッピングへのポインターの検証に使用します。</span><span class="sxs-lookup"><span data-stu-id="7750f-108">[in] A pointer to the mapping from the ECMA public key to the real key used for verification.</span></span>  
   
  `cbEcmaPublicKey`  
- <span data-ttu-id="d838e-109">[in]ECMA の実際の公開キーの長さ。</span><span class="sxs-lookup"><span data-stu-id="d838e-109">[in] The length of the real ECMA public key.</span></span>  
+ <span data-ttu-id="7750f-109">[in]ECMA の実際の公開キーの長さ。</span><span class="sxs-lookup"><span data-stu-id="7750f-109">[in] The length of the real ECMA public key.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="d838e-110">[out]`true` 、厳密な名前の署名が確認済み。 それ以外の場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="d838e-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="d838e-111">このパラメーターに設定されても`false`検証がレジストリ設定により成功した場合。</span><span class="sxs-lookup"><span data-stu-id="d838e-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="7750f-110">[out]`true` 、厳密な名前の署名が確認済み。 それ以外の場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="7750f-110">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="7750f-111">このパラメーターに設定されても`false`検証がレジストリ設定により成功した場合。</span><span class="sxs-lookup"><span data-stu-id="7750f-111">This parameter is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d838e-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="d838e-112">Return Value</span></span>  
- <span data-ttu-id="d838e-113">`S_OK` 検証が成功した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="d838e-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7750f-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="7750f-112">Return Value</span></span>  
+ <span data-ttu-id="7750f-113">`S_OK` 検証が成功した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="7750f-113">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d838e-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="d838e-114">Requirements</span></span>  
- <span data-ttu-id="d838e-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d838e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7750f-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="7750f-114">Requirements</span></span>  
+ <span data-ttu-id="7750f-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7750f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d838e-116">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d838e-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7750f-116">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7750f-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="d838e-117">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d838e-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7750f-117">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="7750f-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d838e-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d838e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="7750f-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7750f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d838e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="d838e-119">See also</span></span>
-- [<span data-ttu-id="d838e-120">StrongNameSignatureVerification メソッド</span><span class="sxs-lookup"><span data-stu-id="d838e-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="d838e-121">StrongNameSignatureVerificationEx メソッド</span><span class="sxs-lookup"><span data-stu-id="d838e-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="d838e-122">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d838e-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7750f-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="7750f-119">See also</span></span>
+- [<span data-ttu-id="7750f-120">StrongNameSignatureVerification メソッド</span><span class="sxs-lookup"><span data-stu-id="7750f-120">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="7750f-121">StrongNameSignatureVerificationEx メソッド</span><span class="sxs-lookup"><span data-stu-id="7750f-121">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="7750f-122">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7750f-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

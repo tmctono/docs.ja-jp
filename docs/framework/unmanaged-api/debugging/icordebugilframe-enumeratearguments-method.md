@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475659"
 ---
-# <a name="icordebugilframeenumeratearguments-method"></a><span data-ttu-id="61c8e-102">ICorDebugILFrame::EnumerateArguments メソッド</span><span class="sxs-lookup"><span data-stu-id="61c8e-102">ICorDebugILFrame::EnumerateArguments Method</span></span>
-<span data-ttu-id="61c8e-103">引数のこのフレームの列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="61c8e-103">Gets an enumerator for the arguments in this frame.</span></span>  
+# <a name="icordebugilframeenumeratearguments-method"></a><span data-ttu-id="adcb4-102">ICorDebugILFrame::EnumerateArguments メソッド</span><span class="sxs-lookup"><span data-stu-id="adcb4-102">ICorDebugILFrame::EnumerateArguments Method</span></span>
+<span data-ttu-id="adcb4-103">このフレームで、引数の列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="adcb4-103">Gets an enumerator for the arguments in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61c8e-104">構文</span><span class="sxs-lookup"><span data-stu-id="61c8e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adcb4-104">構文</span><span class="sxs-lookup"><span data-stu-id="adcb4-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateArguments (  
@@ -35,18 +35,18 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="61c8e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="61c8e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="adcb4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="adcb4-105">Parameters</span></span>  
  `ppValueEnum`  
- <span data-ttu-id="61c8e-106">[out]引数は、このフレームの列挙子である ICorDebugValueEnum オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="61c8e-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the arguments in this frame.</span></span>  
+ <span data-ttu-id="adcb4-106">[out]このフレームの引数の列挙子である ICorDebugValueEnum オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="adcb4-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the arguments in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="61c8e-107">コメント</span><span class="sxs-lookup"><span data-stu-id="61c8e-107">Remarks</span></span>  
- <span data-ttu-id="61c8e-108">`EnumerateArguments` ICorDebugILFrame オブジェクトによって表される呼び出しフレームで使用可能な引数の一覧を表示する列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="61c8e-108">`EnumerateArguments` gets an enumerator that can list the arguments available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="61c8e-109">一覧には引数には表示[vararg](/cpp/windows/vararg) (つまり、可変個の引数) な引数がだけでなく`vararg`です。</span><span class="sxs-lookup"><span data-stu-id="61c8e-109">The list will include arguments that are [vararg](/cpp/windows/vararg) (that is, a variable number of arguments) as well as arguments that are not `vararg`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="adcb4-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="adcb4-107">Remarks</span></span>  
+ <span data-ttu-id="adcb4-108">`EnumerateArguments` ICorDebugILFrame オブジェクトによって表される呼び出しフレームで使用可能な引数を表示できる列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="adcb4-108">`EnumerateArguments` gets an enumerator that can list the arguments available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="adcb4-109">一覧には引数は、 [vararg](/cpp/windows/vararg) (引数の変数番号) でない引数と`vararg`します。</span><span class="sxs-lookup"><span data-stu-id="adcb4-109">The list will include arguments that are [vararg](/cpp/windows/vararg) (that is, a variable number of arguments) as well as arguments that are not `vararg`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61c8e-110">要件</span><span class="sxs-lookup"><span data-stu-id="61c8e-110">Requirements</span></span>  
- <span data-ttu-id="61c8e-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="61c8e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adcb4-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="adcb4-110">Requirements</span></span>  
+ <span data-ttu-id="adcb4-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="adcb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61c8e-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="61c8e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="adcb4-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="adcb4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="61c8e-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61c8e-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="adcb4-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="adcb4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61c8e-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61c8e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="adcb4-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="adcb4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

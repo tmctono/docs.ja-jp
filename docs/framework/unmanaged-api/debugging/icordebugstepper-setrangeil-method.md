@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3c24b3a96a03359dc6983bcaac4a800613ff5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478688"
 ---
-# <a name="icordebugsteppersetrangeil-method"></a><span data-ttu-id="cff5b-102">ICorDebugStepper::SetRangeIL メソッド</span><span class="sxs-lookup"><span data-stu-id="cff5b-102">ICorDebugStepper::SetRangeIL Method</span></span>
-<span data-ttu-id="cff5b-103">指定する値を設定するかどうかを呼び出す[icordebugstepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)または Microsoft の基準としたネイティブ コードへの相対値の中間 language (MSIL) コードがステップ インされているメソッドの引数を渡すを通じてします。</span><span class="sxs-lookup"><span data-stu-id="cff5b-103">Sets a value that specifies whether calls to [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pass argument values that are relative to the native code or relative to Microsoft intermediate language (MSIL) code of the method that is being stepped through.</span></span>  
+# <a name="icordebugsteppersetrangeil-method"></a><span data-ttu-id="3e048-102">ICorDebugStepper::SetRangeIL メソッド</span><span class="sxs-lookup"><span data-stu-id="3e048-102">ICorDebugStepper::SetRangeIL Method</span></span>
+<span data-ttu-id="3e048-103">指定する値を設定するかどうかを呼び出す[icordebugstepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)または Microsoft の基準としたネイティブ コードへの相対値の中間言語 (MSIL) コードがステップで実行されているメソッドの引数を渡す使用します。</span><span class="sxs-lookup"><span data-stu-id="3e048-103">Sets a value that specifies whether calls to [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pass argument values that are relative to the native code or relative to Microsoft intermediate language (MSIL) code of the method that is being stepped through.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cff5b-104">構文</span><span class="sxs-lookup"><span data-stu-id="cff5b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e048-104">構文</span><span class="sxs-lookup"><span data-stu-id="3e048-104">Syntax</span></span>  
   
 ```  
 HRESULT SetRangeIL (  
@@ -35,15 +35,15 @@ HRESULT SetRangeIL (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cff5b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cff5b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3e048-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3e048-105">Parameters</span></span>  
  `bIL`  
- <span data-ttu-id="cff5b-106">[in]設定`true`な MSIL コード相対の範囲を指定します。</span><span class="sxs-lookup"><span data-stu-id="cff5b-106">[in] Set to `true` to specify that the ranges are relative to the MSIL code.</span></span> <span data-ttu-id="cff5b-107">設定`false`範囲がネイティブ コードの基準としたことを指定します。</span><span class="sxs-lookup"><span data-stu-id="cff5b-107">Set to `false` to specify that the ranges are relative to the native code.</span></span> <span data-ttu-id="cff5b-108">既定値は `true` です。</span><span class="sxs-lookup"><span data-stu-id="cff5b-108">The default value is `true`.</span></span>  
+ <span data-ttu-id="3e048-106">[in]設定`true`範囲が MSIL コードの基準としたことを指定します。</span><span class="sxs-lookup"><span data-stu-id="3e048-106">[in] Set to `true` to specify that the ranges are relative to the MSIL code.</span></span> <span data-ttu-id="3e048-107">設定`false`範囲がネイティブ コードの基準としたことを指定します。</span><span class="sxs-lookup"><span data-stu-id="3e048-107">Set to `false` to specify that the ranges are relative to the native code.</span></span> <span data-ttu-id="3e048-108">既定値は `true` です。</span><span class="sxs-lookup"><span data-stu-id="3e048-108">The default value is `true`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cff5b-109">要件</span><span class="sxs-lookup"><span data-stu-id="cff5b-109">Requirements</span></span>  
- <span data-ttu-id="cff5b-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="cff5b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e048-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="3e048-109">Requirements</span></span>  
+ <span data-ttu-id="3e048-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3e048-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cff5b-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cff5b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3e048-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e048-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cff5b-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cff5b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3e048-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e048-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cff5b-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cff5b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3e048-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e048-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

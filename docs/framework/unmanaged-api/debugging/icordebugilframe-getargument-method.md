@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475789"
 ---
-# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="cb311-102">ICorDebugILFrame::GetArgument メソッド</span><span class="sxs-lookup"><span data-stu-id="cb311-102">ICorDebugILFrame::GetArgument Method</span></span>
-<span data-ttu-id="cb311-103">この Microsoft intermediate language (MSIL) のスタック フレーム内には、指定された引数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cb311-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
+# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="52ea4-102">ICorDebugILFrame::GetArgument メソッド</span><span class="sxs-lookup"><span data-stu-id="52ea4-102">ICorDebugILFrame::GetArgument Method</span></span>
+<span data-ttu-id="52ea4-103">この Microsoft intermediate language (MSIL) のスタック フレーム内には、指定された引数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="52ea4-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb311-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb311-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52ea4-104">構文</span><span class="sxs-lookup"><span data-stu-id="52ea4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArgument (  
@@ -36,21 +36,21 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb311-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb311-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52ea4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="52ea4-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="cb311-106">[in]MSIL のこのスタック フレーム内の引数のインデックス。</span><span class="sxs-lookup"><span data-stu-id="cb311-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
+ <span data-ttu-id="52ea4-106">[in]この MSIL のスタック フレームの引数のインデックス。</span><span class="sxs-lookup"><span data-stu-id="52ea4-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="cb311-107">[out]取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cb311-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="52ea4-107">[out]取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="52ea4-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb311-108">コメント</span><span class="sxs-lookup"><span data-stu-id="cb311-108">Remarks</span></span>  
- <span data-ttu-id="cb311-109">`GetArgument` ・ イン タイム (JIT) コンパイル フレームまたは MSIL スタック フレームで、メソッドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="cb311-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52ea4-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="52ea4-108">Remarks</span></span>  
+ <span data-ttu-id="52ea4-109">`GetArgument` MSIL のスタック フレームまたは・ イン タイム (JIT) コンパイル済みのフレームで、メソッドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="52ea4-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb311-110">要件</span><span class="sxs-lookup"><span data-stu-id="cb311-110">Requirements</span></span>  
- <span data-ttu-id="cb311-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="cb311-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52ea4-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="52ea4-110">Requirements</span></span>  
+ <span data-ttu-id="52ea4-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="52ea4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb311-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb311-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="52ea4-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52ea4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cb311-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb311-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52ea4-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52ea4-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb311-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb311-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="52ea4-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52ea4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

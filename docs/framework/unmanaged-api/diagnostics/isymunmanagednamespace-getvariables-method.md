@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11a5eb01a3e354b4360bea59af1e63ffeb0576aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02fd9fd3a580946cda09f0c129f02cd1218a0c9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471434"
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="50668-102">ISymUnmanagedNamespace::GetVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="50668-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="50668-103">この名前空間内のグローバル スコープで定義されたすべての変数を返します。</span><span class="sxs-lookup"><span data-stu-id="50668-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="1372b-102">ISymUnmanagedNamespace::GetVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="1372b-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+<span data-ttu-id="1372b-103">この名前空間内のグローバル スコープで定義されたすべての変数を返します。</span><span class="sxs-lookup"><span data-stu-id="1372b-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50668-104">構文</span><span class="sxs-lookup"><span data-stu-id="50668-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1372b-104">構文</span><span class="sxs-lookup"><span data-stu-id="1372b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables(  
@@ -37,21 +37,21 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="50668-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="50668-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1372b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1372b-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="50668-106">[in]A`ULONG32`のサイズを示す、`pVars`配列。</span><span class="sxs-lookup"><span data-stu-id="50668-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="1372b-106">[in]A`ULONG32`のサイズを示す、`pVars`配列。</span><span class="sxs-lookup"><span data-stu-id="1372b-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="50668-107">[out]ポインターを`ULONG32`名前空間の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="50668-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="1372b-107">[out]ポインターを`ULONG32`名前空間の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="1372b-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="50668-108">[out]名前空間を格納しているバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="50668-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="1372b-108">[out]名前空間を格納しているバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1372b-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="50668-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="50668-109">Return Value</span></span>  
- <span data-ttu-id="50668-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="50668-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1372b-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="1372b-109">Return Value</span></span>  
+ <span data-ttu-id="1372b-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="1372b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="50668-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="50668-111">Requirements</span></span>  
- <span data-ttu-id="50668-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="50668-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1372b-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="1372b-111">Requirements</span></span>  
+ <span data-ttu-id="1372b-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1372b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50668-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="50668-113">See also</span></span>
-- [<span data-ttu-id="50668-114">ISymUnmanagedNamespace インターフェイス</span><span class="sxs-lookup"><span data-stu-id="50668-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1372b-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="1372b-113">See also</span></span>
+- [<span data-ttu-id="1372b-114">ISymUnmanagedNamespace インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1372b-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

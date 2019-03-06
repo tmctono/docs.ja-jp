@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b7415809912b7cb56fb2d0bebae196233c45477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96f9853cfac8cef7b8af2e80b2e5d4196cdf79d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514584"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480222"
 ---
-# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="92bab-102">ICorProfilerCallback::ClassLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="92bab-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
-<span data-ttu-id="92bab-103">クラスの読み込みが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="92bab-103">Notifies the profiler that a class has finished loading.</span></span>  
+# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="0b5fc-102">ICorProfilerCallback::ClassLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="0b5fc-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
+<span data-ttu-id="0b5fc-103">クラスの読み込みが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-103">Notifies the profiler that a class has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92bab-104">構文</span><span class="sxs-lookup"><span data-stu-id="92bab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b5fc-104">構文</span><span class="sxs-lookup"><span data-stu-id="0b5fc-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassLoadFinished(  
@@ -35,27 +35,27 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="92bab-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="92bab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b5fc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0b5fc-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="92bab-106">[in]読み込まれたクラスを識別します。</span><span class="sxs-lookup"><span data-stu-id="92bab-106">[in] Identifies the class that was loaded.</span></span>  
+ <span data-ttu-id="0b5fc-106">[in]読み込まれたクラスを識別します。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-106">[in] Identifies the class that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="92bab-107">[in]クラスが正常に読み込まれたかどうかを示す HRESULT。</span><span class="sxs-lookup"><span data-stu-id="92bab-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
+ <span data-ttu-id="0b5fc-107">[in]クラスが正常に読み込まれたかどうかを示す HRESULT。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92bab-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="92bab-108">Remarks</span></span>  
- <span data-ttu-id="92bab-109">値`classId`まで情報の要求に対して無効です、`ClassLoadFinished`メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="92bab-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b5fc-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="0b5fc-108">Remarks</span></span>  
+ <span data-ttu-id="0b5fc-109">値`classId`まで情報の要求に対して無効です、`ClassLoadFinished`メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="92bab-110">クラスの読み込みの一部が後に続ける可能性があります、`ClassLoadFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="92bab-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="92bab-111">エラーの HRESULT で`hrStatus`失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="92bab-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="92bab-112">ただし、成功 HRESULT で`hrStatus`のみに、クラスの読み込みの最初の部分が成功したことを示します。</span><span class="sxs-lookup"><span data-stu-id="92bab-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
+ <span data-ttu-id="0b5fc-110">クラスの読み込みの一部が後に続ける可能性があります、`ClassLoadFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="0b5fc-111">エラーの HRESULT で`hrStatus`失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="0b5fc-112">ただし、成功 HRESULT で`hrStatus`のみに、クラスの読み込みの最初の部分が成功したことを示します。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92bab-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="92bab-113">Requirements</span></span>  
- <span data-ttu-id="92bab-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="92bab-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b5fc-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="0b5fc-113">Requirements</span></span>  
+ <span data-ttu-id="0b5fc-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b5fc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92bab-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="92bab-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0b5fc-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0b5fc-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="92bab-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92bab-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0b5fc-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b5fc-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="92bab-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92bab-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0b5fc-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b5fc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92bab-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="92bab-118">See also</span></span>
-- [<span data-ttu-id="92bab-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="92bab-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="92bab-120">ClassLoadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="92bab-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="0b5fc-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b5fc-118">See also</span></span>
+- [<span data-ttu-id="0b5fc-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0b5fc-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="0b5fc-120">ClassLoadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="0b5fc-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)

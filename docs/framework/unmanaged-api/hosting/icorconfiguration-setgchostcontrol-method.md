@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7b9602f490900fd5c923abf195b3b0707959832
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a64922e1fe069d682f7ebc51040d06231a8b49c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484356"
 ---
-# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="864d6-102">ICorConfiguration::SetGCHostControl メソッド</span><span class="sxs-lookup"><span data-stu-id="864d6-102">ICorConfiguration::SetGCHostControl Method</span></span>
-<span data-ttu-id="864d6-103">仮想メモリの制限を変更するホストに要求、ガベージ コレクターで使用されるコールバック インターフェイスを設定します。</span><span class="sxs-lookup"><span data-stu-id="864d6-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="f1c93-102">ICorConfiguration::SetGCHostControl メソッド</span><span class="sxs-lookup"><span data-stu-id="f1c93-102">ICorConfiguration::SetGCHostControl Method</span></span>
+<span data-ttu-id="f1c93-103">仮想メモリの制限を変更するホストに要求、ガベージ コレクターで使用されるコールバック インターフェイスを設定します。</span><span class="sxs-lookup"><span data-stu-id="f1c93-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="864d6-104">構文</span><span class="sxs-lookup"><span data-stu-id="864d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1c93-104">構文</span><span class="sxs-lookup"><span data-stu-id="f1c93-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCHostControl (  
@@ -35,18 +35,18 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="864d6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="864d6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1c93-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f1c93-105">Parameters</span></span>  
  `pGCHostControl`  
- <span data-ttu-id="864d6-106">[in]ポインター、 [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)ガベージ コレクターは、仮想メモリの制限を変更するホストを要求できるようにするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="864d6-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+ <span data-ttu-id="f1c93-106">[in]ポインター、 [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)ガベージ コレクターは、仮想メモリの制限を変更するホストを要求できるようにするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f1c93-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="864d6-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="864d6-107">Requirements</span></span>  
- <span data-ttu-id="864d6-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="864d6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1c93-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="f1c93-107">Requirements</span></span>  
+ <span data-ttu-id="f1c93-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1c93-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="864d6-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="864d6-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f1c93-109">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f1c93-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="864d6-110">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="864d6-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f1c93-110">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f1c93-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="864d6-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="864d6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f1c93-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1c93-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="864d6-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="864d6-112">See also</span></span>
-- [<span data-ttu-id="864d6-113">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="864d6-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f1c93-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1c93-112">See also</span></span>
+- [<span data-ttu-id="f1c93-113">ICorConfiguration インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f1c93-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

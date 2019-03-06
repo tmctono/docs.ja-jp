@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417516"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483317"
 ---
-# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="cc36b-102">ICorDebugThread::GetActiveChain メソッド</span><span class="sxs-lookup"><span data-stu-id="cc36b-102">ICorDebugThread::GetActiveChain Method</span></span>
-<span data-ttu-id="cc36b-103">ICorDebugThread オブジェクトでアクティブな (最新) スタック チェーンへのインターフェイス ポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="cc36b-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="4d1da-102">ICorDebugThread::GetActiveChain メソッド</span><span class="sxs-lookup"><span data-stu-id="4d1da-102">ICorDebugThread::GetActiveChain Method</span></span>
+<span data-ttu-id="4d1da-103">ICorDebugThread オブジェクトでアクティブな (最新) スタック チェーンへのインターフェイス ポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="4d1da-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc36b-104">構文</span><span class="sxs-lookup"><span data-stu-id="cc36b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d1da-104">構文</span><span class="sxs-lookup"><span data-stu-id="4d1da-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveChain (  
@@ -35,18 +35,18 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cc36b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cc36b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d1da-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4d1da-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="cc36b-106">[out]スタック チェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cc36b-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
+ <span data-ttu-id="4d1da-106">[out]スタック チェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="4d1da-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cc36b-107">コメント</span><span class="sxs-lookup"><span data-stu-id="cc36b-107">Remarks</span></span>  
- <span data-ttu-id="cc36b-108">`ppChain`パラメーターが現在アクティブなスタック チェーンがない場合は null です。</span><span class="sxs-lookup"><span data-stu-id="cc36b-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d1da-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="4d1da-107">Remarks</span></span>  
+ <span data-ttu-id="4d1da-108">`ppChain`パラメーターが現在アクティブなスタック チェーンがない場合は null です。</span><span class="sxs-lookup"><span data-stu-id="4d1da-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc36b-109">要件</span><span class="sxs-lookup"><span data-stu-id="cc36b-109">Requirements</span></span>  
- <span data-ttu-id="cc36b-110">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="cc36b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d1da-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="4d1da-109">Requirements</span></span>  
+ <span data-ttu-id="4d1da-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4d1da-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc36b-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cc36b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4d1da-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d1da-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cc36b-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cc36b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d1da-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d1da-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cc36b-113">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc36b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4d1da-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d1da-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
