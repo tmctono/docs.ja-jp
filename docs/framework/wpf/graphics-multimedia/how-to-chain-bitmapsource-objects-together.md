@@ -1,5 +1,5 @@
 ---
-title: '方法 : BitmapSource オブジェクトをチェーンする'
+title: '方法: BitmapSource オブジェクトをチェーンする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - graphics [WPF], chaining BitmapSource objects
 - chaining BitmapSource objects [WPF]
 ms.assetid: 32d88853-395b-4855-9685-51a482a3b421
-ms.openlocfilehash: 5c70b6ec132234959404203fb62567ddb0acf762
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 403a2a8683e65fd71df89befd59744ac3fe6200c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377522"
 ---
-# <a name="how-to-chain-bitmapsource-objects-together"></a><span data-ttu-id="f21ad-102">方法 : BitmapSource オブジェクトをチェーンする</span><span class="sxs-lookup"><span data-stu-id="f21ad-102">How to: Chain BitmapSource Objects Together</span></span>
-<span data-ttu-id="f21ad-103">この例では連鎖させることにより、イメージ ソースをさまざまな効果を適用するしくみ複数<xref:System.Windows.Media.Imaging.BitmapSource>派生オブジェクトをまとめています。</span><span class="sxs-lookup"><span data-stu-id="f21ad-103">This example shows how you can apply a variety of effects to an image source by chaining multiple <xref:System.Windows.Media.Imaging.BitmapSource> derived objects together.</span></span>  
+# <a name="how-to-chain-bitmapsource-objects-together"></a><span data-ttu-id="03aee-102">方法: BitmapSource オブジェクトをチェーンする</span><span class="sxs-lookup"><span data-stu-id="03aee-102">How to: Chain BitmapSource Objects Together</span></span>
+<span data-ttu-id="03aee-103">この例では連鎖させることにより、イメージ ソースにさまざまな効果を適用する方法複数<xref:System.Windows.Media.Imaging.BitmapSource>派生オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="03aee-103">This example shows how you can apply a variety of effects to an image source by chaining multiple <xref:System.Windows.Media.Imaging.BitmapSource> derived objects together.</span></span>  
   
- <span data-ttu-id="f21ad-104">次の例では、チェーンを使用して、イメージのソースを反転してピクセル形式を変更します。</span><span class="sxs-lookup"><span data-stu-id="f21ad-104">The following example uses chaining to flip and change the pixel format of the source of an image.</span></span>  
+ <span data-ttu-id="03aee-104">次の例では、チェーンを使用して、イメージのソースを反転してピクセル形式を変更します。</span><span class="sxs-lookup"><span data-stu-id="03aee-104">The following example uses chaining to flip and change the pixel format of the source of an image.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f21ad-105">例</span><span class="sxs-lookup"><span data-stu-id="f21ad-105">Example</span></span>  
- [!code-xaml[ImagingSnippetGallery_snip#ChainedBitmapSourcesXamlExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/ChainedBitmapSourcesExample.xaml#chainedbitmapsourcesxamlexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="03aee-105">例</span><span class="sxs-lookup"><span data-stu-id="03aee-105">Example</span></span>  
+ [!code-xaml[ImagingSnippetGallery_snip#ChainedBitmapSourcesXamlExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/ChainedBitmapSourcesExample.xaml#chainedbitmapsourcesxamlexamplewholepage)]  
   
- [!code-csharp[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/ChainedBitmapSourcesExample.cs#chainedbitmapsourcescodeexamplewholepage)]
- [!code-vb[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/ChainedBitmapSourcesExample.vb#chainedbitmapsourcescodeexamplewholepage)]
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/ChainedBitmapSourcesExample.cs#chainedbitmapsourcescodeexamplewholepage)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#ChainedBitmapSourcesCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/ChainedBitmapSourcesExample.vb#chainedbitmapsourcescodeexamplewholepage)]

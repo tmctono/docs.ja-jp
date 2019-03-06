@@ -7,25 +7,25 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370333"
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="26740-102">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="26740-102">ListView Overviews</span></span>
-<span data-ttu-id="26740-103">このセクションのトピックでは、使用する方法を表示、<xref:System.Windows.Controls.ListView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="26740-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="66d24-102">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="66d24-102">ListView Overviews</span></span>
+<span data-ttu-id="66d24-103">このセクションのトピックでは、使用する方法を説明する<xref:System.Windows.Controls.ListView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="66d24-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="26740-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="26740-104">In This Section</span></span>  
- [<span data-ttu-id="26740-105">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="26740-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="26740-106">GridView の概要</span><span class="sxs-lookup"><span data-stu-id="26740-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="26740-107">GridView の列ヘッダー スタイルおよびテンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="26740-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66d24-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="66d24-104">In This Section</span></span>  
+ [<span data-ttu-id="66d24-105">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="66d24-105">ListView Overview</span></span>](listview-overview.md)  
+ [<span data-ttu-id="66d24-106">GridView の概要</span><span class="sxs-lookup"><span data-stu-id="66d24-106">GridView Overview</span></span>](gridview-overview.md)  
+ [<span data-ttu-id="66d24-107">GridView の列ヘッダー スタイルおよびテンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="66d24-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="26740-108">参照</span><span class="sxs-lookup"><span data-stu-id="26740-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="66d24-108">参照</span><span class="sxs-lookup"><span data-stu-id="66d24-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="26740-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="26740-109">Related Sections</span></span>  
- [<span data-ttu-id="26740-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="26740-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="66d24-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="66d24-109">Related Sections</span></span>  
+ [<span data-ttu-id="66d24-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="66d24-110">How-to Topics</span></span>](listview-how-to-topics.md)

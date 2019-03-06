@@ -1,69 +1,69 @@
 ---
-title: 実行中のワークフロー インスタンスの定義を更新する方法
+title: '方法: 実行中のワークフロー インスタンスの定義を更新します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: da8b6adeede1fddf39c818568cfd884c3add317f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1f5980ed360e8dfb4aaac92e1e5e7236ffb9f409
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376594"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="3fd3b-102">実行中のワークフロー インスタンスの定義を更新する方法</span><span class="sxs-lookup"><span data-stu-id="3fd3b-102">How to: Update the Definition of a Running Workflow Instance</span></span>
-<span data-ttu-id="3fd3b-103">動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="3fd3b-104">必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="3fd3b-105">チュートリアルでは、この手順は、動的更新を使用して、永続化されたインスタンスを変更する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法: 複数のバージョンをワークフロー サイド バイ サイドのホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="3fd3b-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="91e25-102">方法: 実行中のワークフロー インスタンスの定義を更新します。</span><span class="sxs-lookup"><span data-stu-id="91e25-102">How to: Update the Definition of a Running Workflow Instance</span></span>
+<span data-ttu-id="91e25-103">動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="91e25-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="91e25-104">必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。</span><span class="sxs-lookup"><span data-stu-id="91e25-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="91e25-105">このチュートリアルでは、この手順は、の永続化されたインスタンスを変更する動的更新を使用する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="91e25-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="3fd3b-106">完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="91e25-106">完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。</span><span class="sxs-lookup"><span data-stu-id="91e25-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="3fd3b-107">このトピックの内容</span><span class="sxs-lookup"><span data-stu-id="3fd3b-107">In this topic</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="91e25-107">このトピックの内容</span><span class="sxs-lookup"><span data-stu-id="91e25-107">In this topic</span></span>  
   
--   [<span data-ttu-id="3fd3b-108">CreateUpdateMaps プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
+-   [<span data-ttu-id="91e25-108">CreateUpdateMaps プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="91e25-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   
--   [<span data-ttu-id="3fd3b-109">StateMachineNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
+-   [<span data-ttu-id="91e25-109">StateMachineNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
   
--   [<span data-ttu-id="3fd3b-110">FlowchartNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
+-   [<span data-ttu-id="91e25-110">FlowchartNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
   
--   [<span data-ttu-id="3fd3b-111">SequentialNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
+-   [<span data-ttu-id="91e25-111">SequentialNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
   
--   [<span data-ttu-id="3fd3b-112">ビルドおよび CreateUpdateMaps アプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
+-   [<span data-ttu-id="91e25-112">ビルドおよび CreateUpdateMaps アプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="91e25-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [<span data-ttu-id="3fd3b-113">更新されたワークフロー アセンブリをビルドするには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [<span data-ttu-id="91e25-113">更新されたワークフロー アセンブリをビルドするには</span><span class="sxs-lookup"><span data-stu-id="91e25-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
--   [<span data-ttu-id="3fd3b-114">新しいバージョンで WorkflowVersionMap を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="91e25-114">新しいバージョンで WorkflowVersionMap を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [<span data-ttu-id="3fd3b-115">動的更新を適用するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
+-   [<span data-ttu-id="91e25-115">動的更新を適用するには</span><span class="sxs-lookup"><span data-stu-id="91e25-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [<span data-ttu-id="3fd3b-116">更新されたワークフローでアプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="91e25-116">更新されたワークフローでアプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="91e25-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [<span data-ttu-id="3fd3b-117">以前のバージョンのワークフローを開始できるようにするには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [<span data-ttu-id="91e25-117">以前のバージョンのワークフローを開始できるようにするには</span><span class="sxs-lookup"><span data-stu-id="91e25-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a> <span data-ttu-id="3fd3b-118">CreateUpdateMaps プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-118">To create the CreateUpdateMaps project</span></span>  
+### <a name="BKMK_CreateProject"></a> <span data-ttu-id="91e25-118">CreateUpdateMaps プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="91e25-118">To create the CreateUpdateMaps project</span></span>  
   
-1.  <span data-ttu-id="3fd3b-119">右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
+1.  <span data-ttu-id="91e25-119">右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
-2.  <span data-ttu-id="3fd3b-120">**インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
+2.  <span data-ttu-id="91e25-120">**インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="91e25-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="3fd3b-121">Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="91e25-121">Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="3fd3b-122">.NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="3fd3b-123">選択**コンソール アプリケーション**から、 **Windows**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="3fd3b-124">型**CreateUpdateMaps**に、**名前**ボックスし、をクリックして**OK**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="91e25-122">.NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="91e25-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="91e25-123">選択**コンソール アプリケーション**から、 **Windows**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="91e25-124">型**CreateUpdateMaps**に、**名前**ボックスし、をクリックして**OK**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="3fd3b-125">右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="91e25-125">右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="3fd3b-126">選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="3fd3b-127">型**System.Activities**に、**アセンブリの検索**ボックスをアセンブリをフィルター処理し、目的の参照を簡単に選択します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
+4.  <span data-ttu-id="91e25-126">選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="91e25-127">型**System.Activities**に、**アセンブリの検索**ボックスをアセンブリをフィルター処理し、目的の参照を簡単に選択します。</span><span class="sxs-lookup"><span data-stu-id="91e25-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
 
-5.  <span data-ttu-id="3fd3b-128">横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+5.  <span data-ttu-id="91e25-128">横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-6.  <span data-ttu-id="3fd3b-129">型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="91e25-129">型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="3fd3b-130">型**System.Xaml**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Xaml**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="91e25-130">型**System.Xaml**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Xaml**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="3fd3b-131">をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
+8.  <span data-ttu-id="91e25-131">をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-9. <span data-ttu-id="3fd3b-132">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+9. <span data-ttu-id="91e25-132">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -89,7 +89,7 @@ ms.locfileid: "49123840"
     using Microsoft.CSharp.Activities;
     ```
 
-10. <span data-ttu-id="3fd3b-133">`Program` クラス (または `Module1`) に次の 2 つの文字列メンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
+10. <span data-ttu-id="91e25-133">`Program` クラス (または `Module1`) に次の 2 つの文字列メンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const mapPath = "..\..\..\PreviousVersions"
@@ -101,7 +101,7 @@ ms.locfileid: "49123840"
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";
     ```
 
-11. <span data-ttu-id="3fd3b-134">`StartUpdate` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-135">このメソッドにより、指定した xaml ワークフロー定義が `ActivityBuilder` に読み込まれた後、`DynamicUpdate.PrepareForUpdate` が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="3fd3b-136">`PrepareForUpdate` は `ActivityBuilder` 内にワークフロー定義のコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="3fd3b-137">ワークフロー定義が変更されると、更新マップを作成するように変更されたワークフロー定義と共に、このコピーは使用されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
+11. <span data-ttu-id="91e25-134">`StartUpdate` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-135">このメソッドにより、指定した xaml ワークフロー定義が `ActivityBuilder` に読み込まれた後、`DynamicUpdate.PrepareForUpdate` が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="91e25-136">`PrepareForUpdate` は `ActivityBuilder` 内にワークフロー定義のコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="91e25-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="91e25-137">ワークフロー定義が変更されると、更新マップを作成するように変更されたワークフロー定義と共に、このコピーは使用されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
 
     ```vb
     Private Function StartUpdate(name As String) As ActivityBuilder
@@ -165,7 +165,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-12. <span data-ttu-id="3fd3b-138">次に、`CreateUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-139">これにより、DynamicUpdateServices.CreateUpdateMap が呼び出されて動的更新マップが作成され、指定した名前を使用してその更新マップが保存されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="3fd3b-140">この更新マップには、`ActivityBuilder` に格納されている元のワークフロー定義を使用して開始された、永続化されたワークフロー インスタンスが、更新されたワークフロー定義を使用して完了するよう更新するために、ワークフロー ランタイムで必要な情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
+12. <span data-ttu-id="91e25-138">次に、`CreateUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-139">これにより、DynamicUpdateServices.CreateUpdateMap が呼び出されて動的更新マップが作成され、指定した名前を使用してその更新マップが保存されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="91e25-140">この更新マップには、`ActivityBuilder` に格納されている元のワークフロー定義を使用して開始された、永続化されたワークフロー インスタンスが、更新されたワークフロー定義を使用して完了するよう更新するために、ワークフロー ランタイムで必要な情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="91e25-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)
@@ -199,7 +199,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-13. <span data-ttu-id="3fd3b-141">`SaveUpdatedDefinition` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-142">このメソッドは、更新マップが作成されると、更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-142">This method saves the updated workflow definition once the update map is created.</span></span>
+13. <span data-ttu-id="91e25-141">`SaveUpdatedDefinition` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-142">このメソッドは、更新マップが作成されると、更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="91e25-142">This method saves the updated workflow definition once the update map is created.</span></span>
 
     ```vb
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)
@@ -224,9 +224,10 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_StateMachine"></a> <span data-ttu-id="3fd3b-143">StateMachineNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-143">To update StateMachineNumberGuessWorkflow</span></span>
+### <a name="BKMK_StateMachine"></a> <span data-ttu-id="91e25-143">StateMachineNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-143">To update StateMachineNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="3fd3b-144">`CreateStateMachineUpdateMap` クラス (または `Program`) に `Module1` を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
+1.  <span data-ttu-id="91e25-144">
+  `CreateStateMachineUpdateMap\` クラス (または `Program`) に `Module1\` を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -240,7 +241,8 @@ ms.locfileid: "49123840"
     }
     ```
 
-2.  <span data-ttu-id="3fd3b-145">`StartUpdate` を呼び出し、ワークフローのルート `StateMachine` アクティビティへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
+2.  <span data-ttu-id="91e25-145">
+  `StartUpdate\` を呼び出し、ワークフローのルート `StateMachine\` アクティビティへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="91e25-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
 
     ```vb
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")
@@ -256,7 +258,7 @@ ms.locfileid: "49123840"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3.  <span data-ttu-id="3fd3b-146">2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="91e25-146">2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="91e25-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -288,7 +290,7 @@ ms.locfileid: "49123840"
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");
     ```
 
-4.  <span data-ttu-id="3fd3b-147">終了メッセージを表示する新しい `WriteLine` アクティビティを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
+4.  <span data-ttu-id="91e25-147">終了メッセージを表示する新しい `WriteLine` アクティビティを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
 
     ```vb
     'Create the new WriteLine that displays the closing message.
@@ -317,7 +319,7 @@ ms.locfileid: "49123840"
     sm.States[1].Transitions[0].Action = wl;
     ```
 
-5.  <span data-ttu-id="3fd3b-148">ワークフローを更新したら、`CreateUpdateMaps` と `SaveUpdatedDefinition` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="3fd3b-149">`CreateUpdateMaps` は `DynamicUpdateMap` を作成して保存し、`SaveUpdatedDefinition` は更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
+5.  <span data-ttu-id="91e25-148">ワークフローを更新したら、`CreateUpdateMaps` と `SaveUpdatedDefinition` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="91e25-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="91e25-149">`CreateUpdateMaps` は `DynamicUpdateMap` を作成して保存し、`SaveUpdatedDefinition` は更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="91e25-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
 
     ```vb
     'Create the update map.
@@ -335,7 +337,7 @@ ms.locfileid: "49123840"
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");
     ```
 
-     <span data-ttu-id="3fd3b-150">完成した `CreateStateMachineUpdateMap` メソッドは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
+     <span data-ttu-id="91e25-150">完成した `CreateStateMachineUpdateMap` メソッドは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="91e25-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -417,9 +419,10 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_Flowchart"></a> <span data-ttu-id="3fd3b-151">FlowchartNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-151">To update FlowchartNumberGuessWorkflow</span></span>
+### <a name="BKMK_Flowchart"></a> <span data-ttu-id="91e25-151">FlowchartNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-151">To update FlowchartNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="3fd3b-152">`CreateFlowchartUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-153">このメソッドは `CreateStateMachineUpdateMap` に似ています。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="3fd3b-154">最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="91e25-152">
+  `CreateFlowchartUpdateMethod\` クラス (または `Program\`) に次の `Module1\` を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-153">このメソッドは `CreateStateMachineUpdateMap` に似ています。</span><span class="sxs-lookup"><span data-stu-id="91e25-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="91e25-154">最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="91e25-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateFlowchartUpdateMap()
@@ -531,9 +534,10 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_Sequential"></a> <span data-ttu-id="3fd3b-155">SequentialNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-155">To update SequentialNumberGuessWorkflow</span></span>
+### <a name="BKMK_Sequential"></a> <span data-ttu-id="91e25-155">SequentialNumberGuessWorkflow を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-155">To update SequentialNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="3fd3b-156">`CreateSequentialUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-157">このメソッドは、他の 2 つのメソッドに似ています。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="3fd3b-158">最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="91e25-156">
+  `CreateSequentialUpdateMethod\` クラス (または `Program\`) に次の `Module1\` を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-157">このメソッドは、他の 2 つのメソッドに似ています。</span><span class="sxs-lookup"><span data-stu-id="91e25-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="91e25-158">最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。</span><span class="sxs-lookup"><span data-stu-id="91e25-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateSequentialUpdateMap()
@@ -611,9 +615,10 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="3fd3b-159">ビルドおよび CreateUpdateMaps アプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-159">To build and run the CreateUpdateMaps application</span></span>
+### <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="91e25-159">ビルドおよび CreateUpdateMaps アプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="91e25-159">To build and run the CreateUpdateMaps application</span></span>
 
-1.  <span data-ttu-id="3fd3b-160">`Main` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="3fd3b-161">これらのメソッドは次のセクションで追加されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-161">These methods are added in the following sections.</span></span> <span data-ttu-id="3fd3b-162">各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
+1.  <span data-ttu-id="91e25-160">
+  `Main\` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="91e25-161">これらのメソッドは次のセクションで追加されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-161">These methods are added in the following sections.</span></span> <span data-ttu-id="91e25-162">各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。</span><span class="sxs-lookup"><span data-stu-id="91e25-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
 
     ```vb
     Sub Main()
@@ -636,53 +641,53 @@ ms.locfileid: "49123840"
     }
     ```
 
-2.  <span data-ttu-id="3fd3b-163">右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+2.  <span data-ttu-id="91e25-163">右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-3.  <span data-ttu-id="3fd3b-164">Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `CreateUpdateMaps` アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
-
-    > [!NOTE]
-    >  <span data-ttu-id="3fd3b-165">`CreateUpdateMaps`アプリケーション確認する場合は、実行中にステータス情報は表示されませんが、 **NumberGuessWorkflowActivities_du**フォルダーと**PreviousVersions**フォルダーが表示されます更新されたワークフロー定義ファイルは、更新マップ。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
-
-     <span data-ttu-id="3fd3b-166">更新マップが作成され、ワークフロー定義が更新されたら、次に、更新された定義を含む更新されたワークフロー アセンブリをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
-
-###  <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="3fd3b-167">更新されたワークフロー アセンブリをビルドするには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-167">To build the updated workflow assembly</span></span>
-
-1.  <span data-ttu-id="3fd3b-168">Visual Studio 2012 の 2 番目のインスタンスを開きます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-168">Open a second instance of Visual Studio 2012.</span></span>
-
-2.  <span data-ttu-id="3fd3b-169">選択**オープン**、**プロジェクト/ソリューション**から、**ファイル**メニュー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
-
-3.  <span data-ttu-id="3fd3b-170">移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリックして**オープン**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
-
-4.  <span data-ttu-id="3fd3b-171">**ソリューション エクスプ ローラー**を右クリックして**SequentialNumberGuessWorkflow.xaml**選択**プロジェクトから除外**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="3fd3b-172">同じ操作を行う**FlowchartNumberGuessWorkflow.xaml**と**StateMachineNumberGuessWorkflow.xaml**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="3fd3b-173">この手順により、以前のバージョンのワークフロー定義がプロジェクトから削除されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
-
-5.  <span data-ttu-id="3fd3b-174">選択**既存項目の追加**から、**プロジェクト**メニュー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
-
-6.  <span data-ttu-id="3fd3b-175">移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法: をワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
-
-7.  <span data-ttu-id="3fd3b-176">選択**XAML ファイル (\*.xaml;\*します。xoml)** から、**ファイルの種類**ドロップダウン リスト。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
-
-8.  <span data-ttu-id="3fd3b-177">選択**SequentialNumberGuessWorkflow_du.xaml**、 **FlowchartNumberGuessWorkflow_du.xaml**、および**StateMachineNumberGuessWorkflow_du.xaml** をクリックします。**追加**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+3.  <span data-ttu-id="91e25-164">Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `CreateUpdateMaps` アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="91e25-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="3fd3b-178">複数の項目を同時に選択するには、Ctrl を押しながら各項目をクリックします。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-178">CTRL+Click to select multiple items at a time.</span></span>
+    >  <span data-ttu-id="91e25-165">`CreateUpdateMaps`アプリケーション確認する場合は、実行中にステータス情報は表示されませんが、 **NumberGuessWorkflowActivities_du**フォルダーと**PreviousVersions**フォルダーが表示されます更新されたワークフロー定義ファイルは、更新マップ。</span><span class="sxs-lookup"><span data-stu-id="91e25-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
 
-     <span data-ttu-id="3fd3b-179">この手順により、更新されたワークフロー定義がプロジェクトに追加されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+     <span data-ttu-id="91e25-166">更新マップが作成され、ワークフロー定義が更新されたら、次に、更新された定義を含む更新されたワークフロー アセンブリをビルドします。</span><span class="sxs-lookup"><span data-stu-id="91e25-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
 
-9. <span data-ttu-id="3fd3b-180">Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-180">Press CTRL+SHIFT+B to build the project.</span></span>
+### <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="91e25-167">更新されたワークフロー アセンブリをビルドするには</span><span class="sxs-lookup"><span data-stu-id="91e25-167">To build the updated workflow assembly</span></span>
 
-10. <span data-ttu-id="3fd3b-181">選択**ソリューションを閉じる**から、**ファイル**メニュー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="3fd3b-182">ソリューション ファイル、プロジェクトが必要ではありませんので、クリックして**いいえ**ソリューション ファイルを保存せずに Visual Studio を閉じます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="3fd3b-183">選択**終了**から、**ファイル**] メニューの [Visual Studio を終了します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+1.  <span data-ttu-id="91e25-168">Visual Studio 2012 の 2 番目のインスタンスを開きます。</span><span class="sxs-lookup"><span data-stu-id="91e25-168">Open a second instance of Visual Studio 2012.</span></span>
 
-11. <span data-ttu-id="3fd3b-184">Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowactivities_du \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+2.  <span data-ttu-id="91e25-169">選択**オープン**、**プロジェクト/ソリューション**から、**ファイル**メニュー。</span><span class="sxs-lookup"><span data-stu-id="91e25-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
 
-12. <span data-ttu-id="3fd3b-185">名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法: 複数のバージョンをワークフロー サイド バイ サイドのホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="91e25-170">移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリック**オープン**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="3fd3b-186">新しいバージョンで WorkflowVersionMap を更新するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-186">To update WorkflowVersionMap with the new versions</span></span>
+4.  <span data-ttu-id="91e25-171">**ソリューション エクスプ ローラー**を右クリックして**SequentialNumberGuessWorkflow.xaml**選択**プロジェクトから除外**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="91e25-172">同じ操作を行う**FlowchartNumberGuessWorkflow.xaml**と**StateMachineNumberGuessWorkflow.xaml**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="91e25-173">この手順により、以前のバージョンのワークフロー定義がプロジェクトから削除されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
 
-1.  <span data-ttu-id="3fd3b-187">Visual Studio 2012 の最初のインスタンスに切り替えます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+5.  <span data-ttu-id="91e25-174">選択**既存項目の追加**から、**プロジェクト**メニュー。</span><span class="sxs-lookup"><span data-stu-id="91e25-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
 
-2.  <span data-ttu-id="3fd3b-188">ダブルクリック**WorkflowVersionMap.cs** (または**WorkflowVersionMap.vb**) の下、 **NumberGuessWorkflowHost**プロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+6.  <span data-ttu-id="91e25-175">移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="91e25-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
-3.  <span data-ttu-id="3fd3b-189">既存の 6 つのワークフロー ID 宣言の直後に、新しいワークフロー ID を 3 つ追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="3fd3b-190">このチュートリアルでは、`1.5.0.0` は動的更新 ID の `WorkflowIdentity.Version` として使用されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="3fd3b-191">これらの新しい `v15` ワークフロー ID は、動的に更新される永続化されたワークフロー インスタンスに適切なワークフロー定義を指定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
+7.  <span data-ttu-id="91e25-176">選択**XAML ファイル (\*.xaml;\*します。xoml)** から、**ファイルの種類**ドロップダウン リスト。</span><span class="sxs-lookup"><span data-stu-id="91e25-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
+
+8.  <span data-ttu-id="91e25-177">選択**SequentialNumberGuessWorkflow_du.xaml**、 **FlowchartNumberGuessWorkflow_du.xaml**、および**StateMachineNumberGuessWorkflow_du.xaml** をクリックします。**追加**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="91e25-178">複数の項目を同時に選択するには、Ctrl を押しながら各項目をクリックします。</span><span class="sxs-lookup"><span data-stu-id="91e25-178">CTRL+Click to select multiple items at a time.</span></span>
+
+     <span data-ttu-id="91e25-179">この手順により、更新されたワークフロー定義がプロジェクトに追加されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+
+9. <span data-ttu-id="91e25-180">Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="91e25-180">Press CTRL+SHIFT+B to build the project.</span></span>
+
+10. <span data-ttu-id="91e25-181">選択**ソリューションを閉じる**から、**ファイル**メニュー。</span><span class="sxs-lookup"><span data-stu-id="91e25-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="91e25-182">ソリューション ファイル、プロジェクトが必要ではありませんので、クリックして**いいえ**ソリューション ファイルを保存せずに Visual Studio を閉じます。</span><span class="sxs-lookup"><span data-stu-id="91e25-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="91e25-183">選択**終了**から、**ファイル**] メニューの [Visual Studio を終了します。</span><span class="sxs-lookup"><span data-stu-id="91e25-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+
+11. <span data-ttu-id="91e25-184">Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowactivities_du \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。</span><span class="sxs-lookup"><span data-stu-id="91e25-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+
+12. <span data-ttu-id="91e25-185">名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。</span><span class="sxs-lookup"><span data-stu-id="91e25-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="91e25-186">新しいバージョンで WorkflowVersionMap を更新するには</span><span class="sxs-lookup"><span data-stu-id="91e25-186">To update WorkflowVersionMap with the new versions</span></span>
+
+1.  <span data-ttu-id="91e25-187">Visual Studio 2012 の最初のインスタンスに切り替えます。</span><span class="sxs-lookup"><span data-stu-id="91e25-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+
+2.  <span data-ttu-id="91e25-188">ダブルクリック**WorkflowVersionMap.cs** (または**WorkflowVersionMap.vb**) の下、 **NumberGuessWorkflowHost**プロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="91e25-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+3.  <span data-ttu-id="91e25-189">既存の 6 つのワークフロー ID 宣言の直後に、新しいワークフロー ID を 3 つ追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="91e25-190">このチュートリアルでは、`1.5.0.0` は動的更新 ID の `WorkflowIdentity.Version` として使用されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="91e25-191">これらの新しい `v15` ワークフロー ID は、動的に更新される永続化されたワークフロー インスタンスに適切なワークフロー定義を指定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
 
     ```vb
     'Current version identities.
@@ -718,7 +723,7 @@ ms.locfileid: "49123840"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;
     ```
 
-4.  <span data-ttu-id="3fd3b-192">コンストラクターの末尾に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="3fd3b-193">このコードでは、動的更新ワークフロー ID を初期化し、対応するワークフロー定義を読み込み、これらをワークフロー バージョン ディクショナリに追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
+4.  <span data-ttu-id="91e25-192">コンストラクターの末尾に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="91e25-193">このコードでは、動的更新ワークフロー ID を初期化し、対応するワークフロー定義を読み込み、これらをワークフロー バージョン ディクショナリに追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
 
     ```vb
     'Initialize the dynamic update workflow identities.
@@ -796,7 +801,7 @@ ms.locfileid: "49123840"
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     <span data-ttu-id="3fd3b-194">完成した `WorkflowVersionMap` クラスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
+     <span data-ttu-id="91e25-194">完成した `WorkflowVersionMap` クラスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="91e25-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
 
     ```vb
     Public Module WorkflowVersionMap
@@ -1061,36 +1066,37 @@ ms.locfileid: "49123840"
     }
     ```
 
-5.  <span data-ttu-id="3fd3b-195">Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-195">Press CTRL+SHIFT+B to build the project.</span></span>
+5.  <span data-ttu-id="91e25-195">Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="91e25-195">Press CTRL+SHIFT+B to build the project.</span></span>
 
-###  <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="3fd3b-196">動的更新を適用するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-196">To apply the dynamic updates</span></span>
+### <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="91e25-196">動的更新を適用するには</span><span class="sxs-lookup"><span data-stu-id="91e25-196">To apply the dynamic updates</span></span>
 
-1.  <span data-ttu-id="3fd3b-197">右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
+1.  <span data-ttu-id="91e25-197">右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
 
-2.  <span data-ttu-id="3fd3b-198">**インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
+2.  <span data-ttu-id="91e25-198">**インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。</span><span class="sxs-lookup"><span data-stu-id="91e25-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="3fd3b-199">Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="91e25-199">Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="3fd3b-200">.NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="3fd3b-201">選択**コンソール アプリケーション**から、 **Windows**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="3fd3b-202">型**ApplyDynamicUpdate**に、**名前**ボックスし、をクリックして**OK**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="91e25-200">.NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="91e25-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="91e25-201">選択**コンソール アプリケーション**から、 **Windows**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="91e25-202">型**ApplyDynamicUpdate**に、**名前**ボックスし、をクリックして**OK**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="3fd3b-203">右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="91e25-203">右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="3fd3b-204">クリックして**ソリューション**横にチェック ボックスをオンおよび**NumberGuessWorkflowHost**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="3fd3b-205">この参照は、`ApplyDynamicUpdate` で `NumberGuessWorkflowHost.WorkflowVersionMap` クラスを使用できるようにするために必要です。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
+4.  <span data-ttu-id="91e25-204">クリックして**ソリューション**横にチェック ボックスをオンおよび**NumberGuessWorkflowHost**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="91e25-205">この参照は、`ApplyDynamicUpdate` で `NumberGuessWorkflowHost.WorkflowVersionMap` クラスを使用できるようにするために必要です。</span><span class="sxs-lookup"><span data-stu-id="91e25-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
 
-5.  <span data-ttu-id="3fd3b-206">選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="3fd3b-207">型**System.Activities**に、**アセンブリの検索**ボックス。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="3fd3b-208">これにより、アセンブリがフィルター処理され、目的の参照が選択しやすくなります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-208">This will filter the assemblies and make the desired references easier to select.</span></span>
+5.  <span data-ttu-id="91e25-206">選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="91e25-207">型**System.Activities**に、**アセンブリの検索**ボックス。</span><span class="sxs-lookup"><span data-stu-id="91e25-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="91e25-208">これにより、アセンブリがフィルター処理され、目的の参照が選択しやすくなります。</span><span class="sxs-lookup"><span data-stu-id="91e25-208">This will filter the assemblies and make the desired references easier to select.</span></span>
 
-6.  <span data-ttu-id="3fd3b-209">横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="91e25-209">横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="3fd3b-210">型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="91e25-210">型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="3fd3b-211">型**DurableInstancing**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Activities.DurableInstancing**と**System.Runtime.DurableInstancing**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
+8.  <span data-ttu-id="91e25-211">型**DurableInstancing**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Activities.DurableInstancing**と**System.Runtime.DurableInstancing**から、**検索結果**一覧。</span><span class="sxs-lookup"><span data-stu-id="91e25-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
 
-9. <span data-ttu-id="3fd3b-212">をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
+9. <span data-ttu-id="91e25-212">をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-10. <span data-ttu-id="3fd3b-213">右クリックして**ApplyDynamicUpdate**ソリューション エクスプ ローラーで選択**追加**、**クラス**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="3fd3b-214">型`DynamicUpdateInfo`に、**名前**ボックスし、をクリックして**追加**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
+10. <span data-ttu-id="91e25-213">右クリックして**ApplyDynamicUpdate**ソリューション エクスプ ローラーで選択**追加**、**クラス**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="91e25-214">型`DynamicUpdateInfo`に、**名前**ボックスし、をクリックして**追加**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
 
-11. <span data-ttu-id="3fd3b-215">`DynamicUpdateInfo` クラスに次の 2 つのメンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="3fd3b-216">完成した `DynamicUpdateInfo` クラスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="3fd3b-217">このクラスには、ワークフロー インスタンスの更新時に使用された更新マップと新しいワークフロー ID に関する情報が格納されています。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
+11. <span data-ttu-id="91e25-215">
+  `DynamicUpdateInfo\` クラスに次の 2 つのメンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="91e25-216">完成した `DynamicUpdateInfo` クラスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="91e25-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="91e25-217">このクラスには、ワークフロー インスタンスの更新時に使用された更新マップと新しいワークフロー ID に関する情報が格納されています。</span><span class="sxs-lookup"><span data-stu-id="91e25-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
 
     ```vb
     Public Class DynamicUpdateInfo
@@ -1107,7 +1113,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-12. <span data-ttu-id="3fd3b-218">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+12. <span data-ttu-id="91e25-218">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -1119,9 +1125,9 @@ ms.locfileid: "49123840"
     using System.Activities.DynamicUpdate;
     ```
 
-13. <span data-ttu-id="3fd3b-219">ダブルクリック**Program.cs** (または**Module1.vb**) ソリューション エクスプ ローラーでします。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
+13. <span data-ttu-id="91e25-219">ダブルクリック**Program.cs** (または**Module1.vb**) ソリューション エクスプ ローラーでします。</span><span class="sxs-lookup"><span data-stu-id="91e25-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
 
-14. <span data-ttu-id="3fd3b-220">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+14. <span data-ttu-id="91e25-220">次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports NumberGuessWorkflowHost
@@ -1144,7 +1150,7 @@ ms.locfileid: "49123840"
     using System.Activities.DurableInstancing;
     ```
 
-15. <span data-ttu-id="3fd3b-221">`Program` クラス (または `Module1`) に次の接続文字列メンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
+15. <span data-ttu-id="91e25-221">`Program` クラス (または `Module1`) に次の接続文字列メンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
@@ -1155,9 +1161,9 @@ ms.locfileid: "49123840"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="3fd3b-222">使用している SQL Server のエディションによって、接続文字列のサーバー名は異なる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
+    >  <span data-ttu-id="91e25-222">使用している SQL Server のエディションによって、接続文字列のサーバー名は異なる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="91e25-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
 
-16. <span data-ttu-id="3fd3b-223">`GetIDs` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-224">このメソッドは、永続化されたワークフロー インスタンス ID の一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-224">This method returns a list of persisted workflow instance ids.</span></span>
+16. <span data-ttu-id="91e25-223">`GetIDs` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-224">このメソッドは、永続化されたワークフロー インスタンス ID の一覧を返します。</span><span class="sxs-lookup"><span data-stu-id="91e25-224">This method returns a list of persisted workflow instance ids.</span></span>
 
     ```vb
     Function GetIds() As IList(Of Guid)
@@ -1210,7 +1216,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-17. <span data-ttu-id="3fd3b-225">`LoadMap` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-226">このメソッドは、更新マップに `v1` ワークフロー ID をマップするディクショナリと、対応する永続化されたワークフロー インスタンスの更新に使用される新しいワークフロー ID を作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
+17. <span data-ttu-id="91e25-225">`LoadMap` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-226">このメソッドは、更新マップに `v1` ワークフロー ID をマップするディクショナリと、対応する永続化されたワークフロー インスタンスの更新に使用される新しいワークフロー ID を作成します。</span><span class="sxs-lookup"><span data-stu-id="91e25-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
 
     ```vb
     Function LoadMap(mapName As String) As DynamicUpdateMap
@@ -1253,7 +1259,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-18. <span data-ttu-id="3fd3b-227">`LoadMaps` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="3fd3b-228">このメソッドは、3 つの更新マップを読み込み、更新マップに `v1` ワークフロー ID をマップするディクショナリを作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
+18. <span data-ttu-id="91e25-227">`LoadMaps` クラス (または `Program`) に次の `Module1` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="91e25-228">このメソッドは、3 つの更新マップを読み込み、更新マップに `v1` ワークフロー ID をマップするディクショナリを作成します。</span><span class="sxs-lookup"><span data-stu-id="91e25-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
 
     ```vb
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)
@@ -1325,7 +1331,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-19. <span data-ttu-id="3fd3b-229">`Main` に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-229">Add the following code to `Main`.</span></span> <span data-ttu-id="3fd3b-230">このコードでは、永続化されたワークフロー インスタンスを反復処理し、それぞれの `WorkflowIdentity` を調べます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="3fd3b-231">`WorkflowIdentity` が `v1` ワークフロー インスタンスにマップされると、`WorkflowApplication` は、更新されたワークフロー定義と更新されたワークフロー ID を使用して構成されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="3fd3b-232">次に、`WorkflowApplication.Load` がそのインスタンスと更新マップを使用して呼び出され、動的更新マップが適用されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="3fd3b-233">更新が適用されると、更新されたインスタンスは `Unload` の呼び出しによって永続化されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
+19. <span data-ttu-id="91e25-229">`Main` に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-229">Add the following code to `Main`.</span></span> <span data-ttu-id="91e25-230">このコードでは、永続化されたワークフロー インスタンスを反復処理し、それぞれの `WorkflowIdentity` を調べます。</span><span class="sxs-lookup"><span data-stu-id="91e25-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="91e25-231">`WorkflowIdentity` が `v1` ワークフロー インスタンスにマップされると、`WorkflowApplication` は、更新されたワークフロー定義と更新されたワークフロー ID を使用して構成されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="91e25-232">次に、`WorkflowApplication.Load` がそのインスタンスと更新マップを使用して呼び出され、動的更新マップが適用されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="91e25-233">更新が適用されると、更新されたインスタンスは `Unload` の呼び出しによって永続化されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
 
     ```vb
     Dim store = New SqlWorkflowInstanceStore(connectionString)
@@ -1408,35 +1414,35 @@ ms.locfileid: "49123840"
     }
     ```
 
-20. <span data-ttu-id="3fd3b-234">右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+20. <span data-ttu-id="91e25-234">右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-21. <span data-ttu-id="3fd3b-235">Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `ApplyDynamicUpdate` アプリケーションを実行して、永続化されたワークフロー インスタンスを更新します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="3fd3b-236">表示される出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-236">You should see output similar to the following.</span></span> <span data-ttu-id="3fd3b-237">バージョン 1.0.0.0 のワークフローはバージョン 1.5.0.0 に更新されますが、バージョン 2.0.0.0 のワークフローは更新されません。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
+21. <span data-ttu-id="91e25-235">Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `ApplyDynamicUpdate` アプリケーションを実行して、永続化されたワークフロー インスタンスを更新します。</span><span class="sxs-lookup"><span data-stu-id="91e25-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="91e25-236">表示される出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="91e25-236">You should see output similar to the following.</span></span> <span data-ttu-id="91e25-237">バージョン 1.0.0.0 のワークフローはバージョン 1.5.0.0 に更新されますが、バージョン 2.0.0.0 のワークフローは更新されません。</span><span class="sxs-lookup"><span data-stu-id="91e25-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
 
- <span data-ttu-id="3fd3b-238">**StateMachineNumberGuessWorkflow の検査: です。バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**任意のキーを押して続行しています.**</span><span class="sxs-lookup"><span data-stu-id="3fd3b-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+ <span data-ttu-id="91e25-238">**検査するには。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
+**に更新されました。FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
+**を検査します。StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**を検査します。StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**を検査します。FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**を検査します。FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**を検査します。SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**を検査します。SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
+**任意のキーを押して続行しています.**</span><span class="sxs-lookup"><span data-stu-id="91e25-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
 **Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
@@ -1462,30 +1468,31 @@ ms.locfileid: "49123840"
 **Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0**
 **Press any key to continue . . .**</span></span>
 
-###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="3fd3b-239">更新されたワークフローでアプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-239">To run the application with the updated workflows</span></span>
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="91e25-239">更新されたワークフローでアプリケーションを実行するには</span><span class="sxs-lookup"><span data-stu-id="91e25-239">To run the application with the updated workflows</span></span>
 
-1.  <span data-ttu-id="3fd3b-240">右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+1.  <span data-ttu-id="91e25-240">右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-2.  <span data-ttu-id="3fd3b-241">Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-241">Press CTRL+F5 to run the application.</span></span>
+2.  <span data-ttu-id="91e25-241">Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="91e25-241">Press CTRL+F5 to run the application.</span></span>
 
-3.  <span data-ttu-id="3fd3b-242">クリックして**新しいゲーム**を新しいワークフローを開始し、ワークフローを示すステータス ウィンドウが次のバージョン情報に注意してください、`v2`ワークフロー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
+3.  <span data-ttu-id="91e25-242">クリックして**新しいゲーム**を新しいワークフローを開始し、ワークフローを示すステータス ウィンドウが次のバージョン情報に注意してください、`v2`ワークフロー。</span><span class="sxs-lookup"><span data-stu-id="91e25-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
 
-4.  <span data-ttu-id="3fd3b-243">いずれかを選択、`v1`の先頭で開始されたワークフロー、[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="3fd3b-244">ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="3fd3b-245">前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
+4.  <span data-ttu-id="91e25-243">いずれかの選択、`v1`の先頭で開始されたワークフロー、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="91e25-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="91e25-244">ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。</span><span class="sxs-lookup"><span data-stu-id="91e25-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="91e25-245">前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。</span><span class="sxs-lookup"><span data-stu-id="91e25-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
 
- <span data-ttu-id="3fd3b-246">**1 から 10 までの数値を入力してください**
-**推定値が小さすぎます。**</span><span class="sxs-lookup"><span data-stu-id="3fd3b-246">**Please enter a number between 1 and 10**
+ <span data-ttu-id="91e25-246">**1 から 10 までの数値を入力してください**
+**推定値が小さすぎます。**</span><span class="sxs-lookup"><span data-stu-id="91e25-246">**Please enter a number between 1 and 10**
 **Your guess is too low.**</span></span>
 
-5.  <span data-ttu-id="3fd3b-247">`InstanceId` を書き留めておき、ワークフローが完了するまで推定値を入力します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="3fd3b-248">ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
+5.  <span data-ttu-id="91e25-247">
+  `InstanceId\` を書き留めておき、ワークフローが完了するまで推定値を入力します。</span><span class="sxs-lookup"><span data-stu-id="91e25-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="91e25-248">ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="91e25-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
 
- <span data-ttu-id="3fd3b-249">**1 から 10 までの数値を入力してください**
+ <span data-ttu-id="91e25-249">**1 から 10 までの数値を入力してください**
 **推定値が小さすぎます**。
  **1 から 10 までの数値を入力してください**
 **5 が小さすぎます**。
  **1 から 10 までの数値を入力してください**
 **7 が多すぎます**。
  **1 から 10 までの数値を入力してください**
-**おめでとうございますご推察のとおり、番号で 4 になります。**</span><span class="sxs-lookup"><span data-stu-id="3fd3b-249">**Please enter a number between 1 and 10**
+**おめでとうございますご推察のとおり、番号で 4 になります。**</span><span class="sxs-lookup"><span data-stu-id="91e25-249">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1494,16 +1501,16 @@ ms.locfileid: "49123840"
 **Please enter a number between 1 and 10**
 **Congratulations, you guessed the number in 4 turns.**</span></span>
 
-6.  <span data-ttu-id="3fd3b-250">Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって) と、対応するメモ帳を使用して追跡ファイルを開く完了したワークフロー。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="3fd3b-251">メモして行っていない場合、`InstanceId`を使用して正しい追跡ファイルを識別できる場合があります、**に変更された日付**Windows エクスプ ローラーの情報。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="3fd3b-252">追跡情報の最後の行には、新しく追加した `WriteLine` アクティビティの出力が含まれます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
+6.  <span data-ttu-id="91e25-250">Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって) と、対応するメモ帳を使用して追跡ファイルを開く完了したワークフロー。</span><span class="sxs-lookup"><span data-stu-id="91e25-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="91e25-251">メモして行っていない場合、`InstanceId`を使用して正しい追跡ファイルを識別できる場合があります、**に変更された日付**Windows エクスプ ローラーの情報。</span><span class="sxs-lookup"><span data-stu-id="91e25-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="91e25-252">追跡情報の最後の行には、新しく追加した `WriteLine` アクティビティの出力が含まれます。</span><span class="sxs-lookup"><span data-stu-id="91e25-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
 
- <span data-ttu-id="3fd3b-253">**1 から 10 までの数値を入力してください**
+ <span data-ttu-id="91e25-253">**1 から 10 までの数値を入力してください**
 **推定値が小さすぎます**。
  **1 から 10 までの数値を入力してください**
 **5 が小さすぎます**。
  **1 から 10 までの数値を入力してください**
 **7 が多すぎます**。
  **1 から 10 までの数値を入力してください**
-**6 が正しい。察しのように 4 になります。**</span><span class="sxs-lookup"><span data-stu-id="3fd3b-253">**Please enter a number between 1 and 10**
+**6 が正しい。察しのように 4 になります。**</span><span class="sxs-lookup"><span data-stu-id="91e25-253">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1512,14 +1519,14 @@ ms.locfileid: "49123840"
 **Please enter a number between 1 and 10**
 **6 is correct. You guessed it in 4 turns.**</span></span>
 
-###  <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="3fd3b-254">以前のバージョンのワークフローを開始できるようにするには</span><span class="sxs-lookup"><span data-stu-id="3fd3b-254">To enable starting previous versions of the workflows</span></span>
- <span data-ttu-id="3fd3b-255">更新するワークフローがなくなったら、ワークフローの以前のバージョンを開始できるように `NumberGuessWorkflowHost` アプリケーションを変更できます。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
+### <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="91e25-254">以前のバージョンのワークフローを開始できるようにするには</span><span class="sxs-lookup"><span data-stu-id="91e25-254">To enable starting previous versions of the workflows</span></span>
+ <span data-ttu-id="91e25-255">更新するワークフローがなくなったら、ワークフローの以前のバージョンを開始できるように `NumberGuessWorkflowHost` アプリケーションを変更できます。</span><span class="sxs-lookup"><span data-stu-id="91e25-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
 
-1.  <span data-ttu-id="3fd3b-256">ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、 **WorkflowType**コンボ ボックス。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
+1.  <span data-ttu-id="91e25-256">ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、 **WorkflowType**コンボ ボックス。</span><span class="sxs-lookup"><span data-stu-id="91e25-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
 
-2.  <span data-ttu-id="3fd3b-257">**プロパティ**ウィンドウで、**項目**プロパティおよび編集する、省略記号のボタンをクリックし、**項目**コレクション。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
+2.  <span data-ttu-id="91e25-257">**プロパティ**ウィンドウで、**項目**プロパティおよび編集する、省略記号のボタンをクリックし、**項目**コレクション。</span><span class="sxs-lookup"><span data-stu-id="91e25-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
 
-3.  <span data-ttu-id="3fd3b-258">コレクションに次の 3 つの項目を追加します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-258">Add the following three items to the collection.</span></span>
+3.  <span data-ttu-id="91e25-258">コレクションに次の 3 つの項目を追加します。</span><span class="sxs-lookup"><span data-stu-id="91e25-258">Add the following three items to the collection.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow v1
@@ -1527,7 +1534,7 @@ ms.locfileid: "49123840"
     SequentialNumberGuessWorkflow v1
     ```
 
-     <span data-ttu-id="3fd3b-259">完成した `Items` コレクションには 6 個の項目があります。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-259">The completed `Items` collection will have six items.</span></span>
+     <span data-ttu-id="91e25-259">完成した `Items` コレクションには 6 個の項目があります。</span><span class="sxs-lookup"><span data-stu-id="91e25-259">The completed `Items` collection will have six items.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow
@@ -1538,9 +1545,9 @@ ms.locfileid: "49123840"
     SequentialNumberGuessWorkflow v1
     ```
 
-4.  <span data-ttu-id="3fd3b-260">ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、**コードの表示**します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
+4.  <span data-ttu-id="91e25-260">ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、**コードの表示**します。</span><span class="sxs-lookup"><span data-stu-id="91e25-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
 
-5.  <span data-ttu-id="3fd3b-261">次の 3 つの新しいケースを追加、 `switch` (または`Select Case`) 内のステートメント、`NewGame_Click`ハンドラーの新しい項目をマップする、 **WorkflowType**コンボ ボックスに一致するワークフローの id。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
+5.  <span data-ttu-id="91e25-261">次の 3 つの新しいケースを追加、 `switch` (または`Select Case`) 内のステートメント、`NewGame_Click`ハンドラーの新しい項目をマップする、 **WorkflowType**コンボ ボックスに一致するワークフローの id。</span><span class="sxs-lookup"><span data-stu-id="91e25-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
 
     ```vb
     Case "SequentialNumberGuessWorkflow v1"
@@ -1567,7 +1574,7 @@ ms.locfileid: "49123840"
         break;
     ```
 
-     <span data-ttu-id="3fd3b-262">完成した `switch` (または `Select Case`) ステートメントを次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
+     <span data-ttu-id="91e25-262">完成した `switch` (または `Select Case`) ステートメントを次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="91e25-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
 
     ```vb
     Select Case WorkflowType.SelectedItem.ToString()
@@ -1620,4 +1627,4 @@ ms.locfileid: "49123840"
     };
     ```
 
-6.  <span data-ttu-id="3fd3b-263">Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="3fd3b-264">これで、ワークフローの現在のバージョンに加え、`v1` バージョンを開始できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="3fd3b-265">これらの新しいインスタンスを動的に更新するには、実行、 **ApplyDynamicUpdate**アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="3fd3b-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>
+6.  <span data-ttu-id="91e25-263">Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="91e25-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="91e25-264">これで、ワークフローの現在のバージョンに加え、`v1` バージョンを開始できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="91e25-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="91e25-265">これらの新しいインスタンスを動的に更新するには、実行、 **ApplyDynamicUpdate**アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="91e25-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>

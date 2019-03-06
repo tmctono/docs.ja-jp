@@ -7,23 +7,23 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373544"
 ---
-# <a name="flow-content"></a><span data-ttu-id="a342d-102">フロー コンテンツ</span><span class="sxs-lookup"><span data-stu-id="a342d-102">Flow Content</span></span>
-<span data-ttu-id="a342d-103">フロー コンテンツ要素でホストするのに適したフロー コンテンツを作成する構成要素を提供する、<xref:System.Windows.Documents.FlowDocument>です。</span><span class="sxs-lookup"><span data-stu-id="a342d-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="9af3a-102">フロー コンテンツ</span><span class="sxs-lookup"><span data-stu-id="9af3a-102">Flow Content</span></span>
+<span data-ttu-id="9af3a-103">フロー コンテンツ要素でホストするための適切なフロー コンテンツを作成するための構成要素の提供、<xref:System.Windows.Documents.FlowDocument>します。</span><span class="sxs-lookup"><span data-stu-id="9af3a-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a342d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a342d-104">In This Section</span></span>  
- [<span data-ttu-id="a342d-105">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="a342d-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="a342d-106">TextElement コンテンツ モデルの概要</span><span class="sxs-lookup"><span data-stu-id="a342d-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="a342d-107">テーブルの概要</span><span class="sxs-lookup"><span data-stu-id="a342d-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="a342d-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="a342d-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9af3a-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9af3a-104">In This Section</span></span>  
+ [<span data-ttu-id="9af3a-105">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="9af3a-105">Flow Document Overview</span></span>](flow-document-overview.md)  
+ [<span data-ttu-id="9af3a-106">TextElement コンテンツ モデルの概要</span><span class="sxs-lookup"><span data-stu-id="9af3a-106">TextElement Content Model Overview</span></span>](textelement-content-model-overview.md)  
+ [<span data-ttu-id="9af3a-107">テーブルの概要</span><span class="sxs-lookup"><span data-stu-id="9af3a-107">Table Overview</span></span>](table-overview.md)  
+ [<span data-ttu-id="9af3a-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="9af3a-108">How-to Topics</span></span>](flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a342d-109">参照</span><span class="sxs-lookup"><span data-stu-id="a342d-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9af3a-109">参照</span><span class="sxs-lookup"><span data-stu-id="9af3a-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -38,5 +38,5 @@ ms.locfileid: "33542338"
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="a342d-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a342d-110">Related Sections</span></span>  
- [<span data-ttu-id="a342d-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="a342d-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="9af3a-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="9af3a-110">Related Sections</span></span>  
+ [<span data-ttu-id="9af3a-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="9af3a-111">Documents in WPF</span></span>](documents-in-wpf.md)

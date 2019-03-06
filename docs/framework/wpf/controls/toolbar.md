@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361929"
 ---
-# <a name="toolbar"></a><span data-ttu-id="ebf6c-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="ebf6c-102">ToolBar</span></span>
-<span data-ttu-id="ebf6c-103"><xref:System.Windows.Controls.ToolBar>コントロールは、コマンドまたは通常、その機能に関連するコントロールのグループのコンテナーです。</span><span class="sxs-lookup"><span data-stu-id="ebf6c-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="ebd65-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="ebd65-102">ToolBar</span></span>
+<span data-ttu-id="ebd65-103"><xref:System.Windows.Controls.ToolBar>コントロールは、コマンドまたは一般にそれぞれの機能に関連するコントロールのグループのコンテナー。</span><span class="sxs-lookup"><span data-stu-id="ebd65-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="ebf6c-104">水平および垂直方向に次の図が示して<xref:System.Windows.Controls.ToolBar>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ebf6c-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="ebd65-104">水平および垂直方向に次の図が示して<xref:System.Windows.Controls.ToolBar>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ebd65-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="ebf6c-105">![水平ツールバー](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="ebf6c-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="ebf6c-106">水平ツールバー</span><span class="sxs-lookup"><span data-stu-id="ebf6c-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="ebd65-105">![水平ツールバー](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="ebd65-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="ebd65-106">水平ツールバー</span><span class="sxs-lookup"><span data-stu-id="ebd65-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="ebf6c-107">![垂直ツールバー](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="ebf6c-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="ebf6c-108">垂直ツールバー</span><span class="sxs-lookup"><span data-stu-id="ebf6c-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="ebd65-107">![垂直ツールバー](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="ebd65-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="ebd65-108">垂直ツールバー</span><span class="sxs-lookup"><span data-stu-id="ebd65-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ebf6c-109">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ebf6c-109">In This Section</span></span>  
- [<span data-ttu-id="ebf6c-110">ToolBar の概要</span><span class="sxs-lookup"><span data-stu-id="ebf6c-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="ebf6c-111">ToolBar のコントロールのスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="ebf6c-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ebd65-109">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ebd65-109">In This Section</span></span>  
+ [<span data-ttu-id="ebd65-110">ToolBar の概要</span><span class="sxs-lookup"><span data-stu-id="ebd65-110">ToolBar Overview</span></span>](toolbar-overview.md)  
+  [<span data-ttu-id="ebd65-111">ToolBar のコントロールのスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="ebd65-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="ebf6c-112">参照</span><span class="sxs-lookup"><span data-stu-id="ebf6c-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ebd65-112">参照</span><span class="sxs-lookup"><span data-stu-id="ebd65-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="ebf6c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ebf6c-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="ebd65-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ebd65-113">Related Sections</span></span>

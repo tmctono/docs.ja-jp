@@ -8,25 +8,25 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354636"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="1562e-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="1562e-102">ContextMenu</span></span>
-<span data-ttu-id="1562e-103"><xref:System.Windows.Controls.ContextMenu>コントロールが表示できるように、<xref:System.Windows.Controls.Menu>コントロールのコンテキストに固有です。</span><span class="sxs-lookup"><span data-stu-id="1562e-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="1562e-104">通常、<xref:System.Windows.Controls.ContextMenu>で公開されている、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]マウスの右ボタンまたはキーボードのメニュー ボタンを使用します。</span><span class="sxs-lookup"><span data-stu-id="1562e-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="20307-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="20307-102">ContextMenu</span></span>
+<span data-ttu-id="20307-103"><xref:System.Windows.Controls.ContextMenu>コントロールが表示できるように、<xref:System.Windows.Controls.Menu>コントロールのコンテキストに固有です。</span><span class="sxs-lookup"><span data-stu-id="20307-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="20307-104">通常、<xref:System.Windows.Controls.ContextMenu>で公開されている、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]マウスの右ボタンまたはキーボードのメニュー ボタンを使用します。</span><span class="sxs-lookup"><span data-stu-id="20307-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="1562e-105">次の図は、<xref:System.Windows.Controls.ContextMenu>の 2 つの異なる状態: 既定の状態と開いている状態です。</span><span class="sxs-lookup"><span data-stu-id="1562e-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="1562e-106">既定の状態では、コントロールが折りたたまれています。</span><span class="sxs-lookup"><span data-stu-id="1562e-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="1562e-107">メニューの親の上でマウスの右ボタンが押されると、コントロールを展開し、メニュー項目を表示します。</span><span class="sxs-lookup"><span data-stu-id="1562e-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="20307-105">次の図を示しています、<xref:System.Windows.Controls.ContextMenu>の 2 つの異なる状態: 既定の状態とオープンの状態。</span><span class="sxs-lookup"><span data-stu-id="20307-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="20307-106">既定の状態では、コントロールが折りたたまれます。</span><span class="sxs-lookup"><span data-stu-id="20307-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="20307-107">メニューの親の上でマウスの右ボタンが押された、ときに、コントロールが展開し、メニュー項目が表示されます。</span><span class="sxs-lookup"><span data-stu-id="20307-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="1562e-108">![ContextMenu 状態](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="1562e-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="1562e-109">さまざまな状態でコンテキスト メニュー</span><span class="sxs-lookup"><span data-stu-id="1562e-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="20307-108">![コンテキスト メニューの状態](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="20307-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="20307-109">さまざまな状態でコンテキスト メニュー</span><span class="sxs-lookup"><span data-stu-id="20307-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1562e-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1562e-110">In This Section</span></span>  
- [<span data-ttu-id="1562e-111">ContextMenu の概要</span><span class="sxs-lookup"><span data-stu-id="1562e-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="20307-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="20307-110">In This Section</span></span>  
+ [<span data-ttu-id="20307-111">ContextMenu の概要</span><span class="sxs-lookup"><span data-stu-id="20307-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="1562e-112">参照</span><span class="sxs-lookup"><span data-stu-id="1562e-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="20307-112">参照</span><span class="sxs-lookup"><span data-stu-id="20307-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="1562e-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="1562e-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="20307-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="20307-113">Related Sections</span></span>

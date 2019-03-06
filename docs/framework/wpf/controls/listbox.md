@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551688"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362228"
 ---
-# <a name="listbox"></a><span data-ttu-id="fe2a9-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="fe2a9-102">ListBox</span></span>
-<span data-ttu-id="fe2a9-103">A<xref:System.Windows.Controls.ListBox>コントロールには、選択可能な項目のリストでユーザーが用意されています。</span><span class="sxs-lookup"><span data-stu-id="fe2a9-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="fec25-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="fec25-102">ListBox</span></span>
+<span data-ttu-id="fec25-103">A<xref:System.Windows.Controls.ListBox>コントロールが選択可能な項目の一覧をユーザーに提供します。</span><span class="sxs-lookup"><span data-stu-id="fec25-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="fe2a9-104">次の図は、一般的な<xref:System.Windows.Controls.ListBox>します。</span><span class="sxs-lookup"><span data-stu-id="fe2a9-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="fec25-104">次の図は、一般的な示します<xref:System.Windows.Controls.ListBox>します。</span><span class="sxs-lookup"><span data-stu-id="fec25-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="fe2a9-105">![ListBox スクリーン ショット](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="fe2a9-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="fe2a9-106">一般的な ListBox</span><span class="sxs-lookup"><span data-stu-id="fe2a9-106">Typical ListBox</span></span>  
+ <span data-ttu-id="fec25-105">![リスト ボックスのスクリーン ショット](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="fec25-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="fec25-106">一般的なリスト ボックス</span><span class="sxs-lookup"><span data-stu-id="fec25-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fe2a9-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fe2a9-107">In This Section</span></span>  
- [<span data-ttu-id="fe2a9-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="fe2a9-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fec25-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fec25-107">In This Section</span></span>  
+ [<span data-ttu-id="fec25-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="fec25-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="fe2a9-109">参照</span><span class="sxs-lookup"><span data-stu-id="fe2a9-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fec25-109">参照</span><span class="sxs-lookup"><span data-stu-id="fec25-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="fe2a9-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe2a9-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="fec25-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="fec25-110">Related Sections</span></span>

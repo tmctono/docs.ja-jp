@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379745"
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="a2f6a-102">ナビゲーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a2f6a-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="a2f6a-103">次のトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ナビゲーション。</span><span class="sxs-lookup"><span data-stu-id="a2f6a-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="453a6-102">ナビゲーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="453a6-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="453a6-103">次のトピックを使用する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ナビゲーション。</span><span class="sxs-lookup"><span data-stu-id="453a6-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2f6a-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a2f6a-104">In This Section</span></span>  
- [<span data-ttu-id="a2f6a-105">ページ関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="a2f6a-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [<span data-ttu-id="a2f6a-106">ページ関数の戻り値を取得する</span><span class="sxs-lookup"><span data-stu-id="a2f6a-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="a2f6a-107">移動履歴の前後への移動</span><span class="sxs-lookup"><span data-stu-id="a2f6a-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="a2f6a-108">ページ関数から戻る</span><span class="sxs-lookup"><span data-stu-id="a2f6a-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="453a6-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="453a6-104">In This Section</span></span>  
+ [<span data-ttu-id="453a6-105">ページ関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="453a6-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
+  [<span data-ttu-id="453a6-106">ページ関数の戻り値を取得する</span><span class="sxs-lookup"><span data-stu-id="453a6-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="453a6-107">移動履歴の前後への移動</span><span class="sxs-lookup"><span data-stu-id="453a6-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="453a6-108">ページ関数から戻る</span><span class="sxs-lookup"><span data-stu-id="453a6-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="a2f6a-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2f6a-109">Related Sections</span></span>  
- [<span data-ttu-id="a2f6a-110">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="a2f6a-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="453a6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="453a6-109">Related Sections</span></span>  
+ [<span data-ttu-id="453a6-110">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="453a6-110">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="a2f6a-111">構造化ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="a2f6a-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [<span data-ttu-id="453a6-111">構造化ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="453a6-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)

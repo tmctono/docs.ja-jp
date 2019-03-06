@@ -8,20 +8,20 @@ helpviewer_keywords:
 - content [WPF], Grid control
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
-ms.openlocfilehash: cffc1d078bffaa14326d279eb82f8ff040187145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551029"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352140"
 ---
-# <a name="grid"></a><span data-ttu-id="1c527-102">グリッド</span><span class="sxs-lookup"><span data-stu-id="1c527-102">Grid</span></span>
-<span data-ttu-id="1c527-103"><xref:System.Windows.Controls.Grid>要素を使用して行および列の内容を正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="1c527-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="e2660-102">グリッド</span><span class="sxs-lookup"><span data-stu-id="e2660-102">Grid</span></span>
+<span data-ttu-id="e2660-103"><xref:System.Windows.Controls.Grid>要素を使用して、行と列の内容を正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="e2660-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1c527-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1c527-104">In This Section</span></span>  
- [<span data-ttu-id="1c527-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="1c527-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e2660-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e2660-104">In This Section</span></span>  
+ [<span data-ttu-id="e2660-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="e2660-105">How-to Topics</span></span>](grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1c527-106">参照</span><span class="sxs-lookup"><span data-stu-id="1c527-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e2660-106">参照</span><span class="sxs-lookup"><span data-stu-id="e2660-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33551029"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="1c527-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c527-107">Related Sections</span></span>  
- [<span data-ttu-id="1c527-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="1c527-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="e2660-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2660-107">Related Sections</span></span>  
+ [<span data-ttu-id="e2660-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="e2660-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="1c527-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="1c527-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="e2660-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="e2660-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="1c527-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="1c527-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="e2660-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="e2660-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

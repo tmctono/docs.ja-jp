@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358926"
 ---
-# <a name="groupbox"></a><span data-ttu-id="0376c-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="0376c-102">GroupBox</span></span>
-<span data-ttu-id="0376c-103"><xref:System.Windows.Controls.GroupBox>コントロールは、 <xref:System.Windows.Controls.HeaderedContentControl> 」というタイトルのコンテナーを提供する[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]コンテンツ。</span><span class="sxs-lookup"><span data-stu-id="0376c-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
+# <a name="groupbox"></a><span data-ttu-id="7b7c4-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="7b7c4-102">GroupBox</span></span>
+<span data-ttu-id="7b7c4-103"><xref:System.Windows.Controls.GroupBox>コントロールが、 <xref:System.Windows.Controls.HeaderedContentControl> 」というタイトルのコンテナーを提供する[!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]コンテンツ。</span><span class="sxs-lookup"><span data-stu-id="7b7c4-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
   
- <span data-ttu-id="0376c-104">次の図は、<xref:System.Windows.Controls.GroupBox>を格納している、<xref:System.Windows.Controls.TabControl>と<xref:System.Windows.Controls.Button>で囲まれている、<xref:System.Windows.Controls.StackPanel>です。</span><span class="sxs-lookup"><span data-stu-id="0376c-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+ <span data-ttu-id="7b7c4-104">次の図は、<xref:System.Windows.Controls.GroupBox>を格納している、<xref:System.Windows.Controls.TabControl>と<xref:System.Windows.Controls.Button>で囲まれた、<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="7b7c4-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
- <span data-ttu-id="0376c-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="0376c-105">![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")</span></span>  
+ <span data-ttu-id="7b7c4-105">![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")</span><span class="sxs-lookup"><span data-stu-id="7b7c4-105">![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0376c-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="0376c-106">In This Section</span></span>  
- [<span data-ttu-id="0376c-107">GroupBox テンプレートを定義する</span><span class="sxs-lookup"><span data-stu-id="0376c-107">Define a GroupBox Template</span></span>](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7b7c4-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7b7c4-106">In This Section</span></span>  
+ [<span data-ttu-id="7b7c4-107">GroupBox テンプレートを定義する</span><span class="sxs-lookup"><span data-stu-id="7b7c4-107">Define a GroupBox Template</span></span>](how-to-define-a-groupbox-template.md)  
   
-## <a name="reference"></a><span data-ttu-id="0376c-108">参照</span><span class="sxs-lookup"><span data-stu-id="0376c-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7b7c4-108">参照</span><span class="sxs-lookup"><span data-stu-id="7b7c4-108">Reference</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
   
-## <a name="related-sections"></a><span data-ttu-id="0376c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0376c-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7b7c4-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7b7c4-109">Related Sections</span></span>

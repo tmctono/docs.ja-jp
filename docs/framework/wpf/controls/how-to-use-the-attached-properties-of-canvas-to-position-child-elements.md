@@ -9,31 +9,31 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: a0d0bc51466ee18e09eeffe80a568d277280248c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a34bac644bd0fa4c15d76d72d0502b311c49d018
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682077"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365335"
 ---
-# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a><span data-ttu-id="1f87e-102">方法: Canvas の添付プロパティを使用して子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="1f87e-102">How to: Use the Attached Properties of Canvas to Position Child Elements</span></span>
-<span data-ttu-id="1f87e-103">この例の添付プロパティを使用する方法を示しています。<xref:System.Windows.Controls.Canvas>子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="1f87e-103">This example shows how to use the attached properties of <xref:System.Windows.Controls.Canvas> to position child elements.</span></span>  
+# <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a><span data-ttu-id="16fc8-102">方法: Canvas の添付プロパティを使用して子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="16fc8-102">How to: Use the Attached Properties of Canvas to Position Child Elements</span></span>
+<span data-ttu-id="16fc8-103">この例の添付プロパティを使用する方法を示しています。<xref:System.Windows.Controls.Canvas>子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="16fc8-103">This example shows how to use the attached properties of <xref:System.Windows.Controls.Canvas> to position child elements.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1f87e-104">例</span><span class="sxs-lookup"><span data-stu-id="1f87e-104">Example</span></span>  
- <span data-ttu-id="1f87e-105">次の例には、4 が加算されます<xref:System.Windows.Controls.Button>要素の親の子要素として<xref:System.Windows.Controls.Canvas>します。</span><span class="sxs-lookup"><span data-stu-id="1f87e-105">The following example adds four <xref:System.Windows.Controls.Button> elements as child elements of a parent <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="1f87e-106">各要素が表される、 <xref:System.Windows.Controls.Canvas.Bottom%2A>、 <xref:System.Windows.Controls.Canvas.Left%2A>、 <xref:System.Windows.Controls.Canvas.Right%2A>、および<xref:System.Windows.Controls.Canvas.Top%2A>します。</span><span class="sxs-lookup"><span data-stu-id="1f87e-106">Each element is represented by a <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, and <xref:System.Windows.Controls.Canvas.Top%2A>.</span></span>
-<span data-ttu-id="1f87e-107">各<xref:System.Windows.Controls.Button>が、親に対する相対的な配置されている<xref:System.Windows.Controls.Canvas>とその割り当てプロパティ値に従ってします。</span><span class="sxs-lookup"><span data-stu-id="1f87e-107">Each <xref:System.Windows.Controls.Button> is positioned relative to the parent <xref:System.Windows.Controls.Canvas> and according to its assigned property value.</span></span>  
+## <a name="example"></a><span data-ttu-id="16fc8-104">例</span><span class="sxs-lookup"><span data-stu-id="16fc8-104">Example</span></span>  
+ <span data-ttu-id="16fc8-105">次の例には、4 が加算されます<xref:System.Windows.Controls.Button>要素の親の子要素として<xref:System.Windows.Controls.Canvas>します。</span><span class="sxs-lookup"><span data-stu-id="16fc8-105">The following example adds four <xref:System.Windows.Controls.Button> elements as child elements of a parent <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="16fc8-106">各要素が表される、 <xref:System.Windows.Controls.Canvas.Bottom%2A>、 <xref:System.Windows.Controls.Canvas.Left%2A>、 <xref:System.Windows.Controls.Canvas.Right%2A>、および<xref:System.Windows.Controls.Canvas.Top%2A>します。</span><span class="sxs-lookup"><span data-stu-id="16fc8-106">Each element is represented by a <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, and <xref:System.Windows.Controls.Canvas.Top%2A>.</span></span>
+<span data-ttu-id="16fc8-107">各<xref:System.Windows.Controls.Button>が、親に対する相対的な配置されている<xref:System.Windows.Controls.Canvas>とその割り当てプロパティ値に従ってします。</span><span class="sxs-lookup"><span data-stu-id="16fc8-107">Each <xref:System.Windows.Controls.Button> is positioned relative to the parent <xref:System.Windows.Controls.Canvas> and according to its assigned property value.</span></span>  
   
- [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
- [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
- [!code-vb[CanvasAttachedProperties#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
+ [!code-cpp[CanvasAttachedProperties#1](~/samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
+ [!code-csharp[CanvasAttachedProperties#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
+ [!code-vb[CanvasAttachedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="1f87e-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f87e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16fc8-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="16fc8-108">See also</span></span>
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.Canvas.Bottom%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
 - <xref:System.Windows.Controls.Canvas.Right%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
-- [<span data-ttu-id="1f87e-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="1f87e-109">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="1f87e-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="1f87e-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
-- [<span data-ttu-id="1f87e-111">添付プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="1f87e-111">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [<span data-ttu-id="16fc8-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="16fc8-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="16fc8-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="16fc8-110">How-to Topics</span></span>](canvas-how-to-topics.md)
+- [<span data-ttu-id="16fc8-111">添付プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="16fc8-111">Attached Properties Overview</span></span>](../advanced/attached-properties-overview.md)
