@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d362902eb338e5d797b66c5fe2af4f3e1ae9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c590dd1f3f6682179645fb384cdd82d1d7ed96
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508328"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503256"
 ---
-# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="48dc8-102">ICorDebugProcess5::GetGCHeapInformation メソッド</span><span class="sxs-lookup"><span data-stu-id="48dc8-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
-<span data-ttu-id="48dc8-103">現在の列挙可能かどうかなど、ガベージ コレクション ヒープに関する一般的な情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="48dc8-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
+# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="93859-102">ICorDebugProcess5::GetGCHeapInformation メソッド</span><span class="sxs-lookup"><span data-stu-id="93859-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
+<span data-ttu-id="93859-103">現在の列挙可能かどうかなど、ガベージ コレクション ヒープに関する一般的な情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="93859-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48dc8-104">構文</span><span class="sxs-lookup"><span data-stu-id="48dc8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93859-104">構文</span><span class="sxs-lookup"><span data-stu-id="93859-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGCHeapInformation(  
@@ -35,22 +35,22 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="48dc8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="48dc8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93859-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="93859-105">Parameters</span></span>  
  `pHeapInfo`  
- <span data-ttu-id="48dc8-106">[out]ポインターを[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)ガベージ コレクション ヒープに関する一般的な情報を提供する値。</span><span class="sxs-lookup"><span data-stu-id="48dc8-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
+ <span data-ttu-id="93859-106">[out]ポインターを[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)ガベージ コレクション ヒープに関する一般的な情報を提供する値。</span><span class="sxs-lookup"><span data-stu-id="93859-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48dc8-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="48dc8-107">Remarks</span></span>  
- <span data-ttu-id="48dc8-108">`ICorDebugProcess5::GetGCHeapInformation`ヒープを列挙する前にメソッドを呼び出す必要がありますまたは構造体のガベージ コレクションには、プロセスのことを確認するための個々 のヒープ領域は、現在有効です。</span><span class="sxs-lookup"><span data-stu-id="48dc8-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="48dc8-109">コレクションが進行中は、ガベージ コレクション ヒープを処理することはできません。</span><span class="sxs-lookup"><span data-stu-id="48dc8-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="48dc8-110">それ以外の場合、列挙体は、無効なガベージ コレクションの構造をキャプチャする場合があります。</span><span class="sxs-lookup"><span data-stu-id="48dc8-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="93859-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="93859-107">Remarks</span></span>  
+ <span data-ttu-id="93859-108">`ICorDebugProcess5::GetGCHeapInformation`ヒープを列挙する前にメソッドを呼び出す必要がありますまたは構造体のガベージ コレクションには、プロセスのことを確認するための個々 のヒープ領域は、現在有効です。</span><span class="sxs-lookup"><span data-stu-id="93859-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="93859-109">コレクションが進行中は、ガベージ コレクション ヒープを処理することはできません。</span><span class="sxs-lookup"><span data-stu-id="93859-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="93859-110">それ以外の場合、列挙体は、無効なガベージ コレクションの構造をキャプチャする場合があります。</span><span class="sxs-lookup"><span data-stu-id="93859-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48dc8-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="48dc8-111">Requirements</span></span>  
- <span data-ttu-id="48dc8-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="48dc8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93859-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="93859-111">Requirements</span></span>  
+ <span data-ttu-id="93859-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93859-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48dc8-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="48dc8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="93859-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93859-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="48dc8-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48dc8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="93859-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93859-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="48dc8-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48dc8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="93859-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93859-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48dc8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="48dc8-116">See also</span></span>
-- [<span data-ttu-id="48dc8-117">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48dc8-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="48dc8-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48dc8-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="93859-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="93859-116">See also</span></span>
+- [<span data-ttu-id="93859-117">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93859-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="93859-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93859-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

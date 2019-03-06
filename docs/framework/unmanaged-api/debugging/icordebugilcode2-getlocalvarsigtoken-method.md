@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e5a706b3e60bb9460434425ab82125811862ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ee067faddf7300512387c26ae4ce4fda2b73353
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740581"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475802"
 ---
-# <a name="icordebugilcode2getlocalvarsigtoken-method"></a><span data-ttu-id="26ff0-102">ICorDebugILCode2::GetLocalVarSigToken メソッド</span><span class="sxs-lookup"><span data-stu-id="26ff0-102">ICorDebugILCode2::GetLocalVarSigToken Method</span></span>
-<span data-ttu-id="26ff0-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="26ff0-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2getlocalvarsigtoken-method"></a><span data-ttu-id="1d7c9-102">ICorDebugILCode2::GetLocalVarSigToken メソッド</span><span class="sxs-lookup"><span data-stu-id="1d7c9-102">ICorDebugILCode2::GetLocalVarSigToken Method</span></span>
+<span data-ttu-id="1d7c9-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="1d7c9-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="26ff0-104">このインスタンスで示される関数について、ローカル変数のシグネチャのメタデータ トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="26ff0-104">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>  
+ <span data-ttu-id="1d7c9-104">このインスタンスで示される関数について、ローカル変数のシグネチャのメタデータ トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="1d7c9-104">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26ff0-105">構文</span><span class="sxs-lookup"><span data-stu-id="26ff0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d7c9-105">構文</span><span class="sxs-lookup"><span data-stu-id="1d7c9-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetLocalVarSigToken(  
@@ -34,21 +34,21 @@ HRESULT GetLocalVarSigToken(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="26ff0-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="26ff0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d7c9-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1d7c9-106">Parameters</span></span>  
  `pmdSig`  
- <span data-ttu-id="26ff0-107">[out] この機能のローカル変数シグネチャの `mdSignature` トークンへのポインター、またはシグネチャがない場合 (つまり、機能にローカル変数がない場合) は `mdSignatureNil`。</span><span class="sxs-lookup"><span data-stu-id="26ff0-107">[out] A pointer to the `mdSignature` token for the local variable signature for this function, or `mdSignatureNil` if there is no signature (that is, if the function doesn't have any local variables).</span></span>  
+ <span data-ttu-id="1d7c9-107">[out] この機能のローカル変数シグネチャの `mdSignature` トークンへのポインター、またはシグネチャがない場合 (つまり、機能にローカル変数がない場合) は `mdSignatureNil`。</span><span class="sxs-lookup"><span data-stu-id="1d7c9-107">[out] A pointer to the `mdSignature` token for the local variable signature for this function, or `mdSignatureNil` if there is no signature (that is, if the function doesn't have any local variables).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="26ff0-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="26ff0-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1d7c9-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="1d7c9-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26ff0-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="26ff0-109">Requirements</span></span>  
- <span data-ttu-id="26ff0-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="26ff0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d7c9-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="1d7c9-109">Requirements</span></span>  
+ <span data-ttu-id="1d7c9-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d7c9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26ff0-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="26ff0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1d7c9-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d7c9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="26ff0-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26ff0-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1d7c9-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d7c9-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26ff0-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26ff0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="1d7c9-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d7c9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26ff0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="26ff0-114">See also</span></span>
-- [<span data-ttu-id="26ff0-115">ICorDebugILCode2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="26ff0-115">ICorDebugILCode2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
-- [<span data-ttu-id="26ff0-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="26ff0-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1d7c9-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d7c9-114">See also</span></span>
+- [<span data-ttu-id="1d7c9-115">ICorDebugILCode2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d7c9-115">ICorDebugILCode2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [<span data-ttu-id="1d7c9-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d7c9-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
