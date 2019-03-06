@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cca073cfccedacb037478903a603c375c876349c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475360"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="60d2d-102">ISymUnmanagedReader::GetVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="60d2d-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="60d2d-103">親と名前を指定、非ローカル変数を返します。</span><span class="sxs-lookup"><span data-stu-id="60d2d-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="98bb7-102">ISymUnmanagedReader::GetVariables メソッド</span><span class="sxs-lookup"><span data-stu-id="98bb7-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="98bb7-103">親と名前を指定、非ローカル変数を返します。</span><span class="sxs-lookup"><span data-stu-id="98bb7-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60d2d-104">構文</span><span class="sxs-lookup"><span data-stu-id="60d2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98bb7-104">構文</span><span class="sxs-lookup"><span data-stu-id="98bb7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables (  
@@ -38,24 +38,24 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="60d2d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="60d2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98bb7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98bb7-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="60d2d-106">[in]変数の親です。</span><span class="sxs-lookup"><span data-stu-id="60d2d-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="98bb7-106">[in]変数の親です。</span><span class="sxs-lookup"><span data-stu-id="98bb7-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="60d2d-107">[in] `pVars` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="60d2d-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="98bb7-107">[in] `pVars` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="98bb7-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="60d2d-108">[out]返された変数の数を受け取る変数へのポインター`pVars`します。</span><span class="sxs-lookup"><span data-stu-id="60d2d-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="98bb7-108">[out]返された変数の数を受け取る変数へのポインター`pVars`します。</span><span class="sxs-lookup"><span data-stu-id="98bb7-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="60d2d-109">[out]変数を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="60d2d-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="98bb7-109">[out]変数を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="98bb7-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="60d2d-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="60d2d-110">Return Value</span></span>  
- <span data-ttu-id="60d2d-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="60d2d-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="98bb7-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="98bb7-110">Return Value</span></span>  
+ <span data-ttu-id="98bb7-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="98bb7-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60d2d-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="60d2d-112">Requirements</span></span>  
- <span data-ttu-id="60d2d-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="60d2d-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98bb7-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="98bb7-112">Requirements</span></span>  
+ <span data-ttu-id="98bb7-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="98bb7-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60d2d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="60d2d-114">See also</span></span>
-- [<span data-ttu-id="60d2d-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="60d2d-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="98bb7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="98bb7-114">See also</span></span>
+- [<span data-ttu-id="98bb7-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98bb7-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

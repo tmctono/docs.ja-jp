@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67447e90198ded258645ad7d9173eed37bb60915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479416"
 ---
-# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="8bd29-102">IMetaDataImport::GetClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="8bd29-102">IMetaDataImport::GetClassLayout Method</span></span>
-<span data-ttu-id="8bd29-103">指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="8bd29-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgetclasslayout-method"></a><span data-ttu-id="d47de-102">IMetaDataImport::GetClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="d47de-102">IMetaDataImport::GetClassLayout Method</span></span>
+<span data-ttu-id="d47de-103">指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="d47de-103">Gets layout information for the class referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bd29-104">構文</span><span class="sxs-lookup"><span data-stu-id="8bd29-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d47de-104">構文</span><span class="sxs-lookup"><span data-stu-id="d47de-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassLayout  (   
@@ -40,34 +40,34 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8bd29-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8bd29-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d47de-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d47de-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="8bd29-106">[in]返されるレイアウトを使用して、クラスの TypeDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="8bd29-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
+ <span data-ttu-id="d47de-106">[in]返されるレイアウトを使用して、クラスの TypeDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="d47de-106">[in] The TypeDef token for the class with the layout to return.</span></span>  
   
  `pdwPackSize`  
- <span data-ttu-id="8bd29-107">[out]1、2、4、8、または 16 では、クラスのパック サイズを表す値の 1 つ。</span><span class="sxs-lookup"><span data-stu-id="8bd29-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
+ <span data-ttu-id="d47de-107">[out]1、2、4、8、または 16 では、クラスのパック サイズを表す値の 1 つ。</span><span class="sxs-lookup"><span data-stu-id="d47de-107">[out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.</span></span>  
   
  `rFieldOffset`  
- <span data-ttu-id="8bd29-108">[out]配列の[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値。</span><span class="sxs-lookup"><span data-stu-id="8bd29-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
+ <span data-ttu-id="d47de-108">[out]配列の[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)値。</span><span class="sxs-lookup"><span data-stu-id="d47de-108">[out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.</span></span>  
   
  `cMax`  
- <span data-ttu-id="8bd29-109">[in] `rFieldOffset` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="8bd29-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
+ <span data-ttu-id="d47de-109">[in] `rFieldOffset` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="d47de-109">[in] The maximum size of the `rFieldOffset` array.</span></span>  
   
  `pcFieldOffset`  
- <span data-ttu-id="8bd29-110">[out]返される要素の数`rFieldOffset`します。</span><span class="sxs-lookup"><span data-stu-id="8bd29-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
+ <span data-ttu-id="d47de-110">[out]返される要素の数`rFieldOffset`します。</span><span class="sxs-lookup"><span data-stu-id="d47de-110">[out] The number of elements returned in `rFieldOffset`.</span></span>  
   
  `pulClassSize`  
- <span data-ttu-id="8bd29-111">[out]によって表されるクラスのバイト サイズ`td`します。</span><span class="sxs-lookup"><span data-stu-id="8bd29-111">[out] The size in bytes of the class represented by `td`.</span></span>  
+ <span data-ttu-id="d47de-111">[out]によって表されるクラスのバイト サイズ`td`します。</span><span class="sxs-lookup"><span data-stu-id="d47de-111">[out] The size in bytes of the class represented by `td`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bd29-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="8bd29-112">Requirements</span></span>  
- <span data-ttu-id="8bd29-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8bd29-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d47de-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="d47de-112">Requirements</span></span>  
+ <span data-ttu-id="d47de-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d47de-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bd29-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8bd29-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d47de-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d47de-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8bd29-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="8bd29-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d47de-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d47de-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8bd29-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bd29-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d47de-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d47de-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bd29-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bd29-117">See also</span></span>
-- [<span data-ttu-id="8bd29-118">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8bd29-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8bd29-119">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8bd29-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d47de-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="d47de-117">See also</span></span>
+- [<span data-ttu-id="d47de-118">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d47de-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d47de-119">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d47de-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

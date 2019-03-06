@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10982b34add7e42cb54872afdea96df82c1fdc54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487912"
 ---
-# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="90038-102">IMetaDataAssemblyImport::EnumExportedTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="90038-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
-<span data-ttu-id="90038-103">現在のメタデータ スコープ内のアセンブリ マニフェストで参照されているエクスポートされた型を列挙します。</span><span class="sxs-lookup"><span data-stu-id="90038-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
+# <a name="imetadataassemblyimportenumexportedtypes-method"></a><span data-ttu-id="98e21-102">IMetaDataAssemblyImport::EnumExportedTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="98e21-102">IMetaDataAssemblyImport::EnumExportedTypes Method</span></span>
+<span data-ttu-id="98e21-103">現在のメタデータ スコープ内のアセンブリ マニフェストで参照されているエクスポートされた型を列挙します。</span><span class="sxs-lookup"><span data-stu-id="98e21-103">Enumerates the exported types referenced in the assembly manifest in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90038-104">構文</span><span class="sxs-lookup"><span data-stu-id="90038-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98e21-104">構文</span><span class="sxs-lookup"><span data-stu-id="98e21-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumExportedTypes (  
@@ -38,34 +38,34 @@ HRESULT EnumExportedTypes (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="90038-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="90038-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98e21-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98e21-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="90038-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="90038-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="90038-107">これを null には値と、`EnumExportedTypes`メソッドは、最初に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="90038-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
+ <span data-ttu-id="98e21-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="98e21-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="98e21-107">これを null には値と、`EnumExportedTypes`メソッドは、最初に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="98e21-107">This must be a null value when the `EnumExportedTypes` method is called for the first time.</span></span>  
   
  `rExportedTypes`  
- <span data-ttu-id="90038-108">[out]列挙体`mdExportedType`メタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="90038-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
+ <span data-ttu-id="98e21-108">[out]列挙体`mdExportedType`メタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="98e21-108">[out] The enumeration of `mdExportedType` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="90038-109">[in]最大数`mdExportedType`トークン内に配置できる、`rExportedTypes`配列。</span><span class="sxs-lookup"><span data-stu-id="90038-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
+ <span data-ttu-id="98e21-109">[in]最大数`mdExportedType`トークン内に配置できる、`rExportedTypes`配列。</span><span class="sxs-lookup"><span data-stu-id="98e21-109">[in] The maximum number of `mdExportedType` tokens that can be placed in the `rExportedTypes` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="90038-110">[out]数`mdExportedType`トークンが実際に配置`rExportedTypes`します。</span><span class="sxs-lookup"><span data-stu-id="90038-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
+ <span data-ttu-id="98e21-110">[out]数`mdExportedType`トークンが実際に配置`rExportedTypes`します。</span><span class="sxs-lookup"><span data-stu-id="98e21-110">[out] The number of `mdExportedType` tokens actually placed in `rExportedTypes`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="90038-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="90038-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="98e21-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="98e21-111">Return Value</span></span>  
   
-|<span data-ttu-id="90038-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="90038-112">HRESULT</span></span>|<span data-ttu-id="90038-113">説明</span><span class="sxs-lookup"><span data-stu-id="90038-113">Description</span></span>|  
+|<span data-ttu-id="98e21-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="98e21-112">HRESULT</span></span>|<span data-ttu-id="98e21-113">説明</span><span class="sxs-lookup"><span data-stu-id="98e21-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="90038-114">`EnumExportedTypes` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="90038-114">`EnumExportedTypes` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="90038-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="90038-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="90038-116">この場合、 `pcTokens` 0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="90038-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="98e21-114">`EnumExportedTypes` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="98e21-114">`EnumExportedTypes` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="98e21-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="98e21-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="98e21-116">この場合、 `pcTokens` 0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="98e21-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="90038-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="90038-117">Requirements</span></span>  
- <span data-ttu-id="90038-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="90038-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98e21-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="98e21-117">Requirements</span></span>  
+ <span data-ttu-id="98e21-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="98e21-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="90038-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="90038-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="98e21-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="98e21-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="90038-120">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="90038-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="98e21-120">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="98e21-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="90038-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90038-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="98e21-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98e21-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90038-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="90038-122">See also</span></span>
-- [<span data-ttu-id="90038-123">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90038-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="98e21-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="98e21-122">See also</span></span>
+- [<span data-ttu-id="98e21-123">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98e21-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

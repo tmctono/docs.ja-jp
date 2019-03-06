@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501007"
 ---
-# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="78c0f-102">ICorDebugFunction2::SetJMCStatus メソッド</span><span class="sxs-lookup"><span data-stu-id="78c0f-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
-<span data-ttu-id="78c0f-103">関数をマイ コードのみをこの ICorDebugFunction2 によって表されるマークのステップ インします。</span><span class="sxs-lookup"><span data-stu-id="78c0f-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
+# <a name="icordebugfunction2setjmcstatus-method"></a><span data-ttu-id="5e870-102">ICorDebugFunction2::SetJMCStatus メソッド</span><span class="sxs-lookup"><span data-stu-id="5e870-102">ICorDebugFunction2::SetJMCStatus Method</span></span>
+<span data-ttu-id="5e870-103">マイ コードのみのこの ICorDebugFunction2 によって表される関数をマーク ステップ実行します。</span><span class="sxs-lookup"><span data-stu-id="5e870-103">Marks the function represented by this ICorDebugFunction2 for Just My Code stepping.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78c0f-104">構文</span><span class="sxs-lookup"><span data-stu-id="78c0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e870-104">構文</span><span class="sxs-lookup"><span data-stu-id="5e870-104">Syntax</span></span>  
   
 ```  
 HRESULT SetJMCStatus (  
@@ -35,25 +35,25 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="78c0f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="78c0f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e870-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5e870-105">Parameters</span></span>  
  `bIsJustMyCode`  
- <span data-ttu-id="78c0f-106">[in]設定`true`ユーザー コードとして関数をマークするそれ以外の場合、`false`です。</span><span class="sxs-lookup"><span data-stu-id="78c0f-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="5e870-106">[in]設定`true`ユーザー コードとして関数をマークする場合は、`false`します。</span><span class="sxs-lookup"><span data-stu-id="5e870-106">[in] Set to `true` to mark the function as user code; otherwise, set to `false`.</span></span>  
   
-## <a name="return-values"></a><span data-ttu-id="78c0f-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="78c0f-107">Return Values</span></span>  
+## <a name="return-values"></a><span data-ttu-id="5e870-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="5e870-107">Return Values</span></span>  
   
-|<span data-ttu-id="78c0f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="78c0f-108">HRESULT</span></span>|<span data-ttu-id="78c0f-109">説明</span><span class="sxs-lookup"><span data-stu-id="78c0f-109">Description</span></span>|  
+|<span data-ttu-id="5e870-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5e870-108">HRESULT</span></span>|<span data-ttu-id="5e870-109">説明</span><span class="sxs-lookup"><span data-stu-id="5e870-109">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="78c0f-110">関数が正常にマークされました。</span><span class="sxs-lookup"><span data-stu-id="78c0f-110">The function was successfully marked.</span></span>|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="78c0f-111">デバッグできないために、関数をユーザー コードとしてマークできませんでした。</span><span class="sxs-lookup"><span data-stu-id="78c0f-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
+|`S_OK`|<span data-ttu-id="5e870-110">関数は正しく設定されました。</span><span class="sxs-lookup"><span data-stu-id="5e870-110">The function was successfully marked.</span></span>|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|<span data-ttu-id="5e870-111">デバッグすることはできませんので、関数をユーザー コードとしてマークされませんでした。</span><span class="sxs-lookup"><span data-stu-id="5e870-111">The function could not be marked as user code because it cannot be debugged.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="78c0f-112">コメント</span><span class="sxs-lookup"><span data-stu-id="78c0f-112">Remarks</span></span>  
- <span data-ttu-id="78c0f-113">マイ コードのみステッパは非ユーザー コードをスキップします。</span><span class="sxs-lookup"><span data-stu-id="78c0f-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="78c0f-114">ユーザー コードは、デバッグ可能なコードのサブセットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="78c0f-114">User code must be a subset of debuggable code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e870-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="5e870-112">Remarks</span></span>  
+ <span data-ttu-id="5e870-113">マイ コードのみステッパでは、非ユーザー コードをスキップします。</span><span class="sxs-lookup"><span data-stu-id="5e870-113">A Just My Code stepper will skip non-user code.</span></span> <span data-ttu-id="5e870-114">ユーザー コードは、デバッグできるコードのサブセットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e870-114">User code must be a subset of debuggable code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78c0f-115">要件</span><span class="sxs-lookup"><span data-stu-id="78c0f-115">Requirements</span></span>  
- <span data-ttu-id="78c0f-116">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="78c0f-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e870-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="5e870-115">Requirements</span></span>  
+ <span data-ttu-id="5e870-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5e870-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78c0f-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78c0f-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e870-117">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5e870-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="78c0f-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78c0f-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e870-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e870-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="78c0f-119">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78c0f-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5e870-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e870-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

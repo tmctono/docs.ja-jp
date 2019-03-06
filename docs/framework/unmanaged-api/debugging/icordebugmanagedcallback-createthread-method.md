@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ca11853100228287c4148a2330cbc5a4609550f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586528"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472509"
 ---
-# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="d3d03-102">ICorDebugManagedCallback::CreateThread メソッド</span><span class="sxs-lookup"><span data-stu-id="d3d03-102">ICorDebugManagedCallback::CreateThread Method</span></span>
-<span data-ttu-id="d3d03-103">スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="d3d03-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
+# <a name="icordebugmanagedcallbackcreatethread-method"></a><span data-ttu-id="29bb3-102">ICorDebugManagedCallback::CreateThread メソッド</span><span class="sxs-lookup"><span data-stu-id="29bb3-102">ICorDebugManagedCallback::CreateThread Method</span></span>
+<span data-ttu-id="29bb3-103">スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="29bb3-103">Notifies the debugger that a thread has started executing managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3d03-104">構文</span><span class="sxs-lookup"><span data-stu-id="d3d03-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29bb3-104">構文</span><span class="sxs-lookup"><span data-stu-id="29bb3-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateThread (  
@@ -36,24 +36,24 @@ HRESULT CreateThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d3d03-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d3d03-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="29bb3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="29bb3-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="d3d03-106">[in]スレッドがあるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d3d03-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
+ <span data-ttu-id="29bb3-106">[in]スレッドがあるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="29bb3-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="d3d03-107">[in]スレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d3d03-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="29bb3-107">[in]スレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="29bb3-107">[in] A pointer to an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d3d03-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="d3d03-108">Remarks</span></span>  
- <span data-ttu-id="d3d03-109">スレッドは、実行されるマネージ コードの最初の命令に配置されます。</span><span class="sxs-lookup"><span data-stu-id="d3d03-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="29bb3-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="29bb3-108">Remarks</span></span>  
+ <span data-ttu-id="29bb3-109">スレッドは、実行されるマネージ コードの最初の命令に配置されます。</span><span class="sxs-lookup"><span data-stu-id="29bb3-109">The thread will be positioned at the first managed code instruction to be executed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d3d03-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="d3d03-110">Requirements</span></span>  
- <span data-ttu-id="d3d03-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d3d03-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29bb3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="29bb3-110">Requirements</span></span>  
+ <span data-ttu-id="29bb3-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="29bb3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3d03-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d3d03-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="29bb3-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="29bb3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d3d03-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d3d03-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="29bb3-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29bb3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d3d03-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3d03-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="29bb3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29bb3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3d03-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="d3d03-115">See also</span></span>
-- [<span data-ttu-id="d3d03-116">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d3d03-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="29bb3-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="29bb3-115">See also</span></span>
+- [<span data-ttu-id="29bb3-116">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="29bb3-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

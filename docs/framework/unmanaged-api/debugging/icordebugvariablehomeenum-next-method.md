@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d383d4bf0f3d203c331ff00981885cbc6c0c35d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd2d188b273d857ba92914f490e3448ba01601c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492479"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="b135c-102">ICorDebugVariableHomeEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="b135c-102">ICorDebugVariableHomeEnum::Next Method</span></span>
-<span data-ttu-id="b135c-103">指定した数を取得[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)については、ローカル変数と関数の引数を格納するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="b135c-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="cb181-102">ICorDebugVariableHomeEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="cb181-102">ICorDebugVariableHomeEnum::Next Method</span></span>
+<span data-ttu-id="cb181-103">指定した数を取得[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)については、ローカル変数と関数の引数を格納するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="cb181-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b135c-104">構文</span><span class="sxs-lookup"><span data-stu-id="b135c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb181-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb181-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,36 +37,36 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b135c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b135c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb181-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb181-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="b135c-106">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="b135c-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="cb181-106">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="cb181-106">[in] The number of objects to be retrieved.</span></span>  
   
  `homes`  
- <span data-ttu-id="b135c-107">それぞれが指すポインターの配列を[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)ローカル変数または関数の引数に関する情報を提供するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b135c-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
+ <span data-ttu-id="cb181-107">それぞれが指すポインターの配列を[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)ローカル変数または関数の引数に関する情報を提供するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cb181-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b135c-108">[out]インスタンスの数は、実際には、オブジェクトで返されます。</span><span class="sxs-lookup"><span data-stu-id="b135c-108">[out] The number of instances actually returned in objects.</span></span>  
+ <span data-ttu-id="cb181-108">[out]インスタンスの数は、実際には、オブジェクトで返されます。</span><span class="sxs-lookup"><span data-stu-id="cb181-108">[out] The number of instances actually returned in objects.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b135c-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="b135c-109">Return Value</span></span>  
- <span data-ttu-id="b135c-110">メソッドは、次の値を返します。</span><span class="sxs-lookup"><span data-stu-id="b135c-110">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cb181-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="cb181-109">Return Value</span></span>  
+ <span data-ttu-id="cb181-110">メソッドは、次の値を返します。</span><span class="sxs-lookup"><span data-stu-id="cb181-110">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="b135c-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b135c-111">HRESULT</span></span>|<span data-ttu-id="b135c-112">説明</span><span class="sxs-lookup"><span data-stu-id="b135c-112">Description</span></span>|  
+|<span data-ttu-id="cb181-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cb181-111">HRESULT</span></span>|<span data-ttu-id="cb181-112">説明</span><span class="sxs-lookup"><span data-stu-id="cb181-112">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="b135c-113">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="b135c-113">The method completed successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="b135c-114">インスタンスの実際の数の取得に反映される`pceltFetched`が要求されたインスタンスの数未満です。</span><span class="sxs-lookup"><span data-stu-id="b135c-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
+|`S_OK`|<span data-ttu-id="cb181-113">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="cb181-113">The method completed successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="cb181-114">インスタンスの実際の数の取得に反映される`pceltFetched`が要求されたインスタンスの数未満です。</span><span class="sxs-lookup"><span data-stu-id="cb181-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b135c-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="b135c-115">Remarks</span></span>  
- <span data-ttu-id="b135c-116">[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)メソッドの最大値を取得する`celt`オブジェクトの列挙子の現在位置から始まります。</span><span class="sxs-lookup"><span data-stu-id="b135c-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="b135c-117">メソッドが戻るときに`pceltFetched`取得したオブジェクトの実際の数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b135c-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb181-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="cb181-115">Remarks</span></span>  
+ <span data-ttu-id="cb181-116">[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)メソッドの最大値を取得する`celt`オブジェクトの列挙子の現在位置から始まります。</span><span class="sxs-lookup"><span data-stu-id="cb181-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="cb181-117">メソッドが戻るときに`pceltFetched`取得したオブジェクトの実際の数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="cb181-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b135c-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="b135c-118">Requirements</span></span>  
- <span data-ttu-id="b135c-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b135c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb181-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="cb181-118">Requirements</span></span>  
+ <span data-ttu-id="cb181-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb181-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b135c-120">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b135c-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cb181-120">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb181-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b135c-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b135c-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cb181-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb181-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b135c-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b135c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="cb181-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb181-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b135c-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="b135c-123">See also</span></span>
-- [<span data-ttu-id="b135c-124">ICorDebugVariableHomeEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b135c-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
-- [<span data-ttu-id="b135c-125">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b135c-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cb181-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb181-123">See also</span></span>
+- [<span data-ttu-id="cb181-124">ICorDebugVariableHomeEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb181-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [<span data-ttu-id="cb181-125">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb181-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

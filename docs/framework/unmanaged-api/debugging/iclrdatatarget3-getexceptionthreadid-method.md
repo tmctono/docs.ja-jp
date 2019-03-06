@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59bd3b8c427996fe5e44e95aeff51deb1da984a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: de3606e4763596038a2c573002d774c6348071e8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066377"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473514"
 ---
-# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="a2c8f-102">ICLRDataTarget3::GetExceptionThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="a2c8f-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
-<span data-ttu-id="a2c8f-103">例外をスローしたスレッドの ID を取得するために、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
+# <a name="iclrdatatarget3getexceptionthreadid-method"></a><span data-ttu-id="16fe3-102">ICLRDataTarget3::GetExceptionThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="16fe3-102">ICLRDataTarget3::GetExceptionThreadID Method</span></span>
+<span data-ttu-id="16fe3-103">例外をスローしたスレッドの ID を取得するために、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="16fe3-103">Called by the common language runtime (CLR) data access services to get the ID of the thread that threw the exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2c8f-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2c8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16fe3-104">構文</span><span class="sxs-lookup"><span data-stu-id="16fe3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionThreadID(  
@@ -32,31 +32,31 @@ HRESULT GetExceptionThreadID(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2c8f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a2c8f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16fe3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="16fe3-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="a2c8f-106">[out] 例外をスローしたスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-106">[out] The ID of the thread that threw the exception.</span></span>  
+ <span data-ttu-id="16fe3-106">[out] 例外をスローしたスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="16fe3-106">[out] The ID of the thread that threw the exception.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a2c8f-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a2c8f-107">Return Value</span></span>  
- <span data-ttu-id="a2c8f-108">戻り値は、成功の場合は `S_OK` で、失敗の場合は `HRESULT` コードです。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="a2c8f-109">次が `HRESULT` コードに含まれることはありますが、限定されているわけではありません。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="16fe3-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="16fe3-107">Return Value</span></span>  
+ <span data-ttu-id="16fe3-108">戻り値は、成功の場合は `S_OK` で、失敗の場合は `HRESULT` コードです。</span><span class="sxs-lookup"><span data-stu-id="16fe3-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="16fe3-109">次が `HRESULT` コードに含まれることはありますが、限定されているわけではありません。</span><span class="sxs-lookup"><span data-stu-id="16fe3-109">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="a2c8f-110">リターン コード</span><span class="sxs-lookup"><span data-stu-id="a2c8f-110">Return code</span></span>|<span data-ttu-id="a2c8f-111">説明</span><span class="sxs-lookup"><span data-stu-id="a2c8f-111">Description</span></span>|  
+|<span data-ttu-id="16fe3-110">リターン コード</span><span class="sxs-lookup"><span data-stu-id="16fe3-110">Return code</span></span>|<span data-ttu-id="16fe3-111">説明</span><span class="sxs-lookup"><span data-stu-id="16fe3-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="a2c8f-112">メソッドが成功しました。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-112">Method succeeded.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="a2c8f-113">例外の有効なスレッド ID を見つけることができませんでした。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-113">Could not find a valid thread ID for the exception.</span></span>|  
+|`S_OK`|<span data-ttu-id="16fe3-112">メソッドが成功しました。</span><span class="sxs-lookup"><span data-stu-id="16fe3-112">Method succeeded.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="16fe3-113">例外の有効なスレッド ID を見つけることができませんでした。</span><span class="sxs-lookup"><span data-stu-id="16fe3-113">Could not find a valid thread ID for the exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a2c8f-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="a2c8f-114">Remarks</span></span>  
- <span data-ttu-id="a2c8f-115">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-115">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16fe3-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="16fe3-114">Remarks</span></span>  
+ <span data-ttu-id="16fe3-115">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="16fe3-115">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2c8f-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="a2c8f-116">Requirements</span></span>  
- <span data-ttu-id="a2c8f-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2c8f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16fe3-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="16fe3-116">Requirements</span></span>  
+ <span data-ttu-id="16fe3-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="16fe3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2c8f-118">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a2c8f-118">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="16fe3-118">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="16fe3-118">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="a2c8f-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2c8f-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="16fe3-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16fe3-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a2c8f-120">**.NET Framework のバージョン:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a2c8f-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="16fe3-120">**.NET Framework のバージョン:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="16fe3-120">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2c8f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2c8f-121">See also</span></span>
-- [<span data-ttu-id="a2c8f-122">ICLRDataTarget3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2c8f-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="a2c8f-123">GetExceptionContextRecord メソッド</span><span class="sxs-lookup"><span data-stu-id="a2c8f-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [<span data-ttu-id="a2c8f-124">GetExceptionRecord メソッド</span><span class="sxs-lookup"><span data-stu-id="a2c8f-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+## <a name="see-also"></a><span data-ttu-id="16fe3-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="16fe3-121">See also</span></span>
+- [<span data-ttu-id="16fe3-122">ICLRDataTarget3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="16fe3-122">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="16fe3-123">GetExceptionContextRecord メソッド</span><span class="sxs-lookup"><span data-stu-id="16fe3-123">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="16fe3-124">GetExceptionRecord メソッド</span><span class="sxs-lookup"><span data-stu-id="16fe3-124">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)

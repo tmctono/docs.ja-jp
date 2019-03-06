@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b90ddefb082b9017246bf644b79aa63c5d7444b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85f74eb3c6f159cf2c8c8cbd186695dc97489504
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600181"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469197"
 ---
-# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="c8212-102">IHostAssemblyManager::GetNonHostStoreAssemblies メソッド</span><span class="sxs-lookup"><span data-stu-id="c8212-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
-<span data-ttu-id="c8212-103">インターフェイス ポインターを取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)ホストは、共通言語ランタイム (CLR) を読み込むアセンブリの一覧を表します。</span><span class="sxs-lookup"><span data-stu-id="c8212-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
+# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="65d2d-102">IHostAssemblyManager::GetNonHostStoreAssemblies メソッド</span><span class="sxs-lookup"><span data-stu-id="65d2d-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
+<span data-ttu-id="65d2d-103">インターフェイス ポインターを取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)ホストは、共通言語ランタイム (CLR) を読み込むアセンブリの一覧を表します。</span><span class="sxs-lookup"><span data-stu-id="65d2d-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8212-104">構文</span><span class="sxs-lookup"><span data-stu-id="c8212-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65d2d-104">構文</span><span class="sxs-lookup"><span data-stu-id="65d2d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNonHostStoreAssemblies (  
@@ -35,48 +35,48 @@ HRESULT GetNonHostStoreAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c8212-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c8212-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="65d2d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="65d2d-105">Parameters</span></span>  
  `ppReferenceList`  
- <span data-ttu-id="c8212-106">[out]アドレスへのポインター、`ICLRAssemblyReferenceList`ホストが CLR をロードを必要とするアセンブリへの参照の一覧を格納しています。</span><span class="sxs-lookup"><span data-stu-id="c8212-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
+ <span data-ttu-id="65d2d-106">[out]アドレスへのポインター、`ICLRAssemblyReferenceList`ホストが CLR をロードを必要とするアセンブリへの参照の一覧を格納しています。</span><span class="sxs-lookup"><span data-stu-id="65d2d-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c8212-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="c8212-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="65d2d-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="65d2d-107">Return Value</span></span>  
   
-|<span data-ttu-id="c8212-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c8212-108">HRESULT</span></span>|<span data-ttu-id="c8212-109">説明</span><span class="sxs-lookup"><span data-stu-id="c8212-109">Description</span></span>|  
+|<span data-ttu-id="65d2d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="65d2d-108">HRESULT</span></span>|<span data-ttu-id="65d2d-109">説明</span><span class="sxs-lookup"><span data-stu-id="65d2d-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c8212-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="c8212-110">S_OK</span></span>|<span data-ttu-id="c8212-111">`GetNonHostStoreAssemblies` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="c8212-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
-|<span data-ttu-id="c8212-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c8212-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c8212-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="c8212-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c8212-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c8212-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c8212-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="c8212-115">The call timed out.</span></span>|  
-|<span data-ttu-id="c8212-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c8212-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c8212-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="c8212-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c8212-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c8212-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c8212-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="c8212-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c8212-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c8212-120">E_FAIL</span></span>|<span data-ttu-id="c8212-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="c8212-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c8212-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="c8212-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c8212-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="c8212-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="c8212-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="c8212-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="c8212-125">メモリが不足していますが、要求された参照の一覧を作成できませんでした。`ICLRAssemblyReferenceList`します。</span><span class="sxs-lookup"><span data-stu-id="c8212-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
+|<span data-ttu-id="65d2d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="65d2d-110">S_OK</span></span>|<span data-ttu-id="65d2d-111">`GetNonHostStoreAssemblies` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="65d2d-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
+|<span data-ttu-id="65d2d-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="65d2d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="65d2d-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="65d2d-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="65d2d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="65d2d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="65d2d-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="65d2d-115">The call timed out.</span></span>|  
+|<span data-ttu-id="65d2d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="65d2d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="65d2d-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="65d2d-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="65d2d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="65d2d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="65d2d-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="65d2d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="65d2d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="65d2d-120">E_FAIL</span></span>|<span data-ttu-id="65d2d-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="65d2d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="65d2d-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="65d2d-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="65d2d-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="65d2d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="65d2d-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="65d2d-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="65d2d-125">メモリが不足していますが、要求された参照の一覧を作成できませんでした。`ICLRAssemblyReferenceList`します。</span><span class="sxs-lookup"><span data-stu-id="65d2d-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c8212-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="c8212-126">Remarks</span></span>  
- <span data-ttu-id="c8212-127">CLR は、次のガイドラインのセットを使用して参照を解決します。</span><span class="sxs-lookup"><span data-stu-id="c8212-127">The CLR resolves references using the following set of guidelines:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65d2d-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="65d2d-126">Remarks</span></span>  
+ <span data-ttu-id="65d2d-127">CLR は、次のガイドラインのセットを使用して参照を解決します。</span><span class="sxs-lookup"><span data-stu-id="65d2d-127">The CLR resolves references using the following set of guidelines:</span></span>  
   
--   <span data-ttu-id="c8212-128">によって返されるアセンブリ参照の一覧を参照して、最初に、`GetNonHostStoreAssemblies`します。</span><span class="sxs-lookup"><span data-stu-id="c8212-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
+-   <span data-ttu-id="65d2d-128">によって返されるアセンブリ参照の一覧を参照して、最初に、`GetNonHostStoreAssemblies`します。</span><span class="sxs-lookup"><span data-stu-id="65d2d-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
   
--   <span data-ttu-id="c8212-129">アセンブリが一覧に表示された場合、CLR は通常どおりにバインドします。</span><span class="sxs-lookup"><span data-stu-id="c8212-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
+-   <span data-ttu-id="65d2d-129">アセンブリが一覧に表示された場合、CLR は通常どおりにバインドします。</span><span class="sxs-lookup"><span data-stu-id="65d2d-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
   
--   <span data-ttu-id="c8212-130">アセンブリが一覧に表示されないと、ホストでの実装が提供されている場合[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)、CLR 呼び出し[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)を指定するホストを許可するのにはバインドするアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="c8212-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
+-   <span data-ttu-id="65d2d-130">アセンブリが一覧に表示されないと、ホストでの実装が提供されている場合[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)、CLR 呼び出し[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)を指定するホストを許可するのにはバインドするアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="65d2d-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
   
--   <span data-ttu-id="c8212-131">それ以外の場合、CLR は、アセンブリのバインドに失敗します。</span><span class="sxs-lookup"><span data-stu-id="c8212-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
+-   <span data-ttu-id="65d2d-131">それ以外の場合、CLR は、アセンブリのバインドに失敗します。</span><span class="sxs-lookup"><span data-stu-id="65d2d-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
   
- <span data-ttu-id="c8212-132">ホストが設定されている場合`ppReferenceList`、グローバル アセンブリ キャッシュの呼び出しを null に CLR の最初のプローブ`ProvideAssembly`とし、アセンブリ参照を解決するのには、アプリケーション ベースをプローブします。</span><span class="sxs-lookup"><span data-stu-id="c8212-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
+ <span data-ttu-id="65d2d-132">ホストが設定されている場合`ppReferenceList`、グローバル アセンブリ キャッシュの呼び出しを null に CLR の最初のプローブ`ProvideAssembly`とし、アセンブリ参照を解決するのには、アプリケーション ベースをプローブします。</span><span class="sxs-lookup"><span data-stu-id="65d2d-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c8212-133">初期化時に、CLR は呼び出し`GetNonHostStoreAssemblies`1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="c8212-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="c8212-134">メソッドは、もう一度呼び出されません。</span><span class="sxs-lookup"><span data-stu-id="c8212-134">The method is not called again.</span></span>  
+>  <span data-ttu-id="65d2d-133">初期化時に、CLR は呼び出し`GetNonHostStoreAssemblies`1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="65d2d-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="65d2d-134">メソッドは、もう一度呼び出されません。</span><span class="sxs-lookup"><span data-stu-id="65d2d-134">The method is not called again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8212-135">必要条件</span><span class="sxs-lookup"><span data-stu-id="c8212-135">Requirements</span></span>  
- <span data-ttu-id="c8212-136">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c8212-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65d2d-135">必要条件</span><span class="sxs-lookup"><span data-stu-id="65d2d-135">Requirements</span></span>  
+ <span data-ttu-id="65d2d-136">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="65d2d-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8212-137">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c8212-137">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="65d2d-137">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="65d2d-137">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c8212-138">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c8212-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="65d2d-138">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="65d2d-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c8212-139">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8212-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="65d2d-139">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65d2d-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8212-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8212-140">See also</span></span>
-- [<span data-ttu-id="c8212-141">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c8212-141">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="c8212-142">IHostAssemblyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c8212-142">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="c8212-143">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c8212-143">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a><span data-ttu-id="65d2d-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="65d2d-140">See also</span></span>
+- [<span data-ttu-id="65d2d-141">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65d2d-141">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="65d2d-142">IHostAssemblyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65d2d-142">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="65d2d-143">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65d2d-143">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

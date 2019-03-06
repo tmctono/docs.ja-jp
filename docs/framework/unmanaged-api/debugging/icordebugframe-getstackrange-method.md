@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5da87071bc23ac17a3077049cd77f0fb8611439f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43532888d181adcb7a7e3760f2a5e3d8f664a35c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492284"
 ---
-# <a name="icordebugframegetstackrange-method"></a><span data-ttu-id="acbc6-102">ICorDebugFrame::GetStackRange メソッド</span><span class="sxs-lookup"><span data-stu-id="acbc6-102">ICorDebugFrame::GetStackRange Method</span></span>
-<span data-ttu-id="acbc6-103">このスタック フレームの絶対アドレス範囲を取得します。</span><span class="sxs-lookup"><span data-stu-id="acbc6-103">Gets the absolute address range of this stack frame.</span></span>  
+# <a name="icordebugframegetstackrange-method"></a><span data-ttu-id="5f812-102">ICorDebugFrame::GetStackRange メソッド</span><span class="sxs-lookup"><span data-stu-id="5f812-102">ICorDebugFrame::GetStackRange Method</span></span>
+<span data-ttu-id="5f812-103">このスタック フレームの絶対アドレスの範囲を取得します。</span><span class="sxs-lookup"><span data-stu-id="5f812-103">Gets the absolute address range of this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="acbc6-104">構文</span><span class="sxs-lookup"><span data-stu-id="acbc6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f812-104">構文</span><span class="sxs-lookup"><span data-stu-id="5f812-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackRange (  
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="acbc6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="acbc6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f812-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5f812-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="acbc6-106">[out]ポインター、`CORDB_ADDRESS`これによって表されるスタック フレームの開始アドレスを指定する`ICorDebugFrame`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="acbc6-106">[out] A pointer to a `CORDB_ADDRESS` that specifies the starting address of the stack frame represented by this `ICorDebugFrame` object.</span></span>  
+ <span data-ttu-id="5f812-106">[out]ポインターを`CORDB_ADDRESS`これによって表されるスタック フレームの開始アドレスを指定する`ICorDebugFrame`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5f812-106">[out] A pointer to a `CORDB_ADDRESS` that specifies the starting address of the stack frame represented by this `ICorDebugFrame` object.</span></span>  
   
  `pEnd`  
- <span data-ttu-id="acbc6-107">[out]ポインター、`CORDB_ADDRESS`これによって表されるスタック フレームの終了アドレスを指定する`ICorDebugFrame`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="acbc6-107">[out] A pointer to a `CORDB_ADDRESS` that specifies the ending address of the stack frame represented by this `ICorDebugFrame` object.</span></span>  
+ <span data-ttu-id="5f812-107">[out]ポインターを`CORDB_ADDRESS`これによって表されるスタック フレームの終了アドレスを指定する`ICorDebugFrame`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5f812-107">[out] A pointer to a `CORDB_ADDRESS` that specifies the ending address of the stack frame represented by this `ICorDebugFrame` object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="acbc6-108">コメント</span><span class="sxs-lookup"><span data-stu-id="acbc6-108">Remarks</span></span>  
- <span data-ttu-id="acbc6-109">スタックのアドレス範囲は、複数のデバッグ エンジンから収集されインタリーブされたスタック トレースをつなぎ合わせてに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="acbc6-109">The address range of the stack is useful for piecing together interleaved stack traces gathered from multiple debugging engines.</span></span> <span data-ttu-id="acbc6-110">数値の範囲には、スタック フレームのコンテンツに関する情報は含まれません。</span><span class="sxs-lookup"><span data-stu-id="acbc6-110">The numeric range provides no information about the contents of the stack frame.</span></span> <span data-ttu-id="acbc6-111">スタック フレームの場所の比較に対してのみ意味があります。</span><span class="sxs-lookup"><span data-stu-id="acbc6-111">It is meaningful only for comparison of stack frame locations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f812-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="5f812-108">Remarks</span></span>  
+ <span data-ttu-id="5f812-109">スタックのアドレス範囲は、複数のデバッグ エンジンから収集されたスタック トレースをつなぎ合わせた適しています。</span><span class="sxs-lookup"><span data-stu-id="5f812-109">The address range of the stack is useful for piecing together interleaved stack traces gathered from multiple debugging engines.</span></span> <span data-ttu-id="5f812-110">数値の範囲には、スタック フレームの内容に関する情報は含まれません。</span><span class="sxs-lookup"><span data-stu-id="5f812-110">The numeric range provides no information about the contents of the stack frame.</span></span> <span data-ttu-id="5f812-111">スタック フレームの場所の比較だけに有効になります。</span><span class="sxs-lookup"><span data-stu-id="5f812-111">It is meaningful only for comparison of stack frame locations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="acbc6-112">要件</span><span class="sxs-lookup"><span data-stu-id="acbc6-112">Requirements</span></span>  
- <span data-ttu-id="acbc6-113">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="acbc6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f812-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="5f812-112">Requirements</span></span>  
+ <span data-ttu-id="5f812-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5f812-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="acbc6-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="acbc6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5f812-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f812-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="acbc6-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="acbc6-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f812-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f812-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="acbc6-116">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="acbc6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5f812-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f812-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 012cd9fdf23206f57662c854692ba53f403b727f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492521"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471603"
 ---
-# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="b7dff-102">IMetaDataEmit2::DefineMethodSpec メソッド</span><span class="sxs-lookup"><span data-stu-id="b7dff-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
-<span data-ttu-id="b7dff-103">メソッドのジェネリック インスタンスを作成し、定義するためのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="b7dff-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
+# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="6e427-102">IMetaDataEmit2::DefineMethodSpec メソッド</span><span class="sxs-lookup"><span data-stu-id="6e427-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
+<span data-ttu-id="6e427-103">メソッドのジェネリック インスタンスを作成し、定義するためのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="6e427-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7dff-104">構文</span><span class="sxs-lookup"><span data-stu-id="b7dff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e427-104">構文</span><span class="sxs-lookup"><span data-stu-id="6e427-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodSpec (  
@@ -38,28 +38,28 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b7dff-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b7dff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e427-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6e427-105">Parameters</span></span>  
  `tkParent`  
- <span data-ttu-id="b7dff-106">[in]ジェネリックのインスタンスを作成する対象のメソッドのトークンです。</span><span class="sxs-lookup"><span data-stu-id="b7dff-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="b7dff-107">トークン型でなければなりません`mdMethodDef`または`mdMemberRef`します。</span><span class="sxs-lookup"><span data-stu-id="b7dff-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
+ <span data-ttu-id="6e427-106">[in]ジェネリックのインスタンスを作成する対象のメソッドのトークンです。</span><span class="sxs-lookup"><span data-stu-id="6e427-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="6e427-107">トークン型でなければなりません`mdMethodDef`または`mdMemberRef`します。</span><span class="sxs-lookup"><span data-stu-id="6e427-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="b7dff-108">[in]メソッドのバイナリの COM + シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b7dff-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
+ <span data-ttu-id="6e427-108">[in]メソッドのバイナリの COM + シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6e427-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
   
  `cbSibBlob`  
- <span data-ttu-id="b7dff-109">[in]サイズ (バイト単位) の`pvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="b7dff-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="6e427-109">[in]サイズ (バイト単位) の`pvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="6e427-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
   
  `pmi`  
- <span data-ttu-id="b7dff-110">[out]メソッドのメタデータ署名定義のトークン。</span><span class="sxs-lookup"><span data-stu-id="b7dff-110">[out] A token to the metadata signature definition of the method.</span></span>  
+ <span data-ttu-id="6e427-110">[out]メソッドのメタデータ署名定義のトークン。</span><span class="sxs-lookup"><span data-stu-id="6e427-110">[out] A token to the metadata signature definition of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7dff-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="b7dff-111">Requirements</span></span>  
- <span data-ttu-id="b7dff-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b7dff-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e427-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="6e427-111">Requirements</span></span>  
+ <span data-ttu-id="6e427-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6e427-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7dff-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b7dff-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6e427-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6e427-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b7dff-114">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="b7dff-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6e427-114">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="6e427-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b7dff-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7dff-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6e427-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e427-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b7dff-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b7dff-116">See also</span></span>
-- [<span data-ttu-id="b7dff-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b7dff-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="b7dff-118">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b7dff-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6e427-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e427-116">See also</span></span>
+- [<span data-ttu-id="6e427-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6e427-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="6e427-118">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6e427-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

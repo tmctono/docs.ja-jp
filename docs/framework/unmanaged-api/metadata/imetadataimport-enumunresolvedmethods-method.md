@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a91c8de67a095a2f89a69f43375c9ebdd4fc767c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611957"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491296"
 ---
-# <a name="imetadataimportenumunresolvedmethods-method"></a><span data-ttu-id="c84db-102">IMetaDataImport::EnumUnresolvedMethods メソッド</span><span class="sxs-lookup"><span data-stu-id="c84db-102">IMetaDataImport::EnumUnresolvedMethods Method</span></span>
-<span data-ttu-id="c84db-103">現在のメタデータ スコープ内の未解決のメソッドを表す MemberDef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="c84db-103">Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumunresolvedmethods-method"></a><span data-ttu-id="25d49-102">IMetaDataImport::EnumUnresolvedMethods メソッド</span><span class="sxs-lookup"><span data-stu-id="25d49-102">IMetaDataImport::EnumUnresolvedMethods Method</span></span>
+<span data-ttu-id="25d49-103">現在のメタデータ スコープ内の未解決のメソッドを表す MemberDef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="25d49-103">Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c84db-104">構文</span><span class="sxs-lookup"><span data-stu-id="c84db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25d49-104">構文</span><span class="sxs-lookup"><span data-stu-id="25d49-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumUnresolvedMethods (  
@@ -38,40 +38,40 @@ HRESULT EnumUnresolvedMethods (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c84db-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c84db-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25d49-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="25d49-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="c84db-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="c84db-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="c84db-107">このメソッドの最初の呼び出しで NULL があります。</span><span class="sxs-lookup"><span data-stu-id="c84db-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="25d49-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="25d49-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="25d49-107">このメソッドの最初の呼び出しで NULL があります。</span><span class="sxs-lookup"><span data-stu-id="25d49-107">This must be NULL for the first call of this method.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="c84db-108">[out]MemberDef トークンを格納するために使用する配列。</span><span class="sxs-lookup"><span data-stu-id="c84db-108">[out] The array used to store the MemberDef tokens.</span></span>  
+ <span data-ttu-id="25d49-108">[out]MemberDef トークンを格納するために使用する配列。</span><span class="sxs-lookup"><span data-stu-id="25d49-108">[out] The array used to store the MemberDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="c84db-109">[in] `rMethods` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="c84db-109">[in] The maximum size of the `rMethods` array.</span></span>  
+ <span data-ttu-id="25d49-109">[in] `rMethods` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="25d49-109">[in] The maximum size of the `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="c84db-110">[out]返される MemberDef トークン数`rMethods`します。</span><span class="sxs-lookup"><span data-stu-id="c84db-110">[out] The number of MemberDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="25d49-110">[out]返される MemberDef トークン数`rMethods`します。</span><span class="sxs-lookup"><span data-stu-id="25d49-110">[out] The number of MemberDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c84db-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="c84db-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="25d49-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="25d49-111">Return Value</span></span>  
   
-|<span data-ttu-id="c84db-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c84db-112">HRESULT</span></span>|<span data-ttu-id="c84db-113">説明</span><span class="sxs-lookup"><span data-stu-id="c84db-113">Description</span></span>|  
+|<span data-ttu-id="25d49-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="25d49-112">HRESULT</span></span>|<span data-ttu-id="25d49-113">説明</span><span class="sxs-lookup"><span data-stu-id="25d49-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="c84db-114">`EnumUnresolvedMethods` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="c84db-114">`EnumUnresolvedMethods` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="c84db-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="c84db-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="c84db-116">その場合は、`pcTokens`は 0 です。</span><span class="sxs-lookup"><span data-stu-id="c84db-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="25d49-114">`EnumUnresolvedMethods` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="25d49-114">`EnumUnresolvedMethods` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="25d49-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="25d49-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="25d49-116">その場合は、`pcTokens`は 0 です。</span><span class="sxs-lookup"><span data-stu-id="25d49-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c84db-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="c84db-117">Remarks</span></span>  
- <span data-ttu-id="c84db-118">未解決のメソッドは宣言されましたが、実装されていません。</span><span class="sxs-lookup"><span data-stu-id="c84db-118">An unresolved method is one that has been declared but not implemented.</span></span> <span data-ttu-id="c84db-119">メソッドがマークされている場合に、列挙体のメソッドが含まれている`miForwardRef`、`mdPinvokeImpl`または`miRuntime`0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="c84db-119">A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero.</span></span> <span data-ttu-id="c84db-120">つまり、未解決のメソッドは、マークされているクラス メソッド`miForwardRef`(PInvoke 経由で到達)、アンマネージ コードで実装またはランタイム自体によって内部的に実装するはありませんが、</span><span class="sxs-lookup"><span data-stu-id="c84db-120">In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25d49-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="25d49-117">Remarks</span></span>  
+ <span data-ttu-id="25d49-118">未解決のメソッドは宣言されましたが、実装されていません。</span><span class="sxs-lookup"><span data-stu-id="25d49-118">An unresolved method is one that has been declared but not implemented.</span></span> <span data-ttu-id="25d49-119">メソッドがマークされている場合に、列挙体のメソッドが含まれている`miForwardRef`、`mdPinvokeImpl`または`miRuntime`0 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="25d49-119">A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero.</span></span> <span data-ttu-id="25d49-120">つまり、未解決のメソッドは、マークされているクラス メソッド`miForwardRef`(PInvoke 経由で到達)、アンマネージ コードで実装またはランタイム自体によって内部的に実装するはありませんが、</span><span class="sxs-lookup"><span data-stu-id="25d49-120">In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself</span></span>  
   
- <span data-ttu-id="c84db-121">列挙体は、モジュール スコープ (グローバル) またはインターフェイスまたは抽象クラスで定義されているすべてのメソッドを除外します。</span><span class="sxs-lookup"><span data-stu-id="c84db-121">The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.</span></span>  
+ <span data-ttu-id="25d49-121">列挙体は、モジュール スコープ (グローバル) またはインターフェイスまたは抽象クラスで定義されているすべてのメソッドを除外します。</span><span class="sxs-lookup"><span data-stu-id="25d49-121">The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c84db-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="c84db-122">Requirements</span></span>  
- <span data-ttu-id="c84db-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c84db-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25d49-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="25d49-122">Requirements</span></span>  
+ <span data-ttu-id="25d49-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="25d49-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c84db-124">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c84db-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25d49-124">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25d49-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c84db-125">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c84db-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25d49-125">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="25d49-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c84db-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c84db-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25d49-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25d49-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c84db-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="c84db-127">See also</span></span>
-- [<span data-ttu-id="c84db-128">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c84db-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="c84db-129">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c84db-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="25d49-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="25d49-127">See also</span></span>
+- [<span data-ttu-id="25d49-128">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="25d49-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="25d49-129">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="25d49-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

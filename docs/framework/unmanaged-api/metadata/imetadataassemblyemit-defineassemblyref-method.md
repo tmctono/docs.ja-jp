@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 945972269871c3e78c19cc1038dd96a7f098b997
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493471"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464582"
 ---
-# <a name="imetadataassemblyemitdefineassemblyref-method"></a><span data-ttu-id="ac7ec-102">IMetaDataAssemblyEmit::DefineAssemblyRef メソッド</span><span class="sxs-lookup"><span data-stu-id="ac7ec-102">IMetaDataAssemblyEmit::DefineAssemblyRef Method</span></span>
-<span data-ttu-id="ac7ec-103">このアセンブリが参照するアセンブリのメタデータを含む `AssemblyRef` 構造体を作成し、関連付けられたメタデータ トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-103">Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineassemblyref-method"></a><span data-ttu-id="c9aaf-102">IMetaDataAssemblyEmit::DefineAssemblyRef メソッド</span><span class="sxs-lookup"><span data-stu-id="c9aaf-102">IMetaDataAssemblyEmit::DefineAssemblyRef Method</span></span>
+<span data-ttu-id="c9aaf-103">このアセンブリが参照するアセンブリのメタデータを含む `AssemblyRef` 構造体を作成し、関連付けられたメタデータ トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-103">Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac7ec-104">構文</span><span class="sxs-lookup"><span data-stu-id="ac7ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9aaf-104">構文</span><span class="sxs-lookup"><span data-stu-id="c9aaf-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineAssemblyRef (  
@@ -42,44 +42,44 @@ HRESULT DefineAssemblyRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ac7ec-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ac7ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9aaf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c9aaf-105">Parameters</span></span>  
  `pbPublicKeyOrToken`  
- <span data-ttu-id="ac7ec-106">[in]参照先アセンブリの発行者の公開キー。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-106">[in] The public key of the publisher of the referenced assembly.</span></span> <span data-ttu-id="ac7ec-107">ヘルパー関数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)このパラメーターとして渡すパブリック キーのハッシュを取得するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-107">The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.</span></span>  
+ <span data-ttu-id="c9aaf-106">[in]参照先アセンブリの発行者の公開キー。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-106">[in] The public key of the publisher of the referenced assembly.</span></span> <span data-ttu-id="c9aaf-107">ヘルパー関数[StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)このパラメーターとして渡すパブリック キーのハッシュを取得するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-107">The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.</span></span>  
   
  `cbPublicKeyOrToken`  
- <span data-ttu-id="ac7ec-108">[in]バイト サイズ`pbPublicKeyOrToken`します。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
+ <span data-ttu-id="c9aaf-108">[in]バイト サイズ`pbPublicKeyOrToken`します。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
   
  `szName`  
- <span data-ttu-id="ac7ec-109">[in]アセンブリの人間が判読できるテキストの名前。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="ac7ec-110">この値は 1024 文字を超えない必要があります。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-110">This value must not exceed 1024 characters.</span></span>  
+ <span data-ttu-id="c9aaf-109">[in]アセンブリの人間が判読できるテキストの名前。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="c9aaf-110">この値は 1024 文字を超えない必要があります。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-110">This value must not exceed 1024 characters.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="ac7ec-111">[in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-111">[in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.</span></span>  
+ <span data-ttu-id="c9aaf-111">[in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-111">[in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="ac7ec-112">[in]参照先のアセンブリに関連付けられたデータをハッシュします。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-112">[in] The hash data associated with the referenced assembly.</span></span> <span data-ttu-id="ac7ec-113">任意。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-113">Optional.</span></span>  
+ <span data-ttu-id="c9aaf-112">[in]参照先のアセンブリに関連付けられたデータをハッシュします。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-112">[in] The hash data associated with the referenced assembly.</span></span> <span data-ttu-id="c9aaf-113">任意。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-113">Optional.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="ac7ec-114">[in]バイト サイズ`pbHashValue`します。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-114">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="c9aaf-114">[in]バイト サイズ`pbHashValue`します。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-114">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwAssemblyRefFlags`  
- <span data-ttu-id="ac7ec-115">[in]ビットごとの組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)実行エンジンの動作を制御する値。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-115">[in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.</span></span>  
+ <span data-ttu-id="c9aaf-115">[in]ビットごとの組み合わせ[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)実行エンジンの動作を制御する値。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-115">[in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.</span></span>  
   
  `pmdar`  
- <span data-ttu-id="ac7ec-116">[out]返されたポインター`AssemblyRef`メタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-116">[out] A pointer to the returned `AssemblyRef` metadata token.</span></span>  
+ <span data-ttu-id="c9aaf-116">[out]返されたポインター`AssemblyRef`メタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-116">[out] A pointer to the returned `AssemblyRef` metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ac7ec-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="ac7ec-117">Remarks</span></span>  
- <span data-ttu-id="ac7ec-118">1 つ`AssemblyRef`このアセンブリを参照する各アセンブリのメタデータ構造を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-118">One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9aaf-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="c9aaf-117">Remarks</span></span>  
+ <span data-ttu-id="c9aaf-118">1 つ`AssemblyRef`このアセンブリを参照する各アセンブリのメタデータ構造を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-118">One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.</span></span>  
   
- <span data-ttu-id="ac7ec-119">実行時に、参照先アセンブリの詳細については、"ビルド"と情報を表すことを示す値をアセンブリの競合回避モジュールに渡されます。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-119">At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information.</span></span> <span data-ttu-id="ac7ec-120">アセンブリ リゾルバーは、ポリシーを適用します。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-120">The assembly resolver then applies policy.</span></span>  
+ <span data-ttu-id="c9aaf-119">実行時に、参照先アセンブリの詳細については、"ビルド"と情報を表すことを示す値をアセンブリの競合回避モジュールに渡されます。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-119">At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information.</span></span> <span data-ttu-id="c9aaf-120">アセンブリ リゾルバーは、ポリシーを適用します。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-120">The assembly resolver then applies policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac7ec-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="ac7ec-121">Requirements</span></span>  
- <span data-ttu-id="ac7ec-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac7ec-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9aaf-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="c9aaf-121">Requirements</span></span>  
+ <span data-ttu-id="c9aaf-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9aaf-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac7ec-123">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ac7ec-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c9aaf-123">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c9aaf-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ac7ec-124">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="ac7ec-124">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c9aaf-124">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="c9aaf-124">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ac7ec-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac7ec-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c9aaf-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9aaf-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac7ec-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac7ec-126">See also</span></span>
-- [<span data-ttu-id="ac7ec-127">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ac7ec-127">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c9aaf-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9aaf-126">See also</span></span>
+- [<span data-ttu-id="c9aaf-127">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9aaf-127">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

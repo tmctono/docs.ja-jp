@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405289"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493114"
 ---
-# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="afb1c-102">ICorDebugAssemblyEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="afb1c-102">ICorDebugAssemblyEnum::Next Method</span></span>
-<span data-ttu-id="afb1c-103">コレクションの現在のカーソル位置からのアセンブリの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="afb1c-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
+# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="f3797-102">ICorDebugAssemblyEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="f3797-102">ICorDebugAssemblyEnum::Next Method</span></span>
+<span data-ttu-id="f3797-103">現在のカーソル位置から、コレクションから指定した数のアセンブリを取得します。</span><span class="sxs-lookup"><span data-stu-id="f3797-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afb1c-104">構文</span><span class="sxs-lookup"><span data-stu-id="afb1c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3797-104">構文</span><span class="sxs-lookup"><span data-stu-id="f3797-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="afb1c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="afb1c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3797-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f3797-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="afb1c-106">[in]取得するアセンブリの数。</span><span class="sxs-lookup"><span data-stu-id="afb1c-106">[in] The number of assemblies to be retrieved.</span></span>  
+ <span data-ttu-id="f3797-106">[in]取得するアセンブリの数。</span><span class="sxs-lookup"><span data-stu-id="f3797-106">[in] The number of assemblies to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="afb1c-107">[out]アセンブリを表す ICorDebugAssembly オブジェクトを指し示すそれぞれが、ポインターの配列。</span><span class="sxs-lookup"><span data-stu-id="afb1c-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
+ <span data-ttu-id="f3797-107">[out]アセンブリを表す ICorDebugAssembly オブジェクトを指す各ポインターの配列。</span><span class="sxs-lookup"><span data-stu-id="f3797-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="afb1c-108">[out]実際に返されるアセンブリの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="afb1c-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="afb1c-109">この値を null にすることがある場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="afb1c-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="f3797-108">[out]実際に返されるアセンブリの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f3797-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="f3797-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="f3797-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afb1c-110">要件</span><span class="sxs-lookup"><span data-stu-id="afb1c-110">Requirements</span></span>  
- <span data-ttu-id="afb1c-111">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="afb1c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3797-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="f3797-110">Requirements</span></span>  
+ <span data-ttu-id="f3797-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3797-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="afb1c-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="afb1c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f3797-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3797-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="afb1c-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="afb1c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3797-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3797-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="afb1c-114">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afb1c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f3797-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3797-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

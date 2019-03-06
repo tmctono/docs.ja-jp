@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468235"
 ---
-# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="a4a08-102">ICorProfilerInfo::IsArrayClass メソッド</span><span class="sxs-lookup"><span data-stu-id="a4a08-102">ICorProfilerInfo::IsArrayClass Method</span></span>
-<span data-ttu-id="a4a08-103">指定したクラスが、配列クラスであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="a4a08-103">Determines whether the specified class is an array class.</span></span>  
+# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="32bcb-102">ICorProfilerInfo::IsArrayClass メソッド</span><span class="sxs-lookup"><span data-stu-id="32bcb-102">ICorProfilerInfo::IsArrayClass Method</span></span>
+<span data-ttu-id="32bcb-103">指定したクラスが、配列クラスであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="32bcb-103">Determines whether the specified class is an array class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4a08-104">構文</span><span class="sxs-lookup"><span data-stu-id="a4a08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32bcb-104">構文</span><span class="sxs-lookup"><span data-stu-id="32bcb-104">Syntax</span></span>  
   
 ```  
 HRESULT IsArrayClass(  
@@ -37,30 +37,30 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a4a08-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a4a08-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32bcb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="32bcb-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="a4a08-106">[in]調査するクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="a4a08-106">[in] The ID of the class to be examined.</span></span>  
+ <span data-ttu-id="32bcb-106">[in]調査するクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="32bcb-106">[in] The ID of the class to be examined.</span></span>  
   
  `pBaseElemType`  
- <span data-ttu-id="a4a08-107">[out]配列要素の種類を示す CorElementType 列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4a08-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
+ <span data-ttu-id="32bcb-107">[out]配列要素の種類を示す CorElementType 列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="32bcb-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
   
  `pBaseClassId`  
- <span data-ttu-id="a4a08-108">[out]使用可能な場合は、配列の要素のクラス ID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4a08-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
+ <span data-ttu-id="32bcb-108">[out]使用可能な場合は、配列の要素のクラス ID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="32bcb-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
   
  `pcRank`  
- <span data-ttu-id="a4a08-109">[out]配列のランク (次元の数では、) を示す整数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4a08-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="32bcb-109">[out]配列のランク (次元の数では、) を示す整数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="32bcb-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a4a08-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="a4a08-110">Remarks</span></span>  
- <span data-ttu-id="a4a08-111">指定したクラスが、配列クラスの場合、`IsArrayClass`メソッドは、S_OK HRESULT と null 以外の出力パラメーターに値を返します。</span><span class="sxs-lookup"><span data-stu-id="a4a08-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="a4a08-112">それ以外の場合、S_FALSE を返します。</span><span class="sxs-lookup"><span data-stu-id="a4a08-112">Otherwise, it returns S_FALSE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32bcb-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="32bcb-110">Remarks</span></span>  
+ <span data-ttu-id="32bcb-111">指定したクラスが、配列クラスの場合、`IsArrayClass`メソッドは、S_OK HRESULT と null 以外の出力パラメーターに値を返します。</span><span class="sxs-lookup"><span data-stu-id="32bcb-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="32bcb-112">それ以外の場合、S_FALSE を返します。</span><span class="sxs-lookup"><span data-stu-id="32bcb-112">Otherwise, it returns S_FALSE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4a08-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="a4a08-113">Requirements</span></span>  
- <span data-ttu-id="a4a08-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a4a08-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32bcb-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="32bcb-113">Requirements</span></span>  
+ <span data-ttu-id="32bcb-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="32bcb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a4a08-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a4a08-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="32bcb-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="32bcb-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a4a08-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4a08-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32bcb-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32bcb-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a4a08-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4a08-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="32bcb-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32bcb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4a08-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4a08-118">See also</span></span>
-- [<span data-ttu-id="a4a08-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a4a08-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="32bcb-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="32bcb-118">See also</span></span>
+- [<span data-ttu-id="32bcb-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="32bcb-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

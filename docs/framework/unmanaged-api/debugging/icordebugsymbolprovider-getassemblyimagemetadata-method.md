@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ea905443a01f504c1f303f726382b441ae039b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb255330937b00a987ee0d07f0332d04fe1746d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489983"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="c0fc0-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド</span><span class="sxs-lookup"><span data-stu-id="c0fc0-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
-<span data-ttu-id="c0fc0-103">マージされたアセンブリのメタデータを返します。</span><span class="sxs-lookup"><span data-stu-id="c0fc0-103">Returns the metadata from a merged assembly.</span></span>  
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="f6b5b-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド</span><span class="sxs-lookup"><span data-stu-id="f6b5b-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
+<span data-ttu-id="f6b5b-103">マージされたアセンブリのメタデータを返します。</span><span class="sxs-lookup"><span data-stu-id="f6b5b-103">Returns the metadata from a merged assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c0fc0-104">構文</span><span class="sxs-lookup"><span data-stu-id="c0fc0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6b5b-104">構文</span><span class="sxs-lookup"><span data-stu-id="f6b5b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyImageMetadata(  
@@ -22,24 +22,24 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c0fc0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c0fc0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6b5b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f6b5b-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="c0fc0-106">[out]アドレスへのポインター、 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)マージされたアセンブリのメタデータのアドレスとサイズに関する情報を含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="c0fc0-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
+ <span data-ttu-id="f6b5b-106">[out]アドレスへのポインター、 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)マージされたアセンブリのメタデータのアドレスとサイズに関する情報を含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f6b5b-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c0fc0-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="c0fc0-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6b5b-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="f6b5b-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c0fc0-108">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="c0fc0-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="f6b5b-108">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="f6b5b-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c0fc0-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c0fc0-109">Requirements</span></span>  
- <span data-ttu-id="c0fc0-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c0fc0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6b5b-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="f6b5b-109">Requirements</span></span>  
+ <span data-ttu-id="f6b5b-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f6b5b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0fc0-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c0fc0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f6b5b-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6b5b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c0fc0-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c0fc0-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6b5b-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6b5b-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c0fc0-113">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0fc0-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="f6b5b-113">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6b5b-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0fc0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c0fc0-114">See also</span></span>
-- [<span data-ttu-id="c0fc0-115">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c0fc0-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="c0fc0-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c0fc0-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f6b5b-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6b5b-114">See also</span></span>
+- [<span data-ttu-id="f6b5b-115">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6b5b-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="f6b5b-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6b5b-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

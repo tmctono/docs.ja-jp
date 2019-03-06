@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89475ebc5ef04c8693adb7a83bd1dd07f5774fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a9df30ae11b13c052c75b05b0850d9f4754620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544695"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470095"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="af022-102">IMetaDataEmit::SetRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="af022-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="af022-103">指定したメソッドの相対仮想アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="af022-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="0e1cb-102">IMetaDataEmit::SetRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="0e1cb-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="0e1cb-103">指定したメソッドの相対仮想アドレスを設定します。</span><span class="sxs-lookup"><span data-stu-id="0e1cb-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af022-104">構文</span><span class="sxs-lookup"><span data-stu-id="af022-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e1cb-104">構文</span><span class="sxs-lookup"><span data-stu-id="0e1cb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetRVA (  
@@ -36,22 +36,22 @@ HRESULT SetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="af022-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="af022-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0e1cb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0e1cb-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="af022-106">[in]対象のメソッドまたはメソッドの実装のトークンです。</span><span class="sxs-lookup"><span data-stu-id="af022-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="0e1cb-106">[in]対象のメソッドまたはメソッドの実装のトークンです。</span><span class="sxs-lookup"><span data-stu-id="0e1cb-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="af022-107">[in]コードまたはデータ領域のアドレス。</span><span class="sxs-lookup"><span data-stu-id="af022-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="0e1cb-107">[in]コードまたはデータ領域のアドレス。</span><span class="sxs-lookup"><span data-stu-id="0e1cb-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af022-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="af022-108">Requirements</span></span>  
- <span data-ttu-id="af022-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="af022-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e1cb-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="0e1cb-108">Requirements</span></span>  
+ <span data-ttu-id="0e1cb-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0e1cb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af022-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af022-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0e1cb-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0e1cb-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="af022-111">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="af022-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0e1cb-111">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="0e1cb-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="af022-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af022-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0e1cb-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e1cb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af022-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="af022-113">See also</span></span>
-- [<span data-ttu-id="af022-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af022-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="af022-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af022-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0e1cb-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e1cb-113">See also</span></span>
+- [<span data-ttu-id="0e1cb-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0e1cb-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0e1cb-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0e1cb-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

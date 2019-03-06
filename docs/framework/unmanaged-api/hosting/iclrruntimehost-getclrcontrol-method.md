@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f426bac735c780d63b75eeaf49151651fd2fa65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c3b060aaeb73b2d834c053cf47f0384ca4a38f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692900"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488463"
 ---
-# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="426ae-102">ICLRRuntimeHost::GetCLRControl メソッド</span><span class="sxs-lookup"><span data-stu-id="426ae-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
-<span data-ttu-id="426ae-103">型のインターフェイス ポインターを取得[ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)ホストは、共通言語ランタイム (CLR) の部分をカスタマイズして使用できます。</span><span class="sxs-lookup"><span data-stu-id="426ae-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
+# <a name="iclrruntimehostgetclrcontrol-method"></a><span data-ttu-id="be68d-102">ICLRRuntimeHost::GetCLRControl メソッド</span><span class="sxs-lookup"><span data-stu-id="be68d-102">ICLRRuntimeHost::GetCLRControl Method</span></span>
+<span data-ttu-id="be68d-103">型のインターフェイス ポインターを取得[ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)ホストは、共通言語ランタイム (CLR) の部分をカスタマイズして使用できます。</span><span class="sxs-lookup"><span data-stu-id="be68d-103">Gets an interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that hosts can use to customize aspects of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="426ae-104">構文</span><span class="sxs-lookup"><span data-stu-id="426ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be68d-104">構文</span><span class="sxs-lookup"><span data-stu-id="be68d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCLRControl(  
@@ -35,34 +35,34 @@ HRESULT GetCLRControl(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="426ae-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="426ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be68d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="be68d-105">Parameters</span></span>  
  `pCLRControl`  
- <span data-ttu-id="426ae-106">[out]型のインターフェイス ポインターを[ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)CLR の他の側面を構成するホストできるようにします。</span><span class="sxs-lookup"><span data-stu-id="426ae-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
+ <span data-ttu-id="be68d-106">[out]型のインターフェイス ポインターを[ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)CLR の他の側面を構成するホストできるようにします。</span><span class="sxs-lookup"><span data-stu-id="be68d-106">[out] An interface pointer of type [ICLRControl Interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) that enables hosts to configure additional aspects of the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="426ae-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="426ae-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="be68d-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="be68d-107">Return Value</span></span>  
   
-|<span data-ttu-id="426ae-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="426ae-108">HRESULT</span></span>|<span data-ttu-id="426ae-109">説明</span><span class="sxs-lookup"><span data-stu-id="426ae-109">Description</span></span>|  
+|<span data-ttu-id="be68d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="be68d-108">HRESULT</span></span>|<span data-ttu-id="be68d-109">説明</span><span class="sxs-lookup"><span data-stu-id="be68d-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="426ae-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="426ae-110">S_OK</span></span>|<span data-ttu-id="426ae-111">`GetCLRControl` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="426ae-111">`GetCLRControl` returned successfully.</span></span>|  
-|<span data-ttu-id="426ae-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="426ae-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="426ae-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="426ae-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="426ae-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="426ae-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="426ae-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="426ae-115">The call timed out.</span></span>|  
-|<span data-ttu-id="426ae-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="426ae-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="426ae-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="426ae-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="426ae-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="426ae-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="426ae-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="426ae-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="426ae-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="426ae-120">E_FAIL</span></span>|<span data-ttu-id="426ae-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="426ae-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="426ae-122">メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="426ae-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="426ae-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="426ae-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="426ae-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="426ae-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="426ae-125">CLR は既に開始しています。</span><span class="sxs-lookup"><span data-stu-id="426ae-125">The CLR has already started.</span></span>|  
+|<span data-ttu-id="be68d-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="be68d-110">S_OK</span></span>|<span data-ttu-id="be68d-111">`GetCLRControl` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="be68d-111">`GetCLRControl` returned successfully.</span></span>|  
+|<span data-ttu-id="be68d-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="be68d-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="be68d-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="be68d-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="be68d-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="be68d-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="be68d-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="be68d-115">The call timed out.</span></span>|  
+|<span data-ttu-id="be68d-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="be68d-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="be68d-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="be68d-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="be68d-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="be68d-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="be68d-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="be68d-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="be68d-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="be68d-120">E_FAIL</span></span>|<span data-ttu-id="be68d-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="be68d-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="be68d-122">メソッドから E_FAIL が返された場合、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="be68d-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="be68d-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="be68d-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="be68d-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="be68d-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="be68d-125">CLR は既に開始しています。</span><span class="sxs-lookup"><span data-stu-id="be68d-125">The CLR has already started.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="426ae-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="426ae-126">Remarks</span></span>  
- <span data-ttu-id="426ae-127">`ICLRControl` 提供、 [GetCLRManager メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)メソッドで、ホストが、マネージャーの種類のいずれかにインターフェイス ポインターを取得できるようにします。</span><span class="sxs-lookup"><span data-stu-id="426ae-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be68d-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="be68d-126">Remarks</span></span>  
+ <span data-ttu-id="be68d-127">`ICLRControl` 提供、 [GetCLRManager メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)メソッドで、ホストが、マネージャーの種類のいずれかにインターフェイス ポインターを取得できるようにします。</span><span class="sxs-lookup"><span data-stu-id="be68d-127">`ICLRControl` provides the [GetCLRManager Method](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method, which enables the host to get an interface pointer to one of the manager types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="426ae-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="426ae-128">Requirements</span></span>  
- <span data-ttu-id="426ae-129">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="426ae-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be68d-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="be68d-128">Requirements</span></span>  
+ <span data-ttu-id="be68d-129">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="be68d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="426ae-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="426ae-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="be68d-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="be68d-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="426ae-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="426ae-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="be68d-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="be68d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="426ae-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="426ae-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="be68d-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be68d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="426ae-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="426ae-133">See also</span></span>
-- [<span data-ttu-id="426ae-134">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="426ae-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="426ae-135">ICLRRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="426ae-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="be68d-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="be68d-133">See also</span></span>
+- [<span data-ttu-id="be68d-134">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be68d-134">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="be68d-135">ICLRRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be68d-135">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

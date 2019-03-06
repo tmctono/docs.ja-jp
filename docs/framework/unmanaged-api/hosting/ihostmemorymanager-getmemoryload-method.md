@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704031"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469067"
 ---
-# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="52e93-102">IHostMemoryManager::GetMemoryLoad メソッド</span><span class="sxs-lookup"><span data-stu-id="52e93-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
-<span data-ttu-id="52e93-103">現在使用中で、したがって使用不可能で、ホストによって報告された、物理メモリの量を取得します。</span><span class="sxs-lookup"><span data-stu-id="52e93-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
+# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="d9e27-102">IHostMemoryManager::GetMemoryLoad メソッド</span><span class="sxs-lookup"><span data-stu-id="d9e27-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
+<span data-ttu-id="d9e27-103">現在使用中で、したがって使用不可能で、ホストによって報告された、物理メモリの量を取得します。</span><span class="sxs-lookup"><span data-stu-id="d9e27-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52e93-104">構文</span><span class="sxs-lookup"><span data-stu-id="52e93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9e27-104">構文</span><span class="sxs-lookup"><span data-stu-id="d9e27-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemoryLoad (  
@@ -36,38 +36,38 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="52e93-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="52e93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9e27-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d9e27-105">Parameters</span></span>  
  `pMemoryLoad`  
- <span data-ttu-id="52e93-106">[out]現在使用されている物理メモリの総量のおおよその割合へのポインター。</span><span class="sxs-lookup"><span data-stu-id="52e93-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
+ <span data-ttu-id="d9e27-106">[out]現在使用されている物理メモリの総量のおおよその割合へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d9e27-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
   
  `pAvailableBytes`  
- <span data-ttu-id="52e93-107">[out]共通言語ランタイム (CLR) に使用できるバイト数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="52e93-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="d9e27-107">[out]共通言語ランタイム (CLR) に使用できるバイト数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d9e27-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="52e93-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="52e93-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d9e27-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="d9e27-108">Return Value</span></span>  
   
-|<span data-ttu-id="52e93-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="52e93-109">HRESULT</span></span>|<span data-ttu-id="52e93-110">説明</span><span class="sxs-lookup"><span data-stu-id="52e93-110">Description</span></span>|  
+|<span data-ttu-id="d9e27-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d9e27-109">HRESULT</span></span>|<span data-ttu-id="d9e27-110">説明</span><span class="sxs-lookup"><span data-stu-id="d9e27-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="52e93-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="52e93-111">S_OK</span></span>|<span data-ttu-id="52e93-112">`GetMemoryLoad` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="52e93-112">`GetMemoryLoad` returned successfully.</span></span>|  
-|<span data-ttu-id="52e93-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="52e93-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="52e93-114">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="52e93-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="52e93-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="52e93-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="52e93-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="52e93-116">The call timed out.</span></span>|  
-|<span data-ttu-id="52e93-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="52e93-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="52e93-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="52e93-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="52e93-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="52e93-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="52e93-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="52e93-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="52e93-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="52e93-121">E_FAIL</span></span>|<span data-ttu-id="52e93-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="52e93-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="52e93-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="52e93-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="52e93-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="52e93-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d9e27-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d9e27-111">S_OK</span></span>|<span data-ttu-id="d9e27-112">`GetMemoryLoad` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="d9e27-112">`GetMemoryLoad` returned successfully.</span></span>|  
+|<span data-ttu-id="d9e27-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d9e27-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d9e27-114">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="d9e27-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d9e27-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d9e27-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d9e27-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="d9e27-116">The call timed out.</span></span>|  
+|<span data-ttu-id="d9e27-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d9e27-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d9e27-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="d9e27-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="d9e27-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d9e27-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d9e27-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="d9e27-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="d9e27-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d9e27-121">E_FAIL</span></span>|<span data-ttu-id="d9e27-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="d9e27-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d9e27-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="d9e27-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d9e27-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="d9e27-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="52e93-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="52e93-125">Remarks</span></span>  
- <span data-ttu-id="52e93-126">`GetMemoryLoad` Win32 のラップ`GlobalMemoryStatus`関数。</span><span class="sxs-lookup"><span data-stu-id="52e93-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="52e93-127">値`pMemoryLoad`相当、`dwMemoryLoad`フィールドに、`MEMORYSTATUS`から返される構造体`GlobalMemoryStatus`します。</span><span class="sxs-lookup"><span data-stu-id="52e93-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9e27-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="d9e27-125">Remarks</span></span>  
+ <span data-ttu-id="d9e27-126">`GetMemoryLoad` Win32 のラップ`GlobalMemoryStatus`関数。</span><span class="sxs-lookup"><span data-stu-id="d9e27-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="d9e27-127">値`pMemoryLoad`相当、`dwMemoryLoad`フィールドに、`MEMORYSTATUS`から返される構造体`GlobalMemoryStatus`します。</span><span class="sxs-lookup"><span data-stu-id="d9e27-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
   
- <span data-ttu-id="52e93-128">ランタイムは、ガベージ コレクターのヒューリスティックとして戻り値を使用します。</span><span class="sxs-lookup"><span data-stu-id="52e93-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="52e93-129">たとえば、ホストは、メモリの大部分が使用されているレポート、ガベージ コレクターが利用できるメモリの量を増やす複数世代から収集することがあります。</span><span class="sxs-lookup"><span data-stu-id="52e93-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
+ <span data-ttu-id="d9e27-128">ランタイムは、ガベージ コレクターのヒューリスティックとして戻り値を使用します。</span><span class="sxs-lookup"><span data-stu-id="d9e27-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="d9e27-129">たとえば、ホストは、メモリの大部分が使用されているレポート、ガベージ コレクターが利用できるメモリの量を増やす複数世代から収集することがあります。</span><span class="sxs-lookup"><span data-stu-id="d9e27-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52e93-130">必要条件</span><span class="sxs-lookup"><span data-stu-id="52e93-130">Requirements</span></span>  
- <span data-ttu-id="52e93-131">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="52e93-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9e27-130">必要条件</span><span class="sxs-lookup"><span data-stu-id="d9e27-130">Requirements</span></span>  
+ <span data-ttu-id="d9e27-131">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9e27-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52e93-132">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="52e93-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d9e27-132">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d9e27-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="52e93-133">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="52e93-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d9e27-133">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d9e27-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="52e93-134">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52e93-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d9e27-134">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9e27-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52e93-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="52e93-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9e27-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9e27-135">See also</span></span>
 - <xref:System.GC?displayProperty=nameWithType>
-- [<span data-ttu-id="52e93-136">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="52e93-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="d9e27-136">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d9e27-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

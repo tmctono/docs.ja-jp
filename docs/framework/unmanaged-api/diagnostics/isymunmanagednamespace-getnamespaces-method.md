@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a874c1493e1f8aaa18354de26905fabd3a793129
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8284b23f5d36f7b3405bfff706e0ee7f0e32a042
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674545"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479936"
 ---
-# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="3836d-102">ISymUnmanagedNamespace::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="3836d-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
-<span data-ttu-id="3836d-103">この名前空間の子を取得します。</span><span class="sxs-lookup"><span data-stu-id="3836d-103">Gets the children of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="8ef4a-102">ISymUnmanagedNamespace::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="8ef4a-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
+<span data-ttu-id="8ef4a-103">この名前空間の子を取得します。</span><span class="sxs-lookup"><span data-stu-id="8ef4a-103">Gets the children of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3836d-104">構文</span><span class="sxs-lookup"><span data-stu-id="3836d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ef4a-104">構文</span><span class="sxs-lookup"><span data-stu-id="8ef4a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces(  
@@ -37,21 +37,21 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3836d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3836d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8ef4a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8ef4a-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="3836d-106">[in]A`ULONG32`のサイズを示す、`namespaces`配列。</span><span class="sxs-lookup"><span data-stu-id="3836d-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="8ef4a-106">[in]A`ULONG32`のサイズを示す、`namespaces`配列。</span><span class="sxs-lookup"><span data-stu-id="8ef4a-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="3836d-107">[out]ポインターを`ULONG32`名前空間の格納に必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="3836d-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="8ef4a-107">[out]ポインターを`ULONG32`名前空間の格納に必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="8ef4a-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="3836d-108">[out]名前空間を格納しているバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3836d-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="8ef4a-108">[out]名前空間を格納しているバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8ef4a-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3836d-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="3836d-109">Return Value</span></span>  
- <span data-ttu-id="3836d-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="3836d-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8ef4a-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="8ef4a-109">Return Value</span></span>  
+ <span data-ttu-id="8ef4a-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="8ef4a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3836d-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="3836d-111">Requirements</span></span>  
- <span data-ttu-id="3836d-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3836d-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ef4a-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="8ef4a-111">Requirements</span></span>  
+ <span data-ttu-id="8ef4a-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8ef4a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3836d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="3836d-113">See also</span></span>
-- [<span data-ttu-id="3836d-114">ISymUnmanagedNamespace インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3836d-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8ef4a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8ef4a-113">See also</span></span>
+- [<span data-ttu-id="8ef4a-114">ISymUnmanagedNamespace インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ef4a-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

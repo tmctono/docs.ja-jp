@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 421b729468cad365c48bccdae3b31132dd1ed894
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88b56f6edb2ec16d8cf46659224ae38cf7a9b14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479702"
 ---
-# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="d85b4-102">ICorProfilerCallback::UnmanagedToManagedTransition メソッド</span><span class="sxs-lookup"><span data-stu-id="d85b4-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
-<span data-ttu-id="d85b4-103">アンマネージ コードからマネージ コードへの移行が発生したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="d85b4-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
+# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="9cd46-102">ICorProfilerCallback::UnmanagedToManagedTransition メソッド</span><span class="sxs-lookup"><span data-stu-id="9cd46-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
+<span data-ttu-id="9cd46-103">アンマネージ コードからマネージ コードへの移行が発生したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="9cd46-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d85b4-104">構文</span><span class="sxs-lookup"><span data-stu-id="d85b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9cd46-104">構文</span><span class="sxs-lookup"><span data-stu-id="9cd46-104">Syntax</span></span>  
   
 ```  
 HRESULT UnmanagedToManagedTransition(  
@@ -35,29 +35,29 @@ HRESULT UnmanagedToManagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d85b4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d85b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9cd46-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9cd46-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="d85b4-106">[in]呼び出される関数の ID。</span><span class="sxs-lookup"><span data-stu-id="d85b4-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="9cd46-106">[in]呼び出される関数の ID。</span><span class="sxs-lookup"><span data-stu-id="9cd46-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="d85b4-107">[in]値、 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 、アンマネージ コードからマネージ コードへの呼び出しによって、または管理対象の 1 つによって呼び出される非管理対象の関数の戻り値のために、移行が発生したかどうかを示す列挙体。</span><span class="sxs-lookup"><span data-stu-id="d85b4-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
+ <span data-ttu-id="9cd46-107">[in]値、 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 、アンマネージ コードからマネージ コードへの呼び出しによって、または管理対象の 1 つによって呼び出される非管理対象の関数の戻り値のために、移行が発生したかどうかを示す列挙体。</span><span class="sxs-lookup"><span data-stu-id="9cd46-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d85b4-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="d85b4-108">Remarks</span></span>  
- <span data-ttu-id="d85b4-109">場合の値`reason`は COR_PRF_TRANSITION_RETURN と`functionId`が null でない ID が非管理対象の関数とは決してがコンパイルされました - イン タイム (JIT) コンパイラを使用して関数。</span><span class="sxs-lookup"><span data-stu-id="d85b4-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="d85b4-110">アンマネージ関数では、名前といくつかのメタデータなど、それに関連付けられているいくつかの基本的な情報があります。</span><span class="sxs-lookup"><span data-stu-id="d85b4-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9cd46-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="9cd46-108">Remarks</span></span>  
+ <span data-ttu-id="9cd46-109">場合の値`reason`は COR_PRF_TRANSITION_RETURN と`functionId`が null でない ID が非管理対象の関数とは決してがコンパイルされました - イン タイム (JIT) コンパイラを使用して関数。</span><span class="sxs-lookup"><span data-stu-id="9cd46-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="9cd46-110">アンマネージ関数では、名前といくつかのメタデータなど、それに関連付けられているいくつかの基本的な情報があります。</span><span class="sxs-lookup"><span data-stu-id="9cd46-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
   
- <span data-ttu-id="d85b4-111">場合の値`reason`COR_PRF_TRANSITION_CALL には、呼び出された関数 (つまり、マネージ関数) されていない JIT コンパイルされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d85b4-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
+ <span data-ttu-id="9cd46-111">場合の値`reason`COR_PRF_TRANSITION_CALL には、呼び出された関数 (つまり、マネージ関数) されていない JIT コンパイルされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="9cd46-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d85b4-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="d85b4-112">Requirements</span></span>  
- <span data-ttu-id="d85b4-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d85b4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9cd46-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="9cd46-112">Requirements</span></span>  
+ <span data-ttu-id="9cd46-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9cd46-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d85b4-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d85b4-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9cd46-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9cd46-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d85b4-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d85b4-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9cd46-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9cd46-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d85b4-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d85b4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9cd46-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9cd46-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d85b4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="d85b4-117">See also</span></span>
-- [<span data-ttu-id="d85b4-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d85b4-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="d85b4-119">ManagedToUnmanagedTransition メソッド</span><span class="sxs-lookup"><span data-stu-id="d85b4-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
-- [<span data-ttu-id="d85b4-120">C++ での明示的な PInvoke (DllImport 属性) の使用方法</span><span class="sxs-lookup"><span data-stu-id="d85b4-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
-- [<span data-ttu-id="d85b4-121">C++ Interop (暗黙の PInvoke) の使用</span><span class="sxs-lookup"><span data-stu-id="d85b4-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
+## <a name="see-also"></a><span data-ttu-id="9cd46-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9cd46-117">See also</span></span>
+- [<span data-ttu-id="9cd46-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9cd46-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="9cd46-119">ManagedToUnmanagedTransition メソッド</span><span class="sxs-lookup"><span data-stu-id="9cd46-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
+- [<span data-ttu-id="9cd46-120">C++ での明示的な PInvoke (DllImport 属性) の使用方法</span><span class="sxs-lookup"><span data-stu-id="9cd46-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [<span data-ttu-id="9cd46-121">C++ Interop (暗黙の PInvoke) の使用</span><span class="sxs-lookup"><span data-stu-id="9cd46-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
