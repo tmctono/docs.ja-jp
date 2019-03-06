@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551068"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368078"
 ---
-# <a name="border"></a><span data-ttu-id="c2b0f-102">境界線</span><span class="sxs-lookup"><span data-stu-id="c2b0f-102">Border</span></span>
-<span data-ttu-id="c2b0f-103">次の例では、プロパティを動的に変更する方法、<xref:System.Windows.Controls.Border>要素。</span><span class="sxs-lookup"><span data-stu-id="c2b0f-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="4eae6-102">境界線</span><span class="sxs-lookup"><span data-stu-id="4eae6-102">Border</span></span>
+<span data-ttu-id="4eae6-103">次の例では、プロパティを動的に変更する方法、<xref:System.Windows.Controls.Border>要素。</span><span class="sxs-lookup"><span data-stu-id="4eae6-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c2b0f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c2b0f-104">In This Section</span></span>  
- [<span data-ttu-id="c2b0f-105">BorderThickness 値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="c2b0f-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4eae6-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4eae6-104">In This Section</span></span>  
+ [<span data-ttu-id="4eae6-105">BorderThickness 値をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="4eae6-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="c2b0f-106">参照</span><span class="sxs-lookup"><span data-stu-id="c2b0f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4eae6-106">参照</span><span class="sxs-lookup"><span data-stu-id="4eae6-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="c2b0f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2b0f-107">Related Sections</span></span>  
- [<span data-ttu-id="c2b0f-108">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="c2b0f-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="4eae6-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="4eae6-107">Related Sections</span></span>  
+ [<span data-ttu-id="4eae6-108">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="4eae6-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="c2b0f-109">配置、余白、パディングの概要</span><span class="sxs-lookup"><span data-stu-id="c2b0f-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="4eae6-109">配置、余白、パディングの概要</span><span class="sxs-lookup"><span data-stu-id="4eae6-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)

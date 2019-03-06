@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358809"
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="89ea8-102">ドラッグ アンド ドロップに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="89ea8-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="89ea8-103">次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]フレームワークのドラッグ アンド ドロップします。</span><span class="sxs-lookup"><span data-stu-id="89ea8-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="d3236-102">ドラッグ アンド ドロップに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="d3236-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="d3236-103">次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]フレームワークのドラッグ アンド ドロップします。</span><span class="sxs-lookup"><span data-stu-id="d3236-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="89ea8-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="89ea8-104">In This Section</span></span>  
- [<span data-ttu-id="89ea8-105">RichTextBox コントロール上にドロップしたファイルを開く</span><span class="sxs-lookup"><span data-stu-id="89ea8-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="89ea8-106">データ オブジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="89ea8-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [<span data-ttu-id="89ea8-107">データ形式がデータ オブジェクトに存在するかどうかを判別する</span><span class="sxs-lookup"><span data-stu-id="89ea8-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="89ea8-108">データ オブジェクト内のデータ形式の一覧を表示する</span><span class="sxs-lookup"><span data-stu-id="89ea8-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="89ea8-109">特定のデータ形式でデータを取得する</span><span class="sxs-lookup"><span data-stu-id="89ea8-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="89ea8-110">データ オブジェクトへ複数のデータ形式を格納する</span><span class="sxs-lookup"><span data-stu-id="89ea8-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d3236-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d3236-104">In This Section</span></span>  
+ [<span data-ttu-id="d3236-105">RichTextBox コントロール上にドロップしたファイルを開く</span><span class="sxs-lookup"><span data-stu-id="d3236-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="d3236-106">データ オブジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="d3236-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
+ [<span data-ttu-id="d3236-107">データ形式がデータ オブジェクトに存在するかどうかを判別する</span><span class="sxs-lookup"><span data-stu-id="d3236-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="d3236-108">データ オブジェクト内のデータ形式の一覧を表示する</span><span class="sxs-lookup"><span data-stu-id="d3236-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="d3236-109">特定のデータ形式でデータを取得する</span><span class="sxs-lookup"><span data-stu-id="d3236-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="d3236-110">データ オブジェクトへ複数のデータ形式を格納する</span><span class="sxs-lookup"><span data-stu-id="d3236-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="89ea8-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="89ea8-111">See also</span></span>
-- [<span data-ttu-id="89ea8-112">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="89ea8-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d3236-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d3236-111">See also</span></span>
+- [<span data-ttu-id="d3236-112">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="d3236-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)

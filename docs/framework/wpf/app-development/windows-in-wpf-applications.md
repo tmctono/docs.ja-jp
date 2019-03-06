@@ -7,28 +7,28 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550778"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353856"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="658ea-102">WPF アプリケーションのウィンドウ</span><span class="sxs-lookup"><span data-stu-id="658ea-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="658ea-103">ユーザーは、windows 経由でアプリケーションと対話します。</span><span class="sxs-lookup"><span data-stu-id="658ea-103">Users interact with applications through windows.</span></span> <span data-ttu-id="658ea-104">ウィンドウの基本的な目的をホストし、コンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="658ea-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="658ea-105">ウィンドウがホストに依存するデータの種類、アプリケーションが動作する、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベース テーブルとレコード、およびシステム情報が含まれてコンテンツの種類。</span><span class="sxs-lookup"><span data-stu-id="658ea-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="87493-102">WPF アプリケーションのウィンドウ</span><span class="sxs-lookup"><span data-stu-id="87493-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="87493-103">ユーザーは、windows でのアプリケーションと対話します。</span><span class="sxs-lookup"><span data-stu-id="87493-103">Users interact with applications through windows.</span></span> <span data-ttu-id="87493-104">ウィンドウの基本的な目的をホストし、コンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="87493-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="87493-105">ウィンドウのホストに依存しているデータの種類をアプリケーションが処理、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベース テーブルとレコード、およびシステム情報が含まれていますコンテンツの種類。</span><span class="sxs-lookup"><span data-stu-id="87493-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="658ea-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="658ea-106">In This Section</span></span>  
- [<span data-ttu-id="658ea-107">WPF ウィンドウの概要</span><span class="sxs-lookup"><span data-stu-id="658ea-107">WPF Windows Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [<span data-ttu-id="658ea-108">ダイアログ ボックスの概要</span><span class="sxs-lookup"><span data-stu-id="658ea-108">Dialog Boxes Overview</span></span>](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [<span data-ttu-id="658ea-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="658ea-109">How-to Topics</span></span>](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="87493-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="87493-106">In This Section</span></span>  
+ [<span data-ttu-id="87493-107">WPF ウィンドウの概要</span><span class="sxs-lookup"><span data-stu-id="87493-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="87493-108">ダイアログ ボックスの概要</span><span class="sxs-lookup"><span data-stu-id="87493-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="87493-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="87493-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="658ea-110">参照</span><span class="sxs-lookup"><span data-stu-id="658ea-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="87493-110">参照</span><span class="sxs-lookup"><span data-stu-id="87493-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="658ea-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="658ea-111">Related Sections</span></span>  
- [<span data-ttu-id="658ea-112">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="658ea-112">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="658ea-113">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="658ea-113">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="658ea-114">ホスティング</span><span class="sxs-lookup"><span data-stu-id="658ea-114">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [<span data-ttu-id="658ea-115">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="658ea-115">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="87493-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="87493-111">Related Sections</span></span>  
+ [<span data-ttu-id="87493-112">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="87493-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="87493-113">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="87493-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="87493-114">ホスティング</span><span class="sxs-lookup"><span data-stu-id="87493-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="87493-115">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="87493-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

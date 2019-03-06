@@ -7,29 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538676"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369176"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a><span data-ttu-id="13c68-102">方法: グリッドの子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="13c68-102">How to: Position the Child Elements of a Grid</span></span>
-<span data-ttu-id="13c68-103">この例は、get を使用してで定義されているメソッドを設定する方法を示しています。<xref:System.Windows.Controls.Grid>子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="13c68-103">This example shows how to use the get and set methods that are defined on <xref:System.Windows.Controls.Grid> to position child elements.</span></span>  
+# <a name="how-to-position-the-child-elements-of-a-grid"></a><span data-ttu-id="efb57-102">方法: グリッドの子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="efb57-102">How to: Position the Child Elements of a Grid</span></span>
+<span data-ttu-id="efb57-103">この例は、get を使用してで定義されているメソッドを設定する方法を示しています。<xref:System.Windows.Controls.Grid>子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="efb57-103">This example shows how to use the get and set methods that are defined on <xref:System.Windows.Controls.Grid> to position child elements.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13c68-104">例</span><span class="sxs-lookup"><span data-stu-id="13c68-104">Example</span></span>  
- <span data-ttu-id="13c68-105">次の例では、親<xref:System.Windows.Controls.Grid>要素 (`grid1`) を持つ 3 つの列と 3 つの行。</span><span class="sxs-lookup"><span data-stu-id="13c68-105">The following example defines a parent <xref:System.Windows.Controls.Grid> element (`grid1`) that has three columns and three rows.</span></span> <span data-ttu-id="13c68-106">子<xref:System.Windows.Shapes.Rectangle>要素 (`rect1`) に追加されます、<xref:System.Windows.Controls.Grid>列の位置 0 の行の位置は 0。</span><span class="sxs-lookup"><span data-stu-id="13c68-106">A child <xref:System.Windows.Shapes.Rectangle> element (`rect1`) is added to the <xref:System.Windows.Controls.Grid> in column position zero, row position zero.</span></span> <span data-ttu-id="13c68-107"><xref:System.Windows.Controls.Button> 要素の位置を指定して呼び出すことができるメソッドを表す、<xref:System.Windows.Shapes.Rectangle>内の要素、<xref:System.Windows.Controls.Grid>します。</span><span class="sxs-lookup"><span data-stu-id="13c68-107"><xref:System.Windows.Controls.Button> elements represent methods that can be called to reposition the <xref:System.Windows.Shapes.Rectangle> element within the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="13c68-108">ユーザーは、ボタンをクリックすると、関連メソッドは、アクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="13c68-108">When a user clicks a button, the related method is activated.</span></span>  
+## <a name="example"></a><span data-ttu-id="efb57-104">例</span><span class="sxs-lookup"><span data-stu-id="efb57-104">Example</span></span>  
+ <span data-ttu-id="efb57-105">次の例では、親<xref:System.Windows.Controls.Grid>要素 (`grid1`) を持つ 3 つの列と 3 つの行。</span><span class="sxs-lookup"><span data-stu-id="efb57-105">The following example defines a parent <xref:System.Windows.Controls.Grid> element (`grid1`) that has three columns and three rows.</span></span> <span data-ttu-id="efb57-106">子<xref:System.Windows.Shapes.Rectangle>要素 (`rect1`) に追加されます、<xref:System.Windows.Controls.Grid>列の位置 0 の行の位置は 0。</span><span class="sxs-lookup"><span data-stu-id="efb57-106">A child <xref:System.Windows.Shapes.Rectangle> element (`rect1`) is added to the <xref:System.Windows.Controls.Grid> in column position zero, row position zero.</span></span> <span data-ttu-id="efb57-107"><xref:System.Windows.Controls.Button> 要素の位置を指定して呼び出すことができるメソッドを表す、<xref:System.Windows.Shapes.Rectangle>内の要素、<xref:System.Windows.Controls.Grid>します。</span><span class="sxs-lookup"><span data-stu-id="efb57-107"><xref:System.Windows.Controls.Button> elements represent methods that can be called to reposition the <xref:System.Windows.Shapes.Rectangle> element within the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="efb57-108">ユーザーは、ボタンをクリックすると、関連メソッドは、アクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="efb57-108">When a user clicks a button, the related method is activated.</span></span>  
   
- [!code-xaml[gridGetSetMethods](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml)]  
+ [!code-xaml[gridGetSetMethods](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml)]  
   
- <span data-ttu-id="13c68-109">分離コード例では、次の処理方法をボタン<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="13c68-109">The following code-behind example handles the methods that the button <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events raise.</span></span> <span data-ttu-id="13c68-110">例では、これらのメソッド呼び出しを書き込みます<xref:System.Windows.Controls.TextBlock>使用に関連する要素が文字列として新しいプロパティ値を出力するメソッドを取得します。</span><span class="sxs-lookup"><span data-stu-id="13c68-110">The example writes these method calls to <xref:System.Windows.Controls.TextBlock> elements that use related get methods to output the new property values as strings.</span></span>  
+ <span data-ttu-id="efb57-109">分離コード例では、次の処理方法をボタン<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="efb57-109">The following code-behind example handles the methods that the button <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events raise.</span></span> <span data-ttu-id="efb57-110">例では、これらのメソッド呼び出しを書き込みます<xref:System.Windows.Controls.TextBlock>使用に関連する要素が文字列として新しいプロパティ値を出力するメソッドを取得します。</span><span class="sxs-lookup"><span data-stu-id="efb57-110">The example writes these method calls to <xref:System.Windows.Controls.TextBlock> elements that use related get methods to output the new property values as strings.</span></span>  
   
- [!code-csharp[gridGetSetMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
- [!code-vb[gridGetSetMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
- <span data-ttu-id="13c68-111">最終的な結果を次に示します。</span><span class="sxs-lookup"><span data-stu-id="13c68-111">Here is the finished result!</span></span>
+ [!code-csharp[gridGetSetMethods#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[gridGetSetMethods#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
+ <span data-ttu-id="efb57-111">最終的な結果を次に示します。</span><span class="sxs-lookup"><span data-stu-id="efb57-111">Here is the finished result!</span></span>
  
- ![スクリーン ショットは、2 つの列を含む WPF ユーザー インターフェイスを示しています、右側にある 3 x 3 のグリッドがあり、左の列と、グリッドの行の間、色付きの四角形を移動するボタン](./media/grid-methods-sample.png) 
+ ![スクリーン ショットは、2 つの列を含む WPF ユーザー インターフェイスを示しています、右側にある 3 x 3 のグリッドがあり、左の列と、グリッドの行の間、色付きの四角形を移動するボタン](././media/grid-methods-sample.png) 
   
-## <a name="see-also"></a><span data-ttu-id="13c68-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="13c68-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efb57-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="efb57-113">See also</span></span>
 - <xref:System.Windows.Controls.Grid>
-- [<span data-ttu-id="13c68-114">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="13c68-114">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="efb57-114">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="efb57-114">Panels Overview</span></span>](panels-overview.md)

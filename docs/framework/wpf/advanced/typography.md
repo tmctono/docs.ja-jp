@@ -8,28 +8,28 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: 9b382ec6d4be5023649565d411e8c65b5dee5213
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661153"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369553"
 ---
-# <a name="typography"></a><span data-ttu-id="5788a-102">タイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="5788a-102">Typography</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="5788a-103">テキスト コンテンツのリッチ プレゼンテーションのサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5788a-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="5788a-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。</span><span class="sxs-lookup"><span data-stu-id="5788a-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="5788a-105">サポートしています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]によって定義されたもの以外の他の機能を提供する、フォント、[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]形式。</span><span class="sxs-lookup"><span data-stu-id="5788a-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
+# <a name="typography"></a><span data-ttu-id="59519-102">タイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="59519-102">Typography</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="59519-103">テキスト コンテンツのリッチ プレゼンテーションのサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="59519-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="59519-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。</span><span class="sxs-lookup"><span data-stu-id="59519-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="59519-105">サポートしています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]によって定義されたもの以外の他の機能を提供する、フォント、[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]形式。</span><span class="sxs-lookup"><span data-stu-id="59519-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5788a-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5788a-106">In This Section</span></span>  
- [<span data-ttu-id="5788a-107">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="5788a-107">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [<span data-ttu-id="5788a-108">ClearType の概要</span><span class="sxs-lookup"><span data-stu-id="5788a-108">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [<span data-ttu-id="5788a-109">ClearType レジストリの設定</span><span class="sxs-lookup"><span data-stu-id="5788a-109">ClearType Registry Settings</span></span>](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [<span data-ttu-id="5788a-110">書式設定されたテキストの描画</span><span class="sxs-lookup"><span data-stu-id="5788a-110">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [<span data-ttu-id="5788a-111">テキストの高度な書式設定</span><span class="sxs-lookup"><span data-stu-id="5788a-111">Advanced Text Formatting</span></span>](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [<span data-ttu-id="5788a-112">フォント</span><span class="sxs-lookup"><span data-stu-id="5788a-112">Fonts</span></span>](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [<span data-ttu-id="5788a-113">グリフ</span><span class="sxs-lookup"><span data-stu-id="5788a-113">Glyphs</span></span>](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [<span data-ttu-id="5788a-114">方法トピック</span><span class="sxs-lookup"><span data-stu-id="5788a-114">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="59519-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="59519-106">In This Section</span></span>  
+ [<span data-ttu-id="59519-107">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="59519-107">Typography in WPF</span></span>](typography-in-wpf.md)  
+ [<span data-ttu-id="59519-108">ClearType の概要</span><span class="sxs-lookup"><span data-stu-id="59519-108">ClearType Overview</span></span>](cleartype-overview.md)  
+ [<span data-ttu-id="59519-109">ClearType レジストリの設定</span><span class="sxs-lookup"><span data-stu-id="59519-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
+ [<span data-ttu-id="59519-110">書式設定されたテキストの描画</span><span class="sxs-lookup"><span data-stu-id="59519-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
+ [<span data-ttu-id="59519-111">テキストの高度な書式設定</span><span class="sxs-lookup"><span data-stu-id="59519-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
+ [<span data-ttu-id="59519-112">フォント</span><span class="sxs-lookup"><span data-stu-id="59519-112">Fonts</span></span>](fonts-wpf.md)  
+ [<span data-ttu-id="59519-113">グリフ</span><span class="sxs-lookup"><span data-stu-id="59519-113">Glyphs</span></span>](glyphs.md)  
+ [<span data-ttu-id="59519-114">方法トピック</span><span class="sxs-lookup"><span data-stu-id="59519-114">How-to Topics</span></span>](typography-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="5788a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5788a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59519-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="59519-115">See also</span></span>
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="5788a-116">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="5788a-116">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="5788a-117">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="5788a-117">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [<span data-ttu-id="5788a-118">WPF アプリケーションのパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="5788a-118">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [<span data-ttu-id="59519-116">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="59519-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="59519-117">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="59519-117">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="59519-118">WPF アプリケーションのパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="59519-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)

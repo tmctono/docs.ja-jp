@@ -8,42 +8,42 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361214"
 ---
-# <a name="events-wpf"></a><span data-ttu-id="aae37-102">イベント (WPF)</span><span class="sxs-lookup"><span data-stu-id="aae37-102">Events (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="aae37-103"> では、アプリケーションの要素ツリー内のさまざまなリスナー上に存在するハンドラーを呼び出すことができるルーティング イベントが導入されています。</span><span class="sxs-lookup"><span data-stu-id="aae37-103"> introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="0132a-102">イベント (WPF)</span><span class="sxs-lookup"><span data-stu-id="0132a-102">Events (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="0132a-103">では、アプリケーションの要素ツリー内のさまざまなリスナー上に存在するハンドラーを呼び出すことができるルーティング イベントが導入されています。</span><span class="sxs-lookup"><span data-stu-id="0132a-103">introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aae37-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="aae37-104">In This Section</span></span>  
- [<span data-ttu-id="aae37-105">ルーティング イベントの概要</span><span class="sxs-lookup"><span data-stu-id="aae37-105">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [<span data-ttu-id="aae37-106">添付イベントの概要</span><span class="sxs-lookup"><span data-stu-id="aae37-106">Attached Events Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [<span data-ttu-id="aae37-107">オブジェクトの有効期間イベント</span><span class="sxs-lookup"><span data-stu-id="aae37-107">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [<span data-ttu-id="aae37-108">ルーティング イベントの処理済みとしてのマーキング、およびクラス処理</span><span class="sxs-lookup"><span data-stu-id="aae37-108">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="aae37-109">プレビュー イベント</span><span class="sxs-lookup"><span data-stu-id="aae37-109">Preview Events</span></span>](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [<span data-ttu-id="aae37-110">プロパティ変更イベント</span><span class="sxs-lookup"><span data-stu-id="aae37-110">Property Change Events</span></span>](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [<span data-ttu-id="aae37-111">Visual Basic と WPF のイベント処理</span><span class="sxs-lookup"><span data-stu-id="aae37-111">Visual Basic and WPF Event Handling</span></span>](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="aae37-112">弱いイベント パターン</span><span class="sxs-lookup"><span data-stu-id="aae37-112">Weak Event Patterns</span></span>](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [<span data-ttu-id="aae37-113">方法トピック</span><span class="sxs-lookup"><span data-stu-id="aae37-113">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0132a-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="0132a-104">In This Section</span></span>  
+ [<span data-ttu-id="0132a-105">ルーティング イベントの概要</span><span class="sxs-lookup"><span data-stu-id="0132a-105">Routed Events Overview</span></span>](routed-events-overview.md)  
+ [<span data-ttu-id="0132a-106">添付イベントの概要</span><span class="sxs-lookup"><span data-stu-id="0132a-106">Attached Events Overview</span></span>](attached-events-overview.md)  
+ [<span data-ttu-id="0132a-107">オブジェクトの有効期間イベント</span><span class="sxs-lookup"><span data-stu-id="0132a-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
+ [<span data-ttu-id="0132a-108">ルーティング イベントの処理済みとしてのマーキング、およびクラス処理</span><span class="sxs-lookup"><span data-stu-id="0132a-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="0132a-109">プレビュー イベント</span><span class="sxs-lookup"><span data-stu-id="0132a-109">Preview Events</span></span>](preview-events.md)  
+ [<span data-ttu-id="0132a-110">プロパティ変更イベント</span><span class="sxs-lookup"><span data-stu-id="0132a-110">Property Change Events</span></span>](property-change-events.md)  
+ [<span data-ttu-id="0132a-111">Visual Basic と WPF のイベント処理</span><span class="sxs-lookup"><span data-stu-id="0132a-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="0132a-112">弱いイベント パターン</span><span class="sxs-lookup"><span data-stu-id="0132a-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
+ [<span data-ttu-id="0132a-113">方法トピック</span><span class="sxs-lookup"><span data-stu-id="0132a-113">How-to Topics</span></span>](events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="aae37-114">参照</span><span class="sxs-lookup"><span data-stu-id="aae37-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0132a-114">参照</span><span class="sxs-lookup"><span data-stu-id="0132a-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="aae37-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="aae37-115">Related Sections</span></span>  
- [<span data-ttu-id="aae37-116">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="aae37-116">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="aae37-117">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="aae37-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="aae37-118">基本要素</span><span class="sxs-lookup"><span data-stu-id="aae37-118">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="aae37-119">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="aae37-119">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="aae37-120">プロパティ</span><span class="sxs-lookup"><span data-stu-id="aae37-120">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="aae37-121">入力</span><span class="sxs-lookup"><span data-stu-id="aae37-121">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="aae37-122">リソース</span><span class="sxs-lookup"><span data-stu-id="aae37-122">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="aae37-123">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="aae37-123">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="aae37-124">WPF のコンテンツ モデル</span><span class="sxs-lookup"><span data-stu-id="aae37-124">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="aae37-125">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="aae37-125">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="0132a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="0132a-115">Related Sections</span></span>  
+ [<span data-ttu-id="0132a-116">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="0132a-116">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="0132a-117">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="0132a-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="0132a-118">基本要素</span><span class="sxs-lookup"><span data-stu-id="0132a-118">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="0132a-119">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="0132a-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="0132a-120">Properties</span><span class="sxs-lookup"><span data-stu-id="0132a-120">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="0132a-121">入力</span><span class="sxs-lookup"><span data-stu-id="0132a-121">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="0132a-122">リソース</span><span class="sxs-lookup"><span data-stu-id="0132a-122">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="0132a-123">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="0132a-123">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="0132a-124">WPF のコンテンツ モデル</span><span class="sxs-lookup"><span data-stu-id="0132a-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="0132a-125">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="0132a-125">Threading Model</span></span>](threading-model.md)
