@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be144ac8250adf803ddb1f20ea55be09cb3e81d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 886e2a81bab9fbf64668159b501a1d20180b9462
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687389"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503100"
 ---
-# <a name="functionenter-function"></a><span data-ttu-id="8b880-102">FunctionEnter 関数</span><span class="sxs-lookup"><span data-stu-id="8b880-102">FunctionEnter Function</span></span>
-<span data-ttu-id="8b880-103">コントロールが関数に渡されることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="8b880-103">Notifies the profiler that control is being passed to a function.</span></span>  
+# <a name="functionenter-function"></a><span data-ttu-id="3b45c-102">FunctionEnter 関数</span><span class="sxs-lookup"><span data-stu-id="3b45c-102">FunctionEnter Function</span></span>
+<span data-ttu-id="3b45c-103">コントロールが関数に渡されることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="3b45c-103">Notifies the profiler that control is being passed to a function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8b880-104">`FunctionEnter`関数は、.NET Framework version 2.0 では、非推奨し、その使用には、パフォーマンスの低下が発生します。</span><span class="sxs-lookup"><span data-stu-id="8b880-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="8b880-105">使用して、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)関数を使用します。</span><span class="sxs-lookup"><span data-stu-id="8b880-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
+>  <span data-ttu-id="3b45c-104">`FunctionEnter`関数は、.NET Framework version 2.0 では、非推奨し、その使用には、パフォーマンスの低下が発生します。</span><span class="sxs-lookup"><span data-stu-id="3b45c-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="3b45c-105">使用して、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)関数を使用します。</span><span class="sxs-lookup"><span data-stu-id="3b45c-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b880-106">構文</span><span class="sxs-lookup"><span data-stu-id="8b880-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b45c-106">構文</span><span class="sxs-lookup"><span data-stu-id="3b45c-106">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionEnter (  
@@ -37,35 +37,35 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8b880-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b880-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b45c-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3b45c-107">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="8b880-108">[in]コントロールが渡される関数の識別子。</span><span class="sxs-lookup"><span data-stu-id="8b880-108">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="3b45c-108">[in]コントロールが渡される関数の識別子。</span><span class="sxs-lookup"><span data-stu-id="3b45c-108">[in] The identifier of the function to which control is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8b880-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="8b880-109">Remarks</span></span>  
- <span data-ttu-id="8b880-110">`FunctionEnter`関数は、コールバックは、これを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b880-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="8b880-111">実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。</span><span class="sxs-lookup"><span data-stu-id="8b880-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b45c-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="3b45c-109">Remarks</span></span>  
+ <span data-ttu-id="3b45c-110">`FunctionEnter`関数は、コールバックは、これを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3b45c-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="3b45c-111">実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。</span><span class="sxs-lookup"><span data-stu-id="3b45c-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="8b880-112">実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。</span><span class="sxs-lookup"><span data-stu-id="8b880-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="3b45c-112">実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。</span><span class="sxs-lookup"><span data-stu-id="3b45c-112">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="8b880-113">項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b880-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="3b45c-113">項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3b45c-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="8b880-114">終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b880-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="3b45c-114">終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3b45c-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="8b880-115">実装`FunctionEnter`ガベージ コレクションは延期されますブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="8b880-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="8b880-116">実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。</span><span class="sxs-lookup"><span data-stu-id="8b880-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="8b880-117">ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionEnter`を返します。</span><span class="sxs-lookup"><span data-stu-id="8b880-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
+ <span data-ttu-id="3b45c-115">実装`FunctionEnter`ガベージ コレクションは延期されますブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="3b45c-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="3b45c-116">実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。</span><span class="sxs-lookup"><span data-stu-id="3b45c-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="3b45c-117">ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionEnter`を返します。</span><span class="sxs-lookup"><span data-stu-id="3b45c-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
   
- <span data-ttu-id="8b880-118">また、`FunctionEnter`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。</span><span class="sxs-lookup"><span data-stu-id="8b880-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="3b45c-118">また、`FunctionEnter`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。</span><span class="sxs-lookup"><span data-stu-id="3b45c-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b880-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b880-119">Requirements</span></span>  
- <span data-ttu-id="8b880-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b880-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b45c-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="3b45c-119">Requirements</span></span>  
+ <span data-ttu-id="3b45c-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b45c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b880-121">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="8b880-121">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="3b45c-121">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="3b45c-121">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="8b880-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b880-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3b45c-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b45c-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8b880-123">**.NET framework のバージョン:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="8b880-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="3b45c-123">**.NET framework のバージョン:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="3b45c-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b880-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b880-124">See also</span></span>
-- [<span data-ttu-id="8b880-125">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="8b880-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="8b880-126">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="8b880-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="8b880-127">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="8b880-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="8b880-128">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="8b880-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="8b880-129">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="8b880-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="3b45c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="3b45c-124">See also</span></span>
+- [<span data-ttu-id="3b45c-125">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="3b45c-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="3b45c-126">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="3b45c-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="3b45c-127">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="3b45c-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="3b45c-128">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="3b45c-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="3b45c-129">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="3b45c-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

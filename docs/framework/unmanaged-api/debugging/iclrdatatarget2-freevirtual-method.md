@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02bba59a1c4445b3e432d5e44f2bccc4b72ce1da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8d2f6a716c65596c781015bad0dea52705611a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487165"
 ---
-# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="1b32a-102">ICLRDataTarget2::FreeVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="1b32a-102">ICLRDataTarget2::FreeVirtual Method</span></span>
-<span data-ttu-id="1b32a-103">ターゲット プロセスのアドレス空間に割り当てられていたメモリを解放共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1b32a-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
+# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="cb9e0-102">ICLRDataTarget2::FreeVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="cb9e0-102">ICLRDataTarget2::FreeVirtual Method</span></span>
+<span data-ttu-id="cb9e0-103">ターゲット プロセスのアドレス空間に割り当てられていたメモリを解放共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b32a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1b32a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb9e0-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb9e0-104">Syntax</span></span>  
   
 ```  
 HRESULT FreeVirtual(  
@@ -37,30 +37,30 @@ HRESULT FreeVirtual(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1b32a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1b32a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb9e0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb9e0-105">Parameters</span></span>  
  `addr`  
- <span data-ttu-id="1b32a-106">[in]A`CLRDATA_ADDRESS`が解放されるメモリの開始アドレスを指定する値。</span><span class="sxs-lookup"><span data-stu-id="1b32a-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
+ <span data-ttu-id="cb9e0-106">[in]A`CLRDATA_ADDRESS`が解放されるメモリの開始アドレスを指定する値。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
   
  `size`  
- <span data-ttu-id="1b32a-107">[in]解放するメモリのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="1b32a-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
+ <span data-ttu-id="cb9e0-107">[in]解放するメモリのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
   
  `typeFlags`  
- <span data-ttu-id="1b32a-108">[in]メモリの解放を制御するフラグ。</span><span class="sxs-lookup"><span data-stu-id="1b32a-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="1b32a-109">Win32 を参照してください。`VirtualFree`関数。</span><span class="sxs-lookup"><span data-stu-id="1b32a-109">See the Win32 `VirtualFree` function.</span></span>  
+ <span data-ttu-id="cb9e0-108">[in]メモリの解放を制御するフラグ。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="cb9e0-109">Win32 を参照してください。`VirtualFree`関数。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-109">See the Win32 `VirtualFree` function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1b32a-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="1b32a-110">Remarks</span></span>  
- <span data-ttu-id="1b32a-111">`FreeVirtual`メソッドは、Win32 の論理ラッパーとして機能`VirtualFree`関数。</span><span class="sxs-lookup"><span data-stu-id="1b32a-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb9e0-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="cb9e0-110">Remarks</span></span>  
+ <span data-ttu-id="cb9e0-111">`FreeVirtual`メソッドは、Win32 の論理ラッパーとして機能`VirtualFree`関数。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
   
- <span data-ttu-id="1b32a-112">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="1b32a-112">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="cb9e0-112">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b32a-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="1b32a-113">Requirements</span></span>  
- <span data-ttu-id="1b32a-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b32a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb9e0-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="cb9e0-113">Requirements</span></span>  
+ <span data-ttu-id="cb9e0-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb9e0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b32a-115">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="1b32a-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="cb9e0-115">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="cb9e0-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="1b32a-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b32a-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cb9e0-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb9e0-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b32a-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b32a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cb9e0-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb9e0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b32a-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b32a-118">See also</span></span>
-- [<span data-ttu-id="1b32a-119">ICLRDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1b32a-119">ICLRDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [<span data-ttu-id="1b32a-120">AllocVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="1b32a-120">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+## <a name="see-also"></a><span data-ttu-id="cb9e0-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb9e0-118">See also</span></span>
+- [<span data-ttu-id="cb9e0-119">ICLRDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb9e0-119">ICLRDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [<span data-ttu-id="cb9e0-120">AllocVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="cb9e0-120">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
