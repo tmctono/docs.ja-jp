@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 540288f83de9c3c6ff2111330c77ded48abd6d5f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479117"
 ---
-# <a name="icordebugmodulegetsize-method"></a><span data-ttu-id="e7d18-102">ICorDebugModule::GetSize メソッド</span><span class="sxs-lookup"><span data-stu-id="e7d18-102">ICorDebugModule::GetSize Method</span></span>
-<span data-ttu-id="e7d18-103">モジュールのバイト単位のサイズを取得します。</span><span class="sxs-lookup"><span data-stu-id="e7d18-103">Gets the size, in bytes, of the module.</span></span>  
+# <a name="icordebugmodulegetsize-method"></a><span data-ttu-id="baa4d-102">ICorDebugModule::GetSize メソッド</span><span class="sxs-lookup"><span data-stu-id="baa4d-102">ICorDebugModule::GetSize Method</span></span>
+<span data-ttu-id="baa4d-103">モジュールのバイト単位のサイズを取得します。</span><span class="sxs-lookup"><span data-stu-id="baa4d-103">Gets the size, in bytes, of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7d18-104">構文</span><span class="sxs-lookup"><span data-stu-id="e7d18-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="baa4d-104">構文</span><span class="sxs-lookup"><span data-stu-id="baa4d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize(  
@@ -35,17 +35,17 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e7d18-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e7d18-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="baa4d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="baa4d-105">Parameters</span></span>  
  `pcBytes`  
- <span data-ttu-id="e7d18-106">[out]バイトのモジュールのサイズ。</span><span class="sxs-lookup"><span data-stu-id="e7d18-106">[out] The size of the module in bytes.</span></span>  
+ <span data-ttu-id="baa4d-106">[out]\(バイト単位)、モジュールのサイズ。</span><span class="sxs-lookup"><span data-stu-id="baa4d-106">[out] The size of the module in bytes.</span></span>  
   
- <span data-ttu-id="e7d18-107">モジュールは、ネイティブ イメージ ジェネレーター (NGen.exe) から生成された、モジュールのサイズが 0 になります。</span><span class="sxs-lookup"><span data-stu-id="e7d18-107">If the module was produced from the native image generator (NGen.exe), the size of the module will be zero.</span></span>  
+ <span data-ttu-id="baa4d-107">モジュールは、ネイティブ イメージ ジェネレーター (NGen.exe) から生成された、モジュールのサイズが 0 になります。</span><span class="sxs-lookup"><span data-stu-id="baa4d-107">If the module was produced from the native image generator (NGen.exe), the size of the module will be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7d18-108">要件</span><span class="sxs-lookup"><span data-stu-id="e7d18-108">Requirements</span></span>  
- <span data-ttu-id="e7d18-109">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="e7d18-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="baa4d-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="baa4d-108">Requirements</span></span>  
+ <span data-ttu-id="baa4d-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="baa4d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7d18-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7d18-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="baa4d-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="baa4d-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7d18-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7d18-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="baa4d-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="baa4d-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7d18-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7d18-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="baa4d-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="baa4d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
