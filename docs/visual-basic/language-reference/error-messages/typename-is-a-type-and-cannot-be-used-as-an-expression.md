@@ -14,14 +14,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55285143"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="27ec3-102">'\<typename >' は型であり、式として使用することはできません</span><span class="sxs-lookup"><span data-stu-id="27ec3-102">'\<typename>' is a type and cannot be used as an expression</span></span>
-<span data-ttu-id="27ec3-103">式が必要な個所で、型名が出現しています。</span><span class="sxs-lookup"><span data-stu-id="27ec3-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="27ec3-104">式は、変数、定数、リテラル、プロパティ、および `Function` プロシージャ呼び出しを適宜組み合わせて構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="27ec3-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="17555-102">'\<typename>' は型であるため、式として使用することはできません</span><span class="sxs-lookup"><span data-stu-id="17555-102">'\<typename>' is a type and cannot be used as an expression</span></span>
+<span data-ttu-id="17555-103">式が必要な個所で、型名が出現しています。</span><span class="sxs-lookup"><span data-stu-id="17555-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="17555-104">式は、変数、定数、リテラル、プロパティ、および `Function` プロシージャ呼び出しを適宜組み合わせて構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="17555-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  
   
- <span data-ttu-id="27ec3-105">**エラー ID:** BC30108</span><span class="sxs-lookup"><span data-stu-id="27ec3-105">**Error ID:** BC30108</span></span>  
+ <span data-ttu-id="17555-105">**エラー ID:** BC30108</span><span class="sxs-lookup"><span data-stu-id="17555-105">**Error ID:** BC30108</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="27ec3-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="27ec3-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="17555-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="17555-106">To correct this error</span></span>  
   
--   <span data-ttu-id="27ec3-107">型名を削除し、有効な要素を使用して式を作成します。</span><span class="sxs-lookup"><span data-stu-id="27ec3-107">Remove the type name and construct the expression using valid elements.</span></span>  
+-   <span data-ttu-id="17555-107">型名を削除し、有効な要素を使用して式を作成します。</span><span class="sxs-lookup"><span data-stu-id="17555-107">Remove the type name and construct the expression using valid elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27ec3-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="27ec3-108">See also</span></span>
-- [<span data-ttu-id="27ec3-109">演算子および式</span><span class="sxs-lookup"><span data-stu-id="27ec3-109">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="17555-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="17555-108">See also</span></span>
+- [<span data-ttu-id="17555-109">演算子および式</span><span class="sxs-lookup"><span data-stu-id="17555-109">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
