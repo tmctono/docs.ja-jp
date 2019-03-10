@@ -9,42 +9,42 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: b4e65f0fd329f624aa186748d298257b15617c17
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584266"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723869"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="cbd73-102">方法: Windows フォーム DataGridView コントロールで列を固定します。</span><span class="sxs-lookup"><span data-stu-id="cbd73-102">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="cbd73-103">ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。</span><span class="sxs-lookup"><span data-stu-id="cbd73-103">When users view data displayed in a Windows Forms <xref:System.Windows.Forms.DataGridView> control, they sometimes need to refer to a single column or set of columns frequently.</span></span> <span data-ttu-id="cbd73-104">たとえば、多数の列を含む顧客情報のテーブルを表示するとき、顧客名を常に表示して、その他の列は表示領域外にスクロールするようにできると便利です。</span><span class="sxs-lookup"><span data-stu-id="cbd73-104">For example, when displaying a table of customer information that contains many columns, it is useful to display the customer name at all times while enabling other columns to scroll outside the visible region.</span></span>  
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3c0bc-102">方法: Windows フォーム DataGridView コントロールで列を固定します。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-102">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3c0bc-103">ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-103">When users view data displayed in a Windows Forms <xref:System.Windows.Forms.DataGridView> control, they sometimes need to refer to a single column or set of columns frequently.</span></span> <span data-ttu-id="3c0bc-104">たとえば、多数の列を含む顧客情報のテーブルを表示するとき、顧客名を常に表示して、その他の列は表示領域外にスクロールするようにできると便利です。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-104">For example, when displaying a table of customer information that contains many columns, it is useful to display the customer name at all times while enabling other columns to scroll outside the visible region.</span></span>  
   
- <span data-ttu-id="cbd73-105">この動作を実現するために、コントロールの列を固定することができます。</span><span class="sxs-lookup"><span data-stu-id="cbd73-105">To achieve this behavior, you can freeze columns in the control.</span></span> <span data-ttu-id="cbd73-106">列を固定すると、左側 (右から左へ記述する言語のスクリプトでは右側) のすべての列も同様に固定されます。</span><span class="sxs-lookup"><span data-stu-id="cbd73-106">When you freeze a column, all the columns to its left (or to its right in right-to-left language scripts) are frozen as well.</span></span> <span data-ttu-id="cbd73-107">固定された列は表示されたままになり、その他のすべての列はスクロールできます。</span><span class="sxs-lookup"><span data-stu-id="cbd73-107">Frozen columns remain in place while all other columns can scroll.</span></span>  
+ <span data-ttu-id="3c0bc-105">この動作を実現するために、コントロールの列を固定することができます。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-105">To achieve this behavior, you can freeze columns in the control.</span></span> <span data-ttu-id="3c0bc-106">列を固定すると、左側 (右から左へ記述する言語のスクリプトでは右側) のすべての列も同様に固定されます。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-106">When you freeze a column, all the columns to its left (or to its right in right-to-left language scripts) are frozen as well.</span></span> <span data-ttu-id="3c0bc-107">固定された列は表示されたままになり、その他のすべての列はスクロールできます。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-107">Frozen columns remain in place while all other columns can scroll.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cbd73-108">列の並べ替えが有効な場合、固定された列は、固定されていない列とは異なるグループとして扱われます。</span><span class="sxs-lookup"><span data-stu-id="cbd73-108">If column reordering is enabled, the frozen columns are treated as a group distinct from the unfrozen columns.</span></span> <span data-ttu-id="cbd73-109">ユーザーは、どちらかのグループに列を再配置できますが、1 つのグループから別のグループに列を移動することはできません。</span><span class="sxs-lookup"><span data-stu-id="cbd73-109">Users can reposition columns in either group, but they cannot move a column from one group to the other.</span></span>  
+>  <span data-ttu-id="3c0bc-108">列の並べ替えが有効な場合、固定された列は、固定されていない列とは異なるグループとして扱われます。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-108">If column reordering is enabled, the frozen columns are treated as a group distinct from the unfrozen columns.</span></span> <span data-ttu-id="3c0bc-109">ユーザーは、どちらかのグループに列を再配置できますが、1 つのグループから別のグループに列を移動することはできません。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-109">Users can reposition columns in either group, but they cannot move a column from one group to the other.</span></span>  
   
- <span data-ttu-id="cbd73-110">列の <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> プロパティは、列が常にグリッド内で表示されるかどうかを決定します。</span><span class="sxs-lookup"><span data-stu-id="cbd73-110">The <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> property of a column determines whether the column is always visible within the grid.</span></span>  
+ <span data-ttu-id="3c0bc-110">列の <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> プロパティは、列が常にグリッド内で表示されるかどうかを決定します。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-110">The <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> property of a column determines whether the column is always visible within the grid.</span></span>  
   
- <span data-ttu-id="cbd73-111">Visual Studio では、このタスクに対するサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="cbd73-111">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="cbd73-112">参照してください[方法。列を固定、Windows フォーム DataGridView コントロールのデザイナーを使用して](freeze-columns-in-the-datagrid-using-the-designer.md)します。</span><span class="sxs-lookup"><span data-stu-id="cbd73-112">Also see [How to: Freeze Columns in the Windows Forms DataGridView Control Using the Designer](freeze-columns-in-the-datagrid-using-the-designer.md).</span></span>  
+ <span data-ttu-id="3c0bc-111">Visual Studio では、このタスクに対するサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-111">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="3c0bc-112">参照してください[方法。列を固定、Windows フォーム DataGridView コントロールのデザイナーを使用して](freeze-columns-in-the-datagrid-using-the-designer.md)します。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-112">Also see [How to: Freeze Columns in the Windows Forms DataGridView Control Using the Designer](freeze-columns-in-the-datagrid-using-the-designer.md).</span></span>  
   
-### <a name="to-freeze-a-column-programmatically"></a><span data-ttu-id="cbd73-113">プログラムで列を固定するには</span><span class="sxs-lookup"><span data-stu-id="cbd73-113">To freeze a column programmatically</span></span>  
+### <a name="to-freeze-a-column-programmatically"></a><span data-ttu-id="3c0bc-113">プログラムで列を固定するには</span><span class="sxs-lookup"><span data-stu-id="3c0bc-113">To freeze a column programmatically</span></span>  
   
--   <span data-ttu-id="cbd73-114"><xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="cbd73-114">Set the <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> property to `true`.</span></span>  
+-   <span data-ttu-id="3c0bc-114"><xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-114">Set the <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType> property to `true`.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#061](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#061)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#061](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#061)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#061)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#061](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#061)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="cbd73-115">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="cbd73-115">Compiling the Code</span></span>  
- <span data-ttu-id="cbd73-116">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="cbd73-116">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3c0bc-115">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="3c0bc-115">Compiling the Code</span></span>  
+ <span data-ttu-id="3c0bc-116">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-116">This example requires:</span></span>  
   
--   <span data-ttu-id="cbd73-117">`AddToCartButton` という名前の列を含む `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="cbd73-117">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `AddToCartButton`.</span></span>  
+-   <span data-ttu-id="3c0bc-117">`AddToCartButton` という名前の列を含む `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-117">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `AddToCartButton`.</span></span>  
   
--   <span data-ttu-id="cbd73-118">
-  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="cbd73-118">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="3c0bc-118">
+  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-118">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbd73-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbd73-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c0bc-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c0bc-119">See also</span></span>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="cbd73-120">Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能</span><span class="sxs-lookup"><span data-stu-id="cbd73-120">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [<span data-ttu-id="cbd73-121">方法: Windows フォーム DataGridView コントロールの列の並べ替えを有効にします。</span><span class="sxs-lookup"><span data-stu-id="cbd73-121">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="3c0bc-120">Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能</span><span class="sxs-lookup"><span data-stu-id="3c0bc-120">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="3c0bc-121">方法: Windows フォーム DataGridView コントロールの列の並べ替えを有効にします。</span><span class="sxs-lookup"><span data-stu-id="3c0bc-121">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
