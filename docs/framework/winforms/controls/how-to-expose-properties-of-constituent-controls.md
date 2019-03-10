@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532163"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704527"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a><span data-ttu-id="1f57a-102">方法: 内在コントロールのプロパティを公開します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-102">How to: Expose Properties of Constituent Controls</span></span>
-<span data-ttu-id="1f57a-103">複合コントロールを構成するコントロールが呼び出される*内在コントロール*します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-103">The controls that make up a composite control are called *constituent controls*.</span></span> <span data-ttu-id="1f57a-104">これらのコントロールは通常プライベートで宣言されており、そのため、開発者がアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="1f57a-104">These controls are normally declared private, and thus cannot be accessed by the developer.</span></span> <span data-ttu-id="1f57a-105">今後のユーザーにこれらのコントロールのプロパティを使用できるようにする場合は、ユーザーに公開する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f57a-105">If you want to make properties of these controls available to future users, you must expose them to the user.</span></span> <span data-ttu-id="1f57a-106">ユーザー コントロールでプロパティを作成して使用内在コントロールのプロパティを公開、`get`と`set`内在コントロールのプライベート プロパティの変更を有効にするためのプロパティのアクセサー。</span><span class="sxs-lookup"><span data-stu-id="1f57a-106">A property of a constituent control is exposed by creating a property in the user control, and using the `get` and `set` accessors of that property to effect the change in the private property of the constituent control.</span></span>  
+# <a name="how-to-expose-properties-of-constituent-controls"></a><span data-ttu-id="ada08-102">方法: 内在コントロールのプロパティを公開します。</span><span class="sxs-lookup"><span data-stu-id="ada08-102">How to: Expose Properties of Constituent Controls</span></span>
+<span data-ttu-id="ada08-103">複合コントロールを構成するコントロールが呼び出される*内在コントロール*します。</span><span class="sxs-lookup"><span data-stu-id="ada08-103">The controls that make up a composite control are called *constituent controls*.</span></span> <span data-ttu-id="ada08-104">これらのコントロールは通常プライベートで宣言されており、そのため、開発者がアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="ada08-104">These controls are normally declared private, and thus cannot be accessed by the developer.</span></span> <span data-ttu-id="ada08-105">今後のユーザーにこれらのコントロールのプロパティを使用できるようにする場合は、ユーザーに公開する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ada08-105">If you want to make properties of these controls available to future users, you must expose them to the user.</span></span> <span data-ttu-id="ada08-106">ユーザー コントロールでプロパティを作成して使用内在コントロールのプロパティを公開、`get`と`set`内在コントロールのプライベート プロパティの変更を有効にするためのプロパティのアクセサー。</span><span class="sxs-lookup"><span data-stu-id="ada08-106">A property of a constituent control is exposed by creating a property in the user control, and using the `get` and `set` accessors of that property to effect the change in the private property of the constituent control.</span></span>  
   
- <span data-ttu-id="1f57a-107">という名前の構成要素であるボタンで仮想的なユーザー コントロールを検討してください`MyButton`します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-107">Consider a hypothetical user control with a constituent button named `MyButton`.</span></span> <span data-ttu-id="1f57a-108">ユーザーが要求したときに、この例では、`ConstituentButtonBackColor`プロパティに格納された値、<xref:System.Windows.Forms.Control.BackColor%2A>プロパティの`MyButton`配信されます。</span><span class="sxs-lookup"><span data-stu-id="1f57a-108">In this example, when the user requests the `ConstituentButtonBackColor` property, the value stored in the <xref:System.Windows.Forms.Control.BackColor%2A> property of `MyButton` is delivered.</span></span> <span data-ttu-id="1f57a-109">その値が自動的に渡される、ユーザーは、このプロパティに値を割り当てます、ときに、<xref:System.Windows.Forms.Control.BackColor%2A>プロパティの`MyButton`と`set`の色を変更する、コードが実行されます`MyButton`。</span><span class="sxs-lookup"><span data-stu-id="1f57a-109">When the user assigns a value to this property, that value is automatically passed to the <xref:System.Windows.Forms.Control.BackColor%2A> property of `MyButton` and the `set` code will execute, changing the color of `MyButton`.</span></span>  
+ <span data-ttu-id="ada08-107">という名前の構成要素であるボタンで仮想的なユーザー コントロールを検討してください`MyButton`します。</span><span class="sxs-lookup"><span data-stu-id="ada08-107">Consider a hypothetical user control with a constituent button named `MyButton`.</span></span> <span data-ttu-id="ada08-108">ユーザーが要求したときに、この例では、`ConstituentButtonBackColor`プロパティに格納された値、<xref:System.Windows.Forms.Control.BackColor%2A>プロパティの`MyButton`配信されます。</span><span class="sxs-lookup"><span data-stu-id="ada08-108">In this example, when the user requests the `ConstituentButtonBackColor` property, the value stored in the <xref:System.Windows.Forms.Control.BackColor%2A> property of `MyButton` is delivered.</span></span> <span data-ttu-id="ada08-109">その値が自動的に渡される、ユーザーは、このプロパティに値を割り当てます、ときに、<xref:System.Windows.Forms.Control.BackColor%2A>プロパティの`MyButton`と`set`の色を変更する、コードが実行されます`MyButton`。</span><span class="sxs-lookup"><span data-stu-id="ada08-109">When the user assigns a value to this property, that value is automatically passed to the <xref:System.Windows.Forms.Control.BackColor%2A> property of `MyButton` and the `set` code will execute, changing the color of `MyButton`.</span></span>  
   
- <span data-ttu-id="1f57a-110">次の例では、公開する方法を示しています、<xref:System.Windows.Forms.Control.BackColor%2A>構成ボタンのプロパティ。</span><span class="sxs-lookup"><span data-stu-id="1f57a-110">The following example shows how to expose the <xref:System.Windows.Forms.Control.BackColor%2A> property of the constituent button:</span></span>  
+ <span data-ttu-id="ada08-110">次の例では、公開する方法を示しています、<xref:System.Windows.Forms.Control.BackColor%2A>構成ボタンのプロパティ。</span><span class="sxs-lookup"><span data-stu-id="ada08-110">The following example shows how to expose the <xref:System.Windows.Forms.Control.BackColor%2A> property of the constituent button:</span></span>  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -49,15 +49,15 @@ public Color ButtonColor
 }  
 ```  
   
-### <a name="to-expose-a-property-of-a-constituent-control"></a><span data-ttu-id="1f57a-111">内在コントロールのプロパティを公開するには</span><span class="sxs-lookup"><span data-stu-id="1f57a-111">To expose a property of a constituent control</span></span>  
+### <a name="to-expose-a-property-of-a-constituent-control"></a><span data-ttu-id="ada08-111">内在コントロールのプロパティを公開するには</span><span class="sxs-lookup"><span data-stu-id="ada08-111">To expose a property of a constituent control</span></span>  
   
-1.  <span data-ttu-id="1f57a-112">ユーザー コントロールのパブリック プロパティを作成します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-112">Create a public property for your user control.</span></span>  
+1.  <span data-ttu-id="ada08-112">ユーザー コントロールのパブリック プロパティを作成します。</span><span class="sxs-lookup"><span data-stu-id="ada08-112">Create a public property for your user control.</span></span>  
   
-2.  <span data-ttu-id="1f57a-113">`get`セクションのプロパティを公開するプロパティの値を取得するコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-113">In the `get` section of the property, write code that retrieves the value of the property you want to expose.</span></span>  
+2.  <span data-ttu-id="ada08-113">`get`セクションのプロパティを公開するプロパティの値を取得するコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="ada08-113">In the `get` section of the property, write code that retrieves the value of the property you want to expose.</span></span>  
   
-3.  <span data-ttu-id="1f57a-114">`set`セクションのプロパティ、プロパティの値を公開されている、内在コントロールのプロパティに渡されるコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="1f57a-114">In the `set` section of the property, write code that passes the value of the property to the exposed property of the constituent control.</span></span>  
+3.  <span data-ttu-id="ada08-114">`set`セクションのプロパティ、プロパティの値を公開されている、内在コントロールのプロパティに渡されるコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="ada08-114">In the `set` section of the property, write code that passes the value of the property to the exposed property of the constituent control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f57a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f57a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ada08-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ada08-115">See also</span></span>
 - <xref:System.Windows.Forms.UserControl>
-- [<span data-ttu-id="1f57a-116">Windows フォーム コントロールのプロパティ</span><span class="sxs-lookup"><span data-stu-id="1f57a-116">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [<span data-ttu-id="1f57a-117">さまざまなカスタム コントロール</span><span class="sxs-lookup"><span data-stu-id="1f57a-117">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [<span data-ttu-id="ada08-116">Windows フォーム コントロールのプロパティ</span><span class="sxs-lookup"><span data-stu-id="ada08-116">Properties in Windows Forms Controls</span></span>](properties-in-windows-forms-controls.md)
+- [<span data-ttu-id="ada08-117">さまざまなカスタム コントロール</span><span class="sxs-lookup"><span data-stu-id="ada08-117">Varieties of Custom Controls</span></span>](varieties-of-custom-controls.md)
