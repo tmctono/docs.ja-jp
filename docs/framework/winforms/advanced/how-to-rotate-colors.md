@@ -8,47 +8,47 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: 6c4f41504911e94673707d99d804fad5b228599e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb3824d8a5a5674b83124301dbfbd5a3ba60effa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720619"
 ---
-# <a name="how-to-rotate-colors"></a><span data-ttu-id="388f6-102">方法: 色の回転</span><span class="sxs-lookup"><span data-stu-id="388f6-102">How to: Rotate Colors</span></span>
-<span data-ttu-id="388f6-103">4 次元色空間で回転は、視覚化が困難です。</span><span class="sxs-lookup"><span data-stu-id="388f6-103">Rotation in a four-dimensional color space is difficult to visualize.</span></span> <span data-ttu-id="388f6-104">できることができます簡単に固定色コンポーネントの 1 つを保持することに同意する回転を視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="388f6-104">We can make it easier to visualize rotation by agreeing to keep one of the color components fixed.</span></span> <span data-ttu-id="388f6-105">そうですね、アルファ コンポーネントに 1 に固定の (完全に不透明) を保持するとします。</span><span class="sxs-lookup"><span data-stu-id="388f6-105">Suppose we agree to keep the alpha component fixed at 1 (fully opaque).</span></span> <span data-ttu-id="388f6-106">次の図に示すように赤、緑、および青の軸を持つ 3 次元のカラー スペースを視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="388f6-106">Then we can visualize a three-dimensional color space with red, green, and blue axes as shown in the following illustration.</span></span>  
+# <a name="how-to-rotate-colors"></a><span data-ttu-id="7f44f-102">方法: 色の回転</span><span class="sxs-lookup"><span data-stu-id="7f44f-102">How to: Rotate Colors</span></span>
+<span data-ttu-id="7f44f-103">4 次元色空間で回転は、視覚化が困難です。</span><span class="sxs-lookup"><span data-stu-id="7f44f-103">Rotation in a four-dimensional color space is difficult to visualize.</span></span> <span data-ttu-id="7f44f-104">できることができます簡単に固定色コンポーネントの 1 つを保持することに同意する回転を視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="7f44f-104">We can make it easier to visualize rotation by agreeing to keep one of the color components fixed.</span></span> <span data-ttu-id="7f44f-105">そうですね、アルファ コンポーネントに 1 に固定の (完全に不透明) を保持するとします。</span><span class="sxs-lookup"><span data-stu-id="7f44f-105">Suppose we agree to keep the alpha component fixed at 1 (fully opaque).</span></span> <span data-ttu-id="7f44f-106">次の図に示すように赤、緑、および青の軸を持つ 3 次元のカラー スペースを視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="7f44f-106">Then we can visualize a three-dimensional color space with red, green, and blue axes as shown in the following illustration.</span></span>  
   
- <span data-ttu-id="388f6-107">![色の変更](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")</span><span class="sxs-lookup"><span data-stu-id="388f6-107">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")</span></span>  
+ <span data-ttu-id="7f44f-107">![色の変更](./media/recoloring03.gif "recoloring03")</span><span class="sxs-lookup"><span data-stu-id="7f44f-107">![Recoloring](./media/recoloring03.gif "recoloring03")</span></span>  
   
- <span data-ttu-id="388f6-108">色は、3-D 空間内の点として考えることができます。</span><span class="sxs-lookup"><span data-stu-id="388f6-108">A color can be thought of as a point in 3-D space.</span></span> <span data-ttu-id="388f6-109">たとえば、領域で、ポイント (1, 0, 0) は赤の色を表し領域で、ポイント (0, 1, 0) は、緑の色を表します。</span><span class="sxs-lookup"><span data-stu-id="388f6-109">For example, the point (1, 0, 0) in space represents the color red, and the point (0, 1, 0) in space represents the color green.</span></span>  
+ <span data-ttu-id="7f44f-108">色は、3-D 空間内の点として考えることができます。</span><span class="sxs-lookup"><span data-stu-id="7f44f-108">A color can be thought of as a point in 3-D space.</span></span> <span data-ttu-id="7f44f-109">たとえば、領域で、ポイント (1, 0, 0) は赤の色を表し領域で、ポイント (0, 1, 0) は、緑の色を表します。</span><span class="sxs-lookup"><span data-stu-id="7f44f-109">For example, the point (1, 0, 0) in space represents the color red, and the point (0, 1, 0) in space represents the color green.</span></span>  
   
- <span data-ttu-id="388f6-110">次の図は、(1, 0, 0) の色を回転する意味を示します、赤、緑のプレーンで 60 度の角度までです。</span><span class="sxs-lookup"><span data-stu-id="388f6-110">The following illustration shows what it means to rotate the color (1, 0, 0) through an angle of 60 degrees in the Red-Green plane.</span></span> <span data-ttu-id="388f6-111">赤、緑の平面に平行な平面の回転は、青の軸の周りの回転として考えることができます。</span><span class="sxs-lookup"><span data-stu-id="388f6-111">Rotation in a plane parallel to the Red-Green plane can be thought of as rotation about the blue axis.</span></span>  
+ <span data-ttu-id="7f44f-110">次の図は、(1, 0, 0) の色を回転する意味を示します、赤、緑のプレーンで 60 度の角度までです。</span><span class="sxs-lookup"><span data-stu-id="7f44f-110">The following illustration shows what it means to rotate the color (1, 0, 0) through an angle of 60 degrees in the Red-Green plane.</span></span> <span data-ttu-id="7f44f-111">赤、緑の平面に平行な平面の回転は、青の軸の周りの回転として考えることができます。</span><span class="sxs-lookup"><span data-stu-id="7f44f-111">Rotation in a plane parallel to the Red-Green plane can be thought of as rotation about the blue axis.</span></span>  
   
- <span data-ttu-id="388f6-112">![色の変更](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")</span><span class="sxs-lookup"><span data-stu-id="388f6-112">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")</span></span>  
+ <span data-ttu-id="7f44f-112">![色の変更](./media/recoloring04.gif "recoloring04")</span><span class="sxs-lookup"><span data-stu-id="7f44f-112">![Recoloring](./media/recoloring04.gif "recoloring04")</span></span>  
   
- <span data-ttu-id="388f6-113">次の図は、3 つの座標軸 (赤、緑、青) のそれぞれについての回転を実行するカラー行列を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="388f6-113">The following illustration shows how to initialize a color matrix to perform rotations about each of the three coordinate axes (red, green, blue).</span></span>  
+ <span data-ttu-id="7f44f-113">次の図は、3 つの座標軸 (赤、緑、青) のそれぞれについての回転を実行するカラー行列を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7f44f-113">The following illustration shows how to initialize a color matrix to perform rotations about each of the three coordinate axes (red, green, blue).</span></span>  
   
- <span data-ttu-id="388f6-114">![色の変更](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")</span><span class="sxs-lookup"><span data-stu-id="388f6-114">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")</span></span>  
+ <span data-ttu-id="7f44f-114">![色の変更](./media/recoloring05.gif "recoloring05")</span><span class="sxs-lookup"><span data-stu-id="7f44f-114">![Recoloring](./media/recoloring05.gif "recoloring05")</span></span>  
   
-## <a name="example"></a><span data-ttu-id="388f6-115">例</span><span class="sxs-lookup"><span data-stu-id="388f6-115">Example</span></span>  
- <span data-ttu-id="388f6-116">次の例は、イメージを 1 つのすべての色 (1, 0, 0.6) は、青の軸の周りで 60 度回転を適用します。</span><span class="sxs-lookup"><span data-stu-id="388f6-116">The following example takes an image that is all one color (1, 0, 0.6) and applies a 60-degree rotation about the blue axis.</span></span> <span data-ttu-id="388f6-117">回転の角度は赤、緑の平面に平行な平面でをスイープします。</span><span class="sxs-lookup"><span data-stu-id="388f6-117">The angle of the rotation is swept out in a plane that is parallel to the red-green plane.</span></span>  
+## <a name="example"></a><span data-ttu-id="7f44f-115">例</span><span class="sxs-lookup"><span data-stu-id="7f44f-115">Example</span></span>  
+ <span data-ttu-id="7f44f-116">次の例は、イメージを 1 つのすべての色 (1, 0, 0.6) は、青の軸の周りで 60 度回転を適用します。</span><span class="sxs-lookup"><span data-stu-id="7f44f-116">The following example takes an image that is all one color (1, 0, 0.6) and applies a 60-degree rotation about the blue axis.</span></span> <span data-ttu-id="7f44f-117">回転の角度は赤、緑の平面に平行な平面でをスイープします。</span><span class="sxs-lookup"><span data-stu-id="7f44f-117">The angle of the rotation is swept out in a plane that is parallel to the red-green plane.</span></span>  
   
- <span data-ttu-id="388f6-118">次の図は、左側と右側の色の回転後イメージの元のイメージを示します。</span><span class="sxs-lookup"><span data-stu-id="388f6-118">The following illustration shows the original image on the left and the color-rotated image on the right.</span></span>  
+ <span data-ttu-id="7f44f-118">次の図は、左側と右側の色の回転後イメージの元のイメージを示します。</span><span class="sxs-lookup"><span data-stu-id="7f44f-118">The following illustration shows the original image on the left and the color-rotated image on the right.</span></span>  
   
- <span data-ttu-id="388f6-119">![色を回転させる](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")</span><span class="sxs-lookup"><span data-stu-id="388f6-119">![Rotate Colors](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")</span></span>  
+ <span data-ttu-id="7f44f-119">![色を回転させる](./media/colortrans5.png "colortrans5")</span><span class="sxs-lookup"><span data-stu-id="7f44f-119">![Rotate Colors](./media/colortrans5.png "colortrans5")</span></span>  
   
- <span data-ttu-id="388f6-120">次の図は、次のコードで実行される色の回転の視覚エフェクトを示します。</span><span class="sxs-lookup"><span data-stu-id="388f6-120">The following illustration shows a visualization of the color rotation performed in the following code.</span></span>  
+ <span data-ttu-id="7f44f-120">次の図は、次のコードで実行される色の回転の視覚エフェクトを示します。</span><span class="sxs-lookup"><span data-stu-id="7f44f-120">The following illustration shows a visualization of the color rotation performed in the following code.</span></span>  
   
- <span data-ttu-id="388f6-121">![色の変更](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")</span><span class="sxs-lookup"><span data-stu-id="388f6-121">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")</span></span>  
+ <span data-ttu-id="7f44f-121">![色の変更](./media/recoloring06.gif "recoloring06")</span><span class="sxs-lookup"><span data-stu-id="7f44f-121">![Recoloring](./media/recoloring06.gif "recoloring06")</span></span>  
   
- [!code-csharp[System.Drawing.RotateColors#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="388f6-122">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="388f6-122">Compiling the Code</span></span>  
- <span data-ttu-id="388f6-123">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。</span><span class="sxs-lookup"><span data-stu-id="388f6-123">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="388f6-124">置換`RotationInput.bmp`イメージ ファイル名とパス、システムでは無効です。</span><span class="sxs-lookup"><span data-stu-id="388f6-124">Replace `RotationInput.bmp` with an image file name and path valid on your system.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7f44f-122">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="7f44f-122">Compiling the Code</span></span>  
+ <span data-ttu-id="7f44f-123">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。</span><span class="sxs-lookup"><span data-stu-id="7f44f-123">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="7f44f-124">置換`RotationInput.bmp`イメージ ファイル名とパス、システムでは無効です。</span><span class="sxs-lookup"><span data-stu-id="7f44f-124">Replace `RotationInput.bmp` with an image file name and path valid on your system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="388f6-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="388f6-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f44f-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f44f-125">See also</span></span>
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [<span data-ttu-id="388f6-126">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="388f6-126">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="388f6-127">イメージの色の変更</span><span class="sxs-lookup"><span data-stu-id="388f6-127">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [<span data-ttu-id="7f44f-126">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="7f44f-126">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="7f44f-127">イメージの色の変更</span><span class="sxs-lookup"><span data-stu-id="7f44f-127">Recoloring Images</span></span>](recoloring-images.md)

@@ -6,46 +6,46 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: fa1bd6c0274fdf702072e062e6eeab7078375491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 650d10fd681a55dfb17425111ef9d81726551da9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600285"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720187"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a><span data-ttu-id="af7b5-102">方法: 既存のコントロールを別の親に再配置します。</span><span class="sxs-lookup"><span data-stu-id="af7b5-102">How to: Reassign Existing Controls to a Different Parent</span></span>
-<span data-ttu-id="af7b5-103">フォームに存在するコントロールを新しいコンテナー コントロールに割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="af7b5-103">You can assign controls that exist on your form to a new container control.</span></span>  
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a><span data-ttu-id="74fcd-102">方法: 既存のコントロールを別の親に再配置します。</span><span class="sxs-lookup"><span data-stu-id="74fcd-102">How to: Reassign Existing Controls to a Different Parent</span></span>
+<span data-ttu-id="74fcd-103">フォームに存在するコントロールを新しいコンテナー コントロールに割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="74fcd-103">You can assign controls that exist on your form to a new container control.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="af7b5-104">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="af7b5-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="af7b5-105">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="af7b5-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="af7b5-106">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af7b5-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="74fcd-104">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="74fcd-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="74fcd-105">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="74fcd-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="74fcd-106">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74fcd-106">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-reassign-existing-controls-to-a-different-parent"></a><span data-ttu-id="af7b5-107">既存のコントロールを別の親に再配置するには</span><span class="sxs-lookup"><span data-stu-id="af7b5-107">To reassign existing controls to a different parent</span></span>  
+### <a name="to-reassign-existing-controls-to-a-different-parent"></a><span data-ttu-id="74fcd-107">既存のコントロールを別の親に再配置するには</span><span class="sxs-lookup"><span data-stu-id="74fcd-107">To reassign existing controls to a different parent</span></span>  
   
-1.  <span data-ttu-id="af7b5-108"><xref:System.Windows.Forms.Button> [ツールボックス] **から 3 つの** コントロールをフォームにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="af7b5-108">Drag three <xref:System.Windows.Forms.Button> controls from the **Toolbox** onto the form.</span></span>  
+1.  <span data-ttu-id="74fcd-108"><xref:System.Windows.Forms.Button> [ツールボックス] **から 3 つの** コントロールをフォームにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="74fcd-108">Drag three <xref:System.Windows.Forms.Button> controls from the **Toolbox** onto the form.</span></span>  
   
-     <span data-ttu-id="af7b5-109">これらを互いに近づけて配置しますが、整列はさせません。</span><span class="sxs-lookup"><span data-stu-id="af7b5-109">Position them near to each other, but leave them unaligned.</span></span>  
+     <span data-ttu-id="74fcd-109">これらを互いに近づけて配置しますが、整列はさせません。</span><span class="sxs-lookup"><span data-stu-id="74fcd-109">Position them near to each other, but leave them unaligned.</span></span>  
   
-2.  <span data-ttu-id="af7b5-110">**[ツールボックス]** で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="af7b5-110">In the **Toolbox**, click the <xref:System.Windows.Forms.FlowLayoutPanel> control icon.</span></span>  
+2.  <span data-ttu-id="74fcd-110">**[ツールボックス]** で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="74fcd-110">In the **Toolbox**, click the <xref:System.Windows.Forms.FlowLayoutPanel> control icon.</span></span>  
   
-     <span data-ttu-id="af7b5-111">アイコンはフォームにドラッグしないでください。</span><span class="sxs-lookup"><span data-stu-id="af7b5-111">Do not drag the icon onto the form.</span></span>  
+     <span data-ttu-id="74fcd-111">アイコンはフォームにドラッグしないでください。</span><span class="sxs-lookup"><span data-stu-id="74fcd-111">Do not drag the icon onto the form.</span></span>  
   
-3.  <span data-ttu-id="af7b5-112">マウス ポインターを 3 つの <xref:System.Windows.Forms.Button> コントロールに近づけます。</span><span class="sxs-lookup"><span data-stu-id="af7b5-112">Move the mouse pointer close to the three <xref:System.Windows.Forms.Button> controls.</span></span>  
+3.  <span data-ttu-id="74fcd-112">マウス ポインターを 3 つの <xref:System.Windows.Forms.Button> コントロールに近づけます。</span><span class="sxs-lookup"><span data-stu-id="74fcd-112">Move the mouse pointer close to the three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-     <span data-ttu-id="af7b5-113">ポインターが <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンが付いた十字カーソルに変わります。</span><span class="sxs-lookup"><span data-stu-id="af7b5-113">The pointer changes to a crosshair with the <xref:System.Windows.Forms.FlowLayoutPanel> control icon attached.</span></span>  
+     <span data-ttu-id="74fcd-113">ポインターが <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンが付いた十字カーソルに変わります。</span><span class="sxs-lookup"><span data-stu-id="74fcd-113">The pointer changes to a crosshair with the <xref:System.Windows.Forms.FlowLayoutPanel> control icon attached.</span></span>  
   
-4.  <span data-ttu-id="af7b5-114">マウス ボタンを押したままにします。</span><span class="sxs-lookup"><span data-stu-id="af7b5-114">Click and hold the mouse button.</span></span>  
+4.  <span data-ttu-id="74fcd-114">マウス ボタンを押したままにします。</span><span class="sxs-lookup"><span data-stu-id="74fcd-114">Click and hold the mouse button.</span></span>  
   
-5.  <span data-ttu-id="af7b5-115">マウス ポインターをドラッグして、 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのアウトラインを描画します。</span><span class="sxs-lookup"><span data-stu-id="af7b5-115">Drag the mouse pointer to draw the outline of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
+5.  <span data-ttu-id="74fcd-115">マウス ポインターをドラッグして、 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのアウトラインを描画します。</span><span class="sxs-lookup"><span data-stu-id="74fcd-115">Drag the mouse pointer to draw the outline of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-6.  <span data-ttu-id="af7b5-116">3 つの <xref:System.Windows.Forms.Button> コントロールを囲むようにアウトラインを描画します。</span><span class="sxs-lookup"><span data-stu-id="af7b5-116">Draw the outline around the three <xref:System.Windows.Forms.Button> controls.</span></span>  
+6.  <span data-ttu-id="74fcd-116">3 つの <xref:System.Windows.Forms.Button> コントロールを囲むようにアウトラインを描画します。</span><span class="sxs-lookup"><span data-stu-id="74fcd-116">Draw the outline around the three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-7.  <span data-ttu-id="af7b5-117">マウスのボタンを離します。</span><span class="sxs-lookup"><span data-stu-id="af7b5-117">Release the mouse button.</span></span>  
+7.  <span data-ttu-id="74fcd-117">マウスのボタンを離します。</span><span class="sxs-lookup"><span data-stu-id="74fcd-117">Release the mouse button.</span></span>  
   
-     <span data-ttu-id="af7b5-118">これで、3 つの <xref:System.Windows.Forms.Button> コントロールが <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに挿入されました。</span><span class="sxs-lookup"><span data-stu-id="af7b5-118">The three <xref:System.Windows.Forms.Button> controls are now inserted into the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
+     <span data-ttu-id="74fcd-118">これで、3 つの <xref:System.Windows.Forms.Button> コントロールが <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに挿入されました。</span><span class="sxs-lookup"><span data-stu-id="74fcd-118">The three <xref:System.Windows.Forms.Button> controls are now inserted into the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af7b5-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="af7b5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74fcd-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="74fcd-119">See also</span></span>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [<span data-ttu-id="af7b5-120">Windows フォームでのコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="af7b5-120">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="af7b5-121">チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置</span><span class="sxs-lookup"><span data-stu-id="af7b5-121">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [<span data-ttu-id="af7b5-122">チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置</span><span class="sxs-lookup"><span data-stu-id="af7b5-122">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [<span data-ttu-id="74fcd-120">Windows フォームでのコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="74fcd-120">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="74fcd-121">チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置</span><span class="sxs-lookup"><span data-stu-id="74fcd-121">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [<span data-ttu-id="74fcd-122">チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置</span><span class="sxs-lookup"><span data-stu-id="74fcd-122">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
