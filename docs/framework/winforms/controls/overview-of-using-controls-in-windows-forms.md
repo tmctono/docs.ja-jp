@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533089"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703245"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="d04db-102">Windows フォームでのコントロールの使用方法の概要</span><span class="sxs-lookup"><span data-stu-id="d04db-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="d04db-103">このトピックでは、Windows フォーム アプリケーションの重要な要素について説明し、コントロールを使用して Windows フォーム アプリケーションでイベントを処理する簡単な例を提供します。</span><span class="sxs-lookup"><span data-stu-id="d04db-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="3e6d3-102">Windows フォームでのコントロールの使用方法の概要</span><span class="sxs-lookup"><span data-stu-id="3e6d3-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="3e6d3-103">このトピックでは、Windows フォーム アプリケーションの重要な要素について説明し、コントロールを使用して Windows フォーム アプリケーションでイベントを処理する簡単な例を提供します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="d04db-104">単純な Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="d04db-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="d04db-105">少なくとも、Windows フォーム アプリケーションは、次の要素で構成されます。</span><span class="sxs-lookup"><span data-stu-id="d04db-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="3e6d3-104">単純な Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="3e6d3-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="3e6d3-105">少なくとも、Windows フォーム アプリケーションは、次の要素で構成されます。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <span data-ttu-id="d04db-106">1 つまたは複数のクラスから派生した<xref:System.Windows.Forms.Form?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="d04db-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="3e6d3-106">1 つまたは複数のクラスから派生した<xref:System.Windows.Forms.Form?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="d04db-107">A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドを呼び出し、<xref:System.Windows.Forms.Form>のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="d04db-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="d04db-108"><xref:System.Windows.Forms.Application.Run%2A>メソッドは、オペレーティング システムからアプリケーションへのメッセージを処理します。</span><span class="sxs-lookup"><span data-stu-id="d04db-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+-   <span data-ttu-id="3e6d3-107">A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドを呼び出し、<xref:System.Windows.Forms.Form>のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="3e6d3-108"><xref:System.Windows.Forms.Application.Run%2A>メソッドは、オペレーティング システムからアプリケーションへのメッセージを処理します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="d04db-109">次のコード例では、Windows フォーム アプリケーションの重要な要素を示します。</span><span class="sxs-lookup"><span data-stu-id="d04db-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="3e6d3-109">次のコード例では、Windows フォーム アプリケーションの重要な要素を示します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="d04db-110">Windows フォーム アプリケーションでコントロールを使用します。</span><span class="sxs-lookup"><span data-stu-id="d04db-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="d04db-111">次のコード例では、Windows フォーム アプリケーションのコントロールを使用してし、イベントを処理する方法を説明する簡単なアプリケーションを示します。</span><span class="sxs-lookup"><span data-stu-id="d04db-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="d04db-112">フォームの 3 つのボタンの例で構成されます。各ボタンがクリックされたときに背景色を変更します。</span><span class="sxs-lookup"><span data-stu-id="d04db-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="3e6d3-110">Windows フォーム アプリケーションでコントロールを使用します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="3e6d3-111">次のコード例では、Windows フォーム アプリケーションのコントロールを使用してし、イベントを処理する方法を説明する簡単なアプリケーションを示します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="3e6d3-112">フォームの 3 つのボタンの例で構成されます。各ボタンがクリックされたときに背景色を変更します。</span><span class="sxs-lookup"><span data-stu-id="3e6d3-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d04db-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d04db-113">See also</span></span>
-- [<span data-ttu-id="d04db-114">.NET Framework を使用したカスタム Windows フォーム コントロールの開発</span><span class="sxs-lookup"><span data-stu-id="d04db-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="d04db-115">Windows フォーム コントロール開発の基本概念</span><span class="sxs-lookup"><span data-stu-id="d04db-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="3e6d3-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e6d3-113">See also</span></span>
+- [<span data-ttu-id="3e6d3-114">.NET Framework を使用したカスタム Windows フォーム コントロールの開発</span><span class="sxs-lookup"><span data-stu-id="3e6d3-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="3e6d3-115">Windows フォーム コントロール開発の基本概念</span><span class="sxs-lookup"><span data-stu-id="3e6d3-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)

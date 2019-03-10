@@ -8,17 +8,18 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199576"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705380"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="8c694-102">Windows フォーム コントロールのイベントの定義</span><span class="sxs-lookup"><span data-stu-id="8c694-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="8c694-103">カスタム イベントを定義する方法の詳細については、次を参照してください。[イベント](../../../../docs/standard/events/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="8c694-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="8c694-104">関連データがないイベントを定義する場合、イベント データの基本型である <xref:System.EventArgs> を使用し、イベント デリゲートとして <xref:System.EventHandler> を使用します。</span><span class="sxs-lookup"><span data-stu-id="8c694-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="8c694-105">イベント メンバーとプロテクトを定義する操作は、すべて`On` *EventName*イベントを発生させるメソッド。</span><span class="sxs-lookup"><span data-stu-id="8c694-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="7414c-102">Windows フォーム コントロールのイベントの定義</span><span class="sxs-lookup"><span data-stu-id="7414c-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="7414c-103">カスタム イベントを定義する方法の詳細については、次を参照してください。[イベント](../../../standard/events/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="7414c-103">For details about defining custom events, see [Events](../../../standard/events/index.md).</span></span> <span data-ttu-id="7414c-104">関連データがないイベントを定義する場合、イベント データの基本型である <xref:System.EventArgs> を使用し、イベント デリゲートとして <xref:System.EventHandler> を使用します。</span><span class="sxs-lookup"><span data-stu-id="7414c-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="7414c-105">イベント メンバーとプロテクトを定義する操作は、すべて`On` *EventName*イベントを発生させるメソッド。</span><span class="sxs-lookup"><span data-stu-id="7414c-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="8c694-106">`FlashTrackBar` カスタム コントロールによる `ValueChanged` カスタム イベントの定義方法を示すコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="8c694-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="8c694-107">完全なコード、`FlashTrackBar`サンプルを参照してください、[方法: 作成、Windows フォーム コントロール進行状況を示す](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)します。</span><span class="sxs-lookup"><span data-stu-id="8c694-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="7414c-106">
+  `FlashTrackBar\` カスタム コントロールによる `ValueChanged\` カスタム イベントの定義方法を示すコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="7414c-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="7414c-107">完全なコード、`FlashTrackBar`サンプルを参照してください、[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。</span><span class="sxs-lookup"><span data-stu-id="7414c-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -76,7 +77,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8c694-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c694-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7414c-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7414c-108">See also</span></span>
 
-- [<span data-ttu-id="8c694-109">Windows フォーム コントロールのイベント</span><span class="sxs-lookup"><span data-stu-id="8c694-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [<span data-ttu-id="8c694-110">イベント</span><span class="sxs-lookup"><span data-stu-id="8c694-110">Events</span></span>](../../../../docs/standard/events/index.md)
+- [<span data-ttu-id="7414c-109">Windows フォーム コントロールのイベント</span><span class="sxs-lookup"><span data-stu-id="7414c-109">Events in Windows Forms Controls</span></span>](events-in-windows-forms-controls.md)
+- [<span data-ttu-id="7414c-110">イベント</span><span class="sxs-lookup"><span data-stu-id="7414c-110">Events</span></span>](../../../standard/events/index.md)
