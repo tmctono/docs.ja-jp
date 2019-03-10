@@ -9,30 +9,30 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-ms.openlocfilehash: 3784c833098a5585c5cdc38014d5a9542daf39f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da12ece815d8ae9d1f974b02198498b250885843
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583397"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717118"
 ---
-# <a name="restricting-the-drawing-surface-in-gdi"></a><span data-ttu-id="dd01d-102">GDI+ での描画サーフェイスの制限</span><span class="sxs-lookup"><span data-stu-id="dd01d-102">Restricting the Drawing Surface in GDI+</span></span>
-<span data-ttu-id="dd01d-103">クリッピングでは、描画を四角形または領域を制限します。</span><span class="sxs-lookup"><span data-stu-id="dd01d-103">Clipping involves restricting drawing to a certain rectangle or region.</span></span> <span data-ttu-id="dd01d-104">次の図、文字列「こんにちは」ハート形の領域にクリップされます。</span><span class="sxs-lookup"><span data-stu-id="dd01d-104">The following illustration shows the string "Hello" clipped to a heart-shaped region.</span></span>  
+# <a name="restricting-the-drawing-surface-in-gdi"></a><span data-ttu-id="a0949-102">GDI+ での描画サーフェイスの制限</span><span class="sxs-lookup"><span data-stu-id="a0949-102">Restricting the Drawing Surface in GDI+</span></span>
+<span data-ttu-id="a0949-103">クリッピングでは、描画を四角形または領域を制限します。</span><span class="sxs-lookup"><span data-stu-id="a0949-103">Clipping involves restricting drawing to a certain rectangle or region.</span></span> <span data-ttu-id="a0949-104">次の図、文字列「こんにちは」ハート形の領域にクリップされます。</span><span class="sxs-lookup"><span data-stu-id="a0949-104">The following illustration shows the string "Hello" clipped to a heart-shaped region.</span></span>  
   
- <span data-ttu-id="dd01d-105">![制限付き描画面](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art30.gif "AboutGdip02_Art30")</span><span class="sxs-lookup"><span data-stu-id="dd01d-105">![Restricted Drawing Surface](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art30.gif "AboutGdip02_Art30")</span></span>  
+ <span data-ttu-id="a0949-105">![制限付き描画面](./media/aboutgdip02-art30.gif "AboutGdip02_Art30")</span><span class="sxs-lookup"><span data-stu-id="a0949-105">![Restricted Drawing Surface](./media/aboutgdip02-art30.gif "AboutGdip02_Art30")</span></span>  
   
-## <a name="clipping-with-regions"></a><span data-ttu-id="dd01d-106">領域でクリッピング</span><span class="sxs-lookup"><span data-stu-id="dd01d-106">Clipping with Regions</span></span>  
- <span data-ttu-id="dd01d-107">パスからリージョンを作成し、クリッピングを中抜きの文字列を使用できるように、パスは、文字列のアウトラインを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="dd01d-107">Regions can be constructed from paths, and paths can contain the outlines of strings, so you can use outlined text for clipping.</span></span> <span data-ttu-id="dd01d-108">次の図は、一連の同心構造の省略記号のテキスト文字列の内部に切り取られます。</span><span class="sxs-lookup"><span data-stu-id="dd01d-108">The following illustration shows a set of concentric ellipses clipped to the interior of a string of text.</span></span>  
+## <a name="clipping-with-regions"></a><span data-ttu-id="a0949-106">領域でクリッピング</span><span class="sxs-lookup"><span data-stu-id="a0949-106">Clipping with Regions</span></span>  
+ <span data-ttu-id="a0949-107">パスからリージョンを作成し、クリッピングを中抜きの文字列を使用できるように、パスは、文字列のアウトラインを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="a0949-107">Regions can be constructed from paths, and paths can contain the outlines of strings, so you can use outlined text for clipping.</span></span> <span data-ttu-id="a0949-108">次の図は、一連の同心構造の省略記号のテキスト文字列の内部に切り取られます。</span><span class="sxs-lookup"><span data-stu-id="a0949-108">The following illustration shows a set of concentric ellipses clipped to the interior of a string of text.</span></span>  
   
- <span data-ttu-id="dd01d-109">![制限付き描画面](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art31.gif "AboutGdip02_Art31")</span><span class="sxs-lookup"><span data-stu-id="dd01d-109">![Restricted Drawing Surface](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art31.gif "AboutGdip02_Art31")</span></span>  
+ <span data-ttu-id="a0949-109">![制限付き描画面](./media/aboutgdip02-art31.gif "AboutGdip02_Art31")</span><span class="sxs-lookup"><span data-stu-id="a0949-109">![Restricted Drawing Surface](./media/aboutgdip02-art31.gif "AboutGdip02_Art31")</span></span>  
   
- <span data-ttu-id="dd01d-110">クリッピングを描画するには、作成、<xref:System.Drawing.Graphics>オブジェクト、設定、<xref:System.Drawing.Graphics.Clip%2A>プロパティをその描画メソッドを呼び出して同じ<xref:System.Drawing.Graphics>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="dd01d-110">To draw with clipping, create a <xref:System.Drawing.Graphics> object, set its <xref:System.Drawing.Graphics.Clip%2A> property, and then call the drawing methods of that same <xref:System.Drawing.Graphics> object:</span></span>  
+ <span data-ttu-id="a0949-110">クリッピングを描画するには、作成、<xref:System.Drawing.Graphics>オブジェクト、設定、<xref:System.Drawing.Graphics.Clip%2A>プロパティをその描画メソッドを呼び出して同じ<xref:System.Drawing.Graphics>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a0949-110">To draw with clipping, create a <xref:System.Drawing.Graphics> object, set its <xref:System.Drawing.Graphics.Clip%2A> property, and then call the drawing methods of that same <xref:System.Drawing.Graphics> object:</span></span>  
   
- [!code-csharp[LinesCurvesAndShapes#91](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#91)]
- [!code-vb[LinesCurvesAndShapes#91](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
+ [!code-csharp[LinesCurvesAndShapes#91](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#91)]
+ [!code-vb[LinesCurvesAndShapes#91](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
   
-## <a name="see-also"></a><span data-ttu-id="dd01d-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="dd01d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0949-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0949-111">See also</span></span>
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
-- [<span data-ttu-id="dd01d-112">直線、曲線、および図形</span><span class="sxs-lookup"><span data-stu-id="dd01d-112">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [<span data-ttu-id="dd01d-113">領域の使用</span><span class="sxs-lookup"><span data-stu-id="dd01d-113">Using Regions</span></span>](../../../../docs/framework/winforms/advanced/using-regions.md)
+- [<span data-ttu-id="a0949-112">直線、曲線、および図形</span><span class="sxs-lookup"><span data-stu-id="a0949-112">Lines, Curves, and Shapes</span></span>](lines-curves-and-shapes.md)
+- [<span data-ttu-id="a0949-113">領域の使用</span><span class="sxs-lookup"><span data-stu-id="a0949-113">Using Regions</span></span>](using-regions.md)

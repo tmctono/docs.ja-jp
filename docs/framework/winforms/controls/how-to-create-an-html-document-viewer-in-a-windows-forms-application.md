@@ -9,40 +9,41 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 83a29af28f5e58b75377805e443eb92cee39e272
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a25d8bf413614ae71676335c0c8e672caadbf885
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643703"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717753"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="729d1-102">方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。</span><span class="sxs-lookup"><span data-stu-id="729d1-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
-<span data-ttu-id="729d1-103">使用することができます、<xref:System.Windows.Forms.WebBrowser>コントロールを表示し、インターネットの Web ブラウザーの完全な機能を提供することがなく HTML ドキュメントを印刷します。</span><span class="sxs-lookup"><span data-stu-id="729d1-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="729d1-104">これは、機能は、HTML の書式設定機能を活用することが信頼されていない Web コントロールや悪意のあるスクリプト コードを含む可能性のある任意の Web ページの読み込みにユーザーを作成したくない場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="729d1-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="729d1-105">機能を制限したい場合があります、 <xref:System.Windows.Forms.WebBrowser> HTML 電子メール ビューアーとして使用するか、アプリケーションで HTML 形式のヘルプを提供するなど、この方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="729d1-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="d76bd-102">方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。</span><span class="sxs-lookup"><span data-stu-id="d76bd-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
+<span data-ttu-id="d76bd-103">使用することができます、<xref:System.Windows.Forms.WebBrowser>コントロールを表示し、インターネットの Web ブラウザーの完全な機能を提供することがなく HTML ドキュメントを印刷します。</span><span class="sxs-lookup"><span data-stu-id="d76bd-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="d76bd-104">これは、機能は、HTML の書式設定機能を活用することが信頼されていない Web コントロールや悪意のあるスクリプト コードを含む可能性のある任意の Web ページの読み込みにユーザーを作成したくない場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="d76bd-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="d76bd-105">機能を制限したい場合があります、 <xref:System.Windows.Forms.WebBrowser> HTML 電子メール ビューアーとして使用するか、アプリケーションで HTML 形式のヘルプを提供するなど、この方法を制御します。</span><span class="sxs-lookup"><span data-stu-id="d76bd-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML email viewer or to provide HTML-formatted help in your application.</span></span>  
   
-### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="729d1-106">HTML ドキュメントビューアーを作成するには</span><span class="sxs-lookup"><span data-stu-id="729d1-106">To create an HTML document viewer</span></span>  
+### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="d76bd-106">HTML ドキュメントビューアーを作成するには</span><span class="sxs-lookup"><span data-stu-id="d76bd-106">To create an HTML document viewer</span></span>  
   
-1.  <span data-ttu-id="729d1-107">設定、<xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>プロパティを`false`を防ぐために、<xref:System.Windows.Forms.WebBrowser>コントロールにドロップ ファイルを開けないようにします。</span><span class="sxs-lookup"><span data-stu-id="729d1-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
+1.  <span data-ttu-id="d76bd-107">設定、<xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>プロパティを`false`を防ぐために、<xref:System.Windows.Forms.WebBrowser>コントロールにドロップ ファイルを開けないようにします。</span><span class="sxs-lookup"><span data-stu-id="d76bd-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
   
-     [!code-csharp[WebBrowserMisc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
-     [!code-vb[WebBrowserMisc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
+     [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
+     [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  <span data-ttu-id="729d1-108">設定、<xref:System.Windows.Forms.WebBrowser.Url%2A>プロパティを表示する最初のファイルの場所。</span><span class="sxs-lookup"><span data-stu-id="729d1-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
+2.  <span data-ttu-id="d76bd-108">設定、<xref:System.Windows.Forms.WebBrowser.Url%2A>プロパティを表示する最初のファイルの場所。</span><span class="sxs-lookup"><span data-stu-id="d76bd-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
   
-     [!code-csharp[WebBrowserMisc#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
-     [!code-vb[WebBrowserMisc#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
+     [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
+     [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="729d1-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="729d1-109">Compiling the Code</span></span>  
- <span data-ttu-id="729d1-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="729d1-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d76bd-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d76bd-109">Compiling the Code</span></span>  
+ <span data-ttu-id="d76bd-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d76bd-110">This example requires:</span></span>  
   
--   <span data-ttu-id="729d1-111">`webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。</span><span class="sxs-lookup"><span data-stu-id="729d1-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+-   <span data-ttu-id="d76bd-111">`webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。</span><span class="sxs-lookup"><span data-stu-id="d76bd-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   <span data-ttu-id="729d1-112">`System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="729d1-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="d76bd-112">
+  `System\` アセンブリおよび `System.Windows.Forms\` アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="d76bd-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="729d1-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="729d1-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d76bd-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d76bd-113">See also</span></span>
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [<span data-ttu-id="729d1-114">WebBrowser コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="729d1-114">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
-- [<span data-ttu-id="729d1-115">WebBrowser セキュリティ</span><span class="sxs-lookup"><span data-stu-id="729d1-115">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)
-- [<span data-ttu-id="729d1-116">方法: WebBrowser コントロールで URL に移動します</span><span class="sxs-lookup"><span data-stu-id="729d1-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [<span data-ttu-id="729d1-117">方法: WebBrowser コントロールを使用して印刷します。</span><span class="sxs-lookup"><span data-stu-id="729d1-117">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+- [<span data-ttu-id="d76bd-114">WebBrowser コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="d76bd-114">WebBrowser Control Overview</span></span>](webbrowser-control-overview.md)
+- [<span data-ttu-id="d76bd-115">WebBrowser セキュリティ</span><span class="sxs-lookup"><span data-stu-id="d76bd-115">WebBrowser Security</span></span>](webbrowser-security.md)
+- [<span data-ttu-id="d76bd-116">方法: WebBrowser コントロールで URL に移動します</span><span class="sxs-lookup"><span data-stu-id="d76bd-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [<span data-ttu-id="d76bd-117">方法: WebBrowser コントロールを使用して印刷します。</span><span class="sxs-lookup"><span data-stu-id="d76bd-117">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)

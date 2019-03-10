@@ -5,33 +5,35 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193932"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713086"
 ---
-# <a name="savefiledialog-component-windows-forms"></a><span data-ttu-id="042ef-102">SaveFileDialog コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="042ef-102">SaveFileDialog Component (Windows Forms)</span></span>
-<span data-ttu-id="042ef-103">Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。</span><span class="sxs-lookup"><span data-stu-id="042ef-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="042ef-104">これは、Windows で使用される標準の [ファイルを保存] ダイアログ ボックスと同じです。</span><span class="sxs-lookup"><span data-stu-id="042ef-104">It is the same as the standard Save File dialog box used by Windows.</span></span> <span data-ttu-id="042ef-105">これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。</span><span class="sxs-lookup"><span data-stu-id="042ef-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
+# <a name="savefiledialog-component-windows-forms"></a><span data-ttu-id="6b512-102">SaveFileDialog コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="6b512-102">SaveFileDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="6b512-103">Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。</span><span class="sxs-lookup"><span data-stu-id="6b512-103">The Windows Forms <xref:System.Windows.Forms.SaveFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="6b512-104">これは、Windows で使用される標準の [ファイルを保存] ダイアログ ボックスと同じです。</span><span class="sxs-lookup"><span data-stu-id="6b512-104">It is the same as the standard Save File dialog box used by Windows.</span></span> <span data-ttu-id="6b512-105">これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。</span><span class="sxs-lookup"><span data-stu-id="6b512-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="042ef-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="042ef-106">In This Section</span></span>  
- [<span data-ttu-id="042ef-107">SaveFileDialog コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="042ef-107">SaveFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="042ef-108"><xref:System.Windows.Forms.SaveFileDialog> コンポーネントの全般的な概念を説明します。このコンポーネントにより、ユーザーがファイルを指定した場所に保存するために使用する事前構成済みダイアログを表示できます。</span><span class="sxs-lookup"><span data-stu-id="042ef-108">Introduces the general concepts of the <xref:System.Windows.Forms.SaveFileDialog> component, which allows you to display a pre-configured dialog that users can use to save a file to a specified location.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6b512-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6b512-106">In This Section</span></span>  
+ [<span data-ttu-id="6b512-107">SaveFileDialog コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="6b512-107">SaveFileDialog Component Overview</span></span>](savefiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="6b512-108">
+  <xref:System.Windows.Forms.SaveFileDialog> コンポーネントの全般的な概念を説明します。このコンポーネントにより、ユーザーがファイルを指定した場所に保存するために使用する事前構成済みダイアログを表示できます。</span><span class="sxs-lookup"><span data-stu-id="6b512-108">Introduces the general concepts of the <xref:System.Windows.Forms.SaveFileDialog> component, which allows you to display a pre-configured dialog that users can use to save a file to a specified location.</span></span>  
   
- [<span data-ttu-id="042ef-109">方法: SaveFileDialog コンポーネントを使用してファイルを保存する</span><span class="sxs-lookup"><span data-stu-id="042ef-109">How to: Save Files Using the SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)  
- <span data-ttu-id="042ef-110"><xref:System.Windows.Forms.SaveFileDialog> コンポーネントのインスタンスを使用して実行時にファイルを保存する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="042ef-110">Explains how to save a file via an instance of the <xref:System.Windows.Forms.SaveFileDialog> component at run time.</span></span>  
+ [<span data-ttu-id="6b512-109">方法: SaveFileDialog コンポーネントを使用してファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="6b512-109">How to: Save Files Using the SaveFileDialog Component</span></span>](how-to-save-files-using-the-savefiledialog-component.md)  
+ <span data-ttu-id="6b512-110">
+  <xref:System.Windows.Forms.SaveFileDialog> コンポーネントのインスタンスを使用して実行時にファイルを保存する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6b512-110">Explains how to save a file via an instance of the <xref:System.Windows.Forms.SaveFileDialog> component at run time.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="042ef-111">参照</span><span class="sxs-lookup"><span data-stu-id="042ef-111">Reference</span></span>  
- <span data-ttu-id="042ef-112"><xref:System.Windows.Forms.SaveFileDialog> クラス</span><span class="sxs-lookup"><span data-stu-id="042ef-112"><xref:System.Windows.Forms.SaveFileDialog> class</span></span>  
- <span data-ttu-id="042ef-113">クラスとそのメンバーに関するリファレンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="042ef-113">Provides reference information on the class and its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="6b512-111">参照</span><span class="sxs-lookup"><span data-stu-id="6b512-111">Reference</span></span>  
+ <span data-ttu-id="6b512-112"><xref:System.Windows.Forms.SaveFileDialog> クラス</span><span class="sxs-lookup"><span data-stu-id="6b512-112"><xref:System.Windows.Forms.SaveFileDialog> class</span></span>  
+ <span data-ttu-id="6b512-113">クラスとそのメンバーに関するリファレンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="6b512-113">Provides reference information on the class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="042ef-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="042ef-114">Related Sections</span></span>  
- [<span data-ttu-id="042ef-115">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="042ef-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="042ef-116">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="042ef-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="6b512-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b512-114">Related Sections</span></span>  
+ [<span data-ttu-id="6b512-115">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="6b512-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="6b512-116">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="6b512-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="042ef-117">ダイアログ ボックス コントロールおよびコンポーネント</span><span class="sxs-lookup"><span data-stu-id="042ef-117">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- <span data-ttu-id="042ef-118">ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="042ef-118">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
+ [<span data-ttu-id="6b512-117">ダイアログ ボックス コントロールおよびコンポーネント</span><span class="sxs-lookup"><span data-stu-id="6b512-117">Dialog-Box Controls and Components</span></span>](dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="6b512-118">ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="6b512-118">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [<span data-ttu-id="042ef-119">Windows フォーム ダイアログ ボックスの重要コード</span><span class="sxs-lookup"><span data-stu-id="042ef-119">Essential Code for Windows Forms Dialog Boxes</span></span>](https://go.microsoft.com/fwlink/?LinkID=102575)  
- <span data-ttu-id="042ef-120">Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。</span><span class="sxs-lookup"><span data-stu-id="042ef-120">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="042ef-121">(MSDN オンライン ライブラリの技術記事)</span><span class="sxs-lookup"><span data-stu-id="042ef-121">(MSDN Online Library technical article)</span></span>
+ [<span data-ttu-id="6b512-119">Windows フォーム ダイアログ ボックスの重要コード</span><span class="sxs-lookup"><span data-stu-id="6b512-119">Essential Code for Windows Forms Dialog Boxes</span></span>](https://go.microsoft.com/fwlink/?LinkID=102575)  
+ <span data-ttu-id="6b512-120">Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。</span><span class="sxs-lookup"><span data-stu-id="6b512-120">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="6b512-121">(MSDN オンライン ライブラリの技術記事)</span><span class="sxs-lookup"><span data-stu-id="6b512-121">(MSDN Online Library technical article)</span></span>
