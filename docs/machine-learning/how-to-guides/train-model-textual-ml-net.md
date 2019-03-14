@@ -1,29 +1,34 @@
 ---
 title: テキスト データに対するモデル トレーニングに特徴エンジニアリングを適用する - ML.NET
 description: ML.NET でテキスト データに対するモデル トレーニングに特徴エンジニアリングを適用する方法について説明します
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8733db281dbc60ae3f4ac0c139c482b39089f2b8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092216"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680075"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="fd8a7-103">ML.NET でテキスト データに対する機械学習モデル トレーニングに特徴エンジニアリングを適用する</span><span class="sxs-lookup"><span data-stu-id="fd8a7-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="b67f4-103">ML.NET でテキスト データに対する機械学習モデル トレーニングに特徴エンジニアリングを適用する</span><span class="sxs-lookup"><span data-stu-id="b67f4-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="fd8a7-104">すべての ML.NET `learners` は `float vector` 型の特徴を想定しているため、float 以外のデータはすべて `float` データ型に変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="b67f4-104">このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。</span><span class="sxs-lookup"><span data-stu-id="b67f4-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="b67f4-105">詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b67f4-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="fd8a7-105">テキスト データについて学習するには、テキストの特徴を抽出する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="fd8a7-106">ML.NET には、基本的なテキストの特徴抽出メカニズムがいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="b67f4-106">ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。</span><span class="sxs-lookup"><span data-stu-id="b67f4-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="b67f4-107">詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b67f4-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-- <span data-ttu-id="fd8a7-107">`Text normalization` (句読点の削除、分音記号、小文字への切り替え)</span><span class="sxs-lookup"><span data-stu-id="fd8a7-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="fd8a7-108">`Separator-based tokenization`。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="fd8a7-109">`Stopword` 削除。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="fd8a7-110">`Ngram` と `skip-gram` 抽出。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="fd8a7-111">`TF-IDF` 再スケーリング。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="fd8a7-112">`Bag of words` 変換。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-112">`Bag of words` conversion.</span></span>
+<span data-ttu-id="b67f4-108">すべての ML.NET `learners` は `float vector` 型の特徴を想定しているため、float 以外のデータはすべて `float` データ型に変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b67f4-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="fd8a7-113">[Wikipedia detox データセット](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)を使用する ML.NET のテキストの特徴抽出メカニズムの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="fd8a7-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="b67f4-109">テキスト データについて学習するには、テキストの特徴を抽出する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b67f4-109">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="b67f4-110">ML.NET には、基本的なテキストの特徴抽出メカニズムがいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="b67f4-110">ML.NET has some basic text feature extraction mechanisms:</span></span>
+
+- <span data-ttu-id="b67f4-111">`Text normalization` (句読点の削除、分音記号、小文字への切り替え)</span><span class="sxs-lookup"><span data-stu-id="b67f4-111">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="b67f4-112">`Separator-based tokenization`。</span><span class="sxs-lookup"><span data-stu-id="b67f4-112">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="b67f4-113">`Stopword` 削除。</span><span class="sxs-lookup"><span data-stu-id="b67f4-113">`Stopword` removal.</span></span>
+- <span data-ttu-id="b67f4-114">`Ngram` と `skip-gram` 抽出。</span><span class="sxs-lookup"><span data-stu-id="b67f4-114">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="b67f4-115">`TF-IDF` 再スケーリング。</span><span class="sxs-lookup"><span data-stu-id="b67f4-115">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="b67f4-116">`Bag of words` 変換。</span><span class="sxs-lookup"><span data-stu-id="b67f4-116">`Bag of words` conversion.</span></span>
+
+<span data-ttu-id="b67f4-117">[Wikipedia detox データセット](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)を使用する ML.NET のテキストの特徴抽出メカニズムの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b67f4-117">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText

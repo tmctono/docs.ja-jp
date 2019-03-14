@@ -1,24 +1,29 @@
 ---
 title: ML.NET パイプライン処理中の中間データ値を検査する
 description: ML.NET 機械学習パイプラインの処理中に実際の中間データ値を検査する方法について説明します。
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675011"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678645"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="cc97d-103">ML.NET パイプライン処理中の中間データ値を検査する</span><span class="sxs-lookup"><span data-stu-id="cc97d-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="3028a-103">ML.NET パイプライン処理中の中間データ値を検査する</span><span class="sxs-lookup"><span data-stu-id="3028a-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
-<span data-ttu-id="cc97d-104">実験中に、特定の時点のデータ処理結果を観察し、検証することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="cc97d-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="cc97d-105">これは簡単ではありません。なぜなら、ML.NET の操作は、データの 'promise' であるオブジェクトの遅延構築だからです。</span><span class="sxs-lookup"><span data-stu-id="cc97d-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+> [!NOTE]
+> <span data-ttu-id="3028a-104">このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。</span><span class="sxs-lookup"><span data-stu-id="3028a-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="3028a-105">詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3028a-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="cc97d-106">`GetColumn<T>` 拡張メソッドを使用すると、中間データを検査できます。</span><span class="sxs-lookup"><span data-stu-id="cc97d-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="cc97d-107">1 つのデータ列の内容が `IEnumerable` として返されます。</span><span class="sxs-lookup"><span data-stu-id="cc97d-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="3028a-106">ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。</span><span class="sxs-lookup"><span data-stu-id="3028a-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="3028a-107">詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3028a-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="cc97d-108">`GetColumn<T>` 拡張メソッドを使用する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="cc97d-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="3028a-108">実験中に、特定の時点のデータ処理結果を観察し、検証することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="3028a-108">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="3028a-109">これは簡単ではありません。なぜなら、ML.NET の操作は、データの 'promise' であるオブジェクトの遅延構築だからです。</span><span class="sxs-lookup"><span data-stu-id="3028a-109">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="cc97d-109">[ファイルの例](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="cc97d-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="3028a-110">`GetColumn<T>` 拡張メソッドを使用すると、中間データを検査できます。</span><span class="sxs-lookup"><span data-stu-id="3028a-110">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="3028a-111">1 つのデータ列の内容が `IEnumerable` として返されます。</span><span class="sxs-lookup"><span data-stu-id="3028a-111">It returns the contents of one data column as an `IEnumerable`.</span></span>
+
+<span data-ttu-id="3028a-112">`GetColumn<T>` 拡張メソッドを使用する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="3028a-112">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+
+<span data-ttu-id="3028a-113">[ファイルの例](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="3028a-113">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -28,7 +33,7 @@ Label   Workclass   education   marital-status
 
 ```
 
-<span data-ttu-id="cc97d-110">このクラスは次のように定義されています。</span><span class="sxs-lookup"><span data-stu-id="cc97d-110">Our class is defined as follows:</span></span>
+<span data-ttu-id="3028a-114">このクラスは次のように定義されています。</span><span class="sxs-lookup"><span data-stu-id="3028a-114">Our class is defined as follows:</span></span>
 
 ```csharp
 public class InspectedRow
