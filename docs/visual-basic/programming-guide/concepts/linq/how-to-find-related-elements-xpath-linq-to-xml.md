@@ -2,26 +2,26 @@
 title: '方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be7dc6d28c6f176108e33a5c783863fdfc5aed81
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655414"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845948"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="4a146-102">方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a146-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="4a146-103">このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4a146-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="15c41-102">方法: 関連する (XPATH-LINQ to XML) の要素を検索する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15c41-102">How to: Find Related Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="15c41-103">このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="15c41-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="4a146-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4a146-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="15c41-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="15c41-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="4a146-105">例</span><span class="sxs-lookup"><span data-stu-id="4a146-105">Example</span></span>  
- <span data-ttu-id="4a146-106">この例では、12 番目の `Order` 要素を検索し、その注文に対応する顧客を検索します。</span><span class="sxs-lookup"><span data-stu-id="4a146-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="15c41-105">例</span><span class="sxs-lookup"><span data-stu-id="15c41-105">Example</span></span>  
+ <span data-ttu-id="15c41-106">この例では、12 番目の `Order` 要素を検索し、その注文に対応する顧客を検索します。</span><span class="sxs-lookup"><span data-stu-id="15c41-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="4a146-107">.Net のリストのインデックスは '0' から始まることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="4a146-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="4a146-108">XPath 述語のノード コレクションのインデックスは '1' から始まります。</span><span class="sxs-lookup"><span data-stu-id="4a146-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="4a146-109">両者の違いを次の例で示します。</span><span class="sxs-lookup"><span data-stu-id="4a146-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="15c41-107">.NET でリストのインデックスがある '0' から始まるに注意してください。</span><span class="sxs-lookup"><span data-stu-id="15c41-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="15c41-108">XPath 述語のノード コレクションのインデックスは '1' から始まります。</span><span class="sxs-lookup"><span data-stu-id="15c41-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="15c41-109">両者の違いを次の例で示します。</span><span class="sxs-lookup"><span data-stu-id="15c41-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="4a146-110">この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)します。</span><span class="sxs-lookup"><span data-stu-id="4a146-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="15c41-110">この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="15c41-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -53,7 +53,7 @@ End If
 Console.WriteLine(customer1)  
 ```  
   
- <span data-ttu-id="4a146-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4a146-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="15c41-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="15c41-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,5 +73,5 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4a146-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a146-112">See also</span></span>
-- [<span data-ttu-id="4a146-113">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4a146-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="15c41-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="15c41-112">See also</span></span>
+- [<span data-ttu-id="15c41-113">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15c41-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
