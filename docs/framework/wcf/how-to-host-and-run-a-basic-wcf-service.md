@@ -1,6 +1,6 @@
 ---
-title: ホストおよび基本的な Windows Communication Foundation サービスを実行する方法
-ms.date: 09/14/2018
+title: 'チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
@@ -8,408 +8,233 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 73633c2c6119204f2fb608b32ae794a2e07b27d0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747075"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410096"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="8ad44-102">ホストおよび基本的な Windows Communication Foundation サービスを実行する方法</span><span class="sxs-lookup"><span data-stu-id="8ad44-102">How to host and run a basic Windows Communication Foundation service</span></span>
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="56412-102">チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行</span><span class="sxs-lookup"><span data-stu-id="56412-102">Tutorial: Host and run a basic Windows Communication Foundation service</span></span>
 
-<span data-ttu-id="8ad44-103">Windows Communication Foundation (WCF) アプリケーションの作成に必要な 6 つのタスクのうちの 3 番目がこれです。</span><span class="sxs-lookup"><span data-stu-id="8ad44-103">This is the third of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="8ad44-104">6 つのすべてのタスクの概要については、「[チュートリアル入門](getting-started-tutorial.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="56412-103">このチュートリアルでは、3 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。</span><span class="sxs-lookup"><span data-stu-id="56412-103">This tutorial describes the third of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="56412-104">チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。</span><span class="sxs-lookup"><span data-stu-id="56412-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="8ad44-105">このトピックでは、コンソール アプリケーションで Windows Communication Foundation (WCF) サービスをホストする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-105">This topic describes how to host a Windows Communication Foundation (WCF) service in a console application.</span></span> <span data-ttu-id="8ad44-106">この操作は、次の手順から構成されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-106">This procedure consists of the following steps:</span></span>
+<span data-ttu-id="56412-105">WCF アプリケーションを作成するための次のタスクでは、コンソール アプリケーションで WCF サービスをホストします。</span><span class="sxs-lookup"><span data-stu-id="56412-105">The next task for creating a WCF application is to host a WCF service in a console application.</span></span> <span data-ttu-id="56412-106">WCF サービスは、1 つまたは複数公開*エンドポイント*、1 つまたは複数のサービス操作を公開します。</span><span class="sxs-lookup"><span data-stu-id="56412-106">A WCF service exposes one or more *endpoints*, each of which exposes one or more service operations.</span></span> <span data-ttu-id="56412-107">サービス エンドポイントは、次の情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="56412-107">A service endpoint specifies the following information:</span></span> 
+- <span data-ttu-id="56412-108">サービスが得られるアドレスです。</span><span class="sxs-lookup"><span data-stu-id="56412-108">An address where you can find the service.</span></span>
+- <span data-ttu-id="56412-109">クライアントがサービスと通信する必要がある方法を説明する情報を含んでいるバインディング。</span><span class="sxs-lookup"><span data-stu-id="56412-109">A binding that contains the information that describes how a client must communicate with the service.</span></span> 
+- <span data-ttu-id="56412-110">サービスがクライアントに提供する機能を定義するコントラクト。</span><span class="sxs-lookup"><span data-stu-id="56412-110">A contract that defines the functionality that the service provides to its clients.</span></span>
 
-- <span data-ttu-id="8ad44-107">コンソール アプリケーション プロジェクトを作成し、サービスをホストします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-107">Create a console application project to host the service.</span></span>
+<span data-ttu-id="56412-111">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="56412-111">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="56412-112">作成し、WCF サービスをホストするためのコンソール アプリ プロジェクトを構成します。</span><span class="sxs-lookup"><span data-stu-id="56412-112">Create and configure a console app project for hosting a WCF service.</span></span>
+> - <span data-ttu-id="56412-113">WCF サービスをホストするためのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-113">Add code to host the WCF service.</span></span>
+> - <span data-ttu-id="56412-114">構成ファイルを更新します。</span><span class="sxs-lookup"><span data-stu-id="56412-114">Update the configuration file.</span></span>
+> - <span data-ttu-id="56412-115">WCF サービスを開始し、確認が実行されています。</span><span class="sxs-lookup"><span data-stu-id="56412-115">Start the WCF service and verify it's running.</span></span>
 
-- <span data-ttu-id="8ad44-108">サービスのサービス ホストを作成します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-108">Create a service host for the service.</span></span>
 
-- <span data-ttu-id="8ad44-109">メタデータ交換を有効にします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-109">Enable metadata exchange.</span></span>
+## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a><span data-ttu-id="56412-116">作成し、サービスをホストするためのコンソール アプリ プロジェクトを構成します。</span><span class="sxs-lookup"><span data-stu-id="56412-116">Create and configure a console app project for hosting the service</span></span>
 
-- <span data-ttu-id="8ad44-110">サービス ホストを開きます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-110">Open the service host.</span></span>
+1. <span data-ttu-id="56412-117">Visual Studio でコンソール アプリ プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-117">Create a console app project in Visual Studio:</span></span> 
+ 
+    1. <span data-ttu-id="56412-118">**ファイル**メニューの **オープン** > **プロジェクト/ソリューション**を見つけて、 **GettingStarted**ソリューションを以前に作成した (*GettingStarted.sln*)。</span><span class="sxs-lookup"><span data-stu-id="56412-118">From the **File** menu, select **Open** > **Project/Solution** and browse to the **GettingStarted** solution you previously created (*GettingStarted.sln*).</span></span> <span data-ttu-id="56412-119">**[開く]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="56412-119">Select **Open**.</span></span>
 
-<span data-ttu-id="8ad44-111">このタスクで書かれるコードの全容は手順に続いて提供されている例で見ることができます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-111">A complete listing of the code written in this task is provided in the example following the procedure.</span></span>
+    2. <span data-ttu-id="56412-120">**ビュー**メニューの **ソリューション エクスプ ローラー**します。</span><span class="sxs-lookup"><span data-stu-id="56412-120">From the **View** menu, select **Solution Explorer**.</span></span>
+    
+    3. <span data-ttu-id="56412-121">**ソリューション エクスプ ローラー**ウィンドウで、 **GettingStarted**ソリューション (最上位ノード) し、選択**追加** > **の新しいプロジェクト**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="56412-121">In the **Solution Explorer** window, select the **GettingStarted** solution (top node), and then select **Add** > **New Project** from the shortcut menu.</span></span> 
 
-## <a name="create-a-new-console-application-to-host-the-service"></a><span data-ttu-id="8ad44-112">サービスをホストする新しいコンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-112">Create a new console application to host the service</span></span>
+    4. <span data-ttu-id="56412-122">**新しいプロジェクトの追加**ウィンドウで、左側にある、選択、 **Windows デスクトップ**カテゴリ  **Visual C#** または**Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="56412-122">In the **Add New Project** window, on the left side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> 
 
-1. <span data-ttu-id="8ad44-113">Visual Studio でのはじめにソリューションを右クリックして新しいコンソール アプリケーション プロジェクトを作成**追加** > **新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-113">Create a new Console Application project in Visual Studio by right-clicking on the Getting Started solution and selecting **Add** > **New Project**.</span></span> <span data-ttu-id="8ad44-114">**新しいプロジェクトの追加**ダイアログ ボックスで、左側にある、選択、 **Windows デスクトップ**カテゴリ  **Visual c#** または**Visual Basic**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-114">In the **Add New Project** dialog, on the left-hand side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> <span data-ttu-id="8ad44-115">選択、**コンソール アプリ (.NET Framework)** テンプレート、および、プロジェクトの名前を**GettingStartedHost**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-115">Select the **Console App (.NET Framework)** template, and then name the project **GettingStartedHost**.</span></span>
+    5. <span data-ttu-id="56412-123">選択、**コンソール アプリ (.NET Framework)** テンプレート、入力と*GettingStartedHost*の**名前**します。</span><span class="sxs-lookup"><span data-stu-id="56412-123">Select the **Console App (.NET Framework)** template, and enter *GettingStartedHost* for the **Name**.</span></span> <span data-ttu-id="56412-124">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="56412-124">Select **OK**.</span></span>
 
-2. <span data-ttu-id="8ad44-116">GettingStartedLib プロジェクトへの参照を GettingStartedHost プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-116">Add a reference to the GettingStartedLib project to the GettingStartedHost project.</span></span> <span data-ttu-id="8ad44-117">右クリックし、**参照**で GettingStartedHost プロジェクトの下のフォルダー**ソリューション エクスプ ローラー**、し、**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-117">Right-click on the **References** folder under the GettingStartedHost project in **Solution Explorer**, and then select **Add Reference**.</span></span> <span data-ttu-id="8ad44-118">**参照の追加**ダイアログ ボックスで、**ソリューション**ダイアログの左側にあるの ダイアログの中央のセクションで GettingStartedLib を選択し、**追加**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-118">In the **Add Reference** dialog, select **Solution** on the left-hand side of the dialog, select GettingStartedLib in the center section of the dialog, and then choose **Add**.</span></span> <span data-ttu-id="8ad44-119">これにより、GettingStartedLib に定義されている型を GettingStartedHost プロジェクトで利用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="8ad44-119">This makes the types defined in GettingStartedLib available to the GettingStartedHost project.</span></span>
+2. <span data-ttu-id="56412-125">参照を追加、 **GettingStartedHost**プロジェクトを**GettingStartedLib**プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="56412-125">Add a reference in the **GettingStartedHost** project to the **GettingStartedLib** project:</span></span> 
 
-3. <span data-ttu-id="8ad44-120">System.ServiceModel への参照を GettingStartedHost プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-120">Add a reference to System.ServiceModel to the GettingStartedHost project.</span></span> <span data-ttu-id="8ad44-121">右クリックし、**参照**で GettingStartedHost プロジェクトの下のフォルダー**ソリューション エクスプ ローラー**選択**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-121">Right-click the **References** folder under the GettingStartedHost project in **Solution Explorer** and select **Add Reference**.</span></span> <span data-ttu-id="8ad44-122">**参照の追加**ダイアログ ボックスで、 **Framework**ダイアログ ボックスの左側にある**アセンブリ**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-122">In the **Add Reference** dialog, select **Framework** on the left-hand side of the dialog under **Assemblies**.</span></span> <span data-ttu-id="8ad44-123">検索して選択**System.ServiceModel**を選び、 **OK**。</span><span class="sxs-lookup"><span data-stu-id="8ad44-123">Find and select **System.ServiceModel**, and then choose **OK**.</span></span> <span data-ttu-id="8ad44-124">ソリューションを選択して保存**ファイル** > **すべて保存**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-124">Save the solution by selecting **File** > **Save All**.</span></span>
+    1. <span data-ttu-id="56412-126">**ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedHost**プロジェクトを選び**参照の追加**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="56412-126">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedHost** project, and then select **Add Reference** from the shortcut menu.</span></span> 
 
-## <a name="host-the-service"></a><span data-ttu-id="8ad44-125">サービスをホストします</span><span class="sxs-lookup"><span data-stu-id="8ad44-125">Host the service</span></span>
+    2. <span data-ttu-id="56412-127">**参照の追加**ダイアログで、**プロジェクト**ウィンドウの左側にある、次のように選択します。**ソリューション**します。</span><span class="sxs-lookup"><span data-stu-id="56412-127">In the **Add Reference** dialog, under **Projects** on the left side of the window, select **Solution**.</span></span> 
+ 
+    3. <span data-ttu-id="56412-128">選択**GettingStartedLib**選択し、ウィンドウの中央のセクションで**OK**します。</span><span class="sxs-lookup"><span data-stu-id="56412-128">Select **GettingStartedLib** in the center section of the window, and then select **OK**.</span></span> 
 
-<span data-ttu-id="8ad44-126">Program.cs ファイルまたは Module.vb ファイルを開き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-126">Open the Program.cs or Module.vb file and enter the following code:</span></span>
+       <span data-ttu-id="56412-129">この操作によってで定義された型、 **GettingStartedLib**プロジェクトに使用可能な**GettingStartedHost**プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="56412-129">This action makes the types defined in the **GettingStartedLib** project available to the **GettingStartedHost** project.</span></span>
 
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
+3. <span data-ttu-id="56412-130">参照を追加、 **GettingStartedHost**プロジェクトを<xref:System.ServiceModel>アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="56412-130">Add a reference in the **GettingStartedHost** project to the <xref:System.ServiceModel> assembly:</span></span> 
 
-namespace GettingStartedHost
-{
-    class Program
+    1. <span data-ttu-id="56412-131">**ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedHost**プロジェクトを選び**参照の追加**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="56412-131">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedHost** project, and then select **Add Reference** from the shortcut menu.</span></span>
+    
+    2. <span data-ttu-id="56412-132">**参照の追加**ウィンドウで、**アセンブリ**ウィンドウの左側にある、次のように選択します。 **Framework**します。</span><span class="sxs-lookup"><span data-stu-id="56412-132">In the **Add Reference** window, under **Assemblies** on the left side of the window, select **Framework**.</span></span> 
+
+    3. <span data-ttu-id="56412-133">選択**System.ServiceModel**、し、 **OK**します。</span><span class="sxs-lookup"><span data-stu-id="56412-133">Select **System.ServiceModel**, and then select **OK**.</span></span> 
+    
+    4. <span data-ttu-id="56412-134">ソリューションを選択して保存**ファイル** > **すべて保存**します。</span><span class="sxs-lookup"><span data-stu-id="56412-134">Save the solution by selecting **File** > **Save All**.</span></span>
+
+## <a name="add-code-to-host-the-service"></a><span data-ttu-id="56412-135">サービスをホストするコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-135">Add code to host the service</span></span>
+
+<span data-ttu-id="56412-136">サービスをホストするには、次の手順を実行するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-136">To host the service, you add code to do the following steps:</span></span> 
+   1. <span data-ttu-id="56412-137">ベース アドレスの URI を作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-137">Create a URI for the base address.</span></span>
+   2. <span data-ttu-id="56412-138">サービスをホストするためのクラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-138">Create a class instance for hosting the service.</span></span>
+   3. <span data-ttu-id="56412-139">サービス エンドポイントを作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-139">Create a service endpoint.</span></span>
+   4. <span data-ttu-id="56412-140">メタデータ交換を有効にします。</span><span class="sxs-lookup"><span data-stu-id="56412-140">Enable metadata exchange.</span></span>
+   5. <span data-ttu-id="56412-141">受信メッセージをリッスンするサービス ホストを開きます。</span><span class="sxs-lookup"><span data-stu-id="56412-141">Open the service host to listen for incoming messages.</span></span>
+  
+<span data-ttu-id="56412-142">コードを次の変更。</span><span class="sxs-lookup"><span data-stu-id="56412-142">Make the following changes to the code:</span></span>
+
+1. <span data-ttu-id="56412-143">開く、 **Program.cs**または**Module1.vb**ファイル、 **GettingStartedHost**プロジェクトし、そのコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="56412-143">Open the **Program.cs** or **Module1.vb** file in the **GettingStartedHost** project and replace its code with the following code:</span></span>
+
+    ```csharp
+    using System;
+    using System.ServiceModel;
+    using System.ServiceModel.Description;
+    using GettingStartedLib;
+
+    namespace GettingStartedHost
     {
-        static void Main(string[] args)
+        class Program
         {
-            // Step 1 Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 Create a ServiceHost instance
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
+            static void Main(string[] args)
             {
-                // Step 3 Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+                // Step 1: Create a URI to serve as the base address.
+                Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
 
-                // Step 4 Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
+                // Step 2: Create a ServiceHost instance.
+                ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
 
-                // Step 5 Start the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
+                try
+                {
+                    // Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
 
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
+                    // Step 4: Enable metadata exchange.
+                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                    smb.HttpGetEnabled = true;
+                    selfHost.Description.Behaviors.Add(smb)    ;
+
+                    // Step 5: Start the service.
+                    selfHost.Open();
+                    Console.WriteLine("The service is ready.");
+
+                    // Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.");
+                    Console.WriteLine();
+                    Console.ReadLine();
+                    selfHost.Close();
+                }
+                catch (CommunicationException ce)
+                {
+                    Console.WriteLine("An exception occurred: {0}", ce.Message);
+                    selfHost.Abort();
+                }
             }
         }
     }
-}
-```
+    ```
 
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
+    ```vb
+    Imports System.ServiceModel
+    Imports System.ServiceModel.Description
+    Imports GettingStartedLib.GettingStartedLib
 
-Module Service
+    Module Service
 
-    Class Program
-        Shared Sub Main()
-            ' Step 1 Create a URI to serve as the base address
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted")
+        Class Program
+            Shared Sub Main()
+                ' Step 1: Create a URI to serve as the base address.
+                Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
 
-            ' Step 2 Create a ServiceHost instance
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-           Try
+                ' Step 2: Create a ServiceHost instance.
+                Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
+               Try
 
-                ' Step 3 Add a service endpoint
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
+                    ' Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint( _
+                        GetType(ICalculator), _
+                        New WSHttpBinding(), _
+                        "CalculatorService")
 
-                ' Step 4 Enable metadata exchange.
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
+                    ' Step 4: Enable metadata exchange.
+                    Dim smb As New ServiceMetadataBehavior()
+                    smb.HttpGetEnabled = True
+                    selfHost.Description.Behaviors.Add(smb)
 
-                ' Step 5 Start the service
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
+                    ' Step 5: Start the service.
+                    selfHost.Open()
+                    Console.WriteLine("The service is ready.")
 
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
+                    ' Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.")
+                    Console.WriteLine()
+                    Console.ReadLine()
+                    selfHost.Close()
 
-End Module
-```
+                Catch ce As CommunicationException
+                    Console.WriteLine("An exception occurred: {0}", ce.Message)
+                    selfHost.Abort()
+                End Try
+            End Sub
+        End Class
 
-<span data-ttu-id="8ad44-127">**手順 1.** -サービスのベース アドレスを保持するために、Uri クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-127">**Step 1** - Creates an instance of the Uri class to hold the base address of the service.</span></span> <span data-ttu-id="8ad44-128">サービスは、ベース アドレスとオプションの URI を含む URL によって識別されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-128">Services are identified by a URL which contains a base address and an optional URI.</span></span> <span data-ttu-id="8ad44-129">ベース アドレスの書式は、[トランスポート]://[コンピューター名またはドメイン][:省略可能なポート番号]/[省略可能な URI セグメント] です。電卓サービスのベース アドレスは、電卓サービスのベース アドレスを使用して HTTP トランスポート、localhost、ポート 8000、および URI セグメント "GettingStarted" を使用します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-129">The base address is formatted as follows:[transport]://[machine-name or domain][:optional port #]/[optional URI segment]The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment "GettingStarted"</span></span>
+    End Module
+    ```
+    
+    <span data-ttu-id="56412-144">このコードの動作については、次を参照してください。[プログラムの手順をホストしているサービス](#service-hosting-program-steps)します。</span><span class="sxs-lookup"><span data-stu-id="56412-144">For information about how this code works, see [Service hosting program steps](#service-hosting-program-steps).</span></span>
 
-<span data-ttu-id="8ad44-130">**手順 2** – のインスタンスを作成、<xref:System.ServiceModel.ServiceHost>クラス、サービスをホストします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-130">**Step 2** – Creates an instance of the <xref:System.ServiceModel.ServiceHost> class to host the service.</span></span> <span data-ttu-id="8ad44-131">コンストラクターは、サービス コントラクトを実装するクラスの型と、サービスのベース アドレスの、2 つのパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="8ad44-131">The constructor takes two parameters, the type of the class that implements the service contract, and the base address of the service.</span></span>
 
-<span data-ttu-id="8ad44-132">**手順 3** – 作成、<xref:System.ServiceModel.Description.ServiceEndpoint>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="8ad44-132">**Step 3** – Creates a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="8ad44-133">サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-133">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="8ad44-134">
-  <xref:System.ServiceModel.Description.ServiceEndpoint> コンストラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="8ad44-134">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor therefore takes the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="8ad44-135">サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。</span><span class="sxs-lookup"><span data-stu-id="8ad44-135">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="8ad44-136">このサンプルで使用するバインディングは、WS-\* 仕様に準拠するエンドポイントへの接続に使用される組み込みのバインディングである <xref:System.ServiceModel.WSHttpBinding> です。</span><span class="sxs-lookup"><span data-stu-id="8ad44-136">The binding used in this sample is <xref:System.ServiceModel.WSHttpBinding> which is a built-in binding that is used for connecting to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="8ad44-137">WCF バインディングの詳細については、[WCF バインディングの概要](bindings-overview.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-137">For more information about WCF bindings, see [WCF Bindings Overview](bindings-overview.md).</span></span> <span data-ttu-id="8ad44-138">エンドポイントを識別するために、ベース アドレスにアドレスが追加されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-138">The address is appended to the base address to identify the endpoint.</span></span> <span data-ttu-id="8ad44-139">このコードで指定されたアドレスは"CalculatorService"エンドポイントの完全修飾アドレスは`"http://localhost:8000/GettingStarted/CalculatorService"`します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-139">The address specified in this code is "CalculatorService" so the fully qualified address for the endpoint is `"http://localhost:8000/GettingStarted/CalculatorService"`.</span></span>
+2. <span data-ttu-id="56412-145">プロジェクトのプロパティを更新します。</span><span class="sxs-lookup"><span data-stu-id="56412-145">Update the project properties:</span></span>
+
+   1. <span data-ttu-id="56412-146">**ソリューション エクスプ ローラー**ウィンドウで、 **GettingStartedHost**フォルダー、および選択**プロパティ**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="56412-146">In the **Solution Explorer** window, select the **GettingStartedHost** folder, and then select **Properties** from the shortcut menu.</span></span>
+
+   2. <span data-ttu-id="56412-147">**GettingStartedHost**プロパティ ページで、**アプリケーション** タブ。</span><span class="sxs-lookup"><span data-stu-id="56412-147">On the **GettingStartedHost** properties page, select the **Application** tab:</span></span>
+
+      - <span data-ttu-id="56412-148">C#プロジェクトで、 **GettingStartedHost.Program**から、**スタートアップ オブジェクト**一覧。</span><span class="sxs-lookup"><span data-stu-id="56412-148">For C# projects, select **GettingStartedHost.Program** from the **Startup object** list.</span></span>
+
+      - <span data-ttu-id="56412-149">Visual Basic プロジェクトでは、次のように選択します。 **Service.Program**から、**スタートアップ オブジェクト**一覧。</span><span class="sxs-lookup"><span data-stu-id="56412-149">For Visual Basic projects, select **Service.Program** from the **Startup object** list.</span></span>
+
+   3. <span data-ttu-id="56412-150">**ファイル**メニューの **すべて保存**します。</span><span class="sxs-lookup"><span data-stu-id="56412-150">From the **File** menu, select **Save All**.</span></span>
+
+
+## <a name="verify-the-service-is-working"></a><span data-ttu-id="56412-151">サービスが動作を確認します。</span><span class="sxs-lookup"><span data-stu-id="56412-151">Verify the service is working</span></span>
+
+1. <span data-ttu-id="56412-152">ソリューションをビルドし、実行、 **GettingStartedHost**コンソール Visual Studio 内からアプリケーション。</span><span class="sxs-lookup"><span data-stu-id="56412-152">Build the solution, and then run the **GettingStartedHost** console application from inside Visual Studio.</span></span> 
+
+    <span data-ttu-id="56412-153">サービスは、管理者特権で実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="56412-153">The service must be run with administrator privileges.</span></span> <span data-ttu-id="56412-154">実行すると、管理者特権で Visual Studio が開いているため**GettingStartedHost** Visual Studio で、アプリケーションが管理者特権もで実行します。</span><span class="sxs-lookup"><span data-stu-id="56412-154">Because you opened Visual Studio with administrator privileges, when you run **GettingStartedHost** in Visual Studio, the application is run with administrator privileges as well.</span></span> <span data-ttu-id="56412-155">代わりに、管理者として新しいコマンド プロンプトを開くことができます (選択**詳細** > **管理者として実行**ショートカット メニューから) 実行**GettingStartedHost.exe**内。</span><span class="sxs-lookup"><span data-stu-id="56412-155">As an alternative, you can open a new command prompt as an administrator (select **More** > **Run as administrator** from the shortcut menu) and run **GettingStartedHost.exe** within it.</span></span>
+
+2. <span data-ttu-id="56412-156">Web ブラウザーを開き、サービスのページを参照`http://localhost:8000/GettingStarted/CalculatorService`します。</span><span class="sxs-lookup"><span data-stu-id="56412-156">Open a web browser and browse to the service's page at `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>
+   
+   > [!NOTE]
+   > <span data-ttu-id="56412-157">このいずれかなどのサービスには、リッスンを行うコンピューター上で HTTP アドレスを登録する適切なアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="56412-157">Services such as this one require the proper permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="56412-158">管理者アカウントにはこのアクセス許可がありますが、管理者以外のアカウントの場合は、HTTP 名前空間へのアクセス許可を付与する必要があります。</span><span class="sxs-lookup"><span data-stu-id="56412-158">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="56412-159">名前空間の予約を構成する方法については、「[Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md)」 (HTTP と HTTPS を構成する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="56412-159">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md).</span></span> 
+
+
+## <a name="service-hosting-program-steps"></a><span data-ttu-id="56412-160">サービスのホスト プログラムのステップ</span><span class="sxs-lookup"><span data-stu-id="56412-160">Service hosting program steps</span></span>
+
+<span data-ttu-id="56412-161">サービスは次のように説明されているホストに追加したコードの手順:</span><span class="sxs-lookup"><span data-stu-id="56412-161">The steps in the code you added to host the service are described as follows:</span></span>
+
+- <span data-ttu-id="56412-162">**手順 1.**:インスタンスを作成、`Uri`サービスのベース アドレスを保持するクラス。</span><span class="sxs-lookup"><span data-stu-id="56412-162">**Step 1**: Create an instance of the `Uri` class to hold the base address of the service.</span></span> <span data-ttu-id="56412-163">ベース アドレスを含む URL が、省略可能なサービスを識別する URI。</span><span class="sxs-lookup"><span data-stu-id="56412-163">A URL that contains a base address has an optional URI that identifies a service.</span></span> <span data-ttu-id="56412-164">ベース アドレスは次の形式:`<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`します。</span><span class="sxs-lookup"><span data-stu-id="56412-164">The base address is formatted as follows: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`.</span></span> <span data-ttu-id="56412-165">電卓サービスのベース アドレスは、HTTP トランスポート、localhost、ポート 8000、および URI セグメント、GettingStarted を使用します。</span><span class="sxs-lookup"><span data-stu-id="56412-165">The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment, GettingStarted.</span></span>
+
+- <span data-ttu-id="56412-166">**手順 2**:インスタンスを作成、<xref:System.ServiceModel.ServiceHost>クラスは、サービスをホストするために使用します。</span><span class="sxs-lookup"><span data-stu-id="56412-166">**Step 2**: Create an instance of the <xref:System.ServiceModel.ServiceHost> class, which you use to host the service.</span></span> <span data-ttu-id="56412-167">コンス トラクターは 2 つのパラメーター: サービス コントラクトとサービスのベース アドレスを実装するクラスの型。</span><span class="sxs-lookup"><span data-stu-id="56412-167">The constructor takes two parameters: the type of the class that implements the service contract and the base address of the service.</span></span>
+
+- <span data-ttu-id="56412-168">**手順 3**:<xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-168">**Step 3**: Create a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="56412-169">サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。</span><span class="sxs-lookup"><span data-stu-id="56412-169">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="56412-170"><xref:System.ServiceModel.Description.ServiceEndpoint>コンス トラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスで構成されます。</span><span class="sxs-lookup"><span data-stu-id="56412-170">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor is composed of the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="56412-171">サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。</span><span class="sxs-lookup"><span data-stu-id="56412-171">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="56412-172">このサンプルのバインディングが<xref:System.ServiceModel.WSHttpBinding>、組み込みのバインディングし、は、ws-に準拠するエンドポイントに接続 \* の仕様。</span><span class="sxs-lookup"><span data-stu-id="56412-172">The binding for this sample is <xref:System.ServiceModel.WSHttpBinding>, which is a built-in binding and connects to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="56412-173">WCF バインドの詳細については、次を参照してください。 [WCF のバインディングの概要](bindings-overview.md)します。</span><span class="sxs-lookup"><span data-stu-id="56412-173">For more information about WCF bindings, see [WCF bindings overview](bindings-overview.md).</span></span> <span data-ttu-id="56412-174">エンドポイントを識別するためにベース アドレスには、アドレスを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-174">You append the address to the base address to identify the endpoint.</span></span> <span data-ttu-id="56412-175">コードは、CalculatorService ととしてエンドポイントの完全修飾アドレスとしてアドレスを指定します`http://localhost:8000/GettingStarted/CalculatorService`します。</span><span class="sxs-lookup"><span data-stu-id="56412-175">The code specifies the address as CalculatorService and the fully qualified address for the endpoint as `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>
+
+    > [!IMPORTANT]
+    > <span data-ttu-id="56412-176">.NET Framework バージョン 4 以降、サービス エンドポイントの追加は省略可能にします。</span><span class="sxs-lookup"><span data-stu-id="56412-176">For .NET Framework Version 4 and later, adding a service endpoint is optional.</span></span> <span data-ttu-id="56412-177">これらのバージョン、コードや構成を追加しない場合、WCF はベース アドレスと、サービスによって実装されるコントラクトの組み合わせごとに 1 つの既定のエンドポイントを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-177">For these versions, if you don't add your code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service.</span></span> <span data-ttu-id="56412-178">既定のエンドポイントの詳細については、次を参照してください。[エンドポイント アドレスを指定する](specifying-an-endpoint-address.md)します。</span><span class="sxs-lookup"><span data-stu-id="56412-178">For more information about default endpoints, see [Specifying an endpoint address](specifying-an-endpoint-address.md).</span></span> <span data-ttu-id="56412-179">既定のエンドポイント、バインディング、および動作の詳細については、次を参照してください。[簡略化された構成](simplified-configuration.md)と[WCF サービスの構成を簡略化された](samples/simplified-configuration-for-wcf-services.md)します。</span><span class="sxs-lookup"><span data-stu-id="56412-179">For more information about default endpoints, bindings, and behaviors, see [Simplified configuration](simplified-configuration.md) and [Simplified configuration for WCF services](samples/simplified-configuration-for-wcf-services.md).</span></span>
+
+- <span data-ttu-id="56412-180">**手順 4**:メタデータ交換を有効にします。</span><span class="sxs-lookup"><span data-stu-id="56412-180">**Step 4**: Enable metadata exchange.</span></span> <span data-ttu-id="56412-181">クライアントは、サービス操作を呼び出すためのプロキシを生成するのにメタデータ交換を使用します。</span><span class="sxs-lookup"><span data-stu-id="56412-181">Clients use metadata exchange to generate proxies for calling the service operations.</span></span> <span data-ttu-id="56412-182">メタデータ交換を有効にするには作成、<xref:System.ServiceModel.Description.ServiceMetadataBehavior>インスタンスは、設定、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled>プロパティを`true`、追加、`ServiceMetadataBehavior`オブジェクトを<xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>のコレクション、<xref:System.ServiceModel.ServiceHost>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="56412-182">To enable metadata exchange, create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set its <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> property to `true`, and add the `ServiceMetadataBehavior` object to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>
+
+- <span data-ttu-id="56412-183">**手順 5**:開いている<xref:System.ServiceModel.ServiceHost>受信メッセージをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="56412-183">**Step 5**: Open <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="56412-184">アプリケーションがボタンを押すまで待機**Enter**します。</span><span class="sxs-lookup"><span data-stu-id="56412-184">The application waits for you to press **Enter**.</span></span> <span data-ttu-id="56412-185">アプリケーションをインスタンス化後<xref:System.ServiceModel.ServiceHost>、try/catch ブロックを実行します。</span><span class="sxs-lookup"><span data-stu-id="56412-185">After the application instantiates <xref:System.ServiceModel.ServiceHost>, it executes a try/catch block.</span></span> <span data-ttu-id="56412-186">によってスローされた例外を安全にキャッチの詳細については<xref:System.ServiceModel.ServiceHost>を参照してください[使用終了、中止 WCF クライアントのリソースを解放する](samples/use-close-abort-release-wcf-client-resources.md)します。</span><span class="sxs-lookup"><span data-stu-id="56412-186">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Use Close and Abort to release WCF client resources](samples/use-close-abort-release-wcf-client-resources.md).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="8ad44-140">サービス エンドポイントの追加は、.NET Framework 4 以降を使用する場合は省略可能です。</span><span class="sxs-lookup"><span data-stu-id="8ad44-140">Adding a service endpoint is optional when using .NET Framework 4 or later.</span></span> <span data-ttu-id="8ad44-141">これらのバージョンでは、エンドポイントがコードまたは構成で指定されていない場合、WCF は、サービスで実装されたベース アドレスとコントラクトの組み合わせごとに、1 つの既定のエンドポイントを追加します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-141">In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service.</span></span> <span data-ttu-id="8ad44-142">既定のエンドポイントの詳細については、「[Specifying an Endpoint Address](specifying-an-endpoint-address.md)」 (エンドポイント アドレスの指定) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-142">For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md).</span></span> <span data-ttu-id="8ad44-143">既定のエンドポイントについては、「[Simplified Configuration](simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-143">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).</span></span>
+> <span data-ttu-id="56412-187">WCF サービス ライブラリを追加するときに Visual Studio ホストがサービス ホストを起動してデバッグする場合。</span><span class="sxs-lookup"><span data-stu-id="56412-187">When you add a WCF service library, Visual Studio hosts it for you if you debug it by starting a service host.</span></span> <span data-ttu-id="56412-188">競合を回避するには、WCF サービス ライブラリをホストしているから Visual Studio を回避できます。</span><span class="sxs-lookup"><span data-stu-id="56412-188">To avoid conflicts, you can prevent Visual Studio from hosting the WCF service library.</span></span> 
+> 1. <span data-ttu-id="56412-189">選択、 **GettingStartedLib**プロジェクト**ソリューション エクスプ ローラー**選択**プロパティ**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="56412-189">Select the **GettingStartedLib** project in **Solution Explorer** and choose **Properties** from the shortcut menu.</span></span>
+> 2. <span data-ttu-id="56412-190">選択**WCF オプション**をオフにし、**開始 WCF サービス ホスト、同じソリューション内の別のプロジェクトをデバッグするときに**します。</span><span class="sxs-lookup"><span data-stu-id="56412-190">Select **WCF Options** and uncheck **Start WCF Service Host when debugging another project in the same solution**.</span></span>
 
-<span data-ttu-id="8ad44-144">**手順 4** – メタデータ交換を有効にします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-144">**Step 4** – Enable metadata exchange.</span></span> <span data-ttu-id="8ad44-145">クライアントは、サービス操作を呼び出すために使用されるプロキシの生成にメタデータ交換を使用します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-145">Clients will use metadata exchange to generate proxies that will be used to call the service operations.</span></span> <span data-ttu-id="8ad44-146">メタデータ交換を有効化するには、<xref:System.ServiceModel.Description.ServiceMetadataBehavior> インスタンスを作成し、その <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> プロパティを `true` に設定します。さらに、動作を <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> インスタンスの <xref:System.ServiceModel.ServiceHost> コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-146">To enable metadata exchange create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set it’s <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property to `true`, and add the behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>
 
-<span data-ttu-id="8ad44-147">**手順 5** – オープン、<xref:System.ServiceModel.ServiceHost>受信メッセージをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-147">**Step 5** – Open the <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="8ad44-148">コードでは、ユーザーによる Enter キーの押下を待機しています。</span><span class="sxs-lookup"><span data-stu-id="8ad44-148">Notice the code waits for the user to hit enter.</span></span> <span data-ttu-id="8ad44-149">この動作を行わない場合、アプリは直ちに終了し、サービスはシャットダウンします。また、try/catch ブロックが使用されている点にも注意してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-149">If you do not do this, the app will close immediately and the service will shut down.Also notice a  try/catch block used.</span></span> <span data-ttu-id="8ad44-150">
-  <xref:System.ServiceModel.ServiceHost> がインスタンス化された後、他のコードはすべて try/catch ブロックに配置されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-150">After the <xref:System.ServiceModel.ServiceHost> has been instantiated, all other code is placed in a try/catch block.</span></span> <span data-ttu-id="8ad44-151">によってスローされた例外を安全にキャッチの詳細については<xref:System.ServiceModel.ServiceHost>を参照してください[使用終了、中止 WCF クライアントのリソースを解放するには](samples/use-close-abort-release-wcf-client-resources.md)</span><span class="sxs-lookup"><span data-stu-id="8ad44-151">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Use Close and Abort to release WCF client resources](samples/use-close-abort-release-wcf-client-resources.md)</span></span>
+## <a name="next-steps"></a><span data-ttu-id="56412-191">次の手順</span><span class="sxs-lookup"><span data-stu-id="56412-191">Next steps</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="8ad44-152">WCF サービス ライブラリを追加するときに Visual Studio ホストできますがサービス ホストを起動してデバッグするときにします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-152">When you add a WCF Service Library, Visual Studio can host it for you when you debug by starting a service host.</span></span> <span data-ttu-id="8ad44-153">競合を回避するために、これが無効にできます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-153">To avoid conflicts you can disable this.</span></span> 
-> 1. <span data-ttu-id="8ad44-154">GettingStartedLib のプロジェクトのプロパティを開きます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-154">Open Project Properties for GettingStartedLib.</span></span>
-> 2. <span data-ttu-id="8ad44-155">移動して**WCF オプション**をオフにし、**開始 WCF サービス ホストのデバッグ時に**します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-155">Go to **WCF Options** and uncheck **Start WCF Service Host when debugging**.</span></span>
+<span data-ttu-id="56412-192">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="56412-192">In this tutorial, you learned how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="56412-193">作成し、WCF サービスをホストするためのコンソール アプリ プロジェクトを構成します。</span><span class="sxs-lookup"><span data-stu-id="56412-193">Create and configure a console app project for hosting a WCF service.</span></span>
+> - <span data-ttu-id="56412-194">WCF サービスをホストするためのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="56412-194">Add code to host the WCF service.</span></span>
+> - <span data-ttu-id="56412-195">構成ファイルを更新します。</span><span class="sxs-lookup"><span data-stu-id="56412-195">Update the configuration file.</span></span>
+> - <span data-ttu-id="56412-196">WCF サービスを開始し、確認が実行されています。</span><span class="sxs-lookup"><span data-stu-id="56412-196">Start the WCF service and verify it's running.</span></span>
 
-## <a name="verify-the-service-is-working"></a><span data-ttu-id="8ad44-156">サービスが動作を確認します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-156">Verify the service is working</span></span>
-
-1. <span data-ttu-id="8ad44-157">GettingStartedHost コンソールを実行する Visual Studio 内からアプリケーション。</span><span class="sxs-lookup"><span data-stu-id="8ad44-157">Run the GettingStartedHost console application from inside Visual Studio.</span></span>
-
-   <span data-ttu-id="8ad44-158">サービスは、管理者特権で実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8ad44-158">The service must be run with administrator privileges.</span></span> <span data-ttu-id="8ad44-159">Visual Studio が管理者特権で開いた、GettingStartedHost も管理者特権で実行されます。</span><span class="sxs-lookup"><span data-stu-id="8ad44-159">Because Visual Studio was opened with administrator privileges, GettingStartedHost is also run with administrator privileges.</span></span> <span data-ttu-id="8ad44-160">使用して新しいコマンド プロンプトを開くことができますも**管理者として実行**内に service.exe を実行します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-160">You can also open a new command prompt using **Run as administrator** and run service.exe within it.</span></span>
-
-2. <span data-ttu-id="8ad44-161">Web ブラウザーを開き、サービスのデバッグ ページを参照`http://localhost:8000/GettingStarted/`します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-161">Open a web browser and browse to the service's debug page at `http://localhost:8000/GettingStarted/`.</span></span> <span data-ttu-id="8ad44-162">**注意してください。スラッシュを終了することは重要です。**</span><span class="sxs-lookup"><span data-stu-id="8ad44-162">**Note! Ending slash is significant.**</span></span>
-
-## <a name="example"></a><span data-ttu-id="8ad44-163">例</span><span class="sxs-lookup"><span data-stu-id="8ad44-163">Example</span></span>
-
-<span data-ttu-id="8ad44-164">次の例では、チュートリアルの前の手順で作成したサービス コントラクトと実装を含め、コンソール アプリケーションでサービスをホストします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-164">The following example includes the service contract and implementation from previous steps in the tutorial and hosts the service in a console application.</span></span>
-
-<span data-ttu-id="8ad44-165">コマンド ライン コンパイラでコンパイルを参照するクラス ライブラリに IService1.cs と Service1.cs をコンパイル`System.ServiceModel.dll`します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-165">To compile this with a command-line compiler, compile IService1.cs and Service1.cs into a class library that references `System.ServiceModel.dll`.</span></span> <span data-ttu-id="8ad44-166">Program.cs をコンソール アプリケーションとしてコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="8ad44-166">Compile Program.cs as a console application.</span></span>
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-        [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-        public interface ICalculator
-        {
-            [OperationContract]
-            double Add(double n1, double n2);
-            [OperationContract]
-            double Subtract(double n1, double n2);
-            [OperationContract]
-            double Multiply(double n1, double n2);
-            [OperationContract]
-            double Divide(double n1, double n2);
-        }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
-
-namespace GettingStartedHost
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 of the hosting procedure: Create ServiceHost
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
-            {
-                // Step 3 of the hosting procedure: Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
-
-                // Step 4 of the hosting procedure: Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
-
-                // Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
-
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
-            }
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
-
-Module Service
-
-    Class Program
-        Shared Sub Main()
-            ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
-
-            ' Step 2 of the hosting procedure: Create ServiceHost
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-            Try
-
-                ' Step 3 of the hosting procedure: Add a service endpoint.
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
-
-                ' Step 4 of the hosting procedure: Enable metadata exchange.
-                ' Enable metadata exchange
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
-
-                ' Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
-
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
-
-End Module
-```
-
-> [!NOTE]
-> <span data-ttu-id="8ad44-167">このようなサービスには、リッスンを行うコンピューター上で HTTP アドレスを登録するためのアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="8ad44-167">Services such as this one require permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="8ad44-168">管理者アカウントにはこのアクセス許可がありますが、管理者以外のアカウントの場合は、HTTP 名前空間へのアクセス許可を付与する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8ad44-168">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="8ad44-169">名前空間の予約を構成する方法については、「[Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md)」 (HTTP と HTTPS を構成する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-169">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="8ad44-170">Visual Studio で service.exe を実行するには、管理者権限が必要です。</span><span class="sxs-lookup"><span data-stu-id="8ad44-170">When running under Visual Studio, the service.exe must be run with administrator privileges.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="8ad44-171">次の手順</span><span class="sxs-lookup"><span data-stu-id="8ad44-171">Next steps</span></span>
-
-<span data-ttu-id="8ad44-172">これでサービスが実行されていることが確認できました。</span><span class="sxs-lookup"><span data-stu-id="8ad44-172">Now the service is running.</span></span> <span data-ttu-id="8ad44-173">次のタスクでは、WCF クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-173">In the next task, you create a WCF client.</span></span>
+<span data-ttu-id="56412-197">WCF クライアントを作成する方法については、次のチュートリアルに進んでください。</span><span class="sxs-lookup"><span data-stu-id="56412-197">Advance to the next tutorial to learn how to create a WCF client.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="8ad44-174">方法: WCF クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="8ad44-174">How to: Create a WCF client</span></span>](how-to-create-a-wcf-client.md)
-
-<span data-ttu-id="8ad44-175">トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad44-175">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](troubleshooting-the-getting-started-tutorial.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="8ad44-176">関連項目</span><span class="sxs-lookup"><span data-stu-id="8ad44-176">See also</span></span>
-
-- [<span data-ttu-id="8ad44-177">はじめに</span><span class="sxs-lookup"><span data-stu-id="8ad44-177">Getting Started</span></span>](samples/getting-started-sample.md)
-- [<span data-ttu-id="8ad44-178">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="8ad44-178">Self-Host</span></span>](samples/self-host.md)
-- [<span data-ttu-id="8ad44-179">ホスティング サービス</span><span class="sxs-lookup"><span data-stu-id="8ad44-179">Hosting Services</span></span>](hosting-services.md)
+> [<span data-ttu-id="56412-198">チュートリアル: WCF クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="56412-198">Tutorial: Create a WCF client</span></span>](how-to-create-a-wcf-client.md)

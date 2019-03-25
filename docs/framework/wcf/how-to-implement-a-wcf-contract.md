@@ -1,28 +1,33 @@
 ---
-title: '方法 : Windows Communication Foundation サービス コントラクトを実装する'
-ms.date: 09/14/2018
+title: 'チュートリアル: Windows Communication Foundation サービス コントラクトを実装します。'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: fcf96af11bae701585acd92001c8000125858449
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037366"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410083"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="3d1ae-102">方法 : Windows Communication Foundation サービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="3d1ae-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="bc424-102">チュートリアル: Windows Communication Foundation サービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="bc424-102">Tutorial: Implement a Windows Communication Foundation service contract</span></span>
 
-<span data-ttu-id="3d1ae-103">これは、2 番目の基本的な Windows Communication Foundation (WCF) サービスとサービスを呼び出すことができるクライアントを作成するために必要な 6 つのタスクです。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="3d1ae-104">6 つのすべてのタスクの概要については、次を参照してください。、[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="bc424-103">このチュートリアルでは、2 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。</span><span class="sxs-lookup"><span data-stu-id="bc424-103">This tutorial describes the second of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="bc424-104">チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。</span><span class="sxs-lookup"><span data-stu-id="bc424-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="3d1ae-105">WCF アプリケーションの作成における次の手順では、サービス インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="3d1ae-106">これには、ユーザー定義の `CalculatorService` インターフェイスを実装する `ICalculator` というクラスの作成も含まれます。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>
+<span data-ttu-id="bc424-105">WCF アプリケーションを作成する場合は、次の手順では、前の手順で作成した WCF サービスのインターフェイスを実装するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="bc424-105">The next step for creating a WCF application is to add code to implement the WCF service interface that you created in the previous step.</span></span> <span data-ttu-id="bc424-106">この手順でという名前のクラスを作成する`CalculatorService`ユーザー定義を実装する`ICalculator`インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="bc424-106">In this step, you create a class named `CalculatorService` that implements the user-defined `ICalculator` interface.</span></span> <span data-ttu-id="bc424-107">次のコード内の各メソッドでは、電卓操作を呼び出すし、テスト コンソールにテキストを書き込みます。</span><span class="sxs-lookup"><span data-stu-id="bc424-107">Each method in the following code calls a calculator operation and writes text to the console to test it.</span></span> 
 
-## <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="3d1ae-107">WCF サービス コントラクトを実装するには</span><span class="sxs-lookup"><span data-stu-id="3d1ae-107">To implement a WCF service contract</span></span>
+<span data-ttu-id="bc424-108">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="bc424-108">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="bc424-109">WCF サービス コントラクトを実装するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="bc424-109">Add code to implement the WCF service contract.</span></span>
+> - <span data-ttu-id="bc424-110">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="bc424-110">Build the solution.</span></span>
 
-<span data-ttu-id="3d1ae-108">Service1.cs ファイルまたは Service1.vb ファイルを開き、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>
+## <a name="add-code-to-implement-the-wcf-service-contract"></a><span data-ttu-id="bc424-111">WCF サービス コントラクトを実装するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="bc424-111">Add code to implement the WCF service contract</span></span>
+
+<span data-ttu-id="bc424-112">**GettingStartedLib**、オープン、 **Service1.cs**または**Service1.vb**ファイルし、そのコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="bc424-112">In **GettingStartedLib**, open the **Service1.cs** or **Service1.vb** file and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -111,154 +116,32 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-<span data-ttu-id="3d1ae-109">各メソッドは、電卓操作を実装し、テストしやすいように、いくつかのテキストをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>
+## <a name="edit-appconfig"></a><span data-ttu-id="bc424-113">App.config を編集します。</span><span class="sxs-lookup"><span data-stu-id="bc424-113">Edit App.config</span></span>
 
-## <a name="example"></a><span data-ttu-id="3d1ae-110">例</span><span class="sxs-lookup"><span data-stu-id="3d1ae-110">Example</span></span>
+<span data-ttu-id="bc424-114">編集**App.config**で**GettingStartedLib**コードに加えた変更を反映します。</span><span class="sxs-lookup"><span data-stu-id="bc424-114">Edit **App.config** in **GettingStartedLib** to reflect the changes you made to the code.</span></span>
+   - <span data-ttu-id="bc424-115">ビジュアルのC#プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="bc424-115">For Visual C# projects:</span></span>
+       - <span data-ttu-id="bc424-116">14 行を変更します。 `<service name="GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="bc424-116">Change line 14 to `<service name="GettingStartedLib.CalculatorService">`</span></span>
+       - <span data-ttu-id="bc424-117">行 17 を変更します。 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="bc424-117">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
+       - <span data-ttu-id="bc424-118">変更するには、22 行目 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="bc424-118">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span></span>
 
-<span data-ttu-id="3d1ae-111">コントラクトを定義するインターフェイスのコードとそのインターフェイスを実装するコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>
+   - <span data-ttu-id="bc424-119">Visual Basic プロジェクトの場合は、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="bc424-119">For Visual Basic projects:</span></span>
+       - <span data-ttu-id="bc424-120">14 行を変更します。 `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="bc424-120">Change line 14 to `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span></span>
+       - <span data-ttu-id="bc424-121">行 17 を変更します。 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="bc424-121">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
+       - <span data-ttu-id="bc424-122">変更するには、22 行目 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="bc424-122">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span></span>
 
-```csharp
-using System;
-using System.ServiceModel;
 
-namespace GettingStartedLib
-{
-    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-    public interface ICalculator
-    {
-        [OperationContract]
-        double Add(double n1, double n2);
-        [OperationContract]
-        double Subtract(double n1, double n2);
-        [OperationContract]
-        double Multiply(double n1, double n2);
-        [OperationContract]
-        double Divide(double n1, double n2);
-    }
-}
-```
+## <a name="compile-the-code"></a><span data-ttu-id="bc424-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="bc424-123">Compile the code</span></span>
 
-```csharp
-using System;
-using System.ServiceModel;
+<span data-ttu-id="bc424-124">コンパイル エラーがないことを確認するソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="bc424-124">Build the solution to verify there aren't any compilation errors.</span></span> <span data-ttu-id="bc424-125">Visual Studio を使用している場合、**ビルド**メニューの **ソリューションのビルド**(またはキーを押します**Ctrl**+**Shift** + **B**)。</span><span class="sxs-lookup"><span data-stu-id="bc424-125">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
+## <a name="next-steps"></a><span data-ttu-id="bc424-126">次の手順</span><span class="sxs-lookup"><span data-stu-id="bc424-126">Next steps</span></span>
 
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
+<span data-ttu-id="bc424-127">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="bc424-127">In this tutorial, you learned how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="bc424-128">WCF サービス コントラクトを実装するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="bc424-128">Add code to implement the WCF service contract.</span></span>
+> - <span data-ttu-id="bc424-129">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="bc424-129">Build the solution.</span></span>
 
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
-
-## <a name="compile-the-code"></a><span data-ttu-id="3d1ae-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="3d1ae-112">Compile the code</span></span>
-
-<span data-ttu-id="3d1ae-113">コンパイル エラーがないことを確認するソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-113">Build the solution to ensure there are no compilation errors.</span></span> <span data-ttu-id="3d1ae-114">Visual Studio を使用している場合、**ビルド**メニューの **ソリューションのビルド**(またはキーを押します**Ctrl**+**Shift** + **B**)。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-114">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="3d1ae-115">次の手順</span><span class="sxs-lookup"><span data-stu-id="3d1ae-115">Next steps</span></span>
-
-<span data-ttu-id="3d1ae-116">サービス コントラクトが作成されて実装されます。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-116">Now the service contract is created and implemented.</span></span> <span data-ttu-id="3d1ae-117">次の手順では、サービスを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-117">In the next step, you run the service.</span></span>
+<span data-ttu-id="bc424-130">WCF サービスを実行する方法については、次のチュートリアルに進んでください。</span><span class="sxs-lookup"><span data-stu-id="bc424-130">Advance to the next tutorial to learn how to run the WCF service.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="3d1ae-118">方法: 基本的なサービスをホストおよび実行する</span><span class="sxs-lookup"><span data-stu-id="3d1ae-118">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
-
-<span data-ttu-id="3d1ae-119">トラブルシューティングについては、「[Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)」 (チュートリアル入門のトラブルシューティング) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d1ae-119">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="3d1ae-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="3d1ae-120">See also</span></span>
-
-- [<span data-ttu-id="3d1ae-121">はじめに</span><span class="sxs-lookup"><span data-stu-id="3d1ae-121">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="3d1ae-122">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="3d1ae-122">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+> [<span data-ttu-id="bc424-131">チュートリアル: ホストおよび基本的な WCF サービスの実行</span><span class="sxs-lookup"><span data-stu-id="bc424-131">Tutorial: Host and run a basic WCF service</span></span>](how-to-host-and-run-a-basic-wcf-service.md)

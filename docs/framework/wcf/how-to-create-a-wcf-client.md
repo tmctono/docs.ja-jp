@@ -1,72 +1,133 @@
 ---
-title: '方法 : Windows Communication Foundation クライアントを作成する'
-ms.date: 09/14/2018
+title: 'チュートリアル: Windows Communication Foundation クライアントを作成します。'
+ms.dat8: 03/19/2019
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 051275e56a8e63c6ab8136dbb9e24bdcf4c387df
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181671"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411858"
 ---
-# <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="bee12-102">方法 : Windows Communication Foundation クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="bee12-102">How to: Create a Windows Communication Foundation Client</span></span>
+# <a name="tutorial-create-a-windows-communication-foundation-client"></a><span data-ttu-id="d2a33-102">チュートリアル: Windows Communication Foundation クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-102">Tutorial: Create a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="bee12-103">これは、4 番目の Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 6 つのタスクです。</span><span class="sxs-lookup"><span data-stu-id="bee12-103">This is the fourth of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="bee12-104">6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bee12-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="d2a33-103">このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-103">This tutorial describes the fourth of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="d2a33-104">チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="bee12-105">このトピックでは、WCF サービスからメタデータを取得し、使用して、サービスにアクセスできる WCF プロキシを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="bee12-105">This topic describes how to retrieve metadata from a WCF service and use it to create a WCF proxy that can access the service.</span></span> <span data-ttu-id="bee12-106">このタスクを使用して、**サービス参照の追加**Visual Studio によって提供される機能です。</span><span class="sxs-lookup"><span data-stu-id="bee12-106">This task is completed by using the **Add Service Reference** functionality provided by Visual Studio.</span></span> <span data-ttu-id="bee12-107">このツールでは、サービスの MEX エンドポイントからメタデータを取得し、選択した言語 (既定では C#) でクライアント プロキシのマネージド ソース コード ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="bee12-107">This tool obtains the metadata from the service’s MEX endpoint and generates a managed source code file for a client proxy in the language you have chosen (C# by default).</span></span> <span data-ttu-id="bee12-108">このツールでは、クライアント プロキシを作成する以外に、クライアントの構成ファイルの作成または更新も行います。この構成ファイルにより、クライアント アプリケーションはエンドポイントのいずれかにあるサービスに接続できるようになります。</span><span class="sxs-lookup"><span data-stu-id="bee12-108">In addition to creating the client proxy, the tool also creates or updates the client configuration file which enables the client application to connect to the service at one of its endpoints.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="bee12-109">使用することも、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)プロキシ クラスおよび使用する代わりに構成を生成するツール**サービス参照の追加**Visual Studio でします。</span><span class="sxs-lookup"><span data-stu-id="bee12-109">You can also use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to generate the proxy class and configuration instead of using **Add Service Reference** in Visual Studio.</span></span>
+<span data-ttu-id="d2a33-105">WCF アプリケーションを作成するための次のタスクでは、WCF サービスからメタデータを取得することによって、クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-105">The next task for creating a WCF application is to create a client by retrieving metadata from a WCF service.</span></span> <span data-ttu-id="d2a33-106">Visual Studio を使用して、サービスの MEX エンドポイントからメタデータを取得します。 サービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-106">You use Visual Studio to add a service reference, which gets the metadata from the service’s MEX endpoint.</span></span> <span data-ttu-id="d2a33-107">Visual Studio は、選択した言語でクライアント プロキシのマネージ ソース コード ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-107">Visual Studio then generates a managed source code file for a client proxy in the language you've chosen.</span></span> <span data-ttu-id="d2a33-108">クライアント構成ファイルが作成されます (*App.config*)。</span><span class="sxs-lookup"><span data-stu-id="d2a33-108">It also creates a client configuration file (*App.config*).</span></span> <span data-ttu-id="d2a33-109">このファイルは、エンドポイントのサービスに接続するクライアント アプリケーションを使用します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-109">This file enables the client application to connect to the service at an endpoint.</span></span> 
 
 > [!NOTE]
-> <span data-ttu-id="bee12-110">Visual Studio でクラス ライブラリ プロジェクトから WCF サービスを呼び出すときに使用できます、**サービス参照の追加**プロキシと関連付けられている構成ファイルを自動的に生成する機能。</span><span class="sxs-lookup"><span data-stu-id="bee12-110">When calling a WCF service from a class library project in Visual Studio, you can use the **Add Service Reference** feature to automatically generate a proxy and associated configuration file.</span></span> <span data-ttu-id="bee12-111">この構成ファイルはクラス ライブラリ プロジェクトで使用されません。</span><span class="sxs-lookup"><span data-stu-id="bee12-111">The configuration file will not be used by the class library project.</span></span> <span data-ttu-id="bee12-112">クラス ライブラリを呼び出す実行可能ファイルの app.config ファイルに生成された構成ファイルで設定を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bee12-112">You need to add the settings in the generated configuration file to the app.config file for the executable that calls the class library.</span></span>
+> <span data-ttu-id="d2a33-110">Visual Studio でクラス ライブラリ プロジェクトから WCF サービスを呼び出す場合は、使用、**サービス参照の追加**プロキシと関連付けられている構成ファイルを自動的に生成する機能。</span><span class="sxs-lookup"><span data-stu-id="d2a33-110">If you call a WCF service from a class library project in Visual Studio, use the **Add Service Reference** feature to automatically generate a proxy and associated configuration file.</span></span> <span data-ttu-id="d2a33-111">ただし、クラス ライブラリ プロジェクトでは、この構成ファイルを使用しないため、必要がありますに生成された構成ファイルで設定を追加する、 *App.config*クラス ライブラリを呼び出す実行可能ファイルのファイル。</span><span class="sxs-lookup"><span data-stu-id="d2a33-111">However, because class library projects don't use this configuration file, you need to add the settings in the generated configuration file to the *App.config* file for the executable that calls the class library.</span></span>
 
-<span data-ttu-id="bee12-113">クライアント アプリケーションは、生成されたプロキシ クラスを使用してサービスと通信します。</span><span class="sxs-lookup"><span data-stu-id="bee12-113">The client application uses the generated proxy class to communicate with the service.</span></span> <span data-ttu-id="bee12-114">この手順で説明されて[方法: クライアントを使用して](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)します。</span><span class="sxs-lookup"><span data-stu-id="bee12-114">This procedure is described in [How to: Use a Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).</span></span>
+> [!NOTE]
+> <span data-ttu-id="d2a33-112">代わりに、使用、 [ServiceModel メタデータ ユーティリティ ツール](#servicemodel-metadata-utility-tool)Visual Studio で、プロキシ クラスおよび構成ファイルを生成する代わりにします。</span><span class="sxs-lookup"><span data-stu-id="d2a33-112">As an alternative, use the [ServiceModel Metadata Utility tool](#servicemodel-metadata-utility-tool) instead of Visual Studio to generate the proxy class and configuration file.</span></span>
 
-## <a name="to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="bee12-115">Windows Communication Foundation クライアントを作成するには</span><span class="sxs-lookup"><span data-stu-id="bee12-115">To create a Windows Communication Foundation client</span></span>
+<span data-ttu-id="d2a33-113">クライアント アプリケーションは、生成されたプロキシ クラスを使用してサービスと通信します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-113">The client application uses the generated proxy class to communicate with the service.</span></span> <span data-ttu-id="d2a33-114">この手順で説明されて[チュートリアル。クライアントを使用して](how-to-use-a-wcf-client.md)します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-114">This procedure is described in [Tutorial: Use a client](how-to-use-a-wcf-client.md).</span></span>
 
-1. <span data-ttu-id="bee12-116">Visual Studio で新しいコンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="bee12-116">Create a new console application project in Visual Studio.</span></span> <span data-ttu-id="bee12-117">入門ソリューションを右クリックして**ソリューション エクスプ ローラー**選択**追加** > **新しいプロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-117">Right-click on the Getting Started solution in **Solution Explorer** and select **Add** > **New Project**.</span></span> <span data-ttu-id="bee12-118">**新しいプロジェクトの追加**ダイアログ ボックスで、左側にある、選択、 **Windows デスクトップ**カテゴリ  **Visual c#** または**Visual Basic**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-118">In the **Add New Project** dialog, on the left-hand side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> <span data-ttu-id="bee12-119">選択、**コンソール アプリ (.NET Framework)** テンプレート、および、プロジェクトの名前を**GettingStartedClient**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-119">Select the **Console App (.NET Framework)** template, and then name the project **GettingStartedClient**.</span></span>
+<span data-ttu-id="d2a33-115">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-115">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="d2a33-116">作成し、WCF クライアントのコンソール アプリ プロジェクトを構成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-116">Create and configure a console app project for the WCF client.</span></span>
+> - <span data-ttu-id="d2a33-117">プロキシ クラスと構成ファイルを生成する WCF サービスにサービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-117">Add a service reference to the WCF service to generate the proxy class and configuration files.</span></span>
 
-2. <span data-ttu-id="bee12-120">System.ServiceModel への参照を GettingStartedClient プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="bee12-120">Add a reference to System.ServiceModel to the GettingStartedClient project.</span></span> <span data-ttu-id="bee12-121">右クリックし、**参照**で GettingStartedClient プロジェクトの下のフォルダー**ソリューション エクスプ ローラー**、し、**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-121">Right-click on the **References** folder under the GettingStartedClient project in **Solution Explorer**, and then select **Add Reference**.</span></span> <span data-ttu-id="bee12-122">**参照の追加**ダイアログ ボックスで、 **Framework**ダイアログ ボックスの左側にある**アセンブリ**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-122">In the **Add Reference** dialog, select **Framework** on the left-hand side of the dialog under **Assemblies**.</span></span> <span data-ttu-id="bee12-123">検索して選択**System.ServiceModel**を選び、 **OK**。</span><span class="sxs-lookup"><span data-stu-id="bee12-123">Find and select **System.ServiceModel**, and then choose **OK**.</span></span> <span data-ttu-id="bee12-124">ソリューションを選択して保存**ファイル** > **すべて保存**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-124">Save the solution by selecting **File** > **Save All**.</span></span>
 
-3. <span data-ttu-id="bee12-125">電卓サービスにサービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="bee12-125">Add a service reference to the Calculator Service.</span></span>
+## <a name="create-a-windows-communication-foundation-client"></a><span data-ttu-id="d2a33-118">Windows Communication Foundation クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-118">Create a Windows Communication Foundation client</span></span>
 
-   1. <span data-ttu-id="bee12-126">最初に、GettingStartedHost コンソール アプリケーションを開始します。</span><span class="sxs-lookup"><span data-stu-id="bee12-126">First, start up the GettingStartedHost console application.</span></span>
+1. <span data-ttu-id="d2a33-119">Visual Studio でコンソール アプリ プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-119">Create a console app project in Visual Studio:</span></span> 
 
-   2. <span data-ttu-id="bee12-127">ホストが実行されている場合を右クリックし、**参照**で GettingStartedClient プロジェクトの下のフォルダー**ソリューション エクスプ ローラー**選択**追加** >  **サービス参照**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-127">Once the host is running, right-click the **References** folder under the GettingStartedClient project in **Solution Explorer** and select **Add** > **Service Reference**.</span></span>
+    1. <span data-ttu-id="d2a33-120">**ファイル**メニューの **オープン** > **プロジェクト/ソリューション**を見つけて、 **GettingStarted**ソリューションを以前に作成した (*GettingStarted.sln*)。</span><span class="sxs-lookup"><span data-stu-id="d2a33-120">From the **File** menu, select **Open** > **Project/Solution** and browse to the **GettingStarted** solution you previously created (*GettingStarted.sln*).</span></span> <span data-ttu-id="d2a33-121">**[開く]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-121">Select **Open**.</span></span>
 
-   3. <span data-ttu-id="bee12-128">[アドレス] ボックスの次の URL を入力、**サービス参照の追加**ダイアログ。 [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)</span><span class="sxs-lookup"><span data-stu-id="bee12-128">Enter the following URL in the address box of the **Add Service Reference** dialog: [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)</span></span>
+    2. <span data-ttu-id="d2a33-122">**ビュー**メニューの **ソリューション エクスプ ローラー**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-122">From the **View** menu, select **Solution Explorer**.</span></span>
 
-   4. <span data-ttu-id="bee12-129">選択**移動**します。</span><span class="sxs-lookup"><span data-stu-id="bee12-129">Choose **Go**.</span></span>
+    3. <span data-ttu-id="d2a33-123">**ソリューション エクスプ ローラー**ウィンドウで、 **GettingStarted**ソリューション (最上位ノード) し、選択**追加** > **の新しいプロジェクト**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="d2a33-123">In the **Solution Explorer** window, select the **GettingStarted** solution (top node), and then select **Add** > **New Project** from the shortcut menu.</span></span> 
+    
+    4. <span data-ttu-id="d2a33-124">**新しいプロジェクトの追加**ウィンドウで、左側にある、選択、 **Windows デスクトップ**カテゴリ  **Visual C#** または**Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="d2a33-124">In the **Add New Project** window, on the left side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> 
 
-   <span data-ttu-id="bee12-130">CalculatorService に表示される、**サービス**ボックスの一覧。</span><span class="sxs-lookup"><span data-stu-id="bee12-130">The CalculatorService is displayed in the **Services** list box.</span></span> <span data-ttu-id="bee12-131">展開すると、サービスによって実装されるサービス コントラクトを表示する CalculatorService をダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="bee12-131">Double-click CalculatorService to expand it and show the service contracts implemented by the service.</span></span> <span data-ttu-id="bee12-132">として既定の名前空間のままに、選択は、 **OK**。</span><span class="sxs-lookup"><span data-stu-id="bee12-132">Leave the default namespace as-is and choose **OK**.</span></span>
+    5. <span data-ttu-id="d2a33-125">選択、**コンソール アプリ (.NET Framework)** テンプレート、入力と*GettingStartedClient*の**名前**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-125">Select the **Console App (.NET Framework)** template, and enter *GettingStartedClient* for the **Name**.</span></span> <span data-ttu-id="d2a33-126">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-126">Select **OK**.</span></span>
 
-    <span data-ttu-id="bee12-133">Visual Studio を使用してサービスへの参照を追加するに新しい項目が表示されます。**ソリューション エクスプ ローラー**下、**サービス参照**GettingStartedClient プロジェクトの下のフォルダー。</span><span class="sxs-lookup"><span data-stu-id="bee12-133">When you add a reference to a service using Visual Studio, a new item appears in **Solution Explorer** under the **Service References** folder under the GettingStartedClient project.</span></span> <span data-ttu-id="bee12-134">使用する場合、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツール、ソース コード ファイルと app.config ファイルが生成されます。</span><span class="sxs-lookup"><span data-stu-id="bee12-134">If you use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool, a source code file and app.config file are generated.</span></span>
+2. <span data-ttu-id="d2a33-127">参照を追加、 **GettingStartedClient**プロジェクトを<xref:System.ServiceModel>アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="d2a33-127">Add a reference in the **GettingStartedClient** project to the <xref:System.ServiceModel> assembly:</span></span> 
 
-    <span data-ttu-id="bee12-135">コマンド ライン ツールを使用することもできます。 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コードを作成するスイッチを適切な使用。</span><span class="sxs-lookup"><span data-stu-id="bee12-135">You can also use the command-line tool [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) with the appropriate switches to create the client code.</span></span> <span data-ttu-id="bee12-136">次の例では、サービスのコード ファイルと構成ファイルを生成しています。</span><span class="sxs-lookup"><span data-stu-id="bee12-136">The following example generates a code file and a configuration file for the service.</span></span> <span data-ttu-id="bee12-137">最初の例は、VB でプロキシを生成する方法と、2 つ目は、c# でプロキシを生成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="bee12-137">The first example shows how to generate the proxy in VB, and the second shows how to generate the proxy in C#:</span></span>
+    1.  <span data-ttu-id="d2a33-128">**ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedClient**プロジェクトを選び**参照の追加**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="d2a33-128">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedClient** project, and then select **Add Reference** from the shortcut menu.</span></span> 
 
-    ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    2. <span data-ttu-id="d2a33-129">**参照の追加**ウィンドウで、**アセンブリ**ウィンドウの左側にある、次のように選択します。 **Framework**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-129">In the **Add Reference** window, under **Assemblies** on the left side of the window, select **Framework**.</span></span>
+    
+    3. <span data-ttu-id="d2a33-130">検索して選択**System.ServiceModel**を選び、 **OK**。</span><span class="sxs-lookup"><span data-stu-id="d2a33-130">Find and select **System.ServiceModel**, and then choose **OK**.</span></span> 
 
-    ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    4. <span data-ttu-id="d2a33-131">ソリューションを選択して保存**ファイル** > **すべて保存**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-131">Save the solution by selecting **File** > **Save All**.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="bee12-138">次の手順</span><span class="sxs-lookup"><span data-stu-id="bee12-138">Next steps</span></span>
+3. <span data-ttu-id="d2a33-132">電卓サービスにサービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-132">Add a service reference to the calculator service:</span></span>
 
-<span data-ttu-id="bee12-139">クライアント アプリケーションが、電卓サービスの呼び出しに使用するプロキシを作成しました。</span><span class="sxs-lookup"><span data-stu-id="bee12-139">You've created the proxy that the client application will use to call the calculator service.</span></span> <span data-ttu-id="bee12-140">シリーズの次のトピックに進みます。</span><span class="sxs-lookup"><span data-stu-id="bee12-140">Proceed to the next topic in the series.</span></span>
+   1. <span data-ttu-id="d2a33-133">**ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedClient**プロジェクトを選び**サービス参照の追加**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="d2a33-133">In the **Solution Explorer** window, select the **References** folder under the **GettingStartedClient** project, and then select **Add Service Reference** from the shortcut menu.</span></span>
+
+   2. <span data-ttu-id="d2a33-134">**サービス参照の追加**ウィンドウで、 **Discover**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-134">In the **Add Service Reference** window, select **Discover**.</span></span>
+
+      <span data-ttu-id="d2a33-135">CalculatorService サービスが開始されると Visual Studio でそれを表示、**サービス**ボックス。</span><span class="sxs-lookup"><span data-stu-id="d2a33-135">The CalculatorService service starts and Visual Studio displays it in the **Services** box.</span></span>
+
+   3. <span data-ttu-id="d2a33-136">選択**CalculatorService**展開すると、サービスによって実装されるサービス コントラクトを表示します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-136">Select **CalculatorService** to expand it and display the service contracts implemented by the service.</span></span> <span data-ttu-id="d2a33-137">既定値のままに**Namespace**選択**OK**します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-137">Leave the default **Namespace** and choose **OK**.</span></span>
+
+      <span data-ttu-id="d2a33-138">Visual Studio は、新しい項目を追加、**接続済みサービス**フォルダーで、 **GettingStartedClient**プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="d2a33-138">Visual Studio adds a new item under the **Connected Services** folder in the **GettingStartedClient** project.</span></span> 
+
+
+### <a name="servicemodel-metadata-utility-tool"></a><span data-ttu-id="d2a33-139">ServiceModel メタデータ ユーティリティ ツール</span><span class="sxs-lookup"><span data-stu-id="d2a33-139">ServiceModel Metadata Utility tool</span></span>
+
+<span data-ttu-id="d2a33-140">次の例では、必要に応じて使用する方法、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)プロキシ クラス ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-140">The following examples show how to optionally use the [ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the proxy class file.</span></span> <span data-ttu-id="d2a33-141">このツールは、プロキシ クラス ファイルを生成し、 *App.config*ファイル。</span><span class="sxs-lookup"><span data-stu-id="d2a33-141">This tool generates the proxy class file and the *App.config* file.</span></span> <span data-ttu-id="d2a33-142">次の例でプロキシを生成する方法を示してC#および Visual Basic の場合は、それぞれします。</span><span class="sxs-lookup"><span data-stu-id="d2a33-142">The following examples show how to generate the proxy in C# and Visual Basic, respectively:</span></span>
+
+```shell
+svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+```shell
+svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+### <a name="client-configuration-file"></a><span data-ttu-id="d2a33-143">クライアント構成ファイル</span><span class="sxs-lookup"><span data-stu-id="d2a33-143">Client configuration file</span></span>
+
+<span data-ttu-id="d2a33-144">クライアントを作成したら、Visual Studio で作成、 **App.config**構成ファイルで、 **GettingStartedClient**プロジェクトで、次の例のようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2a33-144">After you've created the client, Visual Studio creates the **App.config** configuration file in the **GettingStartedClient** project, which should be similar to the following example:</span></span>
+
+```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+        <startup>
+            <!-- specifies the version of WCF to use-->
+            <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+        </startup>
+        <system.serviceModel>
+            <bindings>
+                <!-- Uses wsHttpBinding-->
+                <wsHttpBinding>
+                    <binding name="WSHttpBinding_ICalculator" />
+                </wsHttpBinding>
+            </bindings>
+            <client>
+                <!-- specifies the endpoint to use when calling the service -->
+                <endpoint address="http://localhost:8000/GettingStarted/CalculatorService"
+                    binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICalculator"
+                    contract="ServiceReference1.ICalculator" name="WSHttpBinding_ICalculator">
+                    <identity>
+                        <dns value="localhost" />
+                    </identity>
+                </endpoint>
+            </client>
+        </system.serviceModel>
+    </configuration>
+```
+
+<span data-ttu-id="d2a33-145">で、 [ \<system.serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md)セクションに注意してください、 [\<エンドポイント >](../configure-apps/file-schema/wcf/endpoint-element.md)要素。</span><span class="sxs-lookup"><span data-stu-id="d2a33-145">Under the [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) section, notice the [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="d2a33-146">**&lt;エンドポイント&gt;** 要素は、クライアントが次のように、サービスへのアクセスに使用するエンドポイントを定義します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-146">The **&lt;endpoint&gt;** element defines the endpoint that the client uses to access the service as follows:</span></span>
+- <span data-ttu-id="d2a33-147">アドレス:`http://localhost:8000/GettingStarted/CalculatorService`します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-147">Address: `http://localhost:8000/GettingStarted/CalculatorService`.</span></span> <span data-ttu-id="d2a33-148">エンドポイントのアドレス。</span><span class="sxs-lookup"><span data-stu-id="d2a33-148">The address of the endpoint.</span></span>
+- <span data-ttu-id="d2a33-149">サービス コントラクト:`ServiceReference1.ICalculator`します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-149">Service contract: `ServiceReference1.ICalculator`.</span></span> <span data-ttu-id="d2a33-150">サービス コントラクトは、WCF クライアントとサービス間の通信を処理します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-150">The service contract handles communication between the WCF client and the service.</span></span> <span data-ttu-id="d2a33-151">Visual Studio が使用したときに、このコントラクトを生成、**サービス参照の追加**関数。</span><span class="sxs-lookup"><span data-stu-id="d2a33-151">Visual Studio generated this contract when you used its **Add Service Reference** function.</span></span> <span data-ttu-id="d2a33-152">基本的に、GettingStartedLib プロジェクトで定義されているコントラクトのコピーになります。</span><span class="sxs-lookup"><span data-stu-id="d2a33-152">It's essentially a copy of the contract that you defined in the GettingStartedLib project.</span></span> 
+- <span data-ttu-id="d2a33-153">バインディング:<xref:System.ServiceModel.WSHttpBinding>します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-153">Binding: <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="d2a33-154">バインディングでは、トランスポート、相互運用可能なセキュリティ、およびその他の構成の詳細として HTTP を指定します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-154">The binding specifies HTTP as the transport, interoperable security, and other configuration details.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="d2a33-155">次の手順</span><span class="sxs-lookup"><span data-stu-id="d2a33-155">Next steps</span></span>
+
+<span data-ttu-id="d2a33-156">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="d2a33-156">In this tutorial, you learned how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="d2a33-157">作成し、WCF クライアントのコンソール アプリ プロジェクトを構成します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-157">Create and configure a console app project for the WCF client.</span></span>
+> - <span data-ttu-id="d2a33-158">クライアント アプリケーションのプロキシ クラスと構成ファイルを生成する WCF サービスにサービス参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-158">Add a service reference to the WCF service to generate the proxy class and configuration files for the client application.</span></span>
+
+<span data-ttu-id="d2a33-159">生成されたクライアントを使用する方法については、次のチュートリアルに進んでください。</span><span class="sxs-lookup"><span data-stu-id="d2a33-159">Advance to the next tutorial to learn how to use the generated client.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="bee12-141">方法: クライアントを構成する</span><span class="sxs-lookup"><span data-stu-id="bee12-141">How to: Configure a Client</span></span>](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+> [<span data-ttu-id="d2a33-160">チュートリアル: WCF クライアントを使用します。</span><span class="sxs-lookup"><span data-stu-id="d2a33-160">Tutorial: Use a WCF client</span></span>](how-to-use-a-wcf-client.md)
 
-## <a name="see-also"></a><span data-ttu-id="bee12-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="bee12-142">See also</span></span>
 
-- [<span data-ttu-id="bee12-143">ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="bee12-143">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [<span data-ttu-id="bee12-144">はじめに</span><span class="sxs-lookup"><span data-stu-id="bee12-144">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="bee12-145">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="bee12-145">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
-- [<span data-ttu-id="bee12-146">方法 : 構成ファイルを使用してサービスのメタデータを公開する</span><span class="sxs-lookup"><span data-stu-id="bee12-146">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [<span data-ttu-id="bee12-147">方法 : Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="bee12-147">How to: Use Svcutil.exe to Download Metadata Documents</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

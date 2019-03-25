@@ -20,10 +20,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57711230"
 ---
-# <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="d6a0e-102">方法: Windows フォームからシステム サウンドを再生します。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-102">How to: Play a System Sound from a Windows Form</span></span>
-<span data-ttu-id="d6a0e-103">実行時に `Exclamation` システム サウンドを再生するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="d6a0e-104">システムが出す音の詳細については、次を参照してください。<xref:System.Media.SystemSounds>します。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  
+# <a name="how-to-play-a-system-sound-from-a-windows-form"></a><span data-ttu-id="2256c-102">方法: Windows フォームからシステム サウンドを再生します。</span><span class="sxs-lookup"><span data-stu-id="2256c-102">How to: Play a System Sound from a Windows Form</span></span>
+<span data-ttu-id="2256c-103">実行時に `Exclamation` システム サウンドを再生するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="2256c-103">The following code example plays the `Exclamation` system sound at run time.</span></span> <span data-ttu-id="2256c-104">システムが出す音の詳細については、次を参照してください。<xref:System.Media.SystemSounds>します。</span><span class="sxs-lookup"><span data-stu-id="2256c-104">For more information about system sounds, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6a0e-105">例</span><span class="sxs-lookup"><span data-stu-id="d6a0e-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2256c-105">例</span><span class="sxs-lookup"><span data-stu-id="2256c-105">Example</span></span>  
   
 ```vb  
 Public Sub PlayExclamation()  
@@ -38,14 +38,13 @@ public void playExclamation()
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d6a0e-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d6a0e-106">Compiling the Code</span></span>  
- <span data-ttu-id="d6a0e-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2256c-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="2256c-106">Compiling the Code</span></span>  
+ <span data-ttu-id="2256c-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="2256c-107">This example requires:</span></span>  
   
--   <span data-ttu-id="d6a0e-108">
-  <xref:System.Media?displayProperty=nameWithType> 名前空間への参照</span><span class="sxs-lookup"><span data-stu-id="d6a0e-108">A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+-   <span data-ttu-id="2256c-108"><xref:System.Media?displayProperty=nameWithType> 名前空間への参照</span><span class="sxs-lookup"><span data-stu-id="2256c-108">A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6a0e-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6a0e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2256c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2256c-109">See also</span></span>
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [<span data-ttu-id="d6a0e-110">方法: Windows フォームからビープ音を再生します。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-110">How to: Play a Beep from a Windows Form</span></span>](how-to-play-a-beep-from-a-windows-form.md)
-- [<span data-ttu-id="d6a0e-111">方法: Windows フォームからサウンドを再生します。</span><span class="sxs-lookup"><span data-stu-id="d6a0e-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
+- [<span data-ttu-id="2256c-110">方法: Windows フォームからビープ音を再生します。</span><span class="sxs-lookup"><span data-stu-id="2256c-110">How to: Play a Beep from a Windows Form</span></span>](how-to-play-a-beep-from-a-windows-form.md)
+- [<span data-ttu-id="2256c-111">方法: Windows フォームからサウンドを再生します。</span><span class="sxs-lookup"><span data-stu-id="2256c-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)

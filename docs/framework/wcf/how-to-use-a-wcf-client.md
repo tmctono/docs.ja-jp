@@ -1,34 +1,38 @@
 ---
-title: '方法: Windows Communication Foundation のクライアントを使用してください。'
-ms.date: 09/14/2018
+title: 'チュートリアル: Windows Communication Foundation クライアントを使用します。'
+ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250924"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411721"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="e1f9e-102">方法: Windows Communication Foundation のクライアントを使用してください。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-102">How to: Use a Windows Communication Foundation Client</span></span>
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a><span data-ttu-id="55194-102">チュートリアル: Windows Communication Foundation クライアントを使用します。</span><span class="sxs-lookup"><span data-stu-id="55194-102">Tutorial: Use a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="e1f9e-103">これは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 6 つのタスクの最後のタスクです。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="e1f9e-104">6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="55194-103">このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクの最後のタスクについて説明します。</span><span class="sxs-lookup"><span data-stu-id="55194-103">This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="55194-104">チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。</span><span class="sxs-lookup"><span data-stu-id="55194-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="e1f9e-105">Windows Communication Foundation (WCF) プロキシを作成および構成するとクライアント インスタンスを作成して、クライアント アプリケーションをコンパイルし、WCF サービスと通信するために使用します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-105">Once a Windows Communication Foundation (WCF) proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the WCF service.</span></span> <span data-ttu-id="e1f9e-106">このトピックでは、インスタンス化し、WCF クライアントを使用して手順を説明します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-106">This topic describes procedures for instantiating and using a WCF client.</span></span> <span data-ttu-id="e1f9e-107">この手順は、次の 3 つの手順で構成されます。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-107">This procedure does three things:</span></span>
+<span data-ttu-id="55194-105">作成、Windows Communication Foundation (WCF) プロキシを構成したら後、は、クライアント インスタンスを作成し、クライアント アプリケーションをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="55194-105">After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application.</span></span> <span data-ttu-id="55194-106">使用する WCF サービスと通信します。</span><span class="sxs-lookup"><span data-stu-id="55194-106">You then use it to communicate with the WCF service.</span></span> 
 
-1.  <span data-ttu-id="e1f9e-108">WCF クライアントをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-108">Instantiates a WCF client.</span></span>
+<span data-ttu-id="55194-107">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="55194-107">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="55194-108">WCF クライアントを使用するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="55194-108">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="55194-109">WCF クライアントをテストします。</span><span class="sxs-lookup"><span data-stu-id="55194-109">Test the WCF client.</span></span>
 
-2.  <span data-ttu-id="e1f9e-109">生成されたプロキシからサービス操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-109">Calls the service operations from the generated proxy.</span></span>
+## <a name="add-code-to-use-the-wcf-client"></a><span data-ttu-id="55194-110">WCF クライアントを使用するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="55194-110">Add code to use the WCF client</span></span>
 
-3.  <span data-ttu-id="e1f9e-110">操作の呼び出しが完了したらクライアントを閉じます。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-110">Closes the client once the operation call is completed.</span></span>
+<span data-ttu-id="55194-111">クライアント コードは、次の手順を行います。</span><span class="sxs-lookup"><span data-stu-id="55194-111">The client code does the following steps:</span></span>
+- <span data-ttu-id="55194-112">WCF クライアントをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="55194-112">Instantiates the WCF client.</span></span>
+- <span data-ttu-id="55194-113">生成されたプロキシからサービス操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="55194-113">Calls the service operations from the generated proxy.</span></span>
+- <span data-ttu-id="55194-114">操作の呼び出しが完了した後は、クライアントを閉じます。</span><span class="sxs-lookup"><span data-stu-id="55194-114">Closes the client after the operation call is completed.</span></span>
 
-## <a name="use-a-windows-communication-foundation-client"></a><span data-ttu-id="e1f9e-111">Windows Communication Foundation クライアントを使用します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-111">Use a Windows Communication Foundation client</span></span>
-
-<span data-ttu-id="e1f9e-112">GettingStartedClient プロジェクトの Program.cs ファイルまたは Program.vb ファイルを開き、既存のコードを次のコードで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>
+<span data-ttu-id="55194-115">開く、 **Program.cs**または**Module1.vb**ファイルから、 **GettingStartedClient**プロジェクトし、そのコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="55194-115">Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -71,7 +75,9 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
-            //Step 3: Closing the client gracefully closes the connection and cleans up resources.
+            // Step 3: Close the client to gracefully close the connection and clean up resources.
+            Console.WriteLine("\nPress <Enter> to terminate the client.");
+            Console.ReadLine();
             client.Close();
         }
     }
@@ -83,89 +89,108 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
-Imports GettingStartedClientVB2.ServiceReference1
+Imports GettingStartedClient.ServiceReference1
 
 Module Module1
 
     Sub Main()
-        ' Step 1: Create an instance of the WCF proxy
+        ' Step 1: Create an instance of the WCF proxy.
         Dim Client As New CalculatorClient()
 
-        'Step 2: Call the service operations.
-        'Call the Add service operation.
+        ' Step 2: Call the service operations.
+        ' Call the Add service operation.
         Dim value1 As Double = 100D
         Dim value2 As Double = 15.99D
         Dim result As Double = Client.Add(value1, value2)
         Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Subtract service operation.
+        ' Call the Subtract service operation.
         value1 = 145D
         value2 = 76.54D
         result = Client.Subtract(value1, value2)
         Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Multiply service operation.
+        ' Call the Multiply service operation.
         value1 = 9D
         value2 = 81.25D
         result = Client.Multiply(value1, value2)
         Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Divide service operation.
+        ' Call the Divide service operation.
         value1 = 22D
         value2 = 7D
         result = Client.Divide(value1, value2)
         Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
 
-        ' Step 3: Closing the client gracefully closes the connection and cleans up resources.
-        Client.Close()
-
+        ' Step 3: Close the client to gracefully close the connection and clean up resources.
         Console.WriteLine()
-        Console.WriteLine("Press <ENTER> to terminate client.")
+        Console.WriteLine("Press <Enter> to terminate the client.")
         Console.ReadLine()
+        Client.Close()
 
     End Sub
 
 End Module
 ```
 
-<span data-ttu-id="e1f9e-113">通知、`using`または`Imports`をインポートするステートメント、`GettingStartedClient.ServiceReference1`します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-113">Notice the `using` or `Imports` statement that imports the `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="e1f9e-114">これにより、インポートによって生成されたコード**サービス参照の追加**Visual Studio でします。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-114">This imports the code generated by **Add Service Reference** in Visual Studio.</span></span> <span data-ttu-id="e1f9e-115">コードは、WCF プロキシをインスタンス化し、電卓サービスによって公開されるサービス操作の各呼び出しが、プロキシを閉じるし、終了します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy, and terminates.</span></span>
+<span data-ttu-id="55194-116">通知、 `using` (ビジュアルのC#) または`Imports`(Visual Basic) のインポート ステートメント`GettingStartedClient.ServiceReference1`します。</span><span class="sxs-lookup"><span data-stu-id="55194-116">Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="55194-117">このステートメントで Visual Studio が生成されたコードをインポートする、**サービス参照の追加**関数。</span><span class="sxs-lookup"><span data-stu-id="55194-117">This statement imports the code that Visual Studio generated with the **Add Service Reference** function.</span></span> <span data-ttu-id="55194-118">コードでは、WCF プロキシをインスタンス化し、電卓サービスを公開するサービス操作の各を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="55194-118">The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes.</span></span> <span data-ttu-id="55194-119">プロキシを終了し、プログラムが終了します。</span><span class="sxs-lookup"><span data-stu-id="55194-119">It then closes the proxy and ends the program.</span></span>
 
-<span data-ttu-id="e1f9e-116">これで、チュートリアルは終了です。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-116">You have now completed the tutorial.</span></span> <span data-ttu-id="e1f9e-117">サービス コントラクトの定義、サービス コントラクトの実装、WCF プロキシの生成、WCF クライアント アプリケーションの構成、そしてプロキシの使用によるサービス操作の呼び出しを行いました。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="e1f9e-118">アプリケーションをテストするには、まず、サービスを開始し、GettingStartedClient を実行し、GettingStartedHost を実行します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-118">To test out the application, first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span>
+## <a name="test-the-wcf-client"></a><span data-ttu-id="55194-120">WCF クライアントをテストします。</span><span class="sxs-lookup"><span data-stu-id="55194-120">Test the WCF client</span></span>
 
-<span data-ttu-id="e1f9e-119">GettingStartedHost からの出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-119">The output from GettingStartedHost should look like this:</span></span>
+### <a name="test-the-application-from-visual-studio"></a><span data-ttu-id="55194-121">Visual Studio からアプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="55194-121">Test the application from Visual Studio</span></span>
 
-```text
-The service is ready.
-Press <ENTER> to terminate service.
+1. <span data-ttu-id="55194-122">保存し、ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="55194-122">Save and build the solution.</span></span>
 
-Received Add(100,15.99)
-Return: 115.99
-Received Subtract(145,76.54)
-Return: 68.46
-Received Multiply(9,81.25)
-Return: 731.25
-Received Divide(22,7)
-Return: 3.14285714285714
-```
+2. <span data-ttu-id="55194-123">選択、 **GettingStartedLib**フォルダー、および選択**スタートアップ プロジェクトとして設定**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="55194-123">Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.</span></span>
 
-<span data-ttu-id="e1f9e-120">GettingStartedClient からの出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-120">The output from GettingStartedClient should look like this:</span></span>
+3. <span data-ttu-id="55194-124">**スタートアップ プロジェクト**を選択します**GettingStartedLib**ドロップダウン リストからを選択し、**実行**またはキーを押します**F5**します。</span><span class="sxs-lookup"><span data-stu-id="55194-124">From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.</span></span>
 
-```text
-Add(100,15.99) = 115.99
-Subtract(145,76.54) = 68.46
-Multiply(9,81.25) = 731.25
-Divide(22,7) = 3.14285714285714
+### <a name="test-the-application-from-a-command-prompt"></a><span data-ttu-id="55194-125">コマンド プロンプトからアプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="55194-125">Test the application from a command prompt</span></span>
 
-Press <ENTER> to terminate client.
-```
+1. <span data-ttu-id="55194-126">管理者は、コマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="55194-126">Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="e1f9e-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="e1f9e-121">See also</span></span>
+2. <span data-ttu-id="55194-127">サービスを開始します。入力*GettingStartedHost\bin\Debug\GettingStartedHost.exe*します。</span><span class="sxs-lookup"><span data-stu-id="55194-127">To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span></span>
 
-- [<span data-ttu-id="e1f9e-122">クライアントを構築する</span><span class="sxs-lookup"><span data-stu-id="e1f9e-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
-- [<span data-ttu-id="e1f9e-123">方法: クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="e1f9e-124">チュートリアル入門</span><span class="sxs-lookup"><span data-stu-id="e1f9e-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="e1f9e-125">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="e1f9e-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="e1f9e-126">方法: 双方向コントラクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="e1f9e-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="e1f9e-127">方法: Access Services と双方向コントラクト</span><span class="sxs-lookup"><span data-stu-id="e1f9e-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [<span data-ttu-id="e1f9e-128">はじめに</span><span class="sxs-lookup"><span data-stu-id="e1f9e-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="e1f9e-129">自己ホスト</span><span class="sxs-lookup"><span data-stu-id="e1f9e-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+3. <span data-ttu-id="55194-128">クライアントを起動します。別のコマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動して、入力*GettingStartedClient\bin\Debug\GettingStartedClient.exe*します。</span><span class="sxs-lookup"><span data-stu-id="55194-128">To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span></span>
+
+   <span data-ttu-id="55194-129">*GettingStartedHost.exe*次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="55194-129">*GettingStartedHost.exe* produces the following output:</span></span>
+
+   ```text
+   The service is ready.
+   Press <Enter> to terminate the service.
+
+   Received Add(100,15.99)
+   Return: 115.99
+   Received Subtract(145,76.54)
+   Return: 68.46
+   Received Multiply(9,81.25)
+   Return: 731.25
+   Received Divide(22,7)
+   Return: 3.14285714285714
+   ```
+
+   <span data-ttu-id="55194-130">*GettingStartedClient.exe*次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="55194-130">*GettingStartedClient.exe* produces the following output:</span></span>
+
+   ```text
+   Add(100,15.99) = 115.99
+   Subtract(145,76.54) = 68.46
+   Multiply(9,81.25) = 731.25
+   Divide(22,7) = 3.14285714285714
+
+   Press <Enter> to terminate the client.
+   ```
+
+## <a name="next-steps"></a><span data-ttu-id="55194-131">次の手順</span><span class="sxs-lookup"><span data-stu-id="55194-131">Next steps</span></span>
+
+<span data-ttu-id="55194-132">WCF 入門チュートリアルで、すべてのタスクを完了します。</span><span class="sxs-lookup"><span data-stu-id="55194-132">You've now completed all the tasks in the WCF get started tutorial.</span></span> <span data-ttu-id="55194-133">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="55194-133">In this tutorial, you learned how to:</span></span>
+
+<span data-ttu-id="55194-134">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="55194-134">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="55194-135">WCF クライアントを使用するコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="55194-135">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="55194-136">WCF クライアントをテストします。</span><span class="sxs-lookup"><span data-stu-id="55194-136">Test the WCF client.</span></span>
+
+<span data-ttu-id="55194-137">手順のいずれかである場合の問題やエラーは場合は、それを修正するトラブルシューティング記事の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="55194-137">If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="55194-138">Get のトラブルシューティングでは、WCF のチュートリアルを開始</span><span class="sxs-lookup"><span data-stu-id="55194-138">Troubleshoot the Get started with WCF tutorials</span></span>](troubleshooting-the-getting-started-tutorial.md)
+
