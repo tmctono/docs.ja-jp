@@ -23,37 +23,35 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57705754"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="e7001-102">方法: ToolStrip コントロールをカスタム描画します。</span><span class="sxs-lookup"><span data-stu-id="e7001-102">How to: Custom Draw a ToolStrip Control</span></span>
-<span data-ttu-id="e7001-103">
-  <xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。</span><span class="sxs-lookup"><span data-stu-id="e7001-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
+# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="1d3c3-102">方法: ToolStrip コントロールをカスタム描画します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-102">How to: Custom Draw a ToolStrip Control</span></span>
+<span data-ttu-id="1d3c3-103"><xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
   
--   <span data-ttu-id="e7001-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> は、オペレーティング システムの外観とスタイルを提供します。</span><span class="sxs-lookup"><span data-stu-id="e7001-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> provides the appearance and style of your operating system.</span></span>  
+-   <span data-ttu-id="1d3c3-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> は、オペレーティング システムの外観とスタイルを提供します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-104"><xref:System.Windows.Forms.ToolStripSystemRenderer> provides the appearance and style of your operating system.</span></span>  
   
--   <span data-ttu-id="e7001-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> は、Microsoft Office の外観とスタイルを提供します。</span><span class="sxs-lookup"><span data-stu-id="e7001-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> provides the appearance and style of Microsoft Office.</span></span>  
+-   <span data-ttu-id="1d3c3-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> は、Microsoft Office の外観とスタイルを提供します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-105"><xref:System.Windows.Forms.ToolStripProfessionalRenderer> provides the appearance and style of Microsoft Office.</span></span>  
   
--   <span data-ttu-id="e7001-106"><xref:System.Windows.Forms.ToolStripRenderer> は、その他の 2 つのレンダリング クラスの抽象基本クラスです。</span><span class="sxs-lookup"><span data-stu-id="e7001-106"><xref:System.Windows.Forms.ToolStripRenderer> is the abstract base class for the other two rendering classes.</span></span>  
+-   <span data-ttu-id="1d3c3-106"><xref:System.Windows.Forms.ToolStripRenderer> は、その他の 2 つのレンダリング クラスの抽象基本クラスです。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-106"><xref:System.Windows.Forms.ToolStripRenderer> is the abstract base class for the other two rendering classes.</span></span>  
   
- <span data-ttu-id="e7001-107"><xref:System.Windows.Forms.ToolStrip> をカスタムで描画 (オーナー描画) するために、レンダラー クラスの 1 つをオーバーライドして表示ロジックの特定の側面を変更できます。</span><span class="sxs-lookup"><span data-stu-id="e7001-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
+ <span data-ttu-id="1d3c3-107"><xref:System.Windows.Forms.ToolStrip> をカスタムで描画 (オーナー描画) するために、レンダラー クラスの 1 つをオーバーライドして表示ロジックの特定の側面を変更できます。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
   
- <span data-ttu-id="e7001-108">次の手順は、カスタムの描画のさまざまな側面について説明します。</span><span class="sxs-lookup"><span data-stu-id="e7001-108">The following procedures describe various aspects of custom drawing.</span></span>  
+ <span data-ttu-id="1d3c3-108">次の手順は、カスタムの描画のさまざまな側面について説明します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-108">The following procedures describe various aspects of custom drawing.</span></span>  
   
-### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="e7001-109">設定されているレンダラー間で切り替えるには</span><span class="sxs-lookup"><span data-stu-id="e7001-109">To switch between the provided renderers</span></span>  
+### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="1d3c3-109">設定されているレンダラー間で切り替えるには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-109">To switch between the provided renderers</span></span>  
   
--   <span data-ttu-id="e7001-110"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A> プロパティを任意の <xref:System.Windows.Forms.ToolStripRenderMode> の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="e7001-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
+-   <span data-ttu-id="1d3c3-110"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A> プロパティを任意の <xref:System.Windows.Forms.ToolStripRenderMode> の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
   
-     <span data-ttu-id="e7001-111"><xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> と共に、静的な <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> がアプリケーションのレンダラーを決定します。</span><span class="sxs-lookup"><span data-stu-id="e7001-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="e7001-112"><xref:System.Windows.Forms.ToolStripRenderMode> のその他の値は、<xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional>、および <xref:System.Windows.Forms.ToolStripRenderMode.System> です。</span><span class="sxs-lookup"><span data-stu-id="e7001-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
+     <span data-ttu-id="1d3c3-111"><xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> と共に、静的な <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> がアプリケーションのレンダラーを決定します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="1d3c3-112"><xref:System.Windows.Forms.ToolStripRenderMode> のその他の値は、<xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional>、および <xref:System.Windows.Forms.ToolStripRenderMode.System> です。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
   
-### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="e7001-113">Microsoft Office スタイルの境界を直線に変更するには</span><span class="sxs-lookup"><span data-stu-id="e7001-113">To change the Microsoft Office–style borders to straight</span></span>  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="1d3c3-113">Microsoft Office スタイルの境界を直線に変更するには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-113">To change the Microsoft Office–style borders to straight</span></span>  
   
--   <span data-ttu-id="e7001-114"><xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType> をオーバーライドしますが、基本クラスは呼び出しません。</span><span class="sxs-lookup"><span data-stu-id="e7001-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
+-   <span data-ttu-id="1d3c3-114"><xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType> をオーバーライドしますが、基本クラスは呼び出しません。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e7001-115"><xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer>、および <xref:System.Windows.Forms.ToolStripProfessionalRenderer> に対して、このメソッドのバージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="e7001-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
+>  <span data-ttu-id="1d3c3-115"><xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer>、および <xref:System.Windows.Forms.ToolStripProfessionalRenderer> に対して、このメソッドのバージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
   
-### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="e7001-116">ProfessionalColorTable を変更するには</span><span class="sxs-lookup"><span data-stu-id="e7001-116">To change the ProfessionalColorTable</span></span>  
+### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="1d3c3-116">ProfessionalColorTable を変更するには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-116">To change the ProfessionalColorTable</span></span>  
   
--   <span data-ttu-id="e7001-117">
-  <xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。</span><span class="sxs-lookup"><span data-stu-id="e7001-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
+-   <span data-ttu-id="1d3c3-117"><xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -107,21 +105,21 @@ ms.locfileid: "57705754"
     End Class  
     ```  
   
-### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="e7001-118">アプリケーション内のすべての ToolStrip コントロールのレンダリングを変更するには</span><span class="sxs-lookup"><span data-stu-id="e7001-118">To change the rendering for all ToolStrip controls in your application</span></span>  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="1d3c3-118">アプリケーション内のすべての ToolStrip コントロールのレンダリングを変更するには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-118">To change the rendering for all ToolStrip controls in your application</span></span>  
   
-1.  <span data-ttu-id="e7001-119"><xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> プロパティを使用して、設定されているレンダラーのいずれかを選択します。</span><span class="sxs-lookup"><span data-stu-id="e7001-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
+1.  <span data-ttu-id="1d3c3-119"><xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> プロパティを使用して、設定されているレンダラーのいずれかを選択します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
   
-2.  <span data-ttu-id="e7001-120"><xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> を使用して、カスタム レンダラーを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="e7001-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
+2.  <span data-ttu-id="1d3c3-120"><xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> を使用して、カスタム レンダラーを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
   
-3.  <span data-ttu-id="e7001-121"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> が既定値の <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> に設定されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="e7001-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
+3.  <span data-ttu-id="1d3c3-121"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> が既定値の <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> に設定されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="e7001-122">アプリケーション全体で Microsoft Office の色をオフにするには</span><span class="sxs-lookup"><span data-stu-id="e7001-122">To turn off the Microsoft Office colors for the entire application</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="1d3c3-122">アプリケーション全体で Microsoft Office の色をオフにするには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-122">To turn off the Microsoft Office colors for the entire application</span></span>  
   
--   <span data-ttu-id="e7001-123"><xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> を `false` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e7001-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
+-   <span data-ttu-id="1d3c3-123"><xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> を `false` に設定します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="e7001-124">1 つの ToolStrip コントロールで Microsoft Office の色をオフにするには</span><span class="sxs-lookup"><span data-stu-id="e7001-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="1d3c3-124">1 つの ToolStrip コントロールで Microsoft Office の色をオフにするには</span><span class="sxs-lookup"><span data-stu-id="1d3c3-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
   
--   <span data-ttu-id="e7001-125">次のコード例に似たコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="e7001-125">Use code similar to the following code example.</span></span>  
+-   <span data-ttu-id="1d3c3-125">次のコード例に似たコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="1d3c3-125">Use code similar to the following code example.</span></span>  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  
@@ -135,10 +133,10 @@ ms.locfileid: "57705754"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7001-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7001-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d3c3-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d3c3-126">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [<span data-ttu-id="e7001-127">組み込みのオーナー描画サポートを備えたコントロール</span><span class="sxs-lookup"><span data-stu-id="e7001-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="e7001-128">方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定</span><span class="sxs-lookup"><span data-stu-id="e7001-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [<span data-ttu-id="e7001-129">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="e7001-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="1d3c3-127">組み込みのオーナー描画サポートを備えたコントロール</span><span class="sxs-lookup"><span data-stu-id="1d3c3-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="1d3c3-128">方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定</span><span class="sxs-lookup"><span data-stu-id="1d3c3-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [<span data-ttu-id="1d3c3-129">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="1d3c3-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
