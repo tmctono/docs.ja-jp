@@ -12,38 +12,36 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968531"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465478"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="571d7-102">方法: XML Stream の代替要素名を指定します。</span><span class="sxs-lookup"><span data-stu-id="571d7-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="24d7d-102">方法: XML Stream の代替要素名を指定します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
   
-<span data-ttu-id="571d7-103"><xref:System.Xml.Serialization.XmlSerializer> を使用して、クラスのセットが同じである XML ストリームを複数生成できます。</span><span class="sxs-lookup"><span data-stu-id="571d7-103">Using the <xref:System.Xml.Serialization.XmlSerializer>, you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="571d7-104">このような作業が必要になるのは、2 つの異なる XML Web サービスが、若干の違いのある同じ基本情報を要求するような場合です。</span><span class="sxs-lookup"><span data-stu-id="571d7-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="571d7-105">たとえば、書籍の注文を処理する 2 つの XML Web サービスがあり、どちらにも ISBN 番号が必要であるとします。</span><span class="sxs-lookup"><span data-stu-id="571d7-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="571d7-106">一方のサービスは \<ISBN> タグを使用しますが、もう一方は \<BookID> タグを使用します。</span><span class="sxs-lookup"><span data-stu-id="571d7-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="571d7-107">
-  `Book\` という名前のフィールドを含む、`ISBN\` という名前のクラスがあります。</span><span class="sxs-lookup"><span data-stu-id="571d7-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="571d7-108">`Book` クラスのインスタンスがシリアル化されると、既定では、メンバー名 (ISBN) がタグ要素名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="571d7-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="571d7-109">最初の XML Web サービスの場合、この既定どおりで問題ありません。</span><span class="sxs-lookup"><span data-stu-id="571d7-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="571d7-110">一方、2 つ目の XML Web サービスに XML ストリームを送信するには、タグの要素名が `BookID` になるようにシリアル化をオーバーライドする必要があります。</span><span class="sxs-lookup"><span data-stu-id="571d7-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
+<span data-ttu-id="24d7d-103"><xref:System.Xml.Serialization.XmlSerializer> を使用して、クラスのセットが同じである XML ストリームを複数生成できます。</span><span class="sxs-lookup"><span data-stu-id="24d7d-103">Using the <xref:System.Xml.Serialization.XmlSerializer>, you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="24d7d-104">このような作業が必要になるのは、2 つの異なる XML Web サービスが、若干の違いのある同じ基本情報を要求するような場合です。</span><span class="sxs-lookup"><span data-stu-id="24d7d-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="24d7d-105">たとえば、書籍の注文を処理する 2 つの XML Web サービスがあり、どちらにも ISBN 番号が必要であるとします。</span><span class="sxs-lookup"><span data-stu-id="24d7d-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="24d7d-106">一方のサービスは \<ISBN> タグを使用しますが、もう一方は \<BookID> タグを使用します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="24d7d-107">`Book` という名前のフィールドを含む、`ISBN` という名前のクラスがあります。</span><span class="sxs-lookup"><span data-stu-id="24d7d-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="24d7d-108">`Book` クラスのインスタンスがシリアル化されると、既定では、メンバー名 (ISBN) がタグ要素名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="24d7d-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="24d7d-109">最初の XML Web サービスの場合、この既定どおりで問題ありません。</span><span class="sxs-lookup"><span data-stu-id="24d7d-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="24d7d-110">一方、2 つ目の XML Web サービスに XML ストリームを送信するには、タグの要素名が `BookID` になるようにシリアル化をオーバーライドする必要があります。</span><span class="sxs-lookup"><span data-stu-id="24d7d-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
   
-## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="571d7-111">代替要素名で XML ストリームを作成するには</span><span class="sxs-lookup"><span data-stu-id="571d7-111">To create an XML stream with an alternate element name</span></span>  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="24d7d-111">代替要素名で XML ストリームを作成するには</span><span class="sxs-lookup"><span data-stu-id="24d7d-111">To create an XML stream with an alternate element name</span></span>  
   
-1.  <span data-ttu-id="571d7-112"><xref:System.Xml.Serialization.XmlElementAttribute> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="571d7-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
+1.  <span data-ttu-id="24d7d-112"><xref:System.Xml.Serialization.XmlElementAttribute> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
   
-2.  <span data-ttu-id="571d7-113"><xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> の <xref:System.Xml.Serialization.XmlElementAttribute> を "BookID" に設定します。</span><span class="sxs-lookup"><span data-stu-id="571d7-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
+2.  <span data-ttu-id="24d7d-113"><xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> の <xref:System.Xml.Serialization.XmlElementAttribute> を "BookID" に設定します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
   
-3.  <span data-ttu-id="571d7-114"><xref:System.Xml.Serialization.XmlAttributes> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="571d7-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
+3.  <span data-ttu-id="24d7d-114"><xref:System.Xml.Serialization.XmlAttributes> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
   
-4.  <span data-ttu-id="571d7-115">`XmlElementAttribute` オブジェクトを <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> の <xref:System.Xml.Serialization.XmlAttributes> プロパティによってアクセスされるコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="571d7-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
+4.  <span data-ttu-id="24d7d-115">`XmlElementAttribute` オブジェクトを <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> の <xref:System.Xml.Serialization.XmlAttributes> プロパティによってアクセスされるコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
   
-5.  <span data-ttu-id="571d7-116"><xref:System.Xml.Serialization.XmlAttributeOverrides> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="571d7-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
+5.  <span data-ttu-id="24d7d-116"><xref:System.Xml.Serialization.XmlAttributeOverrides> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
   
-6.  <span data-ttu-id="571d7-117">`XmlAttributes` を <xref:System.Xml.Serialization.XmlAttributeOverrides> に追加し、オーバーライドするオブジェクトの型とオーバーライドされるメンバーの名前を渡します。</span><span class="sxs-lookup"><span data-stu-id="571d7-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
+6.  <span data-ttu-id="24d7d-117">`XmlAttributes` を <xref:System.Xml.Serialization.XmlAttributeOverrides> に追加し、オーバーライドするオブジェクトの型とオーバーライドされるメンバーの名前を渡します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
   
-7.  <span data-ttu-id="571d7-118">`XmlSerializer` を使用して、`XmlAttributeOverrides` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="571d7-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
+7.  <span data-ttu-id="24d7d-118">`XmlSerializer` を使用して、`XmlAttributeOverrides` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
   
-8.  <span data-ttu-id="571d7-119">
-  `Book\` クラスのインスタンスを作成し、シリアル化または逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="571d7-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
+8.  <span data-ttu-id="24d7d-119">`Book` クラスのインスタンスを作成し、シリアル化または逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="571d7-120">例</span><span class="sxs-lookup"><span data-stu-id="571d7-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="24d7d-120">例</span><span class="sxs-lookup"><span data-stu-id="24d7d-120">Example</span></span>  
   
 ```vb  
 Public Class SerializeOverride()  
@@ -85,7 +83,7 @@ public class SerializeOverride()
 }  
 ```  
   
- <span data-ttu-id="571d7-121">XML ストリームは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="571d7-121">The XML stream might resemble the following.</span></span>  
+ <span data-ttu-id="24d7d-121">XML ストリームは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="24d7d-121">The XML stream might resemble the following.</span></span>  
   
 ```xml  
 <Book>  
@@ -93,13 +91,12 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="571d7-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="571d7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24d7d-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="24d7d-122">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [<span data-ttu-id="571d7-123">XML シリアル化および SOAP シリアル化</span><span class="sxs-lookup"><span data-stu-id="571d7-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="24d7d-123">XML シリアル化および SOAP シリアル化</span><span class="sxs-lookup"><span data-stu-id="24d7d-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [<span data-ttu-id="571d7-124">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="571d7-124">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="571d7-125">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="571d7-125">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [<span data-ttu-id="571d7-126">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="571d7-126">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="24d7d-124">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-124">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="24d7d-125">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="24d7d-125">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
