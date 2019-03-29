@@ -1,1 +1,9 @@
-<span data-ttu-id="2f2df-101">Microsoft Windows GDI+</span><span class="sxs-lookup"><span data-stu-id="2f2df-101">Microsoft Windows GDI+</span></span>
+---
+ms.openlocfilehash: ddb5a2b1c77f84e91f93b3f428e4b7258ba16cfc
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "25705109"
+---
+<span data-ttu-id="88837-101">Microsoft Windows GDI+</span><span class="sxs-lookup"><span data-stu-id="88837-101">Microsoft Windows GDI+</span></span>
