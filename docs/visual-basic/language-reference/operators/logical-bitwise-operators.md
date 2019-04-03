@@ -5,32 +5,33 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 9d782539ca492946de4ebe7f8afcba25b72c9317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829981"
 ---
-# <a name="logicalbitwise-operators-visual-basic"></a><span data-ttu-id="bc5ea-102">論理/ビット演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc5ea-102">Logical/Bitwise Operators (Visual Basic)</span></span>
-<span data-ttu-id="bc5ea-103">Visual Basic で定義されている論理/ビット演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="bc5ea-103">The following are the logical/bitwise operators defined in Visual Basic.</span></span>  
+# <a name="logicalbitwise-operators-visual-basic"></a><span data-ttu-id="e3b84-102">論理/ビット演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e3b84-102">Logical/Bitwise Operators (Visual Basic)</span></span>
+<span data-ttu-id="e3b84-103">Visual Basic で定義されている論理/ビット演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e3b84-103">The following are the logical/bitwise operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="bc5ea-104">And 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-104">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [<span data-ttu-id="e3b84-104">And 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-104">And Operator</span></span>](../../../visual-basic/language-reference/operators/and-operator.md)  
   
- [<span data-ttu-id="bc5ea-105">Not 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-105">Not Operator</span></span>](../../../visual-basic/language-reference/operators/not-operator.md)  
+ [<span data-ttu-id="e3b84-105">Not 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-105">Not Operator</span></span>](../../../visual-basic/language-reference/operators/not-operator.md)  
   
- [<span data-ttu-id="bc5ea-106">Or 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-106">Or Operator</span></span>](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [<span data-ttu-id="e3b84-106">Or 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-106">Or Operator</span></span>](../../../visual-basic/language-reference/operators/or-operator.md)  
   
- [<span data-ttu-id="bc5ea-107">Xor 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-107">Xor Operator</span></span>](../../../visual-basic/language-reference/operators/xor-operator.md)  
+ [<span data-ttu-id="e3b84-107">Xor 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-107">Xor Operator</span></span>](../../../visual-basic/language-reference/operators/xor-operator.md)  
   
- [<span data-ttu-id="bc5ea-108">AndAlso 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-108">AndAlso Operator</span></span>](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [<span data-ttu-id="e3b84-108">AndAlso 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-108">AndAlso Operator</span></span>](../../../visual-basic/language-reference/operators/andalso-operator.md)  
   
- [<span data-ttu-id="bc5ea-109">OrElse 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-109">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [<span data-ttu-id="e3b84-109">OrElse 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-109">OrElse Operator</span></span>](../../../visual-basic/language-reference/operators/orelse-operator.md)  
   
- [<span data-ttu-id="bc5ea-110">IsFalse 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-110">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [<span data-ttu-id="e3b84-110">IsFalse 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-110">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
   
- [<span data-ttu-id="bc5ea-111">IsTrue 演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-111">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [<span data-ttu-id="e3b84-111">IsTrue 演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-111">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bc5ea-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="bc5ea-112">See also</span></span>
-- [<span data-ttu-id="bc5ea-113">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="bc5ea-113">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="bc5ea-114">Visual Basic での論理とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="bc5ea-114">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="e3b84-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="e3b84-112">See also</span></span>
+
+- [<span data-ttu-id="e3b84-113">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="e3b84-113">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="e3b84-114">Visual Basic での論理とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="e3b84-114">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

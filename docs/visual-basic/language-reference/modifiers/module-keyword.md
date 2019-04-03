@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: fa798e8a2c82bdf204edb1812b0020f874b1e978
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257704"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814277"
 ---
-# <a name="module-keyword-visual-basic"></a><span data-ttu-id="baf52-102">モジュール\<キーワード > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="baf52-102">Module \<keyword> (Visual Basic)</span></span>
-<span data-ttu-id="baf52-103">ソース ファイルの先頭にある属性は、現在のアセンブリ モジュールに適用されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="baf52-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  
+# <a name="module-keyword-visual-basic"></a><span data-ttu-id="23e25-102">モジュール\<キーワード > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="23e25-102">Module \<keyword> (Visual Basic)</span></span>
+<span data-ttu-id="23e25-103">ソース ファイルの先頭にある属性は、現在のアセンブリ モジュールに適用されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="23e25-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="baf52-104">コメント</span><span class="sxs-lookup"><span data-stu-id="baf52-104">Remarks</span></span>  
- <span data-ttu-id="baf52-105">多くの属性は、クラスやプロパティなどの個別のプログラミング要素に適用されます。</span><span class="sxs-lookup"><span data-stu-id="baf52-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="baf52-106">山かっこ内で、属性ブロックを接続することによってこのような属性を適用する (`< >`)、宣言ステートメントに直接します。</span><span class="sxs-lookup"><span data-stu-id="baf52-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23e25-104">コメント</span><span class="sxs-lookup"><span data-stu-id="23e25-104">Remarks</span></span>  
+ <span data-ttu-id="23e25-105">多くの属性は、クラスやプロパティなどの個別のプログラミング要素に適用されます。</span><span class="sxs-lookup"><span data-stu-id="23e25-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="23e25-106">山かっこ内で、属性ブロックを接続することによってこのような属性を適用する (`< >`)、宣言ステートメントに直接します。</span><span class="sxs-lookup"><span data-stu-id="23e25-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
   
- <span data-ttu-id="baf52-107">属性ブロックをソース ファイルの先頭に配置しを持つ属性を特定するだけでなく、次の要素を現在のアセンブリ モジュールに属性が関係している場合、`Module`キーワード。</span><span class="sxs-lookup"><span data-stu-id="baf52-107">If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword.</span></span> <span data-ttu-id="baf52-108">アセンブリ全体に適用される場合に使用する、[アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)キーワード。</span><span class="sxs-lookup"><span data-stu-id="baf52-108">If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.</span></span>  
+ <span data-ttu-id="23e25-107">属性ブロックをソース ファイルの先頭に配置しを持つ属性を特定するだけでなく、次の要素を現在のアセンブリ モジュールに属性が関係している場合、`Module`キーワード。</span><span class="sxs-lookup"><span data-stu-id="23e25-107">If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword.</span></span> <span data-ttu-id="23e25-108">アセンブリ全体に適用される場合に使用する、[アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)キーワード。</span><span class="sxs-lookup"><span data-stu-id="23e25-108">If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.</span></span>  
   
- <span data-ttu-id="baf52-109">`Module`修飾子と同じではない、[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。</span><span class="sxs-lookup"><span data-stu-id="baf52-109">The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
+ <span data-ttu-id="23e25-109">`Module`修飾子と同じではない、[Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)です。</span><span class="sxs-lookup"><span data-stu-id="23e25-109">The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="baf52-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="baf52-110">See also</span></span>
-- [<span data-ttu-id="baf52-111">Assembly</span><span class="sxs-lookup"><span data-stu-id="baf52-111">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [<span data-ttu-id="baf52-112">Module ステートメント</span><span class="sxs-lookup"><span data-stu-id="baf52-112">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="baf52-113">属性の概要</span><span class="sxs-lookup"><span data-stu-id="baf52-113">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="23e25-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="23e25-110">See also</span></span>
 
+- [<span data-ttu-id="23e25-111">Assembly</span><span class="sxs-lookup"><span data-stu-id="23e25-111">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [<span data-ttu-id="23e25-112">Module ステートメント</span><span class="sxs-lookup"><span data-stu-id="23e25-112">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="23e25-113">属性の概要</span><span class="sxs-lookup"><span data-stu-id="23e25-113">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)

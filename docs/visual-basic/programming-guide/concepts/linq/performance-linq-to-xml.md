@@ -2,28 +2,29 @@
 title: パフォーマンス (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 4a9353aa1dfeae749664d1ea69b0196e5f202235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824820"
 ---
-# <a name="performance-linq-to-xml-visual-basic"></a><span data-ttu-id="ffa72-102">パフォーマンス (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-102">Performance (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="ffa72-103">ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のパフォーマンス、特に関数型構築とクエリのパフォーマンスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ffa72-103">This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.</span></span>  
+# <a name="performance-linq-to-xml-visual-basic"></a><span data-ttu-id="b528b-102">パフォーマンス (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-102">Performance (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="b528b-103">ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のパフォーマンス、特に関数型構築とクエリのパフォーマンスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="b528b-103">This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ffa72-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ffa72-104">In This Section</span></span>  
- [<span data-ttu-id="ffa72-105">連結クエリ (LINQ to XML) のパフォーマンス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-105">Performance of Chained Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
- <span data-ttu-id="ffa72-106">連結された [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリのパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="ffa72-106">Provides performance information about chained [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b528b-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b528b-104">In This Section</span></span>  
+ [<span data-ttu-id="b528b-105">連結クエリ (LINQ to XML) のパフォーマンス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-105">Performance of Chained Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md)  
+ <span data-ttu-id="b528b-106">連結された [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリのパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b528b-106">Provides performance information about chained [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
- [<span data-ttu-id="ffa72-107">アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-107">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
- <span data-ttu-id="ffa72-108"><xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトの分解処理に関するパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="ffa72-108">Provides performance information about the atomization of <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects.</span></span>  
+ [<span data-ttu-id="b528b-107">アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-107">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)  
+ <span data-ttu-id="b528b-108"><xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトの分解処理に関するパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b528b-108">Provides performance information about the atomization of <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects.</span></span>  
   
- [<span data-ttu-id="ffa72-109">XName オブジェクト (LINQ to XML) の事前アトミック化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-109">Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
- <span data-ttu-id="ffa72-110"><xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトを事前に分解する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="ffa72-110">Describes a technique to pre-atomize <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects.</span></span> <span data-ttu-id="ffa72-111">これにより、パフォーマンスを大幅に向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="ffa72-111">This can significantly improve performance in some scenarios.</span></span>  
+ [<span data-ttu-id="b528b-109">XName オブジェクト (LINQ to XML) の事前アトミック化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-109">Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)  
+ <span data-ttu-id="b528b-110"><xref:System.Xml.Linq.XName> オブジェクトと <xref:System.Xml.Linq.XNamespace> オブジェクトを事前に分解する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="b528b-110">Describes a technique to pre-atomize <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects.</span></span> <span data-ttu-id="b528b-111">これにより、パフォーマンスを大幅に向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="b528b-111">This can significantly improve performance in some scenarios.</span></span>  
   
- [<span data-ttu-id="ffa72-112">静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-112">Statically Compiled Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
- <span data-ttu-id="ffa72-113">XPath 式エバリュエーターで実行される必要がある解析や処理と比較した場合の、静的にコンパイルされたクエリに関するパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="ffa72-113">Provides performance information about statically compiled queries, in contrast to the parsing and processing that must be done by an XPath expression evaluator.</span></span>  
+ [<span data-ttu-id="b528b-112">静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-112">Statically Compiled Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
+ <span data-ttu-id="b528b-113">XPath 式エバリュエーターで実行される必要がある解析や処理と比較した場合の、静的にコンパイルされたクエリに関するパフォーマンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b528b-113">Provides performance information about statically compiled queries, in contrast to the parsing and processing that must be done by an XPath expression evaluator.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffa72-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="ffa72-114">See also</span></span>
-- [<span data-ttu-id="ffa72-115">プログラミング ガイド (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa72-115">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b528b-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b528b-114">See also</span></span>
+
+- [<span data-ttu-id="b528b-115">プログラミング ガイド (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b528b-115">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -14,45 +14,46 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: c17adc6df0f8cf94f06547b48a32b2ffb8f303ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821392"
 ---
-# <a name="throw-statement-visual-basic"></a><span data-ttu-id="fccd4-102">Throw ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fccd4-102">Throw Statement (Visual Basic)</span></span>
-<span data-ttu-id="fccd4-103">プロシージャ内で例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="fccd4-103">Throws an exception within a procedure.</span></span>  
+# <a name="throw-statement-visual-basic"></a><span data-ttu-id="c68f3-102">Throw ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c68f3-102">Throw Statement (Visual Basic)</span></span>
+<span data-ttu-id="c68f3-103">プロシージャ内で例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="c68f3-103">Throws an exception within a procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fccd4-104">構文</span><span class="sxs-lookup"><span data-stu-id="fccd4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c68f3-104">構文</span><span class="sxs-lookup"><span data-stu-id="c68f3-104">Syntax</span></span>  
   
 ```  
 Throw [ expression ]  
 ```  
   
-## <a name="part"></a><span data-ttu-id="fccd4-105">パーツ</span><span class="sxs-lookup"><span data-stu-id="fccd4-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="c68f3-105">パーツ</span><span class="sxs-lookup"><span data-stu-id="c68f3-105">Part</span></span>  
  `expression`  
- <span data-ttu-id="fccd4-106">スローされる例外に関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="fccd4-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="fccd4-107">内に存在するときに省略可能な`Catch`ステートメントでは、それ以外の場合に必要です。</span><span class="sxs-lookup"><span data-stu-id="fccd4-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
+ <span data-ttu-id="c68f3-106">スローされる例外に関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="c68f3-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="c68f3-107">内に存在するときに省略可能な`Catch`ステートメントでは、それ以外の場合に必要です。</span><span class="sxs-lookup"><span data-stu-id="c68f3-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fccd4-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="fccd4-108">Remarks</span></span>  
- <span data-ttu-id="fccd4-109">`Throw`ステートメントは、構造化例外処理コードで処理できる例外をスローします (`Try`.`Catch`...`Finally`) または非構造化例外処理コード (`On Error GoTo`)。</span><span class="sxs-lookup"><span data-stu-id="fccd4-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="fccd4-110">使用することができます、 `Throw` Visual Basic は、適切な例外処理コードが見つかるまで呼び出し履歴を移動するために、コード内のエラーをトラップするステートメント。</span><span class="sxs-lookup"><span data-stu-id="fccd4-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c68f3-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="c68f3-108">Remarks</span></span>  
+ <span data-ttu-id="c68f3-109">`Throw`ステートメントは、構造化例外処理コードで処理できる例外をスローします (`Try`.`Catch`...`Finally`) または非構造化例外処理コード (`On Error GoTo`)。</span><span class="sxs-lookup"><span data-stu-id="c68f3-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="c68f3-110">使用することができます、 `Throw` Visual Basic は、適切な例外処理コードが見つかるまで呼び出し履歴を移動するために、コード内のエラーをトラップするステートメント。</span><span class="sxs-lookup"><span data-stu-id="c68f3-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
   
- <span data-ttu-id="fccd4-111">A`Throw`式ステートメントでのみ使用できます、`Catch`ステートメントでは、case ステートメントが現在処理中の例外を再スロー、`Catch`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="fccd4-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
+ <span data-ttu-id="c68f3-111">A`Throw`式ステートメントでのみ使用できます、`Catch`ステートメントでは、case ステートメントが現在処理中の例外を再スロー、`Catch`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="c68f3-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
   
- <span data-ttu-id="fccd4-112">`Throw`ステートメントの呼び出し履歴をリセットする、`expression`例外。</span><span class="sxs-lookup"><span data-stu-id="fccd4-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="fccd4-113">場合`expression`が指定されていない、コール スタックは変更されません。</span><span class="sxs-lookup"><span data-stu-id="fccd4-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="fccd4-114">例外の呼び出し履歴にアクセスすることができます、<xref:System.Exception.StackTrace%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="fccd4-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
+ <span data-ttu-id="c68f3-112">`Throw`ステートメントの呼び出し履歴をリセットする、`expression`例外。</span><span class="sxs-lookup"><span data-stu-id="c68f3-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="c68f3-113">場合`expression`が指定されていない、コール スタックは変更されません。</span><span class="sxs-lookup"><span data-stu-id="c68f3-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="c68f3-114">例外の呼び出し履歴にアクセスすることができます、<xref:System.Exception.StackTrace%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c68f3-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fccd4-115">例</span><span class="sxs-lookup"><span data-stu-id="fccd4-115">Example</span></span>  
- <span data-ttu-id="fccd4-116">次のコードでは、`Throw`例外をスローするステートメント。</span><span class="sxs-lookup"><span data-stu-id="fccd4-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
+## <a name="example"></a><span data-ttu-id="c68f3-115">例</span><span class="sxs-lookup"><span data-stu-id="c68f3-115">Example</span></span>  
+ <span data-ttu-id="c68f3-116">次のコードでは、`Throw`例外をスローするステートメント。</span><span class="sxs-lookup"><span data-stu-id="c68f3-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
   
  [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
   
-## <a name="requirements"></a><span data-ttu-id="fccd4-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="fccd4-117">Requirements</span></span>  
- <span data-ttu-id="fccd4-118">**名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="fccd4-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c68f3-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="c68f3-117">Requirements</span></span>  
+ <span data-ttu-id="c68f3-118">**名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="c68f3-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="fccd4-119">**モジュール:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="fccd4-119">**Module:** `Interaction`</span></span>  
+ <span data-ttu-id="c68f3-119">**モジュール:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="c68f3-119">**Module:** `Interaction`</span></span>  
   
- <span data-ttu-id="fccd4-120">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="fccd4-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="c68f3-120">**アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="c68f3-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fccd4-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="fccd4-121">See also</span></span>
-- [<span data-ttu-id="fccd4-122">Try...Catch...Finally ステートメント</span><span class="sxs-lookup"><span data-stu-id="fccd4-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="fccd4-123">On Error ステートメント</span><span class="sxs-lookup"><span data-stu-id="fccd4-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a><span data-ttu-id="c68f3-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="c68f3-121">See also</span></span>
+
+- [<span data-ttu-id="c68f3-122">Try...Catch...Finally ステートメント</span><span class="sxs-lookup"><span data-stu-id="c68f3-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="c68f3-123">On Error ステートメント</span><span class="sxs-lookup"><span data-stu-id="c68f3-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)

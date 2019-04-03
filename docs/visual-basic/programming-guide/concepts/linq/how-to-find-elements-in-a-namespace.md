@@ -2,22 +2,22 @@
 title: '方法: Namespace (XPATH-LINQ to XML) で要素を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f48ae0a03d625a3510b2280aa6361e2a731e5afe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825362"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="8e767-102">方法: Namespace (XPATH-LINQ to XML) で要素を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e767-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="8e767-103">XPath 式を使用すると、特定の名前空間内のノードを検索できます。</span><span class="sxs-lookup"><span data-stu-id="8e767-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="8e767-104">XPath 式では、名前空間を指定する名前空間プレフィックスを使用します。</span><span class="sxs-lookup"><span data-stu-id="8e767-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="8e767-105">名前空間プレフィックスを含む XPath 式を解析するには、<xref:System.Xml.IXmlNamespaceResolver> を実装する XPath メソッドにオブジェクトを渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="8e767-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="8e767-106">この例では <xref:System.Xml.XmlNamespaceManager> を使用します。</span><span class="sxs-lookup"><span data-stu-id="8e767-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="1f5a9-102">方法: Namespace (XPATH-LINQ to XML) で要素を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f5a9-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="1f5a9-103">XPath 式を使用すると、特定の名前空間内のノードを検索できます。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="1f5a9-104">XPath 式では、名前空間を指定する名前空間プレフィックスを使用します。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="1f5a9-105">名前空間プレフィックスを含む XPath 式を解析するには、<xref:System.Xml.IXmlNamespaceResolver> を実装する XPath メソッドにオブジェクトを渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="1f5a9-106">この例では <xref:System.Xml.XmlNamespaceManager> を使用します。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- <span data-ttu-id="8e767-107">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="8e767-107">The XPath expression is:</span></span>  
+ <span data-ttu-id="1f5a9-107">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a><span data-ttu-id="8e767-108">例</span><span class="sxs-lookup"><span data-stu-id="8e767-108">Example</span></span>  
- <span data-ttu-id="8e767-109">次の例では、2 つの名前空間を含む XML ツリーを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="8e767-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="8e767-110"><xref:System.Xml.XmlReader> を使用して XML ドキュメントを読み込ます。</span><span class="sxs-lookup"><span data-stu-id="8e767-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="8e767-111">次に、<xref:System.Xml.XmlNameTable> から <xref:System.Xml.XmlReader> を取得し、<xref:System.Xml.XmlNamespaceManager> から <xref:System.Xml.XmlNameTable> を取得します。</span><span class="sxs-lookup"><span data-stu-id="8e767-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="8e767-112">要素を選択する際には <xref:System.Xml.XmlNamespaceManager> を使用します。</span><span class="sxs-lookup"><span data-stu-id="8e767-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f5a9-108">例</span><span class="sxs-lookup"><span data-stu-id="1f5a9-108">Example</span></span>  
+ <span data-ttu-id="1f5a9-109">次の例では、2 つの名前空間を含む XML ツリーを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="1f5a9-110"><xref:System.Xml.XmlReader> を使用して XML ドキュメントを読み込ます。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="1f5a9-111">次に、<xref:System.Xml.XmlNameTable> から <xref:System.Xml.XmlReader> を取得し、<xref:System.Xml.XmlNamespaceManager> から <xref:System.Xml.XmlNameTable> を取得します。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="1f5a9-112">要素を選択する際には <xref:System.Xml.XmlNamespaceManager> を使用します。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- <span data-ttu-id="8e767-113">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8e767-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="1f5a9-113">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1f5a9-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -80,5 +80,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8e767-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e767-114">See also</span></span>
-- [<span data-ttu-id="8e767-115">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e767-115">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="1f5a9-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f5a9-114">See also</span></span>
+
+- [<span data-ttu-id="1f5a9-115">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f5a9-115">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

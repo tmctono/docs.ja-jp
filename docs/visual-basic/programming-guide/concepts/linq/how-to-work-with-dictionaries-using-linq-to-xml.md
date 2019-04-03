@@ -2,18 +2,18 @@
 title: '方法: LINQ to XML (Visual Basic) を使用してディクショナリを使用します。'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572345"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820766"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="601b2-102">方法: LINQ to XML (Visual Basic) を使用してディクショナリを使用します。</span><span class="sxs-lookup"><span data-stu-id="601b2-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
-<span data-ttu-id="601b2-103">さまざまなデータ構造と XML を相互に変換すると便利な場合がよくあります。</span><span class="sxs-lookup"><span data-stu-id="601b2-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="601b2-104">このトピックでは、<xref:System.Collections.Generic.Dictionary%602> と XML を相互に変換することによる、一般的な相互変換の実装について説明します。</span><span class="sxs-lookup"><span data-stu-id="601b2-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="63e32-102">方法: LINQ to XML (Visual Basic) を使用してディクショナリを使用します。</span><span class="sxs-lookup"><span data-stu-id="63e32-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
+<span data-ttu-id="63e32-103">さまざまなデータ構造と XML を相互に変換すると便利な場合がよくあります。</span><span class="sxs-lookup"><span data-stu-id="63e32-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="63e32-104">このトピックでは、<xref:System.Collections.Generic.Dictionary%602> と XML を相互に変換することによる、一般的な相互変換の実装について説明します。</span><span class="sxs-lookup"><span data-stu-id="63e32-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="601b2-105">例</span><span class="sxs-lookup"><span data-stu-id="601b2-105">Example</span></span>  
- <span data-ttu-id="601b2-106">この例では、埋め込み式の中で XML リテラルと、クエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="601b2-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="601b2-107">新しいクエリ プロジェクト<xref:System.Xml.Linq.XElement>用の新しいコンテンツになりますが、オブジェクト、 `Root` <xref:System.Xml.Linq.XElement>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="601b2-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="63e32-105">例</span><span class="sxs-lookup"><span data-stu-id="63e32-105">Example</span></span>  
+ <span data-ttu-id="63e32-106">この例では、埋め込み式の中で XML リテラルと、クエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="63e32-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="63e32-107">新しいクエリ プロジェクト<xref:System.Xml.Linq.XElement>用の新しいコンテンツになりますが、オブジェクト、 `Root` <xref:System.Xml.Linq.XElement>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="63e32-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -29,7 +29,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="601b2-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="601b2-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="63e32-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="63e32-108">This code produces the following output:</span></span>  
   
 ```xml  
           <Root>  
@@ -40,8 +40,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="601b2-109">例</span><span class="sxs-lookup"><span data-stu-id="601b2-109">Example</span></span>  
- <span data-ttu-id="601b2-110">次のコードは、XML からディクショナリを作成します。</span><span class="sxs-lookup"><span data-stu-id="601b2-110">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="63e32-109">例</span><span class="sxs-lookup"><span data-stu-id="63e32-109">Example</span></span>  
+ <span data-ttu-id="63e32-110">次のコードは、XML からディクショナリを作成します。</span><span class="sxs-lookup"><span data-stu-id="63e32-110">The following code creates a dictionary from XML.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -61,7 +61,7 @@ For Each str As String In dict.Keys
 Next  
 ```  
   
- <span data-ttu-id="601b2-111">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="601b2-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="63e32-111">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="63e32-111">This code produces the following output:</span></span>  
   
 ```  
 Child1:Value1  
@@ -70,5 +70,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="601b2-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="601b2-112">See also</span></span>
-- [<span data-ttu-id="601b2-113">射影と変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="601b2-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="63e32-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="63e32-112">See also</span></span>
+
+- [<span data-ttu-id="63e32-113">射影と変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="63e32-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

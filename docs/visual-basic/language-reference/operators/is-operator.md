@@ -9,51 +9,52 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980341"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817072"
 ---
-# <a name="is-operator-visual-basic"></a><span data-ttu-id="5e8e9-102">Is 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e8e9-102">Is Operator (Visual Basic)</span></span>
-<span data-ttu-id="5e8e9-103">2 つのオブジェクト参照変数を比較します。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-103">Compares two object reference variables.</span></span>  
+# <a name="is-operator-visual-basic"></a><span data-ttu-id="e9a89-102">Is 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9a89-102">Is Operator (Visual Basic)</span></span>
+<span data-ttu-id="e9a89-103">2 つのオブジェクト参照変数を比較します。</span><span class="sxs-lookup"><span data-stu-id="e9a89-103">Compares two object reference variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e8e9-104">構文</span><span class="sxs-lookup"><span data-stu-id="5e8e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9a89-104">構文</span><span class="sxs-lookup"><span data-stu-id="e9a89-104">Syntax</span></span>  
   
 ```  
 result = object1 Is object2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="5e8e9-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="5e8e9-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="e9a89-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="e9a89-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="5e8e9-106">必須。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-106">Required.</span></span> <span data-ttu-id="5e8e9-107">すべて`Boolean`値。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-107">Any `Boolean` value.</span></span>  
+ <span data-ttu-id="e9a89-106">必須。</span><span class="sxs-lookup"><span data-stu-id="e9a89-106">Required.</span></span> <span data-ttu-id="e9a89-107">すべて`Boolean`値。</span><span class="sxs-lookup"><span data-stu-id="e9a89-107">Any `Boolean` value.</span></span>  
   
  `object1`  
- <span data-ttu-id="5e8e9-108">必須。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-108">Required.</span></span> <span data-ttu-id="5e8e9-109">すべて`Object`名。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-109">Any `Object` name.</span></span>  
+ <span data-ttu-id="e9a89-108">必須。</span><span class="sxs-lookup"><span data-stu-id="e9a89-108">Required.</span></span> <span data-ttu-id="e9a89-109">すべて`Object`名。</span><span class="sxs-lookup"><span data-stu-id="e9a89-109">Any `Object` name.</span></span>  
   
  `object2`  
- <span data-ttu-id="5e8e9-110">必須。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-110">Required.</span></span> <span data-ttu-id="5e8e9-111">すべて`Object`名。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-111">Any `Object` name.</span></span>  
+ <span data-ttu-id="e9a89-110">必須。</span><span class="sxs-lookup"><span data-stu-id="e9a89-110">Required.</span></span> <span data-ttu-id="e9a89-111">すべて`Object`名。</span><span class="sxs-lookup"><span data-stu-id="e9a89-111">Any `Object` name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5e8e9-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="5e8e9-112">Remarks</span></span>  
- <span data-ttu-id="5e8e9-113">`Is`演算子が 2 つのオブジェクト参照が同じオブジェクトを参照してかどうかを決定します。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="5e8e9-114">ただし、値の比較は実行されません。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="5e8e9-115">場合`object1`と`object2`両方には、まったく同じオブジェクト インスタンスを参照してください`result`は`True`; が存在しない場合、`result`は`False`します。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e9a89-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="e9a89-112">Remarks</span></span>  
+ <span data-ttu-id="e9a89-113">`Is`演算子が 2 つのオブジェクト参照が同じオブジェクトを参照してかどうかを決定します。</span><span class="sxs-lookup"><span data-stu-id="e9a89-113">The `Is` operator determines if two object references refer to the same object.</span></span> <span data-ttu-id="e9a89-114">ただし、値の比較は実行されません。</span><span class="sxs-lookup"><span data-stu-id="e9a89-114">However, it does not perform value comparisons.</span></span> <span data-ttu-id="e9a89-115">場合`object1`と`object2`両方には、まったく同じオブジェクト インスタンスを参照してください`result`は`True`; が存在しない場合、`result`は`False`します。</span><span class="sxs-lookup"><span data-stu-id="e9a89-115">If `object1` and `object2` both refer to the exact same object instance, `result` is `True`; if they do not, `result` is `False`.</span></span>  
   
- <span data-ttu-id="5e8e9-116">`Is` 使用することができますも、`TypeOf`キーワードを`TypeOf`.`Is`オブジェクト変数のデータ型と互換性があるかどうかをテストする式。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
+ <span data-ttu-id="e9a89-116">`Is` 使用することができますも、`TypeOf`キーワードを`TypeOf`.`Is`オブジェクト変数のデータ型と互換性があるかどうかをテストする式。</span><span class="sxs-lookup"><span data-stu-id="e9a89-116">`Is` can also be used with the `TypeOf` keyword to make a `TypeOf`...`Is` expression, which tests whether an object variable is compatible with a data type.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5e8e9-117">`Is`でキーワードを使用しても、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)します。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
+>  <span data-ttu-id="e9a89-117">`Is`でキーワードを使用しても、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)します。</span><span class="sxs-lookup"><span data-stu-id="e9a89-117">The `Is` keyword is also used in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5e8e9-118">例</span><span class="sxs-lookup"><span data-stu-id="5e8e9-118">Example</span></span>  
- <span data-ttu-id="5e8e9-119">次の例では、`Is`オブジェクト参照のペアを比較する演算子。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="5e8e9-120">割り当てられている結果を`Boolean`2 つのオブジェクトが同一であるかどうかを表す値。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
+## <a name="example"></a><span data-ttu-id="e9a89-118">例</span><span class="sxs-lookup"><span data-stu-id="e9a89-118">Example</span></span>  
+ <span data-ttu-id="e9a89-119">次の例では、`Is`オブジェクト参照のペアを比較する演算子。</span><span class="sxs-lookup"><span data-stu-id="e9a89-119">The following example uses the `Is` operator to compare pairs of object references.</span></span> <span data-ttu-id="e9a89-120">割り当てられている結果を`Boolean`2 つのオブジェクトが同一であるかどうかを表す値。</span><span class="sxs-lookup"><span data-stu-id="e9a89-120">The results are assigned to a `Boolean` value representing whether the two objects are identical.</span></span>  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- <span data-ttu-id="5e8e9-121">使用することができます、前の例に示すよう、`Is`両方をテストする演算子が事前バインディングし、遅延バインドされたオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5e8e9-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
+ <span data-ttu-id="e9a89-121">使用することができます、前の例に示すよう、`Is`両方をテストする演算子が事前バインディングし、遅延バインドされたオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e9a89-121">As the preceding example demonstrates, you can use the `Is` operator to test both early bound and late bound objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e8e9-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e8e9-122">See also</span></span>
-- [<span data-ttu-id="5e8e9-123">TypeOf 演算子</span><span class="sxs-lookup"><span data-stu-id="5e8e9-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="5e8e9-124">IsNot 演算子</span><span class="sxs-lookup"><span data-stu-id="5e8e9-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="5e8e9-125">Visual Basic における比較演算子</span><span class="sxs-lookup"><span data-stu-id="5e8e9-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="5e8e9-126">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="5e8e9-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="5e8e9-127">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="5e8e9-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="5e8e9-128">演算子および式</span><span class="sxs-lookup"><span data-stu-id="5e8e9-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="e9a89-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="e9a89-122">See also</span></span>
+
+- [<span data-ttu-id="e9a89-123">TypeOf 演算子</span><span class="sxs-lookup"><span data-stu-id="e9a89-123">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="e9a89-124">IsNot 演算子</span><span class="sxs-lookup"><span data-stu-id="e9a89-124">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="e9a89-125">Visual Basic における比較演算子</span><span class="sxs-lookup"><span data-stu-id="e9a89-125">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="e9a89-126">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="e9a89-126">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="e9a89-127">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="e9a89-127">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="e9a89-128">演算子および式</span><span class="sxs-lookup"><span data-stu-id="e9a89-128">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
