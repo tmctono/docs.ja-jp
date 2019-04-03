@@ -2,17 +2,17 @@
 title: サンプル XML ファイル:数値データ (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 578ec2de69ae549e255fdafb98d3483f6330ce5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495787"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842682"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="80dd5-102">サンプル XML ファイル:数値データ (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="80dd5-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="80dd5-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="80dd5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="80dd5-104">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="80dd5-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="89f60-102">サンプル XML ファイル:数値データ (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="89f60-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="89f60-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="89f60-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="89f60-104">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="89f60-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="80dd5-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="80dd5-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="89f60-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="89f60-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -55,5 +55,6 @@ ms.locfileid: "54495787"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="80dd5-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="80dd5-106">See also</span></span>
-- [<span data-ttu-id="80dd5-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="80dd5-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="89f60-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="89f60-106">See also</span></span>
+
+- [<span data-ttu-id="89f60-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="89f60-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -7,27 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: 3ec3e7bb2f28bf8c4dd38bc71e11193456860021
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9581168fa86f8f0715e004b60c2eb2a813cd38ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379758"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840524"
 ---
-# <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a><span data-ttu-id="d53dc-102">イベント '\<eventname1 >' イベントを実装することはできません'\<eventname2 >' インターフェイスで '\<インターフェイス >' ため、デリゲート型の\<delegate1 >' と'\<delegate2 >' と一致しません。</span><span class="sxs-lookup"><span data-stu-id="d53dc-102">Event '\<eventname1>' cannot implement event '\<eventname2>' on interface '\<interface>' because their delegate types '\<delegate1>' and '\<delegate2>' do not match</span></span>
-<span data-ttu-id="d53dc-103">イベントのデリゲート型がインターフェイスでイベントのデリゲート型と一致しないために、Visual Basic では、イベントを実装できません。</span><span class="sxs-lookup"><span data-stu-id="d53dc-103">Visual Basic cannot implement an event because the delegate type of the event does not match the delegate type of the event in the interface.</span></span> <span data-ttu-id="d53dc-104">このエラーは、インターフェイス内で複数のイベントを定義して、同じイベントと共にそれらを実装しようとする場合に、発生します。</span><span class="sxs-lookup"><span data-stu-id="d53dc-104">This error can occur when you define multiple events in an interface and then attempt to implement them together with the same event.</span></span> <span data-ttu-id="d53dc-105">実装されたすべてのイベントが `As` 構文を使用して宣言され、同じデリゲート型を指定する場合にのみ、イベントは 2 つ以上のイベントを実装することができます。</span><span class="sxs-lookup"><span data-stu-id="d53dc-105">An event can implement two or more events only if all implemented events are declared using the `As` syntax and specify the same delegate type.</span></span>  
+# <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a><span data-ttu-id="9bfb3-102">イベント '\<eventname1 >' イベントを実装することはできません'\<eventname2 >' インターフェイスで '\<インターフェイス >' ため、デリゲート型の\<delegate1 >' と'\<delegate2 >' と一致しません。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-102">Event '\<eventname1>' cannot implement event '\<eventname2>' on interface '\<interface>' because their delegate types '\<delegate1>' and '\<delegate2>' do not match</span></span>
+<span data-ttu-id="9bfb3-103">イベントのデリゲート型がインターフェイスでイベントのデリゲート型と一致しないために、Visual Basic では、イベントを実装できません。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-103">Visual Basic cannot implement an event because the delegate type of the event does not match the delegate type of the event in the interface.</span></span> <span data-ttu-id="9bfb3-104">このエラーは、インターフェイス内で複数のイベントを定義して、同じイベントと共にそれらを実装しようとする場合に、発生します。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-104">This error can occur when you define multiple events in an interface and then attempt to implement them together with the same event.</span></span> <span data-ttu-id="9bfb3-105">実装されたすべてのイベントが `As` 構文を使用して宣言され、同じデリゲート型を指定する場合にのみ、イベントは 2 つ以上のイベントを実装することができます。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-105">An event can implement two or more events only if all implemented events are declared using the `As` syntax and specify the same delegate type.</span></span>  
   
- <span data-ttu-id="d53dc-106">**エラー ID:** BC31423</span><span class="sxs-lookup"><span data-stu-id="d53dc-106">**Error ID:** BC31423</span></span>  
+ <span data-ttu-id="9bfb3-106">**エラー ID:** BC31423</span><span class="sxs-lookup"><span data-stu-id="9bfb3-106">**Error ID:** BC31423</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d53dc-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="d53dc-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9bfb3-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="9bfb3-107">To correct this error</span></span>  
   
--   <span data-ttu-id="d53dc-108">イベントを個別に実装します。</span><span class="sxs-lookup"><span data-stu-id="d53dc-108">Implement the events separately.</span></span>  
+-   <span data-ttu-id="9bfb3-108">イベントを個別に実装します。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-108">Implement the events separately.</span></span>  
   
-     <span data-ttu-id="d53dc-109">または</span><span class="sxs-lookup"><span data-stu-id="d53dc-109">—or—</span></span>  
+     <span data-ttu-id="9bfb3-109">または</span><span class="sxs-lookup"><span data-stu-id="9bfb3-109">—or—</span></span>  
   
--   <span data-ttu-id="d53dc-110">インターフェイスを使用して、イベントを定義、`As`構文と同じデリゲート型を指定します。</span><span class="sxs-lookup"><span data-stu-id="d53dc-110">Define the events in the interface using the `As` syntax and specify the same delegate type.</span></span>  
+-   <span data-ttu-id="9bfb3-110">インターフェイスを使用して、イベントを定義、`As`構文と同じデリゲート型を指定します。</span><span class="sxs-lookup"><span data-stu-id="9bfb3-110">Define the events in the interface using the `As` syntax and specify the same delegate type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d53dc-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d53dc-111">See also</span></span>
-- [<span data-ttu-id="d53dc-112">Event ステートメント</span><span class="sxs-lookup"><span data-stu-id="d53dc-112">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="d53dc-113">Delegate ステートメント</span><span class="sxs-lookup"><span data-stu-id="d53dc-113">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="d53dc-114">イベント</span><span class="sxs-lookup"><span data-stu-id="d53dc-114">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="9bfb3-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="9bfb3-111">See also</span></span>
+
+- [<span data-ttu-id="9bfb3-112">Event ステートメント</span><span class="sxs-lookup"><span data-stu-id="9bfb3-112">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="9bfb3-113">Delegate ステートメント</span><span class="sxs-lookup"><span data-stu-id="9bfb3-113">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="9bfb3-114">イベント</span><span class="sxs-lookup"><span data-stu-id="9bfb3-114">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

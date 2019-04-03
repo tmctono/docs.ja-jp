@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270590"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836351"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="eaec7-102">Default プロパティ アクセスは継承インターフェイス メンバーの間であいまいな\<defaultpropertyname >' のインターフェイス '\<interfacename1 >' と'\<defaultpropertyname >' のインターフェイス '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="eaec7-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
-<span data-ttu-id="eaec7-103">インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。</span><span class="sxs-lookup"><span data-stu-id="eaec7-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="eaec7-104">コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。</span><span class="sxs-lookup"><span data-stu-id="eaec7-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="eaec7-105">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="eaec7-105">The following example illustrates this.</span></span>  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a><span data-ttu-id="ac1dc-102">Default プロパティ アクセスは継承インターフェイス メンバーの間であいまいな\<defaultpropertyname >' のインターフェイス '\<interfacename1 >' と'\<defaultpropertyname >' のインターフェイス '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="ac1dc-102">Default property access is ambiguous between the inherited interface members '\<defaultpropertyname>' of interface '\<interfacename1>' and '\<defaultpropertyname>' of interface '\<interfacename2>'</span></span>
+<span data-ttu-id="ac1dc-103">インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="ac1dc-104">コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="ac1dc-105">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -35,21 +35,21 @@ Public Class testClass
 End Class  
 ```  
   
- <span data-ttu-id="eaec7-106">指定すると`testObj(1)`コンパイラは既定のプロパティに解決しようとしています。</span><span class="sxs-lookup"><span data-stu-id="eaec7-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="eaec7-107">ただし、2 つ可能な既定プロパティは、継承のインターフェイスにより、コンパイラは、このエラーを通知するためです。</span><span class="sxs-lookup"><span data-stu-id="eaec7-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
+ <span data-ttu-id="ac1dc-106">指定すると`testObj(1)`コンパイラは既定のプロパティに解決しようとしています。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="ac1dc-107">ただし、2 つ可能な既定プロパティは、継承のインターフェイスにより、コンパイラは、このエラーを通知するためです。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- <span data-ttu-id="eaec7-108">**エラー ID:** BC30686</span><span class="sxs-lookup"><span data-stu-id="eaec7-108">**Error ID:** BC30686</span></span>  
+ <span data-ttu-id="ac1dc-108">**エラー ID:** BC30686</span><span class="sxs-lookup"><span data-stu-id="ac1dc-108">**Error ID:** BC30686</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="eaec7-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="eaec7-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ac1dc-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="ac1dc-109">To correct this error</span></span>  
   
--   <span data-ttu-id="eaec7-110">同じ名前のメンバーを継承しないようにします。</span><span class="sxs-lookup"><span data-stu-id="eaec7-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="eaec7-111">前の例では場合、`testObj`のメンバーのいずれかの必要はありません、たとえば、 `Iface2`、次のように宣言します。</span><span class="sxs-lookup"><span data-stu-id="eaec7-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
+-   <span data-ttu-id="ac1dc-110">同じ名前のメンバーを継承しないようにします。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="ac1dc-111">前の例では場合、`testObj`のメンバーのいずれかの必要はありません、たとえば、 `Iface2`、次のように宣言します。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     <span data-ttu-id="eaec7-112">- または -</span><span class="sxs-lookup"><span data-stu-id="eaec7-112">-or-</span></span>  
+     <span data-ttu-id="ac1dc-112">- または -</span><span class="sxs-lookup"><span data-stu-id="ac1dc-112">-or-</span></span>  
   
--   <span data-ttu-id="eaec7-113">クラスで継承するインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="eaec7-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="eaec7-114">これらの異なる名前を持つ継承されたプロパティを実装できます。</span><span class="sxs-lookup"><span data-stu-id="eaec7-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="eaec7-115">ただし、それらの 1 つだけでは、実装するクラスの既定のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="eaec7-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="eaec7-116">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="eaec7-116">The following example illustrates this.</span></span>  
+-   <span data-ttu-id="ac1dc-113">クラスで継承するインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="ac1dc-114">これらの異なる名前を持つ継承されたプロパティを実装できます。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="ac1dc-115">ただし、それらの 1 つだけでは、実装するクラスの既定のプロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="ac1dc-116">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="ac1dc-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -63,5 +63,6 @@ End Class
     End Class  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="eaec7-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="eaec7-117">See also</span></span>
-- [<span data-ttu-id="eaec7-118">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="eaec7-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="ac1dc-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac1dc-117">See also</span></span>
+
+- [<span data-ttu-id="ac1dc-118">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ac1dc-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

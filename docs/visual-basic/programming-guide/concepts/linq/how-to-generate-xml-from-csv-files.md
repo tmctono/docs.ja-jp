@@ -2,18 +2,18 @@
 title: '方法: (Visual Basic) の CSV ファイルから XML を生成します。'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706681"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835407"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="9a291-102">方法: (Visual Basic) の CSV ファイルから XML を生成します。</span><span class="sxs-lookup"><span data-stu-id="9a291-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
-<span data-ttu-id="9a291-103">この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9a291-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="df968-102">方法: (Visual Basic) の CSV ファイルから XML を生成します。</span><span class="sxs-lookup"><span data-stu-id="df968-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="df968-103">この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="df968-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a291-104">例</span><span class="sxs-lookup"><span data-stu-id="9a291-104">Example</span></span>  
- <span data-ttu-id="9a291-105">次のコードは、文字列の配列に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="9a291-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="df968-104">例</span><span class="sxs-lookup"><span data-stu-id="df968-104">Example</span></span>  
+ <span data-ttu-id="df968-105">次のコードは、文字列の配列に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="df968-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -48,7 +48,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- <span data-ttu-id="9a291-106">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="9a291-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="df968-106">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="df968-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,5 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9a291-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a291-107">See also</span></span>
-- [<span data-ttu-id="9a291-108">射影と変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a291-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="df968-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="df968-107">See also</span></span>
+
+- [<span data-ttu-id="df968-108">射影と変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df968-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

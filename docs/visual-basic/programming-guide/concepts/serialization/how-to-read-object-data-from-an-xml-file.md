@@ -2,17 +2,17 @@
 title: '方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: cd546e167afe45e2d324a784679f5a05cc1473c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521245"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834895"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a><span data-ttu-id="bb061-102">方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む</span><span class="sxs-lookup"><span data-stu-id="bb061-102">How to: Read Object Data from an XML File (Visual Basic)</span></span>
-<span data-ttu-id="bb061-103">次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="bb061-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a><span data-ttu-id="7e04b-102">方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む</span><span class="sxs-lookup"><span data-stu-id="7e04b-102">How to: Read Object Data from an XML File (Visual Basic)</span></span>
+<span data-ttu-id="7e04b-103">次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="7e04b-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bb061-104">例</span><span class="sxs-lookup"><span data-stu-id="bb061-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7e04b-104">例</span><span class="sxs-lookup"><span data-stu-id="7e04b-104">Example</span></span>  
   
 ```vb  
 Public Class Book  
@@ -29,27 +29,28 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bb061-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="bb061-105">Compiling the Code</span></span>  
- <span data-ttu-id="bb061-106">ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="bb061-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="bb061-107">データのシリアル化に関する詳細については、次を参照してください。[方法。XML ファイル (Visual Basic) にオブジェクト データを書き込む](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)します。</span><span class="sxs-lookup"><span data-stu-id="bb061-107">For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7e04b-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="7e04b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="7e04b-106">ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="7e04b-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="7e04b-107">データのシリアル化の詳細については、「[方法:XML ファイル (Visual Basic) にオブジェクト データを書き込む](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)します。</span><span class="sxs-lookup"><span data-stu-id="7e04b-107">For more information about serializing data, see [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).</span></span>  
   
- <span data-ttu-id="bb061-108">クラスには、パラメーターのないパブリック コンストラクターが必要です。</span><span class="sxs-lookup"><span data-stu-id="bb061-108">The class must have a public constructor without parameters.</span></span>  
+ <span data-ttu-id="7e04b-108">クラスには、パラメーターのないパブリック コンストラクターが必要です。</span><span class="sxs-lookup"><span data-stu-id="7e04b-108">The class must have a public constructor without parameters.</span></span>  
   
- <span data-ttu-id="bb061-109">パブリック プロパティとパブリック フィールドだけが逆シリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="bb061-109">Only public properties and fields are deserialized.</span></span>  
+ <span data-ttu-id="7e04b-109">パブリック プロパティとパブリック フィールドだけが逆シリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="7e04b-109">Only public properties and fields are deserialized.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="bb061-110">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="bb061-110">Robust Programming</span></span>  
- <span data-ttu-id="bb061-111">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="bb061-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="7e04b-110">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="7e04b-110">Robust Programming</span></span>  
+ <span data-ttu-id="7e04b-111">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7e04b-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="bb061-112">シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合</span><span class="sxs-lookup"><span data-stu-id="bb061-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
+-   <span data-ttu-id="7e04b-112">シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合</span><span class="sxs-lookup"><span data-stu-id="7e04b-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   <span data-ttu-id="bb061-113">ファイル内のデータが、逆シリアル化されるクラスのデータを表していない場合。</span><span class="sxs-lookup"><span data-stu-id="bb061-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
+-   <span data-ttu-id="7e04b-113">ファイル内のデータが、逆シリアル化されるクラスのデータを表していない場合。</span><span class="sxs-lookup"><span data-stu-id="7e04b-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
   
--   <span data-ttu-id="bb061-114">ファイルが存在しない (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="bb061-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="7e04b-114">ファイルが存在しない (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="7e04b-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="bb061-115">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="bb061-115">.NET Framework Security</span></span>  
- <span data-ttu-id="bb061-116">入力を常に検証し、信頼できないソースから決してデータを逆シリアル化しないでください。</span><span class="sxs-lookup"><span data-stu-id="bb061-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="bb061-117">再作成されたオブジェクトは、そのオブジェクトを逆シリアル化したコードと同じアクセス許可を持つローカル コンピューターで実行されます。</span><span class="sxs-lookup"><span data-stu-id="bb061-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="bb061-118">アプリケーションでデータを使用する前に、入力をすべて検証してください。</span><span class="sxs-lookup"><span data-stu-id="bb061-118">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="7e04b-115">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="7e04b-115">.NET Framework Security</span></span>  
+ <span data-ttu-id="7e04b-116">入力を常に検証し、信頼できないソースから決してデータを逆シリアル化しないでください。</span><span class="sxs-lookup"><span data-stu-id="7e04b-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="7e04b-117">再作成されたオブジェクトは、そのオブジェクトを逆シリアル化したコードと同じアクセス許可を持つローカル コンピューターで実行されます。</span><span class="sxs-lookup"><span data-stu-id="7e04b-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="7e04b-118">アプリケーションでデータを使用する前に、入力をすべて検証してください。</span><span class="sxs-lookup"><span data-stu-id="7e04b-118">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb061-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="bb061-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e04b-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="7e04b-119">See also</span></span>
+
 - <xref:System.IO.StreamWriter>
-- [<span data-ttu-id="bb061-120">方法: オブジェクトのデータを書き込む XML ファイル (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb061-120">How to: Write Object Data to an XML File (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [<span data-ttu-id="bb061-121">シリアル化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb061-121">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [<span data-ttu-id="bb061-122">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="bb061-122">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="7e04b-120">方法: オブジェクトのデータを書き込む XML ファイル (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e04b-120">How to: Write Object Data to an XML File (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [<span data-ttu-id="7e04b-121">シリアル化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e04b-121">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [<span data-ttu-id="7e04b-122">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="7e04b-122">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)

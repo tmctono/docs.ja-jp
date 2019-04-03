@@ -23,67 +23,68 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964927"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843410"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a><span data-ttu-id="043bd-102">方法: 定数 (Visual Basic) の宣言します。</span><span class="sxs-lookup"><span data-stu-id="043bd-102">How to: Declare A Constant (Visual Basic)</span></span>
-<span data-ttu-id="043bd-103">使用する、`Const`定数を宣言し、その値を設定するステートメント。</span><span class="sxs-lookup"><span data-stu-id="043bd-103">You use the `Const` statement to declare a constant and set its value.</span></span> <span data-ttu-id="043bd-104">定数を宣言すると、値に意味のある名前を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="043bd-104">By declaring a constant, you assign a meaningful name to a value.</span></span> <span data-ttu-id="043bd-105">定数が宣言されると、変更または新しい値を代入することはできません。</span><span class="sxs-lookup"><span data-stu-id="043bd-105">Once a constant is declared, it cannot be modified or assigned a new value.</span></span>  
+# <a name="how-to-declare-a-constant-visual-basic"></a><span data-ttu-id="f0018-102">方法: 定数 (Visual Basic) の宣言します。</span><span class="sxs-lookup"><span data-stu-id="f0018-102">How to: Declare A Constant (Visual Basic)</span></span>
+<span data-ttu-id="f0018-103">使用する、`Const`定数を宣言し、その値を設定するステートメント。</span><span class="sxs-lookup"><span data-stu-id="f0018-103">You use the `Const` statement to declare a constant and set its value.</span></span> <span data-ttu-id="f0018-104">定数を宣言すると、値に意味のある名前を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="f0018-104">By declaring a constant, you assign a meaningful name to a value.</span></span> <span data-ttu-id="f0018-105">定数が宣言されると、変更または新しい値を代入することはできません。</span><span class="sxs-lookup"><span data-stu-id="f0018-105">Once a constant is declared, it cannot be modified or assigned a new value.</span></span>  
   
- <span data-ttu-id="043bd-106">または、モジュール、クラスまたは構造体の宣言セクションに、プロシージャ内で定数を宣言するとします。</span><span class="sxs-lookup"><span data-stu-id="043bd-106">You declare a constant within a procedure or in the declarations section of a module, class, or structure.</span></span> <span data-ttu-id="043bd-107">クラスまたは構造のレベルの定数は、`Private`既定では、としても宣言されている可能性がありますが、 `Public`、 `Friend`、 `Protected`、または`Protected Friend`コードへのアクセスのレベルの適切な場合。</span><span class="sxs-lookup"><span data-stu-id="043bd-107">Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.</span></span>  
+ <span data-ttu-id="f0018-106">または、モジュール、クラスまたは構造体の宣言セクションに、プロシージャ内で定数を宣言するとします。</span><span class="sxs-lookup"><span data-stu-id="f0018-106">You declare a constant within a procedure or in the declarations section of a module, class, or structure.</span></span> <span data-ttu-id="f0018-107">クラスまたは構造のレベルの定数は、`Private`既定では、としても宣言されている可能性がありますが、 `Public`、 `Friend`、 `Protected`、または`Protected Friend`コードへのアクセスのレベルの適切な場合。</span><span class="sxs-lookup"><span data-stu-id="f0018-107">Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.</span></span>  
   
- <span data-ttu-id="043bd-108">定数は、(、規則は、同じ変数名を作成するためのものと)、有効なシンボリック名と式で構成される数値または文字列定数、演算子、(関数呼び出しはありません) が必要です。</span><span class="sxs-lookup"><span data-stu-id="043bd-108">The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).</span></span>  
+ <span data-ttu-id="f0018-108">定数は、(、規則は、同じ変数名を作成するためのものと)、有効なシンボリック名と式で構成される数値または文字列定数、演算子、(関数呼び出しはありません) が必要です。</span><span class="sxs-lookup"><span data-stu-id="f0018-108">The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a><span data-ttu-id="043bd-109">定数を宣言するには</span><span class="sxs-lookup"><span data-stu-id="043bd-109">To declare a constant</span></span>  
+### <a name="to-declare-a-constant"></a><span data-ttu-id="f0018-109">定数を宣言するには</span><span class="sxs-lookup"><span data-stu-id="f0018-109">To declare a constant</span></span>  
   
--   <span data-ttu-id="043bd-110">アクセス指定子を含む宣言を記述、`Const`キーワード、および次の例のように、式。</span><span class="sxs-lookup"><span data-stu-id="043bd-110">Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:</span></span>  
+-   <span data-ttu-id="f0018-110">アクセス指定子を含む宣言を記述、`Const`キーワード、および次の例のように、式。</span><span class="sxs-lookup"><span data-stu-id="f0018-110">Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:</span></span>  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     <span data-ttu-id="043bd-111">ときに[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)は`Off`と[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)は`On`、データ型を指定することで、定数を明示的に宣言する必要があります (`Boolean`、 `Byte`、 `Char`、 `DateTime`、 `Decimal`、 `Double`、 `Integer`、 `Long`、 `Short`、 `Single`、または`String`)。</span><span class="sxs-lookup"><span data-stu-id="043bd-111">When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).</span></span>  
+     <span data-ttu-id="f0018-111">ときに[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)は`Off`と[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)は`On`、データ型を指定することで、定数を明示的に宣言する必要があります (`Boolean`、 `Byte`、 `Char`、 `DateTime`、 `Decimal`、 `Double`、 `Integer`、 `Long`、 `Short`、 `Single`、または`String`)。</span><span class="sxs-lookup"><span data-stu-id="f0018-111">When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).</span></span>  
   
-     <span data-ttu-id="043bd-112">ときに`Option Infer`は`On`または`Option Strict`は`Off`、定数を宣言するにはデータ型を指定せず、`As`句。</span><span class="sxs-lookup"><span data-stu-id="043bd-112">When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause.</span></span> <span data-ttu-id="043bd-113">コンパイラは、定数式の型からの種類を決定します。</span><span class="sxs-lookup"><span data-stu-id="043bd-113">The compiler determines the type of the constant from the type of the expression.</span></span> <span data-ttu-id="043bd-114">詳細については、次を参照してください。[定数とリテラルのデータ型](constant-and-literal-data-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="043bd-114">For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).</span></span>  
+     <span data-ttu-id="f0018-112">ときに`Option Infer`は`On`または`Option Strict`は`Off`、定数を宣言するにはデータ型を指定せず、`As`句。</span><span class="sxs-lookup"><span data-stu-id="f0018-112">When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause.</span></span> <span data-ttu-id="f0018-113">コンパイラは、定数式の型からの種類を決定します。</span><span class="sxs-lookup"><span data-stu-id="f0018-113">The compiler determines the type of the constant from the type of the expression.</span></span> <span data-ttu-id="f0018-114">詳細については、次を参照してください。[定数とリテラルのデータ型](constant-and-literal-data-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="f0018-114">For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).</span></span>  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a><span data-ttu-id="043bd-115">明示的な型を持つ定数を宣言するのには</span><span class="sxs-lookup"><span data-stu-id="043bd-115">To declare a constant that has an explicitly stated data type</span></span>  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a><span data-ttu-id="f0018-115">明示的な型を持つ定数を宣言するのには</span><span class="sxs-lookup"><span data-stu-id="f0018-115">To declare a constant that has an explicitly stated data type</span></span>  
   
--   <span data-ttu-id="043bd-116">含む宣言を記述、`As`次の例のように、キーワードと、明示的なデータを入力します。</span><span class="sxs-lookup"><span data-stu-id="043bd-116">Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:</span></span>  
+-   <span data-ttu-id="f0018-116">含む宣言を記述、`As`次の例のように、キーワードと、明示的なデータを入力します。</span><span class="sxs-lookup"><span data-stu-id="f0018-116">Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:</span></span>  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     <span data-ttu-id="043bd-117">コードは 1 行につき 1 つの定数のみを宣言する場合より読みやすい 1 つの行に複数の定数を宣言できます。</span><span class="sxs-lookup"><span data-stu-id="043bd-117">You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line.</span></span> <span data-ttu-id="043bd-118">1 行に複数の定数を宣言する場合、すべて必要があります、同じアクセス レベル (`Public`、 `Private`、 `Friend`、 `Protected`、または`Protected Friend`)。</span><span class="sxs-lookup"><span data-stu-id="043bd-118">If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).</span></span>  
+     <span data-ttu-id="f0018-117">コードは 1 行につき 1 つの定数のみを宣言する場合より読みやすい 1 つの行に複数の定数を宣言できます。</span><span class="sxs-lookup"><span data-stu-id="f0018-117">You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line.</span></span> <span data-ttu-id="f0018-118">1 行に複数の定数を宣言する場合、すべて必要があります、同じアクセス レベル (`Public`、 `Private`、 `Friend`、 `Protected`、または`Protected Friend`)。</span><span class="sxs-lookup"><span data-stu-id="f0018-118">If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).</span></span>  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a><span data-ttu-id="043bd-119">1 行に複数の定数を宣言するには</span><span class="sxs-lookup"><span data-stu-id="043bd-119">To declare multiple constants on a single line</span></span>  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a><span data-ttu-id="f0018-119">1 行に複数の定数を宣言するには</span><span class="sxs-lookup"><span data-stu-id="f0018-119">To declare multiple constants on a single line</span></span>  
   
--   <span data-ttu-id="043bd-120">宣言をコンマと次の例のように、スペースで区切ります。</span><span class="sxs-lookup"><span data-stu-id="043bd-120">Separate the declarations with a comma and a space, as in the following example:</span></span>  
+-   <span data-ttu-id="f0018-120">宣言をコンマと次の例のように、スペースで区切ります。</span><span class="sxs-lookup"><span data-stu-id="f0018-120">Separate the declarations with a comma and a space, as in the following example:</span></span>  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="043bd-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="043bd-121">See also</span></span>
-- [<span data-ttu-id="043bd-122">Const ステートメント</span><span class="sxs-lookup"><span data-stu-id="043bd-122">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)
-- [<span data-ttu-id="043bd-123">定数とリテラルのデータ型</span><span class="sxs-lookup"><span data-stu-id="043bd-123">Constant and Literal Data Types</span></span>](constant-and-literal-data-types.md)
-- [<span data-ttu-id="043bd-124">定数の概要</span><span class="sxs-lookup"><span data-stu-id="043bd-124">Constants Overview</span></span>](constants-overview.md)
-- [<span data-ttu-id="043bd-125">方法: 定数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="043bd-125">How to: Declare A Constant</span></span>](how-to-declare-a-constant.md)
-- [<span data-ttu-id="043bd-126">ユーザー定義定数</span><span class="sxs-lookup"><span data-stu-id="043bd-126">User-Defined Constants</span></span>](user-defined-constants.md)
-- [<span data-ttu-id="043bd-127">定数とリテラルのデータ型</span><span class="sxs-lookup"><span data-stu-id="043bd-127">Constant and Literal Data Types</span></span>](constant-and-literal-data-types.md)
-- [<span data-ttu-id="043bd-128">方法: 関連する定数値をまとめてグループ</span><span class="sxs-lookup"><span data-stu-id="043bd-128">How to: Group Related Constant Values Together</span></span>](how-to-group-related-constant-values-together.md)
-- [<span data-ttu-id="043bd-129">列挙型の概要</span><span class="sxs-lookup"><span data-stu-id="043bd-129">Enumerations Overview</span></span>](enumerations-overview.md)
-- [<span data-ttu-id="043bd-130">方法: 列挙体を宣言します。</span><span class="sxs-lookup"><span data-stu-id="043bd-130">How to: Declare Enumerations</span></span>](how-to-declare-enumerations.md)
-- [<span data-ttu-id="043bd-131">方法: 列挙体のメンバーを参照してください。</span><span class="sxs-lookup"><span data-stu-id="043bd-131">How to: Refer to an Enumeration Member</span></span>](how-to-refer-to-an-enumeration-member.md)
-- [<span data-ttu-id="043bd-132">列挙型と名前の修飾</span><span class="sxs-lookup"><span data-stu-id="043bd-132">Enumerations and Name Qualification</span></span>](enumerations-and-name-qualification.md)
-- [<span data-ttu-id="043bd-133">方法: 列挙体を反復処理します。</span><span class="sxs-lookup"><span data-stu-id="043bd-133">How to: Iterate Through An Enumeration</span></span>](how-to-iterate-through-an-enumeration.md)
-- [<span data-ttu-id="043bd-134">方法: 列挙値に関連付けられている文字列を確認します。</span><span class="sxs-lookup"><span data-stu-id="043bd-134">How to: Determine the String Associated with an Enumeration Value</span></span>](how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [<span data-ttu-id="043bd-135">列挙型を使用する状況</span><span class="sxs-lookup"><span data-stu-id="043bd-135">When to Use an Enumeration</span></span>](when-to-use-an-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="f0018-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0018-121">See also</span></span>
 
-- [<span data-ttu-id="043bd-136">列挙型の概要</span><span class="sxs-lookup"><span data-stu-id="043bd-136">Enumerations Overview</span></span>](enumerations-overview.md)
-- [<span data-ttu-id="043bd-137">定数の概要</span><span class="sxs-lookup"><span data-stu-id="043bd-137">Constants Overview</span></span>](constants-overview.md)
-- [<span data-ttu-id="043bd-138">方法: 列挙体を宣言します。</span><span class="sxs-lookup"><span data-stu-id="043bd-138">How to: Declare an Enumeration</span></span>](how-to-declare-enumerations.md)
-- [<span data-ttu-id="043bd-139">列挙型と名前の修飾</span><span class="sxs-lookup"><span data-stu-id="043bd-139">Enumerations and Name Qualification</span></span>](enumerations-and-name-qualification.md)
-- [<span data-ttu-id="043bd-140">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="043bd-140">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [<span data-ttu-id="043bd-141">定数と列挙体</span><span class="sxs-lookup"><span data-stu-id="043bd-141">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [<span data-ttu-id="f0018-122">Const ステートメント</span><span class="sxs-lookup"><span data-stu-id="f0018-122">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [<span data-ttu-id="f0018-123">定数とリテラルのデータ型</span><span class="sxs-lookup"><span data-stu-id="f0018-123">Constant and Literal Data Types</span></span>](constant-and-literal-data-types.md)
+- [<span data-ttu-id="f0018-124">定数の概要</span><span class="sxs-lookup"><span data-stu-id="f0018-124">Constants Overview</span></span>](constants-overview.md)
+- [<span data-ttu-id="f0018-125">方法: 定数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="f0018-125">How to: Declare A Constant</span></span>](how-to-declare-a-constant.md)
+- [<span data-ttu-id="f0018-126">ユーザー定義定数</span><span class="sxs-lookup"><span data-stu-id="f0018-126">User-Defined Constants</span></span>](user-defined-constants.md)
+- [<span data-ttu-id="f0018-127">定数とリテラルのデータ型</span><span class="sxs-lookup"><span data-stu-id="f0018-127">Constant and Literal Data Types</span></span>](constant-and-literal-data-types.md)
+- [<span data-ttu-id="f0018-128">方法: 関連する定数値をまとめてグループ</span><span class="sxs-lookup"><span data-stu-id="f0018-128">How to: Group Related Constant Values Together</span></span>](how-to-group-related-constant-values-together.md)
+- [<span data-ttu-id="f0018-129">列挙型の概要</span><span class="sxs-lookup"><span data-stu-id="f0018-129">Enumerations Overview</span></span>](enumerations-overview.md)
+- [<span data-ttu-id="f0018-130">方法: 列挙体を宣言します。</span><span class="sxs-lookup"><span data-stu-id="f0018-130">How to: Declare Enumerations</span></span>](how-to-declare-enumerations.md)
+- [<span data-ttu-id="f0018-131">方法: 列挙体のメンバーを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0018-131">How to: Refer to an Enumeration Member</span></span>](how-to-refer-to-an-enumeration-member.md)
+- [<span data-ttu-id="f0018-132">列挙型と名前の修飾</span><span class="sxs-lookup"><span data-stu-id="f0018-132">Enumerations and Name Qualification</span></span>](enumerations-and-name-qualification.md)
+- [<span data-ttu-id="f0018-133">方法: 列挙体を反復処理します。</span><span class="sxs-lookup"><span data-stu-id="f0018-133">How to: Iterate Through An Enumeration</span></span>](how-to-iterate-through-an-enumeration.md)
+- [<span data-ttu-id="f0018-134">方法: 列挙値に関連付けられている文字列を確認します。</span><span class="sxs-lookup"><span data-stu-id="f0018-134">How to: Determine the String Associated with an Enumeration Value</span></span>](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [<span data-ttu-id="f0018-135">列挙型を使用する状況</span><span class="sxs-lookup"><span data-stu-id="f0018-135">When to Use an Enumeration</span></span>](when-to-use-an-enumeration.md)
+
+- [<span data-ttu-id="f0018-136">列挙型の概要</span><span class="sxs-lookup"><span data-stu-id="f0018-136">Enumerations Overview</span></span>](enumerations-overview.md)
+- [<span data-ttu-id="f0018-137">定数の概要</span><span class="sxs-lookup"><span data-stu-id="f0018-137">Constants Overview</span></span>](constants-overview.md)
+- [<span data-ttu-id="f0018-138">方法: 列挙体を宣言します。</span><span class="sxs-lookup"><span data-stu-id="f0018-138">How to: Declare an Enumeration</span></span>](how-to-declare-enumerations.md)
+- [<span data-ttu-id="f0018-139">列挙型と名前の修飾</span><span class="sxs-lookup"><span data-stu-id="f0018-139">Enumerations and Name Qualification</span></span>](enumerations-and-name-qualification.md)
+- [<span data-ttu-id="f0018-140">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="f0018-140">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="f0018-141">定数と列挙体</span><span class="sxs-lookup"><span data-stu-id="f0018-141">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)
