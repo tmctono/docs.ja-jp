@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 97113227591c40f302d3d1a08a4248a8199817bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285429"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831879"
 ---
-# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a><span data-ttu-id="0de9a-102">'\<methodname >' が同じシグネチャを持つ複数の定義</span><span class="sxs-lookup"><span data-stu-id="0de9a-102">'\<methodname>' has multiple definitions with identical signatures</span></span>
-<span data-ttu-id="0de9a-103">`Function`または`Sub`プロシージャ宣言では、前の宣言と同じプロシージャの名前と引数のリストを使用します。</span><span class="sxs-lookup"><span data-stu-id="0de9a-103">A `Function` or `Sub` procedure declaration uses the identical procedure name and argument list as a previous declaration.</span></span> <span data-ttu-id="0de9a-104">1 つの考えられる原因は、元のプロシージャをオーバー ロードする試みです。</span><span class="sxs-lookup"><span data-stu-id="0de9a-104">One possible cause is an attempt to overload the original procedure.</span></span> <span data-ttu-id="0de9a-105">オーバー ロードされたプロシージャには、異なる引数リストが必要です。</span><span class="sxs-lookup"><span data-stu-id="0de9a-105">Overloaded procedures must have different argument lists.</span></span>  
+# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a><span data-ttu-id="c8f80-102">'\<methodname >' が同じシグネチャを持つ複数の定義</span><span class="sxs-lookup"><span data-stu-id="c8f80-102">'\<methodname>' has multiple definitions with identical signatures</span></span>
+<span data-ttu-id="c8f80-103">`Function`または`Sub`プロシージャ宣言では、前の宣言と同じプロシージャの名前と引数のリストを使用します。</span><span class="sxs-lookup"><span data-stu-id="c8f80-103">A `Function` or `Sub` procedure declaration uses the identical procedure name and argument list as a previous declaration.</span></span> <span data-ttu-id="c8f80-104">1 つの考えられる原因は、元のプロシージャをオーバー ロードする試みです。</span><span class="sxs-lookup"><span data-stu-id="c8f80-104">One possible cause is an attempt to overload the original procedure.</span></span> <span data-ttu-id="c8f80-105">オーバー ロードされたプロシージャには、異なる引数リストが必要です。</span><span class="sxs-lookup"><span data-stu-id="c8f80-105">Overloaded procedures must have different argument lists.</span></span>  
   
- <span data-ttu-id="0de9a-106">**エラー ID:** BC30269</span><span class="sxs-lookup"><span data-stu-id="0de9a-106">**Error ID:** BC30269</span></span>  
+ <span data-ttu-id="c8f80-106">**エラー ID:** BC30269</span><span class="sxs-lookup"><span data-stu-id="c8f80-106">**Error ID:** BC30269</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0de9a-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0de9a-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c8f80-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="c8f80-107">To correct this error</span></span>  
   
--   <span data-ttu-id="0de9a-108">プロシージャ名か、引数リストを変更するか、重複の宣言を削除します。</span><span class="sxs-lookup"><span data-stu-id="0de9a-108">Change the procedure name or the argument list, or remove the duplicate declaration.</span></span>  
+-   <span data-ttu-id="c8f80-108">プロシージャ名か、引数リストを変更するか、重複の宣言を削除します。</span><span class="sxs-lookup"><span data-stu-id="c8f80-108">Change the procedure name or the argument list, or remove the duplicate declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0de9a-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0de9a-109">See also</span></span>
-- [<span data-ttu-id="0de9a-110">宣言された要素の参照</span><span class="sxs-lookup"><span data-stu-id="0de9a-110">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [<span data-ttu-id="0de9a-111">プロシージャのオーバーロードに関する注意事項</span><span class="sxs-lookup"><span data-stu-id="0de9a-111">Considerations in Overloading Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="c8f80-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8f80-109">See also</span></span>
+
+- [<span data-ttu-id="c8f80-110">宣言された要素の参照</span><span class="sxs-lookup"><span data-stu-id="c8f80-110">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="c8f80-111">プロシージャのオーバーロードに関する注意事項</span><span class="sxs-lookup"><span data-stu-id="c8f80-111">Considerations in Overloading Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

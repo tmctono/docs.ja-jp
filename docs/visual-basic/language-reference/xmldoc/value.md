@@ -5,35 +5,36 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 7ab1f4a19793c408acfe1c4adf76aed5679fc696
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474268"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821415"
 ---
-# <a name="value-visual-basic"></a><span data-ttu-id="b0036-102">\<値 > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0036-102">\<value> (Visual Basic)</span></span>
-<span data-ttu-id="b0036-103">プロパティの説明を指定します。</span><span class="sxs-lookup"><span data-stu-id="b0036-103">Specifies the description of a property.</span></span>  
+# <a name="value-visual-basic"></a><span data-ttu-id="599d7-102">\<値 > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="599d7-102">\<value> (Visual Basic)</span></span>
+<span data-ttu-id="599d7-103">プロパティの説明を指定します。</span><span class="sxs-lookup"><span data-stu-id="599d7-103">Specifies the description of a property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0036-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0036-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="599d7-104">構文</span><span class="sxs-lookup"><span data-stu-id="599d7-104">Syntax</span></span>  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0036-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b0036-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="599d7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="599d7-105">Parameters</span></span>  
  `property-description`  
- <span data-ttu-id="b0036-106">プロパティの説明。</span><span class="sxs-lookup"><span data-stu-id="b0036-106">A description for the property.</span></span>  
+ <span data-ttu-id="599d7-106">プロパティの説明。</span><span class="sxs-lookup"><span data-stu-id="599d7-106">A description for the property.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0036-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0036-107">Remarks</span></span>  
- <span data-ttu-id="b0036-108">使用して、`<value>`プロパティを説明するタグ。</span><span class="sxs-lookup"><span data-stu-id="b0036-108">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="b0036-109">Visual Studio 開発環境で、コード ウィザードを使用してプロパティを追加すると、追加されることに注意してください、 [\<概要 >](../../../visual-basic/language-reference/xmldoc/summary.md)新しいプロパティのタグ。</span><span class="sxs-lookup"><span data-stu-id="b0036-109">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="b0036-110">手動で追加する必要がありますし、`<value>`プロパティを表す値を記述するタグ。</span><span class="sxs-lookup"><span data-stu-id="b0036-110">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="599d7-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="599d7-107">Remarks</span></span>  
+ <span data-ttu-id="599d7-108">使用して、`<value>`プロパティを説明するタグ。</span><span class="sxs-lookup"><span data-stu-id="599d7-108">Use the `<value>` tag to describe a property.</span></span> <span data-ttu-id="599d7-109">Visual Studio 開発環境で、コード ウィザードを使用してプロパティを追加すると、追加されることに注意してください、 [\<概要 >](../../../visual-basic/language-reference/xmldoc/summary.md)新しいプロパティのタグ。</span><span class="sxs-lookup"><span data-stu-id="599d7-109">Note that when you add a property using the code wizard in the Visual Studio development environment, it will add a [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="599d7-110">手動で追加する必要がありますし、`<value>`プロパティを表す値を記述するタグ。</span><span class="sxs-lookup"><span data-stu-id="599d7-110">You should then manually add a `<value>` tag to describe the value that the property represents.</span></span>  
   
- <span data-ttu-id="b0036-111">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="b0036-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="599d7-111">コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="599d7-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0036-112">例</span><span class="sxs-lookup"><span data-stu-id="b0036-112">Example</span></span>  
- <span data-ttu-id="b0036-113">この例では、`<value>`どのような値を記述するタグ、`Counter`プロパティを保持します。</span><span class="sxs-lookup"><span data-stu-id="b0036-113">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
+## <a name="example"></a><span data-ttu-id="599d7-112">例</span><span class="sxs-lookup"><span data-stu-id="599d7-112">Example</span></span>  
+ <span data-ttu-id="599d7-113">この例では、`<value>`どのような値を記述するタグ、`Counter`プロパティを保持します。</span><span class="sxs-lookup"><span data-stu-id="599d7-113">This example uses the `<value>` tag to describe what value the `Counter` property holds.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0036-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0036-114">See also</span></span>
-- [<span data-ttu-id="b0036-115">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="b0036-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="599d7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="599d7-114">See also</span></span>
+
+- [<span data-ttu-id="599d7-115">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="599d7-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

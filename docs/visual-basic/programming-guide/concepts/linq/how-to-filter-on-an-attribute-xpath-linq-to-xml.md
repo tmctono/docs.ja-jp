@@ -2,24 +2,24 @@
 title: '方法: 属性 (XPATH-LINQ to XML) をフィルター処理 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ac494b2e453d48a40c2a9be6505d5deebc4a1235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822740"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="468db-102">方法: 属性 (XPATH-LINQ to XML) をフィルター処理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="468db-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="468db-103">このトピックでは、指定した名前を持ち、かつ指定した値の属性を持つ子孫要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="468db-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="33827-102">方法: 属性 (XPATH-LINQ to XML) をフィルター処理 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33827-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="33827-103">このトピックでは、指定した名前を持ち、かつ指定した値の属性を持つ子孫要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="33827-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="468db-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="468db-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="33827-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="33827-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="468db-105">例</span><span class="sxs-lookup"><span data-stu-id="468db-105">Example</span></span>  
- <span data-ttu-id="468db-106">この例では、`Address` という名前を持ち、かつ "Shipping" という値の `Type` 属性を持つ子孫要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="468db-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="33827-105">例</span><span class="sxs-lookup"><span data-stu-id="33827-105">Example</span></span>  
+ <span data-ttu-id="33827-106">この例では、`Address` という名前を持ち、かつ "Shipping" という値の `Type` 属性を持つ子孫要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="33827-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="468db-107">この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:複数の発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)します。</span><span class="sxs-lookup"><span data-stu-id="468db-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="33827-107">この例では、XML ドキュメント、「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="33827-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="468db-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="468db-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="33827-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="33827-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -75,5 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="468db-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="468db-109">See also</span></span>
-- [<span data-ttu-id="468db-110">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="468db-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="33827-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="33827-109">See also</span></span>
+
+- [<span data-ttu-id="33827-110">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33827-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

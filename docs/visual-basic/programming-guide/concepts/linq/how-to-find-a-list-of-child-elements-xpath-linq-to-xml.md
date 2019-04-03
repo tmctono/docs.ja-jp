@@ -2,22 +2,22 @@
 title: '方法: 子要素 (XPATH-LINQ to XML) の一覧を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 4ff9e5f1dc1d1b6c9ac1674434bcb2bc4c57ffde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625108"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825015"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="463ae-102">方法: 子要素 (XPATH-LINQ to XML) の一覧を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="463ae-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="463ae-103">このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を比較します。</span><span class="sxs-lookup"><span data-stu-id="463ae-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="65860-102">方法: 子要素 (XPATH-LINQ to XML) の一覧を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65860-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="65860-103">このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 軸を比較します。</span><span class="sxs-lookup"><span data-stu-id="65860-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="463ae-104">XPath 式は `./*` です。</span><span class="sxs-lookup"><span data-stu-id="463ae-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="65860-104">XPath 式は `./*` です。</span><span class="sxs-lookup"><span data-stu-id="65860-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="463ae-105">例</span><span class="sxs-lookup"><span data-stu-id="463ae-105">Example</span></span>  
- <span data-ttu-id="463ae-106">この例では、`Address` 要素の子要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="463ae-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="65860-105">例</span><span class="sxs-lookup"><span data-stu-id="65860-105">Example</span></span>  
+ <span data-ttu-id="65860-106">この例では、`Address` 要素の子要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="65860-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="463ae-107">この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:複数の発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)します。</span><span class="sxs-lookup"><span data-stu-id="463ae-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="65860-107">この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="65860-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="463ae-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="463ae-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="65860-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="65860-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -52,5 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="463ae-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="463ae-109">See also</span></span>
-- [<span data-ttu-id="463ae-110">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="463ae-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="65860-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="65860-109">See also</span></span>
+
+- [<span data-ttu-id="65860-110">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65860-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

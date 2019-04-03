@@ -10,38 +10,39 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832126"
 ---
-# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="74c44-102">方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。</span><span class="sxs-lookup"><span data-stu-id="74c44-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
-<span data-ttu-id="74c44-103">場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="74c44-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="74c44-104">プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。</span><span class="sxs-lookup"><span data-stu-id="74c44-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a><span data-ttu-id="67e07-102">方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。</span><span class="sxs-lookup"><span data-stu-id="67e07-102">How to: Declare a Property with Mixed Access Levels (Visual Basic)</span></span>
+<span data-ttu-id="67e07-103">場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="67e07-103">If you want the `Get` and `Set` procedures on a property to have different access levels, you can use the more permissive level in the `Property` statement and the more restrictive level in either the `Get` or `Set` statement.</span></span> <span data-ttu-id="67e07-104">プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。</span><span class="sxs-lookup"><span data-stu-id="67e07-104">You use mixed access levels on a property when you want certain parts of the code to be able to get the property's value, and certain other parts of the code to be able to change the value.</span></span>  
   
- <span data-ttu-id="74c44-105">アクセス レベルの詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。</span><span class="sxs-lookup"><span data-stu-id="74c44-105">For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+ <span data-ttu-id="67e07-105">アクセス レベルの詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。</span><span class="sxs-lookup"><span data-stu-id="67e07-105">For more information on access levels, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-### <a name="to-declare-a-property-with-mixed-access-levels"></a><span data-ttu-id="74c44-106">混合アクセス レベルを持つプロパティを宣言するには</span><span class="sxs-lookup"><span data-stu-id="74c44-106">To declare a property with mixed access levels</span></span>  
+### <a name="to-declare-a-property-with-mixed-access-levels"></a><span data-ttu-id="67e07-106">混合アクセス レベルを持つプロパティを宣言するには</span><span class="sxs-lookup"><span data-stu-id="67e07-106">To declare a property with mixed access levels</span></span>  
   
-1.  <span data-ttu-id="74c44-107">通常の方法でプロパティを宣言しより制限の少ないアクセス レベルを指定 (など`Public`) で、`Property`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="74c44-107">Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.</span></span>  
+1.  <span data-ttu-id="67e07-107">通常の方法でプロパティを宣言しより制限の少ないアクセス レベルを指定 (など`Public`) で、`Property`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="67e07-107">Declare the property in the normal way, and specify the less restrictive access level (such as `Public`) in the `Property` statement.</span></span>  
   
-2.  <span data-ttu-id="74c44-108">いずれかを宣言、`Get`または`Set`より制限の厳しいアクセス レベルを指定する手順 (など`Friend`)。</span><span class="sxs-lookup"><span data-stu-id="74c44-108">Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).</span></span>  
+2.  <span data-ttu-id="67e07-108">いずれかを宣言、`Get`または`Set`より制限の厳しいアクセス レベルを指定する手順 (など`Friend`)。</span><span class="sxs-lookup"><span data-stu-id="67e07-108">Declare either the `Get` or the `Set` procedure specifying the more restrictive access level (such as `Friend`).</span></span>  
   
-3.  <span data-ttu-id="74c44-109">その他のプロパティ プロシージャでは、アクセス レベルを指定しません。</span><span class="sxs-lookup"><span data-stu-id="74c44-109">Do not specify an access level on the other property procedure.</span></span> <span data-ttu-id="74c44-110">アクセス レベルで宣言されていると想定して、`Property`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="74c44-110">It assumes the access level declared in the `Property` statement.</span></span> <span data-ttu-id="74c44-111">プロパティ プロシージャの 1 つだけにアクセスを制限することができます。</span><span class="sxs-lookup"><span data-stu-id="74c44-111">You can restrict access on only one of the property procedures.</span></span>  
+3.  <span data-ttu-id="67e07-109">その他のプロパティ プロシージャでは、アクセス レベルを指定しません。</span><span class="sxs-lookup"><span data-stu-id="67e07-109">Do not specify an access level on the other property procedure.</span></span> <span data-ttu-id="67e07-110">アクセス レベルで宣言されていると想定して、`Property`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="67e07-110">It assumes the access level declared in the `Property` statement.</span></span> <span data-ttu-id="67e07-111">プロパティ プロシージャの 1 つだけにアクセスを制限することができます。</span><span class="sxs-lookup"><span data-stu-id="67e07-111">You can restrict access on only one of the property procedures.</span></span>  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
-     <span data-ttu-id="74c44-112">前の例では、`Get`手順では、同じ`Protected`プロパティ自体としてのアクセス中に、`Set`手順では`Private`アクセス。</span><span class="sxs-lookup"><span data-stu-id="74c44-112">In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access.</span></span> <span data-ttu-id="74c44-113">派生したクラス`employee`読み取ることができます、`salary`値のみが、`employee`クラスで設定できます。</span><span class="sxs-lookup"><span data-stu-id="74c44-113">A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.</span></span>  
+     <span data-ttu-id="67e07-112">前の例では、`Get`手順では、同じ`Protected`プロパティ自体としてのアクセス中に、`Set`手順では`Private`アクセス。</span><span class="sxs-lookup"><span data-stu-id="67e07-112">In the preceding example, the `Get` procedure has the same `Protected` access as the property itself, while the `Set` procedure has `Private` access.</span></span> <span data-ttu-id="67e07-113">派生したクラス`employee`読み取ることができます、`salary`値のみが、`employee`クラスで設定できます。</span><span class="sxs-lookup"><span data-stu-id="67e07-113">A class derived from `employee` can read the `salary` value, but only the `employee` class can set it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74c44-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="74c44-114">See also</span></span>
-- [<span data-ttu-id="74c44-115">プロシージャ</span><span class="sxs-lookup"><span data-stu-id="74c44-115">Procedures</span></span>](./index.md)
-- [<span data-ttu-id="74c44-116">Property プロシージャ</span><span class="sxs-lookup"><span data-stu-id="74c44-116">Property Procedures</span></span>](./property-procedures.md)
-- [<span data-ttu-id="74c44-117">プロシージャのパラメーターと引数</span><span class="sxs-lookup"><span data-stu-id="74c44-117">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="74c44-118">Property ステートメント</span><span class="sxs-lookup"><span data-stu-id="74c44-118">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [<span data-ttu-id="74c44-119">Visual Basic でのプロパティと変数の違い</span><span class="sxs-lookup"><span data-stu-id="74c44-119">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)
-- [<span data-ttu-id="74c44-120">方法: プロパティを作成します。</span><span class="sxs-lookup"><span data-stu-id="74c44-120">How to: Create a Property</span></span>](./how-to-create-a-property.md)
-- [<span data-ttu-id="74c44-121">方法: プロパティ プロシージャを呼び出す</span><span class="sxs-lookup"><span data-stu-id="74c44-121">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)
-- [<span data-ttu-id="74c44-122">方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す</span><span class="sxs-lookup"><span data-stu-id="74c44-122">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)
-- [<span data-ttu-id="74c44-123">方法: プロパティに値を格納します。</span><span class="sxs-lookup"><span data-stu-id="74c44-123">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)
-- [<span data-ttu-id="74c44-124">方法: プロパティから値を取得します。</span><span class="sxs-lookup"><span data-stu-id="74c44-124">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="67e07-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="67e07-114">See also</span></span>
+
+- [<span data-ttu-id="67e07-115">プロシージャ</span><span class="sxs-lookup"><span data-stu-id="67e07-115">Procedures</span></span>](./index.md)
+- [<span data-ttu-id="67e07-116">Property プロシージャ</span><span class="sxs-lookup"><span data-stu-id="67e07-116">Property Procedures</span></span>](./property-procedures.md)
+- [<span data-ttu-id="67e07-117">プロシージャのパラメーターと引数</span><span class="sxs-lookup"><span data-stu-id="67e07-117">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="67e07-118">Property ステートメント</span><span class="sxs-lookup"><span data-stu-id="67e07-118">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="67e07-119">Visual Basic でのプロパティと変数の違い</span><span class="sxs-lookup"><span data-stu-id="67e07-119">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)
+- [<span data-ttu-id="67e07-120">方法: プロパティを作成します。</span><span class="sxs-lookup"><span data-stu-id="67e07-120">How to: Create a Property</span></span>](./how-to-create-a-property.md)
+- [<span data-ttu-id="67e07-121">方法: プロパティ プロシージャを呼び出す</span><span class="sxs-lookup"><span data-stu-id="67e07-121">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)
+- [<span data-ttu-id="67e07-122">方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す</span><span class="sxs-lookup"><span data-stu-id="67e07-122">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)
+- [<span data-ttu-id="67e07-123">方法: プロパティに値を格納します。</span><span class="sxs-lookup"><span data-stu-id="67e07-123">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)
+- [<span data-ttu-id="67e07-124">方法: プロパティから値を取得します。</span><span class="sxs-lookup"><span data-stu-id="67e07-124">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)

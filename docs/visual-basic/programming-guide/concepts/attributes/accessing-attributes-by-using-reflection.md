@@ -2,17 +2,17 @@
 title: リフレクション (Visual Basic) を使用した属性へのアクセス
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827654"
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="45d58-102">リフレクション (Visual Basic) を使用した属性へのアクセス</span><span class="sxs-lookup"><span data-stu-id="45d58-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
-<span data-ttu-id="45d58-103">カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。</span><span class="sxs-lookup"><span data-stu-id="45d58-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="45d58-104">リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。</span><span class="sxs-lookup"><span data-stu-id="45d58-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="45d58-105">鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。</span><span class="sxs-lookup"><span data-stu-id="45d58-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="45d58-106">このメソッドには、いくつかのオーバー ロード バージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="45d58-106">This method has several overloaded versions.</span></span> <span data-ttu-id="45d58-107">詳細については、「 <xref:System.Attribute> 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="45d58-107">For more information, see <xref:System.Attribute>.</span></span>  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="57175-102">リフレクション (Visual Basic) を使用した属性へのアクセス</span><span class="sxs-lookup"><span data-stu-id="57175-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
+<span data-ttu-id="57175-103">カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。</span><span class="sxs-lookup"><span data-stu-id="57175-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="57175-104">リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。</span><span class="sxs-lookup"><span data-stu-id="57175-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="57175-105">鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。</span><span class="sxs-lookup"><span data-stu-id="57175-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="57175-106">このメソッドには、いくつかのオーバー ロード バージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="57175-106">This method has several overloaded versions.</span></span> <span data-ttu-id="57175-107">詳細については、「 <xref:System.Attribute> 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57175-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- <span data-ttu-id="45d58-108">次のような属性指定は、</span><span class="sxs-lookup"><span data-stu-id="45d58-108">An attribute specification such as:</span></span>  
+ <span data-ttu-id="57175-108">次のような属性指定は、</span><span class="sxs-lookup"><span data-stu-id="57175-108">An attribute specification such as:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -21,17 +21,17 @@ Class SampleClass
 End Class  
 ```  
   
- <span data-ttu-id="45d58-109">概念的には次の記述と同じです。</span><span class="sxs-lookup"><span data-stu-id="45d58-109">is conceptually equivalent to this:</span></span>  
+ <span data-ttu-id="57175-109">概念的には次の記述と同じです。</span><span class="sxs-lookup"><span data-stu-id="57175-109">is conceptually equivalent to this:</span></span>  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- <span data-ttu-id="45d58-110">ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="45d58-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="45d58-111">`SampleClass` について `GetCustomAttributes` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。</span><span class="sxs-lookup"><span data-stu-id="45d58-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="45d58-112">クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。</span><span class="sxs-lookup"><span data-stu-id="45d58-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="45d58-113">`GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="45d58-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="45d58-114">その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。</span><span class="sxs-lookup"><span data-stu-id="45d58-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
+ <span data-ttu-id="57175-110">ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="57175-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="57175-111">`SampleClass` について `GetCustomAttributes` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。</span><span class="sxs-lookup"><span data-stu-id="57175-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="57175-112">クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。</span><span class="sxs-lookup"><span data-stu-id="57175-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="57175-113">`GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="57175-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="57175-114">その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。</span><span class="sxs-lookup"><span data-stu-id="57175-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="45d58-115">例</span><span class="sxs-lookup"><span data-stu-id="45d58-115">Example</span></span>  
- <span data-ttu-id="45d58-116">完全な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="45d58-116">Here is a complete example.</span></span> <span data-ttu-id="45d58-117">カスタム属性が定義され、複数のエンティティに適用された後、リフレクションを使用して取得されています。</span><span class="sxs-lookup"><span data-stu-id="45d58-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="57175-115">例</span><span class="sxs-lookup"><span data-stu-id="57175-115">Example</span></span>  
+ <span data-ttu-id="57175-116">完全な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="57175-116">Here is a complete example.</span></span> <span data-ttu-id="57175-117">カスタム属性が定義され、複数のエンティティに適用された後、リフレクションを使用して取得されています。</span><span class="sxs-lookup"><span data-stu-id="57175-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```vb  
 ' Multiuse attribute  
@@ -99,11 +99,12 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="45d58-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="45d58-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57175-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="57175-118">See also</span></span>
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [<span data-ttu-id="45d58-119">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="45d58-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="45d58-120">属性に格納されている情報の取得</span><span class="sxs-lookup"><span data-stu-id="45d58-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [<span data-ttu-id="45d58-121">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45d58-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="45d58-122">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45d58-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="45d58-123">カスタム属性の作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45d58-123">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="57175-119">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="57175-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="57175-120">属性に格納されている情報の取得</span><span class="sxs-lookup"><span data-stu-id="57175-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [<span data-ttu-id="57175-121">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57175-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="57175-122">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57175-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="57175-123">カスタム属性の作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57175-123">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)

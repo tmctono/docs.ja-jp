@@ -19,49 +19,50 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626486"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824664"
 ---
-# <a name="double-data-type-visual-basic"></a><span data-ttu-id="b3a5c-102">倍精度浮動小数点数型 (Double) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3a5c-102">Double Data Type (Visual Basic)</span></span>
-<span data-ttu-id="b3a5c-103">-- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="b3a5c-104">倍精度数値には、実数の概数が格納されます。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-104">Double-precision numbers store an approximation of a real number.</span></span>  
+# <a name="double-data-type-visual-basic"></a><span data-ttu-id="f2cc9-102">倍精度浮動小数点数型 (Double) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2cc9-102">Double Data Type (Visual Basic)</span></span>
+<span data-ttu-id="f2cc9-103">-- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-103">Holds signed IEEE 64-bit (8-byte) double-precision floating-point numbers that range in value from -1.79769313486231570E+308 through -4.94065645841246544E-324 for negative values and from 4.94065645841246544E-324 through 1.79769313486231570E+308 for positive values.</span></span> <span data-ttu-id="f2cc9-104">倍精度数値には、実数の概数が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-104">Double-precision numbers store an approximation of a real number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b3a5c-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="b3a5c-105">Remarks</span></span>  
- <span data-ttu-id="b3a5c-106">`Double`データ型最大および最小の大きさを提供しています。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-106">The `Double` data type provides the largest and smallest possible magnitudes for a number.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f2cc9-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="f2cc9-105">Remarks</span></span>  
+ <span data-ttu-id="f2cc9-106">`Double`データ型最大および最小の大きさを提供しています。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-106">The `Double` data type provides the largest and smallest possible magnitudes for a number.</span></span>  
   
- <span data-ttu-id="b3a5c-107">`Double` の既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-107">The default value of `Double` is 0.</span></span>  
+ <span data-ttu-id="f2cc9-107">`Double` の既定値は 0 です。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-107">The default value of `Double` is 0.</span></span>  
   
-## <a name="programming-tips"></a><span data-ttu-id="b3a5c-108">プログラミングのヒント</span><span class="sxs-lookup"><span data-stu-id="b3a5c-108">Programming Tips</span></span>  
+## <a name="programming-tips"></a><span data-ttu-id="f2cc9-108">プログラミングのヒント</span><span class="sxs-lookup"><span data-stu-id="f2cc9-108">Programming Tips</span></span>  
   
--   <span data-ttu-id="b3a5c-109">**有効桁数です。**</span><span class="sxs-lookup"><span data-stu-id="b3a5c-109">**Precision.**</span></span> <span data-ttu-id="b3a5c-110">浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-110">When you work with floating-point numbers, remember that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="b3a5c-111">値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-111">This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="b3a5c-112">詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-112">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
+-   <span data-ttu-id="f2cc9-109">**有効桁数です。**</span><span class="sxs-lookup"><span data-stu-id="f2cc9-109">**Precision.**</span></span> <span data-ttu-id="f2cc9-110">浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-110">When you work with floating-point numbers, remember that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="f2cc9-111">値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-111">This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="f2cc9-112">詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-112">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
--   <span data-ttu-id="b3a5c-113">**後続のゼロ。**</span><span class="sxs-lookup"><span data-stu-id="b3a5c-113">**Trailing Zeros.**</span></span> <span data-ttu-id="b3a5c-114">浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-114">The floating-point data types do not have any internal representation of trailing zero characters.</span></span> <span data-ttu-id="b3a5c-115">たとえば、これらは区別されません 4.2000 および 4.2 します。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-115">For example, they do not distinguish between 4.2000 and 4.2.</span></span> <span data-ttu-id="b3a5c-116">その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-116">Consequently, trailing zero characters do not appear when you display or print floating-point values.</span></span>  
+-   <span data-ttu-id="f2cc9-113">**後続のゼロ。**</span><span class="sxs-lookup"><span data-stu-id="f2cc9-113">**Trailing Zeros.**</span></span> <span data-ttu-id="f2cc9-114">浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-114">The floating-point data types do not have any internal representation of trailing zero characters.</span></span> <span data-ttu-id="f2cc9-115">たとえば、これらは区別されません 4.2000 および 4.2 します。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-115">For example, they do not distinguish between 4.2000 and 4.2.</span></span> <span data-ttu-id="f2cc9-116">その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-116">Consequently, trailing zero characters do not appear when you display or print floating-point values.</span></span>  
   
--   <span data-ttu-id="b3a5c-117">**型宣言文字。**</span><span class="sxs-lookup"><span data-stu-id="b3a5c-117">**Type Characters.**</span></span> <span data-ttu-id="b3a5c-118">あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-118">Appending the literal type character `R` to a literal forces it to the `Double` data type.</span></span> <span data-ttu-id="b3a5c-119">たとえば、整数値が続く場合`R`に値が変更された、`Double`します。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-119">For example, if an integer value is followed by `R`, the value is changed to a `Double`.</span></span>  
+-   <span data-ttu-id="f2cc9-117">**型宣言文字。**</span><span class="sxs-lookup"><span data-stu-id="f2cc9-117">**Type Characters.**</span></span> <span data-ttu-id="f2cc9-118">あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-118">Appending the literal type character `R` to a literal forces it to the `Double` data type.</span></span> <span data-ttu-id="f2cc9-119">たとえば、整数値が続く場合`R`に値が変更された、`Double`します。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-119">For example, if an integer value is followed by `R`, the value is changed to a `Double`.</span></span>  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     <span data-ttu-id="b3a5c-120">ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-120">Appending the identifier type character `#` to any identifier forces it to `Double`.</span></span> <span data-ttu-id="b3a5c-121">次の例では、変数`num`として型指定された、 `Double`:</span><span class="sxs-lookup"><span data-stu-id="b3a5c-121">In the following example, the variable `num` is typed as a `Double`:</span></span>  
+     <span data-ttu-id="f2cc9-120">ある識別子に識別子の型文字 `#` を付けると、その識別子は整数型 (`Double`) に変換されます。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-120">Appending the identifier type character `#` to any identifier forces it to `Double`.</span></span> <span data-ttu-id="f2cc9-121">次の例では、変数`num`として型指定された、 `Double`:</span><span class="sxs-lookup"><span data-stu-id="f2cc9-121">In the following example, the variable `num` is typed as a `Double`:</span></span>  
   
     ```  
     Dim num# = 3  
     ```  
   
--   <span data-ttu-id="b3a5c-122">**フレームワークの型。**</span><span class="sxs-lookup"><span data-stu-id="b3a5c-122">**Framework Type.**</span></span> <span data-ttu-id="b3a5c-123">.NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。</span><span class="sxs-lookup"><span data-stu-id="b3a5c-123">The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.</span></span>  
+-   <span data-ttu-id="f2cc9-122">**フレームワークの型。**</span><span class="sxs-lookup"><span data-stu-id="f2cc9-122">**Framework Type.**</span></span> <span data-ttu-id="f2cc9-123">.NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。</span><span class="sxs-lookup"><span data-stu-id="f2cc9-123">The corresponding type in the .NET Framework is the <xref:System.Double?displayProperty=nameWithType> structure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3a5c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3a5c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2cc9-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="f2cc9-124">See also</span></span>
+
 - <xref:System.Double?displayProperty=nameWithType>
-- [<span data-ttu-id="b3a5c-125">データの種類</span><span class="sxs-lookup"><span data-stu-id="b3a5c-125">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="b3a5c-126">Decimal データ型</span><span class="sxs-lookup"><span data-stu-id="b3a5c-126">Decimal Data Type</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [<span data-ttu-id="b3a5c-127">Single データ型</span><span class="sxs-lookup"><span data-stu-id="b3a5c-127">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [<span data-ttu-id="b3a5c-128">データ型変換関数</span><span class="sxs-lookup"><span data-stu-id="b3a5c-128">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="b3a5c-129">変換の概要</span><span class="sxs-lookup"><span data-stu-id="b3a5c-129">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [<span data-ttu-id="b3a5c-130">データ型の有効な使用方法</span><span class="sxs-lookup"><span data-stu-id="b3a5c-130">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [<span data-ttu-id="b3a5c-131">トラブルシューティング (データ型)</span><span class="sxs-lookup"><span data-stu-id="b3a5c-131">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [<span data-ttu-id="b3a5c-132">型文字</span><span class="sxs-lookup"><span data-stu-id="b3a5c-132">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [<span data-ttu-id="f2cc9-125">データの種類</span><span class="sxs-lookup"><span data-stu-id="f2cc9-125">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="f2cc9-126">Decimal データ型</span><span class="sxs-lookup"><span data-stu-id="f2cc9-126">Decimal Data Type</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [<span data-ttu-id="f2cc9-127">Single データ型</span><span class="sxs-lookup"><span data-stu-id="f2cc9-127">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [<span data-ttu-id="f2cc9-128">データ型変換関数</span><span class="sxs-lookup"><span data-stu-id="f2cc9-128">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="f2cc9-129">変換の概要</span><span class="sxs-lookup"><span data-stu-id="f2cc9-129">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [<span data-ttu-id="f2cc9-130">データ型の有効な使用方法</span><span class="sxs-lookup"><span data-stu-id="f2cc9-130">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [<span data-ttu-id="f2cc9-131">トラブルシューティング (データ型)</span><span class="sxs-lookup"><span data-stu-id="f2cc9-131">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [<span data-ttu-id="f2cc9-132">型文字</span><span class="sxs-lookup"><span data-stu-id="f2cc9-132">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

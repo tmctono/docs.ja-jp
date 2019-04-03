@@ -2,24 +2,24 @@
 title: さまざまな図形 (Visual Basic) での XML の射影
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: 9df05ff8c9dc43de861675b4780fcbdca6881bf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609721"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814238"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="9b4f8-102">さまざまな図形 (Visual Basic) での XML の射影</span><span class="sxs-lookup"><span data-stu-id="9b4f8-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
-<span data-ttu-id="9b4f8-103">このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="75fb3-102">さまざまな図形 (Visual Basic) での XML の射影</span><span class="sxs-lookup"><span data-stu-id="75fb3-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="75fb3-103">このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="9b4f8-104">一般的な XML 変換の多くは、この例のように連結されたクエリで構成されます。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="9b4f8-105">通常、ある形式の XML から開始して、中間結果を匿名型または名前付き型のコレクションとして射影し、最終的にその結果をソース XML とはまったく異なる構造の XML に射影します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="75fb3-104">一般的な XML 変換の多くは、この例のように連結されたクエリで構成されます。</span><span class="sxs-lookup"><span data-stu-id="75fb3-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="75fb3-105">通常、ある形式の XML から開始して、中間結果を匿名型または名前付き型のコレクションとして射影し、最終的にその結果をソース XML とはまったく異なる構造の XML に射影します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b4f8-106">例</span><span class="sxs-lookup"><span data-stu-id="9b4f8-106">Example</span></span>  
- <span data-ttu-id="9b4f8-107">この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="9b4f8-108">それぞれの段落のスタイルおよびテキストも特定します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="9b4f8-109">最後に、別の構造を持った XML を射影します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="9b4f8-110">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="9b4f8-111">射影を行う新しいステートメントについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="75fb3-106">例</span><span class="sxs-lookup"><span data-stu-id="75fb3-106">Example</span></span>  
+ <span data-ttu-id="75fb3-107">この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="75fb3-108">それぞれの段落のスタイルおよびテキストも特定します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="75fb3-109">最後に、別の構造を持った XML を射影します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="75fb3-110">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="75fb3-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="75fb3-111">射影を行う新しいステートメントについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="75fb3-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="9b4f8-112">この例のソース ドキュメントの作成手順については、次を参照してください。[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="75fb3-112">この例のソース ドキュメントの作成手順については、次を参照してください。[ソース Office Open XML ドキュメント (Visual Basic) を作成する](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="9b4f8-113">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="9b4f8-114">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="75fb3-113">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="75fb3-114">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +160,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="9b4f8-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="75fb3-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="75fb3-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -227,10 +227,11 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="9b4f8-116">次の手順</span><span class="sxs-lookup"><span data-stu-id="9b4f8-116">Next Steps</span></span>  
- <span data-ttu-id="9b4f8-117">次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="9b4f8-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="75fb3-116">次の手順</span><span class="sxs-lookup"><span data-stu-id="75fb3-116">Next Steps</span></span>  
+ <span data-ttu-id="75fb3-117">次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="75fb3-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="9b4f8-118">Word 文書 (Visual Basic) でのテキストの検索</span><span class="sxs-lookup"><span data-stu-id="9b4f8-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="75fb3-118">Word 文書 (Visual Basic) でのテキストの検索</span><span class="sxs-lookup"><span data-stu-id="75fb3-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9b4f8-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="9b4f8-119">See also</span></span>
-- [<span data-ttu-id="9b4f8-120">チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="9b4f8-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="75fb3-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="75fb3-119">See also</span></span>
+
+- [<span data-ttu-id="75fb3-120">チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作</span><span class="sxs-lookup"><span data-stu-id="75fb3-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

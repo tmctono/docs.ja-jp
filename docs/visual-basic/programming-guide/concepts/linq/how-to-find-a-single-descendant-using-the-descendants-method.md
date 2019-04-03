@@ -2,18 +2,18 @@
 title: '方法: Descendants メソッド (Visual Basic) を使用して単一の子孫を検索します。'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a2574422f95ed4d2b82c33ee999b233d95ea398
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826458"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="03b15-102">方法: Descendants メソッド (Visual Basic) を使用して単一の子孫を検索します。</span><span class="sxs-lookup"><span data-stu-id="03b15-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
-<span data-ttu-id="03b15-103"><xref:System.Xml.Linq.XContainer.Descendants%2A> 軸メソッドを使用すると、一意の名前を持つ単一の要素を検索するコードを簡単に記述できます。</span><span class="sxs-lookup"><span data-stu-id="03b15-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="03b15-104">この手法は、特定の名前を持つ特定の子孫を検索する必要がある場合に特に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="03b15-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="03b15-105">目的の要素に移動するコードを記述することもできますが、多くの場合、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用してコードを記述する方がより迅速で簡単です。</span><span class="sxs-lookup"><span data-stu-id="03b15-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="38c33-102">方法: Descendants メソッド (Visual Basic) を使用して単一の子孫を検索します。</span><span class="sxs-lookup"><span data-stu-id="38c33-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
+<span data-ttu-id="38c33-103"><xref:System.Xml.Linq.XContainer.Descendants%2A> 軸メソッドを使用すると、一意の名前を持つ単一の要素を検索するコードを簡単に記述できます。</span><span class="sxs-lookup"><span data-stu-id="38c33-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="38c33-104">この手法は、特定の名前を持つ特定の子孫を検索する必要がある場合に特に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="38c33-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="38c33-105">目的の要素に移動するコードを記述することもできますが、多くの場合、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用してコードを記述する方がより迅速で簡単です。</span><span class="sxs-lookup"><span data-stu-id="38c33-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="03b15-106">例</span><span class="sxs-lookup"><span data-stu-id="03b15-106">Example</span></span>  
- <span data-ttu-id="03b15-107">この例では、<xref:System.Linq.Enumerable.First%2A> 標準クエリ演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="03b15-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="38c33-106">例</span><span class="sxs-lookup"><span data-stu-id="38c33-106">Example</span></span>  
+ <span data-ttu-id="38c33-107">この例では、<xref:System.Linq.Enumerable.First%2A> 標準クエリ演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="38c33-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -37,14 +37,14 @@ Dim grandChild3 As String = _
 Console.WriteLine(grandChild3)  
 ```  
   
- <span data-ttu-id="03b15-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="03b15-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="38c33-108">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="38c33-108">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="03b15-109">例</span><span class="sxs-lookup"><span data-stu-id="03b15-109">Example</span></span>  
- <span data-ttu-id="03b15-110">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="03b15-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="03b15-111">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。</span><span class="sxs-lookup"><span data-stu-id="03b15-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="38c33-109">例</span><span class="sxs-lookup"><span data-stu-id="38c33-109">Example</span></span>  
+ <span data-ttu-id="38c33-110">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="38c33-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="38c33-111">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。</span><span class="sxs-lookup"><span data-stu-id="38c33-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -74,11 +74,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="03b15-112">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="03b15-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="38c33-112">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="38c33-112">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="03b15-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="03b15-113">See also</span></span>
-- [<span data-ttu-id="03b15-114">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03b15-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="38c33-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="38c33-113">See also</span></span>
+
+- [<span data-ttu-id="38c33-114">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38c33-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

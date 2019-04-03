@@ -5,31 +5,32 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638757"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819282"
 ---
-# <a name="-highentropyva-visual-basic"></a><span data-ttu-id="082ad-102">-highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="082ad-102">-highentropyva (Visual Basic)</span></span>
-<span data-ttu-id="082ad-103">示す、64 ビット実行可能ファイルまたは実行可能ファイルでマークされているかどうか、 [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)コンパイラ オプションで高エントロピ アドレス空間レイアウト Randomization (ASLR) をサポートします。</span><span class="sxs-lookup"><span data-stu-id="082ad-103">Indicates whether a 64-bit executable or an executable that's marked by the [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
+# <a name="-highentropyva-visual-basic"></a><span data-ttu-id="9484d-102">-highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9484d-102">-highentropyva (Visual Basic)</span></span>
+<span data-ttu-id="9484d-103">示す、64 ビット実行可能ファイルまたは実行可能ファイルでマークされているかどうか、 [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)コンパイラ オプションで高エントロピ アドレス空間レイアウト Randomization (ASLR) をサポートします。</span><span class="sxs-lookup"><span data-stu-id="9484d-103">Indicates whether a 64-bit executable or an executable that's marked by the [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="082ad-104">構文</span><span class="sxs-lookup"><span data-stu-id="082ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9484d-104">構文</span><span class="sxs-lookup"><span data-stu-id="9484d-104">Syntax</span></span>  
   
 ```  
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="082ad-105">引数</span><span class="sxs-lookup"><span data-stu-id="082ad-105">Arguments</span></span>  
- <span data-ttu-id="082ad-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="082ad-106">`+` &#124; `-`</span></span>  
- <span data-ttu-id="082ad-107">任意。</span><span class="sxs-lookup"><span data-stu-id="082ad-107">Optional.</span></span> <span data-ttu-id="082ad-108">既定では、オプションはオフですまたは指定した`-highentropyva-`します。</span><span class="sxs-lookup"><span data-stu-id="082ad-108">The option is off by default or if you specify `-highentropyva-`.</span></span> <span data-ttu-id="082ad-109">指定したかどうかに、オプションは、`-highentropyva`または`-highentropyva+`します。</span><span class="sxs-lookup"><span data-stu-id="082ad-109">The option is on if you specify `-highentropyva` or `-highentropyva+`.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="9484d-105">引数</span><span class="sxs-lookup"><span data-stu-id="9484d-105">Arguments</span></span>  
+ <span data-ttu-id="9484d-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="9484d-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="9484d-107">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="9484d-107">Optional.</span></span> <span data-ttu-id="9484d-108">既定では、オプションはオフですまたは指定した`-highentropyva-`します。</span><span class="sxs-lookup"><span data-stu-id="9484d-108">The option is off by default or if you specify `-highentropyva-`.</span></span> <span data-ttu-id="9484d-109">指定したかどうかに、オプションは、`-highentropyva`または`-highentropyva+`します。</span><span class="sxs-lookup"><span data-stu-id="9484d-109">The option is on if you specify `-highentropyva` or `-highentropyva+`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="082ad-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="082ad-110">Remarks</span></span>  
- <span data-ttu-id="082ad-111">このオプションを指定する場合、互換性のあるバージョンの Windows カーネルはカーネル ASLR の一環として、プロセスのアドレス空間レイアウトをランダムにときに高いレベルのエントロピを使用できます。</span><span class="sxs-lookup"><span data-stu-id="082ad-111">If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR.</span></span> <span data-ttu-id="082ad-112">カーネルは、高いレベルのエントロピを使用している場合、アドレスの数が多いがスタックやヒープといったメモリ領域に割り当てられたことができます。</span><span class="sxs-lookup"><span data-stu-id="082ad-112">If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps.</span></span> <span data-ttu-id="082ad-113">これによって特定のメモリ領域の位置を推測しづらくなる効果が得られます。</span><span class="sxs-lookup"><span data-stu-id="082ad-113">As a result, it is more difficult to guess the location of a particular memory region.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9484d-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="9484d-110">Remarks</span></span>  
+ <span data-ttu-id="9484d-111">このオプションを指定する場合、互換性のあるバージョンの Windows カーネルはカーネル ASLR の一環として、プロセスのアドレス空間レイアウトをランダムにときに高いレベルのエントロピを使用できます。</span><span class="sxs-lookup"><span data-stu-id="9484d-111">If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR.</span></span> <span data-ttu-id="9484d-112">カーネルは、高いレベルのエントロピを使用している場合、アドレスの数が多いがスタックやヒープといったメモリ領域に割り当てられたことができます。</span><span class="sxs-lookup"><span data-stu-id="9484d-112">If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps.</span></span> <span data-ttu-id="9484d-113">これによって特定のメモリ領域の位置を推測しづらくなる効果が得られます。</span><span class="sxs-lookup"><span data-stu-id="9484d-113">As a result, it is more difficult to guess the location of a particular memory region.</span></span>  
   
- <span data-ttu-id="082ad-114">オプションが、ターゲットの実行可能ファイルとすべてのモジュールでのこれらのモジュールは、64 ビット プロセスとして実行しているときに、4 ギガバイト (GB) を超えるポインター値を処理することに依存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="082ad-114">When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.</span></span>  
+ <span data-ttu-id="9484d-114">オプションが、ターゲットの実行可能ファイルとすべてのモジュールでのこれらのモジュールは、64 ビット プロセスとして実行しているときに、4 ギガバイト (GB) を超えるポインター値を処理することに依存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9484d-114">When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="082ad-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="082ad-115">See also</span></span>
-- [<span data-ttu-id="082ad-116">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="082ad-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="082ad-117">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="082ad-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="9484d-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="9484d-115">See also</span></span>
+
+- [<span data-ttu-id="9484d-116">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="9484d-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="9484d-117">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="9484d-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -15,24 +15,25 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: 80f111c699de9c40960681812770b5007179da26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05adafaf26cab7f7ed00c51ee23fafbe02f2a408
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699195"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821791"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="fc3a6-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc3a6-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="fc3a6-103">基底クラスとしてクラスを使用することはできませんを指定します。</span><span class="sxs-lookup"><span data-stu-id="fc3a6-103">Specifies that a class cannot be used as a base class.</span></span>  
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="38fba-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38fba-102">NotInheritable (Visual Basic)</span></span>
+<span data-ttu-id="38fba-103">基底クラスとしてクラスを使用することはできませんを指定します。</span><span class="sxs-lookup"><span data-stu-id="38fba-103">Specifies that a class cannot be used as a base class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fc3a6-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="fc3a6-104">Remarks</span></span>  
- <span data-ttu-id="fc3a6-105">**別の用語**します。</span><span class="sxs-lookup"><span data-stu-id="fc3a6-105">**Alternate Terms**.</span></span> <span data-ttu-id="fc3a6-106">クラスを継承することはできませんとも呼ばれます、*シール*クラス。</span><span class="sxs-lookup"><span data-stu-id="fc3a6-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38fba-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="38fba-104">Remarks</span></span>  
+ <span data-ttu-id="38fba-105">**別の用語**します。</span><span class="sxs-lookup"><span data-stu-id="38fba-105">**Alternate Terms**.</span></span> <span data-ttu-id="38fba-106">クラスを継承することはできませんとも呼ばれます、*シール*クラス。</span><span class="sxs-lookup"><span data-stu-id="38fba-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
   
- <span data-ttu-id="fc3a6-107">`NotInheritable`修飾子は、このコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="fc3a6-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+ <span data-ttu-id="38fba-107">`NotInheritable`修飾子は、このコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="38fba-107">The `NotInheritable` modifier can be used in this context:</span></span>  
   
- [<span data-ttu-id="fc3a6-108">Class ステートメント</span><span class="sxs-lookup"><span data-stu-id="fc3a6-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="38fba-108">Class ステートメント</span><span class="sxs-lookup"><span data-stu-id="38fba-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fc3a6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc3a6-109">See also</span></span>
-- [<span data-ttu-id="fc3a6-110">Inherits ステートメント</span><span class="sxs-lookup"><span data-stu-id="fc3a6-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="fc3a6-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="fc3a6-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="fc3a6-112">キーワード</span><span class="sxs-lookup"><span data-stu-id="fc3a6-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="38fba-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="38fba-109">See also</span></span>
+
+- [<span data-ttu-id="38fba-110">Inherits ステートメント</span><span class="sxs-lookup"><span data-stu-id="38fba-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="38fba-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="38fba-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="38fba-112">キーワード</span><span class="sxs-lookup"><span data-stu-id="38fba-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

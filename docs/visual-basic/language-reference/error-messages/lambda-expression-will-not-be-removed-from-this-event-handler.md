@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817616"
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="3f9a7-102">ラムダ式はこのイベント ハンドラーから削除されません</span><span class="sxs-lookup"><span data-stu-id="3f9a7-102">Lambda expression will not be removed from this event handler</span></span>
-<span data-ttu-id="3f9a7-103">ラムダ式は、このイベント ハンドラーからは削除されません。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="3f9a7-104">変数にラムダ式を割り当てるし、変数の追加し、削除イベントを使用します。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="3c258-102">ラムダ式はこのイベント ハンドラーから削除されません</span><span class="sxs-lookup"><span data-stu-id="3c258-102">Lambda expression will not be removed from this event handler</span></span>
+<span data-ttu-id="3c258-103">ラムダ式は、このイベント ハンドラーからは削除されません。</span><span class="sxs-lookup"><span data-stu-id="3c258-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="3c258-104">変数にラムダ式を割り当てるし、変数の追加し、削除イベントを使用します。</span><span class="sxs-lookup"><span data-stu-id="3c258-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
   
- <span data-ttu-id="3f9a7-105">イベント ハンドラーでラムダ式を使用している場合は、意図した動作が見えないがあります。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="3f9a7-106">同じ場合でも、コンパイラはラムダ式定義ごとに、新しいメソッドを生成します。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="3f9a7-107">そのため、次のコードが表示されます`False`します。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-107">Therefore, the following code displays `False`.</span></span>  
+ <span data-ttu-id="3c258-105">イベント ハンドラーでラムダ式を使用している場合は、意図した動作が見えないがあります。</span><span class="sxs-lookup"><span data-stu-id="3c258-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="3c258-106">同じ場合でも、コンパイラはラムダ式定義ごとに、新しいメソッドを生成します。</span><span class="sxs-lookup"><span data-stu-id="3c258-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="3c258-107">そのため、次のコードが表示されます`False`します。</span><span class="sxs-lookup"><span data-stu-id="3c258-107">Therefore, the following code displays `False`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="3f9a7-108">イベント ハンドラーでラムダ式を使用している場合、予期しない結果が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="3f9a7-109">次の例では、ラムダ式の追加によって`AddHandler`では削除されません、`RemoveHandler`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
+ <span data-ttu-id="3c258-108">イベント ハンドラーでラムダ式を使用している場合、予期しない結果が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c258-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="3c258-109">次の例では、ラムダ式の追加によって`AddHandler`では削除されません、`RemoveHandler`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="3c258-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="3f9a7-110">既定では、このメッセージは警告です。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-110">By default, this message is a warning.</span></span> <span data-ttu-id="3f9a7-111">警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="3c258-110">既定では、このメッセージは警告です。</span><span class="sxs-lookup"><span data-stu-id="3c258-110">By default, this message is a warning.</span></span> <span data-ttu-id="3c258-111">警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c258-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="3f9a7-112">**エラー ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="3f9a7-112">**Error ID:** BC42326</span></span>  
+ <span data-ttu-id="3c258-112">**エラー ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="3c258-112">**Error ID:** BC42326</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3f9a7-113">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="3f9a7-113">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3c258-113">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="3c258-113">To correct this error</span></span>  
   
--   <span data-ttu-id="3f9a7-114">警告を回避し、ラムダ式を削除する変数にラムダ式を割り当てるし、両方で、変数を使用して、`AddHandler`と`RemoveHandler`ステートメントは、次の例に示すようにします。</span><span class="sxs-lookup"><span data-stu-id="3f9a7-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
+-   <span data-ttu-id="3c258-114">警告を回避し、ラムダ式を削除する変数にラムダ式を割り当てるし、両方で、変数を使用して、`AddHandler`と`RemoveHandler`ステートメントは、次の例に示すようにします。</span><span class="sxs-lookup"><span data-stu-id="3c258-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3f9a7-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f9a7-115">See also</span></span>
-- [<span data-ttu-id="3f9a7-116">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="3f9a7-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="3f9a7-117">厳密でないデリゲート変換</span><span class="sxs-lookup"><span data-stu-id="3f9a7-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [<span data-ttu-id="3f9a7-118">イベント</span><span class="sxs-lookup"><span data-stu-id="3f9a7-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="3c258-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c258-115">See also</span></span>
+
+- [<span data-ttu-id="3c258-116">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="3c258-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="3c258-117">厳密でないデリゲート変換</span><span class="sxs-lookup"><span data-stu-id="3c258-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="3c258-118">イベント</span><span class="sxs-lookup"><span data-stu-id="3c258-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

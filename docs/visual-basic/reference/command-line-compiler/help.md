@@ -9,17 +9,17 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 3e213e87d6a1b2288548c6c141661ada3946efbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824638"
 ---
-# <a name="-help---visual-basic"></a><span data-ttu-id="457af-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="457af-103">-help, -?</span></span> <span data-ttu-id="457af-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="457af-104">(Visual Basic)</span></span>
-<span data-ttu-id="457af-105">コンパイラ オプションを出力します。</span><span class="sxs-lookup"><span data-stu-id="457af-105">Displays the compiler options.</span></span>  
+# <a name="-help---visual-basic"></a><span data-ttu-id="41962-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="41962-103">-help, -?</span></span> <span data-ttu-id="41962-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41962-104">(Visual Basic)</span></span>
+<span data-ttu-id="41962-105">コンパイラ オプションを出力します。</span><span class="sxs-lookup"><span data-stu-id="41962-105">Displays the compiler options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="457af-106">構文</span><span class="sxs-lookup"><span data-stu-id="457af-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41962-106">構文</span><span class="sxs-lookup"><span data-stu-id="41962-106">Syntax</span></span>  
   
 ```  
 -help  
@@ -27,19 +27,20 @@ ms.locfileid: "54726547"
 -?  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="457af-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="457af-107">Remarks</span></span>  
- <span data-ttu-id="457af-108">コンパイル時にこのオプションを指定する場合は、出力ファイルは作成されませんし、コンパイルは行われません。</span><span class="sxs-lookup"><span data-stu-id="457af-108">If you include this option in a compilation, no output file is created and no compilation takes place.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41962-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="41962-107">Remarks</span></span>  
+ <span data-ttu-id="41962-108">コンパイル時にこのオプションを指定する場合は、出力ファイルは作成されませんし、コンパイルは行われません。</span><span class="sxs-lookup"><span data-stu-id="41962-108">If you include this option in a compilation, no output file is created and no compilation takes place.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="457af-109">`-help`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。</span><span class="sxs-lookup"><span data-stu-id="457af-109">The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="41962-109">`-help`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。</span><span class="sxs-lookup"><span data-stu-id="41962-109">The `-help` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="457af-110">例</span><span class="sxs-lookup"><span data-stu-id="457af-110">Example</span></span>  
- <span data-ttu-id="457af-111">次のコードは、コマンドラインからヘルプを表示します。</span><span class="sxs-lookup"><span data-stu-id="457af-111">The following code displays help from the command line.</span></span>  
+## <a name="example"></a><span data-ttu-id="41962-110">例</span><span class="sxs-lookup"><span data-stu-id="41962-110">Example</span></span>  
+ <span data-ttu-id="41962-111">次のコードは、コマンドラインからヘルプを表示します。</span><span class="sxs-lookup"><span data-stu-id="41962-111">The following code displays help from the command line.</span></span>  
   
 ```  
 vbc -help  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="457af-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="457af-112">See also</span></span>
-- [<span data-ttu-id="457af-113">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="457af-113">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="457af-114">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="457af-114">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="41962-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="41962-112">See also</span></span>
+
+- [<span data-ttu-id="41962-113">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="41962-113">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="41962-114">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="41962-114">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

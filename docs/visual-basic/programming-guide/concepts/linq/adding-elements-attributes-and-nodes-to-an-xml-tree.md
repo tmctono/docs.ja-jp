@@ -2,37 +2,37 @@
 title: XML ツリー (Visual Basic) への要素、属性、およびノードの追加
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 5b15a3a943425a7443ad0986d8d91973d0090ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814318"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="4d350-102">XML ツリー (Visual Basic) への要素、属性、およびノードの追加</span><span class="sxs-lookup"><span data-stu-id="4d350-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
-<span data-ttu-id="4d350-103">コンテンツ (要素、属性、コメント、処理命令、テキスト、および CDATA) を既存の XML ツリーに追加できます。</span><span class="sxs-lookup"><span data-stu-id="4d350-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a><span data-ttu-id="d49be-102">XML ツリー (Visual Basic) への要素、属性、およびノードの追加</span><span class="sxs-lookup"><span data-stu-id="d49be-102">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="d49be-103">コンテンツ (要素、属性、コメント、処理命令、テキスト、および CDATA) を既存の XML ツリーに追加できます。</span><span class="sxs-lookup"><span data-stu-id="d49be-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  
   
-## <a name="methods-for-adding-content"></a><span data-ttu-id="4d350-104">コンテンツを追加するためのメソッド</span><span class="sxs-lookup"><span data-stu-id="4d350-104">Methods for Adding Content</span></span>  
- <span data-ttu-id="4d350-105">次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。</span><span class="sxs-lookup"><span data-stu-id="4d350-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
+## <a name="methods-for-adding-content"></a><span data-ttu-id="d49be-104">コンテンツを追加するためのメソッド</span><span class="sxs-lookup"><span data-stu-id="d49be-104">Methods for Adding Content</span></span>  
+ <span data-ttu-id="d49be-105">次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。</span><span class="sxs-lookup"><span data-stu-id="d49be-105">The following methods add child content to an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XDocument>:</span></span>  
   
-|<span data-ttu-id="4d350-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="4d350-106">Method</span></span>|<span data-ttu-id="4d350-107">説明</span><span class="sxs-lookup"><span data-stu-id="4d350-107">Description</span></span>|  
+|<span data-ttu-id="d49be-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="d49be-106">Method</span></span>|<span data-ttu-id="d49be-107">説明</span><span class="sxs-lookup"><span data-stu-id="d49be-107">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="4d350-108"><xref:System.Xml.Linq.XContainer> の子コンテンツの末尾にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="4d350-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="4d350-109"><xref:System.Xml.Linq.XContainer> の子コンテンツの冒頭にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="4d350-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<span data-ttu-id="d49be-108"><xref:System.Xml.Linq.XContainer> の子コンテンツの末尾にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="d49be-108">Adds content at the end of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<span data-ttu-id="d49be-109"><xref:System.Xml.Linq.XContainer> の子コンテンツの冒頭にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="d49be-109">Adds content at the beginning of the child content of the <xref:System.Xml.Linq.XContainer>.</span></span>|  
   
- <span data-ttu-id="4d350-110">次のメソッドは、<xref:System.Xml.Linq.XNode> の兄弟ノードとしてコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="4d350-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="4d350-111">兄弟コンテンツの追加先となる最も一般的なノードは <xref:System.Xml.Linq.XElement> ですが、<xref:System.Xml.Linq.XText> や <xref:System.Xml.Linq.XComment> など別の種類のノードに、有効な兄弟コンテンツを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="4d350-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
+ <span data-ttu-id="d49be-110">次のメソッドは、<xref:System.Xml.Linq.XNode> の兄弟ノードとしてコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="d49be-110">The following methods add content as sibling nodes of an <xref:System.Xml.Linq.XNode>.</span></span> <span data-ttu-id="d49be-111">兄弟コンテンツの追加先となる最も一般的なノードは <xref:System.Xml.Linq.XElement> ですが、<xref:System.Xml.Linq.XText> や <xref:System.Xml.Linq.XComment> など別の種類のノードに、有効な兄弟コンテンツを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="d49be-111">The most common node to which you add sibling content is <xref:System.Xml.Linq.XElement>, although you can add valid sibling content to other types of nodes such as <xref:System.Xml.Linq.XText> or <xref:System.Xml.Linq.XComment>.</span></span>  
   
-|<span data-ttu-id="4d350-112">メソッド</span><span class="sxs-lookup"><span data-stu-id="4d350-112">Method</span></span>|<span data-ttu-id="4d350-113">説明</span><span class="sxs-lookup"><span data-stu-id="4d350-113">Description</span></span>|  
+|<span data-ttu-id="d49be-112">メソッド</span><span class="sxs-lookup"><span data-stu-id="d49be-112">Method</span></span>|<span data-ttu-id="d49be-113">説明</span><span class="sxs-lookup"><span data-stu-id="d49be-113">Description</span></span>|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="4d350-114"><xref:System.Xml.Linq.XNode> の後にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="4d350-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="4d350-115"><xref:System.Xml.Linq.XNode> の前にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="4d350-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<span data-ttu-id="d49be-114"><xref:System.Xml.Linq.XNode> の後にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="d49be-114">Adds content after the <xref:System.Xml.Linq.XNode>.</span></span>|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<span data-ttu-id="d49be-115"><xref:System.Xml.Linq.XNode> の前にコンテンツを追加します。</span><span class="sxs-lookup"><span data-stu-id="d49be-115">Adds content before the <xref:System.Xml.Linq.XNode>.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="4d350-116">例</span><span class="sxs-lookup"><span data-stu-id="4d350-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d49be-116">例</span><span class="sxs-lookup"><span data-stu-id="d49be-116">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="4d350-117">説明</span><span class="sxs-lookup"><span data-stu-id="4d350-117">Description</span></span>  
- <span data-ttu-id="4d350-118">次の例では、2 つの XML ツリーを作成し、その 1 つを変更します。</span><span class="sxs-lookup"><span data-stu-id="4d350-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
+### <a name="description"></a><span data-ttu-id="d49be-117">説明</span><span class="sxs-lookup"><span data-stu-id="d49be-117">Description</span></span>  
+ <span data-ttu-id="d49be-118">次の例では、2 つの XML ツリーを作成し、その 1 つを変更します。</span><span class="sxs-lookup"><span data-stu-id="d49be-118">The following example creates two XML trees, and then modifies one of the trees.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="4d350-119">コード</span><span class="sxs-lookup"><span data-stu-id="4d350-119">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="d49be-119">コード</span><span class="sxs-lookup"><span data-stu-id="d49be-119">Code</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -64,8 +64,8 @@ xmlTree.Add(srcTree.Element("Child9"))
 Console.WriteLine(xmlTree)  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="4d350-120">コメント</span><span class="sxs-lookup"><span data-stu-id="4d350-120">Comments</span></span>  
- <span data-ttu-id="4d350-121">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4d350-121">This code produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="d49be-120">コメント</span><span class="sxs-lookup"><span data-stu-id="d49be-120">Comments</span></span>  
+ <span data-ttu-id="d49be-121">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="d49be-121">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -80,5 +80,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4d350-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d350-122">See also</span></span>
-- [<span data-ttu-id="4d350-123">XML ツリー (LINQ to XML) の変更 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d350-123">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d49be-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="d49be-122">See also</span></span>
+
+- [<span data-ttu-id="d49be-123">XML ツリー (LINQ to XML) の変更 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d49be-123">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
