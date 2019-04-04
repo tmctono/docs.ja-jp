@@ -12,16 +12,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54584533"
 ---
-# <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="fc881-102">方法: トランザクションを使用してデータ送信を角かっこ</span><span class="sxs-lookup"><span data-stu-id="fc881-102">How to: Bracket Data Submissions by Using Transactions</span></span>
-<span data-ttu-id="fc881-103">データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。</span><span class="sxs-lookup"><span data-stu-id="fc881-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="fc881-104">詳細については、次を参照してください。[トランザクション サポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)します。</span><span class="sxs-lookup"><span data-stu-id="fc881-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  
+# <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="de02f-102">方法: トランザクションを使用してデータ送信を角かっこ</span><span class="sxs-lookup"><span data-stu-id="de02f-102">How to: Bracket Data Submissions by Using Transactions</span></span>
+<span data-ttu-id="de02f-103">データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。</span><span class="sxs-lookup"><span data-stu-id="de02f-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="de02f-104">詳細については、[トランザクション サポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="de02f-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fc881-105">例</span><span class="sxs-lookup"><span data-stu-id="fc881-105">Example</span></span>  
- <span data-ttu-id="fc881-106">次のコードでは、データベース送信を <xref:System.Transactions.TransactionScope> で囲みます。</span><span class="sxs-lookup"><span data-stu-id="fc881-106">The following code encloses the database submission in a <xref:System.Transactions.TransactionScope>.</span></span>  
+## <a name="example"></a><span data-ttu-id="de02f-105">例</span><span class="sxs-lookup"><span data-stu-id="de02f-105">Example</span></span>  
+ <span data-ttu-id="de02f-106">次のコードでは、データベース送信を <xref:System.Transactions.TransactionScope> で囲みます。</span><span class="sxs-lookup"><span data-stu-id="de02f-106">The following code encloses the database submission in a <xref:System.Transactions.TransactionScope>.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#3)]
  [!code-vb[DLinqSubmittingChanges#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="fc881-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc881-107">See also</span></span>
-- [<span data-ttu-id="fc881-108">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="fc881-108">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [<span data-ttu-id="fc881-109">データの変更と変更の送信</span><span class="sxs-lookup"><span data-stu-id="fc881-109">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [<span data-ttu-id="fc881-110">トランザクションのサポート</span><span class="sxs-lookup"><span data-stu-id="fc881-110">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="de02f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="de02f-107">See also</span></span>
+- [<span data-ttu-id="de02f-108">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="de02f-108">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [<span data-ttu-id="de02f-109">データの変更と変更の送信</span><span class="sxs-lookup"><span data-stu-id="de02f-109">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [<span data-ttu-id="de02f-110">トランザクションのサポート</span><span class="sxs-lookup"><span data-stu-id="de02f-110">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)

@@ -15,13 +15,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58031609"
 ---
-# <a name="xamlname-grammar"></a><span data-ttu-id="c7ddc-102">XamlName の文法</span><span class="sxs-lookup"><span data-stu-id="c7ddc-102">XamlName Grammar</span></span>
-<span data-ttu-id="c7ddc-103">XamlName の文法では、便宜上、ここに再掲は、XAML 言語仕様 [MS-XAML] で定義されている特定の文法です。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
+# <a name="xamlname-grammar"></a><span data-ttu-id="cac41-102">XamlName の文法</span><span class="sxs-lookup"><span data-stu-id="cac41-102">XamlName Grammar</span></span>
+<span data-ttu-id="cac41-103">XamlName の文法では、便宜上、ここに再掲は、XAML 言語仕様 [MS-XAML] で定義されている特定の文法です。</span><span class="sxs-lookup"><span data-stu-id="cac41-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## <a name="from-the-xaml-specification"></a><span data-ttu-id="c7ddc-104">XAML 仕様から</span><span class="sxs-lookup"><span data-stu-id="c7ddc-104">From the XAML Specification</span></span>  
- <span data-ttu-id="c7ddc-105">[MS XAML] の仕様には、型とプロパティに使用される法的のシンボリック識別子のセットを識別するために XamlName の文法が定義されています。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="cac41-104">XAML 仕様から</span><span class="sxs-lookup"><span data-stu-id="cac41-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="cac41-105">[MS XAML] の仕様には、型とプロパティに使用される法的のシンボリック識別子のセットを識別するために XamlName の文法が定義されています。</span><span class="sxs-lookup"><span data-stu-id="cac41-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- <span data-ttu-id="c7ddc-106">次の文法に従う必要があります XamlName 型の値を文字列には。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="cac41-106">次の文法に従う必要があります XamlName 型の値を文字列には。</span><span class="sxs-lookup"><span data-stu-id="cac41-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
 ```  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -32,7 +32,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- <span data-ttu-id="c7ddc-107">Unicode 文字データベースで定義されている次の一般的なカテゴリ値を想定しています</span><span class="sxs-lookup"><span data-stu-id="c7ddc-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+ <span data-ttu-id="cac41-107">Unicode 文字データベースで定義されている次の一般的なカテゴリ値を想定しています</span><span class="sxs-lookup"><span data-stu-id="cac41-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
   
 ```  
 Lu  
@@ -55,13 +55,13 @@ Nl
 Number, Letter  
 ```  
   
- <span data-ttu-id="c7ddc-108">XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="c7ddc-109">詳細については、次を参照してください。<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)します。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
+ <span data-ttu-id="cac41-108">XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="cac41-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="cac41-109">詳細については、<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cac41-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
- <span data-ttu-id="c7ddc-110">次の文法に従う必要があります DottedXamlName 型の値を文字列には。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="cac41-110">次の文法に従う必要があります DottedXamlName 型の値を文字列には。</span><span class="sxs-lookup"><span data-stu-id="cac41-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
 ```  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c7ddc-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="c7ddc-111">Remarks</span></span>  
- <span data-ttu-id="c7ddc-112">完全な仕様では、次を参照してください。 [ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)します。</span><span class="sxs-lookup"><span data-stu-id="c7ddc-112">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
+## <a name="remarks"></a><span data-ttu-id="cac41-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="cac41-111">Remarks</span></span>  
+ <span data-ttu-id="cac41-112">完全な仕様では、[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cac41-112">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>

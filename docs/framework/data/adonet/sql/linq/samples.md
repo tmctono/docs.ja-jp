@@ -9,25 +9,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/12/2019
 ms.locfileid: "56092008"
 ---
-# <a name="samples"></a><span data-ttu-id="49bde-102">サンプル</span><span class="sxs-lookup"><span data-stu-id="49bde-102">Samples</span></span>
-<span data-ttu-id="49bde-103">このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。</span><span class="sxs-lookup"><span data-stu-id="49bde-103">This topic provides links to the Visual Basic and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.</span></span>  
+# <a name="samples"></a><span data-ttu-id="6b847-102">サンプル</span><span class="sxs-lookup"><span data-stu-id="6b847-102">Samples</span></span>
+<span data-ttu-id="6b847-103">このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。</span><span class="sxs-lookup"><span data-stu-id="6b847-103">This topic provides links to the Visual Basic and C# solutions that contain [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sample code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="49bde-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="49bde-104">In This Section</span></span>  
- <span data-ttu-id="49bde-105">SampleQueries ソリューションの Visual Basic バージョン</span><span class="sxs-lookup"><span data-stu-id="49bde-105">Visual Basic version of the SampleQueries solution</span></span>  
- [<span data-ttu-id="49bde-106">サンプル クエリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49bde-106">Sample Queries (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6b847-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6b847-104">In This Section</span></span>  
+ <span data-ttu-id="6b847-105">SampleQueries ソリューションの Visual Basic バージョン</span><span class="sxs-lookup"><span data-stu-id="6b847-105">Visual Basic version of the SampleQueries solution</span></span>  
+ [<span data-ttu-id="6b847-106">サンプル クエリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b847-106">Sample Queries (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
- <span data-ttu-id="49bde-107">SampleQueries ソリューションの C# バージョン</span><span class="sxs-lookup"><span data-stu-id="49bde-107">C# version of the SampleQueries solution</span></span>  
- <span data-ttu-id="49bde-108">[サンプル クエリ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="49bde-108">[Sample Queries](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))</span></span>  
+ <span data-ttu-id="6b847-107">SampleQueries ソリューションの C# バージョン</span><span class="sxs-lookup"><span data-stu-id="6b847-107">C# version of the SampleQueries solution</span></span>  
+ <span data-ttu-id="6b847-108">[サンプル クエリ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="6b847-108">[Sample Queries](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))</span></span>  
   
- <span data-ttu-id="49bde-109">
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="49bde-109">Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:</span></span>  
+ <span data-ttu-id="6b847-109">
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="6b847-109">Follow these steps to find additional examples of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code and applications:</span></span>  
   
--   <span data-ttu-id="49bde-110">Microsoft Docs で特定の問題を検索します。</span><span class="sxs-lookup"><span data-stu-id="49bde-110">Search for specific issues on Microsoft Docs.</span></span>  
+-   <span data-ttu-id="6b847-110">Microsoft Docs で特定の問題を検索します。</span><span class="sxs-lookup"><span data-stu-id="6b847-110">Search for specific issues on Microsoft Docs.</span></span>  
   
--   <span data-ttu-id="49bde-111">参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。</span><span class="sxs-lookup"><span data-stu-id="49bde-111">Participate in the [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span>  
+-   <span data-ttu-id="6b847-111">参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。</span><span class="sxs-lookup"><span data-stu-id="6b847-111">Participate in the [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), where you can discuss more complex topics in detail with experts.</span></span>  
   
--   <span data-ttu-id="49bde-112">詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。</span><span class="sxs-lookup"><span data-stu-id="49bde-112">Study the white paper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with Visual Basic and C# code examples.</span></span> <span data-ttu-id="49bde-113">詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。</span><span class="sxs-lookup"><span data-stu-id="49bde-113">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
+-   <span data-ttu-id="6b847-112">詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。</span><span class="sxs-lookup"><span data-stu-id="6b847-112">Study the white paper that details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technology, complete with Visual Basic and C# code examples.</span></span> <span data-ttu-id="6b847-113">詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6b847-113">For more information, see [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49bde-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="49bde-114">See also</span></span>
-- [<span data-ttu-id="49bde-115">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="49bde-115">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- <span data-ttu-id="49bde-116">[LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="49bde-116">[LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b847-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b847-114">See also</span></span>
+- [<span data-ttu-id="6b847-115">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="6b847-115">LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- <span data-ttu-id="6b847-116">[LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="6b847-116">[LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))</span></span>

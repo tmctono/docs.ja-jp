@@ -12,6 +12,6 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53148276"
 ---
-# <a name="wpf-samples"></a><span data-ttu-id="80302-102">WPF のサンプル</span><span class="sxs-lookup"><span data-stu-id="80302-102">WPF Samples</span></span>
+# <a name="wpf-samples"></a><span data-ttu-id="b70e3-102">WPF のサンプル</span><span class="sxs-lookup"><span data-stu-id="b70e3-102">WPF Samples</span></span>
 
-<span data-ttu-id="80302-103">Windows Presentation Foundation (WPF) を示すサンプルでは、次を参照してください。、 [Microsoft/WPF サンプル リポジトリ](https://github.com/Microsoft/WPF-Samples)GitHub でします。</span><span class="sxs-lookup"><span data-stu-id="80302-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
+<span data-ttu-id="b70e3-103">Windows Presentation Foundation (WPF) を示すサンプルでは、、 [Microsoft/WPF サンプル リポジトリ](https://github.com/Microsoft/WPF-Samples)GitHub でを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b70e3-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
