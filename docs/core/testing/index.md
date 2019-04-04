@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185507"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="36775-103">.NET Core と .NET Standard の単体テスト</span><span class="sxs-lookup"><span data-stu-id="36775-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="36775-104">.NET core では、簡単に単体テストを作成できます。</span><span class="sxs-lookup"><span data-stu-id="36775-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="36775-105">この記事では、単体テストについて紹介し、その他の種類のテストとの違いを示します。</span><span class="sxs-lookup"><span data-stu-id="36775-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="36775-106">ページの下部にあるリンクされたリソースは、テスト プロジェクトをソリューションに追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="36775-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="36775-107">テスト プロジェクトを設定した後は、コマンドラインまたは Visual Studio を使用して単体テストを実行することができます。</span><span class="sxs-lookup"><span data-stu-id="36775-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

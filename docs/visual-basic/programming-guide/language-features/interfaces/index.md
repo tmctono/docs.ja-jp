@@ -2,11 +2,17 @@
 title: インターフェイス (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972386"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="2b47f-102">インターフェイス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b47f-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="2b47f-103">*インターフェイス*は、クラスが実装できるプロパティ、メソッド、およびイベントを定義します。</span><span class="sxs-lookup"><span data-stu-id="2b47f-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="2b47f-104">インターフェイスでは、密接に関連するプロパティ、メソッド、およびイベントの小さなグループとして機能を定義できます。これにより、既存のコードを損なうことなく、インターフェイスを拡張して実装を開発できるため、互換性の問題を減らすことができます。</span><span class="sxs-lookup"><span data-stu-id="2b47f-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="2b47f-105">追加のインターフェイスと実装を開発することで、いつでも新しい機能を追加できます。</span><span class="sxs-lookup"><span data-stu-id="2b47f-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

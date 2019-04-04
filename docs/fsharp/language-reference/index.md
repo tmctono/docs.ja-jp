@@ -1,7 +1,13 @@
 ---
-title: 'F# 言語リファレンス'
-description: 'トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから F# 言語機能情報を検索します。'
+title: F# 言語リファレンス
+description: トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから F# 言語機能情報を検索します。
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846637"
 ---
 # <a name="f-language-reference"></a><span data-ttu-id="e704f-103">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="e704f-103">F# Language Reference</span></span>
 

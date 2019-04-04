@@ -3,11 +3,17 @@ title: フレームワーク デザインのガイドライン
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - 'libraries, .NET Framework class library'
-  - 'class library design guidelines [.NET Framework], about'
-  - 'class library design guidelines [.NET Framework]'
+- libraries, .NET Framework class library
+- class library design guidelines [.NET Framework], about
+- class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
+ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834899"
 ---
 # <a name="framework-design-guidelines"></a><span data-ttu-id="8c80b-102">フレームワーク デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="8c80b-102">Framework Design Guidelines</span></span>
 <span data-ttu-id="8c80b-103">このセクションでは、ライブラリを拡張し、.NET Framework との対話を設計するためのガイドラインを示します。</span><span class="sxs-lookup"><span data-stu-id="8c80b-103">This section provides guidelines for designing libraries that extend and interact with the .NET Framework.</span></span> <span data-ttu-id="8c80b-104">目標は、ライブラリの設計者は開発のために使用するプログラミング言語の独立した統一プログラミング モデルを提供することで API の一貫性と使いやすさを確認するためです。</span><span class="sxs-lookup"><span data-stu-id="8c80b-104">The goal is to help library designers ensure API consistency and ease of use by providing a unified programming model that is independent of the programming language used for development.</span></span> <span data-ttu-id="8c80b-105">.NET Framework を拡張するクラスやコンポーネントを開発する際に、これらのデザイン ガイドラインに従うことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="8c80b-105">We recommend that you follow these design guidelines when developing classes and components that extend the .NET Framework.</span></span> <span data-ttu-id="8c80b-106">一貫性のないライブラリ デザインが悪影響を及ぼす開発者の生産性に影響し、導入を抑制します。</span><span class="sxs-lookup"><span data-stu-id="8c80b-106">Inconsistent library design adversely affects developer productivity and discourages adoption.</span></span>  

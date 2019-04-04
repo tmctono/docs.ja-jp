@@ -2,17 +2,23 @@
 title: .NET Apps でのリソース
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203364"
 ---
 # <a name="resources-in-net-apps"></a><span data-ttu-id="f4f55-102">.NET Apps でのリソース</span><span class="sxs-lookup"><span data-stu-id="f4f55-102">Resources in .NET Apps</span></span>
 <span data-ttu-id="f4f55-103">ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f4f55-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="f4f55-104">リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。</span><span class="sxs-lookup"><span data-stu-id="f4f55-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="f4f55-105">このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。</span><span class="sxs-lookup"><span data-stu-id="f4f55-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="f4f55-106">リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="f4f55-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="f4f55-107">(永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。</span><span class="sxs-lookup"><span data-stu-id="f4f55-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="f4f55-108">また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="f4f55-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  

@@ -1,11 +1,16 @@
 ---
 title: .NET サンプルおよびチュートリアル
-description: '.NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。'
+description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558950"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="a7101-103">.NET サンプルおよびチュートリアル</span><span class="sxs-lookup"><span data-stu-id="a7101-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="a7101-104">.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="a7101-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="a7101-105">ここでは、.NET Core、ASP.NET Core、C# のサンプルを検索、表示、ダウンロードする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a7101-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="a7101-106">F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn.html)にあります。</span><span class="sxs-lookup"><span data-stu-id="a7101-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="a7101-107">オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://www.microsoft.com/net/learn/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a7101-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="a7101-108">サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#viewing-and-downloading-samples)」セクションをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a7101-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>

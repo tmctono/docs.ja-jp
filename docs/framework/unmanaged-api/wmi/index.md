@@ -4,8 +4,13 @@ description: WMI 用の .NET Framework アンマネージド API およびパフ
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377457"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="3905e-103">Windows Management Instrumentation (WMI) およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3905e-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="3905e-104">.NET Framework WMI およびパフォーマンス カウンターのアンマネージド API は、[ネイティブの Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi) の呼び出しをラップする一連の関数によって構成されています。</span><span class="sxs-lookup"><span data-stu-id="3905e-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="3905e-105">これを使用することで、リモート コンピューター システムの管理および監視を行うツールおよびライブラリを開発することができます。</span><span class="sxs-lookup"><span data-stu-id="3905e-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

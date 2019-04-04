@@ -3,15 +3,20 @@ title: .NET Framework の新機能
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'what''s new [.NET Framework]'
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466440"
 ---
-
 # <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="7a601-102">.NET Framework の新機能</span><span class="sxs-lookup"><span data-stu-id="7a601-102">What's new in the .NET Framework</span></span>
 
 <span data-ttu-id="7a601-103">この記事は、.NET Framework の次のバージョンにおける主な新機能と機能強化の概要を示します。</span><span class="sxs-lookup"><span data-stu-id="7a601-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>

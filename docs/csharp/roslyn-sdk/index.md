@@ -3,8 +3,13 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を使用して、.NET コードを理解し、エラーを見つけて、そのエラーを修正する方法について説明します。
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185845"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="b089a-103">.NET Compiler Platform SDK</span><span class="sxs-lookup"><span data-stu-id="b089a-103">The .NET Compiler Platform SDK</span></span>
 
 <span data-ttu-id="b089a-104">コンパイラでは、コードの構文とセマンティクスを検証するように、アプリケーション コードの詳細なモデルをビルドします。</span><span class="sxs-lookup"><span data-stu-id="b089a-104">Compilers build a detailed model of application code as they validate the syntax and semantics of that code.</span></span> <span data-ttu-id="b089a-105">このモデルを使用して、ソース コードから実行可能な出力をビルドします。</span><span class="sxs-lookup"><span data-stu-id="b089a-105">They use this model to build the executable output from the source code.</span></span> <span data-ttu-id="b089a-106">.NET Compiler Platform SDK では、このモデルへのアクセスが提供されます。</span><span class="sxs-lookup"><span data-stu-id="b089a-106">The .NET Compiler Platform SDK provides access to this model.</span></span> <span data-ttu-id="b089a-107">Microsoft では、生産性を向上させるために、IntelliSense、リファクタリング、インテリジェントな名前の変更、"すべての参照の検索"、"定義へ移動" などの統合開発環境 (IDE) 機能をますます使用するようになっています。</span><span class="sxs-lookup"><span data-stu-id="b089a-107">Increasingly, we rely on integrated development environment (IDE) features such as IntelliSense, refactoring, intelligent rename, "Find all references," and "Go to definition" to increase our productivity.</span></span> <span data-ttu-id="b089a-108">コードの品質を向上させるためにコード分析ツールを使用し、アプリケーションの構築に役立てるためにコード ジェネレーターを使用します。</span><span class="sxs-lookup"><span data-stu-id="b089a-108">We rely on code analysis tools to improve our code quality, and code generators to aid in application construction.</span></span> <span data-ttu-id="b089a-109">これらのツールがスマートになったので、アプリケーション コードを処理するときに、コンパイラのみが作成するモデルにますますツールがアクセスする必要が生じます。</span><span class="sxs-lookup"><span data-stu-id="b089a-109">As these tools get smarter, they need access to more and more of the model that only compilers create as they process application code.</span></span> <span data-ttu-id="b089a-110">これが Roslyn API の主要な目的です。ブラック ボックスを開いて、ツールとエンド ユーザーが豊富な情報コンパイラを共有することを許可するためにこのコードがあります。</span><span class="sxs-lookup"><span data-stu-id="b089a-110">This is the core mission of the Roslyn APIs: opening up the black boxes and allowing tools and end users to share in the wealth of information compilers have about our code.</span></span>
