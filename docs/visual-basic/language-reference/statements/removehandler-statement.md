@@ -16,34 +16,34 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/02/2019
 ms.locfileid: "58831684"
 ---
-# <a name="removehandler-statement"></a><span data-ttu-id="5cfcc-102">RemoveHandler ステートメント</span><span class="sxs-lookup"><span data-stu-id="5cfcc-102">RemoveHandler Statement</span></span>
-<span data-ttu-id="5cfcc-103">イベントとイベント ハンドラー間の関連付けを削除します。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-103">Removes the association between an event and an event handler.</span></span>  
+# <a name="removehandler-statement"></a><span data-ttu-id="7596e-102">RemoveHandler ステートメント</span><span class="sxs-lookup"><span data-stu-id="7596e-102">RemoveHandler Statement</span></span>
+<span data-ttu-id="7596e-103">イベントとイベント ハンドラー間の関連付けを削除します。</span><span class="sxs-lookup"><span data-stu-id="7596e-103">Removes the association between an event and an event handler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cfcc-104">構文</span><span class="sxs-lookup"><span data-stu-id="5cfcc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7596e-104">構文</span><span class="sxs-lookup"><span data-stu-id="7596e-104">Syntax</span></span>  
   
 ```  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="5cfcc-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="5cfcc-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="7596e-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="7596e-105">Parts</span></span>  
   
-|<span data-ttu-id="5cfcc-106">用語</span><span class="sxs-lookup"><span data-stu-id="5cfcc-106">Term</span></span>|<span data-ttu-id="5cfcc-107">定義</span><span class="sxs-lookup"><span data-stu-id="5cfcc-107">Definition</span></span>|  
+|<span data-ttu-id="7596e-106">用語</span><span class="sxs-lookup"><span data-stu-id="7596e-106">Term</span></span>|<span data-ttu-id="7596e-107">定義</span><span class="sxs-lookup"><span data-stu-id="7596e-107">Definition</span></span>|  
 |---|---|  
-|`event`|<span data-ttu-id="5cfcc-108">処理されるイベントの名前。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-108">The name of the event being handled.</span></span>|  
-|`eventhandler`|<span data-ttu-id="5cfcc-109">現在、イベントを処理するプロシージャの名前。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-109">The name of the procedure currently handling the event.</span></span>|  
+|`event`|<span data-ttu-id="7596e-108">処理されるイベントの名前。</span><span class="sxs-lookup"><span data-stu-id="7596e-108">The name of the event being handled.</span></span>|  
+|`eventhandler`|<span data-ttu-id="7596e-109">現在、イベントを処理するプロシージャの名前。</span><span class="sxs-lookup"><span data-stu-id="7596e-109">The name of the procedure currently handling the event.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5cfcc-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="5cfcc-110">Remarks</span></span>  
- <span data-ttu-id="5cfcc-111">`AddHandler`と`RemoveHandler`ステートメントでは、開始およびプログラムの実行中にいつでも、特定のイベントのイベント処理を停止することができます。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7596e-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="7596e-110">Remarks</span></span>  
+ <span data-ttu-id="7596e-111">`AddHandler`と`RemoveHandler`ステートメントでは、開始およびプログラムの実行中にいつでも、特定のイベントのイベント処理を停止することができます。</span><span class="sxs-lookup"><span data-stu-id="7596e-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5cfcc-112">カスタム イベントの場合、`RemoveHandler`ステートメントで呼び出されるイベントの`RemoveHandler`アクセサー。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="5cfcc-113">カスタム イベントの詳細については、次を参照してください。 [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)します。</span><span class="sxs-lookup"><span data-stu-id="5cfcc-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
+>  <span data-ttu-id="7596e-112">カスタム イベントの場合、`RemoveHandler`ステートメントで呼び出されるイベントの`RemoveHandler`アクセサー。</span><span class="sxs-lookup"><span data-stu-id="7596e-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="7596e-113">カスタム イベントの詳細については、[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7596e-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5cfcc-114">例</span><span class="sxs-lookup"><span data-stu-id="5cfcc-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7596e-114">例</span><span class="sxs-lookup"><span data-stu-id="7596e-114">Example</span></span>  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a><span data-ttu-id="5cfcc-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5cfcc-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7596e-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7596e-115">See also</span></span>
 
-- [<span data-ttu-id="5cfcc-116">AddHandler ステートメント</span><span class="sxs-lookup"><span data-stu-id="5cfcc-116">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [<span data-ttu-id="5cfcc-117">Handles</span><span class="sxs-lookup"><span data-stu-id="5cfcc-117">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [<span data-ttu-id="5cfcc-118">Event ステートメント</span><span class="sxs-lookup"><span data-stu-id="5cfcc-118">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="5cfcc-119">イベント</span><span class="sxs-lookup"><span data-stu-id="5cfcc-119">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="7596e-116">AddHandler ステートメント</span><span class="sxs-lookup"><span data-stu-id="7596e-116">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [<span data-ttu-id="7596e-117">Handles</span><span class="sxs-lookup"><span data-stu-id="7596e-117">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="7596e-118">Event ステートメント</span><span class="sxs-lookup"><span data-stu-id="7596e-118">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="7596e-119">イベント</span><span class="sxs-lookup"><span data-stu-id="7596e-119">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

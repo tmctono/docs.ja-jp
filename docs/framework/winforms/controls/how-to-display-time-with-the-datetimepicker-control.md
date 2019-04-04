@@ -16,35 +16,35 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57716453"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="beafd-102">方法: 時間 DateTimePicker コントロールを表示します。</span><span class="sxs-lookup"><span data-stu-id="beafd-102">How to: Display Time with the DateTimePicker Control</span></span>
-<span data-ttu-id="beafd-103">アプリケーションでユーザーが日付と時刻を選択して、指定された形式で日付と時刻を表示できるようにするには、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用します。</span><span class="sxs-lookup"><span data-stu-id="beafd-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="beafd-104">次の手順は、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用して時刻を表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="beafd-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="726d0-102">方法: 時間 DateTimePicker コントロールを表示します。</span><span class="sxs-lookup"><span data-stu-id="726d0-102">How to: Display Time with the DateTimePicker Control</span></span>
+<span data-ttu-id="726d0-103">アプリケーションでユーザーが日付と時刻を選択して、指定された形式で日付と時刻を表示できるようにするには、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用します。</span><span class="sxs-lookup"><span data-stu-id="726d0-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="726d0-104">次の手順は、<xref:System.Windows.Forms.DateTimePicker> コントロールを使用して時刻を表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="726d0-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
   
-### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="beafd-105">方法 : DateTimePicker コントロールを使用して時間を表示する</span><span class="sxs-lookup"><span data-stu-id="beafd-105">To display the time with the DateTimePicker control</span></span>  
+### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="726d0-105">方法 : DateTimePicker コントロールを使用して時間を表示する</span><span class="sxs-lookup"><span data-stu-id="726d0-105">To display the time with the DateTimePicker control</span></span>  
   
-1.  <span data-ttu-id="beafd-106">
-  <xref:System.Windows.Forms.DateTimePicker.Format%2A> プロパティを <xref:System.Windows.Forms.DateTimePickerFormat.Time> に設定します。</span><span class="sxs-lookup"><span data-stu-id="beafd-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time></span></span>  
+1.  <span data-ttu-id="726d0-106">
+  <xref:System.Windows.Forms.DateTimePicker.Format%2A> プロパティを <xref:System.Windows.Forms.DateTimePickerFormat.Time> に設定します。</span><span class="sxs-lookup"><span data-stu-id="726d0-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time></span></span>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
   
-2.  <span data-ttu-id="beafd-107">
-  <xref:System.Windows.Forms.DateTimePicker> の <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> プロパティを `true\` に設定します。</span><span class="sxs-lookup"><span data-stu-id="beafd-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
+2.  <span data-ttu-id="726d0-107">
+  <xref:System.Windows.Forms.DateTimePicker> の <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> プロパティを `true\` に設定します。</span><span class="sxs-lookup"><span data-stu-id="726d0-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#3)]  
   
-## <a name="example"></a><span data-ttu-id="beafd-108">例</span><span class="sxs-lookup"><span data-stu-id="beafd-108">Example</span></span>  
- <span data-ttu-id="beafd-109">次のコード サンプルは、ユーザーが時刻のみを選択できるようにする <xref:System.Windows.Forms.DateTimePicker> を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="beafd-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
+## <a name="example"></a><span data-ttu-id="726d0-108">例</span><span class="sxs-lookup"><span data-stu-id="726d0-108">Example</span></span>  
+ <span data-ttu-id="726d0-109">次のコード サンプルは、ユーザーが時刻のみを選択できるようにする <xref:System.Windows.Forms.DateTimePicker> を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="726d0-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="beafd-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="beafd-110">Compiling the Code</span></span>  
- <span data-ttu-id="beafd-111">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="beafd-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="726d0-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="726d0-110">Compiling the Code</span></span>  
+ <span data-ttu-id="726d0-111">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="726d0-111">This example requires:</span></span>  
   
--   <span data-ttu-id="beafd-112">System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="beafd-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="726d0-112">System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="726d0-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="beafd-113">コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。</span><span class="sxs-lookup"><span data-stu-id="beafd-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="beafd-114">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="beafd-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="726d0-113">コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="726d0-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="726d0-114">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="726d0-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="beafd-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="beafd-115">See also</span></span>
-- [<span data-ttu-id="beafd-116">DateTimePicker コントロール</span><span class="sxs-lookup"><span data-stu-id="beafd-116">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="726d0-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="726d0-115">See also</span></span>
+- [<span data-ttu-id="726d0-116">DateTimePicker コントロール</span><span class="sxs-lookup"><span data-stu-id="726d0-116">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)

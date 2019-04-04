@@ -9,10 +9,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/07/2019
 ms.locfileid: "55827540"
 ---
-# <a name="function-entity-sql"></a><span data-ttu-id="425e7-102">FUNCTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="425e7-102">FUNCTION (Entity SQL)</span></span>
-<span data-ttu-id="425e7-103">Entity SQL クエリ コマンドのスコープに関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="425e7-103">Defines a function in the scope of an Entity SQL query command.</span></span>  
+# <a name="function-entity-sql"></a><span data-ttu-id="5fafe-102">FUNCTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5fafe-102">FUNCTION (Entity SQL)</span></span>
+<span data-ttu-id="5fafe-103">Entity SQL クエリ コマンドのスコープに関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="5fafe-103">Defines a function in the scope of an Entity SQL query command.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="425e7-104">構文</span><span class="sxs-lookup"><span data-stu-id="425e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fafe-104">構文</span><span class="sxs-lookup"><span data-stu-id="5fafe-104">Syntax</span></span>  
   
 ```  
 FUNCTION function-name  
@@ -28,32 +28,32 @@ FUNCTION function-name
         }   
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="425e7-105">引数</span><span class="sxs-lookup"><span data-stu-id="425e7-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="5fafe-105">引数</span><span class="sxs-lookup"><span data-stu-id="5fafe-105">Arguments</span></span>  
  `function-name`  
- <span data-ttu-id="425e7-106">関数名。</span><span class="sxs-lookup"><span data-stu-id="425e7-106">Name of the function.</span></span>  
+ <span data-ttu-id="5fafe-106">関数名。</span><span class="sxs-lookup"><span data-stu-id="5fafe-106">Name of the function.</span></span>  
   
  `parameter-name`  
- <span data-ttu-id="425e7-107">関数のパラメーター名。</span><span class="sxs-lookup"><span data-stu-id="425e7-107">Name of a parameter in the function.</span></span>  
+ <span data-ttu-id="5fafe-107">関数のパラメーター名。</span><span class="sxs-lookup"><span data-stu-id="5fafe-107">Name of a parameter in the function.</span></span>  
   
  `function_expression`  
- <span data-ttu-id="425e7-108">関数である有効な Entity SQL 式。</span><span class="sxs-lookup"><span data-stu-id="425e7-108">A valid Entity SQL expression that is the function.</span></span> <span data-ttu-id="425e7-109">関数内のコマンドは、関数に渡される `parameter_name` パラメーターに基づいて実行されます。</span><span class="sxs-lookup"><span data-stu-id="425e7-109">The command in the function can act on `parameter_name` parameters passed to the function.</span></span>  
+ <span data-ttu-id="5fafe-108">関数である有効な Entity SQL 式。</span><span class="sxs-lookup"><span data-stu-id="5fafe-108">A valid Entity SQL expression that is the function.</span></span> <span data-ttu-id="5fafe-109">関数内のコマンドは、関数に渡される `parameter_name` パラメーターに基づいて実行されます。</span><span class="sxs-lookup"><span data-stu-id="5fafe-109">The command in the function can act on `parameter_name` parameters passed to the function.</span></span>  
   
  `data_type`  
- <span data-ttu-id="425e7-110">サポートされる型の名前。</span><span class="sxs-lookup"><span data-stu-id="425e7-110">Name of a supported type.</span></span>  
+ <span data-ttu-id="5fafe-110">サポートされる型の名前。</span><span class="sxs-lookup"><span data-stu-id="5fafe-110">Name of a supported type.</span></span>  
   
- <span data-ttu-id="425e7-111">COLLECTION ( <type_definition`>` )</span><span class="sxs-lookup"><span data-stu-id="425e7-111">COLLECTION ( <type_definition`>` )</span></span>  
- <span data-ttu-id="425e7-112">サポートされる型、行、または参照のコレクションを返す式。</span><span class="sxs-lookup"><span data-stu-id="425e7-112">An expression that returns a collection of supported types, rows, or references.</span></span>  
+ <span data-ttu-id="5fafe-111">COLLECTION ( <type_definition`>` )</span><span class="sxs-lookup"><span data-stu-id="5fafe-111">COLLECTION ( <type_definition`>` )</span></span>  
+ <span data-ttu-id="5fafe-112">サポートされる型、行、または参照のコレクションを返す式。</span><span class="sxs-lookup"><span data-stu-id="5fafe-112">An expression that returns a collection of supported types, rows, or references.</span></span>  
   
- <span data-ttu-id="425e7-113">REF **(**`data_type`**)**</span><span class="sxs-lookup"><span data-stu-id="425e7-113">REF **(**`data_type`**)**</span></span>  
- <span data-ttu-id="425e7-114">エンティティ型への参照を返す式。</span><span class="sxs-lookup"><span data-stu-id="425e7-114">An expression that returns a reference to an entity type.</span></span>  
+ <span data-ttu-id="5fafe-113">REF **(**`data_type`**)**</span><span class="sxs-lookup"><span data-stu-id="5fafe-113">REF **(**`data_type`**)**</span></span>  
+ <span data-ttu-id="5fafe-114">エンティティ型への参照を返す式。</span><span class="sxs-lookup"><span data-stu-id="5fafe-114">An expression that returns a reference to an entity type.</span></span>  
   
- <span data-ttu-id="425e7-115">ROW **(**`row_expression`**)**</span><span class="sxs-lookup"><span data-stu-id="425e7-115">ROW **(**`row_expression`**)**</span></span>  
- <span data-ttu-id="425e7-116">1 つまたは複数の値から構造的に型指定された匿名レコードを返す式。</span><span class="sxs-lookup"><span data-stu-id="425e7-116">An expression that returns anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="425e7-117">詳細については、「 [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="425e7-117">For more information, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
+ <span data-ttu-id="5fafe-115">ROW **(**`row_expression`**)**</span><span class="sxs-lookup"><span data-stu-id="5fafe-115">ROW **(**`row_expression`**)**</span></span>  
+ <span data-ttu-id="5fafe-116">1 つまたは複数の値から構造的に型指定された匿名レコードを返す式。</span><span class="sxs-lookup"><span data-stu-id="5fafe-116">An expression that returns anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="5fafe-117">詳細については、「 [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5fafe-117">For more information, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="425e7-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="425e7-118">Remarks</span></span>  
- <span data-ttu-id="425e7-119">関数のシグネチャが異なっていれば、名前が同じ複数の関数をインラインで宣言することは可能です。</span><span class="sxs-lookup"><span data-stu-id="425e7-119">Multiple functions with the same name can be declared inline, as long as the function signatures are different.</span></span> <span data-ttu-id="425e7-120">詳細については、「 [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="425e7-120">For more information, see [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fafe-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="5fafe-118">Remarks</span></span>  
+ <span data-ttu-id="5fafe-119">関数のシグネチャが異なっていれば、名前が同じ複数の関数をインラインで宣言することは可能です。</span><span class="sxs-lookup"><span data-stu-id="5fafe-119">Multiple functions with the same name can be declared inline, as long as the function signatures are different.</span></span> <span data-ttu-id="5fafe-120">詳細については、「 [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5fafe-120">For more information, see [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).</span></span>  
   
- <span data-ttu-id="425e7-121">関数がインラインである場合、Entity SQL コマンドに呼び出せるのは、そのコマンド内で定義された後のみです。</span><span class="sxs-lookup"><span data-stu-id="425e7-121">An inline function can be called in an Entity SQL command only after it has been defined in that command.</span></span> <span data-ttu-id="425e7-122">ただし、インライン関数を別のインライン関数内で呼び出す場合には、呼び出される関数が定義される前でも後でもかまいません。</span><span class="sxs-lookup"><span data-stu-id="425e7-122">However, an inline function can be called inside another inline function either before or after the called function has been defined.</span></span> <span data-ttu-id="425e7-123">次の例では、関数 B が定義される前に、関数 A が関数 B を呼び出しています。</span><span class="sxs-lookup"><span data-stu-id="425e7-123">In the following example, function A calls function B before function B is defined:</span></span>  
+ <span data-ttu-id="5fafe-121">関数がインラインである場合、Entity SQL コマンドに呼び出せるのは、そのコマンド内で定義された後のみです。</span><span class="sxs-lookup"><span data-stu-id="5fafe-121">An inline function can be called in an Entity SQL command only after it has been defined in that command.</span></span> <span data-ttu-id="5fafe-122">ただし、インライン関数を別のインライン関数内で呼び出す場合には、呼び出される関数が定義される前でも後でもかまいません。</span><span class="sxs-lookup"><span data-stu-id="5fafe-122">However, an inline function can be called inside another inline function either before or after the called function has been defined.</span></span> <span data-ttu-id="5fafe-123">次の例では、関数 B が定義される前に、関数 A が関数 B を呼び出しています。</span><span class="sxs-lookup"><span data-stu-id="5fafe-123">In the following example, function A calls function B before function B is defined:</span></span>  
   
  `Function A() as ('A calls B. ' + B())`  
   
@@ -61,20 +61,20 @@ FUNCTION function-name
   
  `A()`  
   
- <span data-ttu-id="425e7-124">詳細については、「[方法 :ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))します。</span><span class="sxs-lookup"><span data-stu-id="425e7-124">For more information, see [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span></span>  
+ <span data-ttu-id="5fafe-124">詳細については、「[方法 :ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))します。</span><span class="sxs-lookup"><span data-stu-id="5fafe-124">For more information, see [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).</span></span>  
   
- <span data-ttu-id="425e7-125">関数をモデル自体で宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="425e7-125">Functions can also be declared in the model itself.</span></span> <span data-ttu-id="425e7-126">モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。</span><span class="sxs-lookup"><span data-stu-id="425e7-126">Functions declared in the model are executed in the same way as functions declared inline in the command.</span></span> <span data-ttu-id="425e7-127">詳細については、次を参照してください。[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)します。</span><span class="sxs-lookup"><span data-stu-id="425e7-127">For more information, see [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).</span></span>  
+ <span data-ttu-id="5fafe-125">関数をモデル自体で宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="5fafe-125">Functions can also be declared in the model itself.</span></span> <span data-ttu-id="5fafe-126">モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。</span><span class="sxs-lookup"><span data-stu-id="5fafe-126">Functions declared in the model are executed in the same way as functions declared inline in the command.</span></span> <span data-ttu-id="5fafe-127">詳細については、[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5fafe-127">For more information, see [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="425e7-128">例</span><span class="sxs-lookup"><span data-stu-id="425e7-128">Example</span></span>  
- <span data-ttu-id="425e7-129">次の Entity SQL コマンドは、関数 `Products` を定義します。この関数は、整数値を受け取って、返された製品をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="425e7-129">The following Entity SQL command defines a function `Products` that takes an integer value to filter the returned products.</span></span>  
+## <a name="example"></a><span data-ttu-id="5fafe-128">例</span><span class="sxs-lookup"><span data-stu-id="5fafe-128">Example</span></span>  
+ <span data-ttu-id="5fafe-129">次の Entity SQL コマンドは、関数 `Products` を定義します。この関数は、整数値を受け取って、返された製品をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="5fafe-129">The following Entity SQL command defines a function `Products` that takes an integer value to filter the returned products.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
   
-## <a name="example"></a><span data-ttu-id="425e7-130">例</span><span class="sxs-lookup"><span data-stu-id="425e7-130">Example</span></span>  
- <span data-ttu-id="425e7-131">次の Entity SQL コマンドは、関数 `StringReturnsCollection` を定義します。この関数は、文字列のコレクションを受け取って、返された連絡先をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="425e7-131">The following Entity SQL command defines a function `StringReturnsCollection` that takes a collection of strings to filter the returned contacts.</span></span>  
+## <a name="example"></a><span data-ttu-id="5fafe-130">例</span><span class="sxs-lookup"><span data-stu-id="5fafe-130">Example</span></span>  
+ <span data-ttu-id="5fafe-131">次の Entity SQL コマンドは、関数 `StringReturnsCollection` を定義します。この関数は、文字列のコレクションを受け取って、返された連絡先をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="5fafe-131">The following Entity SQL command defines a function `StringReturnsCollection` that takes a collection of strings to filter the returned contacts.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
   
-## <a name="see-also"></a><span data-ttu-id="425e7-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="425e7-132">See also</span></span>
-- [<span data-ttu-id="425e7-133">Entity SQL リファレンス</span><span class="sxs-lookup"><span data-stu-id="425e7-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="425e7-134">Entity SQL 言語</span><span class="sxs-lookup"><span data-stu-id="425e7-134">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+## <a name="see-also"></a><span data-ttu-id="5fafe-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="5fafe-132">See also</span></span>
+- [<span data-ttu-id="5fafe-133">Entity SQL リファレンス</span><span class="sxs-lookup"><span data-stu-id="5fafe-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="5fafe-134">Entity SQL 言語</span><span class="sxs-lookup"><span data-stu-id="5fafe-134">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

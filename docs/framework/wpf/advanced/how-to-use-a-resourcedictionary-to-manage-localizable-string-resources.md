@@ -17,28 +17,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2019
 ms.locfileid: "57377938"
 ---
-# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="3b555-102">方法: ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する</span><span class="sxs-lookup"><span data-stu-id="3b555-102">How to: Use a ResourceDictionary to Manage Localizable String Resources</span></span>
-<span data-ttu-id="3b555-103">この例は、使用する方法を示します、 <xref:System.Windows.ResourceDictionary> Windows Presentation Foundation (WPF) アプリケーションのローカライズ可能な文字列リソースをパッケージ化します。</span><span class="sxs-lookup"><span data-stu-id="3b555-103">This example shows how to use a <xref:System.Windows.ResourceDictionary> to package localizable string resources for Windows Presentation Foundation (WPF) applications.</span></span>  
+# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="7a479-102">方法: ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する</span><span class="sxs-lookup"><span data-stu-id="7a479-102">How to: Use a ResourceDictionary to Manage Localizable String Resources</span></span>
+<span data-ttu-id="7a479-103">この例は、使用する方法を示します、 <xref:System.Windows.ResourceDictionary> Windows Presentation Foundation (WPF) アプリケーションのローカライズ可能な文字列リソースをパッケージ化します。</span><span class="sxs-lookup"><span data-stu-id="7a479-103">This example shows how to use a <xref:System.Windows.ResourceDictionary> to package localizable string resources for Windows Presentation Foundation (WPF) applications.</span></span>  
   
-### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="3b555-104">ResourceDictionary を使用してローカライズ可能な文字列リソースを管理するには</span><span class="sxs-lookup"><span data-stu-id="3b555-104">To use a ResourceDictionary to manage localizable string resources</span></span>  
+### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="7a479-104">ResourceDictionary を使用してローカライズ可能な文字列リソースを管理するには</span><span class="sxs-lookup"><span data-stu-id="7a479-104">To use a ResourceDictionary to manage localizable string resources</span></span>  
   
-1.  <span data-ttu-id="3b555-105">作成、<xref:System.Windows.ResourceDictionary>にローカライズする文字列を格納しています。</span><span class="sxs-lookup"><span data-stu-id="3b555-105">Create a <xref:System.Windows.ResourceDictionary> that contains the strings you would like to localize.</span></span> <span data-ttu-id="3b555-106">次のコードは一例を示しています。</span><span class="sxs-lookup"><span data-stu-id="3b555-106">The following code shows an example.</span></span>  
+1.  <span data-ttu-id="7a479-105">作成、<xref:System.Windows.ResourceDictionary>にローカライズする文字列を格納しています。</span><span class="sxs-lookup"><span data-stu-id="7a479-105">Create a <xref:System.Windows.ResourceDictionary> that contains the strings you would like to localize.</span></span> <span data-ttu-id="7a479-106">次のコードは一例を示しています。</span><span class="sxs-lookup"><span data-stu-id="7a479-106">The following code shows an example.</span></span>  
   
      [!code-xaml[StringLocalizationSample#StringResourceDictionary](~/samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/StringResources.xaml#stringresourcedictionary)]  
   
-     <span data-ttu-id="3b555-107">このコードでは、文字列リソースを定義します。 `localizedMessage`、型の<xref:System.String>、から、 <xref:System> mscorlib.dll に名前空間。</span><span class="sxs-lookup"><span data-stu-id="3b555-107">This code defines a string resource, `localizedMessage`, of type <xref:System.String>, from the <xref:System> namespace in mscorlib.dll.</span></span>  
+     <span data-ttu-id="7a479-107">このコードでは、文字列リソースを定義します。 `localizedMessage`、型の<xref:System.String>、から、 <xref:System> mscorlib.dll に名前空間。</span><span class="sxs-lookup"><span data-stu-id="7a479-107">This code defines a string resource, `localizedMessage`, of type <xref:System.String>, from the <xref:System> namespace in mscorlib.dll.</span></span>  
   
-2.  <span data-ttu-id="3b555-108">追加、<xref:System.Windows.ResourceDictionary>アプリケーションには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="3b555-108">Add the <xref:System.Windows.ResourceDictionary> to your application, using the following code.</span></span>  
+2.  <span data-ttu-id="7a479-108">追加、<xref:System.Windows.ResourceDictionary>アプリケーションには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="7a479-108">Add the <xref:System.Windows.ResourceDictionary> to your application, using the following code.</span></span>  
   
      [!code-xaml[StringLocalizationSample#ReferencingStringResourceDictionary](~/samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/App.xaml#referencingstringresourcedictionary)]  
   
-3.  <span data-ttu-id="3b555-109">マークアップの文字列リソースを使用して、使用して[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]次のようにします。</span><span class="sxs-lookup"><span data-stu-id="3b555-109">Use the string resource from markup, using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] like the following.</span></span>  
+3.  <span data-ttu-id="7a479-109">マークアップの文字列リソースを使用して、使用して[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]次のようにします。</span><span class="sxs-lookup"><span data-stu-id="7a479-109">Use the string resource from markup, using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] like the following.</span></span>  
   
      [!code-xaml[StringLocalizationSample#GetLocalizedResourceFromMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml#getlocalizedresourcefrommarkup)]  
   
-4.  <span data-ttu-id="3b555-110">次のようなコードを使用して、コードビハインドから文字列リソースを使用します。</span><span class="sxs-lookup"><span data-stu-id="3b555-110">Use the string resource from code-behind, using code like the following.</span></span>  
+4.  <span data-ttu-id="7a479-110">次のようなコードを使用して、コードビハインドから文字列リソースを使用します。</span><span class="sxs-lookup"><span data-stu-id="7a479-110">Use the string resource from code-behind, using code like the following.</span></span>  
   
      [!code-csharp[StringLocalizationSample#GetLocalizedResourceFromCode](~/samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml.cs#getlocalizedresourcefromcode)]
      [!code-vb[StringLocalizationSample#GetLocalizedResourceFromCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StringLocalizationSample/VisualBasic/MainWindow.xaml.vb#getlocalizedresourcefromcode)]  
   
-5.  <span data-ttu-id="3b555-111">アプリケーションをローカライズします。</span><span class="sxs-lookup"><span data-stu-id="3b555-111">Localize the application.</span></span> <span data-ttu-id="3b555-112">詳細については、次を参照してください。[アプリケーションをローカライズする](how-to-localize-an-application.md)します。</span><span class="sxs-lookup"><span data-stu-id="3b555-112">For more information, see [Localize an Application](how-to-localize-an-application.md).</span></span>
+5.  <span data-ttu-id="7a479-111">アプリケーションをローカライズします。</span><span class="sxs-lookup"><span data-stu-id="7a479-111">Localize the application.</span></span> <span data-ttu-id="7a479-112">詳細については、[アプリケーションをローカライズする](how-to-localize-an-application.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7a479-112">For more information, see [Localize an Application](how-to-localize-an-application.md).</span></span>
