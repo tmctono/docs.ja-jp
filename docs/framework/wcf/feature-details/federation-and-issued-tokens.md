@@ -6,45 +6,45 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: 513d68f49e4182979b492fa67e65860aee96e09a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072786"
 ---
-# <a name="federation-and-issued-tokens"></a><span data-ttu-id="d0c45-102">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="d0c45-102">Federation and Issued Tokens</span></span>
-<span data-ttu-id="d0c45-103">Windows Communication Foundation (WCF) で、Ws-federation および Ws-trust 仕様を実装するサービスを安全に通信するクライアントを作成できます。</span><span class="sxs-lookup"><span data-stu-id="d0c45-103">With Windows Communication Foundation (WCF), you can create clients that communicate securely with services that implement the WS-Federation and WS-Trust specifications.</span></span> <span data-ttu-id="d0c45-104">これらの仕様では、異なる信頼領域間での認証と承認を可能にする機構を提供するために、XML、SOAP、および Web サービス記述言語 (WSDL: Web Services Description Language) が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d0c45-104">The specifications use XML, SOAP, and Web Services Description Language (WSDL) to provide mechanisms that enable authentication and authorization across different trust realms.</span></span>  
+# <a name="federation-and-issued-tokens"></a><span data-ttu-id="5557f-102">フェデレーションと発行済みトークン</span><span class="sxs-lookup"><span data-stu-id="5557f-102">Federation and Issued Tokens</span></span>
+<span data-ttu-id="5557f-103">Windows Communication Foundation (WCF) で、Ws-federation および Ws-trust 仕様を実装するサービスを安全に通信するクライアントを作成できます。</span><span class="sxs-lookup"><span data-stu-id="5557f-103">With Windows Communication Foundation (WCF), you can create clients that communicate securely with services that implement the WS-Federation and WS-Trust specifications.</span></span> <span data-ttu-id="5557f-104">これらの仕様では、異なる信頼領域間での認証と承認を可能にする機構を提供するために、XML、SOAP、および Web サービス記述言語 (WSDL: Web Services Description Language) が使用されます。</span><span class="sxs-lookup"><span data-stu-id="5557f-104">The specifications use XML, SOAP, and Web Services Description Language (WSDL) to provide mechanisms that enable authentication and authorization across different trust realms.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d0c45-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d0c45-105">In This Section</span></span>  
- [<span data-ttu-id="d0c45-106">フェデレーション</span><span class="sxs-lookup"><span data-stu-id="d0c45-106">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
- <span data-ttu-id="d0c45-107">フェデレーションの概要を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-107">Provides an overview of federation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5557f-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5557f-105">In This Section</span></span>  
+ [<span data-ttu-id="5557f-106">フェデレーション</span><span class="sxs-lookup"><span data-stu-id="5557f-106">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ <span data-ttu-id="5557f-107">フェデレーションの概要を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-107">Provides an overview of federation.</span></span>  
   
- [<span data-ttu-id="d0c45-108">フェデレーションと信頼</span><span class="sxs-lookup"><span data-stu-id="d0c45-108">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- <span data-ttu-id="d0c45-109">フェデレーション サービスまたはクライアントを作成するときに注意する必要がある設計上の問題を示します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-109">Lists the design issues to be aware of when creating federated services or clients.</span></span>  
+ [<span data-ttu-id="5557f-108">フェデレーションと信頼</span><span class="sxs-lookup"><span data-stu-id="5557f-108">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ <span data-ttu-id="5557f-109">フェデレーション サービスまたはクライアントを作成するときに注意する必要がある設計上の問題を示します。</span><span class="sxs-lookup"><span data-stu-id="5557f-109">Lists the design issues to be aware of when creating federated services or clients.</span></span>  
   
- [<span data-ttu-id="d0c45-110">方法: フェデレーション クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-110">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- <span data-ttu-id="d0c45-111">WCF を使用したフェデレーション クライアントの作成の基本について説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-111">Describes the basics of creating a federated client with WCF.</span></span>  
+ [<span data-ttu-id="5557f-110">方法: フェデレーション クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="5557f-110">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ <span data-ttu-id="5557f-111">WCF を使用したフェデレーション クライアントの作成の基本について説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-111">Describes the basics of creating a federated client with WCF.</span></span>  
   
- [<span data-ttu-id="d0c45-112">方法: フェデレーション サービスで資格情報を構成します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-112">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- <span data-ttu-id="d0c45-113">フェデレーション サービスを作成する手順を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-113">Describes the steps of creating a federated service.</span></span>  
+ [<span data-ttu-id="5557f-112">方法: フェデレーション サービスで資格情報を設定する</span><span class="sxs-lookup"><span data-stu-id="5557f-112">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ <span data-ttu-id="5557f-113">フェデレーション サービスを作成する手順を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-113">Describes the steps of creating a federated service.</span></span>  
   
- [<span data-ttu-id="d0c45-114">方法: WSFederationHttpBinding を作成します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-114">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- <span data-ttu-id="d0c45-115">`WSFederationHttpBinding` を使用するクライアントおよびサービスを構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-115">Describes how to configure clients and services that use the `WSFederationHttpBinding`.</span></span>  
+ [<span data-ttu-id="5557f-114">方法: WSFederationHttpBinding を作成する</span><span class="sxs-lookup"><span data-stu-id="5557f-114">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ <span data-ttu-id="5557f-115">`WSFederationHttpBinding` を使用するクライアントおよびサービスを構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-115">Describes how to configure clients and services that use the `WSFederationHttpBinding`.</span></span>  
   
- [<span data-ttu-id="d0c45-116">方法: セキュリティ トークン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-116">How to: Create a Security Token Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
- <span data-ttu-id="d0c45-117">セキュリティ トークン サービスを作成する手順を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-117">Describes the steps of creating a security token service.</span></span>  
+ [<span data-ttu-id="5557f-116">方法: セキュリティ トークン サービスを作成する</span><span class="sxs-lookup"><span data-stu-id="5557f-116">How to: Create a Security Token Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ <span data-ttu-id="5557f-117">セキュリティ トークン サービスを作成する手順を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-117">Describes the steps of creating a security token service.</span></span>  
   
- [<span data-ttu-id="d0c45-118">SAML (Security Assertions Markup Language) トークンとクレーム</span><span class="sxs-lookup"><span data-stu-id="d0c45-118">Security Assertions Markup Language (SAML) Tokens and Claims</span></span>](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
- <span data-ttu-id="d0c45-119">多様なクレームの種類を作成できる拡張可能な SAML (Security Assertions Markup Language) トークンについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-119">Describes Security Assertions Markup Language (SAML) tokens, which are extensible and enable you to create rich claim types.</span></span>  
+ [<span data-ttu-id="5557f-118">SAML (Security Assertions Markup Language) トークンとクレーム</span><span class="sxs-lookup"><span data-stu-id="5557f-118">Security Assertions Markup Language (SAML) Tokens and Claims</span></span>](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ <span data-ttu-id="5557f-119">多様なクレームの種類を作成できる拡張可能な SAML (Security Assertions Markup Language) トークンについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-119">Describes Security Assertions Markup Language (SAML) tokens, which are extensible and enable you to create rich claim types.</span></span>  
   
- [<span data-ttu-id="d0c45-120">方法: ローカル発行者を構成します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-120">How to: Configure a Local Issuer</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- <span data-ttu-id="d0c45-121">セキュリティ トークンのローカル発行者の作成方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-121">Describes how to create a local issuer of security tokens.</span></span>  
+ [<span data-ttu-id="5557f-120">方法: ローカル発行者を設定する</span><span class="sxs-lookup"><span data-stu-id="5557f-120">How to: Configure a Local Issuer</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ <span data-ttu-id="5557f-121">セキュリティ トークンのローカル発行者の作成方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-121">Describes how to create a local issuer of security tokens.</span></span>  
   
- [<span data-ttu-id="d0c45-122">方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。</span><span class="sxs-lookup"><span data-stu-id="d0c45-122">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- <span data-ttu-id="d0c45-123">`WSFederationHttpBinding` のセキュリティで保護されたセッションを無効にする方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="d0c45-123">Describes how to disable secure sessions on a `WSFederationHttpBinding`.</span></span> <span data-ttu-id="d0c45-124">クライアントごとにセッションが必要になる Web ファームを作成する場合には、セキュリティで保護されたセッションを無効化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d0c45-124">Disabling secure sessions is necessary when creating a Web farm that requires a session for each client.</span></span>  
+ [<span data-ttu-id="5557f-122">方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする</span><span class="sxs-lookup"><span data-stu-id="5557f-122">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ <span data-ttu-id="5557f-123">`WSFederationHttpBinding` のセキュリティで保護されたセッションを無効にする方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="5557f-123">Describes how to disable secure sessions on a `WSFederationHttpBinding`.</span></span> <span data-ttu-id="5557f-124">クライアントごとにセッションが必要になる Web ファームを作成する場合には、セキュリティで保護されたセッションを無効化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5557f-124">Disabling secure sessions is necessary when creating a Web farm that requires a session for each client.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d0c45-125">参照</span><span class="sxs-lookup"><span data-stu-id="d0c45-125">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5557f-125">参照</span><span class="sxs-lookup"><span data-stu-id="5557f-125">Reference</span></span>  
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -61,7 +61,8 @@ ms.locfileid: "54699416"
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a><span data-ttu-id="d0c45-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0c45-126">See also</span></span>
-- [<span data-ttu-id="d0c45-127">承認</span><span class="sxs-lookup"><span data-stu-id="d0c45-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [<span data-ttu-id="d0c45-128">カスタム トークン</span><span class="sxs-lookup"><span data-stu-id="d0c45-128">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)
-- [<span data-ttu-id="d0c45-129">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="d0c45-129">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="5557f-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="5557f-126">See also</span></span>
+
+- [<span data-ttu-id="5557f-127">承認</span><span class="sxs-lookup"><span data-stu-id="5557f-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [<span data-ttu-id="5557f-128">カスタム トークン</span><span class="sxs-lookup"><span data-stu-id="5557f-128">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)
+- [<span data-ttu-id="5557f-129">Windows Server AppFabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="5557f-129">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

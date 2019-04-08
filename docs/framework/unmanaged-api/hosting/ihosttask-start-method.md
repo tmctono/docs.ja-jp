@@ -17,43 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec781a4b51b425225339c08ec8fa194da1972462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45c5b09358430535438734b38e5dce5d1bcdd3e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101628"
 ---
-# <a name="ihosttaskstart-method"></a><span data-ttu-id="f39ca-102">IHostTask::Start メソッド</span><span class="sxs-lookup"><span data-stu-id="f39ca-102">IHostTask::Start Method</span></span>
-<span data-ttu-id="f39ca-103">ホストが現在によって表されるタスクを移動要求[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス、中断したからコードを実行できる、ライブの状態にします。</span><span class="sxs-lookup"><span data-stu-id="f39ca-103">Requests that the host move the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance from a suspended to a live state, in which code can be executed.</span></span>  
+# <a name="ihosttaskstart-method"></a><span data-ttu-id="1144a-102">IHostTask::Start メソッド</span><span class="sxs-lookup"><span data-stu-id="1144a-102">IHostTask::Start Method</span></span>
+<span data-ttu-id="1144a-103">ホストが現在によって表されるタスクを移動要求[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス、中断したからコードを実行できる、ライブの状態にします。</span><span class="sxs-lookup"><span data-stu-id="1144a-103">Requests that the host move the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance from a suspended to a live state, in which code can be executed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f39ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="f39ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1144a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1144a-104">Syntax</span></span>  
   
 ```  
 HRESULT Start ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="f39ca-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="f39ca-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1144a-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="1144a-105">Return Value</span></span>  
   
-|<span data-ttu-id="f39ca-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f39ca-106">HRESULT</span></span>|<span data-ttu-id="f39ca-107">説明</span><span class="sxs-lookup"><span data-stu-id="f39ca-107">Description</span></span>|  
+|<span data-ttu-id="1144a-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1144a-106">HRESULT</span></span>|<span data-ttu-id="1144a-107">説明</span><span class="sxs-lookup"><span data-stu-id="1144a-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f39ca-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="f39ca-108">S_OK</span></span>|<span data-ttu-id="f39ca-109">開始は正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="f39ca-109">Start returned successfully.</span></span>|  
-|<span data-ttu-id="f39ca-110">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f39ca-110">E_FAIL</span></span>|<span data-ttu-id="f39ca-111">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="f39ca-111">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f39ca-112">メソッドには、E_FAIL が返される、ときに、共通言語ランタイム (CLR) は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="f39ca-112">When a method returns E_FAIL, the common language runtime (CLR) is no longer usable within the process.</span></span> <span data-ttu-id="f39ca-113">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="f39ca-113">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="1144a-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="1144a-108">S_OK</span></span>|<span data-ttu-id="1144a-109">開始は正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="1144a-109">Start returned successfully.</span></span>|  
+|<span data-ttu-id="1144a-110">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1144a-110">E_FAIL</span></span>|<span data-ttu-id="1144a-111">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="1144a-111">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1144a-112">メソッドには、E_FAIL が返される、ときに、共通言語ランタイム (CLR) は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="1144a-112">When a method returns E_FAIL, the common language runtime (CLR) is no longer usable within the process.</span></span> <span data-ttu-id="1144a-113">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="1144a-113">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f39ca-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="f39ca-114">Remarks</span></span>  
- <span data-ttu-id="f39ca-115">`Start` 致命的な障害が発生した場合を除く、s_ok HRESULT 値を常に返します。</span><span class="sxs-lookup"><span data-stu-id="f39ca-115">`Start` always returns an HRESULT value of S_OK, except in cases where a catastrophic failure has occurred.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1144a-114">Remarks</span><span class="sxs-lookup"><span data-stu-id="1144a-114">Remarks</span></span>  
+ `Start` <span data-ttu-id="1144a-115">致命的な障害が発生した場合を除く、s_ok HRESULT 値を常に返します。</span><span class="sxs-lookup"><span data-stu-id="1144a-115">always returns an HRESULT value of S_OK, except in cases where a catastrophic failure has occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f39ca-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="f39ca-116">Requirements</span></span>  
- <span data-ttu-id="f39ca-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f39ca-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1144a-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="1144a-116">Requirements</span></span>  
+ <span data-ttu-id="1144a-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1144a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f39ca-118">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f39ca-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1144a-118">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1144a-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f39ca-119">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f39ca-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1144a-119">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1144a-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f39ca-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f39ca-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1144a-120">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="1144a-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f39ca-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f39ca-121">See also</span></span>
-- [<span data-ttu-id="f39ca-122">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f39ca-122">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="f39ca-123">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f39ca-123">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="f39ca-124">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f39ca-124">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="f39ca-125">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f39ca-125">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1144a-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="1144a-121">See also</span></span>
+
+- [<span data-ttu-id="1144a-122">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1144a-122">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="1144a-123">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1144a-123">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="1144a-124">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1144a-124">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="1144a-125">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1144a-125">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

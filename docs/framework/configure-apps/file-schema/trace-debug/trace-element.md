@@ -10,21 +10,21 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073794"
 ---
-# <a name="trace-element"></a><span data-ttu-id="f8c3c-102">\<トレース > 要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-102">\<trace> Element</span></span>
-<span data-ttu-id="f8c3c-103">トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
+# <a name="trace-element"></a><span data-ttu-id="d99aa-102">\<トレース > 要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-102">\<trace> Element</span></span>
+<span data-ttu-id="d99aa-103">トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
   
- <span data-ttu-id="f8c3c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f8c3c-104">\<configuration></span></span>  
-<span data-ttu-id="f8c3c-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="f8c3c-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="f8c3c-106">\<トレース ></span><span class="sxs-lookup"><span data-stu-id="f8c3c-106">\<trace></span></span>  
+ <span data-ttu-id="d99aa-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d99aa-104">\<configuration></span></span>  
+<span data-ttu-id="d99aa-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="d99aa-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="d99aa-106">\<トレース ></span><span class="sxs-lookup"><span data-stu-id="d99aa-106">\<trace></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8c3c-107">構文</span><span class="sxs-lookup"><span data-stu-id="f8c3c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d99aa-107">構文</span><span class="sxs-lookup"><span data-stu-id="d99aa-107">Syntax</span></span>  
   
 ```xml  
 <trace autoflush="true|false"   
@@ -32,46 +32,46 @@ ms.locfileid: "55257799"
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f8c3c-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f8c3c-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d99aa-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d99aa-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f8c3c-110">属性</span><span class="sxs-lookup"><span data-stu-id="f8c3c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d99aa-110">属性</span><span class="sxs-lookup"><span data-stu-id="d99aa-110">Attributes</span></span>  
   
-|<span data-ttu-id="f8c3c-111">属性</span><span class="sxs-lookup"><span data-stu-id="f8c3c-111">Attribute</span></span>|<span data-ttu-id="f8c3c-112">説明</span><span class="sxs-lookup"><span data-stu-id="f8c3c-112">Description</span></span>|  
+|<span data-ttu-id="d99aa-111">属性</span><span class="sxs-lookup"><span data-stu-id="d99aa-111">Attribute</span></span>|<span data-ttu-id="d99aa-112">説明</span><span class="sxs-lookup"><span data-stu-id="d99aa-112">Description</span></span>|  
 |---------------|-----------------|  
-|`autoflush`|<span data-ttu-id="f8c3c-113">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f8c3c-114">トレース リスナーが、すべての書き込み操作の後に、出力バッファーを自動的にフラッシュするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
-|`indentsize`|<span data-ttu-id="f8c3c-115">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f8c3c-116">インデントを設定する空白の数を指定します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-116">Specifies the number of spaces to indent.</span></span>|  
-|`useGlobalLock`|<span data-ttu-id="f8c3c-117">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f8c3c-118">グローバル ロックを使用するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-118">Indicates whether the global lock should be used.</span></span>|  
+|`autoflush`|<span data-ttu-id="d99aa-113">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d99aa-114">トレース リスナーが、すべての書き込み操作の後に、出力バッファーを自動的にフラッシュするかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
+|`indentsize`|<span data-ttu-id="d99aa-115">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d99aa-116">インデントを設定する空白の数を指定します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-116">Specifies the number of spaces to indent.</span></span>|  
+|`useGlobalLock`|<span data-ttu-id="d99aa-117">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="d99aa-118">グローバル ロックを使用するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-118">Indicates whether the global lock should be used.</span></span>|  
   
-## <a name="autoflush-attribute"></a><span data-ttu-id="f8c3c-119">autoflush 属性</span><span class="sxs-lookup"><span data-stu-id="f8c3c-119">autoflush Attribute</span></span>  
+## <a name="autoflush-attribute"></a><span data-ttu-id="d99aa-119">autoflush 属性</span><span class="sxs-lookup"><span data-stu-id="d99aa-119">autoflush Attribute</span></span>  
   
-|<span data-ttu-id="f8c3c-120">[値]</span><span class="sxs-lookup"><span data-stu-id="f8c3c-120">Value</span></span>|<span data-ttu-id="f8c3c-121">説明</span><span class="sxs-lookup"><span data-stu-id="f8c3c-121">Description</span></span>|  
+|<span data-ttu-id="d99aa-120">[値]</span><span class="sxs-lookup"><span data-stu-id="d99aa-120">Value</span></span>|<span data-ttu-id="d99aa-121">説明</span><span class="sxs-lookup"><span data-stu-id="d99aa-121">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="f8c3c-122">出力バッファーを自動的にフラッシュしません。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="f8c3c-123">既定値です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-123">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="f8c3c-124">自動的に出力バッファーをフラッシュします。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-124">Automatically flushes the output buffer.</span></span>|  
+|`false`|<span data-ttu-id="d99aa-122">出力バッファーを自動的にフラッシュしません。</span><span class="sxs-lookup"><span data-stu-id="d99aa-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="d99aa-123">既定値です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-123">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="d99aa-124">自動的に出力バッファーをフラッシュします。</span><span class="sxs-lookup"><span data-stu-id="d99aa-124">Automatically flushes the output buffer.</span></span>|  
   
-## <a name="usegloballock-attribute"></a><span data-ttu-id="f8c3c-125">useGlobalLock 属性</span><span class="sxs-lookup"><span data-stu-id="f8c3c-125">useGlobalLock Attribute</span></span>  
+## <a name="usegloballock-attribute"></a><span data-ttu-id="d99aa-125">useGlobalLock 属性</span><span class="sxs-lookup"><span data-stu-id="d99aa-125">useGlobalLock Attribute</span></span>  
   
-|<span data-ttu-id="f8c3c-126">[値]</span><span class="sxs-lookup"><span data-stu-id="f8c3c-126">Value</span></span>|<span data-ttu-id="f8c3c-127">説明</span><span class="sxs-lookup"><span data-stu-id="f8c3c-127">Description</span></span>|  
+|<span data-ttu-id="d99aa-126">[値]</span><span class="sxs-lookup"><span data-stu-id="d99aa-126">Value</span></span>|<span data-ttu-id="d99aa-127">説明</span><span class="sxs-lookup"><span data-stu-id="d99aa-127">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="f8c3c-128">リスナーがスレッド セーフである場合は、グローバル ロックを使用しませんそれ以外の場合、グローバル ロックを使用します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
-|`true`|<span data-ttu-id="f8c3c-129">リスナーは、スレッド セーフであるかどうかに関係なく、グローバル ロックを使用します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="f8c3c-130">既定値です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-130">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="d99aa-128">リスナーがスレッド セーフである場合は、グローバル ロックを使用しませんそれ以外の場合、グローバル ロックを使用します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
+|`true`|<span data-ttu-id="d99aa-129">リスナーは、スレッド セーフであるかどうかに関係なく、グローバル ロックを使用します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="d99aa-130">既定値です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-130">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f8c3c-131">子要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-131">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d99aa-131">子要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-131">Child Elements</span></span>  
   
-|<span data-ttu-id="f8c3c-132">要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-132">Element</span></span>|<span data-ttu-id="f8c3c-133">説明</span><span class="sxs-lookup"><span data-stu-id="f8c3c-133">Description</span></span>|  
+|<span data-ttu-id="d99aa-132">要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-132">Element</span></span>|<span data-ttu-id="d99aa-133">説明</span><span class="sxs-lookup"><span data-stu-id="d99aa-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f8c3c-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="f8c3c-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="f8c3c-135">収集、するリスナーをストアを指定し、メッセージをルーティングします。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
+|[<span data-ttu-id="d99aa-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="d99aa-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="d99aa-135">収集、するリスナーをストアを指定し、メッセージをルーティングします。</span><span class="sxs-lookup"><span data-stu-id="d99aa-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f8c3c-136">親要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-136">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d99aa-136">親要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-136">Parent Elements</span></span>  
   
-|<span data-ttu-id="f8c3c-137">要素</span><span class="sxs-lookup"><span data-stu-id="f8c3c-137">Element</span></span>|<span data-ttu-id="f8c3c-138">説明</span><span class="sxs-lookup"><span data-stu-id="f8c3c-138">Description</span></span>|  
+|<span data-ttu-id="d99aa-137">要素</span><span class="sxs-lookup"><span data-stu-id="d99aa-137">Element</span></span>|<span data-ttu-id="d99aa-138">説明</span><span class="sxs-lookup"><span data-stu-id="d99aa-138">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="f8c3c-139">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="f8c3c-140">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="d99aa-139">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="d99aa-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="d99aa-140">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="d99aa-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="f8c3c-141">例</span><span class="sxs-lookup"><span data-stu-id="f8c3c-141">Example</span></span>  
- <span data-ttu-id="f8c3c-142">次の例は、使用する方法を示します、`<trace>`リスナーを追加する要素`MyListener`を`Listeners`コレクション。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="f8c3c-143">`MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="f8c3c-144">`useGlobalLock`属性に設定されて`false`、それが原因で、グローバル ロック トレース リスナーがスレッド セーフである場合に使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="f8c3c-145">`autoflush`属性に設定されて`true`、それが原因かどうかにかかわらず、ファイルに書き込むトレース リスナー、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="f8c3c-146">`indentsize`属性が 0 個のスペースのインデントを設定するリスナーと、0 (ゼロ) に設定と、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="f8c3c-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
+## <a name="example"></a><span data-ttu-id="d99aa-141">例</span><span class="sxs-lookup"><span data-stu-id="d99aa-141">Example</span></span>  
+ <span data-ttu-id="d99aa-142">次の例は、使用する方法を示します、`<trace>`リスナーを追加する要素`MyListener`を`Listeners`コレクション。</span><span class="sxs-lookup"><span data-stu-id="d99aa-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> `MyListener` <span data-ttu-id="d99aa-143">という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。</span><span class="sxs-lookup"><span data-stu-id="d99aa-143">creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="d99aa-144">`useGlobalLock`属性に設定されて`false`、それが原因で、グローバル ロック トレース リスナーがスレッド セーフである場合に使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="d99aa-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="d99aa-145">`autoflush`属性に設定されて`true`、それが原因かどうかにかかわらず、ファイルに書き込むトレース リスナー、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d99aa-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="d99aa-146">`indentsize`属性が 0 個のスペースのインデントを設定するリスナーと、0 (ゼロ) に設定と、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="d99aa-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,9 +85,10 @@ ms.locfileid: "55257799"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f8c3c-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8c3c-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d99aa-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="d99aa-147">See also</span></span>
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [<span data-ttu-id="f8c3c-148">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="f8c3c-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="d99aa-148">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="d99aa-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -17,50 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abae0e25f506b930fdb257cea7afab87a630ee0a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075562"
 ---
-# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="f15ec-102">ICorDebugNativeFrame2::IsChild メソッド</span><span class="sxs-lookup"><span data-stu-id="f15ec-102">ICorDebugNativeFrame2::IsChild Method</span></span>
-<span data-ttu-id="f15ec-103">現在のフレームが子フレームであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="f15ec-103">Determines whether the current frame is a child frame.</span></span>  
+# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="e3e2c-102">ICorDebugNativeFrame2::IsChild メソッド</span><span class="sxs-lookup"><span data-stu-id="e3e2c-102">ICorDebugNativeFrame2::IsChild Method</span></span>
+<span data-ttu-id="e3e2c-103">現在のフレームが子フレームであるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-103">Determines whether the current frame is a child frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f15ec-104">構文</span><span class="sxs-lookup"><span data-stu-id="f15ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3e2c-104">構文</span><span class="sxs-lookup"><span data-stu-id="e3e2c-104">Syntax</span></span>  
   
 ```  
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f15ec-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f15ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3e2c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e3e2c-105">Parameters</span></span>  
  `pIsChild`  
- <span data-ttu-id="f15ec-106">[out]現在のフレームが子フレームであるかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="f15ec-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
+ <span data-ttu-id="e3e2c-106">[out]現在のフレームが子フレームであるかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f15ec-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="f15ec-107">Return Value</span></span>  
- <span data-ttu-id="f15ec-108">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="f15ec-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e3e2c-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="e3e2c-107">Return Value</span></span>  
+ <span data-ttu-id="e3e2c-108">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="f15ec-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f15ec-109">HRESULT</span></span>|<span data-ttu-id="f15ec-110">説明</span><span class="sxs-lookup"><span data-stu-id="f15ec-110">Description</span></span>|  
+|<span data-ttu-id="e3e2c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e3e2c-109">HRESULT</span></span>|<span data-ttu-id="e3e2c-110">説明</span><span class="sxs-lookup"><span data-stu-id="e3e2c-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f15ec-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="f15ec-111">S_OK</span></span>|<span data-ttu-id="f15ec-112">子の状態が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="f15ec-112">The child status was successfully returned.</span></span>|  
-|<span data-ttu-id="f15ec-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f15ec-113">E_FAIL</span></span>|<span data-ttu-id="f15ec-114">子の状態が返されませんでした。</span><span class="sxs-lookup"><span data-stu-id="f15ec-114">The child status could not be returned.</span></span>|  
-|<span data-ttu-id="f15ec-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f15ec-115">E_INVALIDARG</span></span>|<span data-ttu-id="f15ec-116">`pIsChild` が null です。</span><span class="sxs-lookup"><span data-stu-id="f15ec-116">`pIsChild` is null.</span></span>|  
+|<span data-ttu-id="e3e2c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="e3e2c-111">S_OK</span></span>|<span data-ttu-id="e3e2c-112">子の状態が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-112">The child status was successfully returned.</span></span>|  
+|<span data-ttu-id="e3e2c-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e3e2c-113">E_FAIL</span></span>|<span data-ttu-id="e3e2c-114">子の状態が返されませんでした。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-114">The child status could not be returned.</span></span>|  
+|<span data-ttu-id="e3e2c-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="e3e2c-115">E_INVALIDARG</span></span>|`pIsChild` <span data-ttu-id="e3e2c-116">null です。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-116">is null.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="f15ec-117">例外</span><span class="sxs-lookup"><span data-stu-id="f15ec-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="e3e2c-117">例外</span><span class="sxs-lookup"><span data-stu-id="e3e2c-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f15ec-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="f15ec-118">Remarks</span></span>  
- <span data-ttu-id="f15ec-119">`IsChild`メソッドを返します。`true`フレーム オブジェクトを、メソッドを呼び出すことが別のフレームの子である場合。</span><span class="sxs-lookup"><span data-stu-id="f15ec-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="f15ec-120">大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームを親となっているかどうかを確認する方法。</span><span class="sxs-lookup"><span data-stu-id="f15ec-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3e2c-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="e3e2c-118">Remarks</span></span>  
+ <span data-ttu-id="e3e2c-119">`IsChild`メソッドを返します。`true`フレーム オブジェクトを、メソッドを呼び出すことが別のフレームの子である場合。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="e3e2c-120">大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームを親となっているかどうかを確認する方法。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f15ec-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="f15ec-121">Requirements</span></span>  
- <span data-ttu-id="f15ec-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f15ec-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3e2c-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="e3e2c-121">Requirements</span></span>  
+ <span data-ttu-id="e3e2c-122">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e3e2c-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f15ec-123">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f15ec-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e3e2c-123">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3e2c-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f15ec-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f15ec-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3e2c-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3e2c-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f15ec-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f15ec-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="e3e2c-125">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="e3e2c-125">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f15ec-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="f15ec-126">See also</span></span>
-- [<span data-ttu-id="f15ec-127">ICorDebugNativeFrame2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f15ec-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [<span data-ttu-id="f15ec-128">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f15ec-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="f15ec-129">デバッグ</span><span class="sxs-lookup"><span data-stu-id="f15ec-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="e3e2c-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="e3e2c-126">See also</span></span>
+
+- [<span data-ttu-id="e3e2c-127">ICorDebugNativeFrame2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e3e2c-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [<span data-ttu-id="e3e2c-128">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="e3e2c-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e3e2c-129">デバッグ</span><span class="sxs-lookup"><span data-stu-id="e3e2c-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
