@@ -9,37 +9,37 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54608915"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="c3cfc-102">方法: 探索プロキシを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-102">How to: Implement a Discovery Proxy</span></span>
-<span data-ttu-id="c3cfc-103">このトピックでは、探索プロキシの実装方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="c3cfc-104">Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="c3cfc-105">探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="c3cfc-106">このサンプルでは、他の多くのサポート クラスも定義され、使用されています。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="c3cfc-107">`OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="c3cfc-108">これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="c3cfc-109">詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="57ce1-102">方法: 探索プロキシを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-102">How to: Implement a Discovery Proxy</span></span>
+<span data-ttu-id="57ce1-103">このトピックでは、探索プロキシの実装方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="57ce1-104">Windows Communication Foundation (WCF) の検出機能の詳細については、[WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57ce1-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="57ce1-105">探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="57ce1-106">このサンプルでは、他の多くのサポート クラスも定義され、使用されています。</span><span class="sxs-lookup"><span data-stu-id="57ce1-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="57ce1-107">`OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。</span><span class="sxs-lookup"><span data-stu-id="57ce1-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="57ce1-108">これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="57ce1-109">詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
 
- <span data-ttu-id="c3cfc-110">このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
+ <span data-ttu-id="57ce1-110">このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
 
--   <span data-ttu-id="c3cfc-111">データ ストアを含み、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを定義する。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
+-   <span data-ttu-id="57ce1-111">データ ストアを含み、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを定義する。</span><span class="sxs-lookup"><span data-stu-id="57ce1-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
 
--   <span data-ttu-id="c3cfc-112">ヘルパー クラス `AsyncResult` を実装する。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-112">Implement the helper `AsyncResult` class.</span></span>
+-   <span data-ttu-id="57ce1-112">ヘルパー クラス `AsyncResult` を実装する。</span><span class="sxs-lookup"><span data-stu-id="57ce1-112">Implement the helper `AsyncResult` class.</span></span>
 
--   <span data-ttu-id="c3cfc-113">探索プロキシをホストする。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-113">Host the Discovery Proxy.</span></span>
+-   <span data-ttu-id="57ce1-113">探索プロキシをホストする。</span><span class="sxs-lookup"><span data-stu-id="57ce1-113">Host the Discovery Proxy.</span></span>
 
-### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="c3cfc-114">新しいコンソール アプリケーション プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-114">To create a new console application project</span></span>
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="57ce1-114">新しいコンソール アプリケーション プロジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="57ce1-114">To create a new console application project</span></span>
 
-1.  <span data-ttu-id="c3cfc-115">Visual Studio 2012 を起動します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-115">Start Visual Studio 2012.</span></span>
+1.  <span data-ttu-id="57ce1-115">Visual Studio 2012 を起動します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-115">Start Visual Studio 2012.</span></span>
 
-2.  <span data-ttu-id="c3cfc-116">新しいコンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-116">Create a new console application project.</span></span> <span data-ttu-id="c3cfc-117">プロジェクトに「`DiscoveryProxy`」という名前を付け、ソリューションに「`DiscoveryProxyExample`」という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
+2.  <span data-ttu-id="57ce1-116">新しいコンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-116">Create a new console application project.</span></span> <span data-ttu-id="57ce1-117">プロジェクトに「`DiscoveryProxy`」という名前を付け、ソリューションに「`DiscoveryProxyExample`」という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
 
-3.  <span data-ttu-id="c3cfc-118">プロジェクトに次の参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-118">Add the following references to the project</span></span>
+3.  <span data-ttu-id="57ce1-118">プロジェクトに次の参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-118">Add the following references to the project</span></span>
 
-    1.  <span data-ttu-id="c3cfc-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="c3cfc-119">System.ServiceModel.dll</span></span>
+    1.  <span data-ttu-id="57ce1-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="57ce1-119">System.ServiceModel.dll</span></span>
 
-    2.  <span data-ttu-id="c3cfc-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="c3cfc-120">System.Servicemodel.Discovery.dll</span></span>
+    2.  <span data-ttu-id="57ce1-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="57ce1-120">System.Servicemodel.Discovery.dll</span></span>
 
     > [!CAUTION]
-    >  <span data-ttu-id="c3cfc-121">必ず、これらのアセンブリのバージョン 4.0 以降を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
+    >  <span data-ttu-id="57ce1-121">必ず、これらのアセンブリのバージョン 4.0 以降を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57ce1-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
 
-### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="c3cfc-122">ProxyDiscoveryService クラスを実装するには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-122">To implement the ProxyDiscoveryService class</span></span>
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="57ce1-122">ProxyDiscoveryService クラスを実装するには</span><span class="sxs-lookup"><span data-stu-id="57ce1-122">To implement the ProxyDiscoveryService class</span></span>
 
-1.  <span data-ttu-id="c3cfc-123">新しいコード ファイルをプロジェクトに追加し、DiscoveryProxy.cs という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
+1.  <span data-ttu-id="57ce1-123">新しいコード ファイルをプロジェクトに追加し、DiscoveryProxy.cs という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
 
-2.  <span data-ttu-id="c3cfc-124">次の `using` ステートメントを DiscoveryProxy.cs に追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
+2.  <span data-ttu-id="57ce1-124">次の `using` ステートメントを DiscoveryProxy.cs に追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "54608915"
     using System.Xml;
     ```
 
-3.  <span data-ttu-id="c3cfc-125">`DiscoveryProxyService` から <xref:System.ServiceModel.Discovery.DiscoveryProxy> を派生させます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="c3cfc-126">下の例に示すように、`ServiceBehavior` 属性をクラスに適用します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
+3.  <span data-ttu-id="57ce1-125">`DiscoveryProxyService` から <xref:System.ServiceModel.Discovery.DiscoveryProxy> を派生させます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="57ce1-126">下の例に示すように、`ServiceBehavior` 属性をクラスに適用します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "54608915"
     }
     ```
 
-4.  <span data-ttu-id="c3cfc-127">`DiscoveryProxy` クラス内で、登録済みサービスを保持するディクショナリを定義します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
+4.  <span data-ttu-id="57ce1-127">`DiscoveryProxy` クラス内で、登録済みサービスを保持するディクショナリを定義します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  <span data-ttu-id="c3cfc-128">ディクショナリを初期化するコンストラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-128">Define a constructor that initializes the dictionary.</span></span>
+5.  <span data-ttu-id="57ce1-128">ディクショナリを初期化するコンストラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-128">Define a constructor that initializes the dictionary.</span></span>
 
     ```
     public DiscoveryProxyService()
@@ -75,9 +75,9 @@ ms.locfileid: "54608915"
             }
     ```
 
-### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="c3cfc-129">探索プロキシ キャッシュの更新に使用するメソッドを定義するには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-129">To define the methods used to update the discovery proxy cache</span></span>
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="57ce1-129">探索プロキシ キャッシュの更新に使用するメソッドを定義するには</span><span class="sxs-lookup"><span data-stu-id="57ce1-129">To define the methods used to update the discovery proxy cache</span></span>
 
-1.  <span data-ttu-id="c3cfc-130">`AddOnlineservice` メソッドを実装して、サービスをキャッシュに追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="c3cfc-131">これは、プロキシがアナウンス メッセージを受け取るたびに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-131">This is called every time the proxy receives an announcement message.</span></span>
+1.  <span data-ttu-id="57ce1-130">`AddOnlineservice` メソッドを実装して、サービスをキャッシュに追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="57ce1-131">これは、プロキシがアナウンス メッセージを受け取るたびに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-131">This is called every time the proxy receives an announcement message.</span></span>
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-2.  <span data-ttu-id="c3cfc-132">キャッシュからサービスを削除するのに使用する `RemoveOnlineService` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
+2.  <span data-ttu-id="57ce1-132">キャッシュからサービスを削除するのに使用する `RemoveOnlineService` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-3.  <span data-ttu-id="c3cfc-133">サービスをディクショナリ内のサービスと照合する、`MatchFromOnlineService` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
+3.  <span data-ttu-id="57ce1-133">サービスをディクショナリ内のサービスと照合する、`MatchFromOnlineService` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-4.  <span data-ttu-id="c3cfc-134">探索プロキシの処理に関するコンソール テキスト出力をユーザーに提供する、`PrintDiscoveryMetadata` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
+4.  <span data-ttu-id="57ce1-134">探索プロキシの処理に関するコンソール テキスト出力をユーザーに提供する、`PrintDiscoveryMetadata` メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-5.  <span data-ttu-id="c3cfc-135">次の AsyncResult クラスを DiscoveryProxyService に追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="c3cfc-136">これらのクラスは、非同期操作の各結果を区別するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
+5.  <span data-ttu-id="57ce1-135">次の AsyncResult クラスを DiscoveryProxyService に追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="57ce1-136">これらのクラスは、非同期操作の各結果を区別するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -223,9 +223,9 @@ ms.locfileid: "54608915"
             }
     ```
 
-### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="c3cfc-137">探索プロキシ機能を実装するメソッドを定義するには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-137">To define the methods that implement the discovery proxy functionality</span></span>
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="57ce1-137">探索プロキシ機能を実装するメソッドを定義するには</span><span class="sxs-lookup"><span data-stu-id="57ce1-137">To define the methods that implement the discovery proxy functionality</span></span>
 
-1.  <span data-ttu-id="c3cfc-138"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-139">このメソッドは、探索プロキシがオンライン アナウンス メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
+1.  <span data-ttu-id="57ce1-138"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-139">このメソッドは、探索プロキシがオンライン アナウンス メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-2.  <span data-ttu-id="c3cfc-140"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-141">このメソッドは、探索プロキシがアナウンス メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
+2.  <span data-ttu-id="57ce1-140"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-141">このメソッドは、探索プロキシがアナウンス メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-3.  <span data-ttu-id="c3cfc-142"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-143">このメソッドは、探索プロキシがオフライン アナウンス メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
+3.  <span data-ttu-id="57ce1-142"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-143">このメソッドは、探索プロキシがオフライン アナウンス メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-4.  <span data-ttu-id="c3cfc-144"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-145">このメソッドは、探索プロキシがオフライン アナウンス メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
+4.  <span data-ttu-id="57ce1-144"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-145">このメソッドは、探索プロキシがオフライン アナウンス メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-5.  <span data-ttu-id="c3cfc-146"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-147">このメソッドは、探索プロキシが検索要求を受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-147">This method is called when the discovery proxy receives a find request.</span></span>
+5.  <span data-ttu-id="57ce1-146"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-147">このメソッドは、探索プロキシが検索要求を受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-147">This method is called when the discovery proxy receives a find request.</span></span>
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "54608915"
     }
     ```
 
-6.  <span data-ttu-id="c3cfc-148"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-149">このメソッドは、探索プロキシが検索要求の処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
+6.  <span data-ttu-id="57ce1-148"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-149">このメソッドは、探索プロキシが検索要求の処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-7.  <span data-ttu-id="c3cfc-150"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-151">このメソッドは、探索プロキシが解決メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-151">This method is called when the discovery proxy receives a resolve message.</span></span>
+7.  <span data-ttu-id="57ce1-150"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-151">このメソッドは、探索プロキシが解決メッセージを受け取ると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-151">This method is called when the discovery proxy receives a resolve message.</span></span>
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "54608915"
     }
     ```
 
-8.  <span data-ttu-id="c3cfc-152"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c3cfc-153">このメソッドは、探索プロキシが解決メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
+8.  <span data-ttu-id="57ce1-152"><xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="57ce1-153">このメソッドは、探索プロキシが解決メッセージの処理を終了すると呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -319,22 +319,22 @@ ms.locfileid: "54608915"
     }
     ```
 
- <span data-ttu-id="c3cfc-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="c3cfc-154">The OnBegin..</span></span> <span data-ttu-id="c3cfc-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="c3cfc-155">/ OnEnd..</span></span> <span data-ttu-id="c3cfc-156"> メソッドは、以降の探索操作のロジックを提供します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="c3cfc-157">たとえば、<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> メソッドおよび <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> メソッドは、探索プロキシの検索ロジックを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="c3cfc-158">探索プロキシがプローブ メッセージを受け取ると、これらのメソッドが実行されて、クライアントに応答が返されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="c3cfc-159">必要に応じて、検索ロジックを変更できます。たとえば、アルゴリズムによるカスタム スコープ一致や、検索操作の一環として解析するアプリケーション固有の XML メタデータを組み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
+ <span data-ttu-id="57ce1-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="57ce1-154">The OnBegin..</span></span> <span data-ttu-id="57ce1-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="57ce1-155">/ OnEnd..</span></span> <span data-ttu-id="57ce1-156"> メソッドは、以降の探索操作のロジックを提供します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="57ce1-157">たとえば、<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> メソッドおよび <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> メソッドは、探索プロキシの検索ロジックを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="57ce1-158">探索プロキシがプローブ メッセージを受け取ると、これらのメソッドが実行されて、クライアントに応答が返されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="57ce1-159">必要に応じて、検索ロジックを変更できます。たとえば、アルゴリズムによるカスタム スコープ一致や、検索操作の一環として解析するアプリケーション固有の XML メタデータを組み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
 
-### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="c3cfc-160">AsyncResult クラスを実装するには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-160">To implement the AsyncResult class</span></span>
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="57ce1-160">AsyncResult クラスを実装するには</span><span class="sxs-lookup"><span data-stu-id="57ce1-160">To implement the AsyncResult class</span></span>
 
-1.  <span data-ttu-id="c3cfc-161">各種の非同期結果クラスを派生させるために使用する抽象基本クラス AsyncResult を定義します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
+1.  <span data-ttu-id="57ce1-161">各種の非同期結果クラスを派生させるために使用する抽象基本クラス AsyncResult を定義します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
 
-2.  <span data-ttu-id="c3cfc-162">AsyncResult.cs という名前の新しいコード ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-162">Create a new code file called AsyncResult.cs.</span></span>
+2.  <span data-ttu-id="57ce1-162">AsyncResult.cs という名前の新しいコード ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-162">Create a new code file called AsyncResult.cs.</span></span>
 
-3.  <span data-ttu-id="c3cfc-163">次の `using` ステートメントを AsyncResult.cs に追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-163">Add the following `using` statements to AsyncResult.cs.</span></span>
+3.  <span data-ttu-id="57ce1-163">次の `using` ステートメントを AsyncResult.cs に追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-163">Add the following `using` statements to AsyncResult.cs.</span></span>
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  <span data-ttu-id="c3cfc-164">次の AsyncResult クラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-164">Add the following AsyncResult class.</span></span>
+4.  <span data-ttu-id="57ce1-164">次の AsyncResult クラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-164">Add the following AsyncResult class.</span></span>
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -485,11 +485,11 @@ ms.locfileid: "54608915"
         }
     ```
 
-### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="c3cfc-165">DiscoveryProxy をホストするには</span><span class="sxs-lookup"><span data-stu-id="c3cfc-165">To host the DiscoveryProxy</span></span>
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="57ce1-165">DiscoveryProxy をホストするには</span><span class="sxs-lookup"><span data-stu-id="57ce1-165">To host the DiscoveryProxy</span></span>
 
-1.  <span data-ttu-id="c3cfc-166">DiscoveryProxyExample プロジェクトで Program.cs ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
+1.  <span data-ttu-id="57ce1-166">DiscoveryProxyExample プロジェクトで Program.cs ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
 
-2.  <span data-ttu-id="c3cfc-167">次の `using` ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-167">Add the following `using` statements.</span></span>
+2.  <span data-ttu-id="57ce1-167">次の `using` ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-167">Add the following `using` statements.</span></span>
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "54608915"
     using System.ServiceModel.Discovery;
     ```
 
-3.  <span data-ttu-id="c3cfc-168">`Main()` メソッド内に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="c3cfc-169">これにより、`DiscoveryProxy` クラスのインスタンスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
+3.  <span data-ttu-id="57ce1-168">`Main()` メソッド内に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="57ce1-169">これにより、`DiscoveryProxy` クラスのインスタンスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="57ce1-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "54608915"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  <span data-ttu-id="c3cfc-170">次に、探索エンドポイントとアナウンス エンドポイントを追加する、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
+4.  <span data-ttu-id="57ce1-170">次に、探索エンドポイントとアナウンス エンドポイントを追加する、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
 
     ```
     try
@@ -548,10 +548,10 @@ ms.locfileid: "54608915"
               }
     ```
 
- <span data-ttu-id="c3cfc-171">これで、探索プロキシの実装が完了しました。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="c3cfc-172">進んでください[方法。探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
+ <span data-ttu-id="57ce1-171">これで、探索プロキシの実装が完了しました。</span><span class="sxs-lookup"><span data-stu-id="57ce1-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="57ce1-172">進んでください[方法。探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="c3cfc-173">例</span><span class="sxs-lookup"><span data-stu-id="c3cfc-173">Example</span></span>
- <span data-ttu-id="c3cfc-174">このトピックで使用するコード全体の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-174">This is the full listing of the code used in this topic.</span></span>
+## <a name="example"></a><span data-ttu-id="57ce1-173">例</span><span class="sxs-lookup"><span data-stu-id="57ce1-173">Example</span></span>
+ <span data-ttu-id="57ce1-174">このトピックで使用するコード全体の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-174">This is the full listing of the code used in this topic.</span></span>
 
 ```
 // DiscoveryProxy.cs
@@ -977,9 +977,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c3cfc-175">関連項目</span><span class="sxs-lookup"><span data-stu-id="c3cfc-175">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57ce1-175">関連項目</span><span class="sxs-lookup"><span data-stu-id="57ce1-175">See also</span></span>
 
-- [<span data-ttu-id="c3cfc-176">WCF Discovery の概要</span><span class="sxs-lookup"><span data-stu-id="c3cfc-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="c3cfc-177">方法: 探索プロキシで登録される探索可能なサービスを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [<span data-ttu-id="c3cfc-178">方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [<span data-ttu-id="c3cfc-179">方法: 探索プロキシをテストします。</span><span class="sxs-lookup"><span data-stu-id="c3cfc-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [<span data-ttu-id="57ce1-176">WCF Discovery の概要</span><span class="sxs-lookup"><span data-stu-id="57ce1-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [<span data-ttu-id="57ce1-177">方法: 探索プロキシで登録される探索可能なサービスを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [<span data-ttu-id="57ce1-178">方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。</span><span class="sxs-lookup"><span data-stu-id="57ce1-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [<span data-ttu-id="57ce1-179">方法: 探索プロキシをテストします。</span><span class="sxs-lookup"><span data-stu-id="57ce1-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
