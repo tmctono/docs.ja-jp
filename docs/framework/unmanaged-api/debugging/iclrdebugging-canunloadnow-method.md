@@ -17,49 +17,50 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f18d73a6740d44408acf964c68f0b58e75d3b226
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80559ef685a2dbf48d65e0d81432a5edbd5528bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072871"
 ---
-# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="891ef-102">ICLRDebugging::CanUnloadNow メソッド</span><span class="sxs-lookup"><span data-stu-id="891ef-102">ICLRDebugging::CanUnloadNow Method</span></span>
-<span data-ttu-id="891ef-103">ライブラリで提供されているかどうかを決定する、 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)インターフェイスが使用されている、またはアンロードできます。</span><span class="sxs-lookup"><span data-stu-id="891ef-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
+# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="01321-102">ICLRDebugging::CanUnloadNow メソッド</span><span class="sxs-lookup"><span data-stu-id="01321-102">ICLRDebugging::CanUnloadNow Method</span></span>
+<span data-ttu-id="01321-103">ライブラリで提供されているかどうかを決定する、 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)インターフェイスが使用されている、またはアンロードできます。</span><span class="sxs-lookup"><span data-stu-id="01321-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="891ef-104">構文</span><span class="sxs-lookup"><span data-stu-id="891ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01321-104">構文</span><span class="sxs-lookup"><span data-stu-id="01321-104">Syntax</span></span>  
   
 ```  
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="891ef-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="891ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01321-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="01321-105">Parameters</span></span>  
  `hmodule`  
- <span data-ttu-id="891ef-106">[in]ターゲット プロセスのモジュールのベース アドレス。</span><span class="sxs-lookup"><span data-stu-id="891ef-106">[in] The base address of a module in the target process.</span></span>  
+ <span data-ttu-id="01321-106">[in]ターゲット プロセスのモジュールのベース アドレス。</span><span class="sxs-lookup"><span data-stu-id="01321-106">[in] The base address of a module in the target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="891ef-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="891ef-107">Return Value</span></span>  
- <span data-ttu-id="891ef-108">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="891ef-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="01321-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="01321-107">Return Value</span></span>  
+ <span data-ttu-id="01321-108">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="01321-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="891ef-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="891ef-109">HRESULT</span></span>|<span data-ttu-id="891ef-110">説明</span><span class="sxs-lookup"><span data-stu-id="891ef-110">Description</span></span>|  
+|<span data-ttu-id="01321-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="01321-109">HRESULT</span></span>|<span data-ttu-id="01321-110">説明</span><span class="sxs-lookup"><span data-stu-id="01321-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="891ef-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="891ef-111">S_OK</span></span>|<span data-ttu-id="891ef-112">によって参照されるモジュール`hmodule`アンロードできます。</span><span class="sxs-lookup"><span data-stu-id="891ef-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
-|<span data-ttu-id="891ef-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="891ef-113">S_FALSE</span></span>|<span data-ttu-id="891ef-114">によって参照されるモジュール`hmodule`使用されています。</span><span class="sxs-lookup"><span data-stu-id="891ef-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
-|<span data-ttu-id="891ef-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="891ef-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="891ef-116">指定されたモジュールが CLR モジュールではありません。</span><span class="sxs-lookup"><span data-stu-id="891ef-116">The indicated module is not a CLR module.</span></span>|  
+|<span data-ttu-id="01321-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="01321-111">S_OK</span></span>|<span data-ttu-id="01321-112">によって参照されるモジュール`hmodule`アンロードできます。</span><span class="sxs-lookup"><span data-stu-id="01321-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
+|<span data-ttu-id="01321-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="01321-113">S_FALSE</span></span>|<span data-ttu-id="01321-114">によって参照されるモジュール`hmodule`使用されています。</span><span class="sxs-lookup"><span data-stu-id="01321-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
+|<span data-ttu-id="01321-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="01321-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="01321-116">指定されたモジュールが CLR モジュールではありません。</span><span class="sxs-lookup"><span data-stu-id="01321-116">The indicated module is not a CLR module.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="891ef-117">例外</span><span class="sxs-lookup"><span data-stu-id="891ef-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="01321-117">例外</span><span class="sxs-lookup"><span data-stu-id="01321-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="891ef-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="891ef-118">Remarks</span></span>  
- <span data-ttu-id="891ef-119">このメソッドはすべてかどうかをチェックのインスタンス`ICorDebug*`インターフェイスがリリースされた、スレッドがない現在の呼び出し内で、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="891ef-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01321-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="01321-118">Remarks</span></span>  
+ <span data-ttu-id="01321-119">このメソッドはすべてかどうかをチェックのインスタンス`ICorDebug*`インターフェイスがリリースされた、スレッドがない現在の呼び出し内で、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="01321-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="891ef-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="891ef-120">Requirements</span></span>  
- <span data-ttu-id="891ef-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="891ef-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01321-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="01321-120">Requirements</span></span>  
+ <span data-ttu-id="01321-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="01321-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="891ef-122">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="891ef-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01321-122">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01321-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="891ef-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="891ef-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01321-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01321-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="891ef-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="891ef-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="01321-124">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="01321-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="891ef-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="891ef-125">See also</span></span>
-- [<span data-ttu-id="891ef-126">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="891ef-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="891ef-127">デバッグ</span><span class="sxs-lookup"><span data-stu-id="891ef-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="01321-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="01321-125">See also</span></span>
+
+- [<span data-ttu-id="01321-126">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="01321-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="01321-127">デバッグ</span><span class="sxs-lookup"><span data-stu-id="01321-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

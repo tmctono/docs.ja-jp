@@ -7,30 +7,31 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072507"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="9852f-102">パス アニメーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9852f-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="9852f-103">このセクションのトピックでは、パスに沿ってオブジェクトをアニメーション化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="9852f-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="c9dbd-102">パス アニメーションに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="c9dbd-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="c9dbd-103">このセクションのトピックでは、パスに沿ってオブジェクトをアニメーション化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c9dbd-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9852f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9852f-104">In This Section</span></span>  
- [<span data-ttu-id="9852f-105">パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)</span><span class="sxs-lookup"><span data-stu-id="9852f-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="9852f-106">パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)</span><span class="sxs-lookup"><span data-stu-id="9852f-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="9852f-107">パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="9852f-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="9852f-108">パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="9852f-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="9852f-109">ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="9852f-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="9852f-110">ジオメトリック パスを使用してオブジェクトを回転させる</span><span class="sxs-lookup"><span data-stu-id="9852f-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c9dbd-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c9dbd-104">In This Section</span></span>  
+ [<span data-ttu-id="c9dbd-105">パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)</span><span class="sxs-lookup"><span data-stu-id="c9dbd-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="c9dbd-106">パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)</span><span class="sxs-lookup"><span data-stu-id="c9dbd-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="c9dbd-107">パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="c9dbd-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="c9dbd-108">パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="c9dbd-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="c9dbd-109">ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)</span><span class="sxs-lookup"><span data-stu-id="c9dbd-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="c9dbd-110">ジオメトリック パスを使用してオブジェクトを回転させる</span><span class="sxs-lookup"><span data-stu-id="c9dbd-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="9852f-111">参照</span><span class="sxs-lookup"><span data-stu-id="9852f-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c9dbd-111">参照</span><span class="sxs-lookup"><span data-stu-id="c9dbd-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="9852f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9852f-112">See also</span></span>
-- [<span data-ttu-id="9852f-113">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="9852f-113">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="9852f-114">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="9852f-114">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="9852f-115">キー フレーム アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="9852f-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c9dbd-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9dbd-112">See also</span></span>
+
+- [<span data-ttu-id="c9dbd-113">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="c9dbd-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="c9dbd-114">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="c9dbd-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="c9dbd-115">キー フレーム アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="c9dbd-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

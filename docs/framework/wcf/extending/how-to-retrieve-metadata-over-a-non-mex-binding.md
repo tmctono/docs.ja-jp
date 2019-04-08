@@ -1,20 +1,20 @@
 ---
-title: '方法: 非-MEX のバインディングを介してメタデータを取得します。'
+title: '方法: MEX 以外のバインディングを介してメタデータを取得する'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074158"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="91775-102">方法: 非-MEX のバインディングを介してメタデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="91775-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
-<span data-ttu-id="91775-103">ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="91775-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="91775-104">このサンプルでコードがに基づいて、[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="91775-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="a0e8e-102">方法: MEX 以外のバインディングを介してメタデータを取得する</span><span class="sxs-lookup"><span data-stu-id="a0e8e-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
+<span data-ttu-id="a0e8e-103">ここでは、MEX 以外のバインディングを介して MEX エンドポイントからメタデータを取得する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="a0e8e-104">このサンプルでコードがに基づいて、[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="91775-105">MEX 以外のバインディングを介してメタデータを取得するには</span><span class="sxs-lookup"><span data-stu-id="91775-105">To retrieve metadata over a non-MEX binding</span></span>  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="a0e8e-105">MEX 以外のバインディングを介してメタデータを取得するには</span><span class="sxs-lookup"><span data-stu-id="a0e8e-105">To retrieve metadata over a non-MEX binding</span></span>  
   
-1.  <span data-ttu-id="91775-106">MEX エンドポイントで使用されているバインディングを特定します。</span><span class="sxs-lookup"><span data-stu-id="91775-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="91775-107">Windows Communication Foundation (WCF) サービスの場合に、サービスの構成ファイルにアクセスすることで MEX バインディングを指定できます。</span><span class="sxs-lookup"><span data-stu-id="91775-107">For Windows Communication Foundation (WCF) services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="91775-108">この場合、MEX バインディングは、次のサービス構成で定義されています。</span><span class="sxs-lookup"><span data-stu-id="91775-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
+1.  <span data-ttu-id="a0e8e-106">MEX エンドポイントで使用されているバインディングを特定します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="a0e8e-107">Windows Communication Foundation (WCF) サービスの場合に、サービスの構成ファイルにアクセスすることで MEX バインディングを指定できます。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-107">For Windows Communication Foundation (WCF) services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="a0e8e-108">この場合、MEX バインディングは、次のサービス構成で定義されています。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ ms.locfileid: "54689552"
      </bindings>  
     ```  
   
-2.  <span data-ttu-id="91775-109">クライアント構成ファイルで、同じカスタム バインディングを構成します。</span><span class="sxs-lookup"><span data-stu-id="91775-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="91775-110">ここでクライアントは `clientCredentials` 動作も定義して、MEX エンドポイントからメタデータを要求するときに、サービスに対する認証で使用する証明書を指定します。</span><span class="sxs-lookup"><span data-stu-id="91775-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="91775-111">カスタム バインドを介してメタデータを要求するときに Svcutil.exe を使用する場合は、Svcutil.exe の構成ファイル (Svcutil.exe.config) に MEX エンドポイント構成を追加する必要があります。また、エンドポイント構成の名前が、次のコードに示すように、MEX エンドポイントのアドレスの URI スキームと一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91775-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
+2.  <span data-ttu-id="a0e8e-109">クライアント構成ファイルで、同じカスタム バインドを構成します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="a0e8e-110">ここでクライアントは `clientCredentials` 動作も定義して、MEX エンドポイントからメタデータを要求するときに、サービスに対する認証で使用する証明書を指定します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="a0e8e-111">カスタム バインドを介してメタデータを要求するときに Svcutil.exe を使用する場合は、Svcutil.exe の構成ファイル (Svcutil.exe.config) に MEX エンドポイント構成を追加する必要があります。また、エンドポイント構成の名前が、次のコードに示すように、MEX エンドポイントのアドレスの URI スキームと一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ ms.locfileid: "54689552"
     </system.serviceModel>  
     ```  
   
-3.  <span data-ttu-id="91775-112">`MetadataExchangeClient` を作成して `GetMetadata` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="91775-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="91775-113">これを行うには、次の例に示すように、構成でカスタム バインドを指定する方法と、コードでカスタム バインドを指定する方法の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="91775-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
+3.  <span data-ttu-id="a0e8e-112">`MetadataExchangeClient` を作成して `GetMetadata` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="a0e8e-113">これを行うには、次の例に示すように、構成でカスタム バインドを指定する方法と、コードでカスタム バインドを指定する方法の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,15 @@ ms.locfileid: "54689552"
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  <span data-ttu-id="91775-114">次のコードに示すように、`WsdlImporter` を作成して `ImportAllEndpoints` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="91775-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
+4.  <span data-ttu-id="a0e8e-114">次のコードに示すように、`WsdlImporter` を作成して `ImportAllEndpoints` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  <span data-ttu-id="91775-115">この時点で、サービス エンドポイントのコレクションが取得されます。</span><span class="sxs-lookup"><span data-stu-id="91775-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="91775-116">メタデータのインポートに関する詳細については、次を参照してください。[方法。サービス エンドポイントにメタデータをインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)します。</span><span class="sxs-lookup"><span data-stu-id="91775-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
+5.  <span data-ttu-id="a0e8e-115">この時点で、サービス エンドポイントのコレクションが取得されます。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-115">At this point, you have a collection of service endpoints.</span></span> <span data-ttu-id="a0e8e-116">メタデータのインポートに関する詳細については、次を参照してください。[方法。サービス エンドポイントにメタデータをインポート](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)します。</span><span class="sxs-lookup"><span data-stu-id="a0e8e-116">For more information about importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91775-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="91775-117">See also</span></span>
-- [<span data-ttu-id="91775-118">メタデータ</span><span class="sxs-lookup"><span data-stu-id="91775-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a><span data-ttu-id="a0e8e-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0e8e-117">See also</span></span>
+
+- [<span data-ttu-id="a0e8e-118">メタデータ</span><span class="sxs-lookup"><span data-stu-id="a0e8e-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)

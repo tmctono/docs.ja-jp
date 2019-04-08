@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6462496a8804d9aa5304107a6c01122b745038fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: eb5820087001a207af0c2552f91b4c17f5f78ff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074834"
 ---
-# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="a8227-102">IMetaDataImport::GetNestedClassProps メソッド</span><span class="sxs-lookup"><span data-stu-id="a8227-102">IMetaDataImport::GetNestedClassProps Method</span></span>
-<span data-ttu-id="a8227-103">親の TypeDef トークンを取得<xref:System.Type>入れ子にされた型を指定します。</span><span class="sxs-lookup"><span data-stu-id="a8227-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
+# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="57f65-102">IMetaDataImport::GetNestedClassProps メソッド</span><span class="sxs-lookup"><span data-stu-id="57f65-102">IMetaDataImport::GetNestedClassProps Method</span></span>
+<span data-ttu-id="57f65-103">親の TypeDef トークンを取得<xref:System.Type>入れ子にされた型を指定します。</span><span class="sxs-lookup"><span data-stu-id="57f65-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8227-104">構文</span><span class="sxs-lookup"><span data-stu-id="a8227-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57f65-104">構文</span><span class="sxs-lookup"><span data-stu-id="57f65-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNestedClassProps (  
@@ -36,22 +36,23 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a8227-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a8227-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57f65-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="57f65-105">Parameters</span></span>  
  `tdNestedClass`  
- <span data-ttu-id="a8227-106">[in]TypeDef トークンを表す、<xref:System.Type>親クラスを返すためにトークン。</span><span class="sxs-lookup"><span data-stu-id="a8227-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
+ <span data-ttu-id="57f65-106">[in]TypeDef トークンを表す、<xref:System.Type>親クラスを返すためにトークン。</span><span class="sxs-lookup"><span data-stu-id="57f65-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
   
  `ptdEnclosingClass`  
- <span data-ttu-id="a8227-107">[out]TypeDef トークンへのポインター、<xref:System.Type>を`tdNestedClass`で入れ子になっています。</span><span class="sxs-lookup"><span data-stu-id="a8227-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
+ <span data-ttu-id="57f65-107">[out]TypeDef トークンへのポインター、<xref:System.Type>を`tdNestedClass`で入れ子になっています。</span><span class="sxs-lookup"><span data-stu-id="57f65-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8227-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="a8227-108">Requirements</span></span>  
- <span data-ttu-id="a8227-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a8227-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57f65-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="57f65-108">Requirements</span></span>  
+ <span data-ttu-id="57f65-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="57f65-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8227-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a8227-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="57f65-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="57f65-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a8227-111">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a8227-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="57f65-111">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="57f65-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a8227-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8227-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="57f65-112">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="57f65-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a8227-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8227-113">See also</span></span>
-- [<span data-ttu-id="a8227-114">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8227-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a8227-115">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8227-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="57f65-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="57f65-113">See also</span></span>
+
+- [<span data-ttu-id="57f65-114">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57f65-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="57f65-115">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57f65-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
