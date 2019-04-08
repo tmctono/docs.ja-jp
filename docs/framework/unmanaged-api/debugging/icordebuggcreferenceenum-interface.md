@@ -16,43 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d228e548255cd70f34f6609aff613789f94fe5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080830"
 ---
-# <a name="icordebuggcreferenceenum-interface"></a><span data-ttu-id="46c74-102">ICorDebugGCReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="46c74-102">ICorDebugGCReferenceEnum Interface</span></span>
-<span data-ttu-id="46c74-103">ガベージ コレクトされるオブジェクトの列挙子を提供します。</span><span class="sxs-lookup"><span data-stu-id="46c74-103">Provides an enumerator for objects that will be garbage-collected.</span></span>  
+# <a name="icordebuggcreferenceenum-interface"></a><span data-ttu-id="b1d6b-102">ICorDebugGCReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b1d6b-102">ICorDebugGCReferenceEnum Interface</span></span>
+<span data-ttu-id="b1d6b-103">ガベージ コレクトされるオブジェクトの列挙子を提供します。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-103">Provides an enumerator for objects that will be garbage-collected.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="46c74-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="46c74-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b1d6b-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="b1d6b-104">Methods</span></span>  
   
-|<span data-ttu-id="46c74-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="46c74-105">Method</span></span>|<span data-ttu-id="46c74-106">説明</span><span class="sxs-lookup"><span data-stu-id="46c74-106">Description</span></span>|  
+|<span data-ttu-id="b1d6b-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="b1d6b-105">Method</span></span>|<span data-ttu-id="b1d6b-106">説明</span><span class="sxs-lookup"><span data-stu-id="b1d6b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="46c74-107">Next メソッド</span><span class="sxs-lookup"><span data-stu-id="46c74-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|<span data-ttu-id="46c74-108">指定した数を取得[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)ガベージ コレクトされるオブジェクトに関する情報が含まれているインスタンス。</span><span class="sxs-lookup"><span data-stu-id="46c74-108">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>|  
+|[<span data-ttu-id="b1d6b-107">Next メソッド</span><span class="sxs-lookup"><span data-stu-id="b1d6b-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|<span data-ttu-id="b1d6b-108">指定した数を取得[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)ガベージ コレクトされるオブジェクトに関する情報が含まれているインスタンス。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-108">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="46c74-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="46c74-109">Remarks</span></span>  
- <span data-ttu-id="46c74-110">`ICorDebugGCReferenceEnum` "ICorDebugEnum"インターフェイスを実装するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="46c74-110">The `ICorDebugGCReferenceEnum` interface implements the "ICorDebugEnum" interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b1d6b-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="b1d6b-109">Remarks</span></span>  
+ <span data-ttu-id="b1d6b-110">`ICorDebugGCReferenceEnum` "ICorDebugEnum"インターフェイスを実装するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-110">The `ICorDebugGCReferenceEnum` interface implements the "ICorDebugEnum" interface.</span></span>  
   
- <span data-ttu-id="46c74-111">`ICorDebugGCReferenceEnum`インスタンスには、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)インスタンスを呼び出すことによって、 [icordebugprocess 5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="46c74-111">An `ICorDebugGCReferenceEnum` instance is populated with [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances by calling the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method.</span></span> <span data-ttu-id="46c74-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)オブジェクトを呼び出すことによって列挙できる、 [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="46c74-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects can be enumerated by calling the [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) method.</span></span>  
+ <span data-ttu-id="b1d6b-111">`ICorDebugGCReferenceEnum`インスタンスには、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)インスタンスを呼び出すことによって、 [icordebugprocess 5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-111">An `ICorDebugGCReferenceEnum` instance is populated with [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances by calling the [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) method.</span></span> <span data-ttu-id="b1d6b-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)オブジェクトを呼び出すことによって列挙できる、 [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-112">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects can be enumerated by calling the [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) method.</span></span>  
   
- <span data-ttu-id="46c74-113">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)このメソッドによって設定されます。 コレクション内のオブジェクトは、3 種類のオブジェクトを表します。</span><span class="sxs-lookup"><span data-stu-id="46c74-113">The [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects in the collection populated by this method represent three kinds of objects:</span></span>  
+ <span data-ttu-id="b1d6b-113">[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)このメソッドによって設定されます。 コレクション内のオブジェクトは、3 種類のオブジェクトを表します。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-113">The [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects in the collection populated by this method represent three kinds of objects:</span></span>  
   
--   <span data-ttu-id="46c74-114">すべてのマネージ スタックからオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="46c74-114">Objects from all managed stacks.</span></span> <span data-ttu-id="46c74-115">これには、マネージ コードだけではなく、共通言語ランタイムによって作成されたオブジェクトでのライブ参照が含まれます。</span><span class="sxs-lookup"><span data-stu-id="46c74-115">This includes live references in managed code as well as objects created by the common language runtime.</span></span>  
+-   <span data-ttu-id="b1d6b-114">すべてのマネージ スタックからオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-114">Objects from all managed stacks.</span></span> <span data-ttu-id="b1d6b-115">これには、マネージ コードだけではなく、共通言語ランタイムによって作成されたオブジェクトでのライブ参照が含まれます。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-115">This includes live references in managed code as well as objects created by the common language runtime.</span></span>  
   
--   <span data-ttu-id="46c74-116">オブジェクト ハンドル テーブルをします。</span><span class="sxs-lookup"><span data-stu-id="46c74-116">Objects from the handle table.</span></span> <span data-ttu-id="46c74-117">強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。</span><span class="sxs-lookup"><span data-stu-id="46c74-117">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
+-   <span data-ttu-id="b1d6b-116">オブジェクト ハンドル テーブルをします。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-116">Objects from the handle table.</span></span> <span data-ttu-id="b1d6b-117">強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-117">This includes strong references (`HNDTYPE_STRONG` and `HNDTYPE_REFCOUNT`) and static variables in a module.</span></span>  
   
--   <span data-ttu-id="46c74-118">ファイナライザー キューからのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="46c74-118">Objects from the finalizer queue.</span></span> <span data-ttu-id="46c74-119">ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。</span><span class="sxs-lookup"><span data-stu-id="46c74-119">The finalizer queue roots objects until the finalizer has run.</span></span>  
+-   <span data-ttu-id="b1d6b-118">ファイナライザー キューからのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-118">Objects from the finalizer queue.</span></span> <span data-ttu-id="b1d6b-119">ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-119">The finalizer queue roots objects until the finalizer has run.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46c74-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="46c74-120">Requirements</span></span>  
- <span data-ttu-id="46c74-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="46c74-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1d6b-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="b1d6b-120">Requirements</span></span>  
+ <span data-ttu-id="b1d6b-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b1d6b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46c74-122">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46c74-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b1d6b-122">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b1d6b-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="46c74-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46c74-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b1d6b-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1d6b-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46c74-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46c74-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="b1d6b-124">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="b1d6b-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="46c74-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="46c74-125">See also</span></span>
-- [<span data-ttu-id="46c74-126">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="46c74-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b1d6b-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="b1d6b-125">See also</span></span>
+
+- [<span data-ttu-id="b1d6b-126">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="b1d6b-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

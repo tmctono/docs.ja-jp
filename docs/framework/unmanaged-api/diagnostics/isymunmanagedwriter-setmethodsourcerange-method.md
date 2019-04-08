@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46072718a7dafc0a00294757d5ccce6242a11e23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086170"
 ---
-# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="1860b-102">ISymUnmanagedWriter::SetMethodSourceRange メソッド</span><span class="sxs-lookup"><span data-stu-id="1860b-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
-<span data-ttu-id="1860b-103">実際の先頭とソース ファイル内のメソッドの末尾を指定します。</span><span class="sxs-lookup"><span data-stu-id="1860b-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="1860b-104">このメソッドを使用すると、メソッド内に存在するシーケンス ポイントとは無関係に、メソッドの範囲を指定できます。</span><span class="sxs-lookup"><span data-stu-id="1860b-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
+# <a name="isymunmanagedwritersetmethodsourcerange-method"></a><span data-ttu-id="16dcc-102">ISymUnmanagedWriter::SetMethodSourceRange メソッド</span><span class="sxs-lookup"><span data-stu-id="16dcc-102">ISymUnmanagedWriter::SetMethodSourceRange Method</span></span>
+<span data-ttu-id="16dcc-103">実際の先頭とソース ファイル内のメソッドの末尾を指定します。</span><span class="sxs-lookup"><span data-stu-id="16dcc-103">Specifies the true start and end of a method within a source file.</span></span> <span data-ttu-id="16dcc-104">このメソッドを使用すると、メソッド内に存在するシーケンス ポイントとは無関係に、メソッドの範囲を指定できます。</span><span class="sxs-lookup"><span data-stu-id="16dcc-104">Use this method to specify the extent of a method independently of the sequence points that exist within the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1860b-105">構文</span><span class="sxs-lookup"><span data-stu-id="1860b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16dcc-105">構文</span><span class="sxs-lookup"><span data-stu-id="16dcc-105">Syntax</span></span>  
   
 ```  
 HRESULT SetMethodSourceRange(  
@@ -39,30 +39,31 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1860b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1860b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16dcc-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="16dcc-106">Parameters</span></span>  
  `startDoc`  
- <span data-ttu-id="1860b-107">[in]開始位置を含むドキュメントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1860b-107">[in] A pointer to the document containing the starting position.</span></span>  
+ <span data-ttu-id="16dcc-107">[in]開始位置を含むドキュメントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="16dcc-107">[in] A pointer to the document containing the starting position.</span></span>  
   
  `startLine`  
- <span data-ttu-id="1860b-108">[in]開始行番号。</span><span class="sxs-lookup"><span data-stu-id="1860b-108">[in] The starting line number.</span></span>  
+ <span data-ttu-id="16dcc-108">[in]開始行番号。</span><span class="sxs-lookup"><span data-stu-id="16dcc-108">[in] The starting line number.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="1860b-109">[in]開始列。</span><span class="sxs-lookup"><span data-stu-id="1860b-109">[in] The starting column.</span></span>  
+ <span data-ttu-id="16dcc-109">[in]開始列。</span><span class="sxs-lookup"><span data-stu-id="16dcc-109">[in] The starting column.</span></span>  
   
  `endDoc`  
- <span data-ttu-id="1860b-110">[in]終了位置を含むドキュメントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1860b-110">[in] A pointer to the document containing the ending position.</span></span>  
+ <span data-ttu-id="16dcc-110">[in]終了位置を含むドキュメントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="16dcc-110">[in] A pointer to the document containing the ending position.</span></span>  
   
  `endLine`  
- <span data-ttu-id="1860b-111">[in]終了行番号。</span><span class="sxs-lookup"><span data-stu-id="1860b-111">[in] The ending line number.</span></span>  
+ <span data-ttu-id="16dcc-111">[in]終了行番号。</span><span class="sxs-lookup"><span data-stu-id="16dcc-111">[in] The ending line number.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="1860b-112">[in]終了列番号。</span><span class="sxs-lookup"><span data-stu-id="1860b-112">[in] The ending column number.</span></span>  
+ <span data-ttu-id="16dcc-112">[in]終了列番号。</span><span class="sxs-lookup"><span data-stu-id="16dcc-112">[in] The ending column number.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1860b-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="1860b-113">Return Value</span></span>  
- <span data-ttu-id="1860b-114">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="1860b-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="16dcc-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="16dcc-113">Return Value</span></span>  
+ <span data-ttu-id="16dcc-114">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="16dcc-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1860b-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="1860b-115">Requirements</span></span>  
- <span data-ttu-id="1860b-116">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1860b-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16dcc-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="16dcc-115">Requirements</span></span>  
+ <span data-ttu-id="16dcc-116">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="16dcc-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1860b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="1860b-117">See also</span></span>
-- [<span data-ttu-id="1860b-118">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1860b-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="16dcc-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="16dcc-117">See also</span></span>
+
+- [<span data-ttu-id="16dcc-118">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="16dcc-118">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb6b303fa7569712c854e8dc4e7513d8608e2519
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104963"
 ---
-# <a name="corregflags-enumeration"></a><span data-ttu-id="4bdb8-102">CorRegFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="4bdb8-102">CorRegFlags Enumeration</span></span>
-<span data-ttu-id="4bdb8-103">モジュールまたは複合イメージをインストールするときに登録のために使用するフラグ値を提供します。</span><span class="sxs-lookup"><span data-stu-id="4bdb8-103">Provides flag values used for registration when installing a module or composite image.</span></span>  
+# <a name="corregflags-enumeration"></a><span data-ttu-id="215de-102">CorRegFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="215de-102">CorRegFlags Enumeration</span></span>
+<span data-ttu-id="215de-103">モジュールまたは複合イメージをインストールするときに登録のために使用するフラグ値を提供します。</span><span class="sxs-lookup"><span data-stu-id="215de-103">Provides flag values used for registration when installing a module or composite image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bdb8-104">構文</span><span class="sxs-lookup"><span data-stu-id="4bdb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="215de-104">構文</span><span class="sxs-lookup"><span data-stu-id="215de-104">Syntax</span></span>  
   
 ```  
 typedef enum   
@@ -37,22 +37,23 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4bdb8-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="4bdb8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="215de-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="215de-105">Members</span></span>  
   
-|<span data-ttu-id="4bdb8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="4bdb8-106">Member</span></span>|<span data-ttu-id="4bdb8-107">説明</span><span class="sxs-lookup"><span data-stu-id="4bdb8-107">Description</span></span>|  
+|<span data-ttu-id="215de-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="215de-106">Member</span></span>|<span data-ttu-id="215de-107">説明</span><span class="sxs-lookup"><span data-stu-id="215de-107">Description</span></span>|  
 |------------|-----------------|  
-|`regNoCopy`|<span data-ttu-id="4bdb8-108">変換先にファイルをコピーしないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="4bdb8-108">Specifies that files should not be copied into the destination.</span></span>|  
-|`regConfig`|<span data-ttu-id="4bdb8-109">モジュールまたは複合イメージは、構成を指定します。</span><span class="sxs-lookup"><span data-stu-id="4bdb8-109">Specifies that the module or composite is a configuration.</span></span>|  
-|`regHasRefs`|<span data-ttu-id="4bdb8-110">モジュールまたは複合にクラスの参照があることを指定します。</span><span class="sxs-lookup"><span data-stu-id="4bdb8-110">Specifies that the module or composite has class references.</span></span>|  
+|`regNoCopy`|<span data-ttu-id="215de-108">変換先にファイルをコピーしないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="215de-108">Specifies that files should not be copied into the destination.</span></span>|  
+|`regConfig`|<span data-ttu-id="215de-109">モジュールまたは複合イメージは、構成を指定します。</span><span class="sxs-lookup"><span data-stu-id="215de-109">Specifies that the module or composite is a configuration.</span></span>|  
+|`regHasRefs`|<span data-ttu-id="215de-110">モジュールまたは複合にクラスの参照があることを指定します。</span><span class="sxs-lookup"><span data-stu-id="215de-110">Specifies that the module or composite has class references.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4bdb8-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="4bdb8-111">Requirements</span></span>  
- <span data-ttu-id="4bdb8-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4bdb8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="215de-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="215de-111">Requirements</span></span>  
+ <span data-ttu-id="215de-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="215de-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4bdb8-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4bdb8-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="215de-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="215de-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4bdb8-114">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="4bdb8-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="215de-114">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="215de-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4bdb8-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bdb8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="215de-115">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="215de-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4bdb8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="4bdb8-116">See also</span></span>
-- [<span data-ttu-id="4bdb8-117">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="4bdb8-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="215de-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="215de-116">See also</span></span>
+
+- [<span data-ttu-id="215de-117">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="215de-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

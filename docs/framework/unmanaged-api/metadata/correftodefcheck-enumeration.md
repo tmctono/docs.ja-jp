@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093892"
 ---
-# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="947c5-102">CorRefToDefCheck 列挙型</span><span class="sxs-lookup"><span data-stu-id="947c5-102">CorRefToDefCheck Enumeration</span></span>
-<span data-ttu-id="947c5-103">コードを最適化するために定義に変換される、参照先アイテムを制御するフラグを指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
+# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="24ec8-102">CorRefToDefCheck 列挙型</span><span class="sxs-lookup"><span data-stu-id="24ec8-102">CorRefToDefCheck Enumeration</span></span>
+<span data-ttu-id="24ec8-103">コードを最適化するために定義に変換される、参照先アイテムを制御するフラグを指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="947c5-104">構文</span><span class="sxs-lookup"><span data-stu-id="947c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24ec8-104">構文</span><span class="sxs-lookup"><span data-stu-id="24ec8-104">Syntax</span></span>  
   
 ```  
 typedef enum CorRefToDefCheck {  
@@ -38,22 +38,23 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="947c5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="947c5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="24ec8-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="24ec8-105">Members</span></span>  
   
-|<span data-ttu-id="947c5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="947c5-106">Member</span></span>|<span data-ttu-id="947c5-107">説明</span><span class="sxs-lookup"><span data-stu-id="947c5-107">Description</span></span>|  
+|<span data-ttu-id="24ec8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="24ec8-106">Member</span></span>|<span data-ttu-id="24ec8-107">説明</span><span class="sxs-lookup"><span data-stu-id="24ec8-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|<span data-ttu-id="947c5-108">定義に変換する必要があります型参照とメンバーの参照を指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="947c5-109">これは既定値 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。</span><span class="sxs-lookup"><span data-stu-id="947c5-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
-|`MDRefToDefAll`|<span data-ttu-id="947c5-110">参照されるすべてのアイテムが定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
-|`MDRefToDefNone`|<span data-ttu-id="947c5-111">定義に参照されている項目を変換しない必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
-|`MDTypeRefToDef`|<span data-ttu-id="947c5-112">型の参照のみが型定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-112">Specifies that only type references should be converted to type definitions.</span></span>|  
-|`MDMemberRefToDef`|<span data-ttu-id="947c5-113">メンバーの参照のみが定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="947c5-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="947c5-114">つまり、メンバーの参照は、メソッドの定義またはフィールドの定義のいずれかに変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="947c5-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
+|`MDRefToDefDefault`|<span data-ttu-id="24ec8-108">定義に変換する必要があります型参照とメンバーの参照を指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="24ec8-109">これは既定値 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。</span><span class="sxs-lookup"><span data-stu-id="24ec8-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
+|`MDRefToDefAll`|<span data-ttu-id="24ec8-110">参照されるすべてのアイテムが定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
+|`MDRefToDefNone`|<span data-ttu-id="24ec8-111">定義に参照されている項目を変換しない必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
+|`MDTypeRefToDef`|<span data-ttu-id="24ec8-112">型の参照のみが型定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-112">Specifies that only type references should be converted to type definitions.</span></span>|  
+|`MDMemberRefToDef`|<span data-ttu-id="24ec8-113">メンバーの参照のみが定義に変換されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="24ec8-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="24ec8-114">つまり、メンバーの参照は、メソッドの定義またはフィールドの定義のいずれかに変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="24ec8-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="947c5-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="947c5-115">Requirements</span></span>  
- <span data-ttu-id="947c5-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="947c5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24ec8-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="24ec8-115">Requirements</span></span>  
+ <span data-ttu-id="24ec8-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="24ec8-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="947c5-117">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="947c5-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="24ec8-117">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="24ec8-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="947c5-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="947c5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="24ec8-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="24ec8-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="947c5-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="947c5-119">See also</span></span>
-- [<span data-ttu-id="947c5-120">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="947c5-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="24ec8-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="24ec8-119">See also</span></span>
+
+- [<span data-ttu-id="24ec8-120">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="24ec8-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

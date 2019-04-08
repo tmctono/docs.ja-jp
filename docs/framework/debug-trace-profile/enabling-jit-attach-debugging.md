@@ -7,34 +7,35 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4630e6d02b0137021765f954ab0dae19f2f6199
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078785"
 ---
-# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="7a355-102">JIT アタッチ デバッグの有効化</span><span class="sxs-lookup"><span data-stu-id="7a355-102">Enabling JIT-Attach Debugging</span></span>
-<span data-ttu-id="7a355-103">JIT アタッチ デバッグとは、エラーが発生したとき、または特定のメソッドまたは関数によってトリガーすることで、プロセスにデバッガーをアタッチすることを表すために使用される語句です。</span><span class="sxs-lookup"><span data-stu-id="7a355-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
+# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="b636b-102">JIT アタッチ デバッグの有効化</span><span class="sxs-lookup"><span data-stu-id="b636b-102">Enabling JIT-Attach Debugging</span></span>
+<span data-ttu-id="b636b-103">JIT アタッチ デバッグとは、エラーが発生したとき、または特定のメソッドまたは関数によってトリガーすることで、プロセスにデバッガーをアタッチすることを表すために使用される語句です。</span><span class="sxs-lookup"><span data-stu-id="b636b-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
   
- <span data-ttu-id="7a355-104">JIT アタッチ デバッグは、次のエラー状態で使用されます。</span><span class="sxs-lookup"><span data-stu-id="7a355-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
+ <span data-ttu-id="b636b-104">JIT アタッチ デバッグは、次のエラー状態で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b636b-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
   
--   <span data-ttu-id="7a355-105">未処理の例外 (ネイティブ コードとマネージド コードの両方)。</span><span class="sxs-lookup"><span data-stu-id="7a355-105">Unhandled exceptions (in both native and managed code).</span></span>  
+-   <span data-ttu-id="b636b-105">未処理の例外 (ネイティブ コードとマネージド コードの両方)。</span><span class="sxs-lookup"><span data-stu-id="b636b-105">Unhandled exceptions (in both native and managed code).</span></span>  
   
--   <span data-ttu-id="7a355-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> メソッドまたは [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 関数 (Windows 7 ファミリ)。</span><span class="sxs-lookup"><span data-stu-id="7a355-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> <span data-ttu-id="b636b-106">メソッドまたは[RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107)関数 (Windows 7 ファミリ)。</span><span class="sxs-lookup"><span data-stu-id="b636b-106">method or [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
   
--   <span data-ttu-id="7a355-107">実行時の致命的なエラー。</span><span class="sxs-lookup"><span data-stu-id="7a355-107">Runtime fatal errors.</span></span>  
+-   <span data-ttu-id="b636b-107">実行時の致命的なエラー。</span><span class="sxs-lookup"><span data-stu-id="b636b-107">Runtime fatal errors.</span></span>  
   
- <span data-ttu-id="7a355-108">JIT アタッチ デバッグは、次のメソッドや関数への呼び出しによってもトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="7a355-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
+ <span data-ttu-id="b636b-108">JIT アタッチ デバッグは、次のメソッドや関数への呼び出しによってもトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="b636b-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
   
--   <span data-ttu-id="7a355-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> メソッド</span><span class="sxs-lookup"><span data-stu-id="7a355-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
+-   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> <span data-ttu-id="b636b-109">メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="b636b-109">method.</span></span>  
   
--   <span data-ttu-id="7a355-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> メソッド</span><span class="sxs-lookup"><span data-stu-id="7a355-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
+-   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> <span data-ttu-id="b636b-110">メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="b636b-110">method.</span></span>  
   
--   <span data-ttu-id="7a355-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 関数 (Win32)。</span><span class="sxs-lookup"><span data-stu-id="7a355-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
+-   <span data-ttu-id="b636b-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 関数 (Win32)。</span><span class="sxs-lookup"><span data-stu-id="b636b-111">[DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
   
- <span data-ttu-id="7a355-112">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。</span><span class="sxs-lookup"><span data-stu-id="7a355-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="7a355-113">以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。</span><span class="sxs-lookup"><span data-stu-id="7a355-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="7a355-114">このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。</span><span class="sxs-lookup"><span data-stu-id="7a355-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="7a355-115">このレジストリ キーの設定方法の詳細については、[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7a355-115">For information about setting this registry key, see [Configuring Automatic Debugging](https://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
+ <span data-ttu-id="b636b-112">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。</span><span class="sxs-lookup"><span data-stu-id="b636b-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="b636b-113">以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。</span><span class="sxs-lookup"><span data-stu-id="b636b-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="b636b-114">このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。</span><span class="sxs-lookup"><span data-stu-id="b636b-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="b636b-115">このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。</span><span class="sxs-lookup"><span data-stu-id="b636b-115">For information about setting this registry key, see [Configuring Automatic Debugging](https://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a355-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a355-116">See also</span></span>
-- [<span data-ttu-id="7a355-117">デバッグ、トレース、およびプロファイリング</span><span class="sxs-lookup"><span data-stu-id="7a355-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)
-- [<span data-ttu-id="7a355-118">イメージのデバッグの簡略化</span><span class="sxs-lookup"><span data-stu-id="7a355-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+## <a name="see-also"></a><span data-ttu-id="b636b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b636b-116">See also</span></span>
+
+- [<span data-ttu-id="b636b-117">デバッグ、トレース、およびプロファイリング</span><span class="sxs-lookup"><span data-stu-id="b636b-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)
+- [<span data-ttu-id="b636b-118">イメージのデバッグの簡略化</span><span class="sxs-lookup"><span data-stu-id="b636b-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
