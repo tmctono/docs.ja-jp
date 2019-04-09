@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f99495b04942b7902619e0383522caf9f78ae984
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83265c4f6dffed76f1710378cf5293aac7020ef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119354"
 ---
-# <a name="icordebugvaluegettype-method"></a><span data-ttu-id="c8593-102">ICorDebugValue::GetType メソッド</span><span class="sxs-lookup"><span data-stu-id="c8593-102">ICorDebugValue::GetType Method</span></span>
-<span data-ttu-id="c8593-103">この"ICorDebugValue"オブジェクトのプリミティブ型を取得します。</span><span class="sxs-lookup"><span data-stu-id="c8593-103">Gets the primitive type of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegettype-method"></a><span data-ttu-id="8b495-102">ICorDebugValue::GetType メソッド</span><span class="sxs-lookup"><span data-stu-id="8b495-102">ICorDebugValue::GetType Method</span></span>
+<span data-ttu-id="8b495-103">この"ICorDebugValue"オブジェクトのプリミティブ型を取得します。</span><span class="sxs-lookup"><span data-stu-id="8b495-103">Gets the primitive type of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8593-104">構文</span><span class="sxs-lookup"><span data-stu-id="c8593-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b495-104">構文</span><span class="sxs-lookup"><span data-stu-id="8b495-104">Syntax</span></span>  
   
 ```  
 HRESULT GetType (  
@@ -35,23 +35,22 @@ HRESULT GetType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8593-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c8593-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b495-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b495-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="c8593-106">[out]値の型を示す"CorElementType"列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="c8593-106">[out] A pointer to a value of the "CorElementType" enumeration that indicates the value's type.</span></span>  
+ <span data-ttu-id="8b495-106">[out]値の型を示す"CorElementType"列挙型の値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="8b495-106">[out] A pointer to a value of the "CorElementType" enumeration that indicates the value's type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8593-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="c8593-107">Remarks</span></span>  
- <span data-ttu-id="c8593-108">適切なサブクラスを通じてその型を調べることがありますオブジェクトが実行時の複雑な型の場合、`ICorDebugValue`インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="c8593-108">If the object is a complex run-time type, that type may be examined through the appropriate subclasses of the `ICorDebugValue` interface.</span></span> <span data-ttu-id="c8593-109">たとえば、"ICorDebugObjectValue"を継承する`ICorDebugValue`、複合型を表します。</span><span class="sxs-lookup"><span data-stu-id="c8593-109">For example, "ICorDebugObjectValue", which inherits from `ICorDebugValue`, represents a complex type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b495-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="8b495-107">Remarks</span></span>  
+ <span data-ttu-id="8b495-108">適切なサブクラスを通じてその型を調べることがありますオブジェクトが実行時の複雑な型の場合、`ICorDebugValue`インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="8b495-108">If the object is a complex run-time type, that type may be examined through the appropriate subclasses of the `ICorDebugValue` interface.</span></span> <span data-ttu-id="8b495-109">たとえば、"ICorDebugObjectValue"を継承する`ICorDebugValue`、複合型を表します。</span><span class="sxs-lookup"><span data-stu-id="8b495-109">For example, "ICorDebugObjectValue", which inherits from `ICorDebugValue`, represents a complex type.</span></span>  
   
- <span data-ttu-id="c8593-110">`GetType`と[icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)各メソッドが値の型に関する情報を返します。</span><span class="sxs-lookup"><span data-stu-id="c8593-110">The `GetType` and [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) methods each return information about the type of a value.</span></span> <span data-ttu-id="c8593-111">どちらも汎用対応によって置き換えられる[icordebugvalue 2::getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="c8593-111">They are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) method.</span></span>  
+ <span data-ttu-id="8b495-110">`GetType`と[icordebugobjectvalue::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)各メソッドが値の型に関する情報を返します。</span><span class="sxs-lookup"><span data-stu-id="8b495-110">The `GetType` and [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) methods each return information about the type of a value.</span></span> <span data-ttu-id="8b495-111">どちらも汎用対応によって置き換えられる[icordebugvalue 2::getexacttype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="8b495-111">They are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8593-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="c8593-112">Requirements</span></span>  
- <span data-ttu-id="c8593-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c8593-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b495-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b495-112">Requirements</span></span>  
+ <span data-ttu-id="8b495-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b495-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8593-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c8593-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8b495-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b495-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c8593-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8593-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b495-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b495-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c8593-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8593-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8b495-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="8b495-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c8593-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8593-117">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="8b495-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b495-117">See also</span></span>

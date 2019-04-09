@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d186c29c409bd6f85a764e3632e2e8e4998b168
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132822"
 ---
-# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="3ea4c-102">ICLRDebugManager::SetSymbolReadingPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="3ea4c-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
-<span data-ttu-id="3ea4c-103">プログラム データベース (PDB) ファイルを読み取るためのポリシーを設定します。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="3ea4c-104">ポリシーは、呼び出し履歴で行番号およびファイルに関する情報が含まれているかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
+# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="3d2a7-102">ICLRDebugManager::SetSymbolReadingPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="3d2a7-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
+<span data-ttu-id="3d2a7-103">プログラム データベース (PDB) ファイルを読み取るためのポリシーを設定します。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="3d2a7-104">ポリシーは、呼び出し履歴で行番号およびファイルに関する情報が含まれているかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ea4c-105">構文</span><span class="sxs-lookup"><span data-stu-id="3ea4c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d2a7-105">構文</span><span class="sxs-lookup"><span data-stu-id="3d2a7-105">Syntax</span></span>  
   
 ```  
 HRESULT SetSymbolReadingPolicy (  
@@ -36,26 +36,27 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ea4c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3ea4c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d2a7-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3d2a7-106">Parameters</span></span>  
  `policy`  
- <span data-ttu-id="3ea4c-107">[in]メンバー、 [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)列挙体。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="3d2a7-107">[in]メンバー、 [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)列挙体。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3ea4c-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="3ea4c-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3d2a7-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="3d2a7-108">Return Value</span></span>  
   
-|<span data-ttu-id="3ea4c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3ea4c-109">HRESULT</span></span>|<span data-ttu-id="3ea4c-110">説明</span><span class="sxs-lookup"><span data-stu-id="3ea4c-110">Description</span></span>|  
+|<span data-ttu-id="3d2a7-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3d2a7-109">HRESULT</span></span>|<span data-ttu-id="3d2a7-110">説明</span><span class="sxs-lookup"><span data-stu-id="3d2a7-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3ea4c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3ea4c-111">S_OK</span></span>|<span data-ttu-id="3ea4c-112">`SetSymbolReadingPolicy` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
-|<span data-ttu-id="3ea4c-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3ea4c-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3ea4c-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3ea4c-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3ea4c-115">E_FAIL</span></span>|<span data-ttu-id="3ea4c-116">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3ea4c-117">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3ea4c-118">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3d2a7-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3d2a7-111">S_OK</span></span>|`SetSymbolReadingPolicy` <span data-ttu-id="3d2a7-112">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-112">returned successfully.</span></span>|  
+|<span data-ttu-id="3d2a7-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3d2a7-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3d2a7-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3d2a7-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3d2a7-115">E_FAIL</span></span>|<span data-ttu-id="3d2a7-116">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3d2a7-117">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3d2a7-118">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3ea4c-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="3ea4c-119">Requirements</span></span>  
- <span data-ttu-id="3ea4c-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3ea4c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d2a7-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="3d2a7-119">Requirements</span></span>  
+ <span data-ttu-id="3d2a7-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d2a7-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ea4c-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3ea4c-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3d2a7-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3d2a7-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3ea4c-122">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="3ea4c-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3d2a7-122">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="3d2a7-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ea4c-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ea4c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="3d2a7-123">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="3d2a7-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3ea4c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ea4c-124">See also</span></span>
-- [<span data-ttu-id="3ea4c-125">ICLRDebugManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3ea4c-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3d2a7-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="3d2a7-124">See also</span></span>
+
+- [<span data-ttu-id="3d2a7-125">ICLRDebugManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3d2a7-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

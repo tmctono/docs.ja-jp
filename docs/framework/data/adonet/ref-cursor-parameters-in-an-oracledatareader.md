@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 95bfb544ea02a8a44d010d08c491234fffaf3689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121850"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="eddd4-102">OracleDataReader の REF CURSOR パラメーター</span><span class="sxs-lookup"><span data-stu-id="eddd4-102">REF CURSOR Parameters in an OracleDataReader</span></span>
-<span data-ttu-id="eddd4-103">この Microsoft Visual Basic の例では、REF CURSOR パラメーターを返し、<xref:System.Data.OracleClient.OracleDataReader> を使用して値を読み取る、PL/SQL ストアド プロシージャを実行します。</span><span class="sxs-lookup"><span data-stu-id="eddd4-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a><span data-ttu-id="48964-102">OracleDataReader の REF CURSOR パラメーター</span><span class="sxs-lookup"><span data-stu-id="48964-102">REF CURSOR Parameters in an OracleDataReader</span></span>
+<span data-ttu-id="48964-103">この Microsoft Visual Basic の例では、REF CURSOR パラメーターを返し、<xref:System.Data.OracleClient.OracleDataReader> を使用して値を読み取る、PL/SQL ストアド プロシージャを実行します。</span><span class="sxs-lookup"><span data-stu-id="48964-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -43,6 +43,7 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eddd4-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="eddd4-104">See also</span></span>
-- [<span data-ttu-id="eddd4-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="eddd4-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [<span data-ttu-id="eddd4-106">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="eddd4-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="48964-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="48964-104">See also</span></span>
+
+- [<span data-ttu-id="48964-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="48964-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [<span data-ttu-id="48964-106">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="48964-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
