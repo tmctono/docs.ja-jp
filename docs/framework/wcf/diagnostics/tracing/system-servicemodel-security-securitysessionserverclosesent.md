@@ -2,20 +2,21 @@
 title: System.ServiceModel.Security.SecuritySessionServerCloseSent
 ms.date: 03/30/2017
 ms.assetid: 712716fd-6c89-4dea-9398-d2c5b30f6563
-ms.openlocfilehash: 2f2a04118bf0427b28600d15c4d53b404a12b12c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9e929af7e7983ae1028537a8709999f3eb6691a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140453"
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="24c1e-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="24c1e-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
-<span data-ttu-id="24c1e-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="24c1e-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="fea4a-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="fea4a-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
+<span data-ttu-id="fea4a-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="fea4a-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="24c1e-104">説明</span><span class="sxs-lookup"><span data-stu-id="24c1e-104">Description</span></span>  
- <span data-ttu-id="24c1e-105">サーバーのセキュリティ セッションは、クライアントに Close を送信しました。</span><span class="sxs-lookup"><span data-stu-id="24c1e-105">The server security session sent Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="fea4a-104">説明</span><span class="sxs-lookup"><span data-stu-id="fea4a-104">Description</span></span>  
+ <span data-ttu-id="fea4a-105">サーバーのセキュリティ セッションは、クライアントに Close を送信しました。</span><span class="sxs-lookup"><span data-stu-id="fea4a-105">The server security session sent Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24c1e-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="24c1e-106">See also</span></span>
-- [<span data-ttu-id="24c1e-107">トレース</span><span class="sxs-lookup"><span data-stu-id="24c1e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="24c1e-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="24c1e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="24c1e-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="24c1e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fea4a-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="fea4a-106">See also</span></span>
+
+- [<span data-ttu-id="fea4a-107">トレース</span><span class="sxs-lookup"><span data-stu-id="fea4a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="fea4a-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="fea4a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="fea4a-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="fea4a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
