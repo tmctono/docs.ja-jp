@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99f2b7128ab984d023ce0aed73dd96167a661682
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 12b0e32ab46b3e8ba5120da4b16a10db85f105a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127687"
 ---
-# <a name="ihostsyncmanagercreatemonitorevent-method"></a><span data-ttu-id="39634-102">IHostSyncManager::CreateMonitorEvent メソッド</span><span class="sxs-lookup"><span data-stu-id="39634-102">IHostSyncManager::CreateMonitorEvent Method</span></span>
-<span data-ttu-id="39634-103">監視対象の自動リセット イベント オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="39634-103">Creates a monitored auto-reset event object.</span></span>  
+# <a name="ihostsyncmanagercreatemonitorevent-method"></a><span data-ttu-id="a2660-102">IHostSyncManager::CreateMonitorEvent メソッド</span><span class="sxs-lookup"><span data-stu-id="a2660-102">IHostSyncManager::CreateMonitorEvent Method</span></span>
+<span data-ttu-id="a2660-103">監視対象の自動リセット イベント オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="a2660-103">Creates a monitored auto-reset event object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39634-104">構文</span><span class="sxs-lookup"><span data-stu-id="39634-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2660-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2660-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateMonitorEvent (  
@@ -36,41 +36,42 @@ HRESULT CreateMonitorEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39634-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="39634-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a2660-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a2660-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="39634-106">[in]イベント オブジェクトに関連付けるクッキー。</span><span class="sxs-lookup"><span data-stu-id="39634-106">[in] A cookie to associate with the event object.</span></span>  
+ <span data-ttu-id="a2660-106">[in]イベント オブジェクトに関連付けるクッキー。</span><span class="sxs-lookup"><span data-stu-id="a2660-106">[in] A cookie to associate with the event object.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="39634-107">[out]アドレスへのポインター、 [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)インスタンス、または null の場合は、イベント オブジェクトを作成できませんでした。</span><span class="sxs-lookup"><span data-stu-id="39634-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
+ <span data-ttu-id="a2660-107">[out]アドレスへのポインター、 [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)インスタンス、または null の場合は、イベント オブジェクトを作成できませんでした。</span><span class="sxs-lookup"><span data-stu-id="a2660-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="39634-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="39634-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a2660-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="a2660-108">Return Value</span></span>  
   
-|<span data-ttu-id="39634-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="39634-109">HRESULT</span></span>|<span data-ttu-id="39634-110">説明</span><span class="sxs-lookup"><span data-stu-id="39634-110">Description</span></span>|  
+|<span data-ttu-id="a2660-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a2660-109">HRESULT</span></span>|<span data-ttu-id="a2660-110">説明</span><span class="sxs-lookup"><span data-stu-id="a2660-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="39634-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="39634-111">S_OK</span></span>|<span data-ttu-id="39634-112">`CreateMonitorEvent` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="39634-112">`CreateMonitorEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="39634-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="39634-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="39634-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="39634-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="39634-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="39634-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="39634-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="39634-116">The call timed out.</span></span>|  
-|<span data-ttu-id="39634-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="39634-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="39634-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="39634-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="39634-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="39634-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="39634-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="39634-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="39634-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="39634-121">E_FAIL</span></span>|<span data-ttu-id="39634-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="39634-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="39634-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="39634-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="39634-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="39634-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="39634-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="39634-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="39634-126">メモリ不足は、要求されたイベント オブジェクトを作成できませんでした。</span><span class="sxs-lookup"><span data-stu-id="39634-126">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="a2660-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a2660-111">S_OK</span></span>|`CreateMonitorEvent` <span data-ttu-id="a2660-112">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="a2660-112">returned successfully.</span></span>|  
+|<span data-ttu-id="a2660-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a2660-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a2660-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="a2660-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a2660-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a2660-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a2660-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="a2660-116">The call timed out.</span></span>|  
+|<span data-ttu-id="a2660-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a2660-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a2660-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="a2660-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a2660-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a2660-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a2660-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="a2660-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a2660-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a2660-121">E_FAIL</span></span>|<span data-ttu-id="a2660-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="a2660-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a2660-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="a2660-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a2660-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="a2660-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a2660-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="a2660-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="a2660-126">メモリ不足は、要求されたイベント オブジェクトを作成できませんでした。</span><span class="sxs-lookup"><span data-stu-id="a2660-126">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="39634-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="39634-127">Remarks</span></span>  
- <span data-ttu-id="39634-128">`CreateMonitorEvent` 返します、 `IHostAutoEvent` CLR が、管理対象の実装で使用する<xref:System.Threading.Monitor?displayProperty=nameWithType>型。</span><span class="sxs-lookup"><span data-stu-id="39634-128">`CreateMonitorEvent` returns an `IHostAutoEvent` that the CLR uses in its implementation of the managed <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="39634-129">このメソッドは、Win32 をミラー化`CreateEvent`関数の値を持つ`false`の指定、`bManualReset`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="39634-129">This method mirrors the Win32 `CreateEvent` function, with a value of `false` specified for the `bManualReset` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a2660-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="a2660-127">Remarks</span></span>  
+ `CreateMonitorEvent` <span data-ttu-id="a2660-128">返します、 `IHostAutoEvent` CLR が、管理対象の実装で使用する<xref:System.Threading.Monitor?displayProperty=nameWithType>型。</span><span class="sxs-lookup"><span data-stu-id="a2660-128">returns an `IHostAutoEvent` that the CLR uses in its implementation of the managed <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="a2660-129">このメソッドは、Win32 をミラー化`CreateEvent`関数の値を持つ`false`の指定、`bManualReset`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="a2660-129">This method mirrors the Win32 `CreateEvent` function, with a value of `false` specified for the `bManualReset` parameter.</span></span>  
   
- <span data-ttu-id="39634-130">ホストは、cookie を使用して、どのタスクが呼び出すことで、モニターの待機しているかを判断する、 [iclrsyncmanager::getmonitorowner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="39634-130">The host can use the cookie to determine which task is waiting on the monitor by calling the [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) method.</span></span>  
+ <span data-ttu-id="a2660-130">ホストは、cookie を使用して、どのタスクが呼び出すことで、モニターの待機しているかを判断する、 [iclrsyncmanager::getmonitorowner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="a2660-130">The host can use the cookie to determine which task is waiting on the monitor by calling the [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39634-131">必要条件</span><span class="sxs-lookup"><span data-stu-id="39634-131">Requirements</span></span>  
- <span data-ttu-id="39634-132">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="39634-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2660-131">必要条件</span><span class="sxs-lookup"><span data-stu-id="a2660-131">Requirements</span></span>  
+ <span data-ttu-id="a2660-132">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2660-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39634-133">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="39634-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a2660-133">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a2660-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="39634-134">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="39634-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a2660-134">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a2660-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="39634-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39634-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a2660-135">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="a2660-135">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="39634-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="39634-136">See also</span></span>
-- [<span data-ttu-id="39634-137">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="39634-137">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="39634-138">IHostAutoEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="39634-138">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="39634-139">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="39634-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a2660-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2660-136">See also</span></span>
+
+- [<span data-ttu-id="a2660-137">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2660-137">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="a2660-138">IHostAutoEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2660-138">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="a2660-139">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2660-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
 - <xref:System.Threading.Monitor>
