@@ -2,20 +2,21 @@
 title: System.ServiceModel.Activation.ServiceStop
 ms.date: 03/30/2017
 ms.assetid: f22be67e-0def-4f8e-ab31-6178cbdf98d4
-ms.openlocfilehash: f66a9b774b499c88b6bf83e701525fa9ea3c6121
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a25bc87655f85035a3c6650a20817f35827c7c21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121928"
 ---
-# <a name="systemservicemodelactivationservicestop"></a><span data-ttu-id="a3b93-102">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="a3b93-102">System.ServiceModel.Activation.ServiceStop</span></span>
-<span data-ttu-id="a3b93-103">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="a3b93-103">System.ServiceModel.Activation.ServiceStop</span></span>  
+# <a name="systemservicemodelactivationservicestop"></a><span data-ttu-id="ef1d5-102">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="ef1d5-102">System.ServiceModel.Activation.ServiceStop</span></span>
+<span data-ttu-id="ef1d5-103">System.ServiceModel.Activation.ServiceStop</span><span class="sxs-lookup"><span data-stu-id="ef1d5-103">System.ServiceModel.Activation.ServiceStop</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a3b93-104">説明</span><span class="sxs-lookup"><span data-stu-id="a3b93-104">Description</span></span>  
- <span data-ttu-id="a3b93-105">サービスを停止する要求を受信しました。</span><span class="sxs-lookup"><span data-stu-id="a3b93-105">A request to stop the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="ef1d5-104">説明</span><span class="sxs-lookup"><span data-stu-id="ef1d5-104">Description</span></span>  
+ <span data-ttu-id="ef1d5-105">サービスを停止する要求を受信しました。</span><span class="sxs-lookup"><span data-stu-id="ef1d5-105">A request to stop the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3b93-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3b93-106">See also</span></span>
-- [<span data-ttu-id="a3b93-107">トレース</span><span class="sxs-lookup"><span data-stu-id="a3b93-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="a3b93-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="a3b93-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="a3b93-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="a3b93-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ef1d5-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef1d5-106">See also</span></span>
+
+- [<span data-ttu-id="ef1d5-107">トレース</span><span class="sxs-lookup"><span data-stu-id="ef1d5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="ef1d5-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="ef1d5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ef1d5-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="ef1d5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

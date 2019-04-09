@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126673"
 ---
-# <a name="iclrgcmanagercollect-method"></a><span data-ttu-id="c03a7-102">ICLRGCManager::Collect メソッド</span><span class="sxs-lookup"><span data-stu-id="c03a7-102">ICLRGCManager::Collect Method</span></span>
-<span data-ttu-id="c03a7-103">指定したジェネレーションのガベージ コレクションを強制します。</span><span class="sxs-lookup"><span data-stu-id="c03a7-103">Forces a garbage collection for the specified generation.</span></span>  
+# <a name="iclrgcmanagercollect-method"></a><span data-ttu-id="a5595-102">ICLRGCManager::Collect メソッド</span><span class="sxs-lookup"><span data-stu-id="a5595-102">ICLRGCManager::Collect Method</span></span>
+<span data-ttu-id="a5595-103">指定したジェネレーションのガベージ コレクションを強制します。</span><span class="sxs-lookup"><span data-stu-id="a5595-103">Forces a garbage collection for the specified generation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c03a7-104">構文</span><span class="sxs-lookup"><span data-stu-id="c03a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5595-104">構文</span><span class="sxs-lookup"><span data-stu-id="a5595-104">Syntax</span></span>  
   
 ```  
 HRESULT Collect (  
@@ -35,38 +35,39 @@ HRESULT Collect (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c03a7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c03a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5595-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a5595-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="c03a7-106">[in]収集を生成します。</span><span class="sxs-lookup"><span data-stu-id="c03a7-106">[in] The generation to collect.</span></span> <span data-ttu-id="c03a7-107">-1 の値を強制的にすべてのジェネレーションのコレクション。</span><span class="sxs-lookup"><span data-stu-id="c03a7-107">A value of -1 forces a collection of all generations.</span></span>  
+ <span data-ttu-id="a5595-106">[in]収集を生成します。</span><span class="sxs-lookup"><span data-stu-id="a5595-106">[in] The generation to collect.</span></span> <span data-ttu-id="a5595-107">-1 の値を強制的にすべてのジェネレーションのコレクション。</span><span class="sxs-lookup"><span data-stu-id="a5595-107">A value of -1 forces a collection of all generations.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c03a7-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="c03a7-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5595-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="a5595-108">Return Value</span></span>  
   
-|<span data-ttu-id="c03a7-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c03a7-109">HRESULT</span></span>|<span data-ttu-id="c03a7-110">説明</span><span class="sxs-lookup"><span data-stu-id="c03a7-110">Description</span></span>|  
+|<span data-ttu-id="a5595-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a5595-109">HRESULT</span></span>|<span data-ttu-id="a5595-110">説明</span><span class="sxs-lookup"><span data-stu-id="a5595-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c03a7-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="c03a7-111">S_OK</span></span>|<span data-ttu-id="c03a7-112">`Collect` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="c03a7-112">`Collect` returned successfully.</span></span>|  
-|<span data-ttu-id="c03a7-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c03a7-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c03a7-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="c03a7-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c03a7-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c03a7-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c03a7-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="c03a7-116">The call timed out.</span></span>|  
-|<span data-ttu-id="c03a7-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c03a7-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c03a7-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="c03a7-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c03a7-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c03a7-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c03a7-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="c03a7-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c03a7-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c03a7-121">E_FAIL</span></span>|<span data-ttu-id="c03a7-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="c03a7-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c03a7-123">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="c03a7-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c03a7-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="c03a7-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a5595-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a5595-111">S_OK</span></span>|`Collect` <span data-ttu-id="a5595-112">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="a5595-112">returned successfully.</span></span>|  
+|<span data-ttu-id="a5595-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a5595-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a5595-114">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="a5595-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a5595-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a5595-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a5595-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="a5595-116">The call timed out.</span></span>|  
+|<span data-ttu-id="a5595-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a5595-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a5595-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="a5595-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a5595-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a5595-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a5595-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="a5595-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a5595-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a5595-121">E_FAIL</span></span>|<span data-ttu-id="a5595-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="a5595-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a5595-123">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="a5595-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a5595-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="a5595-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c03a7-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="c03a7-125">Remarks</span></span>  
- <span data-ttu-id="c03a7-126">`Collect`メソッドは、現在の状態に関係なくコレクションを実行する CLR のガベージ コレクターを強制します。</span><span class="sxs-lookup"><span data-stu-id="c03a7-126">The `Collect` method forces the CLR's garbage collector to perform a collection regardless of its current state.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a5595-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="a5595-125">Remarks</span></span>  
+ <span data-ttu-id="a5595-126">`Collect`メソッドは、現在の状態に関係なくコレクションを実行する CLR のガベージ コレクターを強制します。</span><span class="sxs-lookup"><span data-stu-id="a5595-126">The `Collect` method forces the CLR's garbage collector to perform a collection regardless of its current state.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c03a7-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="c03a7-127">Requirements</span></span>  
- <span data-ttu-id="c03a7-128">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c03a7-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5595-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="a5595-127">Requirements</span></span>  
+ <span data-ttu-id="a5595-128">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5595-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c03a7-129">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c03a7-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a5595-129">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a5595-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c03a7-130">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c03a7-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a5595-130">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a5595-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c03a7-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c03a7-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a5595-131">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="a5595-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c03a7-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="c03a7-132">See also</span></span>
-- [<span data-ttu-id="c03a7-133">自動メモリ管理</span><span class="sxs-lookup"><span data-stu-id="c03a7-133">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="c03a7-134">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="c03a7-134">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="c03a7-135">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c03a7-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="c03a7-136">ICLRGCManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c03a7-136">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
-- [<span data-ttu-id="c03a7-137">CLR ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c03a7-137">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [<span data-ttu-id="c03a7-138">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c03a7-138">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="c03a7-139">ホスティング</span><span class="sxs-lookup"><span data-stu-id="c03a7-139">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="a5595-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5595-132">See also</span></span>
+
+- [<span data-ttu-id="a5595-133">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="a5595-133">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="a5595-134">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="a5595-134">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="a5595-135">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5595-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="a5595-136">ICLRGCManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5595-136">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="a5595-137">CLR ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5595-137">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [<span data-ttu-id="a5595-138">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5595-138">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="a5595-139">ホスト</span><span class="sxs-lookup"><span data-stu-id="a5595-139">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
