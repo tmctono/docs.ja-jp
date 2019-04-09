@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8590a40ca74296bab618d6c0ba95f1683cf33cd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84d07fe975bab1b0af81299893b52142630b5bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079748"
 ---
-# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="450fc-102">ICorProfilerCallback3::InitializeForAttach メソッド</span><span class="sxs-lookup"><span data-stu-id="450fc-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
-<span data-ttu-id="450fc-103">アタッチ操作後にその状態を初期化する機会をプロファイラーに与えるために、共通言語ランタイム (CLR) により呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="450fc-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
+# <a name="icorprofilercallback3initializeforattach-method"></a><span data-ttu-id="990f4-102">ICorProfilerCallback3::InitializeForAttach メソッド</span><span class="sxs-lookup"><span data-stu-id="990f4-102">ICorProfilerCallback3::InitializeForAttach Method</span></span>
+<span data-ttu-id="990f4-103">アタッチ操作後にその状態を初期化する機会をプロファイラーに与えるために、共通言語ランタイム (CLR) により呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="990f4-103">Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="450fc-104">構文</span><span class="sxs-lookup"><span data-stu-id="450fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="990f4-104">構文</span><span class="sxs-lookup"><span data-stu-id="990f4-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeForAttach(  
@@ -36,30 +36,31 @@ HRESULT InitializeForAttach(
             [in] UINT cbClientData);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="450fc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="450fc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="990f4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="990f4-105">Parameters</span></span>  
  `pCorProfilerInfoUnk`  
- <span data-ttu-id="450fc-106">[in] `ICorProfilerInfo*` インターフェイスへのインターフェイス ポインター。</span><span class="sxs-lookup"><span data-stu-id="450fc-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
+ <span data-ttu-id="990f4-106">[in] `ICorProfilerInfo*` インターフェイスへのインターフェイス ポインター。</span><span class="sxs-lookup"><span data-stu-id="990f4-106">[in] An interface pointer for the `ICorProfilerInfo*` interface.</span></span>  
   
  `pvClientData`  
- <span data-ttu-id="450fc-107">[in]渡されるデータへのポインター、 [iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドでその`pvClientData`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="450fc-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="450fc-108">このパラメーターが null の場合、`cbClientData` は 0 (ゼロ) になります。</span><span class="sxs-lookup"><span data-stu-id="450fc-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="450fc-109">CLR は、`InitializeForAttach` から戻るとこのメモリを解放します。</span><span class="sxs-lookup"><span data-stu-id="450fc-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
+ <span data-ttu-id="990f4-107">[in]渡されるデータへのポインター、 [iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドでその`pvClientData`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="990f4-107">[in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter.</span></span> <span data-ttu-id="990f4-108">このパラメーターが null の場合、`cbClientData` は 0 (ゼロ) になります。</span><span class="sxs-lookup"><span data-stu-id="990f4-108">If this parameter is null, `cbClientData` will be 0 (zero).</span></span> <span data-ttu-id="990f4-109">CLR は、`InitializeForAttach` から戻るとこのメモリを解放します。</span><span class="sxs-lookup"><span data-stu-id="990f4-109">The CLR frees this memory when it returns from `InitializeForAttach`.</span></span>  
   
  `cbClientData`  
- <span data-ttu-id="450fc-110">[in] `pvClientData` がポイントするデータのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="450fc-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
+ <span data-ttu-id="990f4-110">[in] `pvClientData` がポイントするデータのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="990f4-110">[in] The size, in bytes, of the data that `pvClientData` points to.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="450fc-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="450fc-111">Remarks</span></span>  
- <span data-ttu-id="450fc-112">CLR は `InitializeForAttach` を呼び出し、コールバックを要求できる機会をプロファイラーに与えます。</span><span class="sxs-lookup"><span data-stu-id="450fc-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="990f4-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="990f4-111">Remarks</span></span>  
+ <span data-ttu-id="990f4-112">CLR は `InitializeForAttach` を呼び出し、コールバックを要求できる機会をプロファイラーに与えます。</span><span class="sxs-lookup"><span data-stu-id="990f4-112">The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="450fc-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="450fc-113">Requirements</span></span>  
- <span data-ttu-id="450fc-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="450fc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="990f4-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="990f4-113">Requirements</span></span>  
+ <span data-ttu-id="990f4-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="990f4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="450fc-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="450fc-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="990f4-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="990f4-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="450fc-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="450fc-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="990f4-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="990f4-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="450fc-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="450fc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="990f4-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="990f4-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="450fc-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="450fc-118">See also</span></span>
-- [<span data-ttu-id="450fc-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="450fc-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="450fc-120">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="450fc-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="450fc-121">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="450fc-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="450fc-122">プロファイル</span><span class="sxs-lookup"><span data-stu-id="450fc-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="990f4-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="990f4-118">See also</span></span>
+
+- [<span data-ttu-id="990f4-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="990f4-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="990f4-120">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="990f4-120">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="990f4-121">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="990f4-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="990f4-122">プロファイル</span><span class="sxs-lookup"><span data-stu-id="990f4-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

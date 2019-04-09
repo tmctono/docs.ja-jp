@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104597"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="17385-102">ISymUnmanagedDocument::GetLanguage メソッド</span><span class="sxs-lookup"><span data-stu-id="17385-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="17385-103">このドキュメントの言語識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="17385-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="63f64-102">ISymUnmanagedDocument::GetLanguage メソッド</span><span class="sxs-lookup"><span data-stu-id="63f64-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="63f64-103">このドキュメントの言語識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="63f64-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17385-104">構文</span><span class="sxs-lookup"><span data-stu-id="17385-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63f64-104">構文</span><span class="sxs-lookup"><span data-stu-id="63f64-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="17385-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="17385-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63f64-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="63f64-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="17385-106">[out]言語識別子を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="17385-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="63f64-106">[out]言語識別子を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="63f64-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="17385-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="17385-107">Return Value</span></span>  
- <span data-ttu-id="17385-108">メソッドが成功した場合は s_ok を返します。</span><span class="sxs-lookup"><span data-stu-id="17385-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="63f64-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="63f64-107">Return Value</span></span>  
+ <span data-ttu-id="63f64-108">メソッドが成功した場合は s_ok を返します。</span><span class="sxs-lookup"><span data-stu-id="63f64-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17385-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="17385-109">See also</span></span>
-- [<span data-ttu-id="17385-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17385-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="63f64-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="63f64-109">See also</span></span>
+
+- [<span data-ttu-id="63f64-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="63f64-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

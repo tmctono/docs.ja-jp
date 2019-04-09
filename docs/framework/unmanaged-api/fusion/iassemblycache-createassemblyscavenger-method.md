@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139ade26c8e55feae6e655e51f9d5cd3a167f67e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4ec66a3e8ec09da31ef935d9f875e139fe3645bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097435"
 ---
-# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="9a8c1-102">IAssemblyCache::CreateAssemblyScavenger メソッド</span><span class="sxs-lookup"><span data-stu-id="9a8c1-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
-<span data-ttu-id="9a8c1-103">Fusion のテクノロジでは、内部使用のため予約されています。</span><span class="sxs-lookup"><span data-stu-id="9a8c1-103">Reserved for internal use by the fusion technology.</span></span>  
+# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="10372-102">IAssemblyCache::CreateAssemblyScavenger メソッド</span><span class="sxs-lookup"><span data-stu-id="10372-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
+<span data-ttu-id="10372-103">Fusion のテクノロジでは、内部使用のため予約されています。</span><span class="sxs-lookup"><span data-stu-id="10372-103">Reserved for internal use by the fusion technology.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a8c1-104">構文</span><span class="sxs-lookup"><span data-stu-id="9a8c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10372-104">構文</span><span class="sxs-lookup"><span data-stu-id="10372-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyScavenger (  
@@ -35,16 +35,17 @@ HRESULT CreateAssemblyScavenger (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a8c1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9a8c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10372-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="10372-105">Parameters</span></span>  
  `ppUnkReserved`  
- <span data-ttu-id="9a8c1-106">[out]返された`IUnknown`ポインター。</span><span class="sxs-lookup"><span data-stu-id="9a8c1-106">[out] The returned `IUnknown` pointer.</span></span>  
+ <span data-ttu-id="10372-106">[out]返された`IUnknown`ポインター。</span><span class="sxs-lookup"><span data-stu-id="10372-106">[out] The returned `IUnknown` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a8c1-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a8c1-107">Requirements</span></span>  
- <span data-ttu-id="9a8c1-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a8c1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10372-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="10372-107">Requirements</span></span>  
+ <span data-ttu-id="10372-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="10372-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a8c1-109">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="9a8c1-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="10372-109">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="10372-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="9a8c1-110">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a8c1-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="10372-110">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="10372-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a8c1-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a8c1-111">See also</span></span>
-- [<span data-ttu-id="9a8c1-112">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9a8c1-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="10372-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="10372-111">See also</span></span>
+
+- [<span data-ttu-id="10372-112">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="10372-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

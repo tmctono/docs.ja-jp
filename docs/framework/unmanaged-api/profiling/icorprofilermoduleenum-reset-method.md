@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1389d313cccf95f50e2ee7d99faf37d43b9ec3bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e8a916116eb92fa1e71fc115fd468938fd92fb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101459"
 ---
-# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="3fb54-102">ICorProfilerModuleEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="3fb54-102">ICorProfilerModuleEnum::Reset Method</span></span>
-<span data-ttu-id="3fb54-103">この列挙子のカーソルをシーケンスの開始位置に移動します。</span><span class="sxs-lookup"><span data-stu-id="3fb54-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="93b66-102">ICorProfilerModuleEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="93b66-102">ICorProfilerModuleEnum::Reset Method</span></span>
+<span data-ttu-id="93b66-103">この列挙子のカーソルをシーケンスの開始位置に移動します。</span><span class="sxs-lookup"><span data-stu-id="93b66-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3fb54-104">構文</span><span class="sxs-lookup"><span data-stu-id="3fb54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93b66-104">構文</span><span class="sxs-lookup"><span data-stu-id="93b66-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="3fb54-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="3fb54-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="93b66-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="93b66-105">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3fb54-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="3fb54-106">Requirements</span></span>  
- <span data-ttu-id="3fb54-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3fb54-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93b66-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="93b66-106">Requirements</span></span>  
+ <span data-ttu-id="93b66-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93b66-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3fb54-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3fb54-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="93b66-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="93b66-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3fb54-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3fb54-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="93b66-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93b66-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3fb54-110">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3fb54-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="93b66-110">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="93b66-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3fb54-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3fb54-111">See also</span></span>
-- [<span data-ttu-id="3fb54-112">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3fb54-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="3fb54-113">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="3fb54-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="93b66-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="93b66-111">See also</span></span>
+
+- [<span data-ttu-id="93b66-112">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93b66-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="93b66-113">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="93b66-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
