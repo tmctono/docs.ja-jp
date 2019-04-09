@@ -2,23 +2,24 @@
 title: WmiPutInstanceFailed
 ms.date: 03/30/2017
 ms.assetid: 1e56f6db-c6f6-4e57-9668-3ca79c3750af
-ms.openlocfilehash: a28c49a73ccdaeabae4874eb6e651347066fae48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cfc58eb23e4d5be260df3282f34486910d368c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090551"
 ---
-# <a name="wmiputinstancefailed"></a><span data-ttu-id="9e9ec-102">WmiPutInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="9e9ec-102">WmiPutInstanceFailed</span></span>
-<span data-ttu-id="9e9ec-103">Id:121</span><span class="sxs-lookup"><span data-stu-id="9e9ec-103">Id: 121</span></span>  
+# <a name="wmiputinstancefailed"></a><span data-ttu-id="2430b-102">WmiPutInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="2430b-102">WmiPutInstanceFailed</span></span>
+<span data-ttu-id="2430b-103">Id:121</span><span class="sxs-lookup"><span data-stu-id="2430b-103">Id: 121</span></span>  
   
- <span data-ttu-id="9e9ec-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="9e9ec-104">Severity: Error</span></span>  
+ <span data-ttu-id="2430b-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="2430b-104">Severity: Error</span></span>  
   
- <span data-ttu-id="9e9ec-105">カテゴリ:ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9e9ec-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="2430b-105">カテゴリ:ServiceModel</span><span class="sxs-lookup"><span data-stu-id="2430b-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9e9ec-106">説明</span><span class="sxs-lookup"><span data-stu-id="9e9ec-106">Description</span></span>  
- <span data-ttu-id="9e9ec-107">このイベントは、WMI PutInstance 要求が処理されなかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="9e9ec-107">This event indicates that the WMI PutInstance request was not processed.</span></span> <span data-ttu-id="9e9ec-108">イベントには、WMI オブジェクト、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="9e9ec-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="2430b-106">説明</span><span class="sxs-lookup"><span data-stu-id="2430b-106">Description</span></span>  
+ <span data-ttu-id="2430b-107">このイベントは、WMI PutInstance 要求が処理されなかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="2430b-107">This event indicates that the WMI PutInstance request was not processed.</span></span> <span data-ttu-id="2430b-108">イベントには、WMI オブジェクト、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="2430b-108">The event lists the WMI Object, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e9ec-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9e9ec-109">See also</span></span>
-- [<span data-ttu-id="9e9ec-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="9e9ec-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="9e9ec-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="9e9ec-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="2430b-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2430b-109">See also</span></span>
+
+- [<span data-ttu-id="2430b-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="2430b-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="2430b-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="2430b-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

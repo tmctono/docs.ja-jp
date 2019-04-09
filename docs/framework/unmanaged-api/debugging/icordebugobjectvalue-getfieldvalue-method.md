@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d4e4a2dd9d1f419c94152e4131997f39b2d3b83
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8778edf9ac6e32d5dab3a53a6d9cc643a8df13b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107914"
 ---
-# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="3f965-102">ICorDebugObjectValue::GetFieldValue メソッド</span><span class="sxs-lookup"><span data-stu-id="3f965-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
-<span data-ttu-id="3f965-103">このオブジェクトの値の指定したクラスの指定したフィールドの値を取得します。</span><span class="sxs-lookup"><span data-stu-id="3f965-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
+# <a name="icordebugobjectvaluegetfieldvalue-method"></a><span data-ttu-id="8cb02-102">ICorDebugObjectValue::GetFieldValue メソッド</span><span class="sxs-lookup"><span data-stu-id="8cb02-102">ICorDebugObjectValue::GetFieldValue Method</span></span>
+<span data-ttu-id="8cb02-103">このオブジェクトの値の指定したクラスの指定したフィールドの値を取得します。</span><span class="sxs-lookup"><span data-stu-id="8cb02-103">Gets the value of the specified field of the specified class for this object value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f965-104">構文</span><span class="sxs-lookup"><span data-stu-id="3f965-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cb02-104">構文</span><span class="sxs-lookup"><span data-stu-id="8cb02-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFieldValue (  
@@ -37,30 +37,28 @@ HRESULT GetFieldValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f965-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3f965-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8cb02-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8cb02-105">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="3f965-106">[in]フィールドの値を取得する対象のクラスを表す"ICorDebugClass"オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3f965-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
+ <span data-ttu-id="8cb02-106">[in]フィールドの値を取得する対象のクラスを表す"ICorDebugClass"オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8cb02-106">[in] A pointer to an "ICorDebugClass" object that represents the class for which to get the field value.</span></span>  
   
  `fieldDef`  
- <span data-ttu-id="3f965-107">[in]`mdFieldDef`フィールドを記述するメタデータを参照するトークン。</span><span class="sxs-lookup"><span data-stu-id="3f965-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
+ <span data-ttu-id="8cb02-107">[in]`mdFieldDef`フィールドを記述するメタデータを参照するトークン。</span><span class="sxs-lookup"><span data-stu-id="8cb02-107">[in] An `mdFieldDef` token that references the metadata describing the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="3f965-108">[out]指定したフィールドの値を表す"ICorDebugValue"オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3f965-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
+ <span data-ttu-id="8cb02-108">[out]指定したフィールドの値を表す"ICorDebugValue"オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8cb02-108">[out] A pointer to an "ICorDebugValue" object that represents the value of the specified field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f965-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="3f965-109">Remarks</span></span>  
- <span data-ttu-id="3f965-110">指定された、クラス、`pClass`パラメーターに、オブジェクトの値のクラスの階層にする必要があり、フィールドはそのクラスのフィールドである必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f965-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8cb02-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="8cb02-109">Remarks</span></span>  
+ <span data-ttu-id="8cb02-110">指定された、クラス、`pClass`パラメーターに、オブジェクトの値のクラスの階層にする必要があり、フィールドはそのクラスのフィールドである必要があります。</span><span class="sxs-lookup"><span data-stu-id="8cb02-110">The class, specified in the `pClass` parameter, must be in the hierarchy of the object value's class, and the field must be a field of that class.</span></span>  
   
- <span data-ttu-id="3f965-111">`GetFieldValue`汎用オブジェクトおよびジェネリック クラスのメソッドは成功します。</span><span class="sxs-lookup"><span data-stu-id="3f965-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="3f965-112">たとえば場合、MyDictionary\<V > ディクショナリから継承\<文字列、V >、オブジェクトの値の種類 MyDictionary\<int32 > を渡して、`ICorDebugClass`ディクショナリのオブジェクト\<K, V > はディクショナリのフィールドを正常に取得\<string, int32 > です。</span><span class="sxs-lookup"><span data-stu-id="3f965-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
+ <span data-ttu-id="8cb02-111">`GetFieldValue`汎用オブジェクトおよびジェネリック クラスのメソッドは成功します。</span><span class="sxs-lookup"><span data-stu-id="8cb02-111">The `GetFieldValue` method will still succeed for generic objects and generic classes.</span></span> <span data-ttu-id="8cb02-112">たとえば場合、MyDictionary\<V > ディクショナリから継承\<文字列、V >、オブジェクトの値の種類 MyDictionary\<int32 > を渡して、`ICorDebugClass`ディクショナリのオブジェクト\<K, V > はディクショナリのフィールドを正常に取得\<string, int32 > です。</span><span class="sxs-lookup"><span data-stu-id="8cb02-112">For example, if MyDictionary\<V> inherits from Dictionary\<string,V>, and the object value is of type MyDictionary\<int32>, passing the `ICorDebugClass` object for Dictionary\<K,V> will successfully get a field of Dictionary\<string,int32>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f965-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="3f965-113">Requirements</span></span>  
- <span data-ttu-id="3f965-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f965-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8cb02-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="8cb02-113">Requirements</span></span>  
+ <span data-ttu-id="8cb02-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cb02-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f965-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f965-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8cb02-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8cb02-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3f965-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f965-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8cb02-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8cb02-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f965-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f965-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8cb02-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="8cb02-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3f965-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f965-118">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="8cb02-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cb02-118">See also</span></span>

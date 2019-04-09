@@ -2,23 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 ms.date: 03/30/2017
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
-ms.openlocfilehash: b25debfd9b1e6de6b93fd4dfa8b96925718d9d87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9434f2f902a50a37fb3efee22fd3b18b33af9129
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138971"
 ---
-# <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a><span data-ttu-id="2efc6-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span><span class="sxs-lookup"><span data-stu-id="2efc6-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span></span>
-<span data-ttu-id="2efc6-103">WS-AT プロトコル サービスは、認識されない不安定な参加要素からの準備メッセージまたはリプレイ メッセージを受信しました。</span><span class="sxs-lookup"><span data-stu-id="2efc6-103">The WS-AT protocol service received a Prepared or Replay message from an unrecognized volatile participant.</span></span> <span data-ttu-id="2efc6-104">参加要素にエラーが返されました。この結果、トランザクションの結果が不明であると宣言します。</span><span class="sxs-lookup"><span data-stu-id="2efc6-104">A fault was returned to the participant, declares that the transaction's outcome is in doubt.</span></span>  
+# <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a><span data-ttu-id="6832b-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span><span class="sxs-lookup"><span data-stu-id="6832b-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span></span>
+<span data-ttu-id="6832b-103">WS-AT プロトコル サービスは、認識されない不安定な参加要素からの準備メッセージまたはリプレイ メッセージを受信しました。</span><span class="sxs-lookup"><span data-stu-id="6832b-103">The WS-AT protocol service received a Prepared or Replay message from an unrecognized volatile participant.</span></span> <span data-ttu-id="6832b-104">参加要素にエラーが返されました。この結果、トランザクションの結果が不明であると宣言します。</span><span class="sxs-lookup"><span data-stu-id="6832b-104">A fault was returned to the participant, declares that the transaction's outcome is in doubt.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2efc6-105">説明</span><span class="sxs-lookup"><span data-stu-id="2efc6-105">Description</span></span>  
- <span data-ttu-id="2efc6-106">ローカル トランザクション マネージャーが、既に認識していない揮発性参加リストからの準備メッセージまたはリプレイ メッセージを受信するとトレースされます。</span><span class="sxs-lookup"><span data-stu-id="2efc6-106">Traced when the local Transaction Manager receives a Prepared or Replay message from a Volatile enlistment that it has already forgotten.</span></span>  
+## <a name="description"></a><span data-ttu-id="6832b-105">説明</span><span class="sxs-lookup"><span data-stu-id="6832b-105">Description</span></span>  
+ <span data-ttu-id="6832b-106">ローカル トランザクション マネージャーが、既に認識していない揮発性参加リストからの準備メッセージまたはリプレイ メッセージを受信するとトレースされます。</span><span class="sxs-lookup"><span data-stu-id="6832b-106">Traced when the local Transaction Manager receives a Prepared or Replay message from a Volatile enlistment that it has already forgotten.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="2efc6-107">トラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="2efc6-107">Troubleshooting</span></span>  
- <span data-ttu-id="2efc6-108">不安定な参加要素からメッセージが遅れて届く原因を調査してください。</span><span class="sxs-lookup"><span data-stu-id="2efc6-108">Investigate potential causes of late messages coming from the Volatile participant.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="6832b-107">トラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="6832b-107">Troubleshooting</span></span>  
+ <span data-ttu-id="6832b-108">不安定な参加要素からメッセージが遅れて届く原因を調査してください。</span><span class="sxs-lookup"><span data-stu-id="6832b-108">Investigate potential causes of late messages coming from the Volatile participant.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2efc6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2efc6-109">See also</span></span>
-- [<span data-ttu-id="2efc6-110">トレース</span><span class="sxs-lookup"><span data-stu-id="2efc6-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="2efc6-111">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="2efc6-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2efc6-112">管理と診断</span><span class="sxs-lookup"><span data-stu-id="2efc6-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6832b-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="6832b-109">See also</span></span>
+
+- [<span data-ttu-id="6832b-110">トレース</span><span class="sxs-lookup"><span data-stu-id="6832b-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="6832b-111">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="6832b-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="6832b-112">管理と診断</span><span class="sxs-lookup"><span data-stu-id="6832b-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

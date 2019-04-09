@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04bf526b4868fc683eac92a84828ae36b02bb3ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 649f44bd7966b9ca89d2d040b7eede662404aa0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093554"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="d0693-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath メソッド</span><span class="sxs-lookup"><span data-stu-id="d0693-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
-<span data-ttu-id="d0693-103">検索パスを取得します。</span><span class="sxs-lookup"><span data-stu-id="d0693-103">Gets the search path.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="c6235-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath メソッド</span><span class="sxs-lookup"><span data-stu-id="c6235-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+<span data-ttu-id="c6235-103">検索パスを取得します。</span><span class="sxs-lookup"><span data-stu-id="c6235-103">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0693-104">構文</span><span class="sxs-lookup"><span data-stu-id="d0693-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6235-104">構文</span><span class="sxs-lookup"><span data-stu-id="c6235-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0693-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d0693-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6235-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c6235-105">Parameters</span></span>  
  `pcchPath`  
- <span data-ttu-id="d0693-106">[out]ポインター、`ULONG32`検索パスの格納に必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="d0693-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="c6235-106">[out]ポインター、`ULONG32`検索パスの格納に必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="c6235-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d0693-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="d0693-107">Return Value</span></span>  
- <span data-ttu-id="d0693-108">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="d0693-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c6235-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="c6235-107">Return Value</span></span>  
+ <span data-ttu-id="c6235-108">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="c6235-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0693-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="d0693-109">Requirements</span></span>  
- <span data-ttu-id="d0693-110">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d0693-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6235-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c6235-109">Requirements</span></span>  
+ <span data-ttu-id="c6235-110">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c6235-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0693-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0693-111">See also</span></span>
-- [<span data-ttu-id="d0693-112">ISymUnmanagedSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d0693-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6235-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c6235-111">See also</span></span>
+
+- [<span data-ttu-id="c6235-112">ISymUnmanagedSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c6235-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
