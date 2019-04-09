@@ -1,35 +1,36 @@
 ---
-title: '方法: デザイナーを使用してタブ ページにコントロールを追加します。'
+title: '方法: デザイナーを使ってタブ ページにコントロールを追加する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabPage control
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 21db54ac178ef6e10a03c2917886ffa7e5d84a41
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132712"
 ---
-# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a><span data-ttu-id="422dc-102">方法: デザイナーを使用してタブ ページにコントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="422dc-102">How to: Add a Control to a Tab Page Using the Designer</span></span>
-<span data-ttu-id="422dc-103">Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に他のコントロールを表示することです。</span><span class="sxs-lookup"><span data-stu-id="422dc-103">The use of the Windows Forms <xref:System.Windows.Forms.TabControl> is to display other controls in an organized fashion.</span></span> <span data-ttu-id="422dc-104">これらの手順を使用すると、タブ ページの本体に画像を表示します。</span><span class="sxs-lookup"><span data-stu-id="422dc-104">You can use these instructions to display a picture on the main part of a tab page.</span></span> <span data-ttu-id="422dc-105">タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。</span><span class="sxs-lookup"><span data-stu-id="422dc-105">For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
+# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a><span data-ttu-id="ffe56-102">方法: デザイナーを使ってタブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="ffe56-102">How to: Add a Control to a Tab Page Using the Designer</span></span>
+<span data-ttu-id="ffe56-103">Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に他のコントロールを表示することです。</span><span class="sxs-lookup"><span data-stu-id="ffe56-103">The use of the Windows Forms <xref:System.Windows.Forms.TabControl> is to display other controls in an organized fashion.</span></span> <span data-ttu-id="ffe56-104">これらの手順を使用すると、タブ ページの本体に画像を表示します。</span><span class="sxs-lookup"><span data-stu-id="ffe56-104">You can use these instructions to display a picture on the main part of a tab page.</span></span> <span data-ttu-id="ffe56-105">タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。</span><span class="sxs-lookup"><span data-stu-id="ffe56-105">For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
   
- <span data-ttu-id="422dc-106">次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.TabControl>コントロール。</span><span class="sxs-lookup"><span data-stu-id="422dc-106">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TabControl> control.</span></span> <span data-ttu-id="422dc-107">このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。</span><span class="sxs-lookup"><span data-stu-id="422dc-107">For information about setting up such a project, see [How to: Create a Windows Forms application project](/visualstudio/ide/step-1-create-a-windows-forms-application-project) and [How to: Add Controls to Windows Forms](how-to-add-controls-to-windows-forms.md).</span></span>  
+ <span data-ttu-id="ffe56-106">次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.TabControl>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ffe56-106">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TabControl> control.</span></span> <span data-ttu-id="ffe56-107">このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。</span><span class="sxs-lookup"><span data-stu-id="ffe56-107">For information about setting up such a project, see [How to: Create a Windows Forms application project](/visualstudio/ide/step-1-create-a-windows-forms-application-project) and [How to: Add Controls to Windows Forms](how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="422dc-108">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="422dc-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="422dc-109">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="422dc-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="422dc-110">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="422dc-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="ffe56-108">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="ffe56-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="ffe56-109">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ffe56-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="ffe56-110">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ffe56-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-add-a-control-using-the-designer"></a><span data-ttu-id="422dc-111">デザイナーを使用してコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="422dc-111">To add a control using the designer</span></span>  
+### <a name="to-add-a-control-using-the-designer"></a><span data-ttu-id="ffe56-111">デザイナーを使用してコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="ffe56-111">To add a control using the designer</span></span>  
   
-1.  <span data-ttu-id="422dc-112">上部に表示されるように、適切なタブ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="422dc-112">Click the appropriate tab page so that it appears on top.</span></span>  
+1.  <span data-ttu-id="ffe56-112">上部に表示されるように、適切なタブ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="ffe56-112">Click the appropriate tab page so that it appears on top.</span></span>  
   
-2.  <span data-ttu-id="422dc-113">タブ ページにコントロールを描画します。</span><span class="sxs-lookup"><span data-stu-id="422dc-113">Draw the control on the tab page.</span></span>  
+2.  <span data-ttu-id="ffe56-113">タブ ページにコントロールを描画します。</span><span class="sxs-lookup"><span data-stu-id="ffe56-113">Draw the control on the tab page.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="422dc-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="422dc-114">See also</span></span>
-- [<span data-ttu-id="422dc-115">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="422dc-115">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="422dc-116">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="422dc-116">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="422dc-117">方法: Windows フォーム TabControl の外観を変更します。</span><span class="sxs-lookup"><span data-stu-id="422dc-117">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [<span data-ttu-id="422dc-118">方法: タブ ページを無効にします。</span><span class="sxs-lookup"><span data-stu-id="422dc-118">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="422dc-119">方法: Windows フォーム tabcontrol のタブ追加および削除</span><span class="sxs-lookup"><span data-stu-id="422dc-119">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="ffe56-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="ffe56-114">See also</span></span>
+
+- [<span data-ttu-id="ffe56-115">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="ffe56-115">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="ffe56-116">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="ffe56-116">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="ffe56-117">方法: Windows フォーム TabControl の表示形式を変更する</span><span class="sxs-lookup"><span data-stu-id="ffe56-117">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="ffe56-118">方法: タブ ページを無効化する</span><span class="sxs-lookup"><span data-stu-id="ffe56-118">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="ffe56-119">方法: Windows フォーム TabControl のタブを追加および削除する</span><span class="sxs-lookup"><span data-stu-id="ffe56-119">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
