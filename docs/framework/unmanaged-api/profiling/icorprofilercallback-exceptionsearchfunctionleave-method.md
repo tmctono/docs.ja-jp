@@ -17,31 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d20aa04b292fd29b60d68b844ef410258d90d31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdea3b0cc5b21cd881fe0ff3e0278444a22d083d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117197"
 ---
-# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="2504d-102">ICorProfilerCallback::ExceptionSearchFunctionLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="2504d-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
-<span data-ttu-id="2504d-103">例外処理の検索フェーズで、関数の検索が完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="2504d-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a><span data-ttu-id="15d99-102">ICorProfilerCallback::ExceptionSearchFunctionLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="15d99-102">ICorProfilerCallback::ExceptionSearchFunctionLeave Method</span></span>
+<span data-ttu-id="15d99-103">例外処理の検索フェーズで、関数の検索が完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="15d99-103">Notifies the profiler that the search phase of exception handling has finished searching a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2504d-104">構文</span><span class="sxs-lookup"><span data-stu-id="2504d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15d99-104">構文</span><span class="sxs-lookup"><span data-stu-id="15d99-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFunctionLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2504d-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="2504d-105">Requirements</span></span>  
- <span data-ttu-id="2504d-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2504d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15d99-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="15d99-105">Requirements</span></span>  
+ <span data-ttu-id="15d99-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="15d99-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2504d-107">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2504d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="15d99-107">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15d99-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2504d-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2504d-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15d99-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15d99-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2504d-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2504d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="15d99-109">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="15d99-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2504d-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="2504d-110">See also</span></span>
-- [<span data-ttu-id="2504d-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2504d-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="2504d-112">ExceptionSearchFunctionEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="2504d-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
+## <a name="see-also"></a><span data-ttu-id="15d99-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="15d99-110">See also</span></span>
+
+- [<span data-ttu-id="15d99-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="15d99-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="15d99-112">ExceptionSearchFunctionEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="15d99-112">ExceptionSearchFunctionEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
