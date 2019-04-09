@@ -1,5 +1,5 @@
 ---
-title: '方法: オブジェクトの遅延初期化を実行します。'
+title: '方法: オブジェクトの遅延初期化を実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188964"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="08940-102">方法: オブジェクトの遅延初期化を実行します。</span><span class="sxs-lookup"><span data-stu-id="08940-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="08940-103"><xref:System.Lazy%601?displayProperty=nameWithType> クラスは、オブジェクトの遅延初期化とインスタンス化を実行する操作を簡略化します。</span><span class="sxs-lookup"><span data-stu-id="08940-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="08940-104">オブジェクトを限定的に初期化すれば、不要なオブジェクトを作成する必要がなくなります。また、オブジェクトに初めてアクセスするときまで、そのオブジェクトの初期化を延期できます。</span><span class="sxs-lookup"><span data-stu-id="08940-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="08940-105">詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="08940-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="69bce-102">方法: オブジェクトの遅延初期化を実行する</span><span class="sxs-lookup"><span data-stu-id="69bce-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="69bce-103"><xref:System.Lazy%601?displayProperty=nameWithType> クラスは、オブジェクトの遅延初期化とインスタンス化を実行する操作を簡略化します。</span><span class="sxs-lookup"><span data-stu-id="69bce-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="69bce-104">オブジェクトを限定的に初期化すれば、不要なオブジェクトを作成する必要がなくなります。また、オブジェクトに初めてアクセスするときまで、そのオブジェクトの初期化を延期できます。</span><span class="sxs-lookup"><span data-stu-id="69bce-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="69bce-105">詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="69bce-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="08940-106">例</span><span class="sxs-lookup"><span data-stu-id="08940-106">Example</span></span>  
- <span data-ttu-id="08940-107">次の例では、<xref:System.Lazy%601> で値を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="08940-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="08940-108">`someCondition` 変数を true または false に設定する他の一部のコードでは、遅延変数は必要ないものとします。</span><span class="sxs-lookup"><span data-stu-id="08940-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="69bce-106">例</span><span class="sxs-lookup"><span data-stu-id="69bce-106">Example</span></span>  
+ <span data-ttu-id="69bce-107">次の例では、<xref:System.Lazy%601> で値を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="69bce-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="69bce-108">`someCondition` 変数を true または false に設定する他の一部のコードでは、遅延変数は必要ないものとします。</span><span class="sxs-lookup"><span data-stu-id="69bce-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -70,12 +70,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="08940-109">例</span><span class="sxs-lookup"><span data-stu-id="08940-109">Example</span></span>  
- <span data-ttu-id="08940-110">次の例では、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、現在のスレッド上の現在のオブジェクト インスタンスでのみ表示される型を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="08940-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="69bce-109">例</span><span class="sxs-lookup"><span data-stu-id="69bce-109">Example</span></span>  
+ <span data-ttu-id="69bce-110">次の例では、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、現在のスレッド上の現在のオブジェクト インスタンスでのみ表示される型を初期化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="69bce-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="08940-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="08940-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69bce-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="69bce-111">See also</span></span>
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="08940-112">遅延初期化</span><span class="sxs-lookup"><span data-stu-id="08940-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)
+- [<span data-ttu-id="69bce-112">遅延初期化</span><span class="sxs-lookup"><span data-stu-id="69bce-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)

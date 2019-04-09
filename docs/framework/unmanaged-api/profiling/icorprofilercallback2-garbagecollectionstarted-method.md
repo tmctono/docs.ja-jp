@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3c95bbf946cd208a1cc01463aaae76e3842c8fa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f5f9104dded44540c47c955c15354d8d76a27650
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183073"
 ---
-# <a name="icorprofilercallback2garbagecollectionstarted-method"></a><span data-ttu-id="61ece-102">ICorProfilerCallback2::GarbageCollectionStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="61ece-102">ICorProfilerCallback2::GarbageCollectionStarted Method</span></span>
-<span data-ttu-id="61ece-103">ガベージ コレクションが開始されたことをコード プロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="61ece-103">Notifies the code profiler that garbage collection has started.</span></span>  
+# <a name="icorprofilercallback2garbagecollectionstarted-method"></a><span data-ttu-id="5d5fb-102">ICorProfilerCallback2::GarbageCollectionStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="5d5fb-102">ICorProfilerCallback2::GarbageCollectionStarted Method</span></span>
+<span data-ttu-id="5d5fb-103">ガベージ コレクションが開始されたことをコード プロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-103">Notifies the code profiler that garbage collection has started.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61ece-104">構文</span><span class="sxs-lookup"><span data-stu-id="61ece-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d5fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="5d5fb-104">Syntax</span></span>  
   
 ```  
 HRESULT GarbageCollectionStarted(  
@@ -36,32 +36,33 @@ HRESULT GarbageCollectionStarted(
     [in] COR_PRF_GC_REASON reason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61ece-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="61ece-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d5fb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5d5fb-105">Parameters</span></span>  
  `cGenerations`  
- <span data-ttu-id="61ece-106">[in]内のエントリの合計数、`generationCollected`配列。</span><span class="sxs-lookup"><span data-stu-id="61ece-106">[in] The total number of entries in the `generationCollected` array.</span></span>  
+ <span data-ttu-id="5d5fb-106">[in]内のエントリの合計数、`generationCollected`配列。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-106">[in] The total number of entries in the `generationCollected` array.</span></span>  
   
  `generationCollected`  
- <span data-ttu-id="61ece-107">[in]ブール値の配列`true`このガベージ コレクションによって収集されます。 それ以外の場合、配列のインデックスに対応する生成されている場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="61ece-107">[in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.</span></span>  
+ <span data-ttu-id="5d5fb-107">[in]ブール値の配列`true`このガベージ コレクションによって収集されます。 それ以外の場合、配列のインデックスに対応する生成されている場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-107">[in] An array of Boolean values, which are `true` if the generation that corresponds to the array index is being collected by this garbage collection; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="61ece-108">値によって、配列のインデックスが、 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体は、ジェネレーションを示します。</span><span class="sxs-lookup"><span data-stu-id="61ece-108">The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.</span></span>  
+ <span data-ttu-id="5d5fb-108">値によって、配列のインデックスが、 [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)列挙体は、ジェネレーションを示します。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-108">The array is indexed by a value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration, which indicates the generation.</span></span>  
   
  `reason`  
- <span data-ttu-id="61ece-109">[in]値、 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)ガベージ コレクション理由を示す列挙体が発生しました。</span><span class="sxs-lookup"><span data-stu-id="61ece-109">[in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.</span></span>  
+ <span data-ttu-id="5d5fb-109">[in]値、 [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)ガベージ コレクション理由を示す列挙体が発生しました。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-109">[in] A value of the [COR_PRF_GC_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md) enumeration that indicates the reason the garbage collection was induced.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="61ece-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="61ece-110">Remarks</span></span>  
- <span data-ttu-id="61ece-111">このガベージ コレクションに関連するすべてのコールバック間で発生する、`GarbageCollectionStarted`コールバックと、対応する[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="61ece-111">All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback.</span></span> <span data-ttu-id="61ece-112">これらのコールバックは、同じスレッドでは発生する必要があります。</span><span class="sxs-lookup"><span data-stu-id="61ece-112">These callbacks need not occur on the same thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d5fb-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="5d5fb-110">Remarks</span></span>  
+ <span data-ttu-id="5d5fb-111">このガベージ コレクションに関連するすべてのコールバック間で発生する、`GarbageCollectionStarted`コールバックと、対応する[icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-111">All callbacks that pertain to this garbage collection will occur between the `GarbageCollectionStarted` callback and the corresponding [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback.</span></span> <span data-ttu-id="5d5fb-112">これらのコールバックは、同じスレッドでは発生する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-112">These callbacks need not occur on the same thread.</span></span>  
   
- <span data-ttu-id="61ece-113">プロファイラーが中に元の場所にオブジェクトを検査するは安全では、`GarbageCollectionStarted`コールバック。</span><span class="sxs-lookup"><span data-stu-id="61ece-113">It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback.</span></span> <span data-ttu-id="61ece-114">ガベージ コレクターが移動オブジェクトからの戻り値の後に開始されます`GarbageCollectionStarted`します。</span><span class="sxs-lookup"><span data-stu-id="61ece-114">The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`.</span></span> <span data-ttu-id="61ece-115">プロファイラーがこのコールバックから戻ると後、プロファイラーが受信するまで無効にするすべてのオブジェクト Id を検討してください、`ICorProfilerCallback2::GarbageCollectionFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="61ece-115">After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.</span></span>  
+ <span data-ttu-id="5d5fb-113">プロファイラーが中に元の場所にオブジェクトを検査するは安全では、`GarbageCollectionStarted`コールバック。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-113">It is safe for the profiler to inspect objects in their original locations during the `GarbageCollectionStarted` callback.</span></span> <span data-ttu-id="5d5fb-114">ガベージ コレクターが移動オブジェクトからの戻り値の後に開始されます`GarbageCollectionStarted`します。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-114">The garbage collector will begin moving objects after the return from `GarbageCollectionStarted`.</span></span> <span data-ttu-id="5d5fb-115">プロファイラーがこのコールバックから戻ると後、プロファイラーが受信するまで無効にするすべてのオブジェクト Id を検討してください、`ICorProfilerCallback2::GarbageCollectionFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-115">After the profiler has returned from this callback, the profiler should consider all object IDs to be invalid until it receives a `ICorProfilerCallback2::GarbageCollectionFinished` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61ece-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="61ece-116">Requirements</span></span>  
- <span data-ttu-id="61ece-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="61ece-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d5fb-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="5d5fb-116">Requirements</span></span>  
+ <span data-ttu-id="5d5fb-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d5fb-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61ece-118">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61ece-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5d5fb-118">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5d5fb-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="61ece-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61ece-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5d5fb-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d5fb-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61ece-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61ece-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="5d5fb-120">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="5d5fb-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="61ece-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="61ece-121">See also</span></span>
-- [<span data-ttu-id="61ece-122">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="61ece-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="61ece-123">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="61ece-123">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5d5fb-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d5fb-121">See also</span></span>
+
+- [<span data-ttu-id="5d5fb-122">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d5fb-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="5d5fb-123">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d5fb-123">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561622"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186174"
 ---
-# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="9404d-102">CorSymSearchPolicyAttributes 列挙体</span><span class="sxs-lookup"><span data-stu-id="9404d-102">CorSymSearchPolicyAttributes Enumeration</span></span>
-<span data-ttu-id="9404d-103">シンボル リーダーの検索を行うときに使用されるポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="9404d-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="9404d-104">これらの定数を使って、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)と[isymunmanagedbinder 3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="9404d-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
+# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="968d1-102">CorSymSearchPolicyAttributes 列挙体</span><span class="sxs-lookup"><span data-stu-id="968d1-102">CorSymSearchPolicyAttributes Enumeration</span></span>
+<span data-ttu-id="968d1-103">シンボル リーダーの検索を行うときに使用されるポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="968d1-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="968d1-104">これらの定数を使って、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)と[isymunmanagedbinder 3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="968d1-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9404d-105">信頼できないソースからプログラム データベース (PDB) ファイルをセキュリティ リスクになります。</span><span class="sxs-lookup"><span data-stu-id="9404d-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="968d1-105">信頼できないソースからプログラム データベース (PDB) ファイルをセキュリティ リスクになります。</span><span class="sxs-lookup"><span data-stu-id="968d1-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9404d-106">構文</span><span class="sxs-lookup"><span data-stu-id="9404d-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="968d1-106">構文</span><span class="sxs-lookup"><span data-stu-id="968d1-106">Syntax</span></span>  
   
 ```  
 typedef enum CorSymSearchPolicyAttributes  
@@ -41,17 +41,18 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9404d-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="9404d-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="968d1-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="968d1-107">Members</span></span>  
   
-|<span data-ttu-id="9404d-108">メンバー</span><span class="sxs-lookup"><span data-stu-id="9404d-108">Member</span></span>|<span data-ttu-id="9404d-109">説明</span><span class="sxs-lookup"><span data-stu-id="9404d-109">Description</span></span>|  
+|<span data-ttu-id="968d1-108">メンバー</span><span class="sxs-lookup"><span data-stu-id="968d1-108">Member</span></span>|<span data-ttu-id="968d1-109">説明</span><span class="sxs-lookup"><span data-stu-id="968d1-109">Description</span></span>|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|<span data-ttu-id="9404d-110">シンボルの検索パスのレジストリを照会します。</span><span class="sxs-lookup"><span data-stu-id="9404d-110">Queries the registry for symbol search paths.</span></span>|  
-|`AllowSymbolServerAccess`|<span data-ttu-id="9404d-111">シンボル サーバーにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="9404d-111">Accesses a symbol server.</span></span>|  
-|`AllowOriginalPathAccess`|<span data-ttu-id="9404d-112">デバッグ ディレクトリで指定されたパスを検索します。</span><span class="sxs-lookup"><span data-stu-id="9404d-112">Searches the path specified in the Debug directory.</span></span>|  
-|`AllowReferencePathAccess`|<span data-ttu-id="9404d-113">.Exe ファイルのある場所に PDB を検索します。</span><span class="sxs-lookup"><span data-stu-id="9404d-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
+|`AllowRegistryAccess`|<span data-ttu-id="968d1-110">シンボルの検索パスのレジストリを照会します。</span><span class="sxs-lookup"><span data-stu-id="968d1-110">Queries the registry for symbol search paths.</span></span>|  
+|`AllowSymbolServerAccess`|<span data-ttu-id="968d1-111">シンボル サーバーにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="968d1-111">Accesses a symbol server.</span></span>|  
+|`AllowOriginalPathAccess`|<span data-ttu-id="968d1-112">デバッグ ディレクトリで指定されたパスを検索します。</span><span class="sxs-lookup"><span data-stu-id="968d1-112">Searches the path specified in the Debug directory.</span></span>|  
+|`AllowReferencePathAccess`|<span data-ttu-id="968d1-113">.Exe ファイルのある場所に PDB を検索します。</span><span class="sxs-lookup"><span data-stu-id="968d1-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9404d-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="9404d-114">Requirements</span></span>  
- <span data-ttu-id="9404d-115">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9404d-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="968d1-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="968d1-114">Requirements</span></span>  
+ <span data-ttu-id="968d1-115">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="968d1-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9404d-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="9404d-116">See also</span></span>
-- [<span data-ttu-id="9404d-117">シンボル ストア診断列挙型</span><span class="sxs-lookup"><span data-stu-id="9404d-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="968d1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="968d1-116">See also</span></span>
+
+- [<span data-ttu-id="968d1-117">シンボル ストア診断列挙体</span><span class="sxs-lookup"><span data-stu-id="968d1-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

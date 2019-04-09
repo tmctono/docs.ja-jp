@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 777d7bf51db3e6984f30e31c46ac115301d13faf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183171"
 ---
-# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="f75c2-102">IMetaDataImport::FindMember メソッド</span><span class="sxs-lookup"><span data-stu-id="f75c2-102">IMetaDataImport::FindMember Method</span></span>
-<span data-ttu-id="f75c2-103">フィールドまたは囲まれたメソッドの memberdef にポインターをトークン取得を指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。</span><span class="sxs-lookup"><span data-stu-id="f75c2-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindmember-method"></a><span data-ttu-id="41ea9-102">IMetaDataImport::FindMember メソッド</span><span class="sxs-lookup"><span data-stu-id="41ea9-102">IMetaDataImport::FindMember Method</span></span>
+<span data-ttu-id="41ea9-103">フィールドまたは囲まれたメソッドの memberdef にポインターをトークン取得を指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。</span><span class="sxs-lookup"><span data-stu-id="41ea9-103">Gets a pointer to the MemberDef token for field or method that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f75c2-104">構文</span><span class="sxs-lookup"><span data-stu-id="f75c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41ea9-104">構文</span><span class="sxs-lookup"><span data-stu-id="41ea9-104">Syntax</span></span>  
   
 ```  
 HRESULT FindMember (  
@@ -39,41 +39,42 @@ HRESULT FindMember (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f75c2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f75c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41ea9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="41ea9-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="f75c2-106">[in]クラスまたはインターフェイスを検索するメンバーを囲む TypeDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="f75c2-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="f75c2-107">この値が場合`mdTokenNil`、グローバル変数またはグローバル関数、検索を実行します。</span><span class="sxs-lookup"><span data-stu-id="f75c2-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
+ <span data-ttu-id="41ea9-106">[in]クラスまたはインターフェイスを検索するメンバーを囲む TypeDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="41ea9-106">[in] The TypeDef token for the class or interface that encloses the member to search for.</span></span> <span data-ttu-id="41ea9-107">この値が場合`mdTokenNil`、グローバル変数またはグローバル関数、検索を実行します。</span><span class="sxs-lookup"><span data-stu-id="41ea9-107">If this value is `mdTokenNil`, the lookup is done for a global-variable or global-function.</span></span>  
   
  `szName`  
- <span data-ttu-id="f75c2-108">[in]検索するメンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="f75c2-108">[in] The name of the member to search for.</span></span>  
+ <span data-ttu-id="41ea9-108">[in]検索するメンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="41ea9-108">[in] The name of the member to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="f75c2-109">[in]メンバーのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f75c2-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="41ea9-109">[in]メンバーのバイナリ メタデータ シグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="41ea9-109">[in] A pointer to the binary metadata signature of the member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="f75c2-110">[in]バイト サイズ`pvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="f75c2-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="41ea9-110">[in]バイト サイズ`pvSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="41ea9-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmb`  
- <span data-ttu-id="f75c2-111">[out]一致する MemberDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f75c2-111">[out] A pointer to the matching MemberDef token.</span></span>  
+ <span data-ttu-id="41ea9-111">[out]一致する MemberDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="41ea9-111">[out] A pointer to the matching MemberDef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f75c2-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="f75c2-112">Remarks</span></span>  
- <span data-ttu-id="f75c2-113">外側のクラスまたはインターフェイスを使用してメンバーを指定する (`td`)、その名前 (`szName`)、および必要に応じてその署名 (`pvSigBlob`)。</span><span class="sxs-lookup"><span data-stu-id="f75c2-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="f75c2-114">クラスまたはインターフェイスで同じ名前の複数のメンバーである可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f75c2-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="f75c2-115">その場合は、一意の一致を検索するメンバーのシグネチャを渡します。</span><span class="sxs-lookup"><span data-stu-id="f75c2-115">In that case, pass the member's signature to find the unique match.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41ea9-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="41ea9-112">Remarks</span></span>  
+ <span data-ttu-id="41ea9-113">外側のクラスまたはインターフェイスを使用してメンバーを指定する (`td`)、その名前 (`szName`)、および必要に応じてその署名 (`pvSigBlob`)。</span><span class="sxs-lookup"><span data-stu-id="41ea9-113">You specify the member using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span> <span data-ttu-id="41ea9-114">クラスまたはインターフェイスで同じ名前の複数のメンバーである可能性があります。</span><span class="sxs-lookup"><span data-stu-id="41ea9-114">There might be multiple members with the same name in a class or interface.</span></span> <span data-ttu-id="41ea9-115">その場合は、一意の一致を検索するメンバーのシグネチャを渡します。</span><span class="sxs-lookup"><span data-stu-id="41ea9-115">In that case, pass the member's signature to find the unique match.</span></span>  
   
- <span data-ttu-id="f75c2-116">渡される署名`FindMember`生成された現在のスコープで特定のスコープにバインドされるためです。</span><span class="sxs-lookup"><span data-stu-id="f75c2-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="f75c2-117">署名は、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="f75c2-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="f75c2-118">トークンは、ローカルの TypeDef テーブルへのインデックスです。</span><span class="sxs-lookup"><span data-stu-id="f75c2-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="f75c2-119">現在のスコープのコンテキスト外にある実行時シグネチャを作成してを入力としてその署名を使用することはできません`FindMember`します。</span><span class="sxs-lookup"><span data-stu-id="f75c2-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
+ <span data-ttu-id="41ea9-116">渡される署名`FindMember`生成された現在のスコープで特定のスコープにバインドされるためです。</span><span class="sxs-lookup"><span data-stu-id="41ea9-116">The signature passed to `FindMember` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="41ea9-117">署名は、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="41ea9-117">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="41ea9-118">トークンは、ローカルの TypeDef テーブルへのインデックスです。</span><span class="sxs-lookup"><span data-stu-id="41ea9-118">The token is an index into the local TypeDef table.</span></span> <span data-ttu-id="41ea9-119">現在のスコープのコンテキスト外にある実行時シグネチャを作成してを入力としてその署名を使用することはできません`FindMember`します。</span><span class="sxs-lookup"><span data-stu-id="41ea9-119">You cannot build a run-time signature outside the context of the current scope and use that signature as input to input to `FindMember`.</span></span>  
   
- <span data-ttu-id="f75c2-120">`FindMember` クラスまたはインターフェイス内で直接定義されたメンバーのみを検索します継承されたメンバーは検索しません。</span><span class="sxs-lookup"><span data-stu-id="f75c2-120">`FindMember` finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
+ `FindMember` <span data-ttu-id="41ea9-120">クラスまたはインターフェイス内で直接定義されたメンバーのみを検索します継承されたメンバーは検索しません。</span><span class="sxs-lookup"><span data-stu-id="41ea9-120">finds only members that were defined directly in the class or interface; it does not find inherited members.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f75c2-121">`FindMember` ヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="f75c2-121">`FindMember` is a helper method.</span></span> <span data-ttu-id="f75c2-122">呼び出す[imetadataimport::findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md)その呼び出しには、一致が見つからない場合は`FindMember`呼び出して[imetadataimport::findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="f75c2-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
+>  `FindMember` <span data-ttu-id="41ea9-121">ヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="41ea9-121">is a helper method.</span></span> <span data-ttu-id="41ea9-122">呼び出す[imetadataimport::findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md)その呼び出しには、一致が見つからない場合は`FindMember`呼び出して[imetadataimport::findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="41ea9-122">It calls [IMetaDataImport::FindMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); if that call does not find a match, `FindMember` then calls [IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f75c2-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="f75c2-123">Requirements</span></span>  
- <span data-ttu-id="f75c2-124">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75c2-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41ea9-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="41ea9-123">Requirements</span></span>  
+ <span data-ttu-id="41ea9-124">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="41ea9-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f75c2-125">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f75c2-125">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="41ea9-125">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="41ea9-125">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f75c2-126">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f75c2-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="41ea9-126">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="41ea9-126">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f75c2-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f75c2-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="41ea9-127">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="41ea9-127">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f75c2-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="f75c2-128">See also</span></span>
-- [<span data-ttu-id="f75c2-129">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f75c2-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f75c2-130">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f75c2-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="41ea9-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="41ea9-128">See also</span></span>
+
+- [<span data-ttu-id="41ea9-129">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="41ea9-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="41ea9-130">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="41ea9-130">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

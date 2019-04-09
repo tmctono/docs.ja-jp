@@ -19,39 +19,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c6887d390ded1846e201711c9278663b9ff2888
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177490"
 ---
-# <a name="corexemain-function"></a><span data-ttu-id="5bab4-102">_CorExeMain 関数</span><span class="sxs-lookup"><span data-stu-id="5bab4-102">_CorExeMain Function</span></span>
-<span data-ttu-id="5bab4-103">共通言語ランタイム (CLR) を初期化します、実行可能アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索し、実行を開始します。</span><span class="sxs-lookup"><span data-stu-id="5bab4-103">Initializes the common language runtime (CLR), locates the managed entry point in the executable assembly's CLR header, and begins execution.</span></span>  
+# <a name="corexemain-function"></a><span data-ttu-id="da8e7-102">_CorExeMain 関数</span><span class="sxs-lookup"><span data-stu-id="da8e7-102">_CorExeMain Function</span></span>
+<span data-ttu-id="da8e7-103">共通言語ランタイム (CLR) を初期化します、実行可能アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索し、実行を開始します。</span><span class="sxs-lookup"><span data-stu-id="da8e7-103">Initializes the common language runtime (CLR), locates the managed entry point in the executable assembly's CLR header, and begins execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5bab4-104">構文</span><span class="sxs-lookup"><span data-stu-id="5bab4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da8e7-104">構文</span><span class="sxs-lookup"><span data-stu-id="da8e7-104">Syntax</span></span>  
   
 ```  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5bab4-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="5bab4-105">Remarks</span></span>  
- <span data-ttu-id="5bab4-106">この関数は、マネージ実行可能アセンブリから作成されたプロセスのローダーによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="5bab4-106">This function is called by the loader in processes created from managed executable assemblies.</span></span> <span data-ttu-id="5bab4-107">DLL のアセンブリ ローダーの呼び出し、 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)関数を使用します。</span><span class="sxs-lookup"><span data-stu-id="5bab4-107">For DLL assemblies, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da8e7-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="da8e7-105">Remarks</span></span>  
+ <span data-ttu-id="da8e7-106">この関数は、マネージ実行可能アセンブリから作成されたプロセスのローダーによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="da8e7-106">This function is called by the loader in processes created from managed executable assemblies.</span></span> <span data-ttu-id="da8e7-107">DLL のアセンブリ ローダーの呼び出し、 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)関数を使用します。</span><span class="sxs-lookup"><span data-stu-id="da8e7-107">For DLL assemblies, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function instead.</span></span>  
   
- <span data-ttu-id="5bab4-108">オペレーティング システム ローダーでは、イメージ ファイルに指定されたエントリ ポイントに関係なく、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="5bab4-108">The operating system loader calls this method regardless of the entry point specified in the image file.</span></span>  
+ <span data-ttu-id="da8e7-108">オペレーティング システム ローダーでは、イメージ ファイルに指定されたエントリ ポイントに関係なく、このメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="da8e7-108">The operating system loader calls this method regardless of the entry point specified in the image file.</span></span>  
   
- <span data-ttu-id="5bab4-109">Windows 98、Windows ME、Windows NT、および Windows 2000 で、`_CorExeMain`オペレーティング システム ローダーのフィックス アップを関数が直接呼び出さです。</span><span class="sxs-lookup"><span data-stu-id="5bab4-109">In Windows 98, Windows ME, Windows NT, and Windows 2000, the `_CorExeMain` function is called indirectly through a fixup in the operating system loader.</span></span> <span data-ttu-id="5bab4-110">他のすべてのバージョンの Windows では、オペレーティング システム ローダーによって直接呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="5bab4-110">In all other versions of Windows, it is called directly by the operating system loader.</span></span>  
+ <span data-ttu-id="da8e7-109">Windows 98、Windows ME、Windows NT、および Windows 2000 で、`_CorExeMain`オペレーティング システム ローダーのフィックス アップを関数が直接呼び出さです。</span><span class="sxs-lookup"><span data-stu-id="da8e7-109">In Windows 98, Windows ME, Windows NT, and Windows 2000, the `_CorExeMain` function is called indirectly through a fixup in the operating system loader.</span></span> <span data-ttu-id="da8e7-110">他のすべてのバージョンの Windows では、オペレーティング システム ローダーによって直接呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="da8e7-110">In all other versions of Windows, it is called directly by the operating system loader.</span></span>  
   
- <span data-ttu-id="5bab4-111">詳細については、「解説」セクションを参照してください。、 [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="5bab4-111">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
+ <span data-ttu-id="da8e7-111">詳細については、「解説」セクションを参照してください。、 [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="da8e7-111">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5bab4-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="5bab4-112">Requirements</span></span>  
- <span data-ttu-id="5bab4-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5bab4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da8e7-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="da8e7-112">Requirements</span></span>  
+ <span data-ttu-id="da8e7-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="da8e7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bab4-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5bab4-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="da8e7-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="da8e7-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5bab4-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="5bab4-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="da8e7-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="da8e7-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5bab4-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bab4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="da8e7-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="da8e7-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5bab4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="5bab4-117">See also</span></span>
-- [<span data-ttu-id="5bab4-118">メタデータ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="5bab4-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="da8e7-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="da8e7-117">See also</span></span>
+
+- [<span data-ttu-id="da8e7-118">メタデータ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="da8e7-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
