@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d610385cfbfcb6a625e0e1893f97525f6f5430c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 358346af540c8b6b7ee1523e763bebbacf8cd2bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127817"
 ---
-# <a name="imetadataimportgetuserstring-method"></a><span data-ttu-id="bf901-102">IMetaDataImport::GetUserString メソッド</span><span class="sxs-lookup"><span data-stu-id="bf901-102">IMetaDataImport::GetUserString Method</span></span>
-<span data-ttu-id="bf901-103">指定したメタデータ トークンで表されるリテラル文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="bf901-103">Gets the literal string represented by the specified metadata token.</span></span>  
+# <a name="imetadataimportgetuserstring-method"></a><span data-ttu-id="fd5c1-102">IMetaDataImport::GetUserString メソッド</span><span class="sxs-lookup"><span data-stu-id="fd5c1-102">IMetaDataImport::GetUserString Method</span></span>
+<span data-ttu-id="fd5c1-103">指定したメタデータ トークンで表されるリテラル文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-103">Gets the literal string represented by the specified metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf901-104">構文</span><span class="sxs-lookup"><span data-stu-id="bf901-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd5c1-104">構文</span><span class="sxs-lookup"><span data-stu-id="fd5c1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetUserString (  
@@ -38,28 +38,29 @@ HRESULT GetUserString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf901-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bf901-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd5c1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fd5c1-105">Parameters</span></span>  
  `stk`  
- <span data-ttu-id="bf901-106">[in]関連付けられている文字列を返す文字列トークンです。</span><span class="sxs-lookup"><span data-stu-id="bf901-106">[in] The String token to return the associated string for.</span></span>  
+ <span data-ttu-id="fd5c1-106">[in]関連付けられている文字列を返す文字列トークンです。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-106">[in] The String token to return the associated string for.</span></span>  
   
  `szString`  
- <span data-ttu-id="bf901-107">[out]要求された文字列のコピー。</span><span class="sxs-lookup"><span data-stu-id="bf901-107">[out] A copy of the requested string.</span></span>  
+ <span data-ttu-id="fd5c1-107">[out]要求された文字列のコピー。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-107">[out] A copy of the requested string.</span></span>  
   
  `cchString`  
- <span data-ttu-id="bf901-108">[in]要求されたワイド文字の最大サイズ`szString`します。</span><span class="sxs-lookup"><span data-stu-id="bf901-108">[in] The maximum size in wide characters of the requested `szString`.</span></span>  
+ <span data-ttu-id="fd5c1-108">[in]要求されたワイド文字の最大サイズ`szString`します。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-108">[in] The maximum size in wide characters of the requested `szString`.</span></span>  
   
  `pchString`  
- <span data-ttu-id="bf901-109">[out]返されるワイド文字のサイズ`szString`します。</span><span class="sxs-lookup"><span data-stu-id="bf901-109">[out] The size in wide characters of the returned `szString`.</span></span>  
+ <span data-ttu-id="fd5c1-109">[out]返されるワイド文字のサイズ`szString`します。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-109">[out] The size in wide characters of the returned `szString`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf901-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="bf901-110">Requirements</span></span>  
- <span data-ttu-id="bf901-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bf901-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd5c1-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="fd5c1-110">Requirements</span></span>  
+ <span data-ttu-id="fd5c1-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fd5c1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf901-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bf901-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fd5c1-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fd5c1-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf901-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="bf901-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fd5c1-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="fd5c1-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bf901-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf901-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="fd5c1-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="fd5c1-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bf901-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf901-115">See also</span></span>
-- [<span data-ttu-id="bf901-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf901-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="bf901-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf901-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fd5c1-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="fd5c1-115">See also</span></span>
+
+- [<span data-ttu-id="fd5c1-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fd5c1-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fd5c1-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fd5c1-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
