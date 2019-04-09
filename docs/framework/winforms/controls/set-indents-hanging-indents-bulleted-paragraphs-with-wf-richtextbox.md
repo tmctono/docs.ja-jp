@@ -1,5 +1,5 @@
 ---
-title: '方法: インデント、ぶら下げインデント、および箇条書き段落を Windows フォームの RichTextBox コントロールでを設定します。'
+title: '方法: Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140648"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="c18d8-102">方法: インデント、ぶら下げインデント、および箇条書き段落を Windows フォームの RichTextBox コントロールでを設定します。</span><span class="sxs-lookup"><span data-stu-id="c18d8-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="c18d8-103">Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。</span><span class="sxs-lookup"><span data-stu-id="c18d8-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="c18d8-104">設定して箇条書きとして選択した段落を書式設定することができます、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c18d8-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="c18d8-105">使用することも、 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、 <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>、および<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>左側と、コントロールの右端と左端の他の行のテキストの段落のインデントを設定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="c18d8-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="c9032-102">方法: Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する</span><span class="sxs-lookup"><span data-stu-id="c9032-102">How to: Set Indents, Hanging Indents, and Bulleted Paragraphs with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="c9032-103">Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。</span><span class="sxs-lookup"><span data-stu-id="c9032-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control has numerous options for formatting the text it displays.</span></span> <span data-ttu-id="c9032-104">設定して箇条書きとして選択した段落を書式設定することができます、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9032-104">You can format selected paragraphs as bulleted lists by setting the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="c9032-105">使用することも、 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、 <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>、および<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>左側と、コントロールの右端と左端の他の行のテキストの段落のインデントを設定するプロパティ。</span><span class="sxs-lookup"><span data-stu-id="c9032-105">You can also use the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, and <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> properties to set the indentation of paragraphs relative to the left and right edges of the control, and the left edge of other lines of text.</span></span>  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="c18d8-106">段落を箇条書きとして書式設定するには</span><span class="sxs-lookup"><span data-stu-id="c18d8-106">To format a paragraph as a bulleted list</span></span>  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a><span data-ttu-id="c9032-106">段落を箇条書きとして書式設定するには</span><span class="sxs-lookup"><span data-stu-id="c9032-106">To format a paragraph as a bulleted list</span></span>  
   
-1.  <span data-ttu-id="c18d8-107"><xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="c18d8-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="c9032-107"><xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="c9032-107">Set the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property to `true`.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -39,13 +39,13 @@ ms.locfileid: "57713032"
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a><span data-ttu-id="c18d8-108">段落にインデントを設定するには</span><span class="sxs-lookup"><span data-stu-id="c18d8-108">To indent a paragraph</span></span>  
+### <a name="to-indent-a-paragraph"></a><span data-ttu-id="c9032-108">段落にインデントを設定するには</span><span class="sxs-lookup"><span data-stu-id="c9032-108">To indent a paragraph</span></span>  
   
-1.  <span data-ttu-id="c18d8-109">設定、<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>プロパティにコントロールの左端とテキストの左端のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c18d8-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
+1.  <span data-ttu-id="c9032-109">設定、<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>プロパティにコントロールの左端とテキストの左端のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c9032-109">Set the <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> property to an integer representing the distance in pixels between the left edge of the control and the left edge of the text.</span></span>  
   
-2.  <span data-ttu-id="c18d8-110">設定、<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>プロパティに同じ段落の後続行の左端と段落のテキストの最初の行の左端のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c18d8-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="c18d8-111">値、<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>プロパティは、最初の行の下で折り返されて段落内の行にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="c18d8-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
+2.  <span data-ttu-id="c9032-110">設定、<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>プロパティに同じ段落の後続行の左端と段落のテキストの最初の行の左端のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c9032-110">Set the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property to an integer representing the distance in pixels between the left edge of the first line of text in the paragraph and the left edge of subsequent lines in the same paragraph.</span></span> <span data-ttu-id="c9032-111">値、<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>プロパティは、最初の行の下で折り返されて段落内の行にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="c9032-111">The value of the <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> property only applies to lines in a paragraph that have wrapped below the first line.</span></span>  
   
-3.  <span data-ttu-id="c18d8-112">設定、<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>プロパティに、コントロールの右端とテキストの右端の間のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c18d8-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
+3.  <span data-ttu-id="c9032-112">設定、<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>プロパティに、コントロールの右端とテキストの右端の間のピクセル単位で距離を表す整数。</span><span class="sxs-lookup"><span data-stu-id="c9032-112">Set the <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> property to an integer representing the distance in pixels between the right edge of the control and the right edge of the text.</span></span>  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,9 +66,10 @@ ms.locfileid: "57713032"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="c18d8-113">これらすべてのプロパティは、選択したテキストを含む段落に影響し、現在の挿入ポイントの後に入力されるテキストにも影響します。</span><span class="sxs-lookup"><span data-stu-id="c18d8-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="c18d8-114">たとえば、ユーザーが段落内の単語を選択して、インデントを調整すると、新しい設定はその単語を含む段落全体に適用され、選択した段落の後に入力される段落にも適用されます。</span><span class="sxs-lookup"><span data-stu-id="c18d8-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="c18d8-115">プログラムでテキストを選択する方法の詳細については、<xref:System.Windows.Forms.TextBoxBase.Select%2A>を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c18d8-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
+    >  <span data-ttu-id="c9032-113">これらすべてのプロパティは、選択したテキストを含む段落に影響し、現在の挿入ポイントの後に入力されるテキストにも影響します。</span><span class="sxs-lookup"><span data-stu-id="c9032-113">All these properties affect any paragraphs that contain selected text, and also the text that is typed after the current insertion point.</span></span> <span data-ttu-id="c9032-114">たとえば、ユーザーが段落内の単語を選択して、インデントを調整すると、新しい設定はその単語を含む段落全体に適用され、選択した段落の後に入力される段落にも適用されます。</span><span class="sxs-lookup"><span data-stu-id="c9032-114">For example, when a user selects a word within a paragraph and then adjusts the indentation, the new settings will apply to the entire paragraph that contains that word, and also to any paragraphs subsequently entered after the selected paragraph.</span></span> <span data-ttu-id="c9032-115">プログラムでテキストを選択する方法の詳細については、次を参照してください。<xref:System.Windows.Forms.TextBoxBase.Select%2A>します。</span><span class="sxs-lookup"><span data-stu-id="c9032-115">For information about selecting text programmatically, see <xref:System.Windows.Forms.TextBoxBase.Select%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c18d8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="c18d8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9032-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9032-116">See also</span></span>
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="c18d8-117">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="c18d8-117">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="c18d8-118">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="c18d8-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="c9032-117">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="c9032-117">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="c9032-118">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="c9032-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
