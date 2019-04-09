@@ -16,39 +16,40 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f56ce2da5cc1b79fded3788ddb9631d2c8a2fa7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca8e87157a7adf45f35608aeba1067f2d66c8972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081607"
 ---
-# <a name="initialize-function"></a><span data-ttu-id="19278-103">Initialize 関数</span><span class="sxs-lookup"><span data-stu-id="19278-103">Initialize function</span></span>
-<span data-ttu-id="19278-104">WMI の初期化が実行されます。</span><span class="sxs-lookup"><span data-stu-id="19278-104">Performs WMI initialization.</span></span>  
+# <a name="initialize-function"></a><span data-ttu-id="0c155-103">Initialize 関数</span><span class="sxs-lookup"><span data-stu-id="0c155-103">Initialize function</span></span>
+<span data-ttu-id="0c155-104">WMI の初期化が実行されます。</span><span class="sxs-lookup"><span data-stu-id="0c155-104">Performs WMI initialization.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="19278-105">構文</span><span class="sxs-lookup"><span data-stu-id="19278-105">Syntax</span></span> 
+## <a name="syntax"></a><span data-ttu-id="0c155-105">構文</span><span class="sxs-lookup"><span data-stu-id="0c155-105">Syntax</span></span> 
 ```  
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
 ); 
 ```  
-## <a name="parameters"></a><span data-ttu-id="19278-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="19278-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0c155-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0c155-106">Parameters</span></span>
 
 `bAllowIManagementObjectQI`   
-<span data-ttu-id="19278-107">[in]`true` WMI オブジェクトの queryinterface 呼び出しが許可されることを示す`false`それ以外の場合。</span><span class="sxs-lookup"><span data-stu-id="19278-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
+<span data-ttu-id="0c155-107">[in]`true` WMI オブジェクトの queryinterface 呼び出しが許可されることを示す`false`それ以外の場合。</span><span class="sxs-lookup"><span data-stu-id="0c155-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="19278-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="19278-108">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="0c155-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="0c155-108">Return value</span></span>
 
-<span data-ttu-id="19278-109">関数は常に返します`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="19278-109">The function always returns `S_OK` (0).</span></span>
+<span data-ttu-id="0c155-109">関数は常に返します`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="0c155-109">The function always returns `S_OK` (0).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="19278-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="19278-110">Requirements</span></span>  
- <span data-ttu-id="19278-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="19278-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c155-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="0c155-110">Requirements</span></span>  
+ <span data-ttu-id="0c155-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0c155-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19278-112">**ヘッダー:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="19278-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="0c155-112">**ヘッダー:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="0c155-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="19278-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="19278-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ **<span data-ttu-id="0c155-113">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="0c155-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="19278-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="19278-114">See also</span></span>
-- [<span data-ttu-id="19278-115">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="19278-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="0c155-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="0c155-114">See also</span></span>
+
+- [<span data-ttu-id="0c155-115">WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="0c155-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

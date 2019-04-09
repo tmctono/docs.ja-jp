@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2fe4a5a2886fdbbd36ee491ea66dbce353fb034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 628790bb8229dc519589c122235f07a38ba57c1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100237"
 ---
-# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="11c6a-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="11c6a-102">raceOnRCWCleanup MDA</span></span>
-<span data-ttu-id="11c6a-103"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> メソッドなどのコマンドを使用して [ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW: Runtime Callable Wrapper) を解放する呼び出しがなされた時点でその RCW が使用中であることを共通言語ランタイム (CLR: Common Language Runtime) が検出すると、`raceOnRCWCleanup` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="11c6a-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="36967-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="36967-102">raceOnRCWCleanup MDA</span></span>
+<span data-ttu-id="36967-103"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> メソッドなどのコマンドを使用して [ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW: Runtime Callable Wrapper) を解放する呼び出しがなされた時点でその RCW が使用中であることを共通言語ランタイム (CLR: Common Language Runtime) が検出すると、`raceOnRCWCleanup` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="36967-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="11c6a-104">現象</span><span class="sxs-lookup"><span data-stu-id="11c6a-104">Symptoms</span></span>  
- <span data-ttu-id="11c6a-105"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> メソッド、または類似メソッドを使用して RCW が解放中または解放後に、アクセス違反またはメモリ破損が発生します。</span><span class="sxs-lookup"><span data-stu-id="11c6a-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="36967-104">症状</span><span class="sxs-lookup"><span data-stu-id="36967-104">Symptoms</span></span>  
+ <span data-ttu-id="36967-105"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> メソッド、または類似メソッドを使用して RCW が解放中または解放後に、アクセス違反またはメモリ破損が発生します。</span><span class="sxs-lookup"><span data-stu-id="36967-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="11c6a-106">原因</span><span class="sxs-lookup"><span data-stu-id="11c6a-106">Cause</span></span>  
- <span data-ttu-id="11c6a-107">別のスレッドまたは解放中のスレッド スタックで、RCW が使用中です。</span><span class="sxs-lookup"><span data-stu-id="11c6a-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="11c6a-108">使用中の RCW は解放できません。</span><span class="sxs-lookup"><span data-stu-id="11c6a-108">An RCW that is in use cannot be released.</span></span>  
+## <a name="cause"></a><span data-ttu-id="36967-106">原因</span><span class="sxs-lookup"><span data-stu-id="36967-106">Cause</span></span>  
+ <span data-ttu-id="36967-107">別のスレッドまたは解放中のスレッド スタックで、RCW が使用中です。</span><span class="sxs-lookup"><span data-stu-id="36967-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="36967-108">使用中の RCW は解放できません。</span><span class="sxs-lookup"><span data-stu-id="36967-108">An RCW that is in use cannot be released.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="11c6a-109">解像度</span><span class="sxs-lookup"><span data-stu-id="11c6a-109">Resolution</span></span>  
- <span data-ttu-id="11c6a-110">現在のスレッドまたは他のスレッドで使用中の可能性がある RCW は、解放しないでください。</span><span class="sxs-lookup"><span data-stu-id="11c6a-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="36967-109">解像度</span><span class="sxs-lookup"><span data-stu-id="36967-109">Resolution</span></span>  
+ <span data-ttu-id="36967-110">現在のスレッドまたは他のスレッドで使用中の可能性がある RCW は、解放しないでください。</span><span class="sxs-lookup"><span data-stu-id="36967-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="11c6a-111">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="11c6a-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="11c6a-112">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="11c6a-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="36967-111">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="36967-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="36967-112">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="36967-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="11c6a-113">出力</span><span class="sxs-lookup"><span data-stu-id="11c6a-113">Output</span></span>  
- <span data-ttu-id="11c6a-114">エラーを説明するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="11c6a-114">A message describing the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="36967-113">出力</span><span class="sxs-lookup"><span data-stu-id="36967-113">Output</span></span>  
+ <span data-ttu-id="36967-114">エラーを説明するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="36967-114">A message describing the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="11c6a-115">構成</span><span class="sxs-lookup"><span data-stu-id="11c6a-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="36967-115">構成</span><span class="sxs-lookup"><span data-stu-id="36967-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,8 @@ ms.locfileid: "54717247"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="11c6a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="11c6a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36967-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="36967-116">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="11c6a-117">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="11c6a-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="11c6a-118">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="11c6a-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="36967-117">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="36967-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="36967-118">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="36967-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

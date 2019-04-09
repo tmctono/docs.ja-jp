@@ -1,5 +1,5 @@
 ---
-title: '方法: によって表示されるテキストを設定、Windows フォーム コントロール'
+title: '方法: Windows フォーム コントロールによって表示されるテキストを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096187"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="7bb3b-102">方法: によって表示されるテキストを設定、Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="7bb3b-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="7bb3b-103">Windows フォーム コントロールは、通常、コントロールの主な機能に関連するいくつかのテキストを表示します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="7bb3b-104">たとえば、<xref:System.Windows.Forms.Button> コントロールは、通常、ボタンがクリックされたときにどのようなアクションを実行するかを示すキャプションを表示します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="7bb3b-105">すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="7bb3b-106"><xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="7bb3b-107">また、デザイナーを使用してテキストを設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="7bb3b-108">参照してください[方法。Windows フォーム デザイナーを使用してコントロールのアクセス キーを作成](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)、[方法。によって表示されるテキストを設定、Windows フォーム デザイナーを使用してコントロール](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)、[方法。によって表示されるイメージの設定を Windows フォーム デザイナーを使用してコントロール](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="990c5-102">方法: Windows フォーム コントロールによって表示されるテキストを設定する</span><span class="sxs-lookup"><span data-stu-id="990c5-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="990c5-103">Windows フォーム コントロールは、通常、コントロールの主な機能に関連するいくつかのテキストを表示します。</span><span class="sxs-lookup"><span data-stu-id="990c5-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="990c5-104">たとえば、<xref:System.Windows.Forms.Button> コントロールは、通常、ボタンがクリックされたときにどのようなアクションを実行するかを示すキャプションを表示します。</span><span class="sxs-lookup"><span data-stu-id="990c5-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="990c5-105">すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。</span><span class="sxs-lookup"><span data-stu-id="990c5-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="990c5-106"><xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="990c5-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="990c5-107">また、デザイナーを使用してテキストを設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="990c5-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="990c5-108">参照してください[方法。Windows フォーム デザイナーを使用してコントロールのアクセス キーを作成](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)、[方法。によって表示されるテキストを設定、Windows フォーム デザイナーを使用してコントロール](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)、[方法。によって表示されるイメージの設定を Windows フォーム デザイナーを使用してコントロール](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)します。</span><span class="sxs-lookup"><span data-stu-id="990c5-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>  
   
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="7bb3b-109">コントロールによって表示されるテキストをプログラムで設定するには</span><span class="sxs-lookup"><span data-stu-id="7bb3b-109">To set the text displayed by a control programmatically</span></span>  
+### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="990c5-109">コントロールによって表示されるテキストをプログラムで設定するには</span><span class="sxs-lookup"><span data-stu-id="990c5-109">To set the text displayed by a control programmatically</span></span>  
   
-1.  <span data-ttu-id="7bb3b-110"><xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
+1.  <span data-ttu-id="990c5-110"><xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。</span><span class="sxs-lookup"><span data-stu-id="990c5-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
   
-     <span data-ttu-id="7bb3b-111">下線付きのアクセス キーを作成するには、アクセス キーにする文字の前にアンパサンド (&) を含めます。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
+     <span data-ttu-id="990c5-111">下線付きのアクセス キーを作成するアンパサンドが含まれています (&) は、アクセス キーとなる文字の前にします。</span><span class="sxs-lookup"><span data-stu-id="990c5-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
   
-2.  <span data-ttu-id="7bb3b-112"><xref:System.Windows.Forms.Control.Font%2A> プロパティを型 <xref:System.Drawing.Font> のオブジェクトに設定します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
+2.  <span data-ttu-id="990c5-112"><xref:System.Windows.Forms.Control.Font%2A> プロパティを型 <xref:System.Drawing.Font> のオブジェクトに設定します。</span><span class="sxs-lookup"><span data-stu-id="990c5-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
   
     ```vb  
     Button1.Text = "Click here to save changes"  
@@ -57,7 +57,7 @@ ms.locfileid: "57716908"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="7bb3b-113">エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="7bb3b-114">たとえば、次のコード行は、メニュー項目のテキストが "& Now For Something Completely Different" と読めるように設定します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
+    >  <span data-ttu-id="990c5-113">エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。</span><span class="sxs-lookup"><span data-stu-id="990c5-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="990c5-114">たとえば、次のコード行は、メニュー項目のテキストを読み取るを設定します。"& Now For Something まったく異なる"。</span><span class="sxs-lookup"><span data-stu-id="990c5-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  
@@ -71,7 +71,8 @@ ms.locfileid: "57716908"
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7bb3b-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7bb3b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="990c5-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="990c5-115">See also</span></span>
+
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="7bb3b-116">方法: Windows フォーム コントロールのアクセス キーを作成します。</span><span class="sxs-lookup"><span data-stu-id="7bb3b-116">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
-- [<span data-ttu-id="7bb3b-117">方法: Windows フォームのボタン クリックに応答するには</span><span class="sxs-lookup"><span data-stu-id="7bb3b-117">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="990c5-116">方法: Windows フォーム コントロールのアクセス キーを作成する</span><span class="sxs-lookup"><span data-stu-id="990c5-116">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
+- [<span data-ttu-id="990c5-117">方法: Windows フォームのボタンのクリックに応答する</span><span class="sxs-lookup"><span data-stu-id="990c5-117">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)

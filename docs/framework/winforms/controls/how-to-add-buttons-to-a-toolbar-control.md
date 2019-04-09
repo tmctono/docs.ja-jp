@@ -1,5 +1,5 @@
 ---
-title: '方法: ツール バー コントロールにボタンを追加します。'
+title: '方法: ツール バー コントロールにボタンを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085988"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="a1370-102">方法: ツール バー コントロールにボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="a1370-102">How to: Add Buttons to a ToolBar Control</span></span>
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="0051c-102">方法: ツール バー コントロールにボタンを追加する</span><span class="sxs-lookup"><span data-stu-id="0051c-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="a1370-103">
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="a1370-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="0051c-103">
+  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="0051c-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="a1370-104">不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="a1370-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="a1370-105">メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。</span><span class="sxs-lookup"><span data-stu-id="a1370-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
+ <span data-ttu-id="0051c-104">不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="0051c-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="0051c-105">メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。</span><span class="sxs-lookup"><span data-stu-id="0051c-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- <span data-ttu-id="a1370-106">次の例では、あると想定する<xref:System.Windows.Forms.ToolBar>Windows フォームにコントロールが追加されました (`Form1`)。</span><span class="sxs-lookup"><span data-stu-id="a1370-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
+ <span data-ttu-id="0051c-106">次の例では、あると想定する<xref:System.Windows.Forms.ToolBar>Windows フォームにコントロールが追加されました (`Form1`)。</span><span class="sxs-lookup"><span data-stu-id="0051c-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
   
-### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="a1370-107">プログラムでボタンを追加するには</span><span class="sxs-lookup"><span data-stu-id="a1370-107">To add buttons programmatically</span></span>  
+### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="0051c-107">プログラムでボタンを追加するには</span><span class="sxs-lookup"><span data-stu-id="0051c-107">To add buttons programmatically</span></span>  
   
-1.  <span data-ttu-id="a1370-108">プロシージャでは、ツールバーのボタンの作成に追加して、<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクション。</span><span class="sxs-lookup"><span data-stu-id="a1370-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
+1.  <span data-ttu-id="0051c-108">プロシージャでは、ツールバーのボタンの作成に追加して、<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクション。</span><span class="sxs-lookup"><span data-stu-id="0051c-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
   
-2.  <span data-ttu-id="a1370-109">使用して、ボタンのインデックスを渡すことによって、各ボタンのプロパティ設定を指定、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="a1370-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
+2.  <span data-ttu-id="0051c-109">使用して、ボタンのインデックスを渡すことによって、各ボタンのプロパティ設定を指定、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="0051c-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
   
-     <span data-ttu-id="a1370-110">次の例でフォームを前提としています、<xref:System.Windows.Forms.ToolBar>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="a1370-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
+     <span data-ttu-id="0051c-110">次の例でフォームを前提としています、<xref:System.Windows.Forms.ToolBar>コントロールが既に追加されています。</span><span class="sxs-lookup"><span data-stu-id="0051c-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a1370-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクションには、0 から始まるコレクションがあるので、それに応じてコードを続行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a1370-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
+    >  <span data-ttu-id="0051c-111"><xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>コレクションには、0 から始まるコレクションがあるので、それに応じてコードを続行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0051c-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -149,9 +149,10 @@ ms.locfileid: "57713245"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a1370-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="a1370-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0051c-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0051c-112">See also</span></span>
+
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="a1370-113">方法: ツール バー ボタンのアイコンを定義します。</span><span class="sxs-lookup"><span data-stu-id="a1370-113">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="a1370-114">方法: ツール バー ボタンのメニュー イベントのトリガー</span><span class="sxs-lookup"><span data-stu-id="a1370-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [<span data-ttu-id="a1370-115">ToolBar コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="a1370-115">ToolBar Control Overview</span></span>](toolbar-control-overview-windows-forms.md)
-- [<span data-ttu-id="a1370-116">ToolBar コントロール</span><span class="sxs-lookup"><span data-stu-id="a1370-116">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="0051c-113">方法: ツール バー ボタンのアイコンを定義する</span><span class="sxs-lookup"><span data-stu-id="0051c-113">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="0051c-114">方法: ツール バー ボタンのメニュー イベントをトリガーする</span><span class="sxs-lookup"><span data-stu-id="0051c-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [<span data-ttu-id="0051c-115">ToolBar コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="0051c-115">ToolBar Control Overview</span></span>](toolbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="0051c-116">ToolBar コントロール</span><span class="sxs-lookup"><span data-stu-id="0051c-116">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

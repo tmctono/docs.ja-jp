@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 028ff1048813ccbc845d5ad3e7f522b492348f87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103767"
 ---
-# <a name="memberinfocachecreation-mda"></a><span data-ttu-id="5d0f7-102">memberInfoCacheCreation MDA</span><span class="sxs-lookup"><span data-stu-id="5d0f7-102">memberInfoCacheCreation MDA</span></span>
-<span data-ttu-id="5d0f7-103">`memberInfoCacheCreation` マネージド デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-103">The `memberInfoCacheCreation` managed debugging assistant (MDA) is activated when a <xref:System.Reflection.MemberInfo> cache is created.</span></span> <span data-ttu-id="5d0f7-104">これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-104">This is a strong indication of a program that is making use of resource-expensive reflection features.</span></span>  
+# <a name="memberinfocachecreation-mda"></a><span data-ttu-id="9a974-102">memberInfoCacheCreation MDA</span><span class="sxs-lookup"><span data-stu-id="9a974-102">memberInfoCacheCreation MDA</span></span>
+<span data-ttu-id="9a974-103">`memberInfoCacheCreation` マネージド デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="9a974-103">The `memberInfoCacheCreation` managed debugging assistant (MDA) is activated when a <xref:System.Reflection.MemberInfo> cache is created.</span></span> <span data-ttu-id="9a974-104">これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。</span><span class="sxs-lookup"><span data-stu-id="9a974-104">This is a strong indication of a program that is making use of resource-expensive reflection features.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="5d0f7-105">現象</span><span class="sxs-lookup"><span data-stu-id="5d0f7-105">Symptoms</span></span>  
- <span data-ttu-id="5d0f7-106">プログラムがリソースに負荷のかかるリフレクションを使っているため、プログラムのワーキング セットが増加します。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-106">A program's working set increases because the program is using resource-expensive reflection.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="9a974-105">症状</span><span class="sxs-lookup"><span data-stu-id="9a974-105">Symptoms</span></span>  
+ <span data-ttu-id="9a974-106">プログラムがリソースに負荷のかかるリフレクションを使っているため、プログラムのワーキング セットが増加します。</span><span class="sxs-lookup"><span data-stu-id="9a974-106">A program's working set increases because the program is using resource-expensive reflection.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="5d0f7-107">原因</span><span class="sxs-lookup"><span data-stu-id="5d0f7-107">Cause</span></span>  
- <span data-ttu-id="5d0f7-108"><xref:System.Reflection.MemberInfo> オブジェクトが関係するリフレクション操作は、コールド ページに格納されているメタデータを読み取る必要があり、一般にプログラムが何らかの種類の遅延バインディング シナリオを使っていることを示すため、リソースに負荷がかかるものと見なされます。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-108">Reflection operations that involve <xref:System.Reflection.MemberInfo> objects are considered resource expensive because they must read metadata that is stored in cold pages and in general they indicate the program is using some type of late-bound scenario.</span></span>  
+## <a name="cause"></a><span data-ttu-id="9a974-107">原因</span><span class="sxs-lookup"><span data-stu-id="9a974-107">Cause</span></span>  
+ <span data-ttu-id="9a974-108"><xref:System.Reflection.MemberInfo> オブジェクトが関係するリフレクション操作は、コールド ページに格納されているメタデータを読み取る必要があり、一般にプログラムが何らかの種類の遅延バインディング シナリオを使っていることを示すため、リソースに負荷がかかるものと見なされます。</span><span class="sxs-lookup"><span data-stu-id="9a974-108">Reflection operations that involve <xref:System.Reflection.MemberInfo> objects are considered resource expensive because they must read metadata that is stored in cold pages and in general they indicate the program is using some type of late-bound scenario.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="5d0f7-109">解像度</span><span class="sxs-lookup"><span data-stu-id="5d0f7-109">Resolution</span></span>  
- <span data-ttu-id="5d0f7-110">この MDA を有効にした後にデバッガーでコードを実行するか、または MDA がアクティブになっているときにデバッガーとアタッチすることにより、プログラム内でリフレクションで使われている場所を特定できます。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-110">You can determine where reflection is being used in your program by enabling this MDA and then running your code in a debugger or attaching with a debugger when the MDA is activated.</span></span> <span data-ttu-id="5d0f7-111">デバッガーで実行すると、<xref:System.Reflection.MemberInfo> キャッシュが作成された場所を示すスタック トレースが取得され、その情報からプログラムがリフレクションを使っている場所を判断できます。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-111">Under a debugger you will get a stack trace showing where the <xref:System.Reflection.MemberInfo> cache was created and from there you can determine where your program is using reflection.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="9a974-109">解像度</span><span class="sxs-lookup"><span data-stu-id="9a974-109">Resolution</span></span>  
+ <span data-ttu-id="9a974-110">この MDA を有効にした後にデバッガーでコードを実行するか、または MDA がアクティブになっているときにデバッガーとアタッチすることにより、プログラム内でリフレクションで使われている場所を特定できます。</span><span class="sxs-lookup"><span data-stu-id="9a974-110">You can determine where reflection is being used in your program by enabling this MDA and then running your code in a debugger or attaching with a debugger when the MDA is activated.</span></span> <span data-ttu-id="9a974-111">デバッガーで実行すると、<xref:System.Reflection.MemberInfo> キャッシュが作成された場所を示すスタック トレースが取得され、その情報からプログラムがリフレクションを使っている場所を判断できます。</span><span class="sxs-lookup"><span data-stu-id="9a974-111">Under a debugger you will get a stack trace showing where the <xref:System.Reflection.MemberInfo> cache was created and from there you can determine where your program is using reflection.</span></span>  
   
- <span data-ttu-id="5d0f7-112">解決策は、コードの目的によって異なります。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-112">The resolution is dependent on the objectives of the code.</span></span> <span data-ttu-id="5d0f7-113">この MDA は、プログラムに遅延バインディング シナリオがあることを警告します。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-113">This MDA alerts you that your program has a late-bound scenario.</span></span> <span data-ttu-id="5d0f7-114">事前バインディング シナリオに置き換えることができるかどうかを判断したり、遅延バインディング シナリオのパフォーマンスを検討したりできます。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-114">You might want to determine if you can substitute an early-bound scenario or consider the performance of the late bound scenario.</span></span>  
+ <span data-ttu-id="9a974-112">解決策は、コードの目的によって異なります。</span><span class="sxs-lookup"><span data-stu-id="9a974-112">The resolution is dependent on the objectives of the code.</span></span> <span data-ttu-id="9a974-113">この MDA は、プログラムに遅延バインディング シナリオがあることを警告します。</span><span class="sxs-lookup"><span data-stu-id="9a974-113">This MDA alerts you that your program has a late-bound scenario.</span></span> <span data-ttu-id="9a974-114">事前バインディング シナリオに置き換えることができるかどうかを判断したり、遅延バインディング シナリオのパフォーマンスを検討したりできます。</span><span class="sxs-lookup"><span data-stu-id="9a974-114">You might want to determine if you can substitute an early-bound scenario or consider the performance of the late bound scenario.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="5d0f7-115">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="5d0f7-115">Effect on the Runtime</span></span>  
- <span data-ttu-id="5d0f7-116">この MDA は、作成されるすべての <xref:System.Reflection.MemberInfo> キャッシュに対してアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-116">This MDA is activated for every <xref:System.Reflection.MemberInfo> cache that is created.</span></span> <span data-ttu-id="5d0f7-117">パフォーマンスに与える影響はごくわずかです。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-117">The performance impact is negligible.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="9a974-115">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="9a974-115">Effect on the Runtime</span></span>  
+ <span data-ttu-id="9a974-116">この MDA は、作成されるすべての <xref:System.Reflection.MemberInfo> キャッシュに対してアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="9a974-116">This MDA is activated for every <xref:System.Reflection.MemberInfo> cache that is created.</span></span> <span data-ttu-id="9a974-117">パフォーマンスに与える影響はごくわずかです。</span><span class="sxs-lookup"><span data-stu-id="9a974-117">The performance impact is negligible.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="5d0f7-118">出力</span><span class="sxs-lookup"><span data-stu-id="5d0f7-118">Output</span></span>  
- <span data-ttu-id="5d0f7-119">MDA は、<xref:System.Reflection.MemberInfo> キャッシュが作成されたことを示すメッセージを出力します。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-119">The MDA outputs a message indicating the <xref:System.Reflection.MemberInfo> cache was created.</span></span> <span data-ttu-id="5d0f7-120">プログラムがリフレクションを使っている場所を示すスタック トレースを取得するには、デバッガーを使います。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-120">Use a debugger to get a stack trace showing where your program is using reflection.</span></span>  
+## <a name="output"></a><span data-ttu-id="9a974-118">出力</span><span class="sxs-lookup"><span data-stu-id="9a974-118">Output</span></span>  
+ <span data-ttu-id="9a974-119">MDA は、<xref:System.Reflection.MemberInfo> キャッシュが作成されたことを示すメッセージを出力します。</span><span class="sxs-lookup"><span data-stu-id="9a974-119">The MDA outputs a message indicating the <xref:System.Reflection.MemberInfo> cache was created.</span></span> <span data-ttu-id="9a974-120">プログラムがリフレクションを使っている場所を示すスタック トレースを取得するには、デバッガーを使います。</span><span class="sxs-lookup"><span data-stu-id="9a974-120">Use a debugger to get a stack trace showing where your program is using reflection.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="5d0f7-121">構成</span><span class="sxs-lookup"><span data-stu-id="5d0f7-121">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="9a974-121">構成</span><span class="sxs-lookup"><span data-stu-id="9a974-121">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -49,8 +49,8 @@ ms.locfileid: "54651033"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="5d0f7-122">例</span><span class="sxs-lookup"><span data-stu-id="5d0f7-122">Example</span></span>  
- <span data-ttu-id="5d0f7-123">次のサンプル コードは、`memberInfoCacheCreation` MDA をアクティブ化します。</span><span class="sxs-lookup"><span data-stu-id="5d0f7-123">This sample code will activate the `memberInfoCacheCreation` MDA.</span></span>  
+## <a name="example"></a><span data-ttu-id="9a974-122">例</span><span class="sxs-lookup"><span data-stu-id="9a974-122">Example</span></span>  
+ <span data-ttu-id="9a974-123">次のサンプル コードは、`memberInfoCacheCreation` MDA をアクティブ化します。</span><span class="sxs-lookup"><span data-stu-id="9a974-123">This sample code will activate the `memberInfoCacheCreation` MDA.</span></span>  
   
 ```csharp
 using System;  
@@ -64,6 +64,7 @@ public class Exe
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5d0f7-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d0f7-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a974-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a974-124">See also</span></span>
+
 - <xref:System.Reflection.MemberInfo>
-- [<span data-ttu-id="5d0f7-125">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="5d0f7-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="9a974-125">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="9a974-125">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

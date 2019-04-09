@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54c21008e5922a5357f503821d87e297f0d00e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ca54f779d257314b843838d90ca9996f1eb3237b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081831"
 ---
-# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="519b7-102">ICorRuntimeHost::CreateEvidence メソッド</span><span class="sxs-lookup"><span data-stu-id="519b7-102">ICorRuntimeHost::CreateEvidence Method</span></span>
-<span data-ttu-id="519b7-103">型のインターフェイス ポインターを取得<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>、ホストに渡すセキュリティ証拠を作成することができます、 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="519b7-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
+# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="1f9aa-102">ICorRuntimeHost::CreateEvidence メソッド</span><span class="sxs-lookup"><span data-stu-id="1f9aa-102">ICorRuntimeHost::CreateEvidence Method</span></span>
+<span data-ttu-id="1f9aa-103">型のインターフェイス ポインターを取得<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>、ホストに渡すセキュリティ証拠を作成することができます、 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="519b7-104">構文</span><span class="sxs-lookup"><span data-stu-id="519b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f9aa-104">構文</span><span class="sxs-lookup"><span data-stu-id="1f9aa-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateEvidence (  
@@ -35,32 +35,33 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="519b7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="519b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1f9aa-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1f9aa-105">Parameters</span></span>  
  `pEvidence`  
- <span data-ttu-id="519b7-106">[out]インターフェイス ポインターを<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>インスタンスのセキュリティ証拠を作成するために使用します。</span><span class="sxs-lookup"><span data-stu-id="519b7-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="519b7-107">このポインターは型指定`IUnknown`呼び出し元が呼び出す通常必要がありますので、`QueryInterface`へのポインターを取得するには、このインターフェイスで、<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="519b7-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="1f9aa-106">[out]インターフェイス ポインターを<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>インスタンスのセキュリティ証拠を作成するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="1f9aa-107">このポインターは型指定`IUnknown`呼び出し元が呼び出す通常必要がありますので、`QueryInterface`へのポインターを取得するには、このインターフェイスで、<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="519b7-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="519b7-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1f9aa-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="1f9aa-108">Return Value</span></span>  
   
-|<span data-ttu-id="519b7-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="519b7-109">HRESULT</span></span>|<span data-ttu-id="519b7-110">説明</span><span class="sxs-lookup"><span data-stu-id="519b7-110">Description</span></span>|  
+|<span data-ttu-id="1f9aa-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1f9aa-109">HRESULT</span></span>|<span data-ttu-id="1f9aa-110">説明</span><span class="sxs-lookup"><span data-stu-id="1f9aa-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="519b7-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="519b7-111">S_OK</span></span>|<span data-ttu-id="519b7-112">操作が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="519b7-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="519b7-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="519b7-113">S_FALSE</span></span>|<span data-ttu-id="519b7-114">操作を完了できませんでした。</span><span class="sxs-lookup"><span data-stu-id="519b7-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="519b7-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="519b7-115">E_FAIL</span></span>|<span data-ttu-id="519b7-116">未知の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="519b7-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="519b7-117">場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="519b7-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="519b7-118">Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="519b7-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="519b7-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="519b7-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="519b7-120">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="519b7-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="1f9aa-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="1f9aa-111">S_OK</span></span>|<span data-ttu-id="1f9aa-112">操作が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="1f9aa-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="1f9aa-113">S_FALSE</span></span>|<span data-ttu-id="1f9aa-114">操作を完了できませんでした。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="1f9aa-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1f9aa-115">E_FAIL</span></span>|<span data-ttu-id="1f9aa-116">未知の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="1f9aa-117">場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="1f9aa-118">Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="1f9aa-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1f9aa-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1f9aa-120">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="519b7-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="519b7-121">Remarks</span></span>  
- <span data-ttu-id="519b7-122">このメソッドは、ネイティブ コードから設定することはできません、空のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="519b7-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="519b7-123">使用する必要があります、<xref:System.Security.Policy.Evidence>メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="519b7-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f9aa-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="1f9aa-121">Remarks</span></span>  
+ <span data-ttu-id="1f9aa-122">このメソッドは、ネイティブ コードから設定することはできません、空のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="1f9aa-123">使用する必要があります、<xref:System.Security.Policy.Evidence>メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="519b7-124">必要条件</span><span class="sxs-lookup"><span data-stu-id="519b7-124">Requirements</span></span>  
- <span data-ttu-id="519b7-125">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="519b7-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1f9aa-124">必要条件</span><span class="sxs-lookup"><span data-stu-id="1f9aa-124">Requirements</span></span>  
+ <span data-ttu-id="1f9aa-125">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1f9aa-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="519b7-126">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="519b7-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1f9aa-126">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1f9aa-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="519b7-127">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="519b7-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1f9aa-127">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1f9aa-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="519b7-128">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="519b7-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="1f9aa-128">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="1f9aa-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="519b7-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="519b7-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f9aa-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f9aa-129">See also</span></span>
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="519b7-130">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="519b7-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="1f9aa-130">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1f9aa-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
