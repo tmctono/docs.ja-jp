@@ -2,23 +2,24 @@
 title: WebHostUnhandledException
 ms.date: 03/30/2017
 ms.assetid: 9e8564c6-8fd2-4bc9-85b5-68e0b55438ee
-ms.openlocfilehash: 842513fb90375c1366fab43213cf3291633e3906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d34e1c6eab7bbf81e15f0b68cf5a2b19aee3907
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147668"
 ---
-# <a name="webhostunhandledexception"></a><span data-ttu-id="7a968-102">WebHostUnhandledException</span><span class="sxs-lookup"><span data-stu-id="7a968-102">WebHostUnhandledException</span></span>
-<span data-ttu-id="7a968-103">Id:109</span><span class="sxs-lookup"><span data-stu-id="7a968-103">Id: 109</span></span>  
+# <a name="webhostunhandledexception"></a><span data-ttu-id="13c6c-102">WebHostUnhandledException</span><span class="sxs-lookup"><span data-stu-id="13c6c-102">WebHostUnhandledException</span></span>
+<span data-ttu-id="13c6c-103">Id:109</span><span class="sxs-lookup"><span data-stu-id="13c6c-103">Id: 109</span></span>  
   
- <span data-ttu-id="7a968-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="7a968-104">Severity: Error</span></span>  
+ <span data-ttu-id="13c6c-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="13c6c-104">Severity: Error</span></span>  
   
- <span data-ttu-id="7a968-105">カテゴリ:ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7a968-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="13c6c-105">カテゴリ:ServiceModel</span><span class="sxs-lookup"><span data-stu-id="13c6c-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7a968-106">説明</span><span class="sxs-lookup"><span data-stu-id="7a968-106">Description</span></span>  
- <span data-ttu-id="7a968-107">このイベントは、WebHost で処理されない例外が発生したことを示します。</span><span class="sxs-lookup"><span data-stu-id="7a968-107">This event indicates that a WebHost unhandled exception occurred.</span></span> <span data-ttu-id="7a968-108">イベントには、送信者の情報、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7a968-108">The event lists the Sender Information, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="13c6c-106">説明</span><span class="sxs-lookup"><span data-stu-id="13c6c-106">Description</span></span>  
+ <span data-ttu-id="13c6c-107">このイベントは、WebHost で処理されない例外が発生したことを示します。</span><span class="sxs-lookup"><span data-stu-id="13c6c-107">This event indicates that a WebHost unhandled exception occurred.</span></span> <span data-ttu-id="13c6c-108">イベントには、送信者の情報、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="13c6c-108">The event lists the Sender Information, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a968-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a968-109">See also</span></span>
-- [<span data-ttu-id="7a968-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="7a968-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="7a968-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="7a968-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="13c6c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="13c6c-109">See also</span></span>
+
+- [<span data-ttu-id="13c6c-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="13c6c-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="13c6c-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="13c6c-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

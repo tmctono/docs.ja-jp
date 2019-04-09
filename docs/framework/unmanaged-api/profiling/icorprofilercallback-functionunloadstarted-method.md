@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1944b84863cea1cfdc464489640a6f78d476537d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c1c1c9a15e9f56765710ffb2015a29b4206b3bd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152608"
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="821fe-102">ICorProfilerCallback::FunctionUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="821fe-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="821fe-103">関数のアンロードをランタイムが開始されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="821fe-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="fc7b0-102">ICorProfilerCallback::FunctionUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="fc7b0-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="fc7b0-103">関数のアンロードをランタイムが開始されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="fc7b0-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="821fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="821fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc7b0-104">構文</span><span class="sxs-lookup"><span data-stu-id="fc7b0-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="821fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="821fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc7b0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fc7b0-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="821fe-106">[in]アンロードされている関数の ID。</span><span class="sxs-lookup"><span data-stu-id="821fe-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="fc7b0-106">[in]アンロードされている関数の ID。</span><span class="sxs-lookup"><span data-stu-id="fc7b0-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="821fe-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="821fe-107">Remarks</span></span>  
- <span data-ttu-id="821fe-108">値、`functionId`このメソッドが呼び出し元に返された後にパラメーターが無効になっています。</span><span class="sxs-lookup"><span data-stu-id="821fe-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc7b0-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="fc7b0-107">Remarks</span></span>  
+ <span data-ttu-id="fc7b0-108">値、`functionId`このメソッドが呼び出し元に返された後にパラメーターが無効になっています。</span><span class="sxs-lookup"><span data-stu-id="fc7b0-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="821fe-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="821fe-109">Requirements</span></span>  
- <span data-ttu-id="821fe-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="821fe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc7b0-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="fc7b0-109">Requirements</span></span>  
+ <span data-ttu-id="fc7b0-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fc7b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="821fe-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="821fe-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="fc7b0-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fc7b0-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="821fe-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="821fe-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc7b0-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc7b0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="821fe-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="821fe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="fc7b0-113">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="fc7b0-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="821fe-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="821fe-114">See also</span></span>
-- [<span data-ttu-id="821fe-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="821fe-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fc7b0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc7b0-114">See also</span></span>
+
+- [<span data-ttu-id="fc7b0-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc7b0-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

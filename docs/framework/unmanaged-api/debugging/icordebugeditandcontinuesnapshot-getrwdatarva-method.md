@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156378"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="7029b-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="7029b-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="7029b-103">`GetRwDataRVA` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="7029b-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="7029b-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="7029b-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="4e28b-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="4e28b-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+`GetRwDataRVA` <span data-ttu-id="4e28b-103">古い形式です。</span><span class="sxs-lookup"><span data-stu-id="4e28b-103">is obsolete.</span></span> <span data-ttu-id="4e28b-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="4e28b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7029b-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="7029b-105">See also</span></span>
-- [<span data-ttu-id="7029b-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7029b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4e28b-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="4e28b-105">See also</span></span>
+
+- [<span data-ttu-id="4e28b-106">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="4e28b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

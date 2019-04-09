@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43349dd3562b4480746948a0e65cc52580e377b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d47f14ff2adb37fca16cf6774a2b80cb2e074b17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157314"
 ---
-# <a name="icordebugtypeenumnext-method"></a><span data-ttu-id="9a652-102">ICorDebugTypeEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="9a652-102">ICorDebugTypeEnum::Next Method</span></span>
-<span data-ttu-id="9a652-103">指定された"ICorDebugType"インスタンスの数を取得`celt`列挙体の現在位置から。</span><span class="sxs-lookup"><span data-stu-id="9a652-103">Gets the number of "ICorDebugType" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugtypeenumnext-method"></a><span data-ttu-id="e70e6-102">ICorDebugTypeEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="e70e6-102">ICorDebugTypeEnum::Next Method</span></span>
+<span data-ttu-id="e70e6-103">指定された"ICorDebugType"インスタンスの数を取得`celt`列挙体の現在位置から。</span><span class="sxs-lookup"><span data-stu-id="e70e6-103">Gets the number of "ICorDebugType" instances specified by `celt` from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a652-104">構文</span><span class="sxs-lookup"><span data-stu-id="9a652-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e70e6-104">構文</span><span class="sxs-lookup"><span data-stu-id="e70e6-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,24 +38,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a652-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9a652-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e70e6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e70e6-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="9a652-106">[in]数`ICorDebugType`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="9a652-106">[in] The number of `ICorDebugType` instances to be retrieved.</span></span>  
+ <span data-ttu-id="e70e6-106">[in]数`ICorDebugType`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="e70e6-106">[in] The number of `ICorDebugType` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="9a652-107">[out]それぞれが指すポインターの配列、`ICorDebugType`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="9a652-107">[out] An array of pointers, each of which points to an `ICorDebugType` object.</span></span>  
+ <span data-ttu-id="e70e6-107">[out]それぞれが指すポインターの配列、`ICorDebugType`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e70e6-107">[out] An array of pointers, each of which points to an `ICorDebugType` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="9a652-108">[out]数へのポインター`ICorDebugType`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="9a652-108">[out] Pointer to the number of `ICorDebugType` instances actually returned.</span></span> <span data-ttu-id="9a652-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="9a652-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="e70e6-108">[out]数へのポインター`ICorDebugType`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="e70e6-108">[out] Pointer to the number of `ICorDebugType` instances actually returned.</span></span> <span data-ttu-id="e70e6-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="e70e6-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a652-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a652-110">Requirements</span></span>  
- <span data-ttu-id="9a652-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a652-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e70e6-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="e70e6-110">Requirements</span></span>  
+ <span data-ttu-id="e70e6-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e70e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a652-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a652-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e70e6-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e70e6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a652-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a652-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e70e6-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e70e6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a652-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a652-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="e70e6-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="e70e6-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a652-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a652-115">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="e70e6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="e70e6-115">See also</span></span>

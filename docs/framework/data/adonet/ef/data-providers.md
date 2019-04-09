@@ -2,29 +2,30 @@
 title: Entity Framework データ プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 502bfce39a9e645f36b9be13775a0357307d6c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142000"
 ---
-# <a name="entity-framework-data-providers"></a><span data-ttu-id="43541-102">Entity Framework データ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="43541-102">Entity Framework Data Providers</span></span>
-<span data-ttu-id="43541-103">ここでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] をサポートするデータ プロバイダーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="43541-103">This section provides information on data providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
+# <a name="entity-framework-data-providers"></a><span data-ttu-id="3dbfb-102">Entity Framework データ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="3dbfb-102">Entity Framework Data Providers</span></span>
+<span data-ttu-id="3dbfb-103">ここでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] をサポートするデータ プロバイダーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-103">This section provides information on data providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="43541-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="43541-104">In This Section</span></span>  
- [<span data-ttu-id="43541-105">Entity Framework 用の EntityClient プロバイダー</span><span class="sxs-lookup"><span data-stu-id="43541-105">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- <span data-ttu-id="43541-106">EntityClient データ プロバイダーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="43541-106">Describes the EntityClient data provider.</span></span> <span data-ttu-id="43541-107">このプロバイダーは、データ モデルに対するクエリを正規コマンド ツリーに変換します。</span><span class="sxs-lookup"><span data-stu-id="43541-107">This provider transforms queries against a data model into a canonical command tree.</span></span> <span data-ttu-id="43541-108">すると、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 用の [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] データ プロバイダーが、このコマンド ツリーを消費できるようになります。</span><span class="sxs-lookup"><span data-stu-id="43541-108">The command tree can then be consumed by a [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider for the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3dbfb-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="3dbfb-104">In This Section</span></span>  
+ [<span data-ttu-id="3dbfb-105">Entity Framework 用の EntityClient プロバイダー</span><span class="sxs-lookup"><span data-stu-id="3dbfb-105">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ <span data-ttu-id="3dbfb-106">EntityClient データ プロバイダーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-106">Describes the EntityClient data provider.</span></span> <span data-ttu-id="3dbfb-107">このプロバイダーは、データ モデルに対するクエリを正規コマンド ツリーに変換します。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-107">This provider transforms queries against a data model into a canonical command tree.</span></span> <span data-ttu-id="3dbfb-108">すると、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 用の [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] データ プロバイダーが、このコマンド ツリーを消費できるようになります。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-108">The command tree can then be consumed by a [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider for the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span>  
   
- [<span data-ttu-id="43541-109">Entity Framework 用 SqlClient</span><span class="sxs-lookup"><span data-stu-id="43541-109">SqlClient for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- <span data-ttu-id="43541-110">について説明します、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]をサポートするデータ プロバイダー、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server データベースで使用するためです。</span><span class="sxs-lookup"><span data-stu-id="43541-110">Describes the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider that supports the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] for use with a SQL Server database.</span></span>  
+ [<span data-ttu-id="3dbfb-109">Entity Framework 用 SqlClient</span><span class="sxs-lookup"><span data-stu-id="3dbfb-109">SqlClient for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ <span data-ttu-id="3dbfb-110">について説明します、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]をサポートするデータ プロバイダー、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server データベースで使用するためです。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-110">Describes the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] data provider that supports the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] for use with a SQL Server database.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="43541-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="43541-111">Related Sections</span></span>  
- [<span data-ttu-id="43541-112">Entity Framework (SQL Server Compact)</span><span class="sxs-lookup"><span data-stu-id="43541-112">Entity Framework (SQL Server Compact)</span></span>](https://go.microsoft.com/fwlink/?LinkId=135638)  
- <span data-ttu-id="43541-113">プロバイダーの制限事項と、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] を SQL Server Compact のデータベースと組み合わせて使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="43541-113">Describes provider limitations and how to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] with a SQL Server Compact database.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="3dbfb-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3dbfb-111">Related Sections</span></span>  
+ [<span data-ttu-id="3dbfb-112">Entity Framework (SQL Server Compact)</span><span class="sxs-lookup"><span data-stu-id="3dbfb-112">Entity Framework (SQL Server Compact)</span></span>](https://go.microsoft.com/fwlink/?LinkId=135638)  
+ <span data-ttu-id="3dbfb-113">プロバイダーの制限事項と、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] を SQL Server Compact のデータベースと組み合わせて使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-113">Describes provider limitations and how to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] with a SQL Server Compact database.</span></span>  
   
- [<span data-ttu-id="43541-114">Entity Framework 用のサード パーティ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="43541-114">Third-Party Providers for the Entity Framework</span></span>](https://go.microsoft.com/fwlink/?LinkId=143699)  
- <span data-ttu-id="43541-115">現在、Entity Framework 用として公開されているサードパーティのデータ プロバイダーの一覧。</span><span class="sxs-lookup"><span data-stu-id="43541-115">List of the third-party data providers currently available for the Entity Framework.</span></span>  
+ [<span data-ttu-id="3dbfb-114">Entity Framework 用のサードパーティ プロバイダー</span><span class="sxs-lookup"><span data-stu-id="3dbfb-114">Third-Party Providers for the Entity Framework</span></span>](https://go.microsoft.com/fwlink/?LinkId=143699)  
+ <span data-ttu-id="3dbfb-115">現在、Entity Framework 用として公開されているサードパーティのデータ プロバイダーの一覧。</span><span class="sxs-lookup"><span data-stu-id="3dbfb-115">List of the third-party data providers currently available for the Entity Framework.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43541-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="43541-116">See also</span></span>
-- [<span data-ttu-id="43541-117">データ プロバイダーの操作</span><span class="sxs-lookup"><span data-stu-id="43541-117">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a><span data-ttu-id="3dbfb-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3dbfb-116">See also</span></span>
+
+- [<span data-ttu-id="3dbfb-117">データ プロバイダーの操作</span><span class="sxs-lookup"><span data-stu-id="3dbfb-117">Working with Data Providers</span></span>](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

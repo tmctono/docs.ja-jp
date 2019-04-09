@@ -8,74 +8,75 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146576"
 ---
-# <a name="ialink-interface"></a><span data-ttu-id="b7b19-102">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b7b19-102">IALink Interface</span></span>
-<span data-ttu-id="b7b19-103">.NET Framework アセンブリの構築に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="b7b19-103">Helps in constructing .NET Framework assemblies.</span></span> <span data-ttu-id="b7b19-104">その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="b7b19-104">Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.</span></span>  
+# <a name="ialink-interface"></a><span data-ttu-id="961d0-102">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="961d0-102">IALink Interface</span></span>
+<span data-ttu-id="961d0-103">.NET Framework アセンブリの構築に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="961d0-103">Helps in constructing .NET Framework assemblies.</span></span> <span data-ttu-id="961d0-104">その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="961d0-104">Among other things, the interface contains methods that assist in writing assembly manifests for multi-module assemblies, signing assemblies with strong names, and creating netmodules.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b7b19-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b7b19-105">In This Section</span></span>  
- [<span data-ttu-id="b7b19-106">AddFile メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-106">AddFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+## <a name="in-this-section"></a><span data-ttu-id="961d0-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="961d0-105">In This Section</span></span>  
+ [<span data-ttu-id="961d0-106">AddFile メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-106">AddFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [<span data-ttu-id="b7b19-107">AddImport メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-107">AddImport Method</span></span>](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [<span data-ttu-id="961d0-107">AddImport メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-107">AddImport Method</span></span>](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
- [<span data-ttu-id="b7b19-108">CloseAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-108">CloseAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
+ [<span data-ttu-id="961d0-108">CloseAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-108">CloseAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
- [<span data-ttu-id="b7b19-109">CloseEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-109">CloseEnum Method</span></span>](../../../../docs/framework/unmanaged-api/alink/closeenum-method.md)  
+ [<span data-ttu-id="961d0-109">CloseEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-109">CloseEnum Method</span></span>](../../../../docs/framework/unmanaged-api/alink/closeenum-method.md)  
   
- [<span data-ttu-id="b7b19-110">EmbedResource メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-110">EmbedResource Method</span></span>](../../../../docs/framework/unmanaged-api/alink/embedresource-method.md)  
+ [<span data-ttu-id="961d0-110">EmbedResource メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-110">EmbedResource Method</span></span>](../../../../docs/framework/unmanaged-api/alink/embedresource-method.md)  
   
- [<span data-ttu-id="b7b19-111">EmitAssemblyCustomAttribute メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-111">EmitAssemblyCustomAttribute Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitassemblycustomattribute-method.md)  
+ [<span data-ttu-id="961d0-111">EmitAssemblyCustomAttribute メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-111">EmitAssemblyCustomAttribute Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitassemblycustomattribute-method.md)  
   
- [<span data-ttu-id="b7b19-112">EmitManifest メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-112">EmitManifest Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitmanifest-method.md)  
+ [<span data-ttu-id="961d0-112">EmitManifest メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-112">EmitManifest Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitmanifest-method.md)  
   
- [<span data-ttu-id="b7b19-113">EndMerge メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-113">EndMerge Method</span></span>](../../../../docs/framework/unmanaged-api/alink/endmerge-method.md)  
+ [<span data-ttu-id="961d0-113">EndMerge メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-113">EndMerge Method</span></span>](../../../../docs/framework/unmanaged-api/alink/endmerge-method.md)  
   
- [<span data-ttu-id="b7b19-114">EnumCustomAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-114">EnumCustomAttributes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/enumcustomattributes-method.md)  
+ [<span data-ttu-id="961d0-114">EnumCustomAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-114">EnumCustomAttributes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/enumcustomattributes-method.md)  
   
- [<span data-ttu-id="b7b19-115">EnumImportTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-115">EnumImportTypes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/enumimporttypes-method.md)  
+ [<span data-ttu-id="961d0-115">EnumImportTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-115">EnumImportTypes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/enumimporttypes-method.md)  
   
- [<span data-ttu-id="b7b19-116">ExportNestedType メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-116">ExportNestedType Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
+ [<span data-ttu-id="961d0-116">ExportNestedType メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-116">ExportNestedType Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
   
- [<span data-ttu-id="b7b19-117">ExportNestedTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-117">ExportNestedTypeForwarder Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
+ [<span data-ttu-id="961d0-117">ExportNestedTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-117">ExportNestedTypeForwarder Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
   
- [<span data-ttu-id="b7b19-118">ExportType メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-118">ExportType Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
+ [<span data-ttu-id="961d0-118">ExportType メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-118">ExportType Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
   
- [<span data-ttu-id="b7b19-119">ExportTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-119">ExportTypeForwarder Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exporttypeforwarder-method.md)  
+ [<span data-ttu-id="961d0-119">ExportTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-119">ExportTypeForwarder Method</span></span>](../../../../docs/framework/unmanaged-api/alink/exporttypeforwarder-method.md)  
   
- [<span data-ttu-id="b7b19-120">FreeWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-120">FreeWin32ResBlob Method</span></span>](../../../../docs/framework/unmanaged-api/alink/freewin32resblob-method.md)  
+ [<span data-ttu-id="961d0-120">FreeWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-120">FreeWin32ResBlob Method</span></span>](../../../../docs/framework/unmanaged-api/alink/freewin32resblob-method.md)  
   
- [<span data-ttu-id="b7b19-121">GetAssemblyRefHash メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-121">GetAssemblyRefHash Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
+ [<span data-ttu-id="961d0-121">GetAssemblyRefHash メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-121">GetAssemblyRefHash Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
   
- [<span data-ttu-id="b7b19-122">GetResolutionScope メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-122">GetResolutionScope Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
+ [<span data-ttu-id="961d0-122">GetResolutionScope メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-122">GetResolutionScope Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [<span data-ttu-id="b7b19-123">GetScope メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-123">GetScope Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [<span data-ttu-id="961d0-123">GetScope メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-123">GetScope Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
- [<span data-ttu-id="b7b19-124">GetWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-124">GetWin32ResBlob Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
+ [<span data-ttu-id="961d0-124">GetWin32ResBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-124">GetWin32ResBlob Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
- [<span data-ttu-id="b7b19-125">ImportFile メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-125">ImportFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
+ [<span data-ttu-id="961d0-125">ImportFile メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-125">ImportFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
   
- [<span data-ttu-id="b7b19-126">ImportFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-126">ImportFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
+ [<span data-ttu-id="961d0-126">ImportFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-126">ImportFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
   
- [<span data-ttu-id="b7b19-127">ImportTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-127">ImportTypes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
+ [<span data-ttu-id="961d0-127">ImportTypes メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-127">ImportTypes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- <span data-ttu-id="b7b19-128">"Init"メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-128">"Init Method"</span></span>  
+ <span data-ttu-id="961d0-128">"Init"メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-128">"Init Method"</span></span>  
   
- [<span data-ttu-id="b7b19-129">LinkResource メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-129">LinkResource Method</span></span>](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
+ [<span data-ttu-id="961d0-129">LinkResource メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-129">LinkResource Method</span></span>](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
- [<span data-ttu-id="b7b19-130">PreCloseAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-130">PreCloseAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/alink/precloseassembly-method.md)  
+ [<span data-ttu-id="961d0-130">PreCloseAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-130">PreCloseAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/alink/precloseassembly-method.md)  
   
- [<span data-ttu-id="b7b19-131">SetAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-131">SetAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setassemblyfile-method.md)  
+ [<span data-ttu-id="961d0-131">SetAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-131">SetAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setassemblyfile-method.md)  
   
- [<span data-ttu-id="b7b19-132">SetAssemblyProps メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-132">SetAssemblyProps Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setassemblyprops-method.md)  
+ [<span data-ttu-id="961d0-132">SetAssemblyProps メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-132">SetAssemblyProps Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setassemblyprops-method.md)  
   
- [<span data-ttu-id="b7b19-133">SetNonAssemblyFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="b7b19-133">SetNonAssemblyFlags Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
+ [<span data-ttu-id="961d0-133">SetNonAssemblyFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="961d0-133">SetNonAssemblyFlags Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b7b19-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="b7b19-134">See also</span></span>
-- [<span data-ttu-id="b7b19-135">ALink API</span><span class="sxs-lookup"><span data-stu-id="b7b19-135">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [<span data-ttu-id="b7b19-136">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b7b19-136">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="b7b19-137">Al.exe (アセンブリ リンカー)</span><span class="sxs-lookup"><span data-stu-id="b7b19-137">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a><span data-ttu-id="961d0-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="961d0-134">See also</span></span>
+
+- [<span data-ttu-id="961d0-135">ALink API</span><span class="sxs-lookup"><span data-stu-id="961d0-135">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="961d0-136">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="961d0-136">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="961d0-137">Al.exe (アセンブリ リンカー)</span><span class="sxs-lookup"><span data-stu-id="961d0-137">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)

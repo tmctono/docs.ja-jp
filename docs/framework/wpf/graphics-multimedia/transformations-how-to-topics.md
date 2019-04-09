@@ -9,29 +9,30 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140869"
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="69dda-102">変換に関する方法のトピック</span><span class="sxs-lookup"><span data-stu-id="69dda-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="69dda-103">このセクションのトピックでは、オブジェクトを別の変換を適用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="69dda-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="1e243-102">変換に関する方法のトピック</span><span class="sxs-lookup"><span data-stu-id="1e243-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="1e243-103">このセクションのトピックでは、オブジェクトを別の変換を適用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1e243-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="69dda-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="69dda-104">In This Section</span></span>  
- [<span data-ttu-id="69dda-105">イベントの発生時に要素に変換を適用する</span><span class="sxs-lookup"><span data-stu-id="69dda-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="69dda-106">オブジェクトに複数の変換を適用する</span><span class="sxs-lookup"><span data-stu-id="69dda-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="69dda-107">要素のスピンを設定する</span><span class="sxs-lookup"><span data-stu-id="69dda-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="69dda-108">オブジェクトを回転させる</span><span class="sxs-lookup"><span data-stu-id="69dda-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
- [<span data-ttu-id="69dda-109">要素を拡大縮小する</span><span class="sxs-lookup"><span data-stu-id="69dda-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
- [<span data-ttu-id="69dda-110">要素を傾斜させる</span><span class="sxs-lookup"><span data-stu-id="69dda-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
- [<span data-ttu-id="69dda-111">変換の原点を相対値で指定する</span><span class="sxs-lookup"><span data-stu-id="69dda-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="69dda-112">要素を平行移動する</span><span class="sxs-lookup"><span data-stu-id="69dda-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
- [<span data-ttu-id="69dda-113">MatrixTransform を使用してカスタム変換を作成する</span><span class="sxs-lookup"><span data-stu-id="69dda-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1e243-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1e243-104">In This Section</span></span>  
+ [<span data-ttu-id="1e243-105">イベントの発生時に要素に変換を適用する</span><span class="sxs-lookup"><span data-stu-id="1e243-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="1e243-106">オブジェクトに複数の変換を適用する</span><span class="sxs-lookup"><span data-stu-id="1e243-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="1e243-107">要素のスピンを設定する</span><span class="sxs-lookup"><span data-stu-id="1e243-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="1e243-108">オブジェクトを回転させる</span><span class="sxs-lookup"><span data-stu-id="1e243-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
+ [<span data-ttu-id="1e243-109">要素を拡大縮小する</span><span class="sxs-lookup"><span data-stu-id="1e243-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
+ [<span data-ttu-id="1e243-110">要素を傾斜させる</span><span class="sxs-lookup"><span data-stu-id="1e243-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
+ [<span data-ttu-id="1e243-111">変換の原点を相対値で指定する</span><span class="sxs-lookup"><span data-stu-id="1e243-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="1e243-112">要素を平行移動する</span><span class="sxs-lookup"><span data-stu-id="1e243-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
+ [<span data-ttu-id="1e243-113">MatrixTransform を使用してカスタム変換を作成する</span><span class="sxs-lookup"><span data-stu-id="1e243-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="69dda-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="69dda-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e243-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e243-114">See also</span></span>
+
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="69dda-115">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="69dda-115">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="69dda-116">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="69dda-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="69dda-117">レイアウト</span><span class="sxs-lookup"><span data-stu-id="69dda-117">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="1e243-115">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="1e243-115">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="1e243-116">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="1e243-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="1e243-117">レイアウト</span><span class="sxs-lookup"><span data-stu-id="1e243-117">Layout</span></span>](../advanced/layout.md)

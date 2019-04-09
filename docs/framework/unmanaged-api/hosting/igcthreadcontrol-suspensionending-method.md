@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffee1550c64f1ce7c438580ce78a497aeeb99f3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 90b0cba50129bc728089e41ece5a30697cfc3bc5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144418"
 ---
-# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="a88ee-102">IGCThreadControl::SuspensionEnding メソッド</span><span class="sxs-lookup"><span data-stu-id="a88ee-102">IGCThreadControl::SuspensionEnding Method</span></span>
-<span data-ttu-id="a88ee-103">ランタイムがガベージ コレクションまたはその他の中断の後のスレッドを再開することをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="a88ee-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="91871-102">IGCThreadControl::SuspensionEnding メソッド</span><span class="sxs-lookup"><span data-stu-id="91871-102">IGCThreadControl::SuspensionEnding Method</span></span>
+<span data-ttu-id="91871-103">ランタイムがガベージ コレクションまたはその他の中断の後のスレッドを再開することをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="91871-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a88ee-104">構文</span><span class="sxs-lookup"><span data-stu-id="a88ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91871-104">構文</span><span class="sxs-lookup"><span data-stu-id="91871-104">Syntax</span></span>  
   
 ```  
 HRESULT SuspensionEnding (  
@@ -35,21 +35,22 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a88ee-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a88ee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91871-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="91871-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="a88ee-106">[in]ガベージ コレクションが実行されて生成されます。</span><span class="sxs-lookup"><span data-stu-id="a88ee-106">[in] The generation on which a garbage collection has been performed.</span></span>  
+ <span data-ttu-id="91871-106">[in]ガベージ コレクションが実行されて生成されます。</span><span class="sxs-lookup"><span data-stu-id="91871-106">[in] The generation on which a garbage collection has been performed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a88ee-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="a88ee-107">Remarks</span></span>  
- <span data-ttu-id="a88ee-108">中にすべてのスレッドを再スケジュールしないで、`SuspensionEnding`コールバック。</span><span class="sxs-lookup"><span data-stu-id="a88ee-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="91871-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="91871-107">Remarks</span></span>  
+ <span data-ttu-id="91871-108">中にすべてのスレッドを再スケジュールしないで、`SuspensionEnding`コールバック。</span><span class="sxs-lookup"><span data-stu-id="91871-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a88ee-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="a88ee-109">Requirements</span></span>  
- <span data-ttu-id="a88ee-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a88ee-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91871-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="91871-109">Requirements</span></span>  
+ <span data-ttu-id="91871-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="91871-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a88ee-111">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a88ee-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="91871-111">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="91871-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a88ee-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a88ee-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="91871-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="91871-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a88ee-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a88ee-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="91871-113">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="91871-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a88ee-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a88ee-114">See also</span></span>
-- [<span data-ttu-id="a88ee-115">IGCThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a88ee-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="91871-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="91871-114">See also</span></span>
+
+- [<span data-ttu-id="91871-115">IGCThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91871-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

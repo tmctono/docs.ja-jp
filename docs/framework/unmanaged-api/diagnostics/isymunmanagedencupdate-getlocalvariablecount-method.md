@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a8a56d9655a2754c110c08517229a39011d82c5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 11a75ca89a3537ce8ee72e8ba24401800eacff20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153778"
 ---
-# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="e85a0-102">ISymUnmanagedENCUpdate::GetLocalVariableCount メソッド</span><span class="sxs-lookup"><span data-stu-id="e85a0-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
-<span data-ttu-id="e85a0-103">ローカル変数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="e85a0-103">Gets the number of local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="4eccb-102">ISymUnmanagedENCUpdate::GetLocalVariableCount メソッド</span><span class="sxs-lookup"><span data-stu-id="4eccb-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
+<span data-ttu-id="4eccb-103">ローカル変数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="4eccb-103">Gets the number of local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e85a0-104">構文</span><span class="sxs-lookup"><span data-stu-id="e85a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4eccb-104">構文</span><span class="sxs-lookup"><span data-stu-id="4eccb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariableCount(  
@@ -35,18 +35,19 @@ HRESULT GetLocalVariableCount(
     [out] ULONG        *pcLocals);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e85a0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e85a0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4eccb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4eccb-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="e85a0-106">[in]メソッドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="e85a0-106">[in] The metadata token of methods.</span></span>  
+ <span data-ttu-id="4eccb-106">[in]メソッドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="4eccb-106">[in] The metadata token of methods.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="e85a0-107">[out]ポインター、`ULONG32`ローカル変数の数を格納するために必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="e85a0-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
+ <span data-ttu-id="4eccb-107">[out]ポインター、`ULONG32`ローカル変数の数を格納するために必要なバッファーの文字のサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="4eccb-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e85a0-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="e85a0-108">Return Value</span></span>  
- <span data-ttu-id="e85a0-109">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="e85a0-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4eccb-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="4eccb-108">Return Value</span></span>  
+ <span data-ttu-id="4eccb-109">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="4eccb-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e85a0-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="e85a0-110">Requirements</span></span>  
- <span data-ttu-id="e85a0-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e85a0-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4eccb-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="4eccb-110">Requirements</span></span>  
+ <span data-ttu-id="4eccb-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4eccb-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e85a0-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="e85a0-112">See also</span></span>
-- [<span data-ttu-id="e85a0-113">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e85a0-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4eccb-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4eccb-112">See also</span></span>
+
+- [<span data-ttu-id="4eccb-113">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4eccb-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

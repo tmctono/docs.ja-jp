@@ -1,5 +1,5 @@
 ---
-title: '方法: 追加または実行時にコントロールのコレクションから削除するには'
+title: '方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143144"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="b339a-102">方法: 追加または実行時にコントロールのコレクションから削除するには</span><span class="sxs-lookup"><span data-stu-id="b339a-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
-<span data-ttu-id="b339a-103">アプリケーション開発の一般的なタスクをするコントロールを追加し、フォーム上のコンテナー コントロールからコントロールを削除する (など、<xref:System.Windows.Forms.Panel>または<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム自体)。</span><span class="sxs-lookup"><span data-stu-id="b339a-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="b339a-104">デザイン時に、コントロールをパネルやグループ ボックスに直接ドラッグすることができます。</span><span class="sxs-lookup"><span data-stu-id="b339a-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="b339a-105">実行時には、これらのコントロールは `Controls` コレクションを保持し、それらにどのコントロールが置かれているかを追跡します。</span><span class="sxs-lookup"><span data-stu-id="b339a-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a><span data-ttu-id="915f2-102">方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する</span><span class="sxs-lookup"><span data-stu-id="915f2-102">How to: Add to or Remove from a Collection of Controls at Run Time</span></span>
+<span data-ttu-id="915f2-103">アプリケーション開発の一般的なタスクをするコントロールを追加し、フォーム上のコンテナー コントロールからコントロールを削除する (など、<xref:System.Windows.Forms.Panel>または<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム自体)。</span><span class="sxs-lookup"><span data-stu-id="915f2-103">Common tasks in application development are adding controls to and removing controls from any container control on your forms (such as the <xref:System.Windows.Forms.Panel> or <xref:System.Windows.Forms.GroupBox> control, or even the form itself).</span></span> <span data-ttu-id="915f2-104">デザイン時に、コントロールをパネルやグループ ボックスに直接ドラッグすることができます。</span><span class="sxs-lookup"><span data-stu-id="915f2-104">At design time, controls can be dragged directly onto a panel or group box.</span></span> <span data-ttu-id="915f2-105">実行時には、これらのコントロールは `Controls` コレクションを保持し、それらにどのコントロールが置かれているかを追跡します。</span><span class="sxs-lookup"><span data-stu-id="915f2-105">At run time, these controls maintain a `Controls` collection, which keeps track of what controls are placed on them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b339a-106">次のコード例は、コントロールのコレクションを保持する任意のコントロールに適用されます。</span><span class="sxs-lookup"><span data-stu-id="b339a-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
+>  <span data-ttu-id="915f2-106">次のコード例は、コントロールのコレクションを保持する任意のコントロールに適用されます。</span><span class="sxs-lookup"><span data-stu-id="915f2-106">The following code example applies to any control that maintains a collection of controls within it.</span></span>  
   
-### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="b339a-107">プログラムを使用して、コレクションにコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="b339a-107">To add a control to a collection programmatically</span></span>  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a><span data-ttu-id="915f2-107">プログラムを使用して、コレクションにコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="915f2-107">To add a control to a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="b339a-108">追加するコントロールのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="b339a-108">Create an instance of the control to be added.</span></span>  
+1.  <span data-ttu-id="915f2-108">追加するコントロールのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="915f2-108">Create an instance of the control to be added.</span></span>  
   
-2.  <span data-ttu-id="b339a-109">新しいコントロールのプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="b339a-109">Set properties of the new control.</span></span>  
+2.  <span data-ttu-id="915f2-109">新しいコントロールのプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="915f2-109">Set properties of the new control.</span></span>  
   
-3.  <span data-ttu-id="b339a-110">親コントロールの `Controls` コレクションにコントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="b339a-110">Add the control to the `Controls` collection of the parent control.</span></span>  
+3.  <span data-ttu-id="915f2-110">親コントロールの `Controls` コレクションにコントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="915f2-110">Add the control to the `Controls` collection of the parent control.</span></span>  
   
-     <span data-ttu-id="b339a-111">次のコード例のインスタンスを作成する方法を示しています、<xref:System.Windows.Forms.Button>コントロール。</span><span class="sxs-lookup"><span data-stu-id="b339a-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="b339a-112">使用して、フォームが必要です、<xref:System.Windows.Forms.Panel>コントロールとボタンのイベント処理メソッドが作成される、 `NewPanelButton_Click`、既に存在します。</span><span class="sxs-lookup"><span data-stu-id="b339a-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
+     <span data-ttu-id="915f2-111">次のコード例のインスタンスを作成する方法を示しています、<xref:System.Windows.Forms.Button>コントロール。</span><span class="sxs-lookup"><span data-stu-id="915f2-111">The following code example shows how to create an instance of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="915f2-112">使用して、フォームが必要です、<xref:System.Windows.Forms.Panel>コントロールとボタンのイベント処理メソッドが作成される、 `NewPanelButton_Click`、既に存在します。</span><span class="sxs-lookup"><span data-stu-id="915f2-112">It requires a form with a <xref:System.Windows.Forms.Panel> control and that the event-handling method for the button being created, `NewPanelButton_Click`, already exists.</span></span>  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -64,13 +64,13 @@ ms.locfileid: "57720892"
     }  
     ```  
   
-### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="b339a-113">プログラムを使用してコレクションからコントロールを削除するには</span><span class="sxs-lookup"><span data-stu-id="b339a-113">To remove controls from a collection programmatically</span></span>  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a><span data-ttu-id="915f2-113">プログラムを使用してコレクションからコントロールを削除するには</span><span class="sxs-lookup"><span data-stu-id="915f2-113">To remove controls from a collection programmatically</span></span>  
   
-1.  <span data-ttu-id="b339a-114">イベントからイベント ハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="b339a-114">Remove the event handler from the event.</span></span> <span data-ttu-id="b339a-115">Visual Basic で使用して、 [RemoveHandler ステートメント](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)キーワード; ビジュアルでC#を使用して、 [-= 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)します。</span><span class="sxs-lookup"><span data-stu-id="b339a-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
+1.  <span data-ttu-id="915f2-114">イベントからイベント ハンドラーを削除します。</span><span class="sxs-lookup"><span data-stu-id="915f2-114">Remove the event handler from the event.</span></span> <span data-ttu-id="915f2-115">Visual Basic で使用して、 [RemoveHandler ステートメント](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)キーワード; ビジュアルでC#を使用して、 [-= 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)します。</span><span class="sxs-lookup"><span data-stu-id="915f2-115">In Visual Basic, use the [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) keyword; in Visual C#, use the [-= Operator (C# Reference)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).</span></span>  
   
-2.  <span data-ttu-id="b339a-116">`Remove` メソッドを使用して、パネルの `Controls` コレクションから目的のコントロールを削除します。</span><span class="sxs-lookup"><span data-stu-id="b339a-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
+2.  <span data-ttu-id="915f2-116">`Remove` メソッドを使用して、パネルの `Controls` コレクションから目的のコントロールを削除します。</span><span class="sxs-lookup"><span data-stu-id="915f2-116">Use the `Remove` method to delete the desired control from the panel's `Controls` collection.</span></span>  
   
-3.  <span data-ttu-id="b339a-117">呼び出す、<xref:System.Windows.Forms.Control.Dispose%2A>コントロールによって使用されるすべてのリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="b339a-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
+3.  <span data-ttu-id="915f2-117">呼び出す、<xref:System.Windows.Forms.Control.Dispose%2A>コントロールによって使用されるすべてのリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="915f2-117">Call the <xref:System.Windows.Forms.Control.Dispose%2A> method to release all the resources used by the control.</span></span>  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -100,6 +100,7 @@ ms.locfileid: "57720892"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b339a-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="b339a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="915f2-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="915f2-118">See also</span></span>
+
 - <xref:System.Windows.Forms.Panel>
-- [<span data-ttu-id="b339a-119">Panel コントロール</span><span class="sxs-lookup"><span data-stu-id="b339a-119">Panel Control</span></span>](panel-control-windows-forms.md)
+- [<span data-ttu-id="915f2-119">Panel コントロール</span><span class="sxs-lookup"><span data-stu-id="915f2-119">Panel Control</span></span>](panel-control-windows-forms.md)

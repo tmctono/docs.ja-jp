@@ -1,5 +1,5 @@
 ---
-title: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用して、'
+title: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,40 +15,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143911"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="2eba6-102">方法: Modifiers プロパティおよび GenerateMember プロパティを使用して、</span><span class="sxs-lookup"><span data-stu-id="2eba6-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
-<span data-ttu-id="2eba6-103">2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="2eba6-104">`GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="2eba6-105">`Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。</span><span class="sxs-lookup"><span data-stu-id="2eba6-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="2eba6-106">場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。</span><span class="sxs-lookup"><span data-stu-id="2eba6-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="434f4-102">方法: Modifiers プロパティおよび GenerateMember プロパティを使用する</span><span class="sxs-lookup"><span data-stu-id="434f4-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
+<span data-ttu-id="434f4-103">2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。</span><span class="sxs-lookup"><span data-stu-id="434f4-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="434f4-104">`GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。</span><span class="sxs-lookup"><span data-stu-id="434f4-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="434f4-105">`Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。</span><span class="sxs-lookup"><span data-stu-id="434f4-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="434f4-106">場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。</span><span class="sxs-lookup"><span data-stu-id="434f4-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2eba6-107">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="2eba6-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2eba6-108">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="2eba6-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2eba6-109">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2eba6-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="434f4-107">実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="434f4-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="434f4-108">設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="434f4-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="434f4-109">詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="434f4-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="2eba6-110">コンポーネント フォームのメンバーであるかどうかを指定するには</span><span class="sxs-lookup"><span data-stu-id="2eba6-110">To specify whether a component is a member of the form</span></span>  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="434f4-110">コンポーネント フォームのメンバーであるかどうかを指定するには</span><span class="sxs-lookup"><span data-stu-id="434f4-110">To specify whether a component is a member of the form</span></span>  
   
-1.  <span data-ttu-id="2eba6-111">Windows フォーム デザイナーでフォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="2eba6-111">In the Windows Forms Designer, open your form.</span></span>  
+1.  <span data-ttu-id="434f4-111">Windows フォーム デザイナーでフォームを開きます。</span><span class="sxs-lookup"><span data-stu-id="434f4-111">In the Windows Forms Designer, open your form.</span></span>  
   
-2.  <span data-ttu-id="2eba6-112">開く、**ツールボックス**、フォームで、3 つの配置と<xref:System.Windows.Forms.Button>コントロール。</span><span class="sxs-lookup"><span data-stu-id="2eba6-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
+2.  <span data-ttu-id="434f4-112">開く、**ツールボックス**、フォームで、3 つの配置と<xref:System.Windows.Forms.Button>コントロール。</span><span class="sxs-lookup"><span data-stu-id="434f4-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-3.  <span data-ttu-id="2eba6-113">設定、`GenerateMember`と`Modifiers`の各プロパティ<xref:System.Windows.Forms.Button>次の表に従ってコントロール。</span><span class="sxs-lookup"><span data-stu-id="2eba6-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
+3.  <span data-ttu-id="434f4-113">設定、`GenerateMember`と`Modifiers`の各プロパティ<xref:System.Windows.Forms.Button>次の表に従ってコントロール。</span><span class="sxs-lookup"><span data-stu-id="434f4-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
   
-    |<span data-ttu-id="2eba6-114">ボタンの名前</span><span class="sxs-lookup"><span data-stu-id="2eba6-114">Button name</span></span>|<span data-ttu-id="2eba6-115">GenerateMember 値</span><span class="sxs-lookup"><span data-stu-id="2eba6-115">GenerateMember value</span></span>|<span data-ttu-id="2eba6-116">修飾子の値</span><span class="sxs-lookup"><span data-stu-id="2eba6-116">Modifiers value</span></span>|  
+    |<span data-ttu-id="434f4-114">Button name</span><span class="sxs-lookup"><span data-stu-id="434f4-114">Button name</span></span>|<span data-ttu-id="434f4-115">GenerateMember 値</span><span class="sxs-lookup"><span data-stu-id="434f4-115">GenerateMember value</span></span>|<span data-ttu-id="434f4-116">修飾子の値</span><span class="sxs-lookup"><span data-stu-id="434f4-116">Modifiers value</span></span>|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|<span data-ttu-id="2eba6-117">変更なし</span><span class="sxs-lookup"><span data-stu-id="2eba6-117">No change</span></span>|  
+    |`button3`|`false`|<span data-ttu-id="434f4-117">変更なし</span><span class="sxs-lookup"><span data-stu-id="434f4-117">No change</span></span>|  
   
-4.  <span data-ttu-id="2eba6-118">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="2eba6-118">Build the solution.</span></span>  
+4.  <span data-ttu-id="434f4-118">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="434f4-118">Build the solution.</span></span>  
   
-5.  <span data-ttu-id="2eba6-119">**ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="2eba6-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
+5.  <span data-ttu-id="434f4-119">**ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="434f4-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
   
-6.  <span data-ttu-id="2eba6-120">開く、 **Form1**ノード、および、**コード エディター**、オープン、 **Form1.Designer.vb**または**Form1.Designer.cs**ファイル。</span><span class="sxs-lookup"><span data-stu-id="2eba6-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="2eba6-121">このファイルには、Windows フォーム デザイナーによって出力されるコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="2eba6-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
+6.  <span data-ttu-id="434f4-120">開く、 **Form1**ノード、および、**コード エディター**、オープン、 **Form1.Designer.vb**または**Form1.Designer.cs**ファイル。</span><span class="sxs-lookup"><span data-stu-id="434f4-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="434f4-121">このファイルには、Windows フォーム デザイナーによって出力されるコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="434f4-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
   
-7.  <span data-ttu-id="2eba6-122">3 つのボタンの宣言を探します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="2eba6-123">次のコード例で指定された相違点を示しています、`GenerateMember`と`Modifiers`プロパティ。</span><span class="sxs-lookup"><span data-stu-id="2eba6-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
+7.  <span data-ttu-id="434f4-122">3 つのボタンの宣言を探します。</span><span class="sxs-lookup"><span data-stu-id="434f4-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="434f4-123">次のコード例で指定された相違点を示しています、`GenerateMember`と`Modifiers`プロパティ。</span><span class="sxs-lookup"><span data-stu-id="434f4-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -57,10 +57,11 @@ ms.locfileid: "57710798"
      [!code-vb[System.Windows.Forms.GenerateMember#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  <span data-ttu-id="2eba6-124">既定では、Windows フォーム デザイナーによって、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="2eba6-125">場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>がコンテナー コントロールでは、継承されたコントロールとフォーム内の新しい子を受け付けることができません。</span><span class="sxs-lookup"><span data-stu-id="2eba6-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="2eba6-126">ソリューションは、基本のコンテナー コントロールの修飾子を変更する`protected`または`public`します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
+>  <span data-ttu-id="434f4-124">既定では、Windows フォーム デザイナーによって、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="434f4-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="434f4-125">場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>がコンテナー コントロールでは、継承されたコントロールとフォーム内の新しい子を受け付けることができません。</span><span class="sxs-lookup"><span data-stu-id="434f4-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="434f4-126">ソリューションは、基本のコンテナー コントロールの修飾子を変更する`protected`または`public`します。</span><span class="sxs-lookup"><span data-stu-id="434f4-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eba6-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="2eba6-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="434f4-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="434f4-127">See also</span></span>
+
 - <xref:System.Windows.Forms.Button>
-- [<span data-ttu-id="2eba6-128">Windows フォームのビジュアルの継承</span><span class="sxs-lookup"><span data-stu-id="2eba6-128">Windows Forms Visual Inheritance</span></span>](windows-forms-visual-inheritance.md)
-- [<span data-ttu-id="2eba6-129">チュートリアル: ビジュアル継承のデモンストレーション</span><span class="sxs-lookup"><span data-stu-id="2eba6-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](walkthrough-demonstrating-visual-inheritance.md)
-- [<span data-ttu-id="2eba6-130">方法: Windows フォームを継承します。</span><span class="sxs-lookup"><span data-stu-id="2eba6-130">How to: Inherit Windows Forms</span></span>](how-to-inherit-windows-forms.md)
+- [<span data-ttu-id="434f4-128">Windows フォームのビジュアルの継承</span><span class="sxs-lookup"><span data-stu-id="434f4-128">Windows Forms Visual Inheritance</span></span>](windows-forms-visual-inheritance.md)
+- [<span data-ttu-id="434f4-129">チュートリアル: ビジュアル継承のデモンストレーション</span><span class="sxs-lookup"><span data-stu-id="434f4-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](walkthrough-demonstrating-visual-inheritance.md)
+- [<span data-ttu-id="434f4-130">方法: Windows フォームを継承する</span><span class="sxs-lookup"><span data-stu-id="434f4-130">How to: Inherit Windows Forms</span></span>](how-to-inherit-windows-forms.md)
