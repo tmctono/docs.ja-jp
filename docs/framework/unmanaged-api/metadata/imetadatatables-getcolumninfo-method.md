@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcab5adf30648f6b5a614a407478977bc37c7062
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6156499368fb743b69c03f38b40ad3c5bcabce6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174903"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="ace6c-102">IMetaDataTables::GetColumnInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="ace6c-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="ace6c-103">指定されたテーブルで指定された列に関するデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="ace6c-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="153f8-102">IMetaDataTables::GetColumnInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="153f8-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="153f8-103">指定されたテーブルで指定された列に関するデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="153f8-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ace6c-104">構文</span><span class="sxs-lookup"><span data-stu-id="ace6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="153f8-104">構文</span><span class="sxs-lookup"><span data-stu-id="153f8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetColumnInfo (   
@@ -40,34 +40,35 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ace6c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ace6c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="153f8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="153f8-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="ace6c-106">[in]目的のテーブルのインデックス。</span><span class="sxs-lookup"><span data-stu-id="ace6c-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="153f8-106">[in]目的のテーブルのインデックス。</span><span class="sxs-lookup"><span data-stu-id="153f8-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="ace6c-107">[in]必要な列のインデックス。</span><span class="sxs-lookup"><span data-stu-id="ace6c-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="153f8-107">[in]必要な列のインデックス。</span><span class="sxs-lookup"><span data-stu-id="153f8-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="ace6c-108">[out]行内の列のオフセットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ace6c-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="153f8-108">[out]行内の列のオフセットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="153f8-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="ace6c-109">[out]列のバイト単位のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ace6c-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="153f8-109">[out]列のバイト単位のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="153f8-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="ace6c-110">[out]列の値の型へのポインター。</span><span class="sxs-lookup"><span data-stu-id="ace6c-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="153f8-110">[out]列の値の型へのポインター。</span><span class="sxs-lookup"><span data-stu-id="153f8-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="ace6c-111">[out]列の名前へのポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ace6c-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="153f8-111">[out]列の名前へのポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="153f8-111">[out] A pointer to a pointer to the column name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ace6c-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="ace6c-112">Requirements</span></span>  
- <span data-ttu-id="ace6c-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ace6c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="153f8-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="153f8-112">Requirements</span></span>  
+ <span data-ttu-id="153f8-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="153f8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ace6c-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ace6c-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="153f8-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="153f8-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ace6c-115">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="ace6c-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="153f8-115">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="153f8-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ace6c-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ace6c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="153f8-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="153f8-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ace6c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ace6c-117">See also</span></span>
-- [<span data-ttu-id="ace6c-118">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ace6c-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="ace6c-119">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ace6c-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="153f8-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="153f8-117">See also</span></span>
+
+- [<span data-ttu-id="153f8-118">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="153f8-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="153f8-119">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="153f8-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

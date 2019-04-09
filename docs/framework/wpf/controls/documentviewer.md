@@ -7,22 +7,23 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167857"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="faffe-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="faffe-102">DocumentViewer</span></span>
-<span data-ttu-id="faffe-103"><xref:System.Windows.Controls.DocumentViewer>コントロールを使用する表示<xref:System.Windows.Documents.FixedDocument>コンテンツ (など[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]ドキュメント)、改ページ調整された形式でします。</span><span class="sxs-lookup"><span data-stu-id="faffe-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="7de57-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="7de57-102">DocumentViewer</span></span>
+<span data-ttu-id="7de57-103"><xref:System.Windows.Controls.DocumentViewer>コントロールを使用する表示<xref:System.Windows.Documents.FixedDocument>コンテンツ (など[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]ドキュメント)、改ページ調整された形式でします。</span><span class="sxs-lookup"><span data-stu-id="7de57-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="faffe-104">参照</span><span class="sxs-lookup"><span data-stu-id="faffe-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7de57-104">参照</span><span class="sxs-lookup"><span data-stu-id="7de57-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="faffe-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="faffe-105">See also</span></span>
-- [<span data-ttu-id="faffe-106">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="faffe-106">Documents</span></span>](../advanced/documents.md)
-- [<span data-ttu-id="faffe-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="faffe-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="faffe-108">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="faffe-108">Printing Overview</span></span>](../advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="7de57-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="7de57-105">See also</span></span>
+
+- [<span data-ttu-id="7de57-106">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="7de57-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="7de57-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="7de57-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="7de57-108">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="7de57-108">Printing Overview</span></span>](../advanced/printing-overview.md)
