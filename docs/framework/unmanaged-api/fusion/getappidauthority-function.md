@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 274b91793cd51348c42661bf12a4e4385e17f630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093970"
 ---
-# <a name="getappidauthority-function"></a><span data-ttu-id="99a61-102">GetAppIdAuthority 関数</span><span class="sxs-lookup"><span data-stu-id="99a61-102">GetAppIdAuthority Function</span></span>
-<span data-ttu-id="99a61-103">ポインターを取得、 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)アプリケーション id と参照のキーを管理するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="99a61-103">Gets a pointer to an [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instance that manages keys for application identities and references.</span></span>  
+# <a name="getappidauthority-function"></a><span data-ttu-id="c342f-102">GetAppIdAuthority 関数</span><span class="sxs-lookup"><span data-stu-id="c342f-102">GetAppIdAuthority Function</span></span>
+<span data-ttu-id="c342f-103">ポインターを取得、 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)アプリケーション id と参照のキーを管理するインスタンス。</span><span class="sxs-lookup"><span data-stu-id="c342f-103">Gets a pointer to an [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instance that manages keys for application identities and references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99a61-104">構文</span><span class="sxs-lookup"><span data-stu-id="99a61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c342f-104">構文</span><span class="sxs-lookup"><span data-stu-id="c342f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppIdAuthority (  
@@ -35,17 +35,18 @@ HRESULT GetAppIdAuthority (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99a61-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="99a61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c342f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c342f-105">Parameters</span></span>  
  `ppIAppIdAuthority`  
- <span data-ttu-id="99a61-106">[out]返された`IAppIdAuthority`ポインター。</span><span class="sxs-lookup"><span data-stu-id="99a61-106">[out] The returned `IAppIdAuthority` pointer.</span></span>  
+ <span data-ttu-id="c342f-106">[out]返された`IAppIdAuthority`ポインター。</span><span class="sxs-lookup"><span data-stu-id="c342f-106">[out] The returned `IAppIdAuthority` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99a61-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="99a61-107">Requirements</span></span>  
- <span data-ttu-id="99a61-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="99a61-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c342f-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="c342f-107">Requirements</span></span>  
+ <span data-ttu-id="c342f-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c342f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99a61-109">**ヘッダー:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="99a61-109">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="c342f-109">**ヘッダー:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="c342f-109">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="99a61-110">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99a61-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c342f-110">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="c342f-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="99a61-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="99a61-111">See also</span></span>
-- [<span data-ttu-id="99a61-112">IAppIdAuthority インターフェイス</span><span class="sxs-lookup"><span data-stu-id="99a61-112">IAppIdAuthority Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
-- [<span data-ttu-id="99a61-113">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="99a61-113">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="c342f-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c342f-111">See also</span></span>
+
+- [<span data-ttu-id="c342f-112">IAppIdAuthority インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c342f-112">IAppIdAuthority Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
+- [<span data-ttu-id="c342f-113">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="c342f-113">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
