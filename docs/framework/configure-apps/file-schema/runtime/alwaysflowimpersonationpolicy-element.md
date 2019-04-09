@@ -10,72 +10,72 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60c61e5b7c176f88e8f2c2e717e60ae40f43fbf6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ce1928254699f4de41e92087c76be9bc3c249523
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108044"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a><span data-ttu-id="6e0d2-102">\<alwaysFlowImpersonationPolicy > 要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-102">\<alwaysFlowImpersonationPolicy> Element</span></span>
-<span data-ttu-id="6e0d2-103">偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-103">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>  
+# <a name="alwaysflowimpersonationpolicy-element"></a><span data-ttu-id="e83fc-102">\<alwaysFlowImpersonationPolicy > 要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-102">\<alwaysFlowImpersonationPolicy> Element</span></span>
+<span data-ttu-id="e83fc-103">偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-103">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>  
   
- <span data-ttu-id="6e0d2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6e0d2-104">\<configuration></span></span>  
-<span data-ttu-id="6e0d2-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="6e0d2-105">\<runtime></span></span>  
-<span data-ttu-id="6e0d2-106">\<alwaysFlowImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="6e0d2-106">\<alwaysFlowImpersonationPolicy></span></span>  
+ <span data-ttu-id="e83fc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e83fc-104">\<configuration></span></span>  
+<span data-ttu-id="e83fc-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="e83fc-105">\<runtime></span></span>  
+<span data-ttu-id="e83fc-106">\<alwaysFlowImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="e83fc-106">\<alwaysFlowImpersonationPolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e0d2-107">構文</span><span class="sxs-lookup"><span data-stu-id="6e0d2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e83fc-107">構文</span><span class="sxs-lookup"><span data-stu-id="e83fc-107">Syntax</span></span>  
   
 ```xml  
 <alwaysFlowImpersonationPolicy    
   enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6e0d2-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-108">Attributes and Elements</span></span>  
- <span data-ttu-id="6e0d2-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e83fc-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e83fc-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6e0d2-110">属性</span><span class="sxs-lookup"><span data-stu-id="6e0d2-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e83fc-110">属性</span><span class="sxs-lookup"><span data-stu-id="e83fc-110">Attributes</span></span>  
   
-|<span data-ttu-id="6e0d2-111">属性</span><span class="sxs-lookup"><span data-stu-id="6e0d2-111">Attribute</span></span>|<span data-ttu-id="6e0d2-112">説明</span><span class="sxs-lookup"><span data-stu-id="6e0d2-112">Description</span></span>|  
+|<span data-ttu-id="e83fc-111">属性</span><span class="sxs-lookup"><span data-stu-id="e83fc-111">Attribute</span></span>|<span data-ttu-id="e83fc-112">説明</span><span class="sxs-lookup"><span data-stu-id="e83fc-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="6e0d2-113">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="6e0d2-114">Windows id が非同期ポイント間でフローするかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-114">Indicates whether the Windows identity flows across asynchronous points.</span></span>|  
+|`enabled`|<span data-ttu-id="e83fc-113">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="e83fc-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="e83fc-114">Windows id が非同期ポイント間でフローするかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-114">Indicates whether the Windows identity flows across asynchronous points.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="6e0d2-115">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="6e0d2-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="e83fc-115">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="e83fc-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="6e0d2-116">値</span><span class="sxs-lookup"><span data-stu-id="6e0d2-116">Value</span></span>|<span data-ttu-id="6e0d2-117">説明</span><span class="sxs-lookup"><span data-stu-id="6e0d2-117">Description</span></span>|  
+|<span data-ttu-id="e83fc-116">値</span><span class="sxs-lookup"><span data-stu-id="e83fc-116">Value</span></span>|<span data-ttu-id="e83fc-117">説明</span><span class="sxs-lookup"><span data-stu-id="e83fc-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="6e0d2-118">管理されているメソッドをなどで、権限の借用を実行しない限り、id が、非同期ポイント間でフローしない Windows<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-118">The Windows identity does not flow across asynchronous points, unless the impersonation is performed through managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>.</span></span> <span data-ttu-id="6e0d2-119">既定値です。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="6e0d2-120">Windows id は、偽装の実行方法に関係なく、非同期ポイント間で常にフローします。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-120">The Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
+|`false`|<span data-ttu-id="e83fc-118">管理されているメソッドをなどで、権限の借用を実行しない限り、id が、非同期ポイント間でフローしない Windows<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-118">The Windows identity does not flow across asynchronous points, unless the impersonation is performed through managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>.</span></span> <span data-ttu-id="e83fc-119">既定値です。</span><span class="sxs-lookup"><span data-stu-id="e83fc-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="e83fc-120">Windows id は、偽装の実行方法に関係なく、非同期ポイント間で常にフローします。</span><span class="sxs-lookup"><span data-stu-id="e83fc-120">The Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6e0d2-121">子要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-121">Child Elements</span></span>  
- <span data-ttu-id="6e0d2-122">なし。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e83fc-121">子要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-121">Child Elements</span></span>  
+ <span data-ttu-id="e83fc-122">なし。</span><span class="sxs-lookup"><span data-stu-id="e83fc-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6e0d2-123">親要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e83fc-123">親要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="6e0d2-124">要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-124">Element</span></span>|<span data-ttu-id="6e0d2-125">説明</span><span class="sxs-lookup"><span data-stu-id="6e0d2-125">Description</span></span>|  
+|<span data-ttu-id="e83fc-124">要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-124">Element</span></span>|<span data-ttu-id="e83fc-125">説明</span><span class="sxs-lookup"><span data-stu-id="e83fc-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="6e0d2-126">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="6e0d2-127">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="e83fc-126">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="e83fc-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e83fc-127">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e83fc-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e0d2-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="6e0d2-128">Remarks</span></span>  
- <span data-ttu-id="6e0d2-129">.NET Framework バージョン 1.0 および 1.1 では、Windows id が非同期ポイント間をフローしません。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-129">In the .NET Framework versions 1.0 and 1.1, the Windows identity does not flow across asynchronous points.</span></span> <span data-ttu-id="6e0d2-130">.NET Framework version 2.0 では、<xref:System.Threading.ExecutionContext>オブジェクトを現在実行中のスレッドに関する情報を含み、アプリケーション ドメイン内での非同期ポイント間でフローします。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-130">In the .NET Framework version 2.0, there is an <xref:System.Threading.ExecutionContext> object that contains information about the currently executing thread, and flows it across asynchronous points within an application domain.</span></span> <span data-ttu-id="6e0d2-131"><xref:System.Security.Principal.WindowsIdentity>またメソッドの管理を使用して、権限の借用が行われた指定された、非同期ポイント間をフロー情報の一部としてフローなど<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>platform などの他の方法ではなくネイティブ メソッドを呼び出すとします。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-131">The <xref:System.Security.Principal.WindowsIdentity> also flows as part of the information that flows across the asynchronous points, provided the impersonation was achieved using managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> and not through other means such as platform invoke to native methods.</span></span> <span data-ttu-id="6e0d2-132">この要素を使用して、Windows id は、権限借用の実現方法に関係なく、非同期ポイント間でフローことを指定します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-132">This element is used to specify that the Windows identity does flow across asynchronous points, regardless of how the impersonation was achieved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e83fc-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="e83fc-128">Remarks</span></span>  
+ <span data-ttu-id="e83fc-129">.NET Framework バージョン 1.0 および 1.1 では、Windows id が非同期ポイント間をフローしません。</span><span class="sxs-lookup"><span data-stu-id="e83fc-129">In the .NET Framework versions 1.0 and 1.1, the Windows identity does not flow across asynchronous points.</span></span> <span data-ttu-id="e83fc-130">.NET Framework version 2.0 では、<xref:System.Threading.ExecutionContext>オブジェクトを現在実行中のスレッドに関する情報を含み、アプリケーション ドメイン内での非同期ポイント間でフローします。</span><span class="sxs-lookup"><span data-stu-id="e83fc-130">In the .NET Framework version 2.0, there is an <xref:System.Threading.ExecutionContext> object that contains information about the currently executing thread, and flows it across asynchronous points within an application domain.</span></span> <span data-ttu-id="e83fc-131"><xref:System.Security.Principal.WindowsIdentity>またメソッドの管理を使用して、権限の借用が行われた指定された、非同期ポイント間をフロー情報の一部としてフローなど<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>platform などの他の方法ではなくネイティブ メソッドを呼び出すとします。</span><span class="sxs-lookup"><span data-stu-id="e83fc-131">The <xref:System.Security.Principal.WindowsIdentity> also flows as part of the information that flows across the asynchronous points, provided the impersonation was achieved using managed methods such as <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> and not through other means such as platform invoke to native methods.</span></span> <span data-ttu-id="e83fc-132">この要素を使用して、Windows id は、権限借用の実現方法に関係なく、非同期ポイント間でフローことを指定します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-132">This element is used to specify that the Windows identity does flow across asynchronous points, regardless of how the impersonation was achieved.</span></span>  
   
- <span data-ttu-id="6e0d2-133">他の 2 つの方法でこの既定の動作を変更することができます。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-133">You can alter this default behavior in two other ways:</span></span>  
+ <span data-ttu-id="e83fc-133">他の 2 つの方法でこの既定の動作を変更することができます。</span><span class="sxs-lookup"><span data-stu-id="e83fc-133">You can alter this default behavior in two other ways:</span></span>  
   
-1.  <span data-ttu-id="6e0d2-134">スレッドごとにマネージ コードは。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-134">In managed code on a per-thread basis.</span></span>  
+1.  <span data-ttu-id="e83fc-134">スレッドごとにマネージ コードは。</span><span class="sxs-lookup"><span data-stu-id="e83fc-134">In managed code on a per-thread basis.</span></span>  
   
-     <span data-ttu-id="6e0d2-135">スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-135">You can suppress the flow on a per-thread basis by modifying the <xref:System.Threading.ExecutionContext> and <xref:System.Security.SecurityContext> settings by using the <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, or <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> method.</span></span>  
+     <span data-ttu-id="e83fc-135">スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。</span><span class="sxs-lookup"><span data-stu-id="e83fc-135">You can suppress the flow on a per-thread basis by modifying the <xref:System.Threading.ExecutionContext> and <xref:System.Security.SecurityContext> settings by using the <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, or <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> method.</span></span>  
   
-2.  <span data-ttu-id="6e0d2-136">で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-136">In the call to the unmanaged hosting interface to load the common language runtime (CLR).</span></span>  
+2.  <span data-ttu-id="e83fc-136">で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。</span><span class="sxs-lookup"><span data-stu-id="e83fc-136">In the call to the unmanaged hosting interface to load the common language runtime (CLR).</span></span>  
   
-     <span data-ttu-id="6e0d2-137">呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-137">If an unmanaged hosting interface (instead of a simple managed executable) is used to load the CLR, you can specify a special flag in the call to the [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function.</span></span> <span data-ttu-id="6e0d2-138">プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-138">To enable the compatibility mode for the entire process, set the `flags` parameter for [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) to `STARTUP_ALWAYSFLOW_IMPERSONATION`.</span></span>  
+     <span data-ttu-id="e83fc-137">呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="e83fc-137">If an unmanaged hosting interface (instead of a simple managed executable) is used to load the CLR, you can specify a special flag in the call to the [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function.</span></span> <span data-ttu-id="e83fc-138">プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-138">To enable the compatibility mode for the entire process, set the `flags` parameter for [CorBindToRuntimeEx Function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) to `STARTUP_ALWAYSFLOW_IMPERSONATION`.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="6e0d2-139">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="6e0d2-139">Configuration File</span></span>  
- <span data-ttu-id="6e0d2-140">.NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-140">In a .NET Framework application, this element can be used only in the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="e83fc-139">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="e83fc-139">Configuration File</span></span>  
+ <span data-ttu-id="e83fc-140">.NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="e83fc-140">In a .NET Framework application, this element can be used only in the application configuration file.</span></span>  
   
- <span data-ttu-id="6e0d2-141">見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-141">For an ASP.NET application, the impersonation flow can be configured in the aspnet.config file found in the \<Windows Folder>\Microsoft.NET\Framework\vx.x.xxxx directory.</span></span>  
+ <span data-ttu-id="e83fc-141">見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="e83fc-141">For an ASP.NET application, the impersonation flow can be configured in the aspnet.config file found in the \<Windows Folder>\Microsoft.NET\Framework\vx.x.xxxx directory.</span></span>  
   
- <span data-ttu-id="6e0d2-142">既定では ASP.NET では、次の構成設定を使用して、aspnet.config ファイルで権限借用のフローを無効にします。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-142">ASP.NET by default disables the impersonation flow in the aspnet.config file by using the following configuration settings:</span></span>  
+ <span data-ttu-id="e83fc-142">既定では ASP.NET では、次の構成設定を使用して、aspnet.config ファイルで権限借用のフローを無効にします。</span><span class="sxs-lookup"><span data-stu-id="e83fc-142">ASP.NET by default disables the impersonation flow in the aspnet.config file by using the following configuration settings:</span></span>  
   
 ```xml
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "55255262"
 </configuration>  
 ```  
   
- <span data-ttu-id="6e0d2-143">ASP.NET では、代わりに、権限借用のフローを許可する場合は、する必要があります明示的に使用する次の構成設定。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-143">In ASP.NET, if you want to allow the flow of impersonation instead, you must explicitly use the following configuration settings:</span></span>  
+ <span data-ttu-id="e83fc-143">ASP.NET では、代わりに、権限借用のフローを許可する場合は、する必要があります明示的に使用する次の構成設定。</span><span class="sxs-lookup"><span data-stu-id="e83fc-143">In ASP.NET, if you want to allow the flow of impersonation instead, you must explicitly use the following configuration settings:</span></span>  
   
 ```xml  
 <configuration>  
@@ -97,8 +97,8 @@ ms.locfileid: "55255262"
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6e0d2-144">例</span><span class="sxs-lookup"><span data-stu-id="6e0d2-144">Example</span></span>  
- <span data-ttu-id="6e0d2-145">次の例では、Windows id を権限の借用は、マネージ メソッド以外の方法によって実現している場合でも、非同期ポイント間でフローするかを指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6e0d2-145">The following example shows how to specify that the Windows identity flows across asynchronous points, even when the impersonation is achieved through means other than managed methods.</span></span>  
+## <a name="example"></a><span data-ttu-id="e83fc-144">例</span><span class="sxs-lookup"><span data-stu-id="e83fc-144">Example</span></span>  
+ <span data-ttu-id="e83fc-145">次の例では、Windows id を権限の借用は、マネージ メソッド以外の方法によって実現している場合でも、非同期ポイント間でフローするかを指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e83fc-145">The following example shows how to specify that the Windows identity flows across asynchronous points, even when the impersonation is achieved through means other than managed methods.</span></span>  
   
 ```xml  
 <configuration>  
@@ -108,7 +108,8 @@ ms.locfileid: "55255262"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e0d2-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e0d2-146">See also</span></span>
-- [<span data-ttu-id="6e0d2-147">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="6e0d2-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="6e0d2-148">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="6e0d2-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="6e0d2-149">\<legacyImpersonationPolicy > 要素</span><span class="sxs-lookup"><span data-stu-id="6e0d2-149">\<legacyImpersonationPolicy> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+## <a name="see-also"></a><span data-ttu-id="e83fc-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="e83fc-146">See also</span></span>
+
+- [<span data-ttu-id="e83fc-147">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="e83fc-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="e83fc-148">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="e83fc-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="e83fc-149">\<legacyImpersonationPolicy > 要素</span><span class="sxs-lookup"><span data-stu-id="e83fc-149">\<legacyImpersonationPolicy> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
