@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 780c19acd3d6980c0fb3e31d01e569a61fd04d6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104703"
 ---
-# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="7d1e5-102">ISymUnmanagedWriter::Close メソッド</span><span class="sxs-lookup"><span data-stu-id="7d1e5-102">ISymUnmanagedWriter::Close Method</span></span>
-<span data-ttu-id="7d1e5-103">シンボルをシンボル ストアにコミットした後は、シンボル ライターを閉じます。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
+# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="a662d-102">ISymUnmanagedWriter::Close メソッド</span><span class="sxs-lookup"><span data-stu-id="a662d-102">ISymUnmanagedWriter::Close Method</span></span>
+<span data-ttu-id="a662d-103">シンボルをシンボル ストアにコミットした後は、シンボル ライターを閉じます。</span><span class="sxs-lookup"><span data-stu-id="a662d-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d1e5-104">構文</span><span class="sxs-lookup"><span data-stu-id="7d1e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a662d-104">構文</span><span class="sxs-lookup"><span data-stu-id="a662d-104">Syntax</span></span>  
   
 ```  
 HRESULT Close();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="7d1e5-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="7d1e5-105">Return Value</span></span>  
- <span data-ttu-id="7d1e5-106">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a662d-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="a662d-105">Return Value</span></span>  
+ <span data-ttu-id="a662d-106">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="a662d-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d1e5-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="7d1e5-107">Remarks</span></span>  
- <span data-ttu-id="7d1e5-108">この呼び出しの後、シンボルのライターが、以降の更新は無効になります。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="7d1e5-109">シンボルをコミットせずシンボル ライターを閉じるには使用、 [isymunmanagedwriter::abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="7d1e5-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a662d-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="a662d-107">Remarks</span></span>  
+ <span data-ttu-id="a662d-108">この呼び出しの後、シンボルのライターが、以降の更新は無効になります。</span><span class="sxs-lookup"><span data-stu-id="a662d-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="a662d-109">シンボルをコミットせずシンボル ライターを閉じるには使用、 [isymunmanagedwriter::abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="a662d-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d1e5-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="7d1e5-110">Requirements</span></span>  
- <span data-ttu-id="7d1e5-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7d1e5-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a662d-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="a662d-110">Requirements</span></span>  
+ <span data-ttu-id="a662d-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a662d-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d1e5-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d1e5-112">See also</span></span>
-- [<span data-ttu-id="7d1e5-113">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7d1e5-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a662d-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="a662d-112">See also</span></span>
+
+- [<span data-ttu-id="a662d-113">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a662d-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

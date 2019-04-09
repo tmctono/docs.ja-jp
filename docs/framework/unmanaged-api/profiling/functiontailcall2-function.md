@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 06dd3b028f4f43ca8681c80a5caa4716104068dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080892"
 ---
-# <a name="functiontailcall2-function"></a><span data-ttu-id="29966-102">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="29966-102">FunctionTailcall2 Function</span></span>
-<span data-ttu-id="29966-103">現在実行中の関数が別の関数の末尾呼び出しを実行しようし、スタック フレームに関する情報を提供しますをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="29966-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
+# <a name="functiontailcall2-function"></a><span data-ttu-id="6226b-102">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="6226b-102">FunctionTailcall2 Function</span></span>
+<span data-ttu-id="6226b-103">現在実行中の関数が別の関数の末尾呼び出しを実行しようし、スタック フレームに関する情報を提供しますをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="6226b-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29966-104">構文</span><span class="sxs-lookup"><span data-stu-id="29966-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6226b-104">構文</span><span class="sxs-lookup"><span data-stu-id="6226b-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionTailcall2 (  
@@ -36,46 +36,47 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="29966-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="29966-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6226b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6226b-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="29966-106">[in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。</span><span class="sxs-lookup"><span data-stu-id="29966-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="6226b-106">[in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。</span><span class="sxs-lookup"><span data-stu-id="6226b-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
  `clientData`  
- <span data-ttu-id="29966-107">[in]プロファイラーを使用して以前に指定されたマップが変更された関数の識別子[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)、現在実行中の関数呼び出しの末尾に作成されるのです。</span><span class="sxs-lookup"><span data-stu-id="29966-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="6226b-107">[in]プロファイラーを使用して以前に指定されたマップが変更された関数の識別子[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)、現在実行中の関数呼び出しの末尾に作成されるのです。</span><span class="sxs-lookup"><span data-stu-id="6226b-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
   
  `func`  
- <span data-ttu-id="29966-108">[in]A`COR_PRF_FRAME_INFO`スタック フレームに関する情報を示す値。</span><span class="sxs-lookup"><span data-stu-id="29966-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="6226b-108">[in]A`COR_PRF_FRAME_INFO`スタック フレームに関する情報を示す値。</span><span class="sxs-lookup"><span data-stu-id="6226b-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="29966-109">プロファイラーはこれを不透明なハンドルでの実行エンジンに渡すことができるとして扱う必要があります、 [icorprofilerinfo 2::getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="29966-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="6226b-109">プロファイラーはこれを不透明なハンドルでの実行エンジンに渡すことができるとして扱う必要があります、 [icorprofilerinfo 2::getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="6226b-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="29966-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="29966-110">Remarks</span></span>  
- <span data-ttu-id="29966-111">末尾呼び出しの対象の関数は、現在のスタック フレームを使用し、直接 tail 呼び出しを行った関数の呼び出し元に戻ります。</span><span class="sxs-lookup"><span data-stu-id="29966-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="29966-112">つまり、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)末尾呼び出しの対象となっている関数のコールバックは発行されません。</span><span class="sxs-lookup"><span data-stu-id="29966-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6226b-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="6226b-110">Remarks</span></span>  
+ <span data-ttu-id="6226b-111">末尾呼び出しの対象の関数は、現在のスタック フレームを使用し、直接 tail 呼び出しを行った関数の呼び出し元に戻ります。</span><span class="sxs-lookup"><span data-stu-id="6226b-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="6226b-112">つまり、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)末尾呼び出しの対象となっている関数のコールバックは発行されません。</span><span class="sxs-lookup"><span data-stu-id="6226b-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="29966-113">値、`func`パラメーターが後に有効でない、`FunctionTailcall2`関数は、値が変わる可能性がありますまたは破棄されるためを返します。</span><span class="sxs-lookup"><span data-stu-id="29966-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
+ <span data-ttu-id="6226b-113">値、`func`パラメーターが後に有効でない、`FunctionTailcall2`関数は、値が変わる可能性がありますまたは破棄されるためを返します。</span><span class="sxs-lookup"><span data-stu-id="6226b-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
   
- <span data-ttu-id="29966-114">`FunctionTailcall2`関数は、コールバックは、これを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="29966-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="29966-115">実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。</span><span class="sxs-lookup"><span data-stu-id="29966-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="6226b-114">`FunctionTailcall2`関数は、コールバックは、これを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6226b-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="6226b-115">実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。</span><span class="sxs-lookup"><span data-stu-id="6226b-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="29966-116">実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。</span><span class="sxs-lookup"><span data-stu-id="29966-116">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="6226b-116">実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。</span><span class="sxs-lookup"><span data-stu-id="6226b-116">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="29966-117">項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="29966-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="6226b-117">項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6226b-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="29966-118">終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="29966-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="6226b-118">終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6226b-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="29966-119">実装`FunctionTailcall2`ガベージ コレクションは延期されますブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="29966-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="29966-120">実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。</span><span class="sxs-lookup"><span data-stu-id="29966-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="29966-121">ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall2`を返します。</span><span class="sxs-lookup"><span data-stu-id="29966-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
+ <span data-ttu-id="6226b-119">実装`FunctionTailcall2`ガベージ コレクションは延期されますブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="6226b-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="6226b-120">実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。</span><span class="sxs-lookup"><span data-stu-id="6226b-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="6226b-121">ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall2`を返します。</span><span class="sxs-lookup"><span data-stu-id="6226b-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
   
- <span data-ttu-id="29966-122">また、`FunctionTailcall2`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。</span><span class="sxs-lookup"><span data-stu-id="29966-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="6226b-122">また、`FunctionTailcall2`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。</span><span class="sxs-lookup"><span data-stu-id="6226b-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29966-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="29966-123">Requirements</span></span>  
- <span data-ttu-id="29966-124">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="29966-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6226b-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="6226b-123">Requirements</span></span>  
+ <span data-ttu-id="6226b-124">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6226b-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="29966-125">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="29966-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="6226b-125">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="6226b-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="29966-126">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29966-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6226b-126">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6226b-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="29966-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29966-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="6226b-127">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="6226b-127">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="29966-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="29966-128">See also</span></span>
-- [<span data-ttu-id="29966-129">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="29966-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="29966-130">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="29966-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="29966-131">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="29966-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="29966-132">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="29966-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="6226b-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="6226b-128">See also</span></span>
+
+- [<span data-ttu-id="6226b-129">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="6226b-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="6226b-130">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="6226b-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="6226b-131">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="6226b-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="6226b-132">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="6226b-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
