@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127414"
 ---
-# <a name="validatorflags-enumeration"></a><span data-ttu-id="1dc42-102">ValidatorFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="1dc42-102">ValidatorFlags Enumeration</span></span>
-<span data-ttu-id="1dc42-103">呼び出しで実行される検証の種類を示す値を含む、 [iclrvalidator::validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="1dc42-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
+# <a name="validatorflags-enumeration"></a><span data-ttu-id="a3d63-102">ValidatorFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="a3d63-102">ValidatorFlags Enumeration</span></span>
+<span data-ttu-id="a3d63-103">呼び出しで実行される検証の種類を示す値を含む、 [iclrvalidator::validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="a3d63-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dc42-104">構文</span><span class="sxs-lookup"><span data-stu-id="1dc42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3d63-104">構文</span><span class="sxs-lookup"><span data-stu-id="a3d63-104">Syntax</span></span>  
   
 ```  
 enum ValidatorFlags {  
@@ -38,25 +38,26 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1dc42-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="1dc42-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a3d63-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="a3d63-105">Members</span></span>  
   
-|<span data-ttu-id="1dc42-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="1dc42-106">Member</span></span>|<span data-ttu-id="1dc42-107">説明</span><span class="sxs-lookup"><span data-stu-id="1dc42-107">Description</span></span>|  
+|<span data-ttu-id="a3d63-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="a3d63-106">Member</span></span>|<span data-ttu-id="a3d63-107">説明</span><span class="sxs-lookup"><span data-stu-id="a3d63-107">Description</span></span>|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="1dc42-108">のみ Microsoft intermediate language (MSIL) 実行可能ファイルを検証することを指定します。</span><span class="sxs-lookup"><span data-stu-id="1dc42-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="1dc42-109">実行可能ファイルの形式のみを検証することを指定します。</span><span class="sxs-lookup"><span data-stu-id="1dc42-109">Specifies that only the format of the executable file should be validated.</span></span>|  
-|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="1dc42-110">すべての種類の検証の実行し、で報告される必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="1dc42-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="1dc42-111">実行可能ファイルの形式を検証しないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="1dc42-111">Specifies that the format of the executable file should not be validated.</span></span>|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="1dc42-112">検証エラー メッセージが検証エラーを発生させるソース コードの行を含める必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="1dc42-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="1dc42-113">.NET Framework version 2.0 でこのフィールドの値が正しくありません。</span><span class="sxs-lookup"><span data-stu-id="1dc42-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
+|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="a3d63-108">のみ Microsoft intermediate language (MSIL) 実行可能ファイルを検証することを指定します。</span><span class="sxs-lookup"><span data-stu-id="a3d63-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="a3d63-109">実行可能ファイルの形式のみを検証することを指定します。</span><span class="sxs-lookup"><span data-stu-id="a3d63-109">Specifies that only the format of the executable file should be validated.</span></span>|  
+|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="a3d63-110">すべての種類の検証の実行し、で報告される必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="a3d63-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="a3d63-111">実行可能ファイルの形式を検証しないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="a3d63-111">Specifies that the format of the executable file should not be validated.</span></span>|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="a3d63-112">検証エラー メッセージが検証エラーを発生させるソース コードの行を含める必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="a3d63-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="a3d63-113">.NET Framework version 2.0 でこのフィールドの値が正しくありません。</span><span class="sxs-lookup"><span data-stu-id="a3d63-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1dc42-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="1dc42-114">Requirements</span></span>  
- <span data-ttu-id="1dc42-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dc42-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3d63-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="a3d63-114">Requirements</span></span>  
+ <span data-ttu-id="a3d63-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3d63-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1dc42-116">**ヘッダー:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="1dc42-116">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="a3d63-116">**ヘッダー:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="a3d63-116">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="1dc42-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1dc42-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="a3d63-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a3d63-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1dc42-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dc42-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a3d63-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="a3d63-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1dc42-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dc42-119">See also</span></span>
-- [<span data-ttu-id="1dc42-120">ICLRErrorReportingManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1dc42-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="1dc42-121">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="1dc42-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a3d63-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3d63-119">See also</span></span>
+
+- [<span data-ttu-id="a3d63-120">ICLRErrorReportingManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a3d63-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="a3d63-121">ホスティングの列挙体</span><span class="sxs-lookup"><span data-stu-id="a3d63-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

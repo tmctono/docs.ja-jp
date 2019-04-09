@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128662"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="4f571-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4f571-102">ScrollViewer</span></span>
-<span data-ttu-id="4f571-103"><xref:System.Windows.Controls.ScrollViewer>コントロールが水平方向または垂直方向でスクロールできるコンテンツのスクロール可能な領域を作成します。</span><span class="sxs-lookup"><span data-stu-id="4f571-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="6720c-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="6720c-102">ScrollViewer</span></span>
+<span data-ttu-id="6720c-103"><xref:System.Windows.Controls.ScrollViewer>コントロールが水平方向または垂直方向でスクロールできるコンテンツのスクロール可能な領域を作成します。</span><span class="sxs-lookup"><span data-stu-id="6720c-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4f571-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4f571-104">In This Section</span></span>  
- [<span data-ttu-id="4f571-105">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="4f571-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="4f571-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="4f571-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6720c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6720c-104">In This Section</span></span>  
+ [<span data-ttu-id="6720c-105">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="6720c-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="6720c-106">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="6720c-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4f571-107">参照</span><span class="sxs-lookup"><span data-stu-id="4f571-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6720c-107">参照</span><span class="sxs-lookup"><span data-stu-id="6720c-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="4f571-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="4f571-108">See also</span></span>
-- [<span data-ttu-id="4f571-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="4f571-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="4f571-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="4f571-110">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="6720c-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="6720c-108">See also</span></span>
+
+- [<span data-ttu-id="6720c-109">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="6720c-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="6720c-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="6720c-110">Layout</span></span>](../advanced/layout.md)
