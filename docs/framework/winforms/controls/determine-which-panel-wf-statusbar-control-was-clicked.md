@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。'
+title: '方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7900b010c460fd112acbe0ef35e6945939377e1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116585"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a><span data-ttu-id="3ef3e-102">方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-102">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a><span data-ttu-id="b3b09-102">方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する</span><span class="sxs-lookup"><span data-stu-id="b3b09-102">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="3ef3e-103"><xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="b3b09-103"><xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。</span><span class="sxs-lookup"><span data-stu-id="b3b09-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="3ef3e-104">プログラムを[StatusBar コントロール](statusbar-control-windows-forms.md)コントロールをユーザーのクリックに応答する、内の case ステートメントを使用して、<xref:System.Windows.Forms.StatusBar.PanelClick>イベント。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-104">To program the [StatusBar Control](statusbar-control-windows-forms.md) control to respond to user clicks, use a case statement within the <xref:System.Windows.Forms.StatusBar.PanelClick> event.</span></span> <span data-ttu-id="3ef3e-105">イベント、クリックされたへの参照を含む引数 (パネル引数) に含まれる<xref:System.Windows.Forms.StatusBarPanel>します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-105">The event contains an argument (the panel argument), which contains a reference to the clicked <xref:System.Windows.Forms.StatusBarPanel>.</span></span> <span data-ttu-id="3ef3e-106">この参照を使用して、クリックされたパネルのインデックスを確認し、それに応じたプログラミングできます。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-106">Using this reference, you can determine the index of the clicked panel, and program accordingly.</span></span>  
+ <span data-ttu-id="b3b09-104">プログラムを[StatusBar コントロール](statusbar-control-windows-forms.md)コントロールをユーザーのクリックに応答する、内の case ステートメントを使用して、<xref:System.Windows.Forms.StatusBar.PanelClick>イベント。</span><span class="sxs-lookup"><span data-stu-id="b3b09-104">To program the [StatusBar Control](statusbar-control-windows-forms.md) control to respond to user clicks, use a case statement within the <xref:System.Windows.Forms.StatusBar.PanelClick> event.</span></span> <span data-ttu-id="b3b09-105">イベント、クリックされたへの参照を含む引数 (パネル引数) に含まれる<xref:System.Windows.Forms.StatusBarPanel>します。</span><span class="sxs-lookup"><span data-stu-id="b3b09-105">The event contains an argument (the panel argument), which contains a reference to the clicked <xref:System.Windows.Forms.StatusBarPanel>.</span></span> <span data-ttu-id="b3b09-106">この参照を使用して、クリックされたパネルのインデックスを確認し、それに応じたプログラミングできます。</span><span class="sxs-lookup"><span data-stu-id="b3b09-106">Using this reference, you can determine the index of the clicked panel, and program accordingly.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3ef3e-107">いることを確認、<xref:System.Windows.Forms.StatusBar>コントロールの<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティに設定されて`true`します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-107">Ensure that the <xref:System.Windows.Forms.StatusBar> control's <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> property is set to `true`.</span></span>  
+>  <span data-ttu-id="b3b09-107">いることを確認、<xref:System.Windows.Forms.StatusBar>コントロールの<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティに設定されて`true`します。</span><span class="sxs-lookup"><span data-stu-id="b3b09-107">Ensure that the <xref:System.Windows.Forms.StatusBar> control's <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> property is set to `true`.</span></span>  
   
-### <a name="to-determine-which-panel-was-clicked"></a><span data-ttu-id="3ef3e-108">クリックしてされたパネルを確認するには</span><span class="sxs-lookup"><span data-stu-id="3ef3e-108">To determine which panel was clicked</span></span>  
+### <a name="to-determine-which-panel-was-clicked"></a><span data-ttu-id="b3b09-108">クリックしてされたパネルを確認するには</span><span class="sxs-lookup"><span data-stu-id="b3b09-108">To determine which panel was clicked</span></span>  
   
-1.  <span data-ttu-id="3ef3e-109"><xref:System.Windows.Forms.StatusBar.PanelClick>イベント ハンドラーを使用して、 `Select Case` (Visual Basic) でまたは`switch case`(VisualC#または[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) イベントの引数でクリックされたパネルのインデックスを調べることでクリックしてされたパネルを判断するステートメント。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-109">In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.</span></span>  
+1.  <span data-ttu-id="b3b09-109"><xref:System.Windows.Forms.StatusBar.PanelClick>イベント ハンドラーを使用して、 `Select Case` (Visual Basic) でまたは`switch case`(VisualC#または[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) イベントの引数でクリックされたパネルのインデックスを調べることでクリックしてされたパネルを判断するステートメント。</span><span class="sxs-lookup"><span data-stu-id="b3b09-109">In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.</span></span>  
   
-     <span data-ttu-id="3ef3e-110">次のコード例のフォームで、存在が必要です、<xref:System.Windows.Forms.StatusBar>コントロール、 `StatusBar1`、2 つと<xref:System.Windows.Forms.StatusBarPanel>オブジェクト、`StatusBarPanel1`と`StatusBarPanel2`します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-110">The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.</span></span>  
+     <span data-ttu-id="b3b09-110">次のコード例のフォームで、存在が必要です、<xref:System.Windows.Forms.StatusBar>コントロール、 `StatusBar1`、2 つと<xref:System.Windows.Forms.StatusBarPanel>オブジェクト、`StatusBarPanel1`と`StatusBarPanel2`します。</span><span class="sxs-lookup"><span data-stu-id="b3b09-110">The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.</span></span>  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "57712722"
        }  
     ```  
   
-     <span data-ttu-id="3ef3e-111">(Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-111">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="b3b09-111">(Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="b3b09-111">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
@@ -93,9 +93,10 @@ ms.locfileid: "57712722"
        (this, &Form1::statusBar1_PanelClick);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3ef3e-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ef3e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3b09-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3b09-112">See also</span></span>
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [<span data-ttu-id="3ef3e-113">方法: ステータス バー パネルのサイズを設定します。</span><span class="sxs-lookup"><span data-stu-id="3ef3e-113">How to: Set the Size of Status-Bar Panels</span></span>](how-to-set-the-size-of-status-bar-panels.md)
-- [<span data-ttu-id="3ef3e-114">チュートリアル: 実行時にステータス バー情報の更新</span><span class="sxs-lookup"><span data-stu-id="3ef3e-114">Walkthrough: Updating Status Bar Information at Run Time</span></span>](walkthrough-updating-status-bar-information-at-run-time.md)
-- [<span data-ttu-id="3ef3e-115">StatusBar コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="3ef3e-115">StatusBar Control Overview</span></span>](statusbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="b3b09-113">方法: ステータス バー パネルのサイズを設定する</span><span class="sxs-lookup"><span data-stu-id="b3b09-113">How to: Set the Size of Status-Bar Panels</span></span>](how-to-set-the-size-of-status-bar-panels.md)
+- [<span data-ttu-id="b3b09-114">チュートリアル: ステータス バー情報の実行時更新</span><span class="sxs-lookup"><span data-stu-id="b3b09-114">Walkthrough: Updating Status Bar Information at Run Time</span></span>](walkthrough-updating-status-bar-information-at-run-time.md)
+- [<span data-ttu-id="b3b09-115">StatusBar コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="b3b09-115">StatusBar Control Overview</span></span>](statusbar-control-overview-windows-forms.md)
