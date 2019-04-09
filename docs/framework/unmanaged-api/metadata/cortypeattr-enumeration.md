@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087288"
 ---
-# <a name="cortypeattr-enumeration"></a><span data-ttu-id="f0e80-102">CorTypeAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="f0e80-102">CorTypeAttr Enumeration</span></span>
-<span data-ttu-id="f0e80-103">メタデータ型を示す値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f0e80-103">Contains values that indicate type metadata.</span></span>  
+# <a name="cortypeattr-enumeration"></a><span data-ttu-id="8de51-102">CorTypeAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="8de51-102">CorTypeAttr Enumeration</span></span>
+<span data-ttu-id="8de51-103">メタデータ型を示す値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="8de51-103">Contains values that indicate type metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0e80-104">構文</span><span class="sxs-lookup"><span data-stu-id="f0e80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8de51-104">構文</span><span class="sxs-lookup"><span data-stu-id="8de51-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTypeAttr {  
@@ -75,50 +75,51 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f0e80-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0e80-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8de51-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="8de51-105">Members</span></span>  
   
-|<span data-ttu-id="f0e80-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0e80-106">Member</span></span>|<span data-ttu-id="f0e80-107">説明</span><span class="sxs-lookup"><span data-stu-id="f0e80-107">Description</span></span>|  
+|<span data-ttu-id="8de51-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="8de51-106">Member</span></span>|<span data-ttu-id="8de51-107">説明</span><span class="sxs-lookup"><span data-stu-id="8de51-107">Description</span></span>|  
 |------------|-----------------|  
-|`tdVisibilityMask`|<span data-ttu-id="f0e80-108">可視性の種類の情報に使用されます。</span><span class="sxs-lookup"><span data-stu-id="f0e80-108">Used for type visibility information.</span></span>|  
-|`tdNotPublic`|<span data-ttu-id="f0e80-109">型がパブリック スコープでないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-109">Specifies that the type is not in public scope.</span></span>|  
-|`tdPublic`|<span data-ttu-id="f0e80-110">パブリック スコープで型を指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-110">Specifies that the type is in public scope.</span></span>|  
-|`tdNestedPublic`|<span data-ttu-id="f0e80-111">型がパブリックな可視性と入れ子になったことを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-111">Specifies that the type is nested with public visibility.</span></span>|  
-|`tdNestedPrivate`|<span data-ttu-id="f0e80-112">型がプライベートの可視性を持つ入れ子になったことを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-112">Specifies that the type is nested with private visibility.</span></span>|  
-|`tdNestedFamily`|<span data-ttu-id="f0e80-113">ファミリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-113">Specifies that the type is nested with family visibility.</span></span>|  
-|`tdNestedAssembly`|<span data-ttu-id="f0e80-114">アセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-114">Specifies that the type is nested with assembly visibility.</span></span>|  
-|`tdNestedFamANDAssem`|<span data-ttu-id="f0e80-115">ファミリとアセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
-|`tdNestedFamORAssem`|<span data-ttu-id="f0e80-116">ファミリまたはアセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
-|`tdLayoutMask`|<span data-ttu-id="f0e80-117">型のレイアウト情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-117">Gets layout information for the type.</span></span>|  
-|`tdAutoLayout`|<span data-ttu-id="f0e80-118">この型のフィールドが自動的にレイアウトされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
-|`tdSequentialLayout`|<span data-ttu-id="f0e80-119">この型のフィールドが順番にレイアウトされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
-|`tdExplicitLayout`|<span data-ttu-id="f0e80-120">フィールド レイアウトは明示的に指定されたを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-120">Specifies that field layout is supplied explicitly.</span></span>|  
-|`tdClassSemanticsMask`|<span data-ttu-id="f0e80-121">型に関するセマンティック情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-121">Gets semantic information about the type.</span></span>|  
-|`tdClass`|<span data-ttu-id="f0e80-122">型がクラスであることを示します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-122">Specifies that the type is a class.</span></span>|  
-|`tdInterface`|<span data-ttu-id="f0e80-123">型がインターフェイスであることを示します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-123">Specifies that the type is an interface.</span></span>|  
-|`tdAbstract`|<span data-ttu-id="f0e80-124">型が抽象的であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-124">Specifies that the type is abstract.</span></span>|  
-|`tdSealed`|<span data-ttu-id="f0e80-125">型を拡張できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-125">Specifies that the type cannot be extended.</span></span>|  
-|`tdSpecialName`|<span data-ttu-id="f0e80-126">特殊なクラス名を指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-126">Specifies that the class name is special.</span></span> <span data-ttu-id="f0e80-127">その名前で記述する方法。</span><span class="sxs-lookup"><span data-stu-id="f0e80-127">Its name describes how.</span></span>|  
-|`tdImport`|<span data-ttu-id="f0e80-128">型がインポートされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-128">Specifies that the type is imported.</span></span>|  
-|`tdSerializable`|<span data-ttu-id="f0e80-129">型がシリアル化可能なことを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-129">Specifies that the type is serializable.</span></span>|  
-|`tdWindowsRuntime`|<span data-ttu-id="f0e80-130">この型を指定します、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。</span><span class="sxs-lookup"><span data-stu-id="f0e80-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
-|`tdStringFormatMask`|<span data-ttu-id="f0e80-131">文字列のエンコードおよび書式設定方法に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-131">Gets information about how strings are encoded and formatted.</span></span>|  
-|`tdAnsiClass`|<span data-ttu-id="f0e80-132">この型に、LPTSTR ANSI として解釈するを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
-|`tdUnicodeClass`|<span data-ttu-id="f0e80-133">この型が Unicode として LPTSTR を解釈するを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
-|`tdAutoClass`|<span data-ttu-id="f0e80-134">この型が自動的に LPTSTR を解釈することを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
-|`tdCustomFormatClass`|<span data-ttu-id="f0e80-135">型が非標準のエンコーディングを持つことを指定で指定された`CustomFormatMask`します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
-|`tdCustomFormatMask`|<span data-ttu-id="f0e80-136">このマスクを使用して、ネイティブ相互運用機能の非標準のエンコード情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="f0e80-137">これら 2 つのビットの値の意味では、指定されていません。</span><span class="sxs-lookup"><span data-stu-id="f0e80-137">The meaning of the values of these two bits is unspecified.</span></span>|  
-|`tdBeforeFieldInit`|<span data-ttu-id="f0e80-138">静的フィールドにアクセスする最初の試行する前に、型を初期化する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
-|`tdForwarder`|<span data-ttu-id="f0e80-139">型がエクスポートされたことを指定します。 型フォワーダーとします。</span><span class="sxs-lookup"><span data-stu-id="f0e80-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
-|`tdReservedMask`|<span data-ttu-id="f0e80-140">このフラグは、次のフラグは、共通言語ランタイムによって内部的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="f0e80-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
-|`tdRTSpecialName`|<span data-ttu-id="f0e80-141">名前のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
-|`tdHasSecurity`|<span data-ttu-id="f0e80-142">型が関連付けられているセキュリティを指定します。</span><span class="sxs-lookup"><span data-stu-id="f0e80-142">Specifies that the type has security associated with it.</span></span>|  
+|`tdVisibilityMask`|<span data-ttu-id="8de51-108">可視性の種類の情報に使用されます。</span><span class="sxs-lookup"><span data-stu-id="8de51-108">Used for type visibility information.</span></span>|  
+|`tdNotPublic`|<span data-ttu-id="8de51-109">型がパブリック スコープでないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-109">Specifies that the type is not in public scope.</span></span>|  
+|`tdPublic`|<span data-ttu-id="8de51-110">パブリック スコープで型を指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-110">Specifies that the type is in public scope.</span></span>|  
+|`tdNestedPublic`|<span data-ttu-id="8de51-111">型がパブリックな可視性と入れ子になったことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-111">Specifies that the type is nested with public visibility.</span></span>|  
+|`tdNestedPrivate`|<span data-ttu-id="8de51-112">型がプライベートの可視性を持つ入れ子になったことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-112">Specifies that the type is nested with private visibility.</span></span>|  
+|`tdNestedFamily`|<span data-ttu-id="8de51-113">ファミリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-113">Specifies that the type is nested with family visibility.</span></span>|  
+|`tdNestedAssembly`|<span data-ttu-id="8de51-114">アセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-114">Specifies that the type is nested with assembly visibility.</span></span>|  
+|`tdNestedFamANDAssem`|<span data-ttu-id="8de51-115">ファミリとアセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-115">Specifies that the type is nested with family and assembly visibility.</span></span>|  
+|`tdNestedFamORAssem`|<span data-ttu-id="8de51-116">ファミリまたはアセンブリの可視性を持つ型が入れ子になっていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-116">Specifies that the type is nested with family or assembly visibility.</span></span>|  
+|`tdLayoutMask`|<span data-ttu-id="8de51-117">型のレイアウト情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="8de51-117">Gets layout information for the type.</span></span>|  
+|`tdAutoLayout`|<span data-ttu-id="8de51-118">この型のフィールドが自動的にレイアウトされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-118">Specifies that the fields of this type are laid out automatically.</span></span>|  
+|`tdSequentialLayout`|<span data-ttu-id="8de51-119">この型のフィールドが順番にレイアウトされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-119">Specifies that the fields of this type are laid out sequentially.</span></span>|  
+|`tdExplicitLayout`|<span data-ttu-id="8de51-120">フィールド レイアウトは明示的に指定されたを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-120">Specifies that field layout is supplied explicitly.</span></span>|  
+|`tdClassSemanticsMask`|<span data-ttu-id="8de51-121">型に関するセマンティック情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="8de51-121">Gets semantic information about the type.</span></span>|  
+|`tdClass`|<span data-ttu-id="8de51-122">型がクラスであることを示します。</span><span class="sxs-lookup"><span data-stu-id="8de51-122">Specifies that the type is a class.</span></span>|  
+|`tdInterface`|<span data-ttu-id="8de51-123">型がインターフェイスであることを示します。</span><span class="sxs-lookup"><span data-stu-id="8de51-123">Specifies that the type is an interface.</span></span>|  
+|`tdAbstract`|<span data-ttu-id="8de51-124">型が抽象的であることを示します。</span><span class="sxs-lookup"><span data-stu-id="8de51-124">Specifies that the type is abstract.</span></span>|  
+|`tdSealed`|<span data-ttu-id="8de51-125">型を拡張できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-125">Specifies that the type cannot be extended.</span></span>|  
+|`tdSpecialName`|<span data-ttu-id="8de51-126">特殊なクラス名を指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-126">Specifies that the class name is special.</span></span> <span data-ttu-id="8de51-127">その名前で記述する方法。</span><span class="sxs-lookup"><span data-stu-id="8de51-127">Its name describes how.</span></span>|  
+|`tdImport`|<span data-ttu-id="8de51-128">型がインポートされることを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-128">Specifies that the type is imported.</span></span>|  
+|`tdSerializable`|<span data-ttu-id="8de51-129">型がシリアル化可能なことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-129">Specifies that the type is serializable.</span></span>|  
+|`tdWindowsRuntime`|<span data-ttu-id="8de51-130">この型を指定します、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。</span><span class="sxs-lookup"><span data-stu-id="8de51-130">Specifies that this type is a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
+|`tdStringFormatMask`|<span data-ttu-id="8de51-131">文字列のエンコードおよび書式設定方法に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="8de51-131">Gets information about how strings are encoded and formatted.</span></span>|  
+|`tdAnsiClass`|<span data-ttu-id="8de51-132">この型に、LPTSTR ANSI として解釈するを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-132">Specifies that this type interprets an LPTSTR as ANSI.</span></span>|  
+|`tdUnicodeClass`|<span data-ttu-id="8de51-133">この型が Unicode として LPTSTR を解釈するを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-133">Specifies that this type interprets an LPTSTR as Unicode.</span></span>|  
+|`tdAutoClass`|<span data-ttu-id="8de51-134">この型が自動的に LPTSTR を解釈することを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-134">Specifies that this type interprets an LPTSTR automatically.</span></span>|  
+|`tdCustomFormatClass`|<span data-ttu-id="8de51-135">型が非標準のエンコーディングを持つことを指定で指定された`CustomFormatMask`します。</span><span class="sxs-lookup"><span data-stu-id="8de51-135">Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.</span></span>|  
+|`tdCustomFormatMask`|<span data-ttu-id="8de51-136">このマスクを使用して、ネイティブ相互運用機能の非標準のエンコード情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="8de51-136">Use this mask to get non-standard encoding information for native interop.</span></span> <span data-ttu-id="8de51-137">これら 2 つのビットの値の意味では、指定されていません。</span><span class="sxs-lookup"><span data-stu-id="8de51-137">The meaning of the values of these two bits is unspecified.</span></span>|  
+|`tdBeforeFieldInit`|<span data-ttu-id="8de51-138">静的フィールドにアクセスする最初の試行する前に、型を初期化する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-138">Specifies that the type must be initialized before the first attempt to access a static field.</span></span>|  
+|`tdForwarder`|<span data-ttu-id="8de51-139">型がエクスポートされたことを指定します。 型フォワーダーとします。</span><span class="sxs-lookup"><span data-stu-id="8de51-139">Specifies that the type is exported, and a type forwarder.</span></span>|  
+|`tdReservedMask`|<span data-ttu-id="8de51-140">このフラグは、次のフラグは、共通言語ランタイムによって内部的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="8de51-140">This flag and the flags below are used internally by the common language runtime.</span></span>|  
+|`tdRTSpecialName`|<span data-ttu-id="8de51-141">名前のエンコーディングに共通言語ランタイムが確認する必要がありますを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-141">Specifies that the common language runtime should check the name encoding.</span></span>|  
+|`tdHasSecurity`|<span data-ttu-id="8de51-142">型が関連付けられているセキュリティを指定します。</span><span class="sxs-lookup"><span data-stu-id="8de51-142">Specifies that the type has security associated with it.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f0e80-143">必要条件</span><span class="sxs-lookup"><span data-stu-id="f0e80-143">Requirements</span></span>  
- <span data-ttu-id="f0e80-144">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0e80-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8de51-143">必要条件</span><span class="sxs-lookup"><span data-stu-id="8de51-143">Requirements</span></span>  
+ <span data-ttu-id="8de51-144">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8de51-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0e80-145">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f0e80-145">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8de51-145">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8de51-145">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f0e80-146">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0e80-146">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8de51-146">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="8de51-146">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f0e80-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0e80-147">See also</span></span>
-- [<span data-ttu-id="f0e80-148">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="f0e80-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8de51-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="8de51-147">See also</span></span>
+
+- [<span data-ttu-id="8de51-148">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="8de51-148">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
