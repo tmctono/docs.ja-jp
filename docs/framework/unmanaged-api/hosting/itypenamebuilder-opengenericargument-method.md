@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dba91a384e2dc99e742a54f22be7a28884f0a7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95fc3caad0436bc2bf641c13f9e230e346c31060
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207878"
 ---
-# <a name="itypenamebuilderopengenericargument-method"></a><span data-ttu-id="47674-102">ITypeNameBuilder::OpenGenericArgument メソッド</span><span class="sxs-lookup"><span data-stu-id="47674-102">ITypeNameBuilder::OpenGenericArgument Method</span></span>
-<span data-ttu-id="47674-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="47674-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderopengenericargument-method"></a><span data-ttu-id="4c616-102">ITypeNameBuilder::OpenGenericArgument メソッド</span><span class="sxs-lookup"><span data-stu-id="4c616-102">ITypeNameBuilder::OpenGenericArgument Method</span></span>
+<span data-ttu-id="4c616-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="4c616-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47674-104">構文</span><span class="sxs-lookup"><span data-stu-id="47674-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c616-104">構文</span><span class="sxs-lookup"><span data-stu-id="4c616-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenGenericArgument ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="47674-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="47674-105">Requirements</span></span>  
- <span data-ttu-id="47674-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="47674-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c616-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="4c616-105">Requirements</span></span>  
+ <span data-ttu-id="4c616-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4c616-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47674-107">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="47674-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4c616-107">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4c616-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="47674-108">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="47674-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4c616-108">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="4c616-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="47674-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47674-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="4c616-109">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="4c616-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="47674-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="47674-110">See also</span></span>
-- [<span data-ttu-id="47674-111">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="47674-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4c616-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="4c616-110">See also</span></span>
+
+- [<span data-ttu-id="4c616-111">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4c616-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

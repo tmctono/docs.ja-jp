@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60cbc6f6649db28d06321b59c26c45668628d9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212467"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="25df3-102">COR_GC_THREAD_STATS_TYPES 列挙体</span><span class="sxs-lookup"><span data-stu-id="25df3-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
-<span data-ttu-id="25df3-103">スレッドのガベージ コレクションの統計情報を示します。</span><span class="sxs-lookup"><span data-stu-id="25df3-103">Indicates the garbage collection statistics for a thread.</span></span>  
+# <a name="corgcthreadstatstypes-enumeration"></a><span data-ttu-id="0be0c-102">COR_GC_THREAD_STATS_TYPES 列挙体</span><span class="sxs-lookup"><span data-stu-id="0be0c-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+<span data-ttu-id="0be0c-103">スレッドのガベージ コレクションの統計情報を示します。</span><span class="sxs-lookup"><span data-stu-id="0be0c-103">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25df3-104">構文</span><span class="sxs-lookup"><span data-stu-id="25df3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0be0c-104">構文</span><span class="sxs-lookup"><span data-stu-id="0be0c-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,18 +34,19 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="25df3-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="25df3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0be0c-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="0be0c-105">Members</span></span>  
   
-|<span data-ttu-id="25df3-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="25df3-106">Member</span></span>|<span data-ttu-id="25df3-107">説明</span><span class="sxs-lookup"><span data-stu-id="25df3-107">Description</span></span>|  
+|<span data-ttu-id="0be0c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0be0c-106">Member</span></span>|<span data-ttu-id="0be0c-107">説明</span><span class="sxs-lookup"><span data-stu-id="0be0c-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="25df3-108">スレッドには、最新のガベージ コレクションで昇格されたバイトがあります。</span><span class="sxs-lookup"><span data-stu-id="25df3-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="0be0c-108">スレッドには、最新のガベージ コレクションで昇格されたバイトがあります。</span><span class="sxs-lookup"><span data-stu-id="0be0c-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="25df3-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="25df3-109">Requirements</span></span>  
- <span data-ttu-id="25df3-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="25df3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0be0c-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="0be0c-109">Requirements</span></span>  
+ <span data-ttu-id="0be0c-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0be0c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="25df3-111">**ヘッダー:** GCHost.idl、GCHost.h</span><span class="sxs-lookup"><span data-stu-id="25df3-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="0be0c-111">**ヘッダー:** GCHost.idl、GCHost.h</span><span class="sxs-lookup"><span data-stu-id="0be0c-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="25df3-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25df3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0be0c-112">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="0be0c-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="25df3-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="25df3-113">See also</span></span>
-- [<span data-ttu-id="25df3-114">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="25df3-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="0be0c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0be0c-113">See also</span></span>
+
+- [<span data-ttu-id="0be0c-114">ホスティングの列挙体</span><span class="sxs-lookup"><span data-stu-id="0be0c-114">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

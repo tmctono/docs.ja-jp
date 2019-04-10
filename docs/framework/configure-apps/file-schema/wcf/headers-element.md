@@ -2,21 +2,22 @@
 title: <headers> 要素
 ms.date: 03/30/2017
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
-ms.openlocfilehash: 16fa14148223f5fd2b434dab35976a0f237e2049
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d6d7f981f176348a14ddc6b0af39378239eebd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215808"
 ---
-# <a name="headers-element"></a><span data-ttu-id="b560b-102">\<ヘッダー > 要素</span><span class="sxs-lookup"><span data-stu-id="b560b-102">\<headers> element</span></span>
-<span data-ttu-id="b560b-103">ローカル発行者を正しくアドレス指定するために必要なアドレス ヘッダーのコレクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="b560b-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="b560b-104">`add` キーワードを使用して、このコレクションにヘッダーを追加できます。</span><span class="sxs-lookup"><span data-stu-id="b560b-104">You can use the `add` keyword to add a header to this collection.</span></span>  
+# <a name="headers-element"></a><span data-ttu-id="cedff-102">\<ヘッダー > 要素</span><span class="sxs-lookup"><span data-stu-id="cedff-102">\<headers> element</span></span>
+<span data-ttu-id="cedff-103">ローカル発行者を正しくアドレス指定するために必要なアドレス ヘッダーのコレクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="cedff-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="cedff-104">`add` キーワードを使用して、このコレクションにヘッダーを追加できます。</span><span class="sxs-lookup"><span data-stu-id="cedff-104">You can use the `add` keyword to add a header to this collection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b560b-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="b560b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cedff-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="cedff-105">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Headers%2A>
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection>
-- [<span data-ttu-id="b560b-106">方法: ローカル発行者を構成します。</span><span class="sxs-lookup"><span data-stu-id="b560b-106">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [<span data-ttu-id="b560b-107">エンドポイント:アドレス、バインディング、およびコントラクト</span><span class="sxs-lookup"><span data-stu-id="b560b-107">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [<span data-ttu-id="cedff-106">方法: ローカル発行者を設定する</span><span class="sxs-lookup"><span data-stu-id="cedff-106">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [<span data-ttu-id="cedff-107">エンドポイント:アドレス、バインディング、およびコントラクト</span><span class="sxs-lookup"><span data-stu-id="cedff-107">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

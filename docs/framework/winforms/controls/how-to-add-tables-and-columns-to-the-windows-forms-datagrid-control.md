@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。'
+title: '方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,27 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: e222227d6283555fa4ec25fe1e5d8e661296034f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222043"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a><span data-ttu-id="7422a-102">方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。</span><span class="sxs-lookup"><span data-stu-id="7422a-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a><span data-ttu-id="3d652-102">方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する</span><span class="sxs-lookup"><span data-stu-id="3d652-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="7422a-103">
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="7422a-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="7422a-104">詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7422a-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+>  <span data-ttu-id="3d652-103"><xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="3d652-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="3d652-104">詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d652-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="7422a-105">データを表示するには、Windows フォームで<xref:System.Windows.Forms.DataGrid>テーブルと列を作成してコントロール**DataGridTableStyle**オブジェクトと追加すること、 **GridTableStylesCollection**となるオブジェクト使用してアクセス、<xref:System.Windows.Forms.DataGrid>コントロールの**TableStyles**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="7422a-105">You can display data in the Windows Forms <xref:System.Windows.Forms.DataGrid> control in tables and columns by creating **DataGridTableStyle** objects and adding them to the **GridTableStylesCollection** object, which is accessed through the <xref:System.Windows.Forms.DataGrid> control's **TableStyles** property.</span></span> <span data-ttu-id="7422a-106">各テーブルのスタイルがで指定されたは、どのようなデータ テーブルの内容を表示、 **DataGridTableStyle**オブジェクトの**MappingName**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="7422a-106">Each table style displays the contents of whatever data table is specified in the **DataGridTableStyle** object's **MappingName** property.</span></span> <span data-ttu-id="7422a-107">既定では、テーブルのスタイルが指定されていない列スタイルを使用するデータ テーブル内のすべての列が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7422a-107">By default, a table style with no column styles specified will display all the columns within that data table.</span></span> <span data-ttu-id="7422a-108">追加することで表示するテーブルから列を制限する**DataGridColumnStyle**オブジェクトを**GridColumnStylesCollection**オブジェクトを通じてアクセスされる、 **GridColumnStyles**の各プロパティ**DataGridTableStyle**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="7422a-108">You can restrict which columns from the table appear by adding **DataGridColumnStyle** objects to the **GridColumnStylesCollection** object, which is accessed through the **GridColumnStyles** property of each **DataGridTableStyle** object.</span></span>  
+ <span data-ttu-id="3d652-105">データを表示するには、Windows フォームで<xref:System.Windows.Forms.DataGrid>テーブルと列を作成してコントロール**DataGridTableStyle**オブジェクトと追加すること、 **GridTableStylesCollection**となるオブジェクト使用してアクセス、<xref:System.Windows.Forms.DataGrid>コントロールの**TableStyles**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="3d652-105">You can display data in the Windows Forms <xref:System.Windows.Forms.DataGrid> control in tables and columns by creating **DataGridTableStyle** objects and adding them to the **GridTableStylesCollection** object, which is accessed through the <xref:System.Windows.Forms.DataGrid> control's **TableStyles** property.</span></span> <span data-ttu-id="3d652-106">各テーブルのスタイルがで指定されたは、どのようなデータ テーブルの内容を表示、 **DataGridTableStyle**オブジェクトの**MappingName**プロパティ。</span><span class="sxs-lookup"><span data-stu-id="3d652-106">Each table style displays the contents of whatever data table is specified in the **DataGridTableStyle** object's **MappingName** property.</span></span> <span data-ttu-id="3d652-107">既定では、テーブルのスタイルが指定されていない列スタイルを使用するデータ テーブル内のすべての列が表示されます。</span><span class="sxs-lookup"><span data-stu-id="3d652-107">By default, a table style with no column styles specified will display all the columns within that data table.</span></span> <span data-ttu-id="3d652-108">追加することで表示するテーブルから列を制限する**DataGridColumnStyle**オブジェクトを**GridColumnStylesCollection**オブジェクトを通じてアクセスされる、 **GridColumnStyles**の各プロパティ**DataGridTableStyle**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3d652-108">You can restrict which columns from the table appear by adding **DataGridColumnStyle** objects to the **GridColumnStylesCollection** object, which is accessed through the **GridColumnStyles** property of each **DataGridTableStyle** object.</span></span>  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a><span data-ttu-id="7422a-109">データ グリッドにテーブルと列をプログラムで追加するには</span><span class="sxs-lookup"><span data-stu-id="7422a-109">To add a table and column to a DataGrid programmatically</span></span>  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a><span data-ttu-id="3d652-109">データ グリッドにテーブルと列をプログラムで追加するには</span><span class="sxs-lookup"><span data-stu-id="3d652-109">To add a table and column to a DataGrid programmatically</span></span>  
   
-1.  <span data-ttu-id="7422a-110">テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。</span><span class="sxs-lookup"><span data-stu-id="7422a-110">In order to display data in the table, you must first bind the <xref:System.Windows.Forms.DataGrid> control to a dataset.</span></span> <span data-ttu-id="7422a-111">詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。</span><span class="sxs-lookup"><span data-stu-id="7422a-111">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
+1.  <span data-ttu-id="3d652-110">テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。</span><span class="sxs-lookup"><span data-stu-id="3d652-110">In order to display data in the table, you must first bind the <xref:System.Windows.Forms.DataGrid> control to a dataset.</span></span> <span data-ttu-id="3d652-111">詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。</span><span class="sxs-lookup"><span data-stu-id="3d652-111">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="7422a-112">列のスタイルをプログラムで指定するには、ときに常に作成**DataGridColumnStyle**オブジェクトに追加して、 **GridColumnStylesCollection**オブジェクトを追加する前に**DataGridTableStyle**オブジェクトを**GridTableStylesCollection**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="7422a-112">When programmatically specifying column styles, always create **DataGridColumnStyle** objects and add them to the **GridColumnStylesCollection** object before adding **DataGridTableStyle** objects to the **GridTableStylesCollection** object.</span></span> <span data-ttu-id="7422a-113">空の追加と**DataGridTableStyle**オブジェクトをコレクションに**DataGridColumnStyle**オブジェクトが自動的に生成します。</span><span class="sxs-lookup"><span data-stu-id="7422a-113">When you add an empty **DataGridTableStyle** object to the collection, **DataGridColumnStyle** objects are automatically generated for you.</span></span> <span data-ttu-id="7422a-114">新規追加しようとする場合に例外がスローされます、 **DataGridColumnStyle**重複オブジェクト**MappingName**値を**GridColumnStylesCollection**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="7422a-114">Consequently, an exception will be thrown if you try to add new **DataGridColumnStyle** objects with duplicate **MappingName** values to the **GridColumnStylesCollection** object.</span></span>  
+    >  <span data-ttu-id="3d652-112">列のスタイルをプログラムで指定するには、ときに常に作成**DataGridColumnStyle**オブジェクトに追加して、 **GridColumnStylesCollection**オブジェクトを追加する前に**DataGridTableStyle**オブジェクトを**GridTableStylesCollection**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3d652-112">When programmatically specifying column styles, always create **DataGridColumnStyle** objects and add them to the **GridColumnStylesCollection** object before adding **DataGridTableStyle** objects to the **GridTableStylesCollection** object.</span></span> <span data-ttu-id="3d652-113">空の追加と**DataGridTableStyle**オブジェクトをコレクションに**DataGridColumnStyle**オブジェクトが自動的に生成します。</span><span class="sxs-lookup"><span data-stu-id="3d652-113">When you add an empty **DataGridTableStyle** object to the collection, **DataGridColumnStyle** objects are automatically generated for you.</span></span> <span data-ttu-id="3d652-114">新規追加しようとする場合に例外がスローされます、 **DataGridColumnStyle**重複オブジェクト**MappingName**値を**GridColumnStylesCollection**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3d652-114">Consequently, an exception will be thrown if you try to add new **DataGridColumnStyle** objects with duplicate **MappingName** values to the **GridColumnStylesCollection** object.</span></span>  
   
-2.  <span data-ttu-id="7422a-115">新しいテーブルのスタイルを宣言し、そのマッピングの名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="7422a-115">Declare a new table style and set its mapping name.</span></span>  
+2.  <span data-ttu-id="3d652-115">新しいテーブルのスタイルを宣言し、そのマッピングの名前を設定します。</span><span class="sxs-lookup"><span data-stu-id="3d652-115">Declare a new table style and set its mapping name.</span></span>  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -48,7 +47,7 @@ ms.locfileid: "57709160"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  <span data-ttu-id="7422a-116">新しい列のスタイルを宣言し、そのマッピングの名前とその他のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="7422a-116">Declare a new column style and set its mapping name and other properties.</span></span>  
+3.  <span data-ttu-id="3d652-116">新しい列のスタイルを宣言し、そのマッピングの名前とその他のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="3d652-116">Declare a new column style and set its mapping name and other properties.</span></span>  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -68,7 +67,7 @@ ms.locfileid: "57709160"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  <span data-ttu-id="7422a-117">呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト</span><span class="sxs-lookup"><span data-stu-id="7422a-117">Call the **Add** method of the **GridColumnStylesCollection** object to add the column to the table style</span></span>  
+4.  <span data-ttu-id="3d652-117">呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト</span><span class="sxs-lookup"><span data-stu-id="3d652-117">Call the **Add** method of the **GridColumnStylesCollection** object to add the column to the table style</span></span>  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -82,7 +81,7 @@ ms.locfileid: "57709160"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  <span data-ttu-id="7422a-118">呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="7422a-118">Call the **Add** method of the **GridTableStylesCollection** object to add the table style to the data grid.</span></span>  
+5.  <span data-ttu-id="3d652-118">呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="3d652-118">Call the **Add** method of the **GridTableStylesCollection** object to add the table style to the data grid.</span></span>  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -96,6 +95,7 @@ ms.locfileid: "57709160"
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7422a-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="7422a-119">See also</span></span>
-- [<span data-ttu-id="7422a-120">DataGrid コントロール</span><span class="sxs-lookup"><span data-stu-id="7422a-120">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
-- [<span data-ttu-id="7422a-121">方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。</span><span class="sxs-lookup"><span data-stu-id="7422a-121">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="3d652-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="3d652-119">See also</span></span>
+
+- [<span data-ttu-id="3d652-120">DataGrid コントロール</span><span class="sxs-lookup"><span data-stu-id="3d652-120">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="3d652-121">方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする</span><span class="sxs-lookup"><span data-stu-id="3d652-121">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

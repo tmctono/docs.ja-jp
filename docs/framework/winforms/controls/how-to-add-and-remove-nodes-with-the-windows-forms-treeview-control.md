@@ -1,5 +1,5 @@
 ---
-title: '方法: 追加して、Windows フォーム TreeView コントロールでノードを削除'
+title: '方法: Windows フォーム TreeView コントロールでノードを追加および削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: d0a77f55e28055ef097f0b4604c316f7751abdbe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209516"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="44413-102">方法: 追加して、Windows フォーム TreeView コントロールでノードを削除</span><span class="sxs-lookup"><span data-stu-id="44413-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
-<span data-ttu-id="44413-103">Windows フォーム<xref:System.Windows.Forms.TreeView>コントロール内の最上位ノードを保存します。 その<xref:System.Windows.Forms.TreeView.Nodes%2A>コレクション。</span><span class="sxs-lookup"><span data-stu-id="44413-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="44413-104">各<xref:System.Windows.Forms.TreeNode>独自もが<xref:System.Windows.Forms.TreeNode.Nodes%2A>その子ノードを格納するコレクション。</span><span class="sxs-lookup"><span data-stu-id="44413-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="44413-105">両方のコレクション プロパティは型<xref:System.Windows.Forms.TreeNodeCollection>、高を追加するための標準的なコレクションのメンバーを削除して、ノード階層の 1 つのレベルにあるノードの再配置します。</span><span class="sxs-lookup"><span data-stu-id="44413-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a><span data-ttu-id="4e7e2-102">方法: Windows フォーム TreeView コントロールでノードを追加および削除する</span><span class="sxs-lookup"><span data-stu-id="4e7e2-102">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>
+<span data-ttu-id="4e7e2-103">Windows フォーム<xref:System.Windows.Forms.TreeView>コントロール内の最上位ノードを保存します。 その<xref:System.Windows.Forms.TreeView.Nodes%2A>コレクション。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control stores the top-level nodes in its <xref:System.Windows.Forms.TreeView.Nodes%2A> collection.</span></span> <span data-ttu-id="4e7e2-104">各<xref:System.Windows.Forms.TreeNode>独自もが<xref:System.Windows.Forms.TreeNode.Nodes%2A>その子ノードを格納するコレクション。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-104">Each <xref:System.Windows.Forms.TreeNode> also has its own <xref:System.Windows.Forms.TreeNode.Nodes%2A> collection to store its child nodes.</span></span> <span data-ttu-id="4e7e2-105">両方のコレクション プロパティは型<xref:System.Windows.Forms.TreeNodeCollection>、高を追加するための標準的なコレクションのメンバーを削除して、ノード階層の 1 つのレベルにあるノードの再配置します。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-105">Both collection properties are of type <xref:System.Windows.Forms.TreeNodeCollection>, which provides standard collection members that enable you to add, remove, and rearrange the nodes at a single level of the node hierarchy.</span></span>  
   
-### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="44413-106">プログラムでノードを追加するには</span><span class="sxs-lookup"><span data-stu-id="44413-106">To add nodes programmatically</span></span>  
+### <a name="to-add-nodes-programmatically"></a><span data-ttu-id="4e7e2-106">プログラムでノードを追加するには</span><span class="sxs-lookup"><span data-stu-id="4e7e2-106">To add nodes programmatically</span></span>  
   
-1.  <span data-ttu-id="44413-107">使用して、<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="44413-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
+1.  <span data-ttu-id="4e7e2-107">使用して、<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-107">Use the <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property.</span></span>  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -43,9 +43,9 @@ ms.locfileid: "57702686"
     treeView1->SelectedNode->Nodes->Add(newNode);  
     ```  
   
-### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="44413-108">プログラムでノードを削除するには</span><span class="sxs-lookup"><span data-stu-id="44413-108">To remove nodes programmatically</span></span>  
+### <a name="to-remove-nodes-programmatically"></a><span data-ttu-id="4e7e2-108">プログラムでノードを削除するには</span><span class="sxs-lookup"><span data-stu-id="4e7e2-108">To remove nodes programmatically</span></span>  
   
-1.  <span data-ttu-id="44413-109">使用して、<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>1 つのノードを削除するプロパティまたは<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>メソッドをすべてのノードをオフにします。</span><span class="sxs-lookup"><span data-stu-id="44413-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
+1.  <span data-ttu-id="4e7e2-109">使用して、<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>1 つのノードを削除するプロパティまたは<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>メソッドをすべてのノードをオフにします。</span><span class="sxs-lookup"><span data-stu-id="4e7e2-109">Use the <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> method of the tree view's <xref:System.Windows.Forms.TreeView.Nodes%2A> property to remove a single node, or the <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> method to clear all nodes.</span></span>  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -70,10 +70,11 @@ ms.locfileid: "57702686"
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="44413-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="44413-110">See also</span></span>
-- [<span data-ttu-id="44413-111">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="44413-111">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="44413-112">TreeView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="44413-112">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
-- [<span data-ttu-id="44413-113">方法: Windows フォーム TreeView コントロールのアイコンを設定します。</span><span class="sxs-lookup"><span data-stu-id="44413-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [<span data-ttu-id="44413-114">方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。</span><span class="sxs-lookup"><span data-stu-id="44413-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [<span data-ttu-id="44413-115">方法: クリックしてされた TreeView ノードを決定します。</span><span class="sxs-lookup"><span data-stu-id="44413-115">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [<span data-ttu-id="44413-116">方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。</span><span class="sxs-lookup"><span data-stu-id="44413-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="4e7e2-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="4e7e2-110">See also</span></span>
+
+- [<span data-ttu-id="4e7e2-111">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="4e7e2-111">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="4e7e2-112">TreeView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="4e7e2-112">TreeView Control Overview</span></span>](treeview-control-overview-windows-forms.md)
+- [<span data-ttu-id="4e7e2-113">方法: Windows フォーム TreeView コントロールのアイコンを設定する</span><span class="sxs-lookup"><span data-stu-id="4e7e2-113">How to: Set Icons for the Windows Forms TreeView Control</span></span>](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [<span data-ttu-id="4e7e2-114">方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する</span><span class="sxs-lookup"><span data-stu-id="4e7e2-114">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [<span data-ttu-id="4e7e2-115">方法: クリックされた TreeView ノードを判別する</span><span class="sxs-lookup"><span data-stu-id="4e7e2-115">How to: Determine Which TreeView Node Was Clicked</span></span>](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [<span data-ttu-id="4e7e2-116">方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する</span><span class="sxs-lookup"><span data-stu-id="4e7e2-116">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)

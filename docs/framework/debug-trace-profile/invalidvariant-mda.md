@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d29d3f3638b3dae4381524fcaf55e1afeddc9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64f5a4425d70974bae8c4f7bec28041e687fe95f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228485"
 ---
-# <a name="invalidvariant-mda"></a><span data-ttu-id="bc66e-102">invalidVariant MDA</span><span class="sxs-lookup"><span data-stu-id="bc66e-102">invalidVariant MDA</span></span>
-<span data-ttu-id="bc66e-103">`invalidVariant` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、ネイティブ コードまたはアンマネージド コードからマネージド コードへの呼び出し時に、無効な `VARIANT` 構造体が見つかるとアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="bc66e-103">The `invalidVariant` managed debugging assistant (MDA) is activated when an invalid `VARIANT` structure is encountered during a call from native or unmanaged code to managed code.</span></span>  
+# <a name="invalidvariant-mda"></a><span data-ttu-id="32d0c-102">invalidVariant MDA</span><span class="sxs-lookup"><span data-stu-id="32d0c-102">invalidVariant MDA</span></span>
+<span data-ttu-id="32d0c-103">`invalidVariant` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、ネイティブ コードまたはアンマネージド コードからマネージド コードへの呼び出し時に、無効な `VARIANT` 構造体が見つかるとアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="32d0c-103">The `invalidVariant` managed debugging assistant (MDA) is activated when an invalid `VARIANT` structure is encountered during a call from native or unmanaged code to managed code.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="bc66e-104">症状</span><span class="sxs-lookup"><span data-stu-id="bc66e-104">Symptoms</span></span>  
- <span data-ttu-id="bc66e-105">`VARIANT` からオブジェクトへのマーシャリングを含む、ネイティブ コードとマネージド コードの間の遷移中に、予期しない動作が発生します。</span><span class="sxs-lookup"><span data-stu-id="bc66e-105">Unexpected behavior during a transition between native and managed code involving the marshaling of a `VARIANT` to an object.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="32d0c-104">症状</span><span class="sxs-lookup"><span data-stu-id="32d0c-104">Symptoms</span></span>  
+ <span data-ttu-id="32d0c-105">`VARIANT` からオブジェクトへのマーシャリングを含む、ネイティブ コードとマネージド コードの間の遷移中に、予期しない動作が発生します。</span><span class="sxs-lookup"><span data-stu-id="32d0c-105">Unexpected behavior during a transition between native and managed code involving the marshaling of a `VARIANT` to an object.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="bc66e-106">原因</span><span class="sxs-lookup"><span data-stu-id="bc66e-106">Cause</span></span>  
- <span data-ttu-id="bc66e-107">ネイティブ コードが、不適切な `VARIANT` 構造体をマネージド コードに渡しています。</span><span class="sxs-lookup"><span data-stu-id="bc66e-107">Native code is passing a malformed `VARIANT` structure to managed code.</span></span>  <span data-ttu-id="bc66e-108">ランタイムは、この `VARIANT` をオブジェクトにマーシャリングしようとし、`VARIANT` が有効でない場合に MDA がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="bc66e-108">The runtime attempts to marshal this `VARIANT` to an object and activates the MDA if the `VARIANT` is not valid.</span></span> <span data-ttu-id="bc66e-109">無効な `VARIANT` には、`VARTYPE` VT_EMPTY &#124; VT_BYREF の `VARIANT` や、`VARTYPE` VT_VARIANT の `VARIANT` などがあります。</span><span class="sxs-lookup"><span data-stu-id="bc66e-109">Examples of invalid `VARIANT`S include a `VARIANT` with `VARTYPE` VT_EMPTY &#124; VT_BYREF or a `VARIANT` with `VARTYPE` VT_VARIANT.</span></span>  
+## <a name="cause"></a><span data-ttu-id="32d0c-106">原因</span><span class="sxs-lookup"><span data-stu-id="32d0c-106">Cause</span></span>  
+ <span data-ttu-id="32d0c-107">ネイティブ コードが、不適切な `VARIANT` 構造体をマネージド コードに渡しています。</span><span class="sxs-lookup"><span data-stu-id="32d0c-107">Native code is passing a malformed `VARIANT` structure to managed code.</span></span>  <span data-ttu-id="32d0c-108">ランタイムは、この `VARIANT` をオブジェクトにマーシャリングしようとし、`VARIANT` が有効でない場合に MDA がアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="32d0c-108">The runtime attempts to marshal this `VARIANT` to an object and activates the MDA if the `VARIANT` is not valid.</span></span> <span data-ttu-id="32d0c-109">無効な `VARIANT` には、`VARTYPE` VT_EMPTY &#124; VT_BYREF の `VARIANT` や、`VARTYPE` VT_VARIANT の `VARIANT` などがあります。</span><span class="sxs-lookup"><span data-stu-id="32d0c-109">Examples of invalid `VARIANT`S include a `VARIANT` with `VARTYPE` VT_EMPTY &#124; VT_BYREF or a `VARIANT` with `VARTYPE` VT_VARIANT.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="bc66e-110">解像度</span><span class="sxs-lookup"><span data-stu-id="bc66e-110">Resolution</span></span>  
- <span data-ttu-id="bc66e-111">`VARIANT` を渡すネイティブ コードまたはアンマネージ コードでは、`VARIANT` の形式と初期化が正しいことを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bc66e-111">The native or unmanaged code passing the `VARIANT` must ensure that the `VARIANT` is correctly formed and initialized.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="32d0c-110">解像度</span><span class="sxs-lookup"><span data-stu-id="32d0c-110">Resolution</span></span>  
+ <span data-ttu-id="32d0c-111">`VARIANT` を渡すネイティブ コードまたはアンマネージ コードでは、`VARIANT` の形式と初期化が正しいことを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="32d0c-111">The native or unmanaged code passing the `VARIANT` must ensure that the `VARIANT` is correctly formed and initialized.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="bc66e-112">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="bc66e-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="bc66e-113">この MDA は、ランタイムの動作への影響はありません。</span><span class="sxs-lookup"><span data-stu-id="bc66e-113">The MDA has no effect on the runtime's behavior.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="32d0c-112">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="32d0c-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="32d0c-113">この MDA は、ランタイムの動作への影響はありません。</span><span class="sxs-lookup"><span data-stu-id="32d0c-113">The MDA has no effect on the runtime's behavior.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="bc66e-114">出力</span><span class="sxs-lookup"><span data-stu-id="bc66e-114">Output</span></span>  
- <span data-ttu-id="bc66e-115">無効な `VARIANT` がアンマネージド モジュールによりマネージド コードに渡されたことを、ランタイムが検出したことを示す MDA メッセージです。</span><span class="sxs-lookup"><span data-stu-id="bc66e-115">An MDA message indicating that the runtime detected an invalid `VARIANT` passed to managed code by an unmanaged module.</span></span>  
+## <a name="output"></a><span data-ttu-id="32d0c-114">出力</span><span class="sxs-lookup"><span data-stu-id="32d0c-114">Output</span></span>  
+ <span data-ttu-id="32d0c-115">無効な `VARIANT` がアンマネージド モジュールによりマネージド コードに渡されたことを、ランタイムが検出したことを示す MDA メッセージです。</span><span class="sxs-lookup"><span data-stu-id="32d0c-115">An MDA message indicating that the runtime detected an invalid `VARIANT` passed to managed code by an unmanaged module.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="bc66e-116">構成</span><span class="sxs-lookup"><span data-stu-id="bc66e-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="32d0c-116">構成</span><span class="sxs-lookup"><span data-stu-id="32d0c-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,7 +45,8 @@ ms.locfileid: "54730803"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bc66e-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="bc66e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32d0c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="32d0c-117">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="bc66e-118">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="bc66e-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="bc66e-119">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="bc66e-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="32d0c-118">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="32d0c-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="32d0c-119">相互運用マーシャリング</span><span class="sxs-lookup"><span data-stu-id="32d0c-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

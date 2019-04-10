@@ -2,41 +2,42 @@
 title: モデル定義関数
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226639"
 ---
-# <a name="model-defined-function"></a><span data-ttu-id="df550-102">モデル定義関数</span><span class="sxs-lookup"><span data-stu-id="df550-102">model-defined function</span></span>
-<span data-ttu-id="df550-103">A*モデル定義関数*は概念モデルで定義されている関数です。</span><span class="sxs-lookup"><span data-stu-id="df550-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="df550-104">モデル定義関数の本体がで表される[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)ルールとは無関係に表現する関数に対応できる、または、データ ソースの言語がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="df550-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
+# <a name="model-defined-function"></a><span data-ttu-id="aebd5-102">モデル定義関数</span><span class="sxs-lookup"><span data-stu-id="aebd5-102">model-defined function</span></span>
+<span data-ttu-id="aebd5-103">A*モデル定義関数*は概念モデルで定義されている関数です。</span><span class="sxs-lookup"><span data-stu-id="aebd5-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="aebd5-104">モデル定義関数の本体がで表される[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)ルールとは無関係に表現する関数に対応できる、または、データ ソースの言語がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="aebd5-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
   
- <span data-ttu-id="df550-105">モデル定義関数の定義には、次の情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="df550-105">A definition for a model-defined function contains the following information:</span></span>  
+ <span data-ttu-id="aebd5-105">モデル定義関数の定義には、次の情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="aebd5-105">A definition for a model-defined function contains the following information:</span></span>  
   
--   <span data-ttu-id="df550-106">関数名。</span><span class="sxs-lookup"><span data-stu-id="df550-106">A function name.</span></span> <span data-ttu-id="df550-107">(必須)</span><span class="sxs-lookup"><span data-stu-id="df550-107">(Required)</span></span>  
+-   <span data-ttu-id="aebd5-106">関数名。</span><span class="sxs-lookup"><span data-stu-id="aebd5-106">A function name.</span></span> <span data-ttu-id="aebd5-107">(必須)</span><span class="sxs-lookup"><span data-stu-id="aebd5-107">(Required)</span></span>  
   
--   <span data-ttu-id="df550-108">戻り値の型。</span><span class="sxs-lookup"><span data-stu-id="df550-108">The type of the return value.</span></span> <span data-ttu-id="df550-109">(オプション)。</span><span class="sxs-lookup"><span data-stu-id="df550-109">(Optional)</span></span>  
+-   <span data-ttu-id="aebd5-108">戻り値の型。</span><span class="sxs-lookup"><span data-stu-id="aebd5-108">The type of the return value.</span></span> <span data-ttu-id="aebd5-109">(オプション)。</span><span class="sxs-lookup"><span data-stu-id="aebd5-109">(Optional)</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="df550-110">戻り値の型が指定されていない場合、戻り値は void になります。</span><span class="sxs-lookup"><span data-stu-id="df550-110">If no return type is specified, the return value is void.</span></span>  
+    >  <span data-ttu-id="aebd5-110">戻り値の型が指定されていない場合、戻り値は void になります。</span><span class="sxs-lookup"><span data-stu-id="aebd5-110">If no return type is specified, the return value is void.</span></span>  
   
--   <span data-ttu-id="df550-111">パラメーター情報。</span><span class="sxs-lookup"><span data-stu-id="df550-111">Parameter information.</span></span> <span data-ttu-id="df550-112">(オプション)。</span><span class="sxs-lookup"><span data-stu-id="df550-112">(Optional)</span></span>  
+-   <span data-ttu-id="aebd5-111">パラメーター情報。</span><span class="sxs-lookup"><span data-stu-id="aebd5-111">Parameter information.</span></span> <span data-ttu-id="aebd5-112">(オプション)。</span><span class="sxs-lookup"><span data-stu-id="aebd5-112">(Optional)</span></span>  
   
--   <span data-ttu-id="df550-113">[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)関数の本体を定義する式。</span><span class="sxs-lookup"><span data-stu-id="df550-113">An [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
+-   <span data-ttu-id="aebd5-113">[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)関数の本体を定義する式。</span><span class="sxs-lookup"><span data-stu-id="aebd5-113">An [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
   
- <span data-ttu-id="df550-114">モデル定義関数では、出力パラメーターがサポートされません。</span><span class="sxs-lookup"><span data-stu-id="df550-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="df550-115">この制約は、モデル定義関数を構成できるようにするためにあります。</span><span class="sxs-lookup"><span data-stu-id="df550-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
+ <span data-ttu-id="aebd5-114">モデル定義関数では、出力パラメーターがサポートされません。</span><span class="sxs-lookup"><span data-stu-id="aebd5-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="aebd5-115">この制約は、モデル定義関数を構成できるようにするためにあります。</span><span class="sxs-lookup"><span data-stu-id="aebd5-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="df550-116">例</span><span class="sxs-lookup"><span data-stu-id="df550-116">Example</span></span>  
- <span data-ttu-id="df550-117">下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。</span><span class="sxs-lookup"><span data-stu-id="df550-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
+## <a name="example"></a><span data-ttu-id="aebd5-116">例</span><span class="sxs-lookup"><span data-stu-id="aebd5-116">Example</span></span>  
+ <span data-ttu-id="aebd5-117">下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。</span><span class="sxs-lookup"><span data-stu-id="aebd5-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
   
  ![発行日付きモデルを示すスクリーン ショット。](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
- <span data-ttu-id="df550-119">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。</span><span class="sxs-lookup"><span data-stu-id="df550-119">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="df550-120">次の CSDL は、`Book` (上のダイアグラムの) の出版以降の年数を返す概念モデルの関数を定義しています。</span><span class="sxs-lookup"><span data-stu-id="df550-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
+ <span data-ttu-id="aebd5-119">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。</span><span class="sxs-lookup"><span data-stu-id="aebd5-119">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="aebd5-120">次の CSDL は、`Book` (上のダイアグラムの) の出版以降の年数を返す概念モデルの関数を定義しています。</span><span class="sxs-lookup"><span data-stu-id="aebd5-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
-## <a name="see-also"></a><span data-ttu-id="df550-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="df550-121">See also</span></span>
-- [<span data-ttu-id="df550-122">Entity Data Model キーの概念</span><span class="sxs-lookup"><span data-stu-id="df550-122">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [<span data-ttu-id="df550-123">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="df550-123">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [<span data-ttu-id="df550-124">Entity Data Model:プリミティブ データ型</span><span class="sxs-lookup"><span data-stu-id="df550-124">Entity Data Model: Primitive Data Types</span></span>](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="aebd5-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="aebd5-121">See also</span></span>
+
+- [<span data-ttu-id="aebd5-122">Entity Data Model キーの概念</span><span class="sxs-lookup"><span data-stu-id="aebd5-122">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [<span data-ttu-id="aebd5-123">エンティティ データ モデル</span><span class="sxs-lookup"><span data-stu-id="aebd5-123">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [<span data-ttu-id="aebd5-124">Entity Data Model:プリミティブ データ型</span><span class="sxs-lookup"><span data-stu-id="aebd5-124">Entity Data Model: Primitive Data Types</span></span>](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

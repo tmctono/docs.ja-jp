@@ -17,31 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c8339142ef382ca029e9dd32c0270bd794ffcc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0decfde08a9097c8fe5185c8b5a3fef4f7f68189
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213338"
 ---
-# <a name="icorprofilercallbackexceptionoshandlerleave-method"></a><span data-ttu-id="38c61-102">ICorProfilerCallback::ExceptionOSHandlerLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="38c61-102">ICorProfilerCallback::ExceptionOSHandlerLeave Method</span></span>
-<span data-ttu-id="38c61-103">実装されていません。</span><span class="sxs-lookup"><span data-stu-id="38c61-103">Not implemented.</span></span> <span data-ttu-id="38c61-104">非管理対象の例外情報を必要とするプロファイラーでは、他の手段では、この情報を取得する必要があります。</span><span class="sxs-lookup"><span data-stu-id="38c61-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
+# <a name="icorprofilercallbackexceptionoshandlerleave-method"></a><span data-ttu-id="d6d52-102">ICorProfilerCallback::ExceptionOSHandlerLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="d6d52-102">ICorProfilerCallback::ExceptionOSHandlerLeave Method</span></span>
+<span data-ttu-id="d6d52-103">実装されていません。</span><span class="sxs-lookup"><span data-stu-id="d6d52-103">Not implemented.</span></span> <span data-ttu-id="d6d52-104">非管理対象の例外情報を必要とするプロファイラーでは、他の手段では、この情報を取得する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d6d52-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38c61-105">構文</span><span class="sxs-lookup"><span data-stu-id="38c61-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6d52-105">構文</span><span class="sxs-lookup"><span data-stu-id="d6d52-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionOSHandlerLeave(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="38c61-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="38c61-106">Requirements</span></span>  
- <span data-ttu-id="38c61-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="38c61-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6d52-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="d6d52-106">Requirements</span></span>  
+ <span data-ttu-id="d6d52-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d6d52-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38c61-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="38c61-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d6d52-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d6d52-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="38c61-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38c61-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d6d52-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d6d52-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38c61-110">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38c61-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="d6d52-110">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="d6d52-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="38c61-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="38c61-111">See also</span></span>
-- [<span data-ttu-id="38c61-112">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="38c61-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d6d52-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6d52-111">See also</span></span>
+
+- [<span data-ttu-id="d6d52-112">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d6d52-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: アクティブな MDI 子を決定します。'
+title: '方法: アクティブな MDI 子フォームを特定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229473"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="4aa4a-102">方法: アクティブな MDI 子を決定します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-102">How to: Determine the Active MDI Child</span></span>
-<span data-ttu-id="4aa4a-103">場合によっては、現在アクティブな子フォームでフォーカスのあるコントロールを操作するコマンドを指定するします。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="4aa4a-104">たとえば、子フォームのテキスト ボックスから選択したテキストをクリップボードにコピーするとします。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="4aa4a-105">クリップボードを使用して、選択したテキストをコピーするプロシージャを作成すると、<xref:System.Windows.Forms.Control.Click>の編集 メニューの標準的なコピー メニュー項目のイベント。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  
+# <a name="how-to-determine-the-active-mdi-child"></a><span data-ttu-id="78242-102">方法: アクティブな MDI 子フォームを特定する</span><span class="sxs-lookup"><span data-stu-id="78242-102">How to: Determine the Active MDI Child</span></span>
+<span data-ttu-id="78242-103">場合によっては、現在アクティブな子フォームでフォーカスのあるコントロールを操作するコマンドを指定するします。</span><span class="sxs-lookup"><span data-stu-id="78242-103">On occasion, you will want to provide a command that operates on the control that has focus on the currently active child form.</span></span> <span data-ttu-id="78242-104">たとえば、子フォームのテキスト ボックスから選択したテキストをクリップボードにコピーするとします。</span><span class="sxs-lookup"><span data-stu-id="78242-104">For example, suppose you want to copy selected text from the child form's text box to the Clipboard.</span></span> <span data-ttu-id="78242-105">クリップボードを使用して、選択したテキストをコピーするプロシージャを作成すると、<xref:System.Windows.Forms.Control.Click>の編集 メニューの標準的なコピー メニュー項目のイベント。</span><span class="sxs-lookup"><span data-stu-id="78242-105">You would create a procedure that copies selected text to the Clipboard using the <xref:System.Windows.Forms.Control.Click> event of the Copy menu item on the standard Edit menu.</span></span>  
   
- <span data-ttu-id="4aa4a-106">MDI アプリケーションが同じ子フォームの多くのインスタンスを持てないため、プロシージャを使用するフォームを把握する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-106">Because an MDI application can have many instances of the same child form, the procedure needs to know which form to use.</span></span> <span data-ttu-id="4aa4a-107">正しい形式を指定するには、使用、<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>プロパティで、フォーカスのある、または最後にアクティブだった子フォームを返します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-107">To specify the correct form, use the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, which returns the child form that has the focus or that was most recently active.</span></span>  
+ <span data-ttu-id="78242-106">MDI アプリケーションが同じ子フォームの多くのインスタンスを持てないため、プロシージャを使用するフォームを把握する必要があります。</span><span class="sxs-lookup"><span data-stu-id="78242-106">Because an MDI application can have many instances of the same child form, the procedure needs to know which form to use.</span></span> <span data-ttu-id="78242-107">正しい形式を指定するには、使用、<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>プロパティで、フォーカスのある、または最後にアクティブだった子フォームを返します。</span><span class="sxs-lookup"><span data-stu-id="78242-107">To specify the correct form, use the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, which returns the child form that has the focus or that was most recently active.</span></span>  
   
- <span data-ttu-id="4aa4a-108">フォーム上のいくつかのコントロールがある場合は、どのコントロールがアクティブかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-108">When you have several controls on a form, you also need to specify which control is active.</span></span> <span data-ttu-id="4aa4a-109">ように、<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>プロパティ、<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>プロパティは、アクティブな子フォームにフォーカスを持つコントロールを返します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-109">Like the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property returns the control with the focus on the active child form.</span></span> <span data-ttu-id="4aa4a-110">次の手順は、子フォームのメニューで、MDI フォームまたはツール バー ボタンのメニューから呼び出すことができるコピー手順を示しています。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-110">The procedure below illustrates a copy procedure that can be called from a child form menu, a menu on the MDI form, or a toolbar button.</span></span>  
+ <span data-ttu-id="78242-108">フォーム上のいくつかのコントロールがある場合は、どのコントロールがアクティブかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="78242-108">When you have several controls on a form, you also need to specify which control is active.</span></span> <span data-ttu-id="78242-109">ように、<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>プロパティ、<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>プロパティは、アクティブな子フォームにフォーカスを持つコントロールを返します。</span><span class="sxs-lookup"><span data-stu-id="78242-109">Like the <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> property, the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property returns the control with the focus on the active child form.</span></span> <span data-ttu-id="78242-110">次の手順は、子フォームのメニューで、MDI フォームまたはツール バー ボタンのメニューから呼び出すことができるコピー手順を示しています。</span><span class="sxs-lookup"><span data-stu-id="78242-110">The procedure below illustrates a copy procedure that can be called from a child form menu, a menu on the MDI form, or a toolbar button.</span></span>  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a><span data-ttu-id="4aa4a-111">アクティブな MDI 子ウィンドウ (そのテキストをクリップボードにコピー) を決定するには</span><span class="sxs-lookup"><span data-stu-id="4aa4a-111">To determine the active MDI child (to copy its text to the Clipboard)</span></span>  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a><span data-ttu-id="78242-111">アクティブな MDI 子ウィンドウ (そのテキストをクリップボードにコピー) を決定するには</span><span class="sxs-lookup"><span data-stu-id="78242-111">To determine the active MDI child (to copy its text to the Clipboard)</span></span>  
   
-1.  <span data-ttu-id="4aa4a-112">メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-112">Within a method, copy the text of the active control of the active child form to the Clipboard.</span></span>  
+1.  <span data-ttu-id="78242-112">メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。</span><span class="sxs-lookup"><span data-stu-id="78242-112">Within a method, copy the text of the active control of the active child form to the Clipboard.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="4aa4a-113">この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-113">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="4aa4a-114">詳細については、[MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-114">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    >  <span data-ttu-id="78242-113">この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="78242-113">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="78242-114">詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。</span><span class="sxs-lookup"><span data-stu-id="78242-114">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -83,9 +83,10 @@ ms.locfileid: "57714328"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4aa4a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="4aa4a-115">See also</span></span>
-- [<span data-ttu-id="4aa4a-116">マルチ ドキュメント インターフェイス (MDI) アプリケーション</span><span class="sxs-lookup"><span data-stu-id="4aa4a-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="4aa4a-117">方法: MDI 親フォームを作成します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="4aa4a-118">方法: MDI 子フォームを作成します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="4aa4a-119">方法: アクティブな MDI 子ウィンドウにデータを送信します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-119">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
-- [<span data-ttu-id="4aa4a-120">方法: MDI 子フォームを配置します。</span><span class="sxs-lookup"><span data-stu-id="4aa4a-120">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="78242-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="78242-115">See also</span></span>
+
+- [<span data-ttu-id="78242-116">マルチ ドキュメント インターフェイス (MDI) アプリケーション</span><span class="sxs-lookup"><span data-stu-id="78242-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="78242-117">方法: MDI 親フォームを作成する</span><span class="sxs-lookup"><span data-stu-id="78242-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="78242-118">方法: MDI 子フォームを作成する</span><span class="sxs-lookup"><span data-stu-id="78242-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="78242-119">方法: アクティブな MDI 子フォームにデータを送信する</span><span class="sxs-lookup"><span data-stu-id="78242-119">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
+- [<span data-ttu-id="78242-120">方法: MDI 子フォームを配置する</span><span class="sxs-lookup"><span data-stu-id="78242-120">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)

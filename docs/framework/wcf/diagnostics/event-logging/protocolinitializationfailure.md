@@ -2,23 +2,24 @@
 title: ProtocolInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 8ee26f94-c85e-4e92-b56b-16f486c8b00e
-ms.openlocfilehash: 044cf6058dee6254ad0d427a5c6cd1a09a688c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35cfaed7d4429d447920abb796cdeb7ab748fa86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227523"
 ---
-# <a name="protocolinitializationfailure"></a><span data-ttu-id="d6c11-102">ProtocolInitializationFailure</span><span class="sxs-lookup"><span data-stu-id="d6c11-102">ProtocolInitializationFailure</span></span>
-<span data-ttu-id="d6c11-103">Id:142</span><span class="sxs-lookup"><span data-stu-id="d6c11-103">Id: 142</span></span>  
+# <a name="protocolinitializationfailure"></a><span data-ttu-id="ef6ec-102">ProtocolInitializationFailure</span><span class="sxs-lookup"><span data-stu-id="ef6ec-102">ProtocolInitializationFailure</span></span>
+<span data-ttu-id="ef6ec-103">Id:142</span><span class="sxs-lookup"><span data-stu-id="ef6ec-103">Id: 142</span></span>  
   
- <span data-ttu-id="d6c11-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="d6c11-104">Severity: Error</span></span>  
+ <span data-ttu-id="ef6ec-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="ef6ec-104">Severity: Error</span></span>  
   
- <span data-ttu-id="d6c11-105">カテゴリ:TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="d6c11-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="ef6ec-105">カテゴリ:TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="ef6ec-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d6c11-106">説明</span><span class="sxs-lookup"><span data-stu-id="d6c11-106">Description</span></span>  
- <span data-ttu-id="d6c11-107">このイベントは、WS-AtomicTransaction プロトコル サービスを初期化できなかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="d6c11-107">This event indicates that the WS-Atomic Transaction protocol service failed to initialize.</span></span> <span data-ttu-id="d6c11-108">その結果、WS-AtomicTransaction 機能が無効化されました。</span><span class="sxs-lookup"><span data-stu-id="d6c11-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="d6c11-109">イベントには、プロトコル ID、プロトコル名、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d6c11-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span> <span data-ttu-id="d6c11-110">.</span><span class="sxs-lookup"><span data-stu-id="d6c11-110">.</span></span>  
+## <a name="description"></a><span data-ttu-id="ef6ec-106">説明</span><span class="sxs-lookup"><span data-stu-id="ef6ec-106">Description</span></span>  
+ <span data-ttu-id="ef6ec-107">このイベントは、WS-AtomicTransaction プロトコル サービスを初期化できなかったことを示します。</span><span class="sxs-lookup"><span data-stu-id="ef6ec-107">This event indicates that the WS-Atomic Transaction protocol service failed to initialize.</span></span> <span data-ttu-id="ef6ec-108">その結果、WS-AtomicTransaction 機能が無効化されました。</span><span class="sxs-lookup"><span data-stu-id="ef6ec-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="ef6ec-109">イベントには、プロトコル ID、プロトコル名、例外、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="ef6ec-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span> <span data-ttu-id="ef6ec-110">.</span><span class="sxs-lookup"><span data-stu-id="ef6ec-110">.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6c11-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6c11-111">See also</span></span>
-- [<span data-ttu-id="d6c11-112">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="d6c11-112">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="d6c11-113">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="d6c11-113">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="ef6ec-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef6ec-111">See also</span></span>
+
+- [<span data-ttu-id="ef6ec-112">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="ef6ec-112">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="ef6ec-113">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="ef6ec-113">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

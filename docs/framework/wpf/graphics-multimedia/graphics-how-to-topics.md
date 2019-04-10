@@ -8,25 +8,26 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230656"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="c070d-102">グラフィックスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="c070d-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="c070d-103">次のトピックのグラフィック機能を使用する方法について説明、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="c070d-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="4ff04-102">グラフィックスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="4ff04-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="4ff04-103">次のトピックのグラフィック機能を使用する方法について説明、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="4ff04-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c070d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c070d-104">In This Section</span></span>  
- [<span data-ttu-id="c070d-105">四角形をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="c070d-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="c070d-106">PointAnimation を使用してオブジェクトの位置をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="c070d-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="c070d-107">点およびベクターを変換する</span><span class="sxs-lookup"><span data-stu-id="c070d-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="c070d-108">WPF アプリケーションへのグラス フレームの拡張</span><span class="sxs-lookup"><span data-stu-id="c070d-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="c070d-109">方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる</span><span class="sxs-lookup"><span data-stu-id="c070d-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="c070d-110">方法: キャッシュされた要素をブラシとして使用します。</span><span class="sxs-lookup"><span data-stu-id="c070d-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4ff04-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4ff04-104">In This Section</span></span>  
+ [<span data-ttu-id="4ff04-105">四角形をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="4ff04-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="4ff04-106">PointAnimation を使用してオブジェクトの位置をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="4ff04-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="4ff04-107">点およびベクターを変換する</span><span class="sxs-lookup"><span data-stu-id="4ff04-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="4ff04-108">WPF アプリケーションへのグラス フレームの拡張</span><span class="sxs-lookup"><span data-stu-id="4ff04-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="4ff04-109">方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる</span><span class="sxs-lookup"><span data-stu-id="4ff04-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="4ff04-110">方法: キャッシュされた要素をブラシとして使用する</span><span class="sxs-lookup"><span data-stu-id="4ff04-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c070d-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c070d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ff04-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="4ff04-111">See also</span></span>
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -34,5 +35,5 @@ ms.locfileid: "57358791"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="c070d-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="c070d-112">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="c070d-113">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="c070d-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="4ff04-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="4ff04-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="4ff04-113">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="4ff04-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

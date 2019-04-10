@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム DataGridView コントロールのセルの変更に基づくカスタム動作を実行します。'
+title: '方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,42 +9,41 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: ad1c60c34fc5461de21e2ad5d4d02f5b2abd6dfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229161"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="b6bfa-102">方法: Windows フォーム DataGridView コントロールのセルの変更に基づくカスタム動作を実行します。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="b6bfa-103"><xref:System.Windows.Forms.DataGridView>コントロールが状態の変更を検出するために使用できるイベントの数が<xref:System.Windows.Forms.DataGridView>セル。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="b6bfa-104">2 つの最も一般的に使用される、<xref:System.Windows.Forms.DataGridView.CellValueChanged>と<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a><span data-ttu-id="1cda9-102">方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する</span><span class="sxs-lookup"><span data-stu-id="1cda9-102">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="1cda9-103"><xref:System.Windows.Forms.DataGridView>コントロールが状態の変更を検出するために使用できるイベントの数が<xref:System.Windows.Forms.DataGridView>セル。</span><span class="sxs-lookup"><span data-stu-id="1cda9-103">The <xref:System.Windows.Forms.DataGridView> control has a number of events you can use to detect changes in the state of <xref:System.Windows.Forms.DataGridView> cells.</span></span> <span data-ttu-id="1cda9-104">2 つの最も一般的に使用される、<xref:System.Windows.Forms.DataGridView.CellValueChanged>と<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="1cda9-104">Two of the most commonly used are the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
-### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="b6bfa-105">DataGridView セルの値に変更を検出するには</span><span class="sxs-lookup"><span data-stu-id="b6bfa-105">To detect changes in the values of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a><span data-ttu-id="1cda9-105">DataGridView セルの値に変更を検出するには</span><span class="sxs-lookup"><span data-stu-id="1cda9-105">To detect changes in the values of DataGridView cells</span></span>  
   
--   <span data-ttu-id="b6bfa-106">ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellValueChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
+-   <span data-ttu-id="1cda9-106">ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellValueChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="1cda9-106">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellValueChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
-### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="b6bfa-107">DataGridView セルの状態の変更を検出するには</span><span class="sxs-lookup"><span data-stu-id="b6bfa-107">To detect changes in the states of DataGridView cells</span></span>  
+### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a><span data-ttu-id="1cda9-107">DataGridView セルの状態の変更を検出するには</span><span class="sxs-lookup"><span data-stu-id="1cda9-107">To detect changes in the states of DataGridView cells</span></span>  
   
--   <span data-ttu-id="b6bfa-108">ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
+-   <span data-ttu-id="1cda9-108">ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。</span><span class="sxs-lookup"><span data-stu-id="1cda9-108">Write a handler for the <xref:System.Windows.Forms.DataGridView.CellStateChanged> event.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b6bfa-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="b6bfa-109">Compiling the Code</span></span>  
- <span data-ttu-id="b6bfa-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1cda9-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="1cda9-109">Compiling the Code</span></span>  
+ <span data-ttu-id="1cda9-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="1cda9-110">This example requires:</span></span>  
   
--   <span data-ttu-id="b6bfa-111">
-  `dataGridView1\` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="b6bfa-112">C#、対応するイベントにイベント ハンドラーを接続する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
+-   <span data-ttu-id="1cda9-111">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="1cda9-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span> <span data-ttu-id="1cda9-112">C#、対応するイベントにイベント ハンドラーを接続する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1cda9-112">For C#, the event handlers must be connected to the corresponding events.</span></span>  
   
--   <span data-ttu-id="b6bfa-113">
-  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="b6bfa-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="1cda9-113"><xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="1cda9-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6bfa-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6bfa-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cda9-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1cda9-114">See also</span></span>
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
-- [<span data-ttu-id="b6bfa-115">Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング</span><span class="sxs-lookup"><span data-stu-id="b6bfa-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [<span data-ttu-id="b6bfa-116">チュートリアル: Windows フォームの DataGridView コントロールのデータの検証</span><span class="sxs-lookup"><span data-stu-id="b6bfa-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="1cda9-115">Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング</span><span class="sxs-lookup"><span data-stu-id="1cda9-115">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="1cda9-116">チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査</span><span class="sxs-lookup"><span data-stu-id="1cda9-116">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

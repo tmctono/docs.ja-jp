@@ -8,52 +8,52 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: aa649a0ea83279a1b2bdb2dff33794002b8a6b7d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220319"
 ---
-# <a name="cryptoclasses-element"></a><span data-ttu-id="11e9a-102">\<cryptoClasses > 要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-102">\<cryptoClasses> Element</span></span>
-<span data-ttu-id="11e9a-103">[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。</span><span class="sxs-lookup"><span data-stu-id="11e9a-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
+# <a name="cryptoclasses-element"></a><span data-ttu-id="b0bc9-102">\<cryptoClasses > 要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-102">\<cryptoClasses> Element</span></span>
+<span data-ttu-id="b0bc9-103">[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
- <span data-ttu-id="11e9a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="11e9a-104">\<configuration></span></span>  
-<span data-ttu-id="11e9a-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="11e9a-105">\<mscorlib></span></span>  
-<span data-ttu-id="11e9a-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="11e9a-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="11e9a-107">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="11e9a-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="11e9a-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="11e9a-108">\<cryptoClasses></span></span>  
+ <span data-ttu-id="b0bc9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b0bc9-104">\<configuration></span></span>  
+<span data-ttu-id="b0bc9-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="b0bc9-105">\<mscorlib></span></span>  
+<span data-ttu-id="b0bc9-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="b0bc9-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="b0bc9-107">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="b0bc9-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="b0bc9-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="b0bc9-108">\<cryptoClasses></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11e9a-109">構文</span><span class="sxs-lookup"><span data-stu-id="11e9a-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0bc9-109">構文</span><span class="sxs-lookup"><span data-stu-id="b0bc9-109">Syntax</span></span>  
   
 ```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="11e9a-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-110">Attributes and Elements</span></span>  
- <span data-ttu-id="11e9a-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="11e9a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b0bc9-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="b0bc9-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="11e9a-112">属性</span><span class="sxs-lookup"><span data-stu-id="11e9a-112">Attributes</span></span>  
- <span data-ttu-id="11e9a-113">なし。</span><span class="sxs-lookup"><span data-stu-id="11e9a-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b0bc9-112">属性</span><span class="sxs-lookup"><span data-stu-id="b0bc9-112">Attributes</span></span>  
+ <span data-ttu-id="b0bc9-113">なし。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="11e9a-114">子要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b0bc9-114">子要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-114">Child Elements</span></span>  
   
-|<span data-ttu-id="11e9a-115">要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-115">Element</span></span>|<span data-ttu-id="11e9a-116">説明</span><span class="sxs-lookup"><span data-stu-id="11e9a-116">Description</span></span>|  
+|<span data-ttu-id="b0bc9-115">要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-115">Element</span></span>|<span data-ttu-id="b0bc9-116">説明</span><span class="sxs-lookup"><span data-stu-id="b0bc9-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="11e9a-117">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="11e9a-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="11e9a-118">**\<nameEntry>** 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。</span><span class="sxs-lookup"><span data-stu-id="11e9a-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|[<span data-ttu-id="b0bc9-117">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="b0bc9-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="b0bc9-118">**\<nameEntry>** 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="11e9a-119">親要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b0bc9-119">親要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="11e9a-120">要素</span><span class="sxs-lookup"><span data-stu-id="11e9a-120">Element</span></span>|<span data-ttu-id="11e9a-121">説明</span><span class="sxs-lookup"><span data-stu-id="11e9a-121">Description</span></span>|  
+|<span data-ttu-id="b0bc9-120">要素</span><span class="sxs-lookup"><span data-stu-id="b0bc9-120">Element</span></span>|<span data-ttu-id="b0bc9-121">説明</span><span class="sxs-lookup"><span data-stu-id="b0bc9-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="11e9a-122">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="11e9a-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="11e9a-123">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="11e9a-123">Contains cryptography settings.</span></span>|  
-|`cryptoNameMapping`|<span data-ttu-id="11e9a-124">表示名へのクラスのマッピングを含みます。</span><span class="sxs-lookup"><span data-stu-id="11e9a-124">Contains mappings of classes to friendly names.</span></span>|  
-|`mscorlib`|<span data-ttu-id="11e9a-125">`cryptographySettings`要素を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="11e9a-125">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="b0bc9-122">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="b0bc9-123">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-123">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="b0bc9-124">表示名へのクラスのマッピングを含みます。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-124">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="b0bc9-125">`cryptographySettings`要素を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-125">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="11e9a-126">例</span><span class="sxs-lookup"><span data-stu-id="11e9a-126">Example</span></span>  
- <span data-ttu-id="11e9a-127">次の例では、  **\<cryptoClass >** 暗号化クラスを参照して、ランタイムを構成する要素。</span><span class="sxs-lookup"><span data-stu-id="11e9a-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="11e9a-128">文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="11e9a-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="b0bc9-126">例</span><span class="sxs-lookup"><span data-stu-id="b0bc9-126">Example</span></span>  
+ <span data-ttu-id="b0bc9-127">次の例では、  **\<cryptoClass >** 暗号化クラスを参照して、ランタイムを構成する要素。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="b0bc9-128">文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b0bc9-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,10 +76,11 @@ ms.locfileid: "55274070"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="11e9a-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="11e9a-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0bc9-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0bc9-129">See also</span></span>
+
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="11e9a-130">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="11e9a-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="11e9a-131">暗号化設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="11e9a-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="11e9a-132">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="11e9a-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="11e9a-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="11e9a-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
-- [<span data-ttu-id="11e9a-134">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="11e9a-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [<span data-ttu-id="b0bc9-130">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="b0bc9-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="b0bc9-131">暗号設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="b0bc9-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="b0bc9-132">暗号化サービス</span><span class="sxs-lookup"><span data-stu-id="b0bc9-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="b0bc9-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="b0bc9-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [<span data-ttu-id="b0bc9-134">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="b0bc9-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

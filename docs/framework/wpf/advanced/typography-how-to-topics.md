@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209743"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="a3e4c-102">文字体裁に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a3e4c-102">Typography How-to Topics</span></span>
-<span data-ttu-id="a3e4c-103">このセクションのトピックを使用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストのリッチ プレゼンテーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="a3e4c-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="08e14-102">文字体裁に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="08e14-102">Typography How-to Topics</span></span>
+<span data-ttu-id="08e14-103">このセクションのトピックを使用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストのリッチ プレゼンテーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="08e14-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3e4c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a3e4c-104">In This Section</span></span>  
- [<span data-ttu-id="a3e4c-105">文字の装飾を作成する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="a3e4c-106">ハイパーリンクに下線を引くかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="a3e4c-107">テキストに変換を適用する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="a3e4c-108">アニメーションをテキストに適用する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="a3e4c-109">影付きテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="a3e4c-110">中抜きの文字列を作成する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
- [<span data-ttu-id="a3e4c-111">コントロールの背景にテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="a3e4c-112">ビジュアルにテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="a3e4c-113">XAML で特殊文字を使用する</span><span class="sxs-lookup"><span data-stu-id="a3e4c-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="08e14-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="08e14-104">In This Section</span></span>  
+ [<span data-ttu-id="08e14-105">文字の装飾を作成する</span><span class="sxs-lookup"><span data-stu-id="08e14-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="08e14-106">ハイパーリンクに下線を引くかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="08e14-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="08e14-107">テキストに変換を適用する</span><span class="sxs-lookup"><span data-stu-id="08e14-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="08e14-108">アニメーションをテキストに適用する</span><span class="sxs-lookup"><span data-stu-id="08e14-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="08e14-109">影付きテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="08e14-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="08e14-110">中抜きの文字列を作成する</span><span class="sxs-lookup"><span data-stu-id="08e14-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
+ [<span data-ttu-id="08e14-111">コントロールの背景にテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="08e14-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="08e14-112">ビジュアルにテキストを描画する</span><span class="sxs-lookup"><span data-stu-id="08e14-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="08e14-113">XAML で特殊文字を使用する</span><span class="sxs-lookup"><span data-stu-id="08e14-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a3e4c-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3e4c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08e14-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="08e14-114">See also</span></span>
+
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="a3e4c-115">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="a3e4c-115">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="a3e4c-116">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="a3e4c-116">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="08e14-115">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="08e14-115">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="08e14-116">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="08e14-116">OpenType Font Features</span></span>](opentype-font-features.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88984da3e0456212c73280020da7235d136bf48b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ad1a9bc6b2e5c84f15cf0cf706504f18341f8584
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209178"
 ---
-# <a name="ihostpolicymanagerontimeout-method"></a><span data-ttu-id="c47e1-102">IHostPolicyManager::OnTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="c47e1-102">IHostPolicyManager::OnTimeout Method</span></span>
-<span data-ttu-id="c47e1-103">共通言語ランタイム (CLR) はへの呼び出しで指定されたアクションを実行するホストに通知します、 [iclrpolicymanager::setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)タイムアウトへの応答方法。</span><span class="sxs-lookup"><span data-stu-id="c47e1-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) method in response to a timeout.</span></span>  
+# <a name="ihostpolicymanagerontimeout-method"></a><span data-ttu-id="22dfe-102">IHostPolicyManager::OnTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="22dfe-102">IHostPolicyManager::OnTimeout Method</span></span>
+<span data-ttu-id="22dfe-103">共通言語ランタイム (CLR) はへの呼び出しで指定されたアクションを実行するホストに通知します、 [iclrpolicymanager::setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)タイムアウトへの応答方法。</span><span class="sxs-lookup"><span data-stu-id="22dfe-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) method in response to a timeout.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c47e1-104">構文</span><span class="sxs-lookup"><span data-stu-id="c47e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22dfe-104">構文</span><span class="sxs-lookup"><span data-stu-id="22dfe-104">Syntax</span></span>  
   
 ```  
 HRESULT OnTimeout (  
@@ -36,35 +36,36 @@ HRESULT OnTimeout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c47e1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c47e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22dfe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="22dfe-105">Parameters</span></span>  
  `operation`  
- <span data-ttu-id="c47e1-106">[in]1 つ、 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)タイムアウトした操作の種類を示す値。</span><span class="sxs-lookup"><span data-stu-id="c47e1-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of operation that timed out.</span></span>  
+ <span data-ttu-id="22dfe-106">[in]1 つ、 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)タイムアウトした操作の種類を示す値。</span><span class="sxs-lookup"><span data-stu-id="22dfe-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of operation that timed out.</span></span>  
   
  `action`  
- <span data-ttu-id="c47e1-107">[in]1 つ、 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値は、タイムアウトへの応答時間が、CLR の操作を示します。</span><span class="sxs-lookup"><span data-stu-id="c47e1-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to the timeout.</span></span>  
+ <span data-ttu-id="22dfe-107">[in]1 つ、 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値は、タイムアウトへの応答時間が、CLR の操作を示します。</span><span class="sxs-lookup"><span data-stu-id="22dfe-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to the timeout.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c47e1-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="c47e1-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="22dfe-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="22dfe-108">Return Value</span></span>  
   
-|<span data-ttu-id="c47e1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c47e1-109">HRESULT</span></span>|<span data-ttu-id="c47e1-110">説明</span><span class="sxs-lookup"><span data-stu-id="c47e1-110">Description</span></span>|  
+|<span data-ttu-id="22dfe-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="22dfe-109">HRESULT</span></span>|<span data-ttu-id="22dfe-110">説明</span><span class="sxs-lookup"><span data-stu-id="22dfe-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c47e1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="c47e1-111">S_OK</span></span>|<span data-ttu-id="c47e1-112">`OnTimeout` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="c47e1-112">`OnTimeout` returned successfully.</span></span>|  
-|<span data-ttu-id="c47e1-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c47e1-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c47e1-114">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="c47e1-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c47e1-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c47e1-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c47e1-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="c47e1-116">The call timed out.</span></span>|  
-|<span data-ttu-id="c47e1-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c47e1-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c47e1-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="c47e1-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c47e1-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c47e1-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c47e1-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="c47e1-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c47e1-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c47e1-121">E_FAIL</span></span>|<span data-ttu-id="c47e1-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="c47e1-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c47e1-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="c47e1-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c47e1-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="c47e1-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="22dfe-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="22dfe-111">S_OK</span></span>|`OnTimeout` <span data-ttu-id="22dfe-112">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="22dfe-112">returned successfully.</span></span>|  
+|<span data-ttu-id="22dfe-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="22dfe-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="22dfe-114">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="22dfe-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="22dfe-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="22dfe-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="22dfe-116">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="22dfe-116">The call timed out.</span></span>|  
+|<span data-ttu-id="22dfe-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="22dfe-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="22dfe-118">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="22dfe-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="22dfe-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="22dfe-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="22dfe-120">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="22dfe-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="22dfe-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="22dfe-121">E_FAIL</span></span>|<span data-ttu-id="22dfe-122">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="22dfe-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="22dfe-123">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="22dfe-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="22dfe-124">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="22dfe-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c47e1-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="c47e1-125">Requirements</span></span>  
- <span data-ttu-id="c47e1-126">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c47e1-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22dfe-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="22dfe-125">Requirements</span></span>  
+ <span data-ttu-id="22dfe-126">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="22dfe-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c47e1-127">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c47e1-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="22dfe-127">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="22dfe-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c47e1-128">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c47e1-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="22dfe-128">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="22dfe-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c47e1-129">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c47e1-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="22dfe-129">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="22dfe-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c47e1-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="c47e1-130">See also</span></span>
-- [<span data-ttu-id="c47e1-131">EClrOperation 列挙型</span><span class="sxs-lookup"><span data-stu-id="c47e1-131">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="c47e1-132">EPolicyAction 列挙型</span><span class="sxs-lookup"><span data-stu-id="c47e1-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="c47e1-133">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c47e1-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="c47e1-134">IHostPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c47e1-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="22dfe-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="22dfe-130">See also</span></span>
+
+- [<span data-ttu-id="22dfe-131">EClrOperation 列挙型</span><span class="sxs-lookup"><span data-stu-id="22dfe-131">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [<span data-ttu-id="22dfe-132">EPolicyAction 列挙型</span><span class="sxs-lookup"><span data-stu-id="22dfe-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [<span data-ttu-id="22dfe-133">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="22dfe-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="22dfe-134">IHostPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="22dfe-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

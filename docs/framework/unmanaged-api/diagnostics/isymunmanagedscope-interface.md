@@ -16,32 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 965e8058d44ebb5dc87ade3b6025c6291a9c3bcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 809368ea19528a7ce00d4fcada06ef5724eb79a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228160"
 ---
-# <a name="isymunmanagedscope-interface"></a><span data-ttu-id="58b2d-102">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="58b2d-102">ISymUnmanagedScope Interface</span></span>
-<span data-ttu-id="58b2d-103">メソッド内での構文のスコープを表します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-103">Represents a lexical scope within a method.</span></span>  
+# <a name="isymunmanagedscope-interface"></a><span data-ttu-id="5a918-102">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5a918-102">ISymUnmanagedScope Interface</span></span>
+<span data-ttu-id="5a918-103">メソッド内での構文のスコープを表します。</span><span class="sxs-lookup"><span data-stu-id="5a918-103">Represents a lexical scope within a method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="58b2d-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5a918-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-104">Methods</span></span>  
   
-|<span data-ttu-id="58b2d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-105">Method</span></span>|<span data-ttu-id="58b2d-106">説明</span><span class="sxs-lookup"><span data-stu-id="58b2d-106">Description</span></span>|  
+|<span data-ttu-id="5a918-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-105">Method</span></span>|<span data-ttu-id="5a918-106">説明</span><span class="sxs-lookup"><span data-stu-id="5a918-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="58b2d-107">GetChildren メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-107">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|<span data-ttu-id="58b2d-108">このスコープの子を取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-108">Gets the children of this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-109">GetEndOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-109">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|<span data-ttu-id="58b2d-110">このスコープの終了オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-110">Gets the end offset for this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-111">GetLocalCount メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-111">GetLocalCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|<span data-ttu-id="58b2d-112">このスコープ内で定義されているローカル変数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-112">Gets a count of the local variables defined within this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-113">GetLocals メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-113">GetLocals Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|<span data-ttu-id="58b2d-114">このスコープ内で定義されているローカル変数を取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-114">Gets the local variables defined within this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-115">GetMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-115">GetMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|<span data-ttu-id="58b2d-116">このスコープを含むメソッドを取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-116">Gets the method that contains this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-117">GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-117">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|<span data-ttu-id="58b2d-118">このスコープ内で使用されている名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-118">Gets the namespaces that are being used within this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-119">GetParent メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-119">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|<span data-ttu-id="58b2d-120">このスコープの親スコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-120">Gets the parent scope of this scope.</span></span>|  
-|[<span data-ttu-id="58b2d-121">GetStartOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="58b2d-121">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|<span data-ttu-id="58b2d-122">このスコープの開始オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="58b2d-122">Gets the start offset for this scope.</span></span>|  
+|[<span data-ttu-id="5a918-107">GetChildren メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-107">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|<span data-ttu-id="5a918-108">このスコープの子を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-108">Gets the children of this scope.</span></span>|  
+|[<span data-ttu-id="5a918-109">GetEndOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-109">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|<span data-ttu-id="5a918-110">このスコープの終了オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-110">Gets the end offset for this scope.</span></span>|  
+|[<span data-ttu-id="5a918-111">GetLocalCount メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-111">GetLocalCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|<span data-ttu-id="5a918-112">このスコープ内で定義されているローカル変数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-112">Gets a count of the local variables defined within this scope.</span></span>|  
+|[<span data-ttu-id="5a918-113">GetLocals メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-113">GetLocals Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|<span data-ttu-id="5a918-114">このスコープ内で定義されているローカル変数を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-114">Gets the local variables defined within this scope.</span></span>|  
+|[<span data-ttu-id="5a918-115">GetMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-115">GetMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|<span data-ttu-id="5a918-116">このスコープを含むメソッドを取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-116">Gets the method that contains this scope.</span></span>|  
+|[<span data-ttu-id="5a918-117">GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-117">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|<span data-ttu-id="5a918-118">このスコープ内で使用されている名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-118">Gets the namespaces that are being used within this scope.</span></span>|  
+|[<span data-ttu-id="5a918-119">GetParent メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-119">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|<span data-ttu-id="5a918-120">このスコープの親スコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-120">Gets the parent scope of this scope.</span></span>|  
+|[<span data-ttu-id="5a918-121">GetStartOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="5a918-121">GetStartOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|<span data-ttu-id="5a918-122">このスコープの開始オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="5a918-122">Gets the start offset for this scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="58b2d-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="58b2d-123">Requirements</span></span>  
- <span data-ttu-id="58b2d-124">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="58b2d-124">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a918-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="5a918-123">Requirements</span></span>  
+ <span data-ttu-id="5a918-124">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5a918-124">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58b2d-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="58b2d-125">See also</span></span>
-- [<span data-ttu-id="58b2d-126">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="58b2d-126">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="58b2d-127">ISymUnmanagedScope2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="58b2d-127">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5a918-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="5a918-125">See also</span></span>
+
+- [<span data-ttu-id="5a918-126">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5a918-126">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="5a918-127">ISymUnmanagedScope2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5a918-127">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
