@@ -2,49 +2,49 @@
 title: CodeActivity クラスを使用したワークフロー アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331287"
 ---
-# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a><span data-ttu-id="56c8f-102">CodeActivity クラスを使用したワークフロー アクティビティの作成</span><span class="sxs-lookup"><span data-stu-id="56c8f-102">Workflow Activity Authoring Using the CodeActivity Class</span></span>
-<span data-ttu-id="56c8f-103"><xref:System.Activities.CodeActivity> を継承して作成されたアクティビティは、<xref:System.Activities.CodeActivity.Execute%2A> メソッドをオーバーライドすることで強制的な基本動作を実装できます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-103">Activities created by inheriting from <xref:System.Activities.CodeActivity> can implement basic imperative behavior by overriding the <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a><span data-ttu-id="ddfd2-102">CodeActivity クラスを使用したワークフロー アクティビティの作成</span><span class="sxs-lookup"><span data-stu-id="ddfd2-102">Workflow Activity Authoring Using the CodeActivity Class</span></span>
+<span data-ttu-id="ddfd2-103"><xref:System.Activities.CodeActivity> を継承して作成されたアクティビティは、<xref:System.Activities.CodeActivity.Execute%2A> メソッドをオーバーライドすることで強制的な基本動作を実装できます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-103">Activities created by inheriting from <xref:System.Activities.CodeActivity> can implement basic imperative behavior by overriding the <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
 
-## <a name="using-codeactivitycontext"></a><span data-ttu-id="56c8f-104">CodeActivityContext の使用</span><span class="sxs-lookup"><span data-stu-id="56c8f-104">Using CodeActivityContext</span></span>
- <span data-ttu-id="56c8f-105">ワークフロー ランタイムの機能は、<xref:System.Activities.CodeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.CodeActivityContext> メソッド内からアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-105">Features of the workflow runtime can be accessed from within the <xref:System.Activities.CodeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.CodeActivityContext>.</span></span> <span data-ttu-id="56c8f-106"><xref:System.Activities.CodeActivityContext> を介して、以下のような機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-106">The features available through <xref:System.Activities.CodeActivityContext> include the following:</span></span>
+## <a name="using-codeactivitycontext"></a><span data-ttu-id="ddfd2-104">CodeActivityContext の使用</span><span class="sxs-lookup"><span data-stu-id="ddfd2-104">Using CodeActivityContext</span></span>
+ <span data-ttu-id="ddfd2-105">ワークフロー ランタイムの機能は、<xref:System.Activities.CodeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.CodeActivityContext> メソッド内からアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-105">Features of the workflow runtime can be accessed from within the <xref:System.Activities.CodeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.CodeActivityContext>.</span></span> <span data-ttu-id="ddfd2-106"><xref:System.Activities.CodeActivityContext> を介して、以下のような機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-106">The features available through <xref:System.Activities.CodeActivityContext> include the following:</span></span>
 
--   <span data-ttu-id="56c8f-107">変数と引数の値を取得および設定。</span><span class="sxs-lookup"><span data-stu-id="56c8f-107">Getting and setting the values of variables and arguments.</span></span>
+-   <span data-ttu-id="ddfd2-107">変数と引数の値を取得および設定。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-107">Getting and setting the values of variables and arguments.</span></span>
 
--   <span data-ttu-id="56c8f-108"><xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。</span><span class="sxs-lookup"><span data-stu-id="56c8f-108">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>
+-   <span data-ttu-id="ddfd2-108"><xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-108">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>
 
--   <span data-ttu-id="56c8f-109"><xref:System.Activities.CodeActivityContext.GetProperty%2A> を使用したアクティビティの実行プロパティへのアクセス。</span><span class="sxs-lookup"><span data-stu-id="56c8f-109">Access to the activity’s execution properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A>.</span></span>
+-   <span data-ttu-id="ddfd2-109"><xref:System.Activities.CodeActivityContext.GetProperty%2A> を使用したアクティビティの実行プロパティへのアクセス。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-109">Access to the activity’s execution properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A>.</span></span>
 
-#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a><span data-ttu-id="56c8f-110">CodeActivity を継承するカスタム アクティビティを作成するには</span><span class="sxs-lookup"><span data-stu-id="56c8f-110">To create a custom activity that inherits from CodeActivity</span></span>
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a><span data-ttu-id="ddfd2-110">CodeActivity を継承するカスタム アクティビティを作成するには</span><span class="sxs-lookup"><span data-stu-id="ddfd2-110">To create a custom activity that inherits from CodeActivity</span></span>
 
-1.  <span data-ttu-id="56c8f-111">Visual Studio 2010 を開きます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-111">Open Visual Studio 2010.</span></span>
+1. <span data-ttu-id="ddfd2-111">Visual Studio 2010 を開きます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-111">Open Visual Studio 2010.</span></span>
 
-2.  <span data-ttu-id="56c8f-112">選択**ファイル**、**新しい**、し**プロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-112">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="56c8f-113">選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。</span><span class="sxs-lookup"><span data-stu-id="56c8f-113">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="56c8f-114">選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="56c8f-114">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="56c8f-115">新しいプロジェクトに HelloActivity という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-115">Name the new project HelloActivity.</span></span>
+2. <span data-ttu-id="ddfd2-112">選択**ファイル**、**新しい**、し**プロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-112">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="ddfd2-113">選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-113">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="ddfd2-114">選択**アクティビティ ライブラリ**で、**テンプレート**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-114">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="ddfd2-115">新しいプロジェクトに HelloActivity という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-115">Name the new project HelloActivity.</span></span>
 
-3.  <span data-ttu-id="56c8f-116">HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-116">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>
+3. <span data-ttu-id="ddfd2-116">HelloActivity プロジェクトの Activity1.xaml を右クリックして**削除**します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-116">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>
 
-4.  <span data-ttu-id="56c8f-117">HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-117">Right-click the HelloActivity project and select **Add** , and then **Class**.</span></span> <span data-ttu-id="56c8f-118">新しいクラスに HelloActivity.cs という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="56c8f-118">Name the new class HelloActivity.cs.</span></span>
+4. <span data-ttu-id="ddfd2-117">HelloActivity プロジェクトを右クリックして**追加**、し**クラス**します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-117">Right-click the HelloActivity project and select **Add** , and then **Class**.</span></span> <span data-ttu-id="ddfd2-118">新しいクラスに HelloActivity.cs という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-118">Name the new class HelloActivity.cs.</span></span>
 
-5.  <span data-ttu-id="56c8f-119">HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-119">In the HelloActivity.cs file, add the following `using` directives.</span></span>
+5. <span data-ttu-id="ddfd2-119">HelloActivity.cs ファイルで、次の `using` ディレクティブを追加します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-119">In the HelloActivity.cs file, add the following `using` directives.</span></span>
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  <span data-ttu-id="56c8f-120">クラス宣言に基本クラスを追加することにより、新しいクラスで <xref:System.Activities.CodeActivity> から継承します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-120">Make the new class inherit from <xref:System.Activities.CodeActivity> by adding a base class to the class declaration.</span></span>
+6. <span data-ttu-id="ddfd2-120">クラス宣言に基本クラスを追加することにより、新しいクラスで <xref:System.Activities.CodeActivity> から継承します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-120">Make the new class inherit from <xref:System.Activities.CodeActivity> by adding a base class to the class declaration.</span></span>
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  <span data-ttu-id="56c8f-121"><xref:System.Activities.CodeActivity.Execute%2A> メソッドを追加して、このクラスに機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-121">Add functionality to the class by adding an <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
+7. <span data-ttu-id="ddfd2-121"><xref:System.Activities.CodeActivity.Execute%2A> メソッドを追加して、このクラスに機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-121">Add functionality to the class by adding an <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ ms.locfileid: "53127096"
     }
     ```
 
-8.  <span data-ttu-id="56c8f-122"><xref:System.Activities.CodeActivityContext> を使用して追跡レコードを作成します。</span><span class="sxs-lookup"><span data-stu-id="56c8f-122">Use the <xref:System.Activities.CodeActivityContext> to create a tracking record.</span></span>
+8. <span data-ttu-id="ddfd2-122"><xref:System.Activities.CodeActivityContext> を使用して追跡レコードを作成します。</span><span class="sxs-lookup"><span data-stu-id="ddfd2-122">Use the <xref:System.Activities.CodeActivityContext> to create a tracking record.</span></span>
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
