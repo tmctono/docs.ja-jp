@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e264a63dcea9c351289d1f63e1907f7c68779011
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200650"
 ---
-# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="c38e6-102">ICeeGen::GetSectionBlock メソッド</span><span class="sxs-lookup"><span data-stu-id="c38e6-102">ICeeGen::GetSectionBlock Method</span></span>
-<span data-ttu-id="c38e6-103">コード ベースのセクションのブロックを取得します。</span><span class="sxs-lookup"><span data-stu-id="c38e6-103">Gets a section block of the code base.</span></span>  
+# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="6a37d-102">ICeeGen::GetSectionBlock メソッド</span><span class="sxs-lookup"><span data-stu-id="6a37d-102">ICeeGen::GetSectionBlock Method</span></span>
+<span data-ttu-id="6a37d-103">コード ベースのセクションのブロックを取得します。</span><span class="sxs-lookup"><span data-stu-id="6a37d-103">Gets a section block of the code base.</span></span>  
   
- <span data-ttu-id="c38e6-104">このメソッドは廃止され、使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c38e6-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="6a37d-104">このメソッドは廃止され、使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6a37d-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c38e6-105">構文</span><span class="sxs-lookup"><span data-stu-id="c38e6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a37d-105">構文</span><span class="sxs-lookup"><span data-stu-id="6a37d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionBlock (  
@@ -40,30 +40,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c38e6-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c38e6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a37d-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6a37d-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="c38e6-107">[in]コード ベースのブロックの取得元となるセクション。</span><span class="sxs-lookup"><span data-stu-id="c38e6-107">[in] The section from which to retrieve a block of the code base.</span></span>  
+ <span data-ttu-id="6a37d-107">[in]コード ベースのブロックの取得元となるセクション。</span><span class="sxs-lookup"><span data-stu-id="6a37d-107">[in] The section from which to retrieve a block of the code base.</span></span>  
   
  `len`  
- <span data-ttu-id="c38e6-108">[in]取得するブロックの長さ。</span><span class="sxs-lookup"><span data-stu-id="c38e6-108">[in] The length of the block to be retrieved.</span></span>  
+ <span data-ttu-id="6a37d-108">[in]取得するブロックの長さ。</span><span class="sxs-lookup"><span data-stu-id="6a37d-108">[in] The length of the block to be retrieved.</span></span>  
   
  `align`  
- <span data-ttu-id="c38e6-109">[in]ブロックの最初のバイトを揃えるセクションの先頭からの相対バイト。</span><span class="sxs-lookup"><span data-stu-id="c38e6-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="c38e6-110">これは、セクション内のブロックの位置です。</span><span class="sxs-lookup"><span data-stu-id="c38e6-110">This is the position of the block within the section.</span></span>  
+ <span data-ttu-id="6a37d-109">[in]ブロックの最初のバイトを揃えるセクションの先頭からの相対バイト。</span><span class="sxs-lookup"><span data-stu-id="6a37d-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="6a37d-110">これは、セクション内のブロックの位置です。</span><span class="sxs-lookup"><span data-stu-id="6a37d-110">This is the position of the block within the section.</span></span>  
   
  `ppBytes`  
- <span data-ttu-id="c38e6-111">[out]取得されたブロックのアドレスを受け取る場所へのポインター。</span><span class="sxs-lookup"><span data-stu-id="c38e6-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
+ <span data-ttu-id="6a37d-111">[out]取得されたブロックのアドレスを受け取る場所へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6a37d-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c38e6-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="c38e6-112">Remarks</span></span>  
- <span data-ttu-id="c38e6-113">呼び出す`GetSectionBlock`別の方法で処理されない特別なセクションの要件がある場合にのみです。</span><span class="sxs-lookup"><span data-stu-id="c38e6-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6a37d-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="6a37d-112">Remarks</span></span>  
+ <span data-ttu-id="6a37d-113">呼び出す`GetSectionBlock`別の方法で処理されない特別なセクションの要件がある場合にのみです。</span><span class="sxs-lookup"><span data-stu-id="6a37d-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c38e6-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="c38e6-114">Requirements</span></span>  
- <span data-ttu-id="c38e6-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c38e6-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a37d-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="6a37d-114">Requirements</span></span>  
+ <span data-ttu-id="6a37d-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6a37d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c38e6-116">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c38e6-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6a37d-116">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a37d-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c38e6-117">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="c38e6-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6a37d-117">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="6a37d-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c38e6-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c38e6-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6a37d-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="6a37d-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c38e6-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c38e6-119">See also</span></span>
-- [<span data-ttu-id="c38e6-120">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c38e6-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6a37d-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a37d-119">See also</span></span>
+
+- [<span data-ttu-id="6a37d-120">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6a37d-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

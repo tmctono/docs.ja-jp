@@ -16,38 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46358a66d79030aeea42c75827f05cf07fa925ea
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173811"
 ---
-# <a name="icordebugclass2-interface"></a><span data-ttu-id="54f2d-102">ICorDebugClass2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54f2d-102">ICorDebugClass2 Interface</span></span>
+# <a name="icordebugclass2-interface"></a><span data-ttu-id="920f7-102">ICorDebugClass2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="920f7-102">ICorDebugClass2 Interface</span></span>
 
-<span data-ttu-id="54f2d-103">ジェネリック、または <xref:System.Type> 型のメソッド パラメーターを持つクラスを表します。</span><span class="sxs-lookup"><span data-stu-id="54f2d-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="54f2d-104">このインターフェイスは拡張[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)します。</span><span class="sxs-lookup"><span data-stu-id="54f2d-104">This interface extends [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span></span>  
+<span data-ttu-id="920f7-103">ジェネリック、または <xref:System.Type> 型のメソッド パラメーターを持つクラスを表します。</span><span class="sxs-lookup"><span data-stu-id="920f7-103">Represents a generic class or a class with a method parameter of type <xref:System.Type>.</span></span> <span data-ttu-id="920f7-104">このインターフェイスは拡張[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)します。</span><span class="sxs-lookup"><span data-stu-id="920f7-104">This interface extends [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="54f2d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="54f2d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="920f7-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="920f7-105">Methods</span></span>  
   
-|<span data-ttu-id="54f2d-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="54f2d-106">Method</span></span>|<span data-ttu-id="54f2d-107">説明</span><span class="sxs-lookup"><span data-stu-id="54f2d-107">Description</span></span>|  
+|<span data-ttu-id="920f7-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="920f7-106">Method</span></span>|<span data-ttu-id="920f7-107">説明</span><span class="sxs-lookup"><span data-stu-id="920f7-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="54f2d-108">GetParameterizedType メソッド</span><span class="sxs-lookup"><span data-stu-id="54f2d-108">GetParameterizedType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="54f2d-109">このクラスの型宣言を取得します。</span><span class="sxs-lookup"><span data-stu-id="54f2d-109">Gets the type declaration for this class.</span></span>|  
-|[<span data-ttu-id="54f2d-110">SetJMCStatus メソッド</span><span class="sxs-lookup"><span data-stu-id="54f2d-110">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="54f2d-111">このクラスの各メソッドでは、メソッドは、ユーザー定義のコードかどうかを示す値を設定します。</span><span class="sxs-lookup"><span data-stu-id="54f2d-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
+|[<span data-ttu-id="920f7-108">GetParameterizedType メソッド</span><span class="sxs-lookup"><span data-stu-id="920f7-108">GetParameterizedType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|<span data-ttu-id="920f7-109">このクラスの型宣言を取得します。</span><span class="sxs-lookup"><span data-stu-id="920f7-109">Gets the type declaration for this class.</span></span>|  
+|[<span data-ttu-id="920f7-110">SetJMCStatus メソッド</span><span class="sxs-lookup"><span data-stu-id="920f7-110">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|<span data-ttu-id="920f7-111">このクラスの各メソッドでは、メソッドは、ユーザー定義のコードかどうかを示す値を設定します。</span><span class="sxs-lookup"><span data-stu-id="920f7-111">For each method of this class, sets a value that indicates whether the method is user-defined code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="54f2d-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="54f2d-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="920f7-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="920f7-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="54f2d-113">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="54f2d-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="920f7-113">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="920f7-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54f2d-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="54f2d-114">Requirements</span></span>  
- <span data-ttu-id="54f2d-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="54f2d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="920f7-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="920f7-114">Requirements</span></span>  
+ <span data-ttu-id="920f7-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="920f7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54f2d-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54f2d-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="920f7-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="920f7-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="54f2d-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54f2d-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="920f7-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="920f7-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54f2d-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54f2d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="920f7-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="920f7-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="54f2d-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="54f2d-119">See also</span></span>
-- [<span data-ttu-id="54f2d-120">ICorDebugClass インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54f2d-120">ICorDebugClass Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [<span data-ttu-id="54f2d-121">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54f2d-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="920f7-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="920f7-119">See also</span></span>
+
+- [<span data-ttu-id="920f7-120">ICorDebugClass インターフェイス</span><span class="sxs-lookup"><span data-stu-id="920f7-120">ICorDebugClass Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [<span data-ttu-id="920f7-121">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="920f7-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

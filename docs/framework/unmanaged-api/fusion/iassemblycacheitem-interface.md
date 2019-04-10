@@ -16,32 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188553"
 ---
-# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="353ae-102">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="353ae-102">IAssemblyCacheItem Interface</span></span>
-<span data-ttu-id="353ae-103">グローバル アセンブリ キャッシュ内の 1 つのアセンブリを表します。</span><span class="sxs-lookup"><span data-stu-id="353ae-103">Represents a single assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="665f4-102">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="665f4-102">IAssemblyCacheItem Interface</span></span>
+<span data-ttu-id="665f4-103">グローバル アセンブリ キャッシュ内の 1 つのアセンブリを表します。</span><span class="sxs-lookup"><span data-stu-id="665f4-103">Represents a single assembly in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="353ae-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="353ae-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="665f4-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="665f4-104">Methods</span></span>  
   
-|<span data-ttu-id="353ae-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="353ae-105">Method</span></span>|<span data-ttu-id="353ae-106">説明</span><span class="sxs-lookup"><span data-stu-id="353ae-106">Description</span></span>|  
+|<span data-ttu-id="665f4-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="665f4-105">Method</span></span>|<span data-ttu-id="665f4-106">説明</span><span class="sxs-lookup"><span data-stu-id="665f4-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="353ae-107">AbortItem メソッド</span><span class="sxs-lookup"><span data-stu-id="353ae-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="353ae-108">リリースされる前に、クリーンアップ操作を実行する、グローバル アセンブリ キャッシュにアセンブリを使用します。</span><span class="sxs-lookup"><span data-stu-id="353ae-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
-|[<span data-ttu-id="353ae-109">Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="353ae-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="353ae-110">メモリにキャッシュされたアセンブリ参照をコミットします。</span><span class="sxs-lookup"><span data-stu-id="353ae-110">Commits the cached assembly reference to memory.</span></span>|  
-|[<span data-ttu-id="353ae-111">CreateStream メソッド</span><span class="sxs-lookup"><span data-stu-id="353ae-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="353ae-112">指定した名前と形式を使用するストリームを作成します。</span><span class="sxs-lookup"><span data-stu-id="353ae-112">Creates a stream with the specified name and format.</span></span>|  
+|[<span data-ttu-id="665f4-107">AbortItem メソッド</span><span class="sxs-lookup"><span data-stu-id="665f4-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="665f4-108">リリースされる前に、クリーンアップ操作を実行する、グローバル アセンブリ キャッシュにアセンブリを使用します。</span><span class="sxs-lookup"><span data-stu-id="665f4-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
+|[<span data-ttu-id="665f4-109">Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="665f4-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="665f4-110">メモリにキャッシュされたアセンブリ参照をコミットします。</span><span class="sxs-lookup"><span data-stu-id="665f4-110">Commits the cached assembly reference to memory.</span></span>|  
+|[<span data-ttu-id="665f4-111">CreateStream メソッド</span><span class="sxs-lookup"><span data-stu-id="665f4-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="665f4-112">指定した名前と形式を使用するストリームを作成します。</span><span class="sxs-lookup"><span data-stu-id="665f4-112">Creates a stream with the specified name and format.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="353ae-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="353ae-113">Requirements</span></span>  
- <span data-ttu-id="353ae-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="353ae-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="665f4-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="665f4-113">Requirements</span></span>  
+ <span data-ttu-id="665f4-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="665f4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="353ae-115">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="353ae-115">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="665f4-115">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="665f4-115">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="353ae-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="353ae-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="665f4-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="665f4-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="353ae-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="353ae-117">See also</span></span>
-- [<span data-ttu-id="353ae-118">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="353ae-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="353ae-119">グローバル アセンブリ キャッシュ</span><span class="sxs-lookup"><span data-stu-id="353ae-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
-- [<span data-ttu-id="353ae-120">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="353ae-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="665f4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="665f4-117">See also</span></span>
+
+- [<span data-ttu-id="665f4-118">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="665f4-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="665f4-119">グローバル アセンブリ キャッシュ</span><span class="sxs-lookup"><span data-stu-id="665f4-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="665f4-120">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="665f4-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

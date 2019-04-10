@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c2b383abdc67546749867de154a00fda244b3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43c40e833e3a250239e9e90667196a2a74a96e0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187656"
 ---
-# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="f4fd4-102">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4fd4-102">ICLRAssemblyReferenceList Interface</span></span>
-<span data-ttu-id="f4fd4-103">共通言語ランタイム (CLR) では、ホストではなくに読み込まれるアセンブリの一覧を管理します。</span><span class="sxs-lookup"><span data-stu-id="f4fd4-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
+# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="1315a-102">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1315a-102">ICLRAssemblyReferenceList Interface</span></span>
+<span data-ttu-id="1315a-103">共通言語ランタイム (CLR) では、ホストではなくに読み込まれるアセンブリの一覧を管理します。</span><span class="sxs-lookup"><span data-stu-id="1315a-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f4fd4-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="f4fd4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1315a-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="1315a-104">Methods</span></span>  
   
-|<span data-ttu-id="f4fd4-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="f4fd4-105">Method</span></span>|<span data-ttu-id="f4fd4-106">説明</span><span class="sxs-lookup"><span data-stu-id="f4fd4-106">Description</span></span>|  
+|<span data-ttu-id="1315a-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="1315a-105">Method</span></span>|<span data-ttu-id="1315a-106">説明</span><span class="sxs-lookup"><span data-stu-id="1315a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f4fd4-107">IsAssemblyReferenceInList メソッド</span><span class="sxs-lookup"><span data-stu-id="f4fd4-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="f4fd4-108">指定されたポインターが、リスト内のアセンブリを参照するかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="f4fd4-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
-|[<span data-ttu-id="f4fd4-109">IsStringAssemblyReferenceInList メソッド</span><span class="sxs-lookup"><span data-stu-id="f4fd4-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="f4fd4-110">指定された名前が一覧内のアセンブリの名前と一致するかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="f4fd4-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
+|[<span data-ttu-id="1315a-107">IsAssemblyReferenceInList メソッド</span><span class="sxs-lookup"><span data-stu-id="1315a-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="1315a-108">指定されたポインターが、リスト内のアセンブリを参照するかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="1315a-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
+|[<span data-ttu-id="1315a-109">IsStringAssemblyReferenceInList メソッド</span><span class="sxs-lookup"><span data-stu-id="1315a-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="1315a-110">指定された名前が一覧内のアセンブリの名前と一致するかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="1315a-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f4fd4-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="f4fd4-111">Remarks</span></span>  
- <span data-ttu-id="f4fd4-112">呼び出す、 [iclrassemblyidentitymanager::getclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)のインスタンスへのポインターを取得するメソッドを`ICLRAssemblyReferenceList`します。</span><span class="sxs-lookup"><span data-stu-id="f4fd4-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1315a-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="1315a-111">Remarks</span></span>  
+ <span data-ttu-id="1315a-112">呼び出す、 [iclrassemblyidentitymanager::getclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)のインスタンスへのポインターを取得するメソッドを`ICLRAssemblyReferenceList`します。</span><span class="sxs-lookup"><span data-stu-id="1315a-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4fd4-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="f4fd4-113">Requirements</span></span>  
- <span data-ttu-id="f4fd4-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4fd4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1315a-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="1315a-113">Requirements</span></span>  
+ <span data-ttu-id="1315a-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1315a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4fd4-115">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f4fd4-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1315a-115">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1315a-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f4fd4-116">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f4fd4-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1315a-116">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1315a-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f4fd4-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4fd4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1315a-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="1315a-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4fd4-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4fd4-118">See also</span></span>
-- [<span data-ttu-id="f4fd4-119">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4fd4-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="f4fd4-120">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4fd4-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="f4fd4-121">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4fd4-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1315a-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="1315a-118">See also</span></span>
+
+- [<span data-ttu-id="1315a-119">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1315a-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="1315a-120">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1315a-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="1315a-121">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1315a-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

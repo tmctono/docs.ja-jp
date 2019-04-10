@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96f0b1648c8182b4d075a479f9bd376dbe33ef61
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f3214a21dda27fda01054e96400997b15d11f71b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194438"
 ---
-# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="5040f-102">IHostFilter::MarkToken メソッド</span><span class="sxs-lookup"><span data-stu-id="5040f-102">IHostFilter::MarkToken Method</span></span>
-<span data-ttu-id="5040f-103">指定したメタデータ トークンを処理することを示します。</span><span class="sxs-lookup"><span data-stu-id="5040f-103">Indicates that the specified metadata token will be processed.</span></span>  
+# <a name="ihostfiltermarktoken-method"></a><span data-ttu-id="debb6-102">IHostFilter::MarkToken メソッド</span><span class="sxs-lookup"><span data-stu-id="debb6-102">IHostFilter::MarkToken Method</span></span>
+<span data-ttu-id="debb6-103">指定したメタデータ トークンを処理することを示します。</span><span class="sxs-lookup"><span data-stu-id="debb6-103">Indicates that the specified metadata token will be processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5040f-104">構文</span><span class="sxs-lookup"><span data-stu-id="5040f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="debb6-104">構文</span><span class="sxs-lookup"><span data-stu-id="debb6-104">Syntax</span></span>  
   
 ```  
 HRESULT MarkToken (  
@@ -35,22 +35,23 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5040f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5040f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="debb6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="debb6-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="5040f-106">[in]処理するメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="5040f-106">[in] The metadata token to be processed.</span></span>  
+ <span data-ttu-id="debb6-106">[in]処理するメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="debb6-106">[in] The metadata token to be processed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5040f-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="5040f-107">Remarks</span></span>  
- <span data-ttu-id="5040f-108">通常、メタデータ スコープ内にある場合、処理するためのトークンが必要です。</span><span class="sxs-lookup"><span data-stu-id="5040f-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="5040f-109">`MarkToken`メソッドが使用してメタデータ エンジンに渡される、 [imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="5040f-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="debb6-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="debb6-107">Remarks</span></span>  
+ <span data-ttu-id="debb6-108">通常、メタデータ スコープ内にある場合、処理するためのトークンが必要です。</span><span class="sxs-lookup"><span data-stu-id="debb6-108">Typically, you want a token to be processed if it is in the metadata scope.</span></span> <span data-ttu-id="debb6-109">`MarkToken`メソッドが使用してメタデータ エンジンに渡される、 [imetadataemit::sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="debb6-109">The `MarkToken` method is passed to the metadata engine via the [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5040f-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="5040f-110">Requirements</span></span>  
- <span data-ttu-id="5040f-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5040f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="debb6-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="debb6-110">Requirements</span></span>  
+ <span data-ttu-id="debb6-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="debb6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5040f-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5040f-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="debb6-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="debb6-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5040f-113">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="5040f-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="debb6-113">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="debb6-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5040f-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5040f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="debb6-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="debb6-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5040f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5040f-115">See also</span></span>
-- [<span data-ttu-id="5040f-116">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5040f-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="5040f-117">IHostFilter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5040f-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="debb6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="debb6-115">See also</span></span>
+
+- [<span data-ttu-id="debb6-116">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="debb6-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="debb6-117">IHostFilter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="debb6-117">IHostFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

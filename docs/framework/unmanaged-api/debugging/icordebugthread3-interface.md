@@ -16,38 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5f4cecda80238e7a53cf2aa2a8219c49c2b3f9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d34a3395605505ca0ebda072e33d8083d51123a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185875"
 ---
-# <a name="icordebugthread3-interface"></a><span data-ttu-id="fc18d-102">ICorDebugThread3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc18d-102">ICorDebugThread3 Interface</span></span>
-<span data-ttu-id="fc18d-103">エントリ ポイントを提供します、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)と対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="fc18d-103">Provides the entry point to the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) and corresponding interfaces.</span></span>  
+# <a name="icordebugthread3-interface"></a><span data-ttu-id="f0dba-102">ICorDebugThread3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f0dba-102">ICorDebugThread3 Interface</span></span>
+<span data-ttu-id="f0dba-103">エントリ ポイントを提供します、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)と対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="f0dba-103">Provides the entry point to the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) and corresponding interfaces.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fc18d-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="fc18d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f0dba-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="f0dba-104">Methods</span></span>  
   
-|<span data-ttu-id="fc18d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="fc18d-105">Method</span></span>|<span data-ttu-id="fc18d-106">説明</span><span class="sxs-lookup"><span data-stu-id="fc18d-106">Description</span></span>|  
+|<span data-ttu-id="f0dba-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="f0dba-105">Method</span></span>|<span data-ttu-id="f0dba-106">説明</span><span class="sxs-lookup"><span data-stu-id="f0dba-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fc18d-107">CreateStackWalk メソッド</span><span class="sxs-lookup"><span data-stu-id="fc18d-107">CreateStackWalk Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-createstackwalk-method.md)|<span data-ttu-id="fc18d-108">作成、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)がスタックをアンワインドするスレッドのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fc18d-108">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>|  
-|[<span data-ttu-id="fc18d-109">GetActiveInternalFrames メソッド</span><span class="sxs-lookup"><span data-stu-id="fc18d-109">GetActiveInternalFrames Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)|<span data-ttu-id="fc18d-110">内部フレームの配列を返します ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)オブジェクト)、スタックにします。</span><span class="sxs-lookup"><span data-stu-id="fc18d-110">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>|  
+|[<span data-ttu-id="f0dba-107">CreateStackWalk メソッド</span><span class="sxs-lookup"><span data-stu-id="f0dba-107">CreateStackWalk Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-createstackwalk-method.md)|<span data-ttu-id="f0dba-108">作成、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)がスタックをアンワインドするスレッドのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f0dba-108">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>|  
+|[<span data-ttu-id="f0dba-109">GetActiveInternalFrames メソッド</span><span class="sxs-lookup"><span data-stu-id="f0dba-109">GetActiveInternalFrames Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)|<span data-ttu-id="f0dba-110">内部フレームの配列を返します ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)オブジェクト)、スタックにします。</span><span class="sxs-lookup"><span data-stu-id="f0dba-110">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fc18d-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="fc18d-111">Remarks</span></span>  
- <span data-ttu-id="fc18d-112">`ICorDebugThread3` ICorDebugThread インターフェイスを論理的な拡張です。</span><span class="sxs-lookup"><span data-stu-id="fc18d-112">`ICorDebugThread3` is a logical extension to the ICorDebugThread interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f0dba-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="f0dba-111">Remarks</span></span>  
+ `ICorDebugThread3` <span data-ttu-id="f0dba-112">ICorDebugThread インターフェイスを論理的な拡張です。</span><span class="sxs-lookup"><span data-stu-id="f0dba-112">is a logical extension to the ICorDebugThread interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fc18d-113">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="fc18d-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="f0dba-113">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="f0dba-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc18d-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="fc18d-114">Requirements</span></span>  
- <span data-ttu-id="fc18d-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fc18d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0dba-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="f0dba-114">Requirements</span></span>  
+ <span data-ttu-id="f0dba-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0dba-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc18d-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc18d-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f0dba-116">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f0dba-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fc18d-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc18d-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f0dba-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0dba-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fc18d-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc18d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="f0dba-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="f0dba-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fc18d-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc18d-119">See also</span></span>
-- [<span data-ttu-id="fc18d-120">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc18d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="fc18d-121">デバッグ</span><span class="sxs-lookup"><span data-stu-id="fc18d-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="f0dba-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0dba-119">See also</span></span>
+
+- [<span data-ttu-id="f0dba-120">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f0dba-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f0dba-121">デバッグ</span><span class="sxs-lookup"><span data-stu-id="f0dba-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: b9fcbd8aa74740a66fa6caca18067ac473891f4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168715"
 ---
-# <a name="how-to-return-rowsets"></a><span data-ttu-id="cd86b-102">方法: 行セットを返す</span><span class="sxs-lookup"><span data-stu-id="cd86b-102">How to: Return Rowsets</span></span>
-<span data-ttu-id="cd86b-103">この例では、データベースから行セットを返し、入力パラメーターを使用して結果をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="cd86b-103">This example returns a rowset from the database, and includes an input parameter to filter the result.</span></span>  
+# <a name="how-to-return-rowsets"></a><span data-ttu-id="7ea9b-102">方法: 行セットを返す</span><span class="sxs-lookup"><span data-stu-id="7ea9b-102">How to: Return Rowsets</span></span>
+<span data-ttu-id="7ea9b-103">この例では、データベースから行セットを返し、入力パラメーターを使用して結果をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="7ea9b-103">This example returns a rowset from the database, and includes an input parameter to filter the result.</span></span>  
   
- <span data-ttu-id="cd86b-104">行セットを返すストアド プロシージャを実行するときに使用する、*結果*ストアド プロシージャからの戻り値を格納するクラスです。</span><span class="sxs-lookup"><span data-stu-id="cd86b-104">When you execute a stored procedure that returns a rowset, you use a *result* class that stores the returns from the stored procedure.</span></span> <span data-ttu-id="cd86b-105">詳細については、[LINQ to SQL のソース コードに分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cd86b-105">For more information, see [Analyzing LINQ to SQL Source Code](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).</span></span>  
+ <span data-ttu-id="7ea9b-104">行セットを返すストアド プロシージャを実行するときに使用する、*結果*ストアド プロシージャからの戻り値を格納するクラスです。</span><span class="sxs-lookup"><span data-stu-id="7ea9b-104">When you execute a stored procedure that returns a rowset, you use a *result* class that stores the returns from the stored procedure.</span></span> <span data-ttu-id="7ea9b-105">詳細については、次を参照してください。 [LINQ to SQL のソース コードに分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)します。</span><span class="sxs-lookup"><span data-stu-id="7ea9b-105">For more information, see [Analyzing LINQ to SQL Source Code](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd86b-106">例</span><span class="sxs-lookup"><span data-stu-id="cd86b-106">Example</span></span>  
- <span data-ttu-id="cd86b-107">次の例は、顧客の行を返し、入力パラメーターを使用して、顧客が在住する市が "London" である行のみを返すストアド プロシージャを示しています。</span><span class="sxs-lookup"><span data-stu-id="cd86b-107">The following example represents a stored procedure that returns rows of customers and uses an input parameter to return only those rows that list "London" as the customer city.</span></span> <span data-ttu-id="cd86b-108">例では、列挙可能な `CustomersByCityResult` クラスを想定しています。</span><span class="sxs-lookup"><span data-stu-id="cd86b-108">The example assumes an enumerable `CustomersByCityResult` class.</span></span>  
+## <a name="example"></a><span data-ttu-id="7ea9b-106">例</span><span class="sxs-lookup"><span data-stu-id="7ea9b-106">Example</span></span>  
+ <span data-ttu-id="7ea9b-107">次の例は、顧客の行を返し、入力パラメーターを使用して、顧客が在住する市が "London" である行のみを返すストアド プロシージャを示しています。</span><span class="sxs-lookup"><span data-stu-id="7ea9b-107">The following example represents a stored procedure that returns rows of customers and uses an input parameter to return only those rows that list "London" as the customer city.</span></span> <span data-ttu-id="7ea9b-108">例では、列挙可能な `CustomersByCityResult` クラスを想定しています。</span><span class="sxs-lookup"><span data-stu-id="7ea9b-108">The example assumes an enumerable `CustomersByCityResult` class.</span></span>  
   
 ```  
 CREATE PROCEDURE [dbo].[Customers By City]  
@@ -36,6 +36,7 @@ END
  [!code-csharp[DLinqSprox#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#1)]
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="cd86b-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd86b-109">See also</span></span>
-- [<span data-ttu-id="cd86b-110">ストアド プロシージャ</span><span class="sxs-lookup"><span data-stu-id="cd86b-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [<span data-ttu-id="cd86b-111">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="cd86b-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a><span data-ttu-id="7ea9b-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7ea9b-109">See also</span></span>
+
+- [<span data-ttu-id="7ea9b-110">ストアド プロシージャ</span><span class="sxs-lookup"><span data-stu-id="7ea9b-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [<span data-ttu-id="7ea9b-111">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="7ea9b-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

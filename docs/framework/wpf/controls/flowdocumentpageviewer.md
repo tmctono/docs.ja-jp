@@ -7,18 +7,19 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207631"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="18ee7-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="18ee7-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="18ee7-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="18ee7-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="18ee7-104">これと対照的、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="18ee7-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="7cacb-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="7cacb-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="7cacb-103"><xref:System.Windows.Controls.FlowDocumentPageViewer>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>ページごとのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="7cacb-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="7cacb-104">これと対照的、 <xref:System.Windows.Controls.FlowDocumentScrollViewer>、どの表示<xref:System.Windows.Documents.FlowDocument>スクロール ビューアーのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="7cacb-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18ee7-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="18ee7-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7cacb-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="7cacb-105">See also</span></span>
+
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="18ee7-106">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="18ee7-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
-- [<span data-ttu-id="18ee7-107">方法トピック</span><span class="sxs-lookup"><span data-stu-id="18ee7-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="18ee7-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="18ee7-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="7cacb-106">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="7cacb-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="7cacb-107">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="7cacb-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="7cacb-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="7cacb-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

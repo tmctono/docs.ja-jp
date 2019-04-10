@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3d3ef78da9dd639d0f9050a8b61d1e365cd8b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 204f04b1ed1ea293639e0b9826f7e0ce6f384763
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198544"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="0bdbf-102">CorManifestResourceFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="0bdbf-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="0bdbf-103">アセンブリ マニフェストでエンコードされているリソースの可視性を示します。</span><span class="sxs-lookup"><span data-stu-id="0bdbf-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="ef34c-102">CorManifestResourceFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="ef34c-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="ef34c-103">アセンブリ マニフェストでエンコードされているリソースの可視性を示します。</span><span class="sxs-lookup"><span data-stu-id="ef34c-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bdbf-104">構文</span><span class="sxs-lookup"><span data-stu-id="0bdbf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef34c-104">構文</span><span class="sxs-lookup"><span data-stu-id="ef34c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorManifestResourceFlags {  
@@ -38,20 +38,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0bdbf-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="0bdbf-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ef34c-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="ef34c-105">Members</span></span>  
   
-|<span data-ttu-id="0bdbf-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0bdbf-106">Member</span></span>|<span data-ttu-id="0bdbf-107">説明</span><span class="sxs-lookup"><span data-stu-id="0bdbf-107">Description</span></span>|  
+|<span data-ttu-id="ef34c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="ef34c-106">Member</span></span>|<span data-ttu-id="ef34c-107">説明</span><span class="sxs-lookup"><span data-stu-id="ef34c-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="0bdbf-108">予約済み。</span><span class="sxs-lookup"><span data-stu-id="0bdbf-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="0bdbf-109">リソースはパブリックです。</span><span class="sxs-lookup"><span data-stu-id="0bdbf-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="0bdbf-110">リソースはプライベートです。</span><span class="sxs-lookup"><span data-stu-id="0bdbf-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="ef34c-108">予約済み。</span><span class="sxs-lookup"><span data-stu-id="ef34c-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="ef34c-109">リソースはパブリックです。</span><span class="sxs-lookup"><span data-stu-id="ef34c-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="ef34c-110">リソースはプライベートです。</span><span class="sxs-lookup"><span data-stu-id="ef34c-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0bdbf-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="0bdbf-111">Requirements</span></span>  
- <span data-ttu-id="0bdbf-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0bdbf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef34c-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="ef34c-111">Requirements</span></span>  
+ <span data-ttu-id="ef34c-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ef34c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0bdbf-113">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="0bdbf-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="ef34c-113">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ef34c-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="0bdbf-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0bdbf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="ef34c-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="ef34c-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0bdbf-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="0bdbf-115">See also</span></span>
-- [<span data-ttu-id="0bdbf-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="0bdbf-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="ef34c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef34c-115">See also</span></span>
+
+- [<span data-ttu-id="ef34c-116">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="ef34c-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

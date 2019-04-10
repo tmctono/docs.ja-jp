@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203770"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="9f255-102">ICorDebugObjectValue::SetFromManagedCopy メソッド</span><span class="sxs-lookup"><span data-stu-id="9f255-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="9f255-103">`SetFromManagedCopy` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="9f255-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="9f255-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="9f255-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="baace-102">ICorDebugObjectValue::SetFromManagedCopy メソッド</span><span class="sxs-lookup"><span data-stu-id="baace-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+`SetFromManagedCopy` <span data-ttu-id="baace-103">古い形式です。</span><span class="sxs-lookup"><span data-stu-id="baace-103">is obsolete.</span></span> <span data-ttu-id="baace-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="baace-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f255-105">構文</span><span class="sxs-lookup"><span data-stu-id="9f255-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="baace-105">構文</span><span class="sxs-lookup"><span data-stu-id="baace-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -35,9 +35,7 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9f255-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="9f255-106">Requirements</span></span>  
- <span data-ttu-id="9f255-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f255-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="baace-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="baace-106">Requirements</span></span>  
+ <span data-ttu-id="baace-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="baace-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f255-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f255-108">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="baace-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="baace-108">See also</span></span>

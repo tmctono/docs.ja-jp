@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd8c5e05d3f331d46b2d31f3f2448a674f090eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dfbba3cef8afadfc6e12e53ea328c4fc7165ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206760"
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="651a1-102">COR_PRF_GC_ROOT_KIND 列挙型</span><span class="sxs-lookup"><span data-stu-id="651a1-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="651a1-103">によって公開されるガベージ コレクションのルートの種類を示す、 [icorprofilercallback 2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="651a1-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="f95a2-102">COR_PRF_GC_ROOT_KIND 列挙型</span><span class="sxs-lookup"><span data-stu-id="f95a2-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="f95a2-103">によって公開されるガベージ コレクションのルートの種類を示す、 [icorprofilercallback 2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="f95a2-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="651a1-104">構文</span><span class="sxs-lookup"><span data-stu-id="651a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f95a2-104">構文</span><span class="sxs-lookup"><span data-stu-id="f95a2-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,24 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="651a1-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="651a1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f95a2-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f95a2-105">Members</span></span>  
   
-|<span data-ttu-id="651a1-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="651a1-106">Member</span></span>|<span data-ttu-id="651a1-107">説明</span><span class="sxs-lookup"><span data-stu-id="651a1-107">Description</span></span>|  
+|<span data-ttu-id="f95a2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f95a2-106">Member</span></span>|<span data-ttu-id="f95a2-107">説明</span><span class="sxs-lookup"><span data-stu-id="f95a2-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="651a1-108">ルートは、スタック上の変数です。</span><span class="sxs-lookup"><span data-stu-id="651a1-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="651a1-109">ルートは、ファイナライザー キュー内のエントリです。</span><span class="sxs-lookup"><span data-stu-id="651a1-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="651a1-110">ルートは、ガベージ コレクション ハンドルです。</span><span class="sxs-lookup"><span data-stu-id="651a1-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="651a1-111">ルートの種類が指定されていません。</span><span class="sxs-lookup"><span data-stu-id="651a1-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="f95a2-108">ルートは、スタック上の変数です。</span><span class="sxs-lookup"><span data-stu-id="f95a2-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="f95a2-109">ルートは、ファイナライザー キュー内のエントリです。</span><span class="sxs-lookup"><span data-stu-id="f95a2-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="f95a2-110">ルートは、ガベージ コレクション ハンドルです。</span><span class="sxs-lookup"><span data-stu-id="f95a2-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="f95a2-111">ルートの種類が指定されていません。</span><span class="sxs-lookup"><span data-stu-id="f95a2-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="651a1-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="651a1-112">Requirements</span></span>  
- <span data-ttu-id="651a1-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="651a1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f95a2-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="f95a2-112">Requirements</span></span>  
+ <span data-ttu-id="f95a2-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f95a2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="651a1-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="651a1-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f95a2-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f95a2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="651a1-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="651a1-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f95a2-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f95a2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="651a1-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="651a1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f95a2-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="f95a2-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="651a1-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="651a1-117">See also</span></span>
-- [<span data-ttu-id="651a1-118">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="651a1-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f95a2-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f95a2-117">See also</span></span>
+
+- [<span data-ttu-id="f95a2-118">列挙体のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="f95a2-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

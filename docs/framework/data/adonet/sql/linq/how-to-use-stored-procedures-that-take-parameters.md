@@ -1,24 +1,24 @@
 ---
-title: '方法: パラメーターを受け取るストアド プロシージャを使用します。'
+title: '方法: パラメーターを受け取るストアド プロシージャを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181767"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="5f8f2-102">方法: パラメーターを受け取るストアド プロシージャを使用します。</span><span class="sxs-lookup"><span data-stu-id="5f8f2-102">How to: Use Stored Procedures that Take Parameters</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="5f8f2-103">は、出力パラメーターを参照パラメーターに対応付け、値型はパラメーターを null 許容型として宣言します。</span><span class="sxs-lookup"><span data-stu-id="5f8f2-103">maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="8bab9-102">方法: パラメーターを受け取るストアド プロシージャを使用する</span><span class="sxs-lookup"><span data-stu-id="8bab9-102">How to: Use Stored Procedures that Take Parameters</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="8bab9-103">パラメーターを参照する出力パラメーターをマップし、値型の null 許容型としてパラメーターを宣言します。</span><span class="sxs-lookup"><span data-stu-id="8bab9-103">maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
   
- <span data-ttu-id="5f8f2-104">入力パラメーターの行セットを返すクエリで使用する方法の例は、次を参照してください。[方法。行セットを返す](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)します。</span><span class="sxs-lookup"><span data-stu-id="5f8f2-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
+ <span data-ttu-id="8bab9-104">入力パラメーターの行セットを返すクエリで使用する方法の例は、次を参照してください。[方法。行セットを返す](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)します。</span><span class="sxs-lookup"><span data-stu-id="8bab9-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5f8f2-105">例</span><span class="sxs-lookup"><span data-stu-id="5f8f2-105">Example</span></span>  
- <span data-ttu-id="5f8f2-106">次の例は、単一の入力パラメーター (顧客 ID) を受け取り、出力パラメーター (その顧客の売上合計) を返します。</span><span class="sxs-lookup"><span data-stu-id="5f8f2-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
+## <a name="example"></a><span data-ttu-id="8bab9-105">例</span><span class="sxs-lookup"><span data-stu-id="8bab9-105">Example</span></span>  
+ <span data-ttu-id="8bab9-106">次の例は、単一の入力パラメーター (顧客 ID) を受け取り、出力パラメーター (その顧客の売上合計) を返します。</span><span class="sxs-lookup"><span data-stu-id="8bab9-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -33,14 +33,15 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#2)]
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="5f8f2-107">例</span><span class="sxs-lookup"><span data-stu-id="5f8f2-107">Example</span></span>  
- <span data-ttu-id="5f8f2-108">このストアド プロシージャは次のように呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="5f8f2-108">You would call this stored procedure as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="8bab9-107">例</span><span class="sxs-lookup"><span data-stu-id="8bab9-107">Example</span></span>  
+ <span data-ttu-id="8bab9-108">このストアド プロシージャは次のように呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="8bab9-108">You would call this stored procedure as follows:</span></span>  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="5f8f2-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f8f2-109">See also</span></span>
-- [<span data-ttu-id="5f8f2-110">ストアド プロシージャ</span><span class="sxs-lookup"><span data-stu-id="5f8f2-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [<span data-ttu-id="5f8f2-111">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="5f8f2-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [<span data-ttu-id="5f8f2-112">Null 許容型の使用</span><span class="sxs-lookup"><span data-stu-id="5f8f2-112">Using Nullable Types</span></span>](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [<span data-ttu-id="5f8f2-113">null 許容値型</span><span class="sxs-lookup"><span data-stu-id="5f8f2-113">Nullable Value Types</span></span>](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a><span data-ttu-id="8bab9-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bab9-109">See also</span></span>
+
+- [<span data-ttu-id="8bab9-110">ストアド プロシージャ</span><span class="sxs-lookup"><span data-stu-id="8bab9-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [<span data-ttu-id="8bab9-111">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="8bab9-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [<span data-ttu-id="8bab9-112">Null 許容型の使用</span><span class="sxs-lookup"><span data-stu-id="8bab9-112">Using Nullable Types</span></span>](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [<span data-ttu-id="8bab9-113">null 許容値型</span><span class="sxs-lookup"><span data-stu-id="8bab9-113">Nullable Value Types</span></span>](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

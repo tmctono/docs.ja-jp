@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c001606e1b1642bc10377425d262676cfc2b9f15
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b99a942d5c5fb205a84dd3766c99cc1126998de8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190400"
 ---
-# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="47d3f-102">ICorProfilerCallback2::FinalizeableObjectQueued メソッド</span><span class="sxs-lookup"><span data-stu-id="47d3f-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
-<span data-ttu-id="47d3f-103">コード プロファイラーに通知ファイナライザーを持つオブジェクトが、ファイナライザー スレッドを実行するためにキューに登録されましたが、`Finalize`メソッド。</span><span class="sxs-lookup"><span data-stu-id="47d3f-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
+# <a name="icorprofilercallback2finalizeableobjectqueued-method"></a><span data-ttu-id="ce594-102">ICorProfilerCallback2::FinalizeableObjectQueued メソッド</span><span class="sxs-lookup"><span data-stu-id="ce594-102">ICorProfilerCallback2::FinalizeableObjectQueued Method</span></span>
+<span data-ttu-id="ce594-103">コード プロファイラーに通知ファイナライザーを持つオブジェクトが、ファイナライザー スレッドを実行するためにキューに登録されましたが、`Finalize`メソッド。</span><span class="sxs-lookup"><span data-stu-id="ce594-103">Notifies the code profiler that an object with a finalizer has been queued to the finalizer thread for execution of its `Finalize` method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47d3f-104">構文</span><span class="sxs-lookup"><span data-stu-id="47d3f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce594-104">構文</span><span class="sxs-lookup"><span data-stu-id="ce594-104">Syntax</span></span>  
   
 ```  
 HRESULT FinalizeableObjectQueued(  
@@ -35,22 +35,23 @@ HRESULT FinalizeableObjectQueued(
     [in] ObjectID objectID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47d3f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="47d3f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce594-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ce594-105">Parameters</span></span>  
  `finalizerFlags`  
- <span data-ttu-id="47d3f-106">[in]値、 [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)ファイナライザーの側面について説明する列挙体。</span><span class="sxs-lookup"><span data-stu-id="47d3f-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
+ <span data-ttu-id="ce594-106">[in]値、 [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)ファイナライザーの側面について説明する列挙体。</span><span class="sxs-lookup"><span data-stu-id="ce594-106">[in] A value of the [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) enumeration that describes aspects of the finalizer.</span></span>  
   
  `objectID`  
- <span data-ttu-id="47d3f-107">[in]キューに登録されているオブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="47d3f-107">[in] The ID of the object that has been queued.</span></span>  
+ <span data-ttu-id="ce594-107">[in]キューに登録されているオブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="ce594-107">[in] The ID of the object that has been queued.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="47d3f-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="47d3f-108">Requirements</span></span>  
- <span data-ttu-id="47d3f-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="47d3f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce594-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="ce594-108">Requirements</span></span>  
+ <span data-ttu-id="ce594-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ce594-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47d3f-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="47d3f-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ce594-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ce594-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="47d3f-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47d3f-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce594-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce594-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="47d3f-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47d3f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ce594-112">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="ce594-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="47d3f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="47d3f-113">See also</span></span>
-- [<span data-ttu-id="47d3f-114">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="47d3f-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="47d3f-115">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="47d3f-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ce594-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce594-113">See also</span></span>
+
+- [<span data-ttu-id="ce594-114">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ce594-114">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="ce594-115">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ce594-115">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

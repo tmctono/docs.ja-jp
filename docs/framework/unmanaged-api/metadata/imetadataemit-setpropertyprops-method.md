@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d836abb63aec0ffd72fb54d342e36bae7191a533
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fdee8491b22675fb8dd8fa89e77ebf8541185173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207896"
 ---
-# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="0df40-102">IMetaDataEmit::SetPropertyProps メソッド</span><span class="sxs-lookup"><span data-stu-id="0df40-102">IMetaDataEmit::SetPropertyProps Method</span></span>
-<span data-ttu-id="0df40-103">前回の呼び出しによって定義されるプロパティのメタデータに格納されている機能の設定[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="0df40-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
+# <a name="imetadataemitsetpropertyprops-method"></a><span data-ttu-id="82834-102">IMetaDataEmit::SetPropertyProps メソッド</span><span class="sxs-lookup"><span data-stu-id="82834-102">IMetaDataEmit::SetPropertyProps Method</span></span>
+<span data-ttu-id="82834-103">前回の呼び出しによって定義されるプロパティのメタデータに格納されている機能の設定[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="82834-103">Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0df40-104">構文</span><span class="sxs-lookup"><span data-stu-id="0df40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82834-104">構文</span><span class="sxs-lookup"><span data-stu-id="82834-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPropertyProps (   
@@ -42,40 +42,41 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0df40-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0df40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="82834-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="82834-105">Parameters</span></span>  
  `pr`  
- <span data-ttu-id="0df40-106">[in]変更するプロパティのトークン</span><span class="sxs-lookup"><span data-stu-id="0df40-106">[in] The token for the property to be changed</span></span>  
+ <span data-ttu-id="82834-106">[in]変更するプロパティのトークン</span><span class="sxs-lookup"><span data-stu-id="82834-106">[in] The token for the property to be changed</span></span>  
   
  `dwPropFlags`  
- <span data-ttu-id="0df40-107">[in]プロパティのフラグ。</span><span class="sxs-lookup"><span data-stu-id="0df40-107">[in] Property flags.</span></span>  
+ <span data-ttu-id="82834-107">[in]プロパティのフラグ。</span><span class="sxs-lookup"><span data-stu-id="82834-107">[in] Property flags.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="0df40-108">[in]プロパティの既定値の型。</span><span class="sxs-lookup"><span data-stu-id="0df40-108">[in] The type of the property's default value.</span></span>  
+ <span data-ttu-id="82834-108">[in]プロパティの既定値の型。</span><span class="sxs-lookup"><span data-stu-id="82834-108">[in] The type of the property's default value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="0df40-109">[in]プロパティの既定値。</span><span class="sxs-lookup"><span data-stu-id="0df40-109">[in] The default value for the property.</span></span>  
+ <span data-ttu-id="82834-109">[in]プロパティの既定値。</span><span class="sxs-lookup"><span data-stu-id="82834-109">[in] The default value for the property.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="0df40-110">[in] \(Unicode) の数の文字について`pValue`です。</span><span class="sxs-lookup"><span data-stu-id="0df40-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
+ <span data-ttu-id="82834-110">[in] \(Unicode) の数の文字について`pValue`です。</span><span class="sxs-lookup"><span data-stu-id="82834-110">[in] The count of (Unicode) characters in `pValue`.</span></span>  
   
  `mdSetter`  
- <span data-ttu-id="0df40-111">[in]このメソッドは、プロパティ値を設定します。</span><span class="sxs-lookup"><span data-stu-id="0df40-111">[in] The method that sets the property value.</span></span>  
+ <span data-ttu-id="82834-111">[in]このメソッドは、プロパティ値を設定します。</span><span class="sxs-lookup"><span data-stu-id="82834-111">[in] The method that sets the property value.</span></span>  
   
  `mdGetter`  
- <span data-ttu-id="0df40-112">[in]このメソッドは、プロパティ値を取得します。</span><span class="sxs-lookup"><span data-stu-id="0df40-112">[in] The method that gets the property value.</span></span>  
+ <span data-ttu-id="82834-112">[in]このメソッドは、プロパティ値を取得します。</span><span class="sxs-lookup"><span data-stu-id="82834-112">[in] The method that gets the property value.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="0df40-113">[in]プロパティに関連付けられているその他のメソッドの配列。</span><span class="sxs-lookup"><span data-stu-id="0df40-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="0df40-114">この配列を`mdTokenNil`トークンです。</span><span class="sxs-lookup"><span data-stu-id="0df40-114">Terminate this array with an `mdTokenNil` token.</span></span>  
+ <span data-ttu-id="82834-113">[in]プロパティに関連付けられているその他のメソッドの配列。</span><span class="sxs-lookup"><span data-stu-id="82834-113">[in] An array of other methods associated with the property.</span></span> <span data-ttu-id="82834-114">この配列を`mdTokenNil`トークンです。</span><span class="sxs-lookup"><span data-stu-id="82834-114">Terminate this array with an `mdTokenNil` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0df40-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="0df40-115">Requirements</span></span>  
- <span data-ttu-id="0df40-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0df40-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82834-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="82834-115">Requirements</span></span>  
+ <span data-ttu-id="82834-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="82834-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0df40-117">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0df40-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="82834-117">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="82834-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0df40-118">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="0df40-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="82834-118">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="82834-118">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0df40-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0df40-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="82834-119">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="82834-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0df40-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="0df40-120">See also</span></span>
-- [<span data-ttu-id="0df40-121">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0df40-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="0df40-122">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0df40-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="82834-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="82834-120">See also</span></span>
+
+- [<span data-ttu-id="82834-121">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="82834-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="82834-122">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="82834-122">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

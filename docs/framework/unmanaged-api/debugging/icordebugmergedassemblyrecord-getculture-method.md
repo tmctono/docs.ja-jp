@@ -1,20 +1,20 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetCulture メソッド
+title: Icordebugmergedassemblyrecord::getculture メソッド
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee20ddd337e99836e74fe95e88e9e49a9a783ea7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 093b21a439b96c9fe2f971300f314d1b75527f1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207202"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a><span data-ttu-id="267ab-102">ICorDebugMergedAssemblyRecord::GetCulture メソッド</span><span class="sxs-lookup"><span data-stu-id="267ab-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span></span>
-<span data-ttu-id="267ab-103">アセンブリのカルチャ名文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="267ab-103">Gets the culture name string of the assembly.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a><span data-ttu-id="f5c1e-102">Icordebugmergedassemblyrecord::getculture メソッド</span><span class="sxs-lookup"><span data-stu-id="f5c1e-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span></span>
+<span data-ttu-id="f5c1e-103">アセンブリのカルチャ名文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-103">Gets the culture name string of the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="267ab-104">構文</span><span class="sxs-lookup"><span data-stu-id="267ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5c1e-104">構文</span><span class="sxs-lookup"><span data-stu-id="f5c1e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCulture(  
@@ -24,31 +24,32 @@ HRESULT GetCulture(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="267ab-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="267ab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f5c1e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f5c1e-105">Parameters</span></span>  
  `cchCulture`  
- <span data-ttu-id="267ab-106">[in] `szCulture` バッファー内の文字数。</span><span class="sxs-lookup"><span data-stu-id="267ab-106">[in] The number of characters in the `szCulture` buffer.</span></span>  
+ <span data-ttu-id="f5c1e-106">[in] `szCulture` バッファー内の文字数。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-106">[in] The number of characters in the `szCulture` buffer.</span></span>  
   
  `pcchCulture`  
- <span data-ttu-id="267ab-107">[out] `szCulture` バッファーに実際に書き込まれた文字数。</span><span class="sxs-lookup"><span data-stu-id="267ab-107">[out] The number of characters actually written to the `szCulture` buffer.</span></span>  
+ <span data-ttu-id="f5c1e-107">[out] `szCulture` バッファーに実際に書き込まれた文字数。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-107">[out] The number of characters actually written to the `szCulture` buffer.</span></span>  
   
  `szCulture`  
- <span data-ttu-id="267ab-108">[out] カルチャ名を格納する文字配列。</span><span class="sxs-lookup"><span data-stu-id="267ab-108">[out] A character array that contains the culture name.</span></span>  
+ <span data-ttu-id="f5c1e-108">[out] カルチャ名を格納する文字配列。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-108">[out] A character array that contains the culture name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="267ab-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="267ab-109">Remarks</span></span>  
- <span data-ttu-id="267ab-110">カルチャ名は、"en-US" (英語 (米国) カルチャ)、"neutral" (ニュートラル カルチャ) など、カルチャを識別する一意の文字列です。</span><span class="sxs-lookup"><span data-stu-id="267ab-110">The culture name is a unique string that identifies a culture, such as "en-US" (for the English (United States) culture), or "neutral" (for a neutral culture).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5c1e-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="f5c1e-109">Remarks</span></span>  
+ <span data-ttu-id="f5c1e-110">カルチャ名は、"en-US" (英語 (米国) カルチャ)、"neutral" (ニュートラル カルチャ) など、カルチャを識別する一意の文字列です。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-110">The culture name is a unique string that identifies a culture, such as "en-US" (for the English (United States) culture), or "neutral" (for a neutral culture).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="267ab-111">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="267ab-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="f5c1e-111">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="267ab-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="267ab-112">Requirements</span></span>  
- <span data-ttu-id="267ab-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="267ab-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5c1e-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="f5c1e-112">Requirements</span></span>  
+ <span data-ttu-id="f5c1e-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f5c1e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="267ab-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="267ab-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f5c1e-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f5c1e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="267ab-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="267ab-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f5c1e-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5c1e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="267ab-116">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="267ab-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="f5c1e-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="f5c1e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="267ab-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="267ab-117">See also</span></span>
-- [<span data-ttu-id="267ab-118">ICorDebugMergedAssemblyRecord インターフェイス</span><span class="sxs-lookup"><span data-stu-id="267ab-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [<span data-ttu-id="267ab-119">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="267ab-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f5c1e-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5c1e-117">See also</span></span>
+
+- [<span data-ttu-id="f5c1e-118">ICorDebugMergedAssemblyRecord インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f5c1e-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
+- [<span data-ttu-id="f5c1e-119">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f5c1e-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

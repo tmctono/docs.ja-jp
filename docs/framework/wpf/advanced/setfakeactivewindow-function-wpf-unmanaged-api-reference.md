@@ -8,19 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: 6d665052811cbcea7703fe33903b5713d910d1a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d83833a0f18f94f3aa590896f0a1eb4c53dc16d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168403"
 ---
-# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="86a20-102">SetFakeActiveWindow 関数 (WPF のアンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="86a20-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="86a20-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="86a20-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="0ed4a-102">SetFakeActiveWindow 関数 (WPF のアンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="0ed4a-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="0ed4a-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="0ed4a-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="86a20-104">Windows Presentation Foundation (WPF) インフラストラクチャによって windows の管理に使用します。</span><span class="sxs-lookup"><span data-stu-id="86a20-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="0ed4a-104">Windows Presentation Foundation (WPF) インフラストラクチャによって windows の管理に使用します。</span><span class="sxs-lookup"><span data-stu-id="0ed4a-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86a20-105">構文</span><span class="sxs-lookup"><span data-stu-id="86a20-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ed4a-105">構文</span><span class="sxs-lookup"><span data-stu-id="0ed4a-105">Syntax</span></span>  
   
 ```cpp  
 void __stdcall SetFakeActiveWindow(  
@@ -28,16 +28,17 @@ void __stdcall SetFakeActiveWindow(
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86a20-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="86a20-106">Parameters</span></span>  
- <span data-ttu-id="86a20-107">hwnd</span><span class="sxs-lookup"><span data-stu-id="86a20-107">hwnd</span></span>  
- <span data-ttu-id="86a20-108">ウィンドウ ハンドル。</span><span class="sxs-lookup"><span data-stu-id="86a20-108">A window handle.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0ed4a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0ed4a-106">Parameters</span></span>  
+ <span data-ttu-id="0ed4a-107">hwnd</span><span class="sxs-lookup"><span data-stu-id="0ed4a-107">hwnd</span></span>  
+ <span data-ttu-id="0ed4a-108">ウィンドウ ハンドル。</span><span class="sxs-lookup"><span data-stu-id="0ed4a-108">A window handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86a20-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="86a20-109">Requirements</span></span>  
- <span data-ttu-id="86a20-110">**プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。</span><span class="sxs-lookup"><span data-stu-id="86a20-110">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ed4a-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="0ed4a-109">Requirements</span></span>  
+ <span data-ttu-id="0ed4a-110">**プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。</span><span class="sxs-lookup"><span data-stu-id="0ed4a-110">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86a20-111">**DLL:** PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="86a20-111">**DLL:** PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="0ed4a-111">**DLL:** PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="0ed4a-111">**DLL:** PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="86a20-112">**.NET framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86a20-112">**.NET Framework Version:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="0ed4a-112">.NET framework のバージョン:</span><span class="sxs-lookup"><span data-stu-id="0ed4a-112">.NET Framework Version:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="86a20-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="86a20-113">See also</span></span>
-- [<span data-ttu-id="86a20-114">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="86a20-114">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="0ed4a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0ed4a-113">See also</span></span>
+
+- [<span data-ttu-id="0ed4a-114">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="0ed4a-114">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

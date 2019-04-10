@@ -17,43 +17,44 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52803fc04aa55f40a131e2d53dc4ef7dba70bcde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efe3070b41b1d71e0cf533a7f9f211f4c6626726
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197867"
 ---
-# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="989cb-102">ICorProfilerCallback3::ProfilerDetachSucceeded メソッド</span><span class="sxs-lookup"><span data-stu-id="989cb-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
-<span data-ttu-id="989cb-103">共通言語ランタイム (CLR: Common Language Runtime) がプロファイラー DLL をアンロードしようとしていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="989cb-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
+# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="e797d-102">ICorProfilerCallback3::ProfilerDetachSucceeded メソッド</span><span class="sxs-lookup"><span data-stu-id="e797d-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
+<span data-ttu-id="e797d-103">共通言語ランタイム (CLR: Common Language Runtime) がプロファイラー DLL をアンロードしようとしていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="e797d-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="989cb-104">構文</span><span class="sxs-lookup"><span data-stu-id="989cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e797d-104">構文</span><span class="sxs-lookup"><span data-stu-id="e797d-104">Syntax</span></span>  
   
 ```  
 HRESULT ProfilerDetachSucceeded();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="989cb-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="989cb-105">Return Value</span></span>  
- <span data-ttu-id="989cb-106">このコールバックからの戻り値は無視されます。</span><span class="sxs-lookup"><span data-stu-id="989cb-106">The return value from this callback is ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e797d-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="e797d-105">Return Value</span></span>  
+ <span data-ttu-id="e797d-106">このコールバックからの戻り値は無視されます。</span><span class="sxs-lookup"><span data-stu-id="e797d-106">The return value from this callback is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="989cb-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="989cb-107">Remarks</span></span>  
- <span data-ttu-id="989cb-108">`ProfilerDetachSucceeded` コールバックは、すべてのスレッドでプロファイラーのコードが終了した後に発行されます。</span><span class="sxs-lookup"><span data-stu-id="989cb-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="989cb-109">このメソッドが呼び出された場合、プロファイラーは、そのデストラクターに適さない最後の段階のタスク (その UI またはログ コンポーネントの通知など) を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="989cb-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="989cb-110">ただし、プロファイラーする必要がありますいない関数を呼び出すこのコールバック中に CLR によって提供されるインターフェイス上 (など、 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)または`IMetaData*`インターフェイス)。</span><span class="sxs-lookup"><span data-stu-id="989cb-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e797d-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="e797d-107">Remarks</span></span>  
+ <span data-ttu-id="e797d-108">`ProfilerDetachSucceeded` コールバックは、すべてのスレッドでプロファイラーのコードが終了した後に発行されます。</span><span class="sxs-lookup"><span data-stu-id="e797d-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="e797d-109">このメソッドが呼び出された場合、プロファイラーは、そのデストラクターに適さない最後の段階のタスク (その UI またはログ コンポーネントの通知など) を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e797d-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="e797d-110">ただし、プロファイラーする必要がありますいない関数を呼び出すこのコールバック中に CLR によって提供されるインターフェイス上 (など、 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)または`IMetaData*`インターフェイス)。</span><span class="sxs-lookup"><span data-stu-id="e797d-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
   
- <span data-ttu-id="989cb-111">CLR は Windows アプリケーション イベント ログに、デタッチ操作が成功したことを示すエントリを作成します。</span><span class="sxs-lookup"><span data-stu-id="989cb-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
+ <span data-ttu-id="e797d-111">CLR は Windows アプリケーション イベント ログに、デタッチ操作が成功したことを示すエントリを作成します。</span><span class="sxs-lookup"><span data-stu-id="e797d-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
   
- <span data-ttu-id="989cb-112">プロファイラーがこのコールバックから戻ると、CLR はプロファイラー オブジェクトを解放し、プロファイラー DLL をアンロードします。</span><span class="sxs-lookup"><span data-stu-id="989cb-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="989cb-113">したがって、プロファイラーは、コールバックから戻った後にプロファイラー DLL 内での実行を発生させるアクションを実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="989cb-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="989cb-114">たとえば、プロファイラーは、スレッドを作成することも、タイマー コールバックを登録することもできません。</span><span class="sxs-lookup"><span data-stu-id="989cb-114">For example, it must not create threads or register timer callbacks.</span></span>  
+ <span data-ttu-id="e797d-112">プロファイラーがこのコールバックから戻ると、CLR はプロファイラー オブジェクトを解放し、プロファイラー DLL をアンロードします。</span><span class="sxs-lookup"><span data-stu-id="e797d-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="e797d-113">したがって、プロファイラーは、コールバックから戻った後にプロファイラー DLL 内での実行を発生させるアクションを実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="e797d-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="e797d-114">たとえば、プロファイラーは、スレッドを作成することも、タイマー コールバックを登録することもできません。</span><span class="sxs-lookup"><span data-stu-id="e797d-114">For example, it must not create threads or register timer callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="989cb-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="989cb-115">Requirements</span></span>  
- <span data-ttu-id="989cb-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="989cb-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e797d-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="e797d-115">Requirements</span></span>  
+ <span data-ttu-id="e797d-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e797d-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="989cb-117">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="989cb-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e797d-117">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e797d-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="989cb-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="989cb-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e797d-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e797d-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="989cb-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="989cb-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="e797d-119">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="e797d-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="989cb-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="989cb-120">See also</span></span>
-- [<span data-ttu-id="989cb-121">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="989cb-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="989cb-122">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="989cb-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="989cb-123">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="989cb-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="989cb-124">プロファイル</span><span class="sxs-lookup"><span data-stu-id="989cb-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="e797d-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="e797d-120">See also</span></span>
+
+- [<span data-ttu-id="e797d-121">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e797d-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="e797d-122">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e797d-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="e797d-123">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="e797d-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="e797d-124">プロファイル</span><span class="sxs-lookup"><span data-stu-id="e797d-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
