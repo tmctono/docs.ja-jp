@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: 28089647e8a67d2da55ddd12288b298bcace66c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4545c6d3bc302dba0c37e5ae6ebefa8939b0cff9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305924"
 ---
-# <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a><span data-ttu-id="f04e0-102">クラスがオートメーションをサポートしていないか、必要なインターフェイスをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="f04e0-102">Class does not support Automation or does not support expected interface</span></span>
-<span data-ttu-id="f04e0-103">`GetObject` 関数呼び出しまたは `CreateObject` 関数呼び出しで指定したクラスが外部からプログラム可能なインターフェイスを公開していません。あるいは、.dll から .exe へ、または .exe から .dll へプロジェクトを変更しました。</span><span class="sxs-lookup"><span data-stu-id="f04e0-103">Either the class you specified in the `GetObject` or `CreateObject` function call has not exposed a programmability interface, or you changed a project from .dll to .exe, or vice versa.</span></span>  
+# <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a><span data-ttu-id="346b2-102">クラスがオートメーションをサポートしていないか、必要なインターフェイスをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="346b2-102">Class does not support Automation or does not support expected interface</span></span>
+<span data-ttu-id="346b2-103">`GetObject` 関数呼び出しまたは `CreateObject` 関数呼び出しで指定したクラスが外部からプログラム可能なインターフェイスを公開していません。あるいは、.dll から .exe へ、または .exe から .dll へプロジェクトを変更しました。</span><span class="sxs-lookup"><span data-stu-id="346b2-103">Either the class you specified in the `GetObject` or `CreateObject` function call has not exposed a programmability interface, or you changed a project from .dll to .exe, or vice versa.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f04e0-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="f04e0-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="346b2-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="346b2-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="f04e0-105">オブジェクトを作成したアプリケーションのドキュメントを参照して、このクラスのオブジェクトでオートメーションを使用する上での制限を確認します。</span><span class="sxs-lookup"><span data-stu-id="f04e0-105">Check the documentation of the application that created the object for limitations on the use of automation with this class of object.</span></span>  
+1. <span data-ttu-id="346b2-105">オブジェクトを作成したアプリケーションのドキュメントを参照して、このクラスのオブジェクトでオートメーションを使用する上での制限を確認します。</span><span class="sxs-lookup"><span data-stu-id="346b2-105">Check the documentation of the application that created the object for limitations on the use of automation with this class of object.</span></span>  
   
-2.  <span data-ttu-id="f04e0-106">.dll から .exe へ、または .exe から .dll へプロジェクトを変更した場合は、古い .dll または .exe を手動で登録解除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f04e0-106">If you changed a project from .dll to .exe or vice versa, you must manually unregister the old .dll or .exe.</span></span>  
+2. <span data-ttu-id="346b2-106">.dll から .exe へ、または .exe から .dll へプロジェクトを変更した場合は、古い .dll または .exe を手動で登録解除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="346b2-106">If you changed a project from .dll to .exe or vice versa, you must manually unregister the old .dll or .exe.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f04e0-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="f04e0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="346b2-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="346b2-107">See also</span></span>
 
-- [<span data-ttu-id="f04e0-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="f04e0-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="f04e0-109">ご意見</span><span class="sxs-lookup"><span data-stu-id="f04e0-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="346b2-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="346b2-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="346b2-109">Talk to Us</span><span class="sxs-lookup"><span data-stu-id="346b2-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

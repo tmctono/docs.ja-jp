@@ -2,20 +2,20 @@
 title: '方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827748"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301114"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="69ac6-102">方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。</span><span class="sxs-lookup"><span data-stu-id="69ac6-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="19ae2-102">方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。</span><span class="sxs-lookup"><span data-stu-id="19ae2-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="69ac6-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="69ac6-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="69ac6-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="69ac6-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="69ac6-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="69ac6-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="19ae2-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="19ae2-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="19ae2-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="19ae2-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="19ae2-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="19ae2-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="69ac6-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="69ac6-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="19ae2-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="19ae2-106">To create the data files</span></span>
   
-1.  <span data-ttu-id="69ac6-107">次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="69ac6-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="69ac6-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="69ac6-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="69ac6-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="69ac6-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="19ae2-107">次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="19ae2-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="19ae2-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="19ae2-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="19ae2-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="19ae2-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "55827748"
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="69ac6-110">次の行を names.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="69ac6-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="69ac6-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="69ac6-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="19ae2-110">次の行を names.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="19ae2-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="19ae2-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="19ae2-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "55827748"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="69ac6-112">例</span><span class="sxs-lookup"><span data-stu-id="69ac6-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="19ae2-112">例</span><span class="sxs-lookup"><span data-stu-id="19ae2-112">Example</span></span>  
 
 ```vb
 Imports System.Collections.Generic
@@ -120,15 +120,15 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a><span data-ttu-id="69ac6-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="69ac6-113">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="19ae2-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="19ae2-113">Compiling the code</span></span>
 
-<span data-ttu-id="69ac6-114">次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="69ac6-114">Create and compile a project that targets one of the following options:</span></span>
+<span data-ttu-id="19ae2-114">次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="19ae2-114">Create and compile a project that targets one of the following options:</span></span>
 
-- <span data-ttu-id="69ac6-115">System.Core.dll の参照を含む .NET Framework バージョン 3.5。</span><span class="sxs-lookup"><span data-stu-id="69ac6-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="69ac6-116">.NET Framework バージョン 4.0 以降</span><span class="sxs-lookup"><span data-stu-id="69ac6-116">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="69ac6-117">.NET Core バージョン 1.0 以降。</span><span class="sxs-lookup"><span data-stu-id="69ac6-117">.NET Core version 1.0 or higher.</span></span>
+- <span data-ttu-id="19ae2-115">System.Core.dll の参照を含む .NET Framework バージョン 3.5。</span><span class="sxs-lookup"><span data-stu-id="19ae2-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="19ae2-116">.NET Framework バージョン 4.0 以降</span><span class="sxs-lookup"><span data-stu-id="19ae2-116">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="19ae2-117">.NET Core バージョン 1.0 以降。</span><span class="sxs-lookup"><span data-stu-id="19ae2-117">.NET Core version 1.0 or higher.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="69ac6-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="69ac6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19ae2-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="19ae2-118">See also</span></span>
 
-- [<span data-ttu-id="69ac6-119">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69ac6-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="69ac6-120">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69ac6-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="19ae2-119">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19ae2-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="19ae2-120">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19ae2-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
