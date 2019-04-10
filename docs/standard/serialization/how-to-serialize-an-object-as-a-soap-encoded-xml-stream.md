@@ -1,5 +1,5 @@
 ---
-title: '方法: SOAP エンコード済み XML Stream としてオブジェクトをシリアル化します。'
+title: '方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: dc5c4a68c1fba303937ae126cd5b5d4f7f8107ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334524"
 ---
-# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="3fd0d-102">方法: SOAP エンコード済み XML Stream としてオブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
+# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="d46fa-102">方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する</span><span class="sxs-lookup"><span data-stu-id="d46fa-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
   
- <span data-ttu-id="3fd0d-103">SOAP メッセージは XML を使用して作成されるため、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用してクラスをシリアル化し、エンコード済みの SOAP メッセージを生成できます。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="3fd0d-104">生成される XML は、[W3C (World Wide Web Consortium) のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512) に準拠します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="3fd0d-105">SOAP メッセージを使用して通信を行う XML Web サービスを作成する場合、特殊な SOAP 属性のセットをクラスやクラスのメンバーに適用することで、生成される XML ストリームをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="3fd0d-106">属性の一覧については、「[Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
+ <span data-ttu-id="d46fa-103">SOAP メッセージは XML を使用して作成されるため、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用してクラスをシリアル化し、エンコード済みの SOAP メッセージを生成できます。</span><span class="sxs-lookup"><span data-stu-id="d46fa-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="d46fa-104">生成される XML は、[W3C (World Wide Web Consortium) のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512) に準拠します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="d46fa-105">SOAP メッセージを使用して通信を行う XML Web サービスを作成する場合、特殊な SOAP 属性のセットをクラスやクラスのメンバーに適用することで、生成される XML ストリームをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="d46fa-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="d46fa-106">属性の一覧については、「[Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d46fa-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="3fd0d-107">オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化するには</span><span class="sxs-lookup"><span data-stu-id="3fd0d-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
+### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="d46fa-107">オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化するには</span><span class="sxs-lookup"><span data-stu-id="d46fa-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
   
-1.  <span data-ttu-id="3fd0d-108">[XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) を使用して、クラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
+1. <span data-ttu-id="d46fa-108">[XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) を使用して、クラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
   
-2.  <span data-ttu-id="3fd0d-109">`System.Xml.Serialization` の特別な属性を 1 つ以上適用します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="3fd0d-110">「エンコード済み SOAP シリアル化を制御する属性」の一覧を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
+2. <span data-ttu-id="d46fa-109">`System.Xml.Serialization` の特別な属性を 1 つ以上適用します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="d46fa-110">「エンコード済み SOAP シリアル化を制御する属性」の一覧を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d46fa-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
   
-3.  <span data-ttu-id="3fd0d-111">新しい `XmlTypeMapping` を作成し、シリアル化されるクラスの型を使用して `SoapReflectionImporter` メソッドを呼び出して、`ImportTypeMapping` を作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
+3. <span data-ttu-id="d46fa-111">新しい `XmlTypeMapping` を作成し、シリアル化されるクラスの型を使用して `SoapReflectionImporter` メソッドを呼び出して、`ImportTypeMapping` を作成します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
   
-     <span data-ttu-id="3fd0d-112">`ImportTypeMapping` クラスの `SoapReflectionImporter` メソッドを呼び出して `XmlTypeMapping` を作成するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
+     <span data-ttu-id="d46fa-112">`ImportTypeMapping` クラスの `SoapReflectionImporter` メソッドを呼び出して `XmlTypeMapping` を作成するコード例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
   
     ```vb  
     ' Serializes a class named Group as a SOAP message.  
@@ -42,7 +42,7 @@ ms.locfileid: "54631387"
         new SoapReflectionImporter().ImportTypeMapping(typeof(Group));
     ```  
   
-4.  <span data-ttu-id="3fd0d-113">`XmlSerializer` を `XmlTypeMapping` コンストラクターに渡して、<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
+4. <span data-ttu-id="d46fa-113">`XmlSerializer` を `XmlTypeMapping` コンストラクターに渡して、<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
   
     ```vb  
     Dim mySerializer As XmlSerializer = New XmlSerializer(myTypeMapping)  
@@ -52,9 +52,9 @@ ms.locfileid: "54631387"
     XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
     ```  
   
-5.  <span data-ttu-id="3fd0d-114">`Serialize` メソッドまたは `Deserialize` メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-114">Call the `Serialize` or `Deserialize` method.</span></span>  
+5. <span data-ttu-id="d46fa-114">`Serialize` メソッドまたは `Deserialize` メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d46fa-114">Call the `Serialize` or `Deserialize` method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3fd0d-115">例</span><span class="sxs-lookup"><span data-stu-id="3fd0d-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d46fa-115">例</span><span class="sxs-lookup"><span data-stu-id="d46fa-115">Example</span></span>  
   
 ```vb  
 ' Serializes a class named Group as a SOAP message.  
@@ -70,11 +70,11 @@ XmlTypeMapping myTypeMapping =
 XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3fd0d-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3fd0d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d46fa-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="d46fa-116">See also</span></span>
 
-- [<span data-ttu-id="3fd0d-117">XML シリアル化および SOAP シリアル化</span><span class="sxs-lookup"><span data-stu-id="3fd0d-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [<span data-ttu-id="3fd0d-118">エンコード済み SOAP シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="3fd0d-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [<span data-ttu-id="3fd0d-119">XML Web サービスを使用した XML シリアル化</span><span class="sxs-lookup"><span data-stu-id="3fd0d-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [<span data-ttu-id="3fd0d-120">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="3fd0d-121">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [<span data-ttu-id="3fd0d-122">方法: SOAP エンコード済み XML シリアル化をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="3fd0d-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [<span data-ttu-id="d46fa-117">XML シリアル化および SOAP シリアル化</span><span class="sxs-lookup"><span data-stu-id="d46fa-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="d46fa-118">エンコード済み SOAP シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="d46fa-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [<span data-ttu-id="d46fa-119">XML Web サービスを使用した XML シリアル化</span><span class="sxs-lookup"><span data-stu-id="d46fa-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [<span data-ttu-id="d46fa-120">方法: オブジェクトをシリアル化する</span><span class="sxs-lookup"><span data-stu-id="d46fa-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="d46fa-121">方法: オブジェクトを逆シリアル化する</span><span class="sxs-lookup"><span data-stu-id="d46fa-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="d46fa-122">方法: SOAP エンコード済み XML シリアル化をオーバーライドする</span><span class="sxs-lookup"><span data-stu-id="d46fa-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
