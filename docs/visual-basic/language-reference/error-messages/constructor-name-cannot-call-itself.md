@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324384"
 ---
-# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="5e841-102">コンス トラクター '\<名 >' 自体を呼び出すことはできません</span><span class="sxs-lookup"><span data-stu-id="5e841-102">Constructor '\<name>' cannot call itself</span></span>
-<span data-ttu-id="5e841-103">A`Sub New`クラスまたは構造体でプロシージャを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="5e841-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
+# <a name="constructor-name-cannot-call-itself"></a><span data-ttu-id="48a58-102">コンス トラクター '\<名 >' 自体を呼び出すことはできません</span><span class="sxs-lookup"><span data-stu-id="48a58-102">Constructor '\<name>' cannot call itself</span></span>
+<span data-ttu-id="48a58-103">A`Sub New`クラスまたは構造体でプロシージャを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="48a58-103">A `Sub New` procedure in a class or structure calls itself.</span></span>  
   
- <span data-ttu-id="5e841-104">コンス トラクターの目的は、クラスのインスタンスを初期化するために、またはそのが最初に構造を作成します。</span><span class="sxs-lookup"><span data-stu-id="5e841-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="5e841-105">異なるパラメーター リストがすべて、クラスまたは構造体によって複数のコンス トラクター、することができます。</span><span class="sxs-lookup"><span data-stu-id="5e841-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="5e841-106">コンス トラクターは、独自に加え、その機能を実行する別のコンス トラクターを呼び出す許可されています。</span><span class="sxs-lookup"><span data-stu-id="5e841-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="5e841-107">コンス トラクターを呼び出す意味がありませんし、許可されている場合、無限再帰の結果が実際にします。</span><span class="sxs-lookup"><span data-stu-id="5e841-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
+ <span data-ttu-id="48a58-104">コンス トラクターの目的は、クラスのインスタンスを初期化するために、またはそのが最初に構造を作成します。</span><span class="sxs-lookup"><span data-stu-id="48a58-104">The purpose of a constructor is to initialize an instance of a class or structure when it is first created.</span></span> <span data-ttu-id="48a58-105">異なるパラメーター リストがすべて、クラスまたは構造体によって複数のコンス トラクター、することができます。</span><span class="sxs-lookup"><span data-stu-id="48a58-105">A class or structure can have several constructors, provided they all have different parameter lists.</span></span> <span data-ttu-id="48a58-106">コンス トラクターは、独自に加え、その機能を実行する別のコンス トラクターを呼び出す許可されています。</span><span class="sxs-lookup"><span data-stu-id="48a58-106">A constructor is permitted to call another constructor to perform its functionality in addition to its own.</span></span> <span data-ttu-id="48a58-107">コンス トラクターを呼び出す意味がありませんし、許可されている場合、無限再帰の結果が実際にします。</span><span class="sxs-lookup"><span data-stu-id="48a58-107">But it is meaningless for a constructor to call itself, and in fact it would result in infinite recursion if permitted.</span></span>  
   
- <span data-ttu-id="5e841-108">**エラー ID:** BC30298</span><span class="sxs-lookup"><span data-stu-id="5e841-108">**Error ID:** BC30298</span></span>  
+ <span data-ttu-id="48a58-108">**エラー ID:** BC30298</span><span class="sxs-lookup"><span data-stu-id="48a58-108">**Error ID:** BC30298</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5e841-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="5e841-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="48a58-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="48a58-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="5e841-110">呼び出されるコンス トラクターのパラメーター リストを確認します。</span><span class="sxs-lookup"><span data-stu-id="5e841-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="5e841-111">コンス トラクターの呼び出しを行うのと異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="5e841-111">It should be different from that of the constructor making the call.</span></span>  
+1. <span data-ttu-id="48a58-110">呼び出されるコンス トラクターのパラメーター リストを確認します。</span><span class="sxs-lookup"><span data-stu-id="48a58-110">Check the parameter list of the constructor being called.</span></span> <span data-ttu-id="48a58-111">コンス トラクターの呼び出しを行うのと異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="48a58-111">It should be different from that of the constructor making the call.</span></span>  
   
-2.  <span data-ttu-id="5e841-112">別のコンス トラクターを呼び出すしない場合は、削除、`Sub New`完全呼び出します。</span><span class="sxs-lookup"><span data-stu-id="5e841-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
+2. <span data-ttu-id="48a58-112">別のコンス トラクターを呼び出すしない場合は、削除、`Sub New`完全呼び出します。</span><span class="sxs-lookup"><span data-stu-id="48a58-112">If you do not intend to call a different constructor, remove the `Sub New` call entirely.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e841-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e841-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48a58-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="48a58-113">See also</span></span>
 
-- [<span data-ttu-id="5e841-114">オブジェクトの有効期間:オブジェクトを作成および破棄する方法</span><span class="sxs-lookup"><span data-stu-id="5e841-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [<span data-ttu-id="48a58-114">オブジェクトの有効期間:オブジェクトの作成と破棄</span><span class="sxs-lookup"><span data-stu-id="48a58-114">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
