@@ -6,43 +6,43 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312717"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="f94e9-102">方法: イベント情報をテキスト ファイルに書き込む (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f94e9-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
-<span data-ttu-id="f94e9-103">`My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。</span><span class="sxs-lookup"><span data-stu-id="f94e9-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="f94e9-104">この例では、`My.Application.Log.WriteEntry` メソッドを使ってトレース情報をログ ファイルに記録する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="dd43e-102">方法: イベント情報をテキスト ファイルに書き込む (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd43e-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
+<span data-ttu-id="dd43e-103">`My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。</span><span class="sxs-lookup"><span data-stu-id="dd43e-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="dd43e-104">この例では、`My.Application.Log.WriteEntry` メソッドを使ってトレース情報をログ ファイルに記録する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="f94e9-105">ファイル ログ リスナーを追加および構成するには</span><span class="sxs-lookup"><span data-stu-id="f94e9-105">To add and configure the file log listener</span></span>  
+### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="dd43e-105">ファイル ログ リスナーを追加および構成するには</span><span class="sxs-lookup"><span data-stu-id="dd43e-105">To add and configure the file log listener</span></span>  
   
-1.  <span data-ttu-id="f94e9-106">**ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
+1. <span data-ttu-id="dd43e-106">**ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="f94e9-107">\- または</span><span class="sxs-lookup"><span data-stu-id="f94e9-107">\- or -</span></span>  
+     <span data-ttu-id="dd43e-107">\- または</span><span class="sxs-lookup"><span data-stu-id="dd43e-107">\- or -</span></span>  
   
-     <span data-ttu-id="f94e9-108">app.config ファイルがない場合は、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="f94e9-108">If there is no app.config file:</span></span>  
+     <span data-ttu-id="dd43e-108">app.config ファイルがない場合は、次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="dd43e-108">If there is no app.config file:</span></span>  
   
-    1.  <span data-ttu-id="f94e9-109">**[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f94e9-109">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1.  <span data-ttu-id="dd43e-109">**[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dd43e-109">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  <span data-ttu-id="f94e9-110">**[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2.  <span data-ttu-id="dd43e-110">**[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  <span data-ttu-id="f94e9-111">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="f94e9-111">Click **Add**.</span></span>  
+    3.  <span data-ttu-id="dd43e-111">**[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="dd43e-111">Click **Add**.</span></span>  
   
-2.  <span data-ttu-id="f94e9-112">アプリケーション構成ファイルで `<listeners>` セクションを見つけます。</span><span class="sxs-lookup"><span data-stu-id="f94e9-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
+2. <span data-ttu-id="dd43e-112">アプリケーション構成ファイルで `<listeners>` セクションを見つけます。</span><span class="sxs-lookup"><span data-stu-id="dd43e-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
   
-     <span data-ttu-id="f94e9-113">\<listeners> セクションは、最上位の \<configuration> セクションに入れ子になった \<system.diagnostics> セクションにさらに入れ子になっている、名前属性が "DefaultSource" の \<source> セクションにあります。</span><span class="sxs-lookup"><span data-stu-id="f94e9-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
+     <span data-ttu-id="dd43e-113">\<listeners> セクションは、最上位の \<configuration> セクションに入れ子になった \<system.diagnostics> セクションにさらに入れ子になっている、名前属性が "DefaultSource" の \<source> セクションにあります。</span><span class="sxs-lookup"><span data-stu-id="dd43e-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
   
-3.  <span data-ttu-id="f94e9-114">その `<listeners>` セクションに次の要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-114">Add this element to that `<listeners>` section:</span></span>  
+3. <span data-ttu-id="dd43e-114">その `<listeners>` セクションに次の要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-114">Add this element to that `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  <span data-ttu-id="f94e9-115">最上位の `<configuration>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<sharedListeners>` セクションを見つけます。</span><span class="sxs-lookup"><span data-stu-id="f94e9-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
+4. <span data-ttu-id="dd43e-115">最上位の `<configuration>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<sharedListeners>` セクションを見つけます。</span><span class="sxs-lookup"><span data-stu-id="dd43e-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
   
-5.  <span data-ttu-id="f94e9-116">その `<sharedListeners>` セクションに次の要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-116">Add this element to that `<sharedListeners>` section:</span></span>  
+5. <span data-ttu-id="dd43e-116">その `<sharedListeners>` セクションに次の要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-116">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener"   
@@ -54,21 +54,21 @@ ms.locfileid: "58819035"
         customlocation="c:\temp\" />  
     ```  
   
-     <span data-ttu-id="f94e9-117">`customlocation` 属性の値をログ ディレクトリに変更します。</span><span class="sxs-lookup"><span data-stu-id="f94e9-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
+     <span data-ttu-id="dd43e-117">`customlocation` 属性の値をログ ディレクトリに変更します。</span><span class="sxs-lookup"><span data-stu-id="dd43e-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="f94e9-118">リスナー プロパティの値を設定するには、プロパティと同じ名前ですべてが英小文字の属性を使います。</span><span class="sxs-lookup"><span data-stu-id="f94e9-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="f94e9-119">たとえば、`location` 属性と `customlocation` 属性では、<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> プロパティと <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> プロパティの値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="f94e9-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
+    >  <span data-ttu-id="dd43e-118">リスナー プロパティの値を設定するには、プロパティと同じ名前ですべてが英小文字の属性を使います。</span><span class="sxs-lookup"><span data-stu-id="dd43e-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="dd43e-119">たとえば、`location` 属性と `customlocation` 属性では、<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> プロパティと <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> プロパティの値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="dd43e-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
   
-### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="f94e9-120">イベント情報をファイル ログに書き込むには</span><span class="sxs-lookup"><span data-stu-id="f94e9-120">To write event information to the file log</span></span>  
+### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="dd43e-120">イベント情報をファイル ログに書き込むには</span><span class="sxs-lookup"><span data-stu-id="dd43e-120">To write event information to the file log</span></span>  
   
--   <span data-ttu-id="f94e9-121">ファイル ログに情報を書き込むには、`My.Application.Log.WriteEntry` メソッドまたは `My.Application.Log.WriteException` メソッドを使います。</span><span class="sxs-lookup"><span data-stu-id="f94e9-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="f94e9-122">詳細については、「[方法 :ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)」と「[方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f94e9-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
+-   <span data-ttu-id="dd43e-121">ファイル ログに情報を書き込むには、`My.Application.Log.WriteEntry` メソッドまたは `My.Application.Log.WriteException` メソッドを使います。</span><span class="sxs-lookup"><span data-stu-id="dd43e-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="dd43e-122">詳細については、「[方法 :ログ メッセージを書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)」と「[方法: 例外をログに記録する](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dd43e-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
   
-     <span data-ttu-id="f94e9-123">アセンブリに対してファイル ログ リスナーを設定すると、リスナーはそのアセンブリから `My.Application.Log` によって書き込まれたすべてのメッセージを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="f94e9-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
+     <span data-ttu-id="dd43e-123">アセンブリに対してファイル ログ リスナーを設定すると、リスナーはそのアセンブリから `My.Application.Log` によって書き込まれたすべてのメッセージを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="dd43e-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f94e9-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="f94e9-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd43e-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="dd43e-124">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="f94e9-125">アプリケーション ログの使用</span><span class="sxs-lookup"><span data-stu-id="f94e9-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="f94e9-126">方法: 例外をログに記録する</span><span class="sxs-lookup"><span data-stu-id="f94e9-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="dd43e-125">アプリケーション ログの使用</span><span class="sxs-lookup"><span data-stu-id="dd43e-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="dd43e-126">方法: 例外をログに記録する</span><span class="sxs-lookup"><span data-stu-id="dd43e-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

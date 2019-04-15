@@ -1,11 +1,18 @@
-### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a><span data-ttu-id="a51fb-101">Asp.Net StateServer とセッション状態を共有するには、Web ファーム内のすべてのサーバーが同じ .NET Framework バージョンを使用する必要があります</span><span class="sxs-lookup"><span data-stu-id="a51fb-101">Sharing session state with Asp.Net StateServer requires all servers in the web farm to use the same .NET Framework version</span></span>
+---
+ms.openlocfilehash: 958a89015420ce5632d596688963d576c40b4cb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235583"
+---
+### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a><span data-ttu-id="9fd09-101">Asp.Net StateServer とセッション状態を共有するには、Web ファーム内のすべてのサーバーが同じ .NET Framework バージョンを使用する必要があります</span><span class="sxs-lookup"><span data-stu-id="9fd09-101">Sharing session state with Asp.Net StateServer requires all servers in the web farm to use the same .NET Framework version</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="a51fb-102">説明</span><span class="sxs-lookup"><span data-stu-id="a51fb-102">Details</span></span>|<span data-ttu-id="a51fb-103"><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> セッション状態を有効にする場合、状態を正しく共有するには、指定の Web ファーム内のすべてのサーバーが同じバージョンの .NET Framework を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a51fb-103">When enabling <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> session state, all of the servers in the given web farm must use the same version of the .NET Framework in order for state to be properly shared.</span></span>|
-|<span data-ttu-id="a51fb-104">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="a51fb-104">Suggestion</span></span>|<span data-ttu-id="a51fb-105">同時に状態を共有する Web サーバー上で必ず .NET Framework バージョンのアップグレードを行います。</span><span class="sxs-lookup"><span data-stu-id="a51fb-105">Be sure to upgrade .NET Framework versions on web servers that share state at the same time.</span></span>|
-|<span data-ttu-id="a51fb-106">スコープ</span><span class="sxs-lookup"><span data-stu-id="a51fb-106">Scope</span></span>|<span data-ttu-id="a51fb-107">エッジ</span><span class="sxs-lookup"><span data-stu-id="a51fb-107">Edge</span></span>|
-|<span data-ttu-id="a51fb-108">Version</span><span class="sxs-lookup"><span data-stu-id="a51fb-108">Version</span></span>|<span data-ttu-id="a51fb-109">4.5</span><span class="sxs-lookup"><span data-stu-id="a51fb-109">4.5</span></span>|
-|<span data-ttu-id="a51fb-110">型</span><span class="sxs-lookup"><span data-stu-id="a51fb-110">Type</span></span>|<span data-ttu-id="a51fb-111">ランタイム</span><span class="sxs-lookup"><span data-stu-id="a51fb-111">Runtime</span></span>|
-|<span data-ttu-id="a51fb-112">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="a51fb-112">Affected APIs</span></span>|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
-
+|<span data-ttu-id="9fd09-102">説明</span><span class="sxs-lookup"><span data-stu-id="9fd09-102">Details</span></span>|<span data-ttu-id="9fd09-103"><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> セッション状態を有効にする場合、状態を正しく共有するには、指定の Web ファーム内のすべてのサーバーが同じバージョンの .NET Framework を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9fd09-103">When enabling <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> session state, all of the servers in the given web farm must use the same version of the .NET Framework in order for state to be properly shared.</span></span>|
+|<span data-ttu-id="9fd09-104">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="9fd09-104">Suggestion</span></span>|<span data-ttu-id="9fd09-105">同時に状態を共有する Web サーバー上で必ず .NET Framework バージョンのアップグレードを行います。</span><span class="sxs-lookup"><span data-stu-id="9fd09-105">Be sure to upgrade .NET Framework versions on web servers that share state at the same time.</span></span>|
+|<span data-ttu-id="9fd09-106">スコープ</span><span class="sxs-lookup"><span data-stu-id="9fd09-106">Scope</span></span>|<span data-ttu-id="9fd09-107">エッジ</span><span class="sxs-lookup"><span data-stu-id="9fd09-107">Edge</span></span>|
+|<span data-ttu-id="9fd09-108">Version</span><span class="sxs-lookup"><span data-stu-id="9fd09-108">Version</span></span>|<span data-ttu-id="9fd09-109">4.5</span><span class="sxs-lookup"><span data-stu-id="9fd09-109">4.5</span></span>|
+|<span data-ttu-id="9fd09-110">型</span><span class="sxs-lookup"><span data-stu-id="9fd09-110">Type</span></span>|<span data-ttu-id="9fd09-111">ランタイム</span><span class="sxs-lookup"><span data-stu-id="9fd09-111">Runtime</span></span>|
+|<span data-ttu-id="9fd09-112">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="9fd09-112">Affected APIs</span></span>|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
