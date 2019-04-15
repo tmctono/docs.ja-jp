@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: c908568f2297d5f4f6e8c3d1c924a4a0f653d5a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095447"
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="a9a39-102">同期サーバー ソケットの例</span><span class="sxs-lookup"><span data-stu-id="a9a39-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="a9a39-103">次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="a9a39-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="a9a39-104">このサーバーは同期ソケットで構築されます。そのため、サーバー アプリケーションの実行は、クライアントからの接続を待っている間、一時停止となります。</span><span class="sxs-lookup"><span data-stu-id="a9a39-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="a9a39-105">このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示し、クライアントにエコー バックします。</span><span class="sxs-lookup"><span data-stu-id="a9a39-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="a9a39-106">クライアントからの文字列には、文字列 "\<EOF>" が含まれている必要があります。これは、メッセージの終わりを伝えるためのものです。</span><span class="sxs-lookup"><span data-stu-id="a9a39-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="911a4-102">同期サーバー ソケットの例</span><span class="sxs-lookup"><span data-stu-id="911a4-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="911a4-103">次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。</span><span class="sxs-lookup"><span data-stu-id="911a4-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="911a4-104">このサーバーは同期ソケットで構築されます。そのため、サーバー アプリケーションの実行は、クライアントからの接続を待っている間、一時停止となります。</span><span class="sxs-lookup"><span data-stu-id="911a4-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="911a4-105">このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示し、クライアントにエコー バックします。</span><span class="sxs-lookup"><span data-stu-id="911a4-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="911a4-106">クライアントからの文字列には、文字列 "\<EOF>" が含まれている必要があります。これは、メッセージの終わりを伝えるためのものです。</span><span class="sxs-lookup"><span data-stu-id="911a4-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -155,7 +155,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9a39-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="a9a39-107">See also</span></span>
-- [<span data-ttu-id="a9a39-108">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="a9a39-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [<span data-ttu-id="a9a39-109">同期サーバー ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="a9a39-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="a9a39-110">ソケットのコード例</span><span class="sxs-lookup"><span data-stu-id="a9a39-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="911a4-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="911a4-107">See also</span></span>
+
+- [<span data-ttu-id="911a4-108">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="911a4-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+- [<span data-ttu-id="911a4-109">同期サーバー ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="911a4-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="911a4-110">ソケットのコード例</span><span class="sxs-lookup"><span data-stu-id="911a4-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
