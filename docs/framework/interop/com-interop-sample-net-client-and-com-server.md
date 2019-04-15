@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134525"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="3048d-102">COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー</span><span class="sxs-lookup"><span data-stu-id="3048d-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="3048d-103">このサンプルでは、[COM サーバー](#cpconcominteropsamplenetclientcomserveranchor2)にアクセスするように作成された [.NET クライアント](#cpconcominteropsamplenetclientcomserveranchor1)で、COM コクラスのインスタンスを作成し、クラスのメンバーを呼び出して住宅ローンの計算を行う方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3048d-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="51724-102">COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー</span><span class="sxs-lookup"><span data-stu-id="51724-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="51724-103">このサンプルでは、[COM サーバー](#cpconcominteropsamplenetclientcomserveranchor2)にアクセスするように作成された [.NET クライアント](#cpconcominteropsamplenetclientcomserveranchor1)で、COM コクラスのインスタンスを作成し、クラスのメンバーを呼び出して住宅ローンの計算を行う方法を示します。</span><span class="sxs-lookup"><span data-stu-id="51724-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="3048d-104">この例では、クライアントは **Loan** コクラスのインスタンスを作成して呼び出し、4 つの引数 (そのうち 1 つは 0) をこのインスタンスに渡し、計算結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="3048d-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="3048d-105">このセクション全体で、このサンプルのコード フラグメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="3048d-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="51724-104">この例では、クライアントは **Loan** コクラスのインスタンスを作成して呼び出し、4 つの引数 (そのうち 1 つは 0) をこのインスタンスに渡し、計算結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="51724-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="51724-105">このセクション全体で、このサンプルのコード フラグメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="51724-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="3048d-106">.NET クライアント</span><span class="sxs-lookup"><span data-stu-id="3048d-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="51724-106">.NET クライアント</span><span class="sxs-lookup"><span data-stu-id="51724-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -154,7 +154,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="3048d-107">COM サーバー</span><span class="sxs-lookup"><span data-stu-id="3048d-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="51724-107">COM サーバー</span><span class="sxs-lookup"><span data-stu-id="51724-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -299,5 +299,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3048d-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="3048d-108">See also</span></span>
-- [<span data-ttu-id="3048d-109">.NET Framework への COM コンポーネントの公開</span><span class="sxs-lookup"><span data-stu-id="3048d-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a><span data-ttu-id="51724-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="51724-108">See also</span></span>
+
+- [<span data-ttu-id="51724-109">.NET Framework への COM コンポーネントの公開</span><span class="sxs-lookup"><span data-stu-id="51724-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
