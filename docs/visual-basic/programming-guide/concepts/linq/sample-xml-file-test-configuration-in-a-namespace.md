@@ -3,16 +3,16 @@ title: サンプル XML ファイル:3 でのテスト構成
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821328"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="89d5c-102">サンプル XML ファイル:名前空間内のテスト構成</span><span class="sxs-lookup"><span data-stu-id="89d5c-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="89d5c-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="89d5c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="89d5c-104">これはテスト構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="89d5c-104">This is a test configuration file.</span></span> <span data-ttu-id="89d5c-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="89d5c-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="06b4b-102">サンプル XML ファイル:名前空間内のテスト構成</span><span class="sxs-lookup"><span data-stu-id="06b4b-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="06b4b-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="06b4b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="06b4b-104">これはテスト構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="06b4b-104">This is a test configuration file.</span></span> <span data-ttu-id="06b4b-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="06b4b-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="89d5c-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="89d5c-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="06b4b-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="06b4b-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "58821328"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="89d5c-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="89d5c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06b4b-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="06b4b-107">See also</span></span>
 
-- [<span data-ttu-id="89d5c-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="89d5c-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="06b4b-108">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="06b4b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

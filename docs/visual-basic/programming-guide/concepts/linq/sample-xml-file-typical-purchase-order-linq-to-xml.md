@@ -3,16 +3,16 @@ title: 'サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
 ms.openlocfilehash: a36d5cafaa276bac667b13d0cf3ada00683acb13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820335"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="cdafc-102">サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cdafc-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
-<span data-ttu-id="cdafc-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="cdafc-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cdafc-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="cdafc-104">This file is a typical purchase order.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="f1cf4-102">サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f1cf4-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="f1cf4-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="f1cf4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f1cf4-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="f1cf4-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a><span data-ttu-id="cdafc-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="cdafc-105">PurchaseOrder.xml</span></span>  
+## <a name="purchaseorderxml"></a><span data-ttu-id="f1cf4-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="f1cf4-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -51,6 +51,6 @@ ms.locfileid: "58820335"
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cdafc-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="cdafc-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1cf4-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1cf4-106">See also</span></span>
 
-- [<span data-ttu-id="cdafc-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cdafc-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="f1cf4-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f1cf4-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
