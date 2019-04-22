@@ -8,37 +8,37 @@ helpviewer_keywords:
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
 ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829058"
 ---
-# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="e8196-102">代入演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8196-102">Assignment Operators (Visual Basic)</span></span>
-<span data-ttu-id="e8196-103">Visual Basic で定義されている代入演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e8196-103">The following are the assignment operators defined in Visual Basic.</span></span>  
+# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="48ddf-102">代入演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="48ddf-102">Assignment Operators (Visual Basic)</span></span>
+<span data-ttu-id="48ddf-103">Visual Basic で定義されている代入演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="48ddf-103">The following are the assignment operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="e8196-104">= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-104">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [<span data-ttu-id="48ddf-104">= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-104">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
- [<span data-ttu-id="e8196-105">^= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-105">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-105">^= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-105">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-106">\*= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-106">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-106">\*= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-106">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-107">/= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-107">/= Operator</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-107">/= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-107">/= Operator</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-108">\\= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-108">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-108">\\= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-108">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-109">+= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-109">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-109">+= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-109">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-110">-= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-110">-= Operator</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-110">-= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-110">-= Operator</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-111"><\<= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-111"><\<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-111"><\<= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-111"><\<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-112">>>= 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-112">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-112">>>= 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-112">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   
- [<span data-ttu-id="e8196-113">& = 演算子</span><span class="sxs-lookup"><span data-stu-id="e8196-113">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [<span data-ttu-id="48ddf-113">& = 演算子</span><span class="sxs-lookup"><span data-stu-id="48ddf-113">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e8196-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8196-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48ddf-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="48ddf-114">See also</span></span>
 
-- [<span data-ttu-id="e8196-115">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="e8196-115">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="e8196-116">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="e8196-116">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="e8196-117">ステートメント</span><span class="sxs-lookup"><span data-stu-id="e8196-117">Statements</span></span>](../../../visual-basic/language-reference/statements/index.md)
+- [<span data-ttu-id="48ddf-115">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="48ddf-115">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="48ddf-116">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="48ddf-116">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="48ddf-117">ステートメント</span><span class="sxs-lookup"><span data-stu-id="48ddf-117">Statements</span></span>](../../../visual-basic/language-reference/statements/index.md)
