@@ -3,23 +3,23 @@ title: '方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828655"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="4497a-102">方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4497a-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="4497a-103">このトピックでは、親要素に移動してその属性を検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="4497a-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="a4c17-102">方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4c17-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="a4c17-103">このトピックでは、親要素に移動してその属性を検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a4c17-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
   
- <span data-ttu-id="4497a-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4497a-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="a4c17-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="a4c17-104">The XPath expression is:</span></span>  
   
  `../@id`  
   
-## <a name="example"></a><span data-ttu-id="4497a-105">例</span><span class="sxs-lookup"><span data-stu-id="4497a-105">Example</span></span>  
- <span data-ttu-id="4497a-106">この例では、まず `Author` 要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="4497a-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="4497a-107">次に、親要素の `id` 属性を検索します。</span><span class="sxs-lookup"><span data-stu-id="4497a-107">It then finds the `id` attribute of the parent element.</span></span>  
+## <a name="example"></a><span data-ttu-id="a4c17-105">例</span><span class="sxs-lookup"><span data-stu-id="a4c17-105">Example</span></span>  
+ <span data-ttu-id="a4c17-106">この例では、まず `Author` 要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="a4c17-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="a4c17-107">次に、親要素の `id` 属性を検索します。</span><span class="sxs-lookup"><span data-stu-id="a4c17-107">It then finds the `id` attribute of the parent element.</span></span>  
   
- <span data-ttu-id="4497a-108">この例では、XML ドキュメント、「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。</span><span class="sxs-lookup"><span data-stu-id="4497a-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a4c17-108">この例では、XML ドキュメント、「[サンプル XML ファイル:書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」。</span><span class="sxs-lookup"><span data-stu-id="a4c17-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,13 +40,13 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- <span data-ttu-id="4497a-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4497a-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="a4c17-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="a4c17-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4497a-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="4497a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4c17-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4c17-110">See also</span></span>
 
-- [<span data-ttu-id="4497a-111">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4497a-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="a4c17-111">LINQ to XML XPath ユーザー (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4c17-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

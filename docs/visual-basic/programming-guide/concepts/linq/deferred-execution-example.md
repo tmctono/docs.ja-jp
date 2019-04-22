@@ -3,17 +3,17 @@ title: 遅延実行の例 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
 ms.openlocfilehash: 29f118b3e6d49840b94277f17858f1339f2fb08c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838930"
 ---
-# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="ab53f-102">遅延実行の例 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab53f-102">Deferred Execution Example (Visual Basic)</span></span>
-<span data-ttu-id="ab53f-103">このトピックでは、遅延実行とレイジー評価が LINQ to XML クエリの実行にどのように影響するかについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ab53f-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="039d3-102">遅延実行の例 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="039d3-102">Deferred Execution Example (Visual Basic)</span></span>
+<span data-ttu-id="039d3-103">このトピックでは、遅延実行とレイジー評価が LINQ to XML クエリの実行にどのように影響するかについて説明します。</span><span class="sxs-lookup"><span data-stu-id="039d3-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ab53f-104">例</span><span class="sxs-lookup"><span data-stu-id="ab53f-104">Example</span></span>  
- <span data-ttu-id="ab53f-105">遅延実行を利用する拡張メソッドの使用時における実行順序の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ab53f-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="ab53f-106">この例では、3 つの文字列の配列を宣言します。</span><span class="sxs-lookup"><span data-stu-id="ab53f-106">The example declares an array of three strings.</span></span> <span data-ttu-id="ab53f-107">次に、`ConvertCollectionToUpperCase` によって返されるコレクションを反復処理します。</span><span class="sxs-lookup"><span data-stu-id="ab53f-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="039d3-104">例</span><span class="sxs-lookup"><span data-stu-id="039d3-104">Example</span></span>  
+ <span data-ttu-id="039d3-105">遅延実行を利用する拡張メソッドの使用時における実行順序の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="039d3-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="039d3-106">この例では、3 つの文字列の配列を宣言します。</span><span class="sxs-lookup"><span data-stu-id="039d3-106">The example declares an array of three strings.</span></span> <span data-ttu-id="039d3-107">次に、`ConvertCollectionToUpperCase` によって返されるコレクションを反復処理します。</span><span class="sxs-lookup"><span data-stu-id="039d3-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -44,7 +44,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="ab53f-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ab53f-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="039d3-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="039d3-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -55,10 +55,10 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="ab53f-109">`ConvertCollectionToUpperCase` によって返されるコレクションの反復処理時、各アイテムはソース文字列の配列から取得され、次のアイテムがソース文字列の配列から取得される前に大文字に変換されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ab53f-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="039d3-109">`ConvertCollectionToUpperCase` によって返されるコレクションの反復処理時、各アイテムはソース文字列の配列から取得され、次のアイテムがソース文字列の配列から取得される前に大文字に変換されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="039d3-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="ab53f-110">返されるコレクションの各アイテムが `foreach` の `Main` ループで処理されるまで、文字列の配列全体は大文字に変換されないことを確認できます。</span><span class="sxs-lookup"><span data-stu-id="ab53f-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="039d3-110">返されるコレクションの各アイテムが `foreach` の `Main` ループで処理されるまで、文字列の配列全体は大文字に変換されないことを確認できます。</span><span class="sxs-lookup"><span data-stu-id="039d3-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab53f-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab53f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="039d3-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="039d3-111">See also</span></span>
 
-- [<span data-ttu-id="ab53f-112">チュートリアル: 遅延実行 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab53f-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [<span data-ttu-id="039d3-112">チュートリアル: 遅延実行 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="039d3-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
