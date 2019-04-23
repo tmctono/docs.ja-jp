@@ -4,24 +4,24 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633622"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613565"
 ---
-# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="af33f-103">enum 型の代わりに Enumeration クラスを使用する</span><span class="sxs-lookup"><span data-stu-id="af33f-103">Use enumeration classes instead of enum types</span></span>
+# <a name="use-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="084c2-103">enum 型の代わりに Enumeration クラスを使用する</span><span class="sxs-lookup"><span data-stu-id="084c2-103">Use enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="af33f-104">[列挙型](../../../../docs/csharp/language-reference/keywords/enum.md) (省略形も同じ *列挙型*) は、整数型を包む薄い言語ラッパーです。</span><span class="sxs-lookup"><span data-stu-id="af33f-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="af33f-105">閉じた値のセットから 1 つの値を格納するときに、列挙型の使用を制限することができます。</span><span class="sxs-lookup"><span data-stu-id="af33f-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="af33f-106">サイズ (小、中、大) に基づく分類は良い一例です。</span><span class="sxs-lookup"><span data-stu-id="af33f-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="af33f-107">制御フローまたはより堅牢な抽象化のために列挙型を使用すると、[コードの臭い](https://deviq.com/code-smells/)になることがあります。</span><span class="sxs-lookup"><span data-stu-id="af33f-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="af33f-108">このような用法は、列挙型の値を検査する多くの制御フロー ステートメントでは脆弱なコードにつながります。</span><span class="sxs-lookup"><span data-stu-id="af33f-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="084c2-104">[列挙型](../../../../docs/csharp/language-reference/keywords/enum.md) (省略形も同じ *列挙型*) は、整数型を包む薄い言語ラッパーです。</span><span class="sxs-lookup"><span data-stu-id="084c2-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="084c2-105">閉じた値のセットから 1 つの値を格納するときに、列挙型の使用を制限することができます。</span><span class="sxs-lookup"><span data-stu-id="084c2-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="084c2-106">サイズ (小、中、大) に基づく分類は良い一例です。</span><span class="sxs-lookup"><span data-stu-id="084c2-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="084c2-107">制御フローまたはより堅牢な抽象化のために列挙型を使用すると、[コードの臭い](https://deviq.com/code-smells/)になることがあります。</span><span class="sxs-lookup"><span data-stu-id="084c2-107">Using enums for control flow or more robust abstractions can be a [code smell](https://deviq.com/code-smells/).</span></span> <span data-ttu-id="084c2-108">このような用法は、列挙型の値を検査する多くの制御フロー ステートメントでは脆弱なコードにつながります。</span><span class="sxs-lookup"><span data-stu-id="084c2-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="af33f-109">代わりに、オブジェクト指向言語の豊富な機能をすべて使用できる列挙型クラスを作成する方法があります。</span><span class="sxs-lookup"><span data-stu-id="af33f-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="084c2-109">代わりに、オブジェクト指向言語の豊富な機能をすべて使用できる列挙型クラスを作成する方法があります。</span><span class="sxs-lookup"><span data-stu-id="084c2-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="af33f-110">ただし、これは重要な話題ではなく、多くの場合は、好みに応じてわかりやすくするために通常の[列挙型](../../../csharp/language-reference/keywords/enum.md)を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="af33f-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="af33f-111">いずれにしても、Enumeration クラスを使用するとビジネス関連の概念に対する関連性が強くなります。</span><span class="sxs-lookup"><span data-stu-id="af33f-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
+<span data-ttu-id="084c2-110">ただし、これは重要な話題ではなく、多くの場合は、好みに応じてわかりやすくするために通常の[列挙型](../../../csharp/language-reference/keywords/enum.md)を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="084c2-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../csharp/language-reference/keywords/enum.md) if that's your preference.</span></span> <span data-ttu-id="084c2-111">いずれにしても、Enumeration クラスを使用するとビジネス関連の概念に対する関連性が強くなります。</span><span class="sxs-lookup"><span data-stu-id="084c2-111">Anyway, the use of enumeration classes is more related to business-related concepts.</span></span>
 
-## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="af33f-112">Enumeration 基底クラスを実装する</span><span class="sxs-lookup"><span data-stu-id="af33f-112">Implement an Enumeration base class</span></span>
+## <a name="implement-an-enumeration-base-class"></a><span data-ttu-id="084c2-112">Enumeration 基底クラスを実装する</span><span class="sxs-lookup"><span data-stu-id="084c2-112">Implement an Enumeration base class</span></span>
 
-<span data-ttu-id="af33f-113">eShopOnContainers 内の注文マイクロサービスは、次の例のように、列挙型基底クラスの実装サンプルを提供しています。</span><span class="sxs-lookup"><span data-stu-id="af33f-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="084c2-113">eShopOnContainers 内の注文マイクロサービスは、次の例のように、列挙型基底クラスの実装サンプルを提供しています。</span><span class="sxs-lookup"><span data-stu-id="084c2-113">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -66,7 +66,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="af33f-114">次の `CardType` : `Enumeration` クラスに関しては、このクラスを任意のエンティティまたは値オブジェクトの型として使用できます。</span><span class="sxs-lookup"><span data-stu-id="af33f-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
+<span data-ttu-id="084c2-114">次の `CardType` : `Enumeration` クラスに関しては、このクラスを任意のエンティティまたは値オブジェクトの型として使用できます。</span><span class="sxs-lookup"><span data-stu-id="084c2-114">You can use this class as a type in any entity or value object, as for the following `CardType` : `Enumeration` class:</span></span>
 
 ```csharp
 public abstract class CardType : Enumeration
@@ -82,30 +82,30 @@ public abstract class CardType : Enumeration
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="af33f-115">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="af33f-115">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="084c2-115">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="084c2-115">Additional resources</span></span>
 
-- <span data-ttu-id="af33f-116">**列挙型は悪 — 更新** \\</span><span class="sxs-lookup"><span data-stu-id="af33f-116">**Enum’s are evil—update** \\</span></span>
-  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+- <span data-ttu-id="084c2-116">**列挙型は悪 — 更新** \\</span><span class="sxs-lookup"><span data-stu-id="084c2-116">**Enum’s are evil—update** \\</span></span>
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- <span data-ttu-id="af33f-117">**Daniel Hardman。列挙型で広がる病気 — そしてその治療方法** \\</span><span class="sxs-lookup"><span data-stu-id="af33f-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** \\</span></span>
-  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+- <span data-ttu-id="084c2-117">**Daniel Hardman。列挙型で広がる病気 — そしてその治療方法** \\</span><span class="sxs-lookup"><span data-stu-id="084c2-117">**Daniel Hardman. How Enums Spread Disease — And How To Cure It** \\</span></span>
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- <span data-ttu-id="af33f-118">**Jimmy Bogard。列挙型クラス** \\</span><span class="sxs-lookup"><span data-stu-id="af33f-118">**Jimmy Bogard. Enumeration classes** \\</span></span>
-  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+- <span data-ttu-id="084c2-118">**Jimmy Bogard。列挙型クラス** \\</span><span class="sxs-lookup"><span data-stu-id="084c2-118">**Jimmy Bogard. Enumeration classes** \\</span></span>
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- <span data-ttu-id="af33f-119">**Steve Smith。C# の列挙型の代替** \\</span><span class="sxs-lookup"><span data-stu-id="af33f-119">**Steve Smith. Enum Alternatives in C#** \\</span></span>
-  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
+- <span data-ttu-id="084c2-119">**Steve Smith。C# の列挙型の代替** \\</span><span class="sxs-lookup"><span data-stu-id="084c2-119">**Steve Smith. Enum Alternatives in C#** \\</span></span>
+  <https://ardalis.com/enum-alternatives-in-c>
 
-- <span data-ttu-id="af33f-120">**Enumeration.cs。**</span><span class="sxs-lookup"><span data-stu-id="af33f-120">**Enumeration.cs.**</span></span> <span data-ttu-id="af33f-121">eShopOnContainers の基底列挙型クラス \\</span><span class="sxs-lookup"><span data-stu-id="af33f-121">Base Enumeration class in eShopOnContainers \\</span></span>
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+- <span data-ttu-id="084c2-120">**Enumeration.cs。**</span><span class="sxs-lookup"><span data-stu-id="084c2-120">**Enumeration.cs.**</span></span> <span data-ttu-id="084c2-121">eShopOnContainers の基底列挙型クラス \\</span><span class="sxs-lookup"><span data-stu-id="084c2-121">Base Enumeration class in eShopOnContainers \\</span></span>
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
-- <span data-ttu-id="af33f-122">**CardType.cs**。</span><span class="sxs-lookup"><span data-stu-id="af33f-122">**CardType.cs**.</span></span> <span data-ttu-id="af33f-123">eShopOnContainers のサンプル列挙型クラス。</span><span class="sxs-lookup"><span data-stu-id="af33f-123">Sample Enumeration class in eShopOnContainers.</span></span> \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+- <span data-ttu-id="084c2-122">**CardType.cs**。</span><span class="sxs-lookup"><span data-stu-id="084c2-122">**CardType.cs**.</span></span> <span data-ttu-id="084c2-123">eShopOnContainers のサンプル列挙型クラス。</span><span class="sxs-lookup"><span data-stu-id="084c2-123">Sample Enumeration class in eShopOnContainers.</span></span> \
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
-- <span data-ttu-id="af33f-124">**SmartEnum**.</span><span class="sxs-lookup"><span data-stu-id="af33f-124">**SmartEnum**.</span></span> <span data-ttu-id="af33f-125">Ardalis - .NET で厳密に型指定されたスマートな列挙型を生成するためのクラス。</span><span class="sxs-lookup"><span data-stu-id="af33f-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
-  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+- <span data-ttu-id="084c2-124">**SmartEnum**.</span><span class="sxs-lookup"><span data-stu-id="084c2-124">**SmartEnum**.</span></span> <span data-ttu-id="084c2-125">Ardalis - .NET で厳密に型指定されたスマートな列挙型を生成するためのクラス。</span><span class="sxs-lookup"><span data-stu-id="084c2-125">Ardalis - Classes to help produce strongly typed smarter enums in .NET.</span></span> \
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="af33f-126">[前へ](implement-value-objects.md)
->[次へ](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="af33f-126">[Previous](implement-value-objects.md)
+><span data-ttu-id="084c2-126">[前へ](implement-value-objects.md)
+>[次へ](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="084c2-126">[Previous](implement-value-objects.md)
 [Next](domain-model-layer-validations.md)</span></span>
