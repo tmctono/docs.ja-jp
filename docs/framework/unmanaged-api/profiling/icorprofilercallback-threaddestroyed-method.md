@@ -18,39 +18,39 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c45290b1ef4360e51b5ed8e1b0fac3dcdde727
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217342"
 ---
-# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="cdeac-102">ICorProfilerCallback::ThreadDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="cdeac-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
-<span data-ttu-id="cdeac-103">スレッドが破棄されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="cdeac-103">Notifies the profiler that a thread has been destroyed.</span></span>  
+# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="2c582-102">ICorProfilerCallback::ThreadDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="2c582-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
+<span data-ttu-id="2c582-103">スレッドが破棄されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="2c582-103">Notifies the profiler that a thread has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdeac-104">構文</span><span class="sxs-lookup"><span data-stu-id="cdeac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c582-104">構文</span><span class="sxs-lookup"><span data-stu-id="2c582-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cdeac-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cdeac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c582-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2c582-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="cdeac-106">[in]破棄されているスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="cdeac-106">[in] The ID of the thread that has been destroyed.</span></span>  
+ <span data-ttu-id="2c582-106">[in]破棄されているスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="2c582-106">[in] The ID of the thread that has been destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cdeac-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="cdeac-107">Remarks</span></span>  
- <span data-ttu-id="cdeac-108">`threadId`値は、この呼び出しの時点では有効ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="cdeac-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c582-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="2c582-107">Remarks</span></span>  
+ <span data-ttu-id="2c582-108">`threadId`値は、この呼び出しの時点では有効ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="2c582-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cdeac-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="cdeac-109">Requirements</span></span>  
- <span data-ttu-id="cdeac-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cdeac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c582-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="2c582-109">Requirements</span></span>  
+ <span data-ttu-id="2c582-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2c582-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cdeac-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cdeac-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2c582-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2c582-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cdeac-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cdeac-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c582-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c582-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="cdeac-113">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="cdeac-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="2c582-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c582-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdeac-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="cdeac-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c582-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c582-114">See also</span></span>
 
-- [<span data-ttu-id="cdeac-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cdeac-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="cdeac-116">ThreadCreated メソッド</span><span class="sxs-lookup"><span data-stu-id="cdeac-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+- [<span data-ttu-id="2c582-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2c582-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="2c582-116">ThreadCreated メソッド</span><span class="sxs-lookup"><span data-stu-id="2c582-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

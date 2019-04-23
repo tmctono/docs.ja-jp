@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215145"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="ea698-102">ICorDebugEditAndContinueSnapshot インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ea698-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
+# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="138ce-102">ICorDebugEditAndContinueSnapshot インターフェイス</span><span class="sxs-lookup"><span data-stu-id="138ce-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
 
-`ICorDebugEditAndContinueSnapshot` <span data-ttu-id="ea698-103">古い形式です。</span><span class="sxs-lookup"><span data-stu-id="ea698-103">is obsolete.</span></span> <span data-ttu-id="ea698-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="ea698-104">Do not use this interface.</span></span>  
+<span data-ttu-id="138ce-103">`ICorDebugEditAndContinueSnapshot` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="138ce-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="138ce-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="138ce-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea698-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="ea698-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="138ce-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="138ce-105">See also</span></span>
 
-- [<span data-ttu-id="ea698-106">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="ea698-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="138ce-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="138ce-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

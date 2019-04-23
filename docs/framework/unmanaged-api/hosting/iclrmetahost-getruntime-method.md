@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207605"
 ---
-# <a name="iclrmetahostgetruntime-method"></a><span data-ttu-id="0eaec-102">ICLRMetaHost::GetRuntime メソッド</span><span class="sxs-lookup"><span data-stu-id="0eaec-102">ICLRMetaHost::GetRuntime Method</span></span>
-<span data-ttu-id="0eaec-103">取得、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)共通言語ランタイム (CLR) の特定のバージョンに対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="0eaec-103">Gets the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that corresponds to a particular version of the common language runtime (CLR).</span></span> <span data-ttu-id="0eaec-104">このメソッドは、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)で使用される関数、 [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)フラグ。</span><span class="sxs-lookup"><span data-stu-id="0eaec-104">This method supersedes the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function used with the [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) flag.</span></span>  
+# <a name="iclrmetahostgetruntime-method"></a><span data-ttu-id="93107-102">ICLRMetaHost::GetRuntime メソッド</span><span class="sxs-lookup"><span data-stu-id="93107-102">ICLRMetaHost::GetRuntime Method</span></span>
+<span data-ttu-id="93107-103">取得、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)共通言語ランタイム (CLR) の特定のバージョンに対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="93107-103">Gets the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that corresponds to a particular version of the common language runtime (CLR).</span></span> <span data-ttu-id="93107-104">このメソッドは、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)で使用される関数、 [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)フラグ。</span><span class="sxs-lookup"><span data-stu-id="93107-104">This method supersedes the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function used with the [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) flag.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0eaec-105">構文</span><span class="sxs-lookup"><span data-stu-id="0eaec-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93107-105">構文</span><span class="sxs-lookup"><span data-stu-id="93107-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRuntime (  
@@ -37,45 +37,45 @@ HRESULT GetRuntime (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0eaec-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0eaec-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93107-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="93107-106">Parameters</span></span>  
  `pwzVersion`  
- <span data-ttu-id="0eaec-107">[in]形式で、メタデータに格納されている .NET Framework のコンパイル バージョン"v*A*.*B*[.*X*]"。</span><span class="sxs-lookup"><span data-stu-id="0eaec-107">[in] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="0eaec-108">*A*、 *B*、および*X*はメジャー バージョン、マイナー バージョン、およびビルド番号に対応する 10 進数。</span><span class="sxs-lookup"><span data-stu-id="0eaec-108">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span>  
+ <span data-ttu-id="93107-107">[in]形式で、メタデータに格納されている .NET Framework のコンパイル バージョン"v*A*.*B*[.*X*]"。</span><span class="sxs-lookup"><span data-stu-id="93107-107">[in] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="93107-108">*A*、 *B*、および*X*はメジャー バージョン、マイナー バージョン、およびビルド番号に対応する 10 進数。</span><span class="sxs-lookup"><span data-stu-id="93107-108">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0eaec-109">C:\Windows\Microsoft.NET\Framework または C:\Windows\Microsoft.NET\Framework64 で表示される、このパラメーターは .NET Framework のバージョンのディレクトリ名に一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0eaec-109">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework or C:\Windows\Microsoft.NET\Framework64.</span></span>  
+>  <span data-ttu-id="93107-109">C:\Windows\Microsoft.NET\Framework または C:\Windows\Microsoft.NET\Framework64 で表示される、このパラメーターは .NET Framework のバージョンのディレクトリ名に一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="93107-109">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework or C:\Windows\Microsoft.NET\Framework64.</span></span>  
   
- <span data-ttu-id="0eaec-110">例の値は、"v1.0.3705"、"v1.1.4322"、"v2.0.50727"および"v4.0 です。*X*"ここで、 *X*インストールされているビルドの数によって異なります。</span><span class="sxs-lookup"><span data-stu-id="0eaec-110">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="0eaec-111">"V"プレフィックスが必要です。</span><span class="sxs-lookup"><span data-stu-id="0eaec-111">The "v" prefix is required.</span></span>  
+ <span data-ttu-id="93107-110">例の値は、"v1.0.3705"、"v1.1.4322"、"v2.0.50727"および"v4.0 です。*X*"ここで、 *X*インストールされているビルドの数によって異なります。</span><span class="sxs-lookup"><span data-stu-id="93107-110">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="93107-111">"V"プレフィックスが必要です。</span><span class="sxs-lookup"><span data-stu-id="93107-111">The "v" prefix is required.</span></span>  
   
  `riid`  
- <span data-ttu-id="0eaec-112">[in]必要なインターフェイスの識別子。</span><span class="sxs-lookup"><span data-stu-id="0eaec-112">[in] The identifier for the desired interface.</span></span> <span data-ttu-id="0eaec-113">現時点では、このパラメーターの唯一の有効な値は、IID_ICLRRuntimeInfo です。</span><span class="sxs-lookup"><span data-stu-id="0eaec-113">Currently, the only valid value for this parameter is IID_ICLRRuntimeInfo.</span></span>  
+ <span data-ttu-id="93107-112">[in]必要なインターフェイスの識別子。</span><span class="sxs-lookup"><span data-stu-id="93107-112">[in] The identifier for the desired interface.</span></span> <span data-ttu-id="93107-113">現時点では、このパラメーターの唯一の有効な値は、IID_ICLRRuntimeInfo です。</span><span class="sxs-lookup"><span data-stu-id="93107-113">Currently, the only valid value for this parameter is IID_ICLRRuntimeInfo.</span></span>  
   
  `ppRuntime`  
- <span data-ttu-id="0eaec-114">[out]ポインター、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)要求されたランタイムに対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="0eaec-114">[out] A pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that corresponds to the requested runtime.</span></span>  
+ <span data-ttu-id="93107-114">[out]ポインター、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)要求されたランタイムに対応するインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="93107-114">[out] A pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that corresponds to the requested runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0eaec-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="0eaec-115">Return Value</span></span>  
- <span data-ttu-id="0eaec-116">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="0eaec-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93107-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="93107-115">Return Value</span></span>  
+ <span data-ttu-id="93107-116">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="93107-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="0eaec-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0eaec-117">HRESULT</span></span>|<span data-ttu-id="0eaec-118">説明</span><span class="sxs-lookup"><span data-stu-id="0eaec-118">Description</span></span>|  
+|<span data-ttu-id="93107-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="93107-117">HRESULT</span></span>|<span data-ttu-id="93107-118">説明</span><span class="sxs-lookup"><span data-stu-id="93107-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0eaec-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="0eaec-119">S_OK</span></span>|<span data-ttu-id="0eaec-120">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="0eaec-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="0eaec-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="0eaec-121">E_POINTER</span></span>|`pwzVersion` <span data-ttu-id="0eaec-122">または`ppRuntime`が null です。</span><span class="sxs-lookup"><span data-stu-id="0eaec-122">or `ppRuntime` is null.</span></span>|  
+|<span data-ttu-id="93107-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="93107-119">S_OK</span></span>|<span data-ttu-id="93107-120">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="93107-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="93107-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="93107-121">E_POINTER</span></span>|<span data-ttu-id="93107-122">`pwzVersion` または `ppRuntime` が null です。</span><span class="sxs-lookup"><span data-stu-id="93107-122">`pwzVersion` or `ppRuntime` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0eaec-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="0eaec-123">Remarks</span></span>  
- <span data-ttu-id="0eaec-124">このメソッドとやり取り一貫して従来のインターフェイスなど、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)インターフェイスおよび従来の関数など、非推奨`CorBindTo*`関数 (を参照してください[非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) API をホストしている .NET Framework 2.0 で)。</span><span class="sxs-lookup"><span data-stu-id="0eaec-124">This method interacts consistently with legacy interfaces such as the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface and legacy functions such as the deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span> <span data-ttu-id="0eaec-125">レガシ API で読み込まれたランタイムは、新しい API に表示されると、新しい API が読み込まれているランタイムがレガシ API に表示されます。</span><span class="sxs-lookup"><span data-stu-id="0eaec-125">That is, runtimes that are loaded with the legacy API are visible to the new API, and runtimes that are loaded with the new API are visible to the legacy API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="93107-123">Remarks</span><span class="sxs-lookup"><span data-stu-id="93107-123">Remarks</span></span>  
+ <span data-ttu-id="93107-124">このメソッドとやり取り一貫して従来のインターフェイスなど、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)インターフェイスおよび従来の関数など、非推奨`CorBindTo*`関数 (を参照してください[非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) API をホストしている .NET Framework 2.0 で)。</span><span class="sxs-lookup"><span data-stu-id="93107-124">This method interacts consistently with legacy interfaces such as the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface and legacy functions such as the deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span> <span data-ttu-id="93107-125">レガシ API で読み込まれたランタイムは、新しい API に表示されると、新しい API が読み込まれているランタイムがレガシ API に表示されます。</span><span class="sxs-lookup"><span data-stu-id="93107-125">That is, runtimes that are loaded with the legacy API are visible to the new API, and runtimes that are loaded with the new API are visible to the legacy API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0eaec-126">必要条件</span><span class="sxs-lookup"><span data-stu-id="0eaec-126">Requirements</span></span>  
- <span data-ttu-id="0eaec-127">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0eaec-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93107-126">必要条件</span><span class="sxs-lookup"><span data-stu-id="93107-126">Requirements</span></span>  
+ <span data-ttu-id="93107-127">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93107-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0eaec-128">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="0eaec-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="93107-128">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="93107-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="0eaec-129">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="0eaec-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="93107-129">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="93107-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="0eaec-130">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="0eaec-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="93107-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93107-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eaec-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="0eaec-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93107-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="93107-131">See also</span></span>
 
-- [<span data-ttu-id="0eaec-132">ICLRMetaHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0eaec-132">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="0eaec-133">非推奨の CLR のホスト インターフェイスおよびコクラス</span><span class="sxs-lookup"><span data-stu-id="0eaec-133">Deprecated CLR Hosting Interfaces and Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)
-- [<span data-ttu-id="0eaec-134">CLR ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0eaec-134">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [<span data-ttu-id="0eaec-135">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="0eaec-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
-- [<span data-ttu-id="0eaec-136">ホスト</span><span class="sxs-lookup"><span data-stu-id="0eaec-136">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="93107-132">ICLRMetaHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93107-132">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="93107-133">非推奨の CLR のホスト インターフェイスおよびコクラス</span><span class="sxs-lookup"><span data-stu-id="93107-133">Deprecated CLR Hosting Interfaces and Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)
+- [<span data-ttu-id="93107-134">CLR ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93107-134">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [<span data-ttu-id="93107-135">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="93107-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="93107-136">ホスティング</span><span class="sxs-lookup"><span data-stu-id="93107-136">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

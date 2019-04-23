@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208476"
 ---
-# <a name="corgcstats-structure"></a><span data-ttu-id="341ec-102">COR_GC_STATS 構造体</span><span class="sxs-lookup"><span data-stu-id="341ec-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="341ec-103">共通言語ランタイム (CLR) のガベージ コレクションのメカニズムについての統計情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="341ec-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="corgcstats-structure"></a><span data-ttu-id="bfacb-102">COR_GC_STATS 構造体</span><span class="sxs-lookup"><span data-stu-id="bfacb-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="bfacb-103">共通言語ランタイム (CLR) のガベージ コレクションのメカニズムについての統計情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="341ec-104">構文</span><span class="sxs-lookup"><span data-stu-id="341ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bfacb-104">構文</span><span class="sxs-lookup"><span data-stu-id="bfacb-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +44,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="341ec-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="341ec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bfacb-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="bfacb-105">Members</span></span>  
   
-|<span data-ttu-id="341ec-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="341ec-106">Member</span></span>|<span data-ttu-id="341ec-107">説明</span><span class="sxs-lookup"><span data-stu-id="341ec-107">Description</span></span>|  
+|<span data-ttu-id="bfacb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="bfacb-106">Member</span></span>|<span data-ttu-id="bfacb-107">説明</span><span class="sxs-lookup"><span data-stu-id="bfacb-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="341ec-108">フィールドの値を計算し、返される必要がありますを示します。</span><span class="sxs-lookup"><span data-stu-id="341ec-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="341ec-109">外部要求によって強制的に実行されたガベージ コレクションの数を示します。</span><span class="sxs-lookup"><span data-stu-id="341ec-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="341ec-110">生成されるたびに実行されたガベージ コレクションの数を示します。</span><span class="sxs-lookup"><span data-stu-id="341ec-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="341ec-111">すべてのヒープでコミットされたキロバイト単位の合計数。</span><span class="sxs-lookup"><span data-stu-id="341ec-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="341ec-112">すべてのヒープで予約されているキロバイト数の合計。</span><span class="sxs-lookup"><span data-stu-id="341ec-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="341ec-113">ジェネレーション 0 ヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="341ec-114">ジェネレーション 1 のヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="341ec-115">ジェネレーション 2 のヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="341ec-116">大きなオブジェクト ヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="341ec-117">ジェネレーション 0 からジェネレーション 1 に昇格したオブジェクトのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="341ec-118">ジェネレーション 1 からジェネレーション 2 に昇格したオブジェクトのサイズ。</span><span class="sxs-lookup"><span data-stu-id="341ec-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="bfacb-108">フィールドの値を計算し、返される必要がありますを示します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="bfacb-109">外部要求によって強制的に実行されたガベージ コレクションの数を示します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="bfacb-110">生成されるたびに実行されたガベージ コレクションの数を示します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="bfacb-111">すべてのヒープでコミットされたキロバイト単位の合計数。</span><span class="sxs-lookup"><span data-stu-id="bfacb-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="bfacb-112">すべてのヒープで予約されているキロバイト数の合計。</span><span class="sxs-lookup"><span data-stu-id="bfacb-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="bfacb-113">ジェネレーション 0 ヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="bfacb-114">ジェネレーション 1 のヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="bfacb-115">ジェネレーション 2 のヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="bfacb-116">大きなオブジェクト ヒープのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="bfacb-117">ジェネレーション 0 からジェネレーション 1 に昇格したオブジェクトのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="bfacb-118">ジェネレーション 1 からジェネレーション 2 に昇格したオブジェクトのサイズ。</span><span class="sxs-lookup"><span data-stu-id="bfacb-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="341ec-119">Remarks</span><span class="sxs-lookup"><span data-stu-id="341ec-119">Remarks</span></span>  
- <span data-ttu-id="341ec-120">[Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドが必要です、`Flags`のフィールド、`COR_GC_STATS`構造体の 1 つまたは複数の値に設定する、 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)を指定する列挙型統計情報では、設定します。</span><span class="sxs-lookup"><span data-stu-id="341ec-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bfacb-119">Remarks</span><span class="sxs-lookup"><span data-stu-id="bfacb-119">Remarks</span></span>  
+ <span data-ttu-id="bfacb-120">[Iclrgcmanager::getstats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)メソッドが必要です、`Flags`のフィールド、`COR_GC_STATS`構造体の 1 つまたは複数の値に設定する、 [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)を指定する列挙型統計情報では、設定します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="341ec-121">次の表は、2 つに、この構造体によって提供される統計[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙値、`COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`します。</span><span class="sxs-lookup"><span data-stu-id="341ec-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="bfacb-121">次の表は、2 つに、この構造体によって提供される統計[COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙値、`COR_GC_COUNTS`と`COR_GC_MEMORYUSAGE`します。</span><span class="sxs-lookup"><span data-stu-id="bfacb-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="341ec-122">COR_GC_COUNTS で指定されました。</span><span class="sxs-lookup"><span data-stu-id="341ec-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="341ec-123">COR_GC_MEMORYUSAGE で指定されました。</span><span class="sxs-lookup"><span data-stu-id="341ec-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="bfacb-122">COR_GC_COUNTS で指定されました。</span><span class="sxs-lookup"><span data-stu-id="bfacb-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="bfacb-123">COR_GC_MEMORYUSAGE で指定されました。</span><span class="sxs-lookup"><span data-stu-id="bfacb-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="341ec-124">使用状況の例は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="341ec-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="bfacb-124">使用状況の例は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="bfacb-124">An example of the usage is as follows:</span></span>  
   
 ```  
 COR_GC_STATS GCStats;  
@@ -77,17 +77,17 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="341ec-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="341ec-125">Requirements</span></span>  
- <span data-ttu-id="341ec-126">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="341ec-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bfacb-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="bfacb-125">Requirements</span></span>  
+ <span data-ttu-id="bfacb-126">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bfacb-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="341ec-127">**ヘッダー:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="341ec-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="bfacb-127">**ヘッダー:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="bfacb-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="341ec-128">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="341ec-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bfacb-128">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="bfacb-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="341ec-129">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="341ec-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="bfacb-129">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bfacb-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="341ec-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="341ec-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfacb-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="bfacb-130">See also</span></span>
 
-- [<span data-ttu-id="341ec-131">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="341ec-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="341ec-132">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="341ec-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="341ec-133">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="341ec-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="bfacb-131">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="bfacb-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="bfacb-132">自動メモリ管理</span><span class="sxs-lookup"><span data-stu-id="bfacb-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="bfacb-133">ガベージ コレクション</span><span class="sxs-lookup"><span data-stu-id="bfacb-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)

@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09ce4f3a293e7870ddadf4ad6ee2c15de10f4594
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200572"
 ---
-# <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a><span data-ttu-id="04635-102">ICorProfilerAssemblyReferenceProvider::AddAssemblyReference メソッド</span><span class="sxs-lookup"><span data-stu-id="04635-102">ICorProfilerAssemblyReferenceProvider::AddAssemblyReference Method</span></span>
-<span data-ttu-id="04635-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="04635-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a><span data-ttu-id="a2e2b-102">ICorProfilerAssemblyReferenceProvider::AddAssemblyReference メソッド</span><span class="sxs-lookup"><span data-stu-id="a2e2b-102">ICorProfilerAssemblyReferenceProvider::AddAssemblyReference Method</span></span>
+<span data-ttu-id="a2e2b-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="a2e2b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="04635-104">プロファイラーを計画に追加するアセンブリ参照の共通言語ランタイム (CLR) の通知、 [icorprofilercallback::moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="04635-104">Informs the common language runtime (CLR) of an assembly reference that the profiler plans to add in the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.</span></span>  
+ <span data-ttu-id="a2e2b-104">プロファイラーを計画に追加するアセンブリ参照の共通言語ランタイム (CLR) の通知、 [icorprofilercallback::moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="a2e2b-104">Informs the common language runtime (CLR) of an assembly reference that the profiler plans to add in the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04635-105">構文</span><span class="sxs-lookup"><span data-stu-id="04635-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2e2b-105">構文</span><span class="sxs-lookup"><span data-stu-id="a2e2b-105">Syntax</span></span>  
   
 ```cpp
 HRESULT AddAssemblyReference(  
@@ -34,24 +34,24 @@ HRESULT AddAssemblyReference(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="04635-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="04635-106">Parameters</span></span>  
- <span data-ttu-id="04635-107">pAssemblyRefInfo</span><span class="sxs-lookup"><span data-stu-id="04635-107">pAssemblyRefInfo</span></span>  
- <span data-ttu-id="04635-108">ポインターを[COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) CLR アセンブリ参照クロージャのウォークを実行するときに考慮する必要がありますあるアセンブリ参照に関する情報を提供する構造体。</span><span class="sxs-lookup"><span data-stu-id="04635-108">A pointer to a [COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) structure that provides the CLR with information about an assembly reference that it should consider when performing an assembly reference closure walk.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a2e2b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a2e2b-106">Parameters</span></span>  
+ <span data-ttu-id="a2e2b-107">pAssemblyRefInfo</span><span class="sxs-lookup"><span data-stu-id="a2e2b-107">pAssemblyRefInfo</span></span>  
+ <span data-ttu-id="a2e2b-108">ポインターを[COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) CLR アセンブリ参照クロージャのウォークを実行するときに考慮する必要がありますあるアセンブリ参照に関する情報を提供する構造体。</span><span class="sxs-lookup"><span data-stu-id="a2e2b-108">A pointer to a [COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) structure that provides the CLR with information about an assembly reference that it should consider when performing an assembly reference closure walk.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04635-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="04635-109">Remarks</span></span>  
- <span data-ttu-id="04635-110">プロファイラーは各ターゲット アセンブリがで指定されたアセンブリから参照する予定のこのメソッドを呼び出して、`wszAssemblyPath`の引数、 [icorprofilercallback 6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="04635-110">The profiler calls this method for each target assembly it plans to reference from the assembly specified in the `wszAssemblyPath` argument of the [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) callback.</span></span> <span data-ttu-id="04635-111">[ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)プロファイラーのインターフェイスのオブジェクトが渡される[icorprofilercallback 6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)コールバック、およびアセンブリのパスと名前で、`wszAssemblyPath`引数。</span><span class="sxs-lookup"><span data-stu-id="04635-111">The [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) interface object is passed to the profiler's [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) callback, along with the assembly path and name in the `wszAssemblyPath` argument.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a2e2b-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="a2e2b-109">Remarks</span></span>  
+ <span data-ttu-id="a2e2b-110">プロファイラーは各ターゲット アセンブリがで指定されたアセンブリから参照する予定のこのメソッドを呼び出して、`wszAssemblyPath`の引数、 [icorprofilercallback 6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="a2e2b-110">The profiler calls this method for each target assembly it plans to reference from the assembly specified in the `wszAssemblyPath` argument of the [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) callback.</span></span> <span data-ttu-id="a2e2b-111">[ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)プロファイラーのインターフェイスのオブジェクトが渡される[icorprofilercallback 6::getassemblyreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)コールバック、およびアセンブリのパスと名前で、`wszAssemblyPath`引数。</span><span class="sxs-lookup"><span data-stu-id="a2e2b-111">The [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) interface object is passed to the profiler's [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) callback, along with the assembly path and name in the `wszAssemblyPath` argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04635-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="04635-112">Requirements</span></span>  
- <span data-ttu-id="04635-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="04635-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2e2b-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="a2e2b-112">Requirements</span></span>  
+ <span data-ttu-id="a2e2b-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2e2b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04635-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="04635-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a2e2b-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a2e2b-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="04635-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04635-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a2e2b-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2e2b-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="04635-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="04635-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ <span data-ttu-id="a2e2b-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2e2b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04635-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="04635-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2e2b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2e2b-117">See also</span></span>
 
-- [<span data-ttu-id="04635-118">ICorProfilerAssemblyReferenceProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="04635-118">ICorProfilerAssemblyReferenceProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)
-- [<span data-ttu-id="04635-119">GetAssemblyReferences メソッド</span><span class="sxs-lookup"><span data-stu-id="04635-119">GetAssemblyReferences Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
-- [<span data-ttu-id="04635-120">ModuleLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="04635-120">ModuleLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
+- [<span data-ttu-id="a2e2b-118">ICorProfilerAssemblyReferenceProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2e2b-118">ICorProfilerAssemblyReferenceProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)
+- [<span data-ttu-id="a2e2b-119">GetAssemblyReferences メソッド</span><span class="sxs-lookup"><span data-stu-id="a2e2b-119">GetAssemblyReferences Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+- [<span data-ttu-id="a2e2b-120">ModuleLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="a2e2b-120">ModuleLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
