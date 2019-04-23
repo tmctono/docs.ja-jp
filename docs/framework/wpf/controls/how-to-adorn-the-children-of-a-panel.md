@@ -9,30 +9,30 @@ helpviewer_keywords:
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
 ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299820"
 ---
-# <a name="how-to-adorn-the-children-of-a-panel"></a><span data-ttu-id="7f82c-102">方法: パネルの子を装飾する</span><span class="sxs-lookup"><span data-stu-id="7f82c-102">How to: Adorn the Children of a Panel</span></span>
-<span data-ttu-id="7f82c-103">この例は、プログラムで、指定した子に装飾をバインドする方法を示しています。<xref:System.Windows.Controls.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="7f82c-103">This example shows how to programmatically bind an adorner to the children of a specified <xref:System.Windows.Controls.Panel>.</span></span>  
+# <a name="how-to-adorn-the-children-of-a-panel"></a><span data-ttu-id="e755e-102">方法: パネルの子を装飾する</span><span class="sxs-lookup"><span data-stu-id="e755e-102">How to: Adorn the Children of a Panel</span></span>
+<span data-ttu-id="e755e-103">この例は、プログラムで、指定した子に装飾をバインドする方法を示しています。<xref:System.Windows.Controls.Panel>します。</span><span class="sxs-lookup"><span data-stu-id="e755e-103">This example shows how to programmatically bind an adorner to the children of a specified <xref:System.Windows.Controls.Panel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f82c-104">例</span><span class="sxs-lookup"><span data-stu-id="7f82c-104">Example</span></span>  
- <span data-ttu-id="7f82c-105">子に装飾をバインドする、 <xref:System.Windows.Controls.Panel>、これらの手順に従います。</span><span class="sxs-lookup"><span data-stu-id="7f82c-105">To bind an adorner to the children of a <xref:System.Windows.Controls.Panel>, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="e755e-104">例</span><span class="sxs-lookup"><span data-stu-id="e755e-104">Example</span></span>  
+ <span data-ttu-id="e755e-105">子に装飾をバインドする、 <xref:System.Windows.Controls.Panel>、これらの手順に従います。</span><span class="sxs-lookup"><span data-stu-id="e755e-105">To bind an adorner to the children of a <xref:System.Windows.Controls.Panel>, follow these steps:</span></span>  
   
-1. <span data-ttu-id="7f82c-106">新しい宣言<xref:System.Windows.Documents.AdornerLayer>オブジェクトと呼び出し、`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>子が装飾対象要素の装飾層を検索するメソッド。</span><span class="sxs-lookup"><span data-stu-id="7f82c-106">Declare a new <xref:System.Windows.Documents.AdornerLayer> object and call the `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> method to find an adorner layer for the element whose children are to be adorned.</span></span>  
+1. <span data-ttu-id="e755e-106">新しい宣言<xref:System.Windows.Documents.AdornerLayer>オブジェクトと呼び出し、 `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>メソッドを持つ子が装飾対象要素の装飾層が見つかりません。</span><span class="sxs-lookup"><span data-stu-id="e755e-106">Declare a new <xref:System.Windows.Documents.AdornerLayer> object and call the `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> method to find an adorner layer for the element whose children are to be adorned.</span></span>  
   
-2. <span data-ttu-id="7f82c-107">呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。</span><span class="sxs-lookup"><span data-stu-id="7f82c-107">Enumerate through the children of the parent element and call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind an adorner to each child element.</span></span>  
+2. <span data-ttu-id="e755e-107">呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。</span><span class="sxs-lookup"><span data-stu-id="e755e-107">Enumerate through the children of the parent element and call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind an adorner to each child element.</span></span>  
   
- <span data-ttu-id="7f82c-108">次の例は、simplecircleadorner 参照の子に (上記) を連結、<xref:System.Windows.Controls.StackPanel>という*myStackPanel*します。</span><span class="sxs-lookup"><span data-stu-id="7f82c-108">The following example binds a SimpleCircleAdorner (shown above) to the children of a <xref:System.Windows.Controls.StackPanel> named *myStackPanel*.</span></span>  
+ <span data-ttu-id="e755e-108">次の例は、simplecircleadorner 参照の子に (上記) を連結、<xref:System.Windows.Controls.StackPanel>という*myStackPanel*します。</span><span class="sxs-lookup"><span data-stu-id="e755e-108">The following example binds a SimpleCircleAdorner (shown above) to the children of a <xref:System.Windows.Controls.StackPanel> named *myStackPanel*.</span></span>  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 > [!NOTE]
->  <span data-ttu-id="7f82c-109">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用して、装飾を別の要素にバインドする方法は、現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="7f82c-109">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
+>  <span data-ttu-id="e755e-109">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用して、装飾を別の要素にバインドする方法は、現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="e755e-109">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f82c-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f82c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e755e-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="e755e-110">See also</span></span>
 
-- [<span data-ttu-id="7f82c-111">装飾の概要</span><span class="sxs-lookup"><span data-stu-id="7f82c-111">Adorners Overview</span></span>](adorners-overview.md)
+- [<span data-ttu-id="e755e-111">装飾の概要</span><span class="sxs-lookup"><span data-stu-id="e755e-111">Adorners Overview</span></span>](adorners-overview.md)

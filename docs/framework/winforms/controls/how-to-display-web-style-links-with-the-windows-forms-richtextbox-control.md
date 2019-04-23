@@ -11,29 +11,29 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
 ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301881"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="ff1f0-102">方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する</span><span class="sxs-lookup"><span data-stu-id="ff1f0-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="ff1f0-103">Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは、カラーや下線が引かれたとしての Web リンクを表示できます。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="ff1f0-104">リンクがクリックされたときに、リンク テキストに指定された Web サイトを表示するブラウザー ウィンドウを開いてコードを記述することができます。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="664a0-102">方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する</span><span class="sxs-lookup"><span data-stu-id="664a0-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="664a0-103">Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは、カラーや下線が引かれたとしての Web リンクを表示できます。</span><span class="sxs-lookup"><span data-stu-id="664a0-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="664a0-104">リンクがクリックされたときに、リンク テキストに指定された Web サイトを表示するブラウザー ウィンドウを開いてコードを記述することができます。</span><span class="sxs-lookup"><span data-stu-id="664a0-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="ff1f0-105">RichTextBox コントロールでの Web ページにリンクするには</span><span class="sxs-lookup"><span data-stu-id="ff1f0-105">To link to a Web page with the RichTextBox control</span></span>  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="664a0-105">RichTextBox コントロールでの Web ページにリンクするには</span><span class="sxs-lookup"><span data-stu-id="664a0-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1. <span data-ttu-id="ff1f0-106">設定、<xref:System.Windows.Forms.RichTextBox.Text%2A>プロパティを有効な URL を含む文字列に (たとえば、"http://www.microsoft.com/")。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
+1. <span data-ttu-id="664a0-106">設定、<xref:System.Windows.Forms.RichTextBox.Text%2A>プロパティを有効な URL を含む文字列に (たとえば、"http://www.microsoft.com/")。</span><span class="sxs-lookup"><span data-stu-id="664a0-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2. <span data-ttu-id="ff1f0-107">必ず、<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>プロパティに設定されて`true`(既定)。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
+2. <span data-ttu-id="664a0-107">必ず、<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>プロパティに設定されて`true`(既定)。</span><span class="sxs-lookup"><span data-stu-id="664a0-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3. <span data-ttu-id="ff1f0-108">場合は、新しいグローバル インスタンスを作成、<xref:System.Diagnostics.Process>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
+3. <span data-ttu-id="664a0-108">場合は、新しいグローバル インスタンスを作成、<xref:System.Diagnostics.Process>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="664a0-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4. <span data-ttu-id="ff1f0-109">イベント ハンドラーを記述、<xref:System.Windows.Forms.RichTextBox.LinkClicked>目的のテキストをブラウザーに送信するイベントです。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
+4. <span data-ttu-id="664a0-109">イベント ハンドラーを記述、<xref:System.Windows.Forms.RichTextBox.LinkClicked>目的のテキストをブラウザーに送信するイベントです。</span><span class="sxs-lookup"><span data-stu-id="664a0-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     <span data-ttu-id="ff1f0-110">次の例で、<xref:System.Windows.Forms.RichTextBox.LinkClicked>イベントで指定された URL を Internet Explorer のインスタンスを開き、<xref:System.Windows.Forms.RichTextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="ff1f0-111">この例では使用して、フォーム、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="664a0-110">次の例で、<xref:System.Windows.Forms.RichTextBox.LinkClicked>イベントで指定された URL を Internet Explorer のインスタンスを開き、<xref:System.Windows.Forms.RichTextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="664a0-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="664a0-111">この例では使用して、フォーム、<xref:System.Windows.Forms.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="664a0-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="ff1f0-112">呼び出し元に、<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>が発生、メソッド、<xref:System.Security.SecurityException>特権がないため、部分的に信頼されたコンテキストでコードを実行している場合は例外です。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="ff1f0-113">詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="664a0-112">呼び出し元に、<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>が発生、メソッド、<xref:System.Security.SecurityException>特権がないため、部分的に信頼されたコンテキストでコードを実行している場合は例外です。</span><span class="sxs-lookup"><span data-stu-id="664a0-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="664a0-113">詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="664a0-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -74,13 +74,13 @@ ms.locfileid: "59301881"
        }  
     ```  
   
-     <span data-ttu-id="ff1f0-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) プロセスを初期化する必要があります`p`フォームのコンス トラクターに次のステートメントを含めることで実行できます。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
+     <span data-ttu-id="664a0-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) プロセスを初期化する必要があります`p`フォームのコンス トラクターに次のステートメントを含めることで実行できます。</span><span class="sxs-lookup"><span data-stu-id="664a0-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     <span data-ttu-id="ff1f0-115">(Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="664a0-115">(Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="664a0-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -94,7 +94,7 @@ ms.locfileid: "59301881"
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     <span data-ttu-id="ff1f0-116">作業が完了したら作成したプロセスをすぐに停止するのには重要です。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="ff1f0-117">上に示したコードを指すようこのプロセスを停止するコードになります。</span><span class="sxs-lookup"><span data-stu-id="ff1f0-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
+     <span data-ttu-id="664a0-116">作業が完了したら作成したプロセスをすぐに停止するのには重要です。</span><span class="sxs-lookup"><span data-stu-id="664a0-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="664a0-117">上に示したコードを指すようこのプロセスを停止するコードになります。</span><span class="sxs-lookup"><span data-stu-id="664a0-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
@@ -116,10 +116,10 @@ ms.locfileid: "59301881"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ff1f0-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff1f0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="664a0-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="664a0-118">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="ff1f0-119">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="ff1f0-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="ff1f0-120">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="ff1f0-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="664a0-119">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="664a0-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="664a0-120">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="664a0-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

@@ -16,19 +16,19 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 128af261c429228c97d952f1f8d382f46306f711
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229317"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a><span data-ttu-id="62ddf-102">ISOSDacInterface::GetModuleData メソッド</span><span class="sxs-lookup"><span data-stu-id="62ddf-102">ISOSDacInterface::GetModuleData Method</span></span>
+# <a name="isosdacinterfacegetmoduledata-method"></a><span data-ttu-id="039e3-102">ISOSDacInterface::GetModuleData メソッド</span><span class="sxs-lookup"><span data-stu-id="039e3-102">ISOSDacInterface::GetModuleData Method</span></span>
 
-<span data-ttu-id="62ddf-103">指定したアドレスに読み込まれたモジュールに対応するデータをフェッチします。</span><span class="sxs-lookup"><span data-stu-id="62ddf-103">Fetches the data corresponding to the module loaded at a given address.</span></span>
+<span data-ttu-id="039e3-103">指定したアドレスに読み込まれたモジュールに対応するデータをフェッチします。</span><span class="sxs-lookup"><span data-stu-id="039e3-103">Fetches the data corresponding to the module loaded at a given address.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="62ddf-104">構文</span><span class="sxs-lookup"><span data-stu-id="62ddf-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="039e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="039e3-104">Syntax</span></span>
 
 ```
 HRESULT GetModuleData(
@@ -37,26 +37,26 @@ HRESULT GetModuleData(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="62ddf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="62ddf-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="039e3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="039e3-105">Parameters</span></span>
 
 `moduleAddr`\
-<span data-ttu-id="62ddf-106">[in]情報を取得するモジュールのアドレス。</span><span class="sxs-lookup"><span data-stu-id="62ddf-106">[in] The address of the module to retrieve information for.</span></span>
+<span data-ttu-id="039e3-106">[in]情報を取得するモジュールのアドレス。</span><span class="sxs-lookup"><span data-stu-id="039e3-106">[in] The address of the module to retrieve information for.</span></span>
 
 `data`\
-<span data-ttu-id="62ddf-107">[out][DacpModuleData 構造](dacpmoduledata-structure.md)読み込まれたモジュールの情報を保持します。</span><span class="sxs-lookup"><span data-stu-id="62ddf-107">[out] The [DacpModuleData structure](dacpmoduledata-structure.md) to hold the information of the loaded module.</span></span>
+<span data-ttu-id="039e3-107">[out][DacpModuleData 構造](dacpmoduledata-structure.md)読み込まれたモジュールの情報を保持します。</span><span class="sxs-lookup"><span data-stu-id="039e3-107">[out] The [DacpModuleData structure](dacpmoduledata-structure.md) to hold the information of the loaded module.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="62ddf-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="62ddf-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="039e3-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="039e3-108">Remarks</span></span>
 
-<span data-ttu-id="62ddf-109">指定されたメソッドは、`ISOSDacInterface`インターフェイスし、仮想メソッド テーブルの 13 のスロットに対応しています。</span><span class="sxs-lookup"><span data-stu-id="62ddf-109">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 13th slot of the virtual method table.</span></span>
+<span data-ttu-id="039e3-109">指定されたメソッドは、`ISOSDacInterface`インターフェイスし、仮想メソッド テーブルの 13 のスロットに対応しています。</span><span class="sxs-lookup"><span data-stu-id="039e3-109">The provided method is part of the `ISOSDacInterface` interface and corresponds to the 13th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="62ddf-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="62ddf-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="039e3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="039e3-110">Requirements</span></span>
 
-<span data-ttu-id="62ddf-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="62ddf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="62ddf-112">**ヘッダー:** なし</span><span class="sxs-lookup"><span data-stu-id="62ddf-112">**Header:** None</span></span>  
-<span data-ttu-id="62ddf-113">**ライブラリ:** なし</span><span class="sxs-lookup"><span data-stu-id="62ddf-113">**Library:** None</span></span>  
-**<span data-ttu-id="62ddf-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="62ddf-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+<span data-ttu-id="039e3-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="039e3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="039e3-112">**ヘッダー:** なし</span><span class="sxs-lookup"><span data-stu-id="039e3-112">**Header:** None</span></span>  
+<span data-ttu-id="039e3-113">**ライブラリ:** なし</span><span class="sxs-lookup"><span data-stu-id="039e3-113">**Library:** None</span></span>  
+<span data-ttu-id="039e3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="039e3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="62ddf-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="62ddf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="039e3-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="039e3-115">See also</span></span>
 
-- [<span data-ttu-id="62ddf-116">デバッグ</span><span class="sxs-lookup"><span data-stu-id="62ddf-116">Debugging</span></span>](index.md)
-- [<span data-ttu-id="62ddf-117">ISOSDacInterface インターフェイス</span><span class="sxs-lookup"><span data-stu-id="62ddf-117">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)
+- [<span data-ttu-id="039e3-116">デバッグ</span><span class="sxs-lookup"><span data-stu-id="039e3-116">Debugging</span></span>](index.md)
+- [<span data-ttu-id="039e3-117">ISOSDacInterface インターフェイス</span><span class="sxs-lookup"><span data-stu-id="039e3-117">ISOSDacInterface Interface</span></span>](isosdacinterface-interface.md)

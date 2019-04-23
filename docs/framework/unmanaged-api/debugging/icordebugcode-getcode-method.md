@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228537"
 ---
-# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="778e5-102">ICorDebugCode::GetCode メソッド</span><span class="sxs-lookup"><span data-stu-id="778e5-102">ICorDebugCode::GetCode Method</span></span>
-<span data-ttu-id="778e5-103">指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。</span><span class="sxs-lookup"><span data-stu-id="778e5-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="778e5-104">このメソッドは、.NET Framework version 2.0 で廃止されました。</span><span class="sxs-lookup"><span data-stu-id="778e5-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="778e5-105">使用[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。</span><span class="sxs-lookup"><span data-stu-id="778e5-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
+# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="2a38f-102">ICorDebugCode::GetCode メソッド</span><span class="sxs-lookup"><span data-stu-id="2a38f-102">ICorDebugCode::GetCode Method</span></span>
+<span data-ttu-id="2a38f-103">指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。</span><span class="sxs-lookup"><span data-stu-id="2a38f-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="2a38f-104">このメソッドは、.NET Framework version 2.0 で廃止されました。</span><span class="sxs-lookup"><span data-stu-id="2a38f-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="2a38f-105">使用[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。</span><span class="sxs-lookup"><span data-stu-id="2a38f-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="778e5-106">構文</span><span class="sxs-lookup"><span data-stu-id="778e5-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a38f-106">構文</span><span class="sxs-lookup"><span data-stu-id="2a38f-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCode (  
@@ -40,34 +40,34 @@ HRESULT GetCode (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="778e5-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="778e5-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a38f-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2a38f-107">Parameters</span></span>  
  `startOffset`  
- <span data-ttu-id="778e5-108">[in]関数の最初のオフセット。</span><span class="sxs-lookup"><span data-stu-id="778e5-108">[in] The offset of the beginning of the function.</span></span>  
+ <span data-ttu-id="2a38f-108">[in]関数の最初のオフセット。</span><span class="sxs-lookup"><span data-stu-id="2a38f-108">[in] The offset of the beginning of the function.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="778e5-109">[in]関数の最後のオフセット。</span><span class="sxs-lookup"><span data-stu-id="778e5-109">[in] The offset of the end of the function.</span></span>  
+ <span data-ttu-id="2a38f-109">[in]関数の最後のオフセット。</span><span class="sxs-lookup"><span data-stu-id="2a38f-109">[in] The offset of the end of the function.</span></span>  
   
  `cBufferAlloc`  
- <span data-ttu-id="778e5-110">[in]サイズ、`buffer`にコードを返される配列。</span><span class="sxs-lookup"><span data-stu-id="778e5-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
+ <span data-ttu-id="2a38f-110">[in]サイズ、`buffer`にコードを返される配列。</span><span class="sxs-lookup"><span data-stu-id="2a38f-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
   
  `buffer`  
- <span data-ttu-id="778e5-111">[out]コードが返される先の配列。</span><span class="sxs-lookup"><span data-stu-id="778e5-111">[out] The array into which the code will be returned.</span></span>  
+ <span data-ttu-id="2a38f-111">[out]コードが返される先の配列。</span><span class="sxs-lookup"><span data-stu-id="2a38f-111">[out] The array into which the code will be returned.</span></span>  
   
  `pcBufferSize`  
- <span data-ttu-id="778e5-112">[out]返されるバイト数。</span><span class="sxs-lookup"><span data-stu-id="778e5-112">[out] The number of bytes returned.</span></span>  
+ <span data-ttu-id="2a38f-112">[out]返されるバイト数。</span><span class="sxs-lookup"><span data-stu-id="2a38f-112">[out] The number of bytes returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="778e5-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="778e5-113">Remarks</span></span>  
- <span data-ttu-id="778e5-114">関数のコードは、複数のチャンクに分割されていますが場合、は、ネイティブのオフセットの昇順で連結されます。</span><span class="sxs-lookup"><span data-stu-id="778e5-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="778e5-115">命令の境界はチェックされません。</span><span class="sxs-lookup"><span data-stu-id="778e5-115">Instruction boundaries are not checked.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a38f-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="2a38f-113">Remarks</span></span>  
+ <span data-ttu-id="2a38f-114">関数のコードは、複数のチャンクに分割されていますが場合、は、ネイティブのオフセットの昇順で連結されます。</span><span class="sxs-lookup"><span data-stu-id="2a38f-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="2a38f-115">命令の境界はチェックされません。</span><span class="sxs-lookup"><span data-stu-id="2a38f-115">Instruction boundaries are not checked.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="778e5-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="778e5-116">Requirements</span></span>  
- <span data-ttu-id="778e5-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="778e5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a38f-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="2a38f-116">Requirements</span></span>  
+ <span data-ttu-id="2a38f-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2a38f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="778e5-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="778e5-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2a38f-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2a38f-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="778e5-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="778e5-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2a38f-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2a38f-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="778e5-120">**.NET framework のバージョン:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="778e5-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="2a38f-120">**.NET framework のバージョン:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="2a38f-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="778e5-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="778e5-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a38f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="2a38f-121">See also</span></span>
 
-- [<span data-ttu-id="778e5-122">GetCodeChunks メソッド</span><span class="sxs-lookup"><span data-stu-id="778e5-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [<span data-ttu-id="2a38f-122">GetCodeChunks メソッド</span><span class="sxs-lookup"><span data-stu-id="2a38f-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
