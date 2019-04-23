@@ -3,41 +3,41 @@ title: LINQ to Entities クエリ内の関数の呼び出し
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312086"
 ---
-# <a name="calling-functions-in-linq-to-entities-queries"></a><span data-ttu-id="cf0f8-102">LINQ to Entities クエリ内の関数の呼び出し</span><span class="sxs-lookup"><span data-stu-id="cf0f8-102">Calling Functions in LINQ to Entities Queries</span></span>
-<span data-ttu-id="cf0f8-103">このセクションの各トピックでは、LINQ to Entities クエリで関数を呼び出す方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-103">The topics in this section describe how to call functions in LINQ to Entities queries.</span></span>  
+# <a name="calling-functions-in-linq-to-entities-queries"></a><span data-ttu-id="4a339-102">LINQ to Entities クエリ内の関数の呼び出し</span><span class="sxs-lookup"><span data-stu-id="4a339-102">Calling Functions in LINQ to Entities Queries</span></span>
+<span data-ttu-id="4a339-103">このセクションの各トピックでは、LINQ to Entities クエリで関数を呼び出す方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4a339-103">The topics in this section describe how to call functions in LINQ to Entities queries.</span></span>  
   
- <span data-ttu-id="cf0f8-104"><xref:System.Data.Objects.EntityFunctions> クラスおよび <xref:System.Data.Objects.SqlClient.SqlFunctions> クラスを使用すると、Entity Framework の一部として正規関数およびデータベース関数にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-104">The <xref:System.Data.Objects.EntityFunctions> and <xref:System.Data.Objects.SqlClient.SqlFunctions> classes provide access to canonical and database functions as part of the Entity Framework.</span></span> <span data-ttu-id="cf0f8-105">詳細については、「[方法 :正規関数を呼び出す](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)と[方法。データベース関数を呼び出す](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)します。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-105">For more information, see [How to: Call Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) and [How to: Call Database Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).</span></span>  
+ <span data-ttu-id="4a339-104"><xref:System.Data.Objects.EntityFunctions> クラスおよび <xref:System.Data.Objects.SqlClient.SqlFunctions> クラスを使用すると、Entity Framework の一部として正規関数およびデータベース関数にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="4a339-104">The <xref:System.Data.Objects.EntityFunctions> and <xref:System.Data.Objects.SqlClient.SqlFunctions> classes provide access to canonical and database functions as part of the Entity Framework.</span></span> <span data-ttu-id="4a339-105">詳細については、「[方法 :正規関数を呼び出す](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)と[方法。データベース関数を呼び出す](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)します。</span><span class="sxs-lookup"><span data-stu-id="4a339-105">For more information, see [How to: Call Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md) and [How to: Call Database Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md).</span></span>  
   
- <span data-ttu-id="cf0f8-106">カスタム関数を呼び出すプロセスには、3 つの基本的な手順が必要です。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-106">The process for calling a custom function requires three basic steps:</span></span>  
+ <span data-ttu-id="4a339-106">カスタム関数を呼び出すプロセスには、3 つの基本的な手順が必要です。</span><span class="sxs-lookup"><span data-stu-id="4a339-106">The process for calling a custom function requires three basic steps:</span></span>  
   
-1. <span data-ttu-id="cf0f8-107">概念モデルで関数を定義するか、ストレージ モデルで関数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-107">Define a function in your conceptual model or declare a function in your storage model.</span></span>  
+1. <span data-ttu-id="4a339-107">概念モデルで関数を定義するか、ストレージ モデルで関数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="4a339-107">Define a function in your conceptual model or declare a function in your storage model.</span></span>  
   
-2. <span data-ttu-id="cf0f8-108">メソッドをアプリケーションに追加し、<xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> を使用してこれをモデルの関数にマップします。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-108">Add a method to your application and map it to the function in the model with an <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.</span></span>  
+2. <span data-ttu-id="4a339-108">メソッドをアプリケーションに追加し、<xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> を使用してこれをモデルの関数にマップします。</span><span class="sxs-lookup"><span data-stu-id="4a339-108">Add a method to your application and map it to the function in the model with an <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.</span></span>  
   
-3. <span data-ttu-id="cf0f8-109">LINQ to Entities クエリから関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-109">Call the function in a LINQ to Entities query.</span></span>  
+3. <span data-ttu-id="4a339-109">LINQ to Entities クエリから関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="4a339-109">Call the function in a LINQ to Entities query.</span></span>  
   
- <span data-ttu-id="cf0f8-110">詳細については、このセクションの各トピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-110">For more information, see the topics in this section.</span></span>  
+ <span data-ttu-id="4a339-110">詳細については、このセクションの各トピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a339-110">For more information, see the topics in this section.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cf0f8-111">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cf0f8-111">In This Section</span></span>  
- [<span data-ttu-id="cf0f8-112">方法: Canonical 関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="cf0f8-112">How to: Call Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4a339-111">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4a339-111">In This Section</span></span>  
+ [<span data-ttu-id="4a339-112">方法: 正規関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="4a339-112">How to: Call Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
   
- [<span data-ttu-id="cf0f8-113">方法: データベース関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="cf0f8-113">How to: Call Database Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
+ [<span data-ttu-id="4a339-113">方法: データベース関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="4a339-113">How to: Call Database Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
   
- [<span data-ttu-id="cf0f8-114">方法: カスタム データベース関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="cf0f8-114">How to: Call Custom Database Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
+ [<span data-ttu-id="4a339-114">方法: カスタム データベース関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="4a339-114">How to: Call Custom Database Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
   
- [<span data-ttu-id="cf0f8-115">方法: クエリを使用してモデル定義関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="cf0f8-115">How to: Call Model-Defined Functions in Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
+ [<span data-ttu-id="4a339-115">方法: クエリ モデル定義関数を呼び出す</span><span class="sxs-lookup"><span data-stu-id="4a339-115">How to: Call Model-Defined Functions in Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
   
- [<span data-ttu-id="cf0f8-116">方法: モデル定義関数をオブジェクト メソッドとして呼び出す</span><span class="sxs-lookup"><span data-stu-id="cf0f8-116">How to: Call Model-Defined Functions as Object Methods</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
+ [<span data-ttu-id="4a339-116">方法: モデル定義関数をオブジェクト メソッドとして呼び出す</span><span class="sxs-lookup"><span data-stu-id="4a339-116">How to: Call Model-Defined Functions as Object Methods</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cf0f8-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="cf0f8-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a339-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a339-117">See also</span></span>
 
-- [<span data-ttu-id="cf0f8-118">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="cf0f8-118">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [<span data-ttu-id="cf0f8-119">正規関数</span><span class="sxs-lookup"><span data-stu-id="cf0f8-119">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
-- [<span data-ttu-id="cf0f8-120">.edmx ファイルの概要</span><span class="sxs-lookup"><span data-stu-id="cf0f8-120">.edmx File Overview</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [<span data-ttu-id="cf0f8-121">方法: 概念モデルでカスタム関数を定義します。</span><span class="sxs-lookup"><span data-stu-id="cf0f8-121">How to: Define Custom Functions in the Conceptual Model</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [<span data-ttu-id="4a339-118">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="4a339-118">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [<span data-ttu-id="4a339-119">正規関数</span><span class="sxs-lookup"><span data-stu-id="4a339-119">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- <span data-ttu-id="4a339-120">[.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4a339-120">[.edmx File Overview](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))</span></span>
+- <span data-ttu-id="4a339-121">[方法: 概念モデルでカスタム関数を定義します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4a339-121">[How to: Define Custom Functions in the Conceptual Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))</span></span>

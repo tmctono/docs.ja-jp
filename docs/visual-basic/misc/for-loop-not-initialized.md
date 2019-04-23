@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID92
 ms.assetid: 7f5b8b87-1a28-474d-8639-9de97922ceab
 ms.openlocfilehash: 225a363e5e5578160acc5aa45e978a0339b546c4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313218"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="13a28-102">For ループが初期化されていません (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="13a28-102">For loop not initialized (Visual Basic)</span></span>
-<span data-ttu-id="13a28-103">`For...Next` ループの中央にジャンプしました。</span><span class="sxs-lookup"><span data-stu-id="13a28-103">You jumped into the middle of a `For...Next` loop.</span></span>  
+# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="8f97c-102">For ループが初期化されていません (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f97c-102">For loop not initialized (Visual Basic)</span></span>
+<span data-ttu-id="8f97c-103">`For...Next` ループの中央にジャンプしました。</span><span class="sxs-lookup"><span data-stu-id="8f97c-103">You jumped into the middle of a `For...Next` loop.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="13a28-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="13a28-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8f97c-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="8f97c-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="13a28-105">ループへのジャンプを削除します。</span><span class="sxs-lookup"><span data-stu-id="13a28-105">Remove the jump into the loop.</span></span>  
+1. <span data-ttu-id="8f97c-105">ループへのジャンプを削除します。</span><span class="sxs-lookup"><span data-stu-id="8f97c-105">Remove the jump into the loop.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13a28-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="13a28-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f97c-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="8f97c-106">See also</span></span>
 
-- [<span data-ttu-id="13a28-107">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="13a28-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="13a28-108">方法: ラベル ステートメント</span><span class="sxs-lookup"><span data-stu-id="13a28-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [<span data-ttu-id="8f97c-107">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="8f97c-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="8f97c-108">方法: ステートメントへのラベル付け</span><span class="sxs-lookup"><span data-stu-id="8f97c-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
