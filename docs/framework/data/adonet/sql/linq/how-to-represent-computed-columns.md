@@ -3,27 +3,27 @@ title: '方法: 計算列を表す'
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
 ms.openlocfilehash: df72562b303e5b9a7c31334df06926f157b59b05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324742"
 ---
-# <a name="how-to-represent-computed-columns"></a><span data-ttu-id="647d4-102">方法: 計算列を表す</span><span class="sxs-lookup"><span data-stu-id="647d4-102">How to: Represent Computed Columns</span></span>
-<span data-ttu-id="647d4-103">使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>プロパティを<xref:System.Data.Linq.Mapping.ColumnAttribute>計算の結果で構成される列を表す属性です。</span><span class="sxs-lookup"><span data-stu-id="647d4-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property on a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to represent a column whose contents are the result of calculation.</span></span>  
+# <a name="how-to-represent-computed-columns"></a><span data-ttu-id="1bb9c-102">方法: 計算列を表す</span><span class="sxs-lookup"><span data-stu-id="1bb9c-102">How to: Represent Computed Columns</span></span>
+<span data-ttu-id="1bb9c-103">使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>プロパティを<xref:System.Data.Linq.Mapping.ColumnAttribute>計算の結果で構成される列を表す属性です。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property on a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to represent a column whose contents are the result of calculation.</span></span>  
   
- <span data-ttu-id="647d4-104">コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="647d4-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span></span>  
+ <span data-ttu-id="1bb9c-104">コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="647d4-105">主キーとしては、計算列をサポートしません。</span><span class="sxs-lookup"><span data-stu-id="647d4-105">does not support computed columns as primary keys.</span></span>  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="1bb9c-105">では、計算列は主キーとしてサポートされません。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-105">does not support computed columns as primary keys.</span></span>  
   
-### <a name="to-represent-a-computed-column"></a><span data-ttu-id="647d4-106">計算列を表すには</span><span class="sxs-lookup"><span data-stu-id="647d4-106">To represent a computed column</span></span>  
+### <a name="to-represent-a-computed-column"></a><span data-ttu-id="1bb9c-106">計算列を表すには</span><span class="sxs-lookup"><span data-stu-id="1bb9c-106">To represent a computed column</span></span>  
   
-1. <span data-ttu-id="647d4-107"><xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="647d4-107">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
+1. <span data-ttu-id="1bb9c-107"><xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-107">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-2. <span data-ttu-id="647d4-108"><xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> プロパティに数式を表す文字列を代入します。</span><span class="sxs-lookup"><span data-stu-id="647d4-108">Assign a string representation of the formula to the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property.</span></span>  
+2. <span data-ttu-id="1bb9c-108"><xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> プロパティに数式を表す文字列を代入します。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-108">Assign a string representation of the formula to the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="647d4-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="647d4-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bb9c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="1bb9c-109">See also</span></span>
 
-- [<span data-ttu-id="647d4-110">LINQ to SQL オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="647d4-110">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [<span data-ttu-id="647d4-111">方法: コード エディターを使用してエンティティ クラスをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="647d4-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [<span data-ttu-id="1bb9c-110">LINQ to SQL オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="1bb9c-110">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [<span data-ttu-id="1bb9c-111">方法: コード エディターを使用してエンティティ クラスをカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="1bb9c-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
