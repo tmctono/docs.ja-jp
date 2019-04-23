@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157366"
 ---
-# <a name="icorruntimehostcreatedomainsetup-method"></a><span data-ttu-id="906de-102">ICorRuntimeHost::CreateDomainSetup メソッド</span><span class="sxs-lookup"><span data-stu-id="906de-102">ICorRuntimeHost::CreateDomainSetup Method</span></span>
-<span data-ttu-id="906de-103">インターフェイス ポインターの型を IAppDomainSetup の取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="906de-103">Gets an interface pointer of type IAppDomainSetup to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> `IAppDomainSetup` <span data-ttu-id="906de-104">作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="906de-104">provides methods to configure aspects of an application domain before it is created.</span></span>  
+# <a name="icorruntimehostcreatedomainsetup-method"></a><span data-ttu-id="39ff1-102">ICorRuntimeHost::CreateDomainSetup メソッド</span><span class="sxs-lookup"><span data-stu-id="39ff1-102">ICorRuntimeHost::CreateDomainSetup Method</span></span>
+<span data-ttu-id="39ff1-103">インターフェイス ポインターの型を IAppDomainSetup の取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="39ff1-103">Gets an interface pointer of type IAppDomainSetup to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="39ff1-104">`IAppDomainSetup` 作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="39ff1-104">`IAppDomainSetup` provides methods to configure aspects of an application domain before it is created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="906de-105">構文</span><span class="sxs-lookup"><span data-stu-id="906de-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39ff1-105">構文</span><span class="sxs-lookup"><span data-stu-id="39ff1-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateDomainSetup (  
@@ -35,35 +35,35 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="906de-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="906de-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39ff1-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="39ff1-106">Parameters</span></span>  
  `pAppDomainSetup`  
- <span data-ttu-id="906de-107">[out]インターフェイス ポインターを<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="906de-107">[out] An interface pointer to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="906de-108">このパラメーターとして型指定された`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のインターフェイス ポインターを取得するには、このポインターを`IAppDomainSetup`します。</span><span class="sxs-lookup"><span data-stu-id="906de-108">This parameter is typed as `IUnknown`, so callers should generally call `QueryInterface` on this pointer to obtain an interface pointer of type `IAppDomainSetup`.</span></span>  
+ <span data-ttu-id="39ff1-107">[out]インターフェイス ポインターを<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。</span><span class="sxs-lookup"><span data-stu-id="39ff1-107">[out] An interface pointer to an <xref:System.AppDomainSetup?displayProperty=nameWithType> instance.</span></span> <span data-ttu-id="39ff1-108">このパラメーターとして型指定された`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のインターフェイス ポインターを取得するには、このポインターを`IAppDomainSetup`します。</span><span class="sxs-lookup"><span data-stu-id="39ff1-108">This parameter is typed as `IUnknown`, so callers should generally call `QueryInterface` on this pointer to obtain an interface pointer of type `IAppDomainSetup`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="906de-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="906de-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="39ff1-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="39ff1-109">Return Value</span></span>  
   
-|<span data-ttu-id="906de-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="906de-110">HRESULT</span></span>|<span data-ttu-id="906de-111">説明</span><span class="sxs-lookup"><span data-stu-id="906de-111">Description</span></span>|  
+|<span data-ttu-id="39ff1-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="39ff1-110">HRESULT</span></span>|<span data-ttu-id="39ff1-111">説明</span><span class="sxs-lookup"><span data-stu-id="39ff1-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="906de-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="906de-112">S_OK</span></span>|<span data-ttu-id="906de-113">操作が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="906de-113">The operation was successful.</span></span>|  
-|<span data-ttu-id="906de-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="906de-114">S_FALSE</span></span>|<span data-ttu-id="906de-115">操作を完了できませんでした。</span><span class="sxs-lookup"><span data-stu-id="906de-115">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="906de-116">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="906de-116">E_FAIL</span></span>|<span data-ttu-id="906de-117">未知の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="906de-117">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="906de-118">場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="906de-118">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="906de-119">Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="906de-119">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="906de-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="906de-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="906de-121">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="906de-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="39ff1-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="39ff1-112">S_OK</span></span>|<span data-ttu-id="39ff1-113">操作が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="39ff1-113">The operation was successful.</span></span>|  
+|<span data-ttu-id="39ff1-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="39ff1-114">S_FALSE</span></span>|<span data-ttu-id="39ff1-115">操作を完了できませんでした。</span><span class="sxs-lookup"><span data-stu-id="39ff1-115">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="39ff1-116">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="39ff1-116">E_FAIL</span></span>|<span data-ttu-id="39ff1-117">未知の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="39ff1-117">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="39ff1-118">場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="39ff1-118">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="39ff1-119">Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="39ff1-119">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="39ff1-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="39ff1-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="39ff1-121">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="39ff1-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="906de-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="906de-122">Remarks</span></span>  
- <span data-ttu-id="906de-123">このメソッドから返されるポインターは通常のパラメーターとして渡さ、 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="906de-123">The pointer returned from this method is typically passed as a parameter to the [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39ff1-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="39ff1-122">Remarks</span></span>  
+ <span data-ttu-id="39ff1-123">このメソッドから返されるポインターは通常のパラメーターとして渡さ、 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="39ff1-123">The pointer returned from this method is typically passed as a parameter to the [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="906de-124">必要条件</span><span class="sxs-lookup"><span data-stu-id="906de-124">Requirements</span></span>  
- <span data-ttu-id="906de-125">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="906de-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39ff1-124">必要条件</span><span class="sxs-lookup"><span data-stu-id="39ff1-124">Requirements</span></span>  
+ <span data-ttu-id="39ff1-125">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="39ff1-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="906de-126">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="906de-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="39ff1-126">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="39ff1-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="906de-127">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="906de-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="39ff1-127">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="39ff1-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="906de-128">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="906de-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="39ff1-128">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="39ff1-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="906de-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="906de-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39ff1-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="39ff1-129">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [<span data-ttu-id="906de-130">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="906de-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="39ff1-130">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="39ff1-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155559"
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="28135-102">CorDebugExceptionCallbackType 列挙型</span><span class="sxs-lookup"><span data-stu-id="28135-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="28135-103">行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。</span><span class="sxs-lookup"><span data-stu-id="28135-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="b54d4-102">CorDebugExceptionCallbackType 列挙型</span><span class="sxs-lookup"><span data-stu-id="b54d4-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="b54d4-103">行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。</span><span class="sxs-lookup"><span data-stu-id="b54d4-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28135-104">構文</span><span class="sxs-lookup"><span data-stu-id="28135-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b54d4-104">構文</span><span class="sxs-lookup"><span data-stu-id="b54d4-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -37,24 +37,24 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="28135-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="28135-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b54d4-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="b54d4-105">Members</span></span>  
   
-|<span data-ttu-id="28135-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="28135-106">Member</span></span>|<span data-ttu-id="28135-107">説明</span><span class="sxs-lookup"><span data-stu-id="28135-107">Description</span></span>|  
+|<span data-ttu-id="b54d4-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b54d4-106">Member</span></span>|<span data-ttu-id="b54d4-107">説明</span><span class="sxs-lookup"><span data-stu-id="b54d4-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="28135-108">例外がスローされました。</span><span class="sxs-lookup"><span data-stu-id="28135-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="28135-109">例外のワインド プロセスでは、ユーザー コードを入力します。</span><span class="sxs-lookup"><span data-stu-id="28135-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="28135-110">例外のワインド処理、`catch`ユーザー コードでブロックします。</span><span class="sxs-lookup"><span data-stu-id="28135-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="28135-111">例外は処理されませんでした。</span><span class="sxs-lookup"><span data-stu-id="28135-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="b54d4-108">例外がスローされました。</span><span class="sxs-lookup"><span data-stu-id="b54d4-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="b54d4-109">例外のワインド プロセスでは、ユーザー コードを入力します。</span><span class="sxs-lookup"><span data-stu-id="b54d4-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="b54d4-110">例外のワインド処理、`catch`ユーザー コードでブロックします。</span><span class="sxs-lookup"><span data-stu-id="b54d4-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="b54d4-111">例外は処理されませんでした。</span><span class="sxs-lookup"><span data-stu-id="b54d4-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="28135-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="28135-112">Requirements</span></span>  
- <span data-ttu-id="28135-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="28135-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b54d4-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="b54d4-112">Requirements</span></span>  
+ <span data-ttu-id="b54d4-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b54d4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="28135-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="28135-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b54d4-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b54d4-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="28135-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28135-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b54d4-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b54d4-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="28135-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="28135-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b54d4-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b54d4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28135-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="28135-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b54d4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="b54d4-117">See also</span></span>
 
-- [<span data-ttu-id="28135-118">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="28135-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="b54d4-118">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="b54d4-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

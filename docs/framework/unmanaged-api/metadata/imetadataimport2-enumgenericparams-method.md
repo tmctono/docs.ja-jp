@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157639"
 ---
-# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="f4791-102">IMetaDataImport2::EnumGenericParams メソッド</span><span class="sxs-lookup"><span data-stu-id="f4791-102">IMetaDataImport2::EnumGenericParams Method</span></span>
-<span data-ttu-id="f4791-103">トークンのジェネリック パラメーター トークンを指定した TypeDef または MethodDef に関連付けられた配列の列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="f4791-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
+# <a name="imetadataimport2enumgenericparams-method"></a><span data-ttu-id="93e80-102">IMetaDataImport2::EnumGenericParams メソッド</span><span class="sxs-lookup"><span data-stu-id="93e80-102">IMetaDataImport2::EnumGenericParams Method</span></span>
+<span data-ttu-id="93e80-103">トークンのジェネリック パラメーター トークンを指定した TypeDef または MethodDef に関連付けられた配列の列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="93e80-103">Gets an enumerator for an array of generic parameter tokens associated with the specified TypeDef or MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4791-104">構文</span><span class="sxs-lookup"><span data-stu-id="f4791-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93e80-104">構文</span><span class="sxs-lookup"><span data-stu-id="93e80-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumGenericParams (  
@@ -39,39 +39,39 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f4791-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f4791-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="93e80-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="93e80-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="f4791-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f4791-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="93e80-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="93e80-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="f4791-107">[in]ジェネリック パラメーターを持つが列挙する TypeDef または MethodDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="f4791-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
+ <span data-ttu-id="93e80-107">[in]ジェネリック パラメーターを持つが列挙する TypeDef または MethodDef トークンです。</span><span class="sxs-lookup"><span data-stu-id="93e80-107">[in] The TypeDef or MethodDef token whose generic parameters are to be enumerated.</span></span>  
   
  `rGenericParams`  
- <span data-ttu-id="f4791-108">[out]列挙するために、ジェネリック パラメーターの配列。</span><span class="sxs-lookup"><span data-stu-id="f4791-108">[out] The array of generic parameters to enumerate.</span></span>  
+ <span data-ttu-id="93e80-108">[out]列挙するために、ジェネリック パラメーターの配列。</span><span class="sxs-lookup"><span data-stu-id="93e80-108">[out] The array of generic parameters to enumerate.</span></span>  
   
  `cMax`  
- <span data-ttu-id="f4791-109">[in]配置するトークンの要求の最大数`rGenericParams`します。</span><span class="sxs-lookup"><span data-stu-id="f4791-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
+ <span data-ttu-id="93e80-109">[in]配置するトークンの要求の最大数`rGenericParams`します。</span><span class="sxs-lookup"><span data-stu-id="93e80-109">[in] The requested maximum number of tokens to place in `rGenericParams`.</span></span>  
   
  `pcGenericParams`  
- <span data-ttu-id="f4791-110">[out]返されたトークンの数に配置`rGenericParams`します。</span><span class="sxs-lookup"><span data-stu-id="f4791-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
+ <span data-ttu-id="93e80-110">[out]返されたトークンの数に配置`rGenericParams`します。</span><span class="sxs-lookup"><span data-stu-id="93e80-110">[out] The returned number of tokens placed in `rGenericParams`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f4791-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="f4791-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93e80-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="93e80-111">Return Value</span></span>  
   
-|<span data-ttu-id="f4791-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f4791-112">HRESULT</span></span>|<span data-ttu-id="f4791-113">説明</span><span class="sxs-lookup"><span data-stu-id="f4791-113">Description</span></span>|  
+|<span data-ttu-id="93e80-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="93e80-112">HRESULT</span></span>|<span data-ttu-id="93e80-113">説明</span><span class="sxs-lookup"><span data-stu-id="93e80-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` <span data-ttu-id="f4791-114">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="f4791-114">returned successfully.</span></span>|  
-|`S_FALSE`|`phEnum` <span data-ttu-id="f4791-115">メンバーの要素がありません。</span><span class="sxs-lookup"><span data-stu-id="f4791-115">has no member elements.</span></span> <span data-ttu-id="f4791-116">この場合、 `pcGenericParams` 0 (ゼロ) に設定されます。</span><span class="sxs-lookup"><span data-stu-id="f4791-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
+|`S_OK`|<span data-ttu-id="93e80-114">`EnumGenericParams` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="93e80-114">`EnumGenericParams` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="93e80-115">`phEnum` メンバーの要素がありません。</span><span class="sxs-lookup"><span data-stu-id="93e80-115">`phEnum` has no member elements.</span></span> <span data-ttu-id="93e80-116">この場合、 `pcGenericParams` 0 (ゼロ) に設定されます。</span><span class="sxs-lookup"><span data-stu-id="93e80-116">In this case, `pcGenericParams` is set to 0 (zero).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f4791-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="f4791-117">Requirements</span></span>  
- <span data-ttu-id="f4791-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4791-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="93e80-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="93e80-117">Requirements</span></span>  
+ <span data-ttu-id="93e80-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93e80-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4791-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f4791-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="93e80-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="93e80-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f4791-120">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="f4791-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="93e80-120">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="93e80-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="f4791-121">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="f4791-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="93e80-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93e80-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4791-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4791-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93e80-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="93e80-122">See also</span></span>
 
-- [<span data-ttu-id="f4791-123">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4791-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="f4791-124">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4791-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="93e80-123">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93e80-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="93e80-124">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93e80-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
