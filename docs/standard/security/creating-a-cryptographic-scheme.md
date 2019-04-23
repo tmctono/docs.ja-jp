@@ -9,29 +9,29 @@ ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321654"
 ---
-# <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="10e59-102">暗号スキームの作成</span><span class="sxs-lookup"><span data-stu-id="10e59-102">Creating a Cryptographic Scheme</span></span>
-<span data-ttu-id="10e59-103">.NET Framework の暗号化コンポーネントを組み合わせて、データの暗号化と復号化を行うさまざまなスキームを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="10e59-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  
+# <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="48ea9-102">暗号スキームの作成</span><span class="sxs-lookup"><span data-stu-id="48ea9-102">Creating a Cryptographic Scheme</span></span>
+<span data-ttu-id="48ea9-103">.NET Framework の暗号化コンポーネントを組み合わせて、データの暗号化と復号化を行うさまざまなスキームを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="48ea9-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  
   
- <span data-ttu-id="10e59-104">データの暗号化と復号化の単純な暗号スキームでは、次の手順を指定することがあります。</span><span class="sxs-lookup"><span data-stu-id="10e59-104">A simple cryptographic scheme for encrypting and decrypting data might specify the following steps:</span></span>  
+ <span data-ttu-id="48ea9-104">データの暗号化と復号化の単純な暗号スキームでは、次の手順を指定することがあります。</span><span class="sxs-lookup"><span data-stu-id="48ea9-104">A simple cryptographic scheme for encrypting and decrypting data might specify the following steps:</span></span>  
   
-1. <span data-ttu-id="10e59-105">暗号化側と復号化側は、公開キーと秘密キーのペアを生成する。</span><span class="sxs-lookup"><span data-stu-id="10e59-105">Each party generates a public/private key pair.</span></span>  
+1. <span data-ttu-id="48ea9-105">暗号化側と復号化側は、公開キーと秘密キーのペアを生成する。</span><span class="sxs-lookup"><span data-stu-id="48ea9-105">Each party generates a public/private key pair.</span></span>  
   
-2. <span data-ttu-id="10e59-106">暗号化側と復号化側は、公開キーを交換する。</span><span class="sxs-lookup"><span data-stu-id="10e59-106">The parties exchange their public keys.</span></span>  
+2. <span data-ttu-id="48ea9-106">暗号化側と復号化側は、公開キーを交換する。</span><span class="sxs-lookup"><span data-stu-id="48ea9-106">The parties exchange their public keys.</span></span>  
   
-3. <span data-ttu-id="10e59-107">暗号化側と復号化側は、たとえば TripleDES 暗号化の秘密キーを生成する。続いて、相手側の公開キーを使用して新規作成されたキーを暗号化する。</span><span class="sxs-lookup"><span data-stu-id="10e59-107">Each party generates a secret key for TripleDES encryption, for example, and encrypts the newly created key using the other's public key.</span></span>  
+3. <span data-ttu-id="48ea9-107">暗号化側と復号化側は、たとえば TripleDES 暗号化の秘密キーを生成する。続いて、相手側の公開キーを使用して新規作成されたキーを暗号化する。</span><span class="sxs-lookup"><span data-stu-id="48ea9-107">Each party generates a secret key for TripleDES encryption, for example, and encrypts the newly created key using the other's public key.</span></span>  
   
-4. <span data-ttu-id="10e59-108">暗号化側と復号化側は、相手側にデータを送信し、特定の順序で相手側の秘密キーを自分の秘密キーと組み合わせて、新しい秘密キーを作成する。</span><span class="sxs-lookup"><span data-stu-id="10e59-108">Each party sends the data to the other and combines the other's secret key with its own, in a particular order, to create a new secret key.</span></span>  
+4. <span data-ttu-id="48ea9-108">暗号化側と復号化側は、相手側にデータを送信し、特定の順序で相手側の秘密キーを自分の秘密キーと組み合わせて、新しい秘密キーを作成する。</span><span class="sxs-lookup"><span data-stu-id="48ea9-108">Each party sends the data to the other and combines the other's secret key with its own, in a particular order, to create a new secret key.</span></span>  
   
-5. <span data-ttu-id="10e59-109">暗号化側と復号化側は、対称暗号化を使って会話を開始する。</span><span class="sxs-lookup"><span data-stu-id="10e59-109">The parties then initiate a conversation using symmetric encryption.</span></span>  
+5. <span data-ttu-id="48ea9-109">暗号化側と復号化側は、対称暗号化を使って会話を開始する。</span><span class="sxs-lookup"><span data-stu-id="48ea9-109">The parties then initiate a conversation using symmetric encryption.</span></span>  
   
- <span data-ttu-id="10e59-110">暗号スキームの作成は簡単なタスクではありません。</span><span class="sxs-lookup"><span data-stu-id="10e59-110">Creating a cryptographic scheme is not a trivial task.</span></span>
+ <span data-ttu-id="48ea9-110">暗号スキームの作成は簡単なタスクではありません。</span><span class="sxs-lookup"><span data-stu-id="48ea9-110">Creating a cryptographic scheme is not a trivial task.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="10e59-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="10e59-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48ea9-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="48ea9-111">See also</span></span>
 
-- [<span data-ttu-id="10e59-112">暗号化サービス</span><span class="sxs-lookup"><span data-stu-id="10e59-112">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="48ea9-112">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="48ea9-112">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

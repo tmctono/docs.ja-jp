@@ -8,92 +8,92 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319873"
 ---
-# <a name="enhanced-strong-naming"></a><span data-ttu-id="ef6d0-102">拡張された厳密な名前付け</span><span class="sxs-lookup"><span data-stu-id="ef6d0-102">Enhanced Strong Naming</span></span>
-<span data-ttu-id="ef6d0-103">厳密な名前の署名は、アセンブリを識別するための .NET Framework の識別機構です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-103">A strong name signature is an identity mechanism in the .NET Framework for identifying assemblies.</span></span> <span data-ttu-id="ef6d0-104">これは通常、発行元 (署名者) から受取人 (検証者) に対して渡されるデータの整合性を検証するために使用される、公開キーによるデジタル署名です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-104">It is a public-key digital signature that is typically used to verify the integrity of data being passed from an originator (signer) to a recipient (verifier).</span></span> <span data-ttu-id="ef6d0-105">この署名はアセンブリに対する一意の ID として使用され、これによりアセンブリへの参照のあいまいさをなくします。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-105">This signature is used as a unique identity for an assembly and ensures that references to the assembly are not ambiguous.</span></span> <span data-ttu-id="ef6d0-106">アセンブリはビルド プロセスの一部として署名され、読み込まれるときに検証されます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-106">The assembly is signed as part of the build process and then verified when it is loaded.</span></span>  
+# <a name="enhanced-strong-naming"></a><span data-ttu-id="dfe4b-102">拡張された厳密な名前付け</span><span class="sxs-lookup"><span data-stu-id="dfe4b-102">Enhanced Strong Naming</span></span>
+<span data-ttu-id="dfe4b-103">厳密な名前の署名は、アセンブリを識別するための .NET Framework の識別機構です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-103">A strong name signature is an identity mechanism in the .NET Framework for identifying assemblies.</span></span> <span data-ttu-id="dfe4b-104">これは通常、発行元 (署名者) から受取人 (検証者) に対して渡されるデータの整合性を検証するために使用される、公開キーによるデジタル署名です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-104">It is a public-key digital signature that is typically used to verify the integrity of data being passed from an originator (signer) to a recipient (verifier).</span></span> <span data-ttu-id="dfe4b-105">この署名はアセンブリに対する一意の ID として使用され、これによりアセンブリへの参照のあいまいさをなくします。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-105">This signature is used as a unique identity for an assembly and ensures that references to the assembly are not ambiguous.</span></span> <span data-ttu-id="dfe4b-106">アセンブリはビルド プロセスの一部として署名され、読み込まれるときに検証されます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-106">The assembly is signed as part of the build process and then verified when it is loaded.</span></span>  
   
- <span data-ttu-id="ef6d0-107">厳密な名前の署名により、悪意のあるユーザーがアセンブリを不正に変更して、元の署名者のキーでアセンブリを再署名することを防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-107">Strong name signatures help prevent malicious parties from tampering with an assembly and then re-signing the assembly with the original signer’s key.</span></span> <span data-ttu-id="ef6d0-108">ただし、厳密な名前キーには、発行者に関する信頼できる情報も、証明書の階層構造も含まれていません。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-108">However, strong name keys don’t contain any reliable information about the publisher, nor do they contain a certificate hierarchy.</span></span> <span data-ttu-id="ef6d0-109">厳密な名前の署名は、アセンブリの署名者の信頼性を保証するものではなく、またその署名者がキーの正当な所有者であることを示すものでもありません。厳密な名前の署名は、キーの所有者がアセンブリに署名したことのみを示しています。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-109">A strong name signature does not guarantee the trustworthiness of the person who signed the assembly or indicate whether that person was a legitimate owner of the key; it indicates only that the owner of the key signed the assembly.</span></span> <span data-ttu-id="ef6d0-110">したがって、信頼できるサードパーティのコードのためのセキュリティの検証コントロールとして、厳密な名前の署名を使用することはお勧めしません。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-110">Therefore, we do not recommend using a strong name signature as a security validator for trusting third-party code.</span></span> <span data-ttu-id="ef6d0-111">コードを認証するために推奨される方法は、Microsoft Authenticode です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-111">Microsoft Authenticode is the recommended way to authenticate code.</span></span>  
+ <span data-ttu-id="dfe4b-107">厳密な名前の署名により、悪意のあるユーザーがアセンブリを不正に変更して、元の署名者のキーでアセンブリを再署名することを防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-107">Strong name signatures help prevent malicious parties from tampering with an assembly and then re-signing the assembly with the original signer’s key.</span></span> <span data-ttu-id="dfe4b-108">ただし、厳密な名前キーには、発行者に関する信頼できる情報も、証明書の階層構造も含まれていません。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-108">However, strong name keys don’t contain any reliable information about the publisher, nor do they contain a certificate hierarchy.</span></span> <span data-ttu-id="dfe4b-109">厳密な名前の署名は、アセンブリの署名者の信頼性を保証するものではなく、またその署名者がキーの正当な所有者であることを示すものでもありません。厳密な名前の署名は、キーの所有者がアセンブリに署名したことのみを示しています。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-109">A strong name signature does not guarantee the trustworthiness of the person who signed the assembly or indicate whether that person was a legitimate owner of the key; it indicates only that the owner of the key signed the assembly.</span></span> <span data-ttu-id="dfe4b-110">したがって、信頼できるサードパーティのコードのためのセキュリティの検証コントロールとして、厳密な名前の署名を使用することはお勧めしません。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-110">Therefore, we do not recommend using a strong name signature as a security validator for trusting third-party code.</span></span> <span data-ttu-id="dfe4b-111">コードを認証するために推奨される方法は、Microsoft Authenticode です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-111">Microsoft Authenticode is the recommended way to authenticate code.</span></span>  
   
-## <a name="limitations-of-conventional-strong-names"></a><span data-ttu-id="ef6d0-112">従来の厳密な名前の制限</span><span class="sxs-lookup"><span data-stu-id="ef6d0-112">Limitations of Conventional Strong Names</span></span>  
- <span data-ttu-id="ef6d0-113">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以前のバージョンで使用されている厳密な名前付けのテクノロジには次の欠点があります。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-113">The strong naming technology used in versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] has the following shortcomings:</span></span>  
+## <a name="limitations-of-conventional-strong-names"></a><span data-ttu-id="dfe4b-112">従来の厳密な名前の制限</span><span class="sxs-lookup"><span data-stu-id="dfe4b-112">Limitations of Conventional Strong Names</span></span>  
+ <span data-ttu-id="dfe4b-113">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以前のバージョンで使用されている厳密な名前付けのテクノロジには次の欠点があります。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-113">The strong naming technology used in versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] has the following shortcomings:</span></span>  
   
--   <span data-ttu-id="ef6d0-114">キーが常に攻撃を受ける状態に置かれています。テクノロジとハードウェアの向上により、公開キーから秘密キーを推測することが容易になっています。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-114">Keys are constantly under attack, and improved techniques and hardware make it easier to infer a private key from a public key.</span></span> <span data-ttu-id="ef6d0-115">攻撃からの保護には、より大きなキーが必要です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-115">To guard against attacks, larger keys are necessary.</span></span> <span data-ttu-id="ef6d0-116">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは任意のサイズのキー (既定のサイズは 1024 ビット) で署名する機能を提供していますが、新しいキーでアセンブリを署名すると、アセンブリの古い ID を参照しているすべてのバイナリが動作しなくなります。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-116">.NET Framework versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provide the ability to sign with any size key (the default size is 1024 bits), but signing an assembly with a new key breaks all binaries that reference the older identity of the assembly.</span></span> <span data-ttu-id="ef6d0-117">したがって、互換性を維持する場合には、署名キーのサイズの更新は非常に困難です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-117">Therefore, it is extremely difficult to upgrade the size of a signing key if you want to maintain compatibility.</span></span>  
+-   <span data-ttu-id="dfe4b-114">キーが常に攻撃を受ける状態に置かれています。テクノロジとハードウェアの向上により、公開キーから秘密キーを推測することが容易になっています。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-114">Keys are constantly under attack, and improved techniques and hardware make it easier to infer a private key from a public key.</span></span> <span data-ttu-id="dfe4b-115">攻撃からの保護には、より大きなキーが必要です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-115">To guard against attacks, larger keys are necessary.</span></span> <span data-ttu-id="dfe4b-116">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは任意のサイズのキー (既定のサイズは 1024 ビット) で署名する機能を提供していますが、新しいキーでアセンブリを署名すると、アセンブリの古い ID を参照しているすべてのバイナリが動作しなくなります。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-116">.NET Framework versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provide the ability to sign with any size key (the default size is 1024 bits), but signing an assembly with a new key breaks all binaries that reference the older identity of the assembly.</span></span> <span data-ttu-id="dfe4b-117">したがって、互換性を維持する場合には、署名キーのサイズの更新は非常に困難です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-117">Therefore, it is extremely difficult to upgrade the size of a signing key if you want to maintain compatibility.</span></span>  
   
--   <span data-ttu-id="ef6d0-118">厳密な名前の署名は SHA-1 アルゴリズムのみをサポートします。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-118">Strong name signing supports only the SHA-1 algorithm.</span></span> <span data-ttu-id="ef6d0-119">SHA-1 は、最近、セキュリティが強化されたハッシュ アプリケーションのためには不十分であることがわかりました。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-119">SHA-1 has recently been found to be inadequate for secure hashing applications.</span></span> <span data-ttu-id="ef6d0-120">したがって、より強力なアルゴリズム (SHA-256 以上) が必要です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-120">Therefore, a stronger algorithm (SHA-256 or greater) is necessary.</span></span> <span data-ttu-id="ef6d0-121">SHA-1 は FIPS 準拠の地位を失う可能性があり、これによって FIPS 準拠のソフトウェアとアルゴリズムのみを選択して使用しているユーザーには問題が生じることになります。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-121">It is possible that SHA-1 will lose its FIPS-compliant standing, which would present problems for those who choose to use only FIPS-compliant software and algorithms.</span></span>  
+-   <span data-ttu-id="dfe4b-118">厳密な名前の署名は SHA-1 アルゴリズムのみをサポートします。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-118">Strong name signing supports only the SHA-1 algorithm.</span></span> <span data-ttu-id="dfe4b-119">SHA-1 は、最近、セキュリティが強化されたハッシュ アプリケーションのためには不十分であることがわかりました。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-119">SHA-1 has recently been found to be inadequate for secure hashing applications.</span></span> <span data-ttu-id="dfe4b-120">したがって、より強力なアルゴリズム (SHA-256 以上) が必要です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-120">Therefore, a stronger algorithm (SHA-256 or greater) is necessary.</span></span> <span data-ttu-id="dfe4b-121">SHA-1 は FIPS 準拠の地位を失う可能性があり、これによって FIPS 準拠のソフトウェアとアルゴリズムのみを選択して使用しているユーザーには問題が生じることになります。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-121">It is possible that SHA-1 will lose its FIPS-compliant standing, which would present problems for those who choose to use only FIPS-compliant software and algorithms.</span></span>  
   
-## <a name="advantages-of-enhanced-strong-names"></a><span data-ttu-id="ef6d0-122">強化された厳密な名前の利点</span><span class="sxs-lookup"><span data-stu-id="ef6d0-122">Advantages of Enhanced Strong Names</span></span>  
- <span data-ttu-id="ef6d0-123">強化された厳密な名前の主な利点は、既存の厳密な名前との互換性と、ある ID が別の ID と等価であることを指定できる機能です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-123">The main advantages of enhanced strong names are compatibility with pre-existing strong names and the ability to claim that one identity is equivalent to another:</span></span>  
+## <a name="advantages-of-enhanced-strong-names"></a><span data-ttu-id="dfe4b-122">強化された厳密な名前の利点</span><span class="sxs-lookup"><span data-stu-id="dfe4b-122">Advantages of Enhanced Strong Names</span></span>  
+ <span data-ttu-id="dfe4b-123">強化された厳密な名前の主な利点は、既存の厳密な名前との互換性と、ある ID が別の ID と等価であることを指定できる機能です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-123">The main advantages of enhanced strong names are compatibility with pre-existing strong names and the ability to claim that one identity is equivalent to another:</span></span>  
   
--   <span data-ttu-id="ef6d0-124">既存の署名付きアセンブリを持つ開発者は、以前の ID を参照するアセンブリとの互換性を保ちながら、それらのアセンブリの ID を SHA-2 アルゴリズムに移行できます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-124">Developers who have pre-existing signed assemblies can migrate their identities to the SHA-2 algorithms while maintaining compatibility with assemblies that reference the old identities.</span></span>  
+-   <span data-ttu-id="dfe4b-124">既存の署名付きアセンブリを持つ開発者は、以前の ID を参照するアセンブリとの互換性を保ちながら、それらのアセンブリの ID を SHA-2 アルゴリズムに移行できます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-124">Developers who have pre-existing signed assemblies can migrate their identities to the SHA-2 algorithms while maintaining compatibility with assemblies that reference the old identities.</span></span>  
   
--   <span data-ttu-id="ef6d0-125">新しいアセンブリを作成する際に、既存の厳密な名前の署名を考慮する必要のない開発者は、より安全な SHA-2 アルゴリズムを使用して、今までどおりにアセンブリに署名できます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-125">Developers who create new assemblies and are not concerned with pre-existing strong name signatures can use the more secure SHA-2 algorithms and sign the assemblies as they always have.</span></span>  
+-   <span data-ttu-id="dfe4b-125">新しいアセンブリを作成する際に、既存の厳密な名前の署名を考慮する必要のない開発者は、より安全な SHA-2 アルゴリズムを使用して、今までどおりにアセンブリに署名できます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-125">Developers who create new assemblies and are not concerned with pre-existing strong name signatures can use the more secure SHA-2 algorithms and sign the assemblies as they always have.</span></span>  
   
-## <a name="using-enhanced-strong-names"></a><span data-ttu-id="ef6d0-126">強化された厳密な名前の使用</span><span class="sxs-lookup"><span data-stu-id="ef6d0-126">Using Enhanced Strong Names</span></span>  
- <span data-ttu-id="ef6d0-127">厳密な名前のキーは署名キーと ID のキーで構成されます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-127">Strong name keys consist of a signature key and an identity key.</span></span> <span data-ttu-id="ef6d0-128">アセンブリは署名キーで署名され、ID キーで識別されます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-128">The assembly is signed with the signature key and is identified by the identity key.</span></span> <span data-ttu-id="ef6d0-129">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前では、これらの 2 つのキーは同一です。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-129">Prior to the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], these two keys were identical.</span></span> <span data-ttu-id="ef6d0-130">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、ID キーは、.NET Framework の以前のバージョンと同じですが、署名キーは、より強力なハッシュ アルゴリズムを備えています。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-130">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the identity key remains the same as in earlier .NET Framework versions, but the signature key is enhanced with a stronger hash algorithm.</span></span> <span data-ttu-id="ef6d0-131">さらに、副署名を作成するために、署名キーは ID キーで署名されます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-131">In addition, the signature key is signed with the identity key to create a counter-signature.</span></span>  
+## <a name="using-enhanced-strong-names"></a><span data-ttu-id="dfe4b-126">強化された厳密な名前の使用</span><span class="sxs-lookup"><span data-stu-id="dfe4b-126">Using Enhanced Strong Names</span></span>  
+ <span data-ttu-id="dfe4b-127">厳密な名前のキーは署名キーと ID のキーで構成されます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-127">Strong name keys consist of a signature key and an identity key.</span></span> <span data-ttu-id="dfe4b-128">アセンブリは署名キーで署名され、ID キーで識別されます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-128">The assembly is signed with the signature key and is identified by the identity key.</span></span> <span data-ttu-id="dfe4b-129">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前では、これらの 2 つのキーは同一です。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-129">Prior to the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], these two keys were identical.</span></span> <span data-ttu-id="dfe4b-130">[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、ID キーは、.NET Framework の以前のバージョンと同じですが、署名キーは、より強力なハッシュ アルゴリズムを備えています。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-130">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the identity key remains the same as in earlier .NET Framework versions, but the signature key is enhanced with a stronger hash algorithm.</span></span> <span data-ttu-id="dfe4b-131">さらに、副署名を作成するために、署名キーは ID キーで署名されます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-131">In addition, the signature key is signed with the identity key to create a counter-signature.</span></span>  
   
- <span data-ttu-id="ef6d0-132"><xref:System.Reflection.AssemblySignatureKeyAttribute> 属性によって、アセンブリのメタデータはアセンブリの ID に既存の公開キーを使用することができ、これによって、古いアセンブリ参照は引き続き動作します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-132">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute enables the assembly metadata to use the pre-existing public key for assembly identity, which allows old assembly references to continue to work.</span></span>  <span data-ttu-id="ef6d0-133"><xref:System.Reflection.AssemblySignatureKeyAttribute> の属性は副署名を使用して、新しい署名キーの所有者が古い ID キーの所有者にもなるようにします。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-133">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute uses the counter-signature to ensure that the owner of the new signature key is also the owner of the old identity key.</span></span>  
+ <span data-ttu-id="dfe4b-132"><xref:System.Reflection.AssemblySignatureKeyAttribute> 属性によって、アセンブリのメタデータはアセンブリの ID に既存の公開キーを使用することができ、これによって、古いアセンブリ参照は引き続き動作します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-132">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute enables the assembly metadata to use the pre-existing public key for assembly identity, which allows old assembly references to continue to work.</span></span>  <span data-ttu-id="dfe4b-133"><xref:System.Reflection.AssemblySignatureKeyAttribute> の属性は副署名を使用して、新しい署名キーの所有者が古い ID キーの所有者にもなるようにします。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-133">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute uses the counter-signature to ensure that the owner of the new signature key is also the owner of the old identity key.</span></span>  
   
-### <a name="signing-with-sha-2-without-key-migration"></a><span data-ttu-id="ef6d0-134">キー移行を伴わない SHA-2 による署名</span><span class="sxs-lookup"><span data-stu-id="ef6d0-134">Signing with SHA-2, Without Key Migration</span></span>  
- <span data-ttu-id="ef6d0-135">厳密な名前の署名を移行せずにアセンブリに署名するには、コマンド プロンプト ウィンドウから次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-135">Run the following commands from a Command Prompt window to sign an assembly without migrating a strong name signature:</span></span>  
+### <a name="signing-with-sha-2-without-key-migration"></a><span data-ttu-id="dfe4b-134">キー移行を伴わない SHA-2 による署名</span><span class="sxs-lookup"><span data-stu-id="dfe4b-134">Signing with SHA-2, Without Key Migration</span></span>  
+ <span data-ttu-id="dfe4b-135">厳密な名前の署名を移行せずにアセンブリに署名するには、コマンド プロンプト ウィンドウから次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-135">Run the following commands from a Command Prompt window to sign an assembly without migrating a strong name signature:</span></span>  
   
-1. <span data-ttu-id="ef6d0-136">新しい ID キーを生成します (必要な場合)。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-136">Generate the new identity key (if necessary).</span></span>  
+1. <span data-ttu-id="dfe4b-136">新しい ID キーを生成します (必要な場合)。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-136">Generate the new identity key (if necessary).</span></span>  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2. <span data-ttu-id="ef6d0-137">ID の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-137">Extract the identity public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
+2. <span data-ttu-id="dfe4b-137">ID の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-137">Extract the identity public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3. <span data-ttu-id="ef6d0-138">ID 公開キー ファイルで、アセンブリに遅延署名します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-138">Delay-sign the assembly with the identity public key file.</span></span>  
+3. <span data-ttu-id="dfe4b-138">ID 公開キー ファイルで、アセンブリに遅延署名します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-138">Delay-sign the assembly with the identity public key file.</span></span>  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4. <span data-ttu-id="ef6d0-139">完全な ID キーのペアでアセンブリに再署名します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-139">Re-sign the assembly with the full identity key pair.</span></span>  
+4. <span data-ttu-id="dfe4b-139">完全な ID キーのペアでアセンブリに再署名します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-139">Re-sign the assembly with the full identity key pair.</span></span>  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="signing-with-sha-2-with-key-migration"></a><span data-ttu-id="ef6d0-140">キー移行を伴う SHA-2 による署名</span><span class="sxs-lookup"><span data-stu-id="ef6d0-140">Signing with SHA-2, with Key Migration</span></span>  
- <span data-ttu-id="ef6d0-141">移行した厳密な名前の署名でアセンブリに署名するには、コマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-141">Run the following commands from a Command Prompt window to sign an assembly with a migrated strong name signature.</span></span>  
+### <a name="signing-with-sha-2-with-key-migration"></a><span data-ttu-id="dfe4b-140">キー移行を伴う SHA-2 による署名</span><span class="sxs-lookup"><span data-stu-id="dfe4b-140">Signing with SHA-2, with Key Migration</span></span>  
+ <span data-ttu-id="dfe4b-141">移行した厳密な名前の署名でアセンブリに署名するには、コマンド プロンプト ウィンドウで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-141">Run the following commands from a Command Prompt window to sign an assembly with a migrated strong name signature.</span></span>  
   
-1. <span data-ttu-id="ef6d0-142">ID キーと署名キーのペアを生成します (必要な場合)。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-142">Generate an identity and signature key pair (if necessary).</span></span>  
+1. <span data-ttu-id="dfe4b-142">ID キーと署名キーのペアを生成します (必要な場合)。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-142">Generate an identity and signature key pair (if necessary).</span></span>  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2. <span data-ttu-id="ef6d0-143">署名の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-143">Extract the signature public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
+2. <span data-ttu-id="dfe4b-143">署名の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-143">Extract the signature public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3. <span data-ttu-id="ef6d0-144">副署名を生成するハッシュ アルゴリズムを決定する ID の公開キーを抽出します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-144">Extract the identity public key, which determines the hash algorithm that generates a counter-signature.</span></span>  
+3. <span data-ttu-id="dfe4b-144">副署名を生成するハッシュ アルゴリズムを決定する ID の公開キーを抽出します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-144">Extract the identity public key, which determines the hash algorithm that generates a counter-signature.</span></span>  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4. <span data-ttu-id="ef6d0-145"><xref:System.Reflection.AssemblySignatureKeyAttribute> の属性のパラメーターを生成し、アセンブリに属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-145">Generate the parameters for a <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute, and attach the attribute to the assembly.</span></span>  
+4. <span data-ttu-id="dfe4b-145"><xref:System.Reflection.AssemblySignatureKeyAttribute> の属性のパラメーターを生成し、アセンブリに属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-145">Generate the parameters for a <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute, and attach the attribute to the assembly.</span></span>  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
 
-    <span data-ttu-id="ef6d0-146">これにより、次のような出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-146">This produces output similar to the following.</span></span>
+    <span data-ttu-id="dfe4b-146">これにより、次のような出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-146">This produces output similar to the following.</span></span>
 
     ```
     Information for key migration attribute.
@@ -112,7 +112,7 @@ ms.locfileid: "59319873"
     ae5fec2c682e57b7442738
     ```
 
-    <span data-ttu-id="ef6d0-147">この出力は AssemblySignatureKeyAttribute に変換できます。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-147">This output can then be transformed into an AssemblySignatureKeyAttribute.</span></span>
+    <span data-ttu-id="dfe4b-147">この出力は AssemblySignatureKeyAttribute に変換できます。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-147">This output can then be transformed into an AssemblySignatureKeyAttribute.</span></span>
 
     ```
     [assembly:System.Reflection.AssemblySignatureKeyAttribute(
@@ -121,18 +121,18 @@ ms.locfileid: "59319873"
     )]
     ```
   
-5. <span data-ttu-id="ef6d0-148">ID 公開キーでアセンブリに遅延署名します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-148">Delay-sign the assembly with the identity public key.</span></span>  
+5. <span data-ttu-id="dfe4b-148">ID 公開キーでアセンブリに遅延署名します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-148">Delay-sign the assembly with the identity public key.</span></span>  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6. <span data-ttu-id="ef6d0-149">完全な署名キーのペアでアセンブリに署名します。</span><span class="sxs-lookup"><span data-stu-id="ef6d0-149">Fully sign the assembly with the signature key pair.</span></span>  
+6. <span data-ttu-id="dfe4b-149">完全な署名キーのペアでアセンブリに署名します。</span><span class="sxs-lookup"><span data-stu-id="dfe4b-149">Fully sign the assembly with the signature key pair.</span></span>  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef6d0-150">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef6d0-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfe4b-150">関連項目</span><span class="sxs-lookup"><span data-stu-id="dfe4b-150">See also</span></span>
 
-- [<span data-ttu-id="ef6d0-151">厳密な名前付きアセンブリの作成と使用</span><span class="sxs-lookup"><span data-stu-id="ef6d0-151">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [<span data-ttu-id="dfe4b-151">厳密な名前付きアセンブリの作成と使用</span><span class="sxs-lookup"><span data-stu-id="dfe4b-151">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
