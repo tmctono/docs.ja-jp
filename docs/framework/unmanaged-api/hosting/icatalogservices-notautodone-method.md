@@ -18,21 +18,21 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 499ba1887846cc670dc763ec998ef335c17a9ae5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125997"
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="c5f43-102">ICatalogServices::NotAutodone メソッド</span><span class="sxs-lookup"><span data-stu-id="c5f43-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="c5f43-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="c5f43-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="b1301-102">ICatalogServices::NotAutodone メソッド</span><span class="sxs-lookup"><span data-stu-id="b1301-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="b1301-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="b1301-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5f43-104">構文</span><span class="sxs-lookup"><span data-stu-id="c5f43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1301-104">構文</span><span class="sxs-lookup"><span data-stu-id="b1301-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5f43-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="c5f43-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1301-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="b1301-105">See also</span></span>
 
-- [<span data-ttu-id="c5f43-106">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c5f43-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="b1301-106">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b1301-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

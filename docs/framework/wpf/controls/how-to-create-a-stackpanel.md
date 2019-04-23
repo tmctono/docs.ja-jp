@@ -5,21 +5,21 @@ helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
 ms.openlocfilehash: bcf6decff2fbc012b5f8b62794f0d7b2cd9f29fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121811"
 ---
-# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="0cffc-102">方法: StackPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="0cffc-102">How to: Create a StackPanel</span></span>
-<span data-ttu-id="0cffc-103">この例は、作成する方法を示します、<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="0cffc-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="3dda4-102">方法: StackPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="3dda4-102">How to: Create a StackPanel</span></span>
+<span data-ttu-id="3dda4-103">この例は、作成する方法を示します、<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="3dda4-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0cffc-104">例</span><span class="sxs-lookup"><span data-stu-id="0cffc-104">Example</span></span>  
- <span data-ttu-id="0cffc-105">A<xref:System.Windows.Controls.StackPanel>すると、指定した方向に要素を積み重ねることができます。</span><span class="sxs-lookup"><span data-stu-id="0cffc-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="0cffc-106">定義されているプロパティを使用して<xref:System.Windows.Controls.StackPanel>、コンテンツ流し込むことができます垂直方向に、これは、既定の設定、または水平方向にします。</span><span class="sxs-lookup"><span data-stu-id="0cffc-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
+## <a name="example"></a><span data-ttu-id="3dda4-104">例</span><span class="sxs-lookup"><span data-stu-id="3dda4-104">Example</span></span>  
+ <span data-ttu-id="3dda4-105">A<xref:System.Windows.Controls.StackPanel>すると、指定した方向に要素を積み重ねることができます。</span><span class="sxs-lookup"><span data-stu-id="3dda4-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="3dda4-106">定義されているプロパティを使用して<xref:System.Windows.Controls.StackPanel>、コンテンツ流し込むことができます垂直方向に、これは、既定の設定、または水平方向にします。</span><span class="sxs-lookup"><span data-stu-id="3dda4-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
   
- <span data-ttu-id="0cffc-107">次の例を垂直に積み重ねます 5<xref:System.Windows.Controls.TextBlock>制御する場合に、それぞれ異なる<xref:System.Windows.Controls.Border>と<xref:System.Windows.Controls.Border.Background%2A>を使用して<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="0cffc-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="0cffc-108">子要素を持つ指定されていない<xref:System.Windows.FrameworkElement.Width%2A>に親ウィンドウに合わせて伸縮。 ただし、子要素がある、指定した<xref:System.Windows.FrameworkElement.Width%2A>、ウィンドウ内で中央揃えされます。</span><span class="sxs-lookup"><span data-stu-id="0cffc-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
+ <span data-ttu-id="3dda4-107">次の例を垂直に積み重ねます 5<xref:System.Windows.Controls.TextBlock>制御する場合に、それぞれ異なる<xref:System.Windows.Controls.Border>と<xref:System.Windows.Controls.Border.Background%2A>を使用して<xref:System.Windows.Controls.StackPanel>します。</span><span class="sxs-lookup"><span data-stu-id="3dda4-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="3dda4-108">子要素を持つ指定されていない<xref:System.Windows.FrameworkElement.Width%2A>に親ウィンドウに合わせて伸縮。 ただし、子要素がある、指定した<xref:System.Windows.FrameworkElement.Width%2A>、ウィンドウ内で中央揃えされます。</span><span class="sxs-lookup"><span data-stu-id="3dda4-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
   
- <span data-ttu-id="0cffc-109">既定のスタック方向、<xref:System.Windows.Controls.StackPanel>が垂直方向。</span><span class="sxs-lookup"><span data-stu-id="0cffc-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="0cffc-110">コンテンツの流れを制御する、<xref:System.Windows.Controls.StackPanel>を使用して、<xref:System.Windows.Controls.StackPanel.Orientation%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="0cffc-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="0cffc-111">使用して水平方向の配置を制御することができます、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="0cffc-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
+ <span data-ttu-id="3dda4-109">既定のスタック方向、<xref:System.Windows.Controls.StackPanel>が垂直方向。</span><span class="sxs-lookup"><span data-stu-id="3dda4-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="3dda4-110">コンテンツの流れを制御する、<xref:System.Windows.Controls.StackPanel>を使用して、<xref:System.Windows.Controls.StackPanel.Orientation%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="3dda4-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="3dda4-111">使用して水平方向の配置を制御することができます、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="3dda4-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
   
 ```xaml  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
@@ -43,8 +43,8 @@ ms.locfileid: "59121811"
 </Page>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0cffc-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0cffc-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dda4-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="3dda4-112">See also</span></span>
 
 - <xref:System.Windows.Controls.StackPanel>
-- [<span data-ttu-id="0cffc-113">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="0cffc-113">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="0cffc-114">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="0cffc-114">How-to Topics</span></span>](stackpanel-how-to-topics.md)
+- [<span data-ttu-id="3dda4-113">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="3dda4-113">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="3dda4-114">方法トピック</span><span class="sxs-lookup"><span data-stu-id="3dda4-114">How-to Topics</span></span>](stackpanel-how-to-topics.md)
