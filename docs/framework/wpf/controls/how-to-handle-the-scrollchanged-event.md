@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ScrollChanged events [WPF]
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
 ms.openlocfilehash: 54f20a4b8c6e6fcc190257fcf5de4374415d68b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206149"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974163"
 ---
-# <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="00894-102">方法: ScrollChanged イベントの処理</span><span class="sxs-lookup"><span data-stu-id="00894-102">How to: Handle the ScrollChanged Event</span></span>
-## <a name="example"></a><span data-ttu-id="00894-103">例</span><span class="sxs-lookup"><span data-stu-id="00894-103">Example</span></span>  
- <span data-ttu-id="00894-104">この例では、処理、<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>のイベントを<xref:System.Windows.Controls.ScrollViewer>します。</span><span class="sxs-lookup"><span data-stu-id="00894-104">This example shows how to handle the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event of a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
+# <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="8056e-102">方法: ScrollChanged イベントの処理</span><span class="sxs-lookup"><span data-stu-id="8056e-102">How to: Handle the ScrollChanged Event</span></span>
+## <a name="example"></a><span data-ttu-id="8056e-103">例</span><span class="sxs-lookup"><span data-stu-id="8056e-103">Example</span></span>  
+ <span data-ttu-id="8056e-104">この例では、処理、<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>のイベントを<xref:System.Windows.Controls.ScrollViewer>します。</span><span class="sxs-lookup"><span data-stu-id="8056e-104">This example shows how to handle the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event of a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
- <span data-ttu-id="00894-105">A<xref:System.Windows.Documents.FlowDocument>を持つ要素<xref:System.Windows.Documents.Paragraph>で定義されているパーツ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="00894-105">A <xref:System.Windows.Documents.FlowDocument> element with <xref:System.Windows.Documents.Paragraph> parts is defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="00894-106">ときに、<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>イベントは、ユーザーの相互作用のために発生します、ハンドラーが呼び出されると、およびテキストを書き込む、<xref:System.Windows.Controls.TextBlock>イベントが発生したことを示します。</span><span class="sxs-lookup"><span data-stu-id="00894-106">When the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event occurs due to user interaction, a handler is invoked, and text is written to a <xref:System.Windows.Controls.TextBlock> indicating that the event has occurred.</span></span>  
+ <span data-ttu-id="8056e-105">A<xref:System.Windows.Documents.FlowDocument>を持つ要素<xref:System.Windows.Documents.Paragraph>で定義されているパーツ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="8056e-105">A <xref:System.Windows.Documents.FlowDocument> element with <xref:System.Windows.Documents.Paragraph> parts is defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="8056e-106">ときに、<xref:System.Windows.Controls.ScrollViewer.ScrollChanged>イベントは、ユーザーの相互作用のために発生します、ハンドラーが呼び出されると、およびテキストを書き込む、<xref:System.Windows.Controls.TextBlock>イベントが発生したことを示します。</span><span class="sxs-lookup"><span data-stu-id="8056e-106">When the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event occurs due to user interaction, a handler is invoked, and text is written to a <xref:System.Windows.Controls.TextBlock> indicating that the event has occurred.</span></span>  
   
  [!code-xaml[scrollchangedeventargsLayout#1](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
 [!code-xaml[scrollchangedeventargsLayout#2](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
@@ -27,7 +27,7 @@ ms.locfileid: "59206149"
  [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
  [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="00894-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="00894-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8056e-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="8056e-107">See also</span></span>
 
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>
