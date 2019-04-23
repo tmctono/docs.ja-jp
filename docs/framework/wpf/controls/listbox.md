@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055054"
 ---
-# <a name="listbox"></a><span data-ttu-id="97560-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="97560-102">ListBox</span></span>
-<span data-ttu-id="97560-103">A<xref:System.Windows.Controls.ListBox>コントロールが選択可能な項目の一覧をユーザーに提供します。</span><span class="sxs-lookup"><span data-stu-id="97560-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="9164f-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="9164f-102">ListBox</span></span>
+<span data-ttu-id="9164f-103">A<xref:System.Windows.Controls.ListBox>コントロールが選択可能な項目の一覧をユーザーに提供します。</span><span class="sxs-lookup"><span data-stu-id="9164f-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="97560-104">次の図は、一般的な示します<xref:System.Windows.Controls.ListBox>します。</span><span class="sxs-lookup"><span data-stu-id="97560-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="9164f-104">次の図は、一般的な示します<xref:System.Windows.Controls.ListBox>します。</span><span class="sxs-lookup"><span data-stu-id="9164f-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="97560-105">![ListBox スクリーン ショット](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="97560-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="97560-106">一般的なリスト ボックス</span><span class="sxs-lookup"><span data-stu-id="97560-106">Typical ListBox</span></span>  
+ <span data-ttu-id="9164f-105">![ListBox スクリーン ショット](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="9164f-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="9164f-106">一般的なリスト ボックス</span><span class="sxs-lookup"><span data-stu-id="9164f-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="97560-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="97560-107">In This Section</span></span>  
- [<span data-ttu-id="97560-108">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="97560-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9164f-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9164f-107">In This Section</span></span>  
+ [<span data-ttu-id="9164f-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="9164f-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="97560-109">参照</span><span class="sxs-lookup"><span data-stu-id="97560-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9164f-109">参照</span><span class="sxs-lookup"><span data-stu-id="9164f-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="97560-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="97560-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9164f-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="9164f-110">Related Sections</span></span>
