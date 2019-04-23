@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c997ab107ba3ceb7773bc9235b9c9dcd4d97df8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231449"
 ---
-# <a name="corlaunchapplication-function"></a><span data-ttu-id="3419e-102">CorLaunchApplication 関数</span><span class="sxs-lookup"><span data-stu-id="3419e-102">CorLaunchApplication Function</span></span>
-<span data-ttu-id="3419e-103">指定したネットワーク パスのアプリケーションを、指定したマニフェストとその他のアプリケーション データを使用して起動します。</span><span class="sxs-lookup"><span data-stu-id="3419e-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
+# <a name="corlaunchapplication-function"></a><span data-ttu-id="ee804-102">CorLaunchApplication 関数</span><span class="sxs-lookup"><span data-stu-id="ee804-102">CorLaunchApplication Function</span></span>
+<span data-ttu-id="ee804-103">指定したネットワーク パスのアプリケーションを、指定したマニフェストとその他のアプリケーション データを使用して起動します。</span><span class="sxs-lookup"><span data-stu-id="ee804-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
   
- <span data-ttu-id="3419e-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="3419e-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="ee804-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="ee804-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3419e-105">構文</span><span class="sxs-lookup"><span data-stu-id="3419e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ee804-105">構文</span><span class="sxs-lookup"><span data-stu-id="ee804-105">Syntax</span></span>  
   
 ```  
 HRESULT CorLaunchApplication (  
@@ -43,37 +43,37 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3419e-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3419e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ee804-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ee804-106">Parameters</span></span>  
  `dwClickOnceHost`  
- <span data-ttu-id="3419e-107">[in]値、 [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)が起動して、アプリケーション ホストの種類を指定する列挙体。</span><span class="sxs-lookup"><span data-stu-id="3419e-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
+ <span data-ttu-id="ee804-107">[in]値、 [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)が起動して、アプリケーション ホストの種類を指定する列挙体。</span><span class="sxs-lookup"><span data-stu-id="ee804-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
   
  `pwzAppFullName`  
- <span data-ttu-id="3419e-108">[in]起動しているアプリケーションの完全名。</span><span class="sxs-lookup"><span data-stu-id="3419e-108">[in] The full name of the application that is being launched.</span></span>  
+ <span data-ttu-id="ee804-108">[in]起動しているアプリケーションの完全名。</span><span class="sxs-lookup"><span data-stu-id="ee804-108">[in] The full name of the application that is being launched.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="3419e-109">[in]アプリケーションのマニフェストのパスの数。</span><span class="sxs-lookup"><span data-stu-id="3419e-109">[in] The number of manifest paths for the application.</span></span>  
+ <span data-ttu-id="ee804-109">[in]アプリケーションのマニフェストのパスの数。</span><span class="sxs-lookup"><span data-stu-id="ee804-109">[in] The number of manifest paths for the application.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="3419e-110">[in]起動しているアプリケーションのマニフェストへのパスを指定の文字列の配列。</span><span class="sxs-lookup"><span data-stu-id="3419e-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
+ <span data-ttu-id="ee804-110">[in]起動しているアプリケーションのマニフェストへのパスを指定の文字列の配列。</span><span class="sxs-lookup"><span data-stu-id="ee804-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="3419e-111">[in]起動しているアプリケーションのデータ項目をアクティブ化の数。</span><span class="sxs-lookup"><span data-stu-id="3419e-111">[in] The number of activation data items for the application that is being launched.</span></span>  
+ <span data-ttu-id="ee804-111">[in]起動しているアプリケーションのデータ項目をアクティブ化の数。</span><span class="sxs-lookup"><span data-stu-id="ee804-111">[in] The number of activation data items for the application that is being launched.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="3419e-112">[in]起動しているアプリケーションのライセンス認証データ項目は、それぞれの文字列の配列。</span><span class="sxs-lookup"><span data-stu-id="3419e-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
+ <span data-ttu-id="ee804-112">[in]起動しているアプリケーションのライセンス認証データ項目は、それぞれの文字列の配列。</span><span class="sxs-lookup"><span data-stu-id="ee804-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="3419e-113">[out]これで、アプリケーションが読み込まれたプロセスに関する情報へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3419e-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
+ <span data-ttu-id="ee804-113">[out]これで、アプリケーションが読み込まれたプロセスに関する情報へのポインター。</span><span class="sxs-lookup"><span data-stu-id="ee804-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3419e-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="3419e-114">Requirements</span></span>  
- <span data-ttu-id="3419e-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3419e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee804-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="ee804-114">Requirements</span></span>  
+ <span data-ttu-id="ee804-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ee804-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3419e-116">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3419e-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ee804-116">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ee804-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3419e-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3419e-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="ee804-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ee804-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="3419e-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="3419e-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="ee804-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee804-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3419e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="3419e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee804-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee804-119">See also</span></span>
 
-- [<span data-ttu-id="3419e-120">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="3419e-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="ee804-120">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="ee804-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
