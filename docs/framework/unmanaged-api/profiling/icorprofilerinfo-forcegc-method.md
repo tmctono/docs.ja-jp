@@ -18,33 +18,33 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5672d1b89b4260d1ebfbf444deb2702f215a0e95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078084"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="125e2-102">ICorProfilerInfo::ForceGC メソッド</span><span class="sxs-lookup"><span data-stu-id="125e2-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="125e2-103">共通言語ランタイム (CLR) 内に発生する強制的にガベージ コレクション。</span><span class="sxs-lookup"><span data-stu-id="125e2-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="f40cc-102">ICorProfilerInfo::ForceGC メソッド</span><span class="sxs-lookup"><span data-stu-id="f40cc-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="f40cc-103">共通言語ランタイム (CLR) 内に発生する強制的にガベージ コレクション。</span><span class="sxs-lookup"><span data-stu-id="f40cc-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="125e2-104">構文</span><span class="sxs-lookup"><span data-stu-id="125e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f40cc-104">構文</span><span class="sxs-lookup"><span data-stu-id="f40cc-104">Syntax</span></span>  
   
 ```  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="125e2-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="125e2-105">Remarks</span></span>  
- <span data-ttu-id="125e2-106">`ForceGC`メソッドは、マネージ コードを実行していないと、スタックに任意のプロファイラーのコールバックがないスレッドからのみ呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="125e2-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="125e2-107">呼び出すプロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。</span><span class="sxs-lookup"><span data-stu-id="125e2-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f40cc-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="f40cc-105">Remarks</span></span>  
+ <span data-ttu-id="f40cc-106">`ForceGC`メソッドは、マネージ コードを実行していないと、スタックに任意のプロファイラーのコールバックがないスレッドからのみ呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="f40cc-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="f40cc-107">呼び出すプロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。</span><span class="sxs-lookup"><span data-stu-id="f40cc-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="125e2-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="125e2-108">Requirements</span></span>  
- <span data-ttu-id="125e2-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="125e2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f40cc-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="f40cc-108">Requirements</span></span>  
+ <span data-ttu-id="f40cc-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f40cc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="125e2-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="125e2-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f40cc-110">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f40cc-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="125e2-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="125e2-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f40cc-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f40cc-111">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="125e2-112">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="125e2-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="f40cc-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f40cc-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="125e2-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="125e2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f40cc-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f40cc-113">See also</span></span>
 
-- [<span data-ttu-id="125e2-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="125e2-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="f40cc-114">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f40cc-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

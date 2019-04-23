@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f4be12e46851b11a5e6db60c351094a356fa61f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082946"
 ---
-# <a name="imetadataimportenumuserstrings-method"></a><span data-ttu-id="33bdb-102">IMetaDataImport::EnumUserStrings メソッド</span><span class="sxs-lookup"><span data-stu-id="33bdb-102">IMetaDataImport::EnumUserStrings Method</span></span>
-<span data-ttu-id="33bdb-103">現在のメタデータ スコープ内にあるハードコーディングされた文字列を表す String トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="33bdb-103">Enumerates String tokens representing hard-coded strings in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumuserstrings-method"></a><span data-ttu-id="9b7c6-102">IMetaDataImport::EnumUserStrings メソッド</span><span class="sxs-lookup"><span data-stu-id="9b7c6-102">IMetaDataImport::EnumUserStrings Method</span></span>
+<span data-ttu-id="9b7c6-103">現在のメタデータ スコープ内にあるハードコーディングされた文字列を表す String トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-103">Enumerates String tokens representing hard-coded strings in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33bdb-104">構文</span><span class="sxs-lookup"><span data-stu-id="33bdb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b7c6-104">構文</span><span class="sxs-lookup"><span data-stu-id="9b7c6-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumUserStrings (  
@@ -38,39 +38,39 @@ HRESULT EnumUserStrings (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33bdb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="33bdb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9b7c6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9b7c6-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="33bdb-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="33bdb-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="33bdb-107">このメソッドの最初の呼び出しで NULL があります。</span><span class="sxs-lookup"><span data-stu-id="33bdb-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="9b7c6-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="9b7c6-107">このメソッドの最初の呼び出しで NULL があります。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-107">This must be NULL for the first call of this method.</span></span>  
   
  `rStrings`  
- <span data-ttu-id="33bdb-108">[out]文字列トークンを格納するために使用する配列。</span><span class="sxs-lookup"><span data-stu-id="33bdb-108">[out] The array used to store the String tokens.</span></span>  
+ <span data-ttu-id="9b7c6-108">[out]文字列トークンを格納するために使用する配列。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-108">[out] The array used to store the String tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="33bdb-109">[in] `rStrings` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="33bdb-109">[in] The maximum size of the `rStrings` array.</span></span>  
+ <span data-ttu-id="9b7c6-109">[in] `rStrings` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-109">[in] The maximum size of the `rStrings` array.</span></span>  
   
  `pcStrings`  
- <span data-ttu-id="33bdb-110">[out]文字列のトークンで返される数`rStrings`します。</span><span class="sxs-lookup"><span data-stu-id="33bdb-110">[out] The number of String tokens returned in `rStrings`.</span></span>  
+ <span data-ttu-id="9b7c6-110">[out]文字列のトークンで返される数`rStrings`します。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-110">[out] The number of String tokens returned in `rStrings`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="33bdb-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="33bdb-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9b7c6-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="9b7c6-111">Return Value</span></span>  
   
-|<span data-ttu-id="33bdb-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="33bdb-112">HRESULT</span></span>|<span data-ttu-id="33bdb-113">説明</span><span class="sxs-lookup"><span data-stu-id="33bdb-113">Description</span></span>|  
+|<span data-ttu-id="9b7c6-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9b7c6-112">HRESULT</span></span>|<span data-ttu-id="9b7c6-113">説明</span><span class="sxs-lookup"><span data-stu-id="9b7c6-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` <span data-ttu-id="33bdb-114">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="33bdb-114">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="33bdb-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="33bdb-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="33bdb-116">その場合は、`pcStrings`は 0 です。</span><span class="sxs-lookup"><span data-stu-id="33bdb-116">In that case, `pcStrings` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="9b7c6-114">`EnumUserStrings` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-114">`EnumUserStrings` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="9b7c6-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="9b7c6-116">その場合は、`pcStrings`は 0 です。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-116">In that case, `pcStrings` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="33bdb-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="33bdb-117">Remarks</span></span>  
- <span data-ttu-id="33bdb-118">文字列トークンがによって作成された、 [imetadataemit::defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="33bdb-118">The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span> <span data-ttu-id="33bdb-119">このメソッドは、コンパイラではなくメタデータ ブラウザーで使用する設計されています。</span><span class="sxs-lookup"><span data-stu-id="33bdb-119">This method is designed to be used by a metadata browser rather than by a compiler.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9b7c6-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="9b7c6-117">Remarks</span></span>  
+ <span data-ttu-id="9b7c6-118">文字列トークンがによって作成された、 [imetadataemit::defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-118">The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span> <span data-ttu-id="9b7c6-119">このメソッドは、コンパイラではなくメタデータ ブラウザーで使用する設計されています。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-119">This method is designed to be used by a metadata browser rather than by a compiler.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33bdb-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="33bdb-120">Requirements</span></span>  
- <span data-ttu-id="33bdb-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="33bdb-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b7c6-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="9b7c6-120">Requirements</span></span>  
+ <span data-ttu-id="9b7c6-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9b7c6-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33bdb-122">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="33bdb-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9b7c6-122">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9b7c6-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="33bdb-123">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="33bdb-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9b7c6-123">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="9b7c6-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="33bdb-124">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="33bdb-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="9b7c6-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b7c6-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33bdb-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="33bdb-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b7c6-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="9b7c6-125">See also</span></span>
 
-- [<span data-ttu-id="33bdb-126">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="33bdb-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="33bdb-127">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="33bdb-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="9b7c6-126">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9b7c6-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9b7c6-127">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9b7c6-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
