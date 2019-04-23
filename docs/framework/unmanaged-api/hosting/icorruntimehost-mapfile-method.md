@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193877"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="92c16-102">ICorRuntimeHost::MapFile メソッド</span><span class="sxs-lookup"><span data-stu-id="92c16-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="92c16-103">指定したファイルをメモリにマップします。</span><span class="sxs-lookup"><span data-stu-id="92c16-103">Maps the specified file into memory.</span></span> <span data-ttu-id="92c16-104">このメソッドは、互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="92c16-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="8b407-102">ICorRuntimeHost::MapFile メソッド</span><span class="sxs-lookup"><span data-stu-id="8b407-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="8b407-103">指定したファイルをメモリにマップします。</span><span class="sxs-lookup"><span data-stu-id="8b407-103">Maps the specified file into memory.</span></span> <span data-ttu-id="8b407-104">このメソッドは、互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="8b407-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92c16-105">構文</span><span class="sxs-lookup"><span data-stu-id="92c16-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b407-105">構文</span><span class="sxs-lookup"><span data-stu-id="8b407-105">Syntax</span></span>  
   
 ```  
 HRESULT MapFile(  
@@ -36,22 +36,22 @@ HRESULT MapFile(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="92c16-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="92c16-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b407-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b407-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="92c16-107">[in]マップするファイルのハンドル。</span><span class="sxs-lookup"><span data-stu-id="92c16-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="8b407-107">[in]マップするファイルのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8b407-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="92c16-108">[out]ファイルのマッピングを開始する位置の開始メモリ アドレス。</span><span class="sxs-lookup"><span data-stu-id="92c16-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="8b407-108">[out]ファイルのマッピングを開始する位置の開始メモリ アドレス。</span><span class="sxs-lookup"><span data-stu-id="8b407-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92c16-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="92c16-109">Requirements</span></span>  
- <span data-ttu-id="92c16-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="92c16-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b407-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b407-109">Requirements</span></span>  
+ <span data-ttu-id="8b407-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b407-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92c16-111">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="92c16-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8b407-111">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8b407-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="92c16-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="92c16-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8b407-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="8b407-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="92c16-113">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="92c16-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="8b407-113">**.NET framework のバージョン:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="8b407-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92c16-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="92c16-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b407-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b407-114">See also</span></span>
 
-- [<span data-ttu-id="92c16-115">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="92c16-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="8b407-115">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b407-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

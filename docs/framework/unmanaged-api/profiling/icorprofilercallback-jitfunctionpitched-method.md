@@ -18,40 +18,40 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c8aa46e869d50fc7aa65c1d4244ad4ff71657bad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186395"
 ---
-# <a name="icorprofilercallbackjitfunctionpitched-method"></a><span data-ttu-id="d74c9-102">ICorProfilerCallback::JITFunctionPitched メソッド</span><span class="sxs-lookup"><span data-stu-id="d74c9-102">ICorProfilerCallback::JITFunctionPitched Method</span></span>
-<span data-ttu-id="d74c9-103">プロファイラーに通知を・ イン タイム (JIT) されている関数のコンパイル メモリから削除されました。</span><span class="sxs-lookup"><span data-stu-id="d74c9-103">Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.</span></span>  
+# <a name="icorprofilercallbackjitfunctionpitched-method"></a><span data-ttu-id="285f2-102">ICorProfilerCallback::JITFunctionPitched メソッド</span><span class="sxs-lookup"><span data-stu-id="285f2-102">ICorProfilerCallback::JITFunctionPitched Method</span></span>
+<span data-ttu-id="285f2-103">プロファイラーに通知を・ イン タイム (JIT) されている関数のコンパイル メモリから削除されました。</span><span class="sxs-lookup"><span data-stu-id="285f2-103">Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d74c9-104">構文</span><span class="sxs-lookup"><span data-stu-id="d74c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="285f2-104">構文</span><span class="sxs-lookup"><span data-stu-id="285f2-104">Syntax</span></span>  
   
 ```  
 HRESULT JITFunctionPitched(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d74c9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d74c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="285f2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="285f2-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="d74c9-106">[in]削除された関数の ID。</span><span class="sxs-lookup"><span data-stu-id="d74c9-106">[in] The ID of the function that was removed.</span></span>  
+ <span data-ttu-id="285f2-106">[in]削除された関数の ID。</span><span class="sxs-lookup"><span data-stu-id="285f2-106">[in] The ID of the function that was removed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d74c9-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="d74c9-107">Remarks</span></span>  
- <span data-ttu-id="d74c9-108">削除された関数が呼び出されると、プロファイラーは、関数が再コンパイルされるときに、新しい JIT コンパイル イベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d74c9-108">If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled.</span></span> <span data-ttu-id="d74c9-109">現時点では、共通言語ランタイム (CLR) の JIT コンパイラは削除されません関数をメモリからこのコールバックは現在は使用されませんし、プロファイラーでは受信できません。</span><span class="sxs-lookup"><span data-stu-id="d74c9-109">Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="285f2-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="285f2-107">Remarks</span></span>  
+ <span data-ttu-id="285f2-108">削除された関数が呼び出されると、プロファイラーは、関数が再コンパイルされるときに、新しい JIT コンパイル イベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="285f2-108">If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled.</span></span> <span data-ttu-id="285f2-109">現時点では、共通言語ランタイム (CLR) の JIT コンパイラは削除されません関数をメモリからこのコールバックは現在は使用されませんし、プロファイラーでは受信できません。</span><span class="sxs-lookup"><span data-stu-id="285f2-109">Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.</span></span>  
   
- <span data-ttu-id="d74c9-110">値`functionId`が、関数が再コンパイルされるまで、無効です。</span><span class="sxs-lookup"><span data-stu-id="d74c9-110">The value of `functionId` is not valid until the function is recompiled.</span></span> <span data-ttu-id="d74c9-111">関数を再コンパイルすると、同じ`functionId`値が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d74c9-111">When the function is recompiled, the same `functionId` value will be used.</span></span>  
+ <span data-ttu-id="285f2-110">値`functionId`が、関数が再コンパイルされるまで、無効です。</span><span class="sxs-lookup"><span data-stu-id="285f2-110">The value of `functionId` is not valid until the function is recompiled.</span></span> <span data-ttu-id="285f2-111">関数を再コンパイルすると、同じ`functionId`値が使用されます。</span><span class="sxs-lookup"><span data-stu-id="285f2-111">When the function is recompiled, the same `functionId` value will be used.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d74c9-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="d74c9-112">Requirements</span></span>  
- <span data-ttu-id="d74c9-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d74c9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="285f2-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="285f2-112">Requirements</span></span>  
+ <span data-ttu-id="285f2-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="285f2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d74c9-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d74c9-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="285f2-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="285f2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d74c9-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d74c9-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="285f2-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="285f2-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="d74c9-116">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="d74c9-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="285f2-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="285f2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d74c9-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="d74c9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="285f2-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="285f2-117">See also</span></span>
 
-- [<span data-ttu-id="d74c9-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d74c9-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="285f2-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="285f2-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

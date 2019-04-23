@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183691"
 ---
-# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="5fada-102">IAssemblyCache::CreateAssemblyCacheItem メソッド</span><span class="sxs-lookup"><span data-stu-id="5fada-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
-<span data-ttu-id="5fada-103">新しいへの参照を取得します。 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5fada-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
+# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="8d35d-102">IAssemblyCache::CreateAssemblyCacheItem メソッド</span><span class="sxs-lookup"><span data-stu-id="8d35d-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
+<span data-ttu-id="8d35d-103">新しいへの参照を取得します。 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8d35d-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fada-104">構文</span><span class="sxs-lookup"><span data-stu-id="5fada-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d35d-104">構文</span><span class="sxs-lookup"><span data-stu-id="8d35d-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCacheItem (  
@@ -38,31 +38,31 @@ HRESULT CreateAssemblyCacheItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5fada-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5fada-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d35d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8d35d-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="5fada-106">[in]ものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="5fada-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="5fada-107">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="5fada-107">The following values are supported:</span></span>  
+ <span data-ttu-id="8d35d-106">[in]ものがありますで定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="8d35d-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="8d35d-107">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="8d35d-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="5fada-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="5fada-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="8d35d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="8d35d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="5fada-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="5fada-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="8d35d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="8d35d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="5fada-110">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="5fada-110">[in] Reserved for future extensibility.</span></span> `pvReserved` <span data-ttu-id="5fada-111">null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="5fada-111">must be a null reference.</span></span>  
+ <span data-ttu-id="8d35d-110">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="8d35d-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="8d35d-111">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="8d35d-111">`pvReserved` must be a null reference.</span></span>  
   
  `ppAsmItem`  
- <span data-ttu-id="5fada-112">[out]返された`IAssemblyCacheItem`ポインター。</span><span class="sxs-lookup"><span data-stu-id="5fada-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
+ <span data-ttu-id="8d35d-112">[out]返された`IAssemblyCacheItem`ポインター。</span><span class="sxs-lookup"><span data-stu-id="8d35d-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="5fada-113">[in、省略可能]Uncanonicalized、コンマで区切られた`name=value`ペア。</span><span class="sxs-lookup"><span data-stu-id="5fada-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
+ <span data-ttu-id="8d35d-113">[in、省略可能]Uncanonicalized、コンマで区切られた`name=value`ペア。</span><span class="sxs-lookup"><span data-stu-id="8d35d-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fada-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="5fada-114">Requirements</span></span>  
- <span data-ttu-id="5fada-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5fada-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d35d-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="8d35d-114">Requirements</span></span>  
+ <span data-ttu-id="8d35d-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8d35d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5fada-116">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5fada-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="8d35d-116">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8d35d-116">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="5fada-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="5fada-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="8d35d-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d35d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fada-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="5fada-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d35d-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="8d35d-118">See also</span></span>
 
-- [<span data-ttu-id="5fada-119">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5fada-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="5fada-120">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5fada-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [<span data-ttu-id="8d35d-119">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d35d-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="8d35d-120">IAssemblyCacheItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d35d-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

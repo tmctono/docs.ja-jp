@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f244d256d3af104d1d0c65769e82a87d6de046e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189015"
 ---
-# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="b8dcf-102">IMetaDataEmit::DefineSecurityAttributeSet メソッド</span><span class="sxs-lookup"><span data-stu-id="b8dcf-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
-<span data-ttu-id="b8dcf-103">指定したトークンによって参照されるオブジェクトにアタッチするセキュリティ権限のセットを作成します。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinesecurityattributeset-method"></a><span data-ttu-id="02bbd-102">IMetaDataEmit::DefineSecurityAttributeSet メソッド</span><span class="sxs-lookup"><span data-stu-id="02bbd-102">IMetaDataEmit::DefineSecurityAttributeSet Method</span></span>
+<span data-ttu-id="02bbd-103">指定したトークンによって参照されるオブジェクトにアタッチするセキュリティ権限のセットを作成します。</span><span class="sxs-lookup"><span data-stu-id="02bbd-103">Creates a set of security permissions to attach to the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8dcf-104">構文</span><span class="sxs-lookup"><span data-stu-id="b8dcf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02bbd-104">構文</span><span class="sxs-lookup"><span data-stu-id="02bbd-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineSecurityAttributeSet (   
@@ -38,29 +38,29 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8dcf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b8dcf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02bbd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="02bbd-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="b8dcf-106">[in]セキュリティ情報が接続されているトークンです。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-106">[in] The token to which the security information is attached.</span></span>  
+ <span data-ttu-id="02bbd-106">[in]セキュリティ情報が接続されているトークンです。</span><span class="sxs-lookup"><span data-stu-id="02bbd-106">[in] The token to which the security information is attached.</span></span>  
   
  `rSecAttrs`  
- <span data-ttu-id="b8dcf-107">[in]配列の`COR_SECATTR`構造体。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-107">[in] An array of `COR_SECATTR` structures.</span></span>  
+ <span data-ttu-id="02bbd-107">[in]配列の`COR_SECATTR`構造体。</span><span class="sxs-lookup"><span data-stu-id="02bbd-107">[in] An array of `COR_SECATTR` structures.</span></span>  
   
  `cSecAttrs`  
- <span data-ttu-id="b8dcf-108">[in]要素数`rSecAttrs`します。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-108">[in] The number of elements in `rSecAttrs`.</span></span>  
+ <span data-ttu-id="02bbd-108">[in]要素数`rSecAttrs`します。</span><span class="sxs-lookup"><span data-stu-id="02bbd-108">[in] The number of elements in `rSecAttrs`.</span></span>  
   
  `pulErrorAttr`  
- <span data-ttu-id="b8dcf-109">[out]メソッドが失敗した場合にインデックスを指定します。`rSecAttrs`の問題の原因となった要素。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
+ <span data-ttu-id="02bbd-109">[out]メソッドが失敗した場合にインデックスを指定します。`rSecAttrs`の問題の原因となった要素。</span><span class="sxs-lookup"><span data-stu-id="02bbd-109">[out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8dcf-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="b8dcf-110">Requirements</span></span>  
- <span data-ttu-id="b8dcf-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8dcf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02bbd-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="02bbd-110">Requirements</span></span>  
+ <span data-ttu-id="02bbd-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="02bbd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8dcf-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b8dcf-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="02bbd-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="02bbd-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b8dcf-113">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="b8dcf-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="02bbd-113">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="02bbd-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="b8dcf-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="b8dcf-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="02bbd-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02bbd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8dcf-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="b8dcf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02bbd-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="02bbd-115">See also</span></span>
 
-- [<span data-ttu-id="b8dcf-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8dcf-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b8dcf-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8dcf-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="02bbd-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="02bbd-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="02bbd-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="02bbd-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
