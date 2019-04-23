@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101231"
 ---
-# <a name="isymunmanagedmethodgetparameters-method"></a><span data-ttu-id="497b4-102">ISymUnmanagedMethod::GetParameters メソッド</span><span class="sxs-lookup"><span data-stu-id="497b4-102">ISymUnmanagedMethod::GetParameters Method</span></span>
-<span data-ttu-id="497b4-103">このメソッドのパラメーターを取得します。</span><span class="sxs-lookup"><span data-stu-id="497b4-103">Gets the parameters for this method.</span></span> <span data-ttu-id="497b4-104">パラメーターは、メソッドのシグネチャで定義されている順序で返されます。</span><span class="sxs-lookup"><span data-stu-id="497b4-104">The parameters are returned in the order in which they are defined within the method's signature.</span></span>  
+# <a name="isymunmanagedmethodgetparameters-method"></a><span data-ttu-id="1797a-102">ISymUnmanagedMethod::GetParameters メソッド</span><span class="sxs-lookup"><span data-stu-id="1797a-102">ISymUnmanagedMethod::GetParameters Method</span></span>
+<span data-ttu-id="1797a-103">このメソッドのパラメーターを取得します。</span><span class="sxs-lookup"><span data-stu-id="1797a-103">Gets the parameters for this method.</span></span> <span data-ttu-id="1797a-104">パラメーターは、メソッドのシグネチャで定義されている順序で返されます。</span><span class="sxs-lookup"><span data-stu-id="1797a-104">The parameters are returned in the order in which they are defined within the method's signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="497b4-105">構文</span><span class="sxs-lookup"><span data-stu-id="497b4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1797a-105">構文</span><span class="sxs-lookup"><span data-stu-id="1797a-105">Syntax</span></span>  
   
 ```  
 HRESULT GetParameters(  
@@ -37,22 +37,22 @@ HRESULT GetParameters(
         length_is(*pcParams)] ISymUnmanagedVariable*  params[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="497b4-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="497b4-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1797a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1797a-106">Parameters</span></span>  
  `cParams`  
- <span data-ttu-id="497b4-107">[in] `params` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="497b4-107">[in] The size of the `params` array.</span></span>  
+ <span data-ttu-id="1797a-107">[in] `params` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="1797a-107">[in] The size of the `params` array.</span></span>  
   
  `pcParams`  
- <span data-ttu-id="497b4-108">[in]ポインターを`ULONG32`パラメーターを格納するために必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="497b4-108">[in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.</span></span>  
+ <span data-ttu-id="1797a-108">[in]ポインターを`ULONG32`パラメーターを格納するために必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="1797a-108">[in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.</span></span>  
   
  `params`  
- <span data-ttu-id="497b4-109">[out]パラメーターを受け取るバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="497b4-109">[out] A pointer to the buffer that receives the parameters.</span></span>  
+ <span data-ttu-id="1797a-109">[out]パラメーターを受け取るバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1797a-109">[out] A pointer to the buffer that receives the parameters.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="497b4-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="497b4-110">Return Value</span></span>  
- <span data-ttu-id="497b4-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="497b4-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1797a-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="1797a-110">Return Value</span></span>  
+ <span data-ttu-id="1797a-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="1797a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="497b4-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="497b4-112">Requirements</span></span>  
- <span data-ttu-id="497b4-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="497b4-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1797a-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="1797a-112">Requirements</span></span>  
+ <span data-ttu-id="1797a-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1797a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="497b4-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="497b4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1797a-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1797a-114">See also</span></span>
 
-- [<span data-ttu-id="497b4-115">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="497b4-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="1797a-115">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1797a-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
