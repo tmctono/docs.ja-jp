@@ -18,19 +18,19 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116758"
 ---
-# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="09aaf-102">ICorProfilerCallback::COMClassicVTableDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="09aaf-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
-<span data-ttu-id="09aaf-103">COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="09aaf-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
+# <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a><span data-ttu-id="ab365-102">ICorProfilerCallback::COMClassicVTableDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="ab365-102">ICorProfilerCallback::COMClassicVTableDestroyed Method</span></span>
+<span data-ttu-id="ab365-103">COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="ab365-103">Notifies the profiler that a COM interop vtable is being destroyed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="09aaf-104">このコールバックは、シャット ダウンに近いに vtable の破壊が発生するので、発生することはありません。</span><span class="sxs-lookup"><span data-stu-id="09aaf-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
+>  <span data-ttu-id="ab365-104">このコールバックは、シャット ダウンに近いに vtable の破壊が発生するので、発生することはありません。</span><span class="sxs-lookup"><span data-stu-id="ab365-104">This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09aaf-105">構文</span><span class="sxs-lookup"><span data-stu-id="09aaf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab365-105">構文</span><span class="sxs-lookup"><span data-stu-id="ab365-105">Syntax</span></span>  
   
 ```  
 HRESULT COMClassicVTableDestroyed(  
@@ -39,31 +39,31 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09aaf-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="09aaf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab365-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ab365-106">Parameters</span></span>  
  `wrappedClasId`  
- <span data-ttu-id="09aaf-107">[in]この vtable が作成されたクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="09aaf-107">[in] The ID of the class for which this vtable was created.</span></span>  
+ <span data-ttu-id="ab365-107">[in]この vtable が作成されたクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="ab365-107">[in] The ID of the class for which this vtable was created.</span></span>  
   
  `implementedIID`  
- <span data-ttu-id="09aaf-108">[in]クラスによって実装されるインターフェイスの ID。</span><span class="sxs-lookup"><span data-stu-id="09aaf-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="09aaf-109">インターフェイスが内部のみの場合、この値は NULL にすることがあります。</span><span class="sxs-lookup"><span data-stu-id="09aaf-109">This value may be NULL if the interface is internal only.</span></span>  
+ <span data-ttu-id="ab365-108">[in]クラスによって実装されるインターフェイスの ID。</span><span class="sxs-lookup"><span data-stu-id="ab365-108">[in] The ID of the interface implemented by the class.</span></span> <span data-ttu-id="ab365-109">インターフェイスが内部のみの場合、この値は NULL にすることがあります。</span><span class="sxs-lookup"><span data-stu-id="ab365-109">This value may be NULL if the interface is internal only.</span></span>  
   
  `pVTable`  
- <span data-ttu-id="09aaf-110">[in]Vtable の先頭へのポインター。</span><span class="sxs-lookup"><span data-stu-id="09aaf-110">[in] A pointer to the start of the vtable.</span></span>  
+ <span data-ttu-id="ab365-110">[in]Vtable の先頭へのポインター。</span><span class="sxs-lookup"><span data-stu-id="ab365-110">[in] A pointer to the start of the vtable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="09aaf-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="09aaf-111">Remarks</span></span>  
- <span data-ttu-id="09aaf-112">プロファイラーでは、スタックはガベージ コレクションを許可する状態にできない可能性がありますので、このメソッドの実装でブロックしないでくださいし、そのため、プリエンプティブなガベージ コレクションを有効にできません。</span><span class="sxs-lookup"><span data-stu-id="09aaf-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="09aaf-113">ここで、プロファイラーをブロックする場合とは、ガベージ コレクションが試行されると、ランタイムがこのコールバックが戻るまでブロックされます。</span><span class="sxs-lookup"><span data-stu-id="09aaf-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab365-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="ab365-111">Remarks</span></span>  
+ <span data-ttu-id="ab365-112">プロファイラーでは、スタックはガベージ コレクションを許可する状態にできない可能性がありますので、このメソッドの実装でブロックしないでくださいし、そのため、プリエンプティブなガベージ コレクションを有効にできません。</span><span class="sxs-lookup"><span data-stu-id="ab365-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="ab365-113">ここで、プロファイラーをブロックする場合とは、ガベージ コレクションが試行されると、ランタイムがこのコールバックが戻るまでブロックされます。</span><span class="sxs-lookup"><span data-stu-id="ab365-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="09aaf-114">このメソッドのプロファイラーの実装には、任意の方法で管理されているメモリの割り当てが発生またはマネージ コードを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="09aaf-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="ab365-114">このメソッドのプロファイラーの実装には、任意の方法で管理されているメモリの割り当てが発生またはマネージ コードを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="ab365-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09aaf-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="09aaf-115">Requirements</span></span>  
- <span data-ttu-id="09aaf-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="09aaf-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab365-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="ab365-115">Requirements</span></span>  
+ <span data-ttu-id="ab365-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ab365-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09aaf-117">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="09aaf-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ab365-117">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ab365-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="09aaf-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09aaf-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab365-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab365-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="09aaf-119">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="09aaf-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="ab365-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab365-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09aaf-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="09aaf-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab365-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab365-120">See also</span></span>
 
-- [<span data-ttu-id="09aaf-121">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="09aaf-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="09aaf-122">COMClassicVTableCreated メソッド</span><span class="sxs-lookup"><span data-stu-id="09aaf-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [<span data-ttu-id="ab365-121">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab365-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="ab365-122">COMClassicVTableCreated メソッド</span><span class="sxs-lookup"><span data-stu-id="ab365-122">COMClassicVTableCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)

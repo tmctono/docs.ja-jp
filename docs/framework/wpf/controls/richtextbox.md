@@ -8,21 +8,21 @@ helpviewer_keywords:
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
 ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113790"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="a830d-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="a830d-102">RichTextBox</span></span>
-<span data-ttu-id="a830d-103"><xref:System.Windows.Controls.RichTextBox>要素は、切り取りと貼り付け、豊富なドキュメントの表示、およびコンテンツの選択などの機能の組み込みサポートを備えた編集コントロールを定義します。</span><span class="sxs-lookup"><span data-stu-id="a830d-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="df36d-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="df36d-102">RichTextBox</span></span>
+<span data-ttu-id="df36d-103"><xref:System.Windows.Controls.RichTextBox>要素は、切り取りと貼り付け、豊富なドキュメントの表示、およびコンテンツの選択などの機能の組み込みサポートを備えた編集コントロールを定義します。</span><span class="sxs-lookup"><span data-stu-id="df36d-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a830d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a830d-104">In This Section</span></span>  
- [<span data-ttu-id="a830d-105">RichTextBox の概要</span><span class="sxs-lookup"><span data-stu-id="a830d-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
- [<span data-ttu-id="a830d-106">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="a830d-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="df36d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="df36d-104">In This Section</span></span>  
+ [<span data-ttu-id="df36d-105">RichTextBox の概要</span><span class="sxs-lookup"><span data-stu-id="df36d-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
+ [<span data-ttu-id="df36d-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="df36d-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a830d-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="a830d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df36d-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="df36d-107">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="a830d-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="a830d-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="a830d-109">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="a830d-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="df36d-108">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="df36d-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="df36d-109">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="df36d-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

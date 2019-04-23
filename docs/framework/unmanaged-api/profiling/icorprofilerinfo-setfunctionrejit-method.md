@@ -18,31 +18,31 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f01d9af8a78f6fd8855e81dadbc596f768ca601d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110150"
 ---
-# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="a52f5-102">ICorProfilerInfo::SetFunctionReJIT メソッド</span><span class="sxs-lookup"><span data-stu-id="a52f5-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
-<span data-ttu-id="a52f5-103">実装されていません。</span><span class="sxs-lookup"><span data-stu-id="a52f5-103">Not implemented.</span></span> <span data-ttu-id="a52f5-104">使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="a52f5-104">Do not use.</span></span>  
+# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="175f9-102">ICorProfilerInfo::SetFunctionReJIT メソッド</span><span class="sxs-lookup"><span data-stu-id="175f9-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
+<span data-ttu-id="175f9-103">実装されていません。</span><span class="sxs-lookup"><span data-stu-id="175f9-103">Not implemented.</span></span> <span data-ttu-id="175f9-104">使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="175f9-104">Do not use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a52f5-105">構文</span><span class="sxs-lookup"><span data-stu-id="a52f5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="175f9-105">構文</span><span class="sxs-lookup"><span data-stu-id="175f9-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFunctionReJIT(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a52f5-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="a52f5-106">Requirements</span></span>  
- <span data-ttu-id="a52f5-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a52f5-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="175f9-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="175f9-106">Requirements</span></span>  
+ <span data-ttu-id="175f9-107">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="175f9-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a52f5-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a52f5-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="175f9-108">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="175f9-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a52f5-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a52f5-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="175f9-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="175f9-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a52f5-110">**.NET framework のバージョン:** 1</span><span class="sxs-lookup"><span data-stu-id="a52f5-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="175f9-110">**.NET framework のバージョン:** 1</span><span class="sxs-lookup"><span data-stu-id="175f9-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a52f5-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a52f5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="175f9-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="175f9-111">See also</span></span>
 
-- [<span data-ttu-id="a52f5-112">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a52f5-112">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="175f9-112">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="175f9-112">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
