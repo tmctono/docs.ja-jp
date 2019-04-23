@@ -18,38 +18,38 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 802072f3a0151aabc5ca5796df57ea7c694a2070
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179037"
 ---
-# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="7eb73-102">ICorProfilerInfo::GetCurrentThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="7eb73-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="7eb73-103">マネージ スレッドである場合は、現在のスレッドの ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="7eb73-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
+# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="cccb7-102">ICorProfilerInfo::GetCurrentThreadID メソッド</span><span class="sxs-lookup"><span data-stu-id="cccb7-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="cccb7-103">マネージ スレッドである場合は、現在のスレッドの ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="cccb7-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7eb73-104">構文</span><span class="sxs-lookup"><span data-stu-id="7eb73-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cccb7-104">構文</span><span class="sxs-lookup"><span data-stu-id="cccb7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID(  
     [out] ThreadID *pThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7eb73-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7eb73-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cccb7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cccb7-105">Parameters</span></span>  
  `pThreadId`  
- <span data-ttu-id="7eb73-106">[out]マネージ スレッドの返された ID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="7eb73-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
+ <span data-ttu-id="cccb7-106">[out]マネージ スレッドの返された ID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="cccb7-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7eb73-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="7eb73-107">Remarks</span></span>  
- <span data-ttu-id="7eb73-108">現在のスレッドが、内部ランタイム スレッドまたは他の非管理対象のスレッドの場合`GetCurrentThreadID`、HRESULT の戻り値として CORPROF_E_NOT_MANAGED_THREAD を返します、`pThreadId`パラメーターは null になります。</span><span class="sxs-lookup"><span data-stu-id="7eb73-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cccb7-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="cccb7-107">Remarks</span></span>  
+ <span data-ttu-id="cccb7-108">現在のスレッドが、内部ランタイム スレッドまたは他の非管理対象のスレッドの場合`GetCurrentThreadID`、HRESULT の戻り値として CORPROF_E_NOT_MANAGED_THREAD を返します、`pThreadId`パラメーターは null になります。</span><span class="sxs-lookup"><span data-stu-id="cccb7-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7eb73-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="7eb73-109">Requirements</span></span>  
- <span data-ttu-id="7eb73-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7eb73-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cccb7-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="cccb7-109">Requirements</span></span>  
+ <span data-ttu-id="cccb7-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cccb7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7eb73-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7eb73-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cccb7-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cccb7-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7eb73-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7eb73-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cccb7-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cccb7-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="7eb73-113">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="7eb73-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="cccb7-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cccb7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7eb73-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="7eb73-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cccb7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="cccb7-114">See also</span></span>
 
-- [<span data-ttu-id="7eb73-115">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7eb73-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="cccb7-115">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cccb7-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

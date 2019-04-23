@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180021"
 ---
-# <a name="coinitiee-enumeration"></a><span data-ttu-id="5463b-102">COINITIEE 列挙型</span><span class="sxs-lookup"><span data-stu-id="5463b-102">COINITIEE Enumeration</span></span>
-<span data-ttu-id="5463b-103">使用される定数を指定します[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)共通言語ランタイムを初期化するときにします。</span><span class="sxs-lookup"><span data-stu-id="5463b-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
+# <a name="coinitiee-enumeration"></a><span data-ttu-id="1c3fd-102">COINITIEE 列挙型</span><span class="sxs-lookup"><span data-stu-id="1c3fd-102">COINITIEE Enumeration</span></span>
+<span data-ttu-id="1c3fd-103">使用される定数を指定します[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)共通言語ランタイムを初期化するときにします。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-103">Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5463b-104">構文</span><span class="sxs-lookup"><span data-stu-id="5463b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c3fd-104">構文</span><span class="sxs-lookup"><span data-stu-id="1c3fd-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOINITEE {  
@@ -36,23 +36,23 @@ typedef enum tagCOINITEE {
 } COINITIEE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5463b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="5463b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1c3fd-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="1c3fd-105">Members</span></span>  
   
-|<span data-ttu-id="5463b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="5463b-106">Member</span></span>|<span data-ttu-id="5463b-107">説明</span><span class="sxs-lookup"><span data-stu-id="5463b-107">Description</span></span>|  
+|<span data-ttu-id="1c3fd-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="1c3fd-106">Member</span></span>|<span data-ttu-id="1c3fd-107">説明</span><span class="sxs-lookup"><span data-stu-id="1c3fd-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|<span data-ttu-id="5463b-108">既定の初期化モード。</span><span class="sxs-lookup"><span data-stu-id="5463b-108">Default initialization mode.</span></span> <span data-ttu-id="5463b-109">ランタイムを初期化し、既定値を作成します。 この<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="5463b-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
-|`COINITEE_DLL`|<span data-ttu-id="5463b-110">マネージ DLL を実行することを初期化します。</span><span class="sxs-lookup"><span data-stu-id="5463b-110">Initializes to run a managed DLL.</span></span>|  
-|`COINITEE_MAIN`|<span data-ttu-id="5463b-111">マネージ EXE を実行することを初期化します。</span><span class="sxs-lookup"><span data-stu-id="5463b-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="5463b-112">これは、ランタイムを初期化しますが、既定値は作成されません<xref:System.AppDomain>、これは、exe ファイルのメイン ルーチンを入力した後に作成されます。</span><span class="sxs-lookup"><span data-stu-id="5463b-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
+|`COINITEE_DEFAULT`|<span data-ttu-id="1c3fd-108">既定の初期化モード。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-108">Default initialization mode.</span></span> <span data-ttu-id="1c3fd-109">ランタイムを初期化し、既定値を作成します。 この<xref:System.AppDomain>します。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-109">This initializes the runtime and creates the default <xref:System.AppDomain>.</span></span>|  
+|`COINITEE_DLL`|<span data-ttu-id="1c3fd-110">マネージ DLL を実行することを初期化します。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-110">Initializes to run a managed DLL.</span></span>|  
+|`COINITEE_MAIN`|<span data-ttu-id="1c3fd-111">マネージ EXE を実行することを初期化します。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-111">Initializes to run a managed EXE.</span></span> <span data-ttu-id="1c3fd-112">これは、ランタイムを初期化しますが、既定値は作成されません<xref:System.AppDomain>、これは、exe ファイルのメイン ルーチンを入力した後に作成されます。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-112">This initializes the runtime but does not create the default <xref:System.AppDomain>, which is created after entering the main routine of the EXE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5463b-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="5463b-113">Requirements</span></span>  
- <span data-ttu-id="5463b-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5463b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c3fd-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="1c3fd-113">Requirements</span></span>  
+ <span data-ttu-id="1c3fd-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1c3fd-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5463b-115">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5463b-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1c3fd-115">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1c3fd-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5463b-116">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="5463b-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1c3fd-116">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1c3fd-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="5463b-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="5463b-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1c3fd-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c3fd-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5463b-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="5463b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c3fd-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c3fd-118">See also</span></span>
 
-- [<span data-ttu-id="5463b-119">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="5463b-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="1c3fd-119">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="1c3fd-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d10bb7033688efce9488078d2ef605e2a29382f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221415"
 ---
-# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="386a5-102">ICorProfilerInfo::SetILFunctionBody メソッド</span><span class="sxs-lookup"><span data-stu-id="386a5-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
-<span data-ttu-id="386a5-103">指定したモジュール内の指定した関数の本体を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="386a5-103">Replaces the body of the specified function in the specified module.</span></span>  
+# <a name="icorprofilerinfosetilfunctionbody-method"></a><span data-ttu-id="60ca8-102">ICorProfilerInfo::SetILFunctionBody メソッド</span><span class="sxs-lookup"><span data-stu-id="60ca8-102">ICorProfilerInfo::SetILFunctionBody Method</span></span>
+<span data-ttu-id="60ca8-103">指定したモジュール内の指定した関数の本体を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="60ca8-103">Replaces the body of the specified function in the specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="386a5-104">構文</span><span class="sxs-lookup"><span data-stu-id="386a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60ca8-104">構文</span><span class="sxs-lookup"><span data-stu-id="60ca8-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILFunctionBody(  
@@ -36,32 +36,32 @@ HRESULT SetILFunctionBody(
     [in] LPCBYTE     pbNewILMethodHeader);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="386a5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="386a5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="60ca8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="60ca8-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="386a5-106">[in]関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="386a5-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="60ca8-106">[in]関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="60ca8-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodid`  
- <span data-ttu-id="386a5-107">[in]本文を置換する関数のトークンです。</span><span class="sxs-lookup"><span data-stu-id="386a5-107">[in] The token of the function for which to replace the body.</span></span>  
+ <span data-ttu-id="60ca8-107">[in]本文を置換する関数のトークンです。</span><span class="sxs-lookup"><span data-stu-id="60ca8-107">[in] The token of the function for which to replace the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="386a5-108">[in]関数の新しいヘッダー。</span><span class="sxs-lookup"><span data-stu-id="386a5-108">[in] The new header for the function.</span></span>  
+ <span data-ttu-id="60ca8-108">[in]関数の新しいヘッダー。</span><span class="sxs-lookup"><span data-stu-id="60ca8-108">[in] The new header for the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="386a5-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="386a5-109">Remarks</span></span>  
- <span data-ttu-id="386a5-110">`SetILFunctionBody`メソッドは、関数の新しい本文をポイントし、必要に応じて内部データ構造を調整できるように、メタデータ内の関数の相対仮想アドレスを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="386a5-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="60ca8-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="60ca8-109">Remarks</span></span>  
+ <span data-ttu-id="60ca8-110">`SetILFunctionBody`メソッドは、関数の新しい本文をポイントし、必要に応じて内部データ構造を調整できるように、メタデータ内の関数の相対仮想アドレスを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="60ca8-110">The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.</span></span>  
   
- <span data-ttu-id="386a5-111">`SetILFunctionBody`ことはありません - イン タイム (JIT) コンパイラによってコンパイルされた関数のみでメソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="386a5-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
+ <span data-ttu-id="60ca8-111">`SetILFunctionBody`ことはありません - イン タイム (JIT) コンパイラによってコンパイルされた関数のみでメソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="60ca8-111">The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.</span></span>  
   
- <span data-ttu-id="386a5-112">使用して、 [icorprofilerinfo::getilfunctionbodyallocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)バッファーとの互換性があることを確認する新しいメソッドの領域を割り当てるためのメソッド。</span><span class="sxs-lookup"><span data-stu-id="386a5-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
+ <span data-ttu-id="60ca8-112">使用して、 [icorprofilerinfo::getilfunctionbodyallocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)バッファーとの互換性があることを確認する新しいメソッドの領域を割り当てるためのメソッド。</span><span class="sxs-lookup"><span data-stu-id="60ca8-112">Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="386a5-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="386a5-113">Requirements</span></span>  
- <span data-ttu-id="386a5-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="386a5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="60ca8-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="60ca8-113">Requirements</span></span>  
+ <span data-ttu-id="60ca8-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="60ca8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="386a5-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="386a5-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="60ca8-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="60ca8-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="386a5-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="386a5-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="60ca8-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="60ca8-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="386a5-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="386a5-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="60ca8-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60ca8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="386a5-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="386a5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60ca8-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="60ca8-118">See also</span></span>
 
-- [<span data-ttu-id="386a5-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="386a5-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="60ca8-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="60ca8-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

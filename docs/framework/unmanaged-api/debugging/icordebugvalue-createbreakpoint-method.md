@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b291521b667954a4118d5319547e90c4cc988a8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179739"
 ---
-# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="5b9a5-102">ICorDebugValue::CreateBreakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="5b9a5-102">ICorDebugValue::CreateBreakpoint Method</span></span>
-<span data-ttu-id="5b9a5-103">`CreateBreakpoint`メソッドが現在実装されていません。</span><span class="sxs-lookup"><span data-stu-id="5b9a5-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
+# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="4f166-102">ICorDebugValue::CreateBreakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="4f166-102">ICorDebugValue::CreateBreakpoint Method</span></span>
+<span data-ttu-id="4f166-103">`CreateBreakpoint`メソッドが現在実装されていません。</span><span class="sxs-lookup"><span data-stu-id="4f166-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b9a5-104">構文</span><span class="sxs-lookup"><span data-stu-id="5b9a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f166-104">構文</span><span class="sxs-lookup"><span data-stu-id="4f166-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint (  
@@ -35,13 +35,13 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5b9a5-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="5b9a5-105">Requirements</span></span>  
- <span data-ttu-id="5b9a5-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b9a5-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f166-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="4f166-105">Requirements</span></span>  
+ <span data-ttu-id="4f166-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4f166-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b9a5-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b9a5-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4f166-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4f166-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5b9a5-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b9a5-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4f166-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f166-108">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="5b9a5-109">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="5b9a5-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="4f166-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f166-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b9a5-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b9a5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f166-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="4f166-110">See also</span></span>

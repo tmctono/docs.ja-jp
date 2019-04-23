@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aeb4ad1dffe4553b243b5168037aea8b68f8244b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222062"
 ---
-# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="bf7fb-102">ICorDebugProcess5::GetTypeForTypeID メソッド</span><span class="sxs-lookup"><span data-stu-id="bf7fb-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
-<span data-ttu-id="bf7fb-103">ICorDebugType 値を型識別子に変換します。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-103">Converts a type identifier to an ICorDebugType value.</span></span>  
+# <a name="icordebugprocess5gettypefortypeid-method"></a><span data-ttu-id="5ff4c-102">ICorDebugProcess5::GetTypeForTypeID メソッド</span><span class="sxs-lookup"><span data-stu-id="5ff4c-102">ICorDebugProcess5::GetTypeForTypeID Method</span></span>
+<span data-ttu-id="5ff4c-103">ICorDebugType 値を型識別子に変換します。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-103">Converts a type identifier to an ICorDebugType value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf7fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="bf7fb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ff4c-104">構文</span><span class="sxs-lookup"><span data-stu-id="5ff4c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeForTypeID(  
@@ -36,26 +36,26 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf7fb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bf7fb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5ff4c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5ff4c-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="bf7fb-106">[in]型識別子。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-106">[in] The type identifier.</span></span>  
+ <span data-ttu-id="5ff4c-106">[in]型識別子。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-106">[in] The type identifier.</span></span>  
   
  `ppType`  
- <span data-ttu-id="bf7fb-107">[out]ICorDebugType オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
+ <span data-ttu-id="5ff4c-107">[out]ICorDebugType オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-107">[out] A pointer to the address of an ICorDebugType object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bf7fb-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="bf7fb-108">Remarks</span></span>  
- <span data-ttu-id="bf7fb-109">場合によっては、型識別子を返すメソッドは null を返す可能性があります`COR_TYPEID`値。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="bf7fb-110">としてこの値が渡された場合、`id`引数、`GetTypeForTypeID`メソッドは失敗し、返す`E_FAIL`します。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5ff4c-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="5ff4c-108">Remarks</span></span>  
+ <span data-ttu-id="5ff4c-109">場合によっては、型識別子を返すメソッドは null を返す可能性があります`COR_TYPEID`値。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-109">In some cases, methods that return a type identifier may return a null `COR_TYPEID` value.</span></span> <span data-ttu-id="5ff4c-110">としてこの値が渡された場合、`id`引数、`GetTypeForTypeID`メソッドは失敗し、返す`E_FAIL`します。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-110">If this value is passed as the `id` argument, the `GetTypeForTypeID` method will fail and return `E_FAIL`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf7fb-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="bf7fb-111">Requirements</span></span>  
- <span data-ttu-id="bf7fb-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bf7fb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ff4c-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="5ff4c-111">Requirements</span></span>  
+ <span data-ttu-id="5ff4c-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5ff4c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf7fb-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bf7fb-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5ff4c-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5ff4c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bf7fb-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf7fb-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5ff4c-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5ff4c-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="bf7fb-115">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="bf7fb-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="5ff4c-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ff4c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf7fb-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf7fb-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ff4c-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ff4c-116">See also</span></span>
 
-- [<span data-ttu-id="bf7fb-117">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf7fb-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="bf7fb-118">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf7fb-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5ff4c-117">ICorDebugProcess5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ff4c-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="5ff4c-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ff4c-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

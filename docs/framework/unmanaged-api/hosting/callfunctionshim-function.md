@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180480"
 ---
-# <a name="callfunctionshim-function"></a><span data-ttu-id="c2640-102">CallFunctionShim 関数</span><span class="sxs-lookup"><span data-stu-id="c2640-102">CallFunctionShim Function</span></span>
-<span data-ttu-id="c2640-103">指定したライブラリ内の関数を、名前とパラメーターを指定して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="c2640-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
+# <a name="callfunctionshim-function"></a><span data-ttu-id="5e07b-102">CallFunctionShim 関数</span><span class="sxs-lookup"><span data-stu-id="5e07b-102">CallFunctionShim Function</span></span>
+<span data-ttu-id="5e07b-103">指定したライブラリ内の関数を、名前とパラメーターを指定して呼び出します。</span><span class="sxs-lookup"><span data-stu-id="5e07b-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
   
- <span data-ttu-id="c2640-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="c2640-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="5e07b-104">この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="5e07b-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2640-105">構文</span><span class="sxs-lookup"><span data-stu-id="c2640-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e07b-105">構文</span><span class="sxs-lookup"><span data-stu-id="5e07b-105">Syntax</span></span>  
   
 ```  
 HRESULT CallFunctionShim (  
@@ -41,34 +41,34 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2640-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c2640-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e07b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5e07b-106">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="c2640-107">[in]関数を含むライブラリの名前。</span><span class="sxs-lookup"><span data-stu-id="c2640-107">[in] The name of the library containing the function.</span></span>  
+ <span data-ttu-id="5e07b-107">[in]関数を含むライブラリの名前。</span><span class="sxs-lookup"><span data-stu-id="5e07b-107">[in] The name of the library containing the function.</span></span>  
   
  `szFunctionName`  
- <span data-ttu-id="c2640-108">[in]関数の名前。</span><span class="sxs-lookup"><span data-stu-id="c2640-108">[in] The name of the function.</span></span>  
+ <span data-ttu-id="5e07b-108">[in]関数の名前。</span><span class="sxs-lookup"><span data-stu-id="5e07b-108">[in] The name of the function.</span></span>  
   
  `lpvArgument1`  
- <span data-ttu-id="c2640-109">[in]関数に渡す最初の引数。</span><span class="sxs-lookup"><span data-stu-id="c2640-109">[in] The first argument to pass to the function.</span></span>  
+ <span data-ttu-id="5e07b-109">[in]関数に渡す最初の引数。</span><span class="sxs-lookup"><span data-stu-id="5e07b-109">[in] The first argument to pass to the function.</span></span>  
   
  `lpvArgument2`  
- <span data-ttu-id="c2640-110">[in]関数に渡す 2 番目の引数。</span><span class="sxs-lookup"><span data-stu-id="c2640-110">[in] The second argument to pass to the function.</span></span>  
+ <span data-ttu-id="5e07b-110">[in]関数に渡す 2 番目の引数。</span><span class="sxs-lookup"><span data-stu-id="5e07b-110">[in] The second argument to pass to the function.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="c2640-111">[in]関数を含むライブラリのバージョン。</span><span class="sxs-lookup"><span data-stu-id="c2640-111">[in] The version of the library that contains the function.</span></span>  
+ <span data-ttu-id="5e07b-111">[in]関数を含むライブラリのバージョン。</span><span class="sxs-lookup"><span data-stu-id="5e07b-111">[in] The version of the library that contains the function.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="c2640-112">[in]将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="c2640-112">[in] Reserved for future use.</span></span> <span data-ttu-id="c2640-113">このパラメーターに 0 を渡します。</span><span class="sxs-lookup"><span data-stu-id="c2640-113">Pass zero in this parameter.</span></span>  
+ <span data-ttu-id="5e07b-112">[in]将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="5e07b-112">[in] Reserved for future use.</span></span> <span data-ttu-id="5e07b-113">このパラメーターに 0 を渡します。</span><span class="sxs-lookup"><span data-stu-id="5e07b-113">Pass zero in this parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2640-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="c2640-114">Requirements</span></span>  
- <span data-ttu-id="c2640-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c2640-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e07b-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="5e07b-114">Requirements</span></span>  
+ <span data-ttu-id="5e07b-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5e07b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2640-116">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c2640-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5e07b-116">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5e07b-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c2640-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c2640-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="5e07b-117">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5e07b-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c2640-118">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="c2640-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="5e07b-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e07b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2640-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2640-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e07b-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e07b-119">See also</span></span>
 
-- [<span data-ttu-id="c2640-120">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="c2640-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="5e07b-120">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="5e07b-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

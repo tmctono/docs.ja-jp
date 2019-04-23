@@ -3,20 +3,20 @@ title: System.ServiceModel.PortSharing.TransportListenerSessionsReceived
 ms.date: 03/30/2017
 ms.assetid: e7a1aca3-7585-4e83-be9e-c2010424647e
 ms.openlocfilehash: cc35c0a14f21cab44f69a7708406e825566f5c76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177360"
 ---
-# <a name="systemservicemodelportsharingtransportlistenersessionsreceived"></a><span data-ttu-id="7db6e-102">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span><span class="sxs-lookup"><span data-stu-id="7db6e-102">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span></span>
-<span data-ttu-id="7db6e-103">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span><span class="sxs-lookup"><span data-stu-id="7db6e-103">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span></span>  
+# <a name="systemservicemodelportsharingtransportlistenersessionsreceived"></a><span data-ttu-id="c94d8-102">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span><span class="sxs-lookup"><span data-stu-id="c94d8-102">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span></span>
+<span data-ttu-id="c94d8-103">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span><span class="sxs-lookup"><span data-stu-id="c94d8-103">System.ServiceModel.PortSharing.TransportListenerSessionsReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7db6e-104">説明</span><span class="sxs-lookup"><span data-stu-id="7db6e-104">Description</span></span>  
- <span data-ttu-id="7db6e-105">TransportListener がセッションを受信しました。</span><span class="sxs-lookup"><span data-stu-id="7db6e-105">The TransportListener received a session.</span></span>  
+## <a name="description"></a><span data-ttu-id="c94d8-104">説明</span><span class="sxs-lookup"><span data-stu-id="c94d8-104">Description</span></span>  
+ <span data-ttu-id="c94d8-105">TransportListener がセッションを受信しました。</span><span class="sxs-lookup"><span data-stu-id="c94d8-105">The TransportListener received a session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7db6e-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="7db6e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c94d8-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="c94d8-106">See also</span></span>
 
-- [<span data-ttu-id="7db6e-107">トレース</span><span class="sxs-lookup"><span data-stu-id="7db6e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="7db6e-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="7db6e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="7db6e-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="7db6e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="c94d8-107">トレース</span><span class="sxs-lookup"><span data-stu-id="c94d8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c94d8-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="c94d8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c94d8-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="c94d8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

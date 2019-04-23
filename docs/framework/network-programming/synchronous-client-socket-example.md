@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219747"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="673e7-102">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="673e7-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="673e7-103">次のプログラム例では、サーバーに接続するクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="673e7-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="673e7-104">このクライアントは同期ソケットで構築されます。そのため、クライアント アプリケーションの実行は、サーバーが応答を返すまで一時停止となります。</span><span class="sxs-lookup"><span data-stu-id="673e7-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="673e7-105">このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。</span><span class="sxs-lookup"><span data-stu-id="673e7-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="c682d-102">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="c682d-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="c682d-103">次のプログラム例では、サーバーに接続するクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="c682d-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="c682d-104">このクライアントは同期ソケットで構築されます。そのため、クライアント アプリケーションの実行は、サーバーが応答を返すまで一時停止となります。</span><span class="sxs-lookup"><span data-stu-id="c682d-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="c682d-105">このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。</span><span class="sxs-lookup"><span data-stu-id="c682d-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -135,8 +135,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="673e7-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="673e7-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c682d-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="c682d-106">See also</span></span>
 
-- [<span data-ttu-id="673e7-107">同期サーバー ソケットの例</span><span class="sxs-lookup"><span data-stu-id="673e7-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [<span data-ttu-id="673e7-108">同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="673e7-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [<span data-ttu-id="673e7-109">ソケットのコード例</span><span class="sxs-lookup"><span data-stu-id="673e7-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="c682d-107">同期サーバー ソケットの例</span><span class="sxs-lookup"><span data-stu-id="c682d-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [<span data-ttu-id="c682d-108">同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="c682d-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [<span data-ttu-id="c682d-109">ソケットのコード例</span><span class="sxs-lookup"><span data-stu-id="c682d-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

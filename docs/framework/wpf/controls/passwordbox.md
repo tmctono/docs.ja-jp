@@ -8,17 +8,17 @@ helpviewer_keywords:
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
 ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218408"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="04aa4-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="04aa4-102">PasswordBox</span></span>
-<span data-ttu-id="04aa4-103"><xref:System.Windows.Controls.PasswordBox>コントロールを使用すると、機密情報や秘密情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="04aa4-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="d9e92-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="d9e92-102">PasswordBox</span></span>
+<span data-ttu-id="d9e92-103"><xref:System.Windows.Controls.PasswordBox>コントロールを使用すると、機密情報や秘密情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="d9e92-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04aa4-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="04aa4-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9e92-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9e92-104">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="04aa4-105">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="04aa4-105">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="d9e92-105">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="d9e92-105">Control Library</span></span>](control-library.md)

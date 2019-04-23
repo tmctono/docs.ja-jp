@@ -3,49 +3,49 @@ title: <windows> <clientCredentials>要素
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
 ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221021"
 ---
-# <a name="windows-of-clientcredentials-element"></a><span data-ttu-id="0acde-102">\<windows > の\<clientCredentials > 要素</span><span class="sxs-lookup"><span data-stu-id="0acde-102">\<windows> of \<clientCredentials> Element</span></span>
-<span data-ttu-id="0acde-103">クライアントを表すために使用される Windows 資格情報の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="0acde-103">Specifies the settings for a Windows credential to be used to represent the client.</span></span>  
+# <a name="windows-of-clientcredentials-element"></a><span data-ttu-id="f3e09-102">\<windows > の\<clientCredentials > 要素</span><span class="sxs-lookup"><span data-stu-id="f3e09-102">\<windows> of \<clientCredentials> Element</span></span>
+<span data-ttu-id="f3e09-103">クライアントを表すために使用される Windows 資格情報の設定を指定します。</span><span class="sxs-lookup"><span data-stu-id="f3e09-103">Specifies the settings for a Windows credential to be used to represent the client.</span></span>  
   
- <span data-ttu-id="0acde-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0acde-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="0acde-105">\<<behaviors></span><span class="sxs-lookup"><span data-stu-id="0acde-105">\<behaviors></span></span>  
-<span data-ttu-id="0acde-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="0acde-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="0acde-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="0acde-107">\<behavior></span></span>  
-<span data-ttu-id="0acde-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="0acde-108">\<clientCredentials></span></span>  
-<span data-ttu-id="0acde-109">\<windows></span><span class="sxs-lookup"><span data-stu-id="0acde-109">\<windows></span></span>  
+ <span data-ttu-id="f3e09-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="f3e09-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f3e09-105">\<<behaviors></span><span class="sxs-lookup"><span data-stu-id="f3e09-105">\<behaviors></span></span>  
+<span data-ttu-id="f3e09-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="f3e09-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="f3e09-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="f3e09-107">\<behavior></span></span>  
+<span data-ttu-id="f3e09-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="f3e09-108">\<clientCredentials></span></span>  
+<span data-ttu-id="f3e09-109">\<windows></span><span class="sxs-lookup"><span data-stu-id="f3e09-109">\<windows></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0acde-110">構文</span><span class="sxs-lookup"><span data-stu-id="0acde-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3e09-110">構文</span><span class="sxs-lookup"><span data-stu-id="f3e09-110">Syntax</span></span>  
   
 ```xml  
 <windows allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"
          allowNtlm="Boolean" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0acde-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="0acde-111">Attributes and Elements</span></span>  
- <span data-ttu-id="0acde-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="0acde-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f3e09-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f3e09-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="f3e09-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f3e09-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0acde-113">属性</span><span class="sxs-lookup"><span data-stu-id="0acde-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f3e09-113">属性</span><span class="sxs-lookup"><span data-stu-id="f3e09-113">Attributes</span></span>  
   
-|<span data-ttu-id="0acde-114">属性</span><span class="sxs-lookup"><span data-stu-id="0acde-114">Attribute</span></span>|<span data-ttu-id="0acde-115">説明</span><span class="sxs-lookup"><span data-stu-id="0acde-115">Description</span></span>|  
+|<span data-ttu-id="f3e09-114">属性</span><span class="sxs-lookup"><span data-stu-id="f3e09-114">Attribute</span></span>|<span data-ttu-id="f3e09-115">説明</span><span class="sxs-lookup"><span data-stu-id="f3e09-115">Description</span></span>|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|<span data-ttu-id="0acde-116">クライアントがサーバーと通信する偽装設定を設定します。</span><span class="sxs-lookup"><span data-stu-id="0acde-116">Sets the impersonation preference that the client communicates to the server.</span></span> <span data-ttu-id="0acde-117">クライアントが選択する偽装モードは、サーバーでは適用されません。</span><span class="sxs-lookup"><span data-stu-id="0acde-117">The impersonation mode that the client selects is not enforced on the server.</span></span> <span data-ttu-id="0acde-118">以下の値が有効です。</span><span class="sxs-lookup"><span data-stu-id="0acde-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="0acde-119">識別します。サーバーは、id およびクライアントの権限を取得できますが、クライアントを偽装できません。</span><span class="sxs-lookup"><span data-stu-id="0acde-119">-   Identification: The server can get the identity and privileges of the client, but cannot impersonate the client.</span></span><br /><span data-ttu-id="0acde-120">-Impersonation:サーバーは、ローカル システム上のクライアントのセキュリティ コンテキストを偽装できます。</span><span class="sxs-lookup"><span data-stu-id="0acde-120">-   Impersonation: The server can impersonate the client's security context on the local system.</span></span><br /><span data-ttu-id="0acde-121">委任します。サーバーは、リモート システム上のクライアントのセキュリティ コンテキストを偽装できます。</span><span class="sxs-lookup"><span data-stu-id="0acde-121">-   Delegation: The server can impersonate the client's security context on remote systems.</span></span><br /><span data-ttu-id="0acde-122">匿名。サーバーは、権限を借用またはクライアントを識別できません。</span><span class="sxs-lookup"><span data-stu-id="0acde-122">-   Anonymous: The server cannot impersonate or identify the client.</span></span><br /><span data-ttu-id="0acde-123">-None。偽装レベルが割り当てられていません。</span><span class="sxs-lookup"><span data-stu-id="0acde-123">-   None: An impersonation level is not assigned.</span></span><br /><br /> <span data-ttu-id="0acde-124">既定値は Identification です。</span><span class="sxs-lookup"><span data-stu-id="0acde-124">The default is Identification.</span></span> <span data-ttu-id="0acde-125">この属性は <xref:System.Security.Principal.TokenImpersonationLevel> 型です。</span><span class="sxs-lookup"><span data-stu-id="0acde-125">This attribute is of type <xref:System.Security.Principal.TokenImpersonationLevel>.</span></span>|  
-|`allowNtlm`|<span data-ttu-id="0acde-126">このプロパティを `true` に設定すると、Kerberos 認証を利用できない場合、NTLM 認証にダウングレードできます。</span><span class="sxs-lookup"><span data-stu-id="0acde-126">Setting this property to `true` allows authentication to downgrade to NTLM if Kerberos is not available.</span></span><br /><br /> <span data-ttu-id="0acde-127">このプロパティを設定`false`させるベスト エフォートで NTLM が使用されている場合に例外をスローするように、Windows Communication Foundation (WCF) が発生します。</span><span class="sxs-lookup"><span data-stu-id="0acde-127">Setting this property to `false` causes Windows Communication Foundation (WCF) to make a best-effort to throw an exception if NTLM is used.</span></span> <span data-ttu-id="0acde-128">ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="0acde-128">Note that setting this property to `false` may not prevent NTLM credentials from being sent over the wire.</span></span>|  
+|`allowedImpersonationLevel`|<span data-ttu-id="f3e09-116">クライアントがサーバーと通信する偽装設定を設定します。</span><span class="sxs-lookup"><span data-stu-id="f3e09-116">Sets the impersonation preference that the client communicates to the server.</span></span> <span data-ttu-id="f3e09-117">クライアントが選択する偽装モードは、サーバーでは適用されません。</span><span class="sxs-lookup"><span data-stu-id="f3e09-117">The impersonation mode that the client selects is not enforced on the server.</span></span> <span data-ttu-id="f3e09-118">以下の値が有効です。</span><span class="sxs-lookup"><span data-stu-id="f3e09-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="f3e09-119">識別します。サーバーは、id およびクライアントの権限を取得できますが、クライアントを偽装できません。</span><span class="sxs-lookup"><span data-stu-id="f3e09-119">-   Identification: The server can get the identity and privileges of the client, but cannot impersonate the client.</span></span><br /><span data-ttu-id="f3e09-120">-Impersonation:サーバーは、ローカル システム上のクライアントのセキュリティ コンテキストを偽装できます。</span><span class="sxs-lookup"><span data-stu-id="f3e09-120">-   Impersonation: The server can impersonate the client's security context on the local system.</span></span><br /><span data-ttu-id="f3e09-121">委任します。サーバーは、リモート システム上のクライアントのセキュリティ コンテキストを偽装できます。</span><span class="sxs-lookup"><span data-stu-id="f3e09-121">-   Delegation: The server can impersonate the client's security context on remote systems.</span></span><br /><span data-ttu-id="f3e09-122">匿名。サーバーは、権限を借用またはクライアントを識別できません。</span><span class="sxs-lookup"><span data-stu-id="f3e09-122">-   Anonymous: The server cannot impersonate or identify the client.</span></span><br /><span data-ttu-id="f3e09-123">-None。偽装レベルが割り当てられていません。</span><span class="sxs-lookup"><span data-stu-id="f3e09-123">-   None: An impersonation level is not assigned.</span></span><br /><br /> <span data-ttu-id="f3e09-124">既定値は Identification です。</span><span class="sxs-lookup"><span data-stu-id="f3e09-124">The default is Identification.</span></span> <span data-ttu-id="f3e09-125">この属性は <xref:System.Security.Principal.TokenImpersonationLevel> 型です。</span><span class="sxs-lookup"><span data-stu-id="f3e09-125">This attribute is of type <xref:System.Security.Principal.TokenImpersonationLevel>.</span></span>|  
+|`allowNtlm`|<span data-ttu-id="f3e09-126">このプロパティを `true` に設定すると、Kerberos 認証を利用できない場合、NTLM 認証にダウングレードできます。</span><span class="sxs-lookup"><span data-stu-id="f3e09-126">Setting this property to `true` allows authentication to downgrade to NTLM if Kerberos is not available.</span></span><br /><br /> <span data-ttu-id="f3e09-127">このプロパティを設定`false`させるベスト エフォートで NTLM が使用されている場合に例外をスローするように、Windows Communication Foundation (WCF) が発生します。</span><span class="sxs-lookup"><span data-stu-id="f3e09-127">Setting this property to `false` causes Windows Communication Foundation (WCF) to make a best-effort to throw an exception if NTLM is used.</span></span> <span data-ttu-id="f3e09-128">ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="f3e09-128">Note that setting this property to `false` may not prevent NTLM credentials from being sent over the wire.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0acde-129">子要素</span><span class="sxs-lookup"><span data-stu-id="0acde-129">Child Elements</span></span>  
- <span data-ttu-id="0acde-130">なし。</span><span class="sxs-lookup"><span data-stu-id="0acde-130">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f3e09-129">子要素</span><span class="sxs-lookup"><span data-stu-id="f3e09-129">Child Elements</span></span>  
+ <span data-ttu-id="f3e09-130">なし。</span><span class="sxs-lookup"><span data-stu-id="f3e09-130">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0acde-131">親要素</span><span class="sxs-lookup"><span data-stu-id="0acde-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f3e09-131">親要素</span><span class="sxs-lookup"><span data-stu-id="f3e09-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="0acde-132">要素</span><span class="sxs-lookup"><span data-stu-id="0acde-132">Element</span></span>|<span data-ttu-id="0acde-133">説明</span><span class="sxs-lookup"><span data-stu-id="0acde-133">Description</span></span>|  
+|<span data-ttu-id="f3e09-132">要素</span><span class="sxs-lookup"><span data-stu-id="f3e09-132">Element</span></span>|<span data-ttu-id="f3e09-133">説明</span><span class="sxs-lookup"><span data-stu-id="f3e09-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0acde-134">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="0acde-134">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="0acde-135">サービスに対するクライアントの認証に使用される資格情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="0acde-135">Specifies the credentials used to authenticate the client to the service.</span></span>|  
+|[<span data-ttu-id="f3e09-134">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="f3e09-134">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="f3e09-135">サービスに対するクライアントの認証に使用される資格情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="f3e09-135">Specifies the credentials used to authenticate the client to the service.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="0acde-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="0acde-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3e09-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="f3e09-136">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
@@ -54,6 +54,6 @@ ms.locfileid: "59221021"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [<span data-ttu-id="0acde-137">クライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="0acde-137">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="0acde-138">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="0acde-138">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="0acde-139">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="0acde-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="f3e09-137">クライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="f3e09-137">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="f3e09-138">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="f3e09-138">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="f3e09-139">サービスおよびクライアントのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="f3e09-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

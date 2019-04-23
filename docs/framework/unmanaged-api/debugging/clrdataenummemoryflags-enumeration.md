@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80ea3afef4aee51760e3a2ce6a2b895bca4a6ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224068"
 ---
-# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="228e6-102">CLRDataEnumMemoryFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="228e6-102">CLRDataEnumMemoryFlags Enumeration</span></span>
-<span data-ttu-id="228e6-103">メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="228e6-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="94c67-102">CLRDataEnumMemoryFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="94c67-102">CLRDataEnumMemoryFlags Enumeration</span></span>
+<span data-ttu-id="94c67-103">メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="94c67-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="228e6-104">構文</span><span class="sxs-lookup"><span data-stu-id="228e6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94c67-104">構文</span><span class="sxs-lookup"><span data-stu-id="94c67-104">Syntax</span></span>  
   
 ```  
 typedef enum CLRDataEnumMemoryFlags {  
@@ -36,22 +36,22 @@ typedef enum CLRDataEnumMemoryFlags {
 } CLRDataEnumMemoryFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="228e6-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="228e6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="94c67-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="94c67-105">Members</span></span>  
   
-|<span data-ttu-id="228e6-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="228e6-106">Member</span></span>|<span data-ttu-id="228e6-107">説明</span><span class="sxs-lookup"><span data-stu-id="228e6-107">Description</span></span>|  
+|<span data-ttu-id="94c67-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="94c67-106">Member</span></span>|<span data-ttu-id="94c67-107">説明</span><span class="sxs-lookup"><span data-stu-id="94c67-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="228e6-108">ミニダンプの場合、スパースのメモリ ダンプは、します。</span><span class="sxs-lookup"><span data-stu-id="228e6-108">A minidump, that is, a sparse memory dump.</span></span>|  
-|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="228e6-109">完全なヒープ ダンプします。</span><span class="sxs-lookup"><span data-stu-id="228e6-109">A full heap dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="94c67-108">ミニダンプの場合、スパースのメモリ ダンプは、します。</span><span class="sxs-lookup"><span data-stu-id="94c67-108">A minidump, that is, a sparse memory dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="94c67-109">完全なヒープ ダンプします。</span><span class="sxs-lookup"><span data-stu-id="94c67-109">A full heap dump.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="228e6-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="228e6-110">Requirements</span></span>  
- <span data-ttu-id="228e6-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="228e6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94c67-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="94c67-110">Requirements</span></span>  
+ <span data-ttu-id="94c67-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="94c67-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="228e6-112">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="228e6-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="94c67-112">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="94c67-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="228e6-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="228e6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94c67-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94c67-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="228e6-114">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="228e6-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="94c67-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94c67-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="228e6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="228e6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94c67-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="94c67-115">See also</span></span>
 
-- [<span data-ttu-id="228e6-116">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="228e6-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="94c67-116">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="94c67-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
