@@ -12,45 +12,45 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297526"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="ae705-102">方法: CodeDOM を使用して XML ドキュメント ファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="ae705-102">How to: Create an XML Documentation File Using CodeDOM</span></span>
-<span data-ttu-id="ae705-103">CodeDOM を利用し、XML ドキュメントを生成するコードを作成できます。</span><span class="sxs-lookup"><span data-stu-id="ae705-103">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="ae705-104">XML ドキュメント コメントを含む CodeDOM グラフを作成する、コードを生成する、XML 文書出力を作成するコンパイラ オプションでその生成されたコードをコンパイルするというプロセスが行われます。</span><span class="sxs-lookup"><span data-stu-id="ae705-104">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a><span data-ttu-id="606f0-102">方法: CodeDOM を使用して XML ドキュメント ファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="606f0-102">How to: Create an XML Documentation File Using CodeDOM</span></span>
+<span data-ttu-id="606f0-103">CodeDOM を利用し、XML ドキュメントを生成するコードを作成できます。</span><span class="sxs-lookup"><span data-stu-id="606f0-103">CodeDOM can be used to create code that generates XML documentation.</span></span> <span data-ttu-id="606f0-104">XML ドキュメント コメントを含む CodeDOM グラフを作成する、コードを生成する、XML 文書出力を作成するコンパイラ オプションでその生成されたコードをコンパイルするというプロセスが行われます。</span><span class="sxs-lookup"><span data-stu-id="606f0-104">The process involves creating the CodeDOM graph that contains the XML documentation comments, generating the code, and compiling the generated code with the compiler option that creates the XML documentation output.</span></span>  
   
-### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a><span data-ttu-id="ae705-105">XML ドキュメント コメントを含む CodeDOM グラフを作成するには</span><span class="sxs-lookup"><span data-stu-id="ae705-105">To create a CodeDOM graph that contains XML documentation comments</span></span>  
+### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a><span data-ttu-id="606f0-105">XML ドキュメント コメントを含む CodeDOM グラフを作成するには</span><span class="sxs-lookup"><span data-stu-id="606f0-105">To create a CodeDOM graph that contains XML documentation comments</span></span>  
   
-1. <span data-ttu-id="ae705-106">サンプル アプリケーションの CodeDOM グラフを含む <xref:System.CodeDom.CodeCompileUnit> を作成します。</span><span class="sxs-lookup"><span data-stu-id="ae705-106">Create a <xref:System.CodeDom.CodeCompileUnit> containing the CodeDOM graph for the sample application.</span></span>  
+1. <span data-ttu-id="606f0-106">サンプル アプリケーションの CodeDOM グラフを含む <xref:System.CodeDom.CodeCompileUnit> を作成します。</span><span class="sxs-lookup"><span data-stu-id="606f0-106">Create a <xref:System.CodeDom.CodeCompileUnit> containing the CodeDOM graph for the sample application.</span></span>  
   
-2. <span data-ttu-id="ae705-107"><xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> コンストラクターを使用します。このとき、`docComment` パラメーターを `true` に設定し、XML ドキュメント コメントの要素とテキストを作成します。</span><span class="sxs-lookup"><span data-stu-id="ae705-107">Use the <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> constructor with the `docComment` parameter set to `true` to create the XML documentation comment elements and text.</span></span>  
+2. <span data-ttu-id="606f0-107"><xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> コンストラクターを使用します。このとき、`docComment` パラメーターを `true` に設定し、XML ドキュメント コメントの要素とテキストを作成します。</span><span class="sxs-lookup"><span data-stu-id="606f0-107">Use the <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> constructor with the `docComment` parameter set to `true` to create the XML documentation comment elements and text.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### <a name="to-generate-the-code-from-the-codecompileunit"></a><span data-ttu-id="ae705-108">CodeCompileUnit からコードを生成するには</span><span class="sxs-lookup"><span data-stu-id="ae705-108">To generate the code from the CodeCompileUnit</span></span>  
+### <a name="to-generate-the-code-from-the-codecompileunit"></a><span data-ttu-id="606f0-108">CodeCompileUnit からコードを生成するには</span><span class="sxs-lookup"><span data-stu-id="606f0-108">To generate the code from the CodeCompileUnit</span></span>  
   
-1. <span data-ttu-id="ae705-109"><xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを使用し、コードを生成し、コンパイルするソース ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="ae705-109">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method to generate the code and create a source file to be compiled.</span></span>  
+1. <span data-ttu-id="606f0-109"><xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを使用し、コードを生成し、コンパイルするソース ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="606f0-109">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> method to generate the code and create a source file to be compiled.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-### <a name="to-compile-the-code-and-generate-the-documentation-file"></a><span data-ttu-id="ae705-110">コードをコンパイルし、ドキュメント ファイルを生成するには</span><span class="sxs-lookup"><span data-stu-id="ae705-110">To compile the code and generate the documentation file</span></span>  
+### <a name="to-compile-the-code-and-generate-the-documentation-file"></a><span data-ttu-id="606f0-110">コードをコンパイルし、ドキュメント ファイルを生成するには</span><span class="sxs-lookup"><span data-stu-id="606f0-110">To compile the code and generate the documentation file</span></span>  
   
-1. <span data-ttu-id="ae705-111"><xref:System.CodeDom.Compiler.CompilerParameters> オブジェクトの <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> プロパティに **/doc** コンパイラ オプションを追加し、オブジェクトを <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> メソッドに渡し、コードのコンパイル時に XML ドキュメント ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="ae705-111">Add the **/doc** compiler option to the <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> property of a <xref:System.CodeDom.Compiler.CompilerParameters> object and pass the object to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> method to create the XML documentation file when the code is compiled.</span></span>  
+1. <span data-ttu-id="606f0-111"><xref:System.CodeDom.Compiler.CompilerParameters> オブジェクトの <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> プロパティに **/doc** コンパイラ オプションを追加し、オブジェクトを <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> メソッドに渡し、コードのコンパイル時に XML ドキュメント ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="606f0-111">Add the **/doc** compiler option to the <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> property of a <xref:System.CodeDom.Compiler.CompilerParameters> object and pass the object to the <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> method to create the XML documentation file when the code is compiled.</span></span>  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-## <a name="example"></a><span data-ttu-id="ae705-112">例</span><span class="sxs-lookup"><span data-stu-id="ae705-112">Example</span></span>  
- <span data-ttu-id="ae705-113">次のコード例では、ドキュメント コメントのある CodeDOM グラフを作成し、グラフからコード ファイルを生成し、ファイルをコンパイルし、関連 XML ドキュメント ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="ae705-113">The following code example creates a CodeDOM graph with documentation comments, generates a code file from the graph, and compiles the file and creates an associated XML documentation file.</span></span>  
+## <a name="example"></a><span data-ttu-id="606f0-112">例</span><span class="sxs-lookup"><span data-stu-id="606f0-112">Example</span></span>  
+ <span data-ttu-id="606f0-113">次のコード例では、ドキュメント コメントのある CodeDOM グラフを作成し、グラフからコード ファイルを生成し、ファイルをコンパイルし、関連 XML ドキュメント ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="606f0-113">The following code example creates a CodeDOM graph with documentation comments, generates a code file from the graph, and compiles the file and creates an associated XML documentation file.</span></span>  
   
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- <span data-ttu-id="ae705-114">このコード例では、HelloWorldDoc.xml ファイルで次の XML ドキュメントが作成されます。</span><span class="sxs-lookup"><span data-stu-id="ae705-114">The code example creates the following XML documentation in the HelloWorldDoc.xml file.</span></span>  
+ <span data-ttu-id="606f0-114">このコード例では、HelloWorldDoc.xml ファイルで次の XML ドキュメントが作成されます。</span><span class="sxs-lookup"><span data-stu-id="606f0-114">The code example creates the following XML documentation in the HelloWorldDoc.xml file.</span></span>  
   
 ```xml  
 <?xml version="1.0" ?>   
@@ -75,12 +75,12 @@ ms.locfileid: "59297526"
 </doc>  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ae705-115">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="ae705-115">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="606f0-115">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="606f0-115">Compiling the Code</span></span>  
   
--   <span data-ttu-id="ae705-116">このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ae705-116">This code example requires the `FullTrust` permission set to execute successfully.</span></span>  
+-   <span data-ttu-id="606f0-116">このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="606f0-116">This code example requires the `FullTrust` permission set to execute successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae705-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae705-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="606f0-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="606f0-117">See also</span></span>
 
-- [<span data-ttu-id="ae705-118">XML の使用によるコードのドキュメントの作成</span><span class="sxs-lookup"><span data-stu-id="ae705-118">Documenting Your Code with XML</span></span>](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [<span data-ttu-id="ae705-119">XML ドキュメントのコメント</span><span class="sxs-lookup"><span data-stu-id="ae705-119">XML Documentation Comments</span></span>](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-- [<span data-ttu-id="ae705-120">XML に関するドキュメント</span><span class="sxs-lookup"><span data-stu-id="ae705-120">XML Documentation</span></span>](/cpp/ide/xml-documentation-visual-cpp)
+- [<span data-ttu-id="606f0-118">XML の使用によるコードのドキュメントの作成</span><span class="sxs-lookup"><span data-stu-id="606f0-118">Documenting Your Code with XML</span></span>](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [<span data-ttu-id="606f0-119">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="606f0-119">XML Documentation Comments</span></span>](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="606f0-120">XML に関するドキュメント</span><span class="sxs-lookup"><span data-stu-id="606f0-120">XML Documentation</span></span>](/cpp/ide/xml-documentation-visual-cpp)

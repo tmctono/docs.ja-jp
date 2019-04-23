@@ -14,38 +14,38 @@ helpviewer_keywords:
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 65e332d229da8fe51ad9c3e9850603471b1dfb12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307237"
 ---
-# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="988f1-102">方法 : シリアル化されたデータをチャンクする</span><span class="sxs-lookup"><span data-stu-id="988f1-102">How to: chunk serialized data</span></span>
+# <a name="how-to-chunk-serialized-data"></a><span data-ttu-id="90bf2-102">方法 : シリアル化されたデータをチャンクする</span><span class="sxs-lookup"><span data-stu-id="90bf2-102">How to: chunk serialized data</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-<span data-ttu-id="988f1-103">Web サービス メッセージ内で大きなデータ セットを送信すると、次の 2 つの問題が発生します。</span><span class="sxs-lookup"><span data-stu-id="988f1-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
+<span data-ttu-id="90bf2-103">Web サービス メッセージ内で大きなデータ セットを送信すると、次の 2 つの問題が発生します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-103">Two issues that occur when sending large data sets in Web service messages are:</span></span>  
   
-1. <span data-ttu-id="988f1-104">シリアル化エンジンのバッファリングによるワーキング セット (メモリ) の巨大化</span><span class="sxs-lookup"><span data-stu-id="988f1-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
+1. <span data-ttu-id="90bf2-104">シリアル化エンジンのバッファリングによるワーキング セット (メモリ) の巨大化</span><span class="sxs-lookup"><span data-stu-id="90bf2-104">A large working set (memory) due to buffering by the serialization engine.</span></span>  
   
-2. <span data-ttu-id="988f1-105">Base64 エンコーディングの実行後はサイズが 33% 増大することによる、帯域幅の過剰消費</span><span class="sxs-lookup"><span data-stu-id="988f1-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
+2. <span data-ttu-id="90bf2-105">Base64 エンコーディングの実行後はサイズが 33% 増大することによる、帯域幅の過剰消費</span><span class="sxs-lookup"><span data-stu-id="90bf2-105">Inordinate bandwidth consumption due to 33 percent inflation after Base64 encoding.</span></span>  
   
- <span data-ttu-id="988f1-106">これらの問題を解決するには、シリアル化と逆シリアル化を制御する <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="988f1-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="988f1-107">特に、<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> メソッドと <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> メソッドを実装することで、データをチャンクします。</span><span class="sxs-lookup"><span data-stu-id="988f1-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
+ <span data-ttu-id="90bf2-106">これらの問題を解決するには、シリアル化と逆シリアル化を制御する <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-106">To solve these problems, implement the <xref:System.Xml.Serialization.IXmlSerializable> interface to control the serialization and deserialization.</span></span> <span data-ttu-id="90bf2-107">特に、<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> メソッドと <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> メソッドを実装することで、データをチャンクします。</span><span class="sxs-lookup"><span data-stu-id="90bf2-107">Specifically, implement the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> and <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> methods to chunk the data.</span></span>  
   
-### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="988f1-108">サーバー側チャンク処理を実装するには</span><span class="sxs-lookup"><span data-stu-id="988f1-108">To implement server-side chunking</span></span>  
+### <a name="to-implement-server-side-chunking"></a><span data-ttu-id="90bf2-108">サーバー側チャンク処理を実装するには</span><span class="sxs-lookup"><span data-stu-id="90bf2-108">To implement server-side chunking</span></span>  
   
-1. <span data-ttu-id="988f1-109">サーバー コンピューター上で、Web メソッドが ASP.NET バッファリングを無効にし、<xref:System.Xml.Serialization.IXmlSerializable> を実装する型を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="988f1-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
+1. <span data-ttu-id="90bf2-109">サーバー コンピューター上で、Web メソッドが ASP.NET バッファリングを無効にし、<xref:System.Xml.Serialization.IXmlSerializable> を実装する型を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="90bf2-109">On the server machine, the Web method must turn off ASP.NET buffering and return a type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span>  
   
-2. <span data-ttu-id="988f1-110"><xref:System.Xml.Serialization.IXmlSerializable> を実装する型は、<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> メソッド内でデータをチャンクします。</span><span class="sxs-lookup"><span data-stu-id="988f1-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+2. <span data-ttu-id="90bf2-110"><xref:System.Xml.Serialization.IXmlSerializable> を実装する型は、<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> メソッド内でデータをチャンクします。</span><span class="sxs-lookup"><span data-stu-id="90bf2-110">The type that implements <xref:System.Xml.Serialization.IXmlSerializable> chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
-### <a name="to-implement-client-side-processing"></a><span data-ttu-id="988f1-111">クライアント側の処理を実装するには</span><span class="sxs-lookup"><span data-stu-id="988f1-111">To implement client-side processing</span></span>  
+### <a name="to-implement-client-side-processing"></a><span data-ttu-id="90bf2-111">クライアント側の処理を実装するには</span><span class="sxs-lookup"><span data-stu-id="90bf2-111">To implement client-side processing</span></span>  
   
-1. <span data-ttu-id="988f1-112">クライアント プロキシ上で <xref:System.Xml.Serialization.IXmlSerializable> を実装する型を返すように Web メソッドを変更します。</span><span class="sxs-lookup"><span data-stu-id="988f1-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="988f1-113"><xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> を使用すると、この処理を自動化できますが、この方法はここでは説明しません。</span><span class="sxs-lookup"><span data-stu-id="988f1-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
+1. <span data-ttu-id="90bf2-112">クライアント プロキシ上で <xref:System.Xml.Serialization.IXmlSerializable> を実装する型を返すように Web メソッドを変更します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-112">Alter the Web method on the client proxy to return the type that implements <xref:System.Xml.Serialization.IXmlSerializable>.</span></span> <span data-ttu-id="90bf2-113"><xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> を使用すると、この処理を自動化できますが、この方法はここでは説明しません。</span><span class="sxs-lookup"><span data-stu-id="90bf2-113">You can use a <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> to do this automatically, but this isn't shown here.</span></span>  
   
-2. <span data-ttu-id="988f1-114">チャンクされたデータ ストリームを読み込み、バイトをディスクに書き込むための <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="988f1-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="988f1-115">この実装により、進行状況イベントも発生します。これは、プログレス バーなどのグラフィック コントロールに使用できます。</span><span class="sxs-lookup"><span data-stu-id="988f1-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
+2. <span data-ttu-id="90bf2-114">チャンクされたデータ ストリームを読み込み、バイトをディスクに書き込むための <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-114">Implement the <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> method to read the chunked data stream and write the bytes to disk.</span></span> <span data-ttu-id="90bf2-115">この実装により、進行状況イベントも発生します。これは、プログレス バーなどのグラフィック コントロールに使用できます。</span><span class="sxs-lookup"><span data-stu-id="90bf2-115">This implementation also raises progress events that can be used by a graphic control, such as a progress bar.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="988f1-116">例</span><span class="sxs-lookup"><span data-stu-id="988f1-116">Example</span></span>  
-<span data-ttu-id="988f1-117">次のコード例では、クライアント上で ASP.NET バッファリングを無効にする Web メソッドを示します。</span><span class="sxs-lookup"><span data-stu-id="988f1-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="988f1-118">また、<xref:System.Xml.Serialization.IXmlSerializable> メソッドにおいてデータをチャンクする <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> インターフェイスをクライアント側で実装する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="988f1-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="90bf2-116">例</span><span class="sxs-lookup"><span data-stu-id="90bf2-116">Example</span></span>  
+<span data-ttu-id="90bf2-117">次のコード例では、クライアント上で ASP.NET バッファリングを無効にする Web メソッドを示します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-117">The following code example shows the Web method on the client that turns off ASP.NET buffering.</span></span> <span data-ttu-id="90bf2-118">また、<xref:System.Xml.Serialization.IXmlSerializable> メソッドにおいてデータをチャンクする <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> インターフェイスをクライアント側で実装する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="90bf2-118">It also shows the client-side implementation of the <xref:System.Xml.Serialization.IXmlSerializable> interface that chunks the data in the <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> method.</span></span>  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]
 [!code-vb[HowToChunkSerializedData#1](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#1)]  
@@ -54,10 +54,10 @@ ms.locfileid: "59307237"
 [!code-csharp[HowToChunkSerializedData#3](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#3)]
 [!code-vb[HowToChunkSerializedData#3](../../../samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#3)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="988f1-119">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="988f1-119">Compiling the code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="90bf2-119">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="90bf2-119">Compiling the code</span></span>  
   
--   <span data-ttu-id="988f1-120">このコードでは、<xref:System>、<xref:System.Runtime.Serialization>、<xref:System.Web.Services>、<xref:System.Web.Services.Protocols>、<xref:System.Xml>、<xref:System.Xml.Serialization>、および <xref:System.Xml.Schema> の各名前空間を使用しています。</span><span class="sxs-lookup"><span data-stu-id="988f1-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
+-   <span data-ttu-id="90bf2-120">このコードでは、<xref:System>、<xref:System.Runtime.Serialization>、<xref:System.Web.Services>、<xref:System.Web.Services.Protocols>、<xref:System.Xml>、<xref:System.Xml.Serialization>、および <xref:System.Xml.Schema> の各名前空間を使用しています。</span><span class="sxs-lookup"><span data-stu-id="90bf2-120">The code uses the following namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, and <xref:System.Xml.Schema>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="988f1-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="988f1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90bf2-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="90bf2-121">See also</span></span>
 
-- [<span data-ttu-id="988f1-122">カスタムのシリアル化</span><span class="sxs-lookup"><span data-stu-id="988f1-122">Custom Serialization</span></span>](custom-serialization.md)
+- [<span data-ttu-id="90bf2-122">カスタムのシリアル化</span><span class="sxs-lookup"><span data-stu-id="90bf2-122">Custom Serialization</span></span>](custom-serialization.md)

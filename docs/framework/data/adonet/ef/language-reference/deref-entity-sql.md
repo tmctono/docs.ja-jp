@@ -3,44 +3,44 @@ title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
 ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305183"
 ---
-# <a name="deref-entity-sql"></a><span data-ttu-id="32ab5-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="32ab5-102">DEREF (Entity SQL)</span></span>
-<span data-ttu-id="32ab5-103">参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-103">Dereferences a reference value and produces the result of that dereference.</span></span>  
+# <a name="deref-entity-sql"></a><span data-ttu-id="33f7a-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="33f7a-102">DEREF (Entity SQL)</span></span>
+<span data-ttu-id="33f7a-103">参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-103">Dereferences a reference value and produces the result of that dereference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32ab5-104">構文</span><span class="sxs-lookup"><span data-stu-id="32ab5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33f7a-104">構文</span><span class="sxs-lookup"><span data-stu-id="33f7a-104">Syntax</span></span>  
   
 ```  
 SELECT DEREF ( o.expression ) from Table as o;  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="32ab5-105">引数</span><span class="sxs-lookup"><span data-stu-id="32ab5-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="33f7a-105">引数</span><span class="sxs-lookup"><span data-stu-id="33f7a-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="32ab5-106">コレクションを返す任意の有効なクエリ式。</span><span class="sxs-lookup"><span data-stu-id="32ab5-106">Any valid query expression that returns a collection.</span></span>  
+ <span data-ttu-id="33f7a-106">コレクションを返す任意の有効なクエリ式。</span><span class="sxs-lookup"><span data-stu-id="33f7a-106">Any valid query expression that returns a collection.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32ab5-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="32ab5-107">Return Value</span></span>  
- <span data-ttu-id="32ab5-108">参照されるエンティティの値。</span><span class="sxs-lookup"><span data-stu-id="32ab5-108">The value of the entity that is referenced.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33f7a-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="33f7a-107">Return Value</span></span>  
+ <span data-ttu-id="33f7a-108">参照されるエンティティの値。</span><span class="sxs-lookup"><span data-stu-id="33f7a-108">The value of the entity that is referenced.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="32ab5-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="32ab5-109">Remarks</span></span>  
- <span data-ttu-id="32ab5-110">DEREF 演算子は参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-110">The DEREF operator dereferences a reference value and produces the result of that dereference.</span></span> <span data-ttu-id="32ab5-111">たとえば場合、 `r` ref 型の参照は、\<T >、`Deref(r)`型の式は、`T`によって参照されるエンティティを生成する`r`します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-111">For example, if `r` is a reference of type ref\<T>, `Deref(r)` is an expression of type `T` that yields the entity referenced by `r`.</span></span> <span data-ttu-id="32ab5-112">参照値が null または未解決 (つまり、参照先が存在しない) の場合、DEREF 演算子の結果は null になります。</span><span class="sxs-lookup"><span data-stu-id="32ab5-112">If the reference value is null, or is dangling (that is, the target of the reference does not exist), the result of the DEREF operator is null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33f7a-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="33f7a-109">Remarks</span></span>  
+ <span data-ttu-id="33f7a-110">DEREF 演算子は参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-110">The DEREF operator dereferences a reference value and produces the result of that dereference.</span></span> <span data-ttu-id="33f7a-111">たとえば場合、 `r` ref 型の参照は、\<T >、`Deref(r)`型の式は、`T`によって参照されるエンティティを生成する`r`します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-111">For example, if `r` is a reference of type ref\<T>, `Deref(r)` is an expression of type `T` that yields the entity referenced by `r`.</span></span> <span data-ttu-id="33f7a-112">参照値が null または未解決 (つまり、参照先が存在しない) の場合、DEREF 演算子の結果は null になります。</span><span class="sxs-lookup"><span data-stu-id="33f7a-112">If the reference value is null, or is dangling (that is, the target of the reference does not exist), the result of the DEREF operator is null.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32ab5-113">例</span><span class="sxs-lookup"><span data-stu-id="32ab5-113">Example</span></span>  
- <span data-ttu-id="32ab5-114">次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、DEREF 演算子を使用して参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference.</span></span> <span data-ttu-id="32ab5-115">このクエリは、AdventureWorks Sales Model に基づいています。</span><span class="sxs-lookup"><span data-stu-id="32ab5-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="32ab5-116">このクエリをコンパイルして実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-116">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="33f7a-113">例</span><span class="sxs-lookup"><span data-stu-id="33f7a-113">Example</span></span>  
+ <span data-ttu-id="33f7a-114">次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、DEREF 演算子を使用して参照値を逆参照し、その逆参照の結果を生成します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the DEREF operator to dereference a reference value and produce the result of that dereference.</span></span> <span data-ttu-id="33f7a-115">このクエリは、AdventureWorks Sales Model に基づいています。</span><span class="sxs-lookup"><span data-stu-id="33f7a-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="33f7a-116">このクエリをコンパイルして実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-116">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="32ab5-117">」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-117">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="33f7a-117">」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-117">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2. <span data-ttu-id="32ab5-118">次のクエリを引数として ExecutePrimitiveTypeQuery メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="32ab5-118">Pass the following query as an argument to the ExecutePrimitiveTypeQuery method:</span></span>  
+2. <span data-ttu-id="33f7a-118">次のクエリを引数として ExecutePrimitiveTypeQuery メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="33f7a-118">Pass the following query as an argument to the ExecutePrimitiveTypeQuery method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
   
-## <a name="see-also"></a><span data-ttu-id="32ab5-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="32ab5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33f7a-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="33f7a-119">See also</span></span>
 
-- [<span data-ttu-id="32ab5-120">Entity SQL リファレンス</span><span class="sxs-lookup"><span data-stu-id="32ab5-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="32ab5-121">REF</span><span class="sxs-lookup"><span data-stu-id="32ab5-121">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [<span data-ttu-id="32ab5-122">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="32ab5-122">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [<span data-ttu-id="32ab5-123">KEY</span><span class="sxs-lookup"><span data-stu-id="32ab5-123">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
-- [<span data-ttu-id="32ab5-124">NULL 値が許容される構造化型</span><span class="sxs-lookup"><span data-stu-id="32ab5-124">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [<span data-ttu-id="33f7a-120">Entity SQL リファレンス</span><span class="sxs-lookup"><span data-stu-id="33f7a-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="33f7a-121">REF</span><span class="sxs-lookup"><span data-stu-id="33f7a-121">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
+- [<span data-ttu-id="33f7a-122">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="33f7a-122">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
+- [<span data-ttu-id="33f7a-123">KEY</span><span class="sxs-lookup"><span data-stu-id="33f7a-123">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
+- [<span data-ttu-id="33f7a-124">NULL 値が許容される構造化型</span><span class="sxs-lookup"><span data-stu-id="33f7a-124">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

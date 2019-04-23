@@ -3,20 +3,20 @@ title: '方法: 任意の単語またはフィールドを基準にテキスト 
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304871"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="aa25f-102">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="aa25f-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
-<span data-ttu-id="aa25f-103">次の例では、コンマ区切り値などの構造化されたテキストの行を、行の任意のフィールドで並べ替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="aa25f-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="aa25f-104">フィールドは、実行時に動的に指定できます。</span><span class="sxs-lookup"><span data-stu-id="aa25f-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="aa25f-105">scores.csv 内のフィールドは、学生の ID 番号と、それに続く 4 つのテストの点を表しているものとします。</span><span class="sxs-lookup"><span data-stu-id="aa25f-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="d838b-102">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d838b-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
+<span data-ttu-id="d838b-103">次の例では、コンマ区切り値などの構造化されたテキストの行を、行の任意のフィールドで並べ替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d838b-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="d838b-104">フィールドは、実行時に動的に指定できます。</span><span class="sxs-lookup"><span data-stu-id="d838b-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="d838b-105">scores.csv 内のフィールドは、学生の ID 番号と、それに続く 4 つのテストの点を表しているものとします。</span><span class="sxs-lookup"><span data-stu-id="d838b-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="aa25f-106">データを含むファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="aa25f-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="d838b-106">データを含むファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="d838b-106">To create a file that contains data</span></span>  
   
-1. <span data-ttu-id="aa25f-107">「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」トピックから scores.csv のデータをコピーし、ソリューション フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="aa25f-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1. <span data-ttu-id="d838b-107">「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」トピックから scores.csv のデータをコピーし、ソリューション フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="d838b-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa25f-108">例</span><span class="sxs-lookup"><span data-stu-id="aa25f-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d838b-108">例</span><span class="sxs-lookup"><span data-stu-id="d838b-108">Example</span></span>  
   
 ```csharp  
 public class SortLines  
@@ -72,12 +72,12 @@ public class SortLines
  */  
 ```  
   
- <span data-ttu-id="aa25f-109">この例では、メソッドからクエリ変数を返す方法についても示します。</span><span class="sxs-lookup"><span data-stu-id="aa25f-109">This example also demonstrates how to return a query variable from a method.</span></span>  
+ <span data-ttu-id="d838b-109">この例では、メソッドからクエリ変数を返す方法についても示します。</span><span class="sxs-lookup"><span data-stu-id="d838b-109">This example also demonstrates how to return a query variable from a method.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="aa25f-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="aa25f-110">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d838b-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d838b-110">Compiling the Code</span></span>  
 
- <span data-ttu-id="aa25f-111">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。</span><span class="sxs-lookup"><span data-stu-id="aa25f-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+ <span data-ttu-id="d838b-111">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。</span><span class="sxs-lookup"><span data-stu-id="d838b-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa25f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa25f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d838b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d838b-112">See also</span></span>
 
-- [<span data-ttu-id="aa25f-113">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa25f-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="d838b-113">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="d838b-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
