@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4373fc4e8a4c414c40e8d3c5547b5998b9300348
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170767"
 ---
-# <a name="ihosttaskjoin-method"></a><span data-ttu-id="1d2b9-102">IHostTask::Join メソッド</span><span class="sxs-lookup"><span data-stu-id="1d2b9-102">IHostTask::Join Method</span></span>
-<span data-ttu-id="1d2b9-103">現在によって表されるタスクまで呼び出し元のタスクをブロック[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスが完了すると、指定した時間間隔が経過すると、または[ihosttask::alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-103">Blocks the calling task until the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance completes, the specified time interval elapses, or [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) is called.</span></span>  
+# <a name="ihosttaskjoin-method"></a><span data-ttu-id="554ff-102">IHostTask::Join メソッド</span><span class="sxs-lookup"><span data-stu-id="554ff-102">IHostTask::Join Method</span></span>
+<span data-ttu-id="554ff-103">現在によって表されるタスクまで呼び出し元のタスクをブロック[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスが完了すると、指定した時間間隔が経過すると、または[ihosttask::alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)が呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="554ff-103">Blocks the calling task until the task represented by the current [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance completes, the specified time interval elapses, or [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) is called.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d2b9-104">構文</span><span class="sxs-lookup"><span data-stu-id="1d2b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="554ff-104">構文</span><span class="sxs-lookup"><span data-stu-id="554ff-104">Syntax</span></span>  
   
 ```  
 HRESULT Join (  
@@ -36,37 +36,37 @@ HRESULT Join (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d2b9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1d2b9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="554ff-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="554ff-105">Parameters</span></span>  
  `milliseconds`  
- <span data-ttu-id="1d2b9-106">[in]タスクが終了するまで待機するミリ秒単位の時間間隔。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-106">[in] The time interval, in milliseconds, to wait for the task to terminate.</span></span> <span data-ttu-id="1d2b9-107">この間隔が経過するは、タスクを終了する前に、呼び出し元のタスクがブロック解除します。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-107">If this interval elapses before the task terminates, the calling task unblocks.</span></span>  
+ <span data-ttu-id="554ff-106">[in]タスクが終了するまで待機するミリ秒単位の時間間隔。</span><span class="sxs-lookup"><span data-stu-id="554ff-106">[in] The time interval, in milliseconds, to wait for the task to terminate.</span></span> <span data-ttu-id="554ff-107">この間隔が経過するは、タスクを終了する前に、呼び出し元のタスクがブロック解除します。</span><span class="sxs-lookup"><span data-stu-id="554ff-107">If this interval elapses before the task terminates, the calling task unblocks.</span></span>  
   
  `option`  
- <span data-ttu-id="1d2b9-108">[in]1 つ、 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)値。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-108">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values.</span></span> <span data-ttu-id="1d2b9-109">WAIT_ALERTABLE の値が場合、タスクのスリープを解除するホストを指示`Alert`前に呼び出されます`milliseconds`が経過するとします。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-109">A value of WAIT_ALERTABLE instructs the host to wake the task if `Alert` is called before `milliseconds` elapses.</span></span>  
+ <span data-ttu-id="554ff-108">[in]1 つ、 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)値。</span><span class="sxs-lookup"><span data-stu-id="554ff-108">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) values.</span></span> <span data-ttu-id="554ff-109">WAIT_ALERTABLE の値が場合、タスクのスリープを解除するホストを指示`Alert`前に呼び出されます`milliseconds`が経過するとします。</span><span class="sxs-lookup"><span data-stu-id="554ff-109">A value of WAIT_ALERTABLE instructs the host to wake the task if `Alert` is called before `milliseconds` elapses.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1d2b9-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="1d2b9-110">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="554ff-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="554ff-110">Return Value</span></span>  
   
-|<span data-ttu-id="1d2b9-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1d2b9-111">HRESULT</span></span>|<span data-ttu-id="1d2b9-112">説明</span><span class="sxs-lookup"><span data-stu-id="1d2b9-112">Description</span></span>|  
+|<span data-ttu-id="554ff-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="554ff-111">HRESULT</span></span>|<span data-ttu-id="554ff-112">説明</span><span class="sxs-lookup"><span data-stu-id="554ff-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1d2b9-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="1d2b9-113">S_OK</span></span>|`Join` <span data-ttu-id="1d2b9-114">正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-114">returned successfully.</span></span>|  
-|<span data-ttu-id="1d2b9-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1d2b9-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1d2b9-116">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1d2b9-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1d2b9-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1d2b9-118">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-118">The call timed out.</span></span>|  
-|<span data-ttu-id="1d2b9-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1d2b9-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1d2b9-120">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-120">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1d2b9-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1d2b9-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1d2b9-122">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しているか、現在`IHostTask`インスタンスは、タスクに関連付けられていません。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-122">An event was canceled while a blocked thread or fiber was waiting on it, or the current `IHostTask` instance is not associated with a task.</span></span>|  
-|<span data-ttu-id="1d2b9-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1d2b9-123">E_FAIL</span></span>|<span data-ttu-id="1d2b9-124">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1d2b9-125">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1d2b9-126">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="554ff-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="554ff-113">S_OK</span></span>|<span data-ttu-id="554ff-114">`Join` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="554ff-114">`Join` returned successfully.</span></span>|  
+|<span data-ttu-id="554ff-115">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="554ff-115">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="554ff-116">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="554ff-116">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="554ff-117">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="554ff-117">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="554ff-118">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="554ff-118">The call timed out.</span></span>|  
+|<span data-ttu-id="554ff-119">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="554ff-119">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="554ff-120">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="554ff-120">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="554ff-121">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="554ff-121">HOST_E_ABANDONED</span></span>|<span data-ttu-id="554ff-122">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しているか、現在`IHostTask`インスタンスは、タスクに関連付けられていません。</span><span class="sxs-lookup"><span data-stu-id="554ff-122">An event was canceled while a blocked thread or fiber was waiting on it, or the current `IHostTask` instance is not associated with a task.</span></span>|  
+|<span data-ttu-id="554ff-123">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="554ff-123">E_FAIL</span></span>|<span data-ttu-id="554ff-124">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="554ff-124">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="554ff-125">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="554ff-125">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="554ff-126">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="554ff-126">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1d2b9-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="1d2b9-127">Requirements</span></span>  
- <span data-ttu-id="1d2b9-128">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d2b9-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="554ff-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="554ff-127">Requirements</span></span>  
+ <span data-ttu-id="554ff-128">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="554ff-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d2b9-129">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1d2b9-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="554ff-129">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="554ff-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1d2b9-130">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1d2b9-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="554ff-130">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="554ff-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="1d2b9-131">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="1d2b9-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="554ff-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="554ff-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d2b9-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d2b9-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="554ff-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="554ff-132">See also</span></span>
 
-- [<span data-ttu-id="1d2b9-133">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d2b9-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="1d2b9-134">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d2b9-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="1d2b9-135">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d2b9-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="1d2b9-136">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1d2b9-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="1d2b9-137">WAIT_OPTION 列挙型</span><span class="sxs-lookup"><span data-stu-id="1d2b9-137">WAIT_OPTION Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)
+- [<span data-ttu-id="554ff-133">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554ff-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="554ff-134">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554ff-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="554ff-135">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554ff-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="554ff-136">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554ff-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="554ff-137">WAIT_OPTION 列挙型</span><span class="sxs-lookup"><span data-stu-id="554ff-137">WAIT_OPTION Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)

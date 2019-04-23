@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176593"
 ---
-# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="d2fd7-102">方法: HTTP 固有のプロパティにアクセスする</span><span class="sxs-lookup"><span data-stu-id="d2fd7-102">How to: Access HTTP-Specific Properties</span></span>
-<span data-ttu-id="d2fd7-103">このサンプルでは、HTTP の **Keep-alive** 動作を無効にして、Web サーバーからプロトコル バージョン番号を取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d2fd7-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
+# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="5aa79-102">方法: HTTP 固有のプロパティにアクセスする</span><span class="sxs-lookup"><span data-stu-id="5aa79-102">How to: Access HTTP-Specific Properties</span></span>
+<span data-ttu-id="5aa79-103">このサンプルでは、HTTP の **Keep-alive** 動作を無効にして、Web サーバーからプロトコル バージョン番号を取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="5aa79-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2fd7-104">例</span><span class="sxs-lookup"><span data-stu-id="d2fd7-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5aa79-104">例</span><span class="sxs-lookup"><span data-stu-id="5aa79-104">Example</span></span>  
   
 ```vb  
 Dim HttpWReq As HttpWebRequest= _  
@@ -44,13 +44,13 @@ String ver = HttpWResp.ProtocolVersion.ToString();
 HttpWResp.Close();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d2fd7-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d2fd7-105">Compiling the Code</span></span>  
- <span data-ttu-id="d2fd7-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d2fd7-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5aa79-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="5aa79-105">Compiling the Code</span></span>  
+ <span data-ttu-id="5aa79-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="5aa79-106">This example requires:</span></span>  
   
--   <span data-ttu-id="d2fd7-107">**System.Net** 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="d2fd7-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="5aa79-107">**System.Net** 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="5aa79-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2fd7-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2fd7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5aa79-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="5aa79-108">See also</span></span>
 
-- [<span data-ttu-id="d2fd7-109">プロキシを介したインターネットへのアクセス</span><span class="sxs-lookup"><span data-stu-id="d2fd7-109">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [<span data-ttu-id="d2fd7-110">アプリケーション プロトコルの使用</span><span class="sxs-lookup"><span data-stu-id="d2fd7-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
-- [<span data-ttu-id="d2fd7-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="d2fd7-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)
+- [<span data-ttu-id="5aa79-109">プロキシを介したインターネットへのアクセス</span><span class="sxs-lookup"><span data-stu-id="5aa79-109">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [<span data-ttu-id="5aa79-110">アプリケーション プロトコルの使用</span><span class="sxs-lookup"><span data-stu-id="5aa79-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)
+- [<span data-ttu-id="5aa79-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="5aa79-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)
