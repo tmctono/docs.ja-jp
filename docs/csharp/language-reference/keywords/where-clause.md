@@ -8,48 +8,48 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221688"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341388"
 ---
-# <a name="where-clause-c-reference"></a><span data-ttu-id="ac718-102">where 句 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ac718-102">where clause (C# Reference)</span></span>
+# <a name="where-clause-c-reference"></a><span data-ttu-id="65e71-102">where 句 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="65e71-102">where clause (C# Reference)</span></span>
 
-<span data-ttu-id="ac718-103">`where` 句をクエリ式で使用して、クエリ式で返されるデータ ソースの要素を指定します。</span><span class="sxs-lookup"><span data-stu-id="ac718-103">The `where` clause is used in a query expression to specify which elements from the data source will be returned in the query expression.</span></span> <span data-ttu-id="ac718-104">ブール条件 (*述語*) を (範囲変数で参照される) 各ソース要素に適用し、指定した条件に該当するものを返します。</span><span class="sxs-lookup"><span data-stu-id="ac718-104">It applies a Boolean condition (*predicate*) to each source element (referenced by the range variable) and returns those for which the specified condition is true.</span></span> <span data-ttu-id="ac718-105">単一のクエリ式に複数の `where` 句を含めることができ、単一の句に複数の述語部分式を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="ac718-105">A single query expression may contain multiple `where` clauses and a single clause may contain multiple predicate subexpressions.</span></span>
+<span data-ttu-id="65e71-103">`where` 句をクエリ式で使用して、クエリ式で返されるデータ ソースの要素を指定します。</span><span class="sxs-lookup"><span data-stu-id="65e71-103">The `where` clause is used in a query expression to specify which elements from the data source will be returned in the query expression.</span></span> <span data-ttu-id="65e71-104">ブール条件 (*述語*) を (範囲変数で参照される) 各ソース要素に適用し、指定した条件に該当するものを返します。</span><span class="sxs-lookup"><span data-stu-id="65e71-104">It applies a Boolean condition (*predicate*) to each source element (referenced by the range variable) and returns those for which the specified condition is true.</span></span> <span data-ttu-id="65e71-105">単一のクエリ式に複数の `where` 句を含めることができ、単一の句に複数の述語部分式を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="65e71-105">A single query expression may contain multiple `where` clauses and a single clause may contain multiple predicate subexpressions.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ac718-106">例</span><span class="sxs-lookup"><span data-stu-id="ac718-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="65e71-106">例</span><span class="sxs-lookup"><span data-stu-id="65e71-106">Example</span></span>
 
-<span data-ttu-id="ac718-107">次の例では、`where` 句で、5 未満の数値を除くすべての数値を除外します。</span><span class="sxs-lookup"><span data-stu-id="ac718-107">In the following example, the `where` clause filters out all numbers except those that are less than five.</span></span> <span data-ttu-id="ac718-108">`where` 句を削除すると、データ ソースのすべての数値が返されます。</span><span class="sxs-lookup"><span data-stu-id="ac718-108">If you remove the `where` clause, all numbers from the data source would be returned.</span></span> <span data-ttu-id="ac718-109">式 `num < 5` は、各要素に適用される述語です。</span><span class="sxs-lookup"><span data-stu-id="ac718-109">The expression `num < 5` is the predicate that is applied to each element.</span></span>
+<span data-ttu-id="65e71-107">次の例では、`where` 句で、5 未満の数値を除くすべての数値を除外します。</span><span class="sxs-lookup"><span data-stu-id="65e71-107">In the following example, the `where` clause filters out all numbers except those that are less than five.</span></span> <span data-ttu-id="65e71-108">`where` 句を削除すると、データ ソースのすべての数値が返されます。</span><span class="sxs-lookup"><span data-stu-id="65e71-108">If you remove the `where` clause, all numbers from the data source would be returned.</span></span> <span data-ttu-id="65e71-109">式 `num < 5` は、各要素に適用される述語です。</span><span class="sxs-lookup"><span data-stu-id="65e71-109">The expression `num < 5` is the predicate that is applied to each element.</span></span>
 
 [!code-csharp[cscsrefQueryKeywords#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#5)]
 
-## <a name="example"></a><span data-ttu-id="ac718-110">例</span><span class="sxs-lookup"><span data-stu-id="ac718-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="65e71-110">例</span><span class="sxs-lookup"><span data-stu-id="65e71-110">Example</span></span>
 
-<span data-ttu-id="ac718-111">単一の `where` 句内には、[&&](../operators/conditional-and-operator.md) および [&#124;&#124;](../operators/conditional-or-operator.md) 演算子を使用して、必要な数の述語を指定できます。</span><span class="sxs-lookup"><span data-stu-id="ac718-111">Within a single `where` clause, you can specify as many predicates as necessary by using the [&&](../operators/conditional-and-operator.md) and [&#124;&#124;](../operators/conditional-or-operator.md) operators.</span></span> <span data-ttu-id="ac718-112">次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。</span><span class="sxs-lookup"><span data-stu-id="ac718-112">In the following example, the query specifies two predicates in order to select only the even numbers that are less than five.</span></span>
+<span data-ttu-id="65e71-111">単一の `where` 句内には、[&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) および [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) 演算子を使用して、必要な数の述語を指定できます。</span><span class="sxs-lookup"><span data-stu-id="65e71-111">Within a single `where` clause, you can specify as many predicates as necessary by using the [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) and [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) operators.</span></span> <span data-ttu-id="65e71-112">次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。</span><span class="sxs-lookup"><span data-stu-id="65e71-112">In the following example, the query specifies two predicates in order to select only the even numbers that are less than five.</span></span>
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
-## <a name="example"></a><span data-ttu-id="ac718-113">例</span><span class="sxs-lookup"><span data-stu-id="ac718-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="65e71-113">例</span><span class="sxs-lookup"><span data-stu-id="65e71-113">Example</span></span>
 
-<span data-ttu-id="ac718-114">`where` 句には、ブール値を返す 1 つ以上のメソッドを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="ac718-114">A `where` clause may contain one or more methods that return Boolean values.</span></span> <span data-ttu-id="ac718-115">次の例の `where` 句では、範囲変数の現在の値が偶数であるか、奇数であるかを判断するためのメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="ac718-115">In the following example, the `where` clause uses a method to determine whether the current value of the range variable is even or odd.</span></span>
+<span data-ttu-id="65e71-114">`where` 句には、ブール値を返す 1 つ以上のメソッドを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="65e71-114">A `where` clause may contain one or more methods that return Boolean values.</span></span> <span data-ttu-id="65e71-115">次の例の `where` 句では、範囲変数の現在の値が偶数であるか、奇数であるかを判断するためのメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="65e71-115">In the following example, the `where` clause uses a method to determine whether the current value of the range variable is even or odd.</span></span>
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a><span data-ttu-id="ac718-116">コメント</span><span class="sxs-lookup"><span data-stu-id="ac718-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="65e71-116">解説</span><span class="sxs-lookup"><span data-stu-id="65e71-116">Remarks</span></span>
 
-<span data-ttu-id="ac718-117">`where` 句はフィルター メカニズムです。</span><span class="sxs-lookup"><span data-stu-id="ac718-117">The `where` clause is a filtering mechanism.</span></span> <span data-ttu-id="ac718-118">クエリ式のほぼどこにでも指定できますが、最初の句や最後の句にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="ac718-118">It can be positioned almost anywhere in a query expression, except it cannot be the first or last clause.</span></span> <span data-ttu-id="ac718-119">`where` 句は、ソース要素のフィルター処理をグループ化の前に行うか後に行うかによって、[group](group-clause.md) 句の前または後に指定できます。</span><span class="sxs-lookup"><span data-stu-id="ac718-119">A `where` clause may appear either before or after a [group](group-clause.md) clause depending on whether you have to filter the source elements before or after they are grouped.</span></span>
+<span data-ttu-id="65e71-117">`where` 句はフィルター メカニズムです。</span><span class="sxs-lookup"><span data-stu-id="65e71-117">The `where` clause is a filtering mechanism.</span></span> <span data-ttu-id="65e71-118">クエリ式のほぼどこにでも指定できますが、最初の句や最後の句にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="65e71-118">It can be positioned almost anywhere in a query expression, except it cannot be the first or last clause.</span></span> <span data-ttu-id="65e71-119">`where` 句は、ソース要素のフィルター処理をグループ化の前に行うか後に行うかによって、[group](group-clause.md) 句の前または後に指定できます。</span><span class="sxs-lookup"><span data-stu-id="65e71-119">A `where` clause may appear either before or after a [group](group-clause.md) clause depending on whether you have to filter the source elements before or after they are grouped.</span></span>
 
-<span data-ttu-id="ac718-120">指定した述語がデータ ソース内の要素に対して有効でない場合は、コンパイル時エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="ac718-120">If a specified predicate is not valid for the elements in the data source, a compile-time error will result.</span></span> <span data-ttu-id="ac718-121">これは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] で提供される厳密な型チェックの 1 つの利点です。</span><span class="sxs-lookup"><span data-stu-id="ac718-121">This is one benefit of the strong type-checking provided by [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span></span>
+<span data-ttu-id="65e71-120">指定した述語がデータ ソース内の要素に対して有効でない場合は、コンパイル時エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="65e71-120">If a specified predicate is not valid for the elements in the data source, a compile-time error will result.</span></span> <span data-ttu-id="65e71-121">これは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] で提供される厳密な型チェックの 1 つの利点です。</span><span class="sxs-lookup"><span data-stu-id="65e71-121">This is one benefit of the strong type-checking provided by [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span></span>
 
-<span data-ttu-id="ac718-122">コンパイル時に、`where` キーワードは <xref:System.Linq.Enumerable.Where%2A> 標準クエリ演算子メソッドの呼び出しに変換されます。</span><span class="sxs-lookup"><span data-stu-id="ac718-122">At compile time the `where` keyword is converted into a call to the <xref:System.Linq.Enumerable.Where%2A> Standard Query Operator method.</span></span>
+<span data-ttu-id="65e71-122">コンパイル時に、`where` キーワードは <xref:System.Linq.Enumerable.Where%2A> 標準クエリ演算子メソッドの呼び出しに変換されます。</span><span class="sxs-lookup"><span data-stu-id="65e71-122">At compile time the `where` keyword is converted into a call to the <xref:System.Linq.Enumerable.Where%2A> Standard Query Operator method.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ac718-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac718-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65e71-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="65e71-123">See also</span></span>
 
-- [<span data-ttu-id="ac718-124">クエリ キーワード (LINQ)</span><span class="sxs-lookup"><span data-stu-id="ac718-124">Query Keywords (LINQ)</span></span>](query-keywords.md)
-- [<span data-ttu-id="ac718-125">from 句</span><span class="sxs-lookup"><span data-stu-id="ac718-125">from clause</span></span>](from-clause.md)
-- [<span data-ttu-id="ac718-126">select 句</span><span class="sxs-lookup"><span data-stu-id="ac718-126">select clause</span></span>](select-clause.md)
-- [<span data-ttu-id="ac718-127">データのフィルター処理</span><span class="sxs-lookup"><span data-stu-id="ac718-127">Filtering Data</span></span>](../../programming-guide/concepts/linq/filtering-data.md)
-- [<span data-ttu-id="ac718-128">LINQ クエリ式</span><span class="sxs-lookup"><span data-stu-id="ac718-128">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [<span data-ttu-id="ac718-129">C# の LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="ac718-129">Getting Started with LINQ in C#</span></span>](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [<span data-ttu-id="65e71-124">クエリ キーワード (LINQ)</span><span class="sxs-lookup"><span data-stu-id="65e71-124">Query Keywords (LINQ)</span></span>](query-keywords.md)
+- [<span data-ttu-id="65e71-125">from 句</span><span class="sxs-lookup"><span data-stu-id="65e71-125">from clause</span></span>](from-clause.md)
+- [<span data-ttu-id="65e71-126">select 句</span><span class="sxs-lookup"><span data-stu-id="65e71-126">select clause</span></span>](select-clause.md)
+- [<span data-ttu-id="65e71-127">データのフィルター処理</span><span class="sxs-lookup"><span data-stu-id="65e71-127">Filtering Data</span></span>](../../programming-guide/concepts/linq/filtering-data.md)
+- [<span data-ttu-id="65e71-128">LINQ クエリ式</span><span class="sxs-lookup"><span data-stu-id="65e71-128">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [<span data-ttu-id="65e71-129">C# の LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="65e71-129">Getting Started with LINQ in C#</span></span>](../../programming-guide/concepts/linq/getting-started-with-linq.md)

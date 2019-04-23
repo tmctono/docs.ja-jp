@@ -11,28 +11,28 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342233"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="c36c0-102">方法: MaskedTextBox コントロールにデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="c36c0-102">How to: Bind Data to the MaskedTextBox Control</span></span>
-<span data-ttu-id="c36c0-103">データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="c36c0-104">ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c36c0-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="c36c0-105">次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="67b64-102">方法: MaskedTextBox コントロールにデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="67b64-102">How to: Bind Data to the MaskedTextBox Control</span></span>
+<span data-ttu-id="67b64-103">データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。</span><span class="sxs-lookup"><span data-stu-id="67b64-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="67b64-104">ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。</span><span class="sxs-lookup"><span data-stu-id="67b64-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="67b64-105">次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。</span><span class="sxs-lookup"><span data-stu-id="67b64-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
   
- <span data-ttu-id="c36c0-106">次の手順では、インストールされている Northwind サンプル データベースで SQL Server データベースへのアクセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="c36c0-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
+ <span data-ttu-id="67b64-106">次の手順では、インストールされている Northwind サンプル データベースで SQL Server データベースへのアクセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="67b64-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="c36c0-107">MaskedTextBox コントロールにデータをバインドするには</span><span class="sxs-lookup"><span data-stu-id="c36c0-107">To bind data to a MaskedTextBox control</span></span>  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="67b64-107">MaskedTextBox コントロールにデータをバインドするには</span><span class="sxs-lookup"><span data-stu-id="67b64-107">To bind data to a MaskedTextBox control</span></span>  
   
-1. <span data-ttu-id="c36c0-108">新しい Windows フォーム プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-108">Create a new Windows Forms project.</span></span>  
+1. <span data-ttu-id="67b64-108">新しい Windows フォーム プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="67b64-108">Create a new Windows Forms project.</span></span>  
   
-2. <span data-ttu-id="c36c0-109">2 つをドラッグ<xref:System.Windows.Forms.TextBox>コントロールをフォームに名前を付けます`FirstName`と`LastName`します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
+2. <span data-ttu-id="67b64-109">2 つをドラッグ<xref:System.Windows.Forms.TextBox>コントロールをフォームに名前を付けます`FirstName`と`LastName`します。</span><span class="sxs-lookup"><span data-stu-id="67b64-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
   
-3. <span data-ttu-id="c36c0-110">ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールをフォームには、名前を付けます`PhoneMask`します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
+3. <span data-ttu-id="67b64-110">ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールをフォームには、名前を付けます`PhoneMask`します。</span><span class="sxs-lookup"><span data-stu-id="67b64-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
   
-4. <span data-ttu-id="c36c0-111">設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティの`PhoneMask`に`(000) 000-0000 x9999`します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
+4. <span data-ttu-id="67b64-111">設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティの`PhoneMask`に`(000) 000-0000 x9999`します。</span><span class="sxs-lookup"><span data-stu-id="67b64-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
   
-5. <span data-ttu-id="c36c0-112">次の名前空間のインポートをフォームに追加します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-112">Add the following namespace imports to the form.</span></span>  
+5. <span data-ttu-id="67b64-112">次の名前空間のインポートをフォームに追加します。</span><span class="sxs-lookup"><span data-stu-id="67b64-112">Add the following namespace imports to the form.</span></span>  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59342233"
     Imports System.Data.SqlClient  
     ```  
   
-6. <span data-ttu-id="c36c0-113">フォームを右クリックし **コードの表示**します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="c36c0-114">このコードをフォーム クラスに置きます。</span><span class="sxs-lookup"><span data-stu-id="c36c0-114">Place this code anywhere in your form class.</span></span>  
+6. <span data-ttu-id="67b64-113">フォームを右クリックし **コードの表示**します。</span><span class="sxs-lookup"><span data-stu-id="67b64-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="67b64-114">このコードをフォーム クラスに置きます。</span><span class="sxs-lookup"><span data-stu-id="67b64-114">Place this code anywhere in your form class.</span></span>  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59342233"
     End Sub  
     ```  
   
-7. <span data-ttu-id="c36c0-115">イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>したり分割したりするイベント、`PhoneNumber`と`Extension`、バインドからフィールド<xref:System.Data.DataSet>します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
+7. <span data-ttu-id="67b64-115">イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>したり分割したりするイベント、`PhoneNumber`と`Extension`、バインドからフィールド<xref:System.Data.DataSet>します。</span><span class="sxs-lookup"><span data-stu-id="67b64-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59342233"
     End Sub  
     ```  
   
-8. <span data-ttu-id="c36c0-116">2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロール。</span><span class="sxs-lookup"><span data-stu-id="c36c0-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="c36c0-117">名前を付けます`previousButton`と`nextButton`します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="c36c0-118">追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーに次のコード例で示すように入力します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
+8. <span data-ttu-id="67b64-116">2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロール。</span><span class="sxs-lookup"><span data-stu-id="67b64-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="67b64-117">名前を付けます`previousButton`と`nextButton`します。</span><span class="sxs-lookup"><span data-stu-id="67b64-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="67b64-118">追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーに次のコード例で示すように入力します。</span><span class="sxs-lookup"><span data-stu-id="67b64-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,27 +228,27 @@ ms.locfileid: "59342233"
     End Sub  
     ```  
   
-9. <span data-ttu-id="c36c0-119">サンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-119">Run the sample.</span></span> <span data-ttu-id="c36c0-120">データを編集して、**前**と**次**ボタンのデータが適切に保持されることを確認、 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="c36c0-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
+9. <span data-ttu-id="67b64-119">サンプルを実行します。</span><span class="sxs-lookup"><span data-stu-id="67b64-119">Run the sample.</span></span> <span data-ttu-id="67b64-120">データを編集して、**前**と**次**ボタンのデータが適切に保持されることを確認、 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="67b64-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c36c0-121">例</span><span class="sxs-lookup"><span data-stu-id="c36c0-121">Example</span></span>  
- <span data-ttu-id="c36c0-122">次のコード例は、コード全体を前の手順を完了には、その結果の一覧です。</span><span class="sxs-lookup"><span data-stu-id="c36c0-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="67b64-121">例</span><span class="sxs-lookup"><span data-stu-id="67b64-121">Example</span></span>  
+ <span data-ttu-id="67b64-122">次のコード例は、コード全体を前の手順を完了には、その結果の一覧です。</span><span class="sxs-lookup"><span data-stu-id="67b64-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c36c0-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c36c0-123">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="67b64-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="67b64-123">Compiling the Code</span></span>  
   
--   <span data-ttu-id="c36c0-124">ビジュアルを作成するC#または Visual Basic プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="c36c0-124">Create a Visual C# or Visual Basic project.</span></span>  
+-   <span data-ttu-id="67b64-124">ビジュアルを作成するC#または Visual Basic プロジェクト。</span><span class="sxs-lookup"><span data-stu-id="67b64-124">Create a Visual C# or Visual Basic project.</span></span>  
   
--   <span data-ttu-id="c36c0-125">追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。</span><span class="sxs-lookup"><span data-stu-id="c36c0-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
+-   <span data-ttu-id="67b64-125">追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。</span><span class="sxs-lookup"><span data-stu-id="67b64-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
   
--   <span data-ttu-id="c36c0-126">プロジェクトの既定のフォームのソース コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="c36c0-126">Open the source code file for the project's default form.</span></span>  
+-   <span data-ttu-id="67b64-126">プロジェクトの既定のフォームのソース コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="67b64-126">Open the source code file for the project's default form.</span></span>  
   
--   <span data-ttu-id="c36c0-127">このファイル内のソース コードを前の"Code"セクションに記載されているコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c36c0-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
+-   <span data-ttu-id="67b64-127">このファイル内のソース コードを前の"Code"セクションに記載されているコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="67b64-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
   
--   <span data-ttu-id="c36c0-128">アプリケーションをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="c36c0-128">Compile the application.</span></span>  
+-   <span data-ttu-id="67b64-128">アプリケーションをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="67b64-128">Compile the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c36c0-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="c36c0-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67b64-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="67b64-129">See also</span></span>
 
-- [<span data-ttu-id="c36c0-130">チュートリアル: MaskedTextBox コントロールの使用</span><span class="sxs-lookup"><span data-stu-id="c36c0-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)
+- [<span data-ttu-id="67b64-130">チュートリアル: MaskedTextBox コントロールの操作</span><span class="sxs-lookup"><span data-stu-id="67b64-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)

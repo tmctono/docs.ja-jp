@@ -17,40 +17,40 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3dd60defc1c003fa4b235ddcb0a78b9a819b1b0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198024"
 ---
-# <a name="icordebugassembly-interface"></a><span data-ttu-id="a0f56-102">ICorDebugAssembly インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a0f56-102">ICorDebugAssembly Interface</span></span>
+# <a name="icordebugassembly-interface"></a><span data-ttu-id="b0a3d-102">ICorDebugAssembly インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0a3d-102">ICorDebugAssembly Interface</span></span>
 
-<span data-ttu-id="a0f56-103">アセンブリを表します。</span><span class="sxs-lookup"><span data-stu-id="a0f56-103">Represents an assembly.</span></span>  
+<span data-ttu-id="b0a3d-103">アセンブリを表します。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-103">Represents an assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a0f56-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b0a3d-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-104">Methods</span></span>  
   
-|<span data-ttu-id="a0f56-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-105">Method</span></span>|<span data-ttu-id="a0f56-106">説明</span><span class="sxs-lookup"><span data-stu-id="a0f56-106">Description</span></span>|  
+|<span data-ttu-id="b0a3d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-105">Method</span></span>|<span data-ttu-id="b0a3d-106">説明</span><span class="sxs-lookup"><span data-stu-id="b0a3d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a0f56-107">EnumerateModules メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-107">EnumerateModules Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|<span data-ttu-id="a0f56-108">アセンブリに含まれるモジュールの列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="a0f56-108">Gets an enumerator for the modules contained in the assembly.</span></span>|  
-|[<span data-ttu-id="a0f56-109">GetAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-109">GetAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|<span data-ttu-id="a0f56-110">これを含むアプリケーション ドメインへのインターフェイス ポインターを取得`ICorDebugAssembly`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="a0f56-110">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>|  
-|[<span data-ttu-id="a0f56-111">GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-111">GetCodeBase Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|<span data-ttu-id="a0f56-112">.NET Framework の現在のバージョンでは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="a0f56-112">Not implemented in the current version of the .NET Framework.</span></span>|  
-|[<span data-ttu-id="a0f56-113">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|<span data-ttu-id="a0f56-114">アセンブリの名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="a0f56-114">Gets the name of the assembly.</span></span>|  
-|[<span data-ttu-id="a0f56-115">GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="a0f56-115">GetProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|<span data-ttu-id="a0f56-116">アセンブリが実行されている ICorDebugProcess インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="a0f56-116">Gets the ICorDebugProcess instance in which the assembly is running.</span></span>|  
+|[<span data-ttu-id="b0a3d-107">EnumerateModules メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-107">EnumerateModules Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|<span data-ttu-id="b0a3d-108">アセンブリに含まれるモジュールの列挙子を取得します。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-108">Gets an enumerator for the modules contained in the assembly.</span></span>|  
+|[<span data-ttu-id="b0a3d-109">GetAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-109">GetAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|<span data-ttu-id="b0a3d-110">これを含むアプリケーション ドメインへのインターフェイス ポインターを取得`ICorDebugAssembly`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-110">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>|  
+|[<span data-ttu-id="b0a3d-111">GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-111">GetCodeBase Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|<span data-ttu-id="b0a3d-112">.NET Framework の現在のバージョンでは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-112">Not implemented in the current version of the .NET Framework.</span></span>|  
+|[<span data-ttu-id="b0a3d-113">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|<span data-ttu-id="b0a3d-114">アセンブリの名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-114">Gets the name of the assembly.</span></span>|  
+|[<span data-ttu-id="b0a3d-115">GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="b0a3d-115">GetProcess Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|<span data-ttu-id="b0a3d-116">アセンブリが実行されている ICorDebugProcess インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-116">Gets the ICorDebugProcess instance in which the assembly is running.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0f56-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="a0f56-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0a3d-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0a3d-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a0f56-118">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="a0f56-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b0a3d-118">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0f56-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="a0f56-119">Requirements</span></span>  
- <span data-ttu-id="a0f56-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a0f56-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0a3d-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="b0a3d-119">Requirements</span></span>  
+ <span data-ttu-id="b0a3d-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0a3d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0f56-121">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0f56-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b0a3d-121">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0a3d-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a0f56-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0f56-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b0a3d-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0a3d-122">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="a0f56-123">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="a0f56-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="b0a3d-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0a3d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0f56-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0f56-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0a3d-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0a3d-124">See also</span></span>
 
-- [<span data-ttu-id="a0f56-125">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="a0f56-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b0a3d-125">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0a3d-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198375"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="5e3e2-102">ICorProfilerCallback::AssemblyLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="5e3e2-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="5e3e2-103">アセンブリの読み込みが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="cf1c5-102">ICorProfilerCallback::AssemblyLoadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="cf1c5-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="cf1c5-103">アセンブリの読み込みが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e3e2-104">構文</span><span class="sxs-lookup"><span data-stu-id="5e3e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf1c5-104">構文</span><span class="sxs-lookup"><span data-stu-id="cf1c5-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyLoadFinished(  
@@ -35,27 +35,27 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e3e2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5e3e2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cf1c5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cf1c5-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="5e3e2-106">[in]読み込まれたアセンブリを識別します。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-106">[in] Identifies the assembly that was loaded.</span></span>  
+ <span data-ttu-id="cf1c5-106">[in]読み込まれたアセンブリを識別します。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-106">[in] Identifies the assembly that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="5e3e2-107">[in]アセンブリの読み込みが正常に終了するかどうかを示す HRESULT。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
+ <span data-ttu-id="cf1c5-107">[in]アセンブリの読み込みが正常に終了するかどうかを示す HRESULT。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5e3e2-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="5e3e2-108">Remarks</span></span>  
- <span data-ttu-id="5e3e2-109">値`assemblyId`まで情報の要求に対して無効です、`AssemblyLoadFinished`メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cf1c5-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="cf1c5-108">Remarks</span></span>  
+ <span data-ttu-id="cf1c5-109">値`assemblyId`まで情報の要求に対して無効です、`AssemblyLoadFinished`メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="5e3e2-110">アセンブリの読み込みの一部が後に続ける可能性があります、`AssemblyLoadFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="5e3e2-111">エラーの HRESULT で`hrStatus`失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="5e3e2-112">ただし、成功 HRESULT で`hrStatus`のみのアセンブリの読み込みの最初の部分が成功したことを示します。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="cf1c5-110">アセンブリの読み込みの一部が後に続ける可能性があります、`AssemblyLoadFinished`コールバック。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="cf1c5-111">エラーの HRESULT で`hrStatus`失敗を示します。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="cf1c5-112">ただし、成功 HRESULT で`hrStatus`のみのアセンブリの読み込みの最初の部分が成功したことを示します。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5e3e2-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="5e3e2-113">Requirements</span></span>  
- <span data-ttu-id="5e3e2-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5e3e2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf1c5-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="cf1c5-113">Requirements</span></span>  
+ <span data-ttu-id="cf1c5-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cf1c5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e3e2-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5e3e2-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cf1c5-115">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cf1c5-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5e3e2-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e3e2-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cf1c5-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf1c5-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="5e3e2-117">.NET Framework のバージョン: </span><span class="sxs-lookup"><span data-stu-id="5e3e2-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="cf1c5-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf1c5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e3e2-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e3e2-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf1c5-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="cf1c5-118">See also</span></span>
 
-- [<span data-ttu-id="5e3e2-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5e3e2-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="cf1c5-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cf1c5-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

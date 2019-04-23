@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197816"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="c16e0-102">ICorDebugEditAndContinueErrorInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c16e0-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-`ICorDebugEditAndContinueErrorInfo` <span data-ttu-id="c16e0-103">古い形式です。</span><span class="sxs-lookup"><span data-stu-id="c16e0-103">is obsolete.</span></span> <span data-ttu-id="c16e0-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="c16e0-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="9c29c-102">ICorDebugEditAndContinueErrorInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9c29c-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
+<span data-ttu-id="9c29c-103">`ICorDebugEditAndContinueErrorInfo` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="9c29c-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="9c29c-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="9c29c-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c16e0-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="c16e0-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c29c-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="9c29c-105">See also</span></span>
 
-- [<span data-ttu-id="c16e0-106">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="c16e0-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9c29c-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9c29c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

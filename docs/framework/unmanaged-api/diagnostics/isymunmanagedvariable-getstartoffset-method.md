@@ -18,33 +18,33 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196282"
 ---
-# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="88c51-102">ISymUnmanagedVariable::GetStartOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="88c51-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
-<span data-ttu-id="88c51-103">この変数の親内の開始オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="88c51-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="88c51-104">スコープ内のローカル変数の場合は、開始オフセットは、スコープに対して定義されたオフセット内で分類されます。</span><span class="sxs-lookup"><span data-stu-id="88c51-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
+# <a name="isymunmanagedvariablegetstartoffset-method"></a><span data-ttu-id="fb535-102">ISymUnmanagedVariable::GetStartOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="fb535-102">ISymUnmanagedVariable::GetStartOffset Method</span></span>
+<span data-ttu-id="fb535-103">この変数の親内の開始オフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="fb535-103">Gets the start offset of this variable within its parent.</span></span> <span data-ttu-id="fb535-104">スコープ内のローカル変数の場合は、開始オフセットは、スコープに対して定義されたオフセット内で分類されます。</span><span class="sxs-lookup"><span data-stu-id="fb535-104">If this is a local variable within a scope, the start offset will fall within the offsets defined for the scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88c51-105">構文</span><span class="sxs-lookup"><span data-stu-id="88c51-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb535-105">構文</span><span class="sxs-lookup"><span data-stu-id="fb535-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="88c51-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="88c51-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fb535-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fb535-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="88c51-107">[out]ポインターを`ULONG32`開始オフセットを受け取る。</span><span class="sxs-lookup"><span data-stu-id="88c51-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
+ <span data-ttu-id="fb535-107">[out]ポインターを`ULONG32`開始オフセットを受け取る。</span><span class="sxs-lookup"><span data-stu-id="fb535-107">[out] A pointer to a `ULONG32` that receives the start offset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="88c51-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="88c51-108">Return Value</span></span>  
- <span data-ttu-id="88c51-109">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="88c51-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fb535-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="fb535-108">Return Value</span></span>  
+ <span data-ttu-id="fb535-109">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="fb535-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88c51-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="88c51-110">Requirements</span></span>  
- <span data-ttu-id="88c51-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="88c51-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb535-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="fb535-110">Requirements</span></span>  
+ <span data-ttu-id="fb535-111">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fb535-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88c51-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="88c51-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb535-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="fb535-112">See also</span></span>
 
-- [<span data-ttu-id="88c51-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="88c51-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="88c51-114">GetEndOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="88c51-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)
+- [<span data-ttu-id="fb535-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fb535-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="fb535-114">GetEndOffSet メソッド</span><span class="sxs-lookup"><span data-stu-id="fb535-114">GetEndOffset Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

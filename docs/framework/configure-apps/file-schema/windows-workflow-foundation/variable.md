@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
 ms.openlocfilehash: c85f3c57739c48566c97c8b1debfb7f2c3912bdf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196633"
 ---
-# <a name="variable"></a><span data-ttu-id="a02ce-101">\<変数 ></span><span class="sxs-lookup"><span data-stu-id="a02ce-101">\<variable></span></span>
-<span data-ttu-id="a02ce-102">このアクティビティ クエリに関連付けられている変数のコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="a02ce-102">Represents a collection of variables associated with this activity query.</span></span>  
+# <a name="variable"></a><span data-ttu-id="11bb6-101">\<変数 ></span><span class="sxs-lookup"><span data-stu-id="11bb6-101">\<variable></span></span>
+<span data-ttu-id="11bb6-102">このアクティビティ クエリに関連付けられている変数のコレクションを表します。</span><span class="sxs-lookup"><span data-stu-id="11bb6-102">Represents a collection of variables associated with this activity query.</span></span>  
   
- <span data-ttu-id="a02ce-103">追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。</span><span class="sxs-lookup"><span data-stu-id="a02ce-103">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="11bb6-103">追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。</span><span class="sxs-lookup"><span data-stu-id="11bb6-103">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="a02ce-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a02ce-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="a02ce-105">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="a02ce-105">\<tracking></span></span>  
-<span data-ttu-id="a02ce-106">\<プロファイル ></span><span class="sxs-lookup"><span data-stu-id="a02ce-106">\<profiles></span></span>  
-<span data-ttu-id="a02ce-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="a02ce-107">\<trackingProfile></span></span>  
-<span data-ttu-id="a02ce-108">\<ワークフロー ></span><span class="sxs-lookup"><span data-stu-id="a02ce-108">\<workflow></span></span>  
-<span data-ttu-id="a02ce-109">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="a02ce-109">\<activityStateQueries></span></span>  
-<span data-ttu-id="a02ce-110">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="a02ce-110">\<activityStateQuery></span></span>  
-<span data-ttu-id="a02ce-111">\<variables></span><span class="sxs-lookup"><span data-stu-id="a02ce-111">\<variables></span></span>  
-<span data-ttu-id="a02ce-112">\<変数 ></span><span class="sxs-lookup"><span data-stu-id="a02ce-112">\<variable></span></span>  
+<span data-ttu-id="11bb6-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="11bb6-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="11bb6-105">\<追跡 ></span><span class="sxs-lookup"><span data-stu-id="11bb6-105">\<tracking></span></span>  
+<span data-ttu-id="11bb6-106">\<プロファイル ></span><span class="sxs-lookup"><span data-stu-id="11bb6-106">\<profiles></span></span>  
+<span data-ttu-id="11bb6-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="11bb6-107">\<trackingProfile></span></span>  
+<span data-ttu-id="11bb6-108">\<ワークフロー ></span><span class="sxs-lookup"><span data-stu-id="11bb6-108">\<workflow></span></span>  
+<span data-ttu-id="11bb6-109">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="11bb6-109">\<activityStateQueries></span></span>  
+<span data-ttu-id="11bb6-110">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="11bb6-110">\<activityStateQuery></span></span>  
+<span data-ttu-id="11bb6-111">\<variables></span><span class="sxs-lookup"><span data-stu-id="11bb6-111">\<variables></span></span>  
+<span data-ttu-id="11bb6-112">\<変数 ></span><span class="sxs-lookup"><span data-stu-id="11bb6-112">\<variable></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a02ce-113">構文</span><span class="sxs-lookup"><span data-stu-id="a02ce-113">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11bb6-113">構文</span><span class="sxs-lookup"><span data-stu-id="11bb6-113">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -42,26 +42,26 @@ ms.locfileid: "59196633"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a02ce-114">属性および要素</span><span class="sxs-lookup"><span data-stu-id="a02ce-114">Attributes and Elements</span></span>  
- <span data-ttu-id="a02ce-115">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="a02ce-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="11bb6-114">属性および要素</span><span class="sxs-lookup"><span data-stu-id="11bb6-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="11bb6-115">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="11bb6-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a02ce-116">属性</span><span class="sxs-lookup"><span data-stu-id="a02ce-116">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="11bb6-116">属性</span><span class="sxs-lookup"><span data-stu-id="11bb6-116">Attributes</span></span>  
   
-|<span data-ttu-id="a02ce-117">属性</span><span class="sxs-lookup"><span data-stu-id="a02ce-117">Attribute</span></span>|<span data-ttu-id="a02ce-118">説明</span><span class="sxs-lookup"><span data-stu-id="a02ce-118">Description</span></span>|  
+|<span data-ttu-id="11bb6-117">属性</span><span class="sxs-lookup"><span data-stu-id="11bb6-117">Attribute</span></span>|<span data-ttu-id="11bb6-118">説明</span><span class="sxs-lookup"><span data-stu-id="11bb6-118">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="a02ce-119">name</span><span class="sxs-lookup"><span data-stu-id="a02ce-119">name</span></span>|<span data-ttu-id="a02ce-120">変数の名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="a02ce-120">A string that specifies the name of the variable.</span></span>|  
+|<span data-ttu-id="11bb6-119">name</span><span class="sxs-lookup"><span data-stu-id="11bb6-119">name</span></span>|<span data-ttu-id="11bb6-120">変数の名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="11bb6-120">A string that specifies the name of the variable.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a02ce-121">子要素</span><span class="sxs-lookup"><span data-stu-id="a02ce-121">Child Elements</span></span>  
- <span data-ttu-id="a02ce-122">なし。</span><span class="sxs-lookup"><span data-stu-id="a02ce-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="11bb6-121">子要素</span><span class="sxs-lookup"><span data-stu-id="11bb6-121">Child Elements</span></span>  
+ <span data-ttu-id="11bb6-122">なし。</span><span class="sxs-lookup"><span data-stu-id="11bb6-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a02ce-123">親要素</span><span class="sxs-lookup"><span data-stu-id="a02ce-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="11bb6-123">親要素</span><span class="sxs-lookup"><span data-stu-id="11bb6-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="a02ce-124">要素</span><span class="sxs-lookup"><span data-stu-id="a02ce-124">Element</span></span>|<span data-ttu-id="a02ce-125">説明</span><span class="sxs-lookup"><span data-stu-id="a02ce-125">Description</span></span>|  
+|<span data-ttu-id="11bb6-124">要素</span><span class="sxs-lookup"><span data-stu-id="11bb6-124">Element</span></span>|<span data-ttu-id="11bb6-125">説明</span><span class="sxs-lookup"><span data-stu-id="11bb6-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a02ce-126">\<変数 ></span><span class="sxs-lookup"><span data-stu-id="a02ce-126">\<variable></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|<span data-ttu-id="a02ce-127">アクティビティ状態クエリに関連付けられている変数。</span><span class="sxs-lookup"><span data-stu-id="a02ce-127">A variable associated with an activity state query.</span></span>|  
+|[<span data-ttu-id="11bb6-126">\<variable></span><span class="sxs-lookup"><span data-stu-id="11bb6-126">\<variable></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|<span data-ttu-id="11bb6-127">アクティビティ状態クエリに関連付けられている変数。</span><span class="sxs-lookup"><span data-stu-id="11bb6-127">A variable associated with an activity state query.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a02ce-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="a02ce-128">Remarks</span></span>  
- <span data-ttu-id="a02ce-129">ActivityStateQuery の固有の機能の 1 つは、ワークフローの実行を追跡するときにデータを抽出する機能です。</span><span class="sxs-lookup"><span data-stu-id="a02ce-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="a02ce-130">これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。</span><span class="sxs-lookup"><span data-stu-id="a02ce-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="a02ce-131">使用することができます、 [\<引数 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)、 [\<状態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)と[\<状態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)任意の変数または引数を抽出する要素ワークフロー内の任意のアクティビティから</span><span class="sxs-lookup"><span data-stu-id="a02ce-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="a02ce-132">次の例は、アクティビティの `Closed` 追跡レコードが生成されたときに変数と引数を抽出するアクティビティ状態クエリを示しています。</span><span class="sxs-lookup"><span data-stu-id="a02ce-132">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="a02ce-133">ActivityStateRecord でのみ抽出できるし、追跡のため購読中の変数と引数を使用してプロファイル[ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)します。</span><span class="sxs-lookup"><span data-stu-id="a02ce-133">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="11bb6-128">Remarks</span><span class="sxs-lookup"><span data-stu-id="11bb6-128">Remarks</span></span>  
+ <span data-ttu-id="11bb6-129">ActivityStateQuery の固有の機能の 1 つは、ワークフローの実行を追跡するときにデータを抽出する機能です。</span><span class="sxs-lookup"><span data-stu-id="11bb6-129">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="11bb6-130">これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。</span><span class="sxs-lookup"><span data-stu-id="11bb6-130">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="11bb6-131">使用することができます、 [\<引数 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)、 [\<状態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)と[\<状態 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)任意の変数または引数を抽出する要素ワークフロー内の任意のアクティビティから</span><span class="sxs-lookup"><span data-stu-id="11bb6-131">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="11bb6-132">次の例は、アクティビティの `Closed` 追跡レコードが生成されたときに変数と引数を抽出するアクティビティ状態クエリを示しています。</span><span class="sxs-lookup"><span data-stu-id="11bb6-132">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="11bb6-133">ActivityStateRecord でのみ抽出できるし、追跡のため購読中の変数と引数を使用してプロファイル[ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)します。</span><span class="sxs-lookup"><span data-stu-id="11bb6-133">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -77,9 +77,9 @@ ms.locfileid: "59196633"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a02ce-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="a02ce-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11bb6-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="11bb6-134">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="a02ce-135">ワークフロー追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="a02ce-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="a02ce-136">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="a02ce-136">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="11bb6-135">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="11bb6-135">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="11bb6-136">追跡プロファイル</span><span class="sxs-lookup"><span data-stu-id="11bb6-136">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
