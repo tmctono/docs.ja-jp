@@ -3,27 +3,27 @@ title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326204"
 ---
-# <a name="control-flow-in-async-programs-c"></a><span data-ttu-id="2553e-102">非同期プログラムにおける制御フロー (C#)</span><span class="sxs-lookup"><span data-stu-id="2553e-102">Control flow in async programs (C#)</span></span>
+# <a name="control-flow-in-async-programs-c"></a><span data-ttu-id="9ba4b-102">非同期プログラムにおける制御フロー (C#)</span><span class="sxs-lookup"><span data-stu-id="9ba4b-102">Control flow in async programs (C#)</span></span>
 
-<span data-ttu-id="2553e-103">`async` キーワードと `await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。</span><span class="sxs-lookup"><span data-stu-id="2553e-103">You can write and maintain asynchronous programs more easily by using the `async` and `await` keywords.</span></span> <span data-ttu-id="2553e-104">ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。</span><span class="sxs-lookup"><span data-stu-id="2553e-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="2553e-105">このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。</span><span class="sxs-lookup"><span data-stu-id="2553e-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>
+<span data-ttu-id="9ba4b-103">`async` キーワードと `await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-103">You can write and maintain asynchronous programs more easily by using the `async` and `await` keywords.</span></span> <span data-ttu-id="9ba4b-104">ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="9ba4b-105">このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>
 
-<span data-ttu-id="2553e-106">一般に、[async (C#)](../../../../csharp/language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。</span><span class="sxs-lookup"><span data-stu-id="2553e-106">In general, you mark methods that contain asynchronous code with the [async (C#)](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="2553e-107">async 修飾子でマークされたメソッドでは、[await (C#)](../../../../csharp/language-reference/keywords/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。</span><span class="sxs-lookup"><span data-stu-id="2553e-107">In a method that's marked with an async modifier, you can use an [await (C#)](../../../../csharp/language-reference/keywords/await.md) operator to specify where the method pauses to wait for a called asynchronous process to complete.</span></span> <span data-ttu-id="2553e-108">詳細については、「[Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2553e-108">For more information, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>
+<span data-ttu-id="9ba4b-106">一般に、[async (C#)](../../../../csharp/language-reference/keywords/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-106">In general, you mark methods that contain asynchronous code with the [async (C#)](../../../../csharp/language-reference/keywords/async.md) modifier.</span></span> <span data-ttu-id="9ba4b-107">async 修飾子でマークされたメソッドでは、[await (C#)](../../../../csharp/language-reference/keywords/await.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-107">In a method that's marked with an async modifier, you can use an [await (C#)](../../../../csharp/language-reference/keywords/await.md) operator to specify where the method pauses to wait for a called asynchronous process to complete.</span></span> <span data-ttu-id="9ba4b-108">詳細については、「[Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-108">For more information, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>
 
-<span data-ttu-id="2553e-109">次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。</span><span class="sxs-lookup"><span data-stu-id="2553e-109">The following example uses async methods to download the contents of a specified website as a string and to display the length of the string.</span></span> <span data-ttu-id="2553e-110">この例には、次の 2 つのメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="2553e-110">The example contains the following two methods.</span></span>
+<span data-ttu-id="9ba4b-109">次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-109">The following example uses async methods to download the contents of a specified website as a string and to display the length of the string.</span></span> <span data-ttu-id="9ba4b-110">この例には、次の 2 つのメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-110">The example contains the following two methods.</span></span>
 
--   `startButton_Click`<span data-ttu-id="2553e-111">: `AccessTheWebAsync` を呼び出して結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="2553e-111">, which calls `AccessTheWebAsync` and displays the result.</span></span>
+-   <span data-ttu-id="9ba4b-111">`startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-111">`startButton_Click`, which calls `AccessTheWebAsync` and displays the result.</span></span>
 
--   `AccessTheWebAsync`<span data-ttu-id="2553e-112">: Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返します。</span><span class="sxs-lookup"><span data-stu-id="2553e-112">, which downloads the contents of a website as a string and returns the length of the string.</span></span> `AccessTheWebAsync` <span data-ttu-id="2553e-113">は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="2553e-113">uses an asynchronous <xref:System.Net.Http.HttpClient> method, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, to download the contents.</span></span>
+-   <span data-ttu-id="9ba4b-112">Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-112">`AccessTheWebAsync`, which downloads the contents of a website as a string and returns the length of the string.</span></span> <span data-ttu-id="9ba4b-113">`AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-113">`AccessTheWebAsync` uses an asynchronous <xref:System.Net.Http.HttpClient> method, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, to download the contents.</span></span>
 
-<span data-ttu-id="2553e-114">番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="2553e-114">Numbered display lines appear at strategic points throughout the program to help you understand how the program runs and to explain what happens at each point that is marked.</span></span> <span data-ttu-id="2553e-115">表示行には「1」から「6」までのラベルが付けられています。</span><span class="sxs-lookup"><span data-stu-id="2553e-115">The display lines are labeled "ONE" through "SIX."</span></span> <span data-ttu-id="2553e-116">このラベルは、プログラムがこれらのコード行に到達する順序を表します。</span><span class="sxs-lookup"><span data-stu-id="2553e-116">The labels represent the order in which the program reaches these lines of code.</span></span>
+<span data-ttu-id="9ba4b-114">番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-114">Numbered display lines appear at strategic points throughout the program to help you understand how the program runs and to explain what happens at each point that is marked.</span></span> <span data-ttu-id="9ba4b-115">表示行には「1」から「6」までのラベルが付けられています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-115">The display lines are labeled "ONE" through "SIX."</span></span> <span data-ttu-id="9ba4b-116">このラベルは、プログラムがこれらのコード行に到達する順序を表します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-116">The labels represent the order in which the program reaches these lines of code.</span></span>
 
-<span data-ttu-id="2553e-117">次のコードは、プログラムの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="2553e-117">The following code shows an outline of the program.</span></span>
+<span data-ttu-id="9ba4b-117">次のコードは、プログラムの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-117">The following code shows an outline of the program.</span></span>
 
 ```csharp
 public partial class MainWindow : Window
@@ -58,7 +58,7 @@ public partial class MainWindow : Window
 }
 ```
 
-<span data-ttu-id="2553e-118">「1」から「6」までのそれぞれのラベルの位置は、プログラムの現在の状態に関する情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="2553e-118">Each of the labeled locations, "ONE" through "SIX," displays information about the current state of the program.</span></span> <span data-ttu-id="2553e-119">次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-119">The following output is produced:</span></span>
+<span data-ttu-id="9ba4b-118">「1」から「6」までのそれぞれのラベルの位置は、プログラムの現在の状態に関する情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-118">Each of the labeled locations, "ONE" through "SIX," displays information about the current state of the program.</span></span> <span data-ttu-id="9ba4b-119">次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-119">The following output is produced:</span></span>
 
 ```text
 ONE:   Entering startButton_Click.
@@ -88,46 +88,46 @@ SIX:   Back in startButton_Click.
 Length of the downloaded string: 33946.
 ```
 
-## <a name="set-up-the-program"></a><span data-ttu-id="2553e-120">プログラムをセットアップする</span><span class="sxs-lookup"><span data-stu-id="2553e-120">Set up the program</span></span>
+## <a name="set-up-the-program"></a><span data-ttu-id="9ba4b-120">プログラムをセットアップする</span><span class="sxs-lookup"><span data-stu-id="9ba4b-120">Set up the program</span></span>
 
-<span data-ttu-id="2553e-121">このトピックで使用するコードは、MSDN からダウンロードするか、または自分でビルドできます。</span><span class="sxs-lookup"><span data-stu-id="2553e-121">You can download the code that this topic uses from MSDN, or you can build it yourself.</span></span>
+<span data-ttu-id="9ba4b-121">このトピックで使用するコードは、MSDN からダウンロードするか、または自分でビルドできます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-121">You can download the code that this topic uses from MSDN, or you can build it yourself.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2553e-122">この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="2553e-122">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="9ba4b-122">この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-122">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-### <a name="download-the-program"></a><span data-ttu-id="2553e-123">プログラムをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="2553e-123">Download the program</span></span>
+### <a name="download-the-program"></a><span data-ttu-id="9ba4b-123">プログラムをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="9ba4b-123">Download the program</span></span>
 
-<span data-ttu-id="2553e-124">このトピックのアプリケーションは、「[非同期のサンプル:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)」からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="2553e-124">You can download the application for this topic from [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0).</span></span> <span data-ttu-id="2553e-125">次の手順でプログラムを開いて実行します。</span><span class="sxs-lookup"><span data-stu-id="2553e-125">The following steps open and run the program.</span></span>
+<span data-ttu-id="9ba4b-124">このトピックのアプリケーションは、「[非同期のサンプル:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)」からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-124">You can download the application for this topic from [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0).</span></span> <span data-ttu-id="9ba4b-125">次の手順でプログラムを開いて実行します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-125">The following steps open and run the program.</span></span>
 
-1. <span data-ttu-id="2553e-126">ダウンロードしたファイルを解凍し、Visual Studio を開始します。</span><span class="sxs-lookup"><span data-stu-id="2553e-126">Unzip the downloaded file, and then start Visual Studio.</span></span>
+1. <span data-ttu-id="9ba4b-126">ダウンロードしたファイルを解凍し、Visual Studio を開始します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-126">Unzip the downloaded file, and then start Visual Studio.</span></span>
 
-2. <span data-ttu-id="2553e-127">メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="2553e-127">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2. <span data-ttu-id="9ba4b-127">メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-127">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3. <span data-ttu-id="2553e-128">解凍したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開き、**F5** キーを押してプロジェクトをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="2553e-128">Navigate to the folder that holds the unzipped sample code, open the solution (.sln) file, and then choose the **F5** key to build and run the project.</span></span>
+3. <span data-ttu-id="9ba4b-128">解凍したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開き、**F5** キーを押してプロジェクトをビルドし、実行します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-128">Navigate to the folder that holds the unzipped sample code, open the solution (.sln) file, and then choose the **F5** key to build and run the project.</span></span>
 
-### <a name="create-the-program-yourself"></a><span data-ttu-id="2553e-129">プログラムを自分で作成する</span><span class="sxs-lookup"><span data-stu-id="2553e-129">Create the program Yourself</span></span>
+### <a name="create-the-program-yourself"></a><span data-ttu-id="9ba4b-129">プログラムを自分で作成する</span><span class="sxs-lookup"><span data-stu-id="9ba4b-129">Create the program Yourself</span></span>
 
-<span data-ttu-id="2553e-130">次の Windows Presentation Foundation (WPF) プロジェクトには、このトピックのコード例が含まれています。</span><span class="sxs-lookup"><span data-stu-id="2553e-130">The following Windows Presentation Foundation (WPF) project contains the code example for this topic.</span></span>
+<span data-ttu-id="9ba4b-130">次の Windows Presentation Foundation (WPF) プロジェクトには、このトピックのコード例が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-130">The following Windows Presentation Foundation (WPF) project contains the code example for this topic.</span></span>
 
-<span data-ttu-id="2553e-131">このプロジェクトを実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="2553e-131">To run the project, perform the following steps:</span></span>
+<span data-ttu-id="9ba4b-131">このプロジェクトを実行するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-131">To run the project, perform the following steps:</span></span>
 
-1. <span data-ttu-id="2553e-132">Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="2553e-132">Start Visual Studio.</span></span>
+1. <span data-ttu-id="9ba4b-132">Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-132">Start Visual Studio.</span></span>
 
-2. <span data-ttu-id="2553e-133">メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="2553e-133">On the menu bar, choose **File** > **New** > **Project**.</span></span>
+2. <span data-ttu-id="9ba4b-133">メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-133">On the menu bar, choose **File** > **New** > **Project**.</span></span>
 
-     <span data-ttu-id="2553e-134">**[新しいプロジェクト]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-134">The **New Project** dialog box opens.</span></span>
+     <span data-ttu-id="9ba4b-134">**[新しいプロジェクト]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-134">The **New Project** dialog box opens.</span></span>
 
-3. <span data-ttu-id="2553e-135">**[インストール済み]** > **[Visual C#]** > **[Windows Desktop]** カテゴリを選択し、プロジェクト テンプレートの一覧から **[WPF アプリ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="2553e-135">Choose the **Installed** > **Visual C#** > **Windows Desktop** category, and then choose **WPF App** from the list of project templates.</span></span>
+3. <span data-ttu-id="9ba4b-135">**[インストール済み]** > **[Visual C#]** > **[Windows Desktop]** カテゴリを選択し、プロジェクト テンプレートの一覧から **[WPF アプリ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-135">Choose the **Installed** > **Visual C#** > **Windows Desktop** category, and then choose **WPF App** from the list of project templates.</span></span>
 
-4. <span data-ttu-id="2553e-136">プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="2553e-136">Enter `AsyncTracer` as the name of the project, and then choose the **OK** button.</span></span>
+4. <span data-ttu-id="9ba4b-136">プロジェクトの名前として「`AsyncTracer`」と入力し、**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-136">Enter `AsyncTracer` as the name of the project, and then choose the **OK** button.</span></span>
 
-     <span data-ttu-id="2553e-137">**ソリューション エクスプローラー**に新しいプロジェクトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-137">The new project appears in **Solution Explorer**.</span></span>
+     <span data-ttu-id="9ba4b-137">**ソリューション エクスプローラー**に新しいプロジェクトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-137">The new project appears in **Solution Explorer**.</span></span>
 
-5. <span data-ttu-id="2553e-138">Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="2553e-138">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
+5. <span data-ttu-id="9ba4b-138">Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-138">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
 
-     <span data-ttu-id="2553e-139">タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="2553e-139">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>
+     <span data-ttu-id="9ba4b-139">タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-139">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>
 
-6. <span data-ttu-id="2553e-140">MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="2553e-140">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>
+6. <span data-ttu-id="9ba4b-140">MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-140">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>
 
     ```csharp
     <Window
@@ -143,13 +143,13 @@ Length of the downloaded string: 33946.
     </Window>
     ```
 
-     <span data-ttu-id="2553e-141">テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-141">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>
+     <span data-ttu-id="9ba4b-141">テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-141">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>
 
-7. <span data-ttu-id="2553e-142"><xref:System.Net.Http> への参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="2553e-142">Add a reference for <xref:System.Net.Http>.</span></span>
+7. <span data-ttu-id="9ba4b-142"><xref:System.Net.Http> への参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-142">Add a reference for <xref:System.Net.Http>.</span></span>
 
-8. <span data-ttu-id="2553e-143">**ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、**[コードの表示]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="2553e-143">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
+8. <span data-ttu-id="9ba4b-143">**ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、**[コードの表示]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-143">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
 
-9. <span data-ttu-id="2553e-144">MainWindow.xaml.cs のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="2553e-144">In MainWindow.xaml.cs, replace the code with the following code.</span></span>
+9. <span data-ttu-id="9ba4b-144">MainWindow.xaml.cs のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-144">In MainWindow.xaml.cs, replace the code with the following code.</span></span>
 
     ```csharp
     using System;
@@ -236,9 +236,9 @@ Length of the downloaded string: 33946.
     }
     ```
 
-10. <span data-ttu-id="2553e-145">**F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。</span><span class="sxs-lookup"><span data-stu-id="2553e-145">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
+10. <span data-ttu-id="9ba4b-145">**F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-145">Choose the **F5** key to run the program, and then choose the **Start** button.</span></span>
 
-    <span data-ttu-id="2553e-146">次の出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-146">The following output appears:</span></span>
+    <span data-ttu-id="9ba4b-146">次の出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-146">The following output appears:</span></span>
 
     ```text
     ONE:   Entering startButton_Click.
@@ -268,29 +268,29 @@ Length of the downloaded string: 33946.
     Length of the downloaded string: 33946.
     ```
 
-## <a name="trace-the-program"></a><span data-ttu-id="2553e-147">プログラムをトレースする</span><span class="sxs-lookup"><span data-stu-id="2553e-147">Trace the program</span></span>
+## <a name="trace-the-program"></a><span data-ttu-id="9ba4b-147">プログラムをトレースする</span><span class="sxs-lookup"><span data-stu-id="9ba4b-147">Trace the program</span></span>
 
-### <a name="steps-one-and-two"></a><span data-ttu-id="2553e-148">手順 1. および 2.</span><span class="sxs-lookup"><span data-stu-id="2553e-148">Steps ONE and TWO</span></span>
+### <a name="steps-one-and-two"></a><span data-ttu-id="9ba4b-148">手順 1. および 2.</span><span class="sxs-lookup"><span data-stu-id="9ba4b-148">Steps ONE and TWO</span></span>
 
-<span data-ttu-id="2553e-149">`startButton_Click` が `AccessTheWebAsync` を呼び出し、`AccessTheWebAsync` が非同期 <xref:System.Net.Http.HttpClient> メソッド <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を呼び出すと、最初の 2 行の表示行がパスをトレースします。</span><span class="sxs-lookup"><span data-stu-id="2553e-149">The first two display lines trace the path as `startButton_Click` calls `AccessTheWebAsync`, and `AccessTheWebAsync` calls the asynchronous <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span></span> <span data-ttu-id="2553e-150">次の図は、メソッドからメソッドへの呼び出しを示しています。</span><span class="sxs-lookup"><span data-stu-id="2553e-150">The following image outlines the calls from method to method.</span></span>
+<span data-ttu-id="9ba4b-149">`startButton_Click` が `AccessTheWebAsync` を呼び出し、`AccessTheWebAsync` が非同期 <xref:System.Net.Http.HttpClient> メソッド <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を呼び出すと、最初の 2 行の表示行がパスをトレースします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-149">The first two display lines trace the path as `startButton_Click` calls `AccessTheWebAsync`, and `AccessTheWebAsync` calls the asynchronous <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</span></span> <span data-ttu-id="9ba4b-150">次の図は、メソッドからメソッドへの呼び出しを示しています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-150">The following image outlines the calls from method to method.</span></span>
 
-<span data-ttu-id="2553e-151">![手順 1. と 2.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span><span class="sxs-lookup"><span data-stu-id="2553e-151">![Steps ONE and TWO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span></span>
+<span data-ttu-id="9ba4b-151">![手順 1. と 2.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span><span class="sxs-lookup"><span data-stu-id="9ba4b-151">![Steps ONE and TWO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")</span></span>
 
-<span data-ttu-id="2553e-152">`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。</span><span class="sxs-lookup"><span data-stu-id="2553e-152">The return type of both `AccessTheWebAsync` and `client.GetStringAsync` is <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="2553e-153">`AccessTheWebAsync` では、TResult は整数です。</span><span class="sxs-lookup"><span data-stu-id="2553e-153">For `AccessTheWebAsync`, TResult is an integer.</span></span> <span data-ttu-id="2553e-154">`GetStringAsync` では、TResult は文字列です。</span><span class="sxs-lookup"><span data-stu-id="2553e-154">For `GetStringAsync`, TResult is a string.</span></span> <span data-ttu-id="2553e-155">非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2553e-155">For more information about async method return types, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>
+<span data-ttu-id="9ba4b-152">`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-152">The return type of both `AccessTheWebAsync` and `client.GetStringAsync` is <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="9ba4b-153">`AccessTheWebAsync` では、TResult は整数です。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-153">For `AccessTheWebAsync`, TResult is an integer.</span></span> <span data-ttu-id="9ba4b-154">`GetStringAsync` では、TResult は文字列です。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-154">For `GetStringAsync`, TResult is a string.</span></span> <span data-ttu-id="9ba4b-155">非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-155">For more information about async method return types, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>
 
-<span data-ttu-id="2553e-156">タスクを返す非同期のメソッドは、制御が呼び出し元に戻ると、タスク インスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="2553e-156">A task-returning async method returns a task instance when control shifts back to the caller.</span></span> <span data-ttu-id="2553e-157">`await` 演算子が呼び出されたメソッドで実行されるか、または呼び出されたメソッドが終了すると、非同期メソッドから呼び出し元に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="2553e-157">Control returns from an async method to its caller either when an `await` operator is encountered in the called method or when the called method ends.</span></span> <span data-ttu-id="2553e-158">「3」から「6」のラベルの付いた表示行はこのプロセスの部分をトレースします。</span><span class="sxs-lookup"><span data-stu-id="2553e-158">The display lines that are labeled "THREE" through "SIX" trace this part of the process.</span></span>
+<span data-ttu-id="9ba4b-156">タスクを返す非同期のメソッドは、制御が呼び出し元に戻ると、タスク インスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-156">A task-returning async method returns a task instance when control shifts back to the caller.</span></span> <span data-ttu-id="9ba4b-157">`await` 演算子が呼び出されたメソッドで実行されるか、または呼び出されたメソッドが終了すると、非同期メソッドから呼び出し元に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-157">Control returns from an async method to its caller either when an `await` operator is encountered in the called method or when the called method ends.</span></span> <span data-ttu-id="9ba4b-158">「3」から「6」のラベルの付いた表示行はこのプロセスの部分をトレースします。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-158">The display lines that are labeled "THREE" through "SIX" trace this part of the process.</span></span>
 
-### <a name="step-three"></a><span data-ttu-id="2553e-159">手順 3.</span><span class="sxs-lookup"><span data-stu-id="2553e-159">Step THREE</span></span>
+### <a name="step-three"></a><span data-ttu-id="9ba4b-159">手順 3.</span><span class="sxs-lookup"><span data-stu-id="9ba4b-159">Step THREE</span></span>
 
-<span data-ttu-id="2553e-160">`AccessTheWebAsync` で非同期メソッド <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> が呼び出され、ターゲットの Web ページのコンテンツがダウンロードされます。</span><span class="sxs-lookup"><span data-stu-id="2553e-160">In `AccessTheWebAsync`, the asynchronous method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> is called to download the contents of the target webpage.</span></span> <span data-ttu-id="2553e-161">`client.GetStringAsync` が制御を返すと、`AccessTheWebAsync` から `client.GetStringAsync` に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="2553e-161">Control returns from `client.GetStringAsync` to `AccessTheWebAsync` when `client.GetStringAsync` returns.</span></span>
+<span data-ttu-id="9ba4b-160">`AccessTheWebAsync` で非同期メソッド <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> が呼び出され、ターゲットの Web ページのコンテンツがダウンロードされます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-160">In `AccessTheWebAsync`, the asynchronous method <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> is called to download the contents of the target webpage.</span></span> <span data-ttu-id="9ba4b-161">`client.GetStringAsync` が制御を返すと、`AccessTheWebAsync` から `client.GetStringAsync` に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-161">Control returns from `client.GetStringAsync` to `AccessTheWebAsync` when `client.GetStringAsync` returns.</span></span>
 
- <span data-ttu-id="2553e-162">`client.GetStringAsync` メソッドは、`getStringTask` の `AccessTheWebAsync` 変数に割り当てる文字列のタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="2553e-162">The `client.GetStringAsync` method returns a task of string that’s assigned to the `getStringTask` variable in `AccessTheWebAsync`.</span></span> <span data-ttu-id="2553e-163">プログラム例の次の行は、`client.GetStringAsync` の呼び出しと割り当てを示しています。</span><span class="sxs-lookup"><span data-stu-id="2553e-163">The following line in the example program shows the call to `client.GetStringAsync` and the assignment.</span></span>
+ <span data-ttu-id="9ba4b-162">`client.GetStringAsync` メソッドは、`getStringTask` の `AccessTheWebAsync` 変数に割り当てる文字列のタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-162">The `client.GetStringAsync` method returns a task of string that’s assigned to the `getStringTask` variable in `AccessTheWebAsync`.</span></span> <span data-ttu-id="9ba4b-163">プログラム例の次の行は、`client.GetStringAsync` の呼び出しと割り当てを示しています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-163">The following line in the example program shows the call to `client.GetStringAsync` and the assignment.</span></span>
 
 ```csharp
 Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 ```
 
- <span data-ttu-id="2553e-164">このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。</span><span class="sxs-lookup"><span data-stu-id="2553e-164">You can think of the task as a promise by `client.GetStringAsync` to produce an actual string eventually.</span></span> <span data-ttu-id="2553e-165">`AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。</span><span class="sxs-lookup"><span data-stu-id="2553e-165">In the meantime, if `AccessTheWebAsync` has work to do that doesn't depend on the promised string from `client.GetStringAsync`, that work can continue while  `client.GetStringAsync` waits.</span></span> <span data-ttu-id="2553e-166">この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。</span><span class="sxs-lookup"><span data-stu-id="2553e-166">In the example, the following lines of output, which are labeled "THREE," represent the opportunity to do independent work</span></span>
+ <span data-ttu-id="9ba4b-164">このタスクは `client.GetStringAsync` により実際の文字列が最終的に生成される約束と見なすことができます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-164">You can think of the task as a promise by `client.GetStringAsync` to produce an actual string eventually.</span></span> <span data-ttu-id="9ba4b-165">`AccessTheWebAsync` には `client.GetStringAsync` から約束された文字列に依存しない処理がある場合、その処理は `client.GetStringAsync` を待機している間は、続行できます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-165">In the meantime, if `AccessTheWebAsync` has work to do that doesn't depend on the promised string from `client.GetStringAsync`, that work can continue while  `client.GetStringAsync` waits.</span></span> <span data-ttu-id="9ba4b-166">この例では、"THREE" のラベルの付いた行の出力は、独立した処理を行う機会を表します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-166">In the example, the following lines of output, which are labeled "THREE," represent the opportunity to do independent work</span></span>
 
 ```
 THREE: Back in AccessTheWebAsync.
@@ -298,34 +298,34 @@ THREE: Back in AccessTheWebAsync.
            About to await getStringTask & return a Task<int> to startButton_Click.
 ```
 
- <span data-ttu-id="2553e-167">次のステートメントは `AccessTheWebAsync` が待機中の場合 `getStringTask` の進行を中断します。</span><span class="sxs-lookup"><span data-stu-id="2553e-167">The following statement suspends progress in `AccessTheWebAsync` when `getStringTask` is awaited.</span></span>
+ <span data-ttu-id="9ba4b-167">次のステートメントは `AccessTheWebAsync` が待機中の場合 `getStringTask` の進行を中断します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-167">The following statement suspends progress in `AccessTheWebAsync` when `getStringTask` is awaited.</span></span>
 
 ```csharp
 string urlContents = await getStringTask;
 ```
 
- <span data-ttu-id="2553e-168">次の図は `client.GetStringAsync` から `getStringTask` への割り当てへの制御フロー、および `getStringTask` の作成から await 演算子のアプリケーションへの制御フローを示しています。</span><span class="sxs-lookup"><span data-stu-id="2553e-168">The following image shows the flow of control from `client.GetStringAsync` to the assignment to `getStringTask` and from the creation of `getStringTask` to the application of an await operator.</span></span>
+ <span data-ttu-id="9ba4b-168">次の図は `client.GetStringAsync` から `getStringTask` への割り当てへの制御フロー、および `getStringTask` の作成から await 演算子のアプリケーションへの制御フローを示しています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-168">The following image shows the flow of control from `client.GetStringAsync` to the assignment to `getStringTask` and from the creation of `getStringTask` to the application of an await operator.</span></span>
 
- <span data-ttu-id="2553e-169">![手順 3.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span><span class="sxs-lookup"><span data-stu-id="2553e-169">![Step THREE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span></span>
+ <span data-ttu-id="9ba4b-169">![手順 3.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span><span class="sxs-lookup"><span data-stu-id="9ba4b-169">![Step THREE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")</span></span>
 
- <span data-ttu-id="2553e-170">await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。</span><span class="sxs-lookup"><span data-stu-id="2553e-170">The await expression suspends `AccessTheWebAsync` until `client.GetStringAsync` returns.</span></span> <span data-ttu-id="2553e-171">その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-171">In the meantime, control returns to the caller of `AccessTheWebAsync`, `startButton_Click`.</span></span>
+ <span data-ttu-id="9ba4b-170">await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-170">The await expression suspends `AccessTheWebAsync` until `client.GetStringAsync` returns.</span></span> <span data-ttu-id="9ba4b-171">その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-171">In the meantime, control returns to the caller of `AccessTheWebAsync`, `startButton_Click`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2553e-172">通常、直ちに非同期メソッドへの呼び出しの待機状態となります。</span><span class="sxs-lookup"><span data-stu-id="2553e-172">Typically, you await the call to an asynchronous method immediately.</span></span> <span data-ttu-id="2553e-173">たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="2553e-173">For example, the following assignment could replace the previous code that creates and then awaits `getStringTask`:</span></span> `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> <span data-ttu-id="9ba4b-172">通常、直ちに非同期メソッドへの呼び出しの待機状態となります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-172">Typically, you await the call to an asynchronous method immediately.</span></span> <span data-ttu-id="9ba4b-173">たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`</span><span class="sxs-lookup"><span data-stu-id="9ba4b-173">For example, the following assignment could replace the previous code that creates and then awaits `getStringTask`: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`</span></span>
 >
-> <span data-ttu-id="2553e-174">このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。</span><span class="sxs-lookup"><span data-stu-id="2553e-174">In this topic, the await operator is applied later to accommodate the output lines that mark the flow of control through the program.</span></span>
+> <span data-ttu-id="9ba4b-174">このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-174">In this topic, the await operator is applied later to accommodate the output lines that mark the flow of control through the program.</span></span>
 
-### <a name="step-four"></a><span data-ttu-id="2553e-175">手順 4.</span><span class="sxs-lookup"><span data-stu-id="2553e-175">Step FOUR</span></span>
+### <a name="step-four"></a><span data-ttu-id="9ba4b-175">手順 4.</span><span class="sxs-lookup"><span data-stu-id="9ba4b-175">Step FOUR</span></span>
 
-<span data-ttu-id="2553e-176">`AccessTheWebAsync` の宣言された戻り値の型は、`Task<int>` です。</span><span class="sxs-lookup"><span data-stu-id="2553e-176">The declared return type of `AccessTheWebAsync` is `Task<int>`.</span></span> <span data-ttu-id="2553e-177">したがって、`AccessTheWebAsync` が中断されると、`startButton_Click` に整数のタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="2553e-177">Therefore, when `AccessTheWebAsync` is suspended, it returns a task of integer to `startButton_Click`.</span></span> <span data-ttu-id="2553e-178">返されたタスクは `getStringTask` ではないことに注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2553e-178">You should understand that the returned task isn’t `getStringTask`.</span></span> <span data-ttu-id="2553e-179">返されたタスクは、中断されたメソッド `AccessTheWebAsync` での未処理を表す、整数の新しいタスクです。</span><span class="sxs-lookup"><span data-stu-id="2553e-179">The returned task is a new task of integer that represents what remains to be done in the suspended method, `AccessTheWebAsync`.</span></span> <span data-ttu-id="2553e-180">これにより、タスクが完了したときに `AccessTheWebAsync` が整数を生成することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-180">The task is a promise from `AccessTheWebAsync` to produce an integer when the task is complete.</span></span>
+<span data-ttu-id="9ba4b-176">`AccessTheWebAsync` の宣言された戻り値の型は、`Task<int>` です。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-176">The declared return type of `AccessTheWebAsync` is `Task<int>`.</span></span> <span data-ttu-id="9ba4b-177">したがって、`AccessTheWebAsync` が中断されると、`startButton_Click` に整数のタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-177">Therefore, when `AccessTheWebAsync` is suspended, it returns a task of integer to `startButton_Click`.</span></span> <span data-ttu-id="9ba4b-178">返されたタスクは `getStringTask` ではないことに注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-178">You should understand that the returned task isn’t `getStringTask`.</span></span> <span data-ttu-id="9ba4b-179">返されたタスクは、中断されたメソッド `AccessTheWebAsync` での未処理を表す、整数の新しいタスクです。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-179">The returned task is a new task of integer that represents what remains to be done in the suspended method, `AccessTheWebAsync`.</span></span> <span data-ttu-id="9ba4b-180">これにより、タスクが完了したときに `AccessTheWebAsync` が整数を生成することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-180">The task is a promise from `AccessTheWebAsync` to produce an integer when the task is complete.</span></span>
 
-<span data-ttu-id="2553e-181">次のステートメントはこのタスクを `getLengthTask` 変数に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="2553e-181">The following statement assigns this task to the `getLengthTask` variable.</span></span>
+<span data-ttu-id="9ba4b-181">次のステートメントはこのタスクを `getLengthTask` 変数に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-181">The following statement assigns this task to the `getLengthTask` variable.</span></span>
 
 ```csharp
 Task<int> getLengthTask = AccessTheWebAsync();
 ```
 
- <span data-ttu-id="2553e-182">`AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。</span><span class="sxs-lookup"><span data-stu-id="2553e-182">As in `AccessTheWebAsync`, `startButton_Click` can continue with work that doesn’t depend on the results of the asynchronous task (`getLengthTask`) until the task is awaited.</span></span> <span data-ttu-id="2553e-183">次の出力行はその処理を表します。</span><span class="sxs-lookup"><span data-stu-id="2553e-183">The following output lines represent that work.</span></span>
+ <span data-ttu-id="9ba4b-182">`AccessTheWebAsync` と同様に、`startButton_Click` は、非同期タスク (`getLengthTask`) の結果に依存しない処理を、タスクが待機するまで続行できます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-182">As in `AccessTheWebAsync`, `startButton_Click` can continue with work that doesn’t depend on the results of the asynchronous task (`getLengthTask`) until the task is awaited.</span></span> <span data-ttu-id="9ba4b-183">次の出力行はその処理を表します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-183">The following output lines represent that work.</span></span>
 
 ```
 FOUR:  Back in startButton_Click.
@@ -333,19 +333,19 @@ FOUR:  Back in startButton_Click.
            About to await getLengthTask -- no caller to return to.
 ```
 
- <span data-ttu-id="2553e-184">`startButton_Click` が待機すると、`getLengthTask` の進行は中断します。</span><span class="sxs-lookup"><span data-stu-id="2553e-184">Progress in `startButton_Click` is suspended when `getLengthTask` is awaited.</span></span> <span data-ttu-id="2553e-185">次の代入ステートメントは、`startButton_Click` が完了するまで `AccessTheWebAsync` を中断します。</span><span class="sxs-lookup"><span data-stu-id="2553e-185">The following assignment statement suspends `startButton_Click` until `AccessTheWebAsync` is complete.</span></span>
+ <span data-ttu-id="9ba4b-184">`startButton_Click` が待機すると、`getLengthTask` の進行は中断します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-184">Progress in `startButton_Click` is suspended when `getLengthTask` is awaited.</span></span> <span data-ttu-id="9ba4b-185">次の代入ステートメントは、`startButton_Click` が完了するまで `AccessTheWebAsync` を中断します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-185">The following assignment statement suspends `startButton_Click` until `AccessTheWebAsync` is complete.</span></span>
 
 ```csharp
 int contentLength = await getLengthTask;
 ```
 
- <span data-ttu-id="2553e-186">次の図で、矢印は `AccessTheWebAsync` の await 式から `getLengthTask` への値の割り当てへの制御のフロー、および `startButton_Click` が待機するまでの `getLengthTask` の通常の処理を示しています。</span><span class="sxs-lookup"><span data-stu-id="2553e-186">In the following illustration, the arrows show the flow of control from the await expression in `AccessTheWebAsync` to the assignment of a value to `getLengthTask`, followed by normal processing in `startButton_Click` until `getLengthTask` is awaited.</span></span>
+ <span data-ttu-id="9ba4b-186">次の図で、矢印は `AccessTheWebAsync` の await 式から `getLengthTask` への値の割り当てへの制御のフロー、および `startButton_Click` が待機するまでの `getLengthTask` の通常の処理を示しています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-186">In the following illustration, the arrows show the flow of control from the await expression in `AccessTheWebAsync` to the assignment of a value to `getLengthTask`, followed by normal processing in `startButton_Click` until `getLengthTask` is awaited.</span></span>
 
- <span data-ttu-id="2553e-187">![手順 4.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span><span class="sxs-lookup"><span data-stu-id="2553e-187">![Step FOUR](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span></span>
+ <span data-ttu-id="9ba4b-187">![手順 4.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span><span class="sxs-lookup"><span data-stu-id="9ba4b-187">![Step FOUR](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")</span></span>
 
-### <a name="step-five"></a><span data-ttu-id="2553e-188">手順 5.</span><span class="sxs-lookup"><span data-stu-id="2553e-188">Step FIVE</span></span>
+### <a name="step-five"></a><span data-ttu-id="9ba4b-188">手順 5.</span><span class="sxs-lookup"><span data-stu-id="9ba4b-188">Step FIVE</span></span>
 
-<span data-ttu-id="2553e-189">`client.GetStringAsync` が終了を通知すると、`AccessTheWebAsync` の処理は中断から解放され、await ステートメントを越えて続行できます。</span><span class="sxs-lookup"><span data-stu-id="2553e-189">When `client.GetStringAsync` signals that it’s complete, processing in `AccessTheWebAsync` is released from suspension and can continue past the await statement.</span></span> <span data-ttu-id="2553e-190">次の出力行は、処理の再開を表します。</span><span class="sxs-lookup"><span data-stu-id="2553e-190">The following lines of output represent the resumption of processing.</span></span>
+<span data-ttu-id="9ba4b-189">`client.GetStringAsync` が終了を通知すると、`AccessTheWebAsync` の処理は中断から解放され、await ステートメントを越えて続行できます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-189">When `client.GetStringAsync` signals that it’s complete, processing in `AccessTheWebAsync` is released from suspension and can continue past the await statement.</span></span> <span data-ttu-id="9ba4b-190">次の出力行は、処理の再開を表します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-190">The following lines of output represent the resumption of processing.</span></span>
 
 ```
 FIVE:  Back in AccessTheWebAsync.
@@ -354,19 +354,19 @@ FIVE:  Back in AccessTheWebAsync.
            Exiting from AccessTheWebAsync.
 ```
 
- <span data-ttu-id="2553e-191">return ステートメントのオペランド `urlContents.Length` は `AccessTheWebAsync` が返すタスクに格納されます。</span><span class="sxs-lookup"><span data-stu-id="2553e-191">The operand of the return statement, `urlContents.Length`, is stored in the task that  `AccessTheWebAsync` returns.</span></span> <span data-ttu-id="2553e-192">await 式はその値を `getLengthTask` の `startButton_Click` から取得します。</span><span class="sxs-lookup"><span data-stu-id="2553e-192">The await expression retrieves that value from `getLengthTask` in `startButton_Click`.</span></span>
+ <span data-ttu-id="9ba4b-191">return ステートメントのオペランド `urlContents.Length` は `AccessTheWebAsync` が返すタスクに格納されます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-191">The operand of the return statement, `urlContents.Length`, is stored in the task that  `AccessTheWebAsync` returns.</span></span> <span data-ttu-id="9ba4b-192">await 式はその値を `getLengthTask` の `startButton_Click` から取得します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-192">The await expression retrieves that value from `getLengthTask` in `startButton_Click`.</span></span>
 
- <span data-ttu-id="2553e-193">次の図は、`client.GetStringAsync` (および `getStringTask`) が完了した後の制御の移動を示します。</span><span class="sxs-lookup"><span data-stu-id="2553e-193">The following image shows the transfer of control after `client.GetStringAsync` (and `getStringTask`) are complete.</span></span>
+ <span data-ttu-id="9ba4b-193">次の図は、`client.GetStringAsync` (および `getStringTask`) が完了した後の制御の移動を示します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-193">The following image shows the transfer of control after `client.GetStringAsync` (and `getStringTask`) are complete.</span></span>
 
- <span data-ttu-id="2553e-194">![手順 5.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span><span class="sxs-lookup"><span data-stu-id="2553e-194">![Step FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span></span>
+ <span data-ttu-id="9ba4b-194">![手順 5.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span><span class="sxs-lookup"><span data-stu-id="9ba4b-194">![Step FIVE](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")</span></span>
 
- `AccessTheWebAsync` <span data-ttu-id="2553e-195">は完了するまで実行され、完了を待機していた `startButton_Click` に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="2553e-195">runs to completion, and control returns to `startButton_Click`, which is awaiting the completion.</span></span>
+ <span data-ttu-id="9ba4b-195">`AccessTheWebAsync` は完了するまで実行され、完了を待機していた `startButton_Click` に制御が戻ります。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-195">`AccessTheWebAsync` runs to completion, and control returns to `startButton_Click`, which is awaiting the completion.</span></span>
 
-### <a name="step-six"></a><span data-ttu-id="2553e-196">手順 6.</span><span class="sxs-lookup"><span data-stu-id="2553e-196">Step SIX</span></span>
+### <a name="step-six"></a><span data-ttu-id="9ba4b-196">手順 6.</span><span class="sxs-lookup"><span data-stu-id="9ba4b-196">Step SIX</span></span>
 
-<span data-ttu-id="2553e-197">`AccessTheWebAsync` が終了を通知すると、処理は `startButton_Async` の await ステートメントを越えて続行できます。</span><span class="sxs-lookup"><span data-stu-id="2553e-197">When `AccessTheWebAsync` signals that it’s complete, processing can continue past the await statement in `startButton_Async`.</span></span> <span data-ttu-id="2553e-198">実際、プログラムはそれ以上行うことがありません。</span><span class="sxs-lookup"><span data-stu-id="2553e-198">In fact, the program has nothing more to do.</span></span>
+<span data-ttu-id="9ba4b-197">`AccessTheWebAsync` が終了を通知すると、処理は `startButton_Async` の await ステートメントを越えて続行できます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-197">When `AccessTheWebAsync` signals that it’s complete, processing can continue past the await statement in `startButton_Async`.</span></span> <span data-ttu-id="9ba4b-198">実際、プログラムはそれ以上行うことがありません。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-198">In fact, the program has nothing more to do.</span></span>
 
-<span data-ttu-id="2553e-199">次の出力行は、`startButton_Async` の処理の再開を表します。</span><span class="sxs-lookup"><span data-stu-id="2553e-199">The following lines of output represent the resumption of processing in `startButton_Async`:</span></span>
+<span data-ttu-id="9ba4b-199">次の出力行は、`startButton_Async` の処理の再開を表します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-199">The following lines of output represent the resumption of processing in `startButton_Async`:</span></span>
 
 ```
 SIX:   Back in startButton_Click.
@@ -375,19 +375,19 @@ SIX:   Back in startButton_Click.
            About to display contentLength and exit.
 ```
 
- <span data-ttu-id="2553e-200">await 式は `getLengthTask` から `AccessTheWebAsync` の return ステートメントのオペランドである整数値を取得します。</span><span class="sxs-lookup"><span data-stu-id="2553e-200">The await expression retrieves from `getLengthTask` the integer value that’s the operand of the return statement in `AccessTheWebAsync`.</span></span> <span data-ttu-id="2553e-201">次のステートメントはその値を `contentLength` 変数に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="2553e-201">The following statement assigns that value to the `contentLength` variable.</span></span>
+ <span data-ttu-id="9ba4b-200">await 式は `getLengthTask` から `AccessTheWebAsync` の return ステートメントのオペランドである整数値を取得します。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-200">The await expression retrieves from `getLengthTask` the integer value that’s the operand of the return statement in `AccessTheWebAsync`.</span></span> <span data-ttu-id="9ba4b-201">次のステートメントはその値を `contentLength` 変数に割り当てます。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-201">The following statement assigns that value to the `contentLength` variable.</span></span>
 
 ```csharp
 int contentLength = await getLengthTask;
 ```
 
- <span data-ttu-id="2553e-202">次の図は `AccessTheWebAsync` から `startButton_Click` に制御が戻ることを示しています。</span><span class="sxs-lookup"><span data-stu-id="2553e-202">The following image shows the return of control from `AccessTheWebAsync` to `startButton_Click`.</span></span>
+ <span data-ttu-id="9ba4b-202">次の図は `AccessTheWebAsync` から `startButton_Click` に制御が戻ることを示しています。</span><span class="sxs-lookup"><span data-stu-id="9ba4b-202">The following image shows the return of control from `AccessTheWebAsync` to `startButton_Click`.</span></span>
 
- <span data-ttu-id="2553e-203">![手順 6.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span><span class="sxs-lookup"><span data-stu-id="2553e-203">![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span></span>
+ <span data-ttu-id="9ba4b-203">![手順 6.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span><span class="sxs-lookup"><span data-stu-id="9ba4b-203">![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2553e-204">関連項目</span><span class="sxs-lookup"><span data-stu-id="2553e-204">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ba4b-204">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ba4b-204">See also</span></span>
 
-- [<span data-ttu-id="2553e-205">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="2553e-205">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="2553e-206">非同期の戻り値の型 (C#)</span><span class="sxs-lookup"><span data-stu-id="2553e-206">Async Return Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [<span data-ttu-id="2553e-207">チュートリアル: Async と Await を使用した Web へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="2553e-207">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [<span data-ttu-id="2553e-208">非同期のサンプル:非同期プログラムにおける制御フロー (C# および Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2553e-208">Async Sample: Control Flow in Async Programs (C# and Visual Basic)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [<span data-ttu-id="9ba4b-205">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="9ba4b-205">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="9ba4b-206">非同期の戻り値の型 (C#)</span><span class="sxs-lookup"><span data-stu-id="9ba4b-206">Async Return Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [<span data-ttu-id="9ba4b-207">チュートリアル: Async と Await を使用した Web へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="9ba4b-207">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="9ba4b-208">Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9ba4b-208">Async Sample: Control Flow in Async Programs (C# and Visual Basic)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
