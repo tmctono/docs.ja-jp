@@ -5,24 +5,24 @@ ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868531"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="0c67e-102">例:データ バインド時の例外の処理</span><span class="sxs-lookup"><span data-stu-id="0c67e-102">Example: Handling Exceptions When Binding Data</span></span>
+# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="47dd5-102">例:データ バインド時の例外の処理</span><span class="sxs-lookup"><span data-stu-id="47dd5-102">Example: Handling Exceptions When Binding Data</span></span>
 > [!NOTE]
->  <span data-ttu-id="0c67e-103">このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。</span><span class="sxs-lookup"><span data-stu-id="0c67e-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="0c67e-104">プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。</span><span class="sxs-lookup"><span data-stu-id="0c67e-104">You can download the preview from the [Microsoft Connect website](https://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
+>  <span data-ttu-id="47dd5-103">このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。</span><span class="sxs-lookup"><span data-stu-id="47dd5-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="47dd5-104">プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。</span><span class="sxs-lookup"><span data-stu-id="47dd5-104">You can download the preview from the [Microsoft Connect website](https://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
   
- <span data-ttu-id="0c67e-105">次の例は、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外の解決方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="0c67e-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain tries to bind data.</span></span> <span data-ttu-id="0c67e-106">例外情報は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0c67e-106">Here’s the exception information:</span></span>  
+ <span data-ttu-id="47dd5-105">次の例は、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外の解決方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="47dd5-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain tries to bind data.</span></span> <span data-ttu-id="47dd5-106">例外情報は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="47dd5-106">Here’s the exception information:</span></span>  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
- <span data-ttu-id="0c67e-107">関連付けられている呼び出し履歴は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0c67e-107">Here's the associated call stack:</span></span>  
+ <span data-ttu-id="47dd5-107">関連付けられている呼び出し履歴は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="47dd5-107">Here's the associated call stack:</span></span>  
   
 ```  
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
@@ -38,28 +38,28 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a><span data-ttu-id="0c67e-108">アプリが行っていた動作は何か</span><span class="sxs-lookup"><span data-stu-id="0c67e-108">What was the app doing?</span></span>  
- <span data-ttu-id="0c67e-109">スタックのベース、フレーム、<xref:Windows.UI.Xaml?displayProperty=nameWithType>名前空間は、XAML レンダリング エンジンが実行されていることを示します。</span><span class="sxs-lookup"><span data-stu-id="0c67e-109">At the base of the stack, frames from the <xref:Windows.UI.Xaml?displayProperty=nameWithType> namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="0c67e-110"><xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> メソッドの使用は、そのメタデータが削除された型での、プロパティ値のリフレクション ベースのルックアップを示します。</span><span class="sxs-lookup"><span data-stu-id="0c67e-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
+## <a name="what-was-the-app-doing"></a><span data-ttu-id="47dd5-108">アプリが行っていた動作は何か</span><span class="sxs-lookup"><span data-stu-id="47dd5-108">What was the app doing?</span></span>  
+ <span data-ttu-id="47dd5-109">スタックのベース、フレーム、<xref:Windows.UI.Xaml?displayProperty=nameWithType>名前空間は、XAML レンダリング エンジンが実行されていることを示します。</span><span class="sxs-lookup"><span data-stu-id="47dd5-109">At the base of the stack, frames from the <xref:Windows.UI.Xaml?displayProperty=nameWithType> namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="47dd5-110"><xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> メソッドの使用は、そのメタデータが削除された型での、プロパティ値のリフレクション ベースのルックアップを示します。</span><span class="sxs-lookup"><span data-stu-id="47dd5-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
   
- <span data-ttu-id="0c67e-111">メタデータ ディレクティブを提供するための最初の手順は、型の `serialize` メタデータを追加して、そのプロパティすべてをアクセス可能にすることです。</span><span class="sxs-lookup"><span data-stu-id="0c67e-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
+ <span data-ttu-id="47dd5-111">メタデータ ディレクティブを提供するための最初の手順は、型の `serialize` メタデータを追加して、そのプロパティすべてをアクセス可能にすることです。</span><span class="sxs-lookup"><span data-stu-id="47dd5-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a><span data-ttu-id="0c67e-112">特殊なケースかどうか</span><span class="sxs-lookup"><span data-stu-id="0c67e-112">Is this an isolated case?</span></span>  
- <span data-ttu-id="0c67e-113">このシナリオでは、ある `ViewModel` について、データ バインディングに不完全なメタデータが含まれる場合、他のものにも同じことが該当する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0c67e-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="0c67e-114">アプリのビュー モデルがすべて `App.ViewModels` 名前空間内にあるようにコードが作成されている場合、より一般的なランタイム ディレクティブを使用できます。</span><span class="sxs-lookup"><span data-stu-id="0c67e-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
+## <a name="is-this-an-isolated-case"></a><span data-ttu-id="47dd5-112">特殊なケースかどうか</span><span class="sxs-lookup"><span data-stu-id="47dd5-112">Is this an isolated case?</span></span>  
+ <span data-ttu-id="47dd5-113">このシナリオでは、ある `ViewModel` について、データ バインディングに不完全なメタデータが含まれる場合、他のものにも同じことが該当する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="47dd5-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="47dd5-114">アプリのビュー モデルがすべて `App.ViewModels` 名前空間内にあるようにコードが作成されている場合、より一般的なランタイム ディレクティブを使用できます。</span><span class="sxs-lookup"><span data-stu-id="47dd5-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="0c67e-115">リフレクションを使用しないようにコードを書き換えることができるか</span><span class="sxs-lookup"><span data-stu-id="0c67e-115">Could the code be rewritten to not use reflection?</span></span>  
- <span data-ttu-id="0c67e-116">データ バインディングではリフレクションが多用されるため、リフレクションを使用しないようにコードを変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="0c67e-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="47dd5-115">リフレクションを使用しないようにコードを書き換えることができるか</span><span class="sxs-lookup"><span data-stu-id="47dd5-115">Could the code be rewritten to not use reflection?</span></span>  
+ <span data-ttu-id="47dd5-116">データ バインディングではリフレクションが多用されるため、リフレクションを使用しないようにコードを変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="47dd5-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
   
- <span data-ttu-id="0c67e-117">ただし、`ViewModel` を XAML ページに指定して、ツール チェーンがコンパイル時にプロパティ バインディングを正しい型に関連付けて、ランタイム ディレクティブを使用せずにメタデータを保持できるようにする方法はあります。</span><span class="sxs-lookup"><span data-stu-id="0c67e-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="0c67e-118">たとえば、適用する可能性があります、<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>プロパティの属性。</span><span class="sxs-lookup"><span data-stu-id="0c67e-118">For example, you could apply the <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribute on properties.</span></span> <span data-ttu-id="0c67e-119">これにより、XAML コンパイラが必要なルックアップ情報を生成するようになり、Default.rd.xml ファイルのランタイム ディレクティブが不要になります。</span><span class="sxs-lookup"><span data-stu-id="0c67e-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
+ <span data-ttu-id="47dd5-117">ただし、`ViewModel` を XAML ページに指定して、ツール チェーンがコンパイル時にプロパティ バインディングを正しい型に関連付けて、ランタイム ディレクティブを使用せずにメタデータを保持できるようにする方法はあります。</span><span class="sxs-lookup"><span data-stu-id="47dd5-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="47dd5-118">たとえば、適用する可能性があります、<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>プロパティの属性。</span><span class="sxs-lookup"><span data-stu-id="47dd5-118">For example, you could apply the <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribute on properties.</span></span> <span data-ttu-id="47dd5-119">これにより、XAML コンパイラが必要なルックアップ情報を生成するようになり、Default.rd.xml ファイルのランタイム ディレクティブが不要になります。</span><span class="sxs-lookup"><span data-stu-id="47dd5-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c67e-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="0c67e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47dd5-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="47dd5-120">See also</span></span>
 
-- [<span data-ttu-id="0c67e-121">はじめに</span><span class="sxs-lookup"><span data-stu-id="0c67e-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [<span data-ttu-id="0c67e-122">例:動的プログラミングのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="0c67e-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [<span data-ttu-id="47dd5-121">はじめに</span><span class="sxs-lookup"><span data-stu-id="47dd5-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [<span data-ttu-id="47dd5-122">例:動的プログラミングのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="47dd5-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
