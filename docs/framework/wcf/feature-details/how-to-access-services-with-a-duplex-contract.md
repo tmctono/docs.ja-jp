@@ -8,29 +8,29 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855141"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="250ed-102">方法: Access services と双方向コントラクト</span><span class="sxs-lookup"><span data-stu-id="250ed-102">How to: Access services with a duplex contract</span></span>
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="d8180-102">方法: Access services と双方向コントラクト</span><span class="sxs-lookup"><span data-stu-id="d8180-102">How to: Access services with a duplex contract</span></span>
 
-<span data-ttu-id="250ed-103">Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッセージング パターンを使用してサービスを作成する機能です。</span><span class="sxs-lookup"><span data-stu-id="250ed-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="250ed-104">双方向のメッセージング パターンを使用するサービスは、コールバックを通じてクライアントと通信できます。</span><span class="sxs-lookup"><span data-stu-id="250ed-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="250ed-105">このトピックでは、コールバック インターフェイスを実装するクライアント クラスで WCF クライアントを作成する手順を示します。</span><span class="sxs-lookup"><span data-stu-id="250ed-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
+<span data-ttu-id="d8180-103">Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッセージング パターンを使用してサービスを作成する機能です。</span><span class="sxs-lookup"><span data-stu-id="d8180-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="d8180-104">双方向のメッセージング パターンを使用するサービスは、コールバックを通じてクライアントと通信できます。</span><span class="sxs-lookup"><span data-stu-id="d8180-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="d8180-105">このトピックでは、コールバック インターフェイスを実装するクライアント クラスで WCF クライアントを作成する手順を示します。</span><span class="sxs-lookup"><span data-stu-id="d8180-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
 
-<span data-ttu-id="250ed-106">二重バインディングでは、クライアントの IP アドレスをサービスに公開します。</span><span class="sxs-lookup"><span data-stu-id="250ed-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="250ed-107">クライアントは、セキュリティを使用して信頼するサービスだけに接続できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="250ed-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
+<span data-ttu-id="d8180-106">二重バインディングでは、クライアントの IP アドレスをサービスに公開します。</span><span class="sxs-lookup"><span data-stu-id="d8180-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="d8180-107">クライアントは、セキュリティを使用して信頼するサービスだけに接続できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8180-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
 
-<span data-ttu-id="250ed-108">基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="250ed-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
+<span data-ttu-id="d8180-108">基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)します。</span><span class="sxs-lookup"><span data-stu-id="d8180-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
 
-## <a name="to-access-a-duplex-service"></a><span data-ttu-id="250ed-109">双方向サービスにアクセスするには</span><span class="sxs-lookup"><span data-stu-id="250ed-109">To access a duplex service</span></span>
+## <a name="to-access-a-duplex-service"></a><span data-ttu-id="d8180-109">双方向サービスにアクセスするには</span><span class="sxs-lookup"><span data-stu-id="d8180-109">To access a duplex service</span></span>
 
-1. <span data-ttu-id="250ed-110">2 つのインターフェイスを含むサービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="250ed-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="250ed-111">1 つ目のインターフェイスはサービスに使用し、2 つ目のインターフェイスはコールバックに使用します。</span><span class="sxs-lookup"><span data-stu-id="250ed-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="250ed-112">双方向サービスの作成の詳細については、次を参照してください。[方法。双方向コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)します。</span><span class="sxs-lookup"><span data-stu-id="250ed-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
+1. <span data-ttu-id="d8180-110">2 つのインターフェイスを含むサービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d8180-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="d8180-111">1 つ目のインターフェイスはサービスに使用し、2 つ目のインターフェイスはコールバックに使用します。</span><span class="sxs-lookup"><span data-stu-id="d8180-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="d8180-112">双方向サービスの作成の詳細については、次を参照してください。[方法。双方向コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)します。</span><span class="sxs-lookup"><span data-stu-id="d8180-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
 
-2. <span data-ttu-id="250ed-113">サービスを実行します。</span><span class="sxs-lookup"><span data-stu-id="250ed-113">Run the service.</span></span>
+2. <span data-ttu-id="d8180-113">サービスを実行します。</span><span class="sxs-lookup"><span data-stu-id="d8180-113">Run the service.</span></span>
 
-3. <span data-ttu-id="250ed-114">使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアントのコントラクト (インターフェイス) を生成します。</span><span class="sxs-lookup"><span data-stu-id="250ed-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="250ed-115">これを行う方法については、次を参照してください。[方法。クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。</span><span class="sxs-lookup"><span data-stu-id="250ed-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
+3. <span data-ttu-id="d8180-114">使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアントのコントラクト (インターフェイス) を生成します。</span><span class="sxs-lookup"><span data-stu-id="d8180-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="d8180-115">これを行う方法については、次を参照してください。[方法。クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。</span><span class="sxs-lookup"><span data-stu-id="d8180-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
 
-4. <span data-ttu-id="250ed-116">次の例に示すように、クライアント クラスにコールバック インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="250ed-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
+4. <span data-ttu-id="d8180-116">次の例に示すように、クライアント クラスにコールバック インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="d8180-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
 
     ```csharp
     public class CallbackHandler : ICalculatorDuplexCallback
@@ -58,8 +58,7 @@ ms.locfileid: "57678684"
     End Class
     ```
 
-5. <span data-ttu-id="250ed-117">
-  <xref:System.ServiceModel.InstanceContext> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="250ed-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="250ed-118">コンストラクターには、クライアント クラスのインスタンスが必要です。</span><span class="sxs-lookup"><span data-stu-id="250ed-118">The constructor requires an instance of the client class.</span></span>
+5. <span data-ttu-id="d8180-117"><xref:System.ServiceModel.InstanceContext> クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d8180-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="d8180-118">コンストラクターには、クライアント クラスのインスタンスが必要です。</span><span class="sxs-lookup"><span data-stu-id="d8180-118">The constructor requires an instance of the client class.</span></span>
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());
@@ -69,7 +68,7 @@ ms.locfileid: "57678684"
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. <span data-ttu-id="250ed-119">必要とするコンス トラクターを使用して、WCF クライアントのインスタンスを作成、<xref:System.ServiceModel.InstanceContext>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="250ed-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="250ed-120">コンストラクターの 2 番目のパラメーターは、構成ファイルに含まれるエンドポイントの名前です。</span><span class="sxs-lookup"><span data-stu-id="250ed-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
+6. <span data-ttu-id="d8180-119">必要とするコンス トラクターを使用して、WCF クライアントのインスタンスを作成、<xref:System.ServiceModel.InstanceContext>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d8180-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="d8180-120">コンストラクターの 2 番目のパラメーターは、構成ファイルに含まれるエンドポイントの名前です。</span><span class="sxs-lookup"><span data-stu-id="d8180-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -79,19 +78,19 @@ ms.locfileid: "57678684"
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. <span data-ttu-id="250ed-121">必要に応じて、WCF クライアントのメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="250ed-121">Call the methods of the WCF client as required.</span></span>
+7. <span data-ttu-id="d8180-121">必要に応じて、WCF クライアントのメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d8180-121">Call the methods of the WCF client as required.</span></span>
 
-## <a name="example"></a><span data-ttu-id="250ed-122">例</span><span class="sxs-lookup"><span data-stu-id="250ed-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d8180-122">例</span><span class="sxs-lookup"><span data-stu-id="d8180-122">Example</span></span>
 
-<span data-ttu-id="250ed-123">双方向コントラクトにアクセスするクライアント クラスを作成する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="250ed-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
+<span data-ttu-id="d8180-123">双方向コントラクトにアクセスするクライアント クラスを作成する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="d8180-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="250ed-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="250ed-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8180-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8180-124">See also</span></span>
 
-- [<span data-ttu-id="250ed-125">チュートリアル入門</span><span class="sxs-lookup"><span data-stu-id="250ed-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="250ed-126">方法: 双方向コントラクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="250ed-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="250ed-127">ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="250ed-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [<span data-ttu-id="250ed-128">方法: クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="250ed-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="250ed-129">方法: ChannelFactory を使用します。</span><span class="sxs-lookup"><span data-stu-id="250ed-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [<span data-ttu-id="d8180-125">チュートリアル入門</span><span class="sxs-lookup"><span data-stu-id="d8180-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [<span data-ttu-id="d8180-126">方法: 双方向コントラクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="d8180-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [<span data-ttu-id="d8180-127">ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="d8180-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="d8180-128">方法: クライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="d8180-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [<span data-ttu-id="d8180-129">方法: ChannelFactory を使用します。</span><span class="sxs-lookup"><span data-stu-id="d8180-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
