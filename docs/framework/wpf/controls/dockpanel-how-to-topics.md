@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
 ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911860"
 ---
-# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="29b01-102">DockPanel に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="29b01-102">DockPanel How-to Topics</span></span>
-<span data-ttu-id="29b01-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.DockPanel>要素をレイアウト コンテナーの端に沿って子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="29b01-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
+# <a name="dockpanel-how-to-topics"></a><span data-ttu-id="31b77-102">DockPanel に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="31b77-102">DockPanel How-to Topics</span></span>
+<span data-ttu-id="31b77-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.DockPanel>要素をレイアウト コンテナーの端に沿って子要素を配置します。</span><span class="sxs-lookup"><span data-stu-id="31b77-103">The topics in this section describe how to use the <xref:System.Windows.Controls.DockPanel> element to position child elements along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="29b01-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="29b01-104">In This Section</span></span>  
- [<span data-ttu-id="29b01-105">Dock の値を取得または設定する</span><span class="sxs-lookup"><span data-stu-id="29b01-105">Get or Set a Dock Value</span></span>](how-to-get-or-set-a-dock-value.md)  
- [<span data-ttu-id="29b01-106">DockPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="29b01-106">Create a DockPanel</span></span>](how-to-create-a-dockpanel.md)  
- [<span data-ttu-id="29b01-107">DockPanel 要素を使用して領域を分割する</span><span class="sxs-lookup"><span data-stu-id="29b01-107">Partition Space by Using the DockPanel Element</span></span>](how-to-partition-space-by-using-the-dockpanel-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="31b77-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="31b77-104">In This Section</span></span>  
+ [<span data-ttu-id="31b77-105">Dock の値を取得または設定する</span><span class="sxs-lookup"><span data-stu-id="31b77-105">Get or Set a Dock Value</span></span>](how-to-get-or-set-a-dock-value.md)  
+ [<span data-ttu-id="31b77-106">DockPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="31b77-106">Create a DockPanel</span></span>](how-to-create-a-dockpanel.md)  
+ [<span data-ttu-id="31b77-107">DockPanel 要素を使用して領域を分割する</span><span class="sxs-lookup"><span data-stu-id="31b77-107">Partition Space by Using the DockPanel Element</span></span>](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="29b01-108">参照</span><span class="sxs-lookup"><span data-stu-id="29b01-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="31b77-108">参照</span><span class="sxs-lookup"><span data-stu-id="31b77-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "57355546"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="29b01-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="29b01-109">Related Sections</span></span>  
- [<span data-ttu-id="29b01-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="29b01-110">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="31b77-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="31b77-109">Related Sections</span></span>  
+ [<span data-ttu-id="31b77-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="31b77-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="29b01-111">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="29b01-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="31b77-111">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="31b77-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="29b01-112">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="29b01-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="31b77-112">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="31b77-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911829"
 ---
-# <a name="expander"></a><span data-ttu-id="2dce4-102">Expander</span><span class="sxs-lookup"><span data-stu-id="2dce4-102">Expander</span></span>
-<span data-ttu-id="2dce4-103"><xref:System.Windows.Controls.Expander>ヘッダーを表示し、詳細は、さらに参照してください。 または、ヘッダーまでのセクションを折りたたむには、そのヘッダーを展開できます。</span><span class="sxs-lookup"><span data-stu-id="2dce4-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="2f9ec-102">Expander</span><span class="sxs-lookup"><span data-stu-id="2f9ec-102">Expander</span></span>
+<span data-ttu-id="2f9ec-103"><xref:System.Windows.Controls.Expander>ヘッダーを表示し、詳細は、さらに参照してください。 または、ヘッダーまでのセクションを折りたたむには、そのヘッダーを展開できます。</span><span class="sxs-lookup"><span data-stu-id="2f9ec-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="2dce4-104">次の図は、展開された位置では、このコントロールの例を示します。</span><span class="sxs-lookup"><span data-stu-id="2dce4-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="2f9ec-104">次の図は、展開された位置では、このコントロールの例を示します。</span><span class="sxs-lookup"><span data-stu-id="2f9ec-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
  ![Expander の例](./media/expander/expander-control-example.jpg)
   
-## <a name="in-this-section"></a><span data-ttu-id="2dce4-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2dce4-106">In This Section</span></span>  
- [<span data-ttu-id="2dce4-107">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="2dce4-107">Expander Overview</span></span>](expander-overview.md)  
- [<span data-ttu-id="2dce4-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="2dce4-108">How-to Topics</span></span>](expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2f9ec-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2f9ec-106">In This Section</span></span>  
+ [<span data-ttu-id="2f9ec-107">エキスパンダーの概要</span><span class="sxs-lookup"><span data-stu-id="2f9ec-107">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="2f9ec-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="2f9ec-108">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2dce4-109">参照</span><span class="sxs-lookup"><span data-stu-id="2dce4-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2f9ec-109">参照</span><span class="sxs-lookup"><span data-stu-id="2f9ec-109">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="2dce4-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="2dce4-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2f9ec-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="2f9ec-110">Related Sections</span></span>

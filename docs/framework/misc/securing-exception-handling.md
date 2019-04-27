@@ -12,14 +12,14 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868804"
 ---
-# <a name="securing-exception-handling"></a><span data-ttu-id="72414-102">例外処理の保護</span><span class="sxs-lookup"><span data-stu-id="72414-102">Securing Exception Handling</span></span>
-<span data-ttu-id="72414-103">Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**最後に**ステートメント。</span><span class="sxs-lookup"><span data-stu-id="72414-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="72414-104">**キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**最後に**ステートメント。</span><span class="sxs-lookup"><span data-stu-id="72414-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="72414-105">詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。</span><span class="sxs-lookup"><span data-stu-id="72414-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="72414-106">このセクションでは、この注文のセキュリティへの影響を調べます。</span><span class="sxs-lookup"><span data-stu-id="72414-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="72414-107">フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**最後に**ステートメントを実行します。</span><span class="sxs-lookup"><span data-stu-id="72414-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
+# <a name="securing-exception-handling"></a><span data-ttu-id="65405-102">例外処理の保護</span><span class="sxs-lookup"><span data-stu-id="65405-102">Securing Exception Handling</span></span>
+<span data-ttu-id="65405-103">Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**最後に**ステートメント。</span><span class="sxs-lookup"><span data-stu-id="65405-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="65405-104">**キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**最後に**ステートメント。</span><span class="sxs-lookup"><span data-stu-id="65405-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="65405-105">詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。</span><span class="sxs-lookup"><span data-stu-id="65405-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="65405-106">このセクションでは、この注文のセキュリティへの影響を調べます。</span><span class="sxs-lookup"><span data-stu-id="65405-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="65405-107">フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**最後に**ステートメントを実行します。</span><span class="sxs-lookup"><span data-stu-id="65405-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- <span data-ttu-id="72414-108">このコードは、次を出力します。</span><span class="sxs-lookup"><span data-stu-id="72414-108">This code prints the following.</span></span>  
+ <span data-ttu-id="65405-108">このコードは、次を出力します。</span><span class="sxs-lookup"><span data-stu-id="65405-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- <span data-ttu-id="72414-109">フィルターを実行する前に、**最後に**ステートメントでは、セキュリティの問題は状態を他のコードの実行が活用かかる場合がありますを変更することによってもたらされるようにします。</span><span class="sxs-lookup"><span data-stu-id="72414-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="72414-110">例:</span><span class="sxs-lookup"><span data-stu-id="72414-110">For example:</span></span>  
+ <span data-ttu-id="65405-109">フィルターを実行する前に、**最後に**ステートメントでは、セキュリティの問題は状態を他のコードの実行が活用かかる場合がありますを変更することによってもたらされるようにします。</span><span class="sxs-lookup"><span data-stu-id="65405-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="65405-110">例:</span><span class="sxs-lookup"><span data-stu-id="65405-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- <span data-ttu-id="72414-111">この擬似コードは、任意のコードを実行するスタックの上位フィルターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="72414-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="72414-112">他の同様の効果を必要とされる操作の例がいくつかのセキュリティ チェックをバイパスする内部フラグを設定、別の id の一時的な権限の借用またはスレッドに関連付けられているカルチャを変更します。</span><span class="sxs-lookup"><span data-stu-id="72414-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="72414-113">スレッドの状態に呼び出し元のフィルターのブロックから、コードの変更を分離する例外ハンドラーを導入することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="72414-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="72414-114">ただし、例外ハンドラーを正しく導入することが重要か、この問題は解消されません。</span><span class="sxs-lookup"><span data-stu-id="72414-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="72414-115">次の例では、スイッチ、UI カルチャが、任意の種類のスレッド状態の変更を同様に公開される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="72414-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
+ <span data-ttu-id="65405-111">この擬似コードは、任意のコードを実行するスタックの上位フィルターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="65405-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="65405-112">他の同様の効果を必要とされる操作の例がいくつかのセキュリティ チェックをバイパスする内部フラグを設定、別の id の一時的な権限の借用またはスレッドに関連付けられているカルチャを変更します。</span><span class="sxs-lookup"><span data-stu-id="65405-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="65405-113">スレッドの状態に呼び出し元のフィルターのブロックから、コードの変更を分離する例外ハンドラーを導入することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="65405-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="65405-114">ただし、例外ハンドラーを正しく導入することが重要か、この問題は解消されません。</span><span class="sxs-lookup"><span data-stu-id="65405-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="65405-115">次の例では、スイッチ、UI カルチャが、任意の種類のスレッド状態の変更を同様に公開される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="65405-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- <span data-ttu-id="72414-116">修正プログラムがここでは、既存をラップする**お試しください**/**最後に**ブロックを**お試しください**/**キャッチ**ブロックです。</span><span class="sxs-lookup"><span data-stu-id="72414-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="72414-117">簡単に把握、 **catch、throw**既存句**お試しください**/**最後に**の次の例に示すように、ブロックで、問題が解決しません。</span><span class="sxs-lookup"><span data-stu-id="72414-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
+ <span data-ttu-id="65405-116">修正プログラムがここでは、既存をラップする**お試しください**/**最後に**ブロックを**お試しください**/**キャッチ**ブロックです。</span><span class="sxs-lookup"><span data-stu-id="65405-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="65405-117">簡単に把握、 **catch、throw**既存句**お試しください**/**最後に**の次の例に示すように、ブロックで、問題が解決しません。</span><span class="sxs-lookup"><span data-stu-id="65405-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- <span data-ttu-id="72414-118">問題が解決しない、**最後に**する前にステートメントが実行されていない、`FilterFunc`コントロールを取得します。</span><span class="sxs-lookup"><span data-stu-id="72414-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
+ <span data-ttu-id="65405-118">問題が解決しない、**最後に**する前にステートメントが実行されていない、`FilterFunc`コントロールを取得します。</span><span class="sxs-lookup"><span data-stu-id="65405-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- <span data-ttu-id="72414-119">次の例は、ことを確認して問題を修正、**最後に**句が呼び出し元の例外フィルター ブロックの例外を提供する前に実行します。</span><span class="sxs-lookup"><span data-stu-id="72414-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
+ <span data-ttu-id="65405-119">次の例は、ことを確認して問題を修正、**最後に**句が呼び出し元の例外フィルター ブロックの例外を提供する前に実行します。</span><span class="sxs-lookup"><span data-stu-id="65405-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,6 +160,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72414-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="72414-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65405-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="65405-120">See also</span></span>
 
-- [<span data-ttu-id="72414-121">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="72414-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="65405-121">安全なコーディングのガイドライン</span><span class="sxs-lookup"><span data-stu-id="65405-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
