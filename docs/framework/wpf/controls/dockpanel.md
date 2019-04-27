@@ -8,19 +8,19 @@ helpviewer_keywords:
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911873"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="ff89f-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="ff89f-102">DockPanel</span></span>
-<span data-ttu-id="ff89f-103"><xref:System.Windows.Controls.DockPanel>要素はレイアウト コンテナーの端に沿って子コンテンツの配置に使用します。</span><span class="sxs-lookup"><span data-stu-id="ff89f-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="5b74f-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="5b74f-102">DockPanel</span></span>
+<span data-ttu-id="5b74f-103"><xref:System.Windows.Controls.DockPanel>要素はレイアウト コンテナーの端に沿って子コンテンツの配置に使用します。</span><span class="sxs-lookup"><span data-stu-id="5b74f-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ff89f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ff89f-104">In This Section</span></span>  
- [<span data-ttu-id="ff89f-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="ff89f-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5b74f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5b74f-104">In This Section</span></span>  
+ [<span data-ttu-id="5b74f-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="5b74f-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ff89f-106">参照</span><span class="sxs-lookup"><span data-stu-id="ff89f-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5b74f-106">参照</span><span class="sxs-lookup"><span data-stu-id="5b74f-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "57361877"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="ff89f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff89f-107">Related Sections</span></span>  
- [<span data-ttu-id="ff89f-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="ff89f-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="5b74f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b74f-107">Related Sections</span></span>  
+ [<span data-ttu-id="5b74f-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="5b74f-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="ff89f-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="ff89f-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="5b74f-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="5b74f-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="ff89f-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="ff89f-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="5b74f-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="5b74f-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

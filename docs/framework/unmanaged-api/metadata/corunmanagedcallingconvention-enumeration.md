@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ff308a81282a1cc14c35583daf9cbb057149e556
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905438"
 ---
-# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="791ee-102">CorUnmanagedCallingConvention 列挙型</span><span class="sxs-lookup"><span data-stu-id="791ee-102">CorUnmanagedCallingConvention Enumeration</span></span>
-<span data-ttu-id="791ee-103">アンマネージ コードの呼び出し規約を指定します。</span><span class="sxs-lookup"><span data-stu-id="791ee-103">Specifies the calling conventions for unmanaged code.</span></span>  
+# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="55e36-102">CorUnmanagedCallingConvention 列挙型</span><span class="sxs-lookup"><span data-stu-id="55e36-102">CorUnmanagedCallingConvention Enumeration</span></span>
+<span data-ttu-id="55e36-103">アンマネージ コードの呼び出し規約を指定します。</span><span class="sxs-lookup"><span data-stu-id="55e36-103">Specifies the calling conventions for unmanaged code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="791ee-104">構文</span><span class="sxs-lookup"><span data-stu-id="791ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55e36-104">構文</span><span class="sxs-lookup"><span data-stu-id="55e36-104">Syntax</span></span>  
   
 ```  
 typedef enum CorUnmanagedCallingConvention {  
@@ -44,29 +44,29 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="791ee-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="791ee-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="55e36-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="55e36-105">Members</span></span>  
   
-|<span data-ttu-id="791ee-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="791ee-106">Member</span></span>|<span data-ttu-id="791ee-107">説明</span><span class="sxs-lookup"><span data-stu-id="791ee-107">Description</span></span>|  
+|<span data-ttu-id="55e36-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="55e36-106">Member</span></span>|<span data-ttu-id="55e36-107">説明</span><span class="sxs-lookup"><span data-stu-id="55e36-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="791ee-108">C 言語の呼び出し規則。</span><span class="sxs-lookup"><span data-stu-id="791ee-108">The C language calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="791ee-109">標準呼び出し規則。</span><span class="sxs-lookup"><span data-stu-id="791ee-109">The standard calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="791ee-110">"This"呼び出し規約。</span><span class="sxs-lookup"><span data-stu-id="791ee-110">The "this" calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="791ee-111">「高速」の呼び出し規約。</span><span class="sxs-lookup"><span data-stu-id="791ee-111">The "fast" calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="791ee-112">使用しません。</span><span class="sxs-lookup"><span data-stu-id="791ee-112">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="791ee-113">使用しません。</span><span class="sxs-lookup"><span data-stu-id="791ee-113">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="791ee-114">使用しません。</span><span class="sxs-lookup"><span data-stu-id="791ee-114">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="791ee-115">使用しません。</span><span class="sxs-lookup"><span data-stu-id="791ee-115">Not used.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="55e36-108">C 言語の呼び出し規則。</span><span class="sxs-lookup"><span data-stu-id="55e36-108">The C language calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="55e36-109">標準呼び出し規則。</span><span class="sxs-lookup"><span data-stu-id="55e36-109">The standard calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="55e36-110">"This"呼び出し規約。</span><span class="sxs-lookup"><span data-stu-id="55e36-110">The "this" calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="55e36-111">「高速」の呼び出し規約。</span><span class="sxs-lookup"><span data-stu-id="55e36-111">The "fast" calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="55e36-112">使用しません。</span><span class="sxs-lookup"><span data-stu-id="55e36-112">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="55e36-113">使用しません。</span><span class="sxs-lookup"><span data-stu-id="55e36-113">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="55e36-114">使用しません。</span><span class="sxs-lookup"><span data-stu-id="55e36-114">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="55e36-115">使用しません。</span><span class="sxs-lookup"><span data-stu-id="55e36-115">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="791ee-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="791ee-116">Remarks</span></span>  
- <span data-ttu-id="791ee-117">CLR は、.NET Framework version 1.0 での「高速」の呼び出し規約をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="791ee-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55e36-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="55e36-116">Remarks</span></span>  
+ <span data-ttu-id="55e36-117">CLR は、.NET Framework version 1.0 での「高速」の呼び出し規約をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="55e36-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="791ee-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="791ee-118">Requirements</span></span>  
- <span data-ttu-id="791ee-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="791ee-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55e36-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="55e36-118">Requirements</span></span>  
+ <span data-ttu-id="55e36-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="55e36-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="791ee-120">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="791ee-120">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="55e36-120">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="55e36-120">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="791ee-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="791ee-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="55e36-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55e36-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="791ee-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="791ee-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55e36-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="55e36-122">See also</span></span>
 
-- [<span data-ttu-id="791ee-123">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="791ee-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="55e36-123">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="55e36-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

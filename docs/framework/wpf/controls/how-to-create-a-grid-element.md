@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
 ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001365"
 ---
-# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="0d64a-102">方法: グリッド要素を作成する</span><span class="sxs-lookup"><span data-stu-id="0d64a-102">How to: Create a Grid Element</span></span>
-## <a name="example"></a><span data-ttu-id="0d64a-103">例</span><span class="sxs-lookup"><span data-stu-id="0d64a-103">Example</span></span>  
- <span data-ttu-id="0d64a-104">次の例は、作成しのインスタンスを使用する方法を示しています。<xref:System.Windows.Controls.Grid>いずれかを使用して[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]またはコード。</span><span class="sxs-lookup"><span data-stu-id="0d64a-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="0d64a-105">この例は、3 つ<xref:System.Windows.Controls.ColumnDefinition>オブジェクトと 3 <xref:System.Windows.Controls.RowDefinition> 9 個のグリッドを作成するセル、ワークシートなどのオブジェクトします。</span><span class="sxs-lookup"><span data-stu-id="0d64a-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="0d64a-106">各セルが含まれています、<xref:System.Windows.Controls.TextBlock>データ、および、先頭の行を表す要素が含まれています、<xref:System.Windows.Controls.TextBlock>で、<xref:System.Windows.Controls.Grid.ColumnSpan%2A>プロパティを適用します。</span><span class="sxs-lookup"><span data-stu-id="0d64a-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="0d64a-107">各セルの境界を表示する、<xref:System.Windows.Controls.Grid.ShowGridLines%2A>プロパティを有効にします。</span><span class="sxs-lookup"><span data-stu-id="0d64a-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
+# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="4d4e5-102">方法: グリッド要素を作成する</span><span class="sxs-lookup"><span data-stu-id="4d4e5-102">How to: Create a Grid Element</span></span>
+## <a name="example"></a><span data-ttu-id="4d4e5-103">例</span><span class="sxs-lookup"><span data-stu-id="4d4e5-103">Example</span></span>  
+ <span data-ttu-id="4d4e5-104">次の例は、作成しのインスタンスを使用する方法を示しています。<xref:System.Windows.Controls.Grid>いずれかを使用して[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]またはコード。</span><span class="sxs-lookup"><span data-stu-id="4d4e5-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="4d4e5-105">この例は、3 つ<xref:System.Windows.Controls.ColumnDefinition>オブジェクトと 3 <xref:System.Windows.Controls.RowDefinition> 9 個のグリッドを作成するセル、ワークシートなどのオブジェクトします。</span><span class="sxs-lookup"><span data-stu-id="4d4e5-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="4d4e5-106">各セルが含まれています、<xref:System.Windows.Controls.TextBlock>データ、および、先頭の行を表す要素が含まれています、<xref:System.Windows.Controls.TextBlock>で、<xref:System.Windows.Controls.Grid.ColumnSpan%2A>プロパティを適用します。</span><span class="sxs-lookup"><span data-stu-id="4d4e5-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="4d4e5-107">各セルの境界を表示する、<xref:System.Windows.Controls.Grid.ShowGridLines%2A>プロパティを有効にします。</span><span class="sxs-lookup"><span data-stu-id="4d4e5-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
   
  [!code-csharp[Grid#3](~/samples/snippets/csharp/VS_Snippets_Wpf/Grid/CSharp/Grid_Code.cs#3)]
  [!code-vb[Grid#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Grid/VisualBasic/grid_vb.vb#3)]
  [!code-xaml[Grid#3](~/samples/snippets/xaml/VS_Snippets_Wpf/Grid/XAML/default.xaml#3)]  
   
-  <span data-ttu-id="0d64a-108">どちらの方法では、非常によく似た次のように、同じユーザー インターフェイスを生成します。</span><span class="sxs-lookup"><span data-stu-id="0d64a-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
+  <span data-ttu-id="4d4e5-108">どちらの方法では、非常によく似た次のように、同じユーザー インターフェイスを生成します。</span><span class="sxs-lookup"><span data-stu-id="4d4e5-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
 
   ![スクリーン ショットは、3 つの列に分割グリッドを含む WPF ユーザー インターフェイスを示しています。](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
-## <a name="see-also"></a><span data-ttu-id="0d64a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0d64a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d4e5-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d4e5-112">See also</span></span>
 
 - <xref:System.Windows.Controls.Grid>
-- [<span data-ttu-id="0d64a-113">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="0d64a-113">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="4d4e5-113">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="4d4e5-113">Panels Overview</span></span>](panels-overview.md)

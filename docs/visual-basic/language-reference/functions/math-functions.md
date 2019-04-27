@@ -8,55 +8,55 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801349"
 ---
-# <a name="math-functions-visual-basic"></a><span data-ttu-id="59b7e-102">数値演算関数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="59b7e-102">Math Functions (Visual Basic)</span></span>
-<span data-ttu-id="59b7e-103">メソッド、<xref:System.Math?displayProperty=nameWithType>クラスは三角関数演算、対数演算、およびその他の一般的な数学関数を提供します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
+# <a name="math-functions-visual-basic"></a><span data-ttu-id="53c30-102">数値演算関数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53c30-102">Math Functions (Visual Basic)</span></span>
+<span data-ttu-id="53c30-103">メソッド、<xref:System.Math?displayProperty=nameWithType>クラスは三角関数演算、対数演算、およびその他の一般的な数学関数を提供します。</span><span class="sxs-lookup"><span data-stu-id="53c30-103">The methods of the <xref:System.Math?displayProperty=nameWithType> class provide trigonometric, logarithmic, and other common mathematical functions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59b7e-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="59b7e-104">Remarks</span></span>  
- <span data-ttu-id="59b7e-105">次の表に、メソッドの<xref:System.Math?displayProperty=nameWithType>クラス。</span><span class="sxs-lookup"><span data-stu-id="59b7e-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="59b7e-106">Visual Basic プログラムでこれらを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="59b7e-106">You can use these in a Visual Basic program.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53c30-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="53c30-104">Remarks</span></span>  
+ <span data-ttu-id="53c30-105">次の表に、メソッドの<xref:System.Math?displayProperty=nameWithType>クラス。</span><span class="sxs-lookup"><span data-stu-id="53c30-105">The following table lists methods of the <xref:System.Math?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="53c30-106">Visual Basic プログラムでこれらを使用することができます。</span><span class="sxs-lookup"><span data-stu-id="53c30-106">You can use these in a Visual Basic program.</span></span>  
   
-|<span data-ttu-id="59b7e-107">.NET メソッド</span><span class="sxs-lookup"><span data-stu-id="59b7e-107">.NET method</span></span>|<span data-ttu-id="59b7e-108">説明</span><span class="sxs-lookup"><span data-stu-id="59b7e-108">Description</span></span>|  
+|<span data-ttu-id="53c30-107">.NET メソッド</span><span class="sxs-lookup"><span data-stu-id="53c30-107">.NET method</span></span>|<span data-ttu-id="53c30-108">説明</span><span class="sxs-lookup"><span data-stu-id="53c30-108">Description</span></span>|  
 |---------------------------|-----------------|  
-|<xref:System.Math.Abs%2A>|<span data-ttu-id="59b7e-109">絶対値を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-109">Returns the absolute value of a number.</span></span>|  
-|<xref:System.Math.Acos%2A>|<span data-ttu-id="59b7e-110">コサインが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-110">Returns the angle whose cosine is the specified number.</span></span>|  
-|<xref:System.Math.Asin%2A>|<span data-ttu-id="59b7e-111">サインが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-111">Returns the angle whose sine is the specified number.</span></span>|  
-|<xref:System.Math.Atan%2A>|<span data-ttu-id="59b7e-112">タンジェントが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-112">Returns the angle whose tangent is the specified number.</span></span>|  
-|<xref:System.Math.Atan2%2A>|<span data-ttu-id="59b7e-113">タンジェントが 2 つの指定された数の商である角度を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
-|<xref:System.Math.BigMul%2A>|<span data-ttu-id="59b7e-114">2 つの 32 ビット数値の完全な積を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-114">Returns the full product of two 32-bit numbers.</span></span>|  
-|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="59b7e-115">指定した以上である最小の整数値を返します`Decimal`または`Double`します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
-|<xref:System.Math.Cos%2A>|<span data-ttu-id="59b7e-116">指定された角度のコサインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-116">Returns the cosine of the specified angle.</span></span>|  
-|<xref:System.Math.Cosh%2A>|<span data-ttu-id="59b7e-117">指定された角度のハイパーボリック コサインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
-|<xref:System.Math.DivRem%2A>|<span data-ttu-id="59b7e-118">2 32 ビットまたは 64 ビット符号付き整数の商を返し、出力パラメーターの剰余を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
-|<xref:System.Math.Exp%2A>|<span data-ttu-id="59b7e-119">指定した累乗された e (自然対数の底) を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
-|<xref:System.Math.Floor%2A>|<span data-ttu-id="59b7e-120">指定した小さい最大整数を返します`Decimal`または`Double`数。</span><span class="sxs-lookup"><span data-stu-id="59b7e-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
-|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="59b7e-121">指定された数の剰余をもう 1 つの指定された数値の除算の結果を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
-|<xref:System.Math.Log%2A>|<span data-ttu-id="59b7e-122">指定した基数では、指定した数の自然 (底 e) 対数または指定した数の対数を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
-|<xref:System.Math.Log10%2A>|<span data-ttu-id="59b7e-123">指定した数の底 10 の対数を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-123">Returns the base 10 logarithm of a specified number.</span></span>|  
-|<xref:System.Math.Max%2A>|<span data-ttu-id="59b7e-124">2 つの数値のうち、大きい方を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-124">Returns the larger of two numbers.</span></span>|  
-|<xref:System.Math.Min%2A>|<span data-ttu-id="59b7e-125">2 つの数のうち、小さい方を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-125">Returns the smaller of two numbers.</span></span>|  
-|<xref:System.Math.Pow%2A>|<span data-ttu-id="59b7e-126">指定の数値を指定した値で累乗した値を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-126">Returns a specified number raised to the specified power.</span></span>|  
-|<xref:System.Math.Round%2A>|<span data-ttu-id="59b7e-127">返します、`Decimal`または`Double`値には、最も近い整数値または指定された数の桁の小数部が丸められます。</span><span class="sxs-lookup"><span data-stu-id="59b7e-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
-|<xref:System.Math.Sign%2A>|<span data-ttu-id="59b7e-128">返します、`Integer`数値の符号を示す値。</span><span class="sxs-lookup"><span data-stu-id="59b7e-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
-|<xref:System.Math.Sin%2A>|<span data-ttu-id="59b7e-129">指定された角度のサインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-129">Returns the sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sinh%2A>|<span data-ttu-id="59b7e-130">指定された角度のハイパーボリック サインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
-|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="59b7e-131">指定された数値の平方根を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-131">Returns the square root of a specified number.</span></span>|  
-|<xref:System.Math.Tan%2A>|<span data-ttu-id="59b7e-132">指定された角度のタンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-132">Returns the tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Tanh%2A>|<span data-ttu-id="59b7e-133">指定された角度のハイパーボリック タンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
-|<xref:System.Math.Truncate%2A>|<span data-ttu-id="59b7e-134">指定の整数部を計算`Decimal`または`Double`数。</span><span class="sxs-lookup"><span data-stu-id="59b7e-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.Abs%2A>|<span data-ttu-id="53c30-109">絶対値を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-109">Returns the absolute value of a number.</span></span>|  
+|<xref:System.Math.Acos%2A>|<span data-ttu-id="53c30-110">コサインが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-110">Returns the angle whose cosine is the specified number.</span></span>|  
+|<xref:System.Math.Asin%2A>|<span data-ttu-id="53c30-111">サインが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-111">Returns the angle whose sine is the specified number.</span></span>|  
+|<xref:System.Math.Atan%2A>|<span data-ttu-id="53c30-112">タンジェントが指定数となる角度を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-112">Returns the angle whose tangent is the specified number.</span></span>|  
+|<xref:System.Math.Atan2%2A>|<span data-ttu-id="53c30-113">タンジェントが 2 つの指定された数の商である角度を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-113">Returns the angle whose tangent is the quotient of two specified numbers.</span></span>|  
+|<xref:System.Math.BigMul%2A>|<span data-ttu-id="53c30-114">2 つの 32 ビット数値の完全な積を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-114">Returns the full product of two 32-bit numbers.</span></span>|  
+|<xref:System.Math.Ceiling%2A>|<span data-ttu-id="53c30-115">指定した以上である最小の整数値を返します`Decimal`または`Double`します。</span><span class="sxs-lookup"><span data-stu-id="53c30-115">Returns the smallest integral value that's greater than or equal to the specified `Decimal` or `Double`.</span></span>|  
+|<xref:System.Math.Cos%2A>|<span data-ttu-id="53c30-116">指定された角度のコサインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-116">Returns the cosine of the specified angle.</span></span>|  
+|<xref:System.Math.Cosh%2A>|<span data-ttu-id="53c30-117">指定された角度のハイパーボリック コサインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-117">Returns the hyperbolic cosine of the specified angle.</span></span>|  
+|<xref:System.Math.DivRem%2A>|<span data-ttu-id="53c30-118">2 32 ビットまたは 64 ビット符号付き整数の商を返し、出力パラメーターの剰余を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-118">Returns the quotient of two 32-bit or 64-bit signed integers, and also returns the remainder in an output parameter.</span></span>|  
+|<xref:System.Math.Exp%2A>|<span data-ttu-id="53c30-119">指定した累乗された e (自然対数の底) を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-119">Returns e (the base of natural logarithms) raised to the specified power.</span></span>|  
+|<xref:System.Math.Floor%2A>|<span data-ttu-id="53c30-120">指定した小さい最大整数を返します`Decimal`または`Double`数。</span><span class="sxs-lookup"><span data-stu-id="53c30-120">Returns the largest integer that's less than or equal to the specified `Decimal` or `Double` number.</span></span>|  
+|<xref:System.Math.IEEERemainder%2A>|<span data-ttu-id="53c30-121">指定された数の剰余をもう 1 つの指定された数値の除算の結果を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-121">Returns the remainder that results from the division of a specified number by another specified number.</span></span>|  
+|<xref:System.Math.Log%2A>|<span data-ttu-id="53c30-122">指定した基数では、指定した数の自然 (底 e) 対数または指定した数の対数を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-122">Returns the natural (base e) logarithm of a specified number or the logarithm of a specified number in a specified base.</span></span>|  
+|<xref:System.Math.Log10%2A>|<span data-ttu-id="53c30-123">指定した数の底 10 の対数を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-123">Returns the base 10 logarithm of a specified number.</span></span>|  
+|<xref:System.Math.Max%2A>|<span data-ttu-id="53c30-124">2 つの数値のうち、大きい方を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-124">Returns the larger of two numbers.</span></span>|  
+|<xref:System.Math.Min%2A>|<span data-ttu-id="53c30-125">2 つの数のうち、小さい方を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-125">Returns the smaller of two numbers.</span></span>|  
+|<xref:System.Math.Pow%2A>|<span data-ttu-id="53c30-126">指定の数値を指定した値で累乗した値を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-126">Returns a specified number raised to the specified power.</span></span>|  
+|<xref:System.Math.Round%2A>|<span data-ttu-id="53c30-127">返します、`Decimal`または`Double`値には、最も近い整数値または指定された数の桁の小数部が丸められます。</span><span class="sxs-lookup"><span data-stu-id="53c30-127">Returns a `Decimal` or `Double` value rounded to the nearest integral value or to a specified number of fractional digits.</span></span>|  
+|<xref:System.Math.Sign%2A>|<span data-ttu-id="53c30-128">返します、`Integer`数値の符号を示す値。</span><span class="sxs-lookup"><span data-stu-id="53c30-128">Returns an `Integer` value indicating the sign of a number.</span></span>|  
+|<xref:System.Math.Sin%2A>|<span data-ttu-id="53c30-129">指定された角度のサインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-129">Returns the sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sinh%2A>|<span data-ttu-id="53c30-130">指定された角度のハイパーボリック サインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-130">Returns the hyperbolic sine of the specified angle.</span></span>|  
+|<xref:System.Math.Sqrt%2A>|<span data-ttu-id="53c30-131">指定された数値の平方根を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-131">Returns the square root of a specified number.</span></span>|  
+|<xref:System.Math.Tan%2A>|<span data-ttu-id="53c30-132">指定された角度のタンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-132">Returns the tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Tanh%2A>|<span data-ttu-id="53c30-133">指定された角度のハイパーボリック タンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-133">Returns the hyperbolic tangent of the specified angle.</span></span>|  
+|<xref:System.Math.Truncate%2A>|<span data-ttu-id="53c30-134">指定の整数部を計算`Decimal`または`Double`数。</span><span class="sxs-lookup"><span data-stu-id="53c30-134">Calculates the integral part of a specified `Decimal` or `Double` number.</span></span>|  
   
- <span data-ttu-id="59b7e-135">修飾なしのこれらの関数を使用するインポート、<xref:System.Math?displayProperty=nameWithType>ソース ファイルの先頭に次のコードを追加して、プロジェクトに名前空間。</span><span class="sxs-lookup"><span data-stu-id="59b7e-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
+ <span data-ttu-id="53c30-135">修飾なしのこれらの関数を使用するインポート、<xref:System.Math?displayProperty=nameWithType>ソース ファイルの先頭に次のコードを追加して、プロジェクトに名前空間。</span><span class="sxs-lookup"><span data-stu-id="53c30-135">To use these functions without qualification, import the <xref:System.Math?displayProperty=nameWithType> namespace into your project by adding the following code to the top of your source file:</span></span>  
   
 ```vb
 Imports System.Math  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-136">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-136">Example</span></span>  
- <span data-ttu-id="59b7e-137">この例では、<xref:System.Math.Abs%2A>のメソッド、<xref:System.Math>数値の絶対値を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="59b7e-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-136">例</span><span class="sxs-lookup"><span data-stu-id="53c30-136">Example</span></span>  
+ <span data-ttu-id="53c30-137">この例では、<xref:System.Math.Abs%2A>のメソッド、<xref:System.Math>数値の絶対値を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="53c30-137">This example uses the <xref:System.Math.Abs%2A> method of the <xref:System.Math> class to compute the absolute value of a number.</span></span>  
   
 ```vb
 ' Returns 50.3.  
@@ -65,8 +65,8 @@ Dim MyNumber1 As Double = Math.Abs(50.3)
 Dim MyNumber2 As Double = Math.Abs(-50.3)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-138">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-138">Example</span></span>  
- <span data-ttu-id="59b7e-139">この例では、<xref:System.Math.Atan%2A>のメソッド、 <xref:System.Math> pi の値を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="59b7e-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-138">例</span><span class="sxs-lookup"><span data-stu-id="53c30-138">Example</span></span>  
+ <span data-ttu-id="53c30-139">この例では、<xref:System.Math.Atan%2A>のメソッド、 <xref:System.Math> pi の値を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="53c30-139">This example uses the <xref:System.Math.Atan%2A> method of the <xref:System.Math> class to calculate the value of pi.</span></span>  
   
 ```vb
 Public Function GetPi() As Double  
@@ -75,8 +75,8 @@ Public Function GetPi() As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-140">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-140">Example</span></span>  
- <span data-ttu-id="59b7e-141">この例では、<xref:System.Math.Cos%2A>のメソッド、<xref:System.Math>クラス角度のコサインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-140">例</span><span class="sxs-lookup"><span data-stu-id="53c30-140">Example</span></span>  
+ <span data-ttu-id="53c30-141">この例では、<xref:System.Math.Cos%2A>のメソッド、<xref:System.Math>クラス角度のコサインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-141">This example uses the <xref:System.Math.Cos%2A> method of the <xref:System.Math> class to return the cosine of an angle.</span></span>  
   
 ```vb
 Public Function Sec(ByVal angle As Double) As Double  
@@ -85,8 +85,8 @@ Public Function Sec(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-142">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-142">Example</span></span>  
- <span data-ttu-id="59b7e-143">この例では、<xref:System.Math.Exp%2A>のメソッド、<xref:System.Math>クラスを e の累乗を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-142">例</span><span class="sxs-lookup"><span data-stu-id="53c30-142">Example</span></span>  
+ <span data-ttu-id="53c30-143">この例では、<xref:System.Math.Exp%2A>のメソッド、<xref:System.Math>クラスを e の累乗を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-143">This example uses the <xref:System.Math.Exp%2A> method of the <xref:System.Math> class to return e raised to a power.</span></span>  
   
 ```vb
 Public Function Sinh(ByVal angle As Double) As Double  
@@ -95,8 +95,8 @@ Public Function Sinh(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-144">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-144">Example</span></span>  
- <span data-ttu-id="59b7e-145">この例では、<xref:System.Math.Log%2A>のメソッド、<xref:System.Math>クラス数値の自然対数を返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-144">例</span><span class="sxs-lookup"><span data-stu-id="53c30-144">Example</span></span>  
+ <span data-ttu-id="53c30-145">この例では、<xref:System.Math.Log%2A>のメソッド、<xref:System.Math>クラス数値の自然対数を返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-145">This example uses the <xref:System.Math.Log%2A> method of the <xref:System.Math> class to return the natural logarithm of a number.</span></span>  
   
 ```vb
 Public Function Asinh(ByVal value As Double) As Double  
@@ -105,16 +105,16 @@ Public Function Asinh(ByVal value As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-146">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-146">Example</span></span>  
- <span data-ttu-id="59b7e-147">この例では、<xref:System.Math.Round%2A>のメソッド、<xref:System.Math>に最も近い整数に数値を丸めるクラス。</span><span class="sxs-lookup"><span data-stu-id="59b7e-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-146">例</span><span class="sxs-lookup"><span data-stu-id="53c30-146">Example</span></span>  
+ <span data-ttu-id="53c30-147">この例では、<xref:System.Math.Round%2A>のメソッド、<xref:System.Math>に最も近い整数に数値を丸めるクラス。</span><span class="sxs-lookup"><span data-stu-id="53c30-147">This example uses the <xref:System.Math.Round%2A> method of the <xref:System.Math> class to round a number to the nearest integer.</span></span>  
   
 ```vb
 ' Returns 3.  
 Dim MyVar2 As Double = Math.Round(2.8)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-148">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-148">Example</span></span>  
- <span data-ttu-id="59b7e-149">この例では、<xref:System.Math.Sign%2A>のメソッド、<xref:System.Math>クラスを数値の符号を調べます。</span><span class="sxs-lookup"><span data-stu-id="59b7e-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-148">例</span><span class="sxs-lookup"><span data-stu-id="53c30-148">Example</span></span>  
+ <span data-ttu-id="53c30-149">この例では、<xref:System.Math.Sign%2A>のメソッド、<xref:System.Math>クラスを数値の符号を調べます。</span><span class="sxs-lookup"><span data-stu-id="53c30-149">This example uses the <xref:System.Math.Sign%2A> method of the <xref:System.Math> class to determine the sign of a number.</span></span>  
   
 ```vb
 ' Returns 1.  
@@ -125,8 +125,8 @@ Dim MySign2 As Integer = Math.Sign(-2.4)
 Dim MySign3 As Integer = Math.Sign(0)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-150">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-150">Example</span></span>  
- <span data-ttu-id="59b7e-151">この例では、<xref:System.Math.Sin%2A>のメソッド、<xref:System.Math>クラス角度のサインを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-150">例</span><span class="sxs-lookup"><span data-stu-id="53c30-150">Example</span></span>  
+ <span data-ttu-id="53c30-151">この例では、<xref:System.Math.Sin%2A>のメソッド、<xref:System.Math>クラス角度のサインを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-151">This example uses the <xref:System.Math.Sin%2A> method of the <xref:System.Math> class to return the sine of an angle.</span></span>  
   
 ```vb
 Public Function Csc(ByVal angle As Double) As Double  
@@ -135,8 +135,8 @@ Public Function Csc(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-152">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-152">Example</span></span>  
- <span data-ttu-id="59b7e-153">この例では、<xref:System.Math.Sqrt%2A>のメソッド、<xref:System.Math>数値の平方根を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="59b7e-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-152">例</span><span class="sxs-lookup"><span data-stu-id="53c30-152">Example</span></span>  
+ <span data-ttu-id="53c30-153">この例では、<xref:System.Math.Sqrt%2A>のメソッド、<xref:System.Math>数値の平方根を計算するクラス。</span><span class="sxs-lookup"><span data-stu-id="53c30-153">This example uses the <xref:System.Math.Sqrt%2A> method of the <xref:System.Math> class to calculate the square root of a number.</span></span>  
   
 ```vb
 ' Returns 2.  
@@ -149,8 +149,8 @@ Dim MySqr3 As Double = Math.Sqrt(0)
 Dim MySqr4 As Double = Math.Sqrt(-4)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59b7e-154">例</span><span class="sxs-lookup"><span data-stu-id="59b7e-154">Example</span></span>  
- <span data-ttu-id="59b7e-155">この例では、<xref:System.Math.Tan%2A>のメソッド、<xref:System.Math>クラス角度のタンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="59b7e-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
+## <a name="example"></a><span data-ttu-id="53c30-154">例</span><span class="sxs-lookup"><span data-stu-id="53c30-154">Example</span></span>  
+ <span data-ttu-id="53c30-155">この例では、<xref:System.Math.Tan%2A>のメソッド、<xref:System.Math>クラス角度のタンジェントを返します。</span><span class="sxs-lookup"><span data-stu-id="53c30-155">This example uses the <xref:System.Math.Tan%2A> method of the <xref:System.Math> class to return the tangent of an angle.</span></span>  
   
 ```vb
 Public Function Ctan(ByVal angle As Double) As Double  
@@ -159,17 +159,17 @@ Public Function Ctan(ByVal angle As Double) As Double
 End Function  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="59b7e-156">必要条件</span><span class="sxs-lookup"><span data-stu-id="59b7e-156">Requirements</span></span>  
- <span data-ttu-id="59b7e-157">**クラス:** <xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="59b7e-157">**Class:** <xref:System.Math></span></span>  
+## <a name="requirements"></a><span data-ttu-id="53c30-156">必要条件</span><span class="sxs-lookup"><span data-stu-id="53c30-156">Requirements</span></span>  
+ <span data-ttu-id="53c30-157">**クラス:** <xref:System.Math></span><span class="sxs-lookup"><span data-stu-id="53c30-157">**Class:** <xref:System.Math></span></span>  
   
- <span data-ttu-id="59b7e-158">**名前空間:** <xref:System></span><span class="sxs-lookup"><span data-stu-id="59b7e-158">**Namespace:** <xref:System></span></span>  
+ <span data-ttu-id="53c30-158">**名前空間:** <xref:System></span><span class="sxs-lookup"><span data-stu-id="53c30-158">**Namespace:** <xref:System></span></span>  
   
- <span data-ttu-id="59b7e-159">**アセンブリ:** mscorlib (mscorlib.dll 内)</span><span class="sxs-lookup"><span data-stu-id="59b7e-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
+ <span data-ttu-id="53c30-159">**アセンブリ:** mscorlib (mscorlib.dll 内)</span><span class="sxs-lookup"><span data-stu-id="53c30-159">**Assembly:** mscorlib (in mscorlib.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59b7e-160">関連項目</span><span class="sxs-lookup"><span data-stu-id="59b7e-160">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53c30-160">関連項目</span><span class="sxs-lookup"><span data-stu-id="53c30-160">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
 - <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
 - <xref:System.Double.NaN>
-- [<span data-ttu-id="59b7e-161">数値演算関数の導出</span><span class="sxs-lookup"><span data-stu-id="59b7e-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [<span data-ttu-id="59b7e-162">算術演算子</span><span class="sxs-lookup"><span data-stu-id="59b7e-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="53c30-161">数値演算関数の導出</span><span class="sxs-lookup"><span data-stu-id="53c30-161">Derived Math Functions</span></span>](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [<span data-ttu-id="53c30-162">算術演算子</span><span class="sxs-lookup"><span data-stu-id="53c30-162">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

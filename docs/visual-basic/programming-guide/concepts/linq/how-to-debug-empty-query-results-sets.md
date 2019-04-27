@@ -3,23 +3,23 @@ title: '方法: 空のクエリ結果セット (Visual Basic) のデバッグし
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855687"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="6688f-102">方法: 空のクエリ結果セット (Visual Basic) のデバッグします。</span><span class="sxs-lookup"><span data-stu-id="6688f-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
-<span data-ttu-id="6688f-103">XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。</span><span class="sxs-lookup"><span data-stu-id="6688f-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a><span data-ttu-id="9b673-102">方法: 空のクエリ結果セット (Visual Basic) のデバッグします。</span><span class="sxs-lookup"><span data-stu-id="9b673-102">How to: Debug Empty Query Results Sets (Visual Basic)</span></span>
+<span data-ttu-id="9b673-103">XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。</span><span class="sxs-lookup"><span data-stu-id="9b673-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="6688f-104">このトピックの最初に示す一連の例では、既定の名前空間内の XML が読み込まれ、クエリが不適切に実行される典型的な例を示しています。</span><span class="sxs-lookup"><span data-stu-id="6688f-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>  
+ <span data-ttu-id="9b673-104">このトピックの最初に示す一連の例では、既定の名前空間内の XML が読み込まれ、クエリが不適切に実行される典型的な例を示しています。</span><span class="sxs-lookup"><span data-stu-id="9b673-104">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, and is queried improperly.</span></span>  
   
- <span data-ttu-id="6688f-105">2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。</span><span class="sxs-lookup"><span data-stu-id="6688f-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="9b673-105">2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。</span><span class="sxs-lookup"><span data-stu-id="9b673-105">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
- <span data-ttu-id="6688f-106">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。</span><span class="sxs-lookup"><span data-stu-id="6688f-106">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="9b673-106">詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。</span><span class="sxs-lookup"><span data-stu-id="9b673-106">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6688f-107">例</span><span class="sxs-lookup"><span data-stu-id="6688f-107">Example</span></span>  
- <span data-ttu-id="6688f-108">この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。</span><span class="sxs-lookup"><span data-stu-id="6688f-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b673-107">例</span><span class="sxs-lookup"><span data-stu-id="9b673-107">Example</span></span>  
+ <span data-ttu-id="9b673-108">この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。</span><span class="sxs-lookup"><span data-stu-id="9b673-108">This example shows creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -41,17 +41,17 @@ Next
 Console.WriteLine("End of result set")  
 ```  
   
- <span data-ttu-id="6688f-109">この例を実行すると、次の結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="6688f-109">This example produces the following result:</span></span>  
+ <span data-ttu-id="9b673-109">この例を実行すると、次の結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="9b673-109">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6688f-110">例</span><span class="sxs-lookup"><span data-stu-id="6688f-110">Example</span></span>  
- <span data-ttu-id="6688f-111">この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。</span><span class="sxs-lookup"><span data-stu-id="6688f-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b673-110">例</span><span class="sxs-lookup"><span data-stu-id="9b673-110">Example</span></span>  
+ <span data-ttu-id="9b673-111">この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。</span><span class="sxs-lookup"><span data-stu-id="9b673-111">This example shows creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="6688f-112">ソリューションを宣言して既定のグローバル名前空間を初期化します。</span><span class="sxs-lookup"><span data-stu-id="6688f-112">The solution is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="6688f-113">これにより、すべての XML プロパティが既定の名前空間に配置されます。</span><span class="sxs-lookup"><span data-stu-id="6688f-113">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="6688f-114">この例を正しく動作させるために必要な変更はこれだけです。</span><span class="sxs-lookup"><span data-stu-id="6688f-114">No other modifications are required to the example to make it work properly.</span></span>  
+ <span data-ttu-id="9b673-112">ソリューションを宣言して既定のグローバル名前空間を初期化します。</span><span class="sxs-lookup"><span data-stu-id="9b673-112">The solution is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="9b673-113">これにより、すべての XML プロパティが既定の名前空間に配置されます。</span><span class="sxs-lookup"><span data-stu-id="9b673-113">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="9b673-114">この例を正しく動作させるために必要な変更はこれだけです。</span><span class="sxs-lookup"><span data-stu-id="9b673-114">No other modifications are required to the example to make it work properly.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -79,7 +79,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="6688f-115">この例を実行すると、次の結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="6688f-115">This example produces the following result:</span></span>  
+ <span data-ttu-id="9b673-115">この例を実行すると、次の結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="9b673-115">This example produces the following result:</span></span>  
   
 ```  
 Result set follows:  
@@ -89,6 +89,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6688f-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="6688f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b673-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="9b673-116">See also</span></span>
 
-- [<span data-ttu-id="6688f-117">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6688f-117">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="9b673-117">基本的なクエリ (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b673-117">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
