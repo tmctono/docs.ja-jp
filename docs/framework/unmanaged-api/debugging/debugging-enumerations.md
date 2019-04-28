@@ -9,143 +9,143 @@ ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698513"
 ---
-# <a name="debugging-enumerations"></a><span data-ttu-id="f98fd-102">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="f98fd-102">Debugging Enumerations</span></span>
-<span data-ttu-id="f98fd-103">このセクションでは、デバッグ API が使用するアンマネージ列挙体について説明します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-103">This section describes the unmanaged enumerations that the debugging API uses.</span></span>  
+# <a name="debugging-enumerations"></a><span data-ttu-id="b99ef-102">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="b99ef-102">Debugging Enumerations</span></span>
+<span data-ttu-id="b99ef-103">このセクションでは、デバッグ API が使用するアンマネージ列挙体について説明します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-103">This section describes the unmanaged enumerations that the debugging API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f98fd-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f98fd-104">In This Section</span></span>  
- [<span data-ttu-id="f98fd-105">CLR_DEBUGGING_PROCESS_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-105">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- <span data-ttu-id="f98fd-106">使用される値を提供します、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f98fd-106">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b99ef-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b99ef-104">In This Section</span></span>  
+ [<span data-ttu-id="b99ef-105">CLR_DEBUGGING_PROCESS_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-105">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
+ <span data-ttu-id="b99ef-106">使用される値を提供します、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b99ef-106">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
- [<span data-ttu-id="f98fd-107">CLRDataEnumMemoryFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-107">CLRDataEnumMemoryFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- <span data-ttu-id="f98fd-108">メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="f98fd-108">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+ [<span data-ttu-id="b99ef-107">CLRDataEnumMemoryFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-107">CLRDataEnumMemoryFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
+ <span data-ttu-id="b99ef-108">メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="b99ef-108">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
- [<span data-ttu-id="f98fd-109">COR_PUB_ENUMPROCESS 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-109">COR_PUB_ENUMPROCESS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
- <span data-ttu-id="f98fd-110">列挙するプロセスの型を識別します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-110">Identifies the type of process to be enumerated.</span></span>  
+ [<span data-ttu-id="b99ef-109">COR_PUB_ENUMPROCESS 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-109">COR_PUB_ENUMPROCESS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
+ <span data-ttu-id="b99ef-110">列挙するプロセスの型を識別します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-110">Identifies the type of process to be enumerated.</span></span>  
   
- [<span data-ttu-id="f98fd-111">CorDebugBlockingReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-111">CorDebugBlockingReason Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingreason-enumeration.md)  
- <span data-ttu-id="f98fd-112">指定されたオブジェクト上でスレッドがブロックされる理由を指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-112">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
+ [<span data-ttu-id="b99ef-111">CorDebugBlockingReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-111">CorDebugBlockingReason Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingreason-enumeration.md)  
+ <span data-ttu-id="b99ef-112">指定されたオブジェクト上でスレッドがブロックされる理由を指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-112">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
   
- <span data-ttu-id="f98fd-113">CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="f98fd-113">CorDebugChainReason</span></span>  
- <span data-ttu-id="f98fd-114">呼び出しチェーンが開始する理由を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-114">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
+ <span data-ttu-id="b99ef-113">CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="b99ef-113">CorDebugChainReason</span></span>  
+ <span data-ttu-id="b99ef-114">呼び出しチェーンが開始する理由を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-114">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
   
- [<span data-ttu-id="f98fd-115">CorDebugCodeInvokeKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-115">CorDebugCodeInvokeKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
- <span data-ttu-id="f98fd-116">エクスポートされた関数がマネージド コードを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-116">Describes how an exported function invokes managed code.</span></span>  
+ [<span data-ttu-id="b99ef-115">CorDebugCodeInvokeKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-115">CorDebugCodeInvokeKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)  
+ <span data-ttu-id="b99ef-116">エクスポートされた関数がマネージド コードを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-116">Describes how an exported function invokes managed code.</span></span>  
   
- [<span data-ttu-id="f98fd-117">CorDebugCodeInvokePurpose 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-117">CorDebugCodeInvokePurpose Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
- <span data-ttu-id="f98fd-118">エクスポートされた関数がマネージド コードを呼び出す理由を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-118">Describes why an exported function calls managed code.</span></span>  
+ [<span data-ttu-id="b99ef-117">CorDebugCodeInvokePurpose 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-117">CorDebugCodeInvokePurpose Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)  
+ <span data-ttu-id="b99ef-118">エクスポートされた関数がマネージド コードを呼び出す理由を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-118">Describes why an exported function calls managed code.</span></span>  
   
- <span data-ttu-id="f98fd-119">CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="f98fd-119">CorDebugCreateProcessFlags</span></span>  
- <span data-ttu-id="f98fd-120">呼び出しで使用できる追加のデバッグ オプションの提供、 [icordebug::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f98fd-120">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
+ <span data-ttu-id="b99ef-119">CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="b99ef-119">CorDebugCreateProcessFlags</span></span>  
+ <span data-ttu-id="b99ef-120">呼び出しで使用できる追加のデバッグ オプションの提供、 [icordebug::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b99ef-120">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) method.</span></span>  
   
- [<span data-ttu-id="f98fd-121">CorDebugDebugEventKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-121">CorDebugDebugEventKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- <span data-ttu-id="f98fd-122">情報がデコードされるによってイベントの種類を示す、 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f98fd-122">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
+ [<span data-ttu-id="b99ef-121">CorDebugDebugEventKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-121">CorDebugDebugEventKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
+ <span data-ttu-id="b99ef-122">情報がデコードされるによってイベントの種類を示す、 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b99ef-122">Indicates the type of event whose information is decoded by the [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method.</span></span>  
   
- [<span data-ttu-id="f98fd-123">CorDebugDecodeEventFlagsWindows 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-123">CorDebugDecodeEventFlagsWindows Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
- <span data-ttu-id="f98fd-124">Windows プラットフォームのデバッグ イベントに関する追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-124">Provides additional information about debug events on the Windows platform.</span></span>  
+ [<span data-ttu-id="b99ef-123">CorDebugDecodeEventFlagsWindows 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-123">CorDebugDecodeEventFlagsWindows Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
+ <span data-ttu-id="b99ef-124">Windows プラットフォームのデバッグ イベントに関する追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-124">Provides additional information about debug events on the Windows platform.</span></span>  
   
- <span data-ttu-id="f98fd-125">CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="f98fd-125">CorDebugExceptionCallbackType</span></span>  
- <span data-ttu-id="f98fd-126">行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。</span><span class="sxs-lookup"><span data-stu-id="f98fd-126">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+ <span data-ttu-id="b99ef-125">CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="b99ef-125">CorDebugExceptionCallbackType</span></span>  
+ <span data-ttu-id="b99ef-126">行われるコールバックの型を示す、 [icordebugmanagedcallback 2::exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベント。</span><span class="sxs-lookup"><span data-stu-id="b99ef-126">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
- [<span data-ttu-id="f98fd-127">CorDebugExceptionFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-127">CorDebugExceptionFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
- <span data-ttu-id="f98fd-128">例外に関する追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-128">Provides additional information about an exception.</span></span>  
+ [<span data-ttu-id="b99ef-127">CorDebugExceptionFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-127">CorDebugExceptionFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
+ <span data-ttu-id="b99ef-128">例外に関する追加情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-128">Provides additional information about an exception.</span></span>  
   
- <span data-ttu-id="f98fd-129">CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="f98fd-129">CorDebugExceptionUnwindCallbackType</span></span>  
- <span data-ttu-id="f98fd-130">アンワインド フェーズ中にコールバックによって通知されるイベントを示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-130">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
+ <span data-ttu-id="b99ef-129">CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="b99ef-129">CorDebugExceptionUnwindCallbackType</span></span>  
+ <span data-ttu-id="b99ef-130">アンワインド フェーズ中にコールバックによって通知されるイベントを示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-130">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
   
- [<span data-ttu-id="f98fd-131">CorDebugGCType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-131">CorDebugGCType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)  
- <span data-ttu-id="f98fd-132">ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-132">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+ [<span data-ttu-id="b99ef-131">CorDebugGCType 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-131">CorDebugGCType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)  
+ <span data-ttu-id="b99ef-132">ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-132">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
- [<span data-ttu-id="f98fd-133">CorDebugGenerationTypes 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-133">CorDebugGenerationTypes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)  
- <span data-ttu-id="f98fd-134">マネージド ヒープ上のメモリ領域の生成を指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-134">Specifies the generation of a region of memory on the managed heap.</span></span>  
+ [<span data-ttu-id="b99ef-133">CorDebugGenerationTypes 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-133">CorDebugGenerationTypes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md)  
+ <span data-ttu-id="b99ef-134">マネージド ヒープ上のメモリ領域の生成を指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-134">Specifies the generation of a region of memory on the managed heap.</span></span>  
   
- <span data-ttu-id="f98fd-135">CorDebugHandleType</span><span class="sxs-lookup"><span data-stu-id="f98fd-135">CorDebugHandleType</span></span>  
- <span data-ttu-id="f98fd-136">ハンドル型を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-136">Indicates the handle type.</span></span>  
+ <span data-ttu-id="b99ef-135">CorDebugHandleType</span><span class="sxs-lookup"><span data-stu-id="b99ef-135">CorDebugHandleType</span></span>  
+ <span data-ttu-id="b99ef-136">ハンドル型を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-136">Indicates the handle type.</span></span>  
   
- [<span data-ttu-id="f98fd-137">CorDebugIlToNativeMappingTypes 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-137">CorDebugIlToNativeMappingTypes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)  
- <span data-ttu-id="f98fd-138">ネイティブ命令の特定の範囲が特別なコード領域に対応するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-138">Indicates whether a particular range of native instructions corresponds to a special code region.</span></span>  
+ [<span data-ttu-id="b99ef-137">CorDebugIlToNativeMappingTypes 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-137">CorDebugIlToNativeMappingTypes Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)  
+ <span data-ttu-id="b99ef-138">ネイティブ命令の特定の範囲が特別なコード領域に対応するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-138">Indicates whether a particular range of native instructions corresponds to a special code region.</span></span>  
   
- <span data-ttu-id="f98fd-139">CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="f98fd-139">CorDebugIntercept</span></span>  
- <span data-ttu-id="f98fd-140">ステップ インできるコードの型を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-140">Indicates the types of code that can be stepped into.</span></span>  
+ <span data-ttu-id="b99ef-139">CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="b99ef-139">CorDebugIntercept</span></span>  
+ <span data-ttu-id="b99ef-140">ステップ インできるコードの型を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-140">Indicates the types of code that can be stepped into.</span></span>  
   
- [<span data-ttu-id="f98fd-141">CorDebugInterfaceVersion 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-141">CorDebugInterfaceVersion Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)  
- <span data-ttu-id="f98fd-142">.NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンのいずれかを指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-142">Specifies either a version of the .NET Framework, or the version of the .NET Framework in which an interface was introduced.</span></span>  
+ [<span data-ttu-id="b99ef-141">CorDebugInterfaceVersion 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-141">CorDebugInterfaceVersion Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md)  
+ <span data-ttu-id="b99ef-142">.NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンのいずれかを指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-142">Specifies either a version of the .NET Framework, or the version of the .NET Framework in which an interface was introduced.</span></span>  
   
- <span data-ttu-id="f98fd-143">CorDebugInternalFrameType</span><span class="sxs-lookup"><span data-stu-id="f98fd-143">CorDebugInternalFrameType</span></span>  
- <span data-ttu-id="f98fd-144">スタック フレームの型を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-144">Identifies the type of stack frame.</span></span>  
+ <span data-ttu-id="b99ef-143">CorDebugInternalFrameType</span><span class="sxs-lookup"><span data-stu-id="b99ef-143">CorDebugInternalFrameType</span></span>  
+ <span data-ttu-id="b99ef-144">スタック フレームの型を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-144">Identifies the type of stack frame.</span></span>  
   
- [<span data-ttu-id="f98fd-145">CorDebugJITCompilerFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-145">CorDebugJITCompilerFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)  
- <span data-ttu-id="f98fd-146">マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="f98fd-146">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
+ [<span data-ttu-id="b99ef-145">CorDebugJITCompilerFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-145">CorDebugJITCompilerFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)  
+ <span data-ttu-id="b99ef-146">マネージド Just-In-Time (JIT) コンパイラの動作に影響を与える値が含まれます。</span><span class="sxs-lookup"><span data-stu-id="b99ef-146">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
   
- [<span data-ttu-id="f98fd-147">CorDebugJITCompilerFlagsDeprecated 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-147">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- <span data-ttu-id="f98fd-148">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="f98fd-148">Obsolete.</span></span> <span data-ttu-id="f98fd-149">使用して、`CORDEBUG_JIT_DEFAULT`のメンバー、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列挙代わりにします。</span><span class="sxs-lookup"><span data-stu-id="f98fd-149">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
+ [<span data-ttu-id="b99ef-147">CorDebugJITCompilerFlagsDeprecated 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-147">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
+ <span data-ttu-id="b99ef-148">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="b99ef-148">Obsolete.</span></span> <span data-ttu-id="b99ef-149">使用して、`CORDEBUG_JIT_DEFAULT`のメンバー、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)列挙代わりにします。</span><span class="sxs-lookup"><span data-stu-id="b99ef-149">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
   
- <span data-ttu-id="f98fd-150">CorDebugMappingResult</span><span class="sxs-lookup"><span data-stu-id="f98fd-150">CorDebugMappingResult</span></span>  
- <span data-ttu-id="f98fd-151">命令ポインター (IP) の値が得られた方法の詳細を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-151">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
+ <span data-ttu-id="b99ef-150">CorDebugMappingResult</span><span class="sxs-lookup"><span data-stu-id="b99ef-150">CorDebugMappingResult</span></span>  
+ <span data-ttu-id="b99ef-151">命令ポインター (IP) の値が得られた方法の詳細を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-151">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
   
- [<span data-ttu-id="f98fd-152">CorDebugMDAFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-152">CorDebugMDAFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md)  
- <span data-ttu-id="f98fd-153">マネージド デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-153">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
+ [<span data-ttu-id="b99ef-152">CorDebugMDAFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-152">CorDebugMDAFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md)  
+ <span data-ttu-id="b99ef-153">マネージド デバッグ アシスタント (MDA) が生成されるスレッドのステータスを指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-153">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
   
- [<span data-ttu-id="f98fd-154">CorDebugNGenPolicy 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-154">CorDebugNGenPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)  
- <span data-ttu-id="f98fd-155">デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-155">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
+ [<span data-ttu-id="b99ef-154">CorDebugNGenPolicy 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-154">CorDebugNGenPolicy Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)  
+ <span data-ttu-id="b99ef-155">デバッガーがネイティブ イメージ キャッシュからネイティブ (NGen) イメージを読み込むかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-155">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
   
- [<span data-ttu-id="f98fd-156">CorDebugPlatform 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-156">CorDebugPlatform Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- <span data-ttu-id="f98fd-157">使用されるターゲット プラットフォームの値を提供します、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f98fd-157">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
+ [<span data-ttu-id="b99ef-156">CorDebugPlatform 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-156">CorDebugPlatform Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
+ <span data-ttu-id="b99ef-157">使用されるターゲット プラットフォームの値を提供します、 [icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="b99ef-157">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
   
- [<span data-ttu-id="f98fd-158">CorDebugRecordFormat 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-158">CorDebugRecordFormat Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
- <span data-ttu-id="f98fd-159">ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-159">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
+ [<span data-ttu-id="b99ef-158">CorDebugRecordFormat 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-158">CorDebugRecordFormat Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+ <span data-ttu-id="b99ef-159">ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-159">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
   
- <span data-ttu-id="f98fd-160">CorDebugRegister</span><span class="sxs-lookup"><span data-stu-id="f98fd-160">CorDebugRegister</span></span>  
- <span data-ttu-id="f98fd-161">指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-161">Specifies the registers associated with a given processor architecture.</span></span>  
+ <span data-ttu-id="b99ef-160">CorDebugRegister</span><span class="sxs-lookup"><span data-stu-id="b99ef-160">CorDebugRegister</span></span>  
+ <span data-ttu-id="b99ef-161">指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-161">Specifies the registers associated with a given processor architecture.</span></span>  
   
- [<span data-ttu-id="f98fd-162">CorDebugSetContextFlag 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-162">CorDebugSetContextFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
- <span data-ttu-id="f98fd-163">スタック上のアクティブ (またはリーフ) フレーム上からのコンテキストなのか、別のフレームからのアンワインドにより計算されたコンテキストなのかを示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-163">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
+ [<span data-ttu-id="b99ef-162">CorDebugSetContextFlag 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-162">CorDebugSetContextFlag Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)  
+ <span data-ttu-id="b99ef-163">スタック上のアクティブ (またはリーフ) フレーム上からのコンテキストなのか、別のフレームからのアンワインドにより計算されたコンテキストなのかを示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-163">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
   
- [<span data-ttu-id="f98fd-164">CorDebugStateChange 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-164">CorDebugStateChange Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
- <span data-ttu-id="f98fd-165">プロセスへの変更に基づいて破棄が必要となった、キャッシュされたデータの量を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-165">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
+ [<span data-ttu-id="b99ef-164">CorDebugStateChange 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-164">CorDebugStateChange Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugstatechange-enumeration.md)  
+ <span data-ttu-id="b99ef-165">プロセスへの変更に基づいて破棄が必要となった、キャッシュされたデータの量を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-165">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
   
- <span data-ttu-id="f98fd-166">CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="f98fd-166">CorDebugStepReason</span></span>  
- <span data-ttu-id="f98fd-167">個々のステップの結果を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-167">Indicates the outcome of an individual step.</span></span>  
+ <span data-ttu-id="b99ef-166">CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="b99ef-166">CorDebugStepReason</span></span>  
+ <span data-ttu-id="b99ef-167">個々のステップの結果を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-167">Indicates the outcome of an individual step.</span></span>  
   
- <span data-ttu-id="f98fd-168">CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="f98fd-168">CorDebugThreadState</span></span>  
- <span data-ttu-id="f98fd-169">デバッグのスレッドの状態を指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-169">Specifies the state of a thread for debugging.</span></span>  
+ <span data-ttu-id="b99ef-168">CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="b99ef-168">CorDebugThreadState</span></span>  
+ <span data-ttu-id="b99ef-169">デバッグのスレッドの状態を指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-169">Specifies the state of a thread for debugging.</span></span>  
   
- <span data-ttu-id="f98fd-170">\>CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="f98fd-170">\>CorDebugUnmappedStop</span></span>  
- <span data-ttu-id="f98fd-171">ステッパによるコード実行の停止をトリガーする可能性のあるマップ解除したコードの型を指定します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-171">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
+ <span data-ttu-id="b99ef-170">\>CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="b99ef-170">\>CorDebugUnmappedStop</span></span>  
+ <span data-ttu-id="b99ef-171">ステッパによるコード実行の停止をトリガーする可能性のあるマップ解除したコードの型を指定します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-171">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
   
- <span data-ttu-id="f98fd-172">CorDebugUserState</span><span class="sxs-lookup"><span data-stu-id="f98fd-172">CorDebugUserState</span></span>  
- <span data-ttu-id="f98fd-173">スレッドのユーザーの状態を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-173">Indicates the user state of a thread.</span></span>  
+ <span data-ttu-id="b99ef-172">CorDebugUserState</span><span class="sxs-lookup"><span data-stu-id="b99ef-172">CorDebugUserState</span></span>  
+ <span data-ttu-id="b99ef-173">スレッドのユーザーの状態を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-173">Indicates the user state of a thread.</span></span>  
   
- [<span data-ttu-id="f98fd-174">CorGCReferenceType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-174">CorGCReferenceType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)  
- <span data-ttu-id="f98fd-175">ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-175">Identifies the source of an object to be garbage-collected.</span></span>  
+ [<span data-ttu-id="b99ef-174">CorGCReferenceType 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-174">CorGCReferenceType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)  
+ <span data-ttu-id="b99ef-175">ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-175">Identifies the source of an object to be garbage-collected.</span></span>  
   
- [<span data-ttu-id="f98fd-176">ILCodeKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-176">ILCodeKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)  
- <span data-ttu-id="f98fd-177">デバッガーがローカル変数またはプロファイラー ReJIT インストルメンテーションに追加されたコードにアクセスできるかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-177">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
+ [<span data-ttu-id="b99ef-176">ILCodeKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-176">ILCodeKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)  
+ <span data-ttu-id="b99ef-177">デバッガーがローカル変数またはプロファイラー ReJIT インストルメンテーションに追加されたコードにアクセスできるかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-177">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
   
- [<span data-ttu-id="f98fd-178">LoggingLevelEnum 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-178">LoggingLevelEnum Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
- <span data-ttu-id="f98fd-179">マネージド スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-179">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
+ [<span data-ttu-id="b99ef-178">LoggingLevelEnum 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-178">LoggingLevelEnum Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
+ <span data-ttu-id="b99ef-179">マネージド スレッドがイベントを記録する際にイベント ログに書き込まれる説明メッセージの重大度レベルを示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-179">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
   
- [<span data-ttu-id="f98fd-180">LogSwitchCallReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-180">LogSwitchCallReason Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)  
- <span data-ttu-id="f98fd-181">デバッグとトレースの切り替えで実行された操作を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-181">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
+ [<span data-ttu-id="b99ef-180">LogSwitchCallReason 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-180">LogSwitchCallReason Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)  
+ <span data-ttu-id="b99ef-181">デバッグとトレースの切り替えで実行された操作を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-181">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
   
- [<span data-ttu-id="f98fd-182">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-182">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- <span data-ttu-id="f98fd-183">変数のネイティブの場所の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-183">Indicates the native location type of a variable.</span></span>  
+ [<span data-ttu-id="b99ef-182">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-182">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
+ <span data-ttu-id="b99ef-183">変数のネイティブの場所の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-183">Indicates the native location type of a variable.</span></span>  
   
- [<span data-ttu-id="f98fd-184">WriteableMetadataUpdateMode 列挙型</span><span class="sxs-lookup"><span data-stu-id="f98fd-184">WriteableMetadataUpdateMode Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- <span data-ttu-id="f98fd-185">メモリ内のメタデータ更新をデバッガーに対して可視にするかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-185">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span> 
+ [<span data-ttu-id="b99ef-184">WriteableMetadataUpdateMode 列挙型</span><span class="sxs-lookup"><span data-stu-id="b99ef-184">WriteableMetadataUpdateMode Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
+ <span data-ttu-id="b99ef-185">メモリ内のメタデータ更新をデバッガーに対して可視にするかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-185">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span> 
 
- <span data-ttu-id="f98fd-186">[ClrDataSourceType 列挙](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)CLRDATA_IL_ADDRESS_MAP 構造で使用される値を提供します。</span><span class="sxs-lookup"><span data-stu-id="f98fd-186">[ClrDataSourceType Enumeration](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) Provides values that are used by the CLRDATA_IL_ADDRESS_MAP structure.</span></span>
+ <span data-ttu-id="b99ef-186">[ClrDataSourceType 列挙](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)CLRDATA_IL_ADDRESS_MAP 構造で使用される値を提供します。</span><span class="sxs-lookup"><span data-stu-id="b99ef-186">[ClrDataSourceType Enumeration](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) Provides values that are used by the CLRDATA_IL_ADDRESS_MAP structure.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="f98fd-187">関連項目</span><span class="sxs-lookup"><span data-stu-id="f98fd-187">Related Sections</span></span>  
- [<span data-ttu-id="f98fd-188">デバッグ コクラス</span><span class="sxs-lookup"><span data-stu-id="f98fd-188">Debugging Coclasses</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+## <a name="related-sections"></a><span data-ttu-id="b99ef-187">関連項目</span><span class="sxs-lookup"><span data-stu-id="b99ef-187">Related Sections</span></span>  
+ [<span data-ttu-id="b99ef-188">デバッグ コクラス</span><span class="sxs-lookup"><span data-stu-id="b99ef-188">Debugging Coclasses</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   
- [<span data-ttu-id="f98fd-189">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f98fd-189">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="b99ef-189">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b99ef-189">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
- [<span data-ttu-id="f98fd-190">デバッグ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="f98fd-190">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [<span data-ttu-id="b99ef-190">デバッグ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="b99ef-190">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   
- [<span data-ttu-id="f98fd-191">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="f98fd-191">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+ [<span data-ttu-id="b99ef-191">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="b99ef-191">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

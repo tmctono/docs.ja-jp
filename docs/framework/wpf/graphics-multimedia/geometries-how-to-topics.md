@@ -7,35 +7,35 @@ helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
 ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762242"
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="15a7f-102">ジオメトリに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="15a7f-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="15a7f-103">このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Media.Geometry>アプリケーション内のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="15a7f-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="1a7cb-102">ジオメトリに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="1a7cb-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="1a7cb-103">このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Media.Geometry>アプリケーション内のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="1a7cb-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="15a7f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="15a7f-104">In This Section</span></span>  
- [<span data-ttu-id="15a7f-105">EllipseGeometry をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="15a7f-105">Animate an EllipseGeometry</span></span>](how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="15a7f-106">ArcSegment のサイズをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="15a7f-106">Animate the Size of an ArcSegment</span></span>](how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="15a7f-107">複合図形の塗りつぶしを制御する</span><span class="sxs-lookup"><span data-stu-id="15a7f-107">Control the Fill of a Composite Shape</span></span>](how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="15a7f-108">結合したジオメトリを作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-108">Create a Combined Geometry</span></span>](how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="15a7f-109">複合図形を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-109">Create a Composite Shape</span></span>](how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="15a7f-110">3 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-110">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="15a7f-111">LineGeometry を使用して線を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-111">Create a Line Using a LineGeometry</span></span>](how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="15a7f-112">PathGeometry で LineSegment を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-112">Create a LineSegment in a PathGeometry</span></span>](how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="15a7f-113">PathGeometry を使用して図形を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-113">Create a Shape by Using a PathGeometry</span></span>](how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="15a7f-114">StreamGeometry を使用して図形を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-114">Create a Shape Using a StreamGeometry</span></span>](how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="15a7f-115">2 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-115">Create a Quadratic Bezier Curve</span></span>](how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="15a7f-116">楕円の円弧を作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-116">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="15a7f-117">PathGeometry 内に複数のサブパスを作成する</span><span class="sxs-lookup"><span data-stu-id="15a7f-117">Create Multiple Subpaths Within a PathGeometry</span></span>](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="15a7f-118">RectangleGeometry を使用して四角形を定義する</span><span class="sxs-lookup"><span data-stu-id="15a7f-118">Define a Rectangle Using a RectangleGeometry</span></span>](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="15a7f-119">RectangleGeometry の角に丸みを付ける</span><span class="sxs-lookup"><span data-stu-id="15a7f-119">Round the Corners of a RectangleGeometry</span></span>](how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1a7cb-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1a7cb-104">In This Section</span></span>  
+ [<span data-ttu-id="1a7cb-105">EllipseGeometry をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-105">Animate an EllipseGeometry</span></span>](how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="1a7cb-106">ArcSegment のサイズをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-106">Animate the Size of an ArcSegment</span></span>](how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="1a7cb-107">複合図形の塗りつぶしを制御する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-107">Control the Fill of a Composite Shape</span></span>](how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="1a7cb-108">結合したジオメトリを作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-108">Create a Combined Geometry</span></span>](how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="1a7cb-109">複合図形を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-109">Create a Composite Shape</span></span>](how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="1a7cb-110">3 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-110">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="1a7cb-111">LineGeometry を使用して線を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-111">Create a Line Using a LineGeometry</span></span>](how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="1a7cb-112">PathGeometry で LineSegment を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-112">Create a LineSegment in a PathGeometry</span></span>](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="1a7cb-113">PathGeometry を使用して図形を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-113">Create a Shape by Using a PathGeometry</span></span>](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="1a7cb-114">StreamGeometry を使用して図形を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-114">Create a Shape Using a StreamGeometry</span></span>](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="1a7cb-115">2 次ベジエ曲線を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-115">Create a Quadratic Bezier Curve</span></span>](how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="1a7cb-116">楕円の円弧を作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-116">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="1a7cb-117">PathGeometry 内に複数のサブパスを作成する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-117">Create Multiple Subpaths Within a PathGeometry</span></span>](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="1a7cb-118">RectangleGeometry を使用して四角形を定義する</span><span class="sxs-lookup"><span data-stu-id="1a7cb-118">Define a Rectangle Using a RectangleGeometry</span></span>](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="1a7cb-119">RectangleGeometry の角に丸みを付ける</span><span class="sxs-lookup"><span data-stu-id="1a7cb-119">Round the Corners of a RectangleGeometry</span></span>](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="15a7f-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="15a7f-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a7cb-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="1a7cb-120">See also</span></span>
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="15a7f-121">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="15a7f-121">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="15a7f-122">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="15a7f-122">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="1a7cb-121">WPF での図形と基本描画の概要</span><span class="sxs-lookup"><span data-stu-id="1a7cb-121">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="1a7cb-122">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="1a7cb-122">Graphics and Multimedia</span></span>](index.md)

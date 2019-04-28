@@ -6,63 +6,63 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772945"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a><span data-ttu-id="9bc91-102">方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する</span><span class="sxs-lookup"><span data-stu-id="9bc91-102">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>
-<span data-ttu-id="9bc91-103">既存のメッセージ キュー (MSMQ) アプリケーションは、WCF メッセージから MSMQ メッセージの変換に、MSMQ 統合バインディングを使用して、Windows Communication Foundation (WCF) アプリケーションと統合できます。</span><span class="sxs-lookup"><span data-stu-id="9bc91-103">You can integrate existing Message Queuing (MSMQ) applications with Windows Communication Foundation (WCF) applications by using the MSMQ integration binding to convert MSMQ messages to and from WCF messages.</span></span> <span data-ttu-id="9bc91-104">これにより、WCF クライアントから MSMQ 受信側アプリケーションへの呼び出しと MSMQ の送信元アプリケーションから WCF サービスを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="9bc91-104">This allows you to call into MSMQ receiver applications from WCF clients as well as call into WCF services from MSMQ sender applications.</span></span>  
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a><span data-ttu-id="c8202-102">方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する</span><span class="sxs-lookup"><span data-stu-id="c8202-102">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>
+<span data-ttu-id="c8202-103">既存のメッセージ キュー (MSMQ) アプリケーションは、WCF メッセージから MSMQ メッセージの変換に、MSMQ 統合バインディングを使用して、Windows Communication Foundation (WCF) アプリケーションと統合できます。</span><span class="sxs-lookup"><span data-stu-id="c8202-103">You can integrate existing Message Queuing (MSMQ) applications with Windows Communication Foundation (WCF) applications by using the MSMQ integration binding to convert MSMQ messages to and from WCF messages.</span></span> <span data-ttu-id="c8202-104">これにより、WCF クライアントから MSMQ 受信側アプリケーションへの呼び出しと MSMQ の送信元アプリケーションから WCF サービスを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="c8202-104">This allows you to call into MSMQ receiver applications from WCF clients as well as call into WCF services from MSMQ sender applications.</span></span>  
   
- <span data-ttu-id="9bc91-105">このセクションで使用する方法を説明します<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>(1)、WCF クライアントと System.Messaging と (2) MSMQ アプリケーション クライアントと WCF サービスを使用して記述された MSMQ アプリケーション サービスのキューに置かれた通信します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-105">In this section, we explain how to use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> for queued communication between (1) a WCF client and an MSMQ application service written using System.Messaging and (2) an MSMQ application client and a WCF service.</span></span>  
+ <span data-ttu-id="c8202-105">このセクションで使用する方法を説明します<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>(1)、WCF クライアントと System.Messaging と (2) MSMQ アプリケーション クライアントと WCF サービスを使用して記述された MSMQ アプリケーション サービスのキューに置かれた通信します。</span><span class="sxs-lookup"><span data-stu-id="c8202-105">In this section, we explain how to use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> for queued communication between (1) a WCF client and an MSMQ application service written using System.Messaging and (2) an MSMQ application client and a WCF service.</span></span>  
   
- <span data-ttu-id="9bc91-106">WCF クライアントから MSMQ 受信側のアプリケーションを呼び出す方法を示す完全なサンプルを参照してください、 [Windows Communication Foundation メッセージ キュー](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="9bc91-106">For a complete sample that demonstrates how to call a MSMQ receiver application from a WCF client, see the [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) sample.</span></span>  
+ <span data-ttu-id="c8202-106">WCF クライアントから MSMQ 受信側のアプリケーションを呼び出す方法を示す完全なサンプルを参照してください、 [Windows Communication Foundation メッセージ キュー](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="c8202-106">For a complete sample that demonstrates how to call a MSMQ receiver application from a WCF client, see the [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) sample.</span></span>  
   
- <span data-ttu-id="9bc91-107">MSMQ クライアントから WCF サービスを呼び出す方法を示す完全なサンプルを参照してください、[メッセージ キューが Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="9bc91-107">For a complete sample that demonstrates how to call a WCF service from a MSMQ client, see the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) sample.</span></span>  
+ <span data-ttu-id="c8202-107">MSMQ クライアントから WCF サービスを呼び出す方法を示す完全なサンプルを参照してください、[メッセージ キューが Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="c8202-107">For a complete sample that demonstrates how to call a WCF service from a MSMQ client, see the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) sample.</span></span>  
   
-### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a><span data-ttu-id="9bc91-108">MSMQ クライアントからのメッセージを受信する WCF サービスを作成するには</span><span class="sxs-lookup"><span data-stu-id="9bc91-108">To create a WCF service that receives messages from a MSMQ client</span></span>  
+### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a><span data-ttu-id="c8202-108">MSMQ クライアントからのメッセージを受信する WCF サービスを作成するには</span><span class="sxs-lookup"><span data-stu-id="c8202-108">To create a WCF service that receives messages from a MSMQ client</span></span>  
   
-1. <span data-ttu-id="9bc91-109">次のコード例に示すように、MSMQ の送信側アプリケーションからキューに置かれたメッセージを受信する WCF サービスのサービス コントラクトを定義するインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-109">Define an interface that defines the service contract for the WCF service that receives queued messages from a MSMQ sender application, as shown in the following example code.</span></span>  
+1. <span data-ttu-id="c8202-109">次のコード例に示すように、MSMQ の送信側アプリケーションからキューに置かれたメッセージを受信する WCF サービスのサービス コントラクトを定義するインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="c8202-109">Define an interface that defines the service contract for the WCF service that receives queued messages from a MSMQ sender application, as shown in the following example code.</span></span>  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2. <span data-ttu-id="9bc91-110">次のコード例に示すように、定義したインターフェイスを実装し、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性をクラスに適用します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-110">Implement the interface and apply the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to the class, as shown in the following example code.</span></span>  
+2. <span data-ttu-id="c8202-110">次のコード例に示すように、定義したインターフェイスを実装し、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性をクラスに適用します。</span><span class="sxs-lookup"><span data-stu-id="c8202-110">Implement the interface and apply the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to the class, as shown in the following example code.</span></span>  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3. <span data-ttu-id="9bc91-111"><xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を指定する構成ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-111">Create a configuration file that specifies the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.</span></span>  
+3. <span data-ttu-id="c8202-111"><xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を指定する構成ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="c8202-111">Create a configuration file that specifies the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.</span></span>  
 
-4. <span data-ttu-id="9bc91-112">構成されたバインディングを使用する <xref:System.ServiceModel.ServiceHost> オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-112">Instantiate a <xref:System.ServiceModel.ServiceHost> object that uses the configured binding.</span></span>  
+4. <span data-ttu-id="c8202-112">構成されたバインディングを使用する <xref:System.ServiceModel.ServiceHost> オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="c8202-112">Instantiate a <xref:System.ServiceModel.ServiceHost> object that uses the configured binding.</span></span>  
 
-### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a><span data-ttu-id="9bc91-113">MSMQ の受信側アプリケーションにメッセージを送信する WCF クライアントを作成するには</span><span class="sxs-lookup"><span data-stu-id="9bc91-113">To create a WCF client that sends messages to a MSMQ receiver application</span></span>  
+### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a><span data-ttu-id="c8202-113">MSMQ の受信側アプリケーションにメッセージを送信する WCF クライアントを作成するには</span><span class="sxs-lookup"><span data-stu-id="c8202-113">To create a WCF client that sends messages to a MSMQ receiver application</span></span>  
   
-1. <span data-ttu-id="9bc91-114">次のコード例に示すように送信しますが、MSMQ の受信側にメッセージをキューに置かれた WCF クライアントのサービス コントラクトを定義するインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-114">Define an interface that defines the service contract for the WCF client that sends queued messages to the MSMQ receiver, as shown in the following example code.</span></span>  
+1. <span data-ttu-id="c8202-114">次のコード例に示すように送信しますが、MSMQ の受信側にメッセージをキューに置かれた WCF クライアントのサービス コントラクトを定義するインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="c8202-114">Define an interface that defines the service contract for the WCF client that sends queued messages to the MSMQ receiver, as shown in the following example code.</span></span>  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2. <span data-ttu-id="9bc91-115">WCF クライアントが MSMQ の受信側の呼び出しに使用されるクライアント クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-115">Define a client class that the WCF client uses to call the MSMQ receiver.</span></span>  
+2. <span data-ttu-id="c8202-115">WCF クライアントが MSMQ の受信側の呼び出しに使用されるクライアント クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="c8202-115">Define a client class that the WCF client uses to call the MSMQ receiver.</span></span>  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
   
-3. <span data-ttu-id="9bc91-116">MsmqIntegrationBinding バインディングの使用を指定する構成を作成します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-116">Create a configuration that specifies use of the MsmqIntegrationBinding binding.</span></span>  
+3. <span data-ttu-id="c8202-116">MsmqIntegrationBinding バインディングの使用を指定する構成を作成します。</span><span class="sxs-lookup"><span data-stu-id="c8202-116">Create a configuration that specifies use of the MsmqIntegrationBinding binding.</span></span>  
   
      [!code-csharp[S_WcfToMsmq#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#3)]
      [!code-vb[S_WcfToMsmq#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#3)]  
   
-4. <span data-ttu-id="9bc91-117">クライアント クラスのインスタンスを作成し、メッセージ受信サービスによって定義されたメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-117">Create an instance of the client class and call the method defined by the message receiving service.</span></span>  
+4. <span data-ttu-id="c8202-117">クライアント クラスのインスタンスを作成し、メッセージ受信サービスによって定義されたメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="c8202-117">Create an instance of the client class and call the method defined by the message receiving service.</span></span>  
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="9bc91-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="9bc91-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8202-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8202-118">See also</span></span>
 
-- [<span data-ttu-id="9bc91-119">キューの概要</span><span class="sxs-lookup"><span data-stu-id="9bc91-119">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [<span data-ttu-id="9bc91-120">方法: WCF エンドポイントとキューに置かれたメッセージを交換します。</span><span class="sxs-lookup"><span data-stu-id="9bc91-120">How to: Exchange Queued Messages with WCF Endpoints</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [<span data-ttu-id="9bc91-121">Windows Communication Foundation でのメッセージ キュー</span><span class="sxs-lookup"><span data-stu-id="9bc91-121">Windows Communication Foundation to Message Queuing</span></span>](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [<span data-ttu-id="9bc91-122">メッセージ キュー (MSMQ) のインストール</span><span class="sxs-lookup"><span data-stu-id="9bc91-122">Installing Message Queuing (MSMQ)</span></span>](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [<span data-ttu-id="9bc91-123">Windows Communication Foundation へのメッセージ キュー</span><span class="sxs-lookup"><span data-stu-id="9bc91-123">Message Queuing to Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [<span data-ttu-id="9bc91-124">メッセージ キューを介したメッセージ セキュリティ</span><span class="sxs-lookup"><span data-stu-id="9bc91-124">Message Security over Message Queuing</span></span>](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [<span data-ttu-id="c8202-119">キューの概要</span><span class="sxs-lookup"><span data-stu-id="c8202-119">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [<span data-ttu-id="c8202-120">方法: WCF エンドポイントとキューに置かれたメッセージを交換します。</span><span class="sxs-lookup"><span data-stu-id="c8202-120">How to: Exchange Queued Messages with WCF Endpoints</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [<span data-ttu-id="c8202-121">Windows Communication Foundation でのメッセージ キュー</span><span class="sxs-lookup"><span data-stu-id="c8202-121">Windows Communication Foundation to Message Queuing</span></span>](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [<span data-ttu-id="c8202-122">メッセージ キュー (MSMQ) のインストール</span><span class="sxs-lookup"><span data-stu-id="c8202-122">Installing Message Queuing (MSMQ)</span></span>](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [<span data-ttu-id="c8202-123">Windows Communication Foundation へのメッセージ キュー</span><span class="sxs-lookup"><span data-stu-id="c8202-123">Message Queuing to Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [<span data-ttu-id="c8202-124">メッセージ キューを介したメッセージ セキュリティ</span><span class="sxs-lookup"><span data-stu-id="c8202-124">Message Security over Message Queuing</span></span>](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

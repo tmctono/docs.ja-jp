@@ -9,27 +9,27 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762086"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="85050-102">ビジュアル層プログラミングに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="85050-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="85050-103">このセクションのトピックでは、ビジュアル層でヒット テストの低レベルの構成に使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="85050-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="e7151-102">ビジュアル層プログラミングに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="e7151-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="e7151-103">このセクションのトピックでは、ビジュアル層でヒット テストの低レベルの構成に使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e7151-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="85050-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="85050-104">In This Section</span></span>  
- [<span data-ttu-id="85050-105">ビジュアルのオフセットを取得する</span><span class="sxs-lookup"><span data-stu-id="85050-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="85050-106">ビジュアルの描画コンテンツを列挙する</span><span class="sxs-lookup"><span data-stu-id="85050-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="85050-107">ビジュアル内のジオメトリのヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="85050-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="85050-108">パラメーターとしてジオメトリを使用してヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="85050-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="85050-109">Win32 ホスト コンテナーを使用してヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="85050-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="85050-110">CompositionTarget を使用したフレームの間隔ごとの描画</span><span class="sxs-lookup"><span data-stu-id="85050-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e7151-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e7151-104">In This Section</span></span>  
+ [<span data-ttu-id="e7151-105">ビジュアルのオフセットを取得する</span><span class="sxs-lookup"><span data-stu-id="e7151-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="e7151-106">ビジュアルの描画コンテンツを列挙する</span><span class="sxs-lookup"><span data-stu-id="e7151-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="e7151-107">ビジュアル内のジオメトリのヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="e7151-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="e7151-108">パラメーターとしてジオメトリを使用してヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="e7151-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="e7151-109">Win32 ホスト コンテナーを使用してヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="e7151-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="e7151-110">CompositionTarget を使用したフレームの間隔ごとの描画</span><span class="sxs-lookup"><span data-stu-id="e7151-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="85050-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="85050-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7151-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7151-111">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="85050-112">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="85050-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="85050-113">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="85050-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e7151-112">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="e7151-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="e7151-113">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="e7151-113">Graphics and Multimedia</span></span>](index.md)

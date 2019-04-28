@@ -14,19 +14,19 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
 ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922526"
 ---
-# <a name="examples-of-xml-serialization"></a><span data-ttu-id="1587a-102">XML シリアル化の例</span><span class="sxs-lookup"><span data-stu-id="1587a-102">Examples of XML Serialization</span></span>
+# <a name="examples-of-xml-serialization"></a><span data-ttu-id="13c08-102">XML シリアル化の例</span><span class="sxs-lookup"><span data-stu-id="13c08-102">Examples of XML Serialization</span></span>
 
-<span data-ttu-id="1587a-103">XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。</span><span class="sxs-lookup"><span data-stu-id="1587a-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="1587a-104">たとえば、「[XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="1587a-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="1587a-105">次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。</span><span class="sxs-lookup"><span data-stu-id="1587a-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
+<span data-ttu-id="13c08-103">XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。</span><span class="sxs-lookup"><span data-stu-id="13c08-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="13c08-104">たとえば、「[XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="13c08-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="13c08-105">次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。</span><span class="sxs-lookup"><span data-stu-id="13c08-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>
 
-## <a name="serializing-a-dataset"></a><span data-ttu-id="1587a-106">データセットのシリアル化</span><span class="sxs-lookup"><span data-stu-id="1587a-106">Serializing a DataSet</span></span>
+## <a name="serializing-a-dataset"></a><span data-ttu-id="13c08-106">データセットのシリアル化</span><span class="sxs-lookup"><span data-stu-id="13c08-106">Serializing a DataSet</span></span>
 
-<span data-ttu-id="1587a-107">次のコード例に示すように、パブリック クラスのインスタンスだけでなく、<xref:System.Data.DataSet> のインスタンスもシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="1587a-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
+<span data-ttu-id="13c08-107">次のコード例に示すように、パブリック クラスのインスタンスだけでなく、<xref:System.Data.DataSet> のインスタンスもシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="13c08-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>
 
 ```vb
 Private Sub SerializeDataSet(filename As String)
@@ -72,9 +72,9 @@ private void SerializeDataSet(string filename){
 }
 ```
 
-## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="1587a-108">XmlElement および XmlNode のシリアル化</span><span class="sxs-lookup"><span data-stu-id="1587a-108">Serializing an XmlElement and XmlNode</span></span>
+## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="13c08-108">XmlElement および XmlNode のシリアル化</span><span class="sxs-lookup"><span data-stu-id="13c08-108">Serializing an XmlElement and XmlNode</span></span>
 
-<span data-ttu-id="1587a-109">インスタンスをシリアル化することも、<xref:System.Xml.XmlElement>または<xref:System.Xml.XmlNode>クラスに、次のコード例に示すようにします。</span><span class="sxs-lookup"><span data-stu-id="1587a-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
+<span data-ttu-id="13c08-109">インスタンスをシリアル化することも、<xref:System.Xml.XmlElement>または<xref:System.Xml.XmlNode>クラスに、次のコード例に示すようにします。</span><span class="sxs-lookup"><span data-stu-id="13c08-109">You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -121,9 +121,9 @@ private void SerializeNode(string filename){
 }
 ```
 
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="1587a-110">複雑なオブジェクトを返すフィールドを含むクラスのシリアル化</span><span class="sxs-lookup"><span data-stu-id="1587a-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="13c08-110">複雑なオブジェクトを返すフィールドを含むクラスのシリアル化</span><span class="sxs-lookup"><span data-stu-id="13c08-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>
 
-<span data-ttu-id="1587a-111">プロパティやフィールドが複雑なオブジェクト (配列やクラス インスタンスなど) を返す場合、<xref:System.Xml.Serialization.XmlSerializer> は、そのオブジェクトを、メイン XML ドキュメント内で入れ子になっている要素に変換します。</span><span class="sxs-lookup"><span data-stu-id="1587a-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="1587a-112">たとえば、次のコード例の最初のクラスは、2 番目のクラスのインスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="1587a-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
+<span data-ttu-id="13c08-111">プロパティやフィールドが複雑なオブジェクト (配列やクラス インスタンスなど) を返す場合、<xref:System.Xml.Serialization.XmlSerializer> は、そのオブジェクトを、メイン XML ドキュメント内で入れ子になっている要素に変換します。</span><span class="sxs-lookup"><span data-stu-id="13c08-111">If a property or field returns a complex object (such as an array or a class instance), the <xref:System.Xml.Serialization.XmlSerializer> converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="13c08-112">たとえば、次のコード例の最初のクラスは、2 番目のクラスのインスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="13c08-112">For example, the first class in the following code example returns an instance of the second class.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -146,7 +146,7 @@ public class Address
 }
 ```
 
-<span data-ttu-id="1587a-113">シリアル化された XML 出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="1587a-113">The serialized XML output might resemble the following.</span></span>
+<span data-ttu-id="13c08-113">シリアル化された XML 出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="13c08-113">The serialized XML output might resemble the following.</span></span>
 
 ```xml
 <PurchaseOrder>
@@ -156,9 +156,9 @@ public class Address
 </PurchaseOrder>
 ```
 
-## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="1587a-114">オブジェクト配列のシリアル化</span><span class="sxs-lookup"><span data-stu-id="1587a-114">Serializing an Array of Objects</span></span>
+## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="13c08-114">オブジェクト配列のシリアル化</span><span class="sxs-lookup"><span data-stu-id="13c08-114">Serializing an Array of Objects</span></span>
 
-<span data-ttu-id="1587a-115">次のコード例に示すように、オブジェクトの配列を返すフィールドをシリアル化することもできます。</span><span class="sxs-lookup"><span data-stu-id="1587a-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
+<span data-ttu-id="13c08-115">次のコード例に示すように、オブジェクトの配列を返すフィールドをシリアル化することもできます。</span><span class="sxs-lookup"><span data-stu-id="13c08-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>
 
 ```vb
 Public Class PurchaseOrder
@@ -184,7 +184,7 @@ public class Item
 }
 ```
 
-<span data-ttu-id="1587a-116">シリアル化されたクラスのインスタンスは、2 つの品目が注文された場合、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="1587a-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
+<span data-ttu-id="13c08-116">シリアル化されたクラスのインスタンスは、2 つの品目が注文された場合、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="13c08-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>
 
 ```xml
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -201,9 +201,9 @@ public class Item
 </PurchaseOrder>
 ```
 
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="1587a-117">ICollection インターフェイスを実装するクラスのシリアル化</span><span class="sxs-lookup"><span data-stu-id="1587a-117">Serializing a Class that Implements the ICollection Interface</span></span>
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="13c08-117">ICollection インターフェイスを実装するクラスのシリアル化</span><span class="sxs-lookup"><span data-stu-id="13c08-117">Serializing a Class that Implements the ICollection Interface</span></span>
 
-<span data-ttu-id="1587a-118"><xref:System.Collections.ICollection> インターフェイスを実装して独自のコレクション クラスを作成し、<xref:System.Xml.Serialization.XmlSerializer> を使用して、これらのクラスのインスタンスをシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="1587a-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="1587a-119">クラスが <xref:System.Collections.ICollection> インターフェイスを実装する場合、そのクラスに含まれているコレクションだけがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="1587a-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="1587a-120">このクラスに追加されたパブリック プロパティやパブリック フィールドはシリアル化されません。</span><span class="sxs-lookup"><span data-stu-id="1587a-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="1587a-121">シリアル化するには、クラスに **Add** メソッドと **Item** プロパティ (C# の場合はインデクサー) を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="1587a-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
+<span data-ttu-id="13c08-118"><xref:System.Collections.ICollection> インターフェイスを実装して独自のコレクション クラスを作成し、<xref:System.Xml.Serialization.XmlSerializer> を使用して、これらのクラスのインスタンスをシリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="13c08-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="13c08-119">クラスが <xref:System.Collections.ICollection> インターフェイスを実装する場合、そのクラスに含まれているコレクションだけがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="13c08-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="13c08-120">このクラスに追加されたパブリック プロパティやパブリック フィールドはシリアル化されません。</span><span class="sxs-lookup"><span data-stu-id="13c08-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="13c08-121">シリアル化するには、クラスに **Add** メソッドと **Item** プロパティ (C# の場合はインデクサー) を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="13c08-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>
 
 ```vb
 Imports System
@@ -360,17 +360,17 @@ public class Employee {
 }
 ```
 
-## <a name="purchase-order-example"></a><span data-ttu-id="1587a-122">注文書の例</span><span class="sxs-lookup"><span data-stu-id="1587a-122">Purchase Order Example</span></span>
+## <a name="purchase-order-example"></a><span data-ttu-id="13c08-122">注文書の例</span><span class="sxs-lookup"><span data-stu-id="13c08-122">Purchase Order Example</span></span>
 
-<span data-ttu-id="1587a-123">次のコード例を切り取って、.cs または .vb というファイル名拡張子を付けて名前を変更したテキスト ファイルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="1587a-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="1587a-124">そのファイルを、C# コンパイラまたは Visual Basic コンパイラを使用してコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="1587a-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="1587a-125">その後、実行可能ファイルの名前を使用して、このコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="1587a-125">Then run it using the name of the executable.</span></span>
+<span data-ttu-id="13c08-123">次のコード例を切り取って、.cs または .vb というファイル名拡張子を付けて名前を変更したテキスト ファイルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="13c08-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="13c08-124">そのファイルを、C# コンパイラまたは Visual Basic コンパイラを使用してコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="13c08-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="13c08-125">その後、実行可能ファイルの名前を使用して、このコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="13c08-125">Then run it using the name of the executable.</span></span>
 
-<span data-ttu-id="1587a-126">この例では、単純なシナリオとして、<xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> メソッドを使用してオブジェクトのインスタンスを作成し、ファイル ストリームにシリアル化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="1587a-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="1587a-127">この XML ストリームをファイルに保存した後、<xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> メソッドを使用して同じファイルを再び読み込み、元のオブジェクトのコピーを再構築します。</span><span class="sxs-lookup"><span data-stu-id="1587a-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
+<span data-ttu-id="13c08-126">この例では、単純なシナリオとして、<xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> メソッドを使用してオブジェクトのインスタンスを作成し、ファイル ストリームにシリアル化する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="13c08-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="13c08-127">この XML ストリームをファイルに保存した後、<xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> メソッドを使用して同じファイルを再び読み込み、元のオブジェクトのコピーを再構築します。</span><span class="sxs-lookup"><span data-stu-id="13c08-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>
 
-<span data-ttu-id="1587a-128">この例では、`PurchaseOrder` という名前のクラスをシリアル化し、さらに逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="1587a-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="1587a-129">また、`Address` という名前のパブリック フィールドを `ShipTo` に設定する必要があるため、`Address` という名前の 2 番目のクラスも含まれています。</span><span class="sxs-lookup"><span data-stu-id="1587a-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="1587a-130">同様に、`OrderedItem` オブジェクトの配列を `OrderedItem` フィールドに設定する必要があるため、`OrderedItems` クラスも含まれています。</span><span class="sxs-lookup"><span data-stu-id="1587a-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="1587a-131">最後に、`Test` という名前のクラスには、これらのクラスをシリアル化および逆シリアル化するコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1587a-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
+<span data-ttu-id="13c08-128">この例では、`PurchaseOrder` という名前のクラスをシリアル化し、さらに逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="13c08-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="13c08-129">また、`Address` という名前のパブリック フィールドを `ShipTo` に設定する必要があるため、`Address` という名前の 2 番目のクラスも含まれています。</span><span class="sxs-lookup"><span data-stu-id="13c08-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="13c08-130">同様に、`OrderedItem` オブジェクトの配列を `OrderedItem` フィールドに設定する必要があるため、`OrderedItems` クラスも含まれています。</span><span class="sxs-lookup"><span data-stu-id="13c08-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="13c08-131">最後に、`Test` という名前のクラスには、これらのクラスをシリアル化および逆シリアル化するコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="13c08-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>
 
-<span data-ttu-id="1587a-132">`CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。</span><span class="sxs-lookup"><span data-stu-id="1587a-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="1587a-133">このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。</span><span class="sxs-lookup"><span data-stu-id="1587a-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="1587a-134">このコードは、シリアル化されるクラスの型をコンストラクターに渡します。</span><span class="sxs-lookup"><span data-stu-id="1587a-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="1587a-135">さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。</span><span class="sxs-lookup"><span data-stu-id="1587a-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
+<span data-ttu-id="13c08-132">`CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。</span><span class="sxs-lookup"><span data-stu-id="13c08-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="13c08-133">このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。</span><span class="sxs-lookup"><span data-stu-id="13c08-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="13c08-134">このコードは、シリアル化されるクラスの型をコンストラクターに渡します。</span><span class="sxs-lookup"><span data-stu-id="13c08-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="13c08-135">さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。</span><span class="sxs-lookup"><span data-stu-id="13c08-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>
 
-<span data-ttu-id="1587a-136">`ReadPo` メソッドは、もう少し単純です。</span><span class="sxs-lookup"><span data-stu-id="1587a-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="1587a-137">このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。</span><span class="sxs-lookup"><span data-stu-id="1587a-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="1587a-138">同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。</span><span class="sxs-lookup"><span data-stu-id="1587a-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="1587a-139">また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。</span><span class="sxs-lookup"><span data-stu-id="1587a-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="1587a-140">オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="1587a-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="1587a-141">逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1587a-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="1587a-142">その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="1587a-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="1587a-143">作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="1587a-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
+<span data-ttu-id="13c08-136">`ReadPo` メソッドは、もう少し単純です。</span><span class="sxs-lookup"><span data-stu-id="13c08-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="13c08-137">このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。</span><span class="sxs-lookup"><span data-stu-id="13c08-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="13c08-138">同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。</span><span class="sxs-lookup"><span data-stu-id="13c08-138">As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="13c08-139">また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。</span><span class="sxs-lookup"><span data-stu-id="13c08-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="13c08-140">オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="13c08-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="13c08-141">逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。</span><span class="sxs-lookup"><span data-stu-id="13c08-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="13c08-142">その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="13c08-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="13c08-143">作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="13c08-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>
 
 ```vb
 Imports System
@@ -742,7 +742,7 @@ public class Test
 }
 ```
 
-<span data-ttu-id="1587a-144">XML 出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="1587a-144">The XML output might resemble the following.</span></span>
+<span data-ttu-id="13c08-144">XML 出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="13c08-144">The XML output might resemble the following.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -769,11 +769,11 @@ public class Test
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1587a-145">関連項目</span><span class="sxs-lookup"><span data-stu-id="1587a-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13c08-145">関連項目</span><span class="sxs-lookup"><span data-stu-id="13c08-145">See also</span></span>
 
-- [<span data-ttu-id="1587a-146">XML シリアル化の概要</span><span class="sxs-lookup"><span data-stu-id="1587a-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="1587a-147">属性を使用した XML シリアル化の制御</span><span class="sxs-lookup"><span data-stu-id="1587a-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [<span data-ttu-id="1587a-148">XML シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="1587a-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [<span data-ttu-id="1587a-149">XmlSerializer クラス</span><span class="sxs-lookup"><span data-stu-id="1587a-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
-- [<span data-ttu-id="1587a-150">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="1587a-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="1587a-151">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="1587a-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="13c08-146">XML シリアル化の概要</span><span class="sxs-lookup"><span data-stu-id="13c08-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="13c08-147">属性を使用した XML シリアル化の制御</span><span class="sxs-lookup"><span data-stu-id="13c08-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [<span data-ttu-id="13c08-148">XML シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="13c08-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [<span data-ttu-id="13c08-149">XmlSerializer クラス</span><span class="sxs-lookup"><span data-stu-id="13c08-149">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
+- [<span data-ttu-id="13c08-150">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="13c08-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="13c08-151">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="13c08-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

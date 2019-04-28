@@ -3,17 +3,17 @@ title: 新機能F#
 description: どのような F# プログラミング言語とはなどの F# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらをまとめる方法について説明します。
 ms.date: 08/03/2018
 ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756339"
 ---
-# <a name="what-is-f"></a><span data-ttu-id="b046c-104">F とは\#</span><span class="sxs-lookup"><span data-stu-id="b046c-104">What is F\#</span></span>
+# <a name="what-is-f"></a><span data-ttu-id="e492e-104">F とは\#</span><span class="sxs-lookup"><span data-stu-id="e492e-104">What is F\#</span></span>
 
-<span data-ttu-id="b046c-105">F#関数型プログラミング言語を適切な保守しやすいコードを記述するが容易にするにです。</span><span class="sxs-lookup"><span data-stu-id="b046c-105">F# is a functional programming language that makes it easy to write correct and maintainable code.</span></span>
+<span data-ttu-id="e492e-105">F#関数型プログラミング言語を適切な保守しやすいコードを記述するが容易にするにです。</span><span class="sxs-lookup"><span data-stu-id="e492e-105">F# is a functional programming language that makes it easy to write correct and maintainable code.</span></span>
 
-<span data-ttu-id="b046c-106">F#主にプログラミングするには、型と型推論され、自動的に汎用化されている関数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b046c-106">F# programming primarily involves defining types and functions that are type-inferred and generalized automatically.</span></span> <span data-ttu-id="b046c-107">これにより、問題のドメインとプログラミングの詳細ではなく、そのデータの操作上に残すに専念できます。</span><span class="sxs-lookup"><span data-stu-id="b046c-107">This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</span></span>
+<span data-ttu-id="e492e-106">F#主にプログラミングするには、型と型推論され、自動的に汎用化されている関数を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e492e-106">F# programming primarily involves defining types and functions that are type-inferred and generalized automatically.</span></span> <span data-ttu-id="e492e-107">これにより、問題のドメインとプログラミングの詳細ではなく、そのデータの操作上に残すに専念できます。</span><span class="sxs-lookup"><span data-stu-id="e492e-107">This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</span></span>
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-<span data-ttu-id="b046c-108">F#など、多数の機能があります。</span><span class="sxs-lookup"><span data-stu-id="b046c-108">F# has numerous features, including:</span></span>
+<span data-ttu-id="e492e-108">F#など、多数の機能があります。</span><span class="sxs-lookup"><span data-stu-id="e492e-108">F# has numerous features, including:</span></span>
 
-* <span data-ttu-id="b046c-109">軽量構文</span><span class="sxs-lookup"><span data-stu-id="b046c-109">Lightweight syntax</span></span>
-* <span data-ttu-id="b046c-110">既定では変更できません。</span><span class="sxs-lookup"><span data-stu-id="b046c-110">Immutable by default</span></span>
-* <span data-ttu-id="b046c-111">型の推論と自動ジェネリック化</span><span class="sxs-lookup"><span data-stu-id="b046c-111">Type inference and automatic generalization</span></span>
-* <span data-ttu-id="b046c-112">ファーストクラス関数</span><span class="sxs-lookup"><span data-stu-id="b046c-112">First-class functions</span></span>
-* <span data-ttu-id="b046c-113">強力なデータ型</span><span class="sxs-lookup"><span data-stu-id="b046c-113">Powerful data types</span></span>
-* <span data-ttu-id="b046c-114">パターン マッチング</span><span class="sxs-lookup"><span data-stu-id="b046c-114">Pattern matching</span></span>
-* <span data-ttu-id="b046c-115">非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="b046c-115">Async programming</span></span>
+* <span data-ttu-id="e492e-109">軽量構文</span><span class="sxs-lookup"><span data-stu-id="e492e-109">Lightweight syntax</span></span>
+* <span data-ttu-id="e492e-110">既定では変更できません。</span><span class="sxs-lookup"><span data-stu-id="e492e-110">Immutable by default</span></span>
+* <span data-ttu-id="e492e-111">型の推論と自動ジェネリック化</span><span class="sxs-lookup"><span data-stu-id="e492e-111">Type inference and automatic generalization</span></span>
+* <span data-ttu-id="e492e-112">ファーストクラス関数</span><span class="sxs-lookup"><span data-stu-id="e492e-112">First-class functions</span></span>
+* <span data-ttu-id="e492e-113">強力なデータ型</span><span class="sxs-lookup"><span data-stu-id="e492e-113">Powerful data types</span></span>
+* <span data-ttu-id="e492e-114">パターン マッチング</span><span class="sxs-lookup"><span data-stu-id="e492e-114">Pattern matching</span></span>
+* <span data-ttu-id="e492e-115">非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="e492e-115">Async programming</span></span>
 
-<span data-ttu-id="b046c-116">機能の完全なセットが記載されて、 [F# 言語リファレンス](language-reference/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="b046c-116">A full set of features are documented in the [F# language reference](language-reference/index.md).</span></span>
+<span data-ttu-id="e492e-116">機能の完全なセットが記載されて、 [F# 言語リファレンス](language-reference/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="e492e-116">A full set of features are documented in the [F# language reference](language-reference/index.md).</span></span>
 
-## <a name="rich-data-types"></a><span data-ttu-id="b046c-117">豊富なデータ型</span><span class="sxs-lookup"><span data-stu-id="b046c-117">Rich data types</span></span>
+## <a name="rich-data-types"></a><span data-ttu-id="e492e-117">豊富なデータ型</span><span class="sxs-lookup"><span data-stu-id="e492e-117">Rich data types</span></span>
 
-<span data-ttu-id="b046c-118">などのデータ型[レコード](language-reference/records.md)と[判別共用体](language-reference/discriminated-unions.md)複雑なデータとドメインを表現することができます。</span><span class="sxs-lookup"><span data-stu-id="b046c-118">Data types such as [Records](language-reference/records.md) and [Discriminated Unions](language-reference/discriminated-unions.md) let you represent complex data and domains.</span></span>
+<span data-ttu-id="e492e-118">などのデータ型[レコード](language-reference/records.md)と[判別共用体](language-reference/discriminated-unions.md)複雑なデータとドメインを表現することができます。</span><span class="sxs-lookup"><span data-stu-id="e492e-118">Data types such as [Records](language-reference/records.md) and [Discriminated Unions](language-reference/discriminated-unions.md) let you represent complex data and domains.</span></span>
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-<span data-ttu-id="b046c-119">F#レコード、判別共用体は、null 以外、変更できない、および簡単に使用できるように、既定では同等です。</span><span class="sxs-lookup"><span data-stu-id="b046c-119">F# records and discriminated unions are non-null, immutable, and comparable by default, making them very easy to use.</span></span>
+<span data-ttu-id="e492e-119">F#レコード、判別共用体は、null 以外、変更できない、および簡単に使用できるように、既定では同等です。</span><span class="sxs-lookup"><span data-stu-id="e492e-119">F# records and discriminated unions are non-null, immutable, and comparable by default, making them very easy to use.</span></span>
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a><span data-ttu-id="b046c-120">関数およびパターン マッチングで正確性を強制</span><span class="sxs-lookup"><span data-stu-id="b046c-120">Enforced correctness with functions and pattern matching</span></span>
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a><span data-ttu-id="e492e-120">関数およびパターン マッチングで正確性を強制</span><span class="sxs-lookup"><span data-stu-id="e492e-120">Enforced correctness with functions and pattern matching</span></span>
 
-<span data-ttu-id="b046c-121">F#関数は、宣言する簡単で実際には強力です。</span><span class="sxs-lookup"><span data-stu-id="b046c-121">F# functions are easy to declare and powerful in practice.</span></span> <span data-ttu-id="b046c-122">組み合わせると[パターン マッチング](language-reference/pattern-matching.md)コンパイラが正確性が適用される動作を定義することができます。</span><span class="sxs-lookup"><span data-stu-id="b046c-122">When combined with [pattern matching](language-reference/pattern-matching.md), they allow you to define behavior whose correctness is enforced by the compiler.</span></span>
+<span data-ttu-id="e492e-121">F#関数は、宣言する簡単で実際には強力です。</span><span class="sxs-lookup"><span data-stu-id="e492e-121">F# functions are easy to declare and powerful in practice.</span></span> <span data-ttu-id="e492e-122">組み合わせると[パターン マッチング](language-reference/pattern-matching.md)コンパイラが正確性が適用される動作を定義することができます。</span><span class="sxs-lookup"><span data-stu-id="e492e-122">When combined with [pattern matching](language-reference/pattern-matching.md), they allow you to define behavior whose correctness is enforced by the compiler.</span></span>
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-<span data-ttu-id="b046c-123">F#関数は、ファースト クラス、つまりパラメーターとして渡され、その他の関数から返されることができますも。</span><span class="sxs-lookup"><span data-stu-id="b046c-123">F# functions are also first-class, meaning they can be passed as parameters and returned from other functions.</span></span>
+<span data-ttu-id="e492e-123">F#関数は、ファースト クラス、つまりパラメーターとして渡され、その他の関数から返されることができますも。</span><span class="sxs-lookup"><span data-stu-id="e492e-123">F# functions are also first-class, meaning they can be passed as parameters and returned from other functions.</span></span>
 
-## <a name="functions-to-define-operations-on-objects"></a><span data-ttu-id="b046c-124">オブジェクトに対する操作を定義する関数</span><span class="sxs-lookup"><span data-stu-id="b046c-124">Functions to define operations on objects</span></span>
+## <a name="functions-to-define-operations-on-objects"></a><span data-ttu-id="e492e-124">オブジェクトに対する操作を定義する関数</span><span class="sxs-lookup"><span data-stu-id="e492e-124">Functions to define operations on objects</span></span>
 
-<span data-ttu-id="b046c-125">F#有用なデータ型は、blend のデータと機能する必要がある場合、オブジェクトの完全サポートしています。</span><span class="sxs-lookup"><span data-stu-id="b046c-125">F# has full support for objects, which are useful data types when you need to blend data and functionality.</span></span> <span data-ttu-id="b046c-126">F#オブジェクトを操作する関数が使用されます。</span><span class="sxs-lookup"><span data-stu-id="b046c-126">F# functions are used to manipulate objects.</span></span>
+<span data-ttu-id="e492e-125">F#有用なデータ型は、blend のデータと機能する必要がある場合、オブジェクトの完全サポートしています。</span><span class="sxs-lookup"><span data-stu-id="e492e-125">F# has full support for objects, which are useful data types when you need to blend data and functionality.</span></span> <span data-ttu-id="e492e-126">F#オブジェクトを操作する関数が使用されます。</span><span class="sxs-lookup"><span data-stu-id="e492e-126">F# functions are used to manipulate objects.</span></span>
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-<span data-ttu-id="b046c-127">内のオブジェクト指向コードを記述するのではなくF#、オブジェクトを操作する関数として別のデータ型を処理するコードを記述する多くの場合。</span><span class="sxs-lookup"><span data-stu-id="b046c-127">Rather than writing code that is object-oriented, in F#, you will often write code that treats objects as another data type for functions to manipulate.</span></span> <span data-ttu-id="b046c-128">などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な F# プログラムでは一般的です。</span><span class="sxs-lookup"><span data-stu-id="b046c-128">Features such as [generic interfaces](language-reference/interfaces.md), [object expressions](language-reference/object-expressions.md), and judicious use of [members](language-reference/members/index.md) are common in larger F# programs.</span></span>
+<span data-ttu-id="e492e-127">内のオブジェクト指向コードを記述するのではなくF#、オブジェクトを操作する関数として別のデータ型を処理するコードを記述する多くの場合。</span><span class="sxs-lookup"><span data-stu-id="e492e-127">Rather than writing code that is object-oriented, in F#, you will often write code that treats objects as another data type for functions to manipulate.</span></span> <span data-ttu-id="e492e-128">などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な F# プログラムでは一般的です。</span><span class="sxs-lookup"><span data-stu-id="e492e-128">Features such as [generic interfaces](language-reference/interfaces.md), [object expressions](language-reference/object-expressions.md), and judicious use of [members](language-reference/members/index.md) are common in larger F# programs.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="b046c-129">次の手順</span><span class="sxs-lookup"><span data-stu-id="b046c-129">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e492e-129">次の手順</span><span class="sxs-lookup"><span data-stu-id="e492e-129">Next steps</span></span>
 
-<span data-ttu-id="b046c-130">多数の F# の機能の詳細については、チェック アウト、 [F# のツアー](tour.md)します。</span><span class="sxs-lookup"><span data-stu-id="b046c-130">To learn more about a larger set of F# features, check out the [F# Tour](tour.md).</span></span>
+<span data-ttu-id="e492e-130">多数の F# の機能の詳細については、チェック アウト、 [F# のツアー](tour.md)します。</span><span class="sxs-lookup"><span data-stu-id="e492e-130">To learn more about a larger set of F# features, check out the [F# Tour](tour.md).</span></span>

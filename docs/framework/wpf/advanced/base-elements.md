@@ -7,22 +7,22 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
 ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926413"
 ---
-# <a name="base-elements"></a><span data-ttu-id="d6ffe-102">基本要素</span><span class="sxs-lookup"><span data-stu-id="d6ffe-102">Base Elements</span></span>
-<span data-ttu-id="d6ffe-103">4 つの主要クラス--<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>--WPF プログラミングで使用可能な要素の共通の機能の大きな割合を実装します。</span><span class="sxs-lookup"><span data-stu-id="d6ffe-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="d6ffe-104">これら 4 つクラスは、基本要素クラスとしてに、この SDK で呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="d6ffe-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
+# <a name="base-elements"></a><span data-ttu-id="7c0de-102">基本要素</span><span class="sxs-lookup"><span data-stu-id="7c0de-102">Base Elements</span></span>
+<span data-ttu-id="7c0de-103">4 つの主要クラス--<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>--WPF プログラミングで使用可能な要素の共通の機能の大きな割合を実装します。</span><span class="sxs-lookup"><span data-stu-id="7c0de-103">Four key classes--<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>--implement a substantial percentage of the common element functionality available in WPF programming.</span></span> <span data-ttu-id="7c0de-104">これら 4 つクラスは、基本要素クラスとしてに、この SDK で呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="7c0de-104">These four classes are referred to in this SDK as the base element classes.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d6ffe-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d6ffe-105">In This Section</span></span>  
- [<span data-ttu-id="d6ffe-106">基本要素の概要</span><span class="sxs-lookup"><span data-stu-id="d6ffe-106">Base Elements Overview</span></span>](base-elements-overview.md)  
- [<span data-ttu-id="d6ffe-107">Freezable オブジェクトの概要</span><span class="sxs-lookup"><span data-stu-id="d6ffe-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
- [<span data-ttu-id="d6ffe-108">配置、余白、パディングの概要</span><span class="sxs-lookup"><span data-stu-id="d6ffe-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
- [<span data-ttu-id="d6ffe-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="d6ffe-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7c0de-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7c0de-105">In This Section</span></span>  
+ [<span data-ttu-id="7c0de-106">基本要素の概要</span><span class="sxs-lookup"><span data-stu-id="7c0de-106">Base Elements Overview</span></span>](base-elements-overview.md)  
+ [<span data-ttu-id="7c0de-107">Freezable オブジェクトの概要</span><span class="sxs-lookup"><span data-stu-id="7c0de-107">Freezable Objects Overview</span></span>](freezable-objects-overview.md)  
+ [<span data-ttu-id="7c0de-108">配置、余白、パディングの概要</span><span class="sxs-lookup"><span data-stu-id="7c0de-108">Alignment, Margins, and Padding Overview</span></span>](alignment-margins-and-padding-overview.md)  
+ [<span data-ttu-id="7c0de-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="7c0de-109">How-to Topics</span></span>](base-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d6ffe-110">参照</span><span class="sxs-lookup"><span data-stu-id="d6ffe-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7c0de-110">参照</span><span class="sxs-lookup"><span data-stu-id="7c0de-110">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -31,13 +31,13 @@ ms.locfileid: "57359615"
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="d6ffe-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6ffe-111">Related Sections</span></span>  
- [<span data-ttu-id="d6ffe-112">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="d6ffe-112">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="d6ffe-113">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="d6ffe-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="d6ffe-114">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="d6ffe-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="d6ffe-115">Properties</span><span class="sxs-lookup"><span data-stu-id="d6ffe-115">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="d6ffe-116">イベント</span><span class="sxs-lookup"><span data-stu-id="d6ffe-116">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="d6ffe-117">入力</span><span class="sxs-lookup"><span data-stu-id="d6ffe-117">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="d6ffe-118">リソース</span><span class="sxs-lookup"><span data-stu-id="d6ffe-118">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="d6ffe-119">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="d6ffe-119">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="d6ffe-120">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="d6ffe-120">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="7c0de-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="7c0de-111">Related Sections</span></span>  
+ [<span data-ttu-id="7c0de-112">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="7c0de-112">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="7c0de-113">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="7c0de-113">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="7c0de-114">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="7c0de-114">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="7c0de-115">Properties</span><span class="sxs-lookup"><span data-stu-id="7c0de-115">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="7c0de-116">イベント</span><span class="sxs-lookup"><span data-stu-id="7c0de-116">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="7c0de-117">入力</span><span class="sxs-lookup"><span data-stu-id="7c0de-117">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="7c0de-118">リソース</span><span class="sxs-lookup"><span data-stu-id="7c0de-118">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="7c0de-119">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="7c0de-119">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="7c0de-120">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="7c0de-120">Threading Model</span></span>](threading-model.md)

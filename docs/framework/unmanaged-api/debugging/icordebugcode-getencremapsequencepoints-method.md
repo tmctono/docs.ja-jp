@@ -19,15 +19,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750177"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="9ac27-102">ICorDebugCode::GetEnCRemapSequencePoints メソッド</span><span class="sxs-lookup"><span data-stu-id="9ac27-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="9ac27-103">.NET Framework の現在のバージョンでは、このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="9ac27-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="ec834-102">ICorDebugCode::GetEnCRemapSequencePoints メソッド</span><span class="sxs-lookup"><span data-stu-id="ec834-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="ec834-103">.NET Framework の現在のバージョンでは、このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="ec834-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ac27-104">構文</span><span class="sxs-lookup"><span data-stu-id="9ac27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec834-104">構文</span><span class="sxs-lookup"><span data-stu-id="ec834-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9ac27-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ac27-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec834-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="ec834-105">See also</span></span>

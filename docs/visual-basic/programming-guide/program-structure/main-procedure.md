@@ -9,33 +9,33 @@ helpviewer_keywords:
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920115"
 ---
-# <a name="main-procedure-in-visual-basic"></a><span data-ttu-id="0b1e4-102">Visual Basic の Main プロシージャ</span><span class="sxs-lookup"><span data-stu-id="0b1e4-102">Main Procedure in Visual Basic</span></span>
-<span data-ttu-id="0b1e4-103">すべての Visual Basic アプリケーションが呼び出されるプロシージャを含める必要があります`Main`します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-103">Every Visual Basic application must contain a procedure called `Main`.</span></span> <span data-ttu-id="0b1e4-104">この手順では、開始ポイントし、アプリケーションの総合的な制御として機能します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-104">This procedure serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="0b1e4-105">.NET Framework の呼び出し、`Main`に制御を渡す準備ができてし、アプリケーションが読み込まれたときにプロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-105">The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it.</span></span> <span data-ttu-id="0b1e4-106">記述する必要がある、Windows フォーム アプリケーションを作成する場合を除き、`Main`自身で実行されるアプリケーションのプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-106">Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.</span></span>  
+# <a name="main-procedure-in-visual-basic"></a><span data-ttu-id="1c951-102">Visual Basic の Main プロシージャ</span><span class="sxs-lookup"><span data-stu-id="1c951-102">Main Procedure in Visual Basic</span></span>
+<span data-ttu-id="1c951-103">すべての Visual Basic アプリケーションが呼び出されるプロシージャを含める必要があります`Main`します。</span><span class="sxs-lookup"><span data-stu-id="1c951-103">Every Visual Basic application must contain a procedure called `Main`.</span></span> <span data-ttu-id="1c951-104">この手順では、開始ポイントし、アプリケーションの総合的な制御として機能します。</span><span class="sxs-lookup"><span data-stu-id="1c951-104">This procedure serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="1c951-105">.NET Framework の呼び出し、`Main`に制御を渡す準備ができてし、アプリケーションが読み込まれたときにプロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-105">The .NET Framework calls your `Main` procedure when it has loaded your application and is ready to pass control to it.</span></span> <span data-ttu-id="1c951-106">記述する必要がある、Windows フォーム アプリケーションを作成する場合を除き、`Main`自身で実行されるアプリケーションのプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="1c951-106">Unless you are creating a Windows Forms application, you must write the `Main` procedure for applications that run on their own.</span></span>  
   
- <span data-ttu-id="0b1e4-107">`Main` 最初に実行されるコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-107">`Main` contains the code that runs first.</span></span> <span data-ttu-id="0b1e4-108">`Main`プログラムの開始時に最初に読み込まれる形式を決定、アプリケーションのコピーがシステムで既に実行されているかどうかを検索、アプリケーションの一連の変数を確立またはアプリケーションに必要なデータベースを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-108">In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.</span></span>  
+ <span data-ttu-id="1c951-107">`Main` 最初に実行されるコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1c951-107">`Main` contains the code that runs first.</span></span> <span data-ttu-id="1c951-108">`Main`プログラムの開始時に最初に読み込まれる形式を決定、アプリケーションのコピーがシステムで既に実行されているかどうかを検索、アプリケーションの一連の変数を確立またはアプリケーションに必要なデータベースを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="1c951-108">In `Main`, you can determine which form is to be loaded first when the program starts, find out if a copy of your application is already running on the system, establish a set of variables for your application, or open a database that the application requires.</span></span>  
   
-## <a name="requirements-for-the-main-procedure"></a><span data-ttu-id="0b1e4-109">メインのプロシージャの要件</span><span class="sxs-lookup"><span data-stu-id="0b1e4-109">Requirements for the Main Procedure</span></span>  
- <span data-ttu-id="0b1e4-110">(通常は拡張子 .exe) で自身で実行されるファイルを含める必要があります、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-110">A file that runs on its own (usually with extension .exe) must contain a `Main` procedure.</span></span> <span data-ttu-id="0b1e4-111">(たとえば、拡張子は .dll) のライブラリとは実行されず、独自は必要ありません、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-111">A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure.</span></span> <span data-ttu-id="0b1e4-112">作成するプロジェクトのさまざまな種類の要件は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-112">The requirements for the different types of projects you can create are as follows:</span></span>  
+## <a name="requirements-for-the-main-procedure"></a><span data-ttu-id="1c951-109">メインのプロシージャの要件</span><span class="sxs-lookup"><span data-stu-id="1c951-109">Requirements for the Main Procedure</span></span>  
+ <span data-ttu-id="1c951-110">(通常は拡張子 .exe) で自身で実行されるファイルを含める必要があります、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-110">A file that runs on its own (usually with extension .exe) must contain a `Main` procedure.</span></span> <span data-ttu-id="1c951-111">(たとえば、拡張子は .dll) のライブラリとは実行されず、独自は必要ありません、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-111">A library (for example with extension .dll) does not run on its own and does not require a `Main` procedure.</span></span> <span data-ttu-id="1c951-112">作成するプロジェクトのさまざまな種類の要件は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="1c951-112">The requirements for the different types of projects you can create are as follows:</span></span>  
   
--   <span data-ttu-id="0b1e4-113">コンソール アプリケーションは、自分で実行して、少なくとも 1 つを指定する必要があります`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-113">Console applications run on their own, and you must supply at least one `Main` procedure.</span></span> <span data-ttu-id="0b1e4-114">.</span><span class="sxs-lookup"><span data-stu-id="0b1e4-114">.</span></span>  
+- <span data-ttu-id="1c951-113">コンソール アプリケーションは、自分で実行して、少なくとも 1 つを指定する必要があります`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-113">Console applications run on their own, and you must supply at least one `Main` procedure.</span></span> <span data-ttu-id="1c951-114">.</span><span class="sxs-lookup"><span data-stu-id="1c951-114">.</span></span>  
   
--   <span data-ttu-id="0b1e4-115">Windows フォーム アプリケーションが単独で実行します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-115">Windows Forms applications run on their own.</span></span> <span data-ttu-id="0b1e4-116">Visual Basic コンパイラが自動的に生成されますが、`Main`プロシージャなどのアプリケーションとする必要はありませんいずれかを記述します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-116">However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.</span></span>  
+- <span data-ttu-id="1c951-115">Windows フォーム アプリケーションが単独で実行します。</span><span class="sxs-lookup"><span data-stu-id="1c951-115">Windows Forms applications run on their own.</span></span> <span data-ttu-id="1c951-116">Visual Basic コンパイラが自動的に生成されますが、`Main`プロシージャなどのアプリケーションとする必要はありませんいずれかを記述します。</span><span class="sxs-lookup"><span data-stu-id="1c951-116">However, the Visual Basic compiler automatically generates a `Main` procedure in such an application, and you do not need to write one.</span></span>  
   
--   <span data-ttu-id="0b1e4-117">クラス ライブラリが不要、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-117">Class libraries do not require a `Main` procedure.</span></span> <span data-ttu-id="0b1e4-118">Windows コントロール ライブラリと Web コントロール ライブラリが含まれます。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-118">These include Windows Control Libraries and Web Control Libraries.</span></span> <span data-ttu-id="0b1e4-119">Web アプリケーションは、クラス ライブラリとしてデプロイされます。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-119">Web applications are deployed as class libraries.</span></span>  
+- <span data-ttu-id="1c951-117">クラス ライブラリが不要、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-117">Class libraries do not require a `Main` procedure.</span></span> <span data-ttu-id="1c951-118">Windows コントロール ライブラリと Web コントロール ライブラリが含まれます。</span><span class="sxs-lookup"><span data-stu-id="1c951-118">These include Windows Control Libraries and Web Control Libraries.</span></span> <span data-ttu-id="1c951-119">Web アプリケーションは、クラス ライブラリとしてデプロイされます。</span><span class="sxs-lookup"><span data-stu-id="1c951-119">Web applications are deployed as class libraries.</span></span>  
   
-## <a name="declaring-the-main-procedure"></a><span data-ttu-id="0b1e4-120">メインのプロシージャを宣言します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-120">Declaring the Main Procedure</span></span>  
- <span data-ttu-id="0b1e4-121">宣言する 4 つの方法がある、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-121">There are four ways to declare the `Main` procedure.</span></span> <span data-ttu-id="0b1e4-122">引数を受け取るものか、および値を返すことか。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-122">It can take arguments or not, and it can return a value or not.</span></span>  
+## <a name="declaring-the-main-procedure"></a><span data-ttu-id="1c951-120">メインのプロシージャを宣言します。</span><span class="sxs-lookup"><span data-stu-id="1c951-120">Declaring the Main Procedure</span></span>  
+ <span data-ttu-id="1c951-121">宣言する 4 つの方法がある、`Main`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-121">There are four ways to declare the `Main` procedure.</span></span> <span data-ttu-id="1c951-122">引数を受け取るものか、および値を返すことか。</span><span class="sxs-lookup"><span data-stu-id="1c951-122">It can take arguments or not, and it can return a value or not.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0b1e4-123">宣言する場合`Main`クラスでは、使用する必要があります、`Shared`キーワード。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-123">If you declare `Main` in a class, you must use the `Shared` keyword.</span></span> <span data-ttu-id="0b1e4-124">モジュールで`Main`する必要はありません`Shared`します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-124">In a module, `Main` does not need to be `Shared`.</span></span>  
+>  <span data-ttu-id="1c951-123">宣言する場合`Main`クラスでは、使用する必要があります、`Shared`キーワード。</span><span class="sxs-lookup"><span data-stu-id="1c951-123">If you declare `Main` in a class, you must use the `Shared` keyword.</span></span> <span data-ttu-id="1c951-124">モジュールで`Main`する必要はありません`Shared`します。</span><span class="sxs-lookup"><span data-stu-id="1c951-124">In a module, `Main` does not need to be `Shared`.</span></span>  
   
--   <span data-ttu-id="0b1e4-125">最も簡単な方法は、宣言する、`Sub`引数または値を返すプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-125">The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.</span></span>  
+- <span data-ttu-id="1c951-125">最も簡単な方法は、宣言する、`Sub`引数または値を返すプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="1c951-125">The simplest way is to declare a `Sub` procedure that does not take arguments or return a value.</span></span>  
   
     ```  
     Module mainModule  
@@ -47,7 +47,7 @@ ms.locfileid: "58833673"
     End Module  
     ```  
   
--   <span data-ttu-id="0b1e4-126">`Main` 返すことも、`Integer`値で、オペレーティング システムは、プログラムの終了コードとして使用します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-126">`Main` can also return an `Integer` value, which the operating system uses as the exit code for your program.</span></span> <span data-ttu-id="0b1e4-127">その他のプログラムでは、Windows ERRORLEVEL の値を調べることで、このコードをテストできます。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-127">Other programs can test this code by examining the Windows ERRORLEVEL value.</span></span> <span data-ttu-id="0b1e4-128">終了コードを返すを宣言する必要があります`Main`として、`Function`プロシージャの代わりに、`Sub`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-128">To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.</span></span>  
+- <span data-ttu-id="1c951-126">`Main` 返すことも、`Integer`値で、オペレーティング システムは、プログラムの終了コードとして使用します。</span><span class="sxs-lookup"><span data-stu-id="1c951-126">`Main` can also return an `Integer` value, which the operating system uses as the exit code for your program.</span></span> <span data-ttu-id="1c951-127">その他のプログラムでは、Windows ERRORLEVEL の値を調べることで、このコードをテストできます。</span><span class="sxs-lookup"><span data-stu-id="1c951-127">Other programs can test this code by examining the Windows ERRORLEVEL value.</span></span> <span data-ttu-id="1c951-128">終了コードを返すを宣言する必要があります`Main`として、`Function`プロシージャの代わりに、`Sub`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="1c951-128">To return an exit code, you must declare `Main` as a `Function` procedure instead of a `Sub` procedure.</span></span>  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ ms.locfileid: "58833673"
     End Module  
     ```  
   
--   <span data-ttu-id="0b1e4-129">`Main` とることも、`String`引数として配列します。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-129">`Main` can also take a `String` array as an argument.</span></span> <span data-ttu-id="0b1e4-130">配列内の各文字列には、プログラムの実行に使用したコマンドライン引数のいずれかが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-130">Each string in the array contains one of the command-line arguments used to invoke your program.</span></span> <span data-ttu-id="0b1e4-131">その値に応じて異なるアクションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-131">You can take different actions depending on their values.</span></span>  
+- <span data-ttu-id="1c951-129">`Main` とることも、`String`引数として配列します。</span><span class="sxs-lookup"><span data-stu-id="1c951-129">`Main` can also take a `String` array as an argument.</span></span> <span data-ttu-id="1c951-130">配列内の各文字列には、プログラムの実行に使用したコマンドライン引数のいずれかが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1c951-130">Each string in the array contains one of the command-line arguments used to invoke your program.</span></span> <span data-ttu-id="1c951-131">その値に応じて異なるアクションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="1c951-131">You can take different actions depending on their values.</span></span>  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ ms.locfileid: "58833673"
     End Module  
     ```  
   
--   <span data-ttu-id="0b1e4-132">宣言できます`Main`コマンドライン引数を検証が終了コードを次のように返されません。</span><span class="sxs-lookup"><span data-stu-id="0b1e4-132">You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.</span></span>  
+- <span data-ttu-id="1c951-132">宣言できます`Main`コマンドライン引数を検証が終了コードを次のように返されません。</span><span class="sxs-lookup"><span data-stu-id="1c951-132">You can declare `Main` to examine the command-line arguments but not return an exit code, as follows.</span></span>  
   
     ```  
     Module mainModule  
@@ -108,15 +108,15 @@ ms.locfileid: "58833673"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b1e4-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b1e4-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c951-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c951-133">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [<span data-ttu-id="0b1e4-134">Visual Basic プログラムの構造</span><span class="sxs-lookup"><span data-stu-id="0b1e4-134">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [<span data-ttu-id="0b1e4-135">/main</span><span class="sxs-lookup"><span data-stu-id="0b1e4-135">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
-- [<span data-ttu-id="0b1e4-136">Shared</span><span class="sxs-lookup"><span data-stu-id="0b1e4-136">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
-- [<span data-ttu-id="0b1e4-137">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="0b1e4-137">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="0b1e4-138">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="0b1e4-138">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="0b1e4-139">Integer データ型</span><span class="sxs-lookup"><span data-stu-id="0b1e4-139">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [<span data-ttu-id="0b1e4-140">String データ型</span><span class="sxs-lookup"><span data-stu-id="0b1e4-140">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [<span data-ttu-id="1c951-134">Visual Basic プログラムの構造</span><span class="sxs-lookup"><span data-stu-id="1c951-134">Structure of a Visual Basic Program</span></span>](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [<span data-ttu-id="1c951-135">/main</span><span class="sxs-lookup"><span data-stu-id="1c951-135">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)
+- [<span data-ttu-id="1c951-136">Shared</span><span class="sxs-lookup"><span data-stu-id="1c951-136">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
+- [<span data-ttu-id="1c951-137">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="1c951-137">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="1c951-138">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="1c951-138">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="1c951-139">Integer データ型</span><span class="sxs-lookup"><span data-stu-id="1c951-139">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [<span data-ttu-id="1c951-140">String データ型</span><span class="sxs-lookup"><span data-stu-id="1c951-140">String Data Type</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)

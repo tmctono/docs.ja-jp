@@ -7,28 +7,28 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
 ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926465"
 ---
-# <a name="base-elements-how-to-topics"></a><span data-ttu-id="b24a4-102">基本要素に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="b24a4-102">Base Elements How-to Topics</span></span>
-<span data-ttu-id="b24a4-103">このセクションのトピックでは、次の 4 つの WPF 基本要素を使用する方法をについて説明します。 <xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>します。</span><span class="sxs-lookup"><span data-stu-id="b24a4-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
+# <a name="base-elements-how-to-topics"></a><span data-ttu-id="1b6a9-102">基本要素に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="1b6a9-102">Base Elements How-to Topics</span></span>
+<span data-ttu-id="1b6a9-103">このセクションのトピックでは、次の 4 つの WPF 基本要素を使用する方法をについて説明します。 <xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>します。</span><span class="sxs-lookup"><span data-stu-id="1b6a9-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b24a4-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b24a4-104">In This Section</span></span>  
- [<span data-ttu-id="b24a4-105">UIElement を透明または半透明にする</span><span class="sxs-lookup"><span data-stu-id="b24a4-105">Make a UIElement Transparent or Semi-Transparent</span></span>](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [<span data-ttu-id="b24a4-106">FrameworkElement のサイズをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="b24a4-106">Animate the Size of a FrameworkElement</span></span>](how-to-animate-the-size-of-a-frameworkelement.md)  
- [<span data-ttu-id="b24a4-107">Freezable が固定されているかどうかを判別する</span><span class="sxs-lookup"><span data-stu-id="b24a4-107">Determine Whether a Freezable Is Frozen</span></span>](how-to-determine-whether-a-freezable-is-frozen.md)  
- [<span data-ttu-id="b24a4-108">読み込まれたイベントを処理する</span><span class="sxs-lookup"><span data-stu-id="b24a4-108">Handle a Loaded Event</span></span>](how-to-handle-a-loaded-event.md)  
- [<span data-ttu-id="b24a4-109">要素およびコントロールのマージンを設定する</span><span class="sxs-lookup"><span data-stu-id="b24a4-109">Set Margins of Elements and Controls</span></span>](how-to-set-margins-of-elements-and-controls.md)  
- [<span data-ttu-id="b24a4-110">Freezable を読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="b24a4-110">Make a Freezable Read-Only</span></span>](how-to-make-a-freezable-read-only.md)  
- [<span data-ttu-id="b24a4-111">読み取り専用の Freezable の書き込み可能なコピーを取得する</span><span class="sxs-lookup"><span data-stu-id="b24a4-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [<span data-ttu-id="b24a4-112">UIElement を左右または上下に反転させる</span><span class="sxs-lookup"><span data-stu-id="b24a4-112">Flip a UIElement Horizontally or Vertically</span></span>](how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [<span data-ttu-id="b24a4-113">ThicknessConverter オブジェクトを使用する</span><span class="sxs-lookup"><span data-stu-id="b24a4-113">Use a ThicknessConverter Object</span></span>](how-to-use-a-thicknessconverter-object.md)  
- [<span data-ttu-id="b24a4-114">ContextMenuOpening イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="b24a4-114">Handle the ContextMenuOpening Event</span></span>](how-to-handle-the-contextmenuopening-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1b6a9-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1b6a9-104">In This Section</span></span>  
+ [<span data-ttu-id="1b6a9-105">UIElement を透明または半透明にする</span><span class="sxs-lookup"><span data-stu-id="1b6a9-105">Make a UIElement Transparent or Semi-Transparent</span></span>](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [<span data-ttu-id="1b6a9-106">FrameworkElement のサイズをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-106">Animate the Size of a FrameworkElement</span></span>](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [<span data-ttu-id="1b6a9-107">Freezable が固定されているかどうかを判別する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-107">Determine Whether a Freezable Is Frozen</span></span>](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [<span data-ttu-id="1b6a9-108">読み込まれたイベントを処理する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-108">Handle a Loaded Event</span></span>](how-to-handle-a-loaded-event.md)  
+ [<span data-ttu-id="1b6a9-109">要素およびコントロールのマージンを設定する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-109">Set Margins of Elements and Controls</span></span>](how-to-set-margins-of-elements-and-controls.md)  
+ [<span data-ttu-id="1b6a9-110">Freezable を読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="1b6a9-110">Make a Freezable Read-Only</span></span>](how-to-make-a-freezable-read-only.md)  
+ [<span data-ttu-id="1b6a9-111">読み取り専用の Freezable の書き込み可能なコピーを取得する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [<span data-ttu-id="1b6a9-112">UIElement を左右または上下に反転させる</span><span class="sxs-lookup"><span data-stu-id="1b6a9-112">Flip a UIElement Horizontally or Vertically</span></span>](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [<span data-ttu-id="1b6a9-113">ThicknessConverter オブジェクトを使用する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-113">Use a ThicknessConverter Object</span></span>](how-to-use-a-thicknessconverter-object.md)  
+ [<span data-ttu-id="1b6a9-114">ContextMenuOpening イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="1b6a9-114">Handle the ContextMenuOpening Event</span></span>](how-to-handle-the-contextmenuopening-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="b24a4-115">参照</span><span class="sxs-lookup"><span data-stu-id="b24a4-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1b6a9-115">参照</span><span class="sxs-lookup"><span data-stu-id="1b6a9-115">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -37,5 +37,5 @@ ms.locfileid: "57370944"
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="b24a4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b24a4-116">Related Sections</span></span>  
- [<span data-ttu-id="b24a4-117">基本要素</span><span class="sxs-lookup"><span data-stu-id="b24a4-117">Base Elements</span></span>](base-elements.md)
+## <a name="related-sections"></a><span data-ttu-id="1b6a9-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b6a9-116">Related Sections</span></span>  
+ [<span data-ttu-id="1b6a9-117">基本要素</span><span class="sxs-lookup"><span data-stu-id="1b6a9-117">Base Elements</span></span>](base-elements.md)

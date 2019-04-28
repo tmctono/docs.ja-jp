@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
 ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932250"
 ---
-# <a name="listview-how-to-topics"></a><span data-ttu-id="6b04c-102">ListView に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="6b04c-102">ListView How-to Topics</span></span>
-<span data-ttu-id="6b04c-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListView>データ項目のセットを表示するコントロール。</span><span class="sxs-lookup"><span data-stu-id="6b04c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
+# <a name="listview-how-to-topics"></a><span data-ttu-id="3abde-102">ListView に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="3abde-102">ListView How-to Topics</span></span>
+<span data-ttu-id="3abde-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListView>データ項目のセットを表示するコントロール。</span><span class="sxs-lookup"><span data-stu-id="3abde-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6b04c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6b04c-104">In This Section</span></span>  
- [<span data-ttu-id="6b04c-105">ヘッダーがクリックされたときに GridView 列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="6b04c-105">Sort a GridView Column When a Header Is Clicked</span></span>](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [<span data-ttu-id="6b04c-106">ListView のカスタム表示モードを作成する</span><span class="sxs-lookup"><span data-stu-id="6b04c-106">Create a Custom View Mode for a ListView</span></span>](how-to-create-a-custom-view-mode-for-a-listview.md)  
- [<span data-ttu-id="6b04c-107">テンプレートを使用して、GridView を使用する ListView のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="6b04c-107">Use Templates to Style a ListView That Uses GridView</span></span>](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [<span data-ttu-id="6b04c-108">ドラッグされた GridView 列ヘッダーのスタイルを作成する</span><span class="sxs-lookup"><span data-stu-id="6b04c-108">Create a Style for a Dragged GridView Column Header</span></span>](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [<span data-ttu-id="6b04c-109">GridView を使用して ListView コンテンツを表示する</span><span class="sxs-lookup"><span data-stu-id="6b04c-109">Display ListView Contents by Using a GridView</span></span>](how-to-display-listview-contents-by-using-a-gridview.md)  
- [<span data-ttu-id="6b04c-110">トリガーを使用して、ListView で選択された項目のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="6b04c-110">Use Triggers to Style Selected Items in a ListView</span></span>](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [<span data-ttu-id="6b04c-111">CheckBox を持つ ListViewItem を作成する</span><span class="sxs-lookup"><span data-stu-id="6b04c-111">Create ListViewItems with a CheckBox</span></span>](how-to-create-listviewitems-with-a-checkbox.md)  
- [<span data-ttu-id="6b04c-112">GridViewRowPresenter を使用してデータを表示する</span><span class="sxs-lookup"><span data-stu-id="6b04c-112">Display Data by Using GridViewRowPresenter</span></span>](how-to-display-data-by-using-gridviewrowpresenter.md)  
- [<span data-ttu-id="6b04c-113">GridView を実装する ListView の項目をグループ化する</span><span class="sxs-lookup"><span data-stu-id="6b04c-113">Group Items in a ListView That Implements a GridView</span></span>](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="6b04c-114">GridView を実装する ListView で行のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="6b04c-114">Style a Row in a ListView That Implements a GridView</span></span>](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="6b04c-115">ListView の列の水平方向の配置を変更する</span><span class="sxs-lookup"><span data-stu-id="6b04c-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [<span data-ttu-id="6b04c-116">ListView の各項目の MouseDoubleClick イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="6b04c-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3abde-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="3abde-104">In This Section</span></span>  
+ [<span data-ttu-id="3abde-105">ヘッダーがクリックされたときに GridView 列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="3abde-105">Sort a GridView Column When a Header Is Clicked</span></span>](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [<span data-ttu-id="3abde-106">ListView のカスタム表示モードを作成する</span><span class="sxs-lookup"><span data-stu-id="3abde-106">Create a Custom View Mode for a ListView</span></span>](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [<span data-ttu-id="3abde-107">テンプレートを使用して、GridView を使用する ListView のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="3abde-107">Use Templates to Style a ListView That Uses GridView</span></span>](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [<span data-ttu-id="3abde-108">ドラッグされた GridView 列ヘッダーのスタイルを作成する</span><span class="sxs-lookup"><span data-stu-id="3abde-108">Create a Style for a Dragged GridView Column Header</span></span>](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [<span data-ttu-id="3abde-109">GridView を使用して ListView コンテンツを表示する</span><span class="sxs-lookup"><span data-stu-id="3abde-109">Display ListView Contents by Using a GridView</span></span>](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [<span data-ttu-id="3abde-110">トリガーを使用して、ListView で選択された項目のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="3abde-110">Use Triggers to Style Selected Items in a ListView</span></span>](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [<span data-ttu-id="3abde-111">CheckBox を持つ ListViewItem を作成する</span><span class="sxs-lookup"><span data-stu-id="3abde-111">Create ListViewItems with a CheckBox</span></span>](how-to-create-listviewitems-with-a-checkbox.md)  
+ [<span data-ttu-id="3abde-112">GridViewRowPresenter を使用してデータを表示する</span><span class="sxs-lookup"><span data-stu-id="3abde-112">Display Data by Using GridViewRowPresenter</span></span>](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [<span data-ttu-id="3abde-113">GridView を実装する ListView の項目をグループ化する</span><span class="sxs-lookup"><span data-stu-id="3abde-113">Group Items in a ListView That Implements a GridView</span></span>](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="3abde-114">GridView を実装する ListView で行のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="3abde-114">Style a Row in a ListView That Implements a GridView</span></span>](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="3abde-115">ListView の列の水平方向の配置を変更する</span><span class="sxs-lookup"><span data-stu-id="3abde-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [<span data-ttu-id="3abde-116">ListView の各項目の MouseDoubleClick イベントを処理する</span><span class="sxs-lookup"><span data-stu-id="3abde-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
-## <a name="reference"></a><span data-ttu-id="6b04c-117">参照</span><span class="sxs-lookup"><span data-stu-id="6b04c-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3abde-117">参照</span><span class="sxs-lookup"><span data-stu-id="3abde-117">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.ListViewItem>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="6b04c-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b04c-118">Related Sections</span></span>  
- [<span data-ttu-id="6b04c-119">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="6b04c-119">ListView Overview</span></span>](listview-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="3abde-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="3abde-118">Related Sections</span></span>  
+ [<span data-ttu-id="3abde-119">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="3abde-119">ListView Overview</span></span>](listview-overview.md)
