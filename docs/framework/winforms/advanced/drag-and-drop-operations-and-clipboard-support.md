@@ -7,39 +7,39 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
 ms.openlocfilehash: 5e7bb75b648163dab7e410a159d55ebbb75f1b0a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756430"
 ---
-# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="2cc1c-102">ドラッグ アンド ドロップ操作とクリップボードのサポート</span><span class="sxs-lookup"><span data-stu-id="2cc1c-102">Drag-and-Drop Operations and Clipboard Support</span></span>
-<span data-ttu-id="2cc1c-103">一連のイベントを処理することで、Windows ベースのアプリケーション内でユーザーによるドラッグ アンド ドロップ操作を有効にすることができます。最も顕著なのは <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave>、および <xref:System.Windows.Forms.Control.DragDrop> のイベントです。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
+# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="aefec-102">ドラッグ アンド ドロップ操作とクリップボードのサポート</span><span class="sxs-lookup"><span data-stu-id="aefec-102">Drag-and-Drop Operations and Clipboard Support</span></span>
+<span data-ttu-id="aefec-103">一連のイベントを処理することで、Windows ベースのアプリケーション内でユーザーによるドラッグ アンド ドロップ操作を有効にすることができます。最も顕著なのは <xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave>、および <xref:System.Windows.Forms.Control.DragDrop> のイベントです。</span><span class="sxs-lookup"><span data-stu-id="aefec-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
   
- <span data-ttu-id="2cc1c-104">単純なメソッドの呼び出しを使用して、Windows ベースのアプリケーション内で、ユーザーの切り取り/コピー/貼り付けのサポートや、ユーザー データの転送を実装することもできます。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
+ <span data-ttu-id="aefec-104">単純なメソッドの呼び出しを使用して、Windows ベースのアプリケーション内で、ユーザーの切り取り/コピー/貼り付けのサポートや、ユーザー データの転送を実装することもできます。</span><span class="sxs-lookup"><span data-stu-id="aefec-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2cc1c-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2cc1c-105">In This Section</span></span>  
- [<span data-ttu-id="2cc1c-106">チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行</span><span class="sxs-lookup"><span data-stu-id="2cc1c-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
- <span data-ttu-id="2cc1c-107">ドラッグ アンド ドロップ操作を開始する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-107">Explains how to start a drag-and-drop operation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="aefec-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="aefec-105">In This Section</span></span>  
+ [<span data-ttu-id="aefec-106">チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行</span><span class="sxs-lookup"><span data-stu-id="aefec-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ <span data-ttu-id="aefec-107">ドラッグ アンド ドロップ操作を開始する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-107">Explains how to start a drag-and-drop operation.</span></span>  
   
- [<span data-ttu-id="2cc1c-108">方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](how-to-perform-drag-and-drop-operations-between-applications.md)  
- <span data-ttu-id="2cc1c-109">アプリケーション間でドラッグ アンド ドロップ操作を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
+ [<span data-ttu-id="aefec-108">方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="aefec-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](how-to-perform-drag-and-drop-operations-between-applications.md)  
+ <span data-ttu-id="aefec-109">アプリケーション間でドラッグ アンド ドロップ操作を実行する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="aefec-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
   
- [<span data-ttu-id="2cc1c-110">方法: データをクリップボードに追加します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-110">How to: Add Data to the Clipboard</span></span>](how-to-add-data-to-the-clipboard.md)  
- <span data-ttu-id="2cc1c-111">プログラムを使用して、クリップボードの情報を挿入する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
+ [<span data-ttu-id="aefec-110">方法: データをクリップボードに追加します。</span><span class="sxs-lookup"><span data-stu-id="aefec-110">How to: Add Data to the Clipboard</span></span>](how-to-add-data-to-the-clipboard.md)  
+ <span data-ttu-id="aefec-111">プログラムを使用して、クリップボードの情報を挿入する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
   
- [<span data-ttu-id="2cc1c-112">方法: クリップボードからデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-112">How to: Retrieve Data from the Clipboard</span></span>](how-to-retrieve-data-from-the-clipboard.md)  
- <span data-ttu-id="2cc1c-113">クリップボードに保存されているデータにアクセスする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-113">Describes how to access the data stored on the Clipboard.</span></span>  
+ [<span data-ttu-id="aefec-112">方法: クリップボードからデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="aefec-112">How to: Retrieve Data from the Clipboard</span></span>](how-to-retrieve-data-from-the-clipboard.md)  
+ <span data-ttu-id="aefec-113">クリップボードに保存されているデータにアクセスする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-113">Describes how to access the data stored on the Clipboard.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2cc1c-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="2cc1c-114">Related Sections</span></span>  
- [<span data-ttu-id="2cc1c-115">Windows フォームにおけるドラッグ アンド ドロップ機能</span><span class="sxs-lookup"><span data-stu-id="2cc1c-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../drag-and-drop-functionality-in-windows-forms.md)  
- <span data-ttu-id="2cc1c-116">ドラッグ アンド ドロップの動作を実装するために使用されるメソッド、イベント、およびクラスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="aefec-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="aefec-114">Related Sections</span></span>  
+ [<span data-ttu-id="aefec-115">Windows フォームにおけるドラッグ アンド ドロップ機能</span><span class="sxs-lookup"><span data-stu-id="aefec-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../drag-and-drop-functionality-in-windows-forms.md)  
+ <span data-ttu-id="aefec-116">ドラッグ アンド ドロップの動作を実装するために使用されるメソッド、イベント、およびクラスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
   
  <xref:System.Windows.Forms.Control.QueryContinueDrag>  
- <span data-ttu-id="2cc1c-117">ドラッグ操作を続行するためにアクセス許可を確認する複雑なイベントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
+ <span data-ttu-id="aefec-117">ドラッグ操作を続行するためにアクセス許可を確認する複雑なイベントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Control.DoDragDrop%2A>  
- <span data-ttu-id="2cc1c-118">ドラッグ操作を開始するときに中心となる複雑なメソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
+ <span data-ttu-id="aefec-118">ドラッグ操作を開始するときに中心となる複雑なメソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="aefec-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Clipboard>  
- <span data-ttu-id="2cc1c-119">参照してください[方法。アクティブな MDI 子ウィンドウにデータを送信](how-to-send-data-to-the-active-mdi-child.md)します。</span><span class="sxs-lookup"><span data-stu-id="2cc1c-119">Also see [How to: Send Data to the Active MDI Child](how-to-send-data-to-the-active-mdi-child.md).</span></span>
+ <span data-ttu-id="aefec-119">参照してください[方法。アクティブな MDI 子ウィンドウにデータを送信](how-to-send-data-to-the-active-mdi-child.md)します。</span><span class="sxs-lookup"><span data-stu-id="aefec-119">Also see [How to: Send Data to the Active MDI Child](how-to-send-data-to-the-active-mdi-child.md).</span></span>

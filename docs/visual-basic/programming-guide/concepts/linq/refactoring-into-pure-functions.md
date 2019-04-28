@@ -3,33 +3,33 @@ title: 純粋関数 (Visual Basic) へのリファクタリング
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
 ms.openlocfilehash: 0a37b30278c850256355612cec09a4c017c7adc2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787167"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="6cf4b-102">純粋関数 (Visual Basic) へのリファクタリング</span><span class="sxs-lookup"><span data-stu-id="6cf4b-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
+# <a name="refactoring-into-pure-functions-visual-basic"></a><span data-ttu-id="c1bbe-102">純粋関数 (Visual Basic) へのリファクタリング</span><span class="sxs-lookup"><span data-stu-id="c1bbe-102">Refactoring Into Pure Functions (Visual Basic)</span></span>
 
-<span data-ttu-id="6cf4b-103">純粋関数型変換で重要なのは、純粋関数を使用してコードをリファクターする方法を理解することです。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>
+<span data-ttu-id="c1bbe-103">純粋関数型変換で重要なのは、純粋関数を使用してコードをリファクターする方法を理解することです。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-103">An important aspect of pure functional transformations is learning how to refactor code using pure functions.</span></span>
 
-<span data-ttu-id="6cf4b-104">このセクションで既に説明したように、純粋関数には 2 つの実用的な特性があります。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>
+<span data-ttu-id="c1bbe-104">このセクションで既に説明したように、純粋関数には 2 つの実用的な特性があります。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-104">As noted previously in this section, a pure function has two useful characteristics:</span></span>
 
-- <span data-ttu-id="6cf4b-105">副作用がありません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-105">It has no side effects.</span></span> <span data-ttu-id="6cf4b-106">この関数は、関数の外部にある変数やあらゆる型のデータを一切変更しません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-106">The function does not change any variables or the data of any type outside of the function.</span></span>
+- <span data-ttu-id="c1bbe-105">副作用がありません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-105">It has no side effects.</span></span> <span data-ttu-id="c1bbe-106">この関数は、関数の外部にある変数やあらゆる型のデータを一切変更しません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-106">The function does not change any variables or the data of any type outside of the function.</span></span>
 
-- <span data-ttu-id="6cf4b-107">一貫性があります。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-107">It is consistent.</span></span> <span data-ttu-id="6cf4b-108">同じ入力データを与えられると、常に同じ出力値を返します。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-108">Given the same set of input data, it will always return the same output value.</span></span>
+- <span data-ttu-id="c1bbe-107">一貫性があります。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-107">It is consistent.</span></span> <span data-ttu-id="c1bbe-108">同じ入力データを与えられると、常に同じ出力値を返します。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-108">Given the same set of input data, it will always return the same output value.</span></span>
 
- <span data-ttu-id="6cf4b-109">関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="6cf4b-110">この方法で、既存のコードの純粋関数バージョンを作成できます。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-110">In this way, you can create pure function versions of existing code.</span></span>
+ <span data-ttu-id="c1bbe-109">関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-109">One way of transitioning to functional programming is to refactor existing code to eliminate unnecessary side effects and external dependencies.</span></span> <span data-ttu-id="c1bbe-110">この方法で、既存のコードの純粋関数バージョンを作成できます。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-110">In this way, you can create pure function versions of existing code.</span></span>
 
-<span data-ttu-id="6cf4b-111">このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="6cf4b-112">「[チュートリアル:WordprocessingML ドキュメント (Visual Basic) 内のコンテンツを操作する](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)チュートリアル、WordprocessingML ドキュメントを操作する方法を示しています、純粋関数を使用してリファクターする方法の 2 つの例が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>
+<span data-ttu-id="c1bbe-111">このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-111">This topic discusses what a pure function is and what it is not.</span></span> <span data-ttu-id="c1bbe-112">「[チュートリアル:WordprocessingML ドキュメント (Visual Basic) 内のコンテンツを操作する](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)チュートリアル、WordprocessingML ドキュメントを操作する方法を示しています、純粋関数を使用してリファクターする方法の 2 つの例が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-112">The [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial shows how to manipulate a WordprocessingML document, and includes two examples of how to refactor using a pure function.</span></span>
 
-## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="6cf4b-113">副作用と外部依存関係の排除</span><span class="sxs-lookup"><span data-stu-id="6cf4b-113">Eliminating Side Effects and External Dependencies</span></span>
+## <a name="eliminating-side-effects-and-external-dependencies"></a><span data-ttu-id="c1bbe-113">副作用と外部依存関係の排除</span><span class="sxs-lookup"><span data-stu-id="c1bbe-113">Eliminating Side Effects and External Dependencies</span></span>
 
-<span data-ttu-id="6cf4b-114">次の例に示す 2 つの非純粋関数と 1 つの純粋関数を参照して、その違いを確認してください。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-114">The following examples contrast two non-pure functions and a pure function.</span></span>
+<span data-ttu-id="c1bbe-114">次の例に示す 2 つの非純粋関数と 1 つの純粋関数を参照して、その違いを確認してください。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-114">The following examples contrast two non-pure functions and a pure function.</span></span>
 
-### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="6cf4b-115">クラス メンバーを変更する非純粋関数</span><span class="sxs-lookup"><span data-stu-id="6cf4b-115">Non-Pure Function that Changes a Class Member</span></span>
+### <a name="non-pure-function-that-changes-a-class-member"></a><span data-ttu-id="c1bbe-115">クラス メンバーを変更する非純粋関数</span><span class="sxs-lookup"><span data-stu-id="c1bbe-115">Non-Pure Function that Changes a Class Member</span></span>
 
-<span data-ttu-id="6cf4b-116">次のコードの `HyphenatedConcat` 関数は、クラス内の `aMember` データ メンバーを変更するため、純粋関数ではありません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-116">In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>
+<span data-ttu-id="c1bbe-116">次のコードの `HyphenatedConcat` 関数は、クラス内の `aMember` データ メンバーを変更するため、純粋関数ではありません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-116">In the following code, the `HyphenatedConcat` function is not a pure function, because it modifies the `aMember` data member in the class:</span></span>
 
 ```vb
 Module Module1
@@ -46,17 +46,17 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="6cf4b-117">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-117">This code produces the following output:</span></span>
+<span data-ttu-id="c1bbe-117">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-117">This code produces the following output:</span></span>
 
 ```
 StringOne-StringTwo
 ```
 
-<span data-ttu-id="6cf4b-118">関連するデータの変更があるかどうかに注意してください`public`または`private`アクセスのどちらが、`shared`メンバーまたはインスタンス メンバーです。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="6cf4b-119">純粋関数は、関数の外部にあるデータを一切変更しません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-119">A pure function does not change any data outside of the function.</span></span>
+<span data-ttu-id="c1bbe-118">関連するデータの変更があるかどうかに注意してください`public`または`private`アクセスのどちらが、`shared`メンバーまたはインスタンス メンバーです。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-118">Note that it is irrelevant whether the data being modified has `public` or `private` access, or is a  `shared` member or an instance member.</span></span> <span data-ttu-id="c1bbe-119">純粋関数は、関数の外部にあるデータを一切変更しません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-119">A pure function does not change any data outside of the function.</span></span>
 
-### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="6cf4b-120">引数を変更する非純粋関数</span><span class="sxs-lookup"><span data-stu-id="6cf4b-120">Non-Pure Function that Changes an Argument</span></span>
+### <a name="non-pure-function-that-changes-an-argument"></a><span data-ttu-id="c1bbe-120">引数を変更する非純粋関数</span><span class="sxs-lookup"><span data-stu-id="c1bbe-120">Non-Pure Function that Changes an Argument</span></span>
 
-<span data-ttu-id="6cf4b-121">同じ関数の次のバージョンは、そのパラメーターである `sb` の内容を変更するため、純粋関数ではありません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>
+<span data-ttu-id="c1bbe-121">同じ関数の次のバージョンは、そのパラメーターである `sb` の内容を変更するため、純粋関数ではありません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-121">Furthermore, the following version of this same function is not pure because it modifies the contents of its parameter, `sb`.</span></span>
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="6cf4b-122">このバージョンのプログラムは、最初のバージョンと同じ出力を生成します。これは、`HyphenatedConcat` 関数が <xref:System.Text.StringBuilder.Append%2A> メンバー関数を呼び出して最初のパラメーターの値 (状態) を変更したためです。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-122">This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="6cf4b-123">`HyphenatedConcat` はパラメーターを値で渡しますが、それでもこの変更は行われるので注意してください。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-123">Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.</span></span>
+<span data-ttu-id="c1bbe-122">このバージョンのプログラムは、最初のバージョンと同じ出力を生成します。これは、`HyphenatedConcat` 関数が <xref:System.Text.StringBuilder.Append%2A> メンバー関数を呼び出して最初のパラメーターの値 (状態) を変更したためです。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-122">This version of the program produces the same output as the first version, because the `HyphenatedConcat` function has changed the value (state) of its first parameter by invoking the <xref:System.Text.StringBuilder.Append%2A> member function.</span></span> <span data-ttu-id="c1bbe-123">`HyphenatedConcat` はパラメーターを値で渡しますが、それでもこの変更は行われるので注意してください。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-123">Note that this alteration occurs despite that fact that `HyphenatedConcat` uses call-by-value parameter passing.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="6cf4b-124">参照型の場合、パラメーターを値で渡すと、渡されるオブジェクトへの参照がコピーされて渡されます。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="6cf4b-125">このコピーは、参照変数が新しいオブジェクトに割り当てられるまで、元の参照と同じインスタンス データに関連付けられたままとなります。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="6cf4b-126">パラメーターを変更する場合に、必ずしも関数に参照を渡す必要はありません。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>
+> <span data-ttu-id="c1bbe-124">参照型の場合、パラメーターを値で渡すと、渡されるオブジェクトへの参照がコピーされて渡されます。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-124">For reference types, if you pass a parameter by value, it results in a copy of the reference to an object being passed.</span></span> <span data-ttu-id="c1bbe-125">このコピーは、参照変数が新しいオブジェクトに割り当てられるまで、元の参照と同じインスタンス データに関連付けられたままとなります。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-125">This copy is still associated with the same instance data as the original reference (until the reference variable is assigned to a new object).</span></span> <span data-ttu-id="c1bbe-126">パラメーターを変更する場合に、必ずしも関数に参照を渡す必要はありません。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-126">Call-by-reference is not necessarily required for a function to modify a parameter.</span></span>
 
-### <a name="pure-function"></a><span data-ttu-id="6cf4b-127">純粋関数</span><span class="sxs-lookup"><span data-stu-id="6cf4b-127">Pure Function</span></span>
+### <a name="pure-function"></a><span data-ttu-id="c1bbe-127">純粋関数</span><span class="sxs-lookup"><span data-stu-id="c1bbe-127">Pure Function</span></span>
 
-<span data-ttu-id="6cf4b-128">次のバージョンのプログラムは、`HyphenatedConcat` 関数を純粋関数として実装する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-128">This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.</span></span>
+<span data-ttu-id="c1bbe-128">次のバージョンのプログラムは、`HyphenatedConcat` 関数を純粋関数として実装する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-128">This next version of the program hows how to implement the `HyphenatedConcat` function as a pure function.</span></span>
 
 ```vb
 Module Module1
@@ -95,17 +95,17 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="6cf4b-129">このバージョンも、同じ出力行 `StringOne-StringTwo` を生成します。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="6cf4b-130">この連結された値を保持するために、中間変数 `s2` が使用されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>
+<span data-ttu-id="c1bbe-129">このバージョンも、同じ出力行 `StringOne-StringTwo` を生成します。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-129">Again, this version produces the same line of output: `StringOne-StringTwo`.</span></span> <span data-ttu-id="c1bbe-130">この連結された値を保持するために、中間変数 `s2` が使用されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-130">Note that to retain the concatenated value, it is stored in the intermediate variable `s2`.</span></span>
 
-<span data-ttu-id="6cf4b-131">ローカルには純粋ではないが (つまりローカル変数を宣言して変更する)、グローバルには純粋である関数を作成すると、非常に便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="6cf4b-132">このような関数は、必要に応じて構成できる特性を多く備えていますが、関数型プログラミングの複雑な表現方法の一部 (単純なループによる処理を行う場合は再帰を使用する必要があるなど) が省かれています。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>
+<span data-ttu-id="c1bbe-131">ローカルには純粋ではないが (つまりローカル変数を宣言して変更する)、グローバルには純粋である関数を作成すると、非常に便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-131">One approach that can be very useful is to write functions that are locally impure (that is, they declare and modify local variables) but are globally pure.</span></span> <span data-ttu-id="c1bbe-132">このような関数は、必要に応じて構成できる特性を多く備えていますが、関数型プログラミングの複雑な表現方法の一部 (単純なループによる処理を行う場合は再帰を使用する必要があるなど) が省かれています。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-132">Such functions have many of the desirable composability characteristics, but avoid some of the more convoluted functional programming idioms, such as having to use recursion when a simple loop would accomplish the same thing.</span></span>
 
-## <a name="standard-query-operators"></a><span data-ttu-id="6cf4b-133">標準クエリ演算子</span><span class="sxs-lookup"><span data-stu-id="6cf4b-133">Standard Query Operators</span></span>
+## <a name="standard-query-operators"></a><span data-ttu-id="c1bbe-133">標準クエリ演算子</span><span class="sxs-lookup"><span data-stu-id="c1bbe-133">Standard Query Operators</span></span>
 
-<span data-ttu-id="6cf4b-134">標準クエリ演算子の重要な特性は、純粋関数として実装される点です。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>
+<span data-ttu-id="c1bbe-134">標準クエリ演算子の重要な特性は、純粋関数として実装される点です。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-134">An important characteristic of the standard query operators is that they are implemented as pure functions.</span></span>
 
-<span data-ttu-id="6cf4b-135">詳細については、[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6cf4b-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>
+<span data-ttu-id="c1bbe-135">詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。</span><span class="sxs-lookup"><span data-stu-id="c1bbe-135">For more information, see [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6cf4b-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="6cf4b-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1bbe-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="c1bbe-136">See also</span></span>
 
-- [<span data-ttu-id="6cf4b-137">純粋関数型変換 (Visual Basic) の概要</span><span class="sxs-lookup"><span data-stu-id="6cf4b-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [<span data-ttu-id="6cf4b-138">関数型プログラミングと命令型プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6cf4b-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [<span data-ttu-id="c1bbe-137">純粋関数型変換 (Visual Basic) の概要</span><span class="sxs-lookup"><span data-stu-id="c1bbe-137">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [<span data-ttu-id="c1bbe-138">関数型プログラミングと命令型プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1bbe-138">Functional Programming vs. Imperative Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
