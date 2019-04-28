@@ -3,37 +3,34 @@ title: アクティビティ ライブラリ
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: b701d382c25644181b23f3c0f0cd8e019b8d37d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909182"
 ---
-# <a name="activity-library"></a><span data-ttu-id="6a229-102">アクティビティ ライブラリ</span><span class="sxs-lookup"><span data-stu-id="6a229-102">Activity Library</span></span>
-<span data-ttu-id="6a229-103">このセクションには、高度なカスタム アクティビティでは、Windows Workflow Foundation (WF) を示すサンプルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6a229-103">This section contains samples that demonstrate advanced custom activities in Windows Workflow Foundation (WF).</span></span>  
+# <a name="activity-library"></a><span data-ttu-id="e41d5-102">アクティビティ ライブラリ</span><span class="sxs-lookup"><span data-stu-id="e41d5-102">Activity Library</span></span>
+<span data-ttu-id="e41d5-103">このセクションには、高度なカスタム アクティビティでは、Windows Workflow Foundation (WF) を示すサンプルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="e41d5-103">This section contains samples that demonstrate advanced custom activities in Windows Workflow Foundation (WF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6a229-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6a229-104">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="e41d5-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e41d5-104">In This Section</span></span>
 
- [<span data-ttu-id="6a229-105">SendMail カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="6a229-105">SendMail Custom Activity</span></span>](sendmail-custom-activity.md)  
- <span data-ttu-id="6a229-106">
-  <xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6a229-106">Demonstrates how to create a custom activity that derives from <xref:System.Activities.AsyncCodeActivity> to send mail using SMTP for use within a workflow application.</span></span>  
+ [<span data-ttu-id="e41d5-105">SendMail カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="e41d5-105">SendMail Custom Activity</span></span>](sendmail-custom-activity.md)  
+ <span data-ttu-id="e41d5-106"><xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e41d5-106">Demonstrates how to create a custom activity that derives from <xref:System.Activities.AsyncCodeActivity> to send mail using SMTP for use within a workflow application.</span></span>  
   
- [<span data-ttu-id="6a229-107">制限された並列 ForEach</span><span class="sxs-lookup"><span data-stu-id="6a229-107">Throttled Parallel ForEach</span></span>](throttled-parallel-foreach.md)  
- <span data-ttu-id="6a229-108">`ThrottleParallelForEach` アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。</span><span class="sxs-lookup"><span data-stu-id="6a229-108">Demonstrates how the `ThrottleParallelForEach` activity is similar to the <xref:System.Activities.Statements.ParallelForEach%601> activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span>
+ [<span data-ttu-id="e41d5-107">制限された並列 ForEach</span><span class="sxs-lookup"><span data-stu-id="e41d5-107">Throttled Parallel ForEach</span></span>](throttled-parallel-foreach.md)  
+ <span data-ttu-id="e41d5-108">`ThrottleParallelForEach` アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、<xref:System.Activities.Statements.ParallelForEach%601> アクティビティと似ていることについて示します。</span><span class="sxs-lookup"><span data-stu-id="e41d5-108">Demonstrates how the `ThrottleParallelForEach` activity is similar to the <xref:System.Activities.Statements.ParallelForEach%601> activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span>
   
- [<span data-ttu-id="6a229-109">データベース アクセス アクティビティ</span><span class="sxs-lookup"><span data-stu-id="6a229-109">Database Access Activities</span></span>](database-access-activities.md)  
- <span data-ttu-id="6a229-110">取得、情報を変更または使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="6a229-110">Demonstrates how to create activities that allow accessing databases to retrieve or modify information and use [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) to access the database.</span></span>  
+ [<span data-ttu-id="e41d5-109">データベース アクセス アクティビティ</span><span class="sxs-lookup"><span data-stu-id="e41d5-109">Database Access Activities</span></span>](database-access-activities.md)  
+ <span data-ttu-id="e41d5-110">取得、情報を変更または使用するデータベースへのアクセスを許可するアクティビティを作成する方法を示します[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="e41d5-110">Demonstrates how to create activities that allow accessing databases to retrieve or modify information and use [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) to access the database.</span></span>  
   
- [<span data-ttu-id="6a229-111">.NET Framework 4.5 の外部化されたポリシー アクティビティ</span><span class="sxs-lookup"><span data-stu-id="6a229-111">Externalized Policy Activity in .NET Framework 4.5</span></span>](externalized-policy-activity-in-net-framework-4-5.md)  
- <span data-ttu-id="6a229-112">ExternalizedPolicy4 アクティビティにより、既存の Windows Workflow Foundation での実行方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトの Windows Workflow Foundation の[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンはWF 3.5 に付属しています。</span><span class="sxs-lookup"><span data-stu-id="6a229-112">Demonstrates how the ExternalizedPolicy4 activity allows executing existing Windows Workflow Foundation in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objects in Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directly by using the rules engine that is shipped in WF 3.5.</span></span> 
+ [<span data-ttu-id="e41d5-111">.NET Framework 4.5 の外部化されたポリシー アクティビティ</span><span class="sxs-lookup"><span data-stu-id="e41d5-111">Externalized Policy Activity in .NET Framework 4.5</span></span>](externalized-policy-activity-in-net-framework-4-5.md)  
+ <span data-ttu-id="e41d5-112">ExternalizedPolicy4 アクティビティにより、既存の Windows Workflow Foundation での実行方法を示します[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクトの Windows Workflow Foundation の[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接を使用して、ルール エンジンはWF 3.5 に付属しています。</span><span class="sxs-lookup"><span data-stu-id="e41d5-112">Demonstrates how the ExternalizedPolicy4 activity allows executing existing Windows Workflow Foundation in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objects in Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directly by using the rules engine that is shipped in WF 3.5.</span></span> 
   
- [<span data-ttu-id="6a229-113">非ジェネリックの ForEach</span><span class="sxs-lookup"><span data-stu-id="6a229-113">Non-Generic ForEach</span></span>](non-generic-foreach.md)  
- <span data-ttu-id="6a229-114">
-  <xref:System.Activities.Statements.ForEach%601> アクティビティの非ジェネリック バージョンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6a229-114">Demonstrates how to create a non-generic version of the <xref:System.Activities.Statements.ForEach%601> activity.</span></span>  
+ [<span data-ttu-id="e41d5-113">非ジェネリックの ForEach</span><span class="sxs-lookup"><span data-stu-id="e41d5-113">Non-Generic ForEach</span></span>](non-generic-foreach.md)  
+ <span data-ttu-id="e41d5-114"><xref:System.Activities.Statements.ForEach%601> アクティビティの非ジェネリック バージョンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e41d5-114">Demonstrates how to create a non-generic version of the <xref:System.Activities.Statements.ForEach%601> activity.</span></span>  
   
- [<span data-ttu-id="6a229-115">非ジェネリックの ParallelForEach</span><span class="sxs-lookup"><span data-stu-id="6a229-115">Non-Generic ParallelForEach</span></span>](non-generic-parallelforeach.md)  
- <span data-ttu-id="6a229-116">
-  <xref:System.Activities.Statements.ParallelForEach%601> アクティビティの非ジェネリック バージョンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6a229-116">Demonstrates how to create a non-generic version of the <xref:System.Activities.Statements.ParallelForEach%601> activity.</span></span>  
+ [<span data-ttu-id="e41d5-115">非ジェネリックの ParallelForEach</span><span class="sxs-lookup"><span data-stu-id="e41d5-115">Non-Generic ParallelForEach</span></span>](non-generic-parallelforeach.md)  
+ <span data-ttu-id="e41d5-116"><xref:System.Activities.Statements.ParallelForEach%601> アクティビティの非ジェネリック バージョンを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e41d5-116">Demonstrates how to create a non-generic version of the <xref:System.Activities.Statements.ParallelForEach%601> activity.</span></span>  
   
- [<span data-ttu-id="6a229-117">WorkflowInstanceId の取得</span><span class="sxs-lookup"><span data-stu-id="6a229-117">Get WorkflowInstanceId</span></span>](get-workflowinstanceid.md)  
- <span data-ttu-id="6a229-118">カスタム アクティビティ `GetWorkflowInstanceId` を使用して、ワークフロー インスタンス ID を返す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6a229-118">Demonstrates how to use the custom activity, `GetWorkflowInstanceId`, to return the workflow instance ID.</span></span>
+ [<span data-ttu-id="e41d5-117">WorkflowInstanceId の取得</span><span class="sxs-lookup"><span data-stu-id="e41d5-117">Get WorkflowInstanceId</span></span>](get-workflowinstanceid.md)  
+ <span data-ttu-id="e41d5-118">カスタム アクティビティ `GetWorkflowInstanceId` を使用して、ワークフロー インスタンス ID を返す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e41d5-118">Demonstrates how to use the custom activity, `GetWorkflowInstanceId`, to return the workflow instance ID.</span></span>

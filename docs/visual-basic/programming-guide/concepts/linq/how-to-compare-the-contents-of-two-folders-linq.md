@@ -3,27 +3,27 @@ title: '方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
 ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855713"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="f47ce-102">方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。</span><span class="sxs-lookup"><span data-stu-id="f47ce-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="f47ce-103">この例では、2 つのファイル リストを比較する 3 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f47ce-103">This example demonstrates three ways to compare two file listings:</span></span>  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="aaa4a-102">方法: 2 つのフォルダー (LINQ) (Visual Basic) の内容を比較します。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="aaa4a-103">この例では、2 つのファイル リストを比較する 3 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   <span data-ttu-id="f47ce-104">2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="f47ce-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
+- <span data-ttu-id="aaa4a-104">2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="aaa4a-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   <span data-ttu-id="f47ce-105">両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="f47ce-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
+- <span data-ttu-id="aaa4a-105">両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="aaa4a-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   <span data-ttu-id="f47ce-106">1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="f47ce-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
+- <span data-ttu-id="aaa4a-106">1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="aaa4a-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="f47ce-107">ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。</span><span class="sxs-lookup"><span data-stu-id="f47ce-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
+    >  <span data-ttu-id="aaa4a-107">ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- <span data-ttu-id="f47ce-108">ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f47ce-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="f47ce-109">このクラスは、実際のシナリオで使用することは想定されていません。</span><span class="sxs-lookup"><span data-stu-id="f47ce-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="f47ce-110">各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。</span><span class="sxs-lookup"><span data-stu-id="f47ce-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="f47ce-111">実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="f47ce-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
+ <span data-ttu-id="aaa4a-108">ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="aaa4a-109">このクラスは、実際のシナリオで使用することは想定されていません。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="aaa4a-110">各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="aaa4a-111">実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f47ce-112">例</span><span class="sxs-lookup"><span data-stu-id="f47ce-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="aaa4a-112">例</span><span class="sxs-lookup"><span data-stu-id="aaa4a-112">Example</span></span>  
   
 ```vb  
 Module CompareDirs  
@@ -113,10 +113,10 @@ Module CompareDirs
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f47ce-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="f47ce-113">Compiling the Code</span></span>  
- <span data-ttu-id="f47ce-114">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。</span><span class="sxs-lookup"><span data-stu-id="f47ce-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="aaa4a-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="aaa4a-113">Compiling the Code</span></span>  
+ <span data-ttu-id="aaa4a-114">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。</span><span class="sxs-lookup"><span data-stu-id="aaa4a-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f47ce-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f47ce-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aaa4a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="aaa4a-115">See also</span></span>
 
-- [<span data-ttu-id="f47ce-116">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f47ce-116">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="f47ce-117">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f47ce-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="aaa4a-116">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aaa4a-116">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="aaa4a-117">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aaa4a-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
