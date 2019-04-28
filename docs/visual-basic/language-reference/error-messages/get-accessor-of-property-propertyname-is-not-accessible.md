@@ -8,32 +8,32 @@ helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
 ms.openlocfilehash: 8fb78f3c14708c79f1910e202287c25a3b2213b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803052"
 ---
-# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a><span data-ttu-id="2eadc-102">プロパティのアクセサーを 'get''\<propertyname >' にアクセスできません</span><span class="sxs-lookup"><span data-stu-id="2eadc-102">'Get' accessor of property '\<propertyname>' is not accessible</span></span>
-<span data-ttu-id="2eadc-103">ステートメントが、プロパティへのアクセスがあるない場合は、プロパティの値を取得しようとしています。`Get`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="2eadc-103">A statement attempts to retrieve the value of a property when it does not have access to the property's `Get` procedure.</span></span>  
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a><span data-ttu-id="efd4a-102">プロパティのアクセサーを 'get''\<propertyname >' にアクセスできません</span><span class="sxs-lookup"><span data-stu-id="efd4a-102">'Get' accessor of property '\<propertyname>' is not accessible</span></span>
+<span data-ttu-id="efd4a-103">ステートメントが、プロパティへのアクセスがあるない場合は、プロパティの値を取得しようとしています。`Get`プロシージャ。</span><span class="sxs-lookup"><span data-stu-id="efd4a-103">A statement attempts to retrieve the value of a property when it does not have access to the property's `Get` procedure.</span></span>  
   
- <span data-ttu-id="2eadc-104">場合、 [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)レベルよりもより制限の厳しいアクセスでマークされたその[Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)プロパティの値を読み取ろうとしてが失敗する、次の場合。</span><span class="sxs-lookup"><span data-stu-id="2eadc-104">If the [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md) is marked with a more restrictive access level than its [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md), an attempt to read the property value could fail in the following cases:</span></span>  
+ <span data-ttu-id="efd4a-104">場合、 [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)レベルよりもより制限の厳しいアクセスでマークされたその[Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)プロパティの値を読み取ろうとしてが失敗する、次の場合。</span><span class="sxs-lookup"><span data-stu-id="efd4a-104">If the [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md) is marked with a more restrictive access level than its [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md), an attempt to read the property value could fail in the following cases:</span></span>  
   
--   <span data-ttu-id="2eadc-105">`Get`ステートメントがマークされている[プライベート](../../../visual-basic/language-reference/modifiers/private.md)呼び出し元のコードとそれには、クラスまたは構造体のプロパティが定義されているとします。</span><span class="sxs-lookup"><span data-stu-id="2eadc-105">The `Get` statement is marked [Private](../../../visual-basic/language-reference/modifiers/private.md) and the calling code is outside the class or structure in which the property is defined.</span></span>  
+- <span data-ttu-id="efd4a-105">`Get`ステートメントがマークされている[プライベート](../../../visual-basic/language-reference/modifiers/private.md)呼び出し元のコードとそれには、クラスまたは構造体のプロパティが定義されているとします。</span><span class="sxs-lookup"><span data-stu-id="efd4a-105">The `Get` statement is marked [Private](../../../visual-basic/language-reference/modifiers/private.md) and the calling code is outside the class or structure in which the property is defined.</span></span>  
   
--   <span data-ttu-id="2eadc-106">`Get`ステートメントがマークされている[Protected](../../../visual-basic/language-reference/modifiers/protected.md)呼び出し元のコードは、クラスまたはプロパティが定義されている構造体ではなく、派生クラスでも。</span><span class="sxs-lookup"><span data-stu-id="2eadc-106">The `Get` statement is marked [Protected](../../../visual-basic/language-reference/modifiers/protected.md) and the calling code is not in the class or structure in which the property is defined, nor in a derived class.</span></span>  
+- <span data-ttu-id="efd4a-106">`Get`ステートメントがマークされている[Protected](../../../visual-basic/language-reference/modifiers/protected.md)呼び出し元のコードは、クラスまたはプロパティが定義されている構造体ではなく、派生クラスでも。</span><span class="sxs-lookup"><span data-stu-id="efd4a-106">The `Get` statement is marked [Protected](../../../visual-basic/language-reference/modifiers/protected.md) and the calling code is not in the class or structure in which the property is defined, nor in a derived class.</span></span>  
   
--   <span data-ttu-id="2eadc-107">`Get`ステートメントがマークされている[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)プロパティが定義されている同じアセンブリに呼び出し元のコードがないとします。</span><span class="sxs-lookup"><span data-stu-id="2eadc-107">The `Get` statement is marked [Friend](../../../visual-basic/language-reference/modifiers/friend.md) and the calling code is not in the same assembly in which the property is defined.</span></span>  
+- <span data-ttu-id="efd4a-107">`Get`ステートメントがマークされている[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)プロパティが定義されている同じアセンブリに呼び出し元のコードがないとします。</span><span class="sxs-lookup"><span data-stu-id="efd4a-107">The `Get` statement is marked [Friend](../../../visual-basic/language-reference/modifiers/friend.md) and the calling code is not in the same assembly in which the property is defined.</span></span>  
   
- <span data-ttu-id="2eadc-108">**エラー ID:** BC31103</span><span class="sxs-lookup"><span data-stu-id="2eadc-108">**Error ID:** BC31103</span></span>  
+ <span data-ttu-id="efd4a-108">**エラー ID:** BC31103</span><span class="sxs-lookup"><span data-stu-id="efd4a-108">**Error ID:** BC31103</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2eadc-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="2eadc-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="efd4a-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="efd4a-109">To correct this error</span></span>  
   
--   <span data-ttu-id="2eadc-110">コントロールのプロパティを定義するソース コードを使っている場合を宣言することを検討してください、`Get`プロパティ自体と同じアクセス レベルを持つプロシージャ。</span><span class="sxs-lookup"><span data-stu-id="2eadc-110">If you have control of the source code defining the property, consider declaring the `Get` procedure with the same access level as the property itself.</span></span>  
+- <span data-ttu-id="efd4a-110">コントロールのプロパティを定義するソース コードを使っている場合を宣言することを検討してください、`Get`プロパティ自体と同じアクセス レベルを持つプロシージャ。</span><span class="sxs-lookup"><span data-stu-id="efd4a-110">If you have control of the source code defining the property, consider declaring the `Get` procedure with the same access level as the property itself.</span></span>  
   
--   <span data-ttu-id="2eadc-111">場合は、プロパティを定義するソース コードがないか、または制限する必要があります、`Get`プロパティ自体へのアクセス性のあるコードの領域にプロパティ値を読み取るステートメントに移動しようとする複数のプロシージャ アクセス レベル、プロパティ。</span><span class="sxs-lookup"><span data-stu-id="2eadc-111">If you do not have control of the source code defining the property, or you must restrict the `Get` procedure access level more than the property itself, try to move the statement that reads the property value to a region of code that has better access to the property.</span></span>  
+- <span data-ttu-id="efd4a-111">場合は、プロパティを定義するソース コードがないか、または制限する必要があります、`Get`プロパティ自体へのアクセス性のあるコードの領域にプロパティ値を読み取るステートメントに移動しようとする複数のプロシージャ アクセス レベル、プロパティ。</span><span class="sxs-lookup"><span data-stu-id="efd4a-111">If you do not have control of the source code defining the property, or you must restrict the `Get` procedure access level more than the property itself, try to move the statement that reads the property value to a region of code that has better access to the property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eadc-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="2eadc-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efd4a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="efd4a-112">See also</span></span>
 
-- [<span data-ttu-id="2eadc-113">Property プロシージャ</span><span class="sxs-lookup"><span data-stu-id="2eadc-113">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [<span data-ttu-id="2eadc-114">方法: 混合アクセス レベルを持つプロパティを宣言します。</span><span class="sxs-lookup"><span data-stu-id="2eadc-114">How to: Declare a Property with Mixed Access Levels</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)
+- [<span data-ttu-id="efd4a-113">Property プロシージャ</span><span class="sxs-lookup"><span data-stu-id="efd4a-113">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [<span data-ttu-id="efd4a-114">方法: 混合アクセス レベルを持つプロパティを宣言します。</span><span class="sxs-lookup"><span data-stu-id="efd4a-114">How to: Declare a Property with Mixed Access Levels</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

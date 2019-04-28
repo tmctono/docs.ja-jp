@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 35faeb69e864a428dc40394ad89a7d50b95bbcab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757665"
 ---
-# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="8a55d-102">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8a55d-102">IInstallReferenceEnum Interface</span></span>
-<span data-ttu-id="8a55d-103">グローバル アセンブリ キャッシュにインストールされている参照先アセンブリの列挙子を表します。</span><span class="sxs-lookup"><span data-stu-id="8a55d-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="d2580-102">IInstallReferenceEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d2580-102">IInstallReferenceEnum Interface</span></span>
+<span data-ttu-id="d2580-103">グローバル アセンブリ キャッシュにインストールされている参照先アセンブリの列挙子を表します。</span><span class="sxs-lookup"><span data-stu-id="d2580-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a55d-104">構文</span><span class="sxs-lookup"><span data-stu-id="8a55d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2580-104">構文</span><span class="sxs-lookup"><span data-stu-id="d2580-104">Syntax</span></span>  
   
 ```  
 interface IInstallReferenceEnum : IUnknown {  
@@ -38,20 +38,20 @@ interface IInstallReferenceEnum : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="8a55d-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="8a55d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d2580-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="d2580-105">Methods</span></span>  
   
-|<span data-ttu-id="8a55d-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="8a55d-106">Method</span></span>|<span data-ttu-id="8a55d-107">説明</span><span class="sxs-lookup"><span data-stu-id="8a55d-107">Description</span></span>|  
+|<span data-ttu-id="d2580-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="d2580-106">Method</span></span>|<span data-ttu-id="d2580-107">説明</span><span class="sxs-lookup"><span data-stu-id="d2580-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8a55d-108">GetNextInstallReferenceItem メソッド</span><span class="sxs-lookup"><span data-stu-id="8a55d-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="8a55d-109">次のポインターを取得`IInstallReferenceItem`これに含まれる`IInstallReferenceEnum`します。</span><span class="sxs-lookup"><span data-stu-id="8a55d-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
+|[<span data-ttu-id="d2580-108">GetNextInstallReferenceItem メソッド</span><span class="sxs-lookup"><span data-stu-id="d2580-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="d2580-109">次のポインターを取得`IInstallReferenceItem`これに含まれる`IInstallReferenceEnum`します。</span><span class="sxs-lookup"><span data-stu-id="d2580-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8a55d-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="8a55d-110">Requirements</span></span>  
- <span data-ttu-id="8a55d-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8a55d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2580-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="d2580-110">Requirements</span></span>  
+ <span data-ttu-id="d2580-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d2580-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a55d-112">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8a55d-112">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="d2580-112">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d2580-112">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8a55d-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a55d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d2580-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2580-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a55d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8a55d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2580-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2580-114">See also</span></span>
 
-- [<span data-ttu-id="8a55d-115">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8a55d-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="8a55d-116">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8a55d-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="d2580-115">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d2580-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="d2580-116">IInstallReferenceItem インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d2580-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
