@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
 ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770609"
 ---
-# <a name="popup"></a><span data-ttu-id="68eed-102">ポップアップ</span><span class="sxs-lookup"><span data-stu-id="68eed-102">Popup</span></span>
-<span data-ttu-id="68eed-103"><xref:System.Windows.Controls.Primitives.Popup>コントロールは、現在のアプリケーション ウィンドウから浮遊した別のウィンドウにコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="68eed-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="b13a6-102">ポップアップ</span><span class="sxs-lookup"><span data-stu-id="b13a6-102">Popup</span></span>
+<span data-ttu-id="b13a6-103"><xref:System.Windows.Controls.Primitives.Popup>コントロールは、現在のアプリケーション ウィンドウから浮遊した別のウィンドウにコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="b13a6-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="68eed-104">次の図は、<xref:System.Windows.Controls.Primitives.Popup>コントロールを配置した、<xref:System.Windows.Controls.Button>その親は。</span><span class="sxs-lookup"><span data-stu-id="68eed-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
+ <span data-ttu-id="b13a6-104">次の図は、<xref:System.Windows.Controls.Primitives.Popup>コントロールを配置した、<xref:System.Windows.Controls.Button>その親は。</span><span class="sxs-lookup"><span data-stu-id="b13a6-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
   
  ![ポップアップの図](./media/popup/popup-picture-button.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="68eed-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="68eed-106">In This Section</span></span>  
- [<span data-ttu-id="68eed-107">ポップアップの概要</span><span class="sxs-lookup"><span data-stu-id="68eed-107">Popup Overview</span></span>](popup-overview.md)  
- [<span data-ttu-id="68eed-108">ポップアップの配置動作</span><span class="sxs-lookup"><span data-stu-id="68eed-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
- [<span data-ttu-id="68eed-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="68eed-109">How-to Topics</span></span>](popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b13a6-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b13a6-106">In This Section</span></span>  
+ [<span data-ttu-id="b13a6-107">ポップアップの概要</span><span class="sxs-lookup"><span data-stu-id="b13a6-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="b13a6-108">ポップアップの配置動作</span><span class="sxs-lookup"><span data-stu-id="b13a6-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="b13a6-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="b13a6-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="68eed-110">参照</span><span class="sxs-lookup"><span data-stu-id="68eed-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b13a6-110">参照</span><span class="sxs-lookup"><span data-stu-id="b13a6-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="68eed-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="68eed-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b13a6-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="b13a6-111">Related Sections</span></span>

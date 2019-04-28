@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
 ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935370"
 ---
-# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="4b5c4-102">構造体メンバーとして宣言された配列を初期サイズで宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
-<span data-ttu-id="4b5c4-103">構造体の配列は、初期サイズで宣言されます。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="4b5c4-104">構造体の要素を初期化することはできませんし、初期化の 1 つの形式は、配列のサイズを宣言します。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
+# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="dc4c0-102">構造体メンバーとして宣言された配列を初期サイズで宣言することはできません。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
+<span data-ttu-id="dc4c0-103">構造体の配列は、初期サイズで宣言されます。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="dc4c0-104">構造体の要素を初期化することはできませんし、初期化の 1 つの形式は、配列のサイズを宣言します。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
   
- <span data-ttu-id="4b5c4-105">**エラー ID:** BC31043</span><span class="sxs-lookup"><span data-stu-id="4b5c4-105">**Error ID:** BC31043</span></span>  
+ <span data-ttu-id="dc4c0-105">**エラー ID:** BC31043</span><span class="sxs-lookup"><span data-stu-id="dc4c0-105">**Error ID:** BC31043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4b5c4-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="4b5c4-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dc4c0-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="dc4c0-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="4b5c4-107">動的 (初期サイズはありません)、構造体の配列を定義します。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-107">Define the array in your structure as dynamic (no initial size).</span></span>  
+1. <span data-ttu-id="dc4c0-107">動的 (初期サイズはありません)、構造体の配列を定義します。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-107">Define the array in your structure as dynamic (no initial size).</span></span>  
   
-2. <span data-ttu-id="4b5c4-108">動的配列のディメンションを変更できる配列の特定のサイズを必要とする場合、 [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)コードが実行されています。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="4b5c4-109">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="4b5c4-109">The following example illustrates this.</span></span>  
+2. <span data-ttu-id="dc4c0-108">動的配列のディメンションを変更できる配列の特定のサイズを必要とする場合、 [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)コードが実行されています。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="dc4c0-109">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="dc4c0-109">The following example illustrates this.</span></span>  
   
     ```  
     Structure demoStruct  
@@ -36,7 +36,7 @@ ms.locfileid: "59335304"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4b5c4-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b5c4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc4c0-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="dc4c0-110">See also</span></span>
 
-- [<span data-ttu-id="4b5c4-111">配列</span><span class="sxs-lookup"><span data-stu-id="4b5c4-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="4b5c4-112">方法: 構造体を宣言する</span><span class="sxs-lookup"><span data-stu-id="4b5c4-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="dc4c0-111">配列</span><span class="sxs-lookup"><span data-stu-id="dc4c0-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="dc4c0-112">方法: 構造体を宣言する</span><span class="sxs-lookup"><span data-stu-id="dc4c0-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

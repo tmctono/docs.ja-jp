@@ -8,22 +8,22 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
 ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790950"
 ---
-# <a name="textblock"></a><span data-ttu-id="185aa-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="185aa-102">TextBlock</span></span>
-<span data-ttu-id="185aa-103"><xref:System.Windows.Controls.TextBlock>コントロールは、柔軟なテキスト サポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="185aa-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="185aa-104">この要素は、主として、複数段落のテキストを必要としない、基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオを対象にしています。</span><span class="sxs-lookup"><span data-stu-id="185aa-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
+# <a name="textblock"></a><span data-ttu-id="537b5-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="537b5-102">TextBlock</span></span>
+<span data-ttu-id="537b5-103"><xref:System.Windows.Controls.TextBlock>コントロールは、柔軟なテキスト サポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="537b5-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="537b5-104">この要素は、主として、複数段落のテキストを必要としない、基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオを対象にしています。</span><span class="sxs-lookup"><span data-stu-id="537b5-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="185aa-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="185aa-105">In This Section</span></span>  
- [<span data-ttu-id="185aa-106">TextBlock の概要</span><span class="sxs-lookup"><span data-stu-id="185aa-106">TextBlock Overview</span></span>](textblock-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="537b5-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="537b5-105">In This Section</span></span>  
+ [<span data-ttu-id="537b5-106">TextBlock の概要</span><span class="sxs-lookup"><span data-stu-id="537b5-106">TextBlock Overview</span></span>](textblock-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="185aa-107">参照</span><span class="sxs-lookup"><span data-stu-id="185aa-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="537b5-107">参照</span><span class="sxs-lookup"><span data-stu-id="537b5-107">Reference</span></span>  
  <xref:System.Windows.Controls.Label>  
   
-## <a name="related-sections"></a><span data-ttu-id="185aa-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="185aa-108">Related Sections</span></span>  
- [<span data-ttu-id="185aa-109">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="185aa-109">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="537b5-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="537b5-108">Related Sections</span></span>  
+ [<span data-ttu-id="537b5-109">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="537b5-109">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)  
   
- [<span data-ttu-id="185aa-110">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="185aa-110">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+ [<span data-ttu-id="537b5-110">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="537b5-110">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

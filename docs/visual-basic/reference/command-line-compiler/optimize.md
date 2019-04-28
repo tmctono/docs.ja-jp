@@ -8,48 +8,48 @@ helpviewer_keywords:
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788974"
 ---
-# <a name="-optimize"></a><span data-ttu-id="b6b94-102">-optimize</span><span class="sxs-lookup"><span data-stu-id="b6b94-102">-optimize</span></span>
-<span data-ttu-id="b6b94-103">有効またはコンパイラの最適化を無効にします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-103">Enables or disables compiler optimizations.</span></span>  
+# <a name="-optimize"></a><span data-ttu-id="778d9-102">-optimize</span><span class="sxs-lookup"><span data-stu-id="778d9-102">-optimize</span></span>
+<span data-ttu-id="778d9-103">有効またはコンパイラの最適化を無効にします。</span><span class="sxs-lookup"><span data-stu-id="778d9-103">Enables or disables compiler optimizations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6b94-104">構文</span><span class="sxs-lookup"><span data-stu-id="b6b94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="778d9-104">構文</span><span class="sxs-lookup"><span data-stu-id="778d9-104">Syntax</span></span>  
   
 ```  
 -optimize[ + | - ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b6b94-105">引数</span><span class="sxs-lookup"><span data-stu-id="b6b94-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="778d9-105">引数</span><span class="sxs-lookup"><span data-stu-id="778d9-105">Arguments</span></span>  
   
-|<span data-ttu-id="b6b94-106">用語</span><span class="sxs-lookup"><span data-stu-id="b6b94-106">Term</span></span>|<span data-ttu-id="b6b94-107">定義</span><span class="sxs-lookup"><span data-stu-id="b6b94-107">Definition</span></span>|  
+|<span data-ttu-id="778d9-106">用語</span><span class="sxs-lookup"><span data-stu-id="778d9-106">Term</span></span>|<span data-ttu-id="778d9-107">定義</span><span class="sxs-lookup"><span data-stu-id="778d9-107">Definition</span></span>|  
 |---|---|  
-|<span data-ttu-id="b6b94-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="b6b94-108">`+` &#124; `-`</span></span>|<span data-ttu-id="b6b94-109">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="b6b94-109">Optional.</span></span> <span data-ttu-id="b6b94-110">`-optimize-`オプションは、コンパイラの最適化を無効になります。</span><span class="sxs-lookup"><span data-stu-id="b6b94-110">The `-optimize-` option disables compiler optimizations.</span></span> <span data-ttu-id="b6b94-111">`-optimize+`最適化を有効にします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-111">The `-optimize+` option enables optimizations.</span></span> <span data-ttu-id="b6b94-112">既定では、最適化が無効になります。</span><span class="sxs-lookup"><span data-stu-id="b6b94-112">By default, optimizations are disabled.</span></span>|  
+|<span data-ttu-id="778d9-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="778d9-108">`+` &#124; `-`</span></span>|<span data-ttu-id="778d9-109">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="778d9-109">Optional.</span></span> <span data-ttu-id="778d9-110">`-optimize-`オプションは、コンパイラの最適化を無効になります。</span><span class="sxs-lookup"><span data-stu-id="778d9-110">The `-optimize-` option disables compiler optimizations.</span></span> <span data-ttu-id="778d9-111">`-optimize+`最適化を有効にします。</span><span class="sxs-lookup"><span data-stu-id="778d9-111">The `-optimize+` option enables optimizations.</span></span> <span data-ttu-id="778d9-112">既定では、最適化が無効になります。</span><span class="sxs-lookup"><span data-stu-id="778d9-112">By default, optimizations are disabled.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b6b94-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="b6b94-113">Remarks</span></span>  
- <span data-ttu-id="b6b94-114">コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。</span><span class="sxs-lookup"><span data-stu-id="b6b94-114">Compiler optimizations make your output file smaller, faster, and more efficient.</span></span> <span data-ttu-id="b6b94-115">ただし、出力ファイルにコードが再配置の最適化を行うので、`-optimize+`デバッグが困難です。</span><span class="sxs-lookup"><span data-stu-id="b6b94-115">However, because optimizations result in code rearrangement in the output file, `-optimize+` can make debugging difficult.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="778d9-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="778d9-113">Remarks</span></span>  
+ <span data-ttu-id="778d9-114">コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。</span><span class="sxs-lookup"><span data-stu-id="778d9-114">Compiler optimizations make your output file smaller, faster, and more efficient.</span></span> <span data-ttu-id="778d9-115">ただし、出力ファイルにコードが再配置の最適化を行うので、`-optimize+`デバッグが困難です。</span><span class="sxs-lookup"><span data-stu-id="778d9-115">However, because optimizations result in code rearrangement in the output file, `-optimize+` can make debugging difficult.</span></span>  
   
- <span data-ttu-id="b6b94-116">生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。</span><span class="sxs-lookup"><span data-stu-id="b6b94-116">All modules generated with `-target:module` for an assembly must use the same `-optimize` settings as the assembly.</span></span> <span data-ttu-id="b6b94-117">詳細については、次を参照してください。 [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。</span><span class="sxs-lookup"><span data-stu-id="b6b94-117">For more information, see [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span>  
+ <span data-ttu-id="778d9-116">生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。</span><span class="sxs-lookup"><span data-stu-id="778d9-116">All modules generated with `-target:module` for an assembly must use the same `-optimize` settings as the assembly.</span></span> <span data-ttu-id="778d9-117">詳細については、次を参照してください。 [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。</span><span class="sxs-lookup"><span data-stu-id="778d9-117">For more information, see [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span>  
   
- <span data-ttu-id="b6b94-118">組み合わせることができます、`-optimize`と`-debug`オプション。</span><span class="sxs-lookup"><span data-stu-id="b6b94-118">You can combine the `-optimize` and `-debug` options.</span></span>  
+ <span data-ttu-id="778d9-118">組み合わせることができます、`-optimize`と`-debug`オプション。</span><span class="sxs-lookup"><span data-stu-id="778d9-118">You can combine the `-optimize` and `-debug` options.</span></span>  
   
-|<span data-ttu-id="b6b94-119">Visual Studio 統合開発環境での最適化 - を設定するには</span><span class="sxs-lookup"><span data-stu-id="b6b94-119">To set -optimize in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="778d9-119">Visual Studio 統合開発環境での最適化 - を設定するには</span><span class="sxs-lookup"><span data-stu-id="778d9-119">To set -optimize in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="b6b94-120">1.**ソリューション エクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="b6b94-120">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="b6b94-121">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-121">On the **Project** menu, click **Properties**.</span></span><br />     <br /><span data-ttu-id="b6b94-122">2.**[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-122">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="b6b94-123">3.**[詳細設定]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-123">3.  Click the **Advanced** button.</span></span><br /><span data-ttu-id="b6b94-124">4.変更、**の最適化を有効にする**チェック ボックスをオンします。</span><span class="sxs-lookup"><span data-stu-id="b6b94-124">4.  Modify the **Enable optimizations** check box.</span></span>|  
+|<span data-ttu-id="778d9-120">1.**ソリューション エクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="778d9-120">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="778d9-121">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="778d9-121">On the **Project** menu, click **Properties**.</span></span><br />     <br /><span data-ttu-id="778d9-122">2.**[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="778d9-122">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="778d9-123">3.**[詳細設定]** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="778d9-123">3.  Click the **Advanced** button.</span></span><br /><span data-ttu-id="778d9-124">4.変更、**の最適化を有効にする**チェック ボックスをオンします。</span><span class="sxs-lookup"><span data-stu-id="778d9-124">4.  Modify the **Enable optimizations** check box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b6b94-125">例</span><span class="sxs-lookup"><span data-stu-id="b6b94-125">Example</span></span>  
- <span data-ttu-id="b6b94-126">次のコードのコンパイル`T2.vb`でき、コンパイラの最適化。</span><span class="sxs-lookup"><span data-stu-id="b6b94-126">The following code compiles `T2.vb` and enables compiler optimizations.</span></span>  
+## <a name="example"></a><span data-ttu-id="778d9-125">例</span><span class="sxs-lookup"><span data-stu-id="778d9-125">Example</span></span>  
+ <span data-ttu-id="778d9-126">次のコードのコンパイル`T2.vb`でき、コンパイラの最適化。</span><span class="sxs-lookup"><span data-stu-id="778d9-126">The following code compiles `T2.vb` and enables compiler optimizations.</span></span>  
   
 ```console
 vbc t2.vb -optimize  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6b94-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6b94-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="778d9-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="778d9-127">See also</span></span>
 
-- [<span data-ttu-id="b6b94-128">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="b6b94-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="b6b94-129">-デバッグ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6b94-129">-debug (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)
-- [<span data-ttu-id="b6b94-130">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="b6b94-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="b6b94-131">-ターゲット (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6b94-131">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="778d9-128">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="778d9-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="778d9-129">-デバッグ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="778d9-129">-debug (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [<span data-ttu-id="778d9-130">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="778d9-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="778d9-131">-ターゲット (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="778d9-131">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)

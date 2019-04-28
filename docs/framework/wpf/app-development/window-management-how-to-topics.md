@@ -7,29 +7,29 @@ helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
 ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788688"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="84d92-102">ウィンドウの管理方法に関するトピック</span><span class="sxs-lookup"><span data-stu-id="84d92-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="84d92-103">次のトピックを管理する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。</span><span class="sxs-lookup"><span data-stu-id="84d92-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="1d721-102">ウィンドウの管理方法に関するトピック</span><span class="sxs-lookup"><span data-stu-id="1d721-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="1d721-103">次のトピックを管理する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。</span><span class="sxs-lookup"><span data-stu-id="1d721-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="84d92-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="84d92-104">In This Section</span></span>  
- [<span data-ttu-id="84d92-105">コンテンツに合わせてウィンドウのサイズを自動的に変更する</span><span class="sxs-lookup"><span data-stu-id="84d92-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="84d92-106">アプリケーションにすべてのウィンドウを取得する</span><span class="sxs-lookup"><span data-stu-id="84d92-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="84d92-107">メイン アプリケーション ウィンドウを取得して設定する</span><span class="sxs-lookup"><span data-stu-id="84d92-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="84d92-108">ダイアログ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="84d92-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="84d92-109">メッセージ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="84d92-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
-  [<span data-ttu-id="84d92-110">ウィンドウを開く</span><span class="sxs-lookup"><span data-stu-id="84d92-110">Open a Window</span></span>](how-to-open-a-window.md)  
-  [<span data-ttu-id="84d92-111">ダイアログ ボックスの結果を返す</span><span class="sxs-lookup"><span data-stu-id="84d92-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1d721-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1d721-104">In This Section</span></span>  
+ [<span data-ttu-id="1d721-105">コンテンツに合わせてウィンドウのサイズを自動的に変更する</span><span class="sxs-lookup"><span data-stu-id="1d721-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="1d721-106">アプリケーションにすべてのウィンドウを取得する</span><span class="sxs-lookup"><span data-stu-id="1d721-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="1d721-107">メイン アプリケーション ウィンドウを取得して設定する</span><span class="sxs-lookup"><span data-stu-id="1d721-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="1d721-108">ダイアログ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="1d721-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="1d721-109">メッセージ ボックスを開く</span><span class="sxs-lookup"><span data-stu-id="1d721-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="1d721-110">ウィンドウを開く</span><span class="sxs-lookup"><span data-stu-id="1d721-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="1d721-111">ダイアログ ボックスの結果を返す</span><span class="sxs-lookup"><span data-stu-id="1d721-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="84d92-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="84d92-112">Related Sections</span></span>  
- [<span data-ttu-id="84d92-113">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="84d92-113">Application Management Overview</span></span>](application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="1d721-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="1d721-112">Related Sections</span></span>  
+ [<span data-ttu-id="1d721-113">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="1d721-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="84d92-114">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="84d92-114">Navigation Overview</span></span>](navigation-overview.md)  
+ [<span data-ttu-id="1d721-114">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="1d721-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="84d92-115">ホスティング</span><span class="sxs-lookup"><span data-stu-id="84d92-115">Hosting</span></span>](hosting-wpf-applications.md)  
+ [<span data-ttu-id="1d721-115">ホスティング</span><span class="sxs-lookup"><span data-stu-id="1d721-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="84d92-116">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="84d92-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="1d721-116">ビルドと配置</span><span class="sxs-lookup"><span data-stu-id="1d721-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

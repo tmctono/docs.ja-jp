@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f3643bf4880532a46fe7f9f57b8077032013728
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796040"
 ---
-# <a name="econtexttype-enumeration"></a><span data-ttu-id="f9632-102">EContextType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f9632-102">EContextType Enumeration</span></span>
-<span data-ttu-id="f9632-103">現在実行中のスレッドのセキュリティ コンテキストをについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f9632-103">Describes the security context of the currently executing thread.</span></span>  
+# <a name="econtexttype-enumeration"></a><span data-ttu-id="ddc37-102">EContextType 列挙型</span><span class="sxs-lookup"><span data-stu-id="ddc37-102">EContextType Enumeration</span></span>
+<span data-ttu-id="ddc37-103">現在実行中のスレッドのセキュリティ コンテキストをについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ddc37-103">Describes the security context of the currently executing thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9632-104">構文</span><span class="sxs-lookup"><span data-stu-id="f9632-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddc37-104">構文</span><span class="sxs-lookup"><span data-stu-id="ddc37-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,27 +35,27 @@ typedef enum {
 } EContextType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f9632-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f9632-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ddc37-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="ddc37-105">Members</span></span>  
   
-|<span data-ttu-id="f9632-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f9632-106">Member</span></span>|<span data-ttu-id="f9632-107">説明</span><span class="sxs-lookup"><span data-stu-id="f9632-107">Description</span></span>|  
+|<span data-ttu-id="ddc37-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="ddc37-106">Member</span></span>|<span data-ttu-id="ddc37-107">説明</span><span class="sxs-lookup"><span data-stu-id="ddc37-107">Description</span></span>|  
 |------------|-----------------|  
-|`eCurrentContext`|<span data-ttu-id="f9632-108">共通言語ランタイム (CLR) の呼び出し時に、現在のスレッドのコンテキストを示す、 [ihostsecuritymanager::getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)メソッド、または CLR への呼び出しでは、によって要求されたコンテキスト、 [Ihostsecuritymanager::setsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="f9632-108">Indicates the context on the current thread at the time the common language runtime (CLR) calls the [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) method, or the context requested by the CLR in a call to the [IHostSecurityManager::SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) method.</span></span>|  
-|`eRestrictedContext`|<span data-ttu-id="f9632-109">どのホストには、ガベージ コレクターまたはクラスまたはモジュールのコンス トラクターなどの低い特権コンテキストを示します。</span><span class="sxs-lookup"><span data-stu-id="f9632-109">Indicates a context over which the host has lower privileges, such as the garbage collector, or class or module constructors.</span></span>|  
+|`eCurrentContext`|<span data-ttu-id="ddc37-108">共通言語ランタイム (CLR) の呼び出し時に、現在のスレッドのコンテキストを示す、 [ihostsecuritymanager::getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)メソッド、または CLR への呼び出しでは、によって要求されたコンテキスト、 [Ihostsecuritymanager::setsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="ddc37-108">Indicates the context on the current thread at the time the common language runtime (CLR) calls the [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) method, or the context requested by the CLR in a call to the [IHostSecurityManager::SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) method.</span></span>|  
+|`eRestrictedContext`|<span data-ttu-id="ddc37-109">どのホストには、ガベージ コレクターまたはクラスまたはモジュールのコンス トラクターなどの低い特権コンテキストを示します。</span><span class="sxs-lookup"><span data-stu-id="ddc37-109">Indicates a context over which the host has lower privileges, such as the garbage collector, or class or module constructors.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f9632-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="f9632-110">Remarks</span></span>  
- <span data-ttu-id="f9632-111">いずれかの CLR が用意されて、`EContextType`値への呼び出しでパラメーター値として、`IHostSecurityManager::GetSecurityContext`と`IHostSecurityManager::SetSecurityContext`メソッド。</span><span class="sxs-lookup"><span data-stu-id="f9632-111">The CLR supplies one of the `EContextType` values as a parameter value in calls to the `IHostSecurityManager::GetSecurityContext` and `IHostSecurityManager::SetSecurityContext` methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ddc37-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="ddc37-110">Remarks</span></span>  
+ <span data-ttu-id="ddc37-111">いずれかの CLR が用意されて、`EContextType`値への呼び出しでパラメーター値として、`IHostSecurityManager::GetSecurityContext`と`IHostSecurityManager::SetSecurityContext`メソッド。</span><span class="sxs-lookup"><span data-stu-id="ddc37-111">The CLR supplies one of the `EContextType` values as a parameter value in calls to the `IHostSecurityManager::GetSecurityContext` and `IHostSecurityManager::SetSecurityContext` methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9632-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="f9632-112">Requirements</span></span>  
- <span data-ttu-id="f9632-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f9632-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddc37-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="ddc37-112">Requirements</span></span>  
+ <span data-ttu-id="ddc37-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ddc37-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9632-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f9632-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ddc37-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ddc37-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f9632-115">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f9632-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="ddc37-115">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ddc37-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f9632-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9632-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ddc37-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddc37-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9632-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9632-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddc37-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ddc37-117">See also</span></span>
 
-- [<span data-ttu-id="f9632-118">IHostSecurityContext インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f9632-118">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="f9632-119">IHostSecurityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f9632-119">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="f9632-120">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="f9632-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="ddc37-118">IHostSecurityContext インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ddc37-118">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="ddc37-119">IHostSecurityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ddc37-119">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="ddc37-120">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="ddc37-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

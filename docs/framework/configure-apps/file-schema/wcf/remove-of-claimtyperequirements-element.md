@@ -3,24 +3,24 @@ title: <remove> <claimTypeRequirements>要素
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
 ms.openlocfilehash: 9ab1162ff5d86b8a9d43dae79ebf9c9321119206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783098"
 ---
-# <a name="remove-of-claimtyperequirements-element"></a><span data-ttu-id="b49b9-102">\<削除 > の\<claimTypeRequirements > 要素</span><span class="sxs-lookup"><span data-stu-id="b49b9-102">\<remove> of \<claimTypeRequirements> element</span></span>
-<span data-ttu-id="b49b9-103">フェデレーション資格情報から削除するクレームの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="b49b9-103">Specifies the types of claims to be removed in the federated credential.</span></span>  
+# <a name="remove-of-claimtyperequirements-element"></a><span data-ttu-id="98b6a-102">\<削除 > の\<claimTypeRequirements > 要素</span><span class="sxs-lookup"><span data-stu-id="98b6a-102">\<remove> of \<claimTypeRequirements> element</span></span>
+<span data-ttu-id="98b6a-103">フェデレーション資格情報から削除するクレームの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="98b6a-103">Specifies the types of claims to be removed in the federated credential.</span></span>  
   
- <span data-ttu-id="b49b9-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="b49b9-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="b49b9-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="b49b9-105">\<bindings></span></span>  
-<span data-ttu-id="b49b9-106">\<wsFederatedBinding></span><span class="sxs-lookup"><span data-stu-id="b49b9-106">\<wsFederatedBinding></span></span>  
-<span data-ttu-id="b49b9-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="b49b9-107">\<binding></span></span>  
-<span data-ttu-id="b49b9-108">\<セキュリティ ></span><span class="sxs-lookup"><span data-stu-id="b49b9-108">\<security></span></span>  
-<span data-ttu-id="b49b9-109">\<message></span><span class="sxs-lookup"><span data-stu-id="b49b9-109">\<message></span></span>  
-<span data-ttu-id="b49b9-110">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="b49b9-110">\<claimTypeRequirements></span></span>  
+ <span data-ttu-id="98b6a-104">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="98b6a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="98b6a-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="98b6a-105">\<bindings></span></span>  
+<span data-ttu-id="98b6a-106">\<wsFederatedBinding></span><span class="sxs-lookup"><span data-stu-id="98b6a-106">\<wsFederatedBinding></span></span>  
+<span data-ttu-id="98b6a-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="98b6a-107">\<binding></span></span>  
+<span data-ttu-id="98b6a-108">\<セキュリティ ></span><span class="sxs-lookup"><span data-stu-id="98b6a-108">\<security></span></span>  
+<span data-ttu-id="98b6a-109">\<message></span><span class="sxs-lookup"><span data-stu-id="98b6a-109">\<message></span></span>  
+<span data-ttu-id="98b6a-110">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="98b6a-110">\<claimTypeRequirements></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b49b9-111">構文</span><span class="sxs-lookup"><span data-stu-id="b49b9-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98b6a-111">構文</span><span class="sxs-lookup"><span data-stu-id="98b6a-111">Syntax</span></span>  
   
 ```xml  
 <claimTypeRequirements>
@@ -28,25 +28,25 @@ ms.locfileid: "59119705"
 </claimTypeRequirements>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b49b9-112">属性および要素</span><span class="sxs-lookup"><span data-stu-id="b49b9-112">Attributes and Elements</span></span>  
- <span data-ttu-id="b49b9-113">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="b49b9-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="98b6a-112">属性および要素</span><span class="sxs-lookup"><span data-stu-id="98b6a-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="98b6a-113">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="98b6a-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b49b9-114">属性</span><span class="sxs-lookup"><span data-stu-id="b49b9-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="98b6a-114">属性</span><span class="sxs-lookup"><span data-stu-id="98b6a-114">Attributes</span></span>  
   
-|<span data-ttu-id="b49b9-115">属性</span><span class="sxs-lookup"><span data-stu-id="b49b9-115">Attribute</span></span>|<span data-ttu-id="b49b9-116">説明</span><span class="sxs-lookup"><span data-stu-id="b49b9-116">Description</span></span>|  
+|<span data-ttu-id="98b6a-115">属性</span><span class="sxs-lookup"><span data-stu-id="98b6a-115">Attribute</span></span>|<span data-ttu-id="98b6a-116">説明</span><span class="sxs-lookup"><span data-stu-id="98b6a-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="b49b9-117">claimType</span><span class="sxs-lookup"><span data-stu-id="b49b9-117">claimType</span></span>|<span data-ttu-id="b49b9-118">削除するクレームの種類を定義する URI。</span><span class="sxs-lookup"><span data-stu-id="b49b9-118">A URI that defines the type of a claim to be removed.</span></span>|  
+|<span data-ttu-id="98b6a-117">claimType</span><span class="sxs-lookup"><span data-stu-id="98b6a-117">claimType</span></span>|<span data-ttu-id="98b6a-118">削除するクレームの種類を定義する URI。</span><span class="sxs-lookup"><span data-stu-id="98b6a-118">A URI that defines the type of a claim to be removed.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b49b9-119">子要素</span><span class="sxs-lookup"><span data-stu-id="b49b9-119">Child Elements</span></span>  
- <span data-ttu-id="b49b9-120">なし。</span><span class="sxs-lookup"><span data-stu-id="b49b9-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="98b6a-119">子要素</span><span class="sxs-lookup"><span data-stu-id="98b6a-119">Child Elements</span></span>  
+ <span data-ttu-id="98b6a-120">なし。</span><span class="sxs-lookup"><span data-stu-id="98b6a-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b49b9-121">親要素</span><span class="sxs-lookup"><span data-stu-id="b49b9-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="98b6a-121">親要素</span><span class="sxs-lookup"><span data-stu-id="98b6a-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="b49b9-122">要素</span><span class="sxs-lookup"><span data-stu-id="b49b9-122">Element</span></span>|<span data-ttu-id="b49b9-123">説明</span><span class="sxs-lookup"><span data-stu-id="b49b9-123">Description</span></span>|  
+|<span data-ttu-id="98b6a-122">要素</span><span class="sxs-lookup"><span data-stu-id="98b6a-122">Element</span></span>|<span data-ttu-id="98b6a-123">説明</span><span class="sxs-lookup"><span data-stu-id="98b6a-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b49b9-124">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="b49b9-124">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|<span data-ttu-id="b49b9-125">必須のクレームの種類のコレクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="b49b9-125">Specifies a collection of required claim types.</span></span> <span data-ttu-id="b49b9-126">各要素は <xref:System.ServiceModel.Configuration.ClaimTypeElement> 型です。</span><span class="sxs-lookup"><span data-stu-id="b49b9-126">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span><br /><br /> <span data-ttu-id="b49b9-127">フェデレーション シナリオでは、サービスが受信資格情報についての要件を記述します。</span><span class="sxs-lookup"><span data-stu-id="b49b9-127">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="b49b9-128">たとえば、受信資格情報は、特定のクレーム タイプのセットを処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b49b9-128">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="b49b9-129">このコレクションの要素はそれぞれ、フェデレーション資格情報に表示されると予想される必須の要求および省略可能な要求の種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="b49b9-129">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
+|[<span data-ttu-id="98b6a-124">\<claimTypeRequirements></span><span class="sxs-lookup"><span data-stu-id="98b6a-124">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|<span data-ttu-id="98b6a-125">必須のクレームの種類のコレクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="98b6a-125">Specifies a collection of required claim types.</span></span> <span data-ttu-id="98b6a-126">各要素は <xref:System.ServiceModel.Configuration.ClaimTypeElement> 型です。</span><span class="sxs-lookup"><span data-stu-id="98b6a-126">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span><br /><br /> <span data-ttu-id="98b6a-127">フェデレーション シナリオでは、サービスが受信資格情報についての要件を記述します。</span><span class="sxs-lookup"><span data-stu-id="98b6a-127">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="98b6a-128">たとえば、受信資格情報は、特定のクレーム タイプのセットを処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98b6a-128">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="98b6a-129">このコレクションの要素はそれぞれ、フェデレーション資格情報に表示されると予想される必須の要求および省略可能な要求の種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="98b6a-129">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b49b9-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="b49b9-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98b6a-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="98b6a-130">See also</span></span>
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>

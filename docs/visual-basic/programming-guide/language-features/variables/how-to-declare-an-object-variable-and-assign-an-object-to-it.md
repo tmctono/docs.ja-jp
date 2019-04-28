@@ -6,44 +6,44 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938217"
 ---
-# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a><span data-ttu-id="1448f-102">方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる</span><span class="sxs-lookup"><span data-stu-id="1448f-102">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>
-<span data-ttu-id="1448f-103">変数を宣言する、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)を指定して`As Object`で、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。</span><span class="sxs-lookup"><span data-stu-id="1448f-103">You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="1448f-104">等号の後、オブジェクトを配置することで、このような変数にオブジェクトを代入する (`=`) 代入ステートメントまたは初期化句でします。</span><span class="sxs-lookup"><span data-stu-id="1448f-104">You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.</span></span>  
+# <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a><span data-ttu-id="e4656-102">方法: オブジェクト変数を宣言し、Visual Basic でオブジェクトを割り当てる</span><span class="sxs-lookup"><span data-stu-id="e4656-102">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>
+<span data-ttu-id="e4656-103">変数を宣言する、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)を指定して`As Object`で、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。</span><span class="sxs-lookup"><span data-stu-id="e4656-103">You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="e4656-104">等号の後、オブジェクトを配置することで、このような変数にオブジェクトを代入する (`=`) 代入ステートメントまたは初期化句でします。</span><span class="sxs-lookup"><span data-stu-id="e4656-104">You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1448f-105">例</span><span class="sxs-lookup"><span data-stu-id="1448f-105">Example</span></span>  
- <span data-ttu-id="1448f-106">次の例で、`Object`変数と、現在のインスタンスを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="1448f-106">The following example declares an `Object` variable and assigns the current instance to it.</span></span>  
+## <a name="example"></a><span data-ttu-id="e4656-105">例</span><span class="sxs-lookup"><span data-stu-id="e4656-105">Example</span></span>  
+ <span data-ttu-id="e4656-106">次の例で、`Object`変数と、現在のインスタンスを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="e4656-106">The following example declares an `Object` variable and assigns the current instance to it.</span></span>  
   
 ```  
       Dim thisObject As Object  
 thisObject = "This is an Object"  
 ```  
   
- <span data-ttu-id="1448f-107">宣言の一部として変数を初期化することにより、宣言と代入を組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="1448f-107">You can combine the declaration and assignment by initializing the variable as part of its declaration.</span></span> <span data-ttu-id="1448f-108">次の例では、前の例と同じです。</span><span class="sxs-lookup"><span data-stu-id="1448f-108">The following example is equivalent to the preceding example.</span></span>  
+ <span data-ttu-id="e4656-107">宣言の一部として変数を初期化することにより、宣言と代入を組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="e4656-107">You can combine the declaration and assignment by initializing the variable as part of its declaration.</span></span> <span data-ttu-id="e4656-108">次の例では、前の例と同じです。</span><span class="sxs-lookup"><span data-stu-id="e4656-108">The following example is equivalent to the preceding example.</span></span>  
   
 ```  
 Dim thisObject As Object= "This is an Object"  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1448f-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="1448f-109">Compiling the Code</span></span>  
- <span data-ttu-id="1448f-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="1448f-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e4656-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="e4656-109">Compiling the Code</span></span>  
+ <span data-ttu-id="e4656-110">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="e4656-110">This example requires:</span></span>  
   
--   <span data-ttu-id="1448f-111"><xref:System> 名前空間への参照</span><span class="sxs-lookup"><span data-stu-id="1448f-111">A reference to the <xref:System> namespace.</span></span>  
+- <span data-ttu-id="e4656-111"><xref:System> 名前空間への参照</span><span class="sxs-lookup"><span data-stu-id="e4656-111">A reference to the <xref:System> namespace.</span></span>  
   
--   <span data-ttu-id="1448f-112">クラス、構造体、または配置されるモジュール、`Dim`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="1448f-112">A class, structure, or module in which to put the `Dim` statement.</span></span>  
+- <span data-ttu-id="e4656-112">クラス、構造体、または配置されるモジュール、`Dim`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="e4656-112">A class, structure, or module in which to put the `Dim` statement.</span></span>  
   
--   <span data-ttu-id="1448f-113">代入ステートメントを記述するためのプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="1448f-113">A procedure in which to put the assignment statement.</span></span>  
+- <span data-ttu-id="e4656-113">代入ステートメントを記述するためのプロシージャです。</span><span class="sxs-lookup"><span data-stu-id="e4656-113">A procedure in which to put the assignment statement.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1448f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1448f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4656-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="e4656-114">See also</span></span>
 
-- [<span data-ttu-id="1448f-115">変数宣言</span><span class="sxs-lookup"><span data-stu-id="1448f-115">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [<span data-ttu-id="1448f-116">オブジェクト変数</span><span class="sxs-lookup"><span data-stu-id="1448f-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="1448f-117">オブジェクト変数の宣言</span><span class="sxs-lookup"><span data-stu-id="1448f-117">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="1448f-118">Object 型</span><span class="sxs-lookup"><span data-stu-id="1448f-118">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="1448f-119">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="1448f-119">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [<span data-ttu-id="1448f-120">ローカル型の推論</span><span class="sxs-lookup"><span data-stu-id="1448f-120">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="1448f-121">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="1448f-121">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="e4656-115">変数宣言</span><span class="sxs-lookup"><span data-stu-id="e4656-115">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="e4656-116">オブジェクト変数</span><span class="sxs-lookup"><span data-stu-id="e4656-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="e4656-117">オブジェクト変数の宣言</span><span class="sxs-lookup"><span data-stu-id="e4656-117">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="e4656-118">Object 型</span><span class="sxs-lookup"><span data-stu-id="e4656-118">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="e4656-119">Dim ステートメント</span><span class="sxs-lookup"><span data-stu-id="e4656-119">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [<span data-ttu-id="e4656-120">ローカル型の推論</span><span class="sxs-lookup"><span data-stu-id="e4656-120">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="e4656-121">Option Strict ステートメント</span><span class="sxs-lookup"><span data-stu-id="e4656-121">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

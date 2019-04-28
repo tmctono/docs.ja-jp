@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777534"
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="b8742-102">IMetaDataImport::GetSigFromToken メソッド</span><span class="sxs-lookup"><span data-stu-id="b8742-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="b8742-103">指定したトークンに関連付けられているバイナリ メタデータ シグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="b8742-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="a7c5b-102">IMetaDataImport::GetSigFromToken メソッド</span><span class="sxs-lookup"><span data-stu-id="a7c5b-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="a7c5b-103">指定したトークンに関連付けられているバイナリ メタデータ シグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="a7c5b-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8742-104">構文</span><span class="sxs-lookup"><span data-stu-id="b8742-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7c5b-104">構文</span><span class="sxs-lookup"><span data-stu-id="a7c5b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSigFromToken (   
@@ -37,26 +37,26 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b8742-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b8742-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7c5b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a7c5b-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="b8742-106">[in]バイナリ メタデータ シグネチャを返すトークンです。</span><span class="sxs-lookup"><span data-stu-id="b8742-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="a7c5b-106">[in]バイナリ メタデータ シグネチャを返すトークンです。</span><span class="sxs-lookup"><span data-stu-id="a7c5b-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="b8742-107">[out]返されたメタデータ署名へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b8742-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="a7c5b-107">[out]返されたメタデータ署名へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a7c5b-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="b8742-108">[out]バイナリ メタデータ シグネチャのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="b8742-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="a7c5b-108">[out]バイナリ メタデータ シグネチャのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="a7c5b-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8742-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="b8742-109">Requirements</span></span>  
- <span data-ttu-id="b8742-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8742-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7c5b-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="a7c5b-109">Requirements</span></span>  
+ <span data-ttu-id="a7c5b-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a7c5b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8742-111">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b8742-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a7c5b-111">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a7c5b-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b8742-112">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="b8742-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a7c5b-112">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a7c5b-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b8742-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8742-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a7c5b-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7c5b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8742-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b8742-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7c5b-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a7c5b-114">See also</span></span>
 
-- [<span data-ttu-id="b8742-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8742-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b8742-116">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b8742-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a7c5b-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a7c5b-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a7c5b-116">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a7c5b-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

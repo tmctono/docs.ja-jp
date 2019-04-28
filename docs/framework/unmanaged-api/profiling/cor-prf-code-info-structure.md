@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775168"
 ---
-# <a name="corprfcodeinfo-structure"></a><span data-ttu-id="83bd6-102">COR_PRF_CODE_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="83bd6-102">COR_PRF_CODE_INFO Structure</span></span>
-<span data-ttu-id="83bd6-103">メモリに格納されている 1 個の連続ブロックからなるネイティブ コードを表します。</span><span class="sxs-lookup"><span data-stu-id="83bd6-103">Represents one contiguous block of native code stored in memory.</span></span>  
+# <a name="corprfcodeinfo-structure"></a><span data-ttu-id="a3034-102">COR_PRF_CODE_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="a3034-102">COR_PRF_CODE_INFO Structure</span></span>
+<span data-ttu-id="a3034-103">メモリに格納されている 1 個の連続ブロックからなるネイティブ コードを表します。</span><span class="sxs-lookup"><span data-stu-id="a3034-103">Represents one contiguous block of native code stored in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83bd6-104">構文</span><span class="sxs-lookup"><span data-stu-id="83bd6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3034-104">構文</span><span class="sxs-lookup"><span data-stu-id="a3034-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_PRF_CODE_INFO {  
@@ -35,22 +35,22 @@ typedef struct _COR_PRF_CODE_INFO {
 } COR_PRF_CODE_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="83bd6-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="83bd6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a3034-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="a3034-105">Members</span></span>  
   
-|<span data-ttu-id="83bd6-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="83bd6-106">Member</span></span>|<span data-ttu-id="83bd6-107">説明</span><span class="sxs-lookup"><span data-stu-id="83bd6-107">Description</span></span>|  
+|<span data-ttu-id="a3034-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="a3034-106">Member</span></span>|<span data-ttu-id="a3034-107">説明</span><span class="sxs-lookup"><span data-stu-id="a3034-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddress`|<span data-ttu-id="83bd6-108">コードの連続するブロックの開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="83bd6-108">The starting address of the contiguous block of code.</span></span>|  
-|`size`|<span data-ttu-id="83bd6-109">ブロックのサイズ。</span><span class="sxs-lookup"><span data-stu-id="83bd6-109">The size of the block.</span></span>|  
+|`startAddress`|<span data-ttu-id="a3034-108">コードの連続するブロックの開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="a3034-108">The starting address of the contiguous block of code.</span></span>|  
+|`size`|<span data-ttu-id="a3034-109">ブロックのサイズ。</span><span class="sxs-lookup"><span data-stu-id="a3034-109">The size of the block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="83bd6-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="83bd6-110">Requirements</span></span>  
- <span data-ttu-id="83bd6-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="83bd6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3034-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="a3034-110">Requirements</span></span>  
+ <span data-ttu-id="a3034-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3034-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83bd6-112">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="83bd6-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="a3034-112">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="a3034-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="83bd6-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83bd6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a3034-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3034-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83bd6-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83bd6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a3034-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3034-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83bd6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="83bd6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3034-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3034-115">See also</span></span>
 
-- [<span data-ttu-id="83bd6-116">構造体のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="83bd6-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="a3034-116">構造体のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="a3034-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

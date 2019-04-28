@@ -6,22 +6,22 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
 ms.openlocfilehash: f22a50fc26108d879d1dcdcce02078b5c41aad4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778574"
 ---
-# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="c004e-102">連結演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c004e-102">Concatenation Operators (Visual Basic)</span></span>
-<span data-ttu-id="c004e-103">Visual Basic で定義されている連結演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c004e-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="743a7-102">連結演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="743a7-102">Concatenation Operators (Visual Basic)</span></span>
+<span data-ttu-id="743a7-103">Visual Basic で定義されている連結演算子を次に示します。</span><span class="sxs-lookup"><span data-stu-id="743a7-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="c004e-104">& 演算子</span><span class="sxs-lookup"><span data-stu-id="c004e-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="743a7-104">& 演算子</span><span class="sxs-lookup"><span data-stu-id="743a7-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
- [<span data-ttu-id="c004e-105">+ 演算子</span><span class="sxs-lookup"><span data-stu-id="c004e-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [<span data-ttu-id="743a7-105">+ 演算子</span><span class="sxs-lookup"><span data-stu-id="743a7-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c004e-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="c004e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="743a7-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="743a7-106">See also</span></span>
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="c004e-107">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="c004e-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="c004e-108">Visual Basic の連結演算子</span><span class="sxs-lookup"><span data-stu-id="c004e-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="743a7-107">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="743a7-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="743a7-108">Visual Basic の連結演算子</span><span class="sxs-lookup"><span data-stu-id="743a7-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765447"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="c2e40-102">ICorDebugErrorInfoEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2e40-102">ICorDebugErrorInfoEnum Interface</span></span>
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="1dff4-102">ICorDebugErrorInfoEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1dff4-102">ICorDebugErrorInfoEnum Interface</span></span>
 
-<span data-ttu-id="c2e40-103">`ICorDebugErrorInfoEnum` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="c2e40-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="c2e40-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="c2e40-104">Do not use this interface.</span></span>  
+<span data-ttu-id="1dff4-103">`ICorDebugErrorInfoEnum` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="1dff4-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="1dff4-104">このインターフェイスは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="1dff4-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2e40-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2e40-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dff4-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dff4-105">See also</span></span>
 
-- [<span data-ttu-id="c2e40-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2e40-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1dff4-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1dff4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

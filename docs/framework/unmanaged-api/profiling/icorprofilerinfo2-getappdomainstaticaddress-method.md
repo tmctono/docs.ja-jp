@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2095f02cb23c3580b0a1109e8f0da669f61adabc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789390"
 ---
-# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="9cdba-102">ICorProfilerInfo2::GetAppDomainStaticAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="9cdba-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
-<span data-ttu-id="9cdba-103">指定したアプリケーション ドメインのスコープ内の指定されたアプリケーション ドメインの静的フィールドのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="9cdba-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
+# <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a><span data-ttu-id="94d2e-102">ICorProfilerInfo2::GetAppDomainStaticAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="94d2e-102">ICorProfilerInfo2::GetAppDomainStaticAddress Method</span></span>
+<span data-ttu-id="94d2e-103">指定したアプリケーション ドメインのスコープ内の指定されたアプリケーション ドメインの静的フィールドのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="94d2e-103">Gets the address of the specified application domain-static field that is in the scope of the specified application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9cdba-104">構文</span><span class="sxs-lookup"><span data-stu-id="9cdba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94d2e-104">構文</span><span class="sxs-lookup"><span data-stu-id="94d2e-104">Syntax</span></span>  
   
 ```  
 RESULT GetAppDomainStaticAddress(  
@@ -37,38 +37,38 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9cdba-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9cdba-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94d2e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="94d2e-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="9cdba-106">[in]要求されたアプリケーション ドメインの静的フィールドを格納するクラスのクラス ID。</span><span class="sxs-lookup"><span data-stu-id="9cdba-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
+ <span data-ttu-id="94d2e-106">[in]要求されたアプリケーション ドメインの静的フィールドを格納するクラスのクラス ID。</span><span class="sxs-lookup"><span data-stu-id="94d2e-106">[in] The class ID of the class that contains the requested application domain-static field.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="9cdba-107">[in]要求されたアプリケーション ドメインの静的フィールドのメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="9cdba-107">[in] The metadata token for the requested application domain-static field.</span></span>  
+ <span data-ttu-id="94d2e-107">[in]要求されたアプリケーション ドメインの静的フィールドのメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="94d2e-107">[in] The metadata token for the requested application domain-static field.</span></span>  
   
  `appDomainId`  
- <span data-ttu-id="9cdba-108">[in]要求された静的フィールドのスコープとなっているアプリケーション ドメインの ID。</span><span class="sxs-lookup"><span data-stu-id="9cdba-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
+ <span data-ttu-id="94d2e-108">[in]要求された静的フィールドのスコープとなっているアプリケーション ドメインの ID。</span><span class="sxs-lookup"><span data-stu-id="94d2e-108">[in] The ID of the application domain that is the scope for the requested static field.</span></span>  
   
  `ppAddress`  
- <span data-ttu-id="9cdba-109">[out]指定したアプリケーション ドメイン内にある静的フィールドのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="9cdba-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
+ <span data-ttu-id="94d2e-109">[out]指定したアプリケーション ドメイン内にある静的フィールドのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="94d2e-109">[out] A pointer to the address of the static field that is within the specified application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9cdba-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="9cdba-110">Remarks</span></span>  
- <span data-ttu-id="9cdba-111">`GetAppDomainStaticAddress`メソッドは、次のいずれかを返す可能性があります。</span><span class="sxs-lookup"><span data-stu-id="9cdba-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="94d2e-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="94d2e-110">Remarks</span></span>  
+ <span data-ttu-id="94d2e-111">`GetAppDomainStaticAddress`メソッドは、次のいずれかを返す可能性があります。</span><span class="sxs-lookup"><span data-stu-id="94d2e-111">The `GetAppDomainStaticAddress` method may return one of the following:</span></span>  
   
--   <span data-ttu-id="9cdba-112">指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="9cdba-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
+- <span data-ttu-id="94d2e-112">指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。</span><span class="sxs-lookup"><span data-stu-id="94d2e-112">A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.</span></span>  
   
--   <span data-ttu-id="9cdba-113">ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="9cdba-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="9cdba-114">これらのアドレスは、ガベージ コレクション後にプロファイラーを想定しないでくださいが有効であるために、ガベージ コレクションの後無効になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="9cdba-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
+- <span data-ttu-id="94d2e-113">ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。</span><span class="sxs-lookup"><span data-stu-id="94d2e-113">The addresses of objects that may be in the garbage collection heap.</span></span> <span data-ttu-id="94d2e-114">これらのアドレスは、ガベージ コレクション後にプロファイラーを想定しないでくださいが有効であるために、ガベージ コレクションの後無効になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="94d2e-114">These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.</span></span>  
   
- <span data-ttu-id="9cdba-115">クラスのクラスのコンス トラクターが完了したら、前に`GetAppDomainStaticAddress`はいくつかの静的フィールドは既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返し、ガベージ コレクション オブジェクトのルートします。</span><span class="sxs-lookup"><span data-stu-id="9cdba-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
+ <span data-ttu-id="94d2e-115">クラスのクラスのコンス トラクターが完了したら、前に`GetAppDomainStaticAddress`はいくつかの静的フィールドは既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返し、ガベージ コレクション オブジェクトのルートします。</span><span class="sxs-lookup"><span data-stu-id="94d2e-115">Before a class’s class constructor is completed, `GetAppDomainStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9cdba-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="9cdba-116">Requirements</span></span>  
- <span data-ttu-id="9cdba-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9cdba-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94d2e-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="94d2e-116">Requirements</span></span>  
+ <span data-ttu-id="94d2e-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="94d2e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9cdba-118">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9cdba-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="94d2e-118">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="94d2e-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9cdba-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9cdba-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="94d2e-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94d2e-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9cdba-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9cdba-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="94d2e-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94d2e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9cdba-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="9cdba-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94d2e-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="94d2e-121">See also</span></span>
 
-- [<span data-ttu-id="9cdba-122">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9cdba-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="9cdba-123">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9cdba-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="94d2e-122">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="94d2e-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="94d2e-123">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="94d2e-123">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
