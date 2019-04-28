@@ -6,14 +6,14 @@ f1_keywords:
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
 ms.openlocfilehash: d06f2dcaf892fcceeb6bac8e2a8860b64cf6e21c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594374"
 ---
-# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a><span data-ttu-id="55c5b-102">'StrConv.LinguisticCasing' には、'StrConv.LowerCase' または 'StrConv.UpperCase' が必要です。</span><span class="sxs-lookup"><span data-stu-id="55c5b-102">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>
-<span data-ttu-id="55c5b-103">`StrConv.LinguisticCasing`を使用しようとしましたが、これは `StrConv.LowerCase` または `StrConv.UpperCase`と組み合わせた場合にのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="55c5b-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
+# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a><span data-ttu-id="1ab05-102">'StrConv.LinguisticCasing' には、'StrConv.LowerCase' または 'StrConv.UpperCase' が必要です。</span><span class="sxs-lookup"><span data-stu-id="1ab05-102">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>
+<span data-ttu-id="1ab05-103">`StrConv.LinguisticCasing`を使用しようとしましたが、これは `StrConv.LowerCase` または `StrConv.UpperCase`と組み合わせた場合にのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="1ab05-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="55c5b-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="55c5b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1ab05-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="1ab05-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="55c5b-105">`StrConv.LowerCase` と共に、 `StrConv.UpperCase` または `StrConv.LinguisticCasing`を使用します。</span><span class="sxs-lookup"><span data-stu-id="55c5b-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
+1. <span data-ttu-id="1ab05-105">`StrConv.LowerCase` と共に、 `StrConv.UpperCase` または `StrConv.LinguisticCasing`を使用します。</span><span class="sxs-lookup"><span data-stu-id="1ab05-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  

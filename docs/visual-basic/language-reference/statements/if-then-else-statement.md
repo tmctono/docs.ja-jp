@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
 ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637755"
 ---
-# <a name="ifthenelse-statement-visual-basic"></a><span data-ttu-id="6f175-102">If...Then...Else ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f175-102">If...Then...Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="6f175-103">式の値に応じてステートメント グループを条件付きで実行します。</span><span class="sxs-lookup"><span data-stu-id="6f175-103">Conditionally executes a group of statements, depending on the value of an expression.</span></span>  
+# <a name="ifthenelse-statement-visual-basic"></a><span data-ttu-id="4bf42-102">If...Then...Else ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bf42-102">If...Then...Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="4bf42-103">式の値に応じてステートメント グループを条件付きで実行します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-103">Conditionally executes a group of statements, depending on the value of an expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f175-104">構文</span><span class="sxs-lookup"><span data-stu-id="6f175-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bf42-104">構文</span><span class="sxs-lookup"><span data-stu-id="4bf42-104">Syntax</span></span>  
   
 ```  
 ' Multiline syntax:  
@@ -47,86 +47,86 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]  
 ```  
 
-## <a name="quick-links-to-example-code"></a><span data-ttu-id="6f175-105">コード例へのクイック リンク</span><span class="sxs-lookup"><span data-stu-id="6f175-105">Quick links to example code</span></span>
+## <a name="quick-links-to-example-code"></a><span data-ttu-id="4bf42-105">コード例へのクイック リンク</span><span class="sxs-lookup"><span data-stu-id="4bf42-105">Quick links to example code</span></span>
 
-<span data-ttu-id="6f175-106">この記事には、使用方法を示すいくつかの例が含まれています、 `If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="6f175-106">This article includes several examples that illustrate uses of the `If`...`Then`...`Else` statement:</span></span>
+<span data-ttu-id="4bf42-106">この記事には、使用方法を示すいくつかの例が含まれています、 `If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="4bf42-106">This article includes several examples that illustrate uses of the `If`...`Then`...`Else` statement:</span></span>
 
-* [<span data-ttu-id="6f175-107">複数行の構文例</span><span class="sxs-lookup"><span data-stu-id="6f175-107">Multiline syntax example</span></span>](#multi-line)
-* [<span data-ttu-id="6f175-108">入れ子になった構文の例</span><span class="sxs-lookup"><span data-stu-id="6f175-108">Nested syntax example</span></span>](#nested)
-* [<span data-ttu-id="6f175-109">単一行の構文例</span><span class="sxs-lookup"><span data-stu-id="6f175-109">Single-line syntax example</span></span>](#single-line)
+* [<span data-ttu-id="4bf42-107">複数行の構文例</span><span class="sxs-lookup"><span data-stu-id="4bf42-107">Multiline syntax example</span></span>](#multi-line)
+* [<span data-ttu-id="4bf42-108">入れ子になった構文の例</span><span class="sxs-lookup"><span data-stu-id="4bf42-108">Nested syntax example</span></span>](#nested)
+* [<span data-ttu-id="4bf42-109">単一行の構文例</span><span class="sxs-lookup"><span data-stu-id="4bf42-109">Single-line syntax example</span></span>](#single-line)
 
-## <a name="parts"></a><span data-ttu-id="6f175-110">指定項目</span><span class="sxs-lookup"><span data-stu-id="6f175-110">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="4bf42-110">指定項目</span><span class="sxs-lookup"><span data-stu-id="4bf42-110">Parts</span></span>  
  `condition`  
- <span data-ttu-id="6f175-111">必須。</span><span class="sxs-lookup"><span data-stu-id="6f175-111">Required.</span></span> <span data-ttu-id="6f175-112">式。</span><span class="sxs-lookup"><span data-stu-id="6f175-112">Expression.</span></span> <span data-ttu-id="6f175-113">評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-113">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
+ <span data-ttu-id="4bf42-111">必須。</span><span class="sxs-lookup"><span data-stu-id="4bf42-111">Required.</span></span> <span data-ttu-id="4bf42-112">式。</span><span class="sxs-lookup"><span data-stu-id="4bf42-112">Expression.</span></span> <span data-ttu-id="4bf42-113">評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-113">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
   
- <span data-ttu-id="6f175-114">式の場合、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)、式の場合と、条件が扱われます`False`と`Else`ブロックが実行されます。</span><span class="sxs-lookup"><span data-stu-id="6f175-114">If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is `False` and the `Else` block is executed.</span></span>  
+ <span data-ttu-id="4bf42-114">式の場合、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)、式の場合と、条件が扱われます`False`と`Else`ブロックが実行されます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-114">If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is `False` and the `Else` block is executed.</span></span>  
   
  `Then`  
- <span data-ttu-id="6f175-115">は単一行の構文で必要複数行の構文では省略可能です。</span><span class="sxs-lookup"><span data-stu-id="6f175-115">Required in the single-line syntax; optional in the multiline syntax.</span></span>  
+ <span data-ttu-id="4bf42-115">は単一行の構文で必要複数行の構文では省略可能です。</span><span class="sxs-lookup"><span data-stu-id="4bf42-115">Required in the single-line syntax; optional in the multiline syntax.</span></span>  
   
  `statements`  
- <span data-ttu-id="6f175-116">任意。</span><span class="sxs-lookup"><span data-stu-id="6f175-116">Optional.</span></span> <span data-ttu-id="6f175-117">1 つまたは複数のステートメントの次`If`.`Then`場合に実行されている`condition`に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-117">One or more statements following `If`...`Then` that are executed if `condition` evaluates to `True`.</span></span>  
+ <span data-ttu-id="4bf42-116">任意。</span><span class="sxs-lookup"><span data-stu-id="4bf42-116">Optional.</span></span> <span data-ttu-id="4bf42-117">1 つまたは複数のステートメントの次`If`.`Then`場合に実行されている`condition`に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-117">One or more statements following `If`...`Then` that are executed if `condition` evaluates to `True`.</span></span>  
   
  `elseifcondition`  
- <span data-ttu-id="6f175-118">場合に、必ず`ElseIf`が存在します。</span><span class="sxs-lookup"><span data-stu-id="6f175-118">Required if `ElseIf` is present.</span></span> <span data-ttu-id="6f175-119">式。</span><span class="sxs-lookup"><span data-stu-id="6f175-119">Expression.</span></span> <span data-ttu-id="6f175-120">評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-120">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
+ <span data-ttu-id="4bf42-118">場合に、必ず`ElseIf`が存在します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-118">Required if `ElseIf` is present.</span></span> <span data-ttu-id="4bf42-119">式。</span><span class="sxs-lookup"><span data-stu-id="4bf42-119">Expression.</span></span> <span data-ttu-id="4bf42-120">評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-120">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
   
  `elseifstatements`  
- <span data-ttu-id="6f175-121">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="6f175-121">Optional.</span></span> <span data-ttu-id="6f175-122">1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-122">One or more statements following `ElseIf`...`Then` that are executed if `elseifcondition` evaluates to `True`.</span></span>  
+ <span data-ttu-id="4bf42-121">任意。</span><span class="sxs-lookup"><span data-stu-id="4bf42-121">Optional.</span></span> <span data-ttu-id="4bf42-122">1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-122">One or more statements following `ElseIf`...`Then` that are executed if `elseifcondition` evaluates to `True`.</span></span>  
   
  `elsestatements`  
- <span data-ttu-id="6f175-123">任意。</span><span class="sxs-lookup"><span data-stu-id="6f175-123">Optional.</span></span> <span data-ttu-id="6f175-124">ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-124">One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.</span></span>  
+ <span data-ttu-id="4bf42-123">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="4bf42-123">Optional.</span></span> <span data-ttu-id="4bf42-124">ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-124">One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.</span></span>  
   
  `End If`  
- <span data-ttu-id="6f175-125">複数行のバージョンを終了する`If`.`Then`...`Else`ブロックします。</span><span class="sxs-lookup"><span data-stu-id="6f175-125">Terminates the multiline version of `If`...`Then`...`Else` block.</span></span>  
+ <span data-ttu-id="4bf42-125">複数行のバージョンを終了する`If`.`Then`...`Else`ブロックします。</span><span class="sxs-lookup"><span data-stu-id="4bf42-125">Terminates the multiline version of `If`...`Then`...`Else` block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6f175-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="6f175-126">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bf42-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="4bf42-126">Remarks</span></span>  
   
-### <a name="multiline-syntax"></a><span data-ttu-id="6f175-127">複数行の構文</span><span class="sxs-lookup"><span data-stu-id="6f175-127">Multiline syntax</span></span>  
- <span data-ttu-id="6f175-128">ときに、 `If`.`Then`...`Else`ステートメントが検出された`condition`をテストします。</span><span class="sxs-lookup"><span data-stu-id="6f175-128">When an `If`...`Then`...`Else` statement is encountered, `condition` is tested.</span></span> <span data-ttu-id="6f175-129">場合`condition`は`True`、次のステートメント`Then`実行されます。</span><span class="sxs-lookup"><span data-stu-id="6f175-129">If `condition` is `True`, the statements following `Then` are executed.</span></span> <span data-ttu-id="6f175-130">場合`condition`は`False`、それぞれ`ElseIf`ステートメント (存在する) 場合は、順番に評価します。</span><span class="sxs-lookup"><span data-stu-id="6f175-130">If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order.</span></span> <span data-ttu-id="6f175-131">ときに、 `True` `elseifcondition`が見つかると、すぐに関連付けられている次のステートメント`ElseIf`実行されます。</span><span class="sxs-lookup"><span data-stu-id="6f175-131">When a `True` `elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed.</span></span> <span data-ttu-id="6f175-132">ない場合は`elseifcondition`に評価される`True`がある場合、またはなし`ElseIf`ステートメント、次のステートメント`Else`実行されます。</span><span class="sxs-lookup"><span data-stu-id="6f175-132">If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed.</span></span> <span data-ttu-id="6f175-133">次のステートメントを実行した後`Then`、 `ElseIf`、または`Else`、ステートメントに次の実行が続行されます`End If`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-133">After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.</span></span>  
+### <a name="multiline-syntax"></a><span data-ttu-id="4bf42-127">複数行の構文</span><span class="sxs-lookup"><span data-stu-id="4bf42-127">Multiline syntax</span></span>  
+ <span data-ttu-id="4bf42-128">ときに、 `If`.`Then`...`Else`ステートメントが検出された`condition`をテストします。</span><span class="sxs-lookup"><span data-stu-id="4bf42-128">When an `If`...`Then`...`Else` statement is encountered, `condition` is tested.</span></span> <span data-ttu-id="4bf42-129">場合`condition`は`True`、次のステートメント`Then`実行されます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-129">If `condition` is `True`, the statements following `Then` are executed.</span></span> <span data-ttu-id="4bf42-130">場合`condition`は`False`、それぞれ`ElseIf`ステートメント (存在する) 場合は、順番に評価します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-130">If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order.</span></span> <span data-ttu-id="4bf42-131">ときに、 `True` `elseifcondition`が見つかると、すぐに関連付けられている次のステートメント`ElseIf`実行されます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-131">When a `True` `elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed.</span></span> <span data-ttu-id="4bf42-132">ない場合は`elseifcondition`に評価される`True`がある場合、またはなし`ElseIf`ステートメント、次のステートメント`Else`実行されます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-132">If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed.</span></span> <span data-ttu-id="4bf42-133">次のステートメントを実行した後`Then`、 `ElseIf`、または`Else`、ステートメントに次の実行が続行されます`End If`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-133">After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.</span></span>  
   
- <span data-ttu-id="6f175-134">`ElseIf`と`Else`句は、どちらもオプションです。</span><span class="sxs-lookup"><span data-stu-id="6f175-134">The `ElseIf` and `Else` clauses are both optional.</span></span> <span data-ttu-id="6f175-135">多くすることが`ElseIf`としてする句が必要、 `If`.`Then`...`Else`ステートメントでは、ただし`ElseIf`後句、`Else`句。</span><span class="sxs-lookup"><span data-stu-id="6f175-135">You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause.</span></span> <span data-ttu-id="6f175-136">`If`...`Then`...`Else`ステートメントは互いに入れ子にすることができます。</span><span class="sxs-lookup"><span data-stu-id="6f175-136">`If`...`Then`...`Else` statements can be nested within each other.</span></span>  
+ <span data-ttu-id="4bf42-134">`ElseIf`と`Else`句は、どちらもオプションです。</span><span class="sxs-lookup"><span data-stu-id="4bf42-134">The `ElseIf` and `Else` clauses are both optional.</span></span> <span data-ttu-id="4bf42-135">多くすることが`ElseIf`としてする句が必要、 `If`.`Then`...`Else`ステートメントでは、ただし`ElseIf`後句、`Else`句。</span><span class="sxs-lookup"><span data-stu-id="4bf42-135">You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause.</span></span> <span data-ttu-id="4bf42-136">`If`...`Then`...`Else`ステートメントは互いに入れ子にすることができます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-136">`If`...`Then`...`Else` statements can be nested within each other.</span></span>  
   
- <span data-ttu-id="6f175-137">複数行の構文では、`If`ステートメントは、最初の行での唯一のステートメントである必要があります。</span><span class="sxs-lookup"><span data-stu-id="6f175-137">In the multiline syntax, the `If` statement must be the only statement on the first line.</span></span> <span data-ttu-id="6f175-138">`ElseIf`、 `Else`、および`End If`ステートメントのみで、行ラベルを付けることができます。</span><span class="sxs-lookup"><span data-stu-id="6f175-138">The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label.</span></span> <span data-ttu-id="6f175-139">`If`.`Then`...`Else`ブロックの最後に使用する必要があります、`End If`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="6f175-139">The `If`...`Then`...`Else` block must end with an `End If` statement.</span></span>  
+ <span data-ttu-id="4bf42-137">複数行の構文では、`If`ステートメントは、最初の行での唯一のステートメントである必要があります。</span><span class="sxs-lookup"><span data-stu-id="4bf42-137">In the multiline syntax, the `If` statement must be the only statement on the first line.</span></span> <span data-ttu-id="4bf42-138">`ElseIf`、 `Else`、および`End If`ステートメントのみで、行ラベルを付けることができます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-138">The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label.</span></span> <span data-ttu-id="4bf42-139">`If`.`Then`...`Else`ブロックの最後に使用する必要があります、`End If`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="4bf42-139">The `If`...`Then`...`Else` block must end with an `End If` statement.</span></span>  
   
 > [!TIP]
->  <span data-ttu-id="6f175-140">[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)をいくつかの値を持つ 1 つの式を評価するときにさらに便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="6f175-140">The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.</span></span>  
+>  <span data-ttu-id="4bf42-140">[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)をいくつかの値を持つ 1 つの式を評価するときにさらに便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="4bf42-140">The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.</span></span>  
   
-### <a name="single-line-syntax"></a><span data-ttu-id="6f175-141">単一行の構文</span><span class="sxs-lookup"><span data-stu-id="6f175-141">Single-Line syntax</span></span>  
- <span data-ttu-id="6f175-142">True の場合に実行するコードを 1 つの条件の単一行構文を使用できます。</span><span class="sxs-lookup"><span data-stu-id="6f175-142">You can use the single-line syntax for a single condition with code to execute if it's true.</span></span> <span data-ttu-id="6f175-143">ただし、複数行の構文は、詳細の構造と柔軟性を提供、読み取り、保守、およびデバッグする方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="6f175-143">However, the multiple-line syntax provides more structure and flexibility and is easier to read, maintain, and debug.</span></span>  
+### <a name="single-line-syntax"></a><span data-ttu-id="4bf42-141">単一行の構文</span><span class="sxs-lookup"><span data-stu-id="4bf42-141">Single-Line syntax</span></span>  
+ <span data-ttu-id="4bf42-142">True の場合に実行するコードを 1 つの条件の単一行構文を使用できます。</span><span class="sxs-lookup"><span data-stu-id="4bf42-142">You can use the single-line syntax for a single condition with code to execute if it's true.</span></span> <span data-ttu-id="4bf42-143">ただし、複数行の構文は、詳細の構造と柔軟性を提供、読み取り、保守、およびデバッグする方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="4bf42-143">However, the multiple-line syntax provides more structure and flexibility and is easier to read, maintain, and debug.</span></span>  
   
- <span data-ttu-id="6f175-144">どのような次のように、`Then`ステートメントが単一行であるかどうかを決定するキーワードが調べられる`If`します。</span><span class="sxs-lookup"><span data-stu-id="6f175-144">What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`.</span></span> <span data-ttu-id="6f175-145">後にコメント以外のものが表示された場合`Then`、同じ行には、ステートメントは単一行として扱われます`If`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="6f175-145">If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement.</span></span> <span data-ttu-id="6f175-146">場合`Then`が存在しない場合は、複数行の開始する必要があります`If`.`Then`...`Else`.</span><span class="sxs-lookup"><span data-stu-id="6f175-146">If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.</span></span>  
+ <span data-ttu-id="4bf42-144">どのような次のように、`Then`ステートメントが単一行であるかどうかを決定するキーワードが調べられる`If`します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-144">What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`.</span></span> <span data-ttu-id="4bf42-145">後にコメント以外のものが表示された場合`Then`、同じ行には、ステートメントは単一行として扱われます`If`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="4bf42-145">If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement.</span></span> <span data-ttu-id="4bf42-146">場合`Then`が存在しない場合は、複数行の開始する必要があります`If`.`Then`...`Else`.</span><span class="sxs-lookup"><span data-stu-id="4bf42-146">If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.</span></span>  
   
- <span data-ttu-id="6f175-147">単一行の構文では、複数のステートメントの結果として実行することが、 `If`.`Then`意思決定します。</span><span class="sxs-lookup"><span data-stu-id="6f175-147">In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision.</span></span> <span data-ttu-id="6f175-148">すべてのステートメントでは、同じ行に配置する必要があり、コロンで区切っています。</span><span class="sxs-lookup"><span data-stu-id="6f175-148">All statements must be on the same line and be separated by colons.</span></span>  
+ <span data-ttu-id="4bf42-147">単一行の構文では、複数のステートメントの結果として実行することが、 `If`.`Then`意思決定します。</span><span class="sxs-lookup"><span data-stu-id="4bf42-147">In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision.</span></span> <span data-ttu-id="4bf42-148">すべてのステートメントでは、同じ行に配置する必要があり、コロンで区切っています。</span><span class="sxs-lookup"><span data-stu-id="4bf42-148">All statements must be on the same line and be separated by colons.</span></span>  
 
-## <a name="multiline-syntax-example"></a><span data-ttu-id="6f175-149">複数行の構文例</span><span class="sxs-lookup"><span data-stu-id="6f175-149">Multiline syntax example</span></span>
+## <a name="multiline-syntax-example"></a><span data-ttu-id="4bf42-149">複数行の構文例</span><span class="sxs-lookup"><span data-stu-id="4bf42-149">Multiline syntax example</span></span>
 
 <a name="multi-line"></a>
  
- <span data-ttu-id="6f175-150">次の例では、複数行の構文の使用、 `If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="6f175-150">The following example illustrates the use of the multiline syntax of the `If`...`Then`...`Else` statement.</span></span>  
+ <span data-ttu-id="4bf42-150">次の例では、複数行の構文の使用、 `If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="4bf42-150">The following example illustrates the use of the multiline syntax of the `If`...`Then`...`Else` statement.</span></span>  
   
  [!code-vb[VbVbalrStatements#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#101)]
 
-## <a name="nested-syntax-example"></a><span data-ttu-id="6f175-151">入れ子になった構文の例</span><span class="sxs-lookup"><span data-stu-id="6f175-151">Nested syntax example</span></span>
+## <a name="nested-syntax-example"></a><span data-ttu-id="4bf42-151">入れ子になった構文の例</span><span class="sxs-lookup"><span data-stu-id="4bf42-151">Nested syntax example</span></span>
 
 <a name="nested"></a>
 
- <span data-ttu-id="6f175-152">次の例を含む入れ子になった`If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="6f175-152">The following example contains nested `If`...`Then`...`Else` statements.</span></span>  
+ <span data-ttu-id="4bf42-152">次の例を含む入れ子になった`If`.`Then`...`Else`ステートメント。</span><span class="sxs-lookup"><span data-stu-id="4bf42-152">The following example contains nested `If`...`Then`...`Else` statements.</span></span>  
   
  [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a><span data-ttu-id="6f175-153">単一行の構文例</span><span class="sxs-lookup"><span data-stu-id="6f175-153">Single-Line syntax example</span></span>
+## <a name="single-line-syntax-example"></a><span data-ttu-id="4bf42-153">単一行の構文例</span><span class="sxs-lookup"><span data-stu-id="4bf42-153">Single-Line syntax example</span></span>
   
-<a name="single-line"></a> <span data-ttu-id="6f175-154">次の例は、単一行の構文の使用を示しています。</span><span class="sxs-lookup"><span data-stu-id="6f175-154">The following example illustrates the use of the single-line syntax.</span></span>  
+<a name="single-line"></a> <span data-ttu-id="4bf42-154">次の例は、単一行の構文の使用を示しています。</span><span class="sxs-lookup"><span data-stu-id="4bf42-154">The following example illustrates the use of the single-line syntax.</span></span>  
   
  [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
   
-## <a name="see-also"></a><span data-ttu-id="6f175-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="6f175-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bf42-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="4bf42-155">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
-- [<span data-ttu-id="6f175-156">#If...Then...#Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="6f175-156">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="6f175-157">Select...Case ステートメント</span><span class="sxs-lookup"><span data-stu-id="6f175-157">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
-- [<span data-ttu-id="6f175-158">入れ子になった制御構造</span><span class="sxs-lookup"><span data-stu-id="6f175-158">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [<span data-ttu-id="6f175-159">条件判断構造</span><span class="sxs-lookup"><span data-stu-id="6f175-159">Decision Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [<span data-ttu-id="6f175-160">Visual Basic での論理とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="6f175-160">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
-- [<span data-ttu-id="6f175-161">If 演算子</span><span class="sxs-lookup"><span data-stu-id="6f175-161">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)
+- [<span data-ttu-id="4bf42-156">#If...Then...#Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="4bf42-156">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="4bf42-157">Select...Case ステートメント</span><span class="sxs-lookup"><span data-stu-id="4bf42-157">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [<span data-ttu-id="4bf42-158">入れ子になった制御構造</span><span class="sxs-lookup"><span data-stu-id="4bf42-158">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [<span data-ttu-id="4bf42-159">条件判断構造</span><span class="sxs-lookup"><span data-stu-id="4bf42-159">Decision Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [<span data-ttu-id="4bf42-160">Visual Basic での論理とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="4bf42-160">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [<span data-ttu-id="4bf42-161">If 演算子</span><span class="sxs-lookup"><span data-stu-id="4bf42-161">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645488"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="8fb46-102">ICorDebugAssembly::GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="8fb46-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="8fb46-103">.NET Framework の現在のバージョンでは、このメソッドが実装されていません。</span><span class="sxs-lookup"><span data-stu-id="8fb46-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="a7c57-102">ICorDebugAssembly::GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="a7c57-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="a7c57-103">.NET Framework の現在のバージョンでは、このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="a7c57-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fb46-104">構文</span><span class="sxs-lookup"><span data-stu-id="8fb46-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7c57-104">構文</span><span class="sxs-lookup"><span data-stu-id="a7c57-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeBase (  

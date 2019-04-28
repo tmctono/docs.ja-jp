@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638542"
 ---
-# <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a><span data-ttu-id="2b7ca-102">ICLRPolicyManager::SetUnhandledExceptionPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="2b7ca-102">ICLRPolicyManager::SetUnhandledExceptionPolicy Method</span></span>
-<span data-ttu-id="2b7ca-103">ハンドルされない例外が発生したときに、共通言語ランタイム (CLR) の動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-103">Specifies the behavior of the common language runtime (CLR) when an unhandled exception occurs.</span></span>  
+# <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a><span data-ttu-id="79ded-102">ICLRPolicyManager::SetUnhandledExceptionPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="79ded-102">ICLRPolicyManager::SetUnhandledExceptionPolicy Method</span></span>
+<span data-ttu-id="79ded-103">ハンドルされない例外が発生したときに、共通言語ランタイム (CLR) の動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="79ded-103">Specifies the behavior of the common language runtime (CLR) when an unhandled exception occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b7ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="2b7ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79ded-104">構文</span><span class="sxs-lookup"><span data-stu-id="79ded-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUnhandledExceptionPolicy (  
@@ -35,36 +35,36 @@ HRESULT SetUnhandledExceptionPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b7ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2b7ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79ded-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="79ded-105">Parameters</span></span>  
  `policy`  
- <span data-ttu-id="2b7ca-106">[in]1 つ、 [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) CLR または、ホストによって動作が設定されているかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-106">[in] One of the [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) values, indicating whether the behavior is set by the CLR or the host.</span></span>  
+ <span data-ttu-id="79ded-106">[in]1 つ、 [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) CLR または、ホストによって動作が設定されているかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="79ded-106">[in] One of the [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) values, indicating whether the behavior is set by the CLR or the host.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2b7ca-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="2b7ca-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="79ded-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="79ded-107">Return Value</span></span>  
   
-|<span data-ttu-id="2b7ca-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2b7ca-108">HRESULT</span></span>|<span data-ttu-id="2b7ca-109">説明</span><span class="sxs-lookup"><span data-stu-id="2b7ca-109">Description</span></span>|  
+|<span data-ttu-id="79ded-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="79ded-108">HRESULT</span></span>|<span data-ttu-id="79ded-109">説明</span><span class="sxs-lookup"><span data-stu-id="79ded-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2b7ca-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2b7ca-110">S_OK</span></span>|<span data-ttu-id="2b7ca-111">`SetUnhandledExceptionPolicy` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-111">`SetUnhandledExceptionPolicy` returned successfully.</span></span>|  
-|<span data-ttu-id="2b7ca-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2b7ca-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2b7ca-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="2b7ca-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2b7ca-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2b7ca-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-115">The call timed out.</span></span>|  
-|<span data-ttu-id="2b7ca-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2b7ca-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2b7ca-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="2b7ca-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2b7ca-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2b7ca-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="2b7ca-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2b7ca-120">E_FAIL</span></span>|<span data-ttu-id="2b7ca-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2b7ca-122">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2b7ca-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="79ded-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="79ded-110">S_OK</span></span>|<span data-ttu-id="79ded-111">`SetUnhandledExceptionPolicy` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="79ded-111">`SetUnhandledExceptionPolicy` returned successfully.</span></span>|  
+|<span data-ttu-id="79ded-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="79ded-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="79ded-113">プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="79ded-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="79ded-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="79ded-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="79ded-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="79ded-115">The call timed out.</span></span>|  
+|<span data-ttu-id="79ded-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="79ded-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="79ded-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="79ded-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="79ded-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="79ded-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="79ded-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="79ded-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="79ded-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="79ded-120">E_FAIL</span></span>|<span data-ttu-id="79ded-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="79ded-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="79ded-122">メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="79ded-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="79ded-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="79ded-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b7ca-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="2b7ca-124">Remarks</span></span>  
- <span data-ttu-id="2b7ca-125">既定では、CLR は、すべてのハンドルされない例外、最後のハンドラーであり、その既定の動作はプロセスを破棄です。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-125">By default, the CLR is the final handler for all unhandled exceptions, and its default behavior is to tear down the process.</span></span> <span data-ttu-id="2b7ca-126">ホストは設定してこの動作を変更することができます、 `policy` eHostDeterminedPolicy する値。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-126">The host can change this behavior by setting the `policy` value to eHostDeterminedPolicy.</span></span> <span data-ttu-id="2b7ca-127">CLR の以前のバージョンと同じように、この値により、独自の既定の動作を実装するためにホストします。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-127">This value allows the host to implement its own default behavior, as with earlier versions of the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79ded-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="79ded-124">Remarks</span></span>  
+ <span data-ttu-id="79ded-125">既定では、CLR は、すべてのハンドルされない例外、最後のハンドラーであり、その既定の動作はプロセスを破棄です。</span><span class="sxs-lookup"><span data-stu-id="79ded-125">By default, the CLR is the final handler for all unhandled exceptions, and its default behavior is to tear down the process.</span></span> <span data-ttu-id="79ded-126">ホストは設定してこの動作を変更することができます、 `policy` eHostDeterminedPolicy する値。</span><span class="sxs-lookup"><span data-stu-id="79ded-126">The host can change this behavior by setting the `policy` value to eHostDeterminedPolicy.</span></span> <span data-ttu-id="79ded-127">CLR の以前のバージョンと同じように、この値により、独自の既定の動作を実装するためにホストします。</span><span class="sxs-lookup"><span data-stu-id="79ded-127">This value allows the host to implement its own default behavior, as with earlier versions of the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b7ca-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="2b7ca-128">Requirements</span></span>  
- <span data-ttu-id="2b7ca-129">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2b7ca-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79ded-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="79ded-128">Requirements</span></span>  
+ <span data-ttu-id="79ded-129">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="79ded-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b7ca-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2b7ca-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="79ded-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="79ded-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2b7ca-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="2b7ca-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="79ded-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="79ded-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2b7ca-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b7ca-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="79ded-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79ded-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b7ca-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b7ca-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79ded-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="79ded-133">See also</span></span>
 
-- [<span data-ttu-id="2b7ca-134">EClrUnhandledException 列挙型</span><span class="sxs-lookup"><span data-stu-id="2b7ca-134">EClrUnhandledException Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
-- [<span data-ttu-id="2b7ca-135">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b7ca-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="2b7ca-136">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b7ca-136">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="2b7ca-137">IHostPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b7ca-137">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [<span data-ttu-id="79ded-134">EClrUnhandledException 列挙型</span><span class="sxs-lookup"><span data-stu-id="79ded-134">EClrUnhandledException Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
+- [<span data-ttu-id="79ded-135">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="79ded-135">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="79ded-136">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="79ded-136">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="79ded-137">IHostPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="79ded-137">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

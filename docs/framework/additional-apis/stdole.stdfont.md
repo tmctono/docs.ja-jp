@@ -10,13 +10,13 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: ae4e2a0e0914251ddc5b7e18202047546b97907f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675248"
 ---
-# <a name="stdfont-interface"></a><span data-ttu-id="f020b-102">StdFont インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f020b-102">StdFont Interface</span></span>
+# <a name="stdfont-interface"></a><span data-ttu-id="36de9-102">StdFont インターフェイス</span><span class="sxs-lookup"><span data-stu-id="36de9-102">StdFont Interface</span></span>
 
 ```csharp
 [GuidAttribute("BEF6E003-A874-101A-8BBA-00AA00300CAB")]
@@ -24,8 +24,8 @@ public interface StdFont : Font,
   FontEvents_Event
 ```
 
-## <a name="requirements"></a><span data-ttu-id="f020b-103">必要条件</span><span class="sxs-lookup"><span data-stu-id="f020b-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="36de9-103">必要条件</span><span class="sxs-lookup"><span data-stu-id="36de9-103">Requirements</span></span>
 
-<span data-ttu-id="f020b-104">**名前空間:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="f020b-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="36de9-104">**名前空間:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="36de9-104">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="f020b-105">**アセンブリ:** stdole.dll) の「最</span><span class="sxs-lookup"><span data-stu-id="f020b-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="36de9-105">**アセンブリ:** stdole.dll) の「最</span><span class="sxs-lookup"><span data-stu-id="36de9-105">**Assembly:** stdole (in stdole.dll)</span></span>
