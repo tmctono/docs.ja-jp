@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
 ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696120"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="83846-102">イメージに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="83846-102">Image How-to Topics</span></span>
-<span data-ttu-id="83846-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Image>要素。</span><span class="sxs-lookup"><span data-stu-id="83846-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="f28fe-102">イメージに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="f28fe-102">Image How-to Topics</span></span>
+<span data-ttu-id="f28fe-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Image>要素。</span><span class="sxs-lookup"><span data-stu-id="f28fe-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="83846-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="83846-104">In This Section</span></span>  
- [<span data-ttu-id="83846-105">イメージ要素を使用する</span><span class="sxs-lookup"><span data-stu-id="83846-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
-  [<span data-ttu-id="83846-106">イメージをグレースケールに変換する</span><span class="sxs-lookup"><span data-stu-id="83846-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="83846-107">イメージをトリミングする</span><span class="sxs-lookup"><span data-stu-id="83846-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
-  [<span data-ttu-id="83846-108">イメージを回転させる</span><span class="sxs-lookup"><span data-stu-id="83846-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f28fe-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f28fe-104">In This Section</span></span>  
+ [<span data-ttu-id="f28fe-105">イメージ要素を使用する</span><span class="sxs-lookup"><span data-stu-id="f28fe-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
+  [<span data-ttu-id="f28fe-106">イメージをグレースケールに変換する</span><span class="sxs-lookup"><span data-stu-id="f28fe-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="f28fe-107">イメージをトリミングする</span><span class="sxs-lookup"><span data-stu-id="f28fe-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
+  [<span data-ttu-id="f28fe-108">イメージを回転させる</span><span class="sxs-lookup"><span data-stu-id="f28fe-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="83846-109">参照</span><span class="sxs-lookup"><span data-stu-id="83846-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f28fe-109">参照</span><span class="sxs-lookup"><span data-stu-id="f28fe-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="83846-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="83846-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f28fe-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="f28fe-110">See also</span></span>
 
-- [<span data-ttu-id="83846-111">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="83846-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="83846-112">方法トピック</span><span class="sxs-lookup"><span data-stu-id="83846-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+- [<span data-ttu-id="f28fe-111">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="f28fe-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="f28fe-112">方法トピック</span><span class="sxs-lookup"><span data-stu-id="f28fe-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

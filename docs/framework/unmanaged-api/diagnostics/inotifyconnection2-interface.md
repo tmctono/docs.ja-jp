@@ -17,27 +17,27 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697707"
 ---
-# <a name="inotifyconnection2-interface"></a><span data-ttu-id="78a30-102">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a30-102">INotifyConnection2 Interface</span></span>
-<span data-ttu-id="78a30-103">登録と接続の通知のソースを登録解除のためのメソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="78a30-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
+# <a name="inotifyconnection2-interface"></a><span data-ttu-id="a8e21-102">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8e21-102">INotifyConnection2 Interface</span></span>
+<span data-ttu-id="a8e21-103">登録と接続の通知のソースを登録解除のためのメソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="a8e21-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="78a30-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="78a30-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a8e21-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="a8e21-104">Methods</span></span>  
   
-|<span data-ttu-id="78a30-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="78a30-105">Method</span></span>|<span data-ttu-id="78a30-106">説明</span><span class="sxs-lookup"><span data-stu-id="78a30-106">Description</span></span>|  
+|<span data-ttu-id="a8e21-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="a8e21-105">Method</span></span>|<span data-ttu-id="a8e21-106">説明</span><span class="sxs-lookup"><span data-stu-id="a8e21-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="78a30-107">RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="78a30-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="78a30-108">指定された通知のソース オブジェクトをインストールします。</span><span class="sxs-lookup"><span data-stu-id="78a30-108">Installs a specified notification source object.</span></span>|  
-|[<span data-ttu-id="78a30-109">UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="78a30-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="78a30-110">接続から、指定された通知のソース オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="78a30-110">Removes a specified notification source object from the connection.</span></span>|  
+|[<span data-ttu-id="a8e21-107">RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="a8e21-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="a8e21-108">指定された通知のソース オブジェクトをインストールします。</span><span class="sxs-lookup"><span data-stu-id="a8e21-108">Installs a specified notification source object.</span></span>|  
+|[<span data-ttu-id="a8e21-109">UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="a8e21-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="a8e21-110">接続から、指定された通知のソース オブジェクトを削除します。</span><span class="sxs-lookup"><span data-stu-id="a8e21-110">Removes a specified notification source object from the connection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="78a30-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="78a30-111">Requirements</span></span>  
- <span data-ttu-id="78a30-112">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="78a30-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8e21-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="a8e21-111">Requirements</span></span>  
+ <span data-ttu-id="a8e21-112">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="a8e21-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78a30-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="78a30-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8e21-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8e21-113">See also</span></span>
 
-- [<span data-ttu-id="78a30-114">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a30-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="78a30-115">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a30-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="78a30-116">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78a30-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="a8e21-114">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8e21-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="a8e21-115">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8e21-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="a8e21-116">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a8e21-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

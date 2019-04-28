@@ -9,29 +9,29 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723044"
 ---
-# <a name="how-to-list-installed-decoders"></a><span data-ttu-id="eecc4-102">方法: インストールされたデコーダーの一覧</span><span class="sxs-lookup"><span data-stu-id="eecc4-102">How to: List Installed Decoders</span></span>
-<span data-ttu-id="eecc4-103">アプリケーションが特定のイメージ ファイル形式を読み取るかどうかを判断するコンピューターでは、使用可能なイメージ デコーダーの一覧を表示することがあります。</span><span class="sxs-lookup"><span data-stu-id="eecc4-103">You may want to list the image decoders available on a computer, to determine whether your application can read a particular image file format.</span></span> <span data-ttu-id="eecc4-104"><xref:System.Drawing.Imaging.ImageCodecInfo>クラスには、<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>静的メソッド イメージ デコーダーは、使用可能なを確認できるようにします。</span><span class="sxs-lookup"><span data-stu-id="eecc4-104">The <xref:System.Drawing.Imaging.ImageCodecInfo> class provides the <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> static methods so that you can determine which image decoders are available.</span></span> <span data-ttu-id="eecc4-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 配列を返します<xref:System.Drawing.Imaging.ImageCodecInfo>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="eecc4-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> returns an array of <xref:System.Drawing.Imaging.ImageCodecInfo> objects.</span></span>  
+# <a name="how-to-list-installed-decoders"></a><span data-ttu-id="00fbb-102">方法: インストールされたデコーダーの一覧</span><span class="sxs-lookup"><span data-stu-id="00fbb-102">How to: List Installed Decoders</span></span>
+<span data-ttu-id="00fbb-103">アプリケーションが特定のイメージ ファイル形式を読み取るかどうかを判断するコンピューターでは、使用可能なイメージ デコーダーの一覧を表示することがあります。</span><span class="sxs-lookup"><span data-stu-id="00fbb-103">You may want to list the image decoders available on a computer, to determine whether your application can read a particular image file format.</span></span> <span data-ttu-id="00fbb-104"><xref:System.Drawing.Imaging.ImageCodecInfo>クラスには、<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>静的メソッド イメージ デコーダーは、使用可能なを確認できるようにします。</span><span class="sxs-lookup"><span data-stu-id="00fbb-104">The <xref:System.Drawing.Imaging.ImageCodecInfo> class provides the <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> static methods so that you can determine which image decoders are available.</span></span> <span data-ttu-id="00fbb-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 配列を返します<xref:System.Drawing.Imaging.ImageCodecInfo>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="00fbb-105"><xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> returns an array of <xref:System.Drawing.Imaging.ImageCodecInfo> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="eecc4-106">例</span><span class="sxs-lookup"><span data-stu-id="eecc4-106">Example</span></span>  
- <span data-ttu-id="eecc4-107">次のコード例では、インストールされたデコーダーの一覧とそのプロパティ値を出力します。</span><span class="sxs-lookup"><span data-stu-id="eecc4-107">The following code example outputs the list of installed decoders and their property values.</span></span>  
+## <a name="example"></a><span data-ttu-id="00fbb-106">例</span><span class="sxs-lookup"><span data-stu-id="00fbb-106">Example</span></span>  
+ <span data-ttu-id="00fbb-107">次のコード例では、インストールされたデコーダーの一覧とそのプロパティ値を出力します。</span><span class="sxs-lookup"><span data-stu-id="00fbb-107">The following code example outputs the list of installed decoders and their property values.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#2](~/samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#2)]
  [!code-vb[UsingImageEncodersDecoders#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#2)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="eecc4-108">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="eecc4-108">Compiling the Code</span></span>  
- <span data-ttu-id="eecc4-109">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="eecc4-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="00fbb-108">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="00fbb-108">Compiling the Code</span></span>  
+ <span data-ttu-id="00fbb-109">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="00fbb-109">This example requires:</span></span>  
   
--   <span data-ttu-id="eecc4-110">Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="eecc4-110">A Windows Forms application.</span></span>  
+- <span data-ttu-id="00fbb-110">Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="00fbb-110">A Windows Forms application.</span></span>  
   
--   <span data-ttu-id="eecc4-111">A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。</span><span class="sxs-lookup"><span data-stu-id="eecc4-111">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+- <span data-ttu-id="00fbb-111">A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。</span><span class="sxs-lookup"><span data-stu-id="00fbb-111">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eecc4-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="eecc4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00fbb-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="00fbb-112">See also</span></span>
 
-- [<span data-ttu-id="eecc4-113">方法: インストールされたエンコーダーの一覧</span><span class="sxs-lookup"><span data-stu-id="eecc4-113">How to: List Installed Encoders</span></span>](how-to-list-installed-encoders.md)
-- [<span data-ttu-id="eecc4-114">マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用</span><span class="sxs-lookup"><span data-stu-id="eecc4-114">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [<span data-ttu-id="00fbb-113">方法: インストールされたエンコーダーの一覧</span><span class="sxs-lookup"><span data-stu-id="00fbb-113">How to: List Installed Encoders</span></span>](how-to-list-installed-encoders.md)
+- [<span data-ttu-id="00fbb-114">マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用</span><span class="sxs-lookup"><span data-stu-id="00fbb-114">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
