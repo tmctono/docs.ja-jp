@@ -3,29 +3,29 @@ title: カスタム アクティビティ デザイナーおよびテンプレ�
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
 ms.openlocfilehash: eb00a2927c8521e68bc2c5fc73bc2aab55d7d868
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669590"
 ---
-# <a name="using-custom-activity-designers-and-templates"></a><span data-ttu-id="39c55-102">カスタム アクティビティ デザイナーおよびテンプレートの使用</span><span class="sxs-lookup"><span data-stu-id="39c55-102">Using Custom Activity Designers and Templates</span></span>
-<span data-ttu-id="39c55-103">このセクションの各トピックでは、カスタム アクティビティ デザイナーとカスタム アクティビティ テンプレートの作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="39c55-103">This section contains topics describing how to create custom activity designers and custom activity templates.</span></span>  
+# <a name="using-custom-activity-designers-and-templates"></a><span data-ttu-id="4fa54-102">カスタム アクティビティ デザイナーおよびテンプレートの使用</span><span class="sxs-lookup"><span data-stu-id="4fa54-102">Using Custom Activity Designers and Templates</span></span>
+<span data-ttu-id="4fa54-103">このセクションの各トピックでは、カスタム アクティビティ デザイナーとカスタム アクティビティ テンプレートの作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-103">This section contains topics describing how to create custom activity designers and custom activity templates.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="39c55-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="39c55-104">In This Section</span></span>  
- [<span data-ttu-id="39c55-105">方法: カスタム アクティビティ デザイナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="39c55-105">How to: Create a Custom Activity Designer</span></span>](how-to-create-a-custom-activity-designer.md)  
- <span data-ttu-id="39c55-106">ワークフローによって提供されるデザイナーがデザイン タスクに適していない場合に、カスタマイズされたアクティビティ デザイナーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="39c55-106">Describes how create a customized activity designer when the designers provided by the workflow are not appropriate to the design tasks.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4fa54-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4fa54-104">In This Section</span></span>  
+ [<span data-ttu-id="4fa54-105">方法: カスタム アクティビティ デザイナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-105">How to: Create a Custom Activity Designer</span></span>](how-to-create-a-custom-activity-designer.md)  
+ <span data-ttu-id="4fa54-106">ワークフローによって提供されるデザイナーがデザイン タスクに適していない場合に、カスタマイズされたアクティビティ デザイナーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-106">Describes how create a customized activity designer when the designers provided by the workflow are not appropriate to the design tasks.</span></span>  
   
- [<span data-ttu-id="39c55-107">方法: カスタム アクティビティ テンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="39c55-107">How to: Create a Custom Activity Template</span></span>](how-to-create-a-custom-activity-template.md)  
- <span data-ttu-id="39c55-108">ユーザーが手動で各アクティビティを個別に作成し、そのプロパティおよびその他の設定を構成しなくても済むように、カスタム アクティビティ テンプレートを使用してアクティビティを事前に構成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="39c55-108">Describes how to use custom activity templates to preconfigure activities so that users do not have to create each activity individually and configure their properties and other settings manually.</span></span>  
+ [<span data-ttu-id="4fa54-107">方法: カスタム アクティビティ テンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-107">How to: Create a Custom Activity Template</span></span>](how-to-create-a-custom-activity-template.md)  
+ <span data-ttu-id="4fa54-108">ユーザーが手動で各アクティビティを個別に作成し、そのプロパティおよびその他の設定を構成しなくても済むように、カスタム アクティビティ テンプレートを使用してアクティビティを事前に構成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-108">Describes how to use custom activity templates to preconfigure activities so that users do not have to create each activity individually and configure their properties and other settings manually.</span></span>  
   
- [<span data-ttu-id="39c55-109">ModelItem 編集コンテキストの使用</span><span class="sxs-lookup"><span data-stu-id="39c55-109">Using the ModelItem Editing Context</span></span>](using-the-modelitem-editing-context.md)  
- <span data-ttu-id="39c55-110">デザイナーがホストと対話できるようにする ModelItem 編集コンテキスト機能の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="39c55-110">Describes how to use the features of the ModelItem editing context to allow the designer to interact with the host.</span></span>  
+ [<span data-ttu-id="4fa54-109">ModelItem 編集コンテキストの使用</span><span class="sxs-lookup"><span data-stu-id="4fa54-109">Using the ModelItem Editing Context</span></span>](using-the-modelitem-editing-context.md)  
+ <span data-ttu-id="4fa54-110">デザイナーがホストと対話できるようにする ModelItem 編集コンテキスト機能の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-110">Describes how to use the features of the ModelItem editing context to allow the designer to interact with the host.</span></span>  
   
- [<span data-ttu-id="39c55-111">デザイナー コントロールへのカスタム アクティビティ プロパティのバインド</span><span class="sxs-lookup"><span data-stu-id="39c55-111">Binding a custom activity property to a designer control</span></span>](binding-a-custom-activity-property-to-a-designer-control.md)  
- <span data-ttu-id="39c55-112">デザイナーのアクティビティ プロパティに listview コントロールをバインドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="39c55-112">Describes how to bind a listview control to an activity property in the designer.</span></span>  
+ [<span data-ttu-id="4fa54-111">デザイナー コントロールへのカスタム アクティビティ プロパティのバインド</span><span class="sxs-lookup"><span data-stu-id="4fa54-111">Binding a custom activity property to a designer control</span></span>](binding-a-custom-activity-property-to-a-designer-control.md)  
+ <span data-ttu-id="4fa54-112">デザイナーのアクティビティ プロパティに listview コントロールをバインドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4fa54-112">Describes how to bind a listview control to an activity property in the designer.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="39c55-113">参照</span><span class="sxs-lookup"><span data-stu-id="39c55-113">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4fa54-113">参照</span><span class="sxs-lookup"><span data-stu-id="4fa54-113">Reference</span></span>  
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  
@@ -36,8 +36,8 @@ ms.locfileid: "57714633"
   
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="39c55-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="39c55-114">Related Sections</span></span>  
- [<span data-ttu-id="39c55-115">ワークフロー デザイナーのホスト変更</span><span class="sxs-lookup"><span data-stu-id="39c55-115">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)  
+## <a name="related-sections"></a><span data-ttu-id="4fa54-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="4fa54-114">Related Sections</span></span>  
+ [<span data-ttu-id="4fa54-115">ワークフロー デザイナーのホスト変更</span><span class="sxs-lookup"><span data-stu-id="4fa54-115">Rehosting the Workflow Designer</span></span>](rehosting-the-workflow-designer.md)  
   
-## <a name="external-resources"></a><span data-ttu-id="39c55-116">外部リソース</span><span class="sxs-lookup"><span data-stu-id="39c55-116">External Resources</span></span>  
- [<span data-ttu-id="39c55-117">カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="39c55-117">Custom Activities</span></span>](./samples/custom-activities.md)
+## <a name="external-resources"></a><span data-ttu-id="4fa54-116">外部リソース</span><span class="sxs-lookup"><span data-stu-id="4fa54-116">External Resources</span></span>  
+ [<span data-ttu-id="4fa54-117">カスタム アクティビティ</span><span class="sxs-lookup"><span data-stu-id="4fa54-117">Custom Activities</span></span>](./samples/custom-activities.md)

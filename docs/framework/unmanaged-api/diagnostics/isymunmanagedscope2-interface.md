@@ -17,26 +17,26 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0109b25b1cdc42204fc4873577e495641c4ec4fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761573"
 ---
-# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="fe6b2-102">ISymUnmanagedScope2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fe6b2-102">ISymUnmanagedScope2 Interface</span></span>
-<span data-ttu-id="fe6b2-103">メソッド内での構文のスコープを表します。</span><span class="sxs-lookup"><span data-stu-id="fe6b2-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="fe6b2-104">このインターフェイスは、拡張、 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)スコープ内で定義されている定数に関する情報を取得するメソッドを持つインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="fe6b2-104">This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
+# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="4bd46-102">ISymUnmanagedScope2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4bd46-102">ISymUnmanagedScope2 Interface</span></span>
+<span data-ttu-id="4bd46-103">メソッド内での構文のスコープを表します。</span><span class="sxs-lookup"><span data-stu-id="4bd46-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="4bd46-104">このインターフェイスは、拡張、 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)スコープ内で定義されている定数に関する情報を取得するメソッドを持つインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="4bd46-104">This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fe6b2-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="fe6b2-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4bd46-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="4bd46-105">Methods</span></span>  
   
-|<span data-ttu-id="fe6b2-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="fe6b2-106">Method</span></span>|<span data-ttu-id="fe6b2-107">説明</span><span class="sxs-lookup"><span data-stu-id="fe6b2-107">Description</span></span>|  
+|<span data-ttu-id="4bd46-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="4bd46-106">Method</span></span>|<span data-ttu-id="4bd46-107">説明</span><span class="sxs-lookup"><span data-stu-id="4bd46-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fe6b2-108">GetConstantCount メソッド</span><span class="sxs-lookup"><span data-stu-id="fe6b2-108">GetConstantCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="fe6b2-109">このスコープ内で定義されている定数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="fe6b2-109">Gets a count of the constants defined within this scope.</span></span>|  
-|[<span data-ttu-id="fe6b2-110">GetConstants メソッド</span><span class="sxs-lookup"><span data-stu-id="fe6b2-110">GetConstants Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="fe6b2-111">このスコープ内で定義されているローカル定数を取得します。</span><span class="sxs-lookup"><span data-stu-id="fe6b2-111">Gets the local constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="4bd46-108">GetConstantCount メソッド</span><span class="sxs-lookup"><span data-stu-id="4bd46-108">GetConstantCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="4bd46-109">このスコープ内で定義されている定数の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="4bd46-109">Gets a count of the constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="4bd46-110">GetConstants メソッド</span><span class="sxs-lookup"><span data-stu-id="4bd46-110">GetConstants Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="4bd46-111">このスコープ内で定義されているローカル定数を取得します。</span><span class="sxs-lookup"><span data-stu-id="4bd46-111">Gets the local constants defined within this scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fe6b2-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="fe6b2-112">Requirements</span></span>  
- <span data-ttu-id="fe6b2-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fe6b2-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bd46-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="4bd46-112">Requirements</span></span>  
+ <span data-ttu-id="4bd46-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4bd46-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe6b2-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe6b2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bd46-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="4bd46-114">See also</span></span>
 
-- [<span data-ttu-id="fe6b2-115">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fe6b2-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="fe6b2-116">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fe6b2-116">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="4bd46-115">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4bd46-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="4bd46-116">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4bd46-116">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

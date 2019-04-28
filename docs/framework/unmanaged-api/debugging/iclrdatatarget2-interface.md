@@ -17,35 +17,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d21bced214242866c47f40f392593f3f51cda02f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697941"
 ---
-# <a name="iclrdatatarget2-interface"></a><span data-ttu-id="3f856-102">ICLRDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f856-102">ICLRDataTarget2 Interface</span></span>
-<span data-ttu-id="3f856-103">サブクラス[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)ターゲット プロセス内の仮想メモリ領域を操作するデータ アクセス サービス層で使用されます。</span><span class="sxs-lookup"><span data-stu-id="3f856-103">A subclass of [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) that is used by the data access services layer to manipulate virtual memory regions in the target process.</span></span>  
+# <a name="iclrdatatarget2-interface"></a><span data-ttu-id="d382e-102">ICLRDataTarget2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d382e-102">ICLRDataTarget2 Interface</span></span>
+<span data-ttu-id="d382e-103">サブクラス[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)ターゲット プロセス内の仮想メモリ領域を操作するデータ アクセス サービス層で使用されます。</span><span class="sxs-lookup"><span data-stu-id="d382e-103">A subclass of [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) that is used by the data access services layer to manipulate virtual memory regions in the target process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3f856-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="3f856-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d382e-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="d382e-104">Methods</span></span>  
   
-|<span data-ttu-id="3f856-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="3f856-105">Method</span></span>|<span data-ttu-id="3f856-106">説明</span><span class="sxs-lookup"><span data-stu-id="3f856-106">Description</span></span>|  
+|<span data-ttu-id="d382e-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="d382e-105">Method</span></span>|<span data-ttu-id="d382e-106">説明</span><span class="sxs-lookup"><span data-stu-id="d382e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3f856-107">AllocVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="3f856-107">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|<span data-ttu-id="3f856-108">ターゲット プロセスのアドレス空間内のメモリを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="3f856-108">Allocates memory in the address space of the target process.</span></span>|  
-|[<span data-ttu-id="3f856-109">FreeVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="3f856-109">FreeVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|<span data-ttu-id="3f856-110">ターゲット プロセスのアドレス空間に割り当てられていたメモリを解放します。</span><span class="sxs-lookup"><span data-stu-id="3f856-110">Frees memory that was previously allocated in the address space of the target process.</span></span>|  
+|[<span data-ttu-id="d382e-107">AllocVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="d382e-107">AllocVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|<span data-ttu-id="d382e-108">ターゲット プロセスのアドレス空間内のメモリを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="d382e-108">Allocates memory in the address space of the target process.</span></span>|  
+|[<span data-ttu-id="d382e-109">FreeVirtual メソッド</span><span class="sxs-lookup"><span data-stu-id="d382e-109">FreeVirtual Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|<span data-ttu-id="d382e-110">ターゲット プロセスのアドレス空間に割り当てられていたメモリを解放します。</span><span class="sxs-lookup"><span data-stu-id="d382e-110">Frees memory that was previously allocated in the address space of the target process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3f856-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="3f856-111">Remarks</span></span>  
- <span data-ttu-id="3f856-112">API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f856-112">The API client (that is, the debugger) must implement this interface as appropriate for the particular target process.</span></span> <span data-ttu-id="3f856-113">たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。</span><span class="sxs-lookup"><span data-stu-id="3f856-113">For example, a live process would have an implementation different from that of a memory dump.</span></span> <span data-ttu-id="3f856-114">ターゲットは、メモリ領域の変更をサポートしない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3f856-114">The target may not support modification of its memory regions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d382e-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="d382e-111">Remarks</span></span>  
+ <span data-ttu-id="d382e-112">API クライアント (つまりデバッガー) は、特定のターゲット プロセスに応じてこのインターフェイスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d382e-112">The API client (that is, the debugger) must implement this interface as appropriate for the particular target process.</span></span> <span data-ttu-id="d382e-113">たとえば、ライブ プロセスの実装は、メモリ ダンプの実装とは異なります。</span><span class="sxs-lookup"><span data-stu-id="d382e-113">For example, a live process would have an implementation different from that of a memory dump.</span></span> <span data-ttu-id="d382e-114">ターゲットは、メモリ領域の変更をサポートしない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d382e-114">The target may not support modification of its memory regions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f856-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="3f856-115">Requirements</span></span>  
- <span data-ttu-id="3f856-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f856-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d382e-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="d382e-115">Requirements</span></span>  
+ <span data-ttu-id="d382e-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d382e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f856-117">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="3f856-117">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="d382e-117">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="d382e-117">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="3f856-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f856-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d382e-118">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d382e-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f856-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f856-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d382e-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d382e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f856-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f856-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d382e-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="d382e-120">See also</span></span>
 
-- [<span data-ttu-id="3f856-121">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f856-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
-- [<span data-ttu-id="3f856-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f856-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d382e-121">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d382e-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="d382e-122">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d382e-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

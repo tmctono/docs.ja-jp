@@ -3,20 +3,20 @@ title: System.ServiceModel.ServiceHostBaseAddresses
 ms.date: 03/30/2017
 ms.assetid: a36b8d38-8719-4d51-923a-420ec6c009e7
 ms.openlocfilehash: fe16208a3ff277fe8322d75f27bcdd961f031ae8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703440"
 ---
-# <a name="systemservicemodelservicehostbaseaddresses"></a><span data-ttu-id="6c944-102">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="6c944-102">System.ServiceModel.ServiceHostBaseAddresses</span></span>
-<span data-ttu-id="6c944-103">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="6c944-103">System.ServiceModel.ServiceHostBaseAddresses</span></span>  
+# <a name="systemservicemodelservicehostbaseaddresses"></a><span data-ttu-id="307eb-102">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="307eb-102">System.ServiceModel.ServiceHostBaseAddresses</span></span>
+<span data-ttu-id="307eb-103">System.ServiceModel.ServiceHostBaseAddresses</span><span class="sxs-lookup"><span data-stu-id="307eb-103">System.ServiceModel.ServiceHostBaseAddresses</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6c944-104">説明</span><span class="sxs-lookup"><span data-stu-id="6c944-104">Description</span></span>  
- <span data-ttu-id="6c944-105">サービスによって登録されたすべてのベース アドレスを表示できます。</span><span class="sxs-lookup"><span data-stu-id="6c944-105">Users can view all the base addresses the service registers.</span></span>  
+## <a name="description"></a><span data-ttu-id="307eb-104">説明</span><span class="sxs-lookup"><span data-stu-id="307eb-104">Description</span></span>  
+ <span data-ttu-id="307eb-105">サービスによって登録されたすべてのベース アドレスを表示できます。</span><span class="sxs-lookup"><span data-stu-id="307eb-105">Users can view all the base addresses the service registers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c944-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="6c944-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="307eb-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="307eb-106">See also</span></span>
 
-- [<span data-ttu-id="6c944-107">トレース</span><span class="sxs-lookup"><span data-stu-id="6c944-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="6c944-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="6c944-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="6c944-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="6c944-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="307eb-107">トレース</span><span class="sxs-lookup"><span data-stu-id="307eb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="307eb-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="307eb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="307eb-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="307eb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
