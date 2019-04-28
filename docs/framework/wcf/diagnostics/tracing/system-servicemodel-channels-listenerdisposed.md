@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.ListenerDisposed
 ms.date: 03/30/2017
 ms.assetid: 75ff3e7e-ad6a-4ac2-a094-4247f523c5f5
 ms.openlocfilehash: 3220d01ca993060f1cf9f325362e5a7c17077369
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792458"
 ---
-# <a name="systemservicemodelchannelslistenerdisposed"></a><span data-ttu-id="1dacb-102">System.ServiceModel.Channels.ListenerDisposed</span><span class="sxs-lookup"><span data-stu-id="1dacb-102">System.ServiceModel.Channels.ListenerDisposed</span></span>
-<span data-ttu-id="1dacb-103">System.ServiceModel.Channels.ListenerDisposed</span><span class="sxs-lookup"><span data-stu-id="1dacb-103">System.ServiceModel.Channels.ListenerDisposed</span></span>  
+# <a name="systemservicemodelchannelslistenerdisposed"></a><span data-ttu-id="e7645-102">System.ServiceModel.Channels.ListenerDisposed</span><span class="sxs-lookup"><span data-stu-id="e7645-102">System.ServiceModel.Channels.ListenerDisposed</span></span>
+<span data-ttu-id="e7645-103">System.ServiceModel.Channels.ListenerDisposed</span><span class="sxs-lookup"><span data-stu-id="e7645-103">System.ServiceModel.Channels.ListenerDisposed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1dacb-104">説明</span><span class="sxs-lookup"><span data-stu-id="1dacb-104">Description</span></span>  
- <span data-ttu-id="1dacb-105">リスナーが破棄されました。</span><span class="sxs-lookup"><span data-stu-id="1dacb-105">Listener disposed.</span></span>  
+## <a name="description"></a><span data-ttu-id="e7645-104">説明</span><span class="sxs-lookup"><span data-stu-id="e7645-104">Description</span></span>  
+ <span data-ttu-id="e7645-105">リスナーが破棄されました。</span><span class="sxs-lookup"><span data-stu-id="e7645-105">Listener disposed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1dacb-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dacb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7645-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7645-106">See also</span></span>
 
-- [<span data-ttu-id="1dacb-107">トレース</span><span class="sxs-lookup"><span data-stu-id="1dacb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="1dacb-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="1dacb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="1dacb-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="1dacb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="e7645-107">トレース</span><span class="sxs-lookup"><span data-stu-id="e7645-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="e7645-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="e7645-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="e7645-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="e7645-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

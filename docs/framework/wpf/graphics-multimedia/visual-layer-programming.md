@@ -10,25 +10,25 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
 ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762099"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="fdb19-102">ビジュアル層のプログラミング</span><span class="sxs-lookup"><span data-stu-id="fdb19-102">Visual Layer Programming</span></span>
-<span data-ttu-id="fdb19-103"><xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fdb19-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="fdb19-104">などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。</span><span class="sxs-lookup"><span data-stu-id="fdb19-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="b7b2a-102">ビジュアル層のプログラミング</span><span class="sxs-lookup"><span data-stu-id="b7b2a-102">Visual Layer Programming</span></span>
+<span data-ttu-id="b7b2a-103"><xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="b7b2a-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="b7b2a-104">などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。</span><span class="sxs-lookup"><span data-stu-id="b7b2a-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fdb19-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fdb19-105">In This Section</span></span>  
- [<span data-ttu-id="fdb19-106">ビジュアル層でのヒット テスト</span><span class="sxs-lookup"><span data-stu-id="fdb19-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="fdb19-107">DrawingVisual オブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="fdb19-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
- [<span data-ttu-id="fdb19-108">チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト</span><span class="sxs-lookup"><span data-stu-id="fdb19-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="fdb19-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="fdb19-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b7b2a-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b7b2a-105">In This Section</span></span>  
+ [<span data-ttu-id="b7b2a-106">ビジュアル層でのヒット テスト</span><span class="sxs-lookup"><span data-stu-id="b7b2a-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="b7b2a-107">DrawingVisual オブジェクトの使用</span><span class="sxs-lookup"><span data-stu-id="b7b2a-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
+ [<span data-ttu-id="b7b2a-108">チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト</span><span class="sxs-lookup"><span data-stu-id="b7b2a-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="b7b2a-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="b7b2a-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fdb19-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="fdb19-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7b2a-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b7b2a-110">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="fdb19-111">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="fdb19-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="fdb19-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="fdb19-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="b7b2a-111">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="b7b2a-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="b7b2a-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="b7b2a-112">Graphics and Multimedia</span></span>](index.md)

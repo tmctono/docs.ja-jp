@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786283"
 ---
-# <a name="icordebugarrayvaluegetbaseindicies-method"></a><span data-ttu-id="a14e1-102">ICorDebugArrayValue::GetBaseIndicies メソッド</span><span class="sxs-lookup"><span data-stu-id="a14e1-102">ICorDebugArrayValue::GetBaseIndicies Method</span></span>
-<span data-ttu-id="a14e1-103">配列内の各次元のベース インデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="a14e1-103">Gets the base index of each dimension in the array.</span></span>  
+# <a name="icordebugarrayvaluegetbaseindicies-method"></a><span data-ttu-id="4893f-102">ICorDebugArrayValue::GetBaseIndicies メソッド</span><span class="sxs-lookup"><span data-stu-id="4893f-102">ICorDebugArrayValue::GetBaseIndicies Method</span></span>
+<span data-ttu-id="4893f-103">配列内の各次元のベース インデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="4893f-103">Gets the base index of each dimension in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a14e1-104">構文</span><span class="sxs-lookup"><span data-stu-id="a14e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4893f-104">構文</span><span class="sxs-lookup"><span data-stu-id="4893f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBaseIndicies (  
@@ -37,18 +37,18 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a14e1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a14e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4893f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4893f-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="a14e1-106">[in]これの次元数`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a14e1-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span> <span data-ttu-id="a14e1-107">この値のサイズでも、`indicies`配列のサイズがの次元数と等しいので、`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a14e1-107">This value is also the size of the `indicies` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="4893f-106">[in]これの次元数`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4893f-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span> <span data-ttu-id="4893f-107">この値のサイズでも、`indicies`配列のサイズがの次元数と等しいので、`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4893f-107">This value is also the size of the `indicies` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indicies`  
- <span data-ttu-id="a14e1-108">[out]このディメンションのベース インデックス (つまり、開始インデックス) は、それぞれの整数の配列`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="a14e1-108">[out] An array of integers, each of which is the base index (that is, the starting index) of a dimension of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="4893f-108">[out]このディメンションのベース インデックス (つまり、開始インデックス) は、それぞれの整数の配列`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="4893f-108">[out] An array of integers, each of which is the base index (that is, the starting index) of a dimension of this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a14e1-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="a14e1-109">Requirements</span></span>  
- <span data-ttu-id="a14e1-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a14e1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4893f-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="4893f-109">Requirements</span></span>  
+ <span data-ttu-id="4893f-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4893f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a14e1-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a14e1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4893f-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4893f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a14e1-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a14e1-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4893f-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4893f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a14e1-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a14e1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4893f-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4893f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

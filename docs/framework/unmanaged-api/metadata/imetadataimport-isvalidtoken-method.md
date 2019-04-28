@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a99ed42f500b83b5109631b21a88029995b43d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777469"
 ---
-# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="a3070-102">IMetaDataImport::IsValidToken メソッド</span><span class="sxs-lookup"><span data-stu-id="a3070-102">IMetaDataImport::IsValidToken Method</span></span>
-<span data-ttu-id="a3070-103">指定したトークンが、コード オブジェクトへの有効な参照を保持しているかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="a3070-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
+# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="a2cf2-102">IMetaDataImport::IsValidToken メソッド</span><span class="sxs-lookup"><span data-stu-id="a2cf2-102">IMetaDataImport::IsValidToken Method</span></span>
+<span data-ttu-id="a2cf2-103">指定したトークンが、コード オブジェクトへの有効な参照を保持しているかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="a2cf2-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3070-104">構文</span><span class="sxs-lookup"><span data-stu-id="a3070-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2cf2-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2cf2-104">Syntax</span></span>  
   
 ```  
 BOOL IsValidToken (  
@@ -35,23 +35,23 @@ BOOL IsValidToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3070-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a3070-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a2cf2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a2cf2-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="a3070-106">[in]参照の有効性を確認するトークン。</span><span class="sxs-lookup"><span data-stu-id="a3070-106">[in] The token to check the reference validity for.</span></span>  
+ <span data-ttu-id="a2cf2-106">[in]参照の有効性を確認するトークン。</span><span class="sxs-lookup"><span data-stu-id="a2cf2-106">[in] The token to check the reference validity for.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3070-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a3070-107">Return Value</span></span>  
- <span data-ttu-id="a3070-108">`true` 場合`tk`は現在のスコープ内で有効なメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="a3070-108">`true` if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="a3070-109">それ以外の場合は `false`。</span><span class="sxs-lookup"><span data-stu-id="a3070-109">Otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a2cf2-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a2cf2-107">Return Value</span></span>  
+ <span data-ttu-id="a2cf2-108">`true` 場合`tk`は現在のスコープ内で有効なメタデータ トークンです。</span><span class="sxs-lookup"><span data-stu-id="a2cf2-108">`true` if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="a2cf2-109">それ以外の場合は `false`。</span><span class="sxs-lookup"><span data-stu-id="a2cf2-109">Otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3070-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="a3070-110">Requirements</span></span>  
- <span data-ttu-id="a3070-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3070-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2cf2-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="a2cf2-110">Requirements</span></span>  
+ <span data-ttu-id="a2cf2-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2cf2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3070-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a3070-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a2cf2-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a2cf2-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a3070-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a3070-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a2cf2-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="a2cf2-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a3070-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3070-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a2cf2-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2cf2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3070-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3070-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2cf2-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2cf2-115">See also</span></span>
 
-- [<span data-ttu-id="a3070-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a3070-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a3070-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a3070-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a2cf2-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2cf2-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a2cf2-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a2cf2-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

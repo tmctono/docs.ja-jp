@@ -13,33 +13,33 @@ ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754714"
 ---
-# <a name="dirtycastandcalloninterface-mda"></a><span data-ttu-id="1f37d-102">dirtyCastAndCallOnInterface MDA</span><span class="sxs-lookup"><span data-stu-id="1f37d-102">dirtyCastAndCallOnInterface MDA</span></span>
-<span data-ttu-id="1f37d-103">`dirtyCastAndCallOnInterface` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、vtable を使用して事前バインディングされた呼び出しが、遅延バインディング専用とマークされたクラス インターフェイスで試行されたときにアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="1f37d-103">The `dirtyCastAndCallOnInterface` managed debugging assistant (MDA) is activated when an early-bound call through a vtable is attempted on a class interface that has been marked late-bound only.</span></span>  
+# <a name="dirtycastandcalloninterface-mda"></a><span data-ttu-id="8cbf5-102">dirtyCastAndCallOnInterface MDA</span><span class="sxs-lookup"><span data-stu-id="8cbf5-102">dirtyCastAndCallOnInterface MDA</span></span>
+<span data-ttu-id="8cbf5-103">`dirtyCastAndCallOnInterface` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) は、vtable を使用して事前バインディングされた呼び出しが、遅延バインディング専用とマークされたクラス インターフェイスで試行されたときにアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-103">The `dirtyCastAndCallOnInterface` managed debugging assistant (MDA) is activated when an early-bound call through a vtable is attempted on a class interface that has been marked late-bound only.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="1f37d-104">症状</span><span class="sxs-lookup"><span data-stu-id="1f37d-104">Symptoms</span></span>  
- <span data-ttu-id="1f37d-105">COM 経由で CLR への事前バインディングされた呼び出しが実行されると、アプリケーションはアクセス違反をスローするか、予期しない動作に発生します。</span><span class="sxs-lookup"><span data-stu-id="1f37d-105">An application throws an access violation or has unexpected behavior when placing an early-bound call via COM into the CLR.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="8cbf5-104">症状</span><span class="sxs-lookup"><span data-stu-id="8cbf5-104">Symptoms</span></span>  
+ <span data-ttu-id="8cbf5-105">COM 経由で CLR への事前バインディングされた呼び出しが実行されると、アプリケーションはアクセス違反をスローするか、予期しない動作に発生します。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-105">An application throws an access violation or has unexpected behavior when placing an early-bound call via COM into the CLR.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="1f37d-106">原因</span><span class="sxs-lookup"><span data-stu-id="1f37d-106">Cause</span></span>  
- <span data-ttu-id="1f37d-107">コードは、遅延バインディング専用のクラス インターフェイス経由で、vtable を使用して事前バインディングされた呼び出しを試行しています。</span><span class="sxs-lookup"><span data-stu-id="1f37d-107">Code is attempting an early-bound call through a vtable via a class interface that is late-bound only.</span></span> <span data-ttu-id="1f37d-108">既定では、クラス インターフェイスは遅延バインディング専用として識別されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="1f37d-108">Note that by default class interfaces are identified as being late-bound only.</span></span> <span data-ttu-id="1f37d-109">また、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性に <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 値 (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`) が設定されている場合も、遅延バインディングとして識別されます。</span><span class="sxs-lookup"><span data-stu-id="1f37d-109">They can also be identified as late-bound with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute with an <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> value (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).</span></span>  
+## <a name="cause"></a><span data-ttu-id="8cbf5-106">原因</span><span class="sxs-lookup"><span data-stu-id="8cbf5-106">Cause</span></span>  
+ <span data-ttu-id="8cbf5-107">コードは、遅延バインディング専用のクラス インターフェイス経由で、vtable を使用して事前バインディングされた呼び出しを試行しています。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-107">Code is attempting an early-bound call through a vtable via a class interface that is late-bound only.</span></span> <span data-ttu-id="8cbf5-108">既定では、クラス インターフェイスは遅延バインディング専用として識別されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-108">Note that by default class interfaces are identified as being late-bound only.</span></span> <span data-ttu-id="8cbf5-109">また、<xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 属性に <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 値 (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`) が設定されている場合も、遅延バインディングとして識別されます。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-109">They can also be identified as late-bound with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute with an <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> value (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="1f37d-110">解像度</span><span class="sxs-lookup"><span data-stu-id="1f37d-110">Resolution</span></span>  
- <span data-ttu-id="1f37d-111">推奨される解決策としては、COM で使用するための明示的なインターフェイスを定義し、自動生成されるクラス インターフェイスを通してではなく、このインターフェイスを通して、COM クライアント呼び出しを実行するようにする方法があります。</span><span class="sxs-lookup"><span data-stu-id="1f37d-111">The recommended resolution is to define an explicit interface for use by COM and have the COM clients call through this interface instead of through the automatically generated class interface.</span></span> <span data-ttu-id="1f37d-112">代わりに、`IDispatch` を介して、COM からの呼び出しを遅延バインディングされた呼び出しに変換することもできます。</span><span class="sxs-lookup"><span data-stu-id="1f37d-112">Alternatively, the call from COM can be transformed into a late-bound call via `IDispatch`.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="8cbf5-110">解像度</span><span class="sxs-lookup"><span data-stu-id="8cbf5-110">Resolution</span></span>  
+ <span data-ttu-id="8cbf5-111">推奨される解決策としては、COM で使用するための明示的なインターフェイスを定義し、自動生成されるクラス インターフェイスを通してではなく、このインターフェイスを通して、COM クライアント呼び出しを実行するようにする方法があります。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-111">The recommended resolution is to define an explicit interface for use by COM and have the COM clients call through this interface instead of through the automatically generated class interface.</span></span> <span data-ttu-id="8cbf5-112">代わりに、`IDispatch` を介して、COM からの呼び出しを遅延バインディングされた呼び出しに変換することもできます。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-112">Alternatively, the call from COM can be transformed into a late-bound call via `IDispatch`.</span></span>  
   
- <span data-ttu-id="1f37d-113">事前バインディングされた呼び出しを COM から実行できるように、クラスを <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) として識別することもできます。ただし、「<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>」に記載されているバージョン管理の制約から、<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> を使用しないことを強く推奨します。</span><span class="sxs-lookup"><span data-stu-id="1f37d-113">Finally, it is possible to identify the class as <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) to allow early bound calls to be placed from COM; however, using <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> is strongly discouraged because of the versioning limitations described in <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span></span>  
+ <span data-ttu-id="8cbf5-113">事前バインディングされた呼び出しを COM から実行できるように、クラスを <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) として識別することもできます。ただし、「<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>」に記載されているバージョン管理の制約から、<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> を使用しないことを強く推奨します。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-113">Finally, it is possible to identify the class as <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) to allow early bound calls to be placed from COM; however, using <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> is strongly discouraged because of the versioning limitations described in <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="1f37d-114">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="1f37d-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="1f37d-115">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="1f37d-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="1f37d-116">遅延バインディングされたインターフェイス上の事前バインディングされた呼び出しに関するデータを報告するだけです。</span><span class="sxs-lookup"><span data-stu-id="1f37d-116">It only reports data about early-bound calls on late-bound interfaces.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="8cbf5-114">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="8cbf5-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="8cbf5-115">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="8cbf5-116">遅延バインディングされたインターフェイス上の事前バインディングされた呼び出しに関するデータを報告するだけです。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-116">It only reports data about early-bound calls on late-bound interfaces.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="1f37d-117">出力</span><span class="sxs-lookup"><span data-stu-id="1f37d-117">Output</span></span>  
- <span data-ttu-id="1f37d-118">事前バインディングでアクセスされたメソッド名またはフィールド名です。</span><span class="sxs-lookup"><span data-stu-id="1f37d-118">The name of the method or name of the field being accessed early-bound.</span></span>  
+## <a name="output"></a><span data-ttu-id="8cbf5-117">出力</span><span class="sxs-lookup"><span data-stu-id="8cbf5-117">Output</span></span>  
+ <span data-ttu-id="8cbf5-118">事前バインディングでアクセスされたメソッド名またはフィールド名です。</span><span class="sxs-lookup"><span data-stu-id="8cbf5-118">The name of the method or name of the field being accessed early-bound.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="1f37d-119">構成</span><span class="sxs-lookup"><span data-stu-id="1f37d-119">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="8cbf5-119">構成</span><span class="sxs-lookup"><span data-stu-id="8cbf5-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -49,7 +49,7 @@ ms.locfileid: "59108590"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f37d-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f37d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cbf5-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cbf5-120">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [<span data-ttu-id="1f37d-121">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="1f37d-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="8cbf5-121">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="8cbf5-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

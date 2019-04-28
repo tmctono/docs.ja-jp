@@ -8,27 +8,27 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
 ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770732"
 ---
-# <a name="menu"></a><span data-ttu-id="8ee19-102">メニュー</span><span class="sxs-lookup"><span data-stu-id="8ee19-102">Menu</span></span>
-<span data-ttu-id="8ee19-103">A<xref:System.Windows.Controls.Menu>コマンドまたはイベント ハンドラーに関連付けられている要素の階層編成できるようにするコントロールです。</span><span class="sxs-lookup"><span data-stu-id="8ee19-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="8ee19-104">各<xref:System.Windows.Controls.Menu>複数含めることができます<xref:System.Windows.Controls.MenuItem>コントロール。</span><span class="sxs-lookup"><span data-stu-id="8ee19-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="8ee19-105">各<xref:System.Windows.Controls.MenuItem>コマンドの呼び出しまたは呼び出すことができます、`Click`イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="8ee19-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="8ee19-106">A<xref:System.Windows.Controls.MenuItem>複数持つこともできます<xref:System.Windows.Controls.MenuItem>サブメニューを形成する子要素として。</span><span class="sxs-lookup"><span data-stu-id="8ee19-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
+# <a name="menu"></a><span data-ttu-id="2efa2-102">メニュー</span><span class="sxs-lookup"><span data-stu-id="2efa2-102">Menu</span></span>
+<span data-ttu-id="2efa2-103">A<xref:System.Windows.Controls.Menu>コマンドまたはイベント ハンドラーに関連付けられている要素の階層編成できるようにするコントロールです。</span><span class="sxs-lookup"><span data-stu-id="2efa2-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="2efa2-104">各<xref:System.Windows.Controls.Menu>複数含めることができます<xref:System.Windows.Controls.MenuItem>コントロール。</span><span class="sxs-lookup"><span data-stu-id="2efa2-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="2efa2-105">各<xref:System.Windows.Controls.MenuItem>コマンドの呼び出しまたは呼び出すことができます、`Click`イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="2efa2-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="2efa2-106">A<xref:System.Windows.Controls.MenuItem>複数持つこともできます<xref:System.Windows.Controls.MenuItem>サブメニューを形成する子要素として。</span><span class="sxs-lookup"><span data-stu-id="2efa2-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
   
- <span data-ttu-id="8ee19-107">次の図は、メニュー コントロールの 3 つの異なる状態を示します。</span><span class="sxs-lookup"><span data-stu-id="8ee19-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="8ee19-108">既定の状態はマウスのポインターなどのデバイスが配置されていないときに、<xref:System.Windows.Controls.Menu>します。</span><span class="sxs-lookup"><span data-stu-id="8ee19-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="8ee19-109">フォーカス状態の場合は、マウス ポインターが配置されて、<xref:System.Windows.Controls.Menu>押された状態は、上でマウス ボタンがクリックされたときに発生します。 および、<xref:System.Windows.Controls.Menu>します。</span><span class="sxs-lookup"><span data-stu-id="8ee19-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
+ <span data-ttu-id="2efa2-107">次の図は、メニュー コントロールの 3 つの異なる状態を示します。</span><span class="sxs-lookup"><span data-stu-id="2efa2-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="2efa2-108">既定の状態はマウスのポインターなどのデバイスが配置されていないときに、<xref:System.Windows.Controls.Menu>します。</span><span class="sxs-lookup"><span data-stu-id="2efa2-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="2efa2-109">フォーカス状態の場合は、マウス ポインターが配置されて、<xref:System.Windows.Controls.Menu>押された状態は、上でマウス ボタンがクリックされたときに発生します。 および、<xref:System.Windows.Controls.Menu>します。</span><span class="sxs-lookup"><span data-stu-id="2efa2-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
   
- <span data-ttu-id="8ee19-110">![メニューの状態](./media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="8ee19-110">![Menu states](./media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
-<span data-ttu-id="8ee19-111">さまざまな状態のメニュー</span><span class="sxs-lookup"><span data-stu-id="8ee19-111">Menus in different states</span></span>  
+ <span data-ttu-id="2efa2-110">![メニューの状態](./media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="2efa2-110">![Menu states](./media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
+<span data-ttu-id="2efa2-111">さまざまな状態のメニュー</span><span class="sxs-lookup"><span data-stu-id="2efa2-111">Menus in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8ee19-112">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="8ee19-112">In This Section</span></span>  
- [<span data-ttu-id="8ee19-113">メニューの概要</span><span class="sxs-lookup"><span data-stu-id="8ee19-113">Menu Overview</span></span>](menu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2efa2-112">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2efa2-112">In This Section</span></span>  
+ [<span data-ttu-id="2efa2-113">メニューの概要</span><span class="sxs-lookup"><span data-stu-id="2efa2-113">Menu Overview</span></span>](menu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="8ee19-114">参照</span><span class="sxs-lookup"><span data-stu-id="8ee19-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2efa2-114">参照</span><span class="sxs-lookup"><span data-stu-id="2efa2-114">Reference</span></span>  
  <xref:System.Windows.Controls.Menu>  
   <xref:System.Windows.Controls.MenuItem>  
   <xref:System.Windows.Controls.Primitives.MenuBase>  
   <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="8ee19-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="8ee19-115">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2efa2-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="2efa2-115">Related Sections</span></span>
