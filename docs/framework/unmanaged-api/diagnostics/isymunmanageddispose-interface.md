@@ -17,24 +17,24 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8e81cea13fb8d25701ccbe163f112904baf47a9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939920"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="1c241-102">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1c241-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="1c241-103">アンマネージ リソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="1c241-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="8d451-102">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d451-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="8d451-103">アンマネージ リソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="8d451-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1c241-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="1c241-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8d451-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="8d451-104">Methods</span></span>  
   
-|<span data-ttu-id="1c241-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="1c241-105">Method</span></span>|<span data-ttu-id="1c241-106">説明</span><span class="sxs-lookup"><span data-stu-id="1c241-106">Description</span></span>|  
+|<span data-ttu-id="8d451-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="8d451-105">Method</span></span>|<span data-ttu-id="8d451-106">説明</span><span class="sxs-lookup"><span data-stu-id="8d451-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1c241-107">destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="1c241-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="1c241-108">基になるオブジェクトを内部参照をすべて解放し、後続のメソッド呼び出しでエラーを返します。</span><span class="sxs-lookup"><span data-stu-id="1c241-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="8d451-107">destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="8d451-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="8d451-108">基になるオブジェクトを内部参照をすべて解放し、後続のメソッド呼び出しでエラーを返します。</span><span class="sxs-lookup"><span data-stu-id="8d451-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1c241-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="1c241-109">Requirements</span></span>  
- <span data-ttu-id="1c241-110">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1c241-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d451-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="8d451-109">Requirements</span></span>  
+ <span data-ttu-id="8d451-110">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8d451-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c241-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c241-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d451-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="8d451-111">See also</span></span>
 
-- [<span data-ttu-id="1c241-112">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1c241-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="8d451-112">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d451-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

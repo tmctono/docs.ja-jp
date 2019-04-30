@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 021068caa8f1ad2c64e5ca3d18ea25dc827563a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986701"
 ---
-# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="12dd6-102">ICorPublish::GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="12dd6-102">ICorPublish::GetProcess Method</span></span>
-<span data-ttu-id="12dd6-103">取得、 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)指定の識別子を持つプロセスを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="12dd6-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
+# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="a71f5-102">ICorPublish::GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="a71f5-102">ICorPublish::GetProcess Method</span></span>
+<span data-ttu-id="a71f5-103">取得、 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)指定の識別子を持つプロセスを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="a71f5-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12dd6-104">構文</span><span class="sxs-lookup"><span data-stu-id="12dd6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a71f5-104">構文</span><span class="sxs-lookup"><span data-stu-id="a71f5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess(  
@@ -36,25 +36,25 @@ HRESULT GetProcess(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="12dd6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="12dd6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a71f5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a71f5-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="12dd6-106">[in]プロセスの識別子です。</span><span class="sxs-lookup"><span data-stu-id="12dd6-106">[in] The identifier of the process.</span></span>  
+ <span data-ttu-id="a71f5-106">[in]プロセスの識別子です。</span><span class="sxs-lookup"><span data-stu-id="a71f5-106">[in] The identifier of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="12dd6-107">[out]アドレスへのポインター、`ICorPublishProcess`プロセスを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="12dd6-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
+ <span data-ttu-id="a71f5-107">[out]アドレスへのポインター、`ICorPublishProcess`プロセスを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="a71f5-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="12dd6-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="12dd6-108">Remarks</span></span>  
- <span data-ttu-id="12dd6-109">`GetProcess` プロセスが存在しないか、現在のユーザーがデバッグ可能なマネージ プロセスがない場合は失敗します。</span><span class="sxs-lookup"><span data-stu-id="12dd6-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a71f5-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="a71f5-108">Remarks</span></span>  
+ <span data-ttu-id="a71f5-109">`GetProcess` プロセスが存在しないか、現在のユーザーがデバッグ可能なマネージ プロセスがない場合は失敗します。</span><span class="sxs-lookup"><span data-stu-id="a71f5-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="12dd6-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="12dd6-110">Requirements</span></span>  
- <span data-ttu-id="12dd6-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="12dd6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a71f5-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="a71f5-110">Requirements</span></span>  
+ <span data-ttu-id="a71f5-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a71f5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12dd6-112">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="12dd6-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="a71f5-112">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a71f5-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="12dd6-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="12dd6-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a71f5-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a71f5-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="12dd6-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12dd6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a71f5-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a71f5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12dd6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="12dd6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a71f5-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a71f5-115">See also</span></span>
 
-- [<span data-ttu-id="12dd6-116">ICorPublish インターフェイス</span><span class="sxs-lookup"><span data-stu-id="12dd6-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [<span data-ttu-id="a71f5-116">ICorPublish インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a71f5-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
 ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010216"
 ---
-# <a name="brushes-how-to-topics"></a><span data-ttu-id="9b29b-102">ブラシに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9b29b-102">Brushes How-to Topics</span></span>
-<span data-ttu-id="9b29b-103">次のトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画面にコンテンツを描画するブラシ。</span><span class="sxs-lookup"><span data-stu-id="9b29b-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
+# <a name="brushes-how-to-topics"></a><span data-ttu-id="f02da-102">ブラシに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="f02da-102">Brushes How-to Topics</span></span>
+<span data-ttu-id="f02da-103">次のトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画面にコンテンツを描画するブラシ。</span><span class="sxs-lookup"><span data-stu-id="f02da-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9b29b-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9b29b-104">In This Section</span></span>  
- [<span data-ttu-id="9b29b-105">SolidColorBrush の色または不透明度をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="9b29b-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [<span data-ttu-id="9b29b-106">グラデーション ストップの位置または色をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="9b29b-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [<span data-ttu-id="9b29b-107">反射を作成する</span><span class="sxs-lookup"><span data-stu-id="9b29b-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
- [<span data-ttu-id="9b29b-108">TileBrush を使用してさまざまなタイル パターンを作成する</span><span class="sxs-lookup"><span data-stu-id="9b29b-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [<span data-ttu-id="9b29b-109">ペンを定義する</span><span class="sxs-lookup"><span data-stu-id="9b29b-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
- [<span data-ttu-id="9b29b-110">描画を使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
- [<span data-ttu-id="9b29b-111">イメージで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
- [<span data-ttu-id="9b29b-112">線形グラデーションを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
- [<span data-ttu-id="9b29b-113">放射状グラデーションを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
- [<span data-ttu-id="9b29b-114">純色で領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
- [<span data-ttu-id="9b29b-115">システム ブラシで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
- [<span data-ttu-id="9b29b-116">ビデオを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
- [<span data-ttu-id="9b29b-117">ビジュアルで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="9b29b-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
- [<span data-ttu-id="9b29b-118">背景として使用するイメージの縦横比を保持する</span><span class="sxs-lookup"><span data-stu-id="9b29b-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [<span data-ttu-id="9b29b-119">TileBrush の水平方向および垂直方向の配置を設定する</span><span class="sxs-lookup"><span data-stu-id="9b29b-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [<span data-ttu-id="9b29b-120">TileBrush のタイル サイズを設定する</span><span class="sxs-lookup"><span data-stu-id="9b29b-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
- [<span data-ttu-id="9b29b-121">ブラシを変換する</span><span class="sxs-lookup"><span data-stu-id="9b29b-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
- [<span data-ttu-id="9b29b-122">グラデーションでシステム カラーを使用する</span><span class="sxs-lookup"><span data-stu-id="9b29b-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f02da-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f02da-104">In This Section</span></span>  
+ [<span data-ttu-id="f02da-105">SolidColorBrush の色または不透明度をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="f02da-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [<span data-ttu-id="f02da-106">グラデーション ストップの位置または色をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="f02da-106">Animate the Position or Color of a Gradient Stop</span></span>](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [<span data-ttu-id="f02da-107">反射を作成する</span><span class="sxs-lookup"><span data-stu-id="f02da-107">Create a Reflection</span></span>](how-to-create-a-reflection.md)  
+ [<span data-ttu-id="f02da-108">TileBrush を使用してさまざまなタイル パターンを作成する</span><span class="sxs-lookup"><span data-stu-id="f02da-108">Create Different Tile Patterns with a TileBrush</span></span>](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [<span data-ttu-id="f02da-109">ペンを定義する</span><span class="sxs-lookup"><span data-stu-id="f02da-109">Define a Pen</span></span>](how-to-define-a-pen.md)  
+ [<span data-ttu-id="f02da-110">描画を使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-110">Paint an Area with a Drawing</span></span>](how-to-paint-an-area-with-a-drawing.md)  
+ [<span data-ttu-id="f02da-111">イメージで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-111">Paint an Area with an Image</span></span>](how-to-paint-an-area-with-an-image.md)  
+ [<span data-ttu-id="f02da-112">線形グラデーションを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-112">Paint an Area with a Linear Gradient</span></span>](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [<span data-ttu-id="f02da-113">放射状グラデーションを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-113">Paint an Area with a Radial Gradient</span></span>](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [<span data-ttu-id="f02da-114">純色で領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-114">Paint an Area with a Solid Color</span></span>](how-to-paint-an-area-with-a-solid-color.md)  
+ [<span data-ttu-id="f02da-115">システム ブラシで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-115">Paint an Area with a System Brush</span></span>](how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="f02da-116">ビデオを使用して領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-116">Paint an Area with a Video</span></span>](how-to-paint-an-area-with-a-video.md)  
+ [<span data-ttu-id="f02da-117">ビジュアルで領域を塗りつぶす</span><span class="sxs-lookup"><span data-stu-id="f02da-117">Paint an Area with a Visual</span></span>](how-to-paint-an-area-with-a-visual.md)  
+ [<span data-ttu-id="f02da-118">背景として使用するイメージの縦横比を保持する</span><span class="sxs-lookup"><span data-stu-id="f02da-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [<span data-ttu-id="f02da-119">TileBrush の水平方向および垂直方向の配置を設定する</span><span class="sxs-lookup"><span data-stu-id="f02da-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [<span data-ttu-id="f02da-120">TileBrush のタイル サイズを設定する</span><span class="sxs-lookup"><span data-stu-id="f02da-120">Set the Tile Size for a TileBrush</span></span>](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="f02da-121">ブラシを変換する</span><span class="sxs-lookup"><span data-stu-id="f02da-121">Transform a Brush</span></span>](how-to-transform-a-brush.md)  
+ [<span data-ttu-id="f02da-122">グラデーションでシステム カラーを使用する</span><span class="sxs-lookup"><span data-stu-id="f02da-122">Use System Colors in a Gradient</span></span>](how-to-use-system-colors-in-a-gradient.md)  
   
-## <a name="reference"></a><span data-ttu-id="9b29b-123">参照</span><span class="sxs-lookup"><span data-stu-id="9b29b-123">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f02da-123">参照</span><span class="sxs-lookup"><span data-stu-id="f02da-123">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -50,7 +50,7 @@ ms.locfileid: "57373258"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="9b29b-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9b29b-124">Related Sections</span></span>  
- [<span data-ttu-id="9b29b-125">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="9b29b-125">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="f02da-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="f02da-124">Related Sections</span></span>  
+ [<span data-ttu-id="f02da-125">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="f02da-125">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="9b29b-126">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="9b29b-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="f02da-126">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="f02da-126">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

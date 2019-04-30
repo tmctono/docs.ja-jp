@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: a3e13659-2efd-457b-ab54-c8fc0bd89f67
 author: BrucePerlerMS
 ms.openlocfilehash: 4baa8bb22afa99d787cf970942219144f41e0ebc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940557"
 ---
-# <a name="getting-started-with-wif"></a><span data-ttu-id="f4600-102">WIF の概要</span><span class="sxs-lookup"><span data-stu-id="f4600-102">Getting Started With WIF</span></span>
--   [<span data-ttu-id="f4600-103">クレーム対応の ASP.NET Web アプリケーションを初めて構築する</span><span class="sxs-lookup"><span data-stu-id="f4600-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+# <a name="getting-started-with-wif"></a><span data-ttu-id="d5769-102">WIF の概要</span><span class="sxs-lookup"><span data-stu-id="d5769-102">Getting Started With WIF</span></span>
+- [<span data-ttu-id="d5769-103">クレーム対応の ASP.NET Web アプリケーションを初めて構築する</span><span class="sxs-lookup"><span data-stu-id="d5769-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [<span data-ttu-id="f4600-104">クレーム対応の WCF サービスを初めて構築する</span><span class="sxs-lookup"><span data-stu-id="f4600-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+- [<span data-ttu-id="d5769-104">クレーム対応の WCF サービスを初めて構築する</span><span class="sxs-lookup"><span data-stu-id="d5769-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f4600-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4600-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5769-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5769-105">See also</span></span>
 
-- [<span data-ttu-id="f4600-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="f4600-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+- [<span data-ttu-id="d5769-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="d5769-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)

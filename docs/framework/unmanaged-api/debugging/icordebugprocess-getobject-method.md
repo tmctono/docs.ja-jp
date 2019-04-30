@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987728"
 ---
-# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="2b057-102">ICorDebugProcess::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="2b057-102">ICorDebugProcess::GetObject Method</span></span>
-<span data-ttu-id="2b057-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="2b057-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="24986-102">ICorDebugProcess::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="24986-102">ICorDebugProcess::GetObject Method</span></span>
+<span data-ttu-id="24986-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="24986-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b057-104">構文</span><span class="sxs-lookup"><span data-stu-id="2b057-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24986-104">構文</span><span class="sxs-lookup"><span data-stu-id="24986-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject(  

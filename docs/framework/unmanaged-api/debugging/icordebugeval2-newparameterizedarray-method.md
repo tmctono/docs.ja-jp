@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988990"
 ---
-# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="90d04-102">ICorDebugEval2::NewParameterizedArray メソッド</span><span class="sxs-lookup"><span data-stu-id="90d04-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
-<span data-ttu-id="90d04-103">指定した要素型とディメンションの新しい配列を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="90d04-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="069e4-102">ICorDebugEval2::NewParameterizedArray メソッド</span><span class="sxs-lookup"><span data-stu-id="069e4-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
+<span data-ttu-id="069e4-103">指定した要素型とディメンションの新しい配列を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="069e4-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90d04-104">構文</span><span class="sxs-lookup"><span data-stu-id="90d04-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="069e4-104">構文</span><span class="sxs-lookup"><span data-stu-id="069e4-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedArray(  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="90d04-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="90d04-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="069e4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="069e4-105">Parameters</span></span>  
  `pElementType`  
- <span data-ttu-id="90d04-106">[in]配列に格納されている要素の型を表す ICorDebugType オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="90d04-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
+ <span data-ttu-id="069e4-106">[in]配列に格納されている要素の型を表す ICorDebugType オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="069e4-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
   
  `rank`  
- <span data-ttu-id="90d04-107">[in]配列の次元の数。</span><span class="sxs-lookup"><span data-stu-id="90d04-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="90d04-108">.NET framework version 2.0 では、この値は 1 にある必要があります。</span><span class="sxs-lookup"><span data-stu-id="90d04-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="069e4-107">[in]配列の次元の数。</span><span class="sxs-lookup"><span data-stu-id="069e4-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="069e4-108">.NET framework version 2.0 では、この値は 1 にある必要があります。</span><span class="sxs-lookup"><span data-stu-id="069e4-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="90d04-109">[in]配列の各次元のバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="90d04-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="069e4-109">[in]配列の各次元のバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="069e4-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="90d04-110">[in] オプション。</span><span class="sxs-lookup"><span data-stu-id="90d04-110">[in] Optional.</span></span> <span data-ttu-id="90d04-111">配列の各次元の下限値です。</span><span class="sxs-lookup"><span data-stu-id="90d04-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="90d04-112">この値を省略すると、各ディメンションの下限を 0 が使われます。</span><span class="sxs-lookup"><span data-stu-id="90d04-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="069e4-110">[in] オプション。</span><span class="sxs-lookup"><span data-stu-id="069e4-110">[in] Optional.</span></span> <span data-ttu-id="069e4-111">配列の各次元の下限値です。</span><span class="sxs-lookup"><span data-stu-id="069e4-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="069e4-112">この値を省略すると、各ディメンションの下限を 0 が使われます。</span><span class="sxs-lookup"><span data-stu-id="069e4-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="90d04-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="90d04-113">Remarks</span></span>  
- <span data-ttu-id="90d04-114">配列の要素には、ジェネリック型のインスタンスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="90d04-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="90d04-115">配列が常に、スレッドが現在実行されているアプリケーション ドメインで作成されます。</span><span class="sxs-lookup"><span data-stu-id="90d04-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="90d04-116">.NET Framework 2.0 の値で`rank`1 である必要があります。</span><span class="sxs-lookup"><span data-stu-id="90d04-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="069e4-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="069e4-113">Remarks</span></span>  
+ <span data-ttu-id="069e4-114">配列の要素には、ジェネリック型のインスタンスを使用できます。</span><span class="sxs-lookup"><span data-stu-id="069e4-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="069e4-115">配列が常に、スレッドが現在実行されているアプリケーション ドメインで作成されます。</span><span class="sxs-lookup"><span data-stu-id="069e4-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="069e4-116">.NET Framework 2.0 の値で`rank`1 である必要があります。</span><span class="sxs-lookup"><span data-stu-id="069e4-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90d04-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="90d04-117">Requirements</span></span>  
- <span data-ttu-id="90d04-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="90d04-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="069e4-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="069e4-117">Requirements</span></span>  
+ <span data-ttu-id="069e4-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="069e4-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="90d04-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90d04-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="069e4-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="069e4-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="90d04-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="90d04-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="069e4-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="069e4-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="90d04-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90d04-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="069e4-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="069e4-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

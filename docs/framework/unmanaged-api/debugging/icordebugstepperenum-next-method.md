@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987403"
 ---
-# <a name="icordebugstepperenumnext-method"></a><span data-ttu-id="f17ca-102">ICorDebugStepperEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="f17ca-102">ICorDebugStepperEnum::Next Method</span></span>
-<span data-ttu-id="f17ca-103">現在の位置から始まり、列挙体から ICorDebugStepper インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="f17ca-103">Gets the specified number of ICorDebugStepper instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugstepperenumnext-method"></a><span data-ttu-id="354aa-102">ICorDebugStepperEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="354aa-102">ICorDebugStepperEnum::Next Method</span></span>
+<span data-ttu-id="354aa-103">現在の位置から始まり、列挙体から ICorDebugStepper インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="354aa-103">Gets the specified number of ICorDebugStepper instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f17ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="f17ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="354aa-104">構文</span><span class="sxs-lookup"><span data-stu-id="354aa-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -38,21 +38,21 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f17ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f17ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="354aa-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="354aa-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="f17ca-106">[in]数`ICorDebugStepper`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="f17ca-106">[in] The number of `ICorDebugStepper` instances to be retrieved.</span></span>  
+ <span data-ttu-id="354aa-106">[in]数`ICorDebugStepper`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="354aa-106">[in] The number of `ICorDebugStepper` instances to be retrieved.</span></span>  
   
  `steppers`  
- <span data-ttu-id="f17ca-107">[out]それぞれが指すポインターの配列、`ICorDebugStepper`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f17ca-107">[out] An array of pointers, each of which points to an `ICorDebugStepper` object.</span></span>  
+ <span data-ttu-id="354aa-107">[out]それぞれが指すポインターの配列、`ICorDebugStepper`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="354aa-107">[out] An array of pointers, each of which points to an `ICorDebugStepper` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="f17ca-108">[out]数へのポインター`ICorDebugStepper`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="f17ca-108">[out] Pointer to the number of `ICorDebugStepper` instances actually returned.</span></span> <span data-ttu-id="f17ca-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="f17ca-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="354aa-108">[out]数へのポインター`ICorDebugStepper`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="354aa-108">[out] Pointer to the number of `ICorDebugStepper` instances actually returned.</span></span> <span data-ttu-id="354aa-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="354aa-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f17ca-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="f17ca-110">Requirements</span></span>  
- <span data-ttu-id="f17ca-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f17ca-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="354aa-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="354aa-110">Requirements</span></span>  
+ <span data-ttu-id="354aa-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="354aa-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f17ca-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f17ca-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="354aa-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="354aa-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f17ca-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f17ca-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="354aa-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="354aa-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f17ca-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f17ca-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="354aa-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="354aa-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

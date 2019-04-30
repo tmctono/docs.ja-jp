@@ -1,1 +1,9 @@
-<span data-ttu-id="fe41c-101">Microsoft Word</span><span class="sxs-lookup"><span data-stu-id="fe41c-101">Microsoft Word</span></span>
+---
+ms.openlocfilehash: 1549499155dcad76ee4cf933519cd8cacaf632b7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775375"
+---
+<span data-ttu-id="4634f-101">Microsoft Word</span><span class="sxs-lookup"><span data-stu-id="4634f-101">Microsoft Word</span></span>

@@ -17,35 +17,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987416"
 ---
-# <a name="icordebugstepper2-interface"></a><span data-ttu-id="4a477-102">ICorDebugStepper2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a477-102">ICorDebugStepper2 Interface</span></span>
-<span data-ttu-id="4a477-103">だけマイ コード (のみ JMC) デバッグのサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="4a477-103">Provides support for just my code (JMC) debugging.</span></span>  
+# <a name="icordebugstepper2-interface"></a><span data-ttu-id="18294-102">ICorDebugStepper2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="18294-102">ICorDebugStepper2 Interface</span></span>
+<span data-ttu-id="18294-103">だけマイ コード (のみ JMC) デバッグのサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="18294-103">Provides support for just my code (JMC) debugging.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4a477-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="4a477-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="18294-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="18294-104">Methods</span></span>  
   
-|<span data-ttu-id="4a477-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="4a477-105">Method</span></span>|<span data-ttu-id="4a477-106">説明</span><span class="sxs-lookup"><span data-stu-id="4a477-106">Description</span></span>|  
+|<span data-ttu-id="18294-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="18294-105">Method</span></span>|<span data-ttu-id="18294-106">説明</span><span class="sxs-lookup"><span data-stu-id="18294-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4a477-107">SetJMC メソッド</span><span class="sxs-lookup"><span data-stu-id="4a477-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="4a477-108">この ICorDebugStepper のステップは、アプリケーションの開発者が作成したコードからのみかどうかを指定する値を設定します。</span><span class="sxs-lookup"><span data-stu-id="4a477-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
+|[<span data-ttu-id="18294-107">SetJMC メソッド</span><span class="sxs-lookup"><span data-stu-id="18294-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="18294-108">この ICorDebugStepper のステップは、アプリケーションの開発者が作成したコードからのみかどうかを指定する値を設定します。</span><span class="sxs-lookup"><span data-stu-id="18294-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4a477-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="4a477-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18294-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="18294-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4a477-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="4a477-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="18294-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="18294-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a477-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="4a477-111">Requirements</span></span>  
- <span data-ttu-id="4a477-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a477-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18294-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="18294-111">Requirements</span></span>  
+ <span data-ttu-id="18294-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="18294-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4a477-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a477-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="18294-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="18294-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4a477-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a477-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18294-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18294-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4a477-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a477-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="18294-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18294-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a477-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a477-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18294-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="18294-116">See also</span></span>
 
-- [<span data-ttu-id="4a477-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a477-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="18294-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="18294-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

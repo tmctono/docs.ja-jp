@@ -8,33 +8,33 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: 5b66e60fa2d28528a9e60d20bb101bc2d19bec3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966999"
 ---
-# <a name="user-input-in-windows-forms"></a><span data-ttu-id="e5d5e-102">Windows フォームでのユーザー入力</span><span class="sxs-lookup"><span data-stu-id="e5d5e-102">User Input in Windows Forms</span></span>
-<span data-ttu-id="e5d5e-103">Windows フォームには、関連する Windows メッセージの処理中に発生するイベントに基づくユーザーの入力モデルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="e5d5e-104">特定のタスクを実行する方法を示すコード例を含む、マウスとキーボードのユーザー入力については、このセクションのトピックで説明します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
+# <a name="user-input-in-windows-forms"></a><span data-ttu-id="ba140-102">Windows フォームでのユーザー入力</span><span class="sxs-lookup"><span data-stu-id="ba140-102">User Input in Windows Forms</span></span>
+<span data-ttu-id="ba140-103">Windows フォームには、関連する Windows メッセージの処理中に発生するイベントに基づくユーザーの入力モデルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ba140-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="ba140-104">特定のタスクを実行する方法を示すコード例を含む、マウスとキーボードのユーザー入力については、このセクションのトピックで説明します。</span><span class="sxs-lookup"><span data-stu-id="ba140-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5d5e-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e5d5e-105">In This Section</span></span>  
- [<span data-ttu-id="e5d5e-106">Windows フォーム アプリケーションにおけるユーザー入力</span><span class="sxs-lookup"><span data-stu-id="e5d5e-106">User Input in a Windows Forms Application</span></span>](user-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="e5d5e-107">ユーザーの入力イベント、および Windows メッセージを処理するメソッドの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ba140-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ba140-105">In This Section</span></span>  
+ [<span data-ttu-id="ba140-106">Windows フォーム アプリケーションにおけるユーザー入力</span><span class="sxs-lookup"><span data-stu-id="ba140-106">User Input in a Windows Forms Application</span></span>](user-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="ba140-107">ユーザーの入力イベント、および Windows メッセージを処理するメソッドの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="ba140-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
   
- [<span data-ttu-id="e5d5e-108">Windows フォーム アプリケーションにおけるキーボード入力</span><span class="sxs-lookup"><span data-stu-id="e5d5e-108">Keyboard Input in a Windows Forms Application</span></span>](keyboard-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="e5d5e-109">キーボードのメッセージ処理、様々な種類のキー、およびキーボード イベントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
+ [<span data-ttu-id="ba140-108">Windows フォーム アプリケーションにおけるキーボード入力</span><span class="sxs-lookup"><span data-stu-id="ba140-108">Keyboard Input in a Windows Forms Application</span></span>](keyboard-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="ba140-109">キーボードのメッセージ処理、様々な種類のキー、およびキーボード イベントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ba140-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
   
- [<span data-ttu-id="e5d5e-110">Windows フォーム アプリケーションにおけるマウス入力</span><span class="sxs-lookup"><span data-stu-id="e5d5e-110">Mouse Input in a Windows Forms Application</span></span>](mouse-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="e5d5e-111">マウスのカーソルとマウスのキャプチャなど、マウス イベントやその他のマウスに関連する機能の情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
+ [<span data-ttu-id="ba140-110">Windows フォーム アプリケーションにおけるマウス入力</span><span class="sxs-lookup"><span data-stu-id="ba140-110">Mouse Input in a Windows Forms Application</span></span>](mouse-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="ba140-111">マウスのカーソルとマウスのキャプチャなど、マウス イベントやその他のマウスに関連する機能の情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="ba140-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
   
- [<span data-ttu-id="e5d5e-112">方法: マウスとキーボード イベントをコードでシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
- <span data-ttu-id="e5d5e-113">プログラムでマウスおよびキーボード入力をシミュレートするいくつかの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
+ [<span data-ttu-id="ba140-112">方法: マウスとキーボード イベントをコードでシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="ba140-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ <span data-ttu-id="ba140-113">プログラムでマウスおよびキーボード入力をシミュレートするいくつかの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="ba140-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
   
- [<span data-ttu-id="e5d5e-114">方法: Windows フォーム コントロールでユーザー入力イベントを処理します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](how-to-handle-user-input-events-in-windows-forms-controls.md)  
- <span data-ttu-id="e5d5e-115">ほとんどのユーザーの入力イベントを処理し、各イベントに関する情報をレポートするコード例を表示します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
+ [<span data-ttu-id="ba140-114">方法: Windows フォーム コントロールでユーザー入力イベントを処理します。</span><span class="sxs-lookup"><span data-stu-id="ba140-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ <span data-ttu-id="ba140-115">ほとんどのユーザーの入力イベントを処理し、各イベントに関する情報をレポートするコード例を表示します。</span><span class="sxs-lookup"><span data-stu-id="ba140-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
   
- [<span data-ttu-id="e5d5e-116">Windows フォームでのユーザー入力の検証</span><span class="sxs-lookup"><span data-stu-id="e5d5e-116">User Input Validation in Windows Forms</span></span>](user-input-validation-in-windows-forms.md)  
- <span data-ttu-id="e5d5e-117">Windows フォーム アプリケーションでユーザー入力を検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
+ [<span data-ttu-id="ba140-116">Windows フォームでのユーザー入力の検証</span><span class="sxs-lookup"><span data-stu-id="ba140-116">User Input Validation in Windows Forms</span></span>](user-input-validation-in-windows-forms.md)  
+ <span data-ttu-id="ba140-117">Windows フォーム アプリケーションでユーザー入力を検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ba140-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="e5d5e-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="e5d5e-118">Related Sections</span></span>  
- <span data-ttu-id="e5d5e-119">参照してください[Windows フォームでのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)です。</span><span class="sxs-lookup"><span data-stu-id="e5d5e-119">Also see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md).</span></span>
+## <a name="related-sections"></a><span data-ttu-id="ba140-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba140-118">Related Sections</span></span>  
+ <span data-ttu-id="ba140-119">参照してください[Windows フォームでのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)です。</span><span class="sxs-lookup"><span data-stu-id="ba140-119">Also see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md).</span></span>

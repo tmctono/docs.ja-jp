@@ -7,97 +7,97 @@ ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940505"
 ---
-# <a name="how-to-display-signed-in-status-using-wif"></a><span data-ttu-id="eb787-102">方法: WIF を使用してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="eb787-102">How To: Display Signed In Status Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="eb787-103">対象</span><span class="sxs-lookup"><span data-stu-id="eb787-103">Applies To</span></span>  
+# <a name="how-to-display-signed-in-status-using-wif"></a><span data-ttu-id="ed4ba-102">方法: WIF を使用してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="ed4ba-102">How To: Display Signed In Status Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="ed4ba-103">対象</span><span class="sxs-lookup"><span data-stu-id="ed4ba-103">Applies To</span></span>  
   
--   <span data-ttu-id="eb787-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span><span class="sxs-lookup"><span data-stu-id="eb787-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span></span>  
+- <span data-ttu-id="ed4ba-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span><span class="sxs-lookup"><span data-stu-id="ed4ba-104">Microsoft® Windows® Identity Foundation (WIF) 4.5</span></span>  
   
--   <span data-ttu-id="eb787-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="eb787-105">ASP.NET® Web Forms</span></span>  
+- <span data-ttu-id="ed4ba-105">ASP.NET® Web フォーム</span><span class="sxs-lookup"><span data-stu-id="ed4ba-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="eb787-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="eb787-106">Summary</span></span>  
- <span data-ttu-id="eb787-107">このトピックでは、WIF 対応 ASP.NET アプリケーションでサインイン状態を表示する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-107">This topic describes how to display the sign in status in a WIF-enabled ASP.NET application.</span></span> <span data-ttu-id="eb787-108">WIF には、アプリケーションでクレームが認識されるようにする機能、およびアプリケーション リソースの認証と承認を管理する機能があります。</span><span class="sxs-lookup"><span data-stu-id="eb787-108">WIF provides the mechanism for making your application claims-aware, and managing authentication and authorization for application resources.</span></span>  
+## <a name="summary"></a><span data-ttu-id="ed4ba-106">まとめ</span><span class="sxs-lookup"><span data-stu-id="ed4ba-106">Summary</span></span>  
+ <span data-ttu-id="ed4ba-107">このトピックでは、WIF 対応 ASP.NET アプリケーションでサインイン状態を表示する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-107">This topic describes how to display the sign in status in a WIF-enabled ASP.NET application.</span></span> <span data-ttu-id="ed4ba-108">WIF には、アプリケーションでクレームが認識されるようにする機能、およびアプリケーション リソースの認証と承認を管理する機能があります。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-108">WIF provides the mechanism for making your application claims-aware, and managing authentication and authorization for application resources.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="eb787-109">目次</span><span class="sxs-lookup"><span data-stu-id="eb787-109">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="ed4ba-109">目次</span><span class="sxs-lookup"><span data-stu-id="ed4ba-109">Contents</span></span>  
   
--   <span data-ttu-id="eb787-110">概要</span><span class="sxs-lookup"><span data-stu-id="eb787-110">Overview</span></span>  
+- <span data-ttu-id="ed4ba-110">概要</span><span class="sxs-lookup"><span data-stu-id="ed4ba-110">Overview</span></span>  
   
--   <span data-ttu-id="eb787-111">手順の要約</span><span class="sxs-lookup"><span data-stu-id="eb787-111">Summary of Steps</span></span>  
+- <span data-ttu-id="ed4ba-111">手順の要約</span><span class="sxs-lookup"><span data-stu-id="ed4ba-111">Summary of Steps</span></span>  
   
--   <span data-ttu-id="eb787-112">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="eb787-112">Step 1 – Install the Identity and Access Extension</span></span>  
+- <span data-ttu-id="ed4ba-112">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="ed4ba-112">Step 1 – Install the Identity and Access Extension</span></span>  
   
--   <span data-ttu-id="eb787-113">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="eb787-113">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+- <span data-ttu-id="ed4ba-113">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="ed4ba-113">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
   
--   <span data-ttu-id="eb787-114">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="eb787-114">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+- <span data-ttu-id="ed4ba-114">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="ed4ba-114">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
   
--   <span data-ttu-id="eb787-115">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="eb787-115">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+- <span data-ttu-id="ed4ba-115">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="ed4ba-115">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
   
--   <span data-ttu-id="eb787-116">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="eb787-116">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+- <span data-ttu-id="ed4ba-116">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="ed4ba-116">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="eb787-117">概要</span><span class="sxs-lookup"><span data-stu-id="eb787-117">Overview</span></span>  
- <span data-ttu-id="eb787-118">このトピックでは、WIF を使用して簡単なクレーム対応アプリケーションを作成する方法と、ユーザーがサインインしているかどうかを簡単に表示する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-118">This topic demonstrates how to create a simple claims-aware application using WIF and how to easily display whether a user is signed in or not.</span></span> <span data-ttu-id="eb787-119">次の手順では、Visual Studio の Identity and Access 拡張機能に含まれるローカル開発用 STS を使用します。</span><span class="sxs-lookup"><span data-stu-id="eb787-119">The following steps use the Local Development STS that is included with the Identity and Access Visual Studio Extension.</span></span> <span data-ttu-id="eb787-120">ローカル開発用 STS は、アプリケーションにクレームを統合する簡単な方法を提供する目的で、テストおよび開発環境向けに用意されたものです。</span><span class="sxs-lookup"><span data-stu-id="eb787-120">The Local Development STS is intended for a testing and development environment to provide a simple method of integrating claims into your application.</span></span> <span data-ttu-id="eb787-121">これは、実際の認証を行わず、資格情報も不要なため、稼動環境で使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="eb787-121">It should never be used in a production environment, as it does not perform real authentication and credentials are not required.</span></span> <span data-ttu-id="eb787-122">ただし、次の手順の命令型コードは、実際の認証を使用した運用環境で使用できるアプリケーションの場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="eb787-122">However, the imperative code in the following steps is the same for a production-ready application using real authentication.</span></span>  
+## <a name="overview"></a><span data-ttu-id="ed4ba-117">概要</span><span class="sxs-lookup"><span data-stu-id="ed4ba-117">Overview</span></span>  
+ <span data-ttu-id="ed4ba-118">このトピックでは、WIF を使用して簡単なクレーム対応アプリケーションを作成する方法と、ユーザーがサインインしているかどうかを簡単に表示する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-118">This topic demonstrates how to create a simple claims-aware application using WIF and how to easily display whether a user is signed in or not.</span></span> <span data-ttu-id="ed4ba-119">次の手順では、Visual Studio の Identity and Access 拡張機能に含まれるローカル開発用 STS を使用します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-119">The following steps use the Local Development STS that is included with the Identity and Access Visual Studio Extension.</span></span> <span data-ttu-id="ed4ba-120">ローカル開発用 STS は、アプリケーションにクレームを統合する簡単な方法を提供する目的で、テストおよび開発環境向けに用意されたものです。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-120">The Local Development STS is intended for a testing and development environment to provide a simple method of integrating claims into your application.</span></span> <span data-ttu-id="ed4ba-121">これは、実際の認証を行わず、資格情報も不要なため、稼動環境で使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-121">It should never be used in a production environment, as it does not perform real authentication and credentials are not required.</span></span> <span data-ttu-id="ed4ba-122">ただし、次の手順の命令型コードは、実際の認証を使用した運用環境で使用できるアプリケーションの場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-122">However, the imperative code in the following steps is the same for a production-ready application using real authentication.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="eb787-123">手順の要約</span><span class="sxs-lookup"><span data-stu-id="eb787-123">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="ed4ba-123">手順の要約</span><span class="sxs-lookup"><span data-stu-id="ed4ba-123">Summary of Steps</span></span>  
   
--   <span data-ttu-id="eb787-124">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="eb787-124">Step 1 – Install the Identity and Access Extension</span></span>  
+- <span data-ttu-id="ed4ba-124">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="ed4ba-124">Step 1 – Install the Identity and Access Extension</span></span>  
   
--   <span data-ttu-id="eb787-125">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="eb787-125">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+- <span data-ttu-id="ed4ba-125">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="ed4ba-125">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
   
--   <span data-ttu-id="eb787-126">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="eb787-126">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+- <span data-ttu-id="ed4ba-126">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="ed4ba-126">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
   
--   <span data-ttu-id="eb787-127">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="eb787-127">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+- <span data-ttu-id="ed4ba-127">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="ed4ba-127">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
   
--   <span data-ttu-id="eb787-128">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="eb787-128">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+- <span data-ttu-id="ed4ba-128">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="ed4ba-128">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
   
-## <a name="step-1--install-the-identity-and-access-extension"></a><span data-ttu-id="eb787-129">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="eb787-129">Step 1 – Install the Identity and Access Extension</span></span>  
- <span data-ttu-id="eb787-130">この手順では、Identity and Access 拡張機能を Visual Studio 2012 用に構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-130">This step describes how to configure the Identity and Access extension to Visual Studio 2012.</span></span> <span data-ttu-id="eb787-131">この拡張機能により、STS エンドポイントと通信するようにアプリケーションを構成するプロセスが自動化されます。</span><span class="sxs-lookup"><span data-stu-id="eb787-131">This extension automates the process of configuring your application to communicate with STS endpoints.</span></span>  
+## <a name="step-1--install-the-identity-and-access-extension"></a><span data-ttu-id="ed4ba-129">手順 1 – Identity and Access 拡張機能をインストールする</span><span class="sxs-lookup"><span data-stu-id="ed4ba-129">Step 1 – Install the Identity and Access Extension</span></span>  
+ <span data-ttu-id="ed4ba-130">この手順では、Identity and Access 拡張機能を Visual Studio 2012 用に構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-130">This step describes how to configure the Identity and Access extension to Visual Studio 2012.</span></span> <span data-ttu-id="ed4ba-131">この拡張機能により、STS エンドポイントと通信するようにアプリケーションを構成するプロセスが自動化されます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-131">This extension automates the process of configuring your application to communicate with STS endpoints.</span></span>  
   
-#### <a name="to-install-the-identity-and-access-extension"></a><span data-ttu-id="eb787-132">Identity and Access 拡張機能をインストールするには</span><span class="sxs-lookup"><span data-stu-id="eb787-132">To install the Identity and Access extension</span></span>  
+#### <a name="to-install-the-identity-and-access-extension"></a><span data-ttu-id="ed4ba-132">Identity and Access 拡張機能をインストールするには</span><span class="sxs-lookup"><span data-stu-id="ed4ba-132">To install the Identity and Access extension</span></span>  
   
-1. <span data-ttu-id="eb787-133">システム特権のあるモードで管理者として Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="eb787-133">Start Visual Studio in elevated mode as administrator.</span></span>  
+1. <span data-ttu-id="ed4ba-133">システム特権のあるモードで管理者として Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-133">Start Visual Studio in elevated mode as administrator.</span></span>  
   
-2. <span data-ttu-id="eb787-134">Visual Studio で、**[ツール]**、**[拡張機能マネージャー]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-134">In Visual Studio, click **Tools** and click **Extension Manager**.</span></span> <span data-ttu-id="eb787-135">**[拡張機能マネージャー]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="eb787-135">The **Extension Manager** window appears.</span></span>  
+2. <span data-ttu-id="ed4ba-134">Visual Studio で、**[ツール]**、**[拡張機能マネージャー]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-134">In Visual Studio, click **Tools** and click **Extension Manager**.</span></span> <span data-ttu-id="ed4ba-135">**[拡張機能マネージャー]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-135">The **Extension Manager** window appears.</span></span>  
   
-3. <span data-ttu-id="eb787-136">**拡張機能マネージャー**の左側のメニューで **[オンラインの拡張機能]** をクリックしてから、**[Visual Studio ギャラリー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="eb787-136">In **Extension Manager**, click **Online Extensions** from the left menu, then select **Visual Studio Gallery**.</span></span>  
+3. <span data-ttu-id="ed4ba-136">**拡張機能マネージャー**の左側のメニューで **[オンラインの拡張機能]** をクリックしてから、**[Visual Studio ギャラリー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-136">In **Extension Manager**, click **Online Extensions** from the left menu, then select **Visual Studio Gallery**.</span></span>  
   
-4. <span data-ttu-id="eb787-137">**拡張機能マネージャー**の右上隅で、*Identity and Access* を検索します。</span><span class="sxs-lookup"><span data-stu-id="eb787-137">In the top right corner of **Extension Manager**, search for *Identity and Access*.</span></span>  
+4. <span data-ttu-id="ed4ba-137">**拡張機能マネージャー**の右上隅で、*Identity and Access* を検索します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-137">In the top right corner of **Extension Manager**, search for *Identity and Access*.</span></span>  
   
-5. <span data-ttu-id="eb787-138">**Identity and Access** の項目が検索結果に表示されます。</span><span class="sxs-lookup"><span data-stu-id="eb787-138">The **Identity and Access** item will appear in the search results.</span></span> <span data-ttu-id="eb787-139">それをクリックしてから、**[ダウンロード]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-139">Click it, and then click **Download**.</span></span>  
+5. <span data-ttu-id="ed4ba-138">**Identity and Access** の項目が検索結果に表示されます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-138">The **Identity and Access** item will appear in the search results.</span></span> <span data-ttu-id="ed4ba-139">それをクリックしてから、**[ダウンロード]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-139">Click it, and then click **Download**.</span></span>  
   
-6. <span data-ttu-id="eb787-140">**[ダウンロードとインストール]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="eb787-140">The **Download and Install** dialog appears.</span></span> <span data-ttu-id="eb787-141">ライセンス条項に同意する場合は、**[インストール]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-141">If you agree with the license terms, click **Install**.</span></span>  
+6. <span data-ttu-id="ed4ba-140">**[ダウンロードとインストール]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-140">The **Download and Install** dialog appears.</span></span> <span data-ttu-id="ed4ba-141">ライセンス条項に同意する場合は、**[インストール]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-141">If you agree with the license terms, click **Install**.</span></span>  
   
-7. <span data-ttu-id="eb787-142">**Identity and Access** の拡張機能のインストールが終了したら、管理者モードで Visual Studio を再起動します。</span><span class="sxs-lookup"><span data-stu-id="eb787-142">When the **Identity and Access** extension has finished installing, restart Visual Studio in administrator mode.</span></span>  
+7. <span data-ttu-id="ed4ba-142">**Identity and Access** の拡張機能のインストールが終了したら、管理者モードで Visual Studio を再起動します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-142">When the **Identity and Access** extension has finished installing, restart Visual Studio in administrator mode.</span></span>  
   
-## <a name="step-2--create-a-relying-party-aspnet-application"></a><span data-ttu-id="eb787-143">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="eb787-143">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
- <span data-ttu-id="eb787-144">この手順では、WIF と統合する証明書利用者の ASP.NET Web フォーム アプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-144">This step describes how to create a relying party ASP.NET Web Forms application that will integrate with WIF.</span></span>  
+## <a name="step-2--create-a-relying-party-aspnet-application"></a><span data-ttu-id="ed4ba-143">手順 2 – 証明書利用者の ASP.NET アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="ed4ba-143">Step 2 – Create a Relying Party ASP.NET Application</span></span>  
+ <span data-ttu-id="ed4ba-144">この手順では、WIF と統合する証明書利用者の ASP.NET Web フォーム アプリケーションを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-144">This step describes how to create a relying party ASP.NET Web Forms application that will integrate with WIF.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="eb787-145">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="eb787-145">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="ed4ba-145">簡単な ASP.NET アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="ed4ba-145">To create a simple ASP.NET application</span></span>  
   
-1. <span data-ttu-id="eb787-146">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-146">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1. <span data-ttu-id="ed4ba-146">Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-146">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2. <span data-ttu-id="eb787-147">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-147">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2. <span data-ttu-id="ed4ba-147">**[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-147">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3. <span data-ttu-id="eb787-148">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="eb787-148">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3. <span data-ttu-id="ed4ba-148">**[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-148">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a><span data-ttu-id="eb787-149">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="eb787-149">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
- <span data-ttu-id="eb787-150">この手順では、アプリケーションでローカル開発用 STS を有効にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-150">This step describes how to enable Local Development STS in your application.</span></span> <span data-ttu-id="eb787-151">ローカル開発用 STS は、Visual Studio 用の Identity and Access 拡張機能を使用することによって有効になります。</span><span class="sxs-lookup"><span data-stu-id="eb787-151">Local Development STS is enabled by using the Identity and Access extension for Visual Studio.</span></span>  
+## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a><span data-ttu-id="ed4ba-149">手順 3 – ユーザー認証のためのローカル開発用 STS の有効化</span><span class="sxs-lookup"><span data-stu-id="ed4ba-149">Step 3 – Enable Local Development STS to Authenticate Users</span></span>  
+ <span data-ttu-id="ed4ba-150">この手順では、アプリケーションでローカル開発用 STS を有効にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-150">This step describes how to enable Local Development STS in your application.</span></span> <span data-ttu-id="ed4ba-151">ローカル開発用 STS は、Visual Studio 用の Identity and Access 拡張機能を使用することによって有効になります。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-151">Local Development STS is enabled by using the Identity and Access extension for Visual Studio.</span></span>  
   
-#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a><span data-ttu-id="eb787-152">ASP.NET アプリケーションでローカル開発用 STS を有効にするには</span><span class="sxs-lookup"><span data-stu-id="eb787-152">To enable Local Development STS in your ASP.NET application</span></span>  
+#### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a><span data-ttu-id="ed4ba-152">ASP.NET アプリケーションでローカル開発用 STS を有効にするには</span><span class="sxs-lookup"><span data-stu-id="ed4ba-152">To enable Local Development STS in your ASP.NET application</span></span>  
   
-1. <span data-ttu-id="eb787-153">Visual Studio の**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="eb787-153">In Visual Studio, right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
+1. <span data-ttu-id="ed4ba-153">Visual Studio の**ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-153">In Visual Studio, right-click the **TestApp** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-2. <span data-ttu-id="eb787-154">**[Identity and Access]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="eb787-154">The **Identity and Access** window appears.</span></span> <span data-ttu-id="eb787-155">**[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="eb787-155">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
+2. <span data-ttu-id="ed4ba-154">**[Identity and Access]** ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-154">The **Identity and Access** window appears.</span></span> <span data-ttu-id="ed4ba-155">**[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-155">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span>  
   
-## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a><span data-ttu-id="eb787-156">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="eb787-156">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
- <span data-ttu-id="eb787-157">この手順では、現在のユーザーがサインインしているかどうかを動的に表示するように ASP.NET アプリケーションを変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-157">This step describes how to modify your ASP.NET application to dynamically display whether the current user is signed in.</span></span> <span data-ttu-id="eb787-158">STS プロバイダーを構成すると、WIF は受信クレームを処理します。</span><span class="sxs-lookup"><span data-stu-id="eb787-158">Once your STS provider has been configured, WIF handles the incoming claims.</span></span> <span data-ttu-id="eb787-159">次に、認証の結果を表示するために、アプリケーション コードを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="eb787-159">Now you need to configure your application’s code to display the result of the authentication.</span></span>  
+## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a><span data-ttu-id="ed4ba-156">手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する</span><span class="sxs-lookup"><span data-stu-id="ed4ba-156">Step 4 – Modify Your ASP.NET Application to Display Sign In Status</span></span>  
+ <span data-ttu-id="ed4ba-157">この手順では、現在のユーザーがサインインしているかどうかを動的に表示するように ASP.NET アプリケーションを変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-157">This step describes how to modify your ASP.NET application to dynamically display whether the current user is signed in.</span></span> <span data-ttu-id="ed4ba-158">STS プロバイダーを構成すると、WIF は受信クレームを処理します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-158">Once your STS provider has been configured, WIF handles the incoming claims.</span></span> <span data-ttu-id="ed4ba-159">次に、認証の結果を表示するために、アプリケーション コードを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-159">Now you need to configure your application’s code to display the result of the authentication.</span></span>  
   
-#### <a name="to-display-sign-in-status"></a><span data-ttu-id="eb787-160">サインイン状態を表示するには</span><span class="sxs-lookup"><span data-stu-id="eb787-160">To display sign in status</span></span>  
+#### <a name="to-display-sign-in-status"></a><span data-ttu-id="ed4ba-160">サインイン状態を表示するには</span><span class="sxs-lookup"><span data-stu-id="ed4ba-160">To display sign in status</span></span>  
   
-1. <span data-ttu-id="eb787-161">Visual Studio で、**[TestApp]** プロジェクトの下にある **Default.aspx** ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="eb787-161">In Visual Studio, open the **Default.aspx** file under the **TestApp** project.</span></span>  
+1. <span data-ttu-id="ed4ba-161">Visual Studio で、**[TestApp]** プロジェクトの下にある **Default.aspx** ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-161">In Visual Studio, open the **Default.aspx** file under the **TestApp** project.</span></span>  
   
-2. <span data-ttu-id="eb787-162">**Default.aspx** ファイルの既存のマークアップを次のマークアップに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="eb787-162">Replace the existing markup in the **Default.aspx** file with the following markup:</span></span>  
+2. <span data-ttu-id="ed4ba-162">**Default.aspx** ファイルの既存のマークアップを次のマークアップに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-162">Replace the existing markup in the **Default.aspx** file with the following markup:</span></span>  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "59979850"
     </html>  
     ```  
   
-3. <span data-ttu-id="eb787-163">**Default.aspx** を保存してから、**Default.aspx.cs** という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="eb787-163">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
+3. <span data-ttu-id="ed4ba-163">**Default.aspx** を保存してから、**Default.aspx.cs** という名前の分離コード ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-163">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="eb787-164">**Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。</span><span class="sxs-lookup"><span data-stu-id="eb787-164">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="eb787-165">**Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。</span><span class="sxs-lookup"><span data-stu-id="eb787-165">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
+    >  <span data-ttu-id="ed4ba-164">**Default.aspx.cs** は、ソリューション エクスプローラーで **Default.aspx** の下に隠れていることがあります。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-164">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="ed4ba-165">**Default.aspx.cs** が表示されない場合は、**Default.aspx** の横の三角形をクリックして展開します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-165">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-4. <span data-ttu-id="eb787-166">**Default.aspx.cs** の既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="eb787-166">Replace the existing code in **Default.aspx.cs** with the following code:</span></span>  
+4. <span data-ttu-id="ed4ba-166">**Default.aspx.cs** の既存のコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-166">Replace the existing code in **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "59979850"
     }  
     ```  
   
-5. <span data-ttu-id="eb787-167">**Default.aspx.cs** を保存し、アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="eb787-167">Save **Default.aspx.cs**, and build the application.</span></span>  
+5. <span data-ttu-id="ed4ba-167">**Default.aspx.cs** を保存し、アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-167">Save **Default.aspx.cs**, and build the application.</span></span>  
   
-## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a><span data-ttu-id="eb787-168">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="eb787-168">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
- <span data-ttu-id="eb787-169">この手順では、WIF と ASP.NET アプリケーション間の統合をテストする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb787-169">This step describes how you can test the integration between WIF and your ASP.NET application.</span></span>  
+## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a><span data-ttu-id="ed4ba-168">手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト</span><span class="sxs-lookup"><span data-stu-id="ed4ba-168">Step 5 – Test the Integration Between WIF and Your ASP.NET Application</span></span>  
+ <span data-ttu-id="ed4ba-169">この手順では、WIF と ASP.NET アプリケーション間の統合をテストする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-169">This step describes how you can test the integration between WIF and your ASP.NET application.</span></span>  
   
-#### <a name="to-test-the-integration-between-wif-and-aspnet"></a><span data-ttu-id="eb787-170">WIF と ASP.NET 間の統合をテストするには</span><span class="sxs-lookup"><span data-stu-id="eb787-170">To test the integration between WIF and ASP.NET</span></span>  
+#### <a name="to-test-the-integration-between-wif-and-aspnet"></a><span data-ttu-id="ed4ba-170">WIF と ASP.NET 間の統合をテストするには</span><span class="sxs-lookup"><span data-stu-id="ed4ba-170">To test the integration between WIF and ASP.NET</span></span>  
   
-1. <span data-ttu-id="eb787-171">Visual Studio で **F5** キーを押して、アプリケーションのデバッグを開始します。</span><span class="sxs-lookup"><span data-stu-id="eb787-171">In Visual Studio, press **F5** to start debugging your application.</span></span> <span data-ttu-id="eb787-172">エラーがなければ、新しいブラウザー ウィンドウが開きます。</span><span class="sxs-lookup"><span data-stu-id="eb787-172">If no errors are found, a new browser window will open.</span></span>  
+1. <span data-ttu-id="ed4ba-171">Visual Studio で **F5** キーを押して、アプリケーションのデバッグを開始します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-171">In Visual Studio, press **F5** to start debugging your application.</span></span> <span data-ttu-id="ed4ba-172">エラーがなければ、新しいブラウザー ウィンドウが開きます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-172">If no errors are found, a new browser window will open.</span></span>  
   
-2. <span data-ttu-id="eb787-173">ブラウザーが STS に自動的に要求をリダイレクトし、Default.aspx ページが開きます。</span><span class="sxs-lookup"><span data-stu-id="eb787-173">You may notice that the browser silently redirects your request to the STS, and then opens the Default.aspx page.</span></span> <span data-ttu-id="eb787-174">WIF が正しく構成されている場合は、次のテキストを表示するサイトが表示されます。**"You are signed"** します。</span><span class="sxs-lookup"><span data-stu-id="eb787-174">If WIF is properly configured, you should see the site display the following text: **"You are signed in"**.</span></span>
+2. <span data-ttu-id="ed4ba-173">ブラウザーが STS に自動的に要求をリダイレクトし、Default.aspx ページが開きます。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-173">You may notice that the browser silently redirects your request to the STS, and then opens the Default.aspx page.</span></span> <span data-ttu-id="ed4ba-174">WIF が正しく構成されている場合は、次のテキストを表示するサイトが表示されます。**"You are signed"** します。</span><span class="sxs-lookup"><span data-stu-id="ed4ba-174">If WIF is properly configured, you should see the site display the following text: **"You are signed in"**.</span></span>

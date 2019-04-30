@@ -10,27 +10,27 @@ helpviewer_keywords:
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
 ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010229"
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="af0be-102">ビットマップ効果</span><span class="sxs-lookup"><span data-stu-id="af0be-102">Bitmap Effects</span></span>
-<span data-ttu-id="af0be-103">このセクションのトピックを使用してビットマップ イメージに視覚効果を適用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="af0be-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="0d2c1-102">ビットマップ効果</span><span class="sxs-lookup"><span data-stu-id="0d2c1-102">Bitmap Effects</span></span>
+<span data-ttu-id="0d2c1-103">このセクションのトピックを使用してビットマップ イメージに視覚効果を適用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="0d2c1-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="af0be-104">[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]以降、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは廃止されています。</span><span class="sxs-lookup"><span data-stu-id="af0be-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="af0be-105">使用しようとする場合、<xref:System.Windows.Media.Effects.BitmapEffect>クラス、廃止例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="af0be-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="af0be-106">旧式でない代わりに、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは、<xref:System.Windows.Media.Effects.Effect>クラス。</span><span class="sxs-lookup"><span data-stu-id="af0be-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="af0be-107">ほとんどの場合、<xref:System.Windows.Media.Effects.Effect>クラスが大幅に高速です。</span><span class="sxs-lookup"><span data-stu-id="af0be-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="0d2c1-104">[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]以降、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは廃止されています。</span><span class="sxs-lookup"><span data-stu-id="0d2c1-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="0d2c1-105">使用しようとする場合、<xref:System.Windows.Media.Effects.BitmapEffect>クラス、廃止例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="0d2c1-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="0d2c1-106">旧式でない代わりに、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは、<xref:System.Windows.Media.Effects.Effect>クラス。</span><span class="sxs-lookup"><span data-stu-id="0d2c1-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="0d2c1-107">ほとんどの場合、<xref:System.Windows.Media.Effects.Effect>クラスが大幅に高速です。</span><span class="sxs-lookup"><span data-stu-id="0d2c1-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="af0be-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="af0be-108">In This Section</span></span>  
- [<span data-ttu-id="af0be-109">ビットマップ効果の概要</span><span class="sxs-lookup"><span data-stu-id="af0be-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0d2c1-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="0d2c1-108">In This Section</span></span>  
+ [<span data-ttu-id="0d2c1-109">ビットマップ効果の概要</span><span class="sxs-lookup"><span data-stu-id="0d2c1-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="af0be-110">参照</span><span class="sxs-lookup"><span data-stu-id="af0be-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0d2c1-110">参照</span><span class="sxs-lookup"><span data-stu-id="0d2c1-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="af0be-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="af0be-111">Related Sections</span></span>  
- [<span data-ttu-id="af0be-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="af0be-112">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="0d2c1-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="0d2c1-111">Related Sections</span></span>  
+ [<span data-ttu-id="0d2c1-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="0d2c1-112">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="af0be-113">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="af0be-113">Imaging Overview</span></span>](imaging-overview.md)
+ [<span data-ttu-id="0d2c1-113">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="0d2c1-113">Imaging Overview</span></span>](imaging-overview.md)

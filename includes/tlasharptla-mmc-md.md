@@ -1,1 +1,9 @@
-<span data-ttu-id="4f4c5-101">Microsoft 管理コンソール (MMC)</span><span class="sxs-lookup"><span data-stu-id="4f4c5-101">Microsoft Management Console (MMC)</span></span>
+---
+ms.openlocfilehash: 362671715713b17bf9870d7ba10b54784bdfa88c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981435"
+---
+<span data-ttu-id="7564d-101">Microsoft 管理コンソール (MMC)</span><span class="sxs-lookup"><span data-stu-id="7564d-101">Microsoft Management Console (MMC)</span></span>

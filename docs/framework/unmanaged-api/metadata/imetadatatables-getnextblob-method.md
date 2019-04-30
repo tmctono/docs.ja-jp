@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9b8a91a2c1ef9b68dcfc293a870ce3e9b9499a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946807"
 ---
-# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="b62f9-102">IMetaDataTables::GetNextBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="b62f9-102">IMetaDataTables::GetNextBlob Method</span></span>
-<span data-ttu-id="b62f9-103">テーブル内には、次のバイナリ ラージ オブジェクト (BLOB) のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="b62f9-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
+# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="cec6d-102">IMetaDataTables::GetNextBlob メソッド</span><span class="sxs-lookup"><span data-stu-id="cec6d-102">IMetaDataTables::GetNextBlob Method</span></span>
+<span data-ttu-id="cec6d-103">テーブル内には、次のバイナリ ラージ オブジェクト (BLOB) のインデックスを取得します。</span><span class="sxs-lookup"><span data-stu-id="cec6d-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b62f9-104">構文</span><span class="sxs-lookup"><span data-stu-id="b62f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cec6d-104">構文</span><span class="sxs-lookup"><span data-stu-id="cec6d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextBlob (  
@@ -36,23 +36,23 @@ HRESULT GetNextBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b62f9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b62f9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cec6d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cec6d-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="b62f9-106">[in]Blob の列から返されるインデックス。</span><span class="sxs-lookup"><span data-stu-id="b62f9-106">[in] The index, as returned from a column of BLOBs.</span></span>  
+ <span data-ttu-id="cec6d-106">[in]Blob の列から返されるインデックス。</span><span class="sxs-lookup"><span data-stu-id="cec6d-106">[in] The index, as returned from a column of BLOBs.</span></span>  
   
  `pNext`  
- <span data-ttu-id="b62f9-107">[out]次の BLOB のインデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b62f9-107">[out] A pointer to the index of the next BLOB.</span></span>  
+ <span data-ttu-id="cec6d-107">[out]次の BLOB のインデックスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cec6d-107">[out] A pointer to the index of the next BLOB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b62f9-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="b62f9-108">Requirements</span></span>  
- <span data-ttu-id="b62f9-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b62f9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cec6d-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="cec6d-108">Requirements</span></span>  
+ <span data-ttu-id="cec6d-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cec6d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b62f9-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b62f9-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cec6d-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cec6d-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b62f9-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="b62f9-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cec6d-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="cec6d-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b62f9-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b62f9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cec6d-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cec6d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b62f9-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b62f9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cec6d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="cec6d-113">See also</span></span>
 
-- [<span data-ttu-id="b62f9-114">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b62f9-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="b62f9-115">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b62f9-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="cec6d-114">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cec6d-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="cec6d-115">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cec6d-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981891"
 ---
-# <a name="resources-wpf"></a><span data-ttu-id="dbb91-102">リソース (WPF)</span><span class="sxs-lookup"><span data-stu-id="dbb91-102">Resources (WPF)</span></span>
-<span data-ttu-id="dbb91-103">リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="dbb91-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="dbb91-104">WPF では、さまざまな種類のリソースをサポートします。</span><span class="sxs-lookup"><span data-stu-id="dbb91-104">WPF supports different types of resources.</span></span> <span data-ttu-id="dbb91-105">これらのリソースは、主に 2 種類のリソースです。XAML のリソースとリソース データ ファイル。</span><span class="sxs-lookup"><span data-stu-id="dbb91-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="dbb91-106">XAML リソースの例には、ブラシ、スタイルが含まれます。</span><span class="sxs-lookup"><span data-stu-id="dbb91-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="dbb91-107">リソース データ ファイルは、アプリケーションに必要なデータの非実行可能ファイルです。</span><span class="sxs-lookup"><span data-stu-id="dbb91-107">Resource data files are non-executable data files that an application needs.</span></span>  
+# <a name="resources-wpf"></a><span data-ttu-id="03e97-102">リソース (WPF)</span><span class="sxs-lookup"><span data-stu-id="03e97-102">Resources (WPF)</span></span>
+<span data-ttu-id="03e97-103">リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="03e97-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="03e97-104">WPF では、さまざまな種類のリソースをサポートします。</span><span class="sxs-lookup"><span data-stu-id="03e97-104">WPF supports different types of resources.</span></span> <span data-ttu-id="03e97-105">これらのリソースは、主に 2 種類のリソースです。XAML のリソースとリソース データ ファイル。</span><span class="sxs-lookup"><span data-stu-id="03e97-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="03e97-106">XAML リソースの例には、ブラシ、スタイルが含まれます。</span><span class="sxs-lookup"><span data-stu-id="03e97-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="03e97-107">リソース データ ファイルは、アプリケーションに必要なデータの非実行可能ファイルです。</span><span class="sxs-lookup"><span data-stu-id="03e97-107">Resource data files are non-executable data files that an application needs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dbb91-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="dbb91-108">In This Section</span></span>  
- [<span data-ttu-id="dbb91-109">XAML リソース</span><span class="sxs-lookup"><span data-stu-id="dbb91-109">XAML Resources</span></span>](xaml-resources.md)  
- [<span data-ttu-id="dbb91-110">WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル</span><span class="sxs-lookup"><span data-stu-id="dbb91-110">WPF Application Resource, Content, and Data Files</span></span>](../app-development/wpf-application-resource-content-and-data-files.md)  
- [<span data-ttu-id="dbb91-111">WPF におけるパッケージの URI</span><span class="sxs-lookup"><span data-stu-id="dbb91-111">Pack URIs in WPF</span></span>](../app-development/pack-uris-in-wpf.md)  
+## <a name="in-this-section"></a><span data-ttu-id="03e97-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="03e97-108">In This Section</span></span>  
+ [<span data-ttu-id="03e97-109">XAML リソース</span><span class="sxs-lookup"><span data-stu-id="03e97-109">XAML Resources</span></span>](xaml-resources.md)  
+ [<span data-ttu-id="03e97-110">WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル</span><span class="sxs-lookup"><span data-stu-id="03e97-110">WPF Application Resource, Content, and Data Files</span></span>](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="03e97-111">WPF におけるパッケージの URI</span><span class="sxs-lookup"><span data-stu-id="03e97-111">Pack URIs in WPF</span></span>](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a><span data-ttu-id="dbb91-112">参照</span><span class="sxs-lookup"><span data-stu-id="dbb91-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="03e97-112">参照</span><span class="sxs-lookup"><span data-stu-id="03e97-112">Reference</span></span>  
  <xref:System.Windows.ResourceDictionary>  
   
- [<span data-ttu-id="dbb91-113">StaticResource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="dbb91-113">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+ [<span data-ttu-id="03e97-113">StaticResource のマークアップ拡張機能</span><span class="sxs-lookup"><span data-stu-id="03e97-113">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
   
- [<span data-ttu-id="dbb91-114">DynamicResource マークアップ拡張</span><span class="sxs-lookup"><span data-stu-id="dbb91-114">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+ [<span data-ttu-id="03e97-114">DynamicResource マークアップ拡張</span><span class="sxs-lookup"><span data-stu-id="03e97-114">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
   
- [<span data-ttu-id="dbb91-115">x:Key ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="dbb91-115">x:Key Directive</span></span>](../../xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="03e97-115">x:Key ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="03e97-115">x:Key Directive</span></span>](../../xaml-services/x-key-directive.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="dbb91-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="dbb91-116">Related Sections</span></span>  
- [<span data-ttu-id="dbb91-117">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="dbb91-117">XAML in WPF</span></span>](xaml-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="03e97-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="03e97-116">Related Sections</span></span>  
+ [<span data-ttu-id="03e97-117">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="03e97-117">XAML in WPF</span></span>](xaml-in-wpf.md)

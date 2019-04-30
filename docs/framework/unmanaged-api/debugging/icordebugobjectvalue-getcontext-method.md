@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c741e58eb0389211fc6d8784d2c5bc66efbb773
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942338"
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="9a6ab-102">ICorDebugObjectValue::GetContext メソッド</span><span class="sxs-lookup"><span data-stu-id="9a6ab-102">ICorDebugObjectValue::GetContext Method</span></span>
-<span data-ttu-id="9a6ab-103">`GetContext` このバージョンの .NET Framework で実装されていません。</span><span class="sxs-lookup"><span data-stu-id="9a6ab-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="7e775-102">ICorDebugObjectValue::GetContext メソッド</span><span class="sxs-lookup"><span data-stu-id="7e775-102">ICorDebugObjectValue::GetContext Method</span></span>
+<span data-ttu-id="7e775-103">`GetContext` このバージョンの .NET Framework で実装されていません。</span><span class="sxs-lookup"><span data-stu-id="7e775-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a6ab-104">構文</span><span class="sxs-lookup"><span data-stu-id="9a6ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e775-104">構文</span><span class="sxs-lookup"><span data-stu-id="7e775-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
@@ -35,7 +35,7 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9a6ab-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a6ab-105">Requirements</span></span>  
- <span data-ttu-id="9a6ab-106">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a6ab-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e775-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="7e775-105">Requirements</span></span>  
+ <span data-ttu-id="7e775-106">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e775-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a6ab-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a6ab-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e775-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="7e775-107">See also</span></span>

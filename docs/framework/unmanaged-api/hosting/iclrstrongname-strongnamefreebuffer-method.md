@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8e42f13d3d3ac0154cd1f8bbe9785e1e4ae16379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993084"
 ---
-# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="2e48d-102">ICLRStrongName::StrongNameFreeBuffer メソッド</span><span class="sxs-lookup"><span data-stu-id="2e48d-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
-<span data-ttu-id="2e48d-103">など、以前の厳密な名前のメソッド呼び出しで割り当てられたメモリを解放[iclrstrongname::strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [iclrstrongname::strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)、または[Iclrstrongname::strongnamesignaturegeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="2e48d-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
+# <a name="iclrstrongnamestrongnamefreebuffer-method"></a><span data-ttu-id="c09a7-102">ICLRStrongName::StrongNameFreeBuffer メソッド</span><span class="sxs-lookup"><span data-stu-id="c09a7-102">ICLRStrongName::StrongNameFreeBuffer Method</span></span>
+<span data-ttu-id="c09a7-103">など、以前の厳密な名前のメソッド呼び出しで割り当てられたメモリを解放[iclrstrongname::strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [iclrstrongname::strongnametokenfrompublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)、または[Iclrstrongname::strongnamesignaturegeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="c09a7-103">Frees memory that was allocated with a previous call to a strong name method such as [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [ICLRStrongName::StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), or [ICLRStrongName::StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e48d-104">構文</span><span class="sxs-lookup"><span data-stu-id="2e48d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c09a7-104">構文</span><span class="sxs-lookup"><span data-stu-id="c09a7-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameFreeBuffer (   
@@ -35,22 +35,22 @@ HRESULT StrongNameFreeBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e48d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2e48d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c09a7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c09a7-105">Parameters</span></span>  
  `pbMemory`  
- <span data-ttu-id="2e48d-106">[in]解放するメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2e48d-106">[in] A pointer to the memory to free.</span></span>  
+ <span data-ttu-id="c09a7-106">[in]解放するメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="c09a7-106">[in] A pointer to the memory to free.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2e48d-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="2e48d-107">Return Value</span></span>  
- <span data-ttu-id="2e48d-108">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="2e48d-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c09a7-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="c09a7-107">Return Value</span></span>  
+ <span data-ttu-id="c09a7-108">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="c09a7-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e48d-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="2e48d-109">Requirements</span></span>  
- <span data-ttu-id="2e48d-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e48d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c09a7-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="c09a7-109">Requirements</span></span>  
+ <span data-ttu-id="c09a7-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c09a7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e48d-111">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2e48d-111">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c09a7-111">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c09a7-111">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="2e48d-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="2e48d-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c09a7-112">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c09a7-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2e48d-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e48d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c09a7-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c09a7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e48d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e48d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c09a7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c09a7-114">See also</span></span>
 
-- [<span data-ttu-id="2e48d-115">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e48d-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="c09a7-115">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c09a7-115">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
