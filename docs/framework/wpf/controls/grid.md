@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
 ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054888"
 ---
-# <a name="grid"></a><span data-ttu-id="e2660-102">グリッド</span><span class="sxs-lookup"><span data-stu-id="e2660-102">Grid</span></span>
-<span data-ttu-id="e2660-103"><xref:System.Windows.Controls.Grid>要素を使用して、行と列の内容を正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="e2660-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="5456b-102">グリッド</span><span class="sxs-lookup"><span data-stu-id="5456b-102">Grid</span></span>
+<span data-ttu-id="5456b-103"><xref:System.Windows.Controls.Grid>要素を使用して、行と列の内容を正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="5456b-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e2660-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e2660-104">In This Section</span></span>  
- [<span data-ttu-id="e2660-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="e2660-105">How-to Topics</span></span>](grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5456b-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5456b-104">In This Section</span></span>  
+ [<span data-ttu-id="5456b-105">方法トピック</span><span class="sxs-lookup"><span data-stu-id="5456b-105">How-to Topics</span></span>](grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e2660-106">参照</span><span class="sxs-lookup"><span data-stu-id="e2660-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5456b-106">参照</span><span class="sxs-lookup"><span data-stu-id="5456b-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57352140"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="e2660-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2660-107">Related Sections</span></span>  
- [<span data-ttu-id="e2660-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="e2660-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="5456b-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="5456b-107">Related Sections</span></span>  
+ [<span data-ttu-id="5456b-108">レイアウト</span><span class="sxs-lookup"><span data-stu-id="5456b-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="e2660-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="e2660-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="5456b-109">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="5456b-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="e2660-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="e2660-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="5456b-110">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="5456b-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

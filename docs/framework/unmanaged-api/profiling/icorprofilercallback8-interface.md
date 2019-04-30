@@ -11,32 +11,32 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e536e61a8d812e442e1e54188c99d6a1d4586757
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049727"
 ---
-# <a name="icorprofilercallback8-interface"></a><span data-ttu-id="e1c93-102">ICorProfilerCallback8 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1c93-102">ICorProfilerCallback8 Interface</span></span>
-<span data-ttu-id="e1c93-103">[.NET Framework 4.7 以降のバージョンでサポートされます]</span><span class="sxs-lookup"><span data-stu-id="e1c93-103">[Supported in the .NET Framework 4.7 and later versions]</span></span>  
+# <a name="icorprofilercallback8-interface"></a><span data-ttu-id="6a67a-102">ICorProfilerCallback8 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6a67a-102">ICorProfilerCallback8 Interface</span></span>
+<span data-ttu-id="6a67a-103">[.NET Framework 4.7 以降のバージョンでサポートされます]</span><span class="sxs-lookup"><span data-stu-id="6a67a-103">[Supported in the .NET Framework 4.7 and later versions]</span></span>  
 
- <span data-ttu-id="e1c93-104">サブクラス[ICorProfilerCallback7](icorprofilercallback7-interface.md)動的メソッドの JIT コンパイルが開始して完了したことをプロファイラーに通知する、共通言語ランタイムで使用されるコールバック メソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="e1c93-104">A subclass of [ICorProfilerCallback7](icorprofilercallback7-interface.md) that provides callback methods used by the common language runtime to notify the profiler that JIT compilation of a dynamic method has started and finished.</span></span> 
+ <span data-ttu-id="6a67a-104">サブクラス[ICorProfilerCallback7](icorprofilercallback7-interface.md)動的メソッドの JIT コンパイルが開始して完了したことをプロファイラーに通知する、共通言語ランタイムで使用されるコールバック メソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="6a67a-104">A subclass of [ICorProfilerCallback7](icorprofilercallback7-interface.md) that provides callback methods used by the common language runtime to notify the profiler that JIT compilation of a dynamic method has started and finished.</span></span> 
   
-## <a name="methods"></a><span data-ttu-id="e1c93-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="e1c93-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6a67a-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6a67a-105">Methods</span></span>  
   
-|<span data-ttu-id="e1c93-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="e1c93-106">Method</span></span>|<span data-ttu-id="e1c93-107">説明</span><span class="sxs-lookup"><span data-stu-id="e1c93-107">Description</span></span>|  
+|<span data-ttu-id="6a67a-106">メソッド</span><span class="sxs-lookup"><span data-stu-id="6a67a-106">Method</span></span>|<span data-ttu-id="6a67a-107">説明</span><span class="sxs-lookup"><span data-stu-id="6a67a-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e1c93-108">DynamicMethodJITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="e1c93-108">DynamicMethodJITCompilationStarted Method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|<span data-ttu-id="e1c93-109">動的メソッドの JIT コンパイルが開始されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="e1c93-109">Notifies the profiler that JIT compilation of a dynamic method has started.</span></span>|  
-|[<span data-ttu-id="e1c93-110">DynamicMethodJITCompilationFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="e1c93-110">DynamicMethodJITCompilationFinished Method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|<span data-ttu-id="e1c93-111">動的メソッドの JIT コンパイルが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="e1c93-111">Notifies the profiler that JIT compilation of a dynamic method has finished.</span></span>|  
+|[<span data-ttu-id="6a67a-108">DynamicMethodJITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="6a67a-108">DynamicMethodJITCompilationStarted Method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|<span data-ttu-id="6a67a-109">動的メソッドの JIT コンパイルが開始されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="6a67a-109">Notifies the profiler that JIT compilation of a dynamic method has started.</span></span>|  
+|[<span data-ttu-id="6a67a-110">DynamicMethodJITCompilationFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="6a67a-110">DynamicMethodJITCompilationFinished Method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|<span data-ttu-id="6a67a-111">動的メソッドの JIT コンパイルが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="6a67a-111">Notifies the profiler that JIT compilation of a dynamic method has finished.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e1c93-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="e1c93-112">Requirements</span></span>  
- <span data-ttu-id="e1c93-113">**プラットフォーム:**[システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e1c93-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a67a-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="6a67a-112">Requirements</span></span>  
+ <span data-ttu-id="6a67a-113">**プラットフォーム:**[システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6a67a-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1c93-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e1c93-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6a67a-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a67a-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
-<span data-ttu-id="e1c93-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e1c93-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="6a67a-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6a67a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="e1c93-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="e1c93-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a67a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a67a-116">See also</span></span>
 
-- [<span data-ttu-id="e1c93-117">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1c93-117">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="e1c93-118">ICorProfilerCallback9 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1c93-118">ICorProfilerCallback9 Interface</span></span>](icorprofilercallback9-interface.md)
+- [<span data-ttu-id="6a67a-117">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="6a67a-117">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="6a67a-118">ICorProfilerCallback9 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6a67a-118">ICorProfilerCallback9 Interface</span></span>](icorprofilercallback9-interface.md)

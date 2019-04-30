@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
 ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013401"
 ---
-# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="7eb29-102">方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する</span><span class="sxs-lookup"><span data-stu-id="7eb29-102">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="7eb29-103">画像またはグラフィックは、データの行で表示できる値のいずれか。</span><span class="sxs-lookup"><span data-stu-id="7eb29-103">A picture or graphic is one of the values that you can display in a row of data.</span></span> <span data-ttu-id="7eb29-104">多くの場合、これらのグラフィックな従業員の写真や会社のロゴの形式になります。</span><span class="sxs-lookup"><span data-stu-id="7eb29-104">Frequently, these graphics take the form of an employee's photograph or a company logo.</span></span>  
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="ad154-102">方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する</span><span class="sxs-lookup"><span data-stu-id="ad154-102">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="ad154-103">画像またはグラフィックは、データの行で表示できる値のいずれか。</span><span class="sxs-lookup"><span data-stu-id="ad154-103">A picture or graphic is one of the values that you can display in a row of data.</span></span> <span data-ttu-id="ad154-104">多くの場合、これらのグラフィックな従業員の写真や会社のロゴの形式になります。</span><span class="sxs-lookup"><span data-stu-id="ad154-104">Frequently, these graphics take the form of an employee's photograph or a company logo.</span></span>  
   
- <span data-ttu-id="7eb29-105">内のデータを表示するときに画像を組み込むことは簡単、<xref:System.Windows.Forms.DataGridView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="7eb29-105">Incorporating pictures is simple when you display data within the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="7eb29-106"><xref:System.Windows.Forms.DataGridView>コントロールがネイティブでサポートされている任意のイメージ形式を処理、 <xref:System.Drawing.Image> OLE と同様に、クラス図の一部のデータベースで使用される形式。</span><span class="sxs-lookup"><span data-stu-id="7eb29-106">The <xref:System.Windows.Forms.DataGridView> control natively handles any image format supported by the <xref:System.Drawing.Image> class, as well as the OLE picture format used by some databases.</span></span>  
+ <span data-ttu-id="ad154-105">内のデータを表示するときに画像を組み込むことは簡単、<xref:System.Windows.Forms.DataGridView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ad154-105">Incorporating pictures is simple when you display data within the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="ad154-106"><xref:System.Windows.Forms.DataGridView>コントロールがネイティブでサポートされている任意のイメージ形式を処理、 <xref:System.Drawing.Image> OLE と同様に、クラス図の一部のデータベースで使用される形式。</span><span class="sxs-lookup"><span data-stu-id="ad154-106">The <xref:System.Windows.Forms.DataGridView> control natively handles any image format supported by the <xref:System.Drawing.Image> class, as well as the OLE picture format used by some databases.</span></span>  
   
- <span data-ttu-id="7eb29-107">場合、<xref:System.Windows.Forms.DataGridView>コントロールのデータ ソースのイメージの列がある、によって自動的に表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="7eb29-107">If the <xref:System.Windows.Forms.DataGridView> control's data source has a column of images, they will be displayed automatically by the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+ <span data-ttu-id="ad154-107">場合、<xref:System.Windows.Forms.DataGridView>コントロールのデータ ソースのイメージの列がある、によって自動的に表示されます、<xref:System.Windows.Forms.DataGridView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="ad154-107">If the <xref:System.Windows.Forms.DataGridView> control's data source has a column of images, they will be displayed automatically by the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- <span data-ttu-id="7eb29-108">次のコード例では、埋め込みリソースからアイコンを抽出し、image 列のすべてのセルに表示するためのビットマップに変換する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7eb29-108">The following code example demonstrates how to extract an icon from an embedded resource and convert it to a bitmap for display in every cell of an image column.</span></span> <span data-ttu-id="7eb29-109">対応するイメージとテキストのセルの値を置換する別の例では、次を参照してください。[方法。Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)します。</span><span class="sxs-lookup"><span data-stu-id="7eb29-109">For another example that replaces textual cell values with corresponding images, see [How to: Customize Data Formatting in the Windows Forms DataGridView Control](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="ad154-108">次のコード例では、埋め込みリソースからアイコンを抽出し、image 列のすべてのセルに表示するためのビットマップに変換する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="ad154-108">The following code example demonstrates how to extract an icon from an embedded resource and convert it to a bitmap for display in every cell of an image column.</span></span> <span data-ttu-id="ad154-109">対応するイメージとテキストのセルの値を置換する別の例では、次を参照してください。[方法。Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)します。</span><span class="sxs-lookup"><span data-stu-id="ad154-109">For another example that replaces textual cell values with corresponding images, see [How to: Customize Data Formatting in the Windows Forms DataGridView Control](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7eb29-110">例</span><span class="sxs-lookup"><span data-stu-id="7eb29-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ad154-110">例</span><span class="sxs-lookup"><span data-stu-id="ad154-110">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7eb29-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="7eb29-111">Compiling the Code</span></span>  
- <span data-ttu-id="7eb29-112">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="7eb29-112">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ad154-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="ad154-111">Compiling the Code</span></span>  
+ <span data-ttu-id="ad154-112">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="ad154-112">This example requires:</span></span>  
   
--   <span data-ttu-id="7eb29-113">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="7eb29-113">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="ad154-113">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="ad154-113">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="7eb29-114">という名前の埋め込まれたアイコン リソース`tree.ico`します。</span><span class="sxs-lookup"><span data-stu-id="7eb29-114">An embedded icon resource named `tree.ico`.</span></span>  
+- <span data-ttu-id="ad154-114">という名前の埋め込まれたアイコン リソース`tree.ico`します。</span><span class="sxs-lookup"><span data-stu-id="ad154-114">An embedded icon resource named `tree.ico`.</span></span>  
   
--   <span data-ttu-id="7eb29-115"><xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="7eb29-115">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Drawing?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="ad154-115"><xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="ad154-115">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Drawing?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7eb29-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7eb29-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad154-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ad154-116">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="7eb29-117">Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能</span><span class="sxs-lookup"><span data-stu-id="7eb29-117">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [<span data-ttu-id="7eb29-118">方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="7eb29-118">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="ad154-117">Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能</span><span class="sxs-lookup"><span data-stu-id="ad154-117">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="ad154-118">方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="ad154-118">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

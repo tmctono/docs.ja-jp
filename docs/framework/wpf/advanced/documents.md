@@ -7,26 +7,26 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052431"
 ---
-# <a name="documents"></a><span data-ttu-id="9619d-102">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="9619d-102">Documents</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="9619d-103">には、多彩なアプリケーション開発コンポーネントが用意されており、開発者は、こうしたコンポーネントを使って、高度なドキュメント機能を備えた読みやすいアプリケーションを構築できます。</span><span class="sxs-lookup"><span data-stu-id="9619d-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="9619d-104">また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、機能と品質の向上を実現するだけでなく、ドキュメントのパッケージ化、セキュリティ、および保存を対象としたシンプルな管理サービスも提供します。</span><span class="sxs-lookup"><span data-stu-id="9619d-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
+# <a name="documents"></a><span data-ttu-id="7af9b-102">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="7af9b-102">Documents</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7af9b-103">には、多彩なアプリケーション開発コンポーネントが用意されており、開発者は、こうしたコンポーネントを使って、高度なドキュメント機能を備えた読みやすいアプリケーションを構築できます。</span><span class="sxs-lookup"><span data-stu-id="7af9b-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="7af9b-104">また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、機能と品質の向上を実現するだけでなく、ドキュメントのパッケージ化、セキュリティ、および保存を対象としたシンプルな管理サービスも提供します。</span><span class="sxs-lookup"><span data-stu-id="7af9b-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9619d-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9619d-105">In This Section</span></span>  
- [<span data-ttu-id="9619d-106">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="9619d-106">Documents in WPF</span></span>](documents-in-wpf.md)  
- [<span data-ttu-id="9619d-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="9619d-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
- [<span data-ttu-id="9619d-108">コメント</span><span class="sxs-lookup"><span data-stu-id="9619d-108">Annotations</span></span>](annotations.md)  
- [<span data-ttu-id="9619d-109">フロー コンテンツ</span><span class="sxs-lookup"><span data-stu-id="9619d-109">Flow Content</span></span>](flow-content.md)  
- [<span data-ttu-id="9619d-110">タイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="9619d-110">Typography</span></span>](typography.md)  
- [<span data-ttu-id="9619d-111">印刷および印刷システムの管理</span><span class="sxs-lookup"><span data-stu-id="9619d-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7af9b-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7af9b-105">In This Section</span></span>  
+ [<span data-ttu-id="7af9b-106">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="7af9b-106">Documents in WPF</span></span>](documents-in-wpf.md)  
+ [<span data-ttu-id="7af9b-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="7af9b-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
+ [<span data-ttu-id="7af9b-108">コメント</span><span class="sxs-lookup"><span data-stu-id="7af9b-108">Annotations</span></span>](annotations.md)  
+ [<span data-ttu-id="7af9b-109">フロー コンテンツ</span><span class="sxs-lookup"><span data-stu-id="7af9b-109">Flow Content</span></span>](flow-content.md)  
+ [<span data-ttu-id="7af9b-110">タイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="7af9b-110">Typography</span></span>](typography.md)  
+ [<span data-ttu-id="7af9b-111">印刷および印刷システムの管理</span><span class="sxs-lookup"><span data-stu-id="7af9b-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9619d-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9619d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7af9b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="7af9b-112">See also</span></span>
 
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>
-- <span data-ttu-id="9619d-113">[isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9619d-113">[isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span></span>
+- <span data-ttu-id="7af9b-113">[isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="7af9b-113">[isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span></span>

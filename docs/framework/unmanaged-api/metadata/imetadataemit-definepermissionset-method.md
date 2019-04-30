@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33eadccf691b14289a46ff460f3cef8ae636b129
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043980"
 ---
-# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="bb705-102">IMetaDataEmit::DefinePermissionSet メソッド</span><span class="sxs-lookup"><span data-stu-id="bb705-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
-<span data-ttu-id="bb705-103">指定したメタデータ シグネチャを持つ設定アクセス許可の定義を作成し、そのアクセス許可セットの定義にトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="bb705-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
+# <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="03bd0-102">IMetaDataEmit::DefinePermissionSet メソッド</span><span class="sxs-lookup"><span data-stu-id="03bd0-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
+<span data-ttu-id="03bd0-103">指定したメタデータ シグネチャを持つ設定アクセス許可の定義を作成し、そのアクセス許可セットの定義にトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="03bd0-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb705-104">構文</span><span class="sxs-lookup"><span data-stu-id="bb705-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03bd0-104">構文</span><span class="sxs-lookup"><span data-stu-id="03bd0-104">Syntax</span></span>  
   
 ```  
 HRESULT DefinePermissionSet (  
@@ -39,32 +39,32 @@ HRESULT DefinePermissionSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bb705-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bb705-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03bd0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="03bd0-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="bb705-106">[in]装飾するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="bb705-106">[in] The object to be decorated.</span></span>  
+ <span data-ttu-id="03bd0-106">[in]装飾するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="03bd0-106">[in] The object to be decorated.</span></span>  
   
  `dwAction`  
- <span data-ttu-id="bb705-107">[in]A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)使用される宣言セキュリティの種類を指定する値。</span><span class="sxs-lookup"><span data-stu-id="bb705-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
+ <span data-ttu-id="03bd0-107">[in]A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)使用される宣言セキュリティの種類を指定する値。</span><span class="sxs-lookup"><span data-stu-id="03bd0-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
   
  `pvPermission`  
- <span data-ttu-id="bb705-108">[in]BLOB の権限です。</span><span class="sxs-lookup"><span data-stu-id="bb705-108">[in] The permission BLOB.</span></span>  
+ <span data-ttu-id="03bd0-108">[in]BLOB の権限です。</span><span class="sxs-lookup"><span data-stu-id="03bd0-108">[in] The permission BLOB.</span></span>  
   
  `cbPermission`  
- <span data-ttu-id="bb705-109">[in]サイズ (バイト単位) の`pvPermission`します。</span><span class="sxs-lookup"><span data-stu-id="bb705-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
+ <span data-ttu-id="03bd0-109">[in]サイズ (バイト単位) の`pvPermission`します。</span><span class="sxs-lookup"><span data-stu-id="03bd0-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
   
  `ppm`  
- <span data-ttu-id="bb705-110">[out]返されるアクセス許可のトークンです。</span><span class="sxs-lookup"><span data-stu-id="bb705-110">[out] The returned permission token.</span></span>  
+ <span data-ttu-id="03bd0-110">[out]返されるアクセス許可のトークンです。</span><span class="sxs-lookup"><span data-stu-id="03bd0-110">[out] The returned permission token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bb705-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="bb705-111">Requirements</span></span>  
- <span data-ttu-id="bb705-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bb705-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03bd0-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="03bd0-111">Requirements</span></span>  
+ <span data-ttu-id="03bd0-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="03bd0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb705-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bb705-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="03bd0-113">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="03bd0-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bb705-114">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="bb705-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="03bd0-114">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="03bd0-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="bb705-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb705-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="03bd0-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03bd0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb705-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="bb705-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03bd0-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="03bd0-116">See also</span></span>
 
-- [<span data-ttu-id="bb705-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bb705-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="bb705-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bb705-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="03bd0-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="03bd0-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="03bd0-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="03bd0-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

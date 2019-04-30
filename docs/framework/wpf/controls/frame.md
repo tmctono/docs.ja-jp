@@ -10,17 +10,17 @@ helpviewer_keywords:
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
 ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054901"
 ---
-# <a name="frame"></a><span data-ttu-id="a9c4f-102">フレーム</span><span class="sxs-lookup"><span data-stu-id="a9c4f-102">Frame</span></span>
-<span data-ttu-id="a9c4f-103"><xref:System.Windows.Controls.Frame>コントロールは、コンテンツ内のコンテンツのナビゲーションをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="a9c4f-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="a9c4f-104"><xref:System.Windows.Controls.Frame> ようにルート要素を主催<xref:System.Windows.Window>、 <xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Controls.UserControl>、 <xref:System.Windows.Documents.FlowDocument>、またはルート要素が属しているコンテンツ ツリー内で、アイランドとして。</span><span class="sxs-lookup"><span data-stu-id="a9c4f-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="3175b-102">フレーム</span><span class="sxs-lookup"><span data-stu-id="3175b-102">Frame</span></span>
+<span data-ttu-id="3175b-103"><xref:System.Windows.Controls.Frame>コントロールは、コンテンツ内のコンテンツのナビゲーションをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="3175b-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="3175b-104"><xref:System.Windows.Controls.Frame> ようにルート要素を主催<xref:System.Windows.Window>、 <xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Controls.UserControl>、 <xref:System.Windows.Documents.FlowDocument>、またはルート要素が属しているコンテンツ ツリー内で、アイランドとして。</span><span class="sxs-lookup"><span data-stu-id="3175b-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a9c4f-105">参照</span><span class="sxs-lookup"><span data-stu-id="a9c4f-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3175b-105">参照</span><span class="sxs-lookup"><span data-stu-id="3175b-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="a9c4f-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="a9c4f-106">Related Sections</span></span>  
- [<span data-ttu-id="a9c4f-107">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="a9c4f-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="3175b-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="3175b-106">Related Sections</span></span>  
+ [<span data-ttu-id="3175b-107">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="3175b-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)

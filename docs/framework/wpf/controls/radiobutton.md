@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
 ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024132"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="07223-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="07223-102">RadioButton</span></span>
-<span data-ttu-id="07223-103"><xref:System.Windows.Controls.RadioButton> コントロールがいくつかのオプション間で 1 つの選択肢をユーザーに提供するまとめてグループ化は、通常一度に 1 つだけのボタンを選択できます。</span><span class="sxs-lookup"><span data-stu-id="07223-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="135a8-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="135a8-102">RadioButton</span></span>
+<span data-ttu-id="135a8-103"><xref:System.Windows.Controls.RadioButton> コントロールがいくつかのオプション間で 1 つの選択肢をユーザーに提供するまとめてグループ化は、通常一度に 1 つだけのボタンを選択できます。</span><span class="sxs-lookup"><span data-stu-id="135a8-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="07223-104">次の図の例を示します、<xref:System.Windows.Controls.RadioButton>コントロール。</span><span class="sxs-lookup"><span data-stu-id="07223-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="135a8-104">次の図の例を示します、<xref:System.Windows.Controls.RadioButton>コントロール。</span><span class="sxs-lookup"><span data-stu-id="135a8-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="07223-105">![ラジオ ボタンの状態](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="07223-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="07223-106">一般的なオプション ボタン</span><span class="sxs-lookup"><span data-stu-id="07223-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="135a8-105">![ラジオ ボタンの状態](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="135a8-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="135a8-106">一般的なオプション ボタン</span><span class="sxs-lookup"><span data-stu-id="135a8-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="07223-107">参照</span><span class="sxs-lookup"><span data-stu-id="07223-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="135a8-107">参照</span><span class="sxs-lookup"><span data-stu-id="135a8-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="07223-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="07223-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="135a8-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="135a8-108">Related Sections</span></span>

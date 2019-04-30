@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b5015dc42497d269cdc2de944f14454558be6c07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042740"
 ---
-# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="9153e-102">IMetaDataImport::CountEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="9153e-102">IMetaDataImport::CountEnum Method</span></span>
-<span data-ttu-id="9153e-103">指定された列挙子によって取得された列挙体の要素の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="9153e-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
+# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="98d6e-102">IMetaDataImport::CountEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="98d6e-102">IMetaDataImport::CountEnum Method</span></span>
+<span data-ttu-id="98d6e-103">指定された列挙子によって取得された列挙体の要素の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="98d6e-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9153e-104">構文</span><span class="sxs-lookup"><span data-stu-id="9153e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98d6e-104">構文</span><span class="sxs-lookup"><span data-stu-id="98d6e-104">Syntax</span></span>  
   
 ```  
 HRESULT CountEnum (  
@@ -36,26 +36,26 @@ HRESULT CountEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9153e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9153e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98d6e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98d6e-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="9153e-106">[in]列挙子のハンドル。</span><span class="sxs-lookup"><span data-stu-id="9153e-106">[in] The handle for the enumerator.</span></span>  
+ <span data-ttu-id="98d6e-106">[in]列挙子のハンドル。</span><span class="sxs-lookup"><span data-stu-id="98d6e-106">[in] The handle for the enumerator.</span></span>  
   
  `pulCount`  
- <span data-ttu-id="9153e-107">[out]列挙された要素の数。</span><span class="sxs-lookup"><span data-stu-id="9153e-107">[out] The number of elements enumerated.</span></span>  
+ <span data-ttu-id="98d6e-107">[out]列挙された要素の数。</span><span class="sxs-lookup"><span data-stu-id="98d6e-107">[out] The number of elements enumerated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9153e-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="9153e-108">Remarks</span></span>  
- <span data-ttu-id="9153e-109">指定されたハンドル`hEnum`以前から取得されます`Enum`*名前*呼び出し (たとえば、 [imetadataimport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。</span><span class="sxs-lookup"><span data-stu-id="9153e-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="98d6e-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="98d6e-108">Remarks</span></span>  
+ <span data-ttu-id="98d6e-109">指定されたハンドル`hEnum`以前から取得されます`Enum`*名前*呼び出し (たとえば、 [imetadataimport::enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))。</span><span class="sxs-lookup"><span data-stu-id="98d6e-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9153e-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="9153e-110">Requirements</span></span>  
- <span data-ttu-id="9153e-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9153e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98d6e-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="98d6e-110">Requirements</span></span>  
+ <span data-ttu-id="98d6e-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="98d6e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9153e-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9153e-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="98d6e-112">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="98d6e-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9153e-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="9153e-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="98d6e-113">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="98d6e-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9153e-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9153e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="98d6e-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98d6e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9153e-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="9153e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98d6e-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="98d6e-115">See also</span></span>
 
-- [<span data-ttu-id="9153e-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9153e-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="9153e-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9153e-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="98d6e-116">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98d6e-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="98d6e-117">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98d6e-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

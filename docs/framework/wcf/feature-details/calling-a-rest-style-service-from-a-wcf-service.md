@@ -3,19 +3,19 @@ title: WCF サービスからの REST スタイル サービスの呼び出し
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
 ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57842932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048219"
 ---
-# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="671a4-102">WCF サービスからの REST スタイル サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="671a4-102">Calling a REST-style service from a WCF service</span></span>
+# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="99ff6-102">WCF サービスからの REST スタイル サービスの呼び出し</span><span class="sxs-lookup"><span data-stu-id="99ff6-102">Calling a REST-style service from a WCF service</span></span>
 
-<span data-ttu-id="671a4-103">標準の (SOAP ベース) WCF サービスから REST スタイルのサービスを呼び出すとき、受信要求に関する情報を含んでいるサービス メソッドの操作コンテキストは、送信要求が使用するコンテキストをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="671a4-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="671a4-104">これにより、HTTP GET 要求は HTTP POST 要求に変更されます。</span><span class="sxs-lookup"><span data-stu-id="671a4-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="671a4-105">WCF サービスが正しいコンテキストを使用して REST スタイルのサービスを呼び出すには、新しい <xref:System.ServiceModel.OperationContextScope> を作成し、操作コンテキスト スコープ内から REST スタイルのサービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="671a4-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="671a4-106">このトピックでは、この手法を説明する簡単なサンプルを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="671a4-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>
+<span data-ttu-id="99ff6-103">標準の (SOAP ベース) WCF サービスから REST スタイルのサービスを呼び出すとき、受信要求に関する情報を含んでいるサービス メソッドの操作コンテキストは、送信要求が使用するコンテキストをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="99ff6-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="99ff6-104">これにより、HTTP GET 要求は HTTP POST 要求に変更されます。</span><span class="sxs-lookup"><span data-stu-id="99ff6-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="99ff6-105">WCF サービスが正しいコンテキストを使用して REST スタイルのサービスを呼び出すには、新しい <xref:System.ServiceModel.OperationContextScope> を作成し、操作コンテキスト スコープ内から REST スタイルのサービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="99ff6-106">このトピックでは、この手法を説明する簡単なサンプルを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>
 
-## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="671a4-107">REST スタイルのサービス コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="671a4-107">Define the REST-style service contract</span></span>
+## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="99ff6-107">REST スタイルのサービス コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="99ff6-107">Define the REST-style service contract</span></span>
 
-<span data-ttu-id="671a4-108">簡単な REST スタイルのサービス コントラクトを定義する:</span><span class="sxs-lookup"><span data-stu-id="671a4-108">Define a simple  REST-style service contract:</span></span>
+<span data-ttu-id="99ff6-108">簡単な REST スタイルのサービス コントラクトを定義する:</span><span class="sxs-lookup"><span data-stu-id="99ff6-108">Define a simple  REST-style service contract:</span></span>
 
 ```csharp
 [ServiceContract]
@@ -29,9 +29,9 @@ public interface IRestInterface
 }
 ```
 
-## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="671a4-109">REST スタイルのサービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="671a4-109">Implement the REST-style service contract</span></span>
+## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="99ff6-109">REST スタイルのサービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="99ff6-109">Implement the REST-style service contract</span></span>
 
-<span data-ttu-id="671a4-110">REST スタイルのサービス コントラクトを実装する:</span><span class="sxs-lookup"><span data-stu-id="671a4-110">Implement the REST-style service contract:</span></span>
+<span data-ttu-id="99ff6-110">REST スタイルのサービス コントラクトを実装する:</span><span class="sxs-lookup"><span data-stu-id="99ff6-110">Implement the REST-style service contract:</span></span>
 
 ```csharp
 public class RestService : IRestInterface
@@ -48,9 +48,9 @@ public class RestService : IRestInterface
 }
 ```
 
-## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="671a4-111">WCF サービス コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="671a4-111">Define the WCF service contract</span></span>
+## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="99ff6-111">WCF サービス コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="99ff6-111">Define the WCF service contract</span></span>
 
-<span data-ttu-id="671a4-112">REST スタイルのサービスの呼び出しに使用する WCF サービス コントラクトを定義する:</span><span class="sxs-lookup"><span data-stu-id="671a4-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>
+<span data-ttu-id="99ff6-112">REST スタイルのサービスの呼び出しに使用する WCF サービス コントラクトを定義する:</span><span class="sxs-lookup"><span data-stu-id="99ff6-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>
 
 ```csharp
 [ServiceContract]
@@ -64,9 +64,9 @@ public interface INormalInterface
 }
 ```
 
-## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="671a4-113">WCF サービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="671a4-113">Implement the WCF service contract</span></span>
+## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="99ff6-113">WCF サービス コントラクトを実装する</span><span class="sxs-lookup"><span data-stu-id="99ff6-113">Implement the WCF service contract</span></span>
 
-<span data-ttu-id="671a4-114">WCF サービス コントラクトを実装する:</span><span class="sxs-lookup"><span data-stu-id="671a4-114">Implement the WCF service contract:</span></span>
+<span data-ttu-id="99ff6-114">WCF サービス コントラクトを実装する:</span><span class="sxs-lookup"><span data-stu-id="99ff6-114">Implement the WCF service contract:</span></span>
 
 ```csharp
 public class NormalService : INormalInterface
@@ -84,9 +84,9 @@ public class NormalService : INormalInterface
 }
 ```
 
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="671a4-115">REST スタイルのサービスのクライアント プロキシを作成する</span><span class="sxs-lookup"><span data-stu-id="671a4-115">Create the client proxy for the REST-style service</span></span>
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="99ff6-115">REST スタイルのサービスのクライアント プロキシを作成する</span><span class="sxs-lookup"><span data-stu-id="99ff6-115">Create the client proxy for the REST-style service</span></span>
 
-<span data-ttu-id="671a4-116">使用して<xref:System.ServiceModel.ClientBase%601>クライアント プロキシの実装。</span><span class="sxs-lookup"><span data-stu-id="671a4-116">Using <xref:System.ServiceModel.ClientBase%601> to implement the client proxy.</span></span> <span data-ttu-id="671a4-117">呼び出される各メソッドで、新しい <xref:System.ServiceModel.OperationContextScope> が作成され、操作の呼び出しに使用されます。</span><span class="sxs-lookup"><span data-stu-id="671a4-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>
+<span data-ttu-id="99ff6-116">使用して<xref:System.ServiceModel.ClientBase%601>クライアント プロキシの実装。</span><span class="sxs-lookup"><span data-stu-id="99ff6-116">Using <xref:System.ServiceModel.ClientBase%601> to implement the client proxy.</span></span> <span data-ttu-id="99ff6-117">呼び出される各メソッドで、新しい <xref:System.ServiceModel.OperationContextScope> が作成され、操作の呼び出しに使用されます。</span><span class="sxs-lookup"><span data-stu-id="99ff6-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>
 
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -115,9 +115,9 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 }
 ```
 
-## <a name="host-and-call-the-services"></a><span data-ttu-id="671a4-118">サービスをホストし、呼び出す</span><span class="sxs-lookup"><span data-stu-id="671a4-118">Host and call the services</span></span>
+## <a name="host-and-call-the-services"></a><span data-ttu-id="99ff6-118">サービスをホストし、呼び出す</span><span class="sxs-lookup"><span data-stu-id="99ff6-118">Host and call the services</span></span>
 
-<span data-ttu-id="671a4-119">コンソール アプリケーションの両方のサービスをホストし、必要なエンドポイントと動作を追加します。</span><span class="sxs-lookup"><span data-stu-id="671a4-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="671a4-120">次に、通常の WCF サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="671a4-120">And then call the regular WCF service:</span></span>
+<span data-ttu-id="99ff6-119">コンソール アプリケーションの両方のサービスをホストし、必要なエンドポイントと動作を追加します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="99ff6-120">次に、通常の WCF サービスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-120">And then call the regular WCF service:</span></span>
 
 ```csharp
 public static void Main()
@@ -140,9 +140,9 @@ public static void Main()
 }
 ```
 
-## <a name="complete-code-listing"></a><span data-ttu-id="671a4-121">完全なコード リスト</span><span class="sxs-lookup"><span data-stu-id="671a4-121">Complete code listing</span></span>
+## <a name="complete-code-listing"></a><span data-ttu-id="99ff6-121">完全なコード リスト</span><span class="sxs-lookup"><span data-stu-id="99ff6-121">Complete code listing</span></span>
 
-<span data-ttu-id="671a4-122">このトピックで実装されるサンプルの完全なコード リストを次に示します。</span><span class="sxs-lookup"><span data-stu-id="671a4-122">The following is a complete listing of the sample implemented in this topic:</span></span>
+<span data-ttu-id="99ff6-122">このトピックで実装されるサンプルの完全なコード リストを次に示します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-122">The following is a complete listing of the sample implemented in this topic:</span></span>
 
 ```csharp
 public class CallingRESTSample
@@ -241,7 +241,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="671a4-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="671a4-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99ff6-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="99ff6-123">See also</span></span>
 
-- [<span data-ttu-id="671a4-124">方法: 基本的な WCF Web HTTP サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="671a4-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
-- [<span data-ttu-id="671a4-125">WCF Web HTTP プログラミング オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="671a4-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [<span data-ttu-id="99ff6-124">方法: 基本的な WCF Web HTTP サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="99ff6-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [<span data-ttu-id="99ff6-125">WCF Web HTTP プログラミング オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="99ff6-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

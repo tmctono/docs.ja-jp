@@ -8,24 +8,24 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052223"
 ---
-# <a name="checkbox"></a><span data-ttu-id="cc10f-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="cc10f-102">CheckBox</span></span>
-<span data-ttu-id="cc10f-103">使用することができます、<xref:System.Windows.Controls.CheckBox>で、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]のアプリケーションをユーザーがオンまたはオフにするオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="cc10f-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="cc10f-104">1 つのチェック ボックスを使用するか、2 つ以上のチェック ボックスをグループ化することができます。</span><span class="sxs-lookup"><span data-stu-id="cc10f-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="4a073-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="4a073-102">CheckBox</span></span>
+<span data-ttu-id="4a073-103">使用することができます、<xref:System.Windows.Controls.CheckBox>で、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]のアプリケーションをユーザーがオンまたはオフにするオプションを表します。</span><span class="sxs-lookup"><span data-stu-id="4a073-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="4a073-104">1 つのチェック ボックスを使用するか、2 つ以上のチェック ボックスをグループ化することができます。</span><span class="sxs-lookup"><span data-stu-id="4a073-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="cc10f-105">次の図のさまざまな状態を示しています、<xref:System.Windows.Controls.CheckBox>します。</span><span class="sxs-lookup"><span data-stu-id="cc10f-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="4a073-105">次の図のさまざまな状態を示しています、<xref:System.Windows.Controls.CheckBox>します。</span><span class="sxs-lookup"><span data-stu-id="4a073-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="cc10f-106">![チェック ボックスをオンの状態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="cc10f-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="cc10f-107">さまざまな状態の CheckBox コントロール</span><span class="sxs-lookup"><span data-stu-id="cc10f-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="4a073-106">![チェック ボックスをオンの状態](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="4a073-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="4a073-107">さまざまな状態の CheckBox コントロール</span><span class="sxs-lookup"><span data-stu-id="4a073-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="cc10f-108">参照</span><span class="sxs-lookup"><span data-stu-id="cc10f-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4a073-108">参照</span><span class="sxs-lookup"><span data-stu-id="4a073-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="cc10f-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="cc10f-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="4a073-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a073-109">Related Sections</span></span>

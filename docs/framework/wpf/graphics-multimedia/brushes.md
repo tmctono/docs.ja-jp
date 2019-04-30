@@ -9,25 +9,25 @@ helpviewer_keywords:
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
 ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020258"
 ---
-# <a name="brushes"></a><span data-ttu-id="cb51d-102">ブラシ</span><span class="sxs-lookup"><span data-stu-id="cb51d-102">Brushes</span></span>
-<span data-ttu-id="cb51d-103">次のトピックを使用する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]「描画」画面にコンテンツをブラシ</span><span class="sxs-lookup"><span data-stu-id="cb51d-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
+# <a name="brushes"></a><span data-ttu-id="7b7c8-102">ブラシ</span><span class="sxs-lookup"><span data-stu-id="7b7c8-102">Brushes</span></span>
+<span data-ttu-id="7b7c8-103">次のトピックを使用する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]「描画」画面にコンテンツをブラシ</span><span class="sxs-lookup"><span data-stu-id="7b7c8-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cb51d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cb51d-104">In This Section</span></span>  
- [<span data-ttu-id="cb51d-105">WPF のブラシの概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-105">WPF Brushes Overview</span></span>](wpf-brushes-overview.md)  
- [<span data-ttu-id="cb51d-106">ブラシの変換の概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-106">Brush Transformation Overview</span></span>](brush-transformation-overview.md)  
- [<span data-ttu-id="cb51d-107">不透明度マスクの概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-107">Opacity Masks Overview</span></span>](opacity-masks-overview.md)  
- [<span data-ttu-id="cb51d-108">純色およびグラデーションによる塗りつぶしの概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-108">Painting with Solid Colors and Gradients Overview</span></span>](painting-with-solid-colors-and-gradients-overview.md)  
- [<span data-ttu-id="cb51d-109">イメージ、描画、およびビジュアルによる塗りつぶし</span><span class="sxs-lookup"><span data-stu-id="cb51d-109">Painting with Images, Drawings, and Visuals</span></span>](painting-with-images-drawings-and-visuals.md)  
- [<span data-ttu-id="cb51d-110">TileBrush の概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-110">TileBrush Overview</span></span>](tilebrush-overview.md)  
- [<span data-ttu-id="cb51d-111">方法トピック</span><span class="sxs-lookup"><span data-stu-id="cb51d-111">How-to Topics</span></span>](brushes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7b7c8-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7b7c8-104">In This Section</span></span>  
+ [<span data-ttu-id="7b7c8-105">WPF のブラシの概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-105">WPF Brushes Overview</span></span>](wpf-brushes-overview.md)  
+ [<span data-ttu-id="7b7c8-106">ブラシの変換の概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-106">Brush Transformation Overview</span></span>](brush-transformation-overview.md)  
+ [<span data-ttu-id="7b7c8-107">不透明度マスクの概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-107">Opacity Masks Overview</span></span>](opacity-masks-overview.md)  
+ [<span data-ttu-id="7b7c8-108">純色およびグラデーションによる塗りつぶしの概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-108">Painting with Solid Colors and Gradients Overview</span></span>](painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="7b7c8-109">イメージ、描画、およびビジュアルによる塗りつぶし</span><span class="sxs-lookup"><span data-stu-id="7b7c8-109">Painting with Images, Drawings, and Visuals</span></span>](painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="7b7c8-110">TileBrush の概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-110">TileBrush Overview</span></span>](tilebrush-overview.md)  
+ [<span data-ttu-id="7b7c8-111">方法トピック</span><span class="sxs-lookup"><span data-stu-id="7b7c8-111">How-to Topics</span></span>](brushes-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="cb51d-112">参照</span><span class="sxs-lookup"><span data-stu-id="cb51d-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7b7c8-112">参照</span><span class="sxs-lookup"><span data-stu-id="7b7c8-112">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -40,7 +40,7 @@ ms.locfileid: "57366726"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="cb51d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb51d-113">Related Sections</span></span>  
- [<span data-ttu-id="cb51d-114">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="cb51d-114">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="7b7c8-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="7b7c8-113">Related Sections</span></span>  
+ [<span data-ttu-id="7b7c8-114">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="7b7c8-114">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="cb51d-115">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="cb51d-115">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="7b7c8-115">WPF グラフィックス レンダリングの概要</span><span class="sxs-lookup"><span data-stu-id="7b7c8-115">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

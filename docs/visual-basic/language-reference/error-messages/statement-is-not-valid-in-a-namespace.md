@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
 ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013721"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="ca1d2-102">名前空間のステートメントが無効です。</span><span class="sxs-lookup"><span data-stu-id="ca1d2-102">Statement is not valid in a namespace</span></span>
-<span data-ttu-id="ca1d2-103">ステートメントは、名前空間のレベルに表示できません。</span><span class="sxs-lookup"><span data-stu-id="ca1d2-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="ca1d2-104">名前空間レベルで許可されている唯一の宣言では、モジュール、インターフェイス、クラス、デリゲート、列挙、および構造体の宣言です。</span><span class="sxs-lookup"><span data-stu-id="ca1d2-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="e81c9-102">名前空間のステートメントが無効です。</span><span class="sxs-lookup"><span data-stu-id="e81c9-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="e81c9-103">ステートメントは、名前空間のレベルに表示できません。</span><span class="sxs-lookup"><span data-stu-id="e81c9-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="e81c9-104">名前空間レベルで許可されている唯一の宣言では、モジュール、インターフェイス、クラス、デリゲート、列挙、および構造体の宣言です。</span><span class="sxs-lookup"><span data-stu-id="e81c9-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- <span data-ttu-id="ca1d2-105">**エラー ID:** BC30001</span><span class="sxs-lookup"><span data-stu-id="ca1d2-105">**Error ID:** BC30001</span></span>  
+ <span data-ttu-id="e81c9-105">**エラー ID:** BC30001</span><span class="sxs-lookup"><span data-stu-id="e81c9-105">**Error ID:** BC30001</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ca1d2-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="ca1d2-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e81c9-106">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="e81c9-106">To correct this error</span></span>  
   
--   <span data-ttu-id="ca1d2-107">ステートメントは、モジュール、クラス、インターフェイス、構造体、列挙型、またはデリゲートの定義内の場所に移動します。</span><span class="sxs-lookup"><span data-stu-id="ca1d2-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
+- <span data-ttu-id="e81c9-107">ステートメントは、モジュール、クラス、インターフェイス、構造体、列挙型、またはデリゲートの定義内の場所に移動します。</span><span class="sxs-lookup"><span data-stu-id="e81c9-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca1d2-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="ca1d2-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e81c9-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="e81c9-108">See also</span></span>
 
-- [<span data-ttu-id="ca1d2-109">Visual Basic におけるスコープ</span><span class="sxs-lookup"><span data-stu-id="ca1d2-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [<span data-ttu-id="ca1d2-110">Visual Basic における名前空間</span><span class="sxs-lookup"><span data-stu-id="ca1d2-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="e81c9-109">Visual Basic におけるスコープ</span><span class="sxs-lookup"><span data-stu-id="e81c9-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="e81c9-110">Visual Basic における名前空間</span><span class="sxs-lookup"><span data-stu-id="e81c9-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
