@@ -17,29 +17,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940401"
 ---
-# <a name="inotifysink2-interface"></a><span data-ttu-id="9ebc3-102">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebc3-102">INotifySink2 Interface</span></span>
-<span data-ttu-id="9ebc3-103">シンク通知メソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="9ebc3-103">Declares methods for sink notification.</span></span>  
+# <a name="inotifysink2-interface"></a><span data-ttu-id="ece1c-102">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ece1c-102">INotifySink2 Interface</span></span>
+<span data-ttu-id="ece1c-103">シンク通知メソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="ece1c-103">Declares methods for sink notification.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9ebc3-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ece1c-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-104">Methods</span></span>  
   
-|<span data-ttu-id="9ebc3-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-105">Method</span></span>|<span data-ttu-id="9ebc3-106">説明</span><span class="sxs-lookup"><span data-stu-id="9ebc3-106">Description</span></span>|  
+|<span data-ttu-id="ece1c-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-105">Method</span></span>|<span data-ttu-id="ece1c-106">説明</span><span class="sxs-lookup"><span data-stu-id="ece1c-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9ebc3-107">OnSyncCallEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="9ebc3-108">呼び出しを入力するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9ebc3-108">Gets invoked when entering a call.</span></span>|  
-|[<span data-ttu-id="9ebc3-109">OnSyncCallExit メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="9ebc3-110">呼び出しが終了するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9ebc3-110">Gets invoked when exiting a call.</span></span>|  
-|[<span data-ttu-id="9ebc3-111">OnSyncCallOut メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="9ebc3-112">呼び出しがないときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9ebc3-112">Gets invoked when a call is out.</span></span>|  
-|[<span data-ttu-id="9ebc3-113">OnSyncCallReturn メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebc3-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="9ebc3-114">呼び出しが戻るときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9ebc3-114">Gets invoked when a call returns.</span></span>|  
+|[<span data-ttu-id="ece1c-107">OnSyncCallEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-107">OnSyncCallEnter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|<span data-ttu-id="ece1c-108">呼び出しを入力するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ece1c-108">Gets invoked when entering a call.</span></span>|  
+|[<span data-ttu-id="ece1c-109">OnSyncCallExit メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-109">OnSyncCallExit Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|<span data-ttu-id="ece1c-110">呼び出しが終了するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ece1c-110">Gets invoked when exiting a call.</span></span>|  
+|[<span data-ttu-id="ece1c-111">OnSyncCallOut メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-111">OnSyncCallOut Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|<span data-ttu-id="ece1c-112">呼び出しがないときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ece1c-112">Gets invoked when a call is out.</span></span>|  
+|[<span data-ttu-id="ece1c-113">OnSyncCallReturn メソッド</span><span class="sxs-lookup"><span data-stu-id="ece1c-113">OnSyncCallReturn Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|<span data-ttu-id="ece1c-114">呼び出しが戻るときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="ece1c-114">Gets invoked when a call returns.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9ebc3-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="9ebc3-115">Requirements</span></span>  
- <span data-ttu-id="9ebc3-116">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="9ebc3-116">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ece1c-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="ece1c-115">Requirements</span></span>  
+ <span data-ttu-id="ece1c-116">**ヘッダー:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="ece1c-116">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ebc3-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ebc3-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ece1c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ece1c-117">See also</span></span>
 
-- [<span data-ttu-id="9ebc3-118">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebc3-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="9ebc3-119">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebc3-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="9ebc3-120">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebc3-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="ece1c-118">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ece1c-118">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="ece1c-119">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ece1c-119">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="ece1c-120">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ece1c-120">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

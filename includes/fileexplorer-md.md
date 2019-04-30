@@ -1,1 +1,9 @@
-<span data-ttu-id="fd61a-101">エクスプローラー</span><span class="sxs-lookup"><span data-stu-id="fd61a-101">File Explorer</span></span>
+---
+ms.openlocfilehash: 700869dc5e37deb64f3dc9bf4596ad870260953e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760042"
+---
+<span data-ttu-id="5af66-101">エクスプローラー</span><span class="sxs-lookup"><span data-stu-id="5af66-101">File Explorer</span></span>

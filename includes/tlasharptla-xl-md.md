@@ -1,1 +1,9 @@
-<span data-ttu-id="a33e2-101">Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="a33e2-101">Microsoft Excel</span></span>
+---
+ms.openlocfilehash: 87276ecf605640589cec1d79d00bf26c970b94e4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61851248"
+---
+<span data-ttu-id="8081b-101">Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="8081b-101">Microsoft Excel</span></span>

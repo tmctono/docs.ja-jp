@@ -3,20 +3,20 @@ title: System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod
 ms.date: 03/30/2017
 ms.assetid: 7b4930be-57e6-4fe8-b63d-81900bba11c1
 ms.openlocfilehash: fedb4bba5a8b121987f2072124e54a1166f83e7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939387"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdispatchmethod"></a><span data-ttu-id="77a21-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="77a21-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>
-<span data-ttu-id="77a21-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="77a21-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdispatchmethod"></a><span data-ttu-id="a3632-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="a3632-102">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>
+<span data-ttu-id="a3632-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span><span class="sxs-lookup"><span data-stu-id="a3632-103">System.ServiceModel.ComIntegration.ComIntegrationDispatchMethod</span></span>  
   
-## <a name="description"></a><span data-ttu-id="77a21-104">説明</span><span class="sxs-lookup"><span data-stu-id="77a21-104">Description</span></span>  
- <span data-ttu-id="77a21-105">ComPlus:メソッドの詳細をディスパッチします。</span><span class="sxs-lookup"><span data-stu-id="77a21-105">ComPlus: Dispatch method details.</span></span>  
+## <a name="description"></a><span data-ttu-id="a3632-104">説明</span><span class="sxs-lookup"><span data-stu-id="a3632-104">Description</span></span>  
+ <span data-ttu-id="a3632-105">ComPlus:メソッドの詳細をディスパッチします。</span><span class="sxs-lookup"><span data-stu-id="a3632-105">ComPlus: Dispatch method details.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77a21-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="77a21-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3632-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3632-106">See also</span></span>
 
-- [<span data-ttu-id="77a21-107">トレース</span><span class="sxs-lookup"><span data-stu-id="77a21-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="77a21-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="77a21-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="77a21-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="77a21-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="a3632-107">トレース</span><span class="sxs-lookup"><span data-stu-id="a3632-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="a3632-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="a3632-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="a3632-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="a3632-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

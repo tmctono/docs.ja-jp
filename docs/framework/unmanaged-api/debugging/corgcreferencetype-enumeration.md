@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966206"
 ---
-# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="8e757-102">CorGCReferenceType 列挙型</span><span class="sxs-lookup"><span data-stu-id="8e757-102">CorGCReferenceType Enumeration</span></span>
-<span data-ttu-id="8e757-103">ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。</span><span class="sxs-lookup"><span data-stu-id="8e757-103">Identifies the source of an object to be garbage-collected.</span></span>  
+# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="cfe0f-102">CorGCReferenceType 列挙型</span><span class="sxs-lookup"><span data-stu-id="cfe0f-102">CorGCReferenceType Enumeration</span></span>
+<span data-ttu-id="cfe0f-103">ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-103">Identifies the source of an object to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e757-104">構文</span><span class="sxs-lookup"><span data-stu-id="8e757-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfe0f-104">構文</span><span class="sxs-lookup"><span data-stu-id="cfe0f-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -48,40 +48,40 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8e757-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="8e757-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cfe0f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="cfe0f-105">Members</span></span>  
   
-|<span data-ttu-id="8e757-106">メンバー名</span><span class="sxs-lookup"><span data-stu-id="8e757-106">Member name</span></span>|<span data-ttu-id="8e757-107">説明</span><span class="sxs-lookup"><span data-stu-id="8e757-107">Description</span></span>|  
+|<span data-ttu-id="cfe0f-106">メンバー名</span><span class="sxs-lookup"><span data-stu-id="cfe0f-106">Member name</span></span>|<span data-ttu-id="cfe0f-107">説明</span><span class="sxs-lookup"><span data-stu-id="cfe0f-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorHandleStrong`|<span data-ttu-id="8e757-108">オブジェクト ハンドル テーブルからの強い参照へのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-108">A handle to a strong reference from the object handle table.</span></span>|  
-|`CorHandleStrongPinning`|<span data-ttu-id="8e757-109">オブジェクト ハンドル テーブルから固定された強い参照へのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
-|`CorHandleWeakShort`|<span data-ttu-id="8e757-110">オブジェクト ハンドル テーブルからの弱い参照をへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-110">A handle to a weak reference from the object handle table.</span></span>|  
-|`CorHandleWeakRefCount`|<span data-ttu-id="8e757-111">オブジェクト ハンドル テーブルから弱い参照カウント オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongRefCount`|<span data-ttu-id="8e757-112">オブジェクト ハンドル テーブルから参照カウント オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-112">A handle to a reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongDependent`|<span data-ttu-id="8e757-113">オブジェクト ハンドル テーブルから、依存オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-113">A handle to a dependent object from the object handle table.</span></span>|  
-|`CorHandleStrongAsyncPinned`|<span data-ttu-id="8e757-114">オブジェクト ハンドル テーブルからの非同期固定オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8e757-114">An asynchronous pinned object from the object handle table.</span></span>|  
-|`CorHandleStrongSizedByref`|<span data-ttu-id="8e757-115">ガベージ コレクション時に、すべてのオブジェクトおよびオブジェクト ルートの集合的なクロージャの概算サイズを保持する強力なハンドル。</span><span class="sxs-lookup"><span data-stu-id="8e757-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
-|`CorReferenceStack`|<span data-ttu-id="8e757-116">マネージ スタックからの参照。</span><span class="sxs-lookup"><span data-stu-id="8e757-116">A reference from the managed stack.</span></span>|  
-|`CorReferenceFinalizer`|<span data-ttu-id="8e757-117">ファイナライザー キューからの参照。</span><span class="sxs-lookup"><span data-stu-id="8e757-117">A reference from the finalizer queue.</span></span>|  
-|<span data-ttu-id="8e757-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="8e757-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="8e757-119">ハンドル テーブルからの強い参照のみを返します。</span><span class="sxs-lookup"><span data-stu-id="8e757-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="8e757-120">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="8e757-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleWeakOnly`|<span data-ttu-id="8e757-121">ハンドル テーブルからの弱い参照のみを返します。</span><span class="sxs-lookup"><span data-stu-id="8e757-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="8e757-122">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="8e757-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleAll`|<span data-ttu-id="8e757-123">ハンドル テーブルからすべての参照を返します。</span><span class="sxs-lookup"><span data-stu-id="8e757-123">Return all references from the handle table.</span></span> <span data-ttu-id="8e757-124">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="8e757-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleStrong`|<span data-ttu-id="cfe0f-108">オブジェクト ハンドル テーブルからの強い参照へのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-108">A handle to a strong reference from the object handle table.</span></span>|  
+|`CorHandleStrongPinning`|<span data-ttu-id="cfe0f-109">オブジェクト ハンドル テーブルから固定された強い参照へのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
+|`CorHandleWeakShort`|<span data-ttu-id="cfe0f-110">オブジェクト ハンドル テーブルからの弱い参照をへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-110">A handle to a weak reference from the object handle table.</span></span>|  
+|`CorHandleWeakRefCount`|<span data-ttu-id="cfe0f-111">オブジェクト ハンドル テーブルから弱い参照カウント オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongRefCount`|<span data-ttu-id="cfe0f-112">オブジェクト ハンドル テーブルから参照カウント オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-112">A handle to a reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongDependent`|<span data-ttu-id="cfe0f-113">オブジェクト ハンドル テーブルから、依存オブジェクトへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-113">A handle to a dependent object from the object handle table.</span></span>|  
+|`CorHandleStrongAsyncPinned`|<span data-ttu-id="cfe0f-114">オブジェクト ハンドル テーブルからの非同期固定オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-114">An asynchronous pinned object from the object handle table.</span></span>|  
+|`CorHandleStrongSizedByref`|<span data-ttu-id="cfe0f-115">ガベージ コレクション時に、すべてのオブジェクトおよびオブジェクト ルートの集合的なクロージャの概算サイズを保持する強力なハンドル。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
+|`CorReferenceStack`|<span data-ttu-id="cfe0f-116">マネージ スタックからの参照。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-116">A reference from the managed stack.</span></span>|  
+|`CorReferenceFinalizer`|<span data-ttu-id="cfe0f-117">ファイナライザー キューからの参照。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-117">A reference from the finalizer queue.</span></span>|  
+|<span data-ttu-id="cfe0f-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="cfe0f-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="cfe0f-119">ハンドル テーブルからの強い参照のみを返します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="cfe0f-120">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleWeakOnly`|<span data-ttu-id="cfe0f-121">ハンドル テーブルからの弱い参照のみを返します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="cfe0f-122">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleAll`|<span data-ttu-id="cfe0f-123">ハンドル テーブルからすべての参照を返します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-123">Return all references from the handle table.</span></span> <span data-ttu-id="cfe0f-124">この値は使用、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッドのみです。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8e757-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="8e757-125">Remarks</span></span>  
- <span data-ttu-id="8e757-126">`CorGCReferenceType`列挙体は次のように使用します。</span><span class="sxs-lookup"><span data-stu-id="8e757-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cfe0f-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="cfe0f-125">Remarks</span></span>  
+ <span data-ttu-id="cfe0f-126">`CorGCReferenceType`列挙体は次のように使用します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
   
--   <span data-ttu-id="8e757-127">値として、`type`のフィールド、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)構造の参照またはハンドルのソースを示します。</span><span class="sxs-lookup"><span data-stu-id="8e757-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
+- <span data-ttu-id="cfe0f-127">値として、`type`のフィールド、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)構造の参照またはハンドルのソースを示します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
   
--   <span data-ttu-id="8e757-128">として、`types`への引数、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッド、列挙体に含めるハンドルの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="8e757-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
+- <span data-ttu-id="cfe0f-128">として、`types`への引数、 [icordebugprocess 5::enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)メソッド、列挙体に含めるハンドルの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e757-129">必要条件</span><span class="sxs-lookup"><span data-stu-id="8e757-129">Requirements</span></span>  
- <span data-ttu-id="8e757-130">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8e757-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfe0f-129">必要条件</span><span class="sxs-lookup"><span data-stu-id="cfe0f-129">Requirements</span></span>  
+ <span data-ttu-id="cfe0f-130">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cfe0f-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8e757-131">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8e757-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cfe0f-131">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cfe0f-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8e757-132">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e757-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cfe0f-132">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cfe0f-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8e757-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e757-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="cfe0f-133">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfe0f-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e757-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e757-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfe0f-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="cfe0f-134">See also</span></span>
 
-- [<span data-ttu-id="8e757-135">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="8e757-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="cfe0f-135">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="cfe0f-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

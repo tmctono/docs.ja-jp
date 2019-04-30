@@ -7,23 +7,23 @@ helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
 ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981683"
 ---
-# <a name="adorners-how-to-topics"></a><span data-ttu-id="236b6-102">装飾に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="236b6-102">Adorners How-to Topics</span></span>
-<span data-ttu-id="236b6-103">次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装飾フレームワーク。</span><span class="sxs-lookup"><span data-stu-id="236b6-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
+# <a name="adorners-how-to-topics"></a><span data-ttu-id="63273-102">装飾に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="63273-102">Adorners How-to Topics</span></span>
+<span data-ttu-id="63273-103">次の例を使用して一般的なタスクを実行する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装飾フレームワーク。</span><span class="sxs-lookup"><span data-stu-id="63273-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="236b6-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="236b6-104">In This Section</span></span>  
- [<span data-ttu-id="236b6-105">装飾を実装する</span><span class="sxs-lookup"><span data-stu-id="236b6-105">Implement an Adorner</span></span>](how-to-implement-an-adorner.md)  
- [<span data-ttu-id="236b6-106">要素に装飾をバインドする</span><span class="sxs-lookup"><span data-stu-id="236b6-106">Bind an Adorner to an Element</span></span>](how-to-bind-an-adorner-to-an-element.md)  
- [<span data-ttu-id="236b6-107">パネルの子を装飾する</span><span class="sxs-lookup"><span data-stu-id="236b6-107">Adorn the Children of a Panel</span></span>](how-to-adorn-the-children-of-a-panel.md)  
- [<span data-ttu-id="236b6-108">要素から装飾を削除する</span><span class="sxs-lookup"><span data-stu-id="236b6-108">Remove an Adorner from an Element</span></span>](how-to-remove-an-adorner-from-an-element.md)  
- [<span data-ttu-id="236b6-109">要素からすべての装飾を削除する</span><span class="sxs-lookup"><span data-stu-id="236b6-109">Remove all Adorners from an Element</span></span>](how-to-remove-all-adorners-from-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="63273-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="63273-104">In This Section</span></span>  
+ [<span data-ttu-id="63273-105">装飾を実装する</span><span class="sxs-lookup"><span data-stu-id="63273-105">Implement an Adorner</span></span>](how-to-implement-an-adorner.md)  
+ [<span data-ttu-id="63273-106">要素に装飾をバインドする</span><span class="sxs-lookup"><span data-stu-id="63273-106">Bind an Adorner to an Element</span></span>](how-to-bind-an-adorner-to-an-element.md)  
+ [<span data-ttu-id="63273-107">パネルの子を装飾する</span><span class="sxs-lookup"><span data-stu-id="63273-107">Adorn the Children of a Panel</span></span>](how-to-adorn-the-children-of-a-panel.md)  
+ [<span data-ttu-id="63273-108">要素から装飾を削除する</span><span class="sxs-lookup"><span data-stu-id="63273-108">Remove an Adorner from an Element</span></span>](how-to-remove-an-adorner-from-an-element.md)  
+ [<span data-ttu-id="63273-109">要素からすべての装飾を削除する</span><span class="sxs-lookup"><span data-stu-id="63273-109">Remove all Adorners from an Element</span></span>](how-to-remove-all-adorners-from-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="236b6-110">参照</span><span class="sxs-lookup"><span data-stu-id="236b6-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="63273-110">参照</span><span class="sxs-lookup"><span data-stu-id="63273-110">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -34,4 +34,4 @@ ms.locfileid: "57359251"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="236b6-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="236b6-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="63273-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="63273-111">Related Sections</span></span>
