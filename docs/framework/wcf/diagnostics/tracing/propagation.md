@@ -3,36 +3,36 @@ title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971380"
 ---
-# <a name="propagation"></a><span data-ttu-id="4b4e5-102">伝達</span><span class="sxs-lookup"><span data-stu-id="4b4e5-102">Propagation</span></span>
-<span data-ttu-id="4b4e5-103">このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
+# <a name="propagation"></a><span data-ttu-id="79e5c-102">伝達</span><span class="sxs-lookup"><span data-stu-id="79e5c-102">Propagation</span></span>
+<span data-ttu-id="79e5c-103">このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="4b4e5-104">伝達を使用したエンドポイント間でのアクティビティの関連付け</span><span class="sxs-lookup"><span data-stu-id="4b4e5-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
- <span data-ttu-id="4b4e5-105">伝達を使用することで、複数のアプリケーション エンドポイントについて、同じ処理単位 (要求など) のエラー トレースを直接関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="4b4e5-106">さまざまなエンドポイントで発生した同じ処理単位のエラーは、アプリケーション ドメインが異なる場合でも同じアクティビティとしてグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="4b4e5-107">これは、メッセージ ヘッダーで特定のアクティビティ ID を伝達することによって実現されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="4b4e5-108">したがって、サーバーの内部エラーによってクライアントがタイムアウトした場合、これらのエラーは直接関係しているので、どちらも同じアクティビティに表示されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="79e5c-104">伝達を使用したエンドポイント間でのアクティビティの関連付け</span><span class="sxs-lookup"><span data-stu-id="79e5c-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
+ <span data-ttu-id="79e5c-105">伝達を使用することで、複数のアプリケーション エンドポイントについて、同じ処理単位 (要求など) のエラー トレースを直接関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="79e5c-106">さまざまなエンドポイントで発生した同じ処理単位のエラーは、アプリケーション ドメインが異なる場合でも同じアクティビティとしてグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="79e5c-107">これは、メッセージ ヘッダーで特定のアクティビティ ID を伝達することによって実現されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="79e5c-108">したがって、サーバーの内部エラーによってクライアントがタイムアウトした場合、これらのエラーは直接関係しているので、どちらも同じアクティビティに表示されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
   
- <span data-ttu-id="4b4e5-109">これを行うには、前述の例に示すように `ActivityTracing` 設定を使用します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="4b4e5-110">さらに、すべてのエンドポイントで `propagateActivity` トレース ソースの `System.ServiceModel` 属性を設定します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
+ <span data-ttu-id="79e5c-109">これを行うには、前述の例に示すように `ActivityTracing` 設定を使用します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="79e5c-110">さらに、すべてのエンドポイントで `propagateActivity` トレース ソースの `System.ServiceModel` 属性を設定します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- <span data-ttu-id="4b4e5-111">アクティビティの伝達は、TLS のアクティビティ ID が含まれていますが、送信メッセージにヘッダーを追加する WCF の原因となる構成可能な機能です。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="4b4e5-112">サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
+ <span data-ttu-id="79e5c-111">アクティビティの伝達は、TLS のアクティビティ ID が含まれていますが、送信メッセージにヘッダーを追加する WCF の原因となる構成可能な機能です。</span><span class="sxs-lookup"><span data-stu-id="79e5c-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="79e5c-112">サーバー側の以降のトレースでこの ID を含めることにより、クライアントとサーバーのアクティビティを相互に関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
   
-## <a name="propagation-definition"></a><span data-ttu-id="4b4e5-113">伝達の定義</span><span class="sxs-lookup"><span data-stu-id="4b4e5-113">Propagation Definition</span></span>  
- <span data-ttu-id="4b4e5-114">次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
+## <a name="propagation-definition"></a><span data-ttu-id="79e5c-113">伝達の定義</span><span class="sxs-lookup"><span data-stu-id="79e5c-113">Propagation Definition</span></span>  
+ <span data-ttu-id="79e5c-114">次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
   
--   <span data-ttu-id="4b4e5-115">M に起因して N が作成された。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-115">N is created because of M</span></span>  
+- <span data-ttu-id="79e5c-115">M に起因して N が作成された。</span><span class="sxs-lookup"><span data-stu-id="79e5c-115">N is created because of M</span></span>  
   
--   <span data-ttu-id="4b4e5-116">M の gAId を N が認識している。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-116">M’s gAId is known to N</span></span>  
+- <span data-ttu-id="79e5c-116">M の gAId を N が認識している。</span><span class="sxs-lookup"><span data-stu-id="79e5c-116">M’s gAId is known to N</span></span>  
   
--   <span data-ttu-id="4b4e5-117">N の gAId と M の gAId が同じである。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-117">N's gAId is equal to M’s gAId.</span></span>  
+- <span data-ttu-id="79e5c-117">N の gAId と M の gAId が同じである。</span><span class="sxs-lookup"><span data-stu-id="79e5c-117">N's gAId is equal to M’s gAId.</span></span>  
   
- <span data-ttu-id="4b4e5-118">次の XML スキーマに示すように、gAId は ActivityId メッセージ ヘッダーによって伝達されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
+ <span data-ttu-id="79e5c-118">次の XML スキーマに示すように、gAId は ActivityId メッセージ ヘッダーによって伝達されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -40,7 +40,7 @@ ms.locfileid: "59154038"
 </xsd:element>  
 ```  
   
- <span data-ttu-id="4b4e5-119">メッセージ ヘッダーの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-119">The following is an example of the message header.</span></span>  
+ <span data-ttu-id="79e5c-119">メッセージ ヘッダーの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-119">The following is an example of the message header.</span></span>  
   
 ```xml  
 <MessageLogTraceRecord>  
@@ -70,15 +70,15 @@ ms.locfileid: "59154038"
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="4b4e5-120">伝達とアクティビティ境界</span><span class="sxs-lookup"><span data-stu-id="4b4e5-120">Propagation and Activity Boundaries</span></span>  
- <span data-ttu-id="4b4e5-121">エンドポイント間でアクティビティ ID が伝達されると、メッセージの受信側は、その (伝達された) アクティビティ ID を使用して Start トレースと Stop トレースを出力します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="4b4e5-122">したがって、各トレース ソースごとに、該当の gAId を持つ Start/Stop トレースが存在することになります。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="4b4e5-123">複数のエンドポイントが同じプロセス内に存在し、同じトレース ソース名を使用している場合、同じ lAId (同じ gAId、同じトレース ソース、同じプロセス) を持つ複数の Start と Stop が作成されます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
+## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="79e5c-120">伝達とアクティビティ境界</span><span class="sxs-lookup"><span data-stu-id="79e5c-120">Propagation and Activity Boundaries</span></span>  
+ <span data-ttu-id="79e5c-121">エンドポイント間でアクティビティ ID が伝達されると、メッセージの受信側は、その (伝達された) アクティビティ ID を使用して Start トレースと Stop トレースを出力します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="79e5c-122">したがって、各トレース ソースごとに、該当の gAId を持つ Start/Stop トレースが存在することになります。</span><span class="sxs-lookup"><span data-stu-id="79e5c-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="79e5c-123">複数のエンドポイントが同じプロセス内に存在し、同じトレース ソース名を使用している場合、同じ lAId (同じ gAId、同じトレース ソース、同じプロセス) を持つ複数の Start と Stop が作成されます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
   
-## <a name="synchronization"></a><span data-ttu-id="4b4e5-124">同期</span><span class="sxs-lookup"><span data-stu-id="4b4e5-124">Synchronization</span></span>  
- <span data-ttu-id="4b4e5-125">異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="4b4e5-126">ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="4b4e5-127">具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。</span><span class="sxs-lookup"><span data-stu-id="4b4e5-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
+## <a name="synchronization"></a><span data-ttu-id="79e5c-124">同期</span><span class="sxs-lookup"><span data-stu-id="79e5c-124">Synchronization</span></span>  
+ <span data-ttu-id="79e5c-125">異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="79e5c-126">ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。</span><span class="sxs-lookup"><span data-stu-id="79e5c-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="79e5c-127">具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。</span><span class="sxs-lookup"><span data-stu-id="79e5c-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b4e5-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b4e5-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79e5c-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="79e5c-128">See also</span></span>
 
-- [<span data-ttu-id="4b4e5-129">トレースの構成</span><span class="sxs-lookup"><span data-stu-id="4b4e5-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [<span data-ttu-id="4b4e5-130">サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="4b4e5-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [<span data-ttu-id="4b4e5-131">エンドツーエンドのトレースのシナリオ</span><span class="sxs-lookup"><span data-stu-id="4b4e5-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [<span data-ttu-id="4b4e5-132">サービス トレース ビューアー ツール (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="4b4e5-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [<span data-ttu-id="79e5c-129">トレースの構成</span><span class="sxs-lookup"><span data-stu-id="79e5c-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [<span data-ttu-id="79e5c-130">サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="79e5c-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [<span data-ttu-id="79e5c-131">エンドツーエンドのトレースのシナリオ</span><span class="sxs-lookup"><span data-stu-id="79e5c-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [<span data-ttu-id="79e5c-132">サービス トレース ビューアー ツール (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="79e5c-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

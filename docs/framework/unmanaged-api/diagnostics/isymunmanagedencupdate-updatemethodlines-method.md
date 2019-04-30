@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd1f101e2e9cf9baeb28290c7607ccab3d8d7440
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939686"
 ---
-# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="79da9-102">ISymUnmanagedENCUpdate::UpdateMethodLines メソッド</span><span class="sxs-lookup"><span data-stu-id="79da9-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
-<span data-ttu-id="79da9-103">再コンパイルされていない、その行が個別に移動されたメソッドの行情報の更新を許可します。</span><span class="sxs-lookup"><span data-stu-id="79da9-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="79da9-104">各ステートメントのデルタが許可されます。</span><span class="sxs-lookup"><span data-stu-id="79da9-104">A delta for each statement is allowed.</span></span>  
+# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="9f8d1-102">ISymUnmanagedENCUpdate::UpdateMethodLines メソッド</span><span class="sxs-lookup"><span data-stu-id="9f8d1-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
+<span data-ttu-id="9f8d1-103">再コンパイルされていない、その行が個別に移動されたメソッドの行情報の更新を許可します。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="9f8d1-104">各ステートメントのデルタが許可されます。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-104">A delta for each statement is allowed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79da9-105">構文</span><span class="sxs-lookup"><span data-stu-id="79da9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f8d1-105">構文</span><span class="sxs-lookup"><span data-stu-id="9f8d1-105">Syntax</span></span>  
   
 ```  
 HRESULT UpdateMethodLines(  
@@ -36,22 +36,22 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79da9-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="79da9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f8d1-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9f8d1-106">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="79da9-107">[in]メソッドのトークンのメタデータ。</span><span class="sxs-lookup"><span data-stu-id="79da9-107">[in] The metadata of the method token.</span></span>  
+ <span data-ttu-id="9f8d1-107">[in]メソッドのトークンのメタデータ。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-107">[in] The metadata of the method token.</span></span>  
   
  `pDeltas`  
- <span data-ttu-id="79da9-108">[in]配列の`INT32`メソッドでは、各シーケンス ポイントのデルタを示す値。</span><span class="sxs-lookup"><span data-stu-id="79da9-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
+ <span data-ttu-id="9f8d1-108">[in]配列の`INT32`メソッドでは、各シーケンス ポイントのデルタを示す値。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
   
  `cDeltas`  
- <span data-ttu-id="79da9-109">[in]A`ULONG`のサイズを含む、`pDeltas`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="79da9-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
+ <span data-ttu-id="9f8d1-109">[in]A`ULONG`のサイズを含む、`pDeltas`パラメーター。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="79da9-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="79da9-110">Return Value</span></span>  
- <span data-ttu-id="79da9-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="79da9-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9f8d1-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="9f8d1-110">Return Value</span></span>  
+ <span data-ttu-id="9f8d1-111">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="9f8d1-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79da9-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="79da9-112">Requirements</span></span>  
- <span data-ttu-id="79da9-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="79da9-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f8d1-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="9f8d1-112">Requirements</span></span>  
+ <span data-ttu-id="9f8d1-113">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9f8d1-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79da9-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="79da9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f8d1-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f8d1-114">See also</span></span>
 
-- [<span data-ttu-id="79da9-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="79da9-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="9f8d1-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9f8d1-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

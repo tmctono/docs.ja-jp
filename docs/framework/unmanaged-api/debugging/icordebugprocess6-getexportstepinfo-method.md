@@ -5,16 +5,16 @@ ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a891e6d65d159875f5607ac33b0668414cb380
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948626"
 ---
-# <a name="icordebugprocess6getexportstepinfo-method"></a><span data-ttu-id="4322f-102">ICorDebugProcess6::GetExportStepInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="4322f-102">ICorDebugProcess6::GetExportStepInfo Method</span></span>
-<span data-ttu-id="4322f-103">マネージド コードのステップ実行に役立つランタイム エクスポート関数の情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="4322f-103">Provides information on runtime exported functions to help step through managed code.</span></span>  
+# <a name="icordebugprocess6getexportstepinfo-method"></a><span data-ttu-id="277f7-102">ICorDebugProcess6::GetExportStepInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="277f7-102">ICorDebugProcess6::GetExportStepInfo Method</span></span>
+<span data-ttu-id="277f7-103">マネージド コードのステップ実行に役立つランタイム エクスポート関数の情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="277f7-103">Provides information on runtime exported functions to help step through managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4322f-104">構文</span><span class="sxs-lookup"><span data-stu-id="4322f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="277f7-104">構文</span><span class="sxs-lookup"><span data-stu-id="277f7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetExportStepInfo(  
@@ -23,40 +23,40 @@ HRESULT GetExportStepInfo(
     [out] CorDebugCodeInvokePurpose* pInvokePurpose);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4322f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4322f-105">Parameters</span></span>  
- <span data-ttu-id="4322f-106">pszExportName</span><span class="sxs-lookup"><span data-stu-id="4322f-106">pszExportName</span></span>  
- <span data-ttu-id="4322f-107">[入力] PE エクスポート テーブルに書き込まれるランタイム エクスポート関数の名前。</span><span class="sxs-lookup"><span data-stu-id="4322f-107">[in] The name of a runtime export function as written in the PE export table.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="277f7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="277f7-105">Parameters</span></span>  
+ <span data-ttu-id="277f7-106">pszExportName</span><span class="sxs-lookup"><span data-stu-id="277f7-106">pszExportName</span></span>  
+ <span data-ttu-id="277f7-107">[入力] PE エクスポート テーブルに書き込まれるランタイム エクスポート関数の名前。</span><span class="sxs-lookup"><span data-stu-id="277f7-107">[in] The name of a runtime export function as written in the PE export table.</span></span>  
   
- <span data-ttu-id="4322f-108">invokeKind</span><span class="sxs-lookup"><span data-stu-id="4322f-108">invokeKind</span></span>  
- <span data-ttu-id="4322f-109">[out]メンバーへのポインター、 [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)エクスポートされた関数がマネージ コードを呼び出す方法について説明する列挙体。</span><span class="sxs-lookup"><span data-stu-id="4322f-109">[out] A pointer to a member of the [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md) enumeration that describes how the exported function will invoke managed code.</span></span>  
+ <span data-ttu-id="277f7-108">invokeKind</span><span class="sxs-lookup"><span data-stu-id="277f7-108">invokeKind</span></span>  
+ <span data-ttu-id="277f7-109">[out]メンバーへのポインター、 [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)エクスポートされた関数がマネージ コードを呼び出す方法について説明する列挙体。</span><span class="sxs-lookup"><span data-stu-id="277f7-109">[out] A pointer to a member of the [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md) enumeration that describes how the exported function will invoke managed code.</span></span>  
   
- <span data-ttu-id="4322f-110">invokePurpose</span><span class="sxs-lookup"><span data-stu-id="4322f-110">invokePurpose</span></span>  
- <span data-ttu-id="4322f-111">[out]メンバーへのポインター、 [CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)エクスポートされた関数がマネージ コードを呼び出す理由を示す列挙体。</span><span class="sxs-lookup"><span data-stu-id="4322f-111">[out] A pointer to a member of the [CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md) enumeration that describes why the exported function will call managed code.</span></span>  
+ <span data-ttu-id="277f7-110">invokePurpose</span><span class="sxs-lookup"><span data-stu-id="277f7-110">invokePurpose</span></span>  
+ <span data-ttu-id="277f7-111">[out]メンバーへのポインター、 [CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)エクスポートされた関数がマネージ コードを呼び出す理由を示す列挙体。</span><span class="sxs-lookup"><span data-stu-id="277f7-111">[out] A pointer to a member of the [CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md) enumeration that describes why the exported function will call managed code.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4322f-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="4322f-112">Return Value</span></span>  
- <span data-ttu-id="4322f-113">メソッドは、次の表に記載されている値を返す場合があります。</span><span class="sxs-lookup"><span data-stu-id="4322f-113">The method can return the values listed in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="277f7-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="277f7-112">Return Value</span></span>  
+ <span data-ttu-id="277f7-113">メソッドは、次の表に記載されている値を返す場合があります。</span><span class="sxs-lookup"><span data-stu-id="277f7-113">The method can return the values listed in the following table.</span></span>  
   
-|<span data-ttu-id="4322f-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="4322f-114">Return value</span></span>|<span data-ttu-id="4322f-115">説明</span><span class="sxs-lookup"><span data-stu-id="4322f-115">Description</span></span>|  
+|<span data-ttu-id="277f7-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="277f7-114">Return value</span></span>|<span data-ttu-id="277f7-115">説明</span><span class="sxs-lookup"><span data-stu-id="277f7-115">Description</span></span>|  
 |------------------|-----------------|  
-|`S_OK`|<span data-ttu-id="4322f-116">メソッド呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="4322f-116">The method call was successful.</span></span>|  
-|`E_POINTER`|<span data-ttu-id="4322f-117">`pInvokeKind` または`pInvokePurpose`は**null**します。</span><span class="sxs-lookup"><span data-stu-id="4322f-117">`pInvokeKind` or `pInvokePurpose` is **null**.</span></span>|  
-|<span data-ttu-id="4322f-118">その他の失敗した `HRESULT` 値。</span><span class="sxs-lookup"><span data-stu-id="4322f-118">Other failing `HRESULT` values.</span></span>|<span data-ttu-id="4322f-119">必要に応じて。</span><span class="sxs-lookup"><span data-stu-id="4322f-119">As appropriate.</span></span>|  
+|`S_OK`|<span data-ttu-id="277f7-116">メソッド呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="277f7-116">The method call was successful.</span></span>|  
+|`E_POINTER`|<span data-ttu-id="277f7-117">`pInvokeKind` または`pInvokePurpose`は**null**します。</span><span class="sxs-lookup"><span data-stu-id="277f7-117">`pInvokeKind` or `pInvokePurpose` is **null**.</span></span>|  
+|<span data-ttu-id="277f7-118">その他の失敗した `HRESULT` 値。</span><span class="sxs-lookup"><span data-stu-id="277f7-118">Other failing `HRESULT` values.</span></span>|<span data-ttu-id="277f7-119">必要に応じて。</span><span class="sxs-lookup"><span data-stu-id="277f7-119">As appropriate.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4322f-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="4322f-120">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="277f7-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="277f7-120">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4322f-121">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="4322f-121">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="277f7-121">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="277f7-121">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4322f-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="4322f-122">Requirements</span></span>  
- <span data-ttu-id="4322f-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4322f-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="277f7-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="277f7-122">Requirements</span></span>  
+ <span data-ttu-id="277f7-123">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="277f7-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4322f-124">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4322f-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="277f7-124">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="277f7-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4322f-125">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4322f-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="277f7-125">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="277f7-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4322f-126">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4322f-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="277f7-126">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="277f7-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4322f-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="4322f-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="277f7-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="277f7-127">See also</span></span>
 
-- [<span data-ttu-id="4322f-128">ICorDebugProcess6 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4322f-128">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [<span data-ttu-id="4322f-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4322f-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="277f7-128">ICorDebugProcess6 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="277f7-128">ICorDebugProcess6 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
+- [<span data-ttu-id="277f7-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="277f7-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
