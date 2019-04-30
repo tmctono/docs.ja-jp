@@ -9,22 +9,22 @@ helpviewer_keywords:
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
 ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010411"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="a8372-102">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="a8372-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a8372-103">非常に柔軟なドラッグ アンド ドロップ インフラストラクチャ内の両方のデータのドラッグ アンド ドロップのサポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションだけでなく他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="a8372-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="a6053-102">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="a6053-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a6053-103">非常に柔軟なドラッグ アンド ドロップ インフラストラクチャ内の両方のデータのドラッグ アンド ドロップのサポートを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションだけでなく他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="a6053-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a8372-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a8372-104">In This Section</span></span>  
- [<span data-ttu-id="a8372-105">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="a8372-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
- [<span data-ttu-id="a8372-106">データとデータ オブジェクト</span><span class="sxs-lookup"><span data-stu-id="a8372-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
- [<span data-ttu-id="a8372-107">チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで</span><span class="sxs-lookup"><span data-stu-id="a8372-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="a8372-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="a8372-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a6053-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a6053-104">In This Section</span></span>  
+ [<span data-ttu-id="a6053-105">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="a6053-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="a6053-106">データとデータ オブジェクト</span><span class="sxs-lookup"><span data-stu-id="a6053-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="a6053-107">チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで</span><span class="sxs-lookup"><span data-stu-id="a6053-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="a6053-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="a6053-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a8372-109">参照</span><span class="sxs-lookup"><span data-stu-id="a8372-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a6053-109">参照</span><span class="sxs-lookup"><span data-stu-id="a6053-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "57367467"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="a8372-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8372-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a6053-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6053-110">Related Sections</span></span>

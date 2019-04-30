@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973681"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="20bb3-102">図形に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="20bb3-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="20bb3-103">このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Shapes.Shape>画面に基本的な図形を描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="20bb3-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="bf281-102">図形に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="bf281-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="bf281-103">このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Shapes.Shape>画面に基本的な図形を描画するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="bf281-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="20bb3-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="20bb3-104">In This Section</span></span>  
- [<span data-ttu-id="20bb3-105">多角形要素を使用して、閉じた図形を描画する</span><span class="sxs-lookup"><span data-stu-id="20bb3-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="20bb3-106">楕円または円を描画する</span><span class="sxs-lookup"><span data-stu-id="20bb3-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="20bb3-107">線を描画する</span><span class="sxs-lookup"><span data-stu-id="20bb3-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
- [<span data-ttu-id="20bb3-108">ポリライン要素を使用してポリラインを描画する</span><span class="sxs-lookup"><span data-stu-id="20bb3-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="20bb3-109">四角形を描画する</span><span class="sxs-lookup"><span data-stu-id="20bb3-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="20bb3-110">直線または線分の終点のキャップを変更する</span><span class="sxs-lookup"><span data-stu-id="20bb3-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bf281-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="bf281-104">In This Section</span></span>  
+ [<span data-ttu-id="bf281-105">多角形要素を使用して、閉じた図形を描画する</span><span class="sxs-lookup"><span data-stu-id="bf281-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="bf281-106">楕円または円を描画する</span><span class="sxs-lookup"><span data-stu-id="bf281-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="bf281-107">線を描画する</span><span class="sxs-lookup"><span data-stu-id="bf281-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
+ [<span data-ttu-id="bf281-108">ポリライン要素を使用してポリラインを描画する</span><span class="sxs-lookup"><span data-stu-id="bf281-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="bf281-109">四角形を描画する</span><span class="sxs-lookup"><span data-stu-id="bf281-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="bf281-110">直線または線分の終点のキャップを変更する</span><span class="sxs-lookup"><span data-stu-id="bf281-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="20bb3-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="20bb3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf281-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf281-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="20bb3-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="20bb3-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="bf281-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="bf281-112">Graphics and Multimedia</span></span>](index.md)

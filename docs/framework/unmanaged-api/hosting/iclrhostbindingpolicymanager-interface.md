@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e494bbbd08a77329b7b64816216e4bb2e1b724a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984673"
 ---
-# <a name="iclrhostbindingpolicymanager-interface"></a><span data-ttu-id="068a5-102">ICLRHostBindingPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="068a5-102">ICLRHostBindingPolicyManager Interface</span></span>
-<span data-ttu-id="068a5-103">現在のバインディング ポリシーを評価し、指定したアセンブリのポリシーの変更を通信するホストのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="068a5-103">Provides methods for the host to evaluate current binding policy and communicate policy changes for a specified assembly.</span></span>  
+# <a name="iclrhostbindingpolicymanager-interface"></a><span data-ttu-id="48856-102">ICLRHostBindingPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48856-102">ICLRHostBindingPolicyManager Interface</span></span>
+<span data-ttu-id="48856-103">現在のバインディング ポリシーを評価し、指定したアセンブリのポリシーの変更を通信するホストのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="48856-103">Provides methods for the host to evaluate current binding policy and communicate policy changes for a specified assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="068a5-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="068a5-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="48856-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="48856-104">Methods</span></span>  
   
-|<span data-ttu-id="068a5-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="068a5-105">Method</span></span>|<span data-ttu-id="068a5-106">説明</span><span class="sxs-lookup"><span data-stu-id="068a5-106">Description</span></span>|  
+|<span data-ttu-id="48856-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="48856-105">Method</span></span>|<span data-ttu-id="48856-106">説明</span><span class="sxs-lookup"><span data-stu-id="48856-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="068a5-107">EvaluatePolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="068a5-107">EvaluatePolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-evaluatepolicy-method.md)|<span data-ttu-id="068a5-108">ホストに代わってバインディング ポリシーを評価します。</span><span class="sxs-lookup"><span data-stu-id="068a5-108">Evaluates binding policy on behalf of the host.</span></span>|  
-|[<span data-ttu-id="068a5-109">ModifyApplicationPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="068a5-109">ModifyApplicationPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|<span data-ttu-id="068a5-110">指定されたアセンブリのバインディング ポリシーを変更し、新しいバージョンのポリシーを作成します。</span><span class="sxs-lookup"><span data-stu-id="068a5-110">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>|  
+|[<span data-ttu-id="48856-107">EvaluatePolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="48856-107">EvaluatePolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-evaluatepolicy-method.md)|<span data-ttu-id="48856-108">ホストに代わってバインディング ポリシーを評価します。</span><span class="sxs-lookup"><span data-stu-id="48856-108">Evaluates binding policy on behalf of the host.</span></span>|  
+|[<span data-ttu-id="48856-109">ModifyApplicationPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="48856-109">ModifyApplicationPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|<span data-ttu-id="48856-110">指定されたアセンブリのバインディング ポリシーを変更し、新しいバージョンのポリシーを作成します。</span><span class="sxs-lookup"><span data-stu-id="48856-110">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="068a5-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="068a5-111">Requirements</span></span>  
- <span data-ttu-id="068a5-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="068a5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48856-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="48856-111">Requirements</span></span>  
+ <span data-ttu-id="48856-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="48856-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="068a5-113">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="068a5-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="48856-113">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="48856-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="068a5-114">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="068a5-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="48856-114">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="48856-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="068a5-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="068a5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="48856-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48856-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="068a5-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="068a5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48856-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="48856-116">See also</span></span>
 
-- [<span data-ttu-id="068a5-117">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="068a5-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="068a5-118">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="068a5-118">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="068a5-119">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="068a5-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="48856-117">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48856-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="48856-118">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48856-118">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="48856-119">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="48856-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

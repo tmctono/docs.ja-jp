@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cdc1b0de9795a000ee680df880c73acc4f711db2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044370"
 ---
-# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="22690-102">IMetaDataConverter::GetMetaDataFromTypeLib メソッド</span><span class="sxs-lookup"><span data-stu-id="22690-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
-<span data-ttu-id="22690-103">インターフェイス ポインターを取得、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)インスタンスの指定によって表されるタイプ ライブラリのメタデータ署名を表す`ITypeLib`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="22690-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="76f9c-102">IMetaDataConverter::GetMetaDataFromTypeLib メソッド</span><span class="sxs-lookup"><span data-stu-id="76f9c-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
+<span data-ttu-id="76f9c-103">インターフェイス ポインターを取得、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)インスタンスの指定によって表されるタイプ ライブラリのメタデータ署名を表す`ITypeLib`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="76f9c-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22690-104">構文</span><span class="sxs-lookup"><span data-stu-id="22690-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76f9c-104">構文</span><span class="sxs-lookup"><span data-stu-id="76f9c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataFromTypeLib (  
@@ -36,23 +36,23 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22690-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="22690-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="76f9c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="76f9c-105">Parameters</span></span>  
  `pITL`  
- <span data-ttu-id="22690-106">[in]ポインター、`ITypeLib`タイプ ライブラリを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="22690-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
+ <span data-ttu-id="76f9c-106">[in]ポインター、`ITypeLib`タイプ ライブラリを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="76f9c-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="22690-107">[out]アドレスを受け取る場所へのポインター、`IMetaDataImport`メタデータ シグネチャを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="22690-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="76f9c-107">[out]アドレスを受け取る場所へのポインター、`IMetaDataImport`メタデータ シグネチャを表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="76f9c-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22690-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="22690-108">Requirements</span></span>  
- <span data-ttu-id="22690-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="22690-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76f9c-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="76f9c-108">Requirements</span></span>  
+ <span data-ttu-id="76f9c-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="76f9c-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22690-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="22690-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="76f9c-110">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="76f9c-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="22690-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="22690-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="76f9c-111">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="76f9c-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="22690-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22690-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="76f9c-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76f9c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22690-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="22690-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76f9c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="76f9c-113">See also</span></span>
 
-- [<span data-ttu-id="22690-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="22690-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="22690-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="22690-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="76f9c-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="76f9c-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="76f9c-115">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="76f9c-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045540"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="e77a9-102">CorPEKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="e77a9-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="e77a9-103">呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を含む[imetadataimport 2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="8cd6f-102">CorPEKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="8cd6f-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="8cd6f-103">呼び出しから返される、ポータブル実行可能 (PE) ファイルを記述する値を含む[imetadataimport 2::getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e77a9-104">構文</span><span class="sxs-lookup"><span data-stu-id="e77a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cd6f-104">構文</span><span class="sxs-lookup"><span data-stu-id="8cd6f-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPEKind {  
@@ -41,27 +41,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e77a9-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e77a9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8cd6f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="8cd6f-105">Members</span></span>  
   
-|<span data-ttu-id="e77a9-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e77a9-106">Member</span></span>|<span data-ttu-id="e77a9-107">説明</span><span class="sxs-lookup"><span data-stu-id="e77a9-107">Description</span></span>|  
+|<span data-ttu-id="8cd6f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="8cd6f-106">Member</span></span>|<span data-ttu-id="8cd6f-107">説明</span><span class="sxs-lookup"><span data-stu-id="8cd6f-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="e77a9-108">PE ファイルではないことを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="e77a9-109">この PE ファイルには、マネージ コードだけが含まれていることを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="e77a9-110">この PE ファイルが Win32 呼び出しを行うことを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="e77a9-111">64 ビット プラットフォームでこの PE ファイルを実行することを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="e77a9-112">この PE ファイルがネイティブ コードであることを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="e77a9-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="e77a9-113">pe32BitPreferred</span></span>|<span data-ttu-id="e77a9-114">この PE ファイルが 32 ビット環境に読み込むことが推奨プラットフォームに依存しないことを示します。</span><span class="sxs-lookup"><span data-stu-id="e77a9-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="8cd6f-108">PE ファイルではないことを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="8cd6f-109">この PE ファイルには、マネージ コードだけが含まれていることを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="8cd6f-110">この PE ファイルが Win32 呼び出しを行うことを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="8cd6f-111">64 ビット プラットフォームでこの PE ファイルを実行することを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="8cd6f-112">この PE ファイルがネイティブ コードであることを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="8cd6f-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="8cd6f-113">pe32BitPreferred</span></span>|<span data-ttu-id="8cd6f-114">この PE ファイルが 32 ビット環境に読み込むことが推奨プラットフォームに依存しないことを示します。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e77a9-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="e77a9-115">Remarks</span></span>  
- <span data-ttu-id="e77a9-116">これらの値は、ビットごとの組み合わせで使用できます。</span><span class="sxs-lookup"><span data-stu-id="e77a9-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8cd6f-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="8cd6f-115">Remarks</span></span>  
+ <span data-ttu-id="8cd6f-116">これらの値は、ビットごとの組み合わせで使用できます。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e77a9-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="e77a9-117">Requirements</span></span>  
- <span data-ttu-id="e77a9-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e77a9-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8cd6f-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="8cd6f-117">Requirements</span></span>  
+ <span data-ttu-id="8cd6f-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cd6f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e77a9-119">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e77a9-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8cd6f-119">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8cd6f-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e77a9-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e77a9-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8cd6f-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cd6f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e77a9-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="e77a9-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cd6f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cd6f-121">See also</span></span>
 
-- [<span data-ttu-id="e77a9-122">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="e77a9-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="8cd6f-122">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="8cd6f-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010562"
 ---
-# <a name="digital-ink"></a><span data-ttu-id="f3e40-102">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="f3e40-102">Digital Ink</span></span>
-<span data-ttu-id="f3e40-103">このセクションでデジタル インクの使用をについて説明します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="f3e40-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="f3e40-104">従来は Tablet PC SDK でのみ検出、デジタル インクは現在 Windows Presentation Foundation のコアに。</span><span class="sxs-lookup"><span data-stu-id="f3e40-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="f3e40-105">つまり、Windows Presentation Foundation の電源を使用して本格的な Tablet PC アプリケーションを開発できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="f3e40-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="1e8ab-102">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="1e8ab-102">Digital Ink</span></span>
+<span data-ttu-id="1e8ab-103">このセクションでデジタル インクの使用をについて説明します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="1e8ab-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="1e8ab-104">従来は Tablet PC SDK でのみ検出、デジタル インクは現在 Windows Presentation Foundation のコアに。</span><span class="sxs-lookup"><span data-stu-id="1e8ab-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="1e8ab-105">つまり、Windows Presentation Foundation の電源を使用して本格的な Tablet PC アプリケーションを開発できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="1e8ab-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f3e40-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f3e40-106">In This Section</span></span>  
- [<span data-ttu-id="f3e40-107">概要</span><span class="sxs-lookup"><span data-stu-id="f3e40-107">Overviews</span></span>](digital-ink-overviews.md)  
-  [<span data-ttu-id="f3e40-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="f3e40-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1e8ab-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1e8ab-106">In This Section</span></span>  
+ [<span data-ttu-id="1e8ab-107">概要</span><span class="sxs-lookup"><span data-stu-id="1e8ab-107">Overviews</span></span>](digital-ink-overviews.md)  
+  [<span data-ttu-id="1e8ab-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="1e8ab-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="f3e40-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="f3e40-109">Related Sections</span></span>  
- [<span data-ttu-id="f3e40-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="f3e40-110">Windows Presentation Foundation</span></span>](../index.md)
+## <a name="related-sections"></a><span data-ttu-id="1e8ab-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e8ab-109">Related Sections</span></span>  
+ [<span data-ttu-id="1e8ab-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="1e8ab-110">Windows Presentation Foundation</span></span>](../index.md)

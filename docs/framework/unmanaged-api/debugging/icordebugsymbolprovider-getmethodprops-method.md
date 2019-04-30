@@ -5,16 +5,16 @@ ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 784fcb10e9c0c3c6ff50c25d47bb4fb3fd5762ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953284"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a><span data-ttu-id="cc3f7-102">ICorDebugSymbolProvider::GetMethodProps メソッド</span><span class="sxs-lookup"><span data-stu-id="cc3f7-102">ICorDebugSymbolProvider::GetMethodProps Method</span></span>
-<span data-ttu-id="cc3f7-103">メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのプロパティに関する情報 (メソッドのメタデータ トークンなど) と、そのジェネリック パラメーターに関する情報を返します。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-103">Returns information about method properties, such as the method's metadata token and information about its generic parameters, given a relative virtual address (RVA) in that method.</span></span>  
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a><span data-ttu-id="5d7eb-102">ICorDebugSymbolProvider::GetMethodProps メソッド</span><span class="sxs-lookup"><span data-stu-id="5d7eb-102">ICorDebugSymbolProvider::GetMethodProps Method</span></span>
+<span data-ttu-id="5d7eb-103">メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのプロパティに関する情報 (メソッドのメタデータ トークンなど) と、そのジェネリック パラメーターに関する情報を返します。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-103">Returns information about method properties, such as the method's metadata token and information about its generic parameters, given a relative virtual address (RVA) in that method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc3f7-104">構文</span><span class="sxs-lookup"><span data-stu-id="cc3f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d7eb-104">構文</span><span class="sxs-lookup"><span data-stu-id="5d7eb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodProps(  
@@ -27,42 +27,42 @@ HRESULT GetMethodProps(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cc3f7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cc3f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d7eb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5d7eb-105">Parameters</span></span>  
  `codeRVA`  
- <span data-ttu-id="cc3f7-106">[in]情報を取得するメソッドでの相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-106">[in] A relative virtual address in the method about which information is to be retrieved.</span></span>  
+ <span data-ttu-id="5d7eb-106">[in]情報を取得するメソッドでの相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-106">[in] A relative virtual address in the method about which information is to be retrieved.</span></span>  
   
  `pMethodToken`  
- <span data-ttu-id="cc3f7-107">[out] メソッドのメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-107">[out] A pointer to the method's metadata token.</span></span>  
+ <span data-ttu-id="5d7eb-107">[out] メソッドのメタデータ トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-107">[out] A pointer to the method's metadata token.</span></span>  
   
  `pcGenericParams`  
- <span data-ttu-id="cc3f7-108">[out] このメソッドに関連付けられているジェネリック パラメーターの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-108">[out] A pointer to the number of generic parameters associated with this method.</span></span>  
+ <span data-ttu-id="5d7eb-108">[out] このメソッドに関連付けられているジェネリック パラメーターの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-108">[out] A pointer to the number of generic parameters associated with this method.</span></span>  
   
  `cbSignature`  
- <span data-ttu-id="cc3f7-109">[in] `signature` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-109">[in] The size of the `signature` array.</span></span> <span data-ttu-id="cc3f7-110">「解説」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-110">See the Remarks section.</span></span>  
+ <span data-ttu-id="5d7eb-109">[in] `signature` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-109">[in] The size of the `signature` array.</span></span> <span data-ttu-id="5d7eb-110">「解説」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-110">See the Remarks section.</span></span>  
   
  `pcbSignature`  
- <span data-ttu-id="cc3f7-111">[out] 返される `signature` 配列のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-111">[out] A pointer to the size of the returned `signature` array.</span></span>  
+ <span data-ttu-id="5d7eb-111">[out] 返される `signature` 配列のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-111">[out] A pointer to the size of the returned `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="cc3f7-112">[out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-112">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
+ <span data-ttu-id="5d7eb-112">[out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-112">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cc3f7-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="cc3f7-113">Remarks</span></span>  
- <span data-ttu-id="cc3f7-114">メソッドに必要なサイズを取得する`signature`配列は、設定、`cbSignature`引数を 0 にし、`signature`に**null**します。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-114">To get the required size of the method's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="cc3f7-115">このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-115">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d7eb-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="5d7eb-113">Remarks</span></span>  
+ <span data-ttu-id="5d7eb-114">メソッドに必要なサイズを取得する`signature`配列は、設定、`cbSignature`引数を 0 にし、`signature`に**null**します。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-114">To get the required size of the method's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="5d7eb-115">このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-115">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cc3f7-116">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-116">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="5d7eb-116">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-116">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cc3f7-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="cc3f7-117">Requirements</span></span>  
- <span data-ttu-id="cc3f7-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cc3f7-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d7eb-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="5d7eb-117">Requirements</span></span>  
+ <span data-ttu-id="5d7eb-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d7eb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cc3f7-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cc3f7-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5d7eb-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5d7eb-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cc3f7-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cc3f7-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5d7eb-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d7eb-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cc3f7-121">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc3f7-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="5d7eb-121">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d7eb-121">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc3f7-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="cc3f7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d7eb-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d7eb-122">See also</span></span>
 
-- [<span data-ttu-id="cc3f7-123">GetTypeProps メソッド</span><span class="sxs-lookup"><span data-stu-id="cc3f7-123">GetTypeProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
-- [<span data-ttu-id="cc3f7-124">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cc3f7-124">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="cc3f7-125">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cc3f7-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5d7eb-123">GetTypeProps メソッド</span><span class="sxs-lookup"><span data-stu-id="5d7eb-123">GetTypeProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
+- [<span data-ttu-id="5d7eb-124">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d7eb-124">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="5d7eb-125">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d7eb-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

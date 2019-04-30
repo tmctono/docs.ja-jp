@@ -17,32 +17,32 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986675"
 ---
-# <a name="icorpublishappdomain-interface"></a><span data-ttu-id="1c6c4-102">ICorPublishAppDomain インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1c6c4-102">ICorPublishAppDomain Interface</span></span>
-<span data-ttu-id="1c6c4-103">アプリケーション ドメインの情報を表し、提供します。</span><span class="sxs-lookup"><span data-stu-id="1c6c4-103">Represents and provides information about an application domain.</span></span>  
+# <a name="icorpublishappdomain-interface"></a><span data-ttu-id="018ad-102">ICorPublishAppDomain インターフェイス</span><span class="sxs-lookup"><span data-stu-id="018ad-102">ICorPublishAppDomain Interface</span></span>
+<span data-ttu-id="018ad-103">アプリケーション ドメインの情報を表し、提供します。</span><span class="sxs-lookup"><span data-stu-id="018ad-103">Represents and provides information about an application domain.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1c6c4-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="1c6c4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="018ad-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="018ad-104">Methods</span></span>  
   
-|<span data-ttu-id="1c6c4-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="1c6c4-105">Method</span></span>|<span data-ttu-id="1c6c4-106">説明</span><span class="sxs-lookup"><span data-stu-id="1c6c4-106">Description</span></span>|  
+|<span data-ttu-id="018ad-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="018ad-105">Method</span></span>|<span data-ttu-id="018ad-106">説明</span><span class="sxs-lookup"><span data-stu-id="018ad-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1c6c4-107">GetID メソッド</span><span class="sxs-lookup"><span data-stu-id="1c6c4-107">GetID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|<span data-ttu-id="1c6c4-108">この一意識別子を取得します。`ICorPublishAppDomain`します。</span><span class="sxs-lookup"><span data-stu-id="1c6c4-108">Gets the unique identifier for this `ICorPublishAppDomain`.</span></span>|  
-|[<span data-ttu-id="1c6c4-109">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="1c6c4-109">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|<span data-ttu-id="1c6c4-110">これによって参照されるアプリケーション ドメインの名前を取得`ICorPublishAppDomain`します。</span><span class="sxs-lookup"><span data-stu-id="1c6c4-110">Gets the name of the application domain referenced by this `ICorPublishAppDomain`.</span></span>|  
+|[<span data-ttu-id="018ad-107">GetID メソッド</span><span class="sxs-lookup"><span data-stu-id="018ad-107">GetID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|<span data-ttu-id="018ad-108">この一意識別子を取得します。`ICorPublishAppDomain`します。</span><span class="sxs-lookup"><span data-stu-id="018ad-108">Gets the unique identifier for this `ICorPublishAppDomain`.</span></span>|  
+|[<span data-ttu-id="018ad-109">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="018ad-109">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|<span data-ttu-id="018ad-110">これによって参照されるアプリケーション ドメインの名前を取得`ICorPublishAppDomain`します。</span><span class="sxs-lookup"><span data-stu-id="018ad-110">Gets the name of the application domain referenced by this `ICorPublishAppDomain`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1c6c4-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="1c6c4-111">Requirements</span></span>  
- <span data-ttu-id="1c6c4-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1c6c4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="018ad-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="018ad-111">Requirements</span></span>  
+ <span data-ttu-id="018ad-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="018ad-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1c6c4-113">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="1c6c4-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="018ad-113">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="018ad-113">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="1c6c4-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c6c4-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="018ad-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="018ad-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1c6c4-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c6c4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="018ad-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="018ad-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c6c4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1c6c4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="018ad-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="018ad-116">See also</span></span>
 
-- [<span data-ttu-id="1c6c4-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1c6c4-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="1c6c4-118">CorpubPublish コクラス</span><span class="sxs-lookup"><span data-stu-id="1c6c4-118">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [<span data-ttu-id="018ad-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="018ad-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="018ad-118">CorpubPublish コクラス</span><span class="sxs-lookup"><span data-stu-id="018ad-118">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

@@ -3,41 +3,41 @@ title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002244"
 ---
-# <a name="configuration-sample"></a><span data-ttu-id="55a86-102">構成サンプル</span><span class="sxs-lookup"><span data-stu-id="55a86-102">Configuration Sample</span></span>
-<span data-ttu-id="55a86-103">このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="55a86-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
+# <a name="configuration-sample"></a><span data-ttu-id="e89d1-102">構成サンプル</span><span class="sxs-lookup"><span data-stu-id="e89d1-102">Configuration Sample</span></span>
+<span data-ttu-id="e89d1-103">このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="55a86-104">このサンプルでは、探索を構成ファイルで実装しています。</span><span class="sxs-lookup"><span data-stu-id="55a86-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="55a86-105">探索をコードで実装するサンプルについては、次を参照してください。[基本的な](../../../../docs/framework/wcf/samples/basic-sample.md)します。</span><span class="sxs-lookup"><span data-stu-id="55a86-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
+>  <span data-ttu-id="e89d1-104">このサンプルでは、探索を構成ファイルで実装しています。</span><span class="sxs-lookup"><span data-stu-id="e89d1-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="e89d1-105">探索をコードで実装するサンプルについては、次を参照してください。[基本的な](../../../../docs/framework/wcf/samples/basic-sample.md)します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="55a86-106">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="55a86-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="55a86-107">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="55a86-107">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="e89d1-106">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="e89d1-107">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="e89d1-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="55a86-108">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="55a86-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="55a86-109">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-109">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="e89d1-108">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="e89d1-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e89d1-109">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-109">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a><span data-ttu-id="55a86-110">サービス構成</span><span class="sxs-lookup"><span data-stu-id="55a86-110">Service Configuration</span></span>  
- <span data-ttu-id="55a86-111">このサンプルの構成ファイルでは、次の 2 つの機能を示します。</span><span class="sxs-lookup"><span data-stu-id="55a86-111">The configuration file in this sample demonstrates two features:</span></span>  
+## <a name="service-configuration"></a><span data-ttu-id="e89d1-110">サービス構成</span><span class="sxs-lookup"><span data-stu-id="e89d1-110">Service Configuration</span></span>  
+ <span data-ttu-id="e89d1-111">このサンプルの構成ファイルでは、次の 2 つの機能を示します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-111">The configuration file in this sample demonstrates two features:</span></span>  
   
--   <span data-ttu-id="55a86-112">標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。</span><span class="sxs-lookup"><span data-stu-id="55a86-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
+- <span data-ttu-id="e89d1-112">標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。</span><span class="sxs-lookup"><span data-stu-id="e89d1-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
   
--   <span data-ttu-id="55a86-113">サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。</span><span class="sxs-lookup"><span data-stu-id="55a86-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
+- <span data-ttu-id="e89d1-113">サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
   
- <span data-ttu-id="55a86-114">探索を有効にするには、サービスのアプリケーション構成ファイルで次の変更を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="55a86-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
+ <span data-ttu-id="e89d1-114">探索を有効にするには、サービスのアプリケーション構成ファイルで次の変更を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
   
--   <span data-ttu-id="55a86-115">探索エンドポイントを `<service>` 要素に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="55a86-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="55a86-116">これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="55a86-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="55a86-117">このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。</span><span class="sxs-lookup"><span data-stu-id="55a86-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="55a86-118">探索サービスは、このエンドポイント上でメッセージをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="55a86-118">The discovery service listens for messages on this endpoint.</span></span>  
+- <span data-ttu-id="e89d1-115">探索エンドポイントを `<service>` 要素に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="e89d1-116">これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="e89d1-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="e89d1-117">このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="e89d1-118">探索サービスは、このエンドポイント上でメッセージをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="e89d1-118">The discovery service listens for messages on this endpoint.</span></span>  
   
--   <span data-ttu-id="55a86-119">`<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="55a86-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="55a86-120">これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。</span><span class="sxs-lookup"><span data-stu-id="55a86-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="55a86-121">この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。</span><span class="sxs-lookup"><span data-stu-id="55a86-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
+- <span data-ttu-id="e89d1-119">`<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="e89d1-120">これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="e89d1-121">この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
   
- <span data-ttu-id="55a86-122">次の構成スニペットでは、アプリケーション エンドポイントのサービスと定義された探索エンドポイントが示されています。</span><span class="sxs-lookup"><span data-stu-id="55a86-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
+ <span data-ttu-id="e89d1-122">次の構成スニペットでは、アプリケーション エンドポイントのサービスと定義された探索エンドポイントが示されています。</span><span class="sxs-lookup"><span data-stu-id="e89d1-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
   
 ```xml
 <services>  
@@ -53,7 +53,7 @@ ms.locfileid: "59768242"
       </services>  
 ```  
   
- <span data-ttu-id="55a86-123">アナウンスを活用するために、アナウンス エンドポイントを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="55a86-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="55a86-124">これを実行するために、次のコードに示すように構成ファイルを変更します。</span><span class="sxs-lookup"><span data-stu-id="55a86-124">To do this, modify the configuration file as shown in the following code.</span></span>  
+ <span data-ttu-id="e89d1-123">アナウンスを活用するために、アナウンス エンドポイントを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="e89d1-124">これを実行するために、次のコードに示すように構成ファイルを変更します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-124">To do this, modify the configuration file as shown in the following code.</span></span>  
   
 ```xml  
 <serviceDiscovery>  
@@ -63,15 +63,15 @@ ms.locfileid: "59768242"
           </serviceDiscovery>  
 ```  
   
- <span data-ttu-id="55a86-125">アナウンス エンドポイントを探索サービス動作に追加することにより、サービスの既定のアナウンス クライアントが作成されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="55a86-126">これによって、サービスは、サービスが開いたときおよび閉じたときにそれぞれオンラインおよびオフラインのアナウンスを送信することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
+ <span data-ttu-id="e89d1-125">アナウンス エンドポイントを探索サービス動作に追加することにより、サービスの既定のアナウンス クライアントが作成されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="e89d1-126">これによって、サービスは、サービスが開いたときおよび閉じたときにそれぞれオンラインおよびオフラインのアナウンスを送信することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
   
- <span data-ttu-id="55a86-127">この構成ファイルは、さらに動作を変更することによって、より高度な機能を提供できます。</span><span class="sxs-lookup"><span data-stu-id="55a86-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="55a86-128">特定のエンドポイントを使用することで、探索関連の情報を制御できます。</span><span class="sxs-lookup"><span data-stu-id="55a86-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="55a86-129">つまり、ユーザーは、エンドポイントを探索できるかどうかを制御できるだけでなく、そのエンドポイントを <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> およびカスタム XML メタデータでマークすることもできます。</span><span class="sxs-lookup"><span data-stu-id="55a86-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="55a86-130">これを行うには、`behaviorConfiguration` プロパティをアプリケーション エンドポイントに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="55a86-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="55a86-131">この場合、次のプロパティをアプリケーション エンドポイントに追加します。</span><span class="sxs-lookup"><span data-stu-id="55a86-131">In this case, the following property is added to the application endpoint.</span></span>  
+ <span data-ttu-id="e89d1-127">この構成ファイルは、さらに動作を変更することによって、より高度な機能を提供できます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="e89d1-128">特定のエンドポイントを使用することで、探索関連の情報を制御できます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="e89d1-129">つまり、ユーザーは、エンドポイントを探索できるかどうかを制御できるだけでなく、そのエンドポイントを <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> およびカスタム XML メタデータでマークすることもできます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="e89d1-130">これを行うには、`behaviorConfiguration` プロパティをアプリケーション エンドポイントに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="e89d1-131">この場合、次のプロパティをアプリケーション エンドポイントに追加します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-131">In this case, the following property is added to the application endpoint.</span></span>  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
 ```  
   
- <span data-ttu-id="55a86-132">これで、この動作構成要素を通じて、探索関連の属性を制御できます。</span><span class="sxs-lookup"><span data-stu-id="55a86-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="55a86-133">この場合、2 つのスコープがアプリケーション エンドポイントに追加されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-133">In this case, two scopes are added to the application endpoint.</span></span>  
+ <span data-ttu-id="e89d1-132">これで、この動作構成要素を通じて、探索関連の属性を制御できます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="e89d1-133">この場合、2 つのスコープがアプリケーション エンドポイントに追加されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-133">In this case, two scopes are added to the application endpoint.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -87,9 +87,9 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- <span data-ttu-id="55a86-134">スコープの詳細については、次を参照してください。[探索検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)します。</span><span class="sxs-lookup"><span data-stu-id="55a86-134">For more information about scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
+ <span data-ttu-id="e89d1-134">スコープの詳細については、次を参照してください。[探索検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-134">For more information about scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
   
- <span data-ttu-id="55a86-135">探索エンドポイントに固有の詳細を制御することもできます。</span><span class="sxs-lookup"><span data-stu-id="55a86-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="55a86-136">この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。</span><span class="sxs-lookup"><span data-stu-id="55a86-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="55a86-137">このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="55a86-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
+ <span data-ttu-id="e89d1-135">探索エンドポイントに固有の詳細を制御することもできます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="e89d1-136">この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="e89d1-137">このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
   
 ```xml  
 <standardEndpoints>  
@@ -99,7 +99,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </standardEndpoints>  
 ```  
   
- <span data-ttu-id="55a86-138">この例で使用されている構成ファイルの全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="55a86-138">The following is the complete configuration file used in this example:</span></span>  
+ <span data-ttu-id="e89d1-138">この例で使用されている構成ファイルの全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-138">The following is the complete configuration file used in this example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -156,8 +156,8 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a><span data-ttu-id="55a86-139">クライアント構成</span><span class="sxs-lookup"><span data-stu-id="55a86-139">Client Configuration</span></span>  
- <span data-ttu-id="55a86-140">クライアントのアプリケーション構成ファイルでは、`standardEndpoint` 型の `dynamicEndpoint` を使用して次の構成スニペットに示すように探索を利用します。</span><span class="sxs-lookup"><span data-stu-id="55a86-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
+## <a name="client-configuration"></a><span data-ttu-id="e89d1-139">クライアント構成</span><span class="sxs-lookup"><span data-stu-id="e89d1-139">Client Configuration</span></span>  
+ <span data-ttu-id="e89d1-140">クライアントのアプリケーション構成ファイルでは、`standardEndpoint` 型の `dynamicEndpoint` を使用して次の構成スニペットに示すように探索を利用します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
   
 ```xml  
 <client>  
@@ -171,13 +171,13 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </client>  
 ```  
   
- <span data-ttu-id="55a86-141">クライアントで `dynamicEndpoint` を使用する場合、探索は自動的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="55a86-142">探索時にはさまざまな設定が使用されます。たとえば、使用する探索エンドポイントの型を指定する、`discoveryClientSettings` セクションで定義される設定などがあります。</span><span class="sxs-lookup"><span data-stu-id="55a86-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
+ <span data-ttu-id="e89d1-141">クライアントで `dynamicEndpoint` を使用する場合、探索は自動的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="e89d1-142">探索時にはさまざまな設定が使用されます。たとえば、使用する探索エンドポイントの型を指定する、`discoveryClientSettings` セクションで定義される設定などがあります。</span><span class="sxs-lookup"><span data-stu-id="e89d1-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
 ```  
   
- <span data-ttu-id="55a86-143">サービスの検索に使用する検索基準。</span><span class="sxs-lookup"><span data-stu-id="55a86-143">The find criteria used to search for services:</span></span>  
+ <span data-ttu-id="e89d1-143">サービスの検索に使用する検索基準。</span><span class="sxs-lookup"><span data-stu-id="e89d1-143">The find criteria used to search for services:</span></span>  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -192,7 +192,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </findCriteria>  
 ```  
   
- <span data-ttu-id="55a86-144">このサンプルでは、この機能を拡張し、クライアントで使用される <xref:System.ServiceModel.Discovery.FindCriteria>、および探索に使用される標準の `updDiscoveryEndpoint` の一部のプロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="55a86-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="55a86-145"><xref:System.ServiceModel.Discovery.FindCriteria> は、スコープと特定の `scopeMatchBy` アルゴリズム、およびカスタムの終了条件を使用するように変更します。</span><span class="sxs-lookup"><span data-stu-id="55a86-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="55a86-146">さらに、このサンプルでは、クライアントで `Probe` メッセージを使用して XML 要素を送信する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="55a86-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="55a86-147">最後に、次の構成ファイルに示すように、使用するプロトコルのバージョンや UDP 固有の設定など、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> の変更をいくつか行います。</span><span class="sxs-lookup"><span data-stu-id="55a86-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
+ <span data-ttu-id="e89d1-144">このサンプルでは、この機能を拡張し、クライアントで使用される <xref:System.ServiceModel.Discovery.FindCriteria>、および探索に使用される標準の `updDiscoveryEndpoint` の一部のプロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="e89d1-145"><xref:System.ServiceModel.Discovery.FindCriteria> は、スコープと特定の `scopeMatchBy` アルゴリズム、およびカスタムの終了条件を使用するように変更します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="e89d1-146">さらに、このサンプルでは、クライアントで `Probe` メッセージを使用して XML 要素を送信する方法も示します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="e89d1-147">最後に、次の構成ファイルに示すように、使用するプロトコルのバージョンや UDP 固有の設定など、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> の変更をいくつか行います。</span><span class="sxs-lookup"><span data-stu-id="e89d1-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -206,7 +206,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
       </udpDiscoveryEndpoint>  
 ```  
   
- <span data-ttu-id="55a86-148">サンプルで使用されているクライアント構成の全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="55a86-148">The following is the complete client configuration used in the sample.</span></span>  
+ <span data-ttu-id="e89d1-148">サンプルで使用されているクライアント構成の全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-148">The following is the complete client configuration used in the sample.</span></span>  
   
 ```xml  
 <configuration>  
@@ -259,12 +259,12 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   </system.serviceModel>  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="55a86-149">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="55a86-149">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="e89d1-149">このサンプルを使用するには</span><span class="sxs-lookup"><span data-stu-id="e89d1-149">To use this sample</span></span>  
   
-1. <span data-ttu-id="55a86-150">このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="55a86-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="55a86-151">管理特権で次のコマンドを実行すると、適切な ACL が追加されます。</span><span class="sxs-lookup"><span data-stu-id="55a86-151">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="55a86-152">そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。</span><span class="sxs-lookup"><span data-stu-id="55a86-152">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. <span data-ttu-id="e89d1-150">このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。</span><span class="sxs-lookup"><span data-stu-id="e89d1-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="e89d1-151">管理特権で次のコマンドを実行すると、適切な ACL が追加されます。</span><span class="sxs-lookup"><span data-stu-id="e89d1-151">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="e89d1-152">そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。</span><span class="sxs-lookup"><span data-stu-id="e89d1-152">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. <span data-ttu-id="55a86-153">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="55a86-153">Build the solution.</span></span>  
+2. <span data-ttu-id="e89d1-153">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="e89d1-153">Build the solution.</span></span>  
   
-3. <span data-ttu-id="55a86-154">ビルド ディレクトリからサービス実行可能ファイルを実行します。</span><span class="sxs-lookup"><span data-stu-id="55a86-154">Run the service executable from the build directory.</span></span>  
+3. <span data-ttu-id="e89d1-154">ビルド ディレクトリからサービス実行可能ファイルを実行します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-154">Run the service executable from the build directory.</span></span>  
   
-4. <span data-ttu-id="55a86-155">クライアント実行可能ファイルを実行します。</span><span class="sxs-lookup"><span data-stu-id="55a86-155">Run the client executable.</span></span> <span data-ttu-id="55a86-156">クライアントでサービスを検索できることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="55a86-156">Note that the client is able to locate the service.</span></span>  
+4. <span data-ttu-id="e89d1-155">クライアント実行可能ファイルを実行します。</span><span class="sxs-lookup"><span data-stu-id="e89d1-155">Run the client executable.</span></span> <span data-ttu-id="e89d1-156">クライアントでサービスを検索できることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e89d1-156">Note that the client is able to locate the service.</span></span>  

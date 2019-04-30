@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5760287e01257e3f0fc99a18ba20f2f2a1b2b3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988157"
 ---
-# <a name="icordebugmanagedcallbackloadassembly-method"></a><span data-ttu-id="f8513-102">ICorDebugManagedCallback::LoadAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="f8513-102">ICorDebugManagedCallback::LoadAssembly Method</span></span>
-<span data-ttu-id="f8513-103">共通言語ランタイム (CLR) アセンブリが正常にアンロードされたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="f8513-103">Notifies the debugger that a common language runtime (CLR) assembly has been successfully loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadassembly-method"></a><span data-ttu-id="b225f-102">ICorDebugManagedCallback::LoadAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="b225f-102">ICorDebugManagedCallback::LoadAssembly Method</span></span>
+<span data-ttu-id="b225f-103">共通言語ランタイム (CLR) アセンブリが正常にアンロードされたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b225f-103">Notifies the debugger that a common language runtime (CLR) assembly has been successfully loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8513-104">構文</span><span class="sxs-lookup"><span data-stu-id="f8513-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b225f-104">構文</span><span class="sxs-lookup"><span data-stu-id="b225f-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadAssembly (  
@@ -36,23 +36,23 @@ HRESULT LoadAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f8513-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f8513-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b225f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b225f-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="f8513-106">[in]先のアセンブリが読み込まれたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f8513-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the assembly has been loaded.</span></span>  
+ <span data-ttu-id="b225f-106">[in]先のアセンブリが読み込まれたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b225f-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the assembly has been loaded.</span></span>  
   
  `pAssembly`  
- <span data-ttu-id="f8513-107">[in]アセンブリを表す ICorDebugAssembly オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f8513-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
+ <span data-ttu-id="b225f-107">[in]アセンブリを表す ICorDebugAssembly オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b225f-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8513-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="f8513-108">Requirements</span></span>  
- <span data-ttu-id="f8513-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f8513-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b225f-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="b225f-108">Requirements</span></span>  
+ <span data-ttu-id="b225f-109">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b225f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8513-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f8513-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b225f-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b225f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f8513-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f8513-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b225f-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b225f-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f8513-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8513-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b225f-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b225f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8513-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8513-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b225f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b225f-113">See also</span></span>
 
-- [<span data-ttu-id="f8513-114">UnloadAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="f8513-114">UnloadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
-- [<span data-ttu-id="f8513-115">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8513-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="b225f-114">UnloadAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="b225f-114">UnloadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
+- [<span data-ttu-id="b225f-115">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b225f-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d1d97e443be884f45187a2811ddfce106249515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044357"
 ---
-# <a name="imetadatadispenserexfindassemblymodule-method"></a><span data-ttu-id="bf237-102">IMetaDataDispenserEx::FindAssemblyModule メソッド</span><span class="sxs-lookup"><span data-stu-id="bf237-102">IMetaDataDispenserEx::FindAssemblyModule Method</span></span>
-<span data-ttu-id="bf237-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="bf237-103">This method is not implemented.</span></span> <span data-ttu-id="bf237-104">呼び出された場合、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="bf237-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassemblymodule-method"></a><span data-ttu-id="ee0b7-102">IMetaDataDispenserEx::FindAssemblyModule メソッド</span><span class="sxs-lookup"><span data-stu-id="ee0b7-102">IMetaDataDispenserEx::FindAssemblyModule Method</span></span>
+<span data-ttu-id="ee0b7-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-103">This method is not implemented.</span></span> <span data-ttu-id="ee0b7-104">呼び出された場合、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf237-105">構文</span><span class="sxs-lookup"><span data-stu-id="bf237-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ee0b7-105">構文</span><span class="sxs-lookup"><span data-stu-id="ee0b7-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssemblyModule(  
@@ -42,41 +42,41 @@ HRESULT FindAssemblyModule(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf237-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bf237-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ee0b7-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ee0b7-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="bf237-107">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="bf237-107">[in] Not used.</span></span>  
+ <span data-ttu-id="ee0b7-107">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="bf237-108">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="bf237-108">[in] Not used.</span></span>  
+ <span data-ttu-id="ee0b7-108">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="bf237-109">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="bf237-109">[in] Not used.</span></span>  
+ <span data-ttu-id="ee0b7-109">[in]使用されません。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="bf237-110">[in]モジュールの名前。</span><span class="sxs-lookup"><span data-stu-id="bf237-110">[in] The name of the module.</span></span>  
+ <span data-ttu-id="ee0b7-110">[in]モジュールの名前。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-110">[in] The name of the module.</span></span>  
   
  `szModuleName`  
- <span data-ttu-id="bf237-111">[in]検索するアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="bf237-111">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="ee0b7-111">[in]検索するアセンブリ。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-111">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="bf237-112">[out]アセンブリの簡易名。</span><span class="sxs-lookup"><span data-stu-id="bf237-112">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="ee0b7-112">[out]アセンブリの簡易名。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-112">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="bf237-113">[in]サイズ (バイト単位) の`szName`します。</span><span class="sxs-lookup"><span data-stu-id="bf237-113">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="ee0b7-113">[in]サイズ (バイト単位) の`szName`します。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-113">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="bf237-114">[out]実際に返される文字数`szName`します。</span><span class="sxs-lookup"><span data-stu-id="bf237-114">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="ee0b7-114">[out]実際に返される文字数`szName`します。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-114">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf237-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="bf237-115">Requirements</span></span>  
- <span data-ttu-id="bf237-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bf237-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee0b7-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="ee0b7-115">Requirements</span></span>  
+ <span data-ttu-id="ee0b7-116">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ee0b7-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf237-117">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bf237-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ee0b7-117">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ee0b7-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf237-118">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="bf237-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ee0b7-118">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="ee0b7-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bf237-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf237-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ee0b7-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee0b7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf237-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf237-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee0b7-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee0b7-120">See also</span></span>
 
-- [<span data-ttu-id="bf237-121">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf237-121">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="bf237-122">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bf237-122">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="ee0b7-121">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ee0b7-121">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="ee0b7-122">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ee0b7-122">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

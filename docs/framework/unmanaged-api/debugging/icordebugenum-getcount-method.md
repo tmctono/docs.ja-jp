@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4af328c537fbc3b64eb1a2ac3df3a4e4224789e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996022"
 ---
-# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="30bff-102">ICorDebugEnum::GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="30bff-102">ICorDebugEnum::GetCount Method</span></span>
-<span data-ttu-id="30bff-103">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="30bff-103">Gets the number of items in the enumeration.</span></span>  
+# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="3abfc-102">ICorDebugEnum::GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="3abfc-102">ICorDebugEnum::GetCount Method</span></span>
+<span data-ttu-id="3abfc-103">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="3abfc-103">Gets the number of items in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30bff-104">構文</span><span class="sxs-lookup"><span data-stu-id="30bff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3abfc-104">構文</span><span class="sxs-lookup"><span data-stu-id="3abfc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount (  
@@ -35,15 +35,15 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30bff-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="30bff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3abfc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3abfc-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="30bff-106">[out]列挙に含まれる項目数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="30bff-106">[out] A pointer to the number of items in the enumeration.</span></span>  
+ <span data-ttu-id="3abfc-106">[out]列挙に含まれる項目数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3abfc-106">[out] A pointer to the number of items in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30bff-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="30bff-107">Requirements</span></span>  
- <span data-ttu-id="30bff-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="30bff-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3abfc-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="3abfc-107">Requirements</span></span>  
+ <span data-ttu-id="3abfc-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3abfc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30bff-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30bff-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3abfc-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3abfc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="30bff-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30bff-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3abfc-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3abfc-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="30bff-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30bff-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3abfc-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3abfc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

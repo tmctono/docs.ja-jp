@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77f4e745e4bd45be51b497fdd5bab95cd24c9685
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994813"
 ---
-# <a name="icordebugmodule2getjitcompilerflags-method"></a><span data-ttu-id="eb8bd-102">ICorDebugModule2::GetJITCompilerFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="eb8bd-102">ICorDebugModule2::GetJITCompilerFlags Method</span></span>
-<span data-ttu-id="eb8bd-103">この ICorDebugModule2 の・ イン タイム (JIT) コンパイルを制御するフラグを取得します。</span><span class="sxs-lookup"><span data-stu-id="eb8bd-103">Gets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
+# <a name="icordebugmodule2getjitcompilerflags-method"></a><span data-ttu-id="11958-102">ICorDebugModule2::GetJITCompilerFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="11958-102">ICorDebugModule2::GetJITCompilerFlags Method</span></span>
+<span data-ttu-id="11958-103">この ICorDebugModule2 の・ イン タイム (JIT) コンパイルを制御するフラグを取得します。</span><span class="sxs-lookup"><span data-stu-id="11958-103">Gets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb8bd-104">構文</span><span class="sxs-lookup"><span data-stu-id="eb8bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11958-104">構文</span><span class="sxs-lookup"><span data-stu-id="11958-104">Syntax</span></span>  
   
 ```  
 HRESULT GetJITCompilerFlags (  
@@ -35,15 +35,15 @@ HRESULT GetJITCompilerFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eb8bd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="eb8bd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11958-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="11958-105">Parameters</span></span>  
  `pdwFlags`  
- <span data-ttu-id="eb8bd-106">[out]値へのポインター、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) JIT コンパイルを制御する列挙体。</span><span class="sxs-lookup"><span data-stu-id="eb8bd-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that controls the JIT compilation.</span></span>  
+ <span data-ttu-id="11958-106">[out]値へのポインター、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) JIT コンパイルを制御する列挙体。</span><span class="sxs-lookup"><span data-stu-id="11958-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that controls the JIT compilation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb8bd-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="eb8bd-107">Requirements</span></span>  
- <span data-ttu-id="eb8bd-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="eb8bd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11958-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="11958-107">Requirements</span></span>  
+ <span data-ttu-id="11958-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="11958-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb8bd-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb8bd-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="11958-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="11958-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eb8bd-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb8bd-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11958-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11958-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eb8bd-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb8bd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="11958-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11958-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

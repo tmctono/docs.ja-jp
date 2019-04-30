@@ -5,38 +5,38 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
 ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011984"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a><span data-ttu-id="7b098-103">Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング</span><span class="sxs-lookup"><span data-stu-id="7b098-103">When to deploy Windows Containers to Azure Container Instances (ACI)</span></span>
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a><span data-ttu-id="16fca-103">Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング</span><span class="sxs-lookup"><span data-stu-id="16fca-103">When to deploy Windows Containers to Azure Container Instances (ACI)</span></span>
 
-<span data-ttu-id="7b098-104">Azure Container Instances は、主な価値提案は、すぐにコンテナーをデプロイすることができ、その環境を維持する必要はありません、基になるオペレーティング システムまたは Vm すべてに対して透過的なアップグレード/修正する必要はありませんし、展開します。コンテナーをすぐに使用できる環境にします。</span><span class="sxs-lookup"><span data-stu-id="7b098-104">Azure Container Instances main value proposition is that you can right away deploy containers to it and you don’t need to maintain that environment, you don’t need to upgrade/patch the underlying operating system or VMs, all that is transparent and you just deploy containers into a ready-to-use environment.</span></span>
+<span data-ttu-id="16fca-104">Azure Container Instances は、主な価値提案は、すぐにコンテナーをデプロイすることができ、その環境を維持する必要はありません、基になるオペレーティング システムまたは Vm すべてに対して透過的なアップグレード/修正する必要はありませんし、展開します。コンテナーをすぐに使用できる環境にします。</span><span class="sxs-lookup"><span data-stu-id="16fca-104">Azure Container Instances main value proposition is that you can right away deploy containers to it and you don’t need to maintain that environment, you don’t need to upgrade/patch the underlying operating system or VMs, all that is transparent and you just deploy containers into a ready-to-use environment.</span></span>
 
-<span data-ttu-id="7b098-105">上の理由から、ACI を使用する場合のシナリオは主なシナリオのような基本的に、コンテナーを Azure Vm を使用すると、Azure Container Instances を使用する主なシナリオは。</span><span class="sxs-lookup"><span data-stu-id="7b098-105">The reasons and scenarios when you would want to use ACI are similar to the main scenarios when you use Azure VMs with containers, so basically, the main scenarios for using Azure Container Instances are:</span></span>
+<span data-ttu-id="16fca-105">上の理由から、ACI を使用する場合のシナリオは主なシナリオのような基本的に、コンテナーを Azure Vm を使用すると、Azure Container Instances を使用する主なシナリオは。</span><span class="sxs-lookup"><span data-stu-id="16fca-105">The reasons and scenarios when you would want to use ACI are similar to the main scenarios when you use Azure VMs with containers, so basically, the main scenarios for using Azure Container Instances are:</span></span>
 
-- <span data-ttu-id="7b098-106">**開発/テスト シナリオ**</span><span class="sxs-lookup"><span data-stu-id="7b098-106">**Dev/Test scenarios**</span></span>
-- <span data-ttu-id="7b098-107">**タスクの自動化**</span><span class="sxs-lookup"><span data-stu-id="7b098-107">**Task automation**</span></span>
-- <span data-ttu-id="7b098-108">**エージェントの CI/CD**</span><span class="sxs-lookup"><span data-stu-id="7b098-108">**CI/CD agents**</span></span>
-- <span data-ttu-id="7b098-109">**小規模スケール/バッチ処理**</span><span class="sxs-lookup"><span data-stu-id="7b098-109">**Small/scale batch processing**</span></span>
-- <span data-ttu-id="7b098-110">**単純な web アプリ**</span><span class="sxs-lookup"><span data-stu-id="7b098-110">**Simple web apps**</span></span>
+- <span data-ttu-id="16fca-106">**開発/テスト シナリオ**</span><span class="sxs-lookup"><span data-stu-id="16fca-106">**Dev/Test scenarios**</span></span>
+- <span data-ttu-id="16fca-107">**タスクの自動化**</span><span class="sxs-lookup"><span data-stu-id="16fca-107">**Task automation**</span></span>
+- <span data-ttu-id="16fca-108">**エージェントの CI/CD**</span><span class="sxs-lookup"><span data-stu-id="16fca-108">**CI/CD agents**</span></span>
+- <span data-ttu-id="16fca-109">**小規模スケール/バッチ処理**</span><span class="sxs-lookup"><span data-stu-id="16fca-109">**Small/scale batch processing**</span></span>
+- <span data-ttu-id="16fca-110">**単純な web アプリ**</span><span class="sxs-lookup"><span data-stu-id="16fca-110">**Simple web apps**</span></span>
 
-<span data-ttu-id="7b098-111">単純な web アプリのシナリオは ACI の公正なシナリオが ACI でコンテナー イメージごとの 1 つのコンテナー インスタンスでのみ設定できる、ので高可用性はありませんをスケーラビリティが制限を考慮します。</span><span class="sxs-lookup"><span data-stu-id="7b098-111">The simple web apps scenario is a fair scenario for ACI but take into account that since in ACI you can only have a single container instance per container image, you won’t have high availability and only have limited scalability.</span></span>
+<span data-ttu-id="16fca-111">単純な web アプリのシナリオは ACI の公正なシナリオが ACI でコンテナー イメージごとの 1 つのコンテナー インスタンスでのみ設定できる、ので高可用性はありませんをスケーラビリティが制限を考慮します。</span><span class="sxs-lookup"><span data-stu-id="16fca-111">The simple web apps scenario is a fair scenario for ACI but take into account that since in ACI you can only have a single container instance per container image, you won’t have high availability and only have limited scalability.</span></span>
 
-<span data-ttu-id="7b098-112">ただし、ACI は 1 つのコンテナー インスタンスを提供するだけであるために、インフラストラクチャと見なされます、できなくては大きなメリットを Windows Server の通常の Azure Vm と比較します。</span><span class="sxs-lookup"><span data-stu-id="7b098-112">However, even when ACI is considered infrastructure because it just provides single container instances, there is a huge benefit compared to regular Azure VMs with Windows Server.</span></span> <span data-ttu-id="7b098-113">ACI、自己保持型の環境にのみ、コンテナーをデプロイしてそれらのコンテナーだけ支払います。</span><span class="sxs-lookup"><span data-stu-id="7b098-113">With ACI, you just deploy the containers into a self-maintained environment and you just pay for those containers.</span></span> <span data-ttu-id="7b098-114">場所を使用している Vm、コンテナーを含むほとんどのシナリオの多くにより良いプラットフォームのため、保守/更新/パッチ適用、Vm に必要はありません。</span><span class="sxs-lookup"><span data-stu-id="7b098-114">You don’t need to maintain/update/patch VMs, so it is a much better platform for most scenarios where you might be using VMs with containers.</span></span> <span data-ttu-id="7b098-115">ACI を使用して簡単には、コンテナーを配置する、だけにコンテナーをデプロイする VM 環境を作成する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="7b098-115">Using ACI is straight forward, you just deploy a container, there’s no need to create a VM environment you just deploy containers.</span></span>
+<span data-ttu-id="16fca-112">ただし、ACI は 1 つのコンテナー インスタンスを提供するだけであるために、インフラストラクチャと見なされます、できなくては大きなメリットを Windows Server の通常の Azure Vm と比較します。</span><span class="sxs-lookup"><span data-stu-id="16fca-112">However, even when ACI is considered infrastructure because it just provides single container instances, there is a huge benefit compared to regular Azure VMs with Windows Server.</span></span> <span data-ttu-id="16fca-113">ACI、自己保持型の環境にのみ、コンテナーをデプロイしてそれらのコンテナーだけ支払います。</span><span class="sxs-lookup"><span data-stu-id="16fca-113">With ACI, you just deploy the containers into a self-maintained environment and you just pay for those containers.</span></span> <span data-ttu-id="16fca-114">場所を使用している Vm、コンテナーを含むほとんどのシナリオの多くにより良いプラットフォームのため、保守/更新/パッチ適用、Vm に必要はありません。</span><span class="sxs-lookup"><span data-stu-id="16fca-114">You don’t need to maintain/update/patch VMs, so it is a much better platform for most scenarios where you might be using VMs with containers.</span></span> <span data-ttu-id="16fca-115">ACI を使用して簡単には、コンテナーを配置する、だけにコンテナーをデプロイする VM 環境を作成する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="16fca-115">Using ACI is straight forward, you just deploy a container, there’s no need to create a VM environment you just deploy containers.</span></span>
 
-<span data-ttu-id="7b098-116">Azure Container Instances (ACI) の主な利点は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="7b098-116">The main benefits of Azure Container Instances (ACI) are:</span></span>
+<span data-ttu-id="16fca-116">Azure Container Instances (ACI) の主な利点は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="16fca-116">The main benefits of Azure Container Instances (ACI) are:</span></span>
 
-- <span data-ttu-id="7b098-117">サーバーを管理することがなくコンテナーを実行します。</span><span class="sxs-lookup"><span data-stu-id="7b098-117">Run containers without managing servers</span></span>
-- <span data-ttu-id="7b098-118">オンデマンドでのコンテナーでの機敏性を高める</span><span class="sxs-lookup"><span data-stu-id="7b098-118">Increase agility with containers on demand</span></span>
-- <span data-ttu-id="7b098-119">前例のないシンプルさと速度で、クラウドへのコンテナーのデプロイ-1 つのコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="7b098-119">Deploy containers to the cloud with unprecedented simplicity and speed—with a single command.</span></span>
-- <span data-ttu-id="7b098-120">ハイパーバイザー分離を使用したセキュリティで保護されたアプリケーション</span><span class="sxs-lookup"><span data-stu-id="7b098-120">Secure applications with hypervisor isolation</span></span>
+- <span data-ttu-id="16fca-117">サーバーを管理することがなくコンテナーを実行します。</span><span class="sxs-lookup"><span data-stu-id="16fca-117">Run containers without managing servers</span></span>
+- <span data-ttu-id="16fca-118">オンデマンドでのコンテナーでの機敏性を高める</span><span class="sxs-lookup"><span data-stu-id="16fca-118">Increase agility with containers on demand</span></span>
+- <span data-ttu-id="16fca-119">前例のないシンプルさと速度で、クラウドへのコンテナーのデプロイ-1 つのコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="16fca-119">Deploy containers to the cloud with unprecedented simplicity and speed—with a single command.</span></span>
+- <span data-ttu-id="16fca-120">ハイパーバイザー分離を使用したセキュリティで保護されたアプリケーション</span><span class="sxs-lookup"><span data-stu-id="16fca-120">Secure applications with hypervisor isolation</span></span>
 
-<span data-ttu-id="7b098-121">つまり、ACI では、仮想マシンを管理または新しいツールを学習することがなく高速アプリを開発できます。</span><span class="sxs-lookup"><span data-stu-id="7b098-121">In short, with ACI you can develop apps fast without managing virtual machines or having to learn new tools.</span></span> <span data-ttu-id="7b098-122">クラウドで実行しているコンテナーで、アプリケーションだけになります。</span><span class="sxs-lookup"><span data-stu-id="7b098-122">It's just your application, in a container, running in the cloud.</span></span>
+<span data-ttu-id="16fca-121">つまり、ACI では、仮想マシンを管理または新しいツールを学習することがなく高速アプリを開発できます。</span><span class="sxs-lookup"><span data-stu-id="16fca-121">In short, with ACI you can develop apps fast without managing virtual machines or having to learn new tools.</span></span> <span data-ttu-id="16fca-122">クラウドで実行しているコンテナーで、アプリケーションだけになります。</span><span class="sxs-lookup"><span data-stu-id="16fca-122">It's just your application, in a container, running in the cloud.</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="7b098-123">[前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [次へ](when-to-deploy-windows-containers-to-service-fabric.md)</span><span class="sxs-lookup"><span data-stu-id="7b098-123">[Previous](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> <span data-ttu-id="16fca-123">[前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [次へ](when-to-deploy-windows-containers-to-service-fabric.md)</span><span class="sxs-lookup"><span data-stu-id="16fca-123">[Previous](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
 [Next](when-to-deploy-windows-containers-to-service-fabric.md)</span></span>

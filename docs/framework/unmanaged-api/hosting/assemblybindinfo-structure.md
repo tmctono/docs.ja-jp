@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946845"
 ---
-# <a name="assemblybindinfo-structure"></a><span data-ttu-id="d803f-102">AssemblyBindInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="d803f-102">AssemblyBindInfo Structure</span></span>
-<span data-ttu-id="d803f-103">参照アセンブリに関する詳細情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="d803f-103">Provides detailed information about the referenced assembly.</span></span>  
+# <a name="assemblybindinfo-structure"></a><span data-ttu-id="b65fb-102">AssemblyBindInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="b65fb-102">AssemblyBindInfo Structure</span></span>
+<span data-ttu-id="b65fb-103">参照アセンブリに関する詳細情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b65fb-103">Provides detailed information about the referenced assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d803f-104">構文</span><span class="sxs-lookup"><span data-stu-id="d803f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b65fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="b65fb-104">Syntax</span></span>  
   
 ```  
 typedef struct _AssemblyBindInfo {  
@@ -37,32 +37,32 @@ typedef struct _AssemblyBindInfo {
 } AssemblyBindInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d803f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="d803f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b65fb-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="b65fb-105">Members</span></span>  
   
-|<span data-ttu-id="d803f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="d803f-106">Member</span></span>|<span data-ttu-id="d803f-107">説明</span><span class="sxs-lookup"><span data-stu-id="d803f-107">Description</span></span>|  
+|<span data-ttu-id="b65fb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b65fb-106">Member</span></span>|<span data-ttu-id="b65fb-107">説明</span><span class="sxs-lookup"><span data-stu-id="b65fb-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwAppDomainId`|<span data-ttu-id="d803f-108">一意の識別子、`IStream`への呼び出しによって返される[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)、参照アセンブリが読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="d803f-108">A unique identifier for the `IStream` returned by a call to [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), from which the referenced assembly is to be loaded.</span></span>|  
-|`lpReferencedIdentity`|<span data-ttu-id="d803f-109">参照アセンブリの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="d803f-109">A unique identifier for the referenced assembly.</span></span>|  
-|`lpPostPolicyIdentity`|<span data-ttu-id="d803f-110">バインディング ポリシー値を適用した後、参照先アセンブリの識別子。</span><span class="sxs-lookup"><span data-stu-id="d803f-110">The identifier for the referenced assembly after the application of any binding policy values.</span></span>|  
-|`ePolicyLevel`|<span data-ttu-id="d803f-111">1 つ、 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)されるバージョン管理ポリシー、適用するかどう参照されるアセンブリを示す値。</span><span class="sxs-lookup"><span data-stu-id="d803f-111">One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values that indicate which versioning policies, if any, should be applied to the referenced assembly.</span></span>|  
+|`dwAppDomainId`|<span data-ttu-id="b65fb-108">一意の識別子、`IStream`への呼び出しによって返される[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)、参照アセンブリが読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="b65fb-108">A unique identifier for the `IStream` returned by a call to [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), from which the referenced assembly is to be loaded.</span></span>|  
+|`lpReferencedIdentity`|<span data-ttu-id="b65fb-109">参照アセンブリの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="b65fb-109">A unique identifier for the referenced assembly.</span></span>|  
+|`lpPostPolicyIdentity`|<span data-ttu-id="b65fb-110">バインディング ポリシー値を適用した後、参照先アセンブリの識別子。</span><span class="sxs-lookup"><span data-stu-id="b65fb-110">The identifier for the referenced assembly after the application of any binding policy values.</span></span>|  
+|`ePolicyLevel`|<span data-ttu-id="b65fb-111">1 つ、 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)されるバージョン管理ポリシー、適用するかどう参照されるアセンブリを示す値。</span><span class="sxs-lookup"><span data-stu-id="b65fb-111">One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values that indicate which versioning policies, if any, should be applied to the referenced assembly.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d803f-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="d803f-112">Remarks</span></span>  
- <span data-ttu-id="d803f-113">ホスト提供の一意識別子`dwAppDomainId`共通言語ランタイム (CLR) にします。</span><span class="sxs-lookup"><span data-stu-id="d803f-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="d803f-114">呼び出しの後に`IHostAssemblyStore::ProvideAssembly`、ランタイムでは、識別子を使用して判断を返すかどうかの内容、`IStream`マップされています。</span><span class="sxs-lookup"><span data-stu-id="d803f-114">After a call to `IHostAssemblyStore::ProvideAssembly` returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="d803f-115">そうである場合、ランタイムは、ストリームを再マップするのではなく、既存のコピーを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="d803f-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="d803f-116">ランタイムも識別子を使用してこのルックアップ キーとしてから返されるストリームの呼び出しを[ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="d803f-116">The runtime also uses this identifier as a lookup key for streams returned from calls to [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md).</span></span> <span data-ttu-id="d803f-117">そのため、識別子は、モジュールの要求とアセンブリの要求で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d803f-117">Therefore, the identifier must be unique for module requests and for assembly requests.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b65fb-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="b65fb-112">Remarks</span></span>  
+ <span data-ttu-id="b65fb-113">ホスト提供の一意識別子`dwAppDomainId`共通言語ランタイム (CLR) にします。</span><span class="sxs-lookup"><span data-stu-id="b65fb-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="b65fb-114">呼び出しの後に`IHostAssemblyStore::ProvideAssembly`、ランタイムでは、識別子を使用して判断を返すかどうかの内容、`IStream`マップされています。</span><span class="sxs-lookup"><span data-stu-id="b65fb-114">After a call to `IHostAssemblyStore::ProvideAssembly` returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="b65fb-115">そうである場合、ランタイムは、ストリームを再マップするのではなく、既存のコピーを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="b65fb-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="b65fb-116">ランタイムも識別子を使用してこのルックアップ キーとしてから返されるストリームの呼び出しを[ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="b65fb-116">The runtime also uses this identifier as a lookup key for streams returned from calls to [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md).</span></span> <span data-ttu-id="b65fb-117">そのため、識別子は、モジュールの要求とアセンブリの要求で一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="b65fb-117">Therefore, the identifier must be unique for module requests and for assembly requests.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d803f-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="d803f-118">Requirements</span></span>  
- <span data-ttu-id="d803f-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d803f-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b65fb-118">必要条件</span><span class="sxs-lookup"><span data-stu-id="b65fb-118">Requirements</span></span>  
+ <span data-ttu-id="b65fb-119">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b65fb-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d803f-120">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="d803f-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="b65fb-120">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="b65fb-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="d803f-121">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d803f-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b65fb-121">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="b65fb-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d803f-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d803f-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b65fb-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b65fb-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d803f-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="d803f-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b65fb-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="b65fb-123">See also</span></span>
 
-- [<span data-ttu-id="d803f-124">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="d803f-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="d803f-125">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d803f-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="d803f-126">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d803f-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="d803f-127">IHostAssemblyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d803f-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="d803f-128">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d803f-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="d803f-129">ModuleBindInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="d803f-129">ModuleBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)
+- [<span data-ttu-id="b65fb-124">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="b65fb-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="b65fb-125">ICLRAssemblyIdentityManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b65fb-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="b65fb-126">ICLRAssemblyReferenceList インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b65fb-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="b65fb-127">IHostAssemblyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b65fb-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="b65fb-128">IHostAssemblyStore インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b65fb-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="b65fb-129">ModuleBindInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="b65fb-129">ModuleBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)

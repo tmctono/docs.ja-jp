@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996113"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="03cd4-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド</span><span class="sxs-lookup"><span data-stu-id="03cd4-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="03cd4-103">`GetErrorCode` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="03cd4-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="03cd4-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="03cd4-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="e685c-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド</span><span class="sxs-lookup"><span data-stu-id="e685c-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="e685c-103">`GetErrorCode` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="e685c-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="e685c-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="e685c-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03cd4-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="03cd4-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e685c-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="e685c-105">See also</span></span>
 
-- [<span data-ttu-id="03cd4-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="03cd4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e685c-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e685c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

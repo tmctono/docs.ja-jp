@@ -11,23 +11,23 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010255"
 ---
-# <a name="glyphs"></a><span data-ttu-id="de448-102">グリフ</span><span class="sxs-lookup"><span data-stu-id="de448-102">Glyphs</span></span>
-<span data-ttu-id="de448-103">グリフは、画面上に描画される文字の低レベルの表現です。</span><span class="sxs-lookup"><span data-stu-id="de448-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="de448-104">使用し、書式設定後のテキストを保持する必要があるお客様のグリフに直接アクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="de448-104">provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
+# <a name="glyphs"></a><span data-ttu-id="7ef77-102">グリフ</span><span class="sxs-lookup"><span data-stu-id="7ef77-102">Glyphs</span></span>
+<span data-ttu-id="7ef77-103">グリフは、画面上に描画される文字の低レベルの表現です。</span><span class="sxs-lookup"><span data-stu-id="7ef77-103">Glyphs are a low-level depiction of a character to be drawn on-screen.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7ef77-104">使用し、書式設定後のテキストを保持する必要があるお客様のグリフに直接アクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="7ef77-104">provides direct access to glyphs for customers who want to intercept and persist text after formatting.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="de448-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="de448-105">In This Section</span></span>  
- [<span data-ttu-id="de448-106">GlyphRun オブジェクトと Glyphs 要素の概要</span><span class="sxs-lookup"><span data-stu-id="de448-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [<span data-ttu-id="de448-107">方法: グリフを使用してテキストを描画します。</span><span class="sxs-lookup"><span data-stu-id="de448-107">How to: Draw Text Using Glyphs</span></span>](draw-text-using-glyphs.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7ef77-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7ef77-105">In This Section</span></span>  
+ [<span data-ttu-id="7ef77-106">GlyphRun オブジェクトと Glyphs 要素の概要</span><span class="sxs-lookup"><span data-stu-id="7ef77-106">Introduction to the GlyphRun Object and Glyphs Element</span></span>](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [<span data-ttu-id="7ef77-107">方法: グリフを使用してテキストを描画します。</span><span class="sxs-lookup"><span data-stu-id="7ef77-107">How to: Draw Text Using Glyphs</span></span>](draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a><span data-ttu-id="de448-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="de448-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ef77-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7ef77-108">See also</span></span>
 
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>
-- [<span data-ttu-id="de448-109">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="de448-109">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="de448-110">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="de448-110">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="7ef77-109">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="7ef77-109">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="7ef77-110">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="7ef77-110">Typography in WPF</span></span>](typography-in-wpf.md)
