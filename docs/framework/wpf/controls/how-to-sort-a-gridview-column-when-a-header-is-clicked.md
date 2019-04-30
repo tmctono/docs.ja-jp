@@ -11,19 +11,19 @@ helpviewer_keywords:
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
 ms.openlocfilehash: 3438ab91045a144a7fa1d531e9d7d55ad30e89ea
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052028"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="68c5b-102">方法: ヘッダーがクリックされたときに GridView 列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="68c5b-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="90cd9-102">方法: ヘッダーがクリックされたときに GridView 列を並べ替える</span><span class="sxs-lookup"><span data-stu-id="90cd9-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
 
-<span data-ttu-id="68c5b-103">この例は、作成する方法を示します、<xref:System.Windows.Controls.ListView>を実装するコントロールを<xref:System.Windows.Controls.GridView>モードと並べ替えをユーザーが列ヘッダーをクリックすると、データがコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="68c5b-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>
+<span data-ttu-id="90cd9-103">この例は、作成する方法を示します、<xref:System.Windows.Controls.ListView>を実装するコントロールを<xref:System.Windows.Controls.GridView>モードと並べ替えをユーザーが列ヘッダーをクリックすると、データがコンテンツを表示します。</span><span class="sxs-lookup"><span data-stu-id="90cd9-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>
 
-## <a name="example"></a><span data-ttu-id="68c5b-104">例</span><span class="sxs-lookup"><span data-stu-id="68c5b-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="90cd9-104">例</span><span class="sxs-lookup"><span data-stu-id="90cd9-104">Example</span></span>
 
-<span data-ttu-id="68c5b-105">次の例では、定義、 <xref:System.Windows.Controls.GridView> 3 つの列にバインドを持つ、 <xref:System.DateTime.Year%2A>、 <xref:System.DateTime.Month%2A>、および<xref:System.DateTime.Day%2A>のプロパティ、<xref:System.DateTime>構造体。</span><span class="sxs-lookup"><span data-stu-id="68c5b-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>
+<span data-ttu-id="90cd9-105">次の例では、定義、 <xref:System.Windows.Controls.GridView> 3 つの列にバインドを持つ、 <xref:System.DateTime.Year%2A>、 <xref:System.DateTime.Month%2A>、および<xref:System.DateTime.Day%2A>のプロパティ、<xref:System.DateTime>構造体。</span><span class="sxs-lookup"><span data-stu-id="90cd9-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>
 
 ```xaml
 <GridView>
@@ -39,7 +39,7 @@ ms.locfileid: "57844289"
 </GridView>
 ```
 
-<span data-ttu-id="68c5b-106">次の例は、データ項目として定義されている、<xref:System.Collections.ArrayList>の<xref:System.DateTime>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="68c5b-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="68c5b-107"><xref:System.Collections.ArrayList>として定義されている場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>の<xref:System.Windows.Controls.ListView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="68c5b-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>
+<span data-ttu-id="90cd9-106">次の例は、データ項目として定義されている、<xref:System.Collections.ArrayList>の<xref:System.DateTime>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="90cd9-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="90cd9-107"><xref:System.Collections.ArrayList>として定義されている場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>の<xref:System.Windows.Controls.ListView>コントロール。</span><span class="sxs-lookup"><span data-stu-id="90cd9-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>
 
 ```xaml
 <ListView.ItemsSource>
@@ -60,7 +60,7 @@ ms.locfileid: "57844289"
 </ListView.ItemsSource>
 ```
 
-<span data-ttu-id="68c5b-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] タグの `s` と `p` の識別子とは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのメタデータで定義されている名前空間マッピングを意味しています。</span><span class="sxs-lookup"><span data-stu-id="68c5b-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="68c5b-109">次の例にメタデータの定義を示します。</span><span class="sxs-lookup"><span data-stu-id="68c5b-109">The following example shows the metadata definition.</span></span>
+<span data-ttu-id="90cd9-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] タグの `s` と `p` の識別子とは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページのメタデータで定義されている名前空間マッピングを意味しています。</span><span class="sxs-lookup"><span data-stu-id="90cd9-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="90cd9-109">次の例にメタデータの定義を示します。</span><span class="sxs-lookup"><span data-stu-id="90cd9-109">The following example shows the metadata definition.</span></span>
 
 ```xaml
 <Window
@@ -71,7 +71,7 @@ ms.locfileid: "57844289"
     xmlns:p="clr-namespace:System;assembly=mscorlib">
 ```
 
-<span data-ttu-id="68c5b-110">処理するイベント ハンドラーを定義している例では、列の内容に従ってデータを並べ替える、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>列ヘッダーのボタンを押したときに発生するイベントです。</span><span class="sxs-lookup"><span data-stu-id="68c5b-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="68c5b-111">次の例のイベント ハンドラーを指定する方法を示しています、<xref:System.Windows.Controls.GridViewColumnHeader>コントロール。</span><span class="sxs-lookup"><span data-stu-id="68c5b-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>
+<span data-ttu-id="90cd9-110">処理するイベント ハンドラーを定義している例では、列の内容に従ってデータを並べ替える、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>列ヘッダーのボタンを押したときに発生するイベントです。</span><span class="sxs-lookup"><span data-stu-id="90cd9-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="90cd9-111">次の例のイベント ハンドラーを指定する方法を示しています、<xref:System.Windows.Controls.GridViewColumnHeader>コントロール。</span><span class="sxs-lookup"><span data-stu-id="90cd9-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>
 
 ```xaml
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"
@@ -80,7 +80,7 @@ ms.locfileid: "57844289"
  >
 ```
 
-<span data-ttu-id="68c5b-112">この例では、列ヘッダーのボタンをクリックするたびに並べ替えの方向の昇順と降順が切り替わるようにイベント ハンドラーを定義します。</span><span class="sxs-lookup"><span data-stu-id="68c5b-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="68c5b-113">次の例ではイベント ハンドラーを示します。</span><span class="sxs-lookup"><span data-stu-id="68c5b-113">The following example shows the event handler.</span></span>
+<span data-ttu-id="90cd9-112">この例では、列ヘッダーのボタンをクリックするたびに並べ替えの方向の昇順と降順が切り替わるようにイベント ハンドラーを定義します。</span><span class="sxs-lookup"><span data-stu-id="90cd9-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="90cd9-113">次の例ではイベント ハンドラーを示します。</span><span class="sxs-lookup"><span data-stu-id="90cd9-113">The following example shows the event handler.</span></span>
 
 ```csharp
 public partial class Window1 : Window
@@ -199,7 +199,7 @@ Partial Public Class Window1
 End Class
 ```
 
-<span data-ttu-id="68c5b-114">次の例では、データを並べ替えるためにイベント ハンドラーにより呼び出される並べ替えアルゴリズムを示します。 </span><span class="sxs-lookup"><span data-stu-id="68c5b-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="68c5b-115">並べ替えは、新しいを作成して<xref:System.ComponentModel.SortDescription>構造体。</span><span class="sxs-lookup"><span data-stu-id="68c5b-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>
+<span data-ttu-id="90cd9-114">次の例では、データを並べ替えるためにイベント ハンドラーにより呼び出される並べ替えアルゴリズムを示します。 </span><span class="sxs-lookup"><span data-stu-id="90cd9-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="90cd9-115">並べ替えは、新しいを作成して<xref:System.ComponentModel.SortDescription>構造体。</span><span class="sxs-lookup"><span data-stu-id="90cd9-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>
 
 ```csharp
 private void Sort(string sortBy, ListSortDirection direction)
@@ -225,10 +225,10 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub
 ```
 
-## <a name="see-also"></a><span data-ttu-id="68c5b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="68c5b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90cd9-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="90cd9-116">See also</span></span>
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [<span data-ttu-id="68c5b-117">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="68c5b-117">ListView Overview</span></span>](listview-overview.md)
-- [<span data-ttu-id="68c5b-118">GridView の概要</span><span class="sxs-lookup"><span data-stu-id="68c5b-118">GridView Overview</span></span>](gridview-overview.md)
-- [<span data-ttu-id="68c5b-119">方法トピック</span><span class="sxs-lookup"><span data-stu-id="68c5b-119">How-to Topics</span></span>](listview-how-to-topics.md)
+- [<span data-ttu-id="90cd9-117">ListView の概要</span><span class="sxs-lookup"><span data-stu-id="90cd9-117">ListView Overview</span></span>](listview-overview.md)
+- [<span data-ttu-id="90cd9-118">GridView の概要</span><span class="sxs-lookup"><span data-stu-id="90cd9-118">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="90cd9-119">方法トピック</span><span class="sxs-lookup"><span data-stu-id="90cd9-119">How-to Topics</span></span>](listview-how-to-topics.md)

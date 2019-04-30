@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 71029d6ebfb3248da791d4371dfe3e39589af443
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049987"
 ---
-# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="8de31-102">IMetaDataEmit::TranslateSigWithScope メソッド</span><span class="sxs-lookup"><span data-stu-id="8de31-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
-<span data-ttu-id="8de31-103">現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="8de31-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
+# <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="b9147-102">IMetaDataEmit::TranslateSigWithScope メソッド</span><span class="sxs-lookup"><span data-stu-id="b9147-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
+<span data-ttu-id="b9147-103">現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="b9147-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8de31-104">構文</span><span class="sxs-lookup"><span data-stu-id="8de31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9147-104">構文</span><span class="sxs-lookup"><span data-stu-id="b9147-104">Syntax</span></span>  
   
 ```  
 HRESULT TranslateSigWithScope (   
@@ -45,53 +45,53 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8de31-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8de31-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b9147-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b9147-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="8de31-106">[in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8de31-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
+ <span data-ttu-id="b9147-106">[in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b9147-106">[in] The interface for import assembly (where the signature is defined).</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="8de31-107">[in]アセンブリのハッシュ blob。</span><span class="sxs-lookup"><span data-stu-id="8de31-107">[in] The hash blob for the assembly.</span></span>  
+ <span data-ttu-id="b9147-107">[in]アセンブリのハッシュ blob。</span><span class="sxs-lookup"><span data-stu-id="b9147-107">[in] The hash blob for the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="8de31-108">[in]内のバイト数`pbHashValue`します。</span><span class="sxs-lookup"><span data-stu-id="8de31-108">[in] The count of bytes in `pbHashValue`.</span></span>  
+ <span data-ttu-id="b9147-108">[in]内のバイト数`pbHashValue`します。</span><span class="sxs-lookup"><span data-stu-id="b9147-108">[in] The count of bytes in `pbHashValue`.</span></span>  
   
  `import`  
- <span data-ttu-id="8de31-109">[in]インポートのメタデータ スコープのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8de31-109">[in] The interface for import metadata scope.</span></span>  
+ <span data-ttu-id="b9147-109">[in]インポートのメタデータ スコープのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b9147-109">[in] The interface for import metadata scope.</span></span>  
   
  `pbSigBlob`  
- <span data-ttu-id="8de31-110">[in]インポートする署名します。</span><span class="sxs-lookup"><span data-stu-id="8de31-110">[in] The signature to be imported.</span></span>  
+ <span data-ttu-id="b9147-110">[in]インポートする署名します。</span><span class="sxs-lookup"><span data-stu-id="b9147-110">[in] The signature to be imported.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="8de31-111">[in]サイズ (バイト単位) の`pbSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="8de31-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
+ <span data-ttu-id="b9147-111">[in]サイズ (バイト単位) の`pbSigBlob`します。</span><span class="sxs-lookup"><span data-stu-id="b9147-111">[in] The size, in bytes, of `pbSigBlob`.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="8de31-112">[in]エクスポートのアセンブリのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8de31-112">[in] The interface for export assembly.</span></span>  
+ <span data-ttu-id="b9147-112">[in]エクスポートのアセンブリのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b9147-112">[in] The interface for export assembly.</span></span>  
   
  `emit`  
- <span data-ttu-id="8de31-113">[in]エクスポートのメタデータ スコープのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8de31-113">[in] The interface for export metadata scope.</span></span>  
+ <span data-ttu-id="b9147-113">[in]エクスポートのメタデータ スコープのインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="b9147-113">[in] The interface for export metadata scope.</span></span>  
   
  `pvTranslatedSig`  
- <span data-ttu-id="8de31-114">[out]翻訳されたシグネチャ blob を保持するバッファー。</span><span class="sxs-lookup"><span data-stu-id="8de31-114">[out] The buffer to hold the translated signature blob.</span></span>  
+ <span data-ttu-id="b9147-114">[out]翻訳されたシグネチャ blob を保持するバッファー。</span><span class="sxs-lookup"><span data-stu-id="b9147-114">[out] The buffer to hold the translated signature blob.</span></span>  
   
  `cbTranslatedSigMax`  
- <span data-ttu-id="8de31-115">[in] (バイト単位) の容量の`pvTranslatedSig`します。</span><span class="sxs-lookup"><span data-stu-id="8de31-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
+ <span data-ttu-id="b9147-115">[in] (バイト単位) の容量の`pvTranslatedSig`します。</span><span class="sxs-lookup"><span data-stu-id="b9147-115">[in] The capacity, in bytes, of `pvTranslatedSig`.</span></span>  
   
  `pcbTranslatedSig`  
- <span data-ttu-id="8de31-116">[out]翻訳されたシグネチャでの実際のバイト数。</span><span class="sxs-lookup"><span data-stu-id="8de31-116">[out] The number of actual bytes in the translated signature.</span></span>  
+ <span data-ttu-id="b9147-116">[out]翻訳されたシグネチャでの実際のバイト数。</span><span class="sxs-lookup"><span data-stu-id="b9147-116">[out] The number of actual bytes in the translated signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8de31-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="8de31-117">Requirements</span></span>  
- <span data-ttu-id="8de31-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8de31-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9147-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="b9147-117">Requirements</span></span>  
+ <span data-ttu-id="b9147-118">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b9147-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8de31-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8de31-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b9147-119">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b9147-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8de31-120">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="8de31-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b9147-120">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="b9147-120">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8de31-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8de31-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b9147-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9147-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8de31-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="8de31-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9147-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="b9147-122">See also</span></span>
 
-- [<span data-ttu-id="8de31-123">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8de31-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="8de31-124">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8de31-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="8de31-125">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8de31-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8de31-126">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8de31-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="8de31-127">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8de31-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b9147-123">IMetaDataAssemblyEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9147-123">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="b9147-124">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9147-124">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="b9147-125">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9147-125">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="b9147-126">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9147-126">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="b9147-127">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9147-127">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

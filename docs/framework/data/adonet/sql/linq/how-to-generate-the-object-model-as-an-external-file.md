@@ -3,27 +3,27 @@ title: '方法: オブジェクト モデルを外部ファイルとして生成
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033749"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="3686f-102">方法: オブジェクト モデルを外部ファイルとして生成する</span><span class="sxs-lookup"><span data-stu-id="3686f-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="3686f-103">属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。</span><span class="sxs-lookup"><span data-stu-id="3686f-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="3686f-104">詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="3686f-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="3686f-105">外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。</span><span class="sxs-lookup"><span data-stu-id="3686f-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="3686f-106">さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。</span><span class="sxs-lookup"><span data-stu-id="3686f-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="3686f-107">詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。</span><span class="sxs-lookup"><span data-stu-id="3686f-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="c189c-102">方法: オブジェクト モデルを外部ファイルとして生成する</span><span class="sxs-lookup"><span data-stu-id="c189c-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="c189c-103">属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。</span><span class="sxs-lookup"><span data-stu-id="c189c-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="c189c-104">詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="c189c-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="c189c-105">外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。</span><span class="sxs-lookup"><span data-stu-id="c189c-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="c189c-106">さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。</span><span class="sxs-lookup"><span data-stu-id="c189c-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="c189c-107">詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。</span><span class="sxs-lookup"><span data-stu-id="c189c-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3686f-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、外部マッピング ファイルの生成をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="3686f-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
+>  <span data-ttu-id="c189c-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、外部マッピング ファイルの生成をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="c189c-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3686f-109">例</span><span class="sxs-lookup"><span data-stu-id="3686f-109">Example</span></span>  
- <span data-ttu-id="3686f-110">次のコマンドは、Northwind サンプル データベースから外部マッピング ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="3686f-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="c189c-109">例</span><span class="sxs-lookup"><span data-stu-id="c189c-109">Example</span></span>  
+ <span data-ttu-id="c189c-110">次のコマンドは、Northwind サンプル データベースから外部マッピング ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="c189c-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3686f-111">例</span><span class="sxs-lookup"><span data-stu-id="3686f-111">Example</span></span>  
- <span data-ttu-id="3686f-112">以下は、Northwind サンプル データベース内の Customers テーブルのマッピングを示す、外部マッピング ファイルの一部分です。</span><span class="sxs-lookup"><span data-stu-id="3686f-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="3686f-113">この抜粋を使って SQLMetal を実行して生成された、 **/map**オプション。</span><span class="sxs-lookup"><span data-stu-id="3686f-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="c189c-111">例</span><span class="sxs-lookup"><span data-stu-id="c189c-111">Example</span></span>  
+ <span data-ttu-id="c189c-112">以下は、Northwind サンプル データベース内の Customers テーブルのマッピングを示す、外部マッピング ファイルの一部分です。</span><span class="sxs-lookup"><span data-stu-id="c189c-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="c189c-113">この抜粋を使って SQLMetal を実行して生成された、 **/map**オプション。</span><span class="sxs-lookup"><span data-stu-id="c189c-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,8 +48,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3686f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="3686f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c189c-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c189c-114">See also</span></span>
 
-- [<span data-ttu-id="3686f-115">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="3686f-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [<span data-ttu-id="3686f-116">外部マップ</span><span class="sxs-lookup"><span data-stu-id="3686f-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [<span data-ttu-id="3686f-117">方法: Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="3686f-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="c189c-115">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="c189c-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [<span data-ttu-id="c189c-116">外部マップ</span><span class="sxs-lookup"><span data-stu-id="c189c-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [<span data-ttu-id="c189c-117">方法: Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="c189c-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

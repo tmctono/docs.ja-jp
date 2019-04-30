@@ -11,27 +11,27 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
 ms.openlocfilehash: 9806583fda60f1cb8a5ef2d97f42eba158593f61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011230"
 ---
-# <a name="how-to-add-a-control-to-a-tab-page"></a><span data-ttu-id="f7220-102">方法: タブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="f7220-102">How to: Add a Control to a Tab Page</span></span>
-<span data-ttu-id="f7220-103">Windows フォームを使用する<xref:System.Windows.Forms.TabControl>を組織的に他のコントロールを表示します。</span><span class="sxs-lookup"><span data-stu-id="f7220-103">You can use the Windows Forms <xref:System.Windows.Forms.TabControl> to display other controls in an organized fashion.</span></span> <span data-ttu-id="f7220-104">次の手順では、最初のタブにボタンを追加する方法を示します。タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。</span><span class="sxs-lookup"><span data-stu-id="f7220-104">The following procedure shows how to add a button to the first tab. For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
+# <a name="how-to-add-a-control-to-a-tab-page"></a><span data-ttu-id="394bb-102">方法: タブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="394bb-102">How to: Add a Control to a Tab Page</span></span>
+<span data-ttu-id="394bb-103">Windows フォームを使用する<xref:System.Windows.Forms.TabControl>を組織的に他のコントロールを表示します。</span><span class="sxs-lookup"><span data-stu-id="394bb-103">You can use the Windows Forms <xref:System.Windows.Forms.TabControl> to display other controls in an organized fashion.</span></span> <span data-ttu-id="394bb-104">次の手順では、最初のタブにボタンを追加する方法を示します。タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。</span><span class="sxs-lookup"><span data-stu-id="394bb-104">The following procedure shows how to add a button to the first tab. For information about adding an icon to the label part of a tab page, see [How to: Change the Appearance of the Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).</span></span>  
   
-### <a name="to-add-a-control-programmatically"></a><span data-ttu-id="f7220-105">プログラムでコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="f7220-105">To add a control programmatically</span></span>  
+### <a name="to-add-a-control-programmatically"></a><span data-ttu-id="394bb-105">プログラムでコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="394bb-105">To add a control programmatically</span></span>  
   
-1. <span data-ttu-id="f7220-106">使用して、<xref:System.Windows.Forms.Control.ControlCollection.Add%2A>メソッドによって返されるコレクションの<xref:System.Windows.Forms.Control.Controls%2A>プロパティの<xref:System.Windows.Forms.TabPage>:</span><span class="sxs-lookup"><span data-stu-id="f7220-106">Use the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method of the collection returned by the <xref:System.Windows.Forms.Control.Controls%2A> property of <xref:System.Windows.Forms.TabPage>:</span></span>  
+1. <span data-ttu-id="394bb-106">使用して、<xref:System.Windows.Forms.Control.ControlCollection.Add%2A>メソッドによって返されるコレクションの<xref:System.Windows.Forms.Control.Controls%2A>プロパティの<xref:System.Windows.Forms.TabPage>:</span><span class="sxs-lookup"><span data-stu-id="394bb-106">Use the <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> method of the collection returned by the <xref:System.Windows.Forms.Control.Controls%2A> property of <xref:System.Windows.Forms.TabPage>:</span></span>  
   
      [!code-cpp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/cpp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cpp/add.cpp#1)]
      [!code-csharp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/csharp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cs/add.cs#1)]
      [!code-vb[TabPageControlCollectionHowToAdd#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/vb/add.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f7220-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="f7220-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="394bb-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="394bb-107">See also</span></span>
 
-- [<span data-ttu-id="f7220-108">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="f7220-108">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="f7220-109">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="f7220-109">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="f7220-110">方法: Windows フォーム TabControl の外観を変更します。</span><span class="sxs-lookup"><span data-stu-id="f7220-110">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [<span data-ttu-id="f7220-111">方法: タブ ページを無効にします。</span><span class="sxs-lookup"><span data-stu-id="f7220-111">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="f7220-112">方法: Windows フォーム tabcontrol のタブ追加および削除</span><span class="sxs-lookup"><span data-stu-id="f7220-112">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="394bb-108">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="394bb-108">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="394bb-109">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="394bb-109">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="394bb-110">方法: Windows フォーム TabControl の外観を変更します。</span><span class="sxs-lookup"><span data-stu-id="394bb-110">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="394bb-111">方法: タブ ページを無効にします。</span><span class="sxs-lookup"><span data-stu-id="394bb-111">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="394bb-112">方法: Windows フォーム tabcontrol のタブ追加および削除</span><span class="sxs-lookup"><span data-stu-id="394bb-112">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

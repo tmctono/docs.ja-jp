@@ -18,34 +18,34 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986051"
 ---
-# <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="5b2c9-102">ISymUnmanagedWriter::OpenMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="5b2c9-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
-<span data-ttu-id="5b2c9-103">シンボル情報の生成のメソッドを開きます。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="5b2c9-104">特定のメソッドでは、シーケンス ポイント、パラメーター、および構文のスコープを定義する呼び出しの現在のメソッドになります。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="5b2c9-105">メソッド全体を囲む暗黙的な構文のスコープがあります。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="5b2c9-106">以前に閉じられたメソッドを再び開くには、そのメソッドの以前に定義されたシンボルが消去されます。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="5b2c9-107">一度に 1 つだけの open メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-107">There can be only one open method at a time.</span></span>  
+# <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="da45c-102">ISymUnmanagedWriter::OpenMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="da45c-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
+<span data-ttu-id="da45c-103">シンボル情報の生成のメソッドを開きます。</span><span class="sxs-lookup"><span data-stu-id="da45c-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="da45c-104">特定のメソッドでは、シーケンス ポイント、パラメーター、および構文のスコープを定義する呼び出しの現在のメソッドになります。</span><span class="sxs-lookup"><span data-stu-id="da45c-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="da45c-105">メソッド全体を囲む暗黙的な構文のスコープがあります。</span><span class="sxs-lookup"><span data-stu-id="da45c-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="da45c-106">以前に閉じられたメソッドを再び開くには、そのメソッドの以前に定義されたシンボルが消去されます。</span><span class="sxs-lookup"><span data-stu-id="da45c-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="da45c-107">一度に 1 つだけの open メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="da45c-107">There can be only one open method at a time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b2c9-108">構文</span><span class="sxs-lookup"><span data-stu-id="5b2c9-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da45c-108">構文</span><span class="sxs-lookup"><span data-stu-id="da45c-108">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod(  
     [in] mdMethodDef method);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5b2c9-109">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5b2c9-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da45c-109">パラメーター</span><span class="sxs-lookup"><span data-stu-id="da45c-109">Parameters</span></span>  
  `method`  
- <span data-ttu-id="5b2c9-110">[in]開かれているメソッドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-110">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="da45c-110">[in]開かれているメソッドのメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="da45c-110">[in] The metadata token for the method to be opened.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b2c9-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="5b2c9-111">Return Value</span></span>  
- <span data-ttu-id="5b2c9-112">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="5b2c9-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="da45c-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="da45c-111">Return Value</span></span>  
+ <span data-ttu-id="da45c-112">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="da45c-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b2c9-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="5b2c9-113">Requirements</span></span>  
- <span data-ttu-id="5b2c9-114">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5b2c9-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da45c-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="da45c-113">Requirements</span></span>  
+ <span data-ttu-id="da45c-114">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="da45c-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b2c9-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b2c9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da45c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="da45c-115">See also</span></span>
 
-- [<span data-ttu-id="5b2c9-116">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5b2c9-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="5b2c9-117">CloseMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="5b2c9-117">CloseMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
-- [<span data-ttu-id="5b2c9-118">OpenMethod2 メソッド</span><span class="sxs-lookup"><span data-stu-id="5b2c9-118">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)
+- [<span data-ttu-id="da45c-116">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="da45c-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="da45c-117">CloseMethod メソッド</span><span class="sxs-lookup"><span data-stu-id="da45c-117">CloseMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
+- [<span data-ttu-id="da45c-118">OpenMethod2 メソッド</span><span class="sxs-lookup"><span data-stu-id="da45c-118">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)

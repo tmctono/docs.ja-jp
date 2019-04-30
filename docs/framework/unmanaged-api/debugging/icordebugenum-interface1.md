@@ -17,82 +17,82 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989067"
 ---
-# <a name="icordebugenum-interface"></a><span data-ttu-id="120c2-102">ICorDebugEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="120c2-102">ICorDebugEnum Interface</span></span>
+# <a name="icordebugenum-interface"></a><span data-ttu-id="de545-102">ICorDebugEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="de545-102">ICorDebugEnum Interface</span></span>
 
-<span data-ttu-id="120c2-103">デバッグ アプリケーションで使用される列挙子の抽象基底インターフェイスとして機能します。</span><span class="sxs-lookup"><span data-stu-id="120c2-103">Serves as the abstract base interface for the enumerators that are used by a debugging application.</span></span>  
+<span data-ttu-id="de545-103">デバッグ アプリケーションで使用される列挙子の抽象基底インターフェイスとして機能します。</span><span class="sxs-lookup"><span data-stu-id="de545-103">Serves as the abstract base interface for the enumerators that are used by a debugging application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="120c2-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="de545-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-104">Methods</span></span>  
   
-|<span data-ttu-id="120c2-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-105">Method</span></span>|<span data-ttu-id="120c2-106">説明</span><span class="sxs-lookup"><span data-stu-id="120c2-106">Description</span></span>|  
+|<span data-ttu-id="de545-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-105">Method</span></span>|<span data-ttu-id="de545-106">説明</span><span class="sxs-lookup"><span data-stu-id="de545-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="120c2-107">Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|<span data-ttu-id="120c2-108">このコピーを作成します`ICorDebugEnum`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="120c2-108">Creates a copy of this `ICorDebugEnum` object.</span></span>|  
-|[<span data-ttu-id="120c2-109">GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|<span data-ttu-id="120c2-110">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="120c2-110">Gets the number of items in the enumeration.</span></span>|  
-|[<span data-ttu-id="120c2-111">Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|<span data-ttu-id="120c2-112">列挙体の先頭にカーソルを移動します。</span><span class="sxs-lookup"><span data-stu-id="120c2-112">Moves the cursor to the beginning of the enumeration.</span></span>|  
-|[<span data-ttu-id="120c2-113">Skip メソッド</span><span class="sxs-lookup"><span data-stu-id="120c2-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|<span data-ttu-id="120c2-114">指定数の項目では、列挙体にカーソルを移動します。</span><span class="sxs-lookup"><span data-stu-id="120c2-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
+|[<span data-ttu-id="de545-107">Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|<span data-ttu-id="de545-108">このコピーを作成します`ICorDebugEnum`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="de545-108">Creates a copy of this `ICorDebugEnum` object.</span></span>|  
+|[<span data-ttu-id="de545-109">GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|<span data-ttu-id="de545-110">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="de545-110">Gets the number of items in the enumeration.</span></span>|  
+|[<span data-ttu-id="de545-111">Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|<span data-ttu-id="de545-112">列挙体の先頭にカーソルを移動します。</span><span class="sxs-lookup"><span data-stu-id="de545-112">Moves the cursor to the beginning of the enumeration.</span></span>|  
+|[<span data-ttu-id="de545-113">Skip メソッド</span><span class="sxs-lookup"><span data-stu-id="de545-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|<span data-ttu-id="de545-114">指定数の項目では、列挙体にカーソルを移動します。</span><span class="sxs-lookup"><span data-stu-id="de545-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="120c2-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="120c2-115">Remarks</span></span>  
- <span data-ttu-id="120c2-116">次の列挙子から派生して`ICorDebugEnum`:</span><span class="sxs-lookup"><span data-stu-id="120c2-116">The following enumerators derive from `ICorDebugEnum`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="de545-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="de545-115">Remarks</span></span>  
+ <span data-ttu-id="de545-116">次の列挙子から派生して`ICorDebugEnum`:</span><span class="sxs-lookup"><span data-stu-id="de545-116">The following enumerators derive from `ICorDebugEnum`:</span></span>  
   
--   <span data-ttu-id="120c2-117">"ICorDebugAppDomainEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-117">"ICorDebugAppDomainEnum"</span></span>  
+- <span data-ttu-id="de545-117">"ICorDebugAppDomainEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-117">"ICorDebugAppDomainEnum"</span></span>  
   
--   <span data-ttu-id="120c2-118">"ICorDebugAssemblyEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-118">"ICorDebugAssemblyEnum"</span></span>  
+- <span data-ttu-id="de545-118">"ICorDebugAssemblyEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-118">"ICorDebugAssemblyEnum"</span></span>  
   
--   [<span data-ttu-id="120c2-119">ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-119">ICorDebugBlockingObjectEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [<span data-ttu-id="de545-119">ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="de545-119">ICorDebugBlockingObjectEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   <span data-ttu-id="120c2-120">"ICorDebugBreakpointEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-120">"ICorDebugBreakpointEnum"</span></span>  
+- <span data-ttu-id="de545-120">"ICorDebugBreakpointEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-120">"ICorDebugBreakpointEnum"</span></span>  
   
--   <span data-ttu-id="120c2-121">"ICorDebugChainEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-121">"ICorDebugChainEnum"</span></span>  
+- <span data-ttu-id="de545-121">"ICorDebugChainEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-121">"ICorDebugChainEnum"</span></span>  
   
--   <span data-ttu-id="120c2-122">"ICorDebugCodeEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-122">"ICorDebugCodeEnum"</span></span>  
+- <span data-ttu-id="de545-122">"ICorDebugCodeEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-122">"ICorDebugCodeEnum"</span></span>  
   
--   <span data-ttu-id="120c2-123">"ICorDebugErrorInfoEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-123">"ICorDebugErrorInfoEnum"</span></span>  
+- <span data-ttu-id="de545-123">"ICorDebugErrorInfoEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-123">"ICorDebugErrorInfoEnum"</span></span>  
   
--   [<span data-ttu-id="120c2-124">ICorDebugExceptionObjectCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-124">ICorDebugExceptionObjectCallStackEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [<span data-ttu-id="de545-124">ICorDebugExceptionObjectCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="de545-124">ICorDebugExceptionObjectCallStackEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   <span data-ttu-id="120c2-125">"ICorDebugFrameEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-125">"ICorDebugFrameEnum"</span></span>  
+- <span data-ttu-id="de545-125">"ICorDebugFrameEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-125">"ICorDebugFrameEnum"</span></span>  
   
--   [<span data-ttu-id="120c2-126">ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-126">ICorDebugGCReferenceEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [<span data-ttu-id="de545-126">ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="de545-126">ICorDebugGCReferenceEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
--   [<span data-ttu-id="120c2-127">ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-127">ICorDebugGuidToTypeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [<span data-ttu-id="de545-127">ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="de545-127">ICorDebugGuidToTypeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
   
--   [<span data-ttu-id="120c2-128">ICorDebugHeapEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-128">ICorDebugHeapEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [<span data-ttu-id="de545-128">ICorDebugHeapEnum</span><span class="sxs-lookup"><span data-stu-id="de545-128">ICorDebugHeapEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
   
--   [<span data-ttu-id="120c2-129">ICorDebugHeapSegmentEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-129">ICorDebugHeapSegmentEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [<span data-ttu-id="de545-129">ICorDebugHeapSegmentEnum</span><span class="sxs-lookup"><span data-stu-id="de545-129">ICorDebugHeapSegmentEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
--   <span data-ttu-id="120c2-130">"ICorDebugModuleEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-130">"ICorDebugModuleEnum"</span></span>  
+- <span data-ttu-id="de545-130">"ICorDebugModuleEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-130">"ICorDebugModuleEnum"</span></span>  
   
--   <span data-ttu-id="120c2-131">"ICorDebugObjectEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-131">"ICorDebugObjectEnum"</span></span>  
+- <span data-ttu-id="de545-131">"ICorDebugObjectEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-131">"ICorDebugObjectEnum"</span></span>  
   
--   <span data-ttu-id="120c2-132">"ICorDebugProcessEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-132">"ICorDebugProcessEnum"</span></span>  
+- <span data-ttu-id="de545-132">"ICorDebugProcessEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-132">"ICorDebugProcessEnum"</span></span>  
   
--   <span data-ttu-id="120c2-133">"ICorDebugStepperEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-133">"ICorDebugStepperEnum"</span></span>  
+- <span data-ttu-id="de545-133">"ICorDebugStepperEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-133">"ICorDebugStepperEnum"</span></span>  
   
--   <span data-ttu-id="120c2-134">"ICorDebugThreadEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-134">"ICorDebugThreadEnum"</span></span>  
+- <span data-ttu-id="de545-134">"ICorDebugThreadEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-134">"ICorDebugThreadEnum"</span></span>  
   
--   <span data-ttu-id="120c2-135">"ICorDebugTypeEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-135">"ICorDebugTypeEnum"</span></span>  
+- <span data-ttu-id="de545-135">"ICorDebugTypeEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-135">"ICorDebugTypeEnum"</span></span>  
   
--   <span data-ttu-id="120c2-136">"ICorDebugValueEnum"</span><span class="sxs-lookup"><span data-stu-id="120c2-136">"ICorDebugValueEnum"</span></span>  
+- <span data-ttu-id="de545-136">"ICorDebugValueEnum"</span><span class="sxs-lookup"><span data-stu-id="de545-136">"ICorDebugValueEnum"</span></span>  
   
--   [<span data-ttu-id="120c2-137">ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="120c2-137">ICorDebugVariableHomeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [<span data-ttu-id="de545-137">ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="de545-137">ICorDebugVariableHomeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  <span data-ttu-id="120c2-138">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="120c2-138">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="de545-138">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="de545-138">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="120c2-139">必要条件</span><span class="sxs-lookup"><span data-stu-id="120c2-139">Requirements</span></span>  
- <span data-ttu-id="120c2-140">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="120c2-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de545-139">必要条件</span><span class="sxs-lookup"><span data-stu-id="de545-139">Requirements</span></span>  
+ <span data-ttu-id="de545-140">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="de545-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="120c2-141">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="120c2-141">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="de545-141">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="de545-141">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="120c2-142">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="120c2-142">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="de545-142">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="de545-142">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="120c2-143">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="120c2-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="de545-143">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de545-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="120c2-144">関連項目</span><span class="sxs-lookup"><span data-stu-id="120c2-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de545-144">関連項目</span><span class="sxs-lookup"><span data-stu-id="de545-144">See also</span></span>
 
-- [<span data-ttu-id="120c2-145">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="120c2-145">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="de545-145">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="de545-145">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

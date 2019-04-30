@@ -8,42 +8,42 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010320"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="02edc-102">アニメーションおよびタイミングに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="02edc-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="02edc-103">次のトピックを使用する方法について説明、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アニメーションおよびタイミング システム、アプリケーションでします。</span><span class="sxs-lookup"><span data-stu-id="02edc-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="be53e-102">アニメーションおよびタイミングに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="be53e-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="be53e-103">次のトピックを使用する方法について説明、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アニメーションおよびタイミング システム、アプリケーションでします。</span><span class="sxs-lookup"><span data-stu-id="be53e-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="02edc-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="02edc-104">In This Section</span></span>  
- [<span data-ttu-id="02edc-105">アニメーションを加速または減速させる</span><span class="sxs-lookup"><span data-stu-id="02edc-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="02edc-106">反復サイクル中にアニメーション値を累積する</span><span class="sxs-lookup"><span data-stu-id="02edc-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="02edc-107">アニメーションの出力値をアニメーションの開始値に追加する</span><span class="sxs-lookup"><span data-stu-id="02edc-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="02edc-108">ストーリーボードを使ってプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="02edc-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="02edc-109">ストーリーボードを使用せずにプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="02edc-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="02edc-110">ControlTemplate 内でアニメーション化を行う</span><span class="sxs-lookup"><span data-stu-id="02edc-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="02edc-111">スタイル内でアニメーション化を行う</span><span class="sxs-lookup"><span data-stu-id="02edc-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
- [<span data-ttu-id="02edc-112">要素またはブラシの不透明度をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="02edc-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="02edc-113">タイムラインの速度を変更せずにクロックの速度を変更する</span><span class="sxs-lookup"><span data-stu-id="02edc-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="02edc-114">対話型メソッドを使用してストーリーボードを開始後に制御する</span><span class="sxs-lookup"><span data-stu-id="02edc-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="02edc-115">"From"、"To"、および "By" を使用してアニメーションを制御する</span><span class="sxs-lookup"><span data-stu-id="02edc-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="02edc-116">名前のスコープを定義する</span><span class="sxs-lookup"><span data-stu-id="02edc-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
- [<span data-ttu-id="02edc-117">クロックの状態が変化したときに通知を受け取る</span><span class="sxs-lookup"><span data-stu-id="02edc-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="02edc-118">アニメーションを反復する</span><span class="sxs-lookup"><span data-stu-id="02edc-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
- [<span data-ttu-id="02edc-119">ストーリーボードをシークする</span><span class="sxs-lookup"><span data-stu-id="02edc-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="02edc-120">ストーリーボードを同期的にシークする</span><span class="sxs-lookup"><span data-stu-id="02edc-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="02edc-121">アニメーションの継続時間を設定する</span><span class="sxs-lookup"><span data-stu-id="02edc-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="02edc-122">ストーリーボードを使用してアニメーション化した後にプロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="02edc-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="02edc-123">子タイムラインを使用してアニメーションを簡素化する</span><span class="sxs-lookup"><span data-stu-id="02edc-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="02edc-124">ストーリーボード アニメーション間で HandoffBehavior を指定する</span><span class="sxs-lookup"><span data-stu-id="02edc-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="02edc-125">アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する</span><span class="sxs-lookup"><span data-stu-id="02edc-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="02edc-126">タイムラインを自動的に反転するかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="02edc-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="02edc-127">プロパティ値が変化したときにアニメーションをトリガーする</span><span class="sxs-lookup"><span data-stu-id="02edc-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="02edc-128">開始後のストーリーボードをイベント トリガーを使用して制御する</span><span class="sxs-lookup"><span data-stu-id="02edc-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="be53e-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="be53e-104">In This Section</span></span>  
+ [<span data-ttu-id="be53e-105">アニメーションを加速または減速させる</span><span class="sxs-lookup"><span data-stu-id="be53e-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="be53e-106">反復サイクル中にアニメーション値を累積する</span><span class="sxs-lookup"><span data-stu-id="be53e-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="be53e-107">アニメーションの出力値をアニメーションの開始値に追加する</span><span class="sxs-lookup"><span data-stu-id="be53e-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="be53e-108">ストーリーボードを使ってプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="be53e-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="be53e-109">ストーリーボードを使用せずにプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="be53e-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="be53e-110">ControlTemplate 内でアニメーション化を行う</span><span class="sxs-lookup"><span data-stu-id="be53e-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="be53e-111">スタイル内でアニメーション化を行う</span><span class="sxs-lookup"><span data-stu-id="be53e-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="be53e-112">要素またはブラシの不透明度をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="be53e-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="be53e-113">タイムラインの速度を変更せずにクロックの速度を変更する</span><span class="sxs-lookup"><span data-stu-id="be53e-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="be53e-114">対話型メソッドを使用してストーリーボードを開始後に制御する</span><span class="sxs-lookup"><span data-stu-id="be53e-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="be53e-115">"From"、"To"、および "By" を使用してアニメーションを制御する</span><span class="sxs-lookup"><span data-stu-id="be53e-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="be53e-116">名前のスコープを定義する</span><span class="sxs-lookup"><span data-stu-id="be53e-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="be53e-117">クロックの状態が変化したときに通知を受け取る</span><span class="sxs-lookup"><span data-stu-id="be53e-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="be53e-118">アニメーションを反復する</span><span class="sxs-lookup"><span data-stu-id="be53e-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="be53e-119">ストーリーボードをシークする</span><span class="sxs-lookup"><span data-stu-id="be53e-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="be53e-120">ストーリーボードを同期的にシークする</span><span class="sxs-lookup"><span data-stu-id="be53e-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="be53e-121">アニメーションの継続時間を設定する</span><span class="sxs-lookup"><span data-stu-id="be53e-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="be53e-122">ストーリーボードを使用してアニメーション化した後にプロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="be53e-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="be53e-123">子タイムラインを使用してアニメーションを簡素化する</span><span class="sxs-lookup"><span data-stu-id="be53e-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="be53e-124">ストーリーボード アニメーション間で HandoffBehavior を指定する</span><span class="sxs-lookup"><span data-stu-id="be53e-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="be53e-125">アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する</span><span class="sxs-lookup"><span data-stu-id="be53e-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="be53e-126">タイムラインを自動的に反転するかどうかを指定する</span><span class="sxs-lookup"><span data-stu-id="be53e-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="be53e-127">プロパティ値が変化したときにアニメーションをトリガーする</span><span class="sxs-lookup"><span data-stu-id="be53e-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="be53e-128">開始後のストーリーボードをイベント トリガーを使用して制御する</span><span class="sxs-lookup"><span data-stu-id="be53e-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="02edc-129">参照</span><span class="sxs-lookup"><span data-stu-id="02edc-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="be53e-129">参照</span><span class="sxs-lookup"><span data-stu-id="be53e-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "57358497"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="02edc-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="02edc-130">Related Sections</span></span>  
- [<span data-ttu-id="02edc-131">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="02edc-131">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="be53e-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="be53e-130">Related Sections</span></span>  
+ [<span data-ttu-id="be53e-131">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="be53e-131">Graphics and Multimedia</span></span>](index.md)

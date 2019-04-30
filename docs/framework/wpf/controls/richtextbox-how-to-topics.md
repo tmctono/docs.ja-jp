@@ -8,23 +8,23 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971081"
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="4641d-102">RichTextBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="4641d-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="4641d-103">このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="4641d-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="9ae47-102">RichTextBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9ae47-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="9ae47-103">このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.RichTextBox>コントロール。</span><span class="sxs-lookup"><span data-stu-id="9ae47-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4641d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4641d-104">In This Section</span></span>  
- [<span data-ttu-id="4641d-105">RichTextBox からテキスト コンテンツを抽出する</span><span class="sxs-lookup"><span data-stu-id="4641d-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="4641d-106">プログラムによる RichTextBox での選択の変更</span><span class="sxs-lookup"><span data-stu-id="4641d-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="4641d-107">RichTextBox コンテンツの保存、読み込み、および印刷</span><span class="sxs-lookup"><span data-stu-id="4641d-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="4641d-108">カスタム コンテキスト メニューを RichTextBox に配置する</span><span class="sxs-lookup"><span data-stu-id="4641d-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9ae47-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9ae47-104">In This Section</span></span>  
+ [<span data-ttu-id="9ae47-105">RichTextBox からテキスト コンテンツを抽出する</span><span class="sxs-lookup"><span data-stu-id="9ae47-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="9ae47-106">プログラムによる RichTextBox での選択の変更</span><span class="sxs-lookup"><span data-stu-id="9ae47-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="9ae47-107">RichTextBox コンテンツの保存、読み込み、および印刷</span><span class="sxs-lookup"><span data-stu-id="9ae47-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="9ae47-108">カスタム コンテキスト メニューを RichTextBox に配置する</span><span class="sxs-lookup"><span data-stu-id="9ae47-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4641d-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="4641d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ae47-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ae47-109">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="4641d-110">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="4641d-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="4641d-111">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="4641d-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="9ae47-110">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="9ae47-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="9ae47-111">フロー ドキュメントの概要</span><span class="sxs-lookup"><span data-stu-id="9ae47-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

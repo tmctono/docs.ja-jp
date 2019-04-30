@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989236"
 ---
-# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="06b18-102">ICorDebugChainEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="06b18-102">ICorDebugChainEnum::Next Method</span></span>
-<span data-ttu-id="06b18-103">現在の位置から始まり、列挙体から ICorDebugChain インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="06b18-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="e83f3-102">ICorDebugChainEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="e83f3-102">ICorDebugChainEnum::Next Method</span></span>
+<span data-ttu-id="e83f3-103">現在の位置から始まり、列挙体から ICorDebugChain インスタンスの指定した数を取得します。</span><span class="sxs-lookup"><span data-stu-id="e83f3-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06b18-104">構文</span><span class="sxs-lookup"><span data-stu-id="06b18-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e83f3-104">構文</span><span class="sxs-lookup"><span data-stu-id="e83f3-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06b18-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="06b18-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e83f3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e83f3-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="06b18-106">[in]数`ICorDebugChain`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="06b18-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
+ <span data-ttu-id="e83f3-106">[in]数`ICorDebugChain`インスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="e83f3-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
   
  `chains`  
- <span data-ttu-id="06b18-107">[out]それぞれが指すポインターの配列、`ICorDebugChain`チェーンを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="06b18-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
+ <span data-ttu-id="e83f3-107">[out]それぞれが指すポインターの配列、`ICorDebugChain`チェーンを表すオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="e83f3-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="06b18-108">[out]数へのポインター`ICorDebugChain`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="06b18-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="06b18-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="06b18-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="e83f3-108">[out]数へのポインター`ICorDebugChain`インスタンスが実際に返されます。</span><span class="sxs-lookup"><span data-stu-id="e83f3-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="e83f3-109">この値は null になる場合`celt`は 1 つです。</span><span class="sxs-lookup"><span data-stu-id="e83f3-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06b18-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="06b18-110">Requirements</span></span>  
- <span data-ttu-id="06b18-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="06b18-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e83f3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="e83f3-110">Requirements</span></span>  
+ <span data-ttu-id="e83f3-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e83f3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06b18-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="06b18-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e83f3-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e83f3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="06b18-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06b18-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e83f3-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e83f3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="06b18-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06b18-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e83f3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e83f3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

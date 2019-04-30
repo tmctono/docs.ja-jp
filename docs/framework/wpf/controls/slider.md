@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
 ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023859"
 ---
-# <a name="slider"></a><span data-ttu-id="65e47-102">スライダー</span><span class="sxs-lookup"><span data-stu-id="65e47-102">Slider</span></span>
-<span data-ttu-id="65e47-103"><xref:System.Windows.Controls.Slider>により、移動して値の範囲から選択する、<xref:System.Windows.Controls.Primitives.Thumb>に沿って、<xref:System.Windows.Controls.Primitives.Track>します。</span><span class="sxs-lookup"><span data-stu-id="65e47-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="5eb75-102">スライダー</span><span class="sxs-lookup"><span data-stu-id="5eb75-102">Slider</span></span>
+<span data-ttu-id="5eb75-103"><xref:System.Windows.Controls.Slider>により、移動して値の範囲から選択する、<xref:System.Windows.Controls.Primitives.Thumb>に沿って、<xref:System.Windows.Controls.Primitives.Track>します。</span><span class="sxs-lookup"><span data-stu-id="5eb75-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="65e47-104">次の図は、水平方向の例を示します<xref:System.Windows.Controls.Slider>コントロール。</span><span class="sxs-lookup"><span data-stu-id="65e47-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="5eb75-104">次の図は、水平方向の例を示します<xref:System.Windows.Controls.Slider>コントロール。</span><span class="sxs-lookup"><span data-stu-id="5eb75-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="65e47-105">![目盛り付きの水平スライダー](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="65e47-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="5eb75-105">![目盛り付きの水平スライダー](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="5eb75-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="65e47-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="65e47-106">In This Section</span></span>  
- [<span data-ttu-id="65e47-107">スライダーの目盛りをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="65e47-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5eb75-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5eb75-106">In This Section</span></span>  
+ [<span data-ttu-id="5eb75-107">スライダーの目盛りをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="5eb75-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="65e47-108">参照</span><span class="sxs-lookup"><span data-stu-id="65e47-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5eb75-108">参照</span><span class="sxs-lookup"><span data-stu-id="5eb75-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

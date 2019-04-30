@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994878"
 ---
-# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="39a50-102">ICorDebugModule::GetEditAndContinueSnapshot メソッド</span><span class="sxs-lookup"><span data-stu-id="39a50-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
-<span data-ttu-id="39a50-103">非推奨。</span><span class="sxs-lookup"><span data-stu-id="39a50-103">Deprecated.</span></span>  
+# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="21937-102">ICorDebugModule::GetEditAndContinueSnapshot メソッド</span><span class="sxs-lookup"><span data-stu-id="21937-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
+<span data-ttu-id="21937-103">非推奨。</span><span class="sxs-lookup"><span data-stu-id="21937-103">Deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39a50-104">構文</span><span class="sxs-lookup"><span data-stu-id="39a50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21937-104">構文</span><span class="sxs-lookup"><span data-stu-id="21937-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEditAndContinueSnapshot(  
@@ -35,11 +35,11 @@ HRESULT GetEditAndContinueSnapshot(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="39a50-105">要件</span><span class="sxs-lookup"><span data-stu-id="39a50-105">Requirements</span></span>  
- <span data-ttu-id="39a50-106">**プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。</span><span class="sxs-lookup"><span data-stu-id="39a50-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21937-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="21937-105">Requirements</span></span>  
+ <span data-ttu-id="21937-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="21937-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39a50-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39a50-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="21937-107">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="21937-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="39a50-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39a50-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="21937-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21937-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="39a50-109">**.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39a50-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="21937-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21937-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

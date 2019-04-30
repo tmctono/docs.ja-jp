@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abfa8a3f58d3e9f7c80762c1faf2bc51514d71b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050039"
 ---
-# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="cb358-102">IMetaDataEmit::SetEventProps メソッド</span><span class="sxs-lookup"><span data-stu-id="cb358-102">IMetaDataEmit::SetEventProps Method</span></span>
-<span data-ttu-id="cb358-103">前回の呼び出しで定義されたイベントの指定した機能の更新を設定または[imetadataemit::defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="cb358-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
+# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="5808d-102">IMetaDataEmit::SetEventProps メソッド</span><span class="sxs-lookup"><span data-stu-id="5808d-102">IMetaDataEmit::SetEventProps Method</span></span>
+<span data-ttu-id="5808d-103">前回の呼び出しで定義されたイベントの指定した機能の更新を設定または[imetadataemit::defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="5808d-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb358-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb358-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5808d-104">構文</span><span class="sxs-lookup"><span data-stu-id="5808d-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEventProps (  
@@ -41,38 +41,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb358-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb358-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5808d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5808d-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="cb358-106">[in]イベント トークンです。</span><span class="sxs-lookup"><span data-stu-id="cb358-106">[in] The event token.</span></span>  
+ <span data-ttu-id="5808d-106">[in]イベント トークンです。</span><span class="sxs-lookup"><span data-stu-id="5808d-106">[in] The event token.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="cb358-107">[in]イベントのフラグ。</span><span class="sxs-lookup"><span data-stu-id="cb358-107">[in] Event flags.</span></span> <span data-ttu-id="cb358-108">これは、ビットマスクの`CorEventAttr`値。</span><span class="sxs-lookup"><span data-stu-id="cb358-108">This is a bitmask of `CorEventAttr` values.</span></span>  
+ <span data-ttu-id="5808d-107">[in]イベントのフラグ。</span><span class="sxs-lookup"><span data-stu-id="5808d-107">[in] Event flags.</span></span> <span data-ttu-id="5808d-108">これは、ビットマスクの`CorEventAttr`値。</span><span class="sxs-lookup"><span data-stu-id="5808d-108">This is a bitmask of `CorEventAttr` values.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="cb358-109">[in]イベント クラスのトークンです。</span><span class="sxs-lookup"><span data-stu-id="cb358-109">[in] The token for the event class.</span></span> <span data-ttu-id="cb358-110">いずれかになります、`mdTypeDef`または`mdTypeRef`トークンです。</span><span class="sxs-lookup"><span data-stu-id="cb358-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="5808d-109">[in]イベント クラスのトークンです。</span><span class="sxs-lookup"><span data-stu-id="5808d-109">[in] The token for the event class.</span></span> <span data-ttu-id="5808d-110">いずれかになります、`mdTypeDef`または`mdTypeRef`トークンです。</span><span class="sxs-lookup"><span data-stu-id="5808d-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="cb358-111">[in]イベント、または null をサブスクライブするために使用するメソッド。</span><span class="sxs-lookup"><span data-stu-id="cb358-111">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="5808d-111">[in]イベント、または null をサブスクライブするために使用するメソッド。</span><span class="sxs-lookup"><span data-stu-id="5808d-111">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="cb358-112">[in]イベント、または null をアンサブスク ライブするメソッド。</span><span class="sxs-lookup"><span data-stu-id="cb358-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="5808d-112">[in]イベント、または null をアンサブスク ライブするメソッド。</span><span class="sxs-lookup"><span data-stu-id="5808d-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="cb358-113">[in]イベントを発生させる (派生クラス) を使用するメソッド。</span><span class="sxs-lookup"><span data-stu-id="cb358-113">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="5808d-113">[in]イベントを発生させる (派生クラス) を使用するメソッド。</span><span class="sxs-lookup"><span data-stu-id="5808d-113">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="cb358-114">[in]イベントに関連付けられているその他のメソッドのトークンの配列。</span><span class="sxs-lookup"><span data-stu-id="cb358-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="cb358-115">配列の最後の要素である必要があります`mdMethodDefNil`します。</span><span class="sxs-lookup"><span data-stu-id="cb358-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
+ <span data-ttu-id="5808d-114">[in]イベントに関連付けられているその他のメソッドのトークンの配列。</span><span class="sxs-lookup"><span data-stu-id="5808d-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="5808d-115">配列の最後の要素である必要があります`mdMethodDefNil`します。</span><span class="sxs-lookup"><span data-stu-id="5808d-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb358-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="cb358-116">Requirements</span></span>  
- <span data-ttu-id="cb358-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb358-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5808d-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="5808d-116">Requirements</span></span>  
+ <span data-ttu-id="5808d-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5808d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb358-118">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cb358-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5808d-118">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5808d-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="cb358-119">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="cb358-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5808d-119">**ライブラリ:** MSCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="5808d-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cb358-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb358-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5808d-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5808d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb358-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb358-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5808d-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="5808d-121">See also</span></span>
 
-- [<span data-ttu-id="cb358-122">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb358-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="cb358-123">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb358-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5808d-122">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5808d-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="5808d-123">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5808d-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046138"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="f4bd5-102">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f4bd5-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="f4bd5-103">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f4bd5-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="54fed-102">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="54fed-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="54fed-103">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="54fed-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4bd5-104">構文</span><span class="sxs-lookup"><span data-stu-id="f4bd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54fed-104">構文</span><span class="sxs-lookup"><span data-stu-id="54fed-104">Syntax</span></span>  
   
 ```  
 typedef enum CorArgType {  
@@ -46,13 +46,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f4bd5-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="f4bd5-105">Requirements</span></span>  
- <span data-ttu-id="f4bd5-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4bd5-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54fed-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="54fed-105">Requirements</span></span>  
+ <span data-ttu-id="54fed-106">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="54fed-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4bd5-107">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f4bd5-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="54fed-107">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="54fed-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f4bd5-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4bd5-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="54fed-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54fed-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4bd5-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4bd5-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54fed-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="54fed-109">See also</span></span>
 
-- [<span data-ttu-id="f4bd5-110">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="f4bd5-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="54fed-110">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="54fed-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
