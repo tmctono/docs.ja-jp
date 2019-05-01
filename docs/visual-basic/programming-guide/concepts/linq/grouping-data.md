@@ -2,31 +2,31 @@
 title: データのグループ化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842058"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808124"
 ---
-# <a name="grouping-data-visual-basic"></a><span data-ttu-id="8afed-102">データのグループ化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8afed-102">Grouping Data (Visual Basic)</span></span>
-<span data-ttu-id="8afed-103">グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。</span><span class="sxs-lookup"><span data-stu-id="8afed-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
+# <a name="grouping-data-visual-basic"></a><span data-ttu-id="562eb-102">データのグループ化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="562eb-102">Grouping Data (Visual Basic)</span></span>
+<span data-ttu-id="562eb-103">グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。</span><span class="sxs-lookup"><span data-stu-id="562eb-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- <span data-ttu-id="8afed-104">次の図は、文字のシーケンスをグループ化した結果を示しています。</span><span class="sxs-lookup"><span data-stu-id="8afed-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="8afed-105">各グループのキーは文字です。</span><span class="sxs-lookup"><span data-stu-id="8afed-105">The key for each group is the character.</span></span>  
+ <span data-ttu-id="562eb-104">次の図は、文字のシーケンスをグループ化した結果を示しています。</span><span class="sxs-lookup"><span data-stu-id="562eb-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="562eb-105">各グループのキーは文字です。</span><span class="sxs-lookup"><span data-stu-id="562eb-105">The key for each group is the character.</span></span>  
   
- <span data-ttu-id="8afed-106">![LINQ グループ化操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span><span class="sxs-lookup"><span data-stu-id="8afed-106">![LINQ Grouping Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span></span>  
+ ![LINQ グループ化操作を示す図。](./media/grouping-data/linq-group-operation.png)  
   
- <span data-ttu-id="8afed-107">次のセクションでは、データ要素をグループ化する標準クエリ演算子メソッドの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="8afed-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
+ <span data-ttu-id="562eb-107">次のセクションでは、データ要素をグループ化する標準クエリ演算子メソッドの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="562eb-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8afed-108">メソッド</span><span class="sxs-lookup"><span data-stu-id="8afed-108">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="562eb-108">メソッド</span><span class="sxs-lookup"><span data-stu-id="562eb-108">Methods</span></span>  
   
-|<span data-ttu-id="8afed-109">メソッド名</span><span class="sxs-lookup"><span data-stu-id="8afed-109">Method Name</span></span>|<span data-ttu-id="8afed-110">説明</span><span class="sxs-lookup"><span data-stu-id="8afed-110">Description</span></span>|<span data-ttu-id="8afed-111">Visual Basic のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="8afed-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="8afed-112">説明</span><span class="sxs-lookup"><span data-stu-id="8afed-112">More Information</span></span>|  
+|<span data-ttu-id="562eb-109">メソッド名</span><span class="sxs-lookup"><span data-stu-id="562eb-109">Method Name</span></span>|<span data-ttu-id="562eb-110">説明</span><span class="sxs-lookup"><span data-stu-id="562eb-110">Description</span></span>|<span data-ttu-id="562eb-111">Visual Basic のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="562eb-111">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="562eb-112">説明</span><span class="sxs-lookup"><span data-stu-id="562eb-112">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="8afed-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="8afed-113">GroupBy</span></span>|<span data-ttu-id="8afed-114">共通の属性を共有する要素をグループ化します。</span><span class="sxs-lookup"><span data-stu-id="8afed-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="8afed-115">各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。</span><span class="sxs-lookup"><span data-stu-id="8afed-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="8afed-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="8afed-116">ToLookup</span></span>|<span data-ttu-id="8afed-117">キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。</span><span class="sxs-lookup"><span data-stu-id="8afed-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="8afed-118">該当なし。</span><span class="sxs-lookup"><span data-stu-id="8afed-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="562eb-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="562eb-113">GroupBy</span></span>|<span data-ttu-id="562eb-114">共通の属性を共有する要素をグループ化します。</span><span class="sxs-lookup"><span data-stu-id="562eb-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="562eb-115">各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。</span><span class="sxs-lookup"><span data-stu-id="562eb-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="562eb-116">ToLookup</span><span class="sxs-lookup"><span data-stu-id="562eb-116">ToLookup</span></span>|<span data-ttu-id="562eb-117">キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。</span><span class="sxs-lookup"><span data-stu-id="562eb-117">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="562eb-118">該当なし。</span><span class="sxs-lookup"><span data-stu-id="562eb-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="8afed-119">クエリ式の構文例</span><span class="sxs-lookup"><span data-stu-id="8afed-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="8afed-120">次のコード例では、`Group By` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。</span><span class="sxs-lookup"><span data-stu-id="8afed-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="562eb-119">クエリ式の構文例</span><span class="sxs-lookup"><span data-stu-id="562eb-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="562eb-120">次のコード例では、`Group By` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。</span><span class="sxs-lookup"><span data-stu-id="562eb-120">The following code example uses the `Group By` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```vb  
 Dim numbers As New System.Collections.Generic.List(Of Integer)(  
@@ -63,10 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8afed-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="8afed-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="562eb-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="562eb-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="8afed-122">標準クエリ演算子の概要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8afed-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="8afed-123">Group By 句</span><span class="sxs-lookup"><span data-stu-id="8afed-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [<span data-ttu-id="8afed-124">方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8afed-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [<span data-ttu-id="8afed-125">方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。</span><span class="sxs-lookup"><span data-stu-id="8afed-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [<span data-ttu-id="562eb-122">標準クエリ演算子の概要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="562eb-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="562eb-123">Group By 句</span><span class="sxs-lookup"><span data-stu-id="562eb-123">Group By Clause</span></span>](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [<span data-ttu-id="562eb-124">方法: ファイルのグループ化拡張機能 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="562eb-124">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [<span data-ttu-id="562eb-125">方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。</span><span class="sxs-lookup"><span data-stu-id="562eb-125">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
