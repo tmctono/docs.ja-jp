@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
 ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61800998"
@@ -85,7 +85,7 @@ ms.locfileid: "61800998"
 ## <a name="compiling-the-code"></a><span data-ttu-id="06036-142">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="06036-142">Compiling the Code</span></span>  
  <span data-ttu-id="06036-143">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="06036-143">This example requires:</span></span>  
   
--   <span data-ttu-id="06036-144">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="06036-144">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="06036-144">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="06036-144">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
  <span data-ttu-id="06036-145">Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="06036-145">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="06036-146">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="06036-146">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
