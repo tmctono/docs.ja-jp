@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635116"
 ---
-# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="afa0a-102">基本認証でのトランスポート セキュリティ</span><span class="sxs-lookup"><span data-stu-id="afa0a-102">Transport Security with Basic Authentication</span></span>
-<span data-ttu-id="afa0a-103">次の図は、Windows Communication Foundation (WCF) サービスとクライアントを示します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="afa0a-104">サーバーには、SSL (Secure Sockets Layer) に使用できる有効な X509 証明書が必要であり、クライアントはサーバーの証明書を信頼する必要があります。</span><span class="sxs-lookup"><span data-stu-id="afa0a-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="afa0a-105">さらに、Web サービスには使用可能な SSL が既に実装されています。</span><span class="sxs-lookup"><span data-stu-id="afa0a-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="afa0a-106">詳細については基本認証を有効にするインターネット インフォメーション サービス (IIS) で、次を参照してください。<https://go.microsoft.com/fwlink/?LinkId=83822>します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-106">For more information about enabling basic authentication on Internet Information Services (IIS), see <https://go.microsoft.com/fwlink/?LinkId=83822>.</span></span>  
+# <a name="transport-security-with-basic-authentication"></a><span data-ttu-id="1f82d-102">基本認証でのトランスポート セキュリティ</span><span class="sxs-lookup"><span data-stu-id="1f82d-102">Transport Security with Basic Authentication</span></span>
+<span data-ttu-id="1f82d-103">次の図は、Windows Communication Foundation (WCF) サービスとクライアントを示します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-103">The following illustration shows a Windows Communication Foundation (WCF) service and client.</span></span> <span data-ttu-id="1f82d-104">サーバーには、SSL (Secure Sockets Layer) に使用できる有効な X509 証明書が必要であり、クライアントはサーバーの証明書を信頼する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f82d-104">The server needs a valid X.509 certificate that can be used for Secure Sockets Layer (SSL), and the clients must trust the server’s certificate.</span></span> <span data-ttu-id="1f82d-105">さらに、Web サービスには使用可能な SSL が既に実装されています。</span><span class="sxs-lookup"><span data-stu-id="1f82d-105">Further, the Web service already has an SSL implementation that can be used.</span></span> <span data-ttu-id="1f82d-106">詳細については基本認証を有効にするインターネット インフォメーション サービス (IIS) で、次を参照してください。<https://go.microsoft.com/fwlink/?LinkId=83822>します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-106">For more information about enabling basic authentication on Internet Information Services (IIS), see <https://go.microsoft.com/fwlink/?LinkId=83822>.</span></span>  
   
  ![基本認証でのトランスポート セキュリティを示しているスクリーン ショット。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|<span data-ttu-id="afa0a-108">特徴</span><span class="sxs-lookup"><span data-stu-id="afa0a-108">Characteristic</span></span>|<span data-ttu-id="afa0a-109">説明</span><span class="sxs-lookup"><span data-stu-id="afa0a-109">Description</span></span>|  
+|<span data-ttu-id="1f82d-108">特徴</span><span class="sxs-lookup"><span data-stu-id="1f82d-108">Characteristic</span></span>|<span data-ttu-id="1f82d-109">説明</span><span class="sxs-lookup"><span data-stu-id="1f82d-109">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="afa0a-110">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="afa0a-110">Security Mode</span></span>|<span data-ttu-id="afa0a-111">Transport</span><span class="sxs-lookup"><span data-stu-id="afa0a-111">Transport</span></span>|  
-|<span data-ttu-id="afa0a-112">相互運用性</span><span class="sxs-lookup"><span data-stu-id="afa0a-112">Interoperability</span></span>|<span data-ttu-id="afa0a-113">既存の Web サービス クライアントとサービスを使用する</span><span class="sxs-lookup"><span data-stu-id="afa0a-113">With existing Web service clients and services</span></span>|  
-|<span data-ttu-id="afa0a-114">認証 (サーバー)</span><span class="sxs-lookup"><span data-stu-id="afa0a-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="afa0a-115">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="afa0a-115">Authentication (Client)</span></span>|<span data-ttu-id="afa0a-116">○ (HTTPS を使用)</span><span class="sxs-lookup"><span data-stu-id="afa0a-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="afa0a-117">○ (ユーザー名とパスワードを使用)</span><span class="sxs-lookup"><span data-stu-id="afa0a-117">Yes (through User name/Password)</span></span>|  
-|<span data-ttu-id="afa0a-118">整合性</span><span class="sxs-lookup"><span data-stu-id="afa0a-118">Integrity</span></span>|<span data-ttu-id="afa0a-119">はい</span><span class="sxs-lookup"><span data-stu-id="afa0a-119">Yes</span></span>|  
-|<span data-ttu-id="afa0a-120">機密性</span><span class="sxs-lookup"><span data-stu-id="afa0a-120">Confidentiality</span></span>|<span data-ttu-id="afa0a-121">はい</span><span class="sxs-lookup"><span data-stu-id="afa0a-121">Yes</span></span>|  
-|<span data-ttu-id="afa0a-122">Transport</span><span class="sxs-lookup"><span data-stu-id="afa0a-122">Transport</span></span>|<span data-ttu-id="afa0a-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="afa0a-123">HTTPS</span></span>|  
-|<span data-ttu-id="afa0a-124">バインド</span><span class="sxs-lookup"><span data-stu-id="afa0a-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="1f82d-110">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="1f82d-110">Security Mode</span></span>|<span data-ttu-id="1f82d-111">Transport</span><span class="sxs-lookup"><span data-stu-id="1f82d-111">Transport</span></span>|  
+|<span data-ttu-id="1f82d-112">相互運用性</span><span class="sxs-lookup"><span data-stu-id="1f82d-112">Interoperability</span></span>|<span data-ttu-id="1f82d-113">既存の Web サービス クライアントとサービスを使用する</span><span class="sxs-lookup"><span data-stu-id="1f82d-113">With existing Web service clients and services</span></span>|  
+|<span data-ttu-id="1f82d-114">認証 (サーバー)</span><span class="sxs-lookup"><span data-stu-id="1f82d-114">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="1f82d-115">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="1f82d-115">Authentication (Client)</span></span>|<span data-ttu-id="1f82d-116">○ (HTTPS を使用)</span><span class="sxs-lookup"><span data-stu-id="1f82d-116">Yes (using HTTPS)</span></span><br /><br /> <span data-ttu-id="1f82d-117">○ (ユーザー名とパスワードを使用)</span><span class="sxs-lookup"><span data-stu-id="1f82d-117">Yes (through User name/Password)</span></span>|  
+|<span data-ttu-id="1f82d-118">整合性</span><span class="sxs-lookup"><span data-stu-id="1f82d-118">Integrity</span></span>|<span data-ttu-id="1f82d-119">はい</span><span class="sxs-lookup"><span data-stu-id="1f82d-119">Yes</span></span>|  
+|<span data-ttu-id="1f82d-120">機密性</span><span class="sxs-lookup"><span data-stu-id="1f82d-120">Confidentiality</span></span>|<span data-ttu-id="1f82d-121">はい</span><span class="sxs-lookup"><span data-stu-id="1f82d-121">Yes</span></span>|  
+|<span data-ttu-id="1f82d-122">Transport</span><span class="sxs-lookup"><span data-stu-id="1f82d-122">Transport</span></span>|<span data-ttu-id="1f82d-123">HTTPS</span><span class="sxs-lookup"><span data-stu-id="1f82d-123">HTTPS</span></span>|  
+|<span data-ttu-id="1f82d-124">バインド</span><span class="sxs-lookup"><span data-stu-id="1f82d-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="afa0a-125">サービス</span><span class="sxs-lookup"><span data-stu-id="afa0a-125">Service</span></span>  
- <span data-ttu-id="afa0a-126">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="afa0a-127">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="afa0a-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="1f82d-125">サービス</span><span class="sxs-lookup"><span data-stu-id="1f82d-125">Service</span></span>  
+ <span data-ttu-id="1f82d-126">次のコードと構成は、別々に実行します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="1f82d-127">次のいずれかの操作を行います。</span><span class="sxs-lookup"><span data-stu-id="1f82d-127">Do one of the following:</span></span>  
   
-- <span data-ttu-id="afa0a-128">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-128">Create a stand-alone service using the code with no configuration.</span></span>  
+- <span data-ttu-id="1f82d-128">構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
-- <span data-ttu-id="afa0a-129">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="afa0a-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+- <span data-ttu-id="1f82d-129">提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。</span><span class="sxs-lookup"><span data-stu-id="1f82d-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="afa0a-130">コード</span><span class="sxs-lookup"><span data-stu-id="afa0a-130">Code</span></span>  
- <span data-ttu-id="afa0a-131">次のコードでは、転送セキュリティ用の Windows ドメイン ユーザー名とパスワードを使用するサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="afa0a-132">サービスには、クライアントに対する認証を行うための X 509 証明書が必要になります。</span><span class="sxs-lookup"><span data-stu-id="afa0a-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="afa0a-133">詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)と[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
+### <a name="code"></a><span data-ttu-id="1f82d-130">コード</span><span class="sxs-lookup"><span data-stu-id="1f82d-130">Code</span></span>  
+ <span data-ttu-id="1f82d-131">次のコードでは、転送セキュリティ用の Windows ドメイン ユーザー名とパスワードを使用するサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-131">The following code shows how to create a service endpoint that uses a Windows domain user name and password for transfer security.</span></span> <span data-ttu-id="1f82d-132">サービスには、クライアントに対する認証を行うための X 509 証明書が必要になります。</span><span class="sxs-lookup"><span data-stu-id="1f82d-132">Note that the service requires an X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="1f82d-133">詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)と[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-133">For more information, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a><span data-ttu-id="afa0a-134">構成</span><span class="sxs-lookup"><span data-stu-id="afa0a-134">Configuration</span></span>  
- <span data-ttu-id="afa0a-135">次の例では、トランスポート レベルのセキュリティの基本認証を使用するサービスを構成します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
+## <a name="configuration"></a><span data-ttu-id="1f82d-134">構成</span><span class="sxs-lookup"><span data-stu-id="1f82d-134">Configuration</span></span>  
+ <span data-ttu-id="1f82d-135">次の例では、トランスポート レベルのセキュリティの基本認証を使用するサービスを構成します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-135">The following configures a service to use basic authentication with transport-level security:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -69,22 +69,22 @@ ms.locfileid: "61933056"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="afa0a-136">クライアント</span><span class="sxs-lookup"><span data-stu-id="afa0a-136">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="1f82d-136">クライアント</span><span class="sxs-lookup"><span data-stu-id="1f82d-136">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="afa0a-137">コード</span><span class="sxs-lookup"><span data-stu-id="afa0a-137">Code</span></span>  
- <span data-ttu-id="afa0a-138">次のコードは、ユーザー名とパスワードが含まれるクライアント コードを示しています。</span><span class="sxs-lookup"><span data-stu-id="afa0a-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="afa0a-139">ユーザーは、有効な Windows ユーザー名とパスワードを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="afa0a-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="afa0a-140">ユーザー名とパスワードを返すコードは、ここに示されていません。</span><span class="sxs-lookup"><span data-stu-id="afa0a-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="afa0a-141">ダイアログボックスまたは他のインターフェースを使用して、ユーザーにこれらの情報を照会してください。</span><span class="sxs-lookup"><span data-stu-id="afa0a-141">Use a dialog box or other interface to query the user for the information.</span></span>  
+### <a name="code"></a><span data-ttu-id="1f82d-137">コード</span><span class="sxs-lookup"><span data-stu-id="1f82d-137">Code</span></span>  
+ <span data-ttu-id="1f82d-138">次のコードは、ユーザー名とパスワードが含まれるクライアント コードを示しています。</span><span class="sxs-lookup"><span data-stu-id="1f82d-138">The following code shows the client code that includes the user name and password.</span></span> <span data-ttu-id="1f82d-139">ユーザーは、有効な Windows ユーザー名とパスワードを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f82d-139">Note that the user must provide a valid Windows user name and password.</span></span> <span data-ttu-id="1f82d-140">ユーザー名とパスワードを返すコードは、ここに示されていません。</span><span class="sxs-lookup"><span data-stu-id="1f82d-140">The code to return the user name and password is not shown here.</span></span> <span data-ttu-id="1f82d-141">ダイアログボックスまたは他のインターフェースを使用して、ユーザーにこれらの情報を照会してください。</span><span class="sxs-lookup"><span data-stu-id="1f82d-141">Use a dialog box or other interface to query the user for the information.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="afa0a-142">ユーザー名とパスワードは、コードを使ってのみ設定できます。</span><span class="sxs-lookup"><span data-stu-id="afa0a-142">User name and password can only be set using code.</span></span>  
+>  <span data-ttu-id="1f82d-142">ユーザー名とパスワードは、コードを使ってのみ設定できます。</span><span class="sxs-lookup"><span data-stu-id="1f82d-142">User name and password can only be set using code.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="afa0a-143">構成</span><span class="sxs-lookup"><span data-stu-id="afa0a-143">Configuration</span></span>  
- <span data-ttu-id="afa0a-144">次のコードは、クライアントの構成を示しています。</span><span class="sxs-lookup"><span data-stu-id="afa0a-144">The following code shows the client configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="1f82d-143">構成</span><span class="sxs-lookup"><span data-stu-id="1f82d-143">Configuration</span></span>  
+ <span data-ttu-id="1f82d-144">次のコードは、クライアントの構成を示しています。</span><span class="sxs-lookup"><span data-stu-id="1f82d-144">The following code shows the client configuration.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="afa0a-145">構成を使用してユーザー名とパスワードを設定することはできません。</span><span class="sxs-lookup"><span data-stu-id="afa0a-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="afa0a-146">ここに示した構成には、ユーザー名とパスワードを設定するためのコードを補う必要があります。</span><span class="sxs-lookup"><span data-stu-id="afa0a-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
+>  <span data-ttu-id="1f82d-145">構成を使用してユーザー名とパスワードを設定することはできません。</span><span class="sxs-lookup"><span data-stu-id="1f82d-145">You cannot use configuration to set the user name and password.</span></span> <span data-ttu-id="1f82d-146">ここに示した構成には、ユーザー名とパスワードを設定するためのコードを補う必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f82d-146">The configuration shown here must be augmented using code to set the user name and password.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -110,12 +110,12 @@ ms.locfileid: "61933056"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="afa0a-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="afa0a-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f82d-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f82d-147">See also</span></span>
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
-- [<span data-ttu-id="afa0a-148">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="afa0a-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="afa0a-149">方法: SSL 証明書でポートを構成します。</span><span class="sxs-lookup"><span data-stu-id="afa0a-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [<span data-ttu-id="afa0a-150">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="afa0a-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="afa0a-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="afa0a-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [<span data-ttu-id="afa0a-152">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="afa0a-152">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="1f82d-148">証明書の使用</span><span class="sxs-lookup"><span data-stu-id="1f82d-148">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="1f82d-149">方法: SSL 証明書でポートを構成します。</span><span class="sxs-lookup"><span data-stu-id="1f82d-149">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [<span data-ttu-id="1f82d-150">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="1f82d-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="1f82d-151">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="1f82d-151">\<clientCredentials></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [<span data-ttu-id="1f82d-152">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="1f82d-152">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
