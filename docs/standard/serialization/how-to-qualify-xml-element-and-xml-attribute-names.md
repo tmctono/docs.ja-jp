@@ -10,37 +10,38 @@ helpviewer_keywords:
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755405"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="896bb-102">方法: XML 要素および XML 属性名を修飾する</span><span class="sxs-lookup"><span data-stu-id="896bb-102">How to: Qualify XML Element and XML Attribute Names</span></span>
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="4724c-102">方法: XML 要素および XML 属性名を修飾する</span><span class="sxs-lookup"><span data-stu-id="4724c-102">How to: Qualify XML Element and XML Attribute Names</span></span>
 
-<span data-ttu-id="896bb-103">インスタンスに格納される XML 名前空間、<xref:System.Xml.Serialization.XmlSerializerNamespaces>クラスは、World Wide Web Consortium (W3C) 仕様に準拠する必要があります[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)します。</span><span class="sxs-lookup"><span data-stu-id="896bb-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
+<span data-ttu-id="4724c-103">インスタンスに格納される XML 名前空間、<xref:System.Xml.Serialization.XmlSerializerNamespaces>クラスは、World Wide Web Consortium (W3C) 仕様に準拠する必要があります[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)します。</span><span class="sxs-lookup"><span data-stu-id="4724c-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
 
-<span data-ttu-id="896bb-104">XML 名前空間を使用すると、XML ドキュメント内の XML 要素および XML 属性の名前を修飾できます。</span><span class="sxs-lookup"><span data-stu-id="896bb-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="896bb-105">修飾名は、プレフィックスとローカル名がコロンで区切られた構成になっています。</span><span class="sxs-lookup"><span data-stu-id="896bb-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="896bb-106">プレフィックスはプレースホルダーとしてのみ機能し、名前空間を指定する URI に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="896bb-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="896bb-107">汎用的に管理される URI 名前空間とローカル名を組み合わせることにより、生成される名前は、必ず汎用的に一意になります。</span><span class="sxs-lookup"><span data-stu-id="896bb-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
+<span data-ttu-id="4724c-104">XML 名前空間を使用すると、XML ドキュメント内の XML 要素および XML 属性の名前を修飾できます。</span><span class="sxs-lookup"><span data-stu-id="4724c-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="4724c-105">修飾名は、プレフィックスとローカル名がコロンで区切られた構成になっています。</span><span class="sxs-lookup"><span data-stu-id="4724c-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="4724c-106">プレフィックスはプレースホルダーとしてのみ機能し、名前空間を指定する URI に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="4724c-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="4724c-107">汎用的に管理される URI 名前空間とローカル名を組み合わせることにより、生成される名前は、必ず汎用的に一意になります。</span><span class="sxs-lookup"><span data-stu-id="4724c-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
 
-<span data-ttu-id="896bb-108">`XmlSerializerNamespaces` のインスタンスを作成し、そのオブジェクトに名前空間のペアを追加することで、XML ドキュメントで使用されるプレフィックスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="896bb-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
+<span data-ttu-id="4724c-108">`XmlSerializerNamespaces` のインスタンスを作成し、そのオブジェクトに名前空間のペアを追加することで、XML ドキュメントで使用されるプレフィックスを指定できます。</span><span class="sxs-lookup"><span data-stu-id="4724c-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
 
-## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="896bb-109">XML ドキュメントにおける修飾名を作成するには</span><span class="sxs-lookup"><span data-stu-id="896bb-109">To create qualified names in an XML document</span></span>
+## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="4724c-109">XML ドキュメントにおける修飾名を作成するには</span><span class="sxs-lookup"><span data-stu-id="4724c-109">To create qualified names in an XML document</span></span>
 
-1. <span data-ttu-id="896bb-110">`XmlSerializerNamespaces` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="896bb-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
+1. <span data-ttu-id="4724c-110">
+  `XmlSerializerNamespaces\` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="4724c-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
 
-2. <span data-ttu-id="896bb-111">すべてのプレフィックスと名前空間のペアを `XmlSerializerNamespaces` に追加します。</span><span class="sxs-lookup"><span data-stu-id="896bb-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
+2. <span data-ttu-id="4724c-111">すべてのプレフィックスと名前空間のペアを `XmlSerializerNamespaces` に追加します。</span><span class="sxs-lookup"><span data-stu-id="4724c-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
 
-3. <span data-ttu-id="896bb-112">`System.Xml.Serialization` が XML ドキュメントにシリアル化する各メンバーやクラスに、適切な <xref:System.Xml.Serialization.XmlSerializer> 属性を適用します。</span><span class="sxs-lookup"><span data-stu-id="896bb-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
+3. <span data-ttu-id="4724c-112">`System.Xml.Serialization` が XML ドキュメントにシリアル化する各メンバーやクラスに、適切な <xref:System.Xml.Serialization.XmlSerializer> 属性を適用します。</span><span class="sxs-lookup"><span data-stu-id="4724c-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
 
-    <span data-ttu-id="896bb-113">適用できる属性は、<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute>、および <xref:System.Xml.Serialization.XmlTypeAttribute> です。</span><span class="sxs-lookup"><span data-stu-id="896bb-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
+    <span data-ttu-id="4724c-113">適用できる属性は、<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute>、および <xref:System.Xml.Serialization.XmlTypeAttribute> です。</span><span class="sxs-lookup"><span data-stu-id="4724c-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
 
-4. <span data-ttu-id="896bb-114">各属性の `Namespace` プロパティを、`XmlSerializerNamespaces` のいずれかの名前空間値に設定します。</span><span class="sxs-lookup"><span data-stu-id="896bb-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
+4. <span data-ttu-id="4724c-114">各属性の `Namespace` プロパティを、`XmlSerializerNamespaces` のいずれかの名前空間値に設定します。</span><span class="sxs-lookup"><span data-stu-id="4724c-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
 
-5. <span data-ttu-id="896bb-115">`XmlSerializerNamespaces` を `Serialize` の `XmlSerializer` メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="896bb-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
+5. <span data-ttu-id="4724c-115">`XmlSerializerNamespaces` を `Serialize` の `XmlSerializer` メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="4724c-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
 
-## <a name="example"></a><span data-ttu-id="896bb-116">例</span><span class="sxs-lookup"><span data-stu-id="896bb-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4724c-116">例</span><span class="sxs-lookup"><span data-stu-id="4724c-116">Example</span></span>
 
-<span data-ttu-id="896bb-117">`XmlSerializerNamespaces` を作成し、このオブジェクトにプレフィックスと名前空間のペアを 2 つ追加する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="896bb-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="896bb-118">このコードでは、`XmlSerializer` クラスのインスタンスをシリアル化するために使用される `Books` を作成します。</span><span class="sxs-lookup"><span data-stu-id="896bb-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="896bb-119">また、`Serialize` を使用して `XmlSerializerNamespaces` メソッドを呼び出し、XML にプレフィックス付き名前空間を含めることができるようにします。</span><span class="sxs-lookup"><span data-stu-id="896bb-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
+<span data-ttu-id="4724c-117">`XmlSerializerNamespaces` を作成し、このオブジェクトにプレフィックスと名前空間のペアを 2 つ追加する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4724c-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="4724c-118">このコードでは、`XmlSerializer` クラスのインスタンスをシリアル化するために使用される `Books` を作成します。</span><span class="sxs-lookup"><span data-stu-id="4724c-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="4724c-119">また、`Serialize` を使用して `XmlSerializerNamespaces` メソッドを呼び出し、XML にプレフィックス付き名前空間を含めることができるようにします。</span><span class="sxs-lookup"><span data-stu-id="4724c-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
 
 ```vb
 Option Explicit
@@ -169,13 +170,13 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="896bb-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="896bb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4724c-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="4724c-120">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [<span data-ttu-id="896bb-121">XML スキーマ定義ツールと XML シリアル化</span><span class="sxs-lookup"><span data-stu-id="896bb-121">The XML Schema Definition Tool and XML Serialization</span></span>](the-xml-schema-definition-tool-and-xml-serialization.md)
-- [<span data-ttu-id="896bb-122">XML シリアル化の概要</span><span class="sxs-lookup"><span data-stu-id="896bb-122">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
-- [<span data-ttu-id="896bb-123">XmlSerializer クラス</span><span class="sxs-lookup"><span data-stu-id="896bb-123">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
-- [<span data-ttu-id="896bb-124">XML シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="896bb-124">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
-- [<span data-ttu-id="896bb-125">方法: XML Stream の代替要素名を指定します。</span><span class="sxs-lookup"><span data-stu-id="896bb-125">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [<span data-ttu-id="896bb-126">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="896bb-126">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
-- [<span data-ttu-id="896bb-127">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="896bb-127">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
+- [<span data-ttu-id="4724c-121">XML スキーマ定義ツールと XML シリアル化</span><span class="sxs-lookup"><span data-stu-id="4724c-121">The XML Schema Definition Tool and XML Serialization</span></span>](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [<span data-ttu-id="4724c-122">XML シリアル化の概要</span><span class="sxs-lookup"><span data-stu-id="4724c-122">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
+- [<span data-ttu-id="4724c-123">XmlSerializer クラス</span><span class="sxs-lookup"><span data-stu-id="4724c-123">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
+- [<span data-ttu-id="4724c-124">XML シリアル化を制御する属性</span><span class="sxs-lookup"><span data-stu-id="4724c-124">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
+- [<span data-ttu-id="4724c-125">方法: XML Stream の代替要素名を指定します。</span><span class="sxs-lookup"><span data-stu-id="4724c-125">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [<span data-ttu-id="4724c-126">方法: オブジェクトをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="4724c-126">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="4724c-127">方法: オブジェクトを逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="4724c-127">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)

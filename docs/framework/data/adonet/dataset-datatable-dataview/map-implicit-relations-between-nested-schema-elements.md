@@ -2,27 +2,27 @@
 title: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586819"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="e2fdc-102">入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て</span><span class="sxs-lookup"><span data-stu-id="e2fdc-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="e2fdc-103">XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入れ子にして指定できます。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="e2fdc-104">この場合、割り当て処理には既定の割り当てが適用されます。その際、<xref:System.Data.DataSet> に作成される内容を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="0499f-102">入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て</span><span class="sxs-lookup"><span data-stu-id="0499f-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="0499f-103">XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入れ子にして指定できます。</span><span class="sxs-lookup"><span data-stu-id="0499f-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="0499f-104">この場合、割り当て処理には既定の割り当てが適用されます。その際、<xref:System.Data.DataSet> に作成される内容を次に示します。</span><span class="sxs-lookup"><span data-stu-id="0499f-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="e2fdc-105">複合型 (親および子) それぞれに対して 1 つのテーブル。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-105">One table for each of the complex types (parent and child).</span></span>  
+- <span data-ttu-id="0499f-105">複合型 (親および子) それぞれに対して 1 つのテーブル。</span><span class="sxs-lookup"><span data-stu-id="0499f-105">One table for each of the complex types (parent and child).</span></span>  
   
--   <span data-ttu-id="e2fdc-106">1 つ主キー列が追加テーブル定義ごとにという名前の親に unique 制約が存在しない場合*TableName*_id のデータ型、 *TableName*親テーブルの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+- <span data-ttu-id="0499f-106">1 つ主キー列が追加テーブル定義ごとにという名前の親に unique 制約が存在しない場合*TableName*_id のデータ型、 *TableName*親テーブルの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="0499f-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   <span data-ttu-id="e2fdc-107">主キーとして追加の列を識別する親テーブルに主キー制約 (設定して、 **IsPrimaryKey**プロパティを**True**)。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="e2fdc-108">制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="e2fdc-109">たとえば、最初の制約の既定の名前は Constraint1 となります。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+- <span data-ttu-id="0499f-107">主キーとして追加の列を識別する親テーブルに主キー制約 (設定して、 **IsPrimaryKey**プロパティを**True**)。</span><span class="sxs-lookup"><span data-stu-id="0499f-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="0499f-108">制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。</span><span class="sxs-lookup"><span data-stu-id="0499f-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="0499f-109">たとえば、最初の制約の既定の名前は Constraint1 となります。</span><span class="sxs-lookup"><span data-stu-id="0499f-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   <span data-ttu-id="e2fdc-110">子テーブルの外部キー制約により、追加された列が親テーブルの主キーを参照する外部キーとして認識されます。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="e2fdc-111">制約名が*ParentTable_ChildTable*場所*ParentTable*親テーブルの名前を指定および*ChildTable*子テーブルの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+- <span data-ttu-id="0499f-110">子テーブルの外部キー制約により、追加された列が親テーブルの主キーを参照する外部キーとして認識されます。</span><span class="sxs-lookup"><span data-stu-id="0499f-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="0499f-111">制約名が*ParentTable_ChildTable*場所*ParentTable*親テーブルの名前を指定および*ChildTable*子テーブルの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="0499f-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   <span data-ttu-id="e2fdc-112">その結果、親テーブルと子テーブル間のデータが関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-112">A data relation between the parent and child tables.</span></span>  
+- <span data-ttu-id="0499f-112">その結果、親テーブルと子テーブル間のデータが関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="0499f-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="e2fdc-113">次の例は、スキーマ、 **OrderDetail**の子要素は、**順序**します。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="0499f-113">次の例は、スキーマ、 **OrderDetail**の子要素は、**順序**します。</span><span class="sxs-lookup"><span data-stu-id="0499f-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "61879594"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="e2fdc-114">XML スキーマの割り当て処理では、次の作成、**データセット**:</span><span class="sxs-lookup"><span data-stu-id="e2fdc-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="0499f-114">XML スキーマの割り当て処理では、次の作成、**データセット**:</span><span class="sxs-lookup"><span data-stu-id="0499f-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   <span data-ttu-id="e2fdc-115">**順序**と**OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-115">An **Order** and an **OrderDetail** table.</span></span>  
+- <span data-ttu-id="0499f-115">**順序**と**OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="0499f-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   <span data-ttu-id="e2fdc-116">Unique 制約、**順序**テーブル。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="e2fdc-117">なお、 **IsPrimaryKey**プロパティに設定されて**True**します。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+- <span data-ttu-id="0499f-116">Unique 制約、**順序**テーブル。</span><span class="sxs-lookup"><span data-stu-id="0499f-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="0499f-117">なお、 **IsPrimaryKey**プロパティに設定されて**True**します。</span><span class="sxs-lookup"><span data-stu-id="0499f-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "61879594"
     IsPrimaryKey: True  
     ```  
   
--   <span data-ttu-id="e2fdc-118">外部キー制約、 **OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+- <span data-ttu-id="0499f-118">外部キー制約、 **OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="0499f-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "61879594"
     RelatedColumns: Order_Id   
     ```  
   
--   <span data-ttu-id="e2fdc-119">間のリレーションシップ、**順序**と**OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="e2fdc-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="e2fdc-120">**入れ子になった**このリレーションシップのプロパティに設定されて**True**ため、**順序**と**OrderDetail**スキーマで要素が入れ子になった.</span><span class="sxs-lookup"><span data-stu-id="e2fdc-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+- <span data-ttu-id="0499f-119">間のリレーションシップ、**順序**と**OrderDetail**テーブル。</span><span class="sxs-lookup"><span data-stu-id="0499f-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="0499f-120">**入れ子になった**このリレーションシップのプロパティに設定されて**True**ため、**順序**と**OrderDetail**スキーマで要素が入れ子になった.</span><span class="sxs-lookup"><span data-stu-id="0499f-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -97,8 +97,8 @@ ms.locfileid: "61879594"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e2fdc-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2fdc-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0499f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="0499f-121">See also</span></span>
 
-- [<span data-ttu-id="e2fdc-122">XML スキーマ (XSD) からの DataSet リレーションの生成</span><span class="sxs-lookup"><span data-stu-id="e2fdc-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="e2fdc-123">XML スキーマ (XSD) 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="e2fdc-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="e2fdc-124">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="e2fdc-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="0499f-122">XML スキーマ (XSD) からの DataSet リレーションの生成</span><span class="sxs-lookup"><span data-stu-id="0499f-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="0499f-123">XML スキーマ (XSD) 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="0499f-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="0499f-124">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="0499f-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
