@@ -2,52 +2,52 @@
 title: '方法: WAS で WCF サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1ebce4f0182b68e0e3c10d3d04e07560130c0245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635291"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="e160f-102">方法: WAS で WCF サービスをホストする</span><span class="sxs-lookup"><span data-stu-id="e160f-102">How to: Host a WCF Service in WAS</span></span>
-<span data-ttu-id="e160f-103">このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順について説明しますには、Windows Communication Foundation (WCF) サービスがホストされています。</span><span class="sxs-lookup"><span data-stu-id="e160f-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="e160f-104">WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。</span><span class="sxs-lookup"><span data-stu-id="e160f-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> <span data-ttu-id="e160f-105">WCF では、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信するために、リスナー アダプター インターフェイスを使用します。</span><span class="sxs-lookup"><span data-stu-id="e160f-105">WCF uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, named pipes, and Message Queuing.</span></span>  
+# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="fe767-102">方法: WAS で WCF サービスをホストする</span><span class="sxs-lookup"><span data-stu-id="fe767-102">How to: Host a WCF Service in WAS</span></span>
+<span data-ttu-id="fe767-103">このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順について説明しますには、Windows Communication Foundation (WCF) サービスがホストされています。</span><span class="sxs-lookup"><span data-stu-id="fe767-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="fe767-104">WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。</span><span class="sxs-lookup"><span data-stu-id="fe767-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> <span data-ttu-id="fe767-105">WCF では、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信するために、リスナー アダプター インターフェイスを使用します。</span><span class="sxs-lookup"><span data-stu-id="fe767-105">WCF uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, named pipes, and Message Queuing.</span></span>  
   
- <span data-ttu-id="e160f-106">このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e160f-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> <span data-ttu-id="e160f-107">インストールして、WAS の構成の詳細については、次を参照してください。[方法。インストールし、構成の WCF アクティブ化コンポーネント](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。</span><span class="sxs-lookup"><span data-stu-id="e160f-107">For more information about installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
+ <span data-ttu-id="fe767-106">このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="fe767-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> <span data-ttu-id="fe767-107">インストールして、WAS の構成の詳細については、次を参照してください。[方法。インストールし、構成の WCF アクティブ化コンポーネント](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。</span><span class="sxs-lookup"><span data-stu-id="fe767-107">For more information about installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="e160f-108">Web サーバーの要求処理パイプラインをクラシック モードに設定すると、WAS のアクティブ化がサポートされません。</span><span class="sxs-lookup"><span data-stu-id="e160f-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="e160f-109">WAS のアクティブ化を使用する場合は、Web サーバーの要求処理パイプラインを統合モードに設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e160f-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
+>  <span data-ttu-id="fe767-108">Web サーバーの要求処理パイプラインをクラシック モードに設定すると、WAS のアクティブ化がサポートされません。</span><span class="sxs-lookup"><span data-stu-id="fe767-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="fe767-109">WAS のアクティブ化を使用する場合は、Web サーバーの要求処理パイプラインを統合モードに設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fe767-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
   
- <span data-ttu-id="e160f-110">WCF サービスが WAS でホストされている、ときに、標準のバインディングは、通常の方法で使用されます。</span><span class="sxs-lookup"><span data-stu-id="e160f-110">When a WCF service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="e160f-111">ただし、WAS でホストされるサービスを <xref:System.ServiceModel.NetTcpBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を使用して構成する場合は、制限を遵守する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e160f-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="e160f-112">つまり、異なるエンドポイントが同じトランスポートを使用する場合、次の 7 つのプロパティでバインディング設定が一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e160f-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
+ <span data-ttu-id="fe767-110">WCF サービスが WAS でホストされている、ときに、標準のバインディングは、通常の方法で使用されます。</span><span class="sxs-lookup"><span data-stu-id="fe767-110">When a WCF service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="fe767-111">ただし、WAS でホストされるサービスを <xref:System.ServiceModel.NetTcpBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を使用して構成する場合は、制限を遵守する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fe767-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="fe767-112">つまり、異なるエンドポイントが同じトランスポートを使用する場合、次の 7 つのプロパティでバインディング設定が一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fe767-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
   
-- <span data-ttu-id="e160f-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="e160f-113">ConnectionBufferSize</span></span>  
+- <span data-ttu-id="fe767-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="fe767-113">ConnectionBufferSize</span></span>  
   
-- <span data-ttu-id="e160f-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="e160f-114">ChannelInitializationTimeout</span></span>  
+- <span data-ttu-id="fe767-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="fe767-114">ChannelInitializationTimeout</span></span>  
   
-- <span data-ttu-id="e160f-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="e160f-115">MaxPendingConnections</span></span>  
+- <span data-ttu-id="fe767-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="fe767-115">MaxPendingConnections</span></span>  
   
-- <span data-ttu-id="e160f-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="e160f-116">MaxOutputDelay</span></span>  
+- <span data-ttu-id="fe767-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="fe767-116">MaxOutputDelay</span></span>  
   
-- <span data-ttu-id="e160f-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="e160f-117">MaxPendingAccepts</span></span>  
+- <span data-ttu-id="fe767-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="fe767-117">MaxPendingAccepts</span></span>  
   
-- <span data-ttu-id="e160f-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="e160f-118">ConnectionPoolSettings.IdleTimeout</span></span>  
+- <span data-ttu-id="fe767-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="fe767-118">ConnectionPoolSettings.IdleTimeout</span></span>  
   
-- <span data-ttu-id="e160f-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="e160f-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
+- <span data-ttu-id="fe767-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="fe767-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
   
- <span data-ttu-id="e160f-120">バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="e160f-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
+ <span data-ttu-id="fe767-120">バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="fe767-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
   
- <span data-ttu-id="e160f-121">この例のソースのコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)します。</span><span class="sxs-lookup"><span data-stu-id="e160f-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
+ <span data-ttu-id="fe767-121">この例のソースのコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)します。</span><span class="sxs-lookup"><span data-stu-id="fe767-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
   
-### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="e160f-122">WAS でホストされる基本サービスを作成するには</span><span class="sxs-lookup"><span data-stu-id="e160f-122">To create a basic service hosted by WAS</span></span>  
+### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="fe767-122">WAS でホストされる基本サービスを作成するには</span><span class="sxs-lookup"><span data-stu-id="fe767-122">To create a basic service hosted by WAS</span></span>  
   
-1. <span data-ttu-id="e160f-123">サービスの種類にサービス コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="e160f-123">Define a service contract for the type of service.</span></span>  
+1. <span data-ttu-id="fe767-123">サービスの種類にサービス コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="fe767-123">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2. <span data-ttu-id="e160f-124">サービス クラスにサービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="e160f-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="e160f-125">アドレス情報とバインディング情報はサービスの実装内では指定されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e160f-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="e160f-126">同様に、コードは構成ファイルから情報を取得する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e160f-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+2. <span data-ttu-id="fe767-124">サービス クラスにサービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="fe767-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="fe767-125">アドレス情報とバインディング情報はサービスの実装内では指定されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fe767-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="fe767-126">同様に、コードは構成ファイルから情報を取得する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="fe767-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. <span data-ttu-id="e160f-127"><xref:System.ServiceModel.NetTcpBinding> エンドポイントによって使用される `CalculatorService` バインディングを定義する Web.config ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e160f-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
+3. <span data-ttu-id="fe767-127"><xref:System.ServiceModel.NetTcpBinding> エンドポイントによって使用される `CalculatorService` バインディングを定義する Web.config ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe767-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,41 +64,41 @@ ms.locfileid: "62039092"
     </configuration>  
     ```  
   
-4. <span data-ttu-id="e160f-128">次のコードを含む Service.svc ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e160f-128">Create a Service.svc file that contains the following code.</span></span>  
+4. <span data-ttu-id="fe767-128">次のコードを含む Service.svc ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe767-128">Create a Service.svc file that contains the following code.</span></span>  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5. <span data-ttu-id="e160f-129">IIS 仮想ディレクトリに Service.svc ファイルを配置します。</span><span class="sxs-lookup"><span data-stu-id="e160f-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
+5. <span data-ttu-id="fe767-129">IIS 仮想ディレクトリに Service.svc ファイルを配置します。</span><span class="sxs-lookup"><span data-stu-id="fe767-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
   
-### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="e160f-130">サービスを使用するクライアントを作成するには</span><span class="sxs-lookup"><span data-stu-id="e160f-130">To create a client to use the service</span></span>  
+### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="fe767-130">サービスを使用するクライアントを作成するには</span><span class="sxs-lookup"><span data-stu-id="fe767-130">To create a client to use the service</span></span>  
   
-1. <span data-ttu-id="e160f-131">使用[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービス メタデータからコードを生成するためのコマンドラインから。</span><span class="sxs-lookup"><span data-stu-id="e160f-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
+1. <span data-ttu-id="fe767-131">使用[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービス メタデータからコードを生成するためのコマンドラインから。</span><span class="sxs-lookup"><span data-stu-id="fe767-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2. <span data-ttu-id="e160f-132">生成されたクライアントには、クライアントの実装時に満たされなければならないサービス コントラクトを定義する `ICalculator` インターフェイスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="e160f-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
+2. <span data-ttu-id="fe767-132">生成されたクライアントには、クライアントの実装時に満たされなければならないサービス コントラクトを定義する `ICalculator` インターフェイスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="fe767-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3. <span data-ttu-id="e160f-133">生成されたクライアント アプリケーションは `ClientCalculator` も実装します。</span><span class="sxs-lookup"><span data-stu-id="e160f-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="e160f-134">このサービスの実装では、アドレス情報とバインディング情報が指定されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e160f-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="e160f-135">同様に、コードは構成ファイルから情報を取得する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e160f-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+3. <span data-ttu-id="fe767-133">生成されたクライアント アプリケーションは `ClientCalculator` も実装します。</span><span class="sxs-lookup"><span data-stu-id="fe767-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="fe767-134">このサービスの実装では、アドレス情報とバインディング情報が指定されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fe767-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="fe767-135">同様に、コードは構成ファイルから情報を取得する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="fe767-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. <span data-ttu-id="e160f-136"><xref:System.ServiceModel.NetTcpBinding> を使用するクライアントの構成は、Svcutil.exe で生成することもできます。</span><span class="sxs-lookup"><span data-stu-id="e160f-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="e160f-137">Visual Studio を使用する場合は、このファイルの名前は App.config ファイル内で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e160f-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
+4. <span data-ttu-id="fe767-136"><xref:System.ServiceModel.NetTcpBinding> を使用するクライアントの構成は、Svcutil.exe で生成することもできます。</span><span class="sxs-lookup"><span data-stu-id="fe767-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="fe767-137">Visual Studio を使用する場合は、このファイルの名前は App.config ファイル内で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fe767-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5. <span data-ttu-id="e160f-138">アプリケーションで `ClientCalculator` のインスタンスを作成し、サービス操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e160f-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
+5. <span data-ttu-id="fe767-138">アプリケーションで `ClientCalculator` のインスタンスを作成し、サービス操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="fe767-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6. <span data-ttu-id="e160f-139">クライアントをコンパイルして実行します。</span><span class="sxs-lookup"><span data-stu-id="e160f-139">Compile and run the client.</span></span>  
+6. <span data-ttu-id="fe767-139">クライアントをコンパイルして実行します。</span><span class="sxs-lookup"><span data-stu-id="fe767-139">Compile and run the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e160f-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="e160f-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe767-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe767-140">See also</span></span>
 
-- [<span data-ttu-id="e160f-141">TCP アクティベーション</span><span class="sxs-lookup"><span data-stu-id="e160f-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [<span data-ttu-id="e160f-142">AppFabric のホスティング機能</span><span class="sxs-lookup"><span data-stu-id="e160f-142">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [<span data-ttu-id="fe767-141">TCP アクティベーション</span><span class="sxs-lookup"><span data-stu-id="fe767-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [<span data-ttu-id="fe767-142">AppFabric のホスティング機能</span><span class="sxs-lookup"><span data-stu-id="fe767-142">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
