@@ -2,18 +2,18 @@
 title: トランスポート:サンプルの UDP 経由のカスタム トランザクション
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760049"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637122"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="4370b-102">トランスポート:サンプルの UDP 経由のカスタム トランザクション</span><span class="sxs-lookup"><span data-stu-id="4370b-102">Transport: Custom Transactions over UDP Sample</span></span>
-<span data-ttu-id="4370b-103">このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 、Windows Communication Foundation (WCF) サンプル[トランスポート拡張](../../../../docs/framework/wcf/samples/transport-extensibility.md)します。</span><span class="sxs-lookup"><span data-stu-id="4370b-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="4370b-104">ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4370b-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
+# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="eea93-102">トランスポート:サンプルの UDP 経由のカスタム トランザクション</span><span class="sxs-lookup"><span data-stu-id="eea93-102">Transport: Custom Transactions over UDP Sample</span></span>
+<span data-ttu-id="eea93-103">このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 、Windows Communication Foundation (WCF) サンプル[トランスポート拡張](../../../../docs/framework/wcf/samples/transport-extensibility.md)します。</span><span class="sxs-lookup"><span data-stu-id="eea93-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="eea93-104">ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eea93-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
   
-## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="4370b-105">UDP トランスポート サンプルのコードの変更</span><span class="sxs-lookup"><span data-stu-id="4370b-105">Code Changes in the UDP Transport Sample</span></span>  
- <span data-ttu-id="4370b-106">トランザクション フローを示すため、サンプルでは、`ICalculatorContract` のサービス コントラクトが `CalculatorService.Add()` のトランザクション スコープを要求するように変更されています。</span><span class="sxs-lookup"><span data-stu-id="4370b-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="4370b-107">また、サンプルでは、別の `System.Guid` パラメータを `Add` 操作のコントラクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="4370b-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="4370b-108">このパラメータは、クライアント トランザクションの識別子をサービスに渡すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
+## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="eea93-105">UDP トランスポート サンプルのコードの変更</span><span class="sxs-lookup"><span data-stu-id="eea93-105">Code Changes in the UDP Transport Sample</span></span>  
+ <span data-ttu-id="eea93-106">トランザクション フローを示すため、サンプルでは、`ICalculatorContract` のサービス コントラクトが `CalculatorService.Add()` のトランザクション スコープを要求するように変更されています。</span><span class="sxs-lookup"><span data-stu-id="eea93-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="eea93-107">また、サンプルでは、別の `System.Guid` パラメータを `Add` 操作のコントラクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="eea93-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="eea93-108">このパラメータは、クライアント トランザクションの識別子をサービスに渡すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
   
 ```  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- <span data-ttu-id="4370b-109">[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルでは、UDP パケットを使用して、クライアントとサービス間のメッセージを渡します。</span><span class="sxs-lookup"><span data-stu-id="4370b-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="4370b-110">[トランスポート。カスタム トランスポートのサンプル](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)同じメカニズムを使用してメッセージをトランスポートするが、トランザクションはフローされるときに、エンコードされたメッセージと共に UDP パケットに挿入されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
+ <span data-ttu-id="eea93-109">[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルでは、UDP パケットを使用して、クライアントとサービス間のメッセージを渡します。</span><span class="sxs-lookup"><span data-stu-id="eea93-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="eea93-110">[トランスポート。カスタム トランスポートのサンプル](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)同じメカニズムを使用してメッセージをトランスポートするが、トランザクションはフローされるときに、エンコードされたメッセージと共に UDP パケットに挿入されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- <span data-ttu-id="4370b-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` は、メッセージ エンティティを使用して現在のトランザクションの反映トークンをマージし、それをバッファに配置する新しい機能を持つヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="4370b-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
+ <span data-ttu-id="eea93-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` は、メッセージ エンティティを使用して現在のトランザクションの反映トークンをマージし、それをバッファに配置する新しい機能を持つヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="eea93-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
   
- <span data-ttu-id="4370b-112">どのようなサービス操作がトランザクション フローを必要とカスタム トランザクション フローのトランスポートで、クライアントの実装が知る必要がありますを WCF にこの情報を渡します。</span><span class="sxs-lookup"><span data-stu-id="4370b-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="4370b-113">また、ユーザー トランザクションをトランスポート層に転送するための機構もあります。</span><span class="sxs-lookup"><span data-stu-id="4370b-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="4370b-114">このサンプルは、「WCF メッセージ インスペクタ」を使用してこの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="4370b-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="4370b-115">ここで実装されるクライアント メッセージ インスペクタは `TransactionFlowInspector` と呼ばれ、次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="4370b-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
+ <span data-ttu-id="eea93-112">どのようなサービス操作がトランザクション フローを必要とカスタム トランザクション フローのトランスポートで、クライアントの実装が知る必要がありますを WCF にこの情報を渡します。</span><span class="sxs-lookup"><span data-stu-id="eea93-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="eea93-113">また、ユーザー トランザクションをトランスポート層に転送するための機構もあります。</span><span class="sxs-lookup"><span data-stu-id="eea93-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="eea93-114">このサンプルは、「WCF メッセージ インスペクタ」を使用してこの情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="eea93-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="eea93-115">ここで実装されるクライアント メッセージ インスペクタは `TransactionFlowInspector` と呼ばれ、次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="eea93-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
   
-- <span data-ttu-id="4370b-116">指定されたメッセージ アクションに対してトランザクションをフローする必要があるかどうかを判断します (これは `IsTxFlowRequiredForThisOperation()` で行われます)。</span><span class="sxs-lookup"><span data-stu-id="4370b-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
+- <span data-ttu-id="eea93-116">指定されたメッセージ アクションに対してトランザクションをフローする必要があるかどうかを判断します (これは `IsTxFlowRequiredForThisOperation()` で行われます)。</span><span class="sxs-lookup"><span data-stu-id="eea93-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
   
-- <span data-ttu-id="4370b-117">トランザクションをフローする必要がある場合、`TransactionFlowProperty` を使用して現在のアンビエント トランザクションをメッセージにアタッチします (これは `BeforeSendRequest()` で行われます)。</span><span class="sxs-lookup"><span data-stu-id="4370b-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
+- <span data-ttu-id="eea93-117">トランザクションをフローする必要がある場合、`TransactionFlowProperty` を使用して現在のアンビエント トランザクションをメッセージにアタッチします (これは `BeforeSendRequest()` で行われます)。</span><span class="sxs-lookup"><span data-stu-id="eea93-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -92,7 +92,7 @@ public class TransactionFlowInspector : IClientMessageInspector
 }  
 ```  
   
- <span data-ttu-id="4370b-118">`TransactionFlowInspector` 自体は、カスタム動作 `TransactionFlowBehavior` を使用してフレームワークに渡されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
+ <span data-ttu-id="eea93-118">`TransactionFlowInspector` 自体は、カスタム動作 `TransactionFlowBehavior` を使用してフレームワークに渡されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
   
 ```  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -117,7 +117,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- <span data-ttu-id="4370b-119">上記の機構を使用して、ユーザー コードは、サービス操作を呼び出す前に `TransactionScope` を作成します。</span><span class="sxs-lookup"><span data-stu-id="4370b-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="4370b-120">メッセージ インスペクタは、トランザクションをサービス操作にフローする必要がある場合に、トランザクションがトランスポートに渡されるようにします。</span><span class="sxs-lookup"><span data-stu-id="4370b-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
+ <span data-ttu-id="eea93-119">上記の機構を使用して、ユーザー コードは、サービス操作を呼び出す前に `TransactionScope` を作成します。</span><span class="sxs-lookup"><span data-stu-id="eea93-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="eea93-120">メッセージ インスペクタは、トランザクションをサービス操作にフローする必要がある場合に、トランザクションがトランスポートに渡されるようにします。</span><span class="sxs-lookup"><span data-stu-id="eea93-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- <span data-ttu-id="4370b-121">クライアントから UDP パケットを受け取ると、サービスはこれを逆シリアル化して、メッセージとトランザクション (可能な場合) を抽出します。</span><span class="sxs-lookup"><span data-stu-id="4370b-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
+ <span data-ttu-id="eea93-121">クライアントから UDP パケットを受け取ると、サービスはこれを逆シリアル化して、メッセージとトランザクション (可能な場合) を抽出します。</span><span class="sxs-lookup"><span data-stu-id="eea93-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
   
 ```  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,9 +159,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- <span data-ttu-id="4370b-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` は、`TransactionMessageBuffer.WriteTransactionMessageBuffer()` によって行われたシリアル化プロセスを元に戻すヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="4370b-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
+ <span data-ttu-id="eea93-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` は、`TransactionMessageBuffer.WriteTransactionMessageBuffer()` によって行われたシリアル化プロセスを元に戻すヘルパー メソッドです。</span><span class="sxs-lookup"><span data-stu-id="eea93-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
   
- <span data-ttu-id="4370b-123">トランザクションがフローされた場合、トランザクションは `TransactionMessageProperty` のメッセージに追加されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
+ <span data-ttu-id="eea93-123">トランザクションがフローされた場合、トランザクションは `TransactionMessageProperty` のメッセージに追加されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
   
 ```  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -172,15 +172,15 @@ if (transaction != null)
 }  
 ```  
   
- <span data-ttu-id="4370b-124">これにより、ディスパッチャはディスパッチ時にトランザクションを取得し、メッセージによってアドレス指定されたサービス操作を呼び出すときにそのトランザクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="4370b-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
+ <span data-ttu-id="eea93-124">これにより、ディスパッチャはディスパッチ時にトランザクションを取得し、メッセージによってアドレス指定されたサービス操作を呼び出すときにそのトランザクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="eea93-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4370b-125">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="4370b-125">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="eea93-125">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="eea93-125">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="4370b-126">ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。</span><span class="sxs-lookup"><span data-stu-id="4370b-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="eea93-126">ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。</span><span class="sxs-lookup"><span data-stu-id="eea93-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="4370b-127">現在のサンプルと同様に実行する必要があります、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="4370b-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="4370b-128">実行するには、UdpTestService.exe を使用してサービスを開始します。</span><span class="sxs-lookup"><span data-stu-id="4370b-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="4370b-129">[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] を実行している場合は、サービスをシステム特権で開始する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4370b-129">If you are running [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], you must start the service with elevated privileges.</span></span> <span data-ttu-id="4370b-130">これを行うで UdpTestService.exe を右クリックし[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]クリック**管理者として実行**します。</span><span class="sxs-lookup"><span data-stu-id="4370b-130">To do so, right-click UdpTestService.exe in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and click **Run as administrator**.</span></span>  
+2. <span data-ttu-id="eea93-127">現在のサンプルと同様に実行する必要があります、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。</span><span class="sxs-lookup"><span data-stu-id="eea93-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="eea93-128">実行するには、UdpTestService.exe を使用してサービスを開始します。</span><span class="sxs-lookup"><span data-stu-id="eea93-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="eea93-129">[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] を実行している場合は、サービスをシステム特権で開始する必要があります。</span><span class="sxs-lookup"><span data-stu-id="eea93-129">If you are running [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], you must start the service with elevated privileges.</span></span> <span data-ttu-id="eea93-130">これを行うで UdpTestService.exe を右クリックし[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]クリック**管理者として実行**します。</span><span class="sxs-lookup"><span data-stu-id="eea93-130">To do so, right-click UdpTestService.exe in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and click **Run as administrator**.</span></span>  
   
-3. <span data-ttu-id="4370b-131">これによって次の文字列が出力されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-131">This produces the following output.</span></span>  
+3. <span data-ttu-id="eea93-131">これによって次の文字列が出力されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-131">This produces the following output.</span></span>  
   
     ```  
     Testing Udp From Code.  
@@ -188,7 +188,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4. <span data-ttu-id="4370b-132">この時点で、UdpTestClient.exe を実行してクライアントを開始できます。</span><span class="sxs-lookup"><span data-stu-id="4370b-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="4370b-133">クライアントによって生成される出力を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4370b-133">The output produced by the client is as follows.</span></span>  
+4. <span data-ttu-id="eea93-132">この時点で、UdpTestClient.exe を実行してクライアントを開始できます。</span><span class="sxs-lookup"><span data-stu-id="eea93-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="eea93-133">クライアントによって生成される出力を次に示します。</span><span class="sxs-lookup"><span data-stu-id="eea93-133">The output produced by the client is as follows.</span></span>  
   
     ```  
     0  
@@ -199,7 +199,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5. <span data-ttu-id="4370b-134">サービスの出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="4370b-134">The service output is as follows.</span></span>  
+5. <span data-ttu-id="eea93-134">サービスの出力は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="eea93-134">The service output is as follows.</span></span>  
   
     ```  
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6. <span data-ttu-id="4370b-135">`The client transaction has flowed to the service` 操作の `clientTransactionId` パラメータで、クライアントによって送信されたトランザクション識別子がサービス トランザクションの識別子と一致する場合、サービス アプリケーションには、"`CalculatorService.Add()`" というメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="4370b-136">クライアント トランザクションがサービスにフローされた場合にのみ、一致が取得されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
+6. <span data-ttu-id="eea93-135">`The client transaction has flowed to the service` 操作の `clientTransactionId` パラメータで、クライアントによって送信されたトランザクション識別子がサービス トランザクションの識別子と一致する場合、サービス アプリケーションには、"`CalculatorService.Add()`" というメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="eea93-136">クライアント トランザクションがサービスにフローされた場合にのみ、一致が取得されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
   
-7. <span data-ttu-id="4370b-137">構成を使用して公開されたエンドポイントに対してクライアント アプリケーションを実行するには、サービス側のアプリケーション ウィンドウで Enter キーを押して、テスト クライアントを再実行します。</span><span class="sxs-lookup"><span data-stu-id="4370b-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="4370b-138">サービスには、次の出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-138">You should see the following output on the service.</span></span>  
+7. <span data-ttu-id="eea93-137">構成を使用して公開されたエンドポイントに対してクライアント アプリケーションを実行するには、サービス側のアプリケーション ウィンドウで Enter キーを押して、テスト クライアントを再実行します。</span><span class="sxs-lookup"><span data-stu-id="eea93-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="eea93-138">サービスには、次の出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-138">You should see the following output on the service.</span></span>  
   
     ```  
     Testing Udp From Config.  
@@ -229,15 +229,15 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8. <span data-ttu-id="4370b-139">サービスに対してクライアントを実行すると、前の出力と同様の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-139">Running the client against the service now produces similar output as before.</span></span>  
+8. <span data-ttu-id="eea93-139">サービスに対してクライアントを実行すると、前の出力と同様の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-139">Running the client against the service now produces similar output as before.</span></span>  
   
-9. <span data-ttu-id="4370b-140">Svcutil.exe を使用してクライアント コードと構成を再生成するには、サービス アプリケーションを開始し、次にサンプルのルート ディレクトリで次のように Svcutil.exe コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="4370b-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
+9. <span data-ttu-id="eea93-140">Svcutil.exe を使用してクライアント コードと構成を再生成するには、サービス アプリケーションを開始し、次にサンプルのルート ディレクトリで次のように Svcutil.exe コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="eea93-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
   
     ```  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. <span data-ttu-id="4370b-141">Svcutil.exe を実行しても `sampleProfileUdpBinding` のバインディング拡張構成は生成されません。したがって、次のコードを手動で追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4370b-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
+10. <span data-ttu-id="eea93-141">Svcutil.exe を実行しても `sampleProfileUdpBinding` のバインディング拡張構成は生成されません。したがって、次のコードを手動で追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="eea93-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
   
     ```xml  
     <configuration>  
@@ -254,14 +254,14 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4370b-142">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="4370b-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4370b-143">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="4370b-143">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="eea93-142">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="eea93-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="eea93-143">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="eea93-143">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="4370b-144">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="4370b-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4370b-145">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="4370b-145">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="eea93-144">このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。</span><span class="sxs-lookup"><span data-stu-id="eea93-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="eea93-145">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="eea93-145">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a><span data-ttu-id="4370b-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="4370b-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eea93-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="eea93-146">See also</span></span>
 
-- [<span data-ttu-id="4370b-147">トランスポート:UDP</span><span class="sxs-lookup"><span data-stu-id="4370b-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [<span data-ttu-id="eea93-147">トランスポート:UDP</span><span class="sxs-lookup"><span data-stu-id="eea93-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)
