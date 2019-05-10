@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e47a140b1fed80618ba4279515cd45721a8e52f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662160"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="c38db-102">WPF アプリケーションのビルドと配置</span><span class="sxs-lookup"><span data-stu-id="c38db-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="c38db-103">ビルドおよび展開モデルは、次のようをビルドし、ローカルとリモートのアプリケーションの展開機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="c38db-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="5f07d-102">WPF アプリケーションのビルドと配置</span><span class="sxs-lookup"><span data-stu-id="5f07d-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="5f07d-103">ビルドおよび展開モデルは、次のようをビルドし、ローカルとリモートのアプリケーションの展開機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="5f07d-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
-- <span data-ttu-id="c38db-104">MSBuild: .NET では、Microsoft.Build.Tasks.Windows 名前空間にあるシステムを構築します。</span><span class="sxs-lookup"><span data-stu-id="c38db-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="5f07d-104">MSBuild: .NET では、Microsoft.Build.Tasks.Windows 名前空間にあるシステムを構築します。</span><span class="sxs-lookup"><span data-stu-id="5f07d-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
-- <span data-ttu-id="c38db-105">リソース: UI リソースを使用します。</span><span class="sxs-lookup"><span data-stu-id="c38db-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="5f07d-105">リソース: UI リソースを使用します。</span><span class="sxs-lookup"><span data-stu-id="5f07d-105">Resources: working with UI resources.</span></span>  
   
-- <span data-ttu-id="c38db-106">ClickOnce 配置: .NET 発行および配置システム。</span><span class="sxs-lookup"><span data-stu-id="c38db-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="5f07d-106">ClickOnce 配置: .NET 発行および配置システム。</span><span class="sxs-lookup"><span data-stu-id="5f07d-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c38db-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c38db-107">In This Section</span></span>  
- [<span data-ttu-id="c38db-108">WPF アプリケーションのビルド</span><span class="sxs-lookup"><span data-stu-id="c38db-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="c38db-109">WPF アプリケーションの配置</span><span class="sxs-lookup"><span data-stu-id="c38db-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="c38db-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="c38db-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5f07d-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5f07d-107">In This Section</span></span>  
+ [<span data-ttu-id="5f07d-108">WPF アプリケーションのビルド</span><span class="sxs-lookup"><span data-stu-id="5f07d-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="5f07d-109">WPF アプリケーションの配置</span><span class="sxs-lookup"><span data-stu-id="5f07d-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="5f07d-110">方法トピック</span><span class="sxs-lookup"><span data-stu-id="5f07d-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c38db-111">参照</span><span class="sxs-lookup"><span data-stu-id="c38db-111">Reference</span></span>  
- <span data-ttu-id="c38db-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="c38db-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="5f07d-111">参照</span><span class="sxs-lookup"><span data-stu-id="5f07d-111">Reference</span></span>  
+ <span data-ttu-id="5f07d-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="5f07d-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c38db-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="c38db-113">Related Sections</span></span>  
- [<span data-ttu-id="c38db-114">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="c38db-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="c38db-115">WPF のウィンドウ</span><span class="sxs-lookup"><span data-stu-id="c38db-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="c38db-116">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="c38db-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="c38db-117">WPF XAML ブラウザー アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="c38db-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="c38db-118">ホスティング</span><span class="sxs-lookup"><span data-stu-id="c38db-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="5f07d-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f07d-113">Related Sections</span></span>  
+ [<span data-ttu-id="5f07d-114">アプリケーション管理の概要</span><span class="sxs-lookup"><span data-stu-id="5f07d-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="5f07d-115">WPF のウィンドウ</span><span class="sxs-lookup"><span data-stu-id="5f07d-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="5f07d-116">ナビゲーションの概要</span><span class="sxs-lookup"><span data-stu-id="5f07d-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="5f07d-117">WPF XAML ブラウザー アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="5f07d-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="5f07d-118">ホスティング</span><span class="sxs-lookup"><span data-stu-id="5f07d-118">Hosting</span></span>](hosting-wpf-applications.md)
