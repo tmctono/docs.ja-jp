@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003887"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626134"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="5024c-102">方法: JPEG 圧縮レベルの設定</span><span class="sxs-lookup"><span data-stu-id="5024c-102">How to: Set JPEG Compression Level</span></span>
-<span data-ttu-id="5024c-103">イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="5024c-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="5024c-104">圧縮レベルを修正して、JPEG イメージの品質を調整することができます。</span><span class="sxs-lookup"><span data-stu-id="5024c-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="5024c-105">JPEG イメージを保存するときに、圧縮レベルを指定するに作成する必要があります、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトに渡すと、<xref:System.Drawing.Image.Save%2A>のメソッド、<xref:System.Drawing.Image>クラス。</span><span class="sxs-lookup"><span data-stu-id="5024c-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="5024c-106">初期化、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトのいずれかで構成される配列を持つこと、<xref:System.Drawing.Imaging.EncoderParameter>します。</span><span class="sxs-lookup"><span data-stu-id="5024c-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="5024c-107">作成するときに、 <xref:System.Drawing.Imaging.EncoderParameter>、指定、<xref:System.Drawing.Imaging.Encoder.Quality>エンコーダー、および、必要な圧縮レベル。</span><span class="sxs-lookup"><span data-stu-id="5024c-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
+# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="0cd3c-102">方法: JPEG 圧縮レベルの設定</span><span class="sxs-lookup"><span data-stu-id="0cd3c-102">How to: Set JPEG Compression Level</span></span>
+<span data-ttu-id="0cd3c-103">イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="0cd3c-104">圧縮レベルを修正して、JPEG イメージの品質を調整することができます。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="0cd3c-105">JPEG イメージを保存するときに、圧縮レベルを指定するに作成する必要があります、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトに渡すと、<xref:System.Drawing.Image.Save%2A>のメソッド、<xref:System.Drawing.Image>クラス。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="0cd3c-106">初期化、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトのいずれかで構成される配列を持つこと、<xref:System.Drawing.Imaging.EncoderParameter>します。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="0cd3c-107">作成するときに、 <xref:System.Drawing.Imaging.EncoderParameter>、指定、<xref:System.Drawing.Imaging.Encoder.Quality>エンコーダー、および、必要な圧縮レベル。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5024c-108">例</span><span class="sxs-lookup"><span data-stu-id="5024c-108">Example</span></span>  
- <span data-ttu-id="5024c-109">次のコード例を作成、<xref:System.Drawing.Imaging.EncoderParameter>オブジェクトし、3 つの JPEG イメージを保存します。</span><span class="sxs-lookup"><span data-stu-id="5024c-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="5024c-110">別々 の品質レベルに変更することによって各 JPEG イメージが保存された、`long`に渡される値、<xref:System.Drawing.Imaging.EncoderParameter>コンス トラクター。</span><span class="sxs-lookup"><span data-stu-id="5024c-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="5024c-111">品質レベル 0 は最も圧縮率が高く、品質レベル 100 は最も低い圧縮率に対応します。</span><span class="sxs-lookup"><span data-stu-id="5024c-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
+## <a name="example"></a><span data-ttu-id="0cd3c-108">例</span><span class="sxs-lookup"><span data-stu-id="0cd3c-108">Example</span></span>  
+ <span data-ttu-id="0cd3c-109">次のコード例を作成、<xref:System.Drawing.Imaging.EncoderParameter>オブジェクトし、3 つの JPEG イメージを保存します。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="0cd3c-110">別々 の品質レベルに変更することによって各 JPEG イメージが保存された、`long`に渡される値、<xref:System.Drawing.Imaging.EncoderParameter>コンス トラクター。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="0cd3c-111">品質レベル 0 は最も圧縮率が高く、品質レベル 100 は最も低い圧縮率に対応します。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -120,17 +120,17 @@ Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo
 End Function  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5024c-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="5024c-112">Compiling the Code</span></span>  
- <span data-ttu-id="5024c-113">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="5024c-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0cd3c-112">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="0cd3c-112">Compiling the Code</span></span>  
+ <span data-ttu-id="0cd3c-113">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-113">This example requires:</span></span>  
   
-- <span data-ttu-id="5024c-114">Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="5024c-114">A Windows Forms application.</span></span>  
+- <span data-ttu-id="0cd3c-114">Windows フォーム アプリケーション</span><span class="sxs-lookup"><span data-stu-id="0cd3c-114">A Windows Forms application.</span></span>  
   
-- <span data-ttu-id="5024c-115">A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。</span><span class="sxs-lookup"><span data-stu-id="5024c-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+- <span data-ttu-id="0cd3c-115">A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-- <span data-ttu-id="5024c-116">`TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。</span><span class="sxs-lookup"><span data-stu-id="5024c-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
+- <span data-ttu-id="0cd3c-116">`TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5024c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="5024c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cd3c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="0cd3c-117">See also</span></span>
 
-- [<span data-ttu-id="5024c-118">方法: エンコーダーがサポートするパラメーターを確認します。</span><span class="sxs-lookup"><span data-stu-id="5024c-118">How to: Determine the Parameters Supported by an Encoder</span></span>](how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [<span data-ttu-id="5024c-119">ビットマップの種類</span><span class="sxs-lookup"><span data-stu-id="5024c-119">Types of Bitmaps</span></span>](types-of-bitmaps.md)
-- [<span data-ttu-id="5024c-120">マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用</span><span class="sxs-lookup"><span data-stu-id="5024c-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [<span data-ttu-id="0cd3c-118">方法: エンコーダーがサポートするパラメーターを確認します。</span><span class="sxs-lookup"><span data-stu-id="0cd3c-118">How to: Determine the Parameters Supported by an Encoder</span></span>](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [<span data-ttu-id="0cd3c-119">ビットマップの種類</span><span class="sxs-lookup"><span data-stu-id="0cd3c-119">Types of Bitmaps</span></span>](types-of-bitmaps.md)
+- [<span data-ttu-id="0cd3c-120">マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用</span><span class="sxs-lookup"><span data-stu-id="0cd3c-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
