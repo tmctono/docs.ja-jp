@@ -6,43 +6,43 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6a990dbf26ac1a6bdc642442b9f4b75c05ee9635
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200118"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583352"
 ---
-# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="743c4-102">静的コンストラクター (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="743c4-102">Static Constructors (C# Programming Guide)</span></span>
-<span data-ttu-id="743c4-103">静的コンストラクターは、任意の [static](../../../csharp/language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。</span><span class="sxs-lookup"><span data-stu-id="743c4-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="743c4-104">最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="743c4-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
+# <a name="static-constructors-c-programming-guide"></a><span data-ttu-id="bb8ec-102">静的コンストラクター (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="bb8ec-102">Static Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="bb8ec-103">静的コンストラクターは、任意の [static](../../../csharp/language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-103">A static constructor is used to initialize any [static](../../../csharp/language-reference/keywords/static.md) data, or to perform a particular action that needs to be performed once only.</span></span> <span data-ttu-id="bb8ec-104">最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-104">It is called automatically before the first instance is created or any static members are referenced.</span></span>  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
   
- <span data-ttu-id="743c4-105">静的コンストラクターには、次の特徴があります。</span><span class="sxs-lookup"><span data-stu-id="743c4-105">Static constructors have the following properties:</span></span>  
+ <span data-ttu-id="bb8ec-105">静的コンストラクターには、次の特徴があります。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-105">Static constructors have the following properties:</span></span>  
   
--   <span data-ttu-id="743c4-106">静的コンストラクターはアクセス修飾子を取らず、パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="743c4-106">A static constructor does not take access modifiers or have parameters.</span></span>  
+- <span data-ttu-id="bb8ec-106">静的コンストラクターはアクセス修飾子を取らず、パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-106">A static constructor does not take access modifiers or have parameters.</span></span>  
   
--   <span data-ttu-id="743c4-107">静的コンストラクターは、最初のインスタンスが作成され前、または静的メンバーが参照される前に、[クラス](../../../csharp/language-reference/keywords/class.md)を初期化するために自動的に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="743c4-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
+- <span data-ttu-id="bb8ec-107">静的コンストラクターは、最初のインスタンスが作成され前、または静的メンバーが参照される前に、[クラス](../../../csharp/language-reference/keywords/class.md)を初期化するために自動的に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-107">A static constructor is called automatically to initialize the [class](../../../csharp/language-reference/keywords/class.md) before the first instance is created or any static members are referenced.</span></span>  
   
--   <span data-ttu-id="743c4-108">静的コンストラクターを直接呼び出すことはできません。</span><span class="sxs-lookup"><span data-stu-id="743c4-108">A static constructor cannot be called directly.</span></span>  
+- <span data-ttu-id="bb8ec-108">静的コンストラクターを直接呼び出すことはできません。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-108">A static constructor cannot be called directly.</span></span>  
   
--   <span data-ttu-id="743c4-109">ユーザーは、プログラムで静的コンストラクターが実行されるタイミングを制御できません。</span><span class="sxs-lookup"><span data-stu-id="743c4-109">The user has no control on when the static constructor is executed in the program.</span></span>  
+- <span data-ttu-id="bb8ec-109">ユーザーは、プログラムで静的コンストラクターが実行されるタイミングを制御できません。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-109">The user has no control on when the static constructor is executed in the program.</span></span>  
   
--   <span data-ttu-id="743c4-110">静的コンストラクターの一般的な用途は、クラスがログ ファイルを使っていて、このファイルにエントリを書き込むためにコンストラクターが使われる場合です。</span><span class="sxs-lookup"><span data-stu-id="743c4-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
+- <span data-ttu-id="bb8ec-110">静的コンストラクターの一般的な用途は、クラスがログ ファイルを使っていて、このファイルにエントリを書き込むためにコンストラクターが使われる場合です。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-110">A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</span></span>  
   
--   <span data-ttu-id="743c4-111">コンストラクターが `LoadLibrary` メソッドを呼び出すことができる場合は、アンマネージ コードのラッパー クラスを作成するときにも静的コンストラクターが役に立ちます。</span><span class="sxs-lookup"><span data-stu-id="743c4-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
+- <span data-ttu-id="bb8ec-111">コンストラクターが `LoadLibrary` メソッドを呼び出すことができる場合は、アンマネージ コードのラッパー クラスを作成するときにも静的コンストラクターが役に立ちます。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-111">Static constructors are also useful when creating wrapper classes for unmanaged code, when the constructor can call the `LoadLibrary` method.</span></span>  
   
--   <span data-ttu-id="743c4-112">静的コンストラクターが例外をスローした場合、ランタイムがその静的コンストラクターを再度呼び出すことはなく、その型は、プログラムが実行しているアプリケーション ドメインの有効期間中、初期化されないままになります。</span><span class="sxs-lookup"><span data-stu-id="743c4-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
+- <span data-ttu-id="bb8ec-112">静的コンストラクターが例外をスローした場合、ランタイムがその静的コンストラクターを再度呼び出すことはなく、その型は、プログラムが実行しているアプリケーション ドメインの有効期間中、初期化されないままになります。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-112">If a static constructor throws an exception, the runtime will not invoke it a second time, and the type will remain uninitialized for the lifetime of the application domain in which your program is running.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="743c4-113">例</span><span class="sxs-lookup"><span data-stu-id="743c4-113">Example</span></span>  
- <span data-ttu-id="743c4-114">この例では、`Bus` クラスに静的コンストラクターがあります。</span><span class="sxs-lookup"><span data-stu-id="743c4-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="743c4-115">`Bus` の最初のインスタンスが作成されるとき (`bus1`)、静的コンストラクターが呼び出されてクラスが初期化されます。</span><span class="sxs-lookup"><span data-stu-id="743c4-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="743c4-116">サンプルの出力では、`Bus` のインスタンスが 2 つでも静的コンストラクターは 1 回だけ実行されること、およびインスタンス コンストラクターの実行前に静的コンストラクターが実行されることがわかります。</span><span class="sxs-lookup"><span data-stu-id="743c4-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
+## <a name="example"></a><span data-ttu-id="bb8ec-113">例</span><span class="sxs-lookup"><span data-stu-id="bb8ec-113">Example</span></span>  
+ <span data-ttu-id="bb8ec-114">この例では、`Bus` クラスに静的コンストラクターがあります。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-114">In this example, class `Bus` has a static constructor.</span></span> <span data-ttu-id="bb8ec-115">`Bus` の最初のインスタンスが作成されるとき (`bus1`)、静的コンストラクターが呼び出されてクラスが初期化されます。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-115">When the first instance of `Bus` is created (`bus1`), the static constructor is invoked to initialize the class.</span></span> <span data-ttu-id="bb8ec-116">サンプルの出力では、`Bus` のインスタンスが 2 つでも静的コンストラクターは 1 回だけ実行されること、およびインスタンス コンストラクターの実行前に静的コンストラクターが実行されることがわかります。</span><span class="sxs-lookup"><span data-stu-id="bb8ec-116">The sample output verifies that the static constructor runs only one time, even though two instances of `Bus` are created, and that it runs before the instance constructor runs.</span></span>  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="743c4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="743c4-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb8ec-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="bb8ec-117">See also</span></span>
 
-- [<span data-ttu-id="743c4-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="743c4-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="743c4-119">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="743c4-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [<span data-ttu-id="743c4-120">コンストラクター</span><span class="sxs-lookup"><span data-stu-id="743c4-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [<span data-ttu-id="743c4-121">静的クラスと静的クラス メンバー</span><span class="sxs-lookup"><span data-stu-id="743c4-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [<span data-ttu-id="743c4-122">ファイナライザー</span><span class="sxs-lookup"><span data-stu-id="743c4-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="bb8ec-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="bb8ec-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="bb8ec-119">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="bb8ec-119">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [<span data-ttu-id="bb8ec-120">コンストラクター</span><span class="sxs-lookup"><span data-stu-id="bb8ec-120">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="bb8ec-121">静的クラスと静的クラス メンバー</span><span class="sxs-lookup"><span data-stu-id="bb8ec-121">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [<span data-ttu-id="bb8ec-122">ファイナライザー</span><span class="sxs-lookup"><span data-stu-id="bb8ec-122">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
