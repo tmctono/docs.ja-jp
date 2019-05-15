@@ -2,17 +2,17 @@
 title: '方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる'
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d61eb9bfd3566a4736fcb0d01a9f3b8915944fc7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855037"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593026"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="c5e7e-102">方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる</span><span class="sxs-lookup"><span data-stu-id="c5e7e-102">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>
-<span data-ttu-id="c5e7e-103">この例では、<xref:System.Text.RegularExpressions.Regex> クラスを使用して正規表現を作成し、テキスト文字列内の複雑な一致を取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="c5e7e-104">LINQ クエリを使用すると、正規表現で検索する必要のあるファイルだけをフィルターで抽出したり、結果の形式を指定したりするのが簡単になります。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="9a1cb-102">方法: LINQ クエリは、正規表現を使用 (Visual Basic) とを組み合わせる</span><span class="sxs-lookup"><span data-stu-id="9a1cb-102">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>
+<span data-ttu-id="9a1cb-103">この例では、<xref:System.Text.RegularExpressions.Regex> クラスを使用して正規表現を作成し、テキスト文字列内の複雑な一致を取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="9a1cb-104">LINQ クエリを使用すると、正規表現で検索する必要のあるファイルだけをフィルターで抽出したり、結果の形式を指定したりするのが簡単になります。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c5e7e-105">例</span><span class="sxs-lookup"><span data-stu-id="c5e7e-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9a1cb-105">例</span><span class="sxs-lookup"><span data-stu-id="9a1cb-105">Example</span></span>  
   
 ```vb  
 Class LinqRegExVB  
@@ -79,12 +79,12 @@ Class LinqRegExVB
 End Class  
 ```  
   
- <span data-ttu-id="c5e7e-106">`RegEx` 検索で返された <xref:System.Text.RegularExpressions.MatchCollection> オブジェクトのクエリを実行することも可能です。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="c5e7e-107">この例では、一致した各文字列の値のみが結果として生成されています。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="c5e7e-108">しかし、LINQ を使用して、各種のフィルター処理、並べ替え、グループ化をそのコレクションに対して実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="c5e7e-109"><xref:System.Text.RegularExpressions.MatchCollection> が非ジェネリック <xref:System.Collections.IEnumerable> コレクションなので、クエリで範囲変数の型を明示的に記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
+ <span data-ttu-id="9a1cb-106">`RegEx` 検索で返された <xref:System.Text.RegularExpressions.MatchCollection> オブジェクトのクエリを実行することも可能です。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="9a1cb-107">この例では、一致した各文字列の値のみが結果として生成されています。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="9a1cb-108">しかし、LINQ を使用して、各種のフィルター処理、並べ替え、グループ化をそのコレクションに対して実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="9a1cb-109"><xref:System.Text.RegularExpressions.MatchCollection> が非ジェネリック <xref:System.Collections.IEnumerable> コレクションなので、クエリで範囲変数の型を明示的に記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c5e7e-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c5e7e-110">Compiling the Code</span></span>  
- <span data-ttu-id="c5e7e-111">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。</span><span class="sxs-lookup"><span data-stu-id="c5e7e-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9a1cb-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="9a1cb-110">Compiling the Code</span></span>  
+<span data-ttu-id="9a1cb-111">VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。</span><span class="sxs-lookup"><span data-stu-id="9a1cb-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="c5e7e-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c5e7e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a1cb-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a1cb-112">See also</span></span>
 
-- [<span data-ttu-id="c5e7e-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5e7e-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="c5e7e-114">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5e7e-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="9a1cb-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a1cb-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="9a1cb-114">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a1cb-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
