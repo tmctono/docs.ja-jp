@@ -8,36 +8,34 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086066"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064104"
 ---
-# <a name="specifying-an-entry-point"></a><span data-ttu-id="331b7-102">エントリ ポイントの指定</span><span class="sxs-lookup"><span data-stu-id="331b7-102">Specifying an Entry Point</span></span>
-<span data-ttu-id="331b7-103">エントリ ポイントは、DLL 内の関数の位置を識別します。</span><span class="sxs-lookup"><span data-stu-id="331b7-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="331b7-104">マネージド プロジェクト内では、対象となる関数の元の名前または序数エントリ ポイントによって、その関数が相互運用の境界にまたがって識別されます。</span><span class="sxs-lookup"><span data-stu-id="331b7-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="331b7-105">また、エントリ ポイントを別の名前に割り当てて、関数の名前を事実上変更できます。</span><span class="sxs-lookup"><span data-stu-id="331b7-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
+# <a name="specifying-an-entry-point"></a><span data-ttu-id="d9017-102">エントリ ポイントの指定</span><span class="sxs-lookup"><span data-stu-id="d9017-102">Specifying an Entry Point</span></span>
+<span data-ttu-id="d9017-103">エントリ ポイントは、DLL 内の関数の位置を識別します。</span><span class="sxs-lookup"><span data-stu-id="d9017-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="d9017-104">マネージド プロジェクト内では、対象となる関数の元の名前または序数エントリ ポイントによって、その関数が相互運用の境界にまたがって識別されます。</span><span class="sxs-lookup"><span data-stu-id="d9017-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="d9017-105">また、エントリ ポイントを別の名前に割り当てて、関数の名前を事実上変更できます。</span><span class="sxs-lookup"><span data-stu-id="d9017-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
   
- <span data-ttu-id="331b7-106">DLL 関数の名前を変更する理由を次に示します。</span><span class="sxs-lookup"><span data-stu-id="331b7-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
+ <span data-ttu-id="d9017-106">DLL 関数の名前を変更する理由を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d9017-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
   
--   <span data-ttu-id="331b7-107">大文字と小文字が区別される API 関数名を使わないようにするため</span><span class="sxs-lookup"><span data-stu-id="331b7-107">To avoid using case-sensitive API function names</span></span>  
+- <span data-ttu-id="d9017-107">大文字と小文字が区別される API 関数名を使わないようにするため</span><span class="sxs-lookup"><span data-stu-id="d9017-107">To avoid using case-sensitive API function names</span></span>  
   
--   <span data-ttu-id="331b7-108">既存の名前付け標準に合わせるため</span><span class="sxs-lookup"><span data-stu-id="331b7-108">To comply with existing naming standards</span></span>  
+- <span data-ttu-id="d9017-108">既存の名前付け標準に合わせるため</span><span class="sxs-lookup"><span data-stu-id="d9017-108">To comply with existing naming standards</span></span>  
   
--   <span data-ttu-id="331b7-109">異なるデータ型を受け取る複数の関数を共存させるため (同じ DLL 関数の複数のバージョンを宣言することによって)</span><span class="sxs-lookup"><span data-stu-id="331b7-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
+- <span data-ttu-id="d9017-109">異なるデータ型を受け取る複数の関数を共存させるため (同じ DLL 関数の複数のバージョンを宣言することによって)</span><span class="sxs-lookup"><span data-stu-id="d9017-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
   
--   <span data-ttu-id="331b7-110">ANSI バージョンと Unicode バージョンを持つ API の使用を簡単にするため</span><span class="sxs-lookup"><span data-stu-id="331b7-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
+- <span data-ttu-id="d9017-110">ANSI バージョンと Unicode バージョンを持つ API の使用を簡単にするため</span><span class="sxs-lookup"><span data-stu-id="d9017-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
   
- <span data-ttu-id="331b7-111">このトピックでは、マネージド コード内の DLL 関数の名前を変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="331b7-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
+ <span data-ttu-id="d9017-111">このトピックでは、マネージド コード内の DLL 関数の名前を変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d9017-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
   
-## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="331b7-112">Visual Basic での関数名の変更</span><span class="sxs-lookup"><span data-stu-id="331b7-112">Renaming a Function in Visual Basic</span></span>  
- <span data-ttu-id="331b7-113">Visual Basic で <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> フィールドを設定するには、**Declare** ステートメントで **Function** キーワードを使います。</span><span class="sxs-lookup"><span data-stu-id="331b7-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="331b7-114">基本的な宣言を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="331b7-114">The following example shows a basic declaration.</span></span>  
+## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="d9017-112">Visual Basic での関数名の変更</span><span class="sxs-lookup"><span data-stu-id="d9017-112">Renaming a Function in Visual Basic</span></span>  
+ <span data-ttu-id="d9017-113">Visual Basic で <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> フィールドを設定するには、**Declare** ステートメントで **Function** キーワードを使います。</span><span class="sxs-lookup"><span data-stu-id="d9017-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="d9017-114">基本的な宣言を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="d9017-114">The following example shows a basic declaration.</span></span>  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -45,13 +43,11 @@ Friend Class WindowsAPI
 End Class
 ```
   
- <span data-ttu-id="331b7-115">定義に **Alias** キーワードを含めることで、**MessageBox** エントリ ポイントを **MsgBox** に置き換えることができます。その例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="331b7-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="331b7-116">どちらの例でも、**Auto** キーワードを使って、エントリ ポイントの文字セットのバージョンを指定する手間を省いています。</span><span class="sxs-lookup"><span data-stu-id="331b7-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="331b7-117">文字セットの選択の詳細については、「[文字セットの指定](../../../docs/framework/interop/specifying-a-character-set.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="331b7-117">For more information about selecting a character set, see [Specifying a Character Set](../../../docs/framework/interop/specifying-a-character-set.md).</span></span>  
+ <span data-ttu-id="d9017-115">定義に **Alias** キーワードを含めることで、**MessageBox** エントリ ポイントを **MsgBox** に置き換えることができます。その例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d9017-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="d9017-116">どちらの例でも、**Auto** キーワードを使って、エントリ ポイントの文字セットのバージョンを指定する手間を省いています。</span><span class="sxs-lookup"><span data-stu-id="d9017-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="d9017-117">文字セットの選択の詳細については、「[文字セットの指定](../../../docs/framework/interop/specifying-a-character-set.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9017-117">For more information about selecting a character set, see [Specifying a Character Set](../../../docs/framework/interop/specifying-a-character-set.md).</span></span>  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MsgBox _
+Friend Class NativeMethods
+    Friend Declare Auto Function MsgBox _
         Lib "user32.dll" Alias "MessageBox" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
@@ -60,23 +56,23 @@ Friend Class WindowsAPI
 End Class
 ```
   
-## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="331b7-118">C# および C++ での関数名の変更</span><span class="sxs-lookup"><span data-stu-id="331b7-118">Renaming a Function in C# and C++</span></span>  
- <span data-ttu-id="331b7-119">DLL 関数を名前または序数で指定するには、<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> フィールドを使います。</span><span class="sxs-lookup"><span data-stu-id="331b7-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="331b7-120">メソッド定義内の関数の名前が DLL 内のエントリ ポイントと同じである場合は、その関数を **EntryPoint** フィールドで明示的に識別する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="331b7-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="331b7-121">同じでない場合は、次のいずれかの属性書式を使って、名前または序数を指示します。</span><span class="sxs-lookup"><span data-stu-id="331b7-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
+## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="d9017-118">C# および C++ での関数名の変更</span><span class="sxs-lookup"><span data-stu-id="d9017-118">Renaming a Function in C# and C++</span></span>  
+ <span data-ttu-id="d9017-119">DLL 関数を名前または序数で指定するには、<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> フィールドを使います。</span><span class="sxs-lookup"><span data-stu-id="d9017-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="d9017-120">メソッド定義内の関数の名前が DLL 内のエントリ ポイントと同じである場合は、その関数を **EntryPoint** フィールドで明示的に識別する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="d9017-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="d9017-121">同じでない場合は、次のいずれかの属性書式を使って、名前または序数を指示します。</span><span class="sxs-lookup"><span data-stu-id="d9017-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
   
 ```csharp
 [DllImport("DllName", EntryPoint = "Functionname")]
 [DllImport("DllName", EntryPoint = "#123")]
 ```
   
- <span data-ttu-id="331b7-122">序数の前にシャープ記号 (#) を付ける必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="331b7-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
+ <span data-ttu-id="d9017-122">序数の前にシャープ記号 (#) を付ける必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="d9017-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
   
- <span data-ttu-id="331b7-123">**EntryPoint** フィールドを使ってコード内の **MessageBoxA** を **MsgBox** に置き換える方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="331b7-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
+ <span data-ttu-id="d9017-123">**EntryPoint** フィールドを使ってコード内の **MessageBoxA** を **MsgBox** に置き換える方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="d9017-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
   
 ```csharp
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
     internal static extern int MessageBox(
@@ -94,9 +90,9 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a><span data-ttu-id="331b7-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="331b7-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9017-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9017-124">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="331b7-125">マネージド コードでのプロトタイプの作成</span><span class="sxs-lookup"><span data-stu-id="331b7-125">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="331b7-126">プラットフォーム呼び出しの例</span><span class="sxs-lookup"><span data-stu-id="331b7-126">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)
-- [<span data-ttu-id="331b7-127">プラットフォーム呼び出しによるデータのマーシャリング</span><span class="sxs-lookup"><span data-stu-id="331b7-127">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="d9017-125">マネージド コードでのプロトタイプの作成</span><span class="sxs-lookup"><span data-stu-id="d9017-125">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="d9017-126">プラットフォーム呼び出しの例</span><span class="sxs-lookup"><span data-stu-id="d9017-126">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)
+- [<span data-ttu-id="d9017-127">プラットフォーム呼び出しによるデータのマーシャリング</span><span class="sxs-lookup"><span data-stu-id="d9017-127">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
