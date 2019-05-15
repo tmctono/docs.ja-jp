@@ -11,37 +11,35 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: eb584e71-59da-4012-aaca-dbe1c7c7a156
-ms.openlocfilehash: dd926a3311ab6fd181dc0acc7e2573c60d2536bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf8440704a7e457d0c987c933cc26e0e12e9565f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651725"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591692"
 ---
-# <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a><span data-ttu-id="77179-102">方法: ContextMenuStrip コントロールでチェックの余白とイメージの余白を有効にする</span><span class="sxs-lookup"><span data-stu-id="77179-102">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>
-<span data-ttu-id="77179-103"><xref:System.Windows.Forms.ToolStripMenuItem> コントロールの <xref:System.Windows.Forms.MenuStrip> オブジェクトを、チェック マークやカスタム イメージを付けてカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="77179-103">You can customize the <xref:System.Windows.Forms.ToolStripMenuItem> objects in your <xref:System.Windows.Forms.MenuStrip> control with check marks and custom images.</span></span>  
+# <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a><span data-ttu-id="a6e4e-102">方法: ContextMenuStrip コントロールでチェックの余白とイメージの余白を有効にする</span><span class="sxs-lookup"><span data-stu-id="a6e4e-102">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>
+<span data-ttu-id="a6e4e-103"><xref:System.Windows.Forms.ToolStripMenuItem> コントロールの <xref:System.Windows.Forms.MenuStrip> オブジェクトを、チェック マークやカスタム イメージを付けてカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="a6e4e-103">You can customize the <xref:System.Windows.Forms.ToolStripMenuItem> objects in your <xref:System.Windows.Forms.MenuStrip> control with check marks and custom images.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="77179-104">例</span><span class="sxs-lookup"><span data-stu-id="77179-104">Example</span></span>  
- <span data-ttu-id="77179-105">次のコード例は、チェック マークとカスタム イメージを持つメニュー項目を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="77179-105">The following code example demonstrates how to create menu items that have check marks and custom images.</span></span>  
+## <a name="example"></a><span data-ttu-id="a6e4e-104">例</span><span class="sxs-lookup"><span data-stu-id="a6e4e-104">Example</span></span>  
+ <span data-ttu-id="a6e4e-105">次のコード例は、チェック マークとカスタム イメージを持つメニュー項目を作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a6e4e-105">The following code example demonstrates how to create menu items that have check marks and custom images.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
 [!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
 [!code-vb[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
   
- <span data-ttu-id="77179-106"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A?displayProperty=nameWithType> プロパティと <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A?displayProperty=nameWithType> プロパティを設定して、チェック マークとカスタム イメージがメニュー項目に表示されるタイミングを指定します。</span><span class="sxs-lookup"><span data-stu-id="77179-106">Set the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A?displayProperty=nameWithType> properties to specify when check marks and custom images appear in your menu items.</span></span>  
+ <span data-ttu-id="a6e4e-106"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A?displayProperty=nameWithType> プロパティと <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A?displayProperty=nameWithType> プロパティを設定して、チェック マークとカスタム イメージがメニュー項目に表示されるタイミングを指定します。</span><span class="sxs-lookup"><span data-stu-id="a6e4e-106">Set the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A?displayProperty=nameWithType> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A?displayProperty=nameWithType> properties to specify when check marks and custom images appear in your menu items.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="77179-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="77179-107">Compiling the Code</span></span>  
- <span data-ttu-id="77179-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="77179-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a6e4e-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="a6e4e-107">Compiling the Code</span></span>  
+ <span data-ttu-id="a6e4e-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="a6e4e-108">This example requires:</span></span>  
   
-- <span data-ttu-id="77179-109">System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="77179-109">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="a6e4e-109">System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="a6e4e-109">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="77179-110">コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="77179-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="77179-111">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="77179-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="77179-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="77179-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6e4e-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6e4e-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="77179-113">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="77179-113">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="a6e4e-111">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="a6e4e-111">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)

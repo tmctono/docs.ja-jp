@@ -7,36 +7,36 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ef1f6ceed49d728f6c9923204c0cb7e11aa3905a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9874b71462fb66828f6baeef4f46ad93899d4cc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627370"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607985"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a><span data-ttu-id="df209-102">ドキュメント タグの区切り記号 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="df209-102">Delimiters for Documentation Tags (C# Programming Guide)</span></span>
-<span data-ttu-id="df209-103">XML ドキュメント コメントでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。</span><span class="sxs-lookup"><span data-stu-id="df209-103">The use of XML doc comments requires delimiters, which indicate to the compiler where a documentation comment begins and ends.</span></span> <span data-ttu-id="df209-104">XML ドキュメント タグでは、次の種類の区切り記号を使用できます。</span><span class="sxs-lookup"><span data-stu-id="df209-104">You can use the following kinds of delimiters with the XML documentation tags:</span></span>  
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a><span data-ttu-id="04844-102">ドキュメント タグの区切り記号 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="04844-102">Delimiters for Documentation Tags (C# Programming Guide)</span></span>
+<span data-ttu-id="04844-103">XML ドキュメント コメントでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。</span><span class="sxs-lookup"><span data-stu-id="04844-103">The use of XML doc comments requires delimiters, which indicate to the compiler where a documentation comment begins and ends.</span></span> <span data-ttu-id="04844-104">XML ドキュメント タグでは、次の種類の区切り記号を使用できます。</span><span class="sxs-lookup"><span data-stu-id="04844-104">You can use the following kinds of delimiters with the XML documentation tags:</span></span>  
   
  `///`  
- <span data-ttu-id="df209-105">単一行の区切り記号。</span><span class="sxs-lookup"><span data-stu-id="df209-105">Single-line delimiter.</span></span> <span data-ttu-id="df209-106">ドキュメント例で使用されています。この区切り記号は、Visual C# プロジェクト テンプレートで使用されます。</span><span class="sxs-lookup"><span data-stu-id="df209-106">This is the form that is shown in documentation examples and used by the Visual C# project templates.</span></span> <span data-ttu-id="df209-107">区切り記号の直後に空白文字が続く場合、その文字は XML 出力に含まれません。</span><span class="sxs-lookup"><span data-stu-id="df209-107">If there is a white space character following the delimiter, that character is not included in the XML output.</span></span>  
+ <span data-ttu-id="04844-105">単一行の区切り記号。</span><span class="sxs-lookup"><span data-stu-id="04844-105">Single-line delimiter.</span></span> <span data-ttu-id="04844-106">ドキュメント例で使用されています。この区切り記号は、Visual C# プロジェクト テンプレートで使用されます。</span><span class="sxs-lookup"><span data-stu-id="04844-106">This is the form that is shown in documentation examples and used by the Visual C# project templates.</span></span> <span data-ttu-id="04844-107">区切り記号の直後に空白文字が続く場合、その文字は XML 出力に含まれません。</span><span class="sxs-lookup"><span data-stu-id="04844-107">If there is a white space character following the delimiter, that character is not included in the XML output.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="df209-108">Visual Studio IDE には、スマート コメント編集と呼ばれる機能があります。コード エディターで `///` 区切り記号を入力すると、\<summary> タグと \</summary> タグが自動的に挿入され、これらのタグの内側にカーソルが移動します。</span><span class="sxs-lookup"><span data-stu-id="df209-108">The Visual Studio IDE has a feature called Smart Comment Editing that automatically inserts the \<summary> and \</summary> tags and moves your cursor within these tags after you type the `///` delimiter in the Code Editor.</span></span> <span data-ttu-id="df209-109">[[オプション] ダイアログ ボックス](/visualstudio/ide/reference/options-text-editor-csharp-advanced)で、この機能をオンまたはオフにできます。</span><span class="sxs-lookup"><span data-stu-id="df209-109">You can turn this feature on or off in the [Options dialog box](/visualstudio/ide/reference/options-text-editor-csharp-advanced).</span></span>  
+>  <span data-ttu-id="04844-108">Visual Studio IDE には、スマート コメント編集と呼ばれる機能があります。コード エディターで `///` 区切り記号を入力すると、\<summary> タグと \</summary> タグが自動的に挿入され、これらのタグの内側にカーソルが移動します。</span><span class="sxs-lookup"><span data-stu-id="04844-108">The Visual Studio IDE has a feature called Smart Comment Editing that automatically inserts the \<summary> and \</summary> tags and moves your cursor within these tags after you type the `///` delimiter in the Code Editor.</span></span> <span data-ttu-id="04844-109">[[オプション] ダイアログ ボックス](/visualstudio/ide/reference/options-text-editor-csharp-advanced)で、この機能をオンまたはオフにできます。</span><span class="sxs-lookup"><span data-stu-id="04844-109">You can turn this feature on or off in the [Options dialog box](/visualstudio/ide/reference/options-text-editor-csharp-advanced).</span></span>  
   
  `/** */`  
- <span data-ttu-id="df209-110">複数行の区切り記号。</span><span class="sxs-lookup"><span data-stu-id="df209-110">Multiline delimiters.</span></span>  
+ <span data-ttu-id="04844-110">複数行の区切り記号。</span><span class="sxs-lookup"><span data-stu-id="04844-110">Multiline delimiters.</span></span>  
   
- <span data-ttu-id="df209-111">`/** */` 区切り記号を使用する場合は、次の書式設定規則に従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="df209-111">There are some formatting rules to follow when you use the `/** */` delimiters.</span></span>  
+ <span data-ttu-id="04844-111">`/** */` 区切り記号を使用する場合は、次の書式設定規則に従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="04844-111">There are some formatting rules to follow when you use the `/** */` delimiters.</span></span>  
   
--   <span data-ttu-id="df209-112">`/**` 区切り記号がある行で、行の残りの部分が空白の場合、その行はコメントとして処理されません。</span><span class="sxs-lookup"><span data-stu-id="df209-112">On the line that contains the `/**` delimiter, if the remainder of the line is white space, the line is not processed for comments.</span></span> <span data-ttu-id="df209-113">`/**` 区切り記号の後の最初の文字が空白の場合、その空白文字は無視され、行の残りの部分が処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-113">If the first character after the `/**` delimiter is white space, that white space character is ignored and the rest of the line is processed.</span></span> <span data-ttu-id="df209-114">それ以外の場合、`/**` 区切り記号の後にある行のテキスト全体が、コメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-114">Otherwise, the entire text of the line after the `/**` delimiter is processed as part of the comment.</span></span>  
+- <span data-ttu-id="04844-112">`/**` 区切り記号がある行で、行の残りの部分が空白の場合、その行はコメントとして処理されません。</span><span class="sxs-lookup"><span data-stu-id="04844-112">On the line that contains the `/**` delimiter, if the remainder of the line is white space, the line is not processed for comments.</span></span> <span data-ttu-id="04844-113">`/**` 区切り記号の後の最初の文字が空白の場合、その空白文字は無視され、行の残りの部分が処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-113">If the first character after the `/**` delimiter is white space, that white space character is ignored and the rest of the line is processed.</span></span> <span data-ttu-id="04844-114">それ以外の場合、`/**` 区切り記号の後にある行のテキスト全体が、コメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-114">Otherwise, the entire text of the line after the `/**` delimiter is processed as part of the comment.</span></span>  
   
--   <span data-ttu-id="df209-115">`*/` 区切り記号がある行で、`*/` 区切り記号までの部分がすべて空白の場合、その行は無視されます。</span><span class="sxs-lookup"><span data-stu-id="df209-115">On the line that contains the `*/` delimiter, if there is only white space up to the `*/` delimiter, that line is ignored.</span></span> <span data-ttu-id="df209-116">それ以外の場合、以下の箇条書きで説明するパターン一致規則に従って、その行の `*/` 区切り記号までのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-116">Otherwise, the text on the line up to the `*/` delimiter is processed as part of the comment, subject to the pattern-matching rules described in the following bullet.</span></span>  
+- <span data-ttu-id="04844-115">`*/` 区切り記号がある行で、`*/` 区切り記号までの部分がすべて空白の場合、その行は無視されます。</span><span class="sxs-lookup"><span data-stu-id="04844-115">On the line that contains the `*/` delimiter, if there is only white space up to the `*/` delimiter, that line is ignored.</span></span> <span data-ttu-id="04844-116">それ以外の場合、以下の箇条書きで説明するパターン一致規則に従って、その行の `*/` 区切り記号までのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-116">Otherwise, the text on the line up to the `*/` delimiter is processed as part of the comment, subject to the pattern-matching rules described in the following bullet.</span></span>  
   
--   <span data-ttu-id="df209-117">`/**` 区切り記号で始まる行の後に来る行については、コンパイラは各行の先頭で共通のパターンを検索します。</span><span class="sxs-lookup"><span data-stu-id="df209-117">For the lines after the one that begins with the `/**` delimiter, the compiler looks for a common pattern at the beginning of each line.</span></span> <span data-ttu-id="df209-118">このパターンは、空白 (省略可能) + アスタリスク (`*`) + 空白 (省略可能) で構成されます。</span><span class="sxs-lookup"><span data-stu-id="df209-118">The pattern can consist of optional white space and an asterisk (`*`), followed by more optional white space.</span></span> <span data-ttu-id="df209-119">`/**` 区切り記号または `*/` 区切り記号で始まらない各行の先頭でコンパイラが共通のパターンを見つけた場合、各行のそのパターンは無視されます。</span><span class="sxs-lookup"><span data-stu-id="df209-119">If the compiler finds a common pattern at the beginning of each line that does not begin with the `/**` delimiter or the `*/` delimiter, it ignores that pattern for each line.</span></span>  
+- <span data-ttu-id="04844-117">`/**` 区切り記号で始まる行の後に来る行については、コンパイラは各行の先頭で共通のパターンを検索します。</span><span class="sxs-lookup"><span data-stu-id="04844-117">For the lines after the one that begins with the `/**` delimiter, the compiler looks for a common pattern at the beginning of each line.</span></span> <span data-ttu-id="04844-118">このパターンは、空白 (省略可能) + アスタリスク (`*`) + 空白 (省略可能) で構成されます。</span><span class="sxs-lookup"><span data-stu-id="04844-118">The pattern can consist of optional white space and an asterisk (`*`), followed by more optional white space.</span></span> <span data-ttu-id="04844-119">`/**` 区切り記号または `*/` 区切り記号で始まらない各行の先頭でコンパイラが共通のパターンを見つけた場合、各行のそのパターンは無視されます。</span><span class="sxs-lookup"><span data-stu-id="04844-119">If the compiler finds a common pattern at the beginning of each line that does not begin with the `/**` delimiter or the `*/` delimiter, it ignores that pattern for each line.</span></span>  
   
- <span data-ttu-id="df209-120">これらの規則について、次の例で説明します。</span><span class="sxs-lookup"><span data-stu-id="df209-120">The following examples illustrate these rules.</span></span>  
+ <span data-ttu-id="04844-120">これらの規則について、次の例で説明します。</span><span class="sxs-lookup"><span data-stu-id="04844-120">The following examples illustrate these rules.</span></span>  
   
--   <span data-ttu-id="df209-121">次のコメントでは、`<summary>` で始まる行だけがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-121">The only part of the following comment that will be processed is the line that begins with `<summary>`.</span></span> <span data-ttu-id="df209-122">次の 3 つのタグ形式は、いずれも同じコメントを生成します。</span><span class="sxs-lookup"><span data-stu-id="df209-122">The three tag formats produce the same comments.</span></span>  
+- <span data-ttu-id="04844-121">次のコメントでは、`<summary>` で始まる行だけがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-121">The only part of the following comment that will be processed is the line that begins with `<summary>`.</span></span> <span data-ttu-id="04844-122">次の 3 つのタグ形式は、いずれも同じコメントを生成します。</span><span class="sxs-lookup"><span data-stu-id="04844-122">The three tag formats produce the same comments.</span></span>  
   
     ```csharp  
     /** <summary>text</summary> */   
@@ -50,7 +50,7 @@ ms.locfileid: "54627370"
     */  
     ```  
   
--   <span data-ttu-id="df209-123">コンパイラは、2 行目と 3 行目の先頭で共通のパターン " \* " を識別します。</span><span class="sxs-lookup"><span data-stu-id="df209-123">The compiler identifies a common pattern of " \* " at the beginning of the second and third lines.</span></span> <span data-ttu-id="df209-124">このパターンは出力に含まれません。</span><span class="sxs-lookup"><span data-stu-id="df209-124">The pattern is not included in the output.</span></span>  
+- <span data-ttu-id="04844-123">コンパイラは、2 行目と 3 行目の先頭で共通のパターン " \* " を識別します。</span><span class="sxs-lookup"><span data-stu-id="04844-123">The compiler identifies a common pattern of " \* " at the beginning of the second and third lines.</span></span> <span data-ttu-id="04844-124">このパターンは出力に含まれません。</span><span class="sxs-lookup"><span data-stu-id="04844-124">The pattern is not included in the output.</span></span>  
   
     ```csharp  
     /**   
@@ -58,7 +58,7 @@ ms.locfileid: "54627370"
      * text </summary>*/   
     ```  
   
--   <span data-ttu-id="df209-125">次のコメントでは、3 行目の 2 番目の文字がアスタリスクではないため、コンパイラは共通のパターンを検索しません。</span><span class="sxs-lookup"><span data-stu-id="df209-125">The compiler finds no common pattern in the following comment because the second character on the third line is not an asterisk.</span></span> <span data-ttu-id="df209-126">このため、2 行目と 3 行目のすべてのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-126">Therefore, all text on the second and third lines is processed as part of the comment.</span></span>  
+- <span data-ttu-id="04844-125">次のコメントでは、3 行目の 2 番目の文字がアスタリスクではないため、コンパイラは共通のパターンを検索しません。</span><span class="sxs-lookup"><span data-stu-id="04844-125">The compiler finds no common pattern in the following comment because the second character on the third line is not an asterisk.</span></span> <span data-ttu-id="04844-126">このため、2 行目と 3 行目のすべてのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-126">Therefore, all text on the second and third lines is processed as part of the comment.</span></span>  
   
     ```csharp  
     /**   
@@ -67,7 +67,7 @@ ms.locfileid: "54627370"
     */   
     ```  
   
--   <span data-ttu-id="df209-127">次のコメントでは、2 つの原因によりコンパイラはパターンを検出しません。</span><span class="sxs-lookup"><span data-stu-id="df209-127">The compiler finds no pattern in the following comment for two reasons.</span></span> <span data-ttu-id="df209-128">まず、アスタリスクの前の空白の数が一致していません。</span><span class="sxs-lookup"><span data-stu-id="df209-128">First, the number of spaces before the asterisk is not consistent.</span></span> <span data-ttu-id="df209-129">次に、5 行目がタブで始まっています。空白とタブは一致しません。</span><span class="sxs-lookup"><span data-stu-id="df209-129">Second, the fifth line begins with a tab, which does not match spaces.</span></span> <span data-ttu-id="df209-130">このため、2 行目から 5 行目のすべてのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="df209-130">Therefore, all text from lines two through five is processed as part of the comment.</span></span>  
+- <span data-ttu-id="04844-127">次のコメントでは、2 つの原因によりコンパイラはパターンを検出しません。</span><span class="sxs-lookup"><span data-stu-id="04844-127">The compiler finds no pattern in the following comment for two reasons.</span></span> <span data-ttu-id="04844-128">まず、アスタリスクの前の空白の数が一致していません。</span><span class="sxs-lookup"><span data-stu-id="04844-128">First, the number of spaces before the asterisk is not consistent.</span></span> <span data-ttu-id="04844-129">次に、5 行目がタブで始まっています。空白とタブは一致しません。</span><span class="sxs-lookup"><span data-stu-id="04844-129">Second, the fifth line begins with a tab, which does not match spaces.</span></span> <span data-ttu-id="04844-130">このため、2 行目から 5 行目のすべてのテキストがコメントの一部として処理されます。</span><span class="sxs-lookup"><span data-stu-id="04844-130">Therefore, all text from lines two through five is processed as part of the comment.</span></span>  
   
     ```csharp  
     /**   
@@ -78,9 +78,9 @@ ms.locfileid: "54627370"
     */   
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="df209-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="df209-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04844-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="04844-131">See also</span></span>
 
-- [<span data-ttu-id="df209-132">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="df209-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="df209-133">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="df209-133">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-- [<span data-ttu-id="df209-134">/doc (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="df209-134">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [<span data-ttu-id="df209-135">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="df209-135">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="04844-132">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="04844-132">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="04844-133">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="04844-133">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="04844-134">/doc (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="04844-134">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
+- [<span data-ttu-id="04844-135">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="04844-135">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

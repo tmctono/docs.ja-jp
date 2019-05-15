@@ -9,34 +9,32 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 767f27b4e76cd14d4a189e79a720a5ff2a45ebcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc50256bd170ccd21b16831734208c531f3f8a4b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614726"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586720"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="1ddee-102">方法: ContextMenuStrip のチェックの余白とイメージの余白を設定する</span><span class="sxs-lookup"><span data-stu-id="1ddee-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
-<span data-ttu-id="1ddee-103"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> プロパティと <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> プロパティをさまざまな組み合わせで設定することにより、<xref:System.Windows.Forms.ContextMenuStrip> をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="1ddee-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="24beb-102">方法: ContextMenuStrip のチェックの余白とイメージの余白を設定する</span><span class="sxs-lookup"><span data-stu-id="24beb-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
+<span data-ttu-id="24beb-103"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> プロパティと <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> プロパティをさまざまな組み合わせで設定することにより、<xref:System.Windows.Forms.ContextMenuStrip> をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="24beb-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ddee-104">例</span><span class="sxs-lookup"><span data-stu-id="1ddee-104">Example</span></span>  
- <span data-ttu-id="1ddee-105">次のコード例では、<xref:System.Windows.Forms.ContextMenuStrip> のチェックの余白とイメージの余白をカスタマイズする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1ddee-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
+## <a name="example"></a><span data-ttu-id="24beb-104">例</span><span class="sxs-lookup"><span data-stu-id="24beb-104">Example</span></span>  
+ <span data-ttu-id="24beb-105">次のコード例では、<xref:System.Windows.Forms.ContextMenuStrip> のチェックの余白とイメージの余白をカスタマイズする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="24beb-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
 [!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
 [!code-vb[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1ddee-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="1ddee-106">Compiling the Code</span></span>  
- <span data-ttu-id="1ddee-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="1ddee-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="24beb-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="24beb-106">Compiling the Code</span></span>  
+ <span data-ttu-id="24beb-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="24beb-107">This example requires:</span></span>  
   
-- <span data-ttu-id="1ddee-108">System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="1ddee-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="24beb-108">System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="24beb-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="1ddee-109">コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1ddee-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="1ddee-110">新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。</span><span class="sxs-lookup"><span data-stu-id="1ddee-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1ddee-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="1ddee-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24beb-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="24beb-109">See also</span></span>
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [<span data-ttu-id="1ddee-112">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="1ddee-112">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="1ddee-113">方法: ContextMenuStrip コントロールでチェックの余白とイメージを有効にします。</span><span class="sxs-lookup"><span data-stu-id="1ddee-113">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [<span data-ttu-id="24beb-110">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="24beb-110">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="24beb-111">方法: ContextMenuStrip コントロールでチェックの余白とイメージを有効にします。</span><span class="sxs-lookup"><span data-stu-id="24beb-111">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
