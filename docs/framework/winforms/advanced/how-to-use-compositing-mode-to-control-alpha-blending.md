@@ -9,54 +9,54 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: ad9437d9c250f067f26f61638b66fbc30fa3b599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6863e59efa25323f80933bf8ab595316b430ef53
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623930"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590142"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a><span data-ttu-id="0a1b8-102">方法: 複合モードを使用してアルファ ブレンドを制御する</span><span class="sxs-lookup"><span data-stu-id="0a1b8-102">How to: Use Compositing Mode to Control Alpha Blending</span></span>
-<span data-ttu-id="0a1b8-103">次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-103">There may be times when you want to create an off-screen bitmap that has the following characteristics:</span></span>  
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a><span data-ttu-id="59af7-102">方法: 複合モードを使用してアルファ ブレンドを制御する</span><span class="sxs-lookup"><span data-stu-id="59af7-102">How to: Use Compositing Mode to Control Alpha Blending</span></span>
+<span data-ttu-id="59af7-103">次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。</span><span class="sxs-lookup"><span data-stu-id="59af7-103">There may be times when you want to create an off-screen bitmap that has the following characteristics:</span></span>  
   
-- <span data-ttu-id="0a1b8-104">色のアルファ値 255 未満であるがあります。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-104">Colors have alpha values that are less than 255.</span></span>  
+- <span data-ttu-id="59af7-104">色のアルファ値 255 未満であるがあります。</span><span class="sxs-lookup"><span data-stu-id="59af7-104">Colors have alpha values that are less than 255.</span></span>  
   
-- <span data-ttu-id="0a1b8-105">色はいないアルファ ビットマップを作成すると、相互のブレンドです。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-105">Colors are not alpha blended with each other as you create the bitmap.</span></span>  
+- <span data-ttu-id="59af7-105">色はいないアルファ ビットマップを作成すると、相互のブレンドです。</span><span class="sxs-lookup"><span data-stu-id="59af7-105">Colors are not alpha blended with each other as you create the bitmap.</span></span>  
   
-- <span data-ttu-id="0a1b8-106">完成したビットマップを表示する場合、ビットマップの色は、アルファ ブレンドされるディスプレイ デバイスの背景色になります。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-106">When you display the finished bitmap, colors in the bitmap are alpha blended with the background colors on the display device.</span></span>  
+- <span data-ttu-id="59af7-106">完成したビットマップを表示する場合、ビットマップの色は、アルファ ブレンドされるディスプレイ デバイスの背景色になります。</span><span class="sxs-lookup"><span data-stu-id="59af7-106">When you display the finished bitmap, colors in the bitmap are alpha blended with the background colors on the display device.</span></span>  
   
- <span data-ttu-id="0a1b8-107">このようなビットマップを作成するには空白を構築<xref:System.Drawing.Bitmap>オブジェクト、および構築し、<xref:System.Drawing.Graphics>オブジェクトに基づくビットマップ。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-107">To create such a bitmap, construct a blank <xref:System.Drawing.Bitmap> object, and then construct a <xref:System.Drawing.Graphics> object based on that bitmap.</span></span> <span data-ttu-id="0a1b8-108">複合モードの設定、<xref:System.Drawing.Graphics>オブジェクトを<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-108">Set the compositing mode of the <xref:System.Drawing.Graphics> object to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="59af7-107">このようなビットマップを作成するには空白を構築<xref:System.Drawing.Bitmap>オブジェクト、および構築し、<xref:System.Drawing.Graphics>オブジェクトに基づくビットマップ。</span><span class="sxs-lookup"><span data-stu-id="59af7-107">To create such a bitmap, construct a blank <xref:System.Drawing.Bitmap> object, and then construct a <xref:System.Drawing.Graphics> object based on that bitmap.</span></span> <span data-ttu-id="59af7-108">複合モードの設定、<xref:System.Drawing.Graphics>オブジェクトを<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>します。</span><span class="sxs-lookup"><span data-stu-id="59af7-108">Set the compositing mode of the <xref:System.Drawing.Graphics> object to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a1b8-109">例</span><span class="sxs-lookup"><span data-stu-id="0a1b8-109">Example</span></span>  
- <span data-ttu-id="0a1b8-110">次の例では、作成、<xref:System.Drawing.Graphics>オブジェクトに基づいて、<xref:System.Drawing.Bitmap>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-110">The following example creates a <xref:System.Drawing.Graphics> object based on a <xref:System.Drawing.Bitmap> object.</span></span> <span data-ttu-id="0a1b8-111">コードを使用して、<xref:System.Drawing.Graphics>と共に半透明ブラシを 2 つのオブジェクト (アルファ = 160) にビットマップを描画します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-111">The code uses the <xref:System.Drawing.Graphics> object along with two semitransparent brushes (alpha = 160) to paint on the bitmap.</span></span> <span data-ttu-id="0a1b8-112">コードでは、赤い楕円および半透明ブラシを使用して、緑の楕円を塗りつぶします。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-112">The code fills a red ellipse and a green ellipse using the semitransparent brushes.</span></span> <span data-ttu-id="0a1b8-113">緑色の楕円が赤い楕円、重なっているが、ため、赤、緑がブレンドしないの複合モード、<xref:System.Drawing.Graphics>にオブジェクトが設定されている<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-113">The green ellipse overlaps the red ellipse, but the green is not blended with the red because the compositing mode of the <xref:System.Drawing.Graphics> object is set to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>.</span></span>  
+## <a name="example"></a><span data-ttu-id="59af7-109">例</span><span class="sxs-lookup"><span data-stu-id="59af7-109">Example</span></span>  
+ <span data-ttu-id="59af7-110">次の例では、作成、<xref:System.Drawing.Graphics>オブジェクトに基づいて、<xref:System.Drawing.Bitmap>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="59af7-110">The following example creates a <xref:System.Drawing.Graphics> object based on a <xref:System.Drawing.Bitmap> object.</span></span> <span data-ttu-id="59af7-111">コードを使用して、<xref:System.Drawing.Graphics>と共に半透明ブラシを 2 つのオブジェクト (アルファ = 160) にビットマップを描画します。</span><span class="sxs-lookup"><span data-stu-id="59af7-111">The code uses the <xref:System.Drawing.Graphics> object along with two semitransparent brushes (alpha = 160) to paint on the bitmap.</span></span> <span data-ttu-id="59af7-112">コードでは、赤い楕円および半透明ブラシを使用して、緑の楕円を塗りつぶします。</span><span class="sxs-lookup"><span data-stu-id="59af7-112">The code fills a red ellipse and a green ellipse using the semitransparent brushes.</span></span> <span data-ttu-id="59af7-113">緑色の楕円が赤い楕円、重なっているが、ため、赤、緑がブレンドしないの複合モード、<xref:System.Drawing.Graphics>にオブジェクトが設定されている<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>します。</span><span class="sxs-lookup"><span data-stu-id="59af7-113">The green ellipse overlaps the red ellipse, but the green is not blended with the red because the compositing mode of the <xref:System.Drawing.Graphics> object is set to <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy>.</span></span>  
   
- <span data-ttu-id="0a1b8-114">コードは、ビットマップを描画、画面に 2 回: 白の背景に 1 回と 1 回マルチカラーの背景色。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-114">The code draws the bitmap on the screen twice: once on a white background and once on a multicolored background.</span></span> <span data-ttu-id="0a1b8-115">2 つの楕円の一部であるビットマップのピクセルはあるので、省略記号は、画面の背景色とブレンドされた、160、アルファ コンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-115">The pixels in the bitmap that are part of the two ellipses have an alpha component of 160, so the ellipses are blended with the background colors on the screen.</span></span>  
+ <span data-ttu-id="59af7-114">コードは、ビットマップを描画、画面に 2 回: 白の背景に 1 回と 1 回マルチカラーの背景色。</span><span class="sxs-lookup"><span data-stu-id="59af7-114">The code draws the bitmap on the screen twice: once on a white background and once on a multicolored background.</span></span> <span data-ttu-id="59af7-115">2 つの楕円の一部であるビットマップのピクセルはあるので、省略記号は、画面の背景色とブレンドされた、160、アルファ コンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="59af7-115">The pixels in the bitmap that are part of the two ellipses have an alpha component of 160, so the ellipses are blended with the background colors on the screen.</span></span>  
   
- <span data-ttu-id="0a1b8-116">次の図は、コード例の出力を示します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-116">The following illustration shows the output of the code example.</span></span> <span data-ttu-id="0a1b8-117">省略記号がバック グラウンドとブレンドされたが、相互ブレンドしないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-117">Note that the ellipses are blended with the background, but they are not blended with each other.</span></span>  
+ <span data-ttu-id="59af7-116">次の図は、コード例の出力を示します。</span><span class="sxs-lookup"><span data-stu-id="59af7-116">The following illustration shows the output of the code example.</span></span> <span data-ttu-id="59af7-117">省略記号がバック グラウンドとブレンドされたが、相互ブレンドしないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="59af7-117">Note that the ellipses are blended with the background, but they are not blended with each other.</span></span>  
   
  ![ダイアグラムが表示された楕円はない他のバック グラウンドとブレンドされます。](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
- <span data-ttu-id="0a1b8-119">コード例には、このステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-119">The code example contains this statement:</span></span>  
+ <span data-ttu-id="59af7-119">コード例には、このステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="59af7-119">The code example contains this statement:</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.AlphaBlending#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
- <span data-ttu-id="0a1b8-120">およびバック グラウンドでブレンドする省略記号を設定する場合は、そのステートメントを次のように変更します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-120">If you want the ellipses to be blended with each other as well as with the background, change that statement to the following:</span></span>  
+ <span data-ttu-id="59af7-120">およびバック グラウンドでブレンドする省略記号を設定する場合は、そのステートメントを次のように変更します。</span><span class="sxs-lookup"><span data-stu-id="59af7-120">If you want the ellipses to be blended with each other as well as with the background, change that statement to the following:</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.AlphaBlending#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
- <span data-ttu-id="0a1b8-121">次の図は、変更後のコードの出力を示します。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-121">The following illustration shows the output of the revised code.</span></span>  
+ <span data-ttu-id="59af7-121">次の図は、変更後のコードの出力を示します。</span><span class="sxs-lookup"><span data-stu-id="59af7-121">The following illustration shows the output of the revised code.</span></span>  
   
  ![省略記号を示す図は、バック グラウンドを使用してまとめてブレンドされます。](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0a1b8-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="0a1b8-123">Compiling the Code</span></span>  
- <span data-ttu-id="0a1b8-124">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。</span><span class="sxs-lookup"><span data-stu-id="0a1b8-124">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="59af7-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="59af7-123">Compiling the Code</span></span>  
+ <span data-ttu-id="59af7-124">前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。</span><span class="sxs-lookup"><span data-stu-id="59af7-124">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a1b8-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a1b8-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59af7-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="59af7-125">See also</span></span>
 
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [<span data-ttu-id="0a1b8-126">アルファ ブレンドの直線と塗りつぶし</span><span class="sxs-lookup"><span data-stu-id="0a1b8-126">Alpha Blending Lines and Fills</span></span>](alpha-blending-lines-and-fills.md)
+- [<span data-ttu-id="59af7-126">アルファ ブレンドの直線と塗りつぶし</span><span class="sxs-lookup"><span data-stu-id="59af7-126">Alpha Blending Lines and Fills</span></span>](alpha-blending-lines-and-fills.md)
