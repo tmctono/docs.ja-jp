@@ -2,92 +2,92 @@
 title: 完了時の非同期タスクの処理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600281"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a><span data-ttu-id="cfde9-102">完了時での複数の非同期タスクとプロセスの実行 (C#)</span><span class="sxs-lookup"><span data-stu-id="cfde9-102">Start Multiple Async Tasks and Process Them As They Complete (C#)</span></span>
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a><span data-ttu-id="fa11f-102">完了時での複数の非同期タスクとプロセスの実行 (C#)</span><span class="sxs-lookup"><span data-stu-id="fa11f-102">Start Multiple Async Tasks and Process Them As They Complete (C#)</span></span>
 
-<span data-ttu-id="cfde9-103"><xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> を使用すると、複数のタスクを、開始された順番に処理するのでなく、同時に開始して完了するごとに 1 つずつ処理できます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>
+<span data-ttu-id="fa11f-103"><xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> を使用すると、複数のタスクを、開始された順番に処理するのでなく、同時に開始して完了するごとに 1 つずつ処理できます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>
 
-<span data-ttu-id="cfde9-104">クエリを使用して、タスクのコレクションを作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="cfde9-105">各タスクは、指定された Web サイトのコンテンツをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="cfde9-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="cfde9-106">while ループの各反復で、待機されている `WhenAny` への呼び出しは、最初にダウンロードを終了するタスクのコレクションにあるタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="cfde9-107">タスクはコレクションから削除され、処理されます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="cfde9-108">ループは、コレクションのタスクがなくなるまで繰り返されます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-108">The loop repeats until the collection contains no more tasks.</span></span>
+<span data-ttu-id="fa11f-104">クエリを使用して、タスクのコレクションを作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="fa11f-105">各タスクは、指定された Web サイトのコンテンツをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="fa11f-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="fa11f-106">while ループの各反復で、待機されている `WhenAny` への呼び出しは、最初にダウンロードを終了するタスクのコレクションにあるタスクを返します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="fa11f-107">タスクはコレクションから削除され、処理されます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="fa11f-108">ループは、コレクションのタスクがなくなるまで繰り返されます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-108">The loop repeats until the collection contains no more tasks.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cfde9-109">この例を実行するには、Visual Studio (2012 以降) および .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="cfde9-109">To run the examples, you must have Visual Studio (2012 or newer) and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="fa11f-109">この例を実行するには、Visual Studio (2012 以降) および .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="fa11f-109">To run the examples, you must have Visual Studio (2012 or newer) and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="download-an-example-solution"></a><span data-ttu-id="cfde9-110">ソリューションの例をダウンロードする</span><span class="sxs-lookup"><span data-stu-id="cfde9-110">Download an example solution</span></span>
+## <a name="download-an-example-solution"></a><span data-ttu-id="fa11f-110">ソリューションの例をダウンロードする</span><span class="sxs-lookup"><span data-stu-id="fa11f-110">Download an example solution</span></span>
 
-<span data-ttu-id="cfde9-111">完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="cfde9-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="fa11f-111">完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="fa11f-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="cfde9-112">プロジェクトをダウンロードしない場合は、代わりに、このトピックの最後の MainWindow.xaml.cs ファイルをレビューしてもかまいません。</span><span class="sxs-lookup"><span data-stu-id="cfde9-112">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic instead.</span></span>
+> <span data-ttu-id="fa11f-112">プロジェクトをダウンロードしない場合は、代わりに、このトピックの最後の MainWindow.xaml.cs ファイルをレビューしてもかまいません。</span><span class="sxs-lookup"><span data-stu-id="fa11f-112">If you don't want to download the project, you can review the MainWindow.xaml.cs file at the end of this topic instead.</span></span>
 
-1. <span data-ttu-id="cfde9-113">.zip ファイルからダウンロードしたファイルを抽出して、Visual Studio を開始します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-113">Extract the files that you downloaded from the .zip file, and then start Visual Studio.</span></span>
+1. <span data-ttu-id="fa11f-113">.zip ファイルからダウンロードしたファイルを抽出して、Visual Studio を開始します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-113">Extract the files that you downloaded from the .zip file, and then start Visual Studio.</span></span>
 
-2. <span data-ttu-id="cfde9-114">メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-114">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2. <span data-ttu-id="fa11f-114">メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-114">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3. <span data-ttu-id="cfde9-115">**[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-115">In the **Open Project** dialog box, open the folder that holds the sample code you downloaded, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3. <span data-ttu-id="fa11f-115">**[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-115">In the **Open Project** dialog box, open the folder that holds the sample code you downloaded, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4. <span data-ttu-id="cfde9-116">**ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="cfde9-116">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>
+4. <span data-ttu-id="fa11f-116">**ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="fa11f-116">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>
 
-5. <span data-ttu-id="cfde9-117">**F5** キーを押してプログラムを実行します (または、**Ctrl**+**F5** キーを押して、デバッグせずにプログラムを実行します)。</span><span class="sxs-lookup"><span data-stu-id="cfde9-117">Choose the **F5** key to run the program (or, press **Ctrl**+**F5** keys to run the program without debugging it).</span></span>
+5. <span data-ttu-id="fa11f-117">**F5** キーを押してプログラムを実行します (または、**Ctrl**+**F5** キーを押して、デバッグせずにプログラムを実行します)。</span><span class="sxs-lookup"><span data-stu-id="fa11f-117">Choose the **F5** key to run the program (or, press **Ctrl**+**F5** keys to run the program without debugging it).</span></span>
 
-6. <span data-ttu-id="cfde9-118">ダウンロードの長さが常に同じ順序では表示されないことを確認するために、プロジェクトを複数回実行します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
+6. <span data-ttu-id="fa11f-118">ダウンロードの長さが常に同じ順序では表示されないことを確認するために、プロジェクトを複数回実行します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
 
-## <a name="create-the-program-yourself"></a><span data-ttu-id="cfde9-119">プログラムを自分で作成する</span><span class="sxs-lookup"><span data-stu-id="cfde9-119">Create the program yourself</span></span>
+## <a name="create-the-program-yourself"></a><span data-ttu-id="fa11f-119">プログラムを自分で作成する</span><span class="sxs-lookup"><span data-stu-id="fa11f-119">Create the program yourself</span></span>
 
-<span data-ttu-id="cfde9-120">この例では、「[完了後の残りの非同期タスクのキャンセル (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)」で開発したコードを追加し、同じ UI を使用します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-120">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), and it uses the same UI.</span></span>
+<span data-ttu-id="fa11f-120">この例では、「[完了後の残りの非同期タスクのキャンセル (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)」で開発したコードを追加し、同じ UI を使用します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-120">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md), and it uses the same UI.</span></span>
 
-<span data-ttu-id="cfde9-121">この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** では [CancelAfterOneTask](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) を設定します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-121">To build the example yourself, step by step, follow the instructions in the [Downloading the Example](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) section, but set **CancelAfterOneTask** as the startup project.</span></span> <span data-ttu-id="cfde9-122">そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-122">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="cfde9-123">変更部分にはアスタリスクが付いています。</span><span class="sxs-lookup"><span data-stu-id="cfde9-123">The changes are marked with asterisks.</span></span>
+<span data-ttu-id="fa11f-121">この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** では [CancelAfterOneTask](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) を設定します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-121">To build the example yourself, step by step, follow the instructions in the [Downloading the Example](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) section, but set **CancelAfterOneTask** as the startup project.</span></span> <span data-ttu-id="fa11f-122">そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-122">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="fa11f-123">変更部分にはアスタリスクが付いています。</span><span class="sxs-lookup"><span data-stu-id="fa11f-123">The changes are marked with asterisks.</span></span>
 
-<span data-ttu-id="cfde9-124">**CancelAfterOneTask** プロジェクトには、実行時にタスクのコレクションを作成するクエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cfde9-124">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="cfde9-125">次のコードの `ProcessURLAsync` への各呼び出しは、`TResult` が整数である <xref:System.Threading.Tasks.Task%601> を返します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-125">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
+<span data-ttu-id="fa11f-124">**CancelAfterOneTask** プロジェクトには、実行時にタスクのコレクションを作成するクエリが含まれています。</span><span class="sxs-lookup"><span data-stu-id="fa11f-124">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="fa11f-125">次のコードの `ProcessURLAsync` への各呼び出しは、`TResult` が整数である <xref:System.Threading.Tasks.Task%601> を返します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-125">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
 
 ```csharp
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-<span data-ttu-id="cfde9-126">プロジェクトの MainWindow.xaml.cs ファイルで、`AccessTheWebAsync` メソッドに次の変更を行います。</span><span class="sxs-lookup"><span data-stu-id="cfde9-126">In the MainWindow.xaml.cs file of the project, make the following changes to the `AccessTheWebAsync` method.</span></span>
+<span data-ttu-id="fa11f-126">プロジェクトの MainWindow.xaml.cs ファイルで、`AccessTheWebAsync` メソッドに次の変更を行います。</span><span class="sxs-lookup"><span data-stu-id="fa11f-126">In the MainWindow.xaml.cs file of the project, make the following changes to the `AccessTheWebAsync` method.</span></span>
 
--   <span data-ttu-id="cfde9-127"><xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> の代わりに <xref:System.Linq.Enumerable.ToArray%2A> を適用して、クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-127">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>
+- <span data-ttu-id="fa11f-127"><xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> の代わりに <xref:System.Linq.Enumerable.ToArray%2A> を適用して、クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-127">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
--   <span data-ttu-id="cfde9-128">コレクションの各タスクで次の手順を実行する `while` ループを追加します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-128">Add a `while` loop that performs the following steps for each task in the collection:</span></span>
+- <span data-ttu-id="fa11f-128">コレクションの各タスクで次の手順を実行する `while` ループを追加します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-128">Add a `while` loop that performs the following steps for each task in the collection:</span></span>
 
-    1.  <span data-ttu-id="cfde9-129">`WhenAny` への呼び出しを待機し、ダウンロードを終了する、コレクションの最初のタスクを識別します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-129">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>
+    1. <span data-ttu-id="fa11f-129">`WhenAny` への呼び出しを待機し、ダウンロードを終了する、コレクションの最初のタスクを識別します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-129">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2.  <span data-ttu-id="cfde9-130">コレクションからそのタスクを削除します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-130">Removes that task from the collection.</span></span>
+    2. <span data-ttu-id="fa11f-130">コレクションからそのタスクを削除します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-130">Removes that task from the collection.</span></span>
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3.  <span data-ttu-id="cfde9-131">`firstFinishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-131">Awaits `firstFinishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="cfde9-132">`firstFinishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。</span><span class="sxs-lookup"><span data-stu-id="cfde9-132">The `firstFinishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="cfde9-133">次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-133">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>
+    3. <span data-ttu-id="fa11f-131">`firstFinishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-131">Awaits `firstFinishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="fa11f-132">`firstFinishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。</span><span class="sxs-lookup"><span data-stu-id="fa11f-132">The `firstFinishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="fa11f-133">次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-133">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>
 
         ```csharp
         int length = await firstFinishedTask;
         resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
-<span data-ttu-id="cfde9-134">ダウンロードされた長さが常に同じ順序では表示されないことを確認するために、プログラムを複数回実行します。</span><span class="sxs-lookup"><span data-stu-id="cfde9-134">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
+<span data-ttu-id="fa11f-134">ダウンロードされた長さが常に同じ順序では表示されないことを確認するために、プログラムを複数回実行します。</span><span class="sxs-lookup"><span data-stu-id="fa11f-134">Run the program several times to verify that the downloaded lengths don't always appear in the same order.</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="cfde9-135">ループで `WhenAny` を使って、例に示すように、いくつかのタスクを格納する問題を解決できます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-135">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="cfde9-136">ただし、多数のタスクが処理する場合、他のアプローチがより効率的です。</span><span class="sxs-lookup"><span data-stu-id="cfde9-136">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="cfde9-137">詳細と例については、「[Processing Tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/)」 (完了したタスクを処理する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cfde9-137">For more information and examples, see [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).</span></span>
+> <span data-ttu-id="fa11f-135">ループで `WhenAny` を使って、例に示すように、いくつかのタスクを格納する問題を解決できます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-135">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="fa11f-136">ただし、多数のタスクが処理する場合、他のアプローチがより効率的です。</span><span class="sxs-lookup"><span data-stu-id="fa11f-136">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="fa11f-137">詳細と例については、「[Processing Tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/)」 (完了したタスクを処理する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fa11f-137">For more information and examples, see [Processing tasks as they complete](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete/).</span></span>
 
-## <a name="complete-example"></a><span data-ttu-id="cfde9-138">コード例全体</span><span class="sxs-lookup"><span data-stu-id="cfde9-138">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="fa11f-138">コード例全体</span><span class="sxs-lookup"><span data-stu-id="fa11f-138">Complete example</span></span>
 
-<span data-ttu-id="cfde9-139">次のコードは、この例での MainWindow.xaml.cs ファイルのテキスト全体です。</span><span class="sxs-lookup"><span data-stu-id="cfde9-139">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="cfde9-140">アスタリスクはこの例のために追加された要素を示しています。</span><span class="sxs-lookup"><span data-stu-id="cfde9-140">Asterisks mark the elements that were added for this example.</span></span> <span data-ttu-id="cfde9-141">また、<xref:System.Net.Http> の参照を追加する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="cfde9-141">Also, take note that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="fa11f-139">次のコードは、この例での MainWindow.xaml.cs ファイルのテキスト全体です。</span><span class="sxs-lookup"><span data-stu-id="fa11f-139">The following code is the complete text of the MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="fa11f-140">アスタリスクはこの例のために追加された要素を示しています。</span><span class="sxs-lookup"><span data-stu-id="fa11f-140">Asterisks mark the elements that were added for this example.</span></span> <span data-ttu-id="fa11f-141">また、<xref:System.Net.Http> の参照を追加する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fa11f-141">Also, take note that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="cfde9-142">プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="cfde9-142">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="fa11f-142">プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="fa11f-142">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
 ```csharp
 using System;
@@ -225,9 +225,9 @@ namespace ProcessTasksAsTheyFinish
 // Downloads complete.
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cfde9-143">関連項目</span><span class="sxs-lookup"><span data-stu-id="cfde9-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa11f-143">関連項目</span><span class="sxs-lookup"><span data-stu-id="fa11f-143">See also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [<span data-ttu-id="cfde9-144">非同期アプリケーションの微調整 (C#)</span><span class="sxs-lookup"><span data-stu-id="cfde9-144">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [<span data-ttu-id="cfde9-145">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="cfde9-145">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="cfde9-146">Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)</span><span class="sxs-lookup"><span data-stu-id="cfde9-146">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [<span data-ttu-id="fa11f-144">非同期アプリケーションの微調整 (C#)</span><span class="sxs-lookup"><span data-stu-id="fa11f-144">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [<span data-ttu-id="fa11f-145">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="fa11f-145">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="fa11f-146">Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)</span><span class="sxs-lookup"><span data-stu-id="fa11f-146">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

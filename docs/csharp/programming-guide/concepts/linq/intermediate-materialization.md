@@ -2,18 +2,18 @@
 title: 中間結果の具体化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 065a7e0ffadaa48d400d4f4e3e045014b3658213
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa1e11c6b4cacff3b5a5a7ca1cc311f5fabda6c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596615"
 ---
-# <a name="intermediate-materialization-c"></a><span data-ttu-id="8c941-102">中間結果の具体化 (C#)</span><span class="sxs-lookup"><span data-stu-id="8c941-102">Intermediate Materialization (C#)</span></span>
-<span data-ttu-id="8c941-103">不注意なユーザーは、クエリ内でコレクションを早期に具体化して、アプリケーションのメモリおよびパフォーマンスのプロファイルを大幅に変更してしまうことがあります。</span><span class="sxs-lookup"><span data-stu-id="8c941-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="8c941-104">一部の標準クエリ演算子では、単一の要素を生成する前に、ソース コレクションを具体化する場合があります。</span><span class="sxs-lookup"><span data-stu-id="8c941-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="8c941-105">たとえば、<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> は最初にソース コレクション全体を反復処理し、次にすべての項目を並べ替えて、最後に最初の項目を生成します。</span><span class="sxs-lookup"><span data-stu-id="8c941-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="8c941-106">これは、順序付けられたコレクションの最初の項目の取得が高コストであることを意味しています。これ以降の各項目の取得は高コストではありません。</span><span class="sxs-lookup"><span data-stu-id="8c941-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="8c941-107">このクエリ演算子は他の方法では処理を実行できないため、これは処理方法として適切なものです。</span><span class="sxs-lookup"><span data-stu-id="8c941-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
+# <a name="intermediate-materialization-c"></a><span data-ttu-id="27042-102">中間結果の具体化 (C#)</span><span class="sxs-lookup"><span data-stu-id="27042-102">Intermediate Materialization (C#)</span></span>
+<span data-ttu-id="27042-103">不注意なユーザーは、クエリ内でコレクションを早期に具体化して、アプリケーションのメモリおよびパフォーマンスのプロファイルを大幅に変更してしまうことがあります。</span><span class="sxs-lookup"><span data-stu-id="27042-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="27042-104">一部の標準クエリ演算子では、単一の要素を生成する前に、ソース コレクションを具体化する場合があります。</span><span class="sxs-lookup"><span data-stu-id="27042-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="27042-105">たとえば、<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> は最初にソース コレクション全体を反復処理し、次にすべての項目を並べ替えて、最後に最初の項目を生成します。</span><span class="sxs-lookup"><span data-stu-id="27042-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="27042-106">これは、順序付けられたコレクションの最初の項目の取得が高コストであることを意味しています。これ以降の各項目の取得は高コストではありません。</span><span class="sxs-lookup"><span data-stu-id="27042-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="27042-107">このクエリ演算子は他の方法では処理を実行できないため、これは処理方法として適切なものです。</span><span class="sxs-lookup"><span data-stu-id="27042-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c941-108">例</span><span class="sxs-lookup"><span data-stu-id="8c941-108">Example</span></span>  
- <span data-ttu-id="8c941-109">この例では、前の例を変更します。</span><span class="sxs-lookup"><span data-stu-id="8c941-109">This example alters the previous example.</span></span> <span data-ttu-id="8c941-110">`AppendString` メソッドは、ソースを反復処理する前に、<xref:System.Linq.Enumerable.ToList%2A> ‚ðŒÄ‚Ño‚µ‚Ü‚·B</span><span class="sxs-lookup"><span data-stu-id="8c941-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="8c941-111">これにより、具体化が行われます。</span><span class="sxs-lookup"><span data-stu-id="8c941-111">This causes materialization.</span></span>  
+## <a name="example"></a><span data-ttu-id="27042-108">例</span><span class="sxs-lookup"><span data-stu-id="27042-108">Example</span></span>  
+ <span data-ttu-id="27042-109">この例では、前の例を変更します。</span><span class="sxs-lookup"><span data-stu-id="27042-109">This example alters the previous example.</span></span> <span data-ttu-id="27042-110">`AppendString` メソッドは、ソースを反復処理する前に、<xref:System.Linq.Enumerable.ToList%2A> ‚ðŒÄ‚Ño‚µ‚Ü‚·B</span><span class="sxs-lookup"><span data-stu-id="27042-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="27042-111">これにより、具体化が行われます。</span><span class="sxs-lookup"><span data-stu-id="27042-111">This causes materialization.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -64,7 +64,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="8c941-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8c941-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="27042-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="27042-112">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -80,12 +80,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="8c941-113">この例では、<xref:System.Linq.Enumerable.ToList%2A> の呼び出しにより、`AppendString` が、最初の項目を生成する前にソース全体を列挙することがわかります。</span><span class="sxs-lookup"><span data-stu-id="8c941-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="8c941-114">ソースが大きな配列である場合は、これによってアプリケーションのメモリ プロファイルが大幅に変更されます。</span><span class="sxs-lookup"><span data-stu-id="8c941-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
+ <span data-ttu-id="27042-113">この例では、<xref:System.Linq.Enumerable.ToList%2A> の呼び出しにより、`AppendString` が、最初の項目を生成する前にソース全体を列挙することがわかります。</span><span class="sxs-lookup"><span data-stu-id="27042-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="27042-114">ソースが大きな配列である場合は、これによってアプリケーションのメモリ プロファイルが大幅に変更されます。</span><span class="sxs-lookup"><span data-stu-id="27042-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
   
- <span data-ttu-id="8c941-115">標準クエリ演算子も連結することができます。</span><span class="sxs-lookup"><span data-stu-id="8c941-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="8c941-116">これについては、このチュートリアルの最後のトピックで説明します。</span><span class="sxs-lookup"><span data-stu-id="8c941-116">The final topic in this tutorial illustrates this.</span></span>  
+ <span data-ttu-id="27042-115">標準クエリ演算子も連結することができます。</span><span class="sxs-lookup"><span data-stu-id="27042-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="27042-116">これについては、このチュートリアルの最後のトピックで説明します。</span><span class="sxs-lookup"><span data-stu-id="27042-116">The final topic in this tutorial illustrates this.</span></span>  
   
--   [<span data-ttu-id="8c941-117">標準クエリ演算子の連結 (C#)</span><span class="sxs-lookup"><span data-stu-id="8c941-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [<span data-ttu-id="27042-117">標準クエリ演算子の連結 (C#)</span><span class="sxs-lookup"><span data-stu-id="27042-117">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8c941-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c941-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27042-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="27042-118">See also</span></span>
 
-- [<span data-ttu-id="8c941-119">チュートリアル: クエリの連結 (C#)</span><span class="sxs-lookup"><span data-stu-id="8c941-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [<span data-ttu-id="27042-119">チュートリアル: クエリの連結 (C#)</span><span class="sxs-lookup"><span data-stu-id="27042-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
