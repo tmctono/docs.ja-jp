@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8e75d44b87cf7b5a72711ef96676def0278f961d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0f3e29ecfec7259dfc60916d52fb6acf7146cf2a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913654"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670916"
 ---
-<span data-ttu-id="bf35a-101">.NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="bf35a-101">.NET Framework 3.0</span></span>
+<span data-ttu-id="54d48-101">.NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="54d48-101">.NET Framework 3.0</span></span>
