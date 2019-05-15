@@ -1,1 +1,9 @@
-<span data-ttu-id="f3d82-101">バイナリ XAML (BAML)</span><span class="sxs-lookup"><span data-stu-id="f3d82-101">binary XAML (BAML)</span></span>
+---
+ms.openlocfilehash: 6dcdd90a26e10c7319b395c26259f3042cdcdd88
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670283"
+---
+<span data-ttu-id="a3e3d-101">バイナリ XAML (BAML)</span><span class="sxs-lookup"><span data-stu-id="a3e3d-101">binary XAML (BAML)</span></span>

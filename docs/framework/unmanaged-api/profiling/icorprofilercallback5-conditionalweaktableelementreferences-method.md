@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39ce72451f3a375f0cd3adb67a431162fc421a93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041602"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636657"
 ---
-# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="86a94-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences メソッド</span><span class="sxs-lookup"><span data-stu-id="86a94-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
+# <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a><span data-ttu-id="5d64c-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences メソッド</span><span class="sxs-lookup"><span data-stu-id="5d64c-102">ICorProfilerCallback5::ConditionalWeakTableElementReferences Method</span></span>
 
-<span data-ttu-id="86a94-103">直接のメンバー フィールド参照および `ConditionalWeakTable` 依存を介してこれらのルーツによって参照されるオブジェクトの推移的終了を識別します。</span><span class="sxs-lookup"><span data-stu-id="86a94-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>
+<span data-ttu-id="5d64c-103">直接のメンバー フィールド参照および `ConditionalWeakTable` 依存を介してこれらのルーツによって参照されるオブジェクトの推移的終了を識別します。</span><span class="sxs-lookup"><span data-stu-id="5d64c-103">Identifies the transitive closure of objects referenced by those roots through both direct member field references and through `ConditionalWeakTable` dependencies.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="86a94-104">構文</span><span class="sxs-lookup"><span data-stu-id="86a94-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="5d64c-104">構文</span><span class="sxs-lookup"><span data-stu-id="5d64c-104">Syntax</span></span>
 
 ```cpp
 HRESULT ConditionalWeakTableElementReferences(
@@ -39,25 +39,25 @@ HRESULT ConditionalWeakTableElementReferences(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="86a94-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="86a94-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="5d64c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5d64c-105">Parameters</span></span>
 
 `cRootRefs`\
-<span data-ttu-id="86a94-106">[入力] `keyRefIds`、`valueRefIds` および `rootIds` 配列にある要素数。</span><span class="sxs-lookup"><span data-stu-id="86a94-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>
+<span data-ttu-id="5d64c-106">[入力] `keyRefIds`、`valueRefIds` および `rootIds` 配列にある要素数。</span><span class="sxs-lookup"><span data-stu-id="5d64c-106">[in] The number of elements in the `keyRefIds`, `valueRefIds`, and `rootIds` arrays.</span></span>
 
 `keyRefIds`\
-<span data-ttu-id="86a94-107">[入力] それぞれが依存ハンドル ペアのプライマリ要素の `ObjectID` を含む、オブジェクト ID の配列。</span><span class="sxs-lookup"><span data-stu-id="86a94-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>
+<span data-ttu-id="5d64c-107">[入力] それぞれが依存ハンドル ペアのプライマリ要素の `ObjectID` を含む、オブジェクト ID の配列。</span><span class="sxs-lookup"><span data-stu-id="5d64c-107">[in] An array of object IDs, each of which contains the `ObjectID` for the primary element in the dependent handle pair.</span></span>
 
 `valueRefIds`\
-<span data-ttu-id="86a94-108">[入力] それぞれが依存ハンドル ペアのセカンダリ要素の `ObjectID` を含む、オブジェクト ID の配列。</span><span class="sxs-lookup"><span data-stu-id="86a94-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="86a94-109">(`keyRefIds[i]`保持`valueRefIds[i]`アライブ)。</span><span class="sxs-lookup"><span data-stu-id="86a94-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>
+<span data-ttu-id="5d64c-108">[入力] それぞれが依存ハンドル ペアのセカンダリ要素の `ObjectID` を含む、オブジェクト ID の配列。</span><span class="sxs-lookup"><span data-stu-id="5d64c-108">[in] An array of object IDs, each of which contains the `ObjectID` for the secondary element in the dependent handle pair.</span></span> <span data-ttu-id="5d64c-109">(`keyRefIds[i]`保持`valueRefIds[i]`アライブ)。</span><span class="sxs-lookup"><span data-stu-id="5d64c-109">(`keyRefIds[i]` keeps `valueRefIds[i]` alive.)</span></span>
 
 `rootIds`\
-<span data-ttu-id="86a94-110">[入力] ガーベッジ コレクション ルートについての追加情報を含む整数を指し示す `GCHandleID` 値の配列</span><span class="sxs-lookup"><span data-stu-id="86a94-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>
+<span data-ttu-id="5d64c-110">[入力] ガーベッジ コレクション ルートについての追加情報を含む整数を指し示す `GCHandleID` 値の配列</span><span class="sxs-lookup"><span data-stu-id="5d64c-110">[in] An array of `GCHandleID` values that point to an integer that contains additional information about the garbage collection root.</span></span>
 
-<span data-ttu-id="86a94-111">ガーベッジ コレクターがオブジェクトを古い場所から新しい場所へ移動中の可能性があるため、コールバックの間は `ObjectID` メソッドによって返される `ConditionalWeakTableElementReferences` 値の値は無効です。</span><span class="sxs-lookup"><span data-stu-id="86a94-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="86a94-112">このため、`ConditionalWeakTableElementReferences` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。</span><span class="sxs-lookup"><span data-stu-id="86a94-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="86a94-113">`GarbageCollectionFinished` では、全てのオブジェトが新しい場所へ移動しているので、検査を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="86a94-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>
+<span data-ttu-id="5d64c-111">ガーベッジ コレクターがオブジェクトを古い場所から新しい場所へ移動中の可能性があるため、コールバックの間は `ObjectID` メソッドによって返される `ConditionalWeakTableElementReferences` 値の値は無効です。</span><span class="sxs-lookup"><span data-stu-id="5d64c-111">None of the `ObjectID` values returned by the `ConditionalWeakTableElementReferences` method are valid during the callback itself, because the garbage collector may be in the process of moving objects from old to new locations.</span></span> <span data-ttu-id="5d64c-112">このため、`ConditionalWeakTableElementReferences` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。</span><span class="sxs-lookup"><span data-stu-id="5d64c-112">Therefore, profilers should not attempt to inspect objects during a `ConditionalWeakTableElementReferences` call.</span></span> <span data-ttu-id="5d64c-113">`GarbageCollectionFinished` では、全てのオブジェトが新しい場所へ移動しているので、検査を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="5d64c-113">At `GarbageCollectionFinished`, all objects have been moved to their new locations, and inspection may be done.</span></span>
 
-## <a name="example"></a><span data-ttu-id="86a94-114">例</span><span class="sxs-lookup"><span data-stu-id="86a94-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5d64c-114">例</span><span class="sxs-lookup"><span data-stu-id="5d64c-114">Example</span></span>
 
-<span data-ttu-id="86a94-115">次のコード例は、実装する方法を示します[ICorProfilerCallback5](icorprofilercallback5-interface.md)このメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="86a94-115">The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.</span></span>
+<span data-ttu-id="5d64c-115">次のコード例は、実装する方法を示します[ICorProfilerCallback5](icorprofilercallback5-interface.md)このメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="5d64c-115">The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.</span></span>
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,18 +80,18 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="86a94-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="86a94-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5d64c-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="5d64c-116">Remarks</span></span>
 
-<span data-ttu-id="86a94-117">プロファイラーは、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]またはそれ以降のバージョンの実装、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスとレコードで指定された依存関係、`ConditionalWeakTableElementReferences`メソッド。</span><span class="sxs-lookup"><span data-stu-id="86a94-117">A profiler for the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="86a94-118">`ICorProfilerCallback5` によって表されるライブ オブジェクト間の依存関係の完全なセットを提供します。`ConditionalWeakTable`エントリ。</span><span class="sxs-lookup"><span data-stu-id="86a94-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="86a94-119">これらの依存関係と、メンバーのフィールドで指定された参照、 [icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md)メソッドは、マネージ プロファイラーがライブ オブジェクトの完全なオブジェクト グラフを生成するを有効にします。</span><span class="sxs-lookup"><span data-stu-id="86a94-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>
+<span data-ttu-id="5d64c-117">プロファイラーは、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]またはそれ以降のバージョンの実装、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスとレコードで指定された依存関係、`ConditionalWeakTableElementReferences`メソッド。</span><span class="sxs-lookup"><span data-stu-id="5d64c-117">A profiler for the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method.</span></span> <span data-ttu-id="5d64c-118">`ICorProfilerCallback5` によって表されるライブ オブジェクト間の依存関係の完全なセットを提供します。`ConditionalWeakTable`エントリ。</span><span class="sxs-lookup"><span data-stu-id="5d64c-118">`ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries.</span></span> <span data-ttu-id="5d64c-119">これらの依存関係と、メンバーのフィールドで指定された参照、 [icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md)メソッドは、マネージ プロファイラーがライブ オブジェクトの完全なオブジェクト グラフを生成するを有効にします。</span><span class="sxs-lookup"><span data-stu-id="5d64c-119">These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="86a94-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="86a94-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="5d64c-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="5d64c-120">Requirements</span></span>
 
-<span data-ttu-id="86a94-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="86a94-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="5d64c-121">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d64c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="86a94-122">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="86a94-122">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="5d64c-122">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5d64c-122">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="86a94-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86a94-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>
+<span data-ttu-id="5d64c-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d64c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="86a94-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="86a94-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d64c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d64c-124">See also</span></span>
 
-- [<span data-ttu-id="86a94-125">ICorProfilerCallback5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="86a94-125">ICorProfilerCallback5 Interface</span></span>](icorprofilercallback5-interface.md)
+- [<span data-ttu-id="5d64c-125">ICorProfilerCallback5 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5d64c-125">ICorProfilerCallback5 Interface</span></span>](icorprofilercallback5-interface.md)

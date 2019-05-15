@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc785a48d0cdf1cf2fdc0245a27b8ef35fd2d81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040769"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636735"
 ---
-# <a name="strongnamekeydelete-function"></a><span data-ttu-id="67cda-102">StrongNameKeyDelete 関数</span><span class="sxs-lookup"><span data-stu-id="67cda-102">StrongNameKeyDelete Function</span></span>
+# <a name="strongnamekeydelete-function"></a><span data-ttu-id="16c4b-102">StrongNameKeyDelete 関数</span><span class="sxs-lookup"><span data-stu-id="16c4b-102">StrongNameKeyDelete Function</span></span>
 
-<span data-ttu-id="67cda-103">指定したキー コンテナーが削除されます。</span><span class="sxs-lookup"><span data-stu-id="67cda-103">Deletes the specified key container.</span></span>
+<span data-ttu-id="16c4b-103">指定したキー コンテナーが削除されます。</span><span class="sxs-lookup"><span data-stu-id="16c4b-103">Deletes the specified key container.</span></span>
 
-<span data-ttu-id="67cda-104">この関数は非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="67cda-104">This function has been deprecated.</span></span> <span data-ttu-id="67cda-105">使用して、 [iclrstrongname::strongnamekeydelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="67cda-105">Use the [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) method instead.</span></span>
+<span data-ttu-id="16c4b-104">この関数は非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="16c4b-104">This function has been deprecated.</span></span> <span data-ttu-id="16c4b-105">使用して、 [iclrstrongname::strongnamekeydelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="16c4b-105">Use the [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) method instead.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="67cda-106">構文</span><span class="sxs-lookup"><span data-stu-id="67cda-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="16c4b-106">構文</span><span class="sxs-lookup"><span data-stu-id="16c4b-106">Syntax</span></span>
 
 ```cpp
 BOOLEAN StrongNameKeyDelete (
@@ -37,33 +37,33 @@ BOOLEAN StrongNameKeyDelete (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="67cda-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="67cda-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="16c4b-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="16c4b-107">Parameters</span></span>
 
 `wszKeyContainer`\
-<span data-ttu-id="67cda-108">[in]削除するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="67cda-108">[in] The name of the key container to delete.</span></span>
+<span data-ttu-id="16c4b-108">[in]削除するキー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="16c4b-108">[in] The name of the key container to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="67cda-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="67cda-109">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="16c4b-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="16c4b-109">Return Value</span></span>
 
-<span data-ttu-id="67cda-110">`true` 正常に終了します。それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="67cda-110">`true` on successful completion; otherwise, `false`.</span></span>
+<span data-ttu-id="16c4b-110">`true` 正常に終了します。それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="16c4b-110">`true` on successful completion; otherwise, `false`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="67cda-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="67cda-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="16c4b-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="16c4b-111">Remarks</span></span>
 
-<span data-ttu-id="67cda-112">使用して、 [StrongNameKeyInstall](strongnamekeyinstall-function.md)公開/秘密キー ペアをコンテナーにインポートする関数。</span><span class="sxs-lookup"><span data-stu-id="67cda-112">Use the [StrongNameKeyInstall](strongnamekeyinstall-function.md) function to import a public/private key pair into a container.</span></span>
+<span data-ttu-id="16c4b-112">使用して、 [StrongNameKeyInstall](strongnamekeyinstall-function.md)公開/秘密キー ペアをコンテナーにインポートする関数。</span><span class="sxs-lookup"><span data-stu-id="16c4b-112">Use the [StrongNameKeyInstall](strongnamekeyinstall-function.md) function to import a public/private key pair into a container.</span></span>
 
-<span data-ttu-id="67cda-113">場合、`StrongNameKeyDelete`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。</span><span class="sxs-lookup"><span data-stu-id="67cda-113">If the `StrongNameKeyDelete` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>
+<span data-ttu-id="16c4b-113">場合、`StrongNameKeyDelete`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。</span><span class="sxs-lookup"><span data-stu-id="16c4b-113">If the `StrongNameKeyDelete` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="67cda-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="67cda-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="16c4b-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="16c4b-114">Requirements</span></span>
 
-<span data-ttu-id="67cda-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="67cda-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="16c4b-115">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="16c4b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="67cda-116">**ヘッダー:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="67cda-116">**Header:** StrongName.h</span></span>
+<span data-ttu-id="16c4b-116">**ヘッダー:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="16c4b-116">**Header:** StrongName.h</span></span>
 
-<span data-ttu-id="67cda-117">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="67cda-117">**Library:** Included as a resource in MsCorEE.dll</span></span>
+<span data-ttu-id="16c4b-117">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="16c4b-117">**Library:** Included as a resource in MsCorEE.dll</span></span>
 
-<span data-ttu-id="67cda-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67cda-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+<span data-ttu-id="16c4b-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16c4b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="67cda-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="67cda-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16c4b-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="16c4b-119">See also</span></span>
 
-- [<span data-ttu-id="67cda-120">StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="67cda-120">StrongNameKeyDelete Method</span></span>](../hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [<span data-ttu-id="67cda-121">StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="67cda-121">StrongNameKeyInstall Method</span></span>](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [<span data-ttu-id="67cda-122">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="67cda-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="16c4b-120">StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="16c4b-120">StrongNameKeyDelete Method</span></span>](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [<span data-ttu-id="16c4b-121">StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="16c4b-121">StrongNameKeyInstall Method</span></span>](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [<span data-ttu-id="16c4b-122">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="16c4b-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
