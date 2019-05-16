@@ -1,1 +1,9 @@
-<span data-ttu-id="0bb6e-101">支援技術</span><span class="sxs-lookup"><span data-stu-id="0bb6e-101">Assistive technologies</span></span>
+---
+ms.openlocfilehash: 56bf8abf04d9de162b928870eba8d6fe42cdc6b9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670146"
+---
+<span data-ttu-id="d189b-101">支援技術</span><span class="sxs-lookup"><span data-stu-id="d189b-101">Assistive technologies</span></span>

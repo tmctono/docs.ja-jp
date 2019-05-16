@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 5b436a3aca7d0814279f3c4196113005cd9cb0e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e480f53702525ef9f51868574ca248ef9ee54948
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769412"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671022"
 ---
-<span data-ttu-id="f228a-101">GDI</span><span class="sxs-lookup"><span data-stu-id="f228a-101">GDI</span></span>
+<span data-ttu-id="ef1de-101">GDI</span><span class="sxs-lookup"><span data-stu-id="ef1de-101">GDI</span></span>
