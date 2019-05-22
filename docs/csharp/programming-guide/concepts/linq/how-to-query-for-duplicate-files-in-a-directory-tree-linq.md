@@ -2,17 +2,17 @@
 title: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: aa1db0c4de2a4b149ee4dd859cd7ab5ee4b78031
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4d7ece3c69db294437ac0ca41ed5b1a3307e524
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747857"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584346"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="41d2e-102">方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="41d2e-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
-<span data-ttu-id="41d2e-103">同じ名前のファイルが複数のフォルダーに存在することがあります。</span><span class="sxs-lookup"><span data-stu-id="41d2e-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="41d2e-104">たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="41d2e-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="41d2e-105">次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="41d2e-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="41d2e-106">また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="41d2e-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="b9f16-102">方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b9f16-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (C#)</span></span>
+<span data-ttu-id="b9f16-103">同じ名前のファイルが複数のフォルダーに存在することがあります。</span><span class="sxs-lookup"><span data-stu-id="b9f16-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="b9f16-104">たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="b9f16-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="b9f16-105">次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="b9f16-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="b9f16-106">また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b9f16-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="41d2e-107">例</span><span class="sxs-lookup"><span data-stu-id="41d2e-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b9f16-107">例</span><span class="sxs-lookup"><span data-stu-id="b9f16-107">Example</span></span>  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -167,12 +167,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- <span data-ttu-id="41d2e-108">最初のクエリでは、単純なキーを使用して一致を判断します。これにより、同じ名前を持つファイルが検索されますが、この場合、各ファイルの内容が一致するとは限りません。</span><span class="sxs-lookup"><span data-stu-id="41d2e-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="41d2e-109">2 番目のクエリでは、複合キーを使用して、<xref:System.IO.FileInfo> オブジェクトの 3 つのプロパティと照合します。</span><span class="sxs-lookup"><span data-stu-id="41d2e-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="41d2e-110">このクエリでは、名前が同じで、内容も類似または一致するファイルが検索される可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="41d2e-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="b9f16-108">最初のクエリでは、単純なキーを使用して一致を判断します。これにより、同じ名前を持つファイルが検索されますが、この場合、各ファイルの内容が一致するとは限りません。</span><span class="sxs-lookup"><span data-stu-id="b9f16-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="b9f16-109">2 番目のクエリでは、複合キーを使用して、<xref:System.IO.FileInfo> オブジェクトの 3 つのプロパティと照合します。</span><span class="sxs-lookup"><span data-stu-id="b9f16-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="b9f16-110">このクエリでは、名前が同じで、内容も類似または一致するファイルが検索される可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="b9f16-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="41d2e-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="41d2e-111">Compiling the Code</span></span>  
- <span data-ttu-id="41d2e-112">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。</span><span class="sxs-lookup"><span data-stu-id="41d2e-112">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b9f16-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="b9f16-111">Compiling the Code</span></span>  
+ <span data-ttu-id="b9f16-112">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="b9f16-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41d2e-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="41d2e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9f16-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b9f16-113">See also</span></span>
 
-- [<span data-ttu-id="41d2e-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="41d2e-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="41d2e-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="41d2e-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="b9f16-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="b9f16-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="b9f16-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="b9f16-115">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

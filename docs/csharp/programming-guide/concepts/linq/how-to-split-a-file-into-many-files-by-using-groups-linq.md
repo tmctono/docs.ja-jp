@@ -2,19 +2,19 @@
 title: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584337"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="c7dd4-102">方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c7dd4-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="c7dd4-103">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c7dd4-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="fe65a-102">方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="fe65a-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="fe65a-103">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="fe65a-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c7dd4-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="c7dd4-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="fe65a-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="fe65a-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="c7dd4-105">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="c7dd4-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="fe65a-105">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="fe65a-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "59337371"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="c7dd4-106">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="c7dd4-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="fe65a-106">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fe65a-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "59337371"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c7dd4-107">例</span><span class="sxs-lookup"><span data-stu-id="c7dd4-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fe65a-107">例</span><span class="sxs-lookup"><span data-stu-id="fe65a-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="c7dd4-108">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="c7dd4-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="fe65a-108">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="fe65a-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c7dd4-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c7dd4-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="fe65a-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="fe65a-109">Compiling the Code</span></span>
 
- <span data-ttu-id="c7dd4-110">.NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。</span><span class="sxs-lookup"><span data-stu-id="c7dd4-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+<span data-ttu-id="fe65a-110">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe65a-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="c7dd4-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7dd4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe65a-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe65a-111">See also</span></span>
 
-- [<span data-ttu-id="c7dd4-112">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="c7dd4-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="c7dd4-113">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="c7dd4-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="fe65a-112">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="fe65a-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="fe65a-113">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="fe65a-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
