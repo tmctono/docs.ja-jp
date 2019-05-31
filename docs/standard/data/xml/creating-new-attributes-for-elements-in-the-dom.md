@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647944"
 ---
-# <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="15b6a-102">DOM の要素に対する新しい属性の作成</span><span class="sxs-lookup"><span data-stu-id="15b6a-102">Creating New Attributes for Elements in the DOM</span></span>
-<span data-ttu-id="15b6a-103">属性はノードではなく、要素ノードのプロパティであり、要素に関連付けられた **XmlAttributeCollection** に格納されるため、新しい属性を作成する方法は、他のノード型を作成する方法と異なります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="15b6a-104">属性を作成して要素に追加するには、次の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  
+# <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="4ec3e-102">DOM の要素に対する新しい属性の作成</span><span class="sxs-lookup"><span data-stu-id="4ec3e-102">Creating New Attributes for Elements in the DOM</span></span>
+<span data-ttu-id="4ec3e-103">属性はノードではなく、要素ノードのプロパティであり、要素に関連付けられた **XmlAttributeCollection** に格納されるため、新しい属性を作成する方法は、他のノード型を作成する方法と異なります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="4ec3e-104">属性を作成して要素に追加するには、次の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  
   
--   <span data-ttu-id="15b6a-105">要素ノードを取得し、**SetAttribute** を使用してその要素の属性コレクションに属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-105">Get the element node and use **SetAttribute** to add an attribute to the attribute collection of that element.</span></span>  
+- <span data-ttu-id="4ec3e-105">要素ノードを取得し、**SetAttribute** を使用してその要素の属性コレクションに属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-105">Get the element node and use **SetAttribute** to add an attribute to the attribute collection of that element.</span></span>  
   
--   <span data-ttu-id="15b6a-106">**CreateAttribute** メソッドを使用して **XmlAttribute** ノードを作成します。要素ノードを取得し、**SetAttributeNode** を使用してその要素の属性コレクションにノードを追加します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-106">Create an **XmlAttribute** node using the **CreateAttribute** method, get the element node, then use **SetAttributeNode** to add the node to the attribute collection of that element.</span></span>  
+- <span data-ttu-id="4ec3e-106">**CreateAttribute** メソッドを使用して **XmlAttribute** ノードを作成します。要素ノードを取得し、**SetAttributeNode** を使用してその要素の属性コレクションにノードを追加します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-106">Create an **XmlAttribute** node using the **CreateAttribute** method, get the element node, then use **SetAttributeNode** to add the node to the attribute collection of that element.</span></span>  
   
- <span data-ttu-id="15b6a-107">**SetAttribute** メソッドを使用して属性を要素に追加する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-107">The following example shows how to add an attribute to an element using the **SetAttribute** method.</span></span>  
+ <span data-ttu-id="4ec3e-107">**SetAttribute** メソッドを使用して属性を要素に追加する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-107">The following example shows how to add an attribute to an element using the **SetAttribute** method.</span></span>  
   
 ```vb  
 Imports System  
@@ -72,9 +72,9 @@ public class Sample
   }  
 ```  
   
- <span data-ttu-id="15b6a-108">**CreateAttribute** メソッドを使用して新しい属性を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-108">The following example shows a new attribute being created using the **CreateAttribute** method.</span></span> <span data-ttu-id="15b6a-109">属性の作成後、**SetAttributeNode** メソッドを使用して、その属性を **book** 要素の属性コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-109">It then shows the attribute added to the attribute collection of the **book** element using the **SetAttributeNode** method.</span></span>  
+ <span data-ttu-id="4ec3e-108">**CreateAttribute** メソッドを使用して新しい属性を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-108">The following example shows a new attribute being created using the **CreateAttribute** method.</span></span> <span data-ttu-id="4ec3e-109">属性の作成後、**SetAttributeNode** メソッドを使用して、その属性を **book** 要素の属性コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-109">It then shows the attribute added to the attribute collection of the **book** element using the **SetAttributeNode** method.</span></span>  
   
- <span data-ttu-id="15b6a-110">次の XML を使用します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-110">Given the following XML:</span></span>  
+ <span data-ttu-id="4ec3e-110">次の XML を使用します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-110">Given the following XML:</span></span>  
   
 ```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
@@ -82,7 +82,7 @@ public class Sample
 </book>  
 ```  
   
- <span data-ttu-id="15b6a-111">新しい属性を作成し、その属性の値を設定します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-111">create a new attribute and give it a value:</span></span>  
+ <span data-ttu-id="4ec3e-111">新しい属性を作成し、その属性の値を設定します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-111">create a new attribute and give it a value:</span></span>  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -94,7 +94,7 @@ XmlAttribute attr = doc.CreateAttribute("publisher");
 attr.Value = "WorldWide Publishing";  
 ```  
   
- <span data-ttu-id="15b6a-112">作成した属性を要素に追加します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-112">and attach it to the element:</span></span>  
+ <span data-ttu-id="4ec3e-112">作成した属性を要素に追加します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-112">and attach it to the element:</span></span>  
   
 ```vb  
 doc.DocumentElement.SetAttributeNode(attr)  
@@ -104,7 +104,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);  
 ```  
   
- <span data-ttu-id="15b6a-113">**出力**</span><span class="sxs-lookup"><span data-stu-id="15b6a-113">**Output**</span></span>  
+ <span data-ttu-id="4ec3e-113">**出力**</span><span class="sxs-lookup"><span data-stu-id="4ec3e-113">**Output**</span></span>  
   
 ```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
@@ -112,18 +112,18 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- <span data-ttu-id="15b6a-114">完全なコード サンプルは <xref:System.Xml.XmlDocument.CreateAttribute%2A> にあります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-114">The full code sample can be found at <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span></span>  
+ <span data-ttu-id="4ec3e-114">完全なコード サンプルは <xref:System.Xml.XmlDocument.CreateAttribute%2A> にあります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-114">The full code sample can be found at <xref:System.Xml.XmlDocument.CreateAttribute%2A>.</span></span>  
   
- <span data-ttu-id="15b6a-115">**XmlAttribute** ノードを作成した後、**InsertBefore** メソッドまたは **InsertAfter** メソッドを使用して、コレクション内の適切な位置にそのノードを配置することもできます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-115">You can also create an **XmlAttribute** node and use the **InsertBefore** or **InsertAfter** methods to place it in the appropriate position in the collection.</span></span> <span data-ttu-id="15b6a-116">同じ名前の属性が属性コレクションに既に含まれている場合、既存の **XmlAttribute** ノードはコレクションから削除され、新しい **XmlAttribute** ノードが挿入されます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-116">If an attribute with the same name is already present in the attribute collection, the existing **XmlAttribute** node is removed from the collection and the new **XmlAttribute** node is inserted.</span></span> <span data-ttu-id="15b6a-117">これは、**SetAttribute** メソッドで行われる処理と同じです。</span><span class="sxs-lookup"><span data-stu-id="15b6a-117">This performs the same way as the **SetAttribute** method.</span></span> <span data-ttu-id="15b6a-118">これらのメソッドは、**InsertBefore** や **InsertAfter** を実行するときに、参照ポイントとなる既存のノードをパラメーターとして受け取ります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-118">These methods take, as a parameter, an existing node as a reference point to do the **InsertBefore** and **InsertAfter**.</span></span> <span data-ttu-id="15b6a-119">新しいノードの挿入位置を示す参照ノードが指定されていないと、**InsertAfter** メソッドは、既定でコレクションの先頭に新しいノードを挿入します。</span><span class="sxs-lookup"><span data-stu-id="15b6a-119">If you do not provide a reference node indicating where to insert the new node, the default for the **InsertAfter** method is to insert the new node at the beginning of the collection.</span></span> <span data-ttu-id="15b6a-120">参照ノードが指定されなかった場合の **InsertBefore** の既定の挿入位置は、コレクションの末尾です。</span><span class="sxs-lookup"><span data-stu-id="15b6a-120">The default position for the **InsertBefore**, if no reference node is provided, is at the end of the collection.</span></span>  
+ <span data-ttu-id="4ec3e-115">**XmlAttribute** ノードを作成した後、**InsertBefore** メソッドまたは **InsertAfter** メソッドを使用して、コレクション内の適切な位置にそのノードを配置することもできます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-115">You can also create an **XmlAttribute** node and use the **InsertBefore** or **InsertAfter** methods to place it in the appropriate position in the collection.</span></span> <span data-ttu-id="4ec3e-116">同じ名前の属性が属性コレクションに既に含まれている場合、既存の **XmlAttribute** ノードはコレクションから削除され、新しい **XmlAttribute** ノードが挿入されます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-116">If an attribute with the same name is already present in the attribute collection, the existing **XmlAttribute** node is removed from the collection and the new **XmlAttribute** node is inserted.</span></span> <span data-ttu-id="4ec3e-117">これは、**SetAttribute** メソッドで行われる処理と同じです。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-117">This performs the same way as the **SetAttribute** method.</span></span> <span data-ttu-id="4ec3e-118">これらのメソッドは、**InsertBefore** や **InsertAfter** を実行するときに、参照ポイントとなる既存のノードをパラメーターとして受け取ります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-118">These methods take, as a parameter, an existing node as a reference point to do the **InsertBefore** and **InsertAfter**.</span></span> <span data-ttu-id="4ec3e-119">新しいノードの挿入位置を示す参照ノードが指定されていないと、**InsertAfter** メソッドは、既定でコレクションの先頭に新しいノードを挿入します。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-119">If you do not provide a reference node indicating where to insert the new node, the default for the **InsertAfter** method is to insert the new node at the beginning of the collection.</span></span> <span data-ttu-id="4ec3e-120">参照ノードが指定されなかった場合の **InsertBefore** の既定の挿入位置は、コレクションの末尾です。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-120">The default position for the **InsertBefore**, if no reference node is provided, is at the end of the collection.</span></span>  
   
- <span data-ttu-id="15b6a-121">属性の **XmlNamedNodeMap** を作成し、<xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> を使用すると、名前を指定して属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-121">If you created an **XmlNamedNodeMap** of attributes, you can add an attribute by name using the <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span></span> <span data-ttu-id="15b6a-122">詳細については、「[NamedNodeMaps と NodeLists のノード コレクション](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="15b6a-122">For more information, see [Node Collections in NamedNodeMaps and NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span></span>  
+ <span data-ttu-id="4ec3e-121">属性の **XmlNamedNodeMap** を作成し、<xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> を使用すると、名前を指定して属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-121">If you created an **XmlNamedNodeMap** of attributes, you can add an attribute by name using the <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>.</span></span> <span data-ttu-id="4ec3e-122">詳細については、「[NamedNodeMaps と NodeLists のノード コレクション](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-122">For more information, see [Node Collections in NamedNodeMaps and NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).</span></span>  
   
-## <a name="default-attributes"></a><span data-ttu-id="15b6a-123">既定の属性</span><span class="sxs-lookup"><span data-stu-id="15b6a-123">Default Attributes</span></span>  
- <span data-ttu-id="15b6a-124">既定の属性を持つと宣言された要素を作成すると、既定値を持つ新しい既定の属性が XML ドキュメント オブジェクト モデル (DOM) によって作成され、その要素に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-124">If you create an element that is declared to have a default attribute, then a new default attribute with its default value is created by the XML Document Object Model (DOM) and attached to the element.</span></span> <span data-ttu-id="15b6a-125">既定の属性の子ノードも同時に作成されます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-125">The child nodes of the default attribute are also created at this time.</span></span>  
+## <a name="default-attributes"></a><span data-ttu-id="4ec3e-123">既定の属性</span><span class="sxs-lookup"><span data-stu-id="4ec3e-123">Default Attributes</span></span>  
+ <span data-ttu-id="4ec3e-124">既定の属性を持つと宣言された要素を作成すると、既定値を持つ新しい既定の属性が XML ドキュメント オブジェクト モデル (DOM) によって作成され、その要素に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-124">If you create an element that is declared to have a default attribute, then a new default attribute with its default value is created by the XML Document Object Model (DOM) and attached to the element.</span></span> <span data-ttu-id="4ec3e-125">既定の属性の子ノードも同時に作成されます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-125">The child nodes of the default attribute are also created at this time.</span></span>  
   
-## <a name="attribute-child-nodes"></a><span data-ttu-id="15b6a-126">属性の子ノード</span><span class="sxs-lookup"><span data-stu-id="15b6a-126">Attribute Child Nodes</span></span>  
- <span data-ttu-id="15b6a-127">属性ノードの値は、その属性の子ノードになります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-127">The value of an attribute node becomes its child nodes.</span></span> <span data-ttu-id="15b6a-128">有効な子ノードの型は **XmlText** ノードと **XmlEntityReference** ノードの 2 つだけです。</span><span class="sxs-lookup"><span data-stu-id="15b6a-128">There are only two types of valid child nodes: **XmlText** nodes, and **XmlEntityReference** nodes.</span></span> <span data-ttu-id="15b6a-129">これらのノードは、**FirstChild** や **LastChild** のようなメソッドが子ノードとして処理するという意味で、子ノードと見なされます。</span><span class="sxs-lookup"><span data-stu-id="15b6a-129">These are child nodes in the sense that methods such as **FirstChild** and **LastChild** process them as child nodes.</span></span> <span data-ttu-id="15b6a-130">属性が子ノードを持つという点は、属性または属性の子ノードを削除するときに重要になります。</span><span class="sxs-lookup"><span data-stu-id="15b6a-130">This distinction of an attribute having child nodes is important when trying to remove attributes or attribute child nodes.</span></span> <span data-ttu-id="15b6a-131">詳細については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="15b6a-131">For more information, see [Removing Attributes from an Element Node in the DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span></span>  
+## <a name="attribute-child-nodes"></a><span data-ttu-id="4ec3e-126">属性の子ノード</span><span class="sxs-lookup"><span data-stu-id="4ec3e-126">Attribute Child Nodes</span></span>  
+ <span data-ttu-id="4ec3e-127">属性ノードの値は、その属性の子ノードになります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-127">The value of an attribute node becomes its child nodes.</span></span> <span data-ttu-id="4ec3e-128">有効な子ノードの種類は 2 つだけです。**XmlText** ノード、および **XmlEntityReference** ノードです。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-128">There are only two types of valid child nodes: **XmlText** nodes, and **XmlEntityReference** nodes.</span></span> <span data-ttu-id="4ec3e-129">これらのノードは、**FirstChild** や **LastChild** のようなメソッドが子ノードとして処理するという意味で、子ノードと見なされます。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-129">These are child nodes in the sense that methods such as **FirstChild** and **LastChild** process them as child nodes.</span></span> <span data-ttu-id="4ec3e-130">属性が子ノードを持つという点は、属性または属性の子ノードを削除するときに重要になります。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-130">This distinction of an attribute having child nodes is important when trying to remove attributes or attribute child nodes.</span></span> <span data-ttu-id="4ec3e-131">詳細については、「[DOM の要素ノードからの属性の削除](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4ec3e-131">For more information, see [Removing Attributes from an Element Node in the DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15b6a-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="15b6a-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ec3e-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="4ec3e-132">See also</span></span>
 
-- [<span data-ttu-id="15b6a-133">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="15b6a-133">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="4ec3e-133">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="4ec3e-133">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

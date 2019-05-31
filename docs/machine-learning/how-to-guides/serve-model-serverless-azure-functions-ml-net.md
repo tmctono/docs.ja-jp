@@ -1,177 +1,266 @@
 ---
-title: Azure Functions に ML.NET モデルをデプロイする
+title: Azure Functions にモデルをデプロイする
 description: Azure Functions を使用して、インターネット経由で予測用の ML.NET 感情分析機械学習モデルを提供します
-ms.date: 03/08/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.date: 05/03/2019
+author: luisquintanilla
+ms.author: luquinta
+ms.custom: mvc, how-to
+ms.openlocfilehash: c30c1c2e6f00020d22fe32fb3f53cefe88d8bb09
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330637"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063500"
 ---
-# <a name="how-to-use-mlnet-model-in-azure-functions"></a><span data-ttu-id="b8412-103">方法:Azure Functions で ML.NET モデルを使用する</span><span class="sxs-lookup"><span data-stu-id="b8412-103">How-To: Use ML.NET Model in Azure Functions</span></span>
+# <a name="deploy-a-model-to-azure-functions"></a><span data-ttu-id="9be10-103">Azure Functions にモデルをデプロイする</span><span class="sxs-lookup"><span data-stu-id="9be10-103">Deploy a model to Azure Functions</span></span>
 
-<span data-ttu-id="b8412-104">このハウツー記事では、Azure Functions などのサーバーレス環境で、構築済みの ML.NET 機械学習モデルをインターネット経由で使用して個々の予測を行う方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b8412-104">This how-to shows how individual predictions can be made using a pre-built ML.NET machine learning model through the internet in a serverless environment such as Azure Functions.</span></span>
+<span data-ttu-id="9be10-104">Azure Functions のサーバーレス環境を介して、HTTP 経由での予測のために、事前トレーニング済みの ML.NET 機械学習モデルをデプロイする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9be10-104">Learn how to deploy a pre-trained ML.NET machine learning model for predictions over HTTP through an Azure Functions serverless environment.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b8412-105">このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。</span><span class="sxs-lookup"><span data-stu-id="b8412-105">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="b8412-106">詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8412-106">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="9be10-105">`PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。</span><span class="sxs-lookup"><span data-stu-id="9be10-105">`PredictionEnginePool` service extension is currently in preview.</span></span>
 
-<span data-ttu-id="b8412-107">ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。</span><span class="sxs-lookup"><span data-stu-id="b8412-107">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="b8412-108">詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b8412-108">For more information, see the release notes at the [dotnet/machinelearning github repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="9be10-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="9be10-106">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="b8412-109">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="b8412-109">Prerequisites</span></span>
+- <span data-ttu-id="9be10-107">[Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。</span><span class="sxs-lookup"><span data-stu-id="9be10-107">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload and "Azure development" installed.</span></span>
+- [<span data-ttu-id="9be10-108">Azure Functions ツール</span><span class="sxs-lookup"><span data-stu-id="9be10-108">Azure Functions Tools</span></span>](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- <span data-ttu-id="9be10-109">PowerShell</span><span class="sxs-lookup"><span data-stu-id="9be10-109">Powershell</span></span>
+- <span data-ttu-id="9be10-110">事前トレーニング済みモデル</span><span class="sxs-lookup"><span data-stu-id="9be10-110">Pre-trained model.</span></span> <span data-ttu-id="9be10-111">[ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、この[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。</span><span class="sxs-lookup"><span data-stu-id="9be10-111">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model or download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
 
-- <span data-ttu-id="b8412-110">[Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。</span><span class="sxs-lookup"><span data-stu-id="b8412-110">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload and "Azure development" installed.</span></span> 
-- [<span data-ttu-id="b8412-111">Azure Functions ツール</span><span class="sxs-lookup"><span data-stu-id="b8412-111">Azure Functions Tools</span></span>](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
-- <span data-ttu-id="b8412-112">PowerShell</span><span class="sxs-lookup"><span data-stu-id="b8412-112">Powershell</span></span>
-- <span data-ttu-id="b8412-113">事前トレーニング済みモデル</span><span class="sxs-lookup"><span data-stu-id="b8412-113">Pre-trained model.</span></span> 
-    - <span data-ttu-id="b8412-114">[ML.NET 感情分析のチュートリアル](../tutorials/sentiment-analysis.md)を使用して、独自のモデルを構築する。</span><span class="sxs-lookup"><span data-stu-id="b8412-114">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model.</span></span>
-    - <span data-ttu-id="b8412-115">この[事前トレーニング済みの感情分析機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードする。</span><span class="sxs-lookup"><span data-stu-id="b8412-115">Download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
+## <a name="create-azure-functions-project"></a><span data-ttu-id="9be10-112">Azure Functions プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="9be10-112">Create Azure Functions project</span></span>
 
-## <a name="create-azure-functions-project"></a><span data-ttu-id="b8412-116">Azure Functions プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="b8412-116">Create Azure Functions Project</span></span>
+1. <span data-ttu-id="9be10-113">Visual Studio 2017 を開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-113">Open Visual Studio 2017.</span></span> <span data-ttu-id="9be10-114">[**ファイル**] > [**新規作成**] > [**プロジェクト**] をメニュー バーから選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-114">Select **File** > **New** > **Project** from the menu bar.</span></span> <span data-ttu-id="9be10-115">**[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[クラウド]** ノードを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-115">In the **New Project** dialog, select the **Visual C#** node followed by the **Cloud** node.</span></span> <span data-ttu-id="9be10-116">次に、**Azure Functions** プロジェクト テンプレートを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-116">Then select the **Azure Functions** project template.</span></span> <span data-ttu-id="9be10-117">**[名前]** テキスト ボックスに「SentimentAnalysisFunctionsApp」と入力し、**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-117">In the **Name** text box, type "SentimentAnalysisFunctionsApp" and then select the **OK** button.</span></span>
+1. <span data-ttu-id="9be10-118">**[新しいプロジェクト]** ダイアログで、プロジェクト オプションの上のドロップダウンを開き、**[Azure Functions v2 (.NET Core)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-118">In the **New Project** dialog, open the dropdown above the project options and select **Azure Functions v2 (.NET Core)**.</span></span> <span data-ttu-id="9be10-119">次に、**[Http トリガー]** プロジェクトを選択し、**[OK]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-119">Then, select the **Http trigger** project and then select the **OK** button.</span></span>
+1. <span data-ttu-id="9be10-120">モデルを保存するための *MLModels* という名前のディレクトリをプロジェクト内に作成します。</span><span class="sxs-lookup"><span data-stu-id="9be10-120">Create a directory named *MLModels* in your project to save your model:</span></span>
 
-1. <span data-ttu-id="b8412-117">Visual Studio 2017 を開きます。</span><span class="sxs-lookup"><span data-stu-id="b8412-117">Open Visual Studio 2017.</span></span> <span data-ttu-id="b8412-118">**[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-118">Select **File** > **New** > **Project** from the menu bar.</span></span> <span data-ttu-id="b8412-119">**[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[クラウド]** ノードを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-119">In the **New Project** dialog, select the **Visual C#** node followed by the **Cloud** node.</span></span> <span data-ttu-id="b8412-120">次に、**Azure Functions** プロジェクト テンプレートを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-120">Then select the **Azure Functions** project template.</span></span> <span data-ttu-id="b8412-121">**[名前]** テキスト ボックスに「SentimentAnalysisFunctionsApp」と入力し、**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-121">In the **Name** text box, type "SentimentAnalysisFunctionsApp" and then select the **OK** button.</span></span>
-1. <span data-ttu-id="b8412-122">**[新しいプロジェクト]** ダイアログで、プロジェクト オプションの上のドロップダウンを開き、**[Azure Functions v2 (.NET Core)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-122">In the **New Project** dialog, open the dropdown above the project options and select **Azure Functions v2 (.NET Core)**.</span></span> <span data-ttu-id="b8412-123">次に、**[Http トリガー]** プロジェクトを選択し、**[OK]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-123">Then, select the **Http trigger** project and then select the **OK** button.</span></span>
-1. <span data-ttu-id="b8412-124">モデルを保存するための *MLModels* という名前のディレクトリをプロジェクト内に作成します。</span><span class="sxs-lookup"><span data-stu-id="b8412-124">Create a directory named *MLModels* in your project to save your model:</span></span>
+    <span data-ttu-id="9be10-121">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-121">In **Solution Explorer**, right-click on your project and select **Add** > **New Folder**.</span></span> <span data-ttu-id="9be10-122">「MLModels」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="9be10-122">Type "MLModels" and hit Enter.</span></span>
 
-    <span data-ttu-id="b8412-125">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-125">In **Solution Explorer**, right-click on your project and select **Add** > **New Folder**.</span></span> <span data-ttu-id="b8412-126">「MLModels」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="b8412-126">Type "MLModels" and hit Enter.</span></span>
+1. <span data-ttu-id="9be10-123">**Microsoft.ML NuGet パッケージ**をインストールします。</span><span class="sxs-lookup"><span data-stu-id="9be10-123">Install the **Microsoft.ML NuGet Package**:</span></span>
 
-1. <span data-ttu-id="b8412-127">**Microsoft.ML NuGet パッケージ**をインストールします。</span><span class="sxs-lookup"><span data-stu-id="b8412-127">Install the **Microsoft.ML NuGet Package**:</span></span>
+    <span data-ttu-id="9be10-124">ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-124">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="9be10-125">[パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-125">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="9be10-126">**[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-126">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-    <span data-ttu-id="b8412-128">ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-128">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="b8412-129">[パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-129">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="b8412-130">**[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-130">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+1. <span data-ttu-id="9be10-127">**Microsoft.Extensions.ML NuGet パッケージ**をインストールします。</span><span class="sxs-lookup"><span data-stu-id="9be10-127">Install the **Microsoft.Extensions.ML NuGet Package**:</span></span>
 
-## <a name="add-pre-built-model-to-project"></a><span data-ttu-id="b8412-131">構築済みのモデルをプロジェクトに追加する</span><span class="sxs-lookup"><span data-stu-id="b8412-131">Add Pre-built Model To Project</span></span>
+    <span data-ttu-id="9be10-128">ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-128">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="9be10-129">パッケージ ソースとして "nuget.org" を選択します。[参照] タブを選択し、「**Microsoft.Extensions.ML**」を検索します。一覧からそのパッケージを選択して、**[インストール]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-129">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Extensions.ML**, select that package in the list, and select the **Install** button.</span></span> <span data-ttu-id="9be10-130">**[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-130">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="b8412-132">構築済みのモデルを *MLModels* フォルダーにコピーします。</span><span class="sxs-lookup"><span data-stu-id="b8412-132">Copy your pre-built model to the *MLModels* folder.</span></span>
-1. <span data-ttu-id="b8412-133">ソリューション エクスプローラーで、構築済みのモデルのファイルを右クリックし、**[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-133">In Solution Explorer, right-click your pre-built model file and select **Properties**.</span></span> <span data-ttu-id="b8412-134">**[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8412-134">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
+## <a name="add-pre-trained-model-to-project"></a><span data-ttu-id="9be10-131">事前トレーニング済みモデルをプロジェクトに追加する</span><span class="sxs-lookup"><span data-stu-id="9be10-131">Add pre-trained model to project</span></span>
 
-## <a name="create-function-to-analyze-sentiment"></a><span data-ttu-id="b8412-135">センチメントを分析する関数を作成する</span><span class="sxs-lookup"><span data-stu-id="b8412-135">Create Function to Analyze Sentiment</span></span>
+1. <span data-ttu-id="9be10-132">構築済みのモデルを *MLModels* フォルダーにコピーします。</span><span class="sxs-lookup"><span data-stu-id="9be10-132">Copy your pre-built model to the *MLModels* folder.</span></span>
+1. <span data-ttu-id="9be10-133">ソリューション エクスプローラーで、構築済みのモデルのファイルを右クリックし、**[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-133">In Solution Explorer, right-click your pre-built model file and select **Properties**.</span></span> <span data-ttu-id="9be10-134">**[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-134">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
 
-<span data-ttu-id="b8412-136">センチメントを予測するクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="b8412-136">Create a class to predict sentiment.</span></span> <span data-ttu-id="b8412-137">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-137">Add a new class to your project:</span></span>
+## <a name="create-azure-function-to-analyze-sentiment"></a><span data-ttu-id="9be10-135">Azure 関数を作成してセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="9be10-135">Create Azure Function to analyze sentiment</span></span>
 
-1. <span data-ttu-id="b8412-138">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-138">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+<span data-ttu-id="9be10-136">センチメントを予測するクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="9be10-136">Create a class to predict sentiment.</span></span> <span data-ttu-id="9be10-137">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-137">Add a new class to your project:</span></span>
 
-1. <span data-ttu-id="b8412-139">**[新しい項目の追加]** ダイアログ ボックスで、**[Azure 関数]** を選択し、**[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8412-139">In the **Add New Item** dialog box, select **Azure Function** and change the **Name** field to *AnalyzeSentiment.cs*.</span></span> <span data-ttu-id="b8412-140">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-140">Then, select the **Add** button.</span></span>
+1. <span data-ttu-id="9be10-138">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-138">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="b8412-141">**[新しい Azure 関数]** ダイアログ ボックスで、**[Http トリガー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-141">In the **New Azure Function** dialog box, select **Http Trigger**.</span></span> <span data-ttu-id="b8412-142">次に、**[OK]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-142">Then, select the **OK** button.</span></span>
+1. <span data-ttu-id="9be10-139">**[新しい項目の追加]** ダイアログ ボックスで、**[Azure 関数]** を選択し、**[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-139">In the **Add New Item** dialog box, select **Azure Function** and change the **Name** field to *AnalyzeSentiment.cs*.</span></span> <span data-ttu-id="9be10-140">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-140">Then, select the **Add** button.</span></span>
 
-    <span data-ttu-id="b8412-143">コード エディターに *AnalyzeSentiment.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="b8412-143">The *AnalyzeSentiment.cs* file opens in the code editor.</span></span> <span data-ttu-id="b8412-144">*GitHubIssueData.cs* の先頭に次の `using` ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-144">Add the following `using` statement to the top of *GitHubIssueData.cs*:</span></span>
+1. <span data-ttu-id="9be10-141">**[新しい Azure 関数]** ダイアログ ボックスで、**[Http トリガー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-141">In the **New Azure Function** dialog box, select **Http Trigger**.</span></span> <span data-ttu-id="9be10-142">次に、**[OK]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-142">Then, select the **OK** button.</span></span>
 
-```csharp
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using Microsoft.ML.Data;
-using MLNETServerless.DataModels;
-```
+    <span data-ttu-id="9be10-143">コード エディターに *AnalyzeSentiment.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-143">The *AnalyzeSentiment.cs* file opens in the code editor.</span></span> <span data-ttu-id="9be10-144">*AnalyzeSentiment.cs* の先頭に次の `using` ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-144">Add the following `using` statement to the top of *AnalyzeSentiment.cs*:</span></span>
 
-### <a name="create-data-models"></a><span data-ttu-id="b8412-145">データ モデルを作成する</span><span class="sxs-lookup"><span data-stu-id="b8412-145">Create Data Models</span></span>
+    ```csharp
+    using System;
+    using System.IO;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Azure.WebJobs;
+    using Microsoft.Azure.WebJobs.Extensions.Http;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Logging;
+    using Newtonsoft.Json;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisFunctionsApp.DataModels;
+    ```
 
-<span data-ttu-id="b8412-146">入力データと予測のために、いくつかのクラスを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b8412-146">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="b8412-147">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-147">Add a new class to your project:</span></span>
+    <span data-ttu-id="9be10-145">既定では、`AnalyzeSentiment` クラスは `static`です。</span><span class="sxs-lookup"><span data-stu-id="9be10-145">By default, the `AnalyzeSentiment` class is `static`.</span></span> <span data-ttu-id="9be10-146">クラス定義から `static` キーワードを必ず削除します。</span><span class="sxs-lookup"><span data-stu-id="9be10-146">Make sure to remove the `static` keyword from the class definition.</span></span>
 
-1. <span data-ttu-id="b8412-148">データ モデルを保存するための *DataModels* という名前のディレクトリをプロジェクト内に作成します。ソリューション エクスプローラーで、プロジェクトを右クリックし、**[追加]、[新しいフォルダー]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-148">Create a directory named *DataModels* in your project to save your data models: In Solution Explorer, right-click on your project and select **Add > New Folder**.</span></span> <span data-ttu-id="b8412-149">「DataModels」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="b8412-149">Type "DataModels" and hit Enter.</span></span>
-2. <span data-ttu-id="b8412-150">ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、**[追加]、[新しいアイテム]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-150">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-3. <span data-ttu-id="b8412-151">**[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8412-151">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="b8412-152">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-152">Then, select the **Add** button.</span></span> <span data-ttu-id="b8412-153">コード エディターで *SentimentData.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="b8412-153">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="b8412-154">*SentimentData.cs* の先頭に次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-154">Add the following using statement to the top of *SentimentData.cs*:</span></span>
-
-```csharp
-using Microsoft.ML.Data;
-```
-
-<span data-ttu-id="b8412-155">既存のクラス定義を削除し、次のコードを SentimentData.cs ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-155">Remove the existing class definition and add the following code to the SentimentData.cs file:</span></span>
-
-```csharp
-public class SentimentData
-{
-    [LoadColumn(0)]
-    public bool Label { get; set; }
-    [LoadColumn(1)]
-    public string Text { get; set; }
-}
-```
-
-4. <span data-ttu-id="b8412-156">ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、**[追加]、[新しいアイテム]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-156">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-5. <span data-ttu-id="b8412-157">**[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *SentimentPrediction.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="b8412-157">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="b8412-158">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="b8412-158">Then, select the **Add** button.</span></span> <span data-ttu-id="b8412-159">コード エディターに *SentimentPrediction.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="b8412-159">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="b8412-160">*SentimentPrediction.cs* の先頭に次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-160">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
-
-```csharp
-using Microsoft.ML.Data;
-```
-
-<span data-ttu-id="b8412-161">既存のクラス定義を削除し、次のコードを *SentimentPrediction.cs* ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="b8412-161">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
-
-```csharp
-public class SentimentPrediction
-{
-    [ColumnName("PredictedLabel")]
-    public bool Prediction { get; set; }
-}
-```
-
-### <a name="add-prediction-logic"></a><span data-ttu-id="b8412-162">予測ロジックを追加する</span><span class="sxs-lookup"><span data-stu-id="b8412-162">Add Prediction Logic</span></span>
-
-<span data-ttu-id="b8412-163">*AnalyzeSentiment* クラスの *Run* メソッドの既存の実装を、次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="b8412-163">Replace the existing implementation of *Run* method in *AnalyzeSentiment* class with the following code:</span></span>
-
-```csharp
-    public static async Task<IActionResult> Run(
-        [HttpTrigger(AuthorizationLevel.Function,"post", Route = null)] HttpRequest req,
-        ILogger log)
+    ```csharp
+    public class AnalyzeSentiment
     {
-        log.LogInformation("C# HTTP trigger function processed a request.");
-
-        //Create Context
-        MLContext mlContext = new MLContext();
-
-        //Load Model
-        using (var fs = File.OpenRead("MLModels/sentiment_model.zip"))
-        {
-            model = mlContext.Model.Load(fs);
-        }
-
-        //Parse HTTP Request Body
-        string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-        SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-
-        //Create Prediction Engine
-        PredictionEngine<SentimentData, SentimentPrediction> predictionEngine = model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-
-        //Make Prediction
-        SentimentPrediction prediction = predictionEngine.Predict(data);
-
-        //Convert prediction to string
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        //Return Prediction
-        return (ActionResult)new OkObjectResult(isToxic);
+    
     }
+    ```
+
+## <a name="create-data-models"></a><span data-ttu-id="9be10-147">データ モデルを作成する</span><span class="sxs-lookup"><span data-stu-id="9be10-147">Create data models</span></span>
+
+<span data-ttu-id="9be10-148">入力データと予測のために、いくつかのクラスを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9be10-148">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="9be10-149">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-149">Add a new class to your project:</span></span>
+
+1. <span data-ttu-id="9be10-150">データ モデルを保存するための *DataModels* という名前のディレクトリをプロジェクト内に作成します。ソリューション エクスプローラーで、プロジェクトを右クリックし、**[追加]、[新しいフォルダー]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-150">Create a directory named *DataModels* in your project to save your data models: In Solution Explorer, right-click on your project and select **Add > New Folder**.</span></span> <span data-ttu-id="9be10-151">「DataModels」と入力し、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="9be10-151">Type "DataModels" and hit Enter.</span></span>
+2. <span data-ttu-id="9be10-152">ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、**[追加]、[新しいアイテム]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-152">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+3. <span data-ttu-id="9be10-153">**[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-153">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="9be10-154">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-154">Then, select the **Add** button.</span></span> 
+
+    <span data-ttu-id="9be10-155">コード エディターで *SentimentData.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-155">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="9be10-156">*SentimentData.cs* の先頭に次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-156">Add the following using statement to the top of *SentimentData.cs*:</span></span>
+
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+
+    <span data-ttu-id="9be10-157">既存のクラス定義を削除し、次のコードを *SentimentData.cs* ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-157">Remove the existing class definition and add the following code to the *SentimentData.cs* file:</span></span>
+    
+    ```csharp
+    public class SentimentData
+    {
+        [LoadColumn(0)]
+        public string SentimentText;
+
+        [LoadColumn(1)]
+        [ColumnName("Label")]
+        public bool Sentiment;
+    }
+    ```
+
+4. <span data-ttu-id="9be10-158">ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、**[追加]、[新しいアイテム]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-158">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+5. <span data-ttu-id="9be10-159">**[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *SentimentPrediction.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-159">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="9be10-160">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-160">Then, select the **Add** button.</span></span> <span data-ttu-id="9be10-161">コード エディターに *SentimentPrediction.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-161">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="9be10-162">*SentimentPrediction.cs* の先頭に次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-162">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
+
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+
+    <span data-ttu-id="9be10-163">既存のクラス定義を削除し、次のコードを *SentimentPrediction.cs* ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-163">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
+
+    ```csharp
+    public class SentimentPrediction : SentimentData
+    {
+
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
+
+        public float Probability { get; set; }
+
+        public float Score { get; set; }
+    }
+    ```
+
+    <span data-ttu-id="9be10-164">`SentimentPrediction` は `SentimentData` を継承し、モデルによって生成された出力だけでなく `SentimentText` プロパティで元のデータへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="9be10-164">`SentimentPrediction` inherits from `SentimentData` which provides access to the original data in the `SentimentText` property as well as the output generated by the model.</span></span>
+
+## <a name="register-predictionenginepool-service"></a><span data-ttu-id="9be10-165">PredictionEnginePool サービスを登録する</span><span class="sxs-lookup"><span data-stu-id="9be10-165">Register PredictionEnginePool service</span></span>
+
+<span data-ttu-id="9be10-166">1 つの予測をするためには、[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。</span><span class="sxs-lookup"><span data-stu-id="9be10-166">To make a single prediction, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="9be10-167">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) をお使いのアプリケーションで使用するには、必要に応じて、作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9be10-167">In order to use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) in your application you must create it when it's needed.</span></span> <span data-ttu-id="9be10-168">その場合、ベスト プラクティスとして、依存関係を挿入することを検討します。</span><span class="sxs-lookup"><span data-stu-id="9be10-168">In that case, a best practice to consider is dependency injection.</span></span>
+
+<span data-ttu-id="9be10-169">依存関係の注入の詳細については、[こちらのリンク](https://en.wikipedia.org/wiki/Dependency_injection)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9be10-169">The following link provides more information if you want to learn about [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection).</span></span>
+
+1. <span data-ttu-id="9be10-170">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-170">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="9be10-171">**[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを「*Startup.cs*」に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-171">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *Startup.cs*.</span></span> <span data-ttu-id="9be10-172">次に、**[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-172">Then, select the **Add** button.</span></span> 
+
+    <span data-ttu-id="9be10-173">コード エディターに *Startup.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-173">The *Startup.cs* file opens in the code editor.</span></span> <span data-ttu-id="9be10-174">*Startup.cs* の先頭に次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-174">Add the following using statement to the top of *Startup.cs*:</span></span>
+
+    ```csharp
+    using Microsoft.Azure.WebJobs;
+    using Microsoft.Azure.WebJobs.Hosting;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisFunctionsApp;
+    using SentimentAnalysisFunctionsApp.DataModels;
+    ```
+
+    <span data-ttu-id="9be10-175">using ステートメントの下にある既存のコードを削除し、*Startup.cs* ファイルに次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-175">Remove the existing code below the using statements and add the following code to the *Startup.cs* file:</span></span>
+
+    ```csharp
+    [assembly: WebJobsStartup(typeof(Startup))]
+    namespace SentimentAnalysisFunctionsApp
+    {
+        class Startup : IWebJobsStartup
+        {
+            public void Configure(IWebJobsBuilder builder)
+            {
+                builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+                    .FromFile("MLModels/sentiment_model.zip");
+            }
+        }
+    }
+    ```
+
+<span data-ttu-id="9be10-176">大まかに言えば、このコードは、オブジェクトとサービスがアプリケーションによって要求されたときに、初期化を手動ではなく自動的に実行します。</span><span class="sxs-lookup"><span data-stu-id="9be10-176">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="9be10-177">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。</span><span class="sxs-lookup"><span data-stu-id="9be10-177">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="9be10-178">パフォーマンスの向上とスレッドの安全性のために、`PredictionEnginePool` サービスを使用します。これにより、アプリケーションで使用される `PredictionEngine` オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。</span><span class="sxs-lookup"><span data-stu-id="9be10-178">For improved performance and thread safety, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of `PredictionEngine` objects for application use.</span></span> 
+
+## <a name="register-startup-as-an-azure-functions-extension"></a><span data-ttu-id="9be10-179">Azure Functions の拡張機能として Startup を登録する</span><span class="sxs-lookup"><span data-stu-id="9be10-179">Register Startup as an Azure Functions extension</span></span>
+
+<span data-ttu-id="9be10-180">`Startup` をお使いのアプリケーションで使用するには、Azure Functions の拡張機能として登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9be10-180">In order to use `Startup` in your application, you need to register it as an Azure Functions extension.</span></span> <span data-ttu-id="9be10-181">まだ存在しない場合は、*extensions.json* という新しいファイルをお使いのプロジェクト内に作成します。</span><span class="sxs-lookup"><span data-stu-id="9be10-181">Create a new file called *extensions.json* in your project if one does not already exist.</span></span>
+
+1. <span data-ttu-id="9be10-182">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-182">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="9be10-183">**[新しい項目]** ダイアログで、**[Visual C#]** ノード、**[Web]** ノードの順に選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-183">In the **New Item** dialog, select the **Visual C#** node followed by the **Web** node.</span></span> <span data-ttu-id="9be10-184">次に、**[Json ファイル]** オプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-184">Then select the **Json File** option.</span></span> <span data-ttu-id="9be10-185">**[名前]** テキスト ボックスに「extensions.json」と入力し、**[OK]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-185">In the **Name** text box, type "extensions.json" and then select the **OK** button.</span></span>
+
+    <span data-ttu-id="9be10-186">コード エディターに *extensions.json* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="9be10-186">The *extensions.json* file opens in the code editor.</span></span> <span data-ttu-id="9be10-187">次の内容を *extensions.json* に追加します。</span><span class="sxs-lookup"><span data-stu-id="9be10-187">Add the following content to *extensions.json*:</span></span>
+    
+    ```json
+    {
+      "extensions": [
+        {
+          "name": "Startup",
+          "typename": "SentimentAnalysisFunctionsApp.Startup, SentimentAnalysisFunctionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        }
+      ]
+    }
+    ```
+
+1. <span data-ttu-id="9be10-188">ソリューション エクスプローラーで、*extensions.json* ファイルを右クリックし、**[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="9be10-188">In Solution Explorer, right-click your *extensions.json* file and select **Properties**.</span></span> <span data-ttu-id="9be10-189">**[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="9be10-189">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
+
+## <a name="load-the-model-into-the-function"></a><span data-ttu-id="9be10-190">関数にモデルを読み込む</span><span class="sxs-lookup"><span data-stu-id="9be10-190">Load the model into the function</span></span>
+
+<span data-ttu-id="9be10-191">次のコードを *AnalyzeSentiment* クラス内に挿入します。</span><span class="sxs-lookup"><span data-stu-id="9be10-191">Insert the following code inside the *AnalyzeSentiment* class:</span></span>
+
+```csharp
+private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
+
+// AnalyzeSentiment class constructor
+public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
+{
+    _predictionEnginePool = predictionEnginePool;
 }
 ```
 
-## <a name="test-locally"></a><span data-ttu-id="b8412-164">ローカルでテストする</span><span class="sxs-lookup"><span data-stu-id="b8412-164">Test Locally</span></span>
+<span data-ttu-id="9be10-192">このコードでは、依存関係の挿入を通して取得する関数のコンストラクターに渡すことで、`PredictionEnginePool` を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="9be10-192">This code assigns the `PredictionEnginePool` by passing it to the function's constructor which you get via dependency injection.</span></span>
 
-<span data-ttu-id="b8412-165">すべてが設定されたので、アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="b8412-165">Now that everything is set up, it's time to test the application:</span></span>
+## <a name="use-the-model-to-make-predictions"></a><span data-ttu-id="9be10-193">モデルを使用して予測を行う</span><span class="sxs-lookup"><span data-stu-id="9be10-193">Use the model to make predictions</span></span>
 
-1. <span data-ttu-id="b8412-166">アプリケーションの実行</span><span class="sxs-lookup"><span data-stu-id="b8412-166">Run the application</span></span>
-1. <span data-ttu-id="b8412-167">PowerShell を開き、プロンプトにコードを入力します。PORT は、アプリケーションが実行されているポートです。</span><span class="sxs-lookup"><span data-stu-id="b8412-167">Open PowerShell and enter the code into the prompt where PORT is the port your application is running on.</span></span> <span data-ttu-id="b8412-168">通常、このポートは 7071 です。</span><span class="sxs-lookup"><span data-stu-id="b8412-168">Typically the port is 7071.</span></span> 
+<span data-ttu-id="9be10-194">*AnalyzeSentiment* クラスの *Run* メソッドの既存の実装を、次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="9be10-194">Replace the existing implementation of *Run* method in *AnalyzeSentiment* class with the following code:</span></span>
 
-```powershell
-Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"
+```csharp
+[FunctionName("AnalyzeSentiment")]
+public async Task<IActionResult> Run(
+[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+ILogger log)
+{
+    log.LogInformation("C# HTTP trigger function processed a request.");
+
+    //Parse HTTP Request Body
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
+    
+    //Make Prediction
+    SentimentPrediction prediction = _predictionEnginePool.Predict(data);
+
+    //Convert prediction to string
+    string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
+
+    //Return Prediction
+    return (ActionResult)new OkObjectResult(sentiment);
+}
 ```
 
-<span data-ttu-id="b8412-169">成功した場合、出力は次のテキストのようになります。</span><span class="sxs-lookup"><span data-stu-id="b8412-169">If successful, the output should look similar to the text below:</span></span>
+<span data-ttu-id="9be10-195">`Run` メソッドが実行されると、HTTP 要求からの受信データが逆シリアル化されて、`PredictionEnginePool` への入力として使用されます。</span><span class="sxs-lookup"><span data-stu-id="9be10-195">When the `Run` method executes, the incoming data from the HTTP request is deserialized and used as input for the `PredictionEnginePool`.</span></span> <span data-ttu-id="9be10-196">その後、予測を生成してその結果をユーザーに返すために、`Predict` メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9be10-196">The `Predict` method is then called to generate a prediction and return the result to the user.</span></span> 
 
-```powershell
-Toxic
-```
+## <a name="test-locally"></a><span data-ttu-id="9be10-197">ローカルでテストする</span><span class="sxs-lookup"><span data-stu-id="9be10-197">Test locally</span></span>
 
-<span data-ttu-id="b8412-170">おめでとうございます! </span><span class="sxs-lookup"><span data-stu-id="b8412-170">Congratulations!</span></span> <span data-ttu-id="b8412-171">Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。</span><span class="sxs-lookup"><span data-stu-id="b8412-171">You have successfully served your model to make predictions over the internet using an Azure Function.</span></span>
+<span data-ttu-id="9be10-198">すべてが設定されたので、アプリケーションをテストします。</span><span class="sxs-lookup"><span data-stu-id="9be10-198">Now that everything is set up, it's time to test the application:</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="b8412-172">次の手順</span><span class="sxs-lookup"><span data-stu-id="b8412-172">Next Steps</span></span>
+1. <span data-ttu-id="9be10-199">アプリケーションの実行</span><span class="sxs-lookup"><span data-stu-id="9be10-199">Run the application</span></span>
+1. <span data-ttu-id="9be10-200">PowerShell を開き、プロンプトにコードを入力します。PORT は、アプリケーションが実行されているポートです。</span><span class="sxs-lookup"><span data-stu-id="9be10-200">Open PowerShell and enter the code into the prompt where PORT is the port your application is running on.</span></span> <span data-ttu-id="9be10-201">通常、このポートは 7071 です。</span><span class="sxs-lookup"><span data-stu-id="9be10-201">Typically the port is 7071.</span></span>
 
-- [<span data-ttu-id="b8412-173">Azure に配置する</span><span class="sxs-lookup"><span data-stu-id="b8412-173">Deploy to Azure</span></span>](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+    ```powershell
+    Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -Body (@{SentimentText="This is a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    ```
+
+    <span data-ttu-id="9be10-202">成功した場合、出力は次のテキストのようになります。</span><span class="sxs-lookup"><span data-stu-id="9be10-202">If successful, the output should look similar to the text below:</span></span>
+    
+    ```powershell
+    Negative
+    ```
+
+<span data-ttu-id="9be10-203">おめでとうございます! </span><span class="sxs-lookup"><span data-stu-id="9be10-203">Congratulations!</span></span> <span data-ttu-id="9be10-204">Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。</span><span class="sxs-lookup"><span data-stu-id="9be10-204">You have successfully served your model to make predictions over the internet using an Azure Function.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="9be10-205">次の手順</span><span class="sxs-lookup"><span data-stu-id="9be10-205">Next Steps</span></span>
+
+- [<span data-ttu-id="9be10-206">Azure に配置する</span><span class="sxs-lookup"><span data-stu-id="9be10-206">Deploy to Azure</span></span>](/azure/azure-functions/functions-develop-vs#publish-to-azure)
