@@ -16,39 +16,39 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66300788"
 ---
-# <a name="configsections-element-for-configuration"></a><span data-ttu-id="13f0c-102">\<configSections > 要素の\<構成 ></span><span class="sxs-lookup"><span data-stu-id="13f0c-102">\<configSections> element for \<configuration></span></span>
+# <a name="configsections-element-for-configuration"></a><span data-ttu-id="05819-102">\<configSections > 要素の\<構成 ></span><span class="sxs-lookup"><span data-stu-id="05819-102">\<configSections> element for \<configuration></span></span>
 
-<span data-ttu-id="13f0c-103">構成セクションと名前空間宣言が含まれています。</span><span class="sxs-lookup"><span data-stu-id="13f0c-103">Contains configuration section and namespace declarations.</span></span>
+<span data-ttu-id="05819-103">構成セクションと名前空間宣言が含まれています。</span><span class="sxs-lookup"><span data-stu-id="05819-103">Contains configuration section and namespace declarations.</span></span>
 
-<span data-ttu-id="13f0c-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="13f0c-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="13f0c-105">&nbsp;&nbsp; **\<configSections>**</span><span class="sxs-lookup"><span data-stu-id="13f0c-105">&nbsp;&nbsp;**\<configSections>**</span></span>
+<span data-ttu-id="05819-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="05819-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="05819-105">&nbsp;&nbsp; **\<configSections>**</span><span class="sxs-lookup"><span data-stu-id="05819-105">&nbsp;&nbsp;**\<configSections>**</span></span>
 
-## <a name="attributes"></a><span data-ttu-id="13f0c-106">属性</span><span class="sxs-lookup"><span data-stu-id="13f0c-106">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="05819-106">属性</span><span class="sxs-lookup"><span data-stu-id="05819-106">Attributes</span></span>
 
-<span data-ttu-id="13f0c-107">なし</span><span class="sxs-lookup"><span data-stu-id="13f0c-107">None</span></span>
+<span data-ttu-id="05819-107">なし</span><span class="sxs-lookup"><span data-stu-id="05819-107">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="13f0c-108">親要素</span><span class="sxs-lookup"><span data-stu-id="13f0c-108">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="05819-108">親要素</span><span class="sxs-lookup"><span data-stu-id="05819-108">Parent element</span></span>
 
-|     | <span data-ttu-id="13f0c-109">説明</span><span class="sxs-lookup"><span data-stu-id="13f0c-109">Description</span></span> |
+|     | <span data-ttu-id="05819-109">説明</span><span class="sxs-lookup"><span data-stu-id="05819-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="13f0c-110"> *\*\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="13f0c-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="13f0c-111">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="13f0c-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="05819-110"> *\*\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="05819-110">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="05819-111">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="05819-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="13f0c-112">子要素</span><span class="sxs-lookup"><span data-stu-id="13f0c-112">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="05819-112">子要素</span><span class="sxs-lookup"><span data-stu-id="05819-112">Child elements</span></span>
 
-|     | <span data-ttu-id="13f0c-113">説明</span><span class="sxs-lookup"><span data-stu-id="13f0c-113">Description</span></span> |
+|     | <span data-ttu-id="05819-113">説明</span><span class="sxs-lookup"><span data-stu-id="05819-113">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="13f0c-114"> *\*\<section>** </span><span class="sxs-lookup"><span data-stu-id="13f0c-114">**\<section>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="13f0c-115">構成セクションの宣言が含まれています。</span><span class="sxs-lookup"><span data-stu-id="13f0c-115">Contains a configuration section declaration.</span></span> |
-| [<span data-ttu-id="13f0c-116"> *\*\<sectionGroup>** </span><span class="sxs-lookup"><span data-stu-id="13f0c-116">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="13f0c-117">構成セクションの名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="13f0c-117">Defines a namespace for configuration sections.</span></span> |
-| [<span data-ttu-id="13f0c-118"> *\*\<remove>** </span><span class="sxs-lookup"><span data-stu-id="13f0c-118">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="13f0c-119">定義済みのセクション、またはセクション グループを削除します。</span><span class="sxs-lookup"><span data-stu-id="13f0c-119">Removes a predefined section or section group.</span></span> |
-| [<span data-ttu-id="13f0c-120"> *\*\<clear>** </span><span class="sxs-lookup"><span data-stu-id="13f0c-120">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="13f0c-121">以前に定義されたセクションおよびセクション グループのすべてをクリアします。</span><span class="sxs-lookup"><span data-stu-id="13f0c-121">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="05819-114"> *\*\<section>** </span><span class="sxs-lookup"><span data-stu-id="05819-114">**\<section>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="05819-115">構成セクションの宣言が含まれています。</span><span class="sxs-lookup"><span data-stu-id="05819-115">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="05819-116"> *\*\<sectionGroup>** </span><span class="sxs-lookup"><span data-stu-id="05819-116">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="05819-117">構成セクションの名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="05819-117">Defines a namespace for configuration sections.</span></span> |
+| [<span data-ttu-id="05819-118"> *\*\<remove>** </span><span class="sxs-lookup"><span data-stu-id="05819-118">**\<remove>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="05819-119">定義済みのセクション、またはセクション グループを削除します。</span><span class="sxs-lookup"><span data-stu-id="05819-119">Removes a predefined section or section group.</span></span> |
+| [<span data-ttu-id="05819-120"> *\*\<clear>** </span><span class="sxs-lookup"><span data-stu-id="05819-120">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="05819-121">以前に定義されたセクションおよびセクション グループのすべてをクリアします。</span><span class="sxs-lookup"><span data-stu-id="05819-121">Clears all previously defined sections and section groups.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="13f0c-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="13f0c-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="05819-122">Remarks</span><span class="sxs-lookup"><span data-stu-id="05819-122">Remarks</span></span>
 
-<span data-ttu-id="13f0c-123">この要素は、構成ファイルでは場合の最初の子要素があります、 **\<構成 >** 要素。</span><span class="sxs-lookup"><span data-stu-id="13f0c-123">If this element is in a configuration file, it must be the first child element of the **\<configuration>** element.</span></span>
+<span data-ttu-id="05819-123">この要素は、構成ファイルでは場合の最初の子要素があります、 **\<構成 >** 要素。</span><span class="sxs-lookup"><span data-stu-id="05819-123">If this element is in a configuration file, it must be the first child element of the **\<configuration>** element.</span></span>
 
-## <a name="example"></a><span data-ttu-id="13f0c-124">例</span><span class="sxs-lookup"><span data-stu-id="13f0c-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="05819-124">例</span><span class="sxs-lookup"><span data-stu-id="05819-124">Example</span></span>
 
-<span data-ttu-id="13f0c-125">次の例では、構成セクションを定義し、そのセクションの設定を定義する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="13f0c-125">The following example shows how to define a configuration section and define settings for that section:</span></span>
+<span data-ttu-id="05819-125">次の例では、構成セクションを定義し、そのセクションの設定を定義する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="05819-125">The following example shows how to define a configuration section and define settings for that section:</span></span>
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ ms.locfileid: "66300788"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="13f0c-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="13f0c-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="05819-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="05819-126">Configuration file</span></span>
 
-<span data-ttu-id="13f0c-127">この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。</span><span class="sxs-lookup"><span data-stu-id="13f0c-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="05819-127">この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。</span><span class="sxs-lookup"><span data-stu-id="05819-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="13f0c-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="13f0c-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05819-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="05819-128">See also</span></span>
 
-- [<span data-ttu-id="13f0c-129">.NET Framework の構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="13f0c-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="05819-129">.NET Framework の構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="05819-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
