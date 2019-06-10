@@ -2,22 +2,22 @@
 title: '方法: 名前空間内の XML に対するクエリを記述する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d33ecc22d8eb6ea4a08b56fbed6b6b437a5e3216
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722099"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484635"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="a5f54-102">方法: 名前空間内の XML に対するクエリを記述する (C#)</span><span class="sxs-lookup"><span data-stu-id="a5f54-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
-<span data-ttu-id="a5f54-103">名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a5f54-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="3713f-102">方法: 名前空間内の XML に対するクエリを記述する (C#)</span><span class="sxs-lookup"><span data-stu-id="3713f-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
+<span data-ttu-id="3713f-103">名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3713f-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="a5f54-104">C# での最も一般的な方法は、URI を含んだ文字列を使用して <xref:System.Xml.Linq.XNamespace> を初期化し、加算演算子オーバーロードを使用して名前空間をローカル名に連結することです。</span><span class="sxs-lookup"><span data-stu-id="a5f54-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
+ <span data-ttu-id="3713f-104">C# での最も一般的な方法は、URI を含んだ文字列を使用して <xref:System.Xml.Linq.XNamespace> を初期化し、加算演算子オーバーロードを使用して名前空間をローカル名に連結することです。</span><span class="sxs-lookup"><span data-stu-id="3713f-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
   
- <span data-ttu-id="a5f54-105">このトピックの最初に示す一連の例では、既定の名前空間内に XML ツリーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a5f54-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="a5f54-106">2 つ目の例では、プレフィックスを持つ名前空間で XML ツリーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a5f54-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="3713f-105">このトピックの最初に示す一連の例では、既定の名前空間内に XML ツリーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3713f-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="3713f-106">2 つ目の例では、プレフィックスを持つ名前空間で XML ツリーを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3713f-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a5f54-107">例</span><span class="sxs-lookup"><span data-stu-id="a5f54-107">Example</span></span>  
- <span data-ttu-id="a5f54-108">次の例では、既定の名前空間に含まれる XML ツリーを作成しています。</span><span class="sxs-lookup"><span data-stu-id="a5f54-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="a5f54-109">さらに、要素のコレクションを取得しています。</span><span class="sxs-lookup"><span data-stu-id="a5f54-109">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="3713f-107">例</span><span class="sxs-lookup"><span data-stu-id="3713f-107">Example</span></span>  
+ <span data-ttu-id="3713f-108">次の例では、既定の名前空間に含まれる XML ツリーを作成しています。</span><span class="sxs-lookup"><span data-stu-id="3713f-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="3713f-109">さらに、要素のコレクションを取得しています。</span><span class="sxs-lookup"><span data-stu-id="3713f-109">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -37,7 +37,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="a5f54-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="a5f54-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="3713f-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="3713f-110">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -45,10 +45,10 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a5f54-111">例</span><span class="sxs-lookup"><span data-stu-id="a5f54-111">Example</span></span>  
- <span data-ttu-id="a5f54-112">C# では、プレフィックスを持つ名前空間を使用する XML ツリーでも、既定の名前空間を持つ XML ツリーでも、クエリを記述する方法は同じです。</span><span class="sxs-lookup"><span data-stu-id="a5f54-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="3713f-111">例</span><span class="sxs-lookup"><span data-stu-id="3713f-111">Example</span></span>  
+ <span data-ttu-id="3713f-112">C# では、プレフィックスを持つ名前空間を使用する XML ツリーでも、既定の名前空間を持つ XML ツリーでも、クエリを記述する方法は同じです。</span><span class="sxs-lookup"><span data-stu-id="3713f-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
   
- <span data-ttu-id="a5f54-113">次の例では、プレフィックスを持つ名前空間に含まれる XML ツリーを作成しています。</span><span class="sxs-lookup"><span data-stu-id="a5f54-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="a5f54-114">さらに、要素のコレクションを取得しています。</span><span class="sxs-lookup"><span data-stu-id="a5f54-114">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="3713f-113">次の例では、プレフィックスを持つ名前空間に含まれる XML ツリーを作成しています。</span><span class="sxs-lookup"><span data-stu-id="3713f-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="3713f-114">さらに、要素のコレクションを取得しています。</span><span class="sxs-lookup"><span data-stu-id="3713f-114">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -68,7 +68,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="a5f54-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="a5f54-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="3713f-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="3713f-115">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -76,6 +76,6 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a5f54-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5f54-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3713f-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3713f-116">See also</span></span>
 
-- [<span data-ttu-id="a5f54-117">XML 名前空間の使用 (C#)</span><span class="sxs-lookup"><span data-stu-id="a5f54-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="3713f-117">XML 名前空間の使用 (C#)</span><span class="sxs-lookup"><span data-stu-id="3713f-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
