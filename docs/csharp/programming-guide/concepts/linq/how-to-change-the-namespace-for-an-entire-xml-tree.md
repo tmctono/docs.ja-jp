@@ -2,20 +2,20 @@
 title: '方法: XML ツリー全体の名前空間を変更する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 020d072cfb58c90720317734199d241c6892511f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d046e01798c193ee0ea459f522a5c29187c697d7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539923"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487451"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="dbe23-102">方法: XML ツリー全体の名前空間を変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="dbe23-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
-<span data-ttu-id="dbe23-103">要素または属性の名前空間をプログラムで変更しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="dbe23-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="dbe23-104">LINQ to XML では、この操作を簡単に行うことができます。</span><span class="sxs-lookup"><span data-stu-id="dbe23-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="dbe23-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> プロパティを設定できます。</span><span class="sxs-lookup"><span data-stu-id="dbe23-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="dbe23-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> プロパティは設定できませんが、簡単に属性を <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> にコピーし、既存の属性を削除して、目的の新しい名前空間に含まれる新しい属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="dbe23-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a><span data-ttu-id="8121d-102">方法: XML ツリー全体の名前空間を変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="8121d-102">How to: Change the Namespace for an Entire XML Tree (C#)</span></span>
+<span data-ttu-id="8121d-103">要素または属性の名前空間をプログラムで変更しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="8121d-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="8121d-104">LINQ to XML では、この操作を簡単に行うことができます。</span><span class="sxs-lookup"><span data-stu-id="8121d-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="8121d-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> プロパティを設定できます。</span><span class="sxs-lookup"><span data-stu-id="8121d-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="8121d-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> プロパティは設定できませんが、簡単に属性を <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> にコピーし、既存の属性を削除して、目的の新しい名前空間に含まれる新しい属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="8121d-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- <span data-ttu-id="dbe23-107">詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dbe23-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="8121d-107">詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8121d-107">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dbe23-108">例</span><span class="sxs-lookup"><span data-stu-id="dbe23-108">Example</span></span>  
- <span data-ttu-id="dbe23-109">次のコードは、名前空間に含まれない 2 つの XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="dbe23-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="dbe23-110">次に、各ツリーの名前空間を変更して、1 つのツリーに結合します。</span><span class="sxs-lookup"><span data-stu-id="dbe23-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="8121d-108">例</span><span class="sxs-lookup"><span data-stu-id="8121d-108">Example</span></span>  
+ <span data-ttu-id="8121d-109">次のコードは、名前空間に含まれない 2 つの XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="8121d-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="8121d-110">次に、各ツリーの名前空間を変更して、1 つのツリーに結合します。</span><span class="sxs-lookup"><span data-stu-id="8121d-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```csharp  
 XElement tree1 = new XElement("Data",  
@@ -64,7 +64,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- <span data-ttu-id="dbe23-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="dbe23-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="8121d-111">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8121d-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -76,7 +76,3 @@ Console.WriteLine(root);
   </ad:Data>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="dbe23-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="dbe23-112">See also</span></span>
-
-- [<span data-ttu-id="dbe23-113">XML ツリーの変更 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="dbe23-113">Modifying XML Trees (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

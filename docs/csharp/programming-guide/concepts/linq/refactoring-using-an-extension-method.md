@@ -2,26 +2,26 @@
 title: 拡張メソッドを使用したリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 0f41c4b4357125b6c92b17d8c818a0cfcf9822e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06c09b1c76e0c5287cc3bf96947b2ebf54337592
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596180"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487262"
 ---
-# <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="235c9-102">拡張メソッドを使用したリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="235c9-102">Refactoring Using an Extension Method (C#)</span></span>
-<span data-ttu-id="235c9-103">ここに示す例は、前の例「[段落のテキストの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)」に基づいており、拡張メソッドとして実装される純粋関数を使って文字列の連結をリファクターしています。</span><span class="sxs-lookup"><span data-stu-id="235c9-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
+# <a name="refactoring-using-an-extension-method-c"></a><span data-ttu-id="c7683-102">拡張メソッドを使用したリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="c7683-102">Refactoring Using an Extension Method (C#)</span></span>
+<span data-ttu-id="c7683-103">ここに示す例は、前の例「[段落のテキストの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)」に基づいており、拡張メソッドとして実装される純粋関数を使って文字列の連結をリファクターしています。</span><span class="sxs-lookup"><span data-stu-id="c7683-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  
   
- <span data-ttu-id="235c9-104">前の例では、<xref:System.Linq.Enumerable.Aggregate%2A> 標準クエリ演算子を使用して、複数の文字列が 1 つの文字列に連結されていました。</span><span class="sxs-lookup"><span data-stu-id="235c9-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="235c9-105">ただし、拡張メソッドでこの処理を記述した方が、結果のクエリが小さく簡単になるので便利です。</span><span class="sxs-lookup"><span data-stu-id="235c9-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
+ <span data-ttu-id="c7683-104">前の例では、<xref:System.Linq.Enumerable.Aggregate%2A> 標準クエリ演算子を使用して、複数の文字列が 1 つの文字列に連結されていました。</span><span class="sxs-lookup"><span data-stu-id="c7683-104">The previous example used the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span> <span data-ttu-id="c7683-105">ただし、拡張メソッドでこの処理を記述した方が、結果のクエリが小さく簡単になるので便利です。</span><span class="sxs-lookup"><span data-stu-id="c7683-105">However, it is more convenient to write an extension method to do this, because the resulting query smaller and more simple.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="235c9-106">例</span><span class="sxs-lookup"><span data-stu-id="235c9-106">Example</span></span>  
- <span data-ttu-id="235c9-107">この例では、WordprocessingML ドキュメントを処理して、段落、各段落のスタイル、および各段落のテキストを取得します。</span><span class="sxs-lookup"><span data-stu-id="235c9-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="235c9-108">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="235c9-108">This example builds on the previous examples in this tutorial.</span></span>  
+## <a name="example"></a><span data-ttu-id="c7683-106">例</span><span class="sxs-lookup"><span data-stu-id="c7683-106">Example</span></span>  
+ <span data-ttu-id="c7683-107">この例では、WordprocessingML ドキュメントを処理して、段落、各段落のスタイル、および各段落のテキストを取得します。</span><span class="sxs-lookup"><span data-stu-id="c7683-107">This example processes a WordprocessingML document, retrieving the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="c7683-108">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="c7683-108">This example builds on the previous examples in this tutorial.</span></span>  
   
- <span data-ttu-id="235c9-109">この例には、`StringConcatenate` メソッドの複数のオーバーロードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="235c9-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
+ <span data-ttu-id="c7683-109">この例には、`StringConcatenate` メソッドの複数のオーバーロードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="c7683-109">The example contains multiple overloads of the `StringConcatenate` method.</span></span>  
   
- <span data-ttu-id="235c9-110">この例のソース ドキュメントを作成する手順については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="235c9-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="c7683-110">この例のソース ドキュメントを作成する手順については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c7683-110">You can find instructions for creating the source document for this example in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="235c9-111">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="235c9-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="235c9-112">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="235c9-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="c7683-111">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="c7683-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="c7683-112">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="c7683-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,10 +62,10 @@ public static class LocalExtensions
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="235c9-113">例</span><span class="sxs-lookup"><span data-stu-id="235c9-113">Example</span></span>  
- <span data-ttu-id="235c9-114">`StringConcatenate` メソッドには 4 つのオーバーロードがあります。</span><span class="sxs-lookup"><span data-stu-id="235c9-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="235c9-115">あるオーバーロードは、文字列のコレクションを受け取って 1 つの文字列を返します。</span><span class="sxs-lookup"><span data-stu-id="235c9-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="235c9-116">別のオーバーロードは、任意の型のコレクション、および単一のコレクションを文字列に射影するデリゲートを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="235c9-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="235c9-117">残りの 2 つのオーバーロードでは、区切り文字列を指定できます。</span><span class="sxs-lookup"><span data-stu-id="235c9-117">There are two more overloads that allow you to specify a separator string.</span></span>  
+## <a name="example"></a><span data-ttu-id="c7683-113">例</span><span class="sxs-lookup"><span data-stu-id="c7683-113">Example</span></span>  
+ <span data-ttu-id="c7683-114">`StringConcatenate` メソッドには 4 つのオーバーロードがあります。</span><span class="sxs-lookup"><span data-stu-id="c7683-114">There are four overloads of the `StringConcatenate` method.</span></span> <span data-ttu-id="c7683-115">あるオーバーロードは、文字列のコレクションを受け取って 1 つの文字列を返します。</span><span class="sxs-lookup"><span data-stu-id="c7683-115">One overload simply takes a collection of strings and returns a single string.</span></span> <span data-ttu-id="c7683-116">別のオーバーロードは、任意の型のコレクション、および単一のコレクションを文字列に射影するデリゲートを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="c7683-116">Another overload can take a collection of any type, and a delegate that projects from a singleton of the collection to a string.</span></span> <span data-ttu-id="c7683-117">残りの 2 つのオーバーロードでは、区切り文字列を指定できます。</span><span class="sxs-lookup"><span data-stu-id="c7683-117">There are two more overloads that allow you to specify a separator string.</span></span>  
   
- <span data-ttu-id="235c9-118">次のコードでは、4 つのオーバーロードがすべて使用されています。</span><span class="sxs-lookup"><span data-stu-id="235c9-118">The following code uses all four overloads.</span></span>  
+ <span data-ttu-id="c7683-118">次のコードでは、4 つのオーバーロードがすべて使用されています。</span><span class="sxs-lookup"><span data-stu-id="c7683-118">The following code uses all four overloads.</span></span>  
   
 ```csharp  
 string[] numbers = { "one", "two", "three" };  
@@ -78,7 +78,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString()));
 Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));  
 ```  
   
- <span data-ttu-id="235c9-119">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="235c9-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="c7683-119">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c7683-119">This example produces the following output:</span></span>  
   
 ```  
 onetwothree  
@@ -87,8 +87,8 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a><span data-ttu-id="235c9-120">例</span><span class="sxs-lookup"><span data-stu-id="235c9-120">Example</span></span>  
- <span data-ttu-id="235c9-121">ここで、新しい拡張メソッドを利用するように例を変更します。</span><span class="sxs-lookup"><span data-stu-id="235c9-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
+## <a name="example"></a><span data-ttu-id="c7683-120">例</span><span class="sxs-lookup"><span data-stu-id="c7683-120">Example</span></span>  
+ <span data-ttu-id="c7683-121">ここで、新しい拡張メソッドを利用するように例を変更します。</span><span class="sxs-lookup"><span data-stu-id="c7683-121">Now, the example can be modified to take advantage of the new extension method:</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -219,7 +219,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="235c9-122">この例を「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="235c9-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="c7683-122">この例を「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているドキュメントに適用すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c7683-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -239,14 +239,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- <span data-ttu-id="235c9-123">このリファクタリングは、純粋関数へのリファクタリングの変化形であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="235c9-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="235c9-124">次のトピックでは、純粋関数へのリファクタリングに関する考え方について詳しく紹介します。</span><span class="sxs-lookup"><span data-stu-id="235c9-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
+ <span data-ttu-id="c7683-123">このリファクタリングは、純粋関数へのリファクタリングの変化形であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="c7683-123">Note that this refactoring is a variant of refactoring into a pure function.</span></span> <span data-ttu-id="c7683-124">次のトピックでは、純粋関数へのリファクタリングに関する考え方について詳しく紹介します。</span><span class="sxs-lookup"><span data-stu-id="c7683-124">The next topic will introduce the idea of factoring into pure functions in more detail.</span></span>  
   
-## <a name="next-steps"></a><span data-ttu-id="235c9-125">次の手順</span><span class="sxs-lookup"><span data-stu-id="235c9-125">Next Steps</span></span>  
- <span data-ttu-id="235c9-126">次の例は、純粋関数を使用してこのコードをリファクターする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="235c9-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="c7683-125">次の手順</span><span class="sxs-lookup"><span data-stu-id="c7683-125">Next Steps</span></span>  
+ <span data-ttu-id="c7683-126">次の例は、純粋関数を使用してこのコードをリファクターする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="c7683-126">The next example shows how to refactor this code in another way, by using pure functions:</span></span>  
   
-- [<span data-ttu-id="235c9-127">純粋関数によるリファクタリング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="235c9-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [<span data-ttu-id="c7683-127">純粋関数によるリファクタリング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7683-127">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a><span data-ttu-id="235c9-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="235c9-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7683-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7683-128">See also</span></span>
 
-- [<span data-ttu-id="235c9-129">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="235c9-129">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="235c9-130">純粋関数へのリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="235c9-130">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [<span data-ttu-id="c7683-129">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)</span><span class="sxs-lookup"><span data-stu-id="c7683-129">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
+- [<span data-ttu-id="c7683-130">純粋関数へのリファクタリング (C#)</span><span class="sxs-lookup"><span data-stu-id="c7683-130">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
