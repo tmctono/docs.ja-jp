@@ -2,34 +2,33 @@
 title: '方法: リフレクション (LINQ) (Visual Basic) を使用してアセンブリのメタデータを照会します。'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: cea1469e6f0acc9c958be9247d7d3d750d881afe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fd9fa5fcbd1f02cec4e96511fa8c4e60d77ce965
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586347"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026059"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="04eb4-102">方法: リフレクション (LINQ) (Visual Basic) を使用してアセンブリのメタデータを照会します。</span><span class="sxs-lookup"><span data-stu-id="04eb4-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="04eb4-103">次の例では、LINQ でリフレクションを使用して、指定した検索条件に一致するメソッドについてのメタデータを取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="04eb4-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="04eb4-104">この例のクエリでは、配列などの列挙可能な型を返すすべてのメソッドの名前をアセンブリ内で検索します。</span><span class="sxs-lookup"><span data-stu-id="04eb4-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a><span data-ttu-id="74fa5-102">方法: リフレクション (LINQ) (Visual Basic) を使用してアセンブリのメタデータを照会します。</span><span class="sxs-lookup"><span data-stu-id="74fa5-102">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="74fa5-103">次の例では、LINQ でリフレクションを使用して、指定した検索条件に一致するメソッドについてのメタデータを取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="74fa5-103">The following example shows how LINQ can be used with reflection to retrieve specific metadata about methods that match a specified search criterion.</span></span> <span data-ttu-id="74fa5-104">この例のクエリでは、配列などの列挙可能な型を返すすべてのメソッドの名前をアセンブリ内で検索します。</span><span class="sxs-lookup"><span data-stu-id="74fa5-104">In this case, the query will find the names of all the methods in the assembly that return enumerable types such as arrays.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="04eb4-105">例</span><span class="sxs-lookup"><span data-stu-id="04eb4-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="74fa5-105">例</span><span class="sxs-lookup"><span data-stu-id="74fa5-105">Example</span></span>  
   
-```vb  
+```vb
+Imports System.Linq
 Imports System.Reflection  
-Imports System.IO  
-Imports System.Linq  
+
 Module Module1  
-  
     Sub Main()  
-        Dim asmbly As Assembly =   
+        Dim asmbly As Assembly =
             Assembly.Load("System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken= b77a5c561934e089")  
   
-        Dim pubTypesQuery = From type In asmbly.GetTypes()   
-                            Where type.IsPublic   
-                            From method In type.GetMethods()   
-                            Where method.ReturnType.IsArray = True   
-                            Let name = method.ToString()   
-                            Let typeName = type.ToString()   
+        Dim pubTypesQuery = From type In asmbly.GetTypes()
+                            Where type.IsPublic
+                            From method In type.GetMethods()
+                            Where method.ReturnType.IsArray = True
+                            Let name = method.ToString()
+                            Let typeName = type.ToString()
                             Group name By typeName Into methodNames = Group  
   
         Console.WriteLine("Getting ready to iterate")  
@@ -40,17 +39,14 @@ Module Module1
                 Console.WriteLine(" " & type)  
             Next  
         Next  
+        Console.WriteLine("Press any key to exit... ")  
         Console.ReadKey()  
     End Sub  
-  
 End Module  
 ```  
   
- <span data-ttu-id="04eb4-106">この例では、<xref:System.Reflection.Assembly.GetTypes%2A> メソッドを使用して、指定したアセンブリ内の型の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="04eb4-106">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="04eb4-107">[Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)パブリック型のみが返されるようにフィルターが適用されます。</span><span class="sxs-lookup"><span data-stu-id="04eb4-107">The [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="04eb4-108">パブリック型ごとに、<xref:System.Type.GetMethods%2A> 呼び出しから返される <xref:System.Reflection.MethodInfo> 配列を使用してサブクエリが生成されます。</span><span class="sxs-lookup"><span data-stu-id="04eb4-108">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A> call.</span></span> <span data-ttu-id="04eb4-109">これらの結果はフィルター処理され、戻り値の型が配列か、<xref:System.Collections.Generic.IEnumerable%601> を実装する型であるメソッドのみが返されます。</span><span class="sxs-lookup"><span data-stu-id="04eb4-109">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="04eb4-110">最後に、型名をキーとして使用して、これらの結果がグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="04eb4-110">Finally, these results are grouped by using the type name as a key.</span></span>  
+<span data-ttu-id="74fa5-106">この例では、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> メソッドを使用して、指定したアセンブリ内の型の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="74fa5-106">The example uses the <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> method to return an array of types in the specified assembly.</span></span> <span data-ttu-id="74fa5-107">[Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)パブリック型のみが返されるようにフィルターが適用されます。</span><span class="sxs-lookup"><span data-stu-id="74fa5-107">The [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md) filter is applied so that only public types are returned.</span></span> <span data-ttu-id="74fa5-108">パブリック型ごとに、<xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 呼び出しから返される <xref:System.Reflection.MethodInfo> 配列を使用してサブクエリが生成されます。</span><span class="sxs-lookup"><span data-stu-id="74fa5-108">For each public type, a subquery is generated by using the <xref:System.Reflection.MethodInfo> array that is returned from the <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> call.</span></span> <span data-ttu-id="74fa5-109">これらの結果はフィルター処理され、戻り値の型が配列か、<xref:System.Collections.Generic.IEnumerable%601> を実装する型であるメソッドのみが返されます。</span><span class="sxs-lookup"><span data-stu-id="74fa5-109">These results are filtered to return only those methods whose return type is an array or else a type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="74fa5-110">最後に、型名をキーとして使用して、これらの結果がグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="74fa5-110">Finally, these results are grouped by using the type name as a key.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="04eb4-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="04eb4-111">Compiling the Code</span></span>  
-<span data-ttu-id="04eb4-112">VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。</span><span class="sxs-lookup"><span data-stu-id="04eb4-112">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="04eb4-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="04eb4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74fa5-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="74fa5-111">See also</span></span>
 
-- [<span data-ttu-id="04eb4-114">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04eb4-114">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="74fa5-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="74fa5-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
