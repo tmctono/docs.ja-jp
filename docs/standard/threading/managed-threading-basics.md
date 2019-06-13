@@ -10,57 +10,57 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960359"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486343"
 ---
-# <a name="managed-threading-basics"></a><span data-ttu-id="a5529-102">マネージド スレッド処理の基本</span><span class="sxs-lookup"><span data-stu-id="a5529-102">Managed threading basics</span></span>
+# <a name="managed-threading-basics"></a><span data-ttu-id="5ff18-102">マネージド スレッド処理の基本</span><span class="sxs-lookup"><span data-stu-id="5ff18-102">Managed threading basics</span></span>
 
-<span data-ttu-id="a5529-103">このセクションの最初の 5 つのトピックは、マネージド スレッド処理を使用するタイミングを判断するのに役立つように設計されており、また、いくつかの基本的な機能について説明するためのものです。</span><span class="sxs-lookup"><span data-stu-id="a5529-103">The first five topics of this section are designed to help you determine when to use managed threading and to explain some basic features.</span></span> <span data-ttu-id="a5529-104">その他の機能を提供するクラスについては、「[スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)」と「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5529-104">For information on classes that provide additional features, see [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) and [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  
+<span data-ttu-id="5ff18-103">このセクションの最初の 5 つのトピックは、マネージド スレッド処理を使用するタイミングを判断するのに役立つように設計されており、また、いくつかの基本的な機能について説明するためのものです。</span><span class="sxs-lookup"><span data-stu-id="5ff18-103">The first five topics of this section are designed to help you determine when to use managed threading and to explain some basic features.</span></span> <span data-ttu-id="5ff18-104">その他の機能を提供するクラスについては、「[スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)」と「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5ff18-104">For information on classes that provide additional features, see [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) and [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  
   
- <span data-ttu-id="a5529-105">このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。</span><span class="sxs-lookup"><span data-stu-id="a5529-105">The rest of the topics in this section cover advanced topics, including the interaction of managed threading with the Windows operating system.</span></span>  
+ <span data-ttu-id="5ff18-105">このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。</span><span class="sxs-lookup"><span data-stu-id="5ff18-105">The rest of the topics in this section cover advanced topics, including the interaction of managed threading with the Windows operating system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a5529-106">[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、タスク並列ライブラリと PLINQ は、マルチスレッド プログラムでのタスクとデータの並列処理のための API を提供します。</span><span class="sxs-lookup"><span data-stu-id="a5529-106">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the Task Parallel Library and PLINQ provide APIs for task and data parallelism in multi-threaded programs.</span></span> <span data-ttu-id="a5529-107">詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a5529-107">For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).</span></span>  
+>  <span data-ttu-id="5ff18-106">.NET Framework 4 では、タスク並列ライブラリおよび PLINQ では、マルチ スレッド プログラムでのタスクとデータの並列処理の Api を提供します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-106">In the .NET Framework 4, the Task Parallel Library and PLINQ provide APIs for task and data parallelism in multi-threaded programs.</span></span> <span data-ttu-id="5ff18-107">詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="5ff18-107">For more information, see [Parallel Programming](../../../docs/standard/parallel-programming/index.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a5529-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a5529-108">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="5ff18-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5ff18-108">In this section</span></span>
 
- [<span data-ttu-id="a5529-109">スレッドおよびスレッド処理</span><span class="sxs-lookup"><span data-stu-id="a5529-109">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
- <span data-ttu-id="a5529-110">複数のスレッドの利点と欠点について説明し、スレッドを作成またはスレッド プール スレッドを使用する可能性のあるシナリオの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="a5529-110">Discusses the advantages and drawbacks of multiple threads, and outlines the scenarios in which you might create threads or use thread pool threads.</span></span>  
+ [<span data-ttu-id="5ff18-109">スレッドおよびスレッド処理</span><span class="sxs-lookup"><span data-stu-id="5ff18-109">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
+ <span data-ttu-id="5ff18-110">複数のスレッドの利点と欠点について説明し、スレッドを作成またはスレッド プール スレッドを使用する可能性のあるシナリオの概要を示します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-110">Discusses the advantages and drawbacks of multiple threads, and outlines the scenarios in which you might create threads or use thread pool threads.</span></span>  
   
- [<span data-ttu-id="a5529-111">マネージド スレッドの例外</span><span class="sxs-lookup"><span data-stu-id="a5529-111">Exceptions in Managed Threads</span></span>](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
- <span data-ttu-id="a5529-112">さまざまなバージョンの .NET Framework のスレッドでのハンドルされていない例外の動作、特に、アプリケーションの終了の原因となる状況について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-112">Describes the behavior of unhandled exceptions in threads for different versions of the .NET Framework, in particular the situations in which they result in termination of the application.</span></span>  
+ [<span data-ttu-id="5ff18-111">マネージド スレッドの例外</span><span class="sxs-lookup"><span data-stu-id="5ff18-111">Exceptions in Managed Threads</span></span>](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
+ <span data-ttu-id="5ff18-112">さまざまなバージョンの .NET Framework のスレッドでのハンドルされていない例外の動作、特に、アプリケーションの終了の原因となる状況について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-112">Describes the behavior of unhandled exceptions in threads for different versions of the .NET Framework, in particular the situations in which they result in termination of the application.</span></span>  
   
- [<span data-ttu-id="a5529-113">マルチスレッド処理のためのデータの同期</span><span class="sxs-lookup"><span data-stu-id="a5529-113">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- <span data-ttu-id="a5529-114">複数のスレッドで使用されるクラスのデータを同期する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-114">Describes strategies for synchronizing data in classes that will be used with multiple threads.</span></span>  
+ [<span data-ttu-id="5ff18-113">マルチスレッド処理のためのデータの同期</span><span class="sxs-lookup"><span data-stu-id="5ff18-113">Synchronizing Data for Multithreading</span></span>](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ <span data-ttu-id="5ff18-114">複数のスレッドで使用されるクラスのデータを同期する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-114">Describes strategies for synchronizing data in classes that will be used with multiple threads.</span></span>  
   
- [<span data-ttu-id="a5529-115">フォアグラウンド スレッドとバックグラウンド スレッド</span><span class="sxs-lookup"><span data-stu-id="a5529-115">Foreground and Background Threads</span></span>](../../../docs/standard/threading/foreground-and-background-threads.md)  
- <span data-ttu-id="a5529-116">フォアグラウンド スレッドとバック グラウンド スレッドの違いについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-116">Explains the differences between foreground and background threads.</span></span>  
+ [<span data-ttu-id="5ff18-115">フォアグラウンド スレッドとバックグラウンド スレッド</span><span class="sxs-lookup"><span data-stu-id="5ff18-115">Foreground and Background Threads</span></span>](../../../docs/standard/threading/foreground-and-background-threads.md)  
+ <span data-ttu-id="5ff18-116">フォアグラウンド スレッドとバック グラウンド スレッドの違いについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-116">Explains the differences between foreground and background threads.</span></span>  
   
- [<span data-ttu-id="a5529-117">Windows でのマネージド スレッド処理とアンマネージド スレッド処理</span><span class="sxs-lookup"><span data-stu-id="a5529-117">Managed and Unmanaged Threading in Windows</span></span>](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
- <span data-ttu-id="a5529-118">マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-118">Discusses the relationship between managed and unmanaged threading, lists managed equivalents for Windows threading APIs, and discusses the interaction of COM apartments and managed threads.</span></span>  
+ [<span data-ttu-id="5ff18-117">Windows でのマネージド スレッド処理とアンマネージド スレッド処理</span><span class="sxs-lookup"><span data-stu-id="5ff18-117">Managed and Unmanaged Threading in Windows</span></span>](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
+ <span data-ttu-id="5ff18-118">マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-118">Discusses the relationship between managed and unmanaged threading, lists managed equivalents for Windows threading APIs, and discusses the interaction of COM apartments and managed threads.</span></span>  
   
- [<span data-ttu-id="a5529-119">スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット</span><span class="sxs-lookup"><span data-stu-id="a5529-119">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
- <span data-ttu-id="a5529-120">スレッド相対ストレージ メカニズムについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-120">Describes thread-relative storage mechanisms.</span></span>  
+ [<span data-ttu-id="5ff18-119">スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット</span><span class="sxs-lookup"><span data-stu-id="5ff18-119">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ <span data-ttu-id="5ff18-120">スレッド相対ストレージ メカニズムについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-120">Describes thread-relative storage mechanisms.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a5529-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5529-121">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="5ff18-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ff18-121">Reference</span></span>
 
  <xref:System.Threading.Thread>  
- <span data-ttu-id="a5529-122">**Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。</span><span class="sxs-lookup"><span data-stu-id="a5529-122">Provides reference documentation for the **Thread** class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
+ <span data-ttu-id="5ff18-122">**Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-122">Provides reference documentation for the **Thread** class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="a5529-123">ユーザー インターフェイス オブジェクトと共にマルチスレッドを実装するための安全な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="a5529-123">Provides a safe way to implement multithreading in conjunction with user-interface objects.</span></span>  
+ <span data-ttu-id="5ff18-123">ユーザー インターフェイス オブジェクトと共にマルチスレッドを実装するための安全な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-123">Provides a safe way to implement multithreading in conjunction with user-interface objects.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="a5529-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5529-124">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5ff18-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ff18-124">Related sections</span></span>
 
- [<span data-ttu-id="a5529-125">同期プリミティブの概要</span><span class="sxs-lookup"><span data-stu-id="a5529-125">Overview of Synchronization Primitives</span></span>](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- <span data-ttu-id="a5529-126">複数のスレッドのアクティビティを同期するために使用されるマネージド クラスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-126">Describes the managed classes used to synchronize the activities of multiple threads.</span></span>  
+ [<span data-ttu-id="5ff18-125">同期プリミティブの概要</span><span class="sxs-lookup"><span data-stu-id="5ff18-125">Overview of Synchronization Primitives</span></span>](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ <span data-ttu-id="5ff18-126">複数のスレッドのアクティビティを同期するために使用されるマネージド クラスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-126">Describes the managed classes used to synchronize the activities of multiple threads.</span></span>  
   
- [<span data-ttu-id="a5529-127">マネージド スレッド処理の実施</span><span class="sxs-lookup"><span data-stu-id="a5529-127">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
- <span data-ttu-id="a5529-128">マルチスレッドに関する一般的な問題と、問題を回避するための方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-128">Describes common problems with multithreading and strategies for avoiding problems.</span></span>  
+ [<span data-ttu-id="5ff18-127">マネージド スレッド処理の実施</span><span class="sxs-lookup"><span data-stu-id="5ff18-127">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ <span data-ttu-id="5ff18-128">マルチスレッドに関する一般的な問題と、問題を回避するための方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-128">Describes common problems with multithreading and strategies for avoiding problems.</span></span>  
   
- [<span data-ttu-id="a5529-129">並列プログラミング</span><span class="sxs-lookup"><span data-stu-id="a5529-129">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
- <span data-ttu-id="a5529-130">非同期およびマルチスレッドの .NET Framework アプリケーションを作成する作業を大幅に簡素化する、タスク並列ライブラリと PLINQ について説明します。</span><span class="sxs-lookup"><span data-stu-id="a5529-130">Describes the Task Parallel Library and PLINQ, which greatly simplify the work of creating asynchronous and multi-threaded .NET Framework applications.</span></span>
+ [<span data-ttu-id="5ff18-129">並列プログラミング</span><span class="sxs-lookup"><span data-stu-id="5ff18-129">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)  
+ <span data-ttu-id="5ff18-130">非同期およびマルチスレッドの .NET Framework アプリケーションを作成する作業を大幅に簡素化する、タスク並列ライブラリと PLINQ について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ff18-130">Describes the Task Parallel Library and PLINQ, which greatly simplify the work of creating asynchronous and multi-threaded .NET Framework applications.</span></span>

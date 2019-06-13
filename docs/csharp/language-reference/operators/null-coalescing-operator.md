@@ -1,45 +1,66 @@
 ---
 title: ?? 演算子 - C# リファレンス
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633943"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816011"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="c71e6-103">??</span><span class="sxs-lookup"><span data-stu-id="c71e6-103">??</span></span> <span data-ttu-id="c71e6-104">演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c71e6-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="72c58-103">??</span><span class="sxs-lookup"><span data-stu-id="72c58-103">??</span></span> <span data-ttu-id="72c58-104">演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="72c58-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="c71e6-105">`??` 演算子は、null 合体演算子と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="c71e6-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="c71e6-106">左側のオペランドが null 値でない場合には左側のオペランドを返し、null 値である場合には右側のオペランドを返します。</span><span class="sxs-lookup"><span data-stu-id="c71e6-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>
+<span data-ttu-id="72c58-105">Null 合体演算子`??`でない場合は、左側のオペランドの値を返します`null`。 そうしないと、右側のオペランドを評価し、その結果を返します。</span><span class="sxs-lookup"><span data-stu-id="72c58-105">The null-coalescing operator `??` returns the value of its left-hand operand if it isn't `null`; otherwise, it evaluates the right-hand operand and returns its result.</span></span> <span data-ttu-id="72c58-106">`??`左側のオペランドが null 以外に評価された場合、演算子は、右辺のオペランドを評価しません。</span><span class="sxs-lookup"><span data-stu-id="72c58-106">The `??` operator doesn't evaluate its right-hand operand if the left-hand operand evaluates to non-null.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c71e6-107">解説</span><span class="sxs-lookup"><span data-stu-id="c71e6-107">Remarks</span></span>
+<span data-ttu-id="72c58-107">Null 合体演算子は右から左、形式の式は、</span><span class="sxs-lookup"><span data-stu-id="72c58-107">The null-coalescing operator is right-associative, that is, an expression of the form</span></span>
 
-<span data-ttu-id="c71e6-108">null 許容型は、型のドメインの値を表すことができ、値は未定義でもかまいません (その場合、値は null になります)。</span><span class="sxs-lookup"><span data-stu-id="c71e6-108">A nullable type can represent a value from the type’s domain, or the value can be undefined (in which case the value is null).</span></span> <span data-ttu-id="c71e6-109">`??` 演算子の構文を使用して、左側のオペランドが null 許容型でその値が null である場合に、適切な値 (右側のオペランド) を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="c71e6-109">You can use the `??` operator’s syntactic expressiveness to return an appropriate value (the right hand operand) when the left operand has a nullable type whose value is null.</span></span> <span data-ttu-id="c71e6-110">`??` 演算子を使用せずに、null 非許容値型に対して null 許容値型を割り当てると、コンパイル時にエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="c71e6-110">If you try to assign a nullable value type to a non-nullable value type without using the `??` operator, you will generate a compile-time error.</span></span> <span data-ttu-id="c71e6-111">null 許容値型が定義されていない場合にキャストを使用すると、`InvalidOperationException` 例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="c71e6-111">If you use a cast, and the nullable value type is currently undefined, an `InvalidOperationException` exception will be thrown.</span></span>
+```csharp
+a ?? b ?? c
+```
 
-<span data-ttu-id="c71e6-112">詳細については、「[Null 許容型](../../programming-guide/nullable-types/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c71e6-112">For more information, see [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="72c58-108">これが次のように評価されます。</span><span class="sxs-lookup"><span data-stu-id="72c58-108">is evaluated as</span></span>
 
-<span data-ttu-id="c71e6-113">?? の結果は、</span><span class="sxs-lookup"><span data-stu-id="c71e6-113">The result of a ??</span></span> <span data-ttu-id="c71e6-114">たとえ両方の引数が定数であった場合でも、定数とは見なされません。</span><span class="sxs-lookup"><span data-stu-id="c71e6-114">operator is not considered to be a constant even if both its arguments are constants.</span></span>
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a><span data-ttu-id="c71e6-115">例</span><span class="sxs-lookup"><span data-stu-id="c71e6-115">Example</span></span>
+<span data-ttu-id="72c58-109">`??`演算子は、次のシナリオで役に立ちます。</span><span class="sxs-lookup"><span data-stu-id="72c58-109">The `??` operator can be useful in the following scenarios:</span></span>
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- <span data-ttu-id="72c58-110">含む式で、 [null 条件演算子?. およびですか?](member-access-operators.md#null-conditional-operators--and-)、null 合体演算子を使用するには代替場合に、null 条件操作を使用して式の結果を評価する式を指定する`null`:</span><span class="sxs-lookup"><span data-stu-id="72c58-110">In expressions with the [null-conditional operators ?. and ?[]](member-access-operators.md#null-conditional-operators--and-), you can use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the expression with null-conditional operations is `null`:</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="c71e6-116">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="c71e6-116">C# language specification</span></span>
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-<span data-ttu-id="c71e6-117">詳細については、「[C# 言語仕様](../language-specification/index.md)」の [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c71e6-117">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="c71e6-118">言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。</span><span class="sxs-lookup"><span data-stu-id="c71e6-118">The language specification is the definitive source for C# syntax and usage.</span></span>
+- <span data-ttu-id="72c58-111">操作が[null 許容値型](../../programming-guide/nullable-types/index.md)場合に、null 許容型の値を提供する値を指定する null 合体演算子を使用して、基になる値型の値を指定する必要があると`null`:</span><span class="sxs-lookup"><span data-stu-id="72c58-111">When you work with [nullable value types](../../programming-guide/nullable-types/index.md) and need to provide a value of an underlying value type, use the null-coalescing operator to specify the value to provide in case a nullable type value is `null`:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c71e6-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c71e6-119">See also</span></span>
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-- [<span data-ttu-id="c71e6-120">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="c71e6-120">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="c71e6-121">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="c71e6-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="c71e6-122">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="c71e6-122">C# operators</span></span>](index.md)
-- [<span data-ttu-id="c71e6-123">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="c71e6-123">Nullable Types</span></span>](../../programming-guide/nullable-types/index.md)
-- [<span data-ttu-id="c71e6-124">'Lifted' の正確な意味</span><span class="sxs-lookup"><span data-stu-id="c71e6-124">What Exactly Does 'Lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+  <span data-ttu-id="72c58-112">使用して、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>メソッド場合、null 許容型の値は、ときに使用される値`null`基になる値型の既定値である必要があります。</span><span class="sxs-lookup"><span data-stu-id="72c58-112">Use the <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> method if the value to be used when a nullable type value is `null` should be the default value of the underlying value type.</span></span>
+
+- <span data-ttu-id="72c58-113">以降でC#使用することができます、7.0、 [ `throw`式](../keywords/throw.md#the-throw-expression)引数チェック コードを簡潔にするため null 合体演算子の右側のオペランドとして。</span><span class="sxs-lookup"><span data-stu-id="72c58-113">Starting with C# 7.0, you can use a [`throw` expression](../keywords/throw.md#the-throw-expression) as the right-hand operand of the null-coalescing operator to make the argument-checking code more concise:</span></span>
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  <span data-ttu-id="72c58-114">上記の例では、使用する方法も示しています[に式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)プロパティを定義します。</span><span class="sxs-lookup"><span data-stu-id="72c58-114">The preceding example also demonstrates how to use [expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) to define a property.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="72c58-115">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="72c58-115">Operator overloadability</span></span>
+
+<span data-ttu-id="72c58-116">Null 合体演算子はオーバー ロードすることはできません。</span><span class="sxs-lookup"><span data-stu-id="72c58-116">The null-coalescing operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="72c58-117">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="72c58-117">C# language specification</span></span>
+
+<span data-ttu-id="72c58-118">詳細については、次を参照してください。 [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)のセクション、 [ C#言語仕様](~/_csharplang/spec/introduction.md)します。</span><span class="sxs-lookup"><span data-stu-id="72c58-118">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="72c58-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="72c58-119">See also</span></span>
+
+- [<span data-ttu-id="72c58-120">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="72c58-120">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="72c58-121">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="72c58-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="72c58-122">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="72c58-122">C# operators</span></span>](index.md)
+- <span data-ttu-id="72c58-123">[?. および ?[] 演算子](member-access-operators.md#null-conditional-operators--and-)</span><span class="sxs-lookup"><span data-stu-id="72c58-123">[?. and ?[] operators](member-access-operators.md#null-conditional-operators--and-)</span></span>
+- [<span data-ttu-id="72c58-124">?:演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="72c58-124">?: operator</span></span>](conditional-operator.md)
