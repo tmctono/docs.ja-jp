@@ -2,20 +2,20 @@
 title: 非同期プログラミング
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: e516e356c9549921e1f3233c2ad0144fb7d517b1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380068"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422798"
 ---
-# <a name="asynchronous-programming"></a><span data-ttu-id="2bd51-102">非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="2bd51-102">Asynchronous Programming</span></span>
+# <a name="asynchronous-programming"></a><span data-ttu-id="a2018-102">非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="a2018-102">Asynchronous Programming</span></span>
 
-<span data-ttu-id="2bd51-103">このトピックでの非同期プログラミング、.NET Framework Data Provider for SQL Server (SqlClient) .NET Framework 4.5 で導入された非同期のプログラミング機能をサポートする拡張機能などのサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-103">This topic discusses support for asynchronous programming in the .NET Framework Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in .NET Framework 4.5.</span></span>
+<span data-ttu-id="a2018-103">このトピックでの非同期プログラミング、.NET Framework Data Provider for SQL Server (SqlClient) .NET Framework 4.5 で導入された非同期のプログラミング機能をサポートする拡張機能などのサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a2018-103">This topic discusses support for asynchronous programming in the .NET Framework Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in .NET Framework 4.5.</span></span>
 
-## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="2bd51-104">従来の非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="2bd51-104">Legacy Asynchronous Programming</span></span>
+## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="a2018-104">従来の非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="a2018-104">Legacy Asynchronous Programming</span></span>
 
-<span data-ttu-id="2bd51-105">.NET Framework 4.5 では、前に、SqlClient による非同期プログラミングが次のメソッドで行われた、`Asynchronous Processing=true`接続プロパティ。</span><span class="sxs-lookup"><span data-stu-id="2bd51-105">Prior to .NET Framework 4.5, asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>
+<span data-ttu-id="a2018-105">.NET Framework 4.5 では、前に、SqlClient による非同期プログラミングが次のメソッドで行われた、`Asynchronous Processing=true`接続プロパティ。</span><span class="sxs-lookup"><span data-stu-id="a2018-105">Prior to .NET Framework 4.5, asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,37 +23,37 @@ ms.locfileid: "66380068"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-<span data-ttu-id="2bd51-106">この機能は、.NET Framework 4.5 での SqlClient に残っています。</span><span class="sxs-lookup"><span data-stu-id="2bd51-106">This functionality remains in SqlClient in .NET Framework 4.5.</span></span>
+<span data-ttu-id="a2018-106">この機能は、.NET Framework 4.5 での SqlClient に残っています。</span><span class="sxs-lookup"><span data-stu-id="a2018-106">This functionality remains in SqlClient in .NET Framework 4.5.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="2bd51-107">以降、.NET Framework 4.5 では、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。</span><span class="sxs-lookup"><span data-stu-id="2bd51-107">Beginning in the .NET Framework 4.5, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>
+> <span data-ttu-id="a2018-107">以降、.NET Framework 4.5 では、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。</span><span class="sxs-lookup"><span data-stu-id="a2018-107">Beginning in the .NET Framework 4.5, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>
 
-## <a name="asynchronous-programming-features-added-in-net-framework-45"></a><span data-ttu-id="2bd51-108">.NET Framework 4.5 で追加された非同期のプログラミング機能</span><span class="sxs-lookup"><span data-stu-id="2bd51-108">Asynchronous Programming Features Added in .NET Framework 4.5</span></span>
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a><span data-ttu-id="a2018-108">.NET Framework 4.5 で追加された非同期のプログラミング機能</span><span class="sxs-lookup"><span data-stu-id="a2018-108">Asynchronous Programming Features Added in .NET Framework 4.5</span></span>
 
-<span data-ttu-id="2bd51-109">新しい非同期プログラミング機能を使用すると、コードを簡単に非同期にすることができます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>
+<span data-ttu-id="a2018-109">新しい非同期プログラミング機能を使用すると、コードを簡単に非同期にすることができます。</span><span class="sxs-lookup"><span data-stu-id="a2018-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>
 
-<span data-ttu-id="2bd51-110">.NET Framework 4.5 で導入された非同期のプログラミング機能の詳細についてを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2bd51-110">For more information about the asynchronous programming feature that was introduced in .NET Framework 4.5, see:</span></span>
+<span data-ttu-id="a2018-110">.NET Framework 4.5 で導入された非同期のプログラミング機能の詳細についてを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2018-110">For more information about the asynchronous programming feature that was introduced in .NET Framework 4.5, see:</span></span>
 
-- [<span data-ttu-id="2bd51-111">C# の非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="2bd51-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
+- [<span data-ttu-id="a2018-111">C# の非同期プログラミング</span><span class="sxs-lookup"><span data-stu-id="a2018-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
 
-- [<span data-ttu-id="2bd51-112">Async および Await を使用した非同期プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bd51-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="a2018-112">Async および Await を使用した非同期プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2018-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [<span data-ttu-id="2bd51-113">.NET 4.5 (パート 1) での SqlDataReader の新しい非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-113">Using SqlDataReader’s new async methods in .NET 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [<span data-ttu-id="a2018-113">.NET 4.5 (パート 1) での SqlDataReader の新しい非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="a2018-113">Using SqlDataReader’s new async methods in .NET 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [<span data-ttu-id="2bd51-114">.NET 4.5 (パート 2) での SqlDataReader の新しい非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-114">Using SqlDataReader’s new async methods in .NET 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [<span data-ttu-id="a2018-114">.NET 4.5 (パート 2) での SqlDataReader の新しい非同期メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="a2018-114">Using SqlDataReader’s new async methods in .NET 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
-<span data-ttu-id="2bd51-115">ユーザー インターフェイスが応答しない場合やサーバーのパフォーマンスが向上しない場合は、コードをさらに非同期にする必要がある可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span> <span data-ttu-id="2bd51-116">非同期コードの記述には、従来、非同期操作の完了後に発生するロジックを表すコールバック (または継続とも呼ばれます) のインストールが伴っていました。</span><span class="sxs-lookup"><span data-stu-id="2bd51-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="2bd51-117">これにより、同期コードと比較して、非同期コードの構造は複雑になります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>
+<span data-ttu-id="a2018-115">ユーザー インターフェイスが応答しない場合やサーバーのパフォーマンスが向上しない場合は、コードをさらに非同期にする必要がある可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span> <span data-ttu-id="a2018-116">非同期コードの記述には、従来、非同期操作の完了後に発生するロジックを表すコールバック (または継続とも呼ばれます) のインストールが伴っていました。</span><span class="sxs-lookup"><span data-stu-id="a2018-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="a2018-117">これにより、同期コードと比較して、非同期コードの構造は複雑になります。</span><span class="sxs-lookup"><span data-stu-id="a2018-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>
 
-<span data-ttu-id="2bd51-118">現在は、コールバックを使用したり、コードを複数のメソッドやラムダ式で分割したりせずに、非同期メソッドを呼び出すことができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="2bd51-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>
+<span data-ttu-id="a2018-118">現在は、コールバックを使用したり、コードを複数のメソッドやラムダ式で分割したりせずに、非同期メソッドを呼び出すことができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="a2018-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>
 
-<span data-ttu-id="2bd51-119">`async` 修飾子はメソッドが非同期であることを示します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="2bd51-120">`async` メソッドを呼び出すと、タスクが返されます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="2bd51-121">ときに、`await`タスクに演算子が適用される、現在のメソッドがすぐに終了します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="2bd51-122">タスクが終了すると、同じメソッド内で実行が再開されます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-122">When the task finishes, execution resumes in the same method.</span></span>
+<span data-ttu-id="a2018-119">`async` 修飾子はメソッドが非同期であることを示します。</span><span class="sxs-lookup"><span data-stu-id="a2018-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="a2018-120">`async` メソッドを呼び出すと、タスクが返されます。</span><span class="sxs-lookup"><span data-stu-id="a2018-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="a2018-121">ときに、`await`タスクに演算子が適用される、現在のメソッドがすぐに終了します。</span><span class="sxs-lookup"><span data-stu-id="a2018-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="a2018-122">タスクが終了すると、同じメソッド内で実行が再開されます。</span><span class="sxs-lookup"><span data-stu-id="a2018-122">When the task finishes, execution resumes in the same method.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="2bd51-123">非同期呼び出しは、アプリケーションで `Context Connection` 接続文字列キーワードも使用されている場合はサポートされません。</span><span class="sxs-lookup"><span data-stu-id="2bd51-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="a2018-123">非同期呼び出しは、アプリケーションで `Context Connection` 接続文字列キーワードも使用されている場合はサポートされません。</span><span class="sxs-lookup"><span data-stu-id="a2018-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 
-<span data-ttu-id="2bd51-124">`async` メソッドを呼び出すと、追加のスレッドは割り当てられません。</span><span class="sxs-lookup"><span data-stu-id="2bd51-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="2bd51-125">既存の I/O 完了スレッドが最後に簡単に使用される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-125">It may use the existing I/O completion thread briefly at the end.</span></span>
+<span data-ttu-id="a2018-124">`async` メソッドを呼び出すと、追加のスレッドは割り当てられません。</span><span class="sxs-lookup"><span data-stu-id="a2018-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="a2018-125">既存の I/O 完了スレッドが最後に簡単に使用される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-125">It may use the existing I/O completion thread briefly at the end.</span></span>
 
-<span data-ttu-id="2bd51-126">非同期プログラミングをサポートするために .NET Framework 4.5 では、次のメソッドが追加されました。</span><span class="sxs-lookup"><span data-stu-id="2bd51-126">The following methods were added in .NET Framework 4.5 to support asynchronous programming:</span></span>
+<span data-ttu-id="a2018-126">非同期プログラミングをサポートするために .NET Framework 4.5 では、次のメソッドが追加されました。</span><span class="sxs-lookup"><span data-stu-id="a2018-126">The following methods were added in .NET Framework 4.5 to support asynchronous programming:</span></span>
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -89,14 +89,14 @@ ms.locfileid: "66380068"
 
 - <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>
 
- <span data-ttu-id="2bd51-127">その他の非同期メンバーがサポートするために追加された[SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>
+ <span data-ttu-id="a2018-127">その他の非同期メンバーがサポートするために追加された[SqlClient ストリーミング サポート](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)します。</span><span class="sxs-lookup"><span data-stu-id="a2018-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>
 
 > [!TIP]
-> <span data-ttu-id="2bd51-128">新しい非同期メソッドを必要としない`Asynchronous Processing=true`接続文字列にします。</span><span class="sxs-lookup"><span data-stu-id="2bd51-128">The new asynchronous methods don't require `Asynchronous Processing=true` in the connection string.</span></span>
+> <span data-ttu-id="a2018-128">新しい非同期メソッドを必要としない`Asynchronous Processing=true`接続文字列にします。</span><span class="sxs-lookup"><span data-stu-id="a2018-128">The new asynchronous methods don't require `Asynchronous Processing=true` in the connection string.</span></span>
 
-### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="2bd51-129">同期から非同期接続を開く</span><span class="sxs-lookup"><span data-stu-id="2bd51-129">Synchronous to Asynchronous Connection Open</span></span>
+### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="a2018-129">同期から非同期接続を開く</span><span class="sxs-lookup"><span data-stu-id="a2018-129">Synchronous to Asynchronous Connection Open</span></span>
 
-<span data-ttu-id="2bd51-130">既存のアプリケーションをアップグレードして、新しい非同期機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-130">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="2bd51-131">たとえば、同期接続アルゴリズムを使用したアプリケーションで、データベースに接続するたびに UI スレッドをブロックし、接続すると、ユーザーがサインインしたことを他のユーザーに通知するストアド プロシージャが呼び出されるとします。</span><span class="sxs-lookup"><span data-stu-id="2bd51-131">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>
+<span data-ttu-id="a2018-130">既存のアプリケーションをアップグレードして、新しい非同期機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="a2018-130">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="a2018-131">たとえば、同期接続アルゴリズムを使用したアプリケーションで、データベースに接続するたびに UI スレッドをブロックし、接続すると、ユーザーがサインインしたことを他のユーザーに通知するストアド プロシージャが呼び出されるとします。</span><span class="sxs-lookup"><span data-stu-id="a2018-131">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>
 
 ```csharp
 using SqlConnection conn = new SqlConnection("…");
@@ -109,7 +109,7 @@ using SqlConnection conn = new SqlConnection("…");
 }
 ```
 
-<span data-ttu-id="2bd51-132">新しい非同期機能を使用するように変換した場合、プログラムは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-132">When converted to use the new asynchronous functionality, the program would look like:</span></span>
+<span data-ttu-id="a2018-132">新しい非同期機能を使用するように変換した場合、プログラムは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="a2018-132">When converted to use the new asynchronous functionality, the program would look like:</span></span>
 
 ```csharp
 using System;
@@ -138,9 +138,9 @@ class A {
 }
 ```
 
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="2bd51-133">既存アプリケーションに新しい非同期機能を追加する (古いパターンと新しいパターンが混在)</span><span class="sxs-lookup"><span data-stu-id="2bd51-133">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="a2018-133">既存アプリケーションに新しい非同期機能を追加する (古いパターンと新しいパターンが混在)</span><span class="sxs-lookup"><span data-stu-id="a2018-133">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>
 
-<span data-ttu-id="2bd51-134">既存の非同期ロジックを変更せずに、新しい非同期機能 (SqlConnection::OpenAsync) を追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-134">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="2bd51-135">たとえば、現在、次のアルゴリズムを使用するアプリケーションがあるとします。</span><span class="sxs-lookup"><span data-stu-id="2bd51-135">For example, if an application currently uses:</span></span>
+<span data-ttu-id="a2018-134">既存の非同期ロジックを変更せずに、新しい非同期機能 (SqlConnection::OpenAsync) を追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="a2018-134">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="a2018-135">たとえば、現在、次のアルゴリズムを使用するアプリケーションがあるとします。</span><span class="sxs-lookup"><span data-stu-id="a2018-135">For example, if an application currently uses:</span></span>
 
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);
@@ -150,7 +150,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);
 ```
 
-<span data-ttu-id="2bd51-136">既存のアルゴリズムを大幅に変更せずに、新しい非同期パターンの使用を開始できます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-136">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>
+<span data-ttu-id="a2018-136">既存のアルゴリズムを大幅に変更せずに、新しい非同期パターンの使用を開始できます。</span><span class="sxs-lookup"><span data-stu-id="a2018-136">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>
 
 ```csharp
 using System;
@@ -177,11 +177,11 @@ class A {
 }
 ```
 
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="2bd51-137">基本プロバイダー モデルと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="2bd51-137">Using the Base Provider Model and the New Asynchronous Feature</span></span>
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="a2018-137">基本プロバイダー モデルと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="a2018-137">Using the Base Provider Model and the New Asynchronous Feature</span></span>
 
-<span data-ttu-id="2bd51-138">異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-138">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="2bd51-139">基本プロバイダー モデルと新しい非同期機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-139">You can use the base provider model and the new asynchronous feature.</span></span>
+<span data-ttu-id="a2018-138">異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-138">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="a2018-139">基本プロバイダー モデルと新しい非同期機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="a2018-139">You can use the base provider model and the new asynchronous feature.</span></span>
 
-<span data-ttu-id="2bd51-140">分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-140">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="2bd51-141">MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-141">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).</span></span>
+<span data-ttu-id="a2018-140">分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-140">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="a2018-141">MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))します。</span><span class="sxs-lookup"><span data-stu-id="a2018-141">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).</span></span>
 
 ```csharp
 using System;
@@ -226,7 +226,7 @@ class A {
 }
 ```
 
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="2bd51-142">SQL トランザクションと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="2bd51-142">Using SQL Transactions and the New Asynchronous Feature</span></span>
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="a2018-142">SQL トランザクションと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="a2018-142">Using SQL Transactions and the New Asynchronous Feature</span></span>
 
 ```csharp
 using System;
@@ -292,9 +292,9 @@ class Program {
 }
 ```
 
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="2bd51-143">SQL トランザクションと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="2bd51-143">Using SQL Transactions and the New Asynchronous Feature</span></span>
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="a2018-143">SQL トランザクションと新しい非同期機能を使用する</span><span class="sxs-lookup"><span data-stu-id="a2018-143">Using SQL Transactions and the New Asynchronous Feature</span></span>
 
-<span data-ttu-id="2bd51-144">エンタープライズ アプリケーションでは、複数のデータベース サーバー間のトランザクションを有効にするために、一部のシナリオで分散トランザクションの追加が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-144">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="2bd51-145">次のように、System.Transactions 名前空間を使用して分散トランザクションを登録できます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-145">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>
+<span data-ttu-id="a2018-144">エンタープライズ アプリケーションでは、複数のデータベース サーバー間のトランザクションを有効にするために、一部のシナリオで分散トランザクションの追加が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-144">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="a2018-145">次のように、System.Transactions 名前空間を使用して分散トランザクションを登録できます。</span><span class="sxs-lookup"><span data-stu-id="a2018-145">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>
 
 ```csharp
 using System;
@@ -354,9 +354,9 @@ class Program {
 }
 ```
 
-### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="2bd51-146">非同期操作を取り消す</span><span class="sxs-lookup"><span data-stu-id="2bd51-146">Cancelling an Asynchronous Operation</span></span>
+### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="a2018-146">非同期操作を取り消す</span><span class="sxs-lookup"><span data-stu-id="a2018-146">Cancelling an Asynchronous Operation</span></span>
 
-<span data-ttu-id="2bd51-147"><xref:System.Threading.CancellationToken> を使用して、非同期要求を取り消すことができます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-147">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>
+<span data-ttu-id="a2018-147"><xref:System.Threading.CancellationToken> を使用して、非同期要求を取り消すことができます。</span><span class="sxs-lookup"><span data-stu-id="a2018-147">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>
 
 ```csharp
 using System;
@@ -395,9 +395,9 @@ namespace Samples {
 }
 ```
 
-### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="2bd51-148">SqlBulkCopy を使用した非同期操作</span><span class="sxs-lookup"><span data-stu-id="2bd51-148">Asynchronous Operations with SqlBulkCopy</span></span>
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="a2018-148">SqlBulkCopy を使用した非同期操作</span><span class="sxs-lookup"><span data-stu-id="a2018-148">Asynchronous Operations with SqlBulkCopy</span></span>
 
-<span data-ttu-id="2bd51-149">非同期機能は、<xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> を使用して、<xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> にも追加されました。</span><span class="sxs-lookup"><span data-stu-id="2bd51-149">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="a2018-149">非同期機能は、<xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> を使用して、<xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> にも追加されました。</span><span class="sxs-lookup"><span data-stu-id="a2018-149">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>
 
 ```csharp
 using System;
@@ -493,7 +493,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.2 Add new Async.NET capabilities in an existing application (Mixing synchronous and asynchornous calls)
+      // 3.2 Add new Async.NET capabilities in an existing application (Mixing synchronous and asynchronous calls)
       private static async Task MixSyncAsyncSqlBulkCopy() {
          using (OdbcConnection odbcconn = new OdbcConnection(odbcConnectionString)) {
             odbcconn.Open();
@@ -638,12 +638,12 @@ namespace SqlBulkCopyAsyncCodeSample {
 }
 ```
 
-## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="2bd51-150">MARS を使用して複数のコマンドを非同期的に使用する</span><span class="sxs-lookup"><span data-stu-id="2bd51-150">Asynchronously Using Multiple Commands with MARS</span></span>
+## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="a2018-150">MARS を使用して複数のコマンドを非同期的に使用する</span><span class="sxs-lookup"><span data-stu-id="a2018-150">Asynchronously Using Multiple Commands with MARS</span></span>
 
-<span data-ttu-id="2bd51-151">1 つの接続を開く例を示します、 **AdventureWorks**データベース。</span><span class="sxs-lookup"><span data-stu-id="2bd51-151">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="2bd51-152"><xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-152">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="2bd51-153">リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-153">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>
+<span data-ttu-id="a2018-151">1 つの接続を開く例を示します、 **AdventureWorks**データベース。</span><span class="sxs-lookup"><span data-stu-id="a2018-151">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="a2018-152"><xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="a2018-152">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="a2018-153">リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。</span><span class="sxs-lookup"><span data-stu-id="a2018-153">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2bd51-154">次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。</span><span class="sxs-lookup"><span data-stu-id="2bd51-154">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="2bd51-155">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="2bd51-155">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="2bd51-156">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="2bd51-156">Modify the connection string as necessary for your environment.</span></span>
+> <span data-ttu-id="a2018-154">次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。</span><span class="sxs-lookup"><span data-stu-id="a2018-154">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="a2018-155">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="a2018-155">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="a2018-156">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="a2018-156">Modify the connection string as necessary for your environment.</span></span>
 
 ```csharp
 using System;
@@ -703,20 +703,20 @@ class Class1 {
    }
 
    private static string GetConnectionString() {
-      // To avoid storing the connection string in your code, you can retrive it from a configuration file.
+      // To avoid storing the connection string in your code, you can retrieve it from a configuration file.
       return "Data Source=(local);Integrated Security=SSPI;Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";
    }
 }
 ```
 
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="2bd51-157">MARS を使用してデータの読み取りと更新を非同期的に行う</span><span class="sxs-lookup"><span data-stu-id="2bd51-157">Asynchronously Reading and Updating Data with MARS</span></span>
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="a2018-157">MARS を使用してデータの読み取りと更新を非同期的に行う</span><span class="sxs-lookup"><span data-stu-id="a2018-157">Asynchronously Reading and Updating Data with MARS</span></span>
 
-<span data-ttu-id="2bd51-158">MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-158">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="2bd51-159">この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-159">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="2bd51-160">さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-160">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="2bd51-161">最後に、複数の操作は、1 つの接続に対して使用できます、共有することを使用する必要がないため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**システムに格納されています。手順です。</span><span class="sxs-lookup"><span data-stu-id="2bd51-161">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>
+<span data-ttu-id="a2018-158">MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="a2018-158">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="a2018-159">この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="a2018-159">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="a2018-160">さらに、MARS ではサーバー側カーソルのユーザーを置き換えることができます。通常、この処理は多くのリソースを消費します。</span><span class="sxs-lookup"><span data-stu-id="a2018-160">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="a2018-161">最後に、複数の操作は、1 つの接続に対して使用できます、共有することを使用する必要がないため、同じトランザクション コンテキスト**sp_getbindtoken**と**sp_bindsession**システムに格納されています。手順です。</span><span class="sxs-lookup"><span data-stu-id="a2018-161">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>
 
-<span data-ttu-id="2bd51-162">次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-162">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="2bd51-163">最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="2bd51-163">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="2bd51-164">2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-164">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="2bd51-165">各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-165">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="2bd51-166">どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2bd51-166">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="2bd51-167">更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を含むテーブル。</span><span class="sxs-lookup"><span data-stu-id="2bd51-167">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="2bd51-168">このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。</span><span class="sxs-lookup"><span data-stu-id="2bd51-168">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>
+<span data-ttu-id="a2018-162">次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。</span><span class="sxs-lookup"><span data-stu-id="a2018-162">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="a2018-163">最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="a2018-163">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="a2018-164">2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="a2018-164">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="a2018-165">各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。</span><span class="sxs-lookup"><span data-stu-id="a2018-165">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="a2018-166">どのような新しいを決定する計算を実行**OnOrderQty**する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a2018-166">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="a2018-167">更新する 3 番目のコマンド オブジェクトを使用して、 **ProductVendor**新しい値を含むテーブル。</span><span class="sxs-lookup"><span data-stu-id="a2018-167">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="a2018-168">このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。</span><span class="sxs-lookup"><span data-stu-id="a2018-168">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2bd51-169">次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。</span><span class="sxs-lookup"><span data-stu-id="2bd51-169">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="2bd51-170">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="2bd51-170">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="2bd51-171">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="2bd51-171">Modify the connection string as necessary for your environment.</span></span>
+> <span data-ttu-id="a2018-169">次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。</span><span class="sxs-lookup"><span data-stu-id="a2018-169">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="a2018-170">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="a2018-170">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="a2018-171">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="a2018-171">Modify the connection string as necessary for your environment.</span></span>
 
 ```csharp
 using System;
@@ -820,12 +820,12 @@ class Program {
    }
 
    private static string GetConnectionString() {
-      // To avoid storing the connection string in your code, you can retrive it from a configuration file.
+      // To avoid storing the connection string in your code, you can retrieve it from a configuration file.
       return "Data Source=(local);Integrated Security=SSPI;Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";
    }
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2bd51-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="2bd51-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2018-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2018-172">See also</span></span>
 
-- [<span data-ttu-id="2bd51-173">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="2bd51-173">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [<span data-ttu-id="a2018-173">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="a2018-173">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

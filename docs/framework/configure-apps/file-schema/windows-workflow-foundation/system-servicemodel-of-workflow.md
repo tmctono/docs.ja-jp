@@ -3,17 +3,17 @@ title: ワークフローの <system.serviceModel>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 005a274df9e9ab99227a3748b7a25c9d465d020f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768876"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422888"
 ---
-# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="28ca1-102">\<system.serviceModel > のワークフロー</span><span class="sxs-lookup"><span data-stu-id="28ca1-102">\<system.serviceModel> of workflow</span></span>
-<span data-ttu-id="28ca1-103">この構成セクションには、すべてのワークフロー構成要素が含まれます。</span><span class="sxs-lookup"><span data-stu-id="28ca1-103">This configuration section contains all the workflow configuration elements.</span></span>  
+# <a name="systemservicemodel-of-workflow"></a><span data-ttu-id="e6ed1-102">\<system.serviceModel > のワークフロー</span><span class="sxs-lookup"><span data-stu-id="e6ed1-102">\<system.serviceModel> of workflow</span></span>
+<span data-ttu-id="e6ed1-103">この構成セクションには、すべてのワークフロー構成要素が含まれます。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-103">This configuration section contains all the workflow configuration elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28ca1-104">構文</span><span class="sxs-lookup"><span data-stu-id="28ca1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6ed1-104">構文</span><span class="sxs-lookup"><span data-stu-id="e6ed1-104">Syntax</span></span>  
   
 ```xml  
 <system.ServiceModel>  
@@ -28,14 +28,14 @@ ms.locfileid: "61768876"
      </sendMessageChannelCache>  
       <sqlWorkflowInstanceStore   
           connectionStringName="String"   
-          honstLockRenewalPeriod="TimeSpan"  
+          hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
           instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry"  
           runnableInstancesDetectionPeriod="TimeSpan" />  
       <workflowIdle timeToPersist="TimeSpan"  
           timeToUnload="TimeSpan" />  
-      <workflowUnhandledExceptionaction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
+      <workflowUnhandledExceptionAction="Abandon/AbandonAndSuspend/Cancel/Terminate" />  
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
@@ -91,21 +91,21 @@ ms.locfileid: "61768876"
 </system.ServiceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="28ca1-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="28ca1-105">Attributes and Elements</span></span>  
- <span data-ttu-id="28ca1-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="28ca1-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e6ed1-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="e6ed1-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="e6ed1-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="28ca1-107">属性</span><span class="sxs-lookup"><span data-stu-id="28ca1-107">Attributes</span></span>  
- <span data-ttu-id="28ca1-108">なし</span><span class="sxs-lookup"><span data-stu-id="28ca1-108">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e6ed1-107">属性</span><span class="sxs-lookup"><span data-stu-id="e6ed1-107">Attributes</span></span>  
+ <span data-ttu-id="e6ed1-108">なし</span><span class="sxs-lookup"><span data-stu-id="e6ed1-108">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="28ca1-109">子要素</span><span class="sxs-lookup"><span data-stu-id="28ca1-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e6ed1-109">子要素</span><span class="sxs-lookup"><span data-stu-id="e6ed1-109">Child Elements</span></span>  
   
-|<span data-ttu-id="28ca1-110">要素</span><span class="sxs-lookup"><span data-stu-id="28ca1-110">Element</span></span>|<span data-ttu-id="28ca1-111">説明</span><span class="sxs-lookup"><span data-stu-id="28ca1-111">Description</span></span>|  
+|<span data-ttu-id="e6ed1-110">要素</span><span class="sxs-lookup"><span data-stu-id="e6ed1-110">Element</span></span>|<span data-ttu-id="e6ed1-111">説明</span><span class="sxs-lookup"><span data-stu-id="e6ed1-111">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="28ca1-112">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="28ca1-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="28ca1-113">このセクションで定義、 **serviceBehaviors**コレクション。</span><span class="sxs-lookup"><span data-stu-id="28ca1-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="28ca1-114">各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。</span><span class="sxs-lookup"><span data-stu-id="28ca1-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="28ca1-115">各動作要素が、一意で識別される**名前**属性。</span><span class="sxs-lookup"><span data-stu-id="28ca1-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
-|[<span data-ttu-id="28ca1-116">\<tracking></span><span class="sxs-lookup"><span data-stu-id="28ca1-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="28ca1-117">ワークフロー サービスの追跡設定を定義する構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="28ca1-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="28ca1-118">ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。</span><span class="sxs-lookup"><span data-stu-id="28ca1-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
+|[<span data-ttu-id="e6ed1-112">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="e6ed1-112">\<behaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|<span data-ttu-id="e6ed1-113">このセクションで定義、 **serviceBehaviors**コレクション。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-113">This section defines the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="e6ed1-114">各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-114">Each element in the collection defines behavior elements consumed by services.</span></span> <span data-ttu-id="e6ed1-115">各動作要素が、一意で識別される**名前**属性。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-115">Each behavior element is identified by its unique **name** attribute.</span></span>|  
+|[<span data-ttu-id="e6ed1-116">\<tracking></span><span class="sxs-lookup"><span data-stu-id="e6ed1-116">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="e6ed1-117">ワークフロー サービスの追跡設定を定義する構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-117">Represents a configuration section for defining tracking settings for a workflow service.</span></span><br /><br /> <span data-ttu-id="e6ed1-118">ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-118">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="28ca1-119">親要素</span><span class="sxs-lookup"><span data-stu-id="28ca1-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e6ed1-119">親要素</span><span class="sxs-lookup"><span data-stu-id="e6ed1-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="28ca1-120">要素</span><span class="sxs-lookup"><span data-stu-id="28ca1-120">Element</span></span>|<span data-ttu-id="28ca1-121">説明</span><span class="sxs-lookup"><span data-stu-id="28ca1-121">Description</span></span>|  
+|<span data-ttu-id="e6ed1-120">要素</span><span class="sxs-lookup"><span data-stu-id="e6ed1-120">Element</span></span>|<span data-ttu-id="e6ed1-121">説明</span><span class="sxs-lookup"><span data-stu-id="e6ed1-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="28ca1-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="28ca1-122">\<configuration></span></span>|<span data-ttu-id="28ca1-123">.NET 構成ファイルのすべての構成要素のルート要素。</span><span class="sxs-lookup"><span data-stu-id="28ca1-123">The root element for all configuration elements in a .NET configuration file.</span></span>|
+|<span data-ttu-id="e6ed1-122">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e6ed1-122">\<configuration></span></span>|<span data-ttu-id="e6ed1-123">.NET 構成ファイルのすべての構成要素のルート要素。</span><span class="sxs-lookup"><span data-stu-id="e6ed1-123">The root element for all configuration elements in a .NET configuration file.</span></span>|
