@@ -7,36 +7,36 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020284"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663953"
 ---
-# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="a8000-102">3-D グラフィックスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a8000-102">3-D Graphics How-to Topics</span></span>
-<span data-ttu-id="a8000-103">このセクションのトピックでは、使用する方法を示します[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]でグラフィックス[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="a8000-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="33810-102">3-D グラフィックスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="33810-102">3-D Graphics How-to Topics</span></span>
+<span data-ttu-id="33810-103">このセクションのトピックでは、3-D グラフィックを使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="33810-103">The topics in this section demonstrate how to use 3-D graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a8000-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a8000-104">In This Section</span></span>  
- [<span data-ttu-id="a8000-105">3-D シーンを作成する</span><span class="sxs-lookup"><span data-stu-id="a8000-105">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="a8000-106">3-D モデルに描画を適用する</span><span class="sxs-lookup"><span data-stu-id="a8000-106">Apply a Drawing to a 3-D Model</span></span>](how-to-apply-a-drawing-to-a-3-d-model.md)  
- [<span data-ttu-id="a8000-107">3-D オブジェクトの前面および背面に素材を適用する</span><span class="sxs-lookup"><span data-stu-id="a8000-107">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [<span data-ttu-id="a8000-108">3-D モデルに放射性素材を適用する</span><span class="sxs-lookup"><span data-stu-id="a8000-108">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)  
- [<span data-ttu-id="a8000-109">3-D モデルのスケールを変換する</span><span class="sxs-lookup"><span data-stu-id="a8000-109">Transform the Scale of a 3-D Model</span></span>](how-to-transform-the-scale-of-a-3-d-model.md)  
- [<span data-ttu-id="a8000-110">複数の変換を 3-D モデルに適用する</span><span class="sxs-lookup"><span data-stu-id="a8000-110">Apply Multiple Transformations to a 3-D Model</span></span>](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [<span data-ttu-id="a8000-111">3-D 変換をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-111">Animate 3-D Translations</span></span>](how-to-animate-3-d-translations.md)  
- [<span data-ttu-id="a8000-112">ストーリーボードを使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-112">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="a8000-113">Rotation3DAnimation を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [<span data-ttu-id="a8000-114">四元数を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-114">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [<span data-ttu-id="a8000-115">キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [<span data-ttu-id="a8000-116">キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [<span data-ttu-id="a8000-117">3D シーンでカメラの位置および方向をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-117">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [<span data-ttu-id="a8000-118">キー フレームを使用してカメラの位置および方向をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-118">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [<span data-ttu-id="a8000-119">3-D シーンで素材プロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="a8000-119">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)  
- [<span data-ttu-id="a8000-120">Viewport3D でヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="a8000-120">Hit Test in a Viewport3D</span></span>](how-to-hit-test-in-a-viewport3d.md)  
- [<span data-ttu-id="a8000-121">Point4D 構造体が等価かどうかをテストする</span><span class="sxs-lookup"><span data-stu-id="a8000-121">Test Point4D structures for equality and inequality</span></span>](how-to-test-point4d-structures-for-equality-and-inequality.md)  
+## <a name="in-this-section"></a><span data-ttu-id="33810-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="33810-104">In This Section</span></span>  
+ [<span data-ttu-id="33810-105">3-D シーンを作成する</span><span class="sxs-lookup"><span data-stu-id="33810-105">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="33810-106">3-D モデルに描画を適用する</span><span class="sxs-lookup"><span data-stu-id="33810-106">Apply a Drawing to a 3-D Model</span></span>](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [<span data-ttu-id="33810-107">3-D オブジェクトの前面および背面に素材を適用する</span><span class="sxs-lookup"><span data-stu-id="33810-107">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [<span data-ttu-id="33810-108">3-D モデルに放射性素材を適用する</span><span class="sxs-lookup"><span data-stu-id="33810-108">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [<span data-ttu-id="33810-109">3-D モデルのスケールを変換する</span><span class="sxs-lookup"><span data-stu-id="33810-109">Transform the Scale of a 3-D Model</span></span>](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [<span data-ttu-id="33810-110">複数の変換を 3-D モデルに適用する</span><span class="sxs-lookup"><span data-stu-id="33810-110">Apply Multiple Transformations to a 3-D Model</span></span>](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [<span data-ttu-id="33810-111">3-D 変換をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-111">Animate 3-D Translations</span></span>](how-to-animate-3-d-translations.md)  
+ [<span data-ttu-id="33810-112">ストーリーボードを使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-112">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="33810-113">Rotation3DAnimation を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [<span data-ttu-id="33810-114">四元数を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-114">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="33810-115">キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [<span data-ttu-id="33810-116">キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [<span data-ttu-id="33810-117">3D シーンでカメラの位置および方向をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-117">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [<span data-ttu-id="33810-118">キー フレームを使用してカメラの位置および方向をアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-118">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [<span data-ttu-id="33810-119">3-D シーンで素材プロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="33810-119">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [<span data-ttu-id="33810-120">Viewport3D でヒット テストを実行する</span><span class="sxs-lookup"><span data-stu-id="33810-120">Hit Test in a Viewport3D</span></span>](how-to-hit-test-in-a-viewport3d.md)  
+ [<span data-ttu-id="33810-121">Point4D 構造体が等価かどうかをテストする</span><span class="sxs-lookup"><span data-stu-id="33810-121">Test Point4D structures for equality and inequality</span></span>](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
-## <a name="reference"></a><span data-ttu-id="a8000-122">参照</span><span class="sxs-lookup"><span data-stu-id="a8000-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="33810-122">参照</span><span class="sxs-lookup"><span data-stu-id="33810-122">Reference</span></span>  
  <xref:System.Windows.Controls.Viewport3D>  
   
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
@@ -45,5 +45,5 @@ ms.locfileid: "62020284"
   
  <xref:System.Windows.Media.Media3D.Material>  
   
-## <a name="related-sections"></a><span data-ttu-id="a8000-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8000-123">Related Sections</span></span>  
- [<span data-ttu-id="a8000-124">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="a8000-124">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="33810-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="33810-123">Related Sections</span></span>  
+ [<span data-ttu-id="33810-124">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="33810-124">Graphics and Multimedia</span></span>](index.md)

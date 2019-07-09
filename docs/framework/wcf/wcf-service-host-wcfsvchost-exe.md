@@ -2,114 +2,125 @@
 title: WCF サービス ホスト (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 7174cac4c07d9011ad4c0744ff7ad6550d832d8b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8a081ed7c525b4346908f0419f0bb1ebf43683a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613258"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662646"
 ---
-# <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="fd263-102">WCF サービス ホスト (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="fd263-102">WCF Service Host (WcfSvcHost.exe)</span></span>
-<span data-ttu-id="fd263-103">Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) を使用すると、自動的にホストし、実装したサービスをテストするには、(F5) Visual Studio デバッガーを起動できます。</span><span class="sxs-lookup"><span data-stu-id="fd263-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="fd263-104">WCF テスト クライアント (WcfTestClient.exe) または独自のクライアントを検出して潜在的なエラーを修正するを使用してサービスをテストできます。</span><span class="sxs-lookup"><span data-stu-id="fd263-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>  
-  
-## <a name="wcf-service-host"></a><span data-ttu-id="fd263-105">WCF サービス ホスト</span><span class="sxs-lookup"><span data-stu-id="fd263-105">WCF Service Host</span></span>  
- <span data-ttu-id="fd263-106">WCF サービス ホストは、WCF サービス プロジェクト内のサービスを列挙、プロジェクトの構成をロードおよび、検出された各サービスのホストをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="fd263-106">WCF Service Host enumerates the services in a WCF service project, loads the project’s configuration, and instantiates a host for each service that it finds.</span></span> <span data-ttu-id="fd263-107">このツールは、WCF サービス テンプレートを使って Visual Studio に統合し、プロジェクトのデバッグを開始するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="fd263-107">The tool is integrated into Visual Studio through the WCF Service template and is invoked when you start to debug your project.</span></span>  
-  
- <span data-ttu-id="fd263-108">WCF サービス ホストを使用すると、余分なコードを記述したり開発時に特定のホストにコミットすることがなく、(WCF サービス ライブラリ プロジェクト) での WCF サービスをホストできます。</span><span class="sxs-lookup"><span data-stu-id="fd263-108">By using WCF Service Host, you can host a WCF service (in a WCF service library project) without writing extra code or committing to a specific host during development.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="fd263-109">WCF サービス ホストは、部分信頼をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="fd263-109">WCF Service Host does not support Partial Trust.</span></span> <span data-ttu-id="fd263-110">部分信頼で WCF サービスを使用する場合は、使わない WCF サービス ライブラリ プロジェクト テンプレート Visual Studio で、サービスを構築します。</span><span class="sxs-lookup"><span data-stu-id="fd263-110">If you want to use a WCF Service in Partial Trust, do not use the WCF Service Library Project template in Visual Studio to build your service.</span></span> <span data-ttu-id="fd263-111">代わりに、WCF の部分的な信頼がサポートされている web サーバーでサービスをホストできる WCF サービスの web サイト テンプレートを選択して Visual Studio で新しい web サイトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fd263-111">Instead, create a New WebSite in Visual Studio by choosing the WCF Service WebSite template, which can host the service in a WebServer on which WCF Partial Trust is supported.</span></span>  
-  
-## <a name="project-types-hosted-by-wcf-service-host"></a><span data-ttu-id="fd263-112">WCF サービス ホストでホストされるプロジェクトの種類</span><span class="sxs-lookup"><span data-stu-id="fd263-112">Project Types hosted by WCF Service Host</span></span>  
- <span data-ttu-id="fd263-113">WCF サービス ホストは、次の WCF サービス ライブラリ プロジェクトの種類をホストできます。WCF サービス ライブラリ、シーケンシャル ワークフロー サービス ライブラリ、ステート マシン ワークフロー サービス ライブラリおよび配信サービス ライブラリです。</span><span class="sxs-lookup"><span data-stu-id="fd263-113">WCF Service Host can host the following WCF service library project types: WCF Service Library, Sequential Workflow Service Library, State Machine Workflow Service Library and Syndication Service Library.</span></span> <span data-ttu-id="fd263-114">WCF サービス ホストが使用してサービス ライブラリ プロジェクトに追加できるこれらのサービスをホストできますも、**項目の追加**機能します。</span><span class="sxs-lookup"><span data-stu-id="fd263-114">WCF Service Host can also host those services that can be added to a service library project using the **Add Item** functionality.</span></span> <span data-ttu-id="fd263-115">これには、WCF サービス、WF ステート マシン サービス、WF シーケンシャル サービス、XAML WF ステート マシン サービス、および XAML WF シーケンシャル サービスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="fd263-115">This includes WCF Service, WF State Machine Service, WF Sequential Service, XAML WF State Machine Service and XAML WF Sequential Service.</span></span>  
-  
- <span data-ttu-id="fd263-116">ただし、このツールでホストを構成することはできません。</span><span class="sxs-lookup"><span data-stu-id="fd263-116">You should note, however, that the tool will not help you to configure a host.</span></span> <span data-ttu-id="fd263-117">このタスクでは、App.config ファイルを手動で編集する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fd263-117">For this task, you must manually edit the App.config file.</span></span> <span data-ttu-id="fd263-118">また、このツールでユーザー定義の構成ファイルを検証することはできません。</span><span class="sxs-lookup"><span data-stu-id="fd263-118">The tool also does not validate user-defined configuration files.</span></span>  
-  
-> [!CAUTION]
->  <span data-ttu-id="fd263-119">いないにこの目的に設計されたように、運用環境でサービスをホストする WCF サービス ホストを使用する必要がありますできません。</span><span class="sxs-lookup"><span data-stu-id="fd263-119">You should not use WCF Service Host to host services in a production environment, as it was not engineered for this purpose.</span></span>  <span data-ttu-id="fd263-120">WCF サービス ホストは、信頼性、セキュリティ、およびそのような環境の管理の容易性の要件をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="fd263-120">WCF Service Host does not support the reliability, security, and manageability requirements of such an environment.</span></span> <span data-ttu-id="fd263-121">代わりに IIS を使用してください。IIS は、より高度な信頼性機能や監視機能を備えており、サービスをホストするのに適しています。</span><span class="sxs-lookup"><span data-stu-id="fd263-121">Instead, use IIS since it provides superior reliability and monitoring features, and is the preferred solution for hosting services.</span></span> <span data-ttu-id="fd263-122">サービスの開発が完了すると、IIS に WCF サービス ホストからサービスを移行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fd263-122">Once development of your services is complete, you should migrate the services from WCF Service Host to IIS.</span></span>  
-  
-## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a><span data-ttu-id="fd263-123">Visual Studio 内で WCF サービス ホストを使用するシナリオ</span><span class="sxs-lookup"><span data-stu-id="fd263-123">Scenarios for Using WCF Service Host inside Visual Studio</span></span>  
- <span data-ttu-id="fd263-124">次の表のすべてのパラメーター、**コマンドライン引数**でプロジェクトを右クリックしてこのダイアログ ボックスで、**ソリューション エクスプ ローラー** を選択すると、VisualStudioで**プロパティ**を選択し、**デバッグ**タブとクリックして**スタート プロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="fd263-124">The following table lists all the parameters in the **Command line arguments** dialog box, which can be found by right-clicking your project in **Solutions Explorer** in Visual Studio, selecting **Properties**, then selecting the **Debug** tab and clicking **Start Project**.</span></span> <span data-ttu-id="fd263-125">これらのパラメーターは、WCF サービス ホストを構成するのに便利です。</span><span class="sxs-lookup"><span data-stu-id="fd263-125">These parameters are useful in configuring WCF Service Host.</span></span>  
-  
-|<span data-ttu-id="fd263-126">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fd263-126">Parameter</span></span>|<span data-ttu-id="fd263-127">説明</span><span class="sxs-lookup"><span data-stu-id="fd263-127">Meaning</span></span>|  
-|---------------|-------------|  
-|`/client`|<span data-ttu-id="fd263-128">サービスのホストが開始された後に実行する実行可能ファイルへのパスを指定するオプション パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="fd263-128">An optional parameter that specifies the path to an executable to run after the services are hosted.</span></span> <span data-ttu-id="fd263-129">WCF テスト クライアントが起動次のホストします。</span><span class="sxs-lookup"><span data-stu-id="fd263-129">This launches WCF Test Client following hosting.</span></span>|  
-|`/clientArg`|<span data-ttu-id="fd263-130">カスタム クライアント アプリケーションに渡す引数として文字列を指定します。</span><span class="sxs-lookup"><span data-stu-id="fd263-130">Specify a string as an argument that is passed to the custom client application.</span></span>|  
-|`/?`|<span data-ttu-id="fd263-131">ヘルプ テキストを表示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-131">Displays the help text.</span></span>|  
-  
-#### <a name="using-wcf-test-client"></a><span data-ttu-id="fd263-132">WCF のテスト用クライアントの使用</span><span class="sxs-lookup"><span data-stu-id="fd263-132">Using WCF Test Client</span></span>  
- <span data-ttu-id="fd263-133">新しい WCF サービス プロジェクトを作成し、f5 キーを押してデバッガーを起動すると後、WCF サービス ホストは、プロジェクト内で見つかったすべてのサービスのホスティングを開始します。</span><span class="sxs-lookup"><span data-stu-id="fd263-133">After you create a new WCF service project and press F5 to start the debugger, WCF Service Host starts hosting all the services it finds in your project.</span></span> <span data-ttu-id="fd263-134">WCF テスト クライアントは自動的に開き、構成ファイルで定義されているサービス エンドポイントの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-134">WCF Test Client automatically opens and displays a list of service endpoints defined in the configuration file.</span></span> <span data-ttu-id="fd263-135">メイン ウィンドウでパラメーターをテストしたり、サービスを呼び出したりできます。</span><span class="sxs-lookup"><span data-stu-id="fd263-135">From the main window, you can test the parameters and invoke your service.</span></span>  
-  
- <span data-ttu-id="fd263-136">WCF テスト クライアントが使用されることを確認するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。クリックして**スタート プロジェクト**で、次が表示されることを確認してください、**コマンドライン引数** ダイアログ ボックス。</span><span class="sxs-lookup"><span data-stu-id="fd263-136">To make sure that WCF Test Client is used, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and ensure that the following appears in the **Command line arguments** dialog box.</span></span>  
-  
- `/client:WcfTestClient.exe`  
-  
-#### <a name="using-a-custom-client"></a><span data-ttu-id="fd263-137">カスタム クライアントの使用</span><span class="sxs-lookup"><span data-stu-id="fd263-137">Using a Custom Client</span></span>  
- <span data-ttu-id="fd263-138">プロジェクトを右クリックし、カスタムのクライアントを使用する**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。をクリックして**スタート プロジェクト**および編集、`/client`パラメーター、**コマンドライン引数** ダイアログ ボックスは、次の例に示すように、カスタムのクライアント をポイントします。</span><span class="sxs-lookup"><span data-stu-id="fd263-138">To use a custom client, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and edit the `/client` parameter in the **Command line arguments** dialog box to point to your custom client, as indicated in the following example.</span></span>  
-  
- `/client:"path/CustomClient.exe"`  
-  
- <span data-ttu-id="fd263-139">サービスをもう一度開始して f5 キーを押すと、WCF サービス ホストで、デバッガーを起動するときに、使用するカスタム クライアントが自動的に開始されます。</span><span class="sxs-lookup"><span data-stu-id="fd263-139">When you press F5 to start the service again, WCF Service Host automatically starts your custom client when you launch the debugger.</span></span>  
-  
- <span data-ttu-id="fd263-140">`/clientArg:` パラメーターを使用して、カスタム クライアント アプリケーションに渡す引数として文字列を指定することもできます。以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-140">You can also use the `/clientArg:` parameter to specify a string as an argument that is passed to the custom client application, as indicated in the following example.</span></span>  
-  
- `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`  
-  
- <span data-ttu-id="fd263-141">たとえば、配信サービス ライブラリ テンプレートを使用している場合は、次のコマンド ライン引数を使用できます。</span><span class="sxs-lookup"><span data-stu-id="fd263-141">For example, if you are using the Syndication Service Library template, you can use the following command line arguments,</span></span>  
-  
- `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
-  
-#### <a name="specifying-no-client"></a><span data-ttu-id="fd263-142">クライアントを指定しない場合</span><span class="sxs-lookup"><span data-stu-id="fd263-142">Specifying No Client</span></span>  
- <span data-ttu-id="fd263-143">WCF サービスをホストしている後にクライアントが使用されませんを指定するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します**プロパティ**を選択してから、 **のデバッグ。** タブ。クリックして**スタート プロジェクト**のままにし、**コマンドライン引数** ダイアログ ボックスを空白。</span><span class="sxs-lookup"><span data-stu-id="fd263-143">To specify that no client will be used after WCF service hosting, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and leave the **Command line arguments** dialog box blank.</span></span>  
-  
-#### <a name="using-a-custom-host"></a><span data-ttu-id="fd263-144">カスタム ホストの使用</span><span class="sxs-lookup"><span data-stu-id="fd263-144">Using a Custom Host</span></span>  
- <span data-ttu-id="fd263-145">カスタム ホストを使用するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。クリックして**外部プログラムの開始**し、カスタム ホストへの完全なパスを入力します。</span><span class="sxs-lookup"><span data-stu-id="fd263-145">To use a custom host, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start External Program** and enter the full path to the custom host.</span></span> <span data-ttu-id="fd263-146">使用することも、**コマンドライン引数** ダイアログ ボックス、ホストに渡される引数を指定します。</span><span class="sxs-lookup"><span data-stu-id="fd263-146">You can also use the **Command line arguments** dialog box to specify arguments to be passed to the host.</span></span>  
-  
-## <a name="wcf-service-host-user-interface"></a><span data-ttu-id="fd263-147">WCF サービス ホストのユーザー インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fd263-147">WCF Service Host User Interface</span></span>  
- <span data-ttu-id="fd263-148">最初に呼び出すと WCF サービス ホスト (を Visual Studio 内で f5 キーを押す)、 **WCF サービス ホスト**ウィンドウが自動的に開きます。</span><span class="sxs-lookup"><span data-stu-id="fd263-148">When you initially invoke WCF Service Host (by pressing F5 inside Visual Studio), the **WCF Service Host** window automatically opens.</span></span> <span data-ttu-id="fd263-149">WCF サービス ホストが実行されている場合は、通知領域で、プログラムのアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="fd263-149">When WCF Service Host is running, the program's icon appears in the notification area.</span></span> <span data-ttu-id="fd263-150">アイコンをダブルクリックして開き、 **WCF サービス ホスト**ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="fd263-150">Double-click the icon to open the **WCF Service Host** window</span></span>  
-  
- <span data-ttu-id="fd263-151">サービスをホストしている中にエラーが発生すると、関連する情報を表示する WCF サービス ホスト ダイアログ ボックスが開きます。</span><span class="sxs-lookup"><span data-stu-id="fd263-151">When errors occur during service hosting, WCF Service Host dialog box will open to display relevant information.</span></span>  
-  
- <span data-ttu-id="fd263-152">**WCF サービス ホスト**メイン ウィンドウには、2 つのメニューが含まれています。</span><span class="sxs-lookup"><span data-stu-id="fd263-152">The **WCF Service Host** main window contains two menus:</span></span>  
-  
-- <span data-ttu-id="fd263-153">**ファイル**:含まれています、**閉じる**と**終了**コマンド。</span><span class="sxs-lookup"><span data-stu-id="fd263-153">**File**: Contains the **Close** and **Exit** commands.</span></span> <span data-ttu-id="fd263-154">クリックすると**閉じる**、 **WCF サービス ホスト** ダイアログ ボックスは閉じますが、サービスは引き続きホストされるようにします。</span><span class="sxs-lookup"><span data-stu-id="fd263-154">When you click **Close**, the **WCF Service Host** dialog box closes, but the services continue to be hosted.</span></span> <span data-ttu-id="fd263-155">クリックすると**終了**、WCF サービス ホストがシャット ダウンもします。</span><span class="sxs-lookup"><span data-stu-id="fd263-155">When you click **Exit**, WCF Service Host is also shut down.</span></span> <span data-ttu-id="fd263-156">ホストされているサービスもすべて停止します。</span><span class="sxs-lookup"><span data-stu-id="fd263-156">This also stops all hosted services.</span></span>  
-  
-- <span data-ttu-id="fd263-157">**ヘルプ**:含まれています、**について**バージョン情報が含まれるコマンド。</span><span class="sxs-lookup"><span data-stu-id="fd263-157">**Help**: Contains the **About** command that contains version information.</span></span> <span data-ttu-id="fd263-158">含まれています、**ヘルプ**コマンドがヘルプ ファイルを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="fd263-158">It also contains the **Help** command that can open a help file.</span></span>  
-  
- <span data-ttu-id="fd263-159">メイン**WCF サービス ホスト**ウィンドウには、2 つの領域が含まれています。</span><span class="sxs-lookup"><span data-stu-id="fd263-159">The main **WCF Service Host** window contains two areas:</span></span>  
-  
-- <span data-ttu-id="fd263-160">最初の領域が**サービス**します。</span><span class="sxs-lookup"><span data-stu-id="fd263-160">The first area is **Service**.</span></span> <span data-ttu-id="fd263-161">この領域には、すべてのサービスの基本情報が一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="fd263-161">It contains a list that displays basic information of all services.</span></span> <span data-ttu-id="fd263-162">具体的には、次の情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="fd263-162">The information includes:</span></span>  
-  
-    - <span data-ttu-id="fd263-163">**[サービス]**:すべてのサービスを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-163">**Service**: Lists all the services.</span></span>  
-  
-    - <span data-ttu-id="fd263-164">**ステータス**:サービスの状態を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-164">**Status**: Lists the status of the service.</span></span> <span data-ttu-id="fd263-165">有効な値は、「開始」、「停止」と"Error"です。</span><span class="sxs-lookup"><span data-stu-id="fd263-165">Valid values are "Started", "Stopped," and "Error".</span></span>  
-  
-    - <span data-ttu-id="fd263-166">**メタデータ アドレス**:サービスのメタデータ アドレスを表示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-166">**Metadata Address**: Displays the metadata address of the services.</span></span>  
-  
-- <span data-ttu-id="fd263-167">2 番目の領域が**追加情報**します。</span><span class="sxs-lookup"><span data-stu-id="fd263-167">The second area is **Additional Information**.</span></span> <span data-ttu-id="fd263-168">特定のサービス行を選択した場合、サービスの状態の詳細についてが表示されます、**サービス**領域。</span><span class="sxs-lookup"><span data-stu-id="fd263-168">It displays a detailed explanation of the service status when the specific service line is selected in the **Service** area.</span></span> <span data-ttu-id="fd263-169">状態が "エラー" の場合は、完全なエラー メッセージを画面上で確認できます。</span><span class="sxs-lookup"><span data-stu-id="fd263-169">If the status is Error, you can view the full error message on the screen.</span></span>  
-  
-## <a name="stopping-wcf-service-host"></a><span data-ttu-id="fd263-170">WCF サービス ホストの停止</span><span class="sxs-lookup"><span data-stu-id="fd263-170">Stopping WCF Service Host</span></span>  
- <span data-ttu-id="fd263-171">次の 4 つの方法で WCF サービス ホストをシャット ダウンできます。</span><span class="sxs-lookup"><span data-stu-id="fd263-171">You can shut down WCF Service Host in the following four ways:</span></span>  
-  
-- <span data-ttu-id="fd263-172">Visual Studio でデバッグ セッションを停止します。</span><span class="sxs-lookup"><span data-stu-id="fd263-172">Stop the debugging session in Visual Studio.</span></span>  
-  
-- <span data-ttu-id="fd263-173">選択**終了**から、**ファイル**メニューで、 **WCF サービス ホスト**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="fd263-173">Select **Exit** from the **File** menu in the **WCF Service Host** window.</span></span>  
-  
-- <span data-ttu-id="fd263-174">選択**終了**システム通知領域の WCF サービス ホストのトレイ アイコンのコンテキスト メニュー。</span><span class="sxs-lookup"><span data-stu-id="fd263-174">Select **Exit** from context menu of WCF Service Host tray icon in the system notification area.</span></span>  
-  
-- <span data-ttu-id="fd263-175">使用されている場合は、WCF テスト クライアントを終了します。</span><span class="sxs-lookup"><span data-stu-id="fd263-175">Exit WCF Test Client if it is being used.</span></span>  
-  
-## <a name="using-service-host-without-administrator-privilege"></a><span data-ttu-id="fd263-176">管理特権を必要としないサービス ホストの使用</span><span class="sxs-lookup"><span data-stu-id="fd263-176">Using Service Host without Administrator privilege</span></span>  
- <span data-ttu-id="fd263-177">WCF サービスの開発を管理者特権のないユーザーを有効にする ACL (アクセス制御リスト) は、名前空間の作成"http://+:8731/Design_Time_Addresses"Visual Studio のインストール中にします。</span><span class="sxs-lookup"><span data-stu-id="fd263-177">To enable users without administrator privilege to develop WCF services, an ACL (Access Control List) is created for the namespace "http://+:8731/Design_Time_Addresses" during the installation of Visual Studio.</span></span> <span data-ttu-id="fd263-178">この ACL は (UI) に設定され、コンピューターにログオンしているすべての対話ユーザーが含まれます。</span><span class="sxs-lookup"><span data-stu-id="fd263-178">The ACL is set to (UI), which includes all interactive users logged on to the machine.</span></span> <span data-ttu-id="fd263-179">管理者は、追加または、この ACL からユーザーを削除または追加のポートを開くことができます。この ACL では、管理者特権を付与せずに WCF サービスの自動ホスト (wcfSvcHost.exe) を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="fd263-179">Administrators can add or remove users from this ACL, or open additional ports.This ACL enables users to use the WCF Service Auto Host (wcfSvcHost.exe) without granting them administrator privileges.</span></span>  
-  
- <span data-ttu-id="fd263-180">システム特権のある管理者アカウントで [!INCLUDE[wv](../../../includes/wv-md.md)] の netsh.exe ツールを使用すると、アクセスを変更できます。</span><span class="sxs-lookup"><span data-stu-id="fd263-180">You can modify access using the netsh.exe tool in [!INCLUDE[wv](../../../includes/wv-md.md)] under the elevated administrator account.</span></span> <span data-ttu-id="fd263-181">netsh.exe の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="fd263-181">The following is an example of using netsh.exe.</span></span>  
-  
-```  
-netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
-```  
-  
- <span data-ttu-id="fd263-182">Netsh.exe の詳細については、次を参照してください。"[Netsh.exe ツールとコマンド ライン スイッチを使用する方法](https://go.microsoft.com/fwlink/?LinkId=97877)"。</span><span class="sxs-lookup"><span data-stu-id="fd263-182">For more information on netsh.exe, see "[How to Use the Netsh.exe Tool and Command-Line Switches](https://go.microsoft.com/fwlink/?LinkId=97877)".</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fd263-183">関連項目</span><span class="sxs-lookup"><span data-stu-id="fd263-183">See also</span></span>
+# <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="b9769-102">WCF サービス ホスト (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="b9769-102">WCF Service Host (WcfSvcHost.exe)</span></span>
 
-- [<span data-ttu-id="fd263-184">WCF のテスト用クライアント (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="fd263-184">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+<span data-ttu-id="b9769-103">Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) を使用すると、自動的にホストし、実装したサービスをテストするには、(F5) Visual Studio デバッガーを起動できます。</span><span class="sxs-lookup"><span data-stu-id="b9769-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="b9769-104">WCF テスト クライアント (WcfTestClient.exe) または独自のクライアントを検出して潜在的なエラーを修正するを使用してサービスをテストできます。</span><span class="sxs-lookup"><span data-stu-id="b9769-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>
+
+## <a name="wcf-service-host"></a><span data-ttu-id="b9769-105">WCF サービス ホスト</span><span class="sxs-lookup"><span data-stu-id="b9769-105">WCF Service Host</span></span>
+
+<span data-ttu-id="b9769-106">WCF サービス ホストは、WCF サービス プロジェクト内のサービスを列挙、プロジェクトの構成をロードおよび、検出された各サービスのホストをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="b9769-106">WCF Service Host enumerates the services in a WCF service project, loads the project’s configuration, and instantiates a host for each service that it finds.</span></span> <span data-ttu-id="b9769-107">このツールは、WCF サービス テンプレートを使って Visual Studio に統合し、プロジェクトのデバッグを開始するときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="b9769-107">The tool is integrated into Visual Studio through the WCF Service template and is invoked when you start to debug your project.</span></span>
+
+<span data-ttu-id="b9769-108">WCF サービス ホストを使用すると、余分なコードを記述したり開発時に特定のホストにコミットすることがなく、(WCF サービス ライブラリ プロジェクト) での WCF サービスをホストできます。</span><span class="sxs-lookup"><span data-stu-id="b9769-108">By using WCF Service Host, you can host a WCF service (in a WCF service library project) without writing extra code or committing to a specific host during development.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="b9769-109">WCF サービス ホストは、部分信頼をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="b9769-109">WCF Service Host does not support Partial Trust.</span></span> <span data-ttu-id="b9769-110">部分信頼で WCF サービスを使用する場合は、使わない WCF サービス ライブラリ プロジェクト テンプレート Visual Studio で、サービスを構築します。</span><span class="sxs-lookup"><span data-stu-id="b9769-110">If you want to use a WCF Service in Partial Trust, do not use the WCF Service Library Project template in Visual Studio to build your service.</span></span> <span data-ttu-id="b9769-111">代わりに、WCF の部分的な信頼がサポートされている web サーバーでサービスをホストできる WCF サービスの web サイト テンプレートを選択して Visual Studio で新しい web サイトを作成します。</span><span class="sxs-lookup"><span data-stu-id="b9769-111">Instead, create a New WebSite in Visual Studio by choosing the WCF Service WebSite template, which can host the service in a WebServer on which WCF Partial Trust is supported.</span></span>
+
+## <a name="project-types-hosted-by-wcf-service-host"></a><span data-ttu-id="b9769-112">WCF サービス ホストでホストされるプロジェクトの種類</span><span class="sxs-lookup"><span data-stu-id="b9769-112">Project Types hosted by WCF Service Host</span></span>
+
+<span data-ttu-id="b9769-113">WCF サービス ホストは、次の WCF サービス ライブラリ プロジェクトの種類をホストできます。WCF サービス ライブラリ、シーケンシャル ワークフロー サービス ライブラリ、ステート マシン ワークフロー サービス ライブラリおよび配信サービス ライブラリです。</span><span class="sxs-lookup"><span data-stu-id="b9769-113">WCF Service Host can host the following WCF service library project types: WCF Service Library, Sequential Workflow Service Library, State Machine Workflow Service Library and Syndication Service Library.</span></span> <span data-ttu-id="b9769-114">WCF サービス ホストが使用してサービス ライブラリ プロジェクトに追加できるこれらのサービスをホストできますも、**項目の追加**機能します。</span><span class="sxs-lookup"><span data-stu-id="b9769-114">WCF Service Host can also host those services that can be added to a service library project using the **Add Item** functionality.</span></span> <span data-ttu-id="b9769-115">これには、WCF サービス、WF ステート マシン サービス、WF シーケンシャル サービス、XAML WF ステート マシン サービス、および XAML WF シーケンシャル サービスが含まれます。</span><span class="sxs-lookup"><span data-stu-id="b9769-115">This includes WCF Service, WF State Machine Service, WF Sequential Service, XAML WF State Machine Service and XAML WF Sequential Service.</span></span>
+
+<span data-ttu-id="b9769-116">ただし、このツールでホストを構成することはできません。</span><span class="sxs-lookup"><span data-stu-id="b9769-116">You should note, however, that the tool will not help you to configure a host.</span></span> <span data-ttu-id="b9769-117">このタスクでは、App.config ファイルを手動で編集する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b9769-117">For this task, you must manually edit the App.config file.</span></span> <span data-ttu-id="b9769-118">また、このツールでユーザー定義の構成ファイルを検証することはできません。</span><span class="sxs-lookup"><span data-stu-id="b9769-118">The tool also does not validate user-defined configuration files.</span></span>
+
+> [!CAUTION]
+> <span data-ttu-id="b9769-119">いないにこの目的に設計されたように、運用環境でサービスをホストする WCF サービス ホストを使用する必要がありますできません。</span><span class="sxs-lookup"><span data-stu-id="b9769-119">You should not use WCF Service Host to host services in a production environment, as it was not engineered for this purpose.</span></span>  <span data-ttu-id="b9769-120">WCF サービス ホストは、信頼性、セキュリティ、およびそのような環境の管理の容易性の要件をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="b9769-120">WCF Service Host does not support the reliability, security, and manageability requirements of such an environment.</span></span> <span data-ttu-id="b9769-121">代わりに IIS を使用してください。IIS は、より高度な信頼性機能や監視機能を備えており、サービスをホストするのに適しています。</span><span class="sxs-lookup"><span data-stu-id="b9769-121">Instead, use IIS since it provides superior reliability and monitoring features, and is the preferred solution for hosting services.</span></span> <span data-ttu-id="b9769-122">サービスの開発が完了すると、IIS に WCF サービス ホストからサービスを移行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b9769-122">Once development of your services is complete, you should migrate the services from WCF Service Host to IIS.</span></span>
+
+## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a><span data-ttu-id="b9769-123">Visual Studio 内で WCF サービス ホストを使用するシナリオ</span><span class="sxs-lookup"><span data-stu-id="b9769-123">Scenarios for Using WCF Service Host inside Visual Studio</span></span>
+
+<span data-ttu-id="b9769-124">次の表のすべてのパラメーター、**コマンドライン引数**でプロジェクトを右クリックしてこのダイアログ ボックスで、**ソリューション エクスプ ローラー** を選択すると、VisualStudioで**プロパティ**を選択し、**デバッグ**タブとクリックして**スタート プロジェクト**します。</span><span class="sxs-lookup"><span data-stu-id="b9769-124">The following table lists all the parameters in the **Command line arguments** dialog box, which can be found by right-clicking your project in **Solutions Explorer** in Visual Studio, selecting **Properties**, then selecting the **Debug** tab and clicking **Start Project**.</span></span> <span data-ttu-id="b9769-125">これらのパラメーターは、WCF サービス ホストを構成するのに便利です。</span><span class="sxs-lookup"><span data-stu-id="b9769-125">These parameters are useful in configuring WCF Service Host.</span></span>
+
+|<span data-ttu-id="b9769-126">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b9769-126">Parameter</span></span>|<span data-ttu-id="b9769-127">説明</span><span class="sxs-lookup"><span data-stu-id="b9769-127">Meaning</span></span>|
+|---------------|-------------|
+|`/client`|<span data-ttu-id="b9769-128">サービスのホストが開始された後に実行する実行可能ファイルへのパスを指定するオプション パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="b9769-128">An optional parameter that specifies the path to an executable to run after the services are hosted.</span></span> <span data-ttu-id="b9769-129">WCF テスト クライアントが起動次のホストします。</span><span class="sxs-lookup"><span data-stu-id="b9769-129">This launches WCF Test Client following hosting.</span></span>|
+|`/clientArg`|<span data-ttu-id="b9769-130">カスタム クライアント アプリケーションに渡す引数として文字列を指定します。</span><span class="sxs-lookup"><span data-stu-id="b9769-130">Specify a string as an argument that is passed to the custom client application.</span></span>|
+|`/?`|<span data-ttu-id="b9769-131">ヘルプ テキストを表示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-131">Displays the help text.</span></span>|
+
+#### <a name="using-wcf-test-client"></a><span data-ttu-id="b9769-132">WCF のテスト用クライアントの使用</span><span class="sxs-lookup"><span data-stu-id="b9769-132">Using WCF Test Client</span></span>
+
+<span data-ttu-id="b9769-133">新しい WCF サービス プロジェクトを作成し、f5 キーを押してデバッガーを起動すると後、WCF サービス ホストは、プロジェクト内で見つかったすべてのサービスのホスティングを開始します。</span><span class="sxs-lookup"><span data-stu-id="b9769-133">After you create a new WCF service project and press F5 to start the debugger, WCF Service Host starts hosting all the services it finds in your project.</span></span> <span data-ttu-id="b9769-134">WCF テスト クライアントは自動的に開き、構成ファイルで定義されているサービス エンドポイントの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-134">WCF Test Client automatically opens and displays a list of service endpoints defined in the configuration file.</span></span> <span data-ttu-id="b9769-135">メイン ウィンドウでパラメーターをテストしたり、サービスを呼び出したりできます。</span><span class="sxs-lookup"><span data-stu-id="b9769-135">From the main window, you can test the parameters and invoke your service.</span></span>
+
+<span data-ttu-id="b9769-136">WCF テスト クライアントが使用されることを確認するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。クリックして**スタート プロジェクト**で、次が表示されることを確認してください、**コマンドライン引数** ダイアログ ボックス。</span><span class="sxs-lookup"><span data-stu-id="b9769-136">To make sure that WCF Test Client is used, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and ensure that the following appears in the **Command line arguments** dialog box.</span></span>
+
+`/client:WcfTestClient.exe`
+
+#### <a name="using-a-custom-client"></a><span data-ttu-id="b9769-137">カスタム クライアントの使用</span><span class="sxs-lookup"><span data-stu-id="b9769-137">Using a Custom Client</span></span>
+
+<span data-ttu-id="b9769-138">プロジェクトを右クリックし、カスタムのクライアントを使用する**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。をクリックして**スタート プロジェクト**および編集、`/client`パラメーター、**コマンドライン引数** ダイアログ ボックスは、次の例に示すように、カスタムのクライアント をポイントします。</span><span class="sxs-lookup"><span data-stu-id="b9769-138">To use a custom client, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and edit the `/client` parameter in the **Command line arguments** dialog box to point to your custom client, as indicated in the following example.</span></span>
+
+`/client:"path/CustomClient.exe"`
+
+<span data-ttu-id="b9769-139">サービスをもう一度開始して f5 キーを押すと、WCF サービス ホストで、デバッガーを起動するときに、使用するカスタム クライアントが自動的に開始されます。</span><span class="sxs-lookup"><span data-stu-id="b9769-139">When you press F5 to start the service again, WCF Service Host automatically starts your custom client when you launch the debugger.</span></span>
+
+<span data-ttu-id="b9769-140">`/clientArg:` パラメーターを使用して、カスタム クライアント アプリケーションに渡す引数として文字列を指定することもできます。以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-140">You can also use the `/clientArg:` parameter to specify a string as an argument that is passed to the custom client application, as indicated in the following example.</span></span>
+
+`/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`
+
+<span data-ttu-id="b9769-141">たとえば、配信サービス ライブラリ テンプレートを使用している場合は、次のコマンド ライン引数を使用できます。</span><span class="sxs-lookup"><span data-stu-id="b9769-141">For example, if you are using the Syndication Service Library template, you can use the following command line arguments,</span></span>
+
+`/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`
+
+#### <a name="specifying-no-client"></a><span data-ttu-id="b9769-142">クライアントを指定しない場合</span><span class="sxs-lookup"><span data-stu-id="b9769-142">Specifying No Client</span></span>
+
+<span data-ttu-id="b9769-143">WCF サービスをホストしている後にクライアントが使用されませんを指定するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します**プロパティ**を選択してから、 **のデバッグ。** タブ。クリックして**スタート プロジェクト**のままにし、**コマンドライン引数** ダイアログ ボックスを空白。</span><span class="sxs-lookup"><span data-stu-id="b9769-143">To specify that no client will be used after WCF service hosting, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start Project** and leave the **Command line arguments** dialog box blank.</span></span>
+
+#### <a name="using-a-custom-host"></a><span data-ttu-id="b9769-144">カスタム ホストの使用</span><span class="sxs-lookup"><span data-stu-id="b9769-144">Using a Custom Host</span></span>
+
+<span data-ttu-id="b9769-145">カスタム ホストを使用するでプロジェクトを右クリックして**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します。**プロパティ**を選択してから、**デバッグ**タブ。クリックして**外部プログラムの開始**し、カスタム ホストへの完全なパスを入力します。</span><span class="sxs-lookup"><span data-stu-id="b9769-145">To use a custom host, right-click your project in **Solutions Explorer** in Visual Studio, select **Properties**, then select the **Debug** tab. Click **Start External Program** and enter the full path to the custom host.</span></span> <span data-ttu-id="b9769-146">使用することも、**コマンドライン引数** ダイアログ ボックス、ホストに渡される引数を指定します。</span><span class="sxs-lookup"><span data-stu-id="b9769-146">You can also use the **Command line arguments** dialog box to specify arguments to be passed to the host.</span></span>
+
+## <a name="wcf-service-host-user-interface"></a><span data-ttu-id="b9769-147">WCF サービス ホストのユーザー インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b9769-147">WCF Service Host User Interface</span></span>
+
+<span data-ttu-id="b9769-148">最初に呼び出すと WCF サービス ホスト (を Visual Studio 内で f5 キーを押す)、 **WCF サービス ホスト**ウィンドウが自動的に開きます。</span><span class="sxs-lookup"><span data-stu-id="b9769-148">When you initially invoke WCF Service Host (by pressing F5 inside Visual Studio), the **WCF Service Host** window automatically opens.</span></span> <span data-ttu-id="b9769-149">WCF サービス ホストが実行されている場合は、通知領域で、プログラムのアイコンが表示されます。</span><span class="sxs-lookup"><span data-stu-id="b9769-149">When WCF Service Host is running, the program's icon appears in the notification area.</span></span> <span data-ttu-id="b9769-150">アイコンをダブルクリックして開き、 **WCF サービス ホスト**ウィンドウ</span><span class="sxs-lookup"><span data-stu-id="b9769-150">Double-click the icon to open the **WCF Service Host** window</span></span>
+
+<span data-ttu-id="b9769-151">サービスをホストしている中にエラーが発生すると、関連する情報を表示する WCF サービス ホスト ダイアログ ボックスが開きます。</span><span class="sxs-lookup"><span data-stu-id="b9769-151">When errors occur during service hosting, WCF Service Host dialog box will open to display relevant information.</span></span>
+
+<span data-ttu-id="b9769-152">**WCF サービス ホスト**メイン ウィンドウには、2 つのメニューが含まれています。</span><span class="sxs-lookup"><span data-stu-id="b9769-152">The **WCF Service Host** main window contains two menus:</span></span>
+
+- <span data-ttu-id="b9769-153">**ファイル**:含まれています、**閉じる**と**終了**コマンド。</span><span class="sxs-lookup"><span data-stu-id="b9769-153">**File**: Contains the **Close** and **Exit** commands.</span></span> <span data-ttu-id="b9769-154">クリックすると**閉じる**、 **WCF サービス ホスト** ダイアログ ボックスは閉じますが、サービスは引き続きホストされるようにします。</span><span class="sxs-lookup"><span data-stu-id="b9769-154">When you click **Close**, the **WCF Service Host** dialog box closes, but the services continue to be hosted.</span></span> <span data-ttu-id="b9769-155">クリックすると**終了**、WCF サービス ホストがシャット ダウンもします。</span><span class="sxs-lookup"><span data-stu-id="b9769-155">When you click **Exit**, WCF Service Host is also shut down.</span></span> <span data-ttu-id="b9769-156">ホストされているサービスもすべて停止します。</span><span class="sxs-lookup"><span data-stu-id="b9769-156">This also stops all hosted services.</span></span>
+
+- <span data-ttu-id="b9769-157">**ヘルプ**:含まれています、**について**バージョン情報が含まれるコマンド。</span><span class="sxs-lookup"><span data-stu-id="b9769-157">**Help**: Contains the **About** command that contains version information.</span></span> <span data-ttu-id="b9769-158">含まれています、**ヘルプ**コマンドがヘルプ ファイルを開くことができます。</span><span class="sxs-lookup"><span data-stu-id="b9769-158">It also contains the **Help** command that can open a help file.</span></span>
+
+<span data-ttu-id="b9769-159">メイン**WCF サービス ホスト**ウィンドウには、2 つの領域が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b9769-159">The main **WCF Service Host** window contains two areas:</span></span>
+
+- <span data-ttu-id="b9769-160">最初の領域が**サービス**します。</span><span class="sxs-lookup"><span data-stu-id="b9769-160">The first area is **Service**.</span></span> <span data-ttu-id="b9769-161">この領域には、すべてのサービスの基本情報が一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="b9769-161">It contains a list that displays basic information of all services.</span></span> <span data-ttu-id="b9769-162">具体的には、次の情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b9769-162">The information includes:</span></span>
+
+  - <span data-ttu-id="b9769-163">**[サービス]** :すべてのサービスを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-163">**Service**: Lists all the services.</span></span>
+
+  - <span data-ttu-id="b9769-164">**ステータス**:サービスの状態を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-164">**Status**: Lists the status of the service.</span></span> <span data-ttu-id="b9769-165">有効な値は、「開始」、「停止」と"Error"です。</span><span class="sxs-lookup"><span data-stu-id="b9769-165">Valid values are "Started", "Stopped," and "Error".</span></span>
+
+  - <span data-ttu-id="b9769-166">**メタデータ アドレス**:サービスのメタデータ アドレスを表示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-166">**Metadata Address**: Displays the metadata address of the services.</span></span>
+
+- <span data-ttu-id="b9769-167">2 番目の領域が**追加情報**します。</span><span class="sxs-lookup"><span data-stu-id="b9769-167">The second area is **Additional Information**.</span></span> <span data-ttu-id="b9769-168">特定のサービス行を選択した場合、サービスの状態の詳細についてが表示されます、**サービス**領域。</span><span class="sxs-lookup"><span data-stu-id="b9769-168">It displays a detailed explanation of the service status when the specific service line is selected in the **Service** area.</span></span> <span data-ttu-id="b9769-169">状態が "エラー" の場合は、完全なエラー メッセージを画面上で確認できます。</span><span class="sxs-lookup"><span data-stu-id="b9769-169">If the status is Error, you can view the full error message on the screen.</span></span>
+
+## <a name="stopping-wcf-service-host"></a><span data-ttu-id="b9769-170">WCF サービス ホストの停止</span><span class="sxs-lookup"><span data-stu-id="b9769-170">Stopping WCF Service Host</span></span>
+
+<span data-ttu-id="b9769-171">次の 4 つの方法で WCF サービス ホストをシャット ダウンできます。</span><span class="sxs-lookup"><span data-stu-id="b9769-171">You can shut down WCF Service Host in the following four ways:</span></span>
+
+- <span data-ttu-id="b9769-172">Visual Studio でデバッグ セッションを停止します。</span><span class="sxs-lookup"><span data-stu-id="b9769-172">Stop the debugging session in Visual Studio.</span></span>
+
+- <span data-ttu-id="b9769-173">選択**終了**から、**ファイル**メニューで、 **WCF サービス ホスト**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="b9769-173">Select **Exit** from the **File** menu in the **WCF Service Host** window.</span></span>
+
+- <span data-ttu-id="b9769-174">選択**終了**システム通知領域の WCF サービス ホストのトレイ アイコンのコンテキスト メニュー。</span><span class="sxs-lookup"><span data-stu-id="b9769-174">Select **Exit** from context menu of WCF Service Host tray icon in the system notification area.</span></span>
+
+- <span data-ttu-id="b9769-175">使用されている場合は、WCF テスト クライアントを終了します。</span><span class="sxs-lookup"><span data-stu-id="b9769-175">Exit WCF Test Client if it is being used.</span></span>
+
+## <a name="using-service-host-without-administrator-privilege"></a><span data-ttu-id="b9769-176">管理特権を必要としないサービス ホストの使用</span><span class="sxs-lookup"><span data-stu-id="b9769-176">Using Service Host without Administrator privilege</span></span>
+
+<span data-ttu-id="b9769-177">WCF サービスの開発を管理者特権のないユーザーを有効にする ACL (アクセス制御リスト) は、名前空間の作成"http://+:8731/Design_Time_Addresses"Visual Studio のインストール中にします。</span><span class="sxs-lookup"><span data-stu-id="b9769-177">To enable users without administrator privilege to develop WCF services, an ACL (Access Control List) is created for the namespace "http://+:8731/Design_Time_Addresses" during the installation of Visual Studio.</span></span> <span data-ttu-id="b9769-178">この ACL は (UI) に設定され、コンピューターにログオンしているすべての対話ユーザーが含まれます。</span><span class="sxs-lookup"><span data-stu-id="b9769-178">The ACL is set to (UI), which includes all interactive users logged on to the machine.</span></span> <span data-ttu-id="b9769-179">管理者は、追加または、この ACL からユーザーを削除または追加のポートを開くことができます。この ACL では、管理者特権を付与せずに WCF サービスの自動ホスト (wcfSvcHost.exe) を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="b9769-179">Administrators can add or remove users from this ACL, or open additional ports.This ACL enables users to use the WCF Service Auto Host (wcfSvcHost.exe) without granting them administrator privileges.</span></span>
+
+<span data-ttu-id="b9769-180">システム特権のある管理者アカウントで [!INCLUDE[wv](../../../includes/wv-md.md)] の netsh.exe ツールを使用すると、アクセスを変更できます。</span><span class="sxs-lookup"><span data-stu-id="b9769-180">You can modify access using the netsh.exe tool in [!INCLUDE[wv](../../../includes/wv-md.md)] under the elevated administrator account.</span></span> <span data-ttu-id="b9769-181">netsh.exe の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b9769-181">The following is an example of using netsh.exe.</span></span>
+
+```
+netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
+```
+
+<span data-ttu-id="b9769-182">Netsh.exe の詳細については、次を参照してください。"[Netsh.exe ツールとコマンド ライン スイッチを使用する方法](https://go.microsoft.com/fwlink/?LinkId=97877)"。</span><span class="sxs-lookup"><span data-stu-id="b9769-182">For more information on netsh.exe, see "[How to Use the Netsh.exe Tool and Command-Line Switches](https://go.microsoft.com/fwlink/?LinkId=97877)".</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="b9769-183">関連項目</span><span class="sxs-lookup"><span data-stu-id="b9769-183">See also</span></span>
+
+- [<span data-ttu-id="b9769-184">WCF のテスト用クライアント (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="b9769-184">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
