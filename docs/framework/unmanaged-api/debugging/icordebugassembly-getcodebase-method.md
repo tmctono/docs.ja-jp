@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b08149b2acd766aac428614205401e79246c5b21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645488"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737250"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="a7c57-102">ICorDebugAssembly::GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="a7c57-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="a7c57-103">.NET Framework の現在のバージョンでは、このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="a7c57-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="efe3d-102">ICorDebugAssembly::GetCodeBase メソッド</span><span class="sxs-lookup"><span data-stu-id="efe3d-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="efe3d-103">.NET Framework の現在のバージョンでは、このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="efe3d-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7c57-104">構文</span><span class="sxs-lookup"><span data-stu-id="a7c57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efe3d-104">構文</span><span class="sxs-lookup"><span data-stu-id="efe3d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCodeBase (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f256195a4cd5b18f568e05156db867aa5dba9161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774046"
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="9a45f-102">ETaskType 列挙型</span><span class="sxs-lookup"><span data-stu-id="9a45f-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="9a45f-103">いずれかで表されるタスクの種類を示す値を含む、 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)または[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="9a45f-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="10d16-102">ETaskType 列挙型</span><span class="sxs-lookup"><span data-stu-id="10d16-102">ETaskType Enumeration</span></span>
+<span data-ttu-id="10d16-103">いずれかで表されるタスクの種類を示す値を含む、 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)または[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="10d16-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a45f-104">構文</span><span class="sxs-lookup"><span data-stu-id="9a45f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10d16-104">構文</span><span class="sxs-lookup"><span data-stu-id="10d16-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum ETaskType {  
     TT_DEBUGGERHELPER           = 0x1,  
     TT_GC                       = 0x2,  
@@ -44,31 +44,31 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9a45f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="9a45f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="10d16-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="10d16-105">Members</span></span>  
   
-|<span data-ttu-id="9a45f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="9a45f-106">Member</span></span>|<span data-ttu-id="9a45f-107">説明</span><span class="sxs-lookup"><span data-stu-id="9a45f-107">Description</span></span>|  
+|<span data-ttu-id="10d16-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="10d16-106">Member</span></span>|<span data-ttu-id="10d16-107">説明</span><span class="sxs-lookup"><span data-stu-id="10d16-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="9a45f-108">このインターフェイスは、アプリケーション ドメインのアンロード タスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="9a45f-109">このインターフェイスは、デバッガー ヘルパーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="9a45f-110">このインターフェイスは、ファイナライザーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="9a45f-111">このインターフェイスは、ガベージ コレクションのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="9a45f-112">このインターフェイスは、ゲートのスレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="9a45f-113">このインターフェイスは、I/O スレッドのタスクまたはタスクの完了ポート スレッドを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="9a45f-114">このインターフェイスは、タイマー スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="9a45f-115">このインターフェイスは、待機スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="9a45f-116">このインターフェイスは、ワーカー スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="9a45f-117">タスクが不明です。</span><span class="sxs-lookup"><span data-stu-id="9a45f-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="9a45f-118">このインターフェイスは、ユーザーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="9a45f-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="10d16-108">このインターフェイスは、アプリケーション ドメインのアンロード タスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="10d16-109">このインターフェイスは、デバッガー ヘルパーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="10d16-110">このインターフェイスは、ファイナライザーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="10d16-111">このインターフェイスは、ガベージ コレクションのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="10d16-112">このインターフェイスは、ゲートのスレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="10d16-113">このインターフェイスは、I/O スレッドのタスクまたはタスクの完了ポート スレッドを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="10d16-114">このインターフェイスは、タイマー スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="10d16-115">このインターフェイスは、待機スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="10d16-116">このインターフェイスは、ワーカー スレッドのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="10d16-117">タスクが不明です。</span><span class="sxs-lookup"><span data-stu-id="10d16-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="10d16-118">このインターフェイスは、ユーザーのタスクを表します。</span><span class="sxs-lookup"><span data-stu-id="10d16-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9a45f-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a45f-119">Requirements</span></span>  
- <span data-ttu-id="9a45f-120">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a45f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10d16-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="10d16-119">Requirements</span></span>  
+ <span data-ttu-id="10d16-120">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="10d16-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a45f-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9a45f-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="10d16-121">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="10d16-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9a45f-122">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9a45f-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="10d16-122">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="10d16-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9a45f-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a45f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="10d16-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10d16-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a45f-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a45f-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10d16-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="10d16-124">See also</span></span>
 
-- [<span data-ttu-id="9a45f-125">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="9a45f-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="10d16-125">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="10d16-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

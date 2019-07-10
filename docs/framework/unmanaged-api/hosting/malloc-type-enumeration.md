@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765220"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779343"
 ---
-# <a name="malloctype-enumeration"></a><span data-ttu-id="2bbf6-102">MALLOC_TYPE 列挙体</span><span class="sxs-lookup"><span data-stu-id="2bbf6-102">MALLOC_TYPE Enumeration</span></span>
-<span data-ttu-id="2bbf6-103">割り当てられるメモリの特性を指定する値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
+# <a name="malloctype-enumeration"></a><span data-ttu-id="e074a-102">MALLOC_TYPE 列挙体</span><span class="sxs-lookup"><span data-stu-id="e074a-102">MALLOC_TYPE Enumeration</span></span>
+<span data-ttu-id="e074a-103">割り当てられるメモリの特性を指定する値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e074a-103">Contains values that specify the characteristics of the memory that is being allocated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bbf6-104">構文</span><span class="sxs-lookup"><span data-stu-id="2bbf6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e074a-104">構文</span><span class="sxs-lookup"><span data-stu-id="e074a-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     MALLOC_THREADSAFE = 0x1,  
     MALLOC_EXECUTABLE = 0x2,  
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2bbf6-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="2bbf6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e074a-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e074a-105">Members</span></span>  
   
-|<span data-ttu-id="2bbf6-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="2bbf6-106">Member</span></span>|<span data-ttu-id="2bbf6-107">説明</span><span class="sxs-lookup"><span data-stu-id="2bbf6-107">Description</span></span>|  
+|<span data-ttu-id="e074a-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e074a-106">Member</span></span>|<span data-ttu-id="e074a-107">説明</span><span class="sxs-lookup"><span data-stu-id="e074a-107">Description</span></span>|  
 |------------|-----------------|  
-|`MALLOC_EXECUTABLE`|<span data-ttu-id="2bbf6-108">割り当てられたメモリは、実行可能ファイルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-108">The allocated memory can contain an executable file.</span></span>|  
-|`MALLOC_THREADSAFE`|<span data-ttu-id="2bbf6-109">割り当てられたメモリは、スレッド セーフです。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="2bbf6-110">つまり、メモリは、同期しなくても、複数のスレッドによってアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="2bbf6-111">このフラグが設定されていない場合は、オブジェクトでの呼び出しをシリアル化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
+|`MALLOC_EXECUTABLE`|<span data-ttu-id="e074a-108">割り当てられたメモリは、実行可能ファイルを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="e074a-108">The allocated memory can contain an executable file.</span></span>|  
+|`MALLOC_THREADSAFE`|<span data-ttu-id="e074a-109">割り当てられたメモリは、スレッド セーフです。</span><span class="sxs-lookup"><span data-stu-id="e074a-109">The allocated memory is thread-safe.</span></span> <span data-ttu-id="e074a-110">つまり、メモリは、同期しなくても、複数のスレッドによってアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="e074a-110">That is, the memory can be accessed by multiple threads without any synchronization.</span></span><br /><br /> <span data-ttu-id="e074a-111">このフラグが設定されていない場合は、オブジェクトでの呼び出しをシリアル化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e074a-111">If this flag is not set, calls on the object must be serialized.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2bbf6-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="2bbf6-112">Requirements</span></span>  
- <span data-ttu-id="2bbf6-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2bbf6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e074a-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="e074a-112">Requirements</span></span>  
+ <span data-ttu-id="e074a-113">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e074a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bbf6-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2bbf6-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e074a-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e074a-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2bbf6-115">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2bbf6-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="e074a-115">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e074a-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2bbf6-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bbf6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e074a-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e074a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bbf6-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="2bbf6-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e074a-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="e074a-117">See also</span></span>
 
-- [<span data-ttu-id="2bbf6-118">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="2bbf6-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="e074a-118">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="e074a-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
