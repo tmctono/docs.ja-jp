@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac550ee7b1d66612557b30d15c275c90cf09b8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986857"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765071"
 ---
-# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="ee4e3-102">ICorDebugValue::GetAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="ee4e3-102">ICorDebugValue::GetAddress Method</span></span>
-<span data-ttu-id="ee4e3-103">デバッグ対象プロセスでは、この"ICorDebugValue"オブジェクトのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="ee4e3-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
+# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="37c4f-102">ICorDebugValue::GetAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="37c4f-102">ICorDebugValue::GetAddress Method</span></span>
+<span data-ttu-id="37c4f-103">デバッグ対象プロセスでは、この"ICorDebugValue"オブジェクトのアドレスを取得します。</span><span class="sxs-lookup"><span data-stu-id="37c4f-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee4e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="ee4e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37c4f-104">構文</span><span class="sxs-lookup"><span data-stu-id="37c4f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetAddress (  
     [out] CORDB_ADDRESS   *pAddress  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ee4e3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ee4e3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37c4f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="37c4f-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="ee4e3-106">[out]ポインターを`CORDB_ADDRESS`値オブジェクトのアドレスを指定するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="ee4e3-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
+ <span data-ttu-id="37c4f-106">[out]ポインターを`CORDB_ADDRESS`値オブジェクトのアドレスを指定するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="37c4f-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ee4e3-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="ee4e3-107">Remarks</span></span>  
- <span data-ttu-id="ee4e3-108">値が使用できない場合は、0 (ゼロ) が返されます。</span><span class="sxs-lookup"><span data-stu-id="ee4e3-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="ee4e3-109">これは、値は、レジスタで少なくとも一部場合に発生する可能性がありますまたはガベージ コレクター ハンドルに格納されている (`GCHandle`)。</span><span class="sxs-lookup"><span data-stu-id="ee4e3-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37c4f-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="37c4f-107">Remarks</span></span>  
+ <span data-ttu-id="37c4f-108">値が使用できない場合は、0 (ゼロ) が返されます。</span><span class="sxs-lookup"><span data-stu-id="37c4f-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="37c4f-109">これは、値は、レジスタで少なくとも一部場合に発生する可能性がありますまたはガベージ コレクター ハンドルに格納されている (`GCHandle`)。</span><span class="sxs-lookup"><span data-stu-id="37c4f-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee4e3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="ee4e3-110">Requirements</span></span>  
- <span data-ttu-id="ee4e3-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ee4e3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37c4f-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="37c4f-110">Requirements</span></span>  
+ <span data-ttu-id="37c4f-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="37c4f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee4e3-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ee4e3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="37c4f-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37c4f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ee4e3-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ee4e3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37c4f-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37c4f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ee4e3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee4e3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="37c4f-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37c4f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee4e3-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee4e3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37c4f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="37c4f-115">See also</span></span>

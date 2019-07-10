@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21fa9a17067f754fe9b13c4d32193856a57750ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698136"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738693"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="6bf40-102">ICLRDataTarget::GetTLSValue メソッド</span><span class="sxs-lookup"><span data-stu-id="6bf40-102">ICLRDataTarget::GetTLSValue Method</span></span>
-<span data-ttu-id="6bf40-103">ターゲット プロセス内の指定したスレッドのスレッド ローカル ストレージ (TLS) から値を取得します。</span><span class="sxs-lookup"><span data-stu-id="6bf40-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="6bf40-104">このメソッドは、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="6bf40-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="02025-102">ICLRDataTarget::GetTLSValue メソッド</span><span class="sxs-lookup"><span data-stu-id="02025-102">ICLRDataTarget::GetTLSValue Method</span></span>
+<span data-ttu-id="02025-103">ターゲット プロセス内の指定したスレッドのスレッド ローカル ストレージ (TLS) から値を取得します。</span><span class="sxs-lookup"><span data-stu-id="02025-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="02025-104">このメソッドは、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="02025-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bf40-105">構文</span><span class="sxs-lookup"><span data-stu-id="6bf40-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02025-105">構文</span><span class="sxs-lookup"><span data-stu-id="02025-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetTLSValue (  
     [in] ULONG32            threadID,  
     [in] ULONG32            index,  
@@ -37,28 +37,28 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6bf40-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6bf40-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02025-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="02025-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="6bf40-107">[in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="6bf40-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="02025-107">[in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。</span><span class="sxs-lookup"><span data-stu-id="02025-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="6bf40-108">[in]位置のインデックス。</span><span class="sxs-lookup"><span data-stu-id="6bf40-108">[in] The index of the location.</span></span> <span data-ttu-id="6bf40-109">この値は、指定したスレッドのローカル ストアに有効なインデックスを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6bf40-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="02025-108">[in]位置のインデックス。</span><span class="sxs-lookup"><span data-stu-id="02025-108">[in] The index of the location.</span></span> <span data-ttu-id="02025-109">この値は、指定したスレッドのローカル ストアに有効なインデックスを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="02025-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="6bf40-110">[out]ポインターを`CLRDATA_ADDRESS`TLS の指定した場所から値を指定する値が返されます。</span><span class="sxs-lookup"><span data-stu-id="6bf40-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
+ <span data-ttu-id="02025-110">[out]ポインターを`CLRDATA_ADDRESS`TLS の指定した場所から値を指定する値が返されます。</span><span class="sxs-lookup"><span data-stu-id="02025-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6bf40-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="6bf40-111">Remarks</span></span>  
- <span data-ttu-id="6bf40-112">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="6bf40-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="02025-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="02025-111">Remarks</span></span>  
+ <span data-ttu-id="02025-112">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="02025-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6bf40-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="6bf40-113">Requirements</span></span>  
- <span data-ttu-id="6bf40-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6bf40-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02025-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="02025-113">Requirements</span></span>  
+ <span data-ttu-id="02025-114">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="02025-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6bf40-115">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6bf40-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="02025-115">**ヘッダー:** ClrData.idl、ClrData.h</span><span class="sxs-lookup"><span data-stu-id="02025-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6bf40-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6bf40-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="02025-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02025-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6bf40-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bf40-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="02025-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02025-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6bf40-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="6bf40-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02025-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="02025-118">See also</span></span>
 
-- [<span data-ttu-id="6bf40-119">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6bf40-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="02025-119">ICLRDataTarget インターフェイス</span><span class="sxs-lookup"><span data-stu-id="02025-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

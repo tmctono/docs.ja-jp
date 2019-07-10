@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edd9407f05e30eb420e83fb042c2412e99b0a022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ab8d56a457db0a70b47293684f0de73ce9ff5f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763363"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="58097-102">ICorDebugModule::GetFunctionFromRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="58097-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="58097-103">このメソッドは、.NET Framework の現在のバージョンで実装されていません。</span><span class="sxs-lookup"><span data-stu-id="58097-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="4be17-102">ICorDebugModule::GetFunctionFromRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="4be17-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="4be17-103">このメソッドは、.NET Framework の現在のバージョンで実装されていません。</span><span class="sxs-lookup"><span data-stu-id="4be17-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58097-104">構文</span><span class="sxs-lookup"><span data-stu-id="58097-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4be17-104">構文</span><span class="sxs-lookup"><span data-stu-id="4be17-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFunctionFromRVA(  
     [in]  CORDB_ADDRESS      rva,  
     [out] ICorDebugFunction  **ppFunction  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="58097-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="58097-105">Requirements</span></span>  
- <span data-ttu-id="58097-106">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58097-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4be17-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="4be17-105">Requirements</span></span>  
+ <span data-ttu-id="4be17-106">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4be17-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58097-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="58097-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4be17-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="4be17-107">See also</span></span>
