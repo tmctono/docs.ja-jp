@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697356"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751594"
 ---
-# <a name="identityattributeblob-structure"></a><span data-ttu-id="78486-102">IDENTITY_ATTRIBUTE_BLOB 構造体</span><span class="sxs-lookup"><span data-stu-id="78486-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
-<span data-ttu-id="78486-103">アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。</span><span class="sxs-lookup"><span data-stu-id="78486-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="78486-104">各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78486-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface</span></span>  
+# <a name="identityattributeblob-structure"></a><span data-ttu-id="d13ac-102">IDENTITY_ATTRIBUTE_BLOB 構造体</span><span class="sxs-lookup"><span data-stu-id="d13ac-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
+<span data-ttu-id="d13ac-103">アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。</span><span class="sxs-lookup"><span data-stu-id="d13ac-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="d13ac-104">各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d13ac-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78486-105">構文</span><span class="sxs-lookup"><span data-stu-id="78486-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d13ac-105">構文</span><span class="sxs-lookup"><span data-stu-id="d13ac-105">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -38,26 +38,26 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="78486-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="78486-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d13ac-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="d13ac-106">Members</span></span>  
   
-|<span data-ttu-id="78486-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="78486-107">Member</span></span>|<span data-ttu-id="78486-108">説明</span><span class="sxs-lookup"><span data-stu-id="78486-108">Description</span></span>|  
+|<span data-ttu-id="d13ac-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="d13ac-107">Member</span></span>|<span data-ttu-id="d13ac-108">説明</span><span class="sxs-lookup"><span data-stu-id="d13ac-108">Description</span></span>|  
 |------------|-----------------|  
-|`ofsNamespace`|<span data-ttu-id="78486-109">最初の文字バッファーにオフセットします。</span><span class="sxs-lookup"><span data-stu-id="78486-109">The first offset into the character buffer.</span></span> <span data-ttu-id="78486-110">属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。</span><span class="sxs-lookup"><span data-stu-id="78486-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="78486-111">そのためは使用されません。</span><span class="sxs-lookup"><span data-stu-id="78486-111">Therefore, it is not used.</span></span>|  
-|`ofsName`|<span data-ttu-id="78486-112">文字バッファーへの 2 つ目のオフセット。</span><span class="sxs-lookup"><span data-stu-id="78486-112">The second offset into the character buffer.</span></span> <span data-ttu-id="78486-113">この場所は、属性の名前の先頭をマークします。</span><span class="sxs-lookup"><span data-stu-id="78486-113">This location marks the start of the attribute's name.</span></span>|  
-|`ofsValue`|<span data-ttu-id="78486-114">文字バッファーに 3 つ目のオフセット。</span><span class="sxs-lookup"><span data-stu-id="78486-114">The third offset into the character buffer.</span></span> <span data-ttu-id="78486-115">この場所は、属性の値の開始をマークします。</span><span class="sxs-lookup"><span data-stu-id="78486-115">This location marks the start of the attribute's value.</span></span>|  
+|`ofsNamespace`|<span data-ttu-id="d13ac-109">最初の文字バッファーにオフセットします。</span><span class="sxs-lookup"><span data-stu-id="d13ac-109">The first offset into the character buffer.</span></span> <span data-ttu-id="d13ac-110">属性の名前空間ではなく、一連の null 文字は、このオフセットは追跡されません。</span><span class="sxs-lookup"><span data-stu-id="d13ac-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="d13ac-111">そのためは使用されません。</span><span class="sxs-lookup"><span data-stu-id="d13ac-111">Therefore, it is not used.</span></span>|  
+|`ofsName`|<span data-ttu-id="d13ac-112">文字バッファーへの 2 つ目のオフセット。</span><span class="sxs-lookup"><span data-stu-id="d13ac-112">The second offset into the character buffer.</span></span> <span data-ttu-id="d13ac-113">この場所は、属性の名前の先頭をマークします。</span><span class="sxs-lookup"><span data-stu-id="d13ac-113">This location marks the start of the attribute's name.</span></span>|  
+|`ofsValue`|<span data-ttu-id="d13ac-114">文字バッファーに 3 つ目のオフセット。</span><span class="sxs-lookup"><span data-stu-id="d13ac-114">The third offset into the character buffer.</span></span> <span data-ttu-id="d13ac-115">この場所は、属性の値の開始をマークします。</span><span class="sxs-lookup"><span data-stu-id="d13ac-115">This location marks the start of the attribute's value.</span></span>|  
   
-## <a name="sample"></a><span data-ttu-id="78486-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="78486-116">Sample</span></span>  
- <span data-ttu-id="78486-117">次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="78486-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
+## <a name="sample"></a><span data-ttu-id="d13ac-116">サンプル</span><span class="sxs-lookup"><span data-stu-id="d13ac-116">Sample</span></span>  
+ <span data-ttu-id="d13ac-117">次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="d13ac-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
   
-1. <span data-ttu-id="78486-118">取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="78486-118">Obtain an [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) for the assembly.</span></span>  
+1. <span data-ttu-id="d13ac-118">取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。</span><span class="sxs-lookup"><span data-stu-id="d13ac-118">Obtain an [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) for the assembly.</span></span>  
   
-2. <span data-ttu-id="78486-119">呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。</span><span class="sxs-lookup"><span data-stu-id="78486-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span></span>  
+2. <span data-ttu-id="d13ac-119">呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。</span><span class="sxs-lookup"><span data-stu-id="d13ac-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span></span>  
   
-3. <span data-ttu-id="78486-120">文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="78486-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+3. <span data-ttu-id="d13ac-120">文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="d13ac-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-4. <span data-ttu-id="78486-121">呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="78486-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="78486-122">このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。</span><span class="sxs-lookup"><span data-stu-id="78486-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="78486-123">これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="78486-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+4. <span data-ttu-id="d13ac-121">呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="d13ac-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="d13ac-122">このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。</span><span class="sxs-lookup"><span data-stu-id="d13ac-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="d13ac-123">これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。</span><span class="sxs-lookup"><span data-stu-id="d13ac-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  
@@ -221,30 +221,30 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="78486-124">サンプルを実行するには</span><span class="sxs-lookup"><span data-stu-id="78486-124">To run the sample</span></span>  
- <span data-ttu-id="78486-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="78486-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="d13ac-124">サンプルを実行するには</span><span class="sxs-lookup"><span data-stu-id="d13ac-124">To run the sample</span></span>  
+ <span data-ttu-id="d13ac-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="d13ac-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
   
-### <a name="sample-output"></a><span data-ttu-id="78486-126">出力例</span><span class="sxs-lookup"><span data-stu-id="78486-126">Sample output</span></span>  
- <span data-ttu-id="78486-127">Culture = neutral</span><span class="sxs-lookup"><span data-stu-id="78486-127">Culture = neutral</span></span>  
+### <a name="sample-output"></a><span data-ttu-id="d13ac-126">出力例</span><span class="sxs-lookup"><span data-stu-id="d13ac-126">Sample output</span></span>  
+ <span data-ttu-id="d13ac-127">Culture = neutral</span><span class="sxs-lookup"><span data-stu-id="d13ac-127">Culture = neutral</span></span>  
   
- <span data-ttu-id="78486-128">名前 = システム</span><span class="sxs-lookup"><span data-stu-id="78486-128">name = System</span></span>  
+ <span data-ttu-id="d13ac-128">名前 = システム</span><span class="sxs-lookup"><span data-stu-id="d13ac-128">name = System</span></span>  
   
- <span data-ttu-id="78486-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="78486-129">processorArchitecture = MSIL</span></span>  
+ <span data-ttu-id="d13ac-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="d13ac-129">processorArchitecture = MSIL</span></span>  
   
- <span data-ttu-id="78486-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="78486-130">PublicKeyToken = b77a5c561934e089</span></span>  
+ <span data-ttu-id="d13ac-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="d13ac-130">PublicKeyToken = b77a5c561934e089</span></span>  
   
- <span data-ttu-id="78486-131">バージョン 2.0.0.0 を =</span><span class="sxs-lookup"><span data-stu-id="78486-131">Version = 2.0.0.0</span></span>  
+ <span data-ttu-id="d13ac-131">バージョン 2.0.0.0 を =</span><span class="sxs-lookup"><span data-stu-id="d13ac-131">Version = 2.0.0.0</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78486-132">必要条件</span><span class="sxs-lookup"><span data-stu-id="78486-132">Requirements</span></span>  
- <span data-ttu-id="78486-133">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="78486-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d13ac-132">必要条件</span><span class="sxs-lookup"><span data-stu-id="d13ac-132">Requirements</span></span>  
+ <span data-ttu-id="d13ac-133">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d13ac-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78486-134">**ヘッダー:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="78486-134">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="d13ac-134">**ヘッダー:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="d13ac-134">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="78486-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78486-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d13ac-135">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d13ac-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78486-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="78486-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d13ac-136">関連項目</span><span class="sxs-lookup"><span data-stu-id="d13ac-136">See also</span></span>
 
-- [<span data-ttu-id="78486-137">IReferenceIdentity インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78486-137">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [<span data-ttu-id="78486-138">IEnumIDENTITY_ATTRIBUTE インターフェイス</span><span class="sxs-lookup"><span data-stu-id="78486-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [<span data-ttu-id="78486-139">IDENTITY_ATTRIBUTE 構造体</span><span class="sxs-lookup"><span data-stu-id="78486-139">IDENTITY_ATTRIBUTE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [<span data-ttu-id="78486-140">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="78486-140">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [<span data-ttu-id="d13ac-137">IReferenceIdentity インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d13ac-137">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [<span data-ttu-id="d13ac-138">IEnumIDENTITY_ATTRIBUTE インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d13ac-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [<span data-ttu-id="d13ac-139">IDENTITY_ATTRIBUTE 構造体</span><span class="sxs-lookup"><span data-stu-id="d13ac-139">IDENTITY_ATTRIBUTE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [<span data-ttu-id="d13ac-140">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="d13ac-140">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

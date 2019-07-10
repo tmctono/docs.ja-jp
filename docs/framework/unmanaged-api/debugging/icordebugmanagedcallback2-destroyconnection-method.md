@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ae3a9761798ed9ea42b984f2c6c2cad4e42777
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350a3505345aa88d93f551309eb896ff52cc683d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761154"
 ---
-# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="b3744-102">ICorDebugManagedCallback2::DestroyConnection メソッド</span><span class="sxs-lookup"><span data-stu-id="b3744-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
-<span data-ttu-id="b3744-103">指定した接続が終了されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b3744-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
+# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="8d0b3-102">ICorDebugManagedCallback2::DestroyConnection メソッド</span><span class="sxs-lookup"><span data-stu-id="8d0b3-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
+<span data-ttu-id="8d0b3-103">指定した接続が終了されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="8d0b3-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3744-104">構文</span><span class="sxs-lookup"><span data-stu-id="b3744-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d0b3-104">構文</span><span class="sxs-lookup"><span data-stu-id="8d0b3-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DestroyConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3744-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b3744-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d0b3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8d0b3-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="b3744-106">[in]破棄された接続を含むプロセスを表す ICorDebugProcess オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b3744-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
+ <span data-ttu-id="8d0b3-106">[in]破棄された接続を含むプロセスを表す ICorDebugProcess オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8d0b3-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="b3744-107">[in]破棄された接続の ID。</span><span class="sxs-lookup"><span data-stu-id="b3744-107">[in] The ID of the connection that was destroyed.</span></span>  
+ <span data-ttu-id="8d0b3-107">[in]破棄された接続の ID。</span><span class="sxs-lookup"><span data-stu-id="8d0b3-107">[in] The ID of the connection that was destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b3744-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="b3744-108">Remarks</span></span>  
- <span data-ttu-id="b3744-109">A`DestroyConnection`ホストを呼び出すときに起動されるコールバック[iclrdebugmanager::endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="b3744-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d0b3-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="8d0b3-108">Remarks</span></span>  
+ <span data-ttu-id="8d0b3-109">A`DestroyConnection`ホストを呼び出すときに起動されるコールバック[iclrdebugmanager::endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。</span><span class="sxs-lookup"><span data-stu-id="8d0b3-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3744-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="b3744-110">Requirements</span></span>  
- <span data-ttu-id="b3744-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b3744-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d0b3-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="8d0b3-110">Requirements</span></span>  
+ <span data-ttu-id="8d0b3-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8d0b3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3744-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3744-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8d0b3-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d0b3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b3744-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3744-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d0b3-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d0b3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b3744-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3744-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d0b3-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d0b3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3744-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3744-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d0b3-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="8d0b3-115">See also</span></span>
 
-- [<span data-ttu-id="b3744-116">ICorDebugManagedCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b3744-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="b3744-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b3744-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="8d0b3-116">ICorDebugManagedCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d0b3-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="8d0b3-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d0b3-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
