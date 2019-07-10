@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17568a46c8e946989af0e401366d7eaa885886da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778859"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="081a7-102">IMetaDataImport::GetScopeProps メソッド</span><span class="sxs-lookup"><span data-stu-id="081a7-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="081a7-103">現在のメタデータ スコープにあるアセンブリまたはモジュールの名前、およびオプションでバージョン ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="081a7-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="fafc0-102">IMetaDataImport::GetScopeProps メソッド</span><span class="sxs-lookup"><span data-stu-id="fafc0-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="fafc0-103">現在のメタデータ スコープにあるアセンブリまたはモジュールの名前、およびオプションでバージョン ID を取得します。</span><span class="sxs-lookup"><span data-stu-id="fafc0-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="081a7-104">構文</span><span class="sxs-lookup"><span data-stu-id="081a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fafc0-104">構文</span><span class="sxs-lookup"><span data-stu-id="fafc0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetScopeProps (  
    [out] LPWSTR           szName,  
    [in]  ULONG            cchName,  
@@ -38,32 +38,32 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="081a7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="081a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fafc0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fafc0-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="081a7-106">[out]アセンブリまたはモジュール名のバッファー。</span><span class="sxs-lookup"><span data-stu-id="081a7-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="fafc0-106">[out]アセンブリまたはモジュール名のバッファー。</span><span class="sxs-lookup"><span data-stu-id="fafc0-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="081a7-107">[in]ワイド文字単位サイズ`szName`します。</span><span class="sxs-lookup"><span data-stu-id="081a7-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="fafc0-107">[in]ワイド文字単位サイズ`szName`します。</span><span class="sxs-lookup"><span data-stu-id="fafc0-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="081a7-108">[out]返されるワイド文字数`szName`します。</span><span class="sxs-lookup"><span data-stu-id="081a7-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="fafc0-108">[out]返されるワイド文字数`szName`します。</span><span class="sxs-lookup"><span data-stu-id="fafc0-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="081a7-109">[out] 省略可能アセンブリまたはモジュールのバージョンを一意に識別する GUID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="081a7-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="fafc0-109">[out] 省略可能アセンブリまたはモジュールのバージョンを一意に識別する GUID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="fafc0-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="081a7-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="081a7-110">Remarks</span></span>  
- <span data-ttu-id="081a7-111">[Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)メソッドを使用して、これらのプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="081a7-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fafc0-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="fafc0-110">Remarks</span></span>  
+ <span data-ttu-id="fafc0-111">[Imetadataemit::setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)メソッドを使用して、これらのプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="fafc0-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="081a7-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="081a7-112">Requirements</span></span>  
- <span data-ttu-id="081a7-113">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="081a7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fafc0-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="fafc0-112">Requirements</span></span>  
+ <span data-ttu-id="fafc0-113">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fafc0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="081a7-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="081a7-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fafc0-114">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fafc0-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="081a7-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="081a7-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fafc0-115">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="fafc0-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="081a7-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="081a7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fafc0-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fafc0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="081a7-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="081a7-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fafc0-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="fafc0-117">See also</span></span>
 
-- [<span data-ttu-id="081a7-118">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="081a7-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="081a7-119">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="081a7-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="fafc0-118">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fafc0-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fafc0-119">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fafc0-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

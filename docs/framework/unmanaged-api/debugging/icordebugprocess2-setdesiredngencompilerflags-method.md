@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e061c3f3dc95e63339d6fd5f82b3cb4d38a4b6c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747377"
 ---
-# <a name="icordebugprocess2setdesiredngencompilerflags-method"></a><span data-ttu-id="f540d-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="f540d-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags Method</span></span>
-<span data-ttu-id="f540d-103">ランタイムにそのイメージを現在のプロセスに読み込むためにプリコンパイル済みのイメージに埋め込む必要があるフラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="f540d-103">Sets the flags that must be embedded in a precompiled image in order for the runtime to load that image into the current process.</span></span>  
+# <a name="icordebugprocess2setdesiredngencompilerflags-method"></a><span data-ttu-id="dab25-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags メソッド</span><span class="sxs-lookup"><span data-stu-id="dab25-102">ICorDebugProcess2::SetDesiredNGENCompilerFlags Method</span></span>
+<span data-ttu-id="dab25-103">ランタイムにそのイメージを現在のプロセスに読み込むためにプリコンパイル済みのイメージに埋め込む必要があるフラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="dab25-103">Sets the flags that must be embedded in a precompiled image in order for the runtime to load that image into the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f540d-104">構文</span><span class="sxs-lookup"><span data-stu-id="f540d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dab25-104">構文</span><span class="sxs-lookup"><span data-stu-id="dab25-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetDesiredNGENCompilerFlags (  
     [in] DWORD    pdwFlags  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f540d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f540d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dab25-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="dab25-105">Parameters</span></span>  
  `pdwFlags`  
- <span data-ttu-id="f540d-106">[in]値、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)コンパイラ フラグを指定する列挙体に適切なコンパイル済みのイメージを選択するために使用します。</span><span class="sxs-lookup"><span data-stu-id="f540d-106">[in] A value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that specifies the compiler flags used to select the correct pre-compiled image.</span></span>  
+ <span data-ttu-id="dab25-106">[in]値、 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md)コンパイラ フラグを指定する列挙体に適切なコンパイル済みのイメージを選択するために使用します。</span><span class="sxs-lookup"><span data-stu-id="dab25-106">[in] A value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that specifies the compiler flags used to select the correct pre-compiled image.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f540d-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="f540d-107">Remarks</span></span>  
- <span data-ttu-id="f540d-108">`SetDesiredNGENCompilerFlags`メソッドは、ランタイムはこのプロセスにそのイメージを読み込むようにプリコンパイル済みのイメージに埋め込む必要があるフラグを指定します。</span><span class="sxs-lookup"><span data-stu-id="f540d-108">The `SetDesiredNGENCompilerFlags` method specifies the flags that must be embedded in a precompiled image so that the runtime will load that image into this process.</span></span> <span data-ttu-id="f540d-109">このメソッドによって設定されたフラグは、適切なプリコンパイル済みのイメージの選択にのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="f540d-109">The flags set by this method are used only to select the correct precompiled image.</span></span> <span data-ttu-id="f540d-110">このようなイメージが存在しない場合、ランタイムは読み込む Microsoft intermediate language (MSIL) のイメージと、ジャストイン タイム (JIT) コンパイラ代わりにします。</span><span class="sxs-lookup"><span data-stu-id="f540d-110">If no such image exists, the runtime will load the Microsoft intermediate language (MSIL) image and the just-in-time (JIT) compiler instead.</span></span> <span data-ttu-id="f540d-111">その場合は、デバッガーを使用する必要がありますが、 [icordebugmodule 2::setjitcompilerflags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)メソッドを JIT コンパイルの必要に応じて、フラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="f540d-111">In that case, the debugger must still use the [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) method to set the flags as desired for the JIT compilation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dab25-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="dab25-107">Remarks</span></span>  
+ <span data-ttu-id="dab25-108">`SetDesiredNGENCompilerFlags`メソッドは、ランタイムはこのプロセスにそのイメージを読み込むようにプリコンパイル済みのイメージに埋め込む必要があるフラグを指定します。</span><span class="sxs-lookup"><span data-stu-id="dab25-108">The `SetDesiredNGENCompilerFlags` method specifies the flags that must be embedded in a precompiled image so that the runtime will load that image into this process.</span></span> <span data-ttu-id="dab25-109">このメソッドによって設定されたフラグは、適切なプリコンパイル済みのイメージの選択にのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="dab25-109">The flags set by this method are used only to select the correct precompiled image.</span></span> <span data-ttu-id="dab25-110">このようなイメージが存在しない場合、ランタイムは読み込む Microsoft intermediate language (MSIL) のイメージと、ジャストイン タイム (JIT) コンパイラ代わりにします。</span><span class="sxs-lookup"><span data-stu-id="dab25-110">If no such image exists, the runtime will load the Microsoft intermediate language (MSIL) image and the just-in-time (JIT) compiler instead.</span></span> <span data-ttu-id="dab25-111">その場合は、デバッガーを使用する必要がありますが、 [icordebugmodule 2::setjitcompilerflags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)メソッドを JIT コンパイルの必要に応じて、フラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="dab25-111">In that case, the debugger must still use the [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) method to set the flags as desired for the JIT compilation.</span></span>  
   
- <span data-ttu-id="f540d-112">イメージが読み込まれると、JIT コンパイルはいくつか行う必要があります (これは、イメージには、ジェネリックが含まれている場合、ケースになります) そのイメージの場合で指定されたコンパイラ フラグ、`SetDesiredNGENCompilerFlags`メソッドは、追加の JIT コンパイルに適用されます。</span><span class="sxs-lookup"><span data-stu-id="f540d-112">If an image is loaded, but some JIT compiling must take place for that image (which will be the case if the image contains generics), the compiler flags specified by the `SetDesiredNGENCompilerFlags` method will apply to the extra JIT compilation.</span></span>  
+ <span data-ttu-id="dab25-112">イメージが読み込まれると、JIT コンパイルはいくつか行う必要があります (これは、イメージには、ジェネリックが含まれている場合、ケースになります) そのイメージの場合で指定されたコンパイラ フラグ、`SetDesiredNGENCompilerFlags`メソッドは、追加の JIT コンパイルに適用されます。</span><span class="sxs-lookup"><span data-stu-id="dab25-112">If an image is loaded, but some JIT compiling must take place for that image (which will be the case if the image contains generics), the compiler flags specified by the `SetDesiredNGENCompilerFlags` method will apply to the extra JIT compilation.</span></span>  
   
- <span data-ttu-id="f540d-113">`SetDesiredNGENCompilerFlags`メソッドを呼び出す必要があります、 [icordebugmanagedcallback::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="f540d-113">The `SetDesiredNGENCompilerFlags` method must be called during the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="f540d-114">呼び出そうとすると、`SetDesiredNGENCompilerFlags`メソッドが後では失敗します。</span><span class="sxs-lookup"><span data-stu-id="f540d-114">Attempts to call the `SetDesiredNGENCompilerFlags` method afterwards will fail.</span></span> <span data-ttu-id="f540d-115">もないか、フラグを設定しようとが定義されている、`CorDebugJITCompilerFlags`列挙型または指定されたプロセスの有効ではないが失敗します。</span><span class="sxs-lookup"><span data-stu-id="f540d-115">Also, attempts to set flags that are either not defined in the `CorDebugJITCompilerFlags` enumeration or are not legal for the given process will fail.</span></span>  
+ <span data-ttu-id="dab25-113">`SetDesiredNGENCompilerFlags`メソッドを呼び出す必要があります、 [icordebugmanagedcallback::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="dab25-113">The `SetDesiredNGENCompilerFlags` method must be called during the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="dab25-114">呼び出そうとすると、`SetDesiredNGENCompilerFlags`メソッドが後では失敗します。</span><span class="sxs-lookup"><span data-stu-id="dab25-114">Attempts to call the `SetDesiredNGENCompilerFlags` method afterwards will fail.</span></span> <span data-ttu-id="dab25-115">もないか、フラグを設定しようとが定義されている、`CorDebugJITCompilerFlags`列挙型または指定されたプロセスの有効ではないが失敗します。</span><span class="sxs-lookup"><span data-stu-id="dab25-115">Also, attempts to set flags that are either not defined in the `CorDebugJITCompilerFlags` enumeration or are not legal for the given process will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f540d-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="f540d-116">Requirements</span></span>  
- <span data-ttu-id="f540d-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f540d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dab25-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="dab25-116">Requirements</span></span>  
+ <span data-ttu-id="dab25-117">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="dab25-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f540d-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f540d-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dab25-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dab25-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f540d-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f540d-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dab25-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dab25-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f540d-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f540d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dab25-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dab25-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f540d-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f540d-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dab25-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="dab25-121">See also</span></span>
 
-- [<span data-ttu-id="f540d-122">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f540d-122">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [<span data-ttu-id="f540d-123">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f540d-123">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="dab25-122">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dab25-122">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="dab25-123">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dab25-123">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
