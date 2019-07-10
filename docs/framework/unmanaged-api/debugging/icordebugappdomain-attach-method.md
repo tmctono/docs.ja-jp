@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785178"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738097"
 ---
-# <a name="icordebugappdomainattach-method"></a><span data-ttu-id="f3b8f-102">ICorDebugAppDomain::Attach メソッド</span><span class="sxs-lookup"><span data-stu-id="f3b8f-102">ICorDebugAppDomain::Attach Method</span></span>
-<span data-ttu-id="f3b8f-103">アプリケーション ドメインに、デバッガーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="f3b8f-103">Attaches the debugger to the application domain.</span></span>  
+# <a name="icordebugappdomainattach-method"></a><span data-ttu-id="9e9d4-102">ICorDebugAppDomain::Attach メソッド</span><span class="sxs-lookup"><span data-stu-id="9e9d4-102">ICorDebugAppDomain::Attach Method</span></span>
+<span data-ttu-id="9e9d4-103">アプリケーション ドメインに、デバッガーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="9e9d4-103">Attaches the debugger to the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3b8f-104">構文</span><span class="sxs-lookup"><span data-stu-id="f3b8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e9d4-104">構文</span><span class="sxs-lookup"><span data-stu-id="9e9d4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Attach ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f3b8f-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="f3b8f-105">Remarks</span></span>  
- <span data-ttu-id="f3b8f-106">アプリケーション ドメイン イベントを受信して、アプリケーション ドメインのデバッグを有効にするには、デバッガーをアタッチする必要があります。</span><span class="sxs-lookup"><span data-stu-id="f3b8f-106">The debugger must be attached to the application domain to receive events and to enable debugging of the application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e9d4-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="9e9d4-105">Remarks</span></span>  
+ <span data-ttu-id="9e9d4-106">アプリケーション ドメイン イベントを受信して、アプリケーション ドメインのデバッグを有効にするには、デバッガーをアタッチする必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e9d4-106">The debugger must be attached to the application domain to receive events and to enable debugging of the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3b8f-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="f3b8f-107">Requirements</span></span>  
- <span data-ttu-id="f3b8f-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3b8f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e9d4-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="9e9d4-107">Requirements</span></span>  
+ <span data-ttu-id="9e9d4-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e9d4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3b8f-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3b8f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9e9d4-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e9d4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3b8f-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3b8f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e9d4-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e9d4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3b8f-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3b8f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9e9d4-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e9d4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

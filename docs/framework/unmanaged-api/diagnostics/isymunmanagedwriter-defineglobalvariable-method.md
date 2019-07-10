@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66efe5ae1fe2154684d2ac6791895b7fcbe4f7b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777348"
 ---
-# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="43ac6-102">ISymUnmanagedWriter::DefineGlobalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="43ac6-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
-<span data-ttu-id="43ac6-103">1 つのグローバル変数を定義します。</span><span class="sxs-lookup"><span data-stu-id="43ac6-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="089be-102">ISymUnmanagedWriter::DefineGlobalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="089be-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
+<span data-ttu-id="089be-103">1 つのグローバル変数を定義します。</span><span class="sxs-lookup"><span data-stu-id="089be-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43ac6-104">構文</span><span class="sxs-lookup"><span data-stu-id="43ac6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="089be-104">構文</span><span class="sxs-lookup"><span data-stu-id="089be-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  
@@ -41,39 +41,39 @@ HRESULT DefineGlobalVariable(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="43ac6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="43ac6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="089be-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="089be-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="43ac6-106">[in]ポインター、`WCHAR`グローバル変数の名前を定義します。</span><span class="sxs-lookup"><span data-stu-id="43ac6-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
+ <span data-ttu-id="089be-106">[in]ポインター、`WCHAR`グローバル変数の名前を定義します。</span><span class="sxs-lookup"><span data-stu-id="089be-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="43ac6-107">[in]グローバル変数の属性。</span><span class="sxs-lookup"><span data-stu-id="43ac6-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="089be-107">[in]グローバル変数の属性。</span><span class="sxs-lookup"><span data-stu-id="089be-107">[in] The global variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="43ac6-108">[in]A`ULONG32`の文字数、サイズを示す、`signature`バッファー。</span><span class="sxs-lookup"><span data-stu-id="43ac6-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="089be-108">[in]A`ULONG32`の文字数、サイズを示す、`signature`バッファー。</span><span class="sxs-lookup"><span data-stu-id="089be-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="43ac6-109">[in]グローバル変数シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="43ac6-109">[in] The global variable signature.</span></span>  
+ <span data-ttu-id="089be-109">[in]グローバル変数シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="089be-109">[in] The global variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="43ac6-110">[in]アドレスの種類。</span><span class="sxs-lookup"><span data-stu-id="43ac6-110">[in] The address type.</span></span>  
+ <span data-ttu-id="089be-110">[in]アドレスの種類。</span><span class="sxs-lookup"><span data-stu-id="089be-110">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="43ac6-111">[in]パラメーター指定の最初のアドレス。</span><span class="sxs-lookup"><span data-stu-id="43ac6-111">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="089be-111">[in]パラメーター指定の最初のアドレス。</span><span class="sxs-lookup"><span data-stu-id="089be-111">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="43ac6-112">[in]パラメーター指定の 2 番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="43ac6-112">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="089be-112">[in]パラメーター指定の 2 番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="089be-112">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="43ac6-113">[in]パラメーター指定の 3 番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="43ac6-113">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="089be-113">[in]パラメーター指定の 3 番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="089be-113">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="43ac6-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="43ac6-114">Return Value</span></span>  
- <span data-ttu-id="43ac6-115">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="43ac6-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="089be-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="089be-114">Return Value</span></span>  
+ <span data-ttu-id="089be-115">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="089be-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43ac6-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="43ac6-116">Requirements</span></span>  
- <span data-ttu-id="43ac6-117">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="43ac6-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="089be-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="089be-116">Requirements</span></span>  
+ <span data-ttu-id="089be-117">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="089be-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43ac6-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="43ac6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="089be-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="089be-118">See also</span></span>
 
-- [<span data-ttu-id="43ac6-119">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="43ac6-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="43ac6-120">DefineLocalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="43ac6-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [<span data-ttu-id="43ac6-121">DefineGlobalVariable2 メソッド</span><span class="sxs-lookup"><span data-stu-id="43ac6-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [<span data-ttu-id="089be-119">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="089be-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="089be-120">DefineLocalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="089be-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [<span data-ttu-id="089be-121">DefineGlobalVariable2 メソッド</span><span class="sxs-lookup"><span data-stu-id="089be-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

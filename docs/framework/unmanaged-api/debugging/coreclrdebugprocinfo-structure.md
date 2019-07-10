@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21fc34add4038d25d60e4728847e0d84914a14e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864079"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739418"
 ---
-# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="e122f-102">CoreClrDebugProcInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="e122f-102">CoreClrDebugProcInfo Structure</span></span>
-<span data-ttu-id="e122f-103">リモート コンピューターで実行されているプロセスを表します。</span><span class="sxs-lookup"><span data-stu-id="e122f-103">Represents a process that is running on a remote machine.</span></span>  
+# <a name="coreclrdebugprocinfo-structure"></a><span data-ttu-id="3b9fb-102">CoreClrDebugProcInfo 構造体</span><span class="sxs-lookup"><span data-stu-id="3b9fb-102">CoreClrDebugProcInfo Structure</span></span>
+<span data-ttu-id="3b9fb-103">リモート コンピューターで実行されているプロセスを表します。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-103">Represents a process that is running on a remote machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e122f-104">構文</span><span class="sxs-lookup"><span data-stu-id="e122f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b9fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="3b9fb-104">Syntax</span></span>  
   
-```  
+```cpp  
 struct  CoreClrDebugProcInfo {  
     DWORD m_dwPID;  
     DWORD m_dwInternalID;  
@@ -38,19 +38,19 @@ struct  CoreClrDebugProcInfo {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e122f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e122f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3b9fb-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="3b9fb-105">Members</span></span>  
   
-|<span data-ttu-id="e122f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e122f-106">Member</span></span>|<span data-ttu-id="e122f-107">説明</span><span class="sxs-lookup"><span data-stu-id="e122f-107">Description</span></span>|  
+|<span data-ttu-id="3b9fb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="3b9fb-106">Member</span></span>|<span data-ttu-id="3b9fb-107">説明</span><span class="sxs-lookup"><span data-stu-id="3b9fb-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_dwPID`|<span data-ttu-id="e122f-108">OS によって割り当てられたプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="e122f-108">OS-assigned process identifier.</span></span>|  
-|`m_dwInternalID`|<span data-ttu-id="e122f-109">対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="e122f-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="e122f-110">この識別子は OS 識別子よりも少ない頻度で再利用されます。</span><span class="sxs-lookup"><span data-stu-id="e122f-110">This identifier recycles less often than the OS identifier.</span></span>|  
-|`m_wszName`|<span data-ttu-id="e122f-111">プロセスのコマンド ライン。</span><span class="sxs-lookup"><span data-stu-id="e122f-111">Command-line of the process.</span></span> <span data-ttu-id="e122f-112">このメンバーは切り詰められる場合があります。</span><span class="sxs-lookup"><span data-stu-id="e122f-112">This member may be truncated.</span></span>|  
+|`m_dwPID`|<span data-ttu-id="3b9fb-108">OS によって割り当てられたプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-108">OS-assigned process identifier.</span></span>|  
+|`m_dwInternalID`|<span data-ttu-id="3b9fb-109">対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-109">Process identifier that is assigned by the remote debugging proxy running on the target machine.</span></span> <span data-ttu-id="3b9fb-110">この識別子は OS 識別子よりも少ない頻度で再利用されます。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-110">This identifier recycles less often than the OS identifier.</span></span>|  
+|`m_wszName`|<span data-ttu-id="3b9fb-111">プロセスのコマンド ライン。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-111">Command-line of the process.</span></span> <span data-ttu-id="3b9fb-112">このメンバーは切り詰められる場合があります。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-112">This member may be truncated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e122f-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="e122f-113">Requirements</span></span>  
- <span data-ttu-id="e122f-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e122f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b9fb-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="3b9fb-113">Requirements</span></span>  
+ <span data-ttu-id="3b9fb-114">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b9fb-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e122f-115">**ヘッダー:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="e122f-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="3b9fb-115">**ヘッダー:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="3b9fb-115">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="e122f-116">**ライブラリ:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="e122f-116">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="3b9fb-116">**ライブラリ:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="3b9fb-116">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="e122f-117">**.NET framework のバージョン:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="e122f-117">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="3b9fb-117">**.NET framework のバージョン:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="3b9fb-117">**.NET Framework Versions:** 3.5 SP1</span></span>

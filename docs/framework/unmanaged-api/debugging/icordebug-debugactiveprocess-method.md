@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b880358ed0d7bce4896217bc07c6ef6268d62962
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786400"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738264"
 ---
-# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="ec8b7-102">ICorDebug::DebugActiveProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="ec8b7-102">ICorDebug::DebugActiveProcess Method</span></span>
-<span data-ttu-id="ec8b7-103">既存のプロセスにデバッガーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-103">Attaches the debugger to an existing process.</span></span>  
+# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="21576-102">ICorDebug::DebugActiveProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="21576-102">ICorDebug::DebugActiveProcess Method</span></span>
+<span data-ttu-id="21576-103">既存のプロセスにデバッガーをアタッチします。</span><span class="sxs-lookup"><span data-stu-id="21576-103">Attaches the debugger to an existing process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec8b7-104">構文</span><span class="sxs-lookup"><span data-stu-id="ec8b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21576-104">構文</span><span class="sxs-lookup"><span data-stu-id="21576-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DebugActiveProcess (  
     [in]  DWORD               id,  
     [in]  BOOL                win32Attach,  
@@ -37,28 +37,28 @@ HRESULT DebugActiveProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ec8b7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ec8b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21576-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="21576-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="ec8b7-106">[in]デバッガーのアタッチ先のプロセスの ID。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="21576-106">[in]デバッガーのアタッチ先のプロセスの ID。</span><span class="sxs-lookup"><span data-stu-id="21576-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="ec8b7-107">[in]ブール値に設定されている`true`デバッガーで、Win32 のデバッガー プロセスとして動作する必要があります、アンマネージのコールバックのディスパッチ場合それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="21576-107">[in]ブール値に設定されている`true`デバッガーで、Win32 のデバッガー プロセスとして動作する必要があります、アンマネージのコールバックのディスパッチ場合それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="21576-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="ec8b7-108">[out]デバッガーのアタッチするプロセスを表す"ICorDebugProcess"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="21576-108">[out]デバッガーのアタッチするプロセスを表す"ICorDebugProcess"オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="21576-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ec8b7-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="ec8b7-109">Remarks</span></span>  
- <span data-ttu-id="ec8b7-110">IA 64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="21576-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="21576-109">Remarks</span></span>  
+ <span data-ttu-id="21576-110">IA 64 ベースおよび AMD64 ベースのプラットフォームなど、Win9x と x86 以外のプラットフォームでは、相互運用機能デバッグはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="21576-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec8b7-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="ec8b7-111">Requirements</span></span>  
- <span data-ttu-id="ec8b7-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ec8b7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21576-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="21576-111">Requirements</span></span>  
+ <span data-ttu-id="21576-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="21576-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec8b7-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec8b7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="21576-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="21576-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec8b7-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec8b7-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="21576-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21576-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ec8b7-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec8b7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="21576-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21576-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec8b7-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ec8b7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21576-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="21576-116">See also</span></span>
 
-- [<span data-ttu-id="ec8b7-117">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ec8b7-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="21576-117">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="21576-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

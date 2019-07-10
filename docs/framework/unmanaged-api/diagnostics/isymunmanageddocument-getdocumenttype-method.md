@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939894"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776738"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="b5800-102">ISymUnmanagedDocument::GetDocumentType メソッド</span><span class="sxs-lookup"><span data-stu-id="b5800-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="b5800-103">このドキュメントのドキュメントの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="b5800-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="e5030-102">ISymUnmanagedDocument::GetDocumentType メソッド</span><span class="sxs-lookup"><span data-stu-id="e5030-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="e5030-103">このドキュメントのドキュメントの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="e5030-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5800-104">構文</span><span class="sxs-lookup"><span data-stu-id="b5800-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5030-104">構文</span><span class="sxs-lookup"><span data-stu-id="e5030-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b5800-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b5800-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5030-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e5030-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="b5800-106">[out]ドキュメントの種類を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b5800-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="e5030-106">[out]ドキュメントの種類を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="e5030-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b5800-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="b5800-107">Return Value</span></span>  
- <span data-ttu-id="b5800-108">メソッドが成功した場合は s_ok を返します。</span><span class="sxs-lookup"><span data-stu-id="b5800-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e5030-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="e5030-107">Return Value</span></span>  
+ <span data-ttu-id="e5030-108">メソッドが成功した場合は s_ok を返します。</span><span class="sxs-lookup"><span data-stu-id="e5030-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5800-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="b5800-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5030-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="e5030-109">See also</span></span>
 
-- [<span data-ttu-id="b5800-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b5800-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="e5030-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e5030-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

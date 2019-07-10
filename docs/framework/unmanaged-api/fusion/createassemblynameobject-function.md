@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd8609bedcea28c1cb8559d378b5e171f3ad568e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669963"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778429"
 ---
-# <a name="createassemblynameobject-function"></a><span data-ttu-id="be515-102">CreateAssemblyNameObject 関数</span><span class="sxs-lookup"><span data-stu-id="be515-102">CreateAssemblyNameObject Function</span></span>
-<span data-ttu-id="be515-103">インターフェイス ポインターを取得、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)指定した名前のアセンブリの一意の id を表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="be515-103">Gets an interface pointer to an [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) instance that represents the unique identity of the assembly with the specified name.</span></span>  
+# <a name="createassemblynameobject-function"></a><span data-ttu-id="c5857-102">CreateAssemblyNameObject 関数</span><span class="sxs-lookup"><span data-stu-id="c5857-102">CreateAssemblyNameObject Function</span></span>
+<span data-ttu-id="c5857-103">インターフェイス ポインターを取得、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)指定した名前のアセンブリの一意の id を表すインスタンス。</span><span class="sxs-lookup"><span data-stu-id="c5857-103">Gets an interface pointer to an [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) instance that represents the unique identity of the assembly with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be515-104">構文</span><span class="sxs-lookup"><span data-stu-id="be515-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5857-104">構文</span><span class="sxs-lookup"><span data-stu-id="c5857-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateAssemblyNameObject (  
     [out] LPASSEMBLYNAME  *ppAssemblyNameObj,  
     [in]  LPCWSTR         szAssemblyName,  
@@ -39,29 +39,29 @@ HRESULT CreateAssemblyNameObject (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be515-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="be515-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5857-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c5857-105">Parameters</span></span>  
  `ppAssemblyNameObj`  
- <span data-ttu-id="be515-106">[out]返された`IAssemblyName`します。</span><span class="sxs-lookup"><span data-stu-id="be515-106">[out] The returned `IAssemblyName`.</span></span>  
+ <span data-ttu-id="c5857-106">[out]返された`IAssemblyName`します。</span><span class="sxs-lookup"><span data-stu-id="c5857-106">[out] The returned `IAssemblyName`.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="be515-107">[in]新しいを作成する対象のアセンブリの名前`IAssemblyName`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="be515-107">[in] The name of the assembly for which to create the new `IAssemblyName` instance.</span></span>  
+ <span data-ttu-id="c5857-107">[in]新しいを作成する対象のアセンブリの名前`IAssemblyName`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="c5857-107">[in] The name of the assembly for which to create the new `IAssemblyName` instance.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="be515-108">[in]オブジェクトのコンス トラクターに渡すフラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="be515-108">[in] Flags to pass to the object constructor.</span></span>  
+ <span data-ttu-id="c5857-108">[in]オブジェクトのコンス トラクターに渡すフラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="c5857-108">[in] Flags to pass to the object constructor.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="be515-109">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="be515-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="be515-110">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="be515-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="c5857-109">[入力] 将来の機能拡張に備えて予約されています。</span><span class="sxs-lookup"><span data-stu-id="c5857-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="c5857-110">`pvReserved` null 参照である必要があります。</span><span class="sxs-lookup"><span data-stu-id="c5857-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be515-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="be515-111">Requirements</span></span>  
- <span data-ttu-id="be515-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="be515-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5857-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="c5857-111">Requirements</span></span>  
+ <span data-ttu-id="c5857-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c5857-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be515-113">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="be515-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="c5857-113">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c5857-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="be515-114">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="be515-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c5857-114">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c5857-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="be515-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be515-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c5857-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5857-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be515-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="be515-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5857-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="c5857-116">See also</span></span>
 
-- [<span data-ttu-id="be515-117">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be515-117">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="be515-118">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="be515-118">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="c5857-117">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c5857-117">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="c5857-118">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="c5857-118">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

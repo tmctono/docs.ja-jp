@@ -17,43 +17,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cd66a895f99d62e8deaa45afab12d963aee2901
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5651da4c0065a4ac479fe31e54225ee5df51b32
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991979"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780622"
 ---
-# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="27f17-102">ICorProfilerInfo::GetILFunctionBodyAllocator メソッド</span><span class="sxs-lookup"><span data-stu-id="27f17-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
-<span data-ttu-id="27f17-103">Microsoft intermediate language (MSIL) コード内のメソッドの本文をスワップするために使用されるメモリを割り当てるメソッドを提供するインターフェイスを取得します。</span><span class="sxs-lookup"><span data-stu-id="27f17-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a><span data-ttu-id="8b069-102">ICorProfilerInfo::GetILFunctionBodyAllocator メソッド</span><span class="sxs-lookup"><span data-stu-id="8b069-102">ICorProfilerInfo::GetILFunctionBodyAllocator Method</span></span>
+<span data-ttu-id="8b069-103">Microsoft intermediate language (MSIL) コード内のメソッドの本文をスワップするために使用されるメモリを割り当てるメソッドを提供するインターフェイスを取得します。</span><span class="sxs-lookup"><span data-stu-id="8b069-103">Gets an interface that provides a method to allocate memory to be used for swapping out the body of a method in Microsoft intermediate language (MSIL) code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27f17-104">構文</span><span class="sxs-lookup"><span data-stu-id="27f17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b069-104">構文</span><span class="sxs-lookup"><span data-stu-id="8b069-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetILFunctionBodyAllocator(  
     [in]  ModuleID      moduleId,  
     [out] IMethodMalloc **ppMalloc);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27f17-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="27f17-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b069-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b069-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="27f17-106">[in]メソッドが存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="27f17-106">[in] The ID of the module in which the method resides.</span></span>  
+ <span data-ttu-id="8b069-106">[in]メソッドが存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="8b069-106">[in] The ID of the module in which the method resides.</span></span>  
   
  `ppMalloc`  
- <span data-ttu-id="27f17-107">[out]ポインター、 [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)メモリを割り当てるメソッドを提供するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="27f17-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
+ <span data-ttu-id="8b069-107">[out]ポインター、 [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)メモリを割り当てるメソッドを提供するインターフェイスです。</span><span class="sxs-lookup"><span data-stu-id="8b069-107">[out] A pointer to an [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface that provides a method to allocate the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="27f17-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="27f17-108">Remarks</span></span>  
- <span data-ttu-id="27f17-109">メソッドの本体の MSIL コードでは、4 GB 内のモジュールに従っていることを意味、読み込まれたモジュールの基準とした相対仮想アドレス (RVA) として配置である必要があります。</span><span class="sxs-lookup"><span data-stu-id="27f17-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="27f17-110">メソッドの本体のスワップ アウトするためのツールを容易にできるように、`GetILFunctionBodyAllocator`メソッドにより、メモリがその範囲内で割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="27f17-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b069-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="8b069-108">Remarks</span></span>  
+ <span data-ttu-id="8b069-109">メソッドの本体の MSIL コードでは、4 GB 内のモジュールに従っていることを意味、読み込まれたモジュールの基準とした相対仮想アドレス (RVA) として配置である必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b069-109">A method body in MSIL code must be located as a relative virtual address (RVA), relative to the loaded module, which means that it follows the module within 4 GB.</span></span> <span data-ttu-id="8b069-110">メソッドの本体のスワップ アウトするためのツールを容易にできるように、`GetILFunctionBodyAllocator`メソッドにより、メモリがその範囲内で割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="8b069-110">To make it easier for a tool to swap out the body of a method, the `GetILFunctionBodyAllocator` method ensures that memory is allocated within that range.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27f17-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="27f17-111">Requirements</span></span>  
- <span data-ttu-id="27f17-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="27f17-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b069-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b069-111">Requirements</span></span>  
+ <span data-ttu-id="8b069-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b069-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27f17-113">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="27f17-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8b069-113">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8b069-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="27f17-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27f17-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8b069-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b069-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="27f17-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27f17-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b069-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b069-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27f17-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="27f17-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b069-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b069-116">See also</span></span>
 
-- [<span data-ttu-id="27f17-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="27f17-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="8b069-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b069-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

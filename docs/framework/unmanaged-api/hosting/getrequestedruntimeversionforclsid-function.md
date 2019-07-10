@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca125932ede48aa43bc51e3d5a7851fb7762547
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779564"
 ---
-# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="edd0b-102">GetRequestedRuntimeVersionForCLSID 関数</span><span class="sxs-lookup"><span data-stu-id="edd0b-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
-<span data-ttu-id="edd0b-103">適切な共通言語ランタイム (CLR) のバージョン情報と、指定したクラスを取得します。`CLSID`します。</span><span class="sxs-lookup"><span data-stu-id="edd0b-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
+# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="81f67-102">GetRequestedRuntimeVersionForCLSID 関数</span><span class="sxs-lookup"><span data-stu-id="81f67-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
+<span data-ttu-id="81f67-103">適切な共通言語ランタイム (CLR) のバージョン情報と、指定したクラスを取得します。`CLSID`します。</span><span class="sxs-lookup"><span data-stu-id="81f67-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
   
- <span data-ttu-id="edd0b-104">この関数は、.NET Framework 4 では廃止されました。</span><span class="sxs-lookup"><span data-stu-id="edd0b-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="81f67-104">この関数は、.NET Framework 4 では廃止されました。</span><span class="sxs-lookup"><span data-stu-id="81f67-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edd0b-105">構文</span><span class="sxs-lookup"><span data-stu-id="edd0b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81f67-105">構文</span><span class="sxs-lookup"><span data-stu-id="81f67-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
     [in]  REFCLSID   rclsid,   
     [out]  LPWSTR     pVersion,   
@@ -40,43 +40,43 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="edd0b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="edd0b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81f67-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="81f67-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="edd0b-107">[in] `CLSID`のコンポーネント。</span><span class="sxs-lookup"><span data-stu-id="edd0b-107">[in]  The `CLSID` of the component.</span></span>  
+ <span data-ttu-id="81f67-107">[in] `CLSID`のコンポーネント。</span><span class="sxs-lookup"><span data-stu-id="81f67-107">[in]  The `CLSID` of the component.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="edd0b-108">[out] 正常完了時にバージョン番号の文字列を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="edd0b-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="81f67-108">[out] 正常完了時にバージョン番号の文字列を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="81f67-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="edd0b-109">[in] ワイド文字単位のサイズの`pVersion`バッファー。</span><span class="sxs-lookup"><span data-stu-id="edd0b-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
+ <span data-ttu-id="81f67-109">[in] ワイド文字単位のサイズの`pVersion`バッファー。</span><span class="sxs-lookup"><span data-stu-id="81f67-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="edd0b-110">[out]返されたバッファーの長さ、(バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="edd0b-110">[out] The length, in bytes, of the returned buffer.</span></span>  
+ <span data-ttu-id="81f67-110">[out]返されたバッファーの長さ、(バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="81f67-110">[out] The length, in bytes, of the returned buffer.</span></span>  
   
  `dwResolutionFlags`  
- <span data-ttu-id="edd0b-111">[in] CLSID_RESOLUTION_FLAGS 値の 1 つ。</span><span class="sxs-lookup"><span data-stu-id="edd0b-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="edd0b-112">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="edd0b-112">The following values are supported:</span></span>  
+ <span data-ttu-id="81f67-111">[in] CLSID_RESOLUTION_FLAGS 値の 1 つ。</span><span class="sxs-lookup"><span data-stu-id="81f67-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="81f67-112">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="81f67-112">The following values are supported:</span></span>  
   
-- <span data-ttu-id="edd0b-113">CLSID_RESOLUTION_DEFAULT:(0x0) 既定の相互運用機能の動作を使用することを指定します。</span><span class="sxs-lookup"><span data-stu-id="edd0b-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
+- <span data-ttu-id="81f67-113">CLSID_RESOLUTION_DEFAULT:(0x0) 既定の相互運用機能の動作を使用することを指定します。</span><span class="sxs-lookup"><span data-stu-id="81f67-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
   
-- <span data-ttu-id="edd0b-114">CLSID_RESOLUTION_REGISTERED:(0x1)、レジストリを検索する必要があるし、shim のポリシーを適用することを指定します。</span><span class="sxs-lookup"><span data-stu-id="edd0b-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
+- <span data-ttu-id="81f67-114">CLSID_RESOLUTION_REGISTERED:(0x1)、レジストリを検索する必要があるし、shim のポリシーを適用することを指定します。</span><span class="sxs-lookup"><span data-stu-id="81f67-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="edd0b-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="edd0b-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81f67-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="81f67-115">Return Value</span></span>  
   
-|<span data-ttu-id="edd0b-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="edd0b-116">HRESULT</span></span>|<span data-ttu-id="edd0b-117">説明</span><span class="sxs-lookup"><span data-stu-id="edd0b-117">Description</span></span>|  
+|<span data-ttu-id="81f67-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="81f67-116">HRESULT</span></span>|<span data-ttu-id="81f67-117">説明</span><span class="sxs-lookup"><span data-stu-id="81f67-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="edd0b-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="edd0b-118">S_OK</span></span>|<span data-ttu-id="edd0b-119">関数が正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="edd0b-119">The function returned successfully.</span></span>|  
-|<span data-ttu-id="edd0b-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="edd0b-120">E_INVALIDARG</span></span>|<span data-ttu-id="edd0b-121">パラメーターの 1 つに、無効な型または形式。</span><span class="sxs-lookup"><span data-stu-id="edd0b-121">One of the parameters has an invalid type or format.</span></span>|  
-|<span data-ttu-id="edd0b-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="edd0b-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="edd0b-123">`pVersion`バッファーはバージョン文字列全体を保持するために十分な大きさがありません。</span><span class="sxs-lookup"><span data-stu-id="edd0b-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
-|<span data-ttu-id="edd0b-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="edd0b-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="edd0b-125">クラスの指定した登録がない`CLSID`します。</span><span class="sxs-lookup"><span data-stu-id="edd0b-125">There is no class registered with the specified `CLSID`.</span></span>|  
-|<span data-ttu-id="edd0b-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="edd0b-126">E_POINTER</span></span>|<span data-ttu-id="edd0b-127">`dwLength` null の場合または`cchBuffer`バージョン文字列を保持するために十分な大きさが`pVersion`が null です。</span><span class="sxs-lookup"><span data-stu-id="edd0b-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
+|<span data-ttu-id="81f67-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="81f67-118">S_OK</span></span>|<span data-ttu-id="81f67-119">関数が正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="81f67-119">The function returned successfully.</span></span>|  
+|<span data-ttu-id="81f67-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="81f67-120">E_INVALIDARG</span></span>|<span data-ttu-id="81f67-121">パラメーターの 1 つに、無効な型または形式。</span><span class="sxs-lookup"><span data-stu-id="81f67-121">One of the parameters has an invalid type or format.</span></span>|  
+|<span data-ttu-id="81f67-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="81f67-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="81f67-123">`pVersion`バッファーはバージョン文字列全体を保持するために十分な大きさがありません。</span><span class="sxs-lookup"><span data-stu-id="81f67-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
+|<span data-ttu-id="81f67-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="81f67-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="81f67-125">クラスの指定した登録がない`CLSID`します。</span><span class="sxs-lookup"><span data-stu-id="81f67-125">There is no class registered with the specified `CLSID`.</span></span>|  
+|<span data-ttu-id="81f67-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="81f67-126">E_POINTER</span></span>|<span data-ttu-id="81f67-127">`dwLength` null の場合または`cchBuffer`バージョン文字列を保持するために十分な大きさが`pVersion`が null です。</span><span class="sxs-lookup"><span data-stu-id="81f67-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="edd0b-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="edd0b-128">Requirements</span></span>  
- <span data-ttu-id="edd0b-129">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="edd0b-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81f67-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="81f67-128">Requirements</span></span>  
+ <span data-ttu-id="81f67-129">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="81f67-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="edd0b-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="edd0b-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="81f67-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="81f67-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="edd0b-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edd0b-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="81f67-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81f67-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edd0b-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="edd0b-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81f67-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="81f67-132">See also</span></span>
 
-- [<span data-ttu-id="edd0b-133">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="edd0b-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="81f67-133">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="81f67-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
