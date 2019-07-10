@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775636"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742240"
 ---
-# <a name="addimport-method"></a><span data-ttu-id="5badf-102">AddImport メソッド</span><span class="sxs-lookup"><span data-stu-id="5badf-102">AddImport Method</span></span>
-<span data-ttu-id="5badf-103">アセンブリにインポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="5badf-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method"></a><span data-ttu-id="59db4-102">AddImport メソッド</span><span class="sxs-lookup"><span data-stu-id="59db4-102">AddImport Method</span></span>
+<span data-ttu-id="59db4-103">アセンブリにインポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="59db4-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5badf-104">構文</span><span class="sxs-lookup"><span data-stu-id="5badf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59db4-104">構文</span><span class="sxs-lookup"><span data-stu-id="59db4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT AddImport(  
     mdAssembly      AssemblyID,  
     mdToken         ImportToken,  
@@ -38,27 +38,27 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5badf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5badf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="59db4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="59db4-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="5badf-106">追加する対象のアセンブリの一意の ID。</span><span class="sxs-lookup"><span data-stu-id="5badf-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="59db4-106">追加する対象のアセンブリの一意の ID。</span><span class="sxs-lookup"><span data-stu-id="59db4-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="5badf-107">一意の ID の取得から[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)ファイルをインポートするのです。</span><span class="sxs-lookup"><span data-stu-id="5badf-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="59db4-107">一意の ID の取得から[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)ファイルをインポートするのです。</span><span class="sxs-lookup"><span data-stu-id="59db4-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="5badf-108">COM + FileDef フラグなど`ffContainsNoMetaData`と`ffWriteable`します。</span><span class="sxs-lookup"><span data-stu-id="5badf-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="5badf-109">`dwFlags` 渡される[DefineFile メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="5badf-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="59db4-108">COM + FileDef フラグなど`ffContainsNoMetaData`と`ffWriteable`します。</span><span class="sxs-lookup"><span data-stu-id="59db4-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="59db4-109">`dwFlags` 渡される[DefineFile メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="59db4-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="5badf-110">結果のファイルの ID を受け取るトークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="5badf-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="59db4-110">結果のファイルの ID を受け取るトークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="59db4-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5badf-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="5badf-111">Return Value</span></span>  
- <span data-ttu-id="5badf-112">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="5badf-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="59db4-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="59db4-111">Return Value</span></span>  
+ <span data-ttu-id="59db4-112">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="59db4-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5badf-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="5badf-113">Requirements</span></span>  
- <span data-ttu-id="5badf-114">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="5badf-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59db4-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="59db4-113">Requirements</span></span>  
+ <span data-ttu-id="59db4-114">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="59db4-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5badf-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5badf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59db4-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="59db4-115">See also</span></span>
 
-- [<span data-ttu-id="5badf-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5badf-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="5badf-117">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5badf-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="5badf-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="5badf-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="59db4-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="59db4-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="59db4-117">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="59db4-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="59db4-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="59db4-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f366a40e1e3cd196f480c5849c49419c7daeea9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989483"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745281"
 ---
-# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="7c8ad-102">ICorDebugChain::GetRegisterSet メソッド</span><span class="sxs-lookup"><span data-stu-id="7c8ad-102">ICorDebugChain::GetRegisterSet Method</span></span>
-<span data-ttu-id="7c8ad-103">このチェーンのアクティブな部分のレジスタ セットを取得します。</span><span class="sxs-lookup"><span data-stu-id="7c8ad-103">Gets the register set for the active part of this chain.</span></span>  
+# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="c9bf4-102">ICorDebugChain::GetRegisterSet メソッド</span><span class="sxs-lookup"><span data-stu-id="c9bf4-102">ICorDebugChain::GetRegisterSet Method</span></span>
+<span data-ttu-id="c9bf4-103">このチェーンのアクティブな部分のレジスタ セットを取得します。</span><span class="sxs-lookup"><span data-stu-id="c9bf4-103">Gets the register set for the active part of this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c8ad-104">構文</span><span class="sxs-lookup"><span data-stu-id="7c8ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9bf4-104">構文</span><span class="sxs-lookup"><span data-stu-id="c9bf4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRegisterSet (  
     [out] ICorDebugRegisterSet **ppRegisters  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7c8ad-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7c8ad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9bf4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c9bf4-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="7c8ad-106">[out]アドレスへのポインター、 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)このチェーンのアクティブな部分のレジスタを表すオブジェクトを設定します。</span><span class="sxs-lookup"><span data-stu-id="7c8ad-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
+ <span data-ttu-id="c9bf4-106">[out]アドレスへのポインター、 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)このチェーンのアクティブな部分のレジスタを表すオブジェクトを設定します。</span><span class="sxs-lookup"><span data-stu-id="c9bf4-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c8ad-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="7c8ad-107">Requirements</span></span>  
- <span data-ttu-id="7c8ad-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7c8ad-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9bf4-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="c9bf4-107">Requirements</span></span>  
+ <span data-ttu-id="c9bf4-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9bf4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c8ad-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7c8ad-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9bf4-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9bf4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7c8ad-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c8ad-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9bf4-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9bf4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7c8ad-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c8ad-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c9bf4-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9bf4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

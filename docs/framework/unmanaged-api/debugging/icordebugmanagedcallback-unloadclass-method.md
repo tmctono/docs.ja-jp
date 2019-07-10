@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3eb8bf59ee2a91c62a6ff74b1903d92607a9ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995152"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761249"
 ---
-# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="eca74-102">ICorDebugManagedCallback::UnloadClass メソッド</span><span class="sxs-lookup"><span data-stu-id="eca74-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
-<span data-ttu-id="eca74-103">クラスがアンロードされることをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="eca74-103">Notifies the debugger that a class is being unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="01c2c-102">ICorDebugManagedCallback::UnloadClass メソッド</span><span class="sxs-lookup"><span data-stu-id="01c2c-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
+<span data-ttu-id="01c2c-103">クラスがアンロードされることをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="01c2c-103">Notifies the debugger that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eca74-104">構文</span><span class="sxs-lookup"><span data-stu-id="eca74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01c2c-104">構文</span><span class="sxs-lookup"><span data-stu-id="01c2c-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UnloadClass (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugClass      *c  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eca74-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="eca74-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01c2c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="01c2c-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="eca74-106">[in]クラスを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="eca74-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
+ <span data-ttu-id="01c2c-106">[in]クラスを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="01c2c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
   
  `c`  
- <span data-ttu-id="eca74-107">[in]クラスを表す ICorDebugClass オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="eca74-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="01c2c-107">[in]クラスを表す ICorDebugClass オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="01c2c-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eca74-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="eca74-108">Remarks</span></span>  
- <span data-ttu-id="eca74-109">クラスは、この呼び出しの後は参照できません。</span><span class="sxs-lookup"><span data-stu-id="eca74-109">The class should not be referenced after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01c2c-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="01c2c-108">Remarks</span></span>  
+ <span data-ttu-id="01c2c-109">クラスは、この呼び出しの後は参照できません。</span><span class="sxs-lookup"><span data-stu-id="01c2c-109">The class should not be referenced after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eca74-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="eca74-110">Requirements</span></span>  
- <span data-ttu-id="eca74-111">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="eca74-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01c2c-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="01c2c-110">Requirements</span></span>  
+ <span data-ttu-id="01c2c-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="01c2c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eca74-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eca74-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01c2c-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01c2c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eca74-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eca74-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01c2c-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01c2c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eca74-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eca74-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01c2c-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01c2c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eca74-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="eca74-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01c2c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="01c2c-115">See also</span></span>
 
-- [<span data-ttu-id="eca74-116">LoadClass メソッド</span><span class="sxs-lookup"><span data-stu-id="eca74-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [<span data-ttu-id="eca74-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="eca74-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="01c2c-116">LoadClass メソッド</span><span class="sxs-lookup"><span data-stu-id="01c2c-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
+- [<span data-ttu-id="01c2c-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="01c2c-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
