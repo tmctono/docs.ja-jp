@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8591cb7f8eec3d92100b49db553ed1b5b6533c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995398"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759895"
 ---
-# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="2b919-102">ICorDebugManagedCallback::Breakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="2b919-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
-<span data-ttu-id="2b919-103">ブレークポイントが発生した場合に、デバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="2b919-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpoint-method"></a><span data-ttu-id="6e269-102">ICorDebugManagedCallback::Breakpoint メソッド</span><span class="sxs-lookup"><span data-stu-id="6e269-102">ICorDebugManagedCallback::Breakpoint Method</span></span>
+<span data-ttu-id="6e269-103">ブレークポイントが発生した場合に、デバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="6e269-103">Notifies the debugger when a breakpoint is encountered.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b919-104">構文</span><span class="sxs-lookup"><span data-stu-id="2b919-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e269-104">構文</span><span class="sxs-lookup"><span data-stu-id="6e269-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Breakpoint (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -37,25 +37,25 @@ HRESULT Breakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b919-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2b919-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e269-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6e269-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="2b919-106">[in]ブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2b919-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
+ <span data-ttu-id="6e269-106">[in]ブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6e269-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="2b919-107">[in]ブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2b919-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
+ <span data-ttu-id="6e269-107">[in]ブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6e269-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="2b919-108">[in]ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2b919-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="6e269-108">[in]ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="6e269-108">[in] A pointer to an ICorDebugBreakpoint object that represents the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b919-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="2b919-109">Requirements</span></span>  
- <span data-ttu-id="2b919-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2b919-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e269-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="6e269-109">Requirements</span></span>  
+ <span data-ttu-id="6e269-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6e269-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b919-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b919-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6e269-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6e269-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2b919-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b919-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6e269-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e269-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2b919-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b919-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6e269-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e269-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b919-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b919-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e269-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e269-114">See also</span></span>
 
-- [<span data-ttu-id="2b919-115">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b919-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="6e269-115">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6e269-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

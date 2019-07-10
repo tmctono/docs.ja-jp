@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040574"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746495"
 ---
-# <a name="getobjecttext-function"></a><span data-ttu-id="35bf7-103">GetObjectText 関数</span><span class="sxs-lookup"><span data-stu-id="35bf7-103">GetObjectText function</span></span>
-<span data-ttu-id="35bf7-104">管理オブジェクト フォーマット (MOF) 構文では、オブジェクトのテキストのレンダリングを返します。</span><span class="sxs-lookup"><span data-stu-id="35bf7-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>
+# <a name="getobjecttext-function"></a><span data-ttu-id="3c49a-103">GetObjectText 関数</span><span class="sxs-lookup"><span data-stu-id="3c49a-103">GetObjectText function</span></span>
+<span data-ttu-id="3c49a-104">管理オブジェクト フォーマット (MOF) 構文では、オブジェクトのテキストのレンダリングを返します。</span><span class="sxs-lookup"><span data-stu-id="3c49a-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="35bf7-105">構文</span><span class="sxs-lookup"><span data-stu-id="35bf7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c49a-105">構文</span><span class="sxs-lookup"><span data-stu-id="3c49a-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetObjectText (
    [in] int                vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -39,51 +39,51 @@ HRESULT GetObjectText (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="35bf7-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="35bf7-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3c49a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3c49a-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="35bf7-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="35bf7-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="3c49a-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="3c49a-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="35bf7-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="35bf7-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="3c49a-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="3c49a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="35bf7-109">[in]通常は 0。</span><span class="sxs-lookup"><span data-stu-id="35bf7-109">[in] Normally 0.</span></span> <span data-ttu-id="35bf7-110">場合`WBEM_FLAG_NO_FLAVORS`(または 0x1) 修飾子は、伝達またはフレーバーの情報も指定します。</span><span class="sxs-lookup"><span data-stu-id="35bf7-110">If `WBEM_FLAG_NO_FLAVORS` (or 0x1) is specified, qualifiers are included without propagation or flavor information.</span></span>
+<span data-ttu-id="3c49a-109">[in]通常は 0。</span><span class="sxs-lookup"><span data-stu-id="3c49a-109">[in] Normally 0.</span></span> <span data-ttu-id="3c49a-110">場合`WBEM_FLAG_NO_FLAVORS`(または 0x1) 修飾子は、伝達またはフレーバーの情報も指定します。</span><span class="sxs-lookup"><span data-stu-id="3c49a-110">If `WBEM_FLAG_NO_FLAVORS` (or 0x1) is specified, qualifiers are included without propagation or flavor information.</span></span>
 
 `pstrObjectText`   
-<span data-ttu-id="35bf7-111">[out]ポインターを`null`エントリ。</span><span class="sxs-lookup"><span data-stu-id="35bf7-111">[out] A pointer to a `null` on entry.</span></span> <span data-ttu-id="35bf7-112">戻り時に、新しく割り当てられた`BSTR`がオブジェクトの MOF 構文のレンダリングを格納しています。</span><span class="sxs-lookup"><span data-stu-id="35bf7-112">On return, a newly allocated `BSTR` that contains a MOF syntax rendering of the object.</span></span>  
+<span data-ttu-id="3c49a-111">[out]ポインターを`null`エントリ。</span><span class="sxs-lookup"><span data-stu-id="3c49a-111">[out] A pointer to a `null` on entry.</span></span> <span data-ttu-id="3c49a-112">戻り時に、新しく割り当てられた`BSTR`がオブジェクトの MOF 構文のレンダリングを格納しています。</span><span class="sxs-lookup"><span data-stu-id="3c49a-112">On return, a newly allocated `BSTR` that contains a MOF syntax rendering of the object.</span></span>  
 
-## <a name="return-value"></a><span data-ttu-id="35bf7-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="35bf7-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3c49a-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="3c49a-113">Return value</span></span>
 
-<span data-ttu-id="35bf7-114">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="35bf7-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="3c49a-114">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="3c49a-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="35bf7-115">定数</span><span class="sxs-lookup"><span data-stu-id="35bf7-115">Constant</span></span>  |<span data-ttu-id="35bf7-116">値</span><span class="sxs-lookup"><span data-stu-id="35bf7-116">Value</span></span>  |<span data-ttu-id="35bf7-117">説明</span><span class="sxs-lookup"><span data-stu-id="35bf7-117">Description</span></span>  |
+|<span data-ttu-id="3c49a-115">定数</span><span class="sxs-lookup"><span data-stu-id="3c49a-115">Constant</span></span>  |<span data-ttu-id="3c49a-116">値</span><span class="sxs-lookup"><span data-stu-id="3c49a-116">Value</span></span>  |<span data-ttu-id="3c49a-117">説明</span><span class="sxs-lookup"><span data-stu-id="3c49a-117">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="35bf7-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="35bf7-118">0x80041001</span></span> | <span data-ttu-id="35bf7-119">一般的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="35bf7-119">There has been a general failure.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="35bf7-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="35bf7-120">0x80041008</span></span> | <span data-ttu-id="35bf7-121">パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="35bf7-121">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="35bf7-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="35bf7-122">0x80041006</span></span> | <span data-ttu-id="35bf7-123">操作を完了するのに十分なメモリがあります。</span><span class="sxs-lookup"><span data-stu-id="35bf7-123">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="35bf7-124">0</span><span class="sxs-lookup"><span data-stu-id="35bf7-124">0</span></span> | <span data-ttu-id="35bf7-125">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="35bf7-125">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="3c49a-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="3c49a-118">0x80041001</span></span> | <span data-ttu-id="3c49a-119">一般的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="3c49a-119">There has been a general failure.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="3c49a-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="3c49a-120">0x80041008</span></span> | <span data-ttu-id="3c49a-121">パラメーターが無効です。</span><span class="sxs-lookup"><span data-stu-id="3c49a-121">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="3c49a-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="3c49a-122">0x80041006</span></span> | <span data-ttu-id="3c49a-123">操作を完了するのに十分なメモリがあります。</span><span class="sxs-lookup"><span data-stu-id="3c49a-123">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="3c49a-124">0</span><span class="sxs-lookup"><span data-stu-id="3c49a-124">0</span></span> | <span data-ttu-id="3c49a-125">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="3c49a-125">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="35bf7-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="35bf7-126">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3c49a-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="3c49a-126">Remarks</span></span>
 
-<span data-ttu-id="35bf7-127">この関数の呼び出しをラップする、 [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)メソッド。</span><span class="sxs-lookup"><span data-stu-id="35bf7-127">This function wraps a call to the [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) method.</span></span>
+<span data-ttu-id="3c49a-127">この関数の呼び出しをラップする、 [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)メソッド。</span><span class="sxs-lookup"><span data-stu-id="3c49a-127">This function wraps a call to the [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) method.</span></span>
 
-<span data-ttu-id="35bf7-128">オブジェクトに関するすべての情報が、元のオブジェクトを再作成できる MOF コンパイラのための十分な情報のみ、返される MOF テキストは含まれません。</span><span class="sxs-lookup"><span data-stu-id="35bf7-128">The MOF text returned does not contain all the information about the object, but only enough information for the MOF compiler to be able to recreate the original object.</span></span> <span data-ttu-id="35bf7-129">たとえば、伝達された修飾子または親クラスのプロパティは含まれません。</span><span class="sxs-lookup"><span data-stu-id="35bf7-129">For instance, no propagated qualifiers or parent class properties are included.</span></span>
+<span data-ttu-id="3c49a-128">オブジェクトに関するすべての情報が、元のオブジェクトを再作成できる MOF コンパイラのための十分な情報のみ、返される MOF テキストは含まれません。</span><span class="sxs-lookup"><span data-stu-id="3c49a-128">The MOF text returned does not contain all the information about the object, but only enough information for the MOF compiler to be able to recreate the original object.</span></span> <span data-ttu-id="3c49a-129">たとえば、伝達された修飾子または親クラスのプロパティは含まれません。</span><span class="sxs-lookup"><span data-stu-id="3c49a-129">For instance, no propagated qualifiers or parent class properties are included.</span></span>
 
-<span data-ttu-id="35bf7-130">メソッドのパラメーターのテキストを再構築には、次のアルゴリズムが使用します。</span><span class="sxs-lookup"><span data-stu-id="35bf7-130">The following algorithm is used to reconstruct the text of the parameters of a method:</span></span>
+<span data-ttu-id="3c49a-130">メソッドのパラメーターのテキストを再構築には、次のアルゴリズムが使用します。</span><span class="sxs-lookup"><span data-stu-id="3c49a-130">The following algorithm is used to reconstruct the text of the parameters of a method:</span></span>
 
-1. <span data-ttu-id="35bf7-131">パラメーターは、その識別子の値の順序 resequenced されます。</span><span class="sxs-lookup"><span data-stu-id="35bf7-131">Parameters are resequenced in the order of their identifier values.</span></span>
-1. <span data-ttu-id="35bf7-132">パラメーターとして指定されている`[in]`と`[out]`パラメーターを 1 つに結合されます。</span><span class="sxs-lookup"><span data-stu-id="35bf7-132">Parameters that are specified as `[in]` and `[out]` are combined into a single parameter.</span></span>
+1. <span data-ttu-id="3c49a-131">パラメーターは、その識別子の値の順序 resequenced されます。</span><span class="sxs-lookup"><span data-stu-id="3c49a-131">Parameters are resequenced in the order of their identifier values.</span></span>
+1. <span data-ttu-id="3c49a-132">パラメーターとして指定されている`[in]`と`[out]`パラメーターを 1 つに結合されます。</span><span class="sxs-lookup"><span data-stu-id="3c49a-132">Parameters that are specified as `[in]` and `[out]` are combined into a single parameter.</span></span>
  
-<span data-ttu-id="35bf7-133">`pstrObjectText` ポインターである必要があります、`null`ポインターが解放されないため、メソッド呼び出しの前に有効な文字列をポイントする必要がありますいない、関数が呼び出されると;。</span><span class="sxs-lookup"><span data-stu-id="35bf7-133">`pstrObjectText` must be a pointer to a `null` when the function is called; it must not point to a string that is valid before the method call, because the pointer will not be deallocated.</span></span>
+<span data-ttu-id="3c49a-133">`pstrObjectText` ポインターである必要があります、`null`ポインターが解放されないため、メソッド呼び出しの前に有効な文字列をポイントする必要がありますいない、関数が呼び出されると;。</span><span class="sxs-lookup"><span data-stu-id="3c49a-133">`pstrObjectText` must be a pointer to a `null` when the function is called; it must not point to a string that is valid before the method call, because the pointer will not be deallocated.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="35bf7-134">必要条件</span><span class="sxs-lookup"><span data-stu-id="35bf7-134">Requirements</span></span>  
-<span data-ttu-id="35bf7-135">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="35bf7-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c49a-134">必要条件</span><span class="sxs-lookup"><span data-stu-id="3c49a-134">Requirements</span></span>  
+<span data-ttu-id="3c49a-135">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c49a-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35bf7-136">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="35bf7-136">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3c49a-136">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3c49a-136">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="35bf7-137">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="35bf7-137">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="3c49a-137">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3c49a-137">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35bf7-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="35bf7-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c49a-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c49a-138">See also</span></span>
 
-- [<span data-ttu-id="35bf7-139">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="35bf7-139">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="3c49a-139">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="3c49a-139">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

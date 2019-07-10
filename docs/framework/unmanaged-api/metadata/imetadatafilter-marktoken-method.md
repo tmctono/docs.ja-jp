@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fdd50f0de014aa68b14303e9e22924b0790fa55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08340c82acb8eff2ce5b778c719f350b58b51fa5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786270"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757525"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="54812-102">IMetaDataFilter::MarkToken メソッド</span><span class="sxs-lookup"><span data-stu-id="54812-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="54812-103">指定したメタデータ トークンが処理されたことを示す値を設定します。</span><span class="sxs-lookup"><span data-stu-id="54812-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="d04ab-102">IMetaDataFilter::MarkToken メソッド</span><span class="sxs-lookup"><span data-stu-id="d04ab-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="d04ab-103">指定したメタデータ トークンが処理されたことを示す値を設定します。</span><span class="sxs-lookup"><span data-stu-id="d04ab-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54812-104">構文</span><span class="sxs-lookup"><span data-stu-id="54812-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d04ab-104">構文</span><span class="sxs-lookup"><span data-stu-id="d04ab-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT MarkToken (  
     [in] mdToken   tk  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54812-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="54812-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d04ab-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d04ab-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="54812-106">[in]処理済みとマークするトークンです。</span><span class="sxs-lookup"><span data-stu-id="54812-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="d04ab-106">[in]処理済みとマークするトークンです。</span><span class="sxs-lookup"><span data-stu-id="d04ab-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54812-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="54812-107">Requirements</span></span>  
- <span data-ttu-id="54812-108">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="54812-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d04ab-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="d04ab-107">Requirements</span></span>  
+ <span data-ttu-id="d04ab-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d04ab-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54812-109">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54812-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d04ab-109">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d04ab-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54812-110">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="54812-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d04ab-110">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="d04ab-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="54812-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54812-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d04ab-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d04ab-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54812-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="54812-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d04ab-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d04ab-112">See also</span></span>
 
-- [<span data-ttu-id="54812-113">IMetaDataFilter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="54812-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="d04ab-113">IMetaDataFilter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d04ab-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

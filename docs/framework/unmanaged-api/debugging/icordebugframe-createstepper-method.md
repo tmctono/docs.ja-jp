@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd105a5cbdb857aaa902e60968ff1d94473259b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988898"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754238"
 ---
-# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="1257e-102">ICorDebugFrame::CreateStepper メソッド</span><span class="sxs-lookup"><span data-stu-id="1257e-102">ICorDebugFrame::CreateStepper Method</span></span>
-<span data-ttu-id="1257e-103">この ICorDebugFrame 基準としたステップ実行操作を実行するデバッガーを許可するステッパを取得します。</span><span class="sxs-lookup"><span data-stu-id="1257e-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
+# <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="38377-102">ICorDebugFrame::CreateStepper メソッド</span><span class="sxs-lookup"><span data-stu-id="38377-102">ICorDebugFrame::CreateStepper Method</span></span>
+<span data-ttu-id="38377-103">この ICorDebugFrame 基準としたステップ実行操作を実行するデバッガーを許可するステッパを取得します。</span><span class="sxs-lookup"><span data-stu-id="38377-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1257e-104">構文</span><span class="sxs-lookup"><span data-stu-id="1257e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38377-104">構文</span><span class="sxs-lookup"><span data-stu-id="38377-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateStepper (  
     [out] ICorDebugStepper   **ppStepper  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1257e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1257e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38377-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="38377-105">Parameters</span></span>  
  `ppStepper`  
- <span data-ttu-id="1257e-106">[out]現在のフレームに合わせてステップ実行操作を実行するデバッガーをできるようにする ICorDebugStepper オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="1257e-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
+ <span data-ttu-id="38377-106">[out]現在のフレームに合わせてステップ実行操作を実行するデバッガーをできるようにする ICorDebugStepper オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="38377-106">[out] A pointer to the address of an ICorDebugStepper object that allows the debugger to perform stepping operations relative to the current frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1257e-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="1257e-107">Remarks</span></span>  
- <span data-ttu-id="1257e-108">フレームがアクティブでない場合、ステッパ オブジェクト通常の手順を完了する前に、フレームに返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="1257e-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38377-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="38377-107">Remarks</span></span>  
+ <span data-ttu-id="38377-108">フレームがアクティブでない場合、ステッパ オブジェクト通常の手順を完了する前に、フレームに返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="38377-108">If the frame is not active, the stepper object will typically have to return to the frame before the step is completed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1257e-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="1257e-109">Requirements</span></span>  
- <span data-ttu-id="1257e-110">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1257e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38377-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="38377-109">Requirements</span></span>  
+ <span data-ttu-id="38377-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="38377-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1257e-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1257e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="38377-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38377-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1257e-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1257e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="38377-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38377-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1257e-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1257e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="38377-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38377-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3ce0b9a40d5375f563662d73964d28724209dcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758296"
 ---
-# <a name="couninitializecor-function"></a><span data-ttu-id="6fc15-102">CoUninitializeCor 関数</span><span class="sxs-lookup"><span data-stu-id="6fc15-102">CoUninitializeCor Function</span></span>
-<span data-ttu-id="6fc15-103">`CoUninitializeCor` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="6fc15-103">`CoUninitializeCor` is obsolete.</span></span>  
+# <a name="couninitializecor-function"></a><span data-ttu-id="beabd-102">CoUninitializeCor 関数</span><span class="sxs-lookup"><span data-stu-id="beabd-102">CoUninitializeCor Function</span></span>
+<span data-ttu-id="beabd-103">`CoUninitializeCor` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="beabd-103">`CoUninitializeCor` is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fc15-104">構文</span><span class="sxs-lookup"><span data-stu-id="6fc15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="beabd-104">構文</span><span class="sxs-lookup"><span data-stu-id="beabd-104">Syntax</span></span>  
   
-```  
+```cpp  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="6fc15-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="6fc15-105">Remarks</span></span>  
- <span data-ttu-id="6fc15-106">共通言語ランタイムは、プロセスからアンロードすることはできません。</span><span class="sxs-lookup"><span data-stu-id="6fc15-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="6fc15-107">実行中のプロセスからランタイムを完全に削除するには、そのプロセスをシャット ダウンする必要があります。</span><span class="sxs-lookup"><span data-stu-id="6fc15-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="beabd-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="beabd-105">Remarks</span></span>  
+ <span data-ttu-id="beabd-106">共通言語ランタイムは、プロセスからアンロードすることはできません。</span><span class="sxs-lookup"><span data-stu-id="beabd-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="beabd-107">実行中のプロセスからランタイムを完全に削除するには、そのプロセスをシャット ダウンする必要があります。</span><span class="sxs-lookup"><span data-stu-id="beabd-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fc15-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="6fc15-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="beabd-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="beabd-108">See also</span></span>
 
-- [<span data-ttu-id="6fc15-109">メタデータ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="6fc15-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="beabd-109">メタデータ グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="beabd-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
