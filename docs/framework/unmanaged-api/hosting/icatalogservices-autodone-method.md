@@ -17,22 +17,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c6b998bfe2c04d45b332088ad43272c8013e354
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7771691950fac34b30a804d507688deaa0548314
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766742"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="ce339-102">ICatalogServices::Autodone メソッド</span><span class="sxs-lookup"><span data-stu-id="ce339-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="ce339-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="ce339-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="38fef-102">ICatalogServices::Autodone メソッド</span><span class="sxs-lookup"><span data-stu-id="38fef-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="38fef-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="38fef-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce339-104">構文</span><span class="sxs-lookup"><span data-stu-id="ce339-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38fef-104">構文</span><span class="sxs-lookup"><span data-stu-id="38fef-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ce339-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce339-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38fef-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="38fef-105">See also</span></span>
 
-- [<span data-ttu-id="ce339-106">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ce339-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="38fef-106">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="38fef-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
