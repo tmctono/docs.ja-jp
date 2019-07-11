@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3056836d289383161f9fa538c3c6349f88b6ba6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719f0522cc43625a4d6cc8afa838d869e47b40d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905737"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781836"
 ---
-# <a name="corfilemapping-enumeration"></a><span data-ttu-id="e4466-102">CorFileMapping 列挙体</span><span class="sxs-lookup"><span data-stu-id="e4466-102">CorFileMapping Enumeration</span></span>
-<span data-ttu-id="e4466-103">呼び出しから返されるファイル マッピングの種類を記述する値が含まれています、 [imetadatainfo::getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="e4466-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
+# <a name="corfilemapping-enumeration"></a><span data-ttu-id="03791-102">CorFileMapping 列挙体</span><span class="sxs-lookup"><span data-stu-id="03791-102">CorFileMapping Enumeration</span></span>
+<span data-ttu-id="03791-103">呼び出しから返されるファイル マッピングの種類を記述する値が含まれています、 [imetadatainfo::getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="03791-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4466-104">構文</span><span class="sxs-lookup"><span data-stu-id="e4466-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03791-104">構文</span><span class="sxs-lookup"><span data-stu-id="03791-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorFileMapping {  
   
     fmFlat                  =   0x0000,  
@@ -37,21 +37,21 @@ typedef enum CorFileMapping {
 } CorFileMapping;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e4466-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e4466-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="03791-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="03791-105">Members</span></span>  
   
-|<span data-ttu-id="e4466-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e4466-106">Member</span></span>|<span data-ttu-id="e4466-107">説明</span><span class="sxs-lookup"><span data-stu-id="e4466-107">Description</span></span>|  
+|<span data-ttu-id="03791-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="03791-106">Member</span></span>|<span data-ttu-id="03791-107">説明</span><span class="sxs-lookup"><span data-stu-id="03791-107">Description</span></span>|  
 |------------|-----------------|  
-|`fmFlat`|<span data-ttu-id="e4466-108">ファイルは、データ ファイルとしてマップされます。</span><span class="sxs-lookup"><span data-stu-id="e4466-108">The file is mapped as a data file.</span></span> <span data-ttu-id="e4466-109">つまり、`SEC_IMAGE`フラグは、Microsoft Win32 に渡されなかった`CreateFileMapping`関数。</span><span class="sxs-lookup"><span data-stu-id="e4466-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
-|`fmExecutableImage`|<span data-ttu-id="e4466-110">いずれかを使用して、実行するため、ファイルがマップされている、`LoadLibrary`関数または`CreateFileMapping`関数と、`SEC_IMAGE`フラグ。</span><span class="sxs-lookup"><span data-stu-id="e4466-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
+|`fmFlat`|<span data-ttu-id="03791-108">ファイルは、データ ファイルとしてマップされます。</span><span class="sxs-lookup"><span data-stu-id="03791-108">The file is mapped as a data file.</span></span> <span data-ttu-id="03791-109">つまり、`SEC_IMAGE`フラグは、Microsoft Win32 に渡されなかった`CreateFileMapping`関数。</span><span class="sxs-lookup"><span data-stu-id="03791-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
+|`fmExecutableImage`|<span data-ttu-id="03791-110">いずれかを使用して、実行するため、ファイルがマップされている、`LoadLibrary`関数または`CreateFileMapping`関数と、`SEC_IMAGE`フラグ。</span><span class="sxs-lookup"><span data-stu-id="03791-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e4466-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="e4466-111">Requirements</span></span>  
- <span data-ttu-id="e4466-112">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e4466-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03791-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="03791-111">Requirements</span></span>  
+ <span data-ttu-id="03791-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="03791-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e4466-113">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e4466-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="03791-113">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="03791-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e4466-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4466-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="03791-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03791-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4466-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="e4466-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03791-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="03791-115">See also</span></span>
 
-- [<span data-ttu-id="e4466-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="e4466-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="e4466-117">GetFileMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="e4466-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [<span data-ttu-id="03791-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="03791-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="03791-117">GetFileMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="03791-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
