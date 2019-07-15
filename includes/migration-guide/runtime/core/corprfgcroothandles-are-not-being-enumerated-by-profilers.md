@@ -1,17 +1,18 @@
 ---
-ms.openlocfilehash: 8433899058c6f569e380999800557dbe8ed0a169
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8dc98b2d9c2c0b5f145ebce48cf8f5e054975c6e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235454"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858572"
 ---
-### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a><span data-ttu-id="69bb4-101">COR_PRF_GC_ROOT_HANDLE がプロファイラーで列挙されていない</span><span class="sxs-lookup"><span data-stu-id="69bb4-101">COR_PRF_GC_ROOT_HANDLEs are not being enumerated by profilers</span></span>
+### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a><span data-ttu-id="6d12f-101">COR_PRF_GC_ROOT_HANDLE がプロファイラーで列挙されていない</span><span class="sxs-lookup"><span data-stu-id="6d12f-101">COR_PRF_GC_ROOT_HANDLEs are not being enumerated by profilers</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="69bb4-102">説明</span><span class="sxs-lookup"><span data-stu-id="69bb4-102">Details</span></span>|<span data-ttu-id="69bb4-103">.NET Framework v4.5.1 では、プロファイル API <code>RootReferences2()</code> が正しく <code>COR_PRF_GC_ROOT_HANDLE</code> を返しません (代わりに、<code>COR_PRF_GC_ROOT_OTHER</code> として返される)。</span><span class="sxs-lookup"><span data-stu-id="69bb4-103">In the .NET Framework v4.5.1, the profiling API <code>RootReferences2()</code> is incorrectly never returning <code>COR_PRF_GC_ROOT_HANDLE</code> (they are returned as <code>COR_PRF_GC_ROOT_OTHER</code> instead).</span></span> <span data-ttu-id="69bb4-104">この問題は、.NET Framework 4.6 以降で修正されています。</span><span class="sxs-lookup"><span data-stu-id="69bb4-104">This issue is fixed beginning in the .NET Framework 4.6.</span></span>|
-|<span data-ttu-id="69bb4-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="69bb4-105">Suggestion</span></span>|<span data-ttu-id="69bb4-106">この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって対処できます。</span><span class="sxs-lookup"><span data-stu-id="69bb4-106">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
-|<span data-ttu-id="69bb4-107">スコープ</span><span class="sxs-lookup"><span data-stu-id="69bb4-107">Scope</span></span>|<span data-ttu-id="69bb4-108">マイナー</span><span class="sxs-lookup"><span data-stu-id="69bb4-108">Minor</span></span>|
-|<span data-ttu-id="69bb4-109">Version</span><span class="sxs-lookup"><span data-stu-id="69bb4-109">Version</span></span>|<span data-ttu-id="69bb4-110">4.5.1</span><span class="sxs-lookup"><span data-stu-id="69bb4-110">4.5.1</span></span>|
-|<span data-ttu-id="69bb4-111">型</span><span class="sxs-lookup"><span data-stu-id="69bb4-111">Type</span></span>|<span data-ttu-id="69bb4-112">ランタイム</span><span class="sxs-lookup"><span data-stu-id="69bb4-112">Runtime</span></span>|
+|<span data-ttu-id="6d12f-102">説明</span><span class="sxs-lookup"><span data-stu-id="6d12f-102">Details</span></span>|<span data-ttu-id="6d12f-103">.NET Framework v4.5.1 では、プロファイル API <code>RootReferences2()</code> が正しく <code>COR_PRF_GC_ROOT_HANDLE</code> を返しません (代わりに、<code>COR_PRF_GC_ROOT_OTHER</code> として返される)。</span><span class="sxs-lookup"><span data-stu-id="6d12f-103">In the .NET Framework v4.5.1, the profiling API <code>RootReferences2()</code> is incorrectly never returning <code>COR_PRF_GC_ROOT_HANDLE</code> (they are returned as <code>COR_PRF_GC_ROOT_OTHER</code> instead).</span></span> <span data-ttu-id="6d12f-104">この問題は、.NET Framework 4.6 以降で修正されています。</span><span class="sxs-lookup"><span data-stu-id="6d12f-104">This issue is fixed beginning in the .NET Framework 4.6.</span></span>|
+|<span data-ttu-id="6d12f-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="6d12f-105">Suggestion</span></span>|<span data-ttu-id="6d12f-106">この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって対処できます。</span><span class="sxs-lookup"><span data-stu-id="6d12f-106">This issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
+|<span data-ttu-id="6d12f-107">スコープ</span><span class="sxs-lookup"><span data-stu-id="6d12f-107">Scope</span></span>|<span data-ttu-id="6d12f-108">マイナー</span><span class="sxs-lookup"><span data-stu-id="6d12f-108">Minor</span></span>|
+|<span data-ttu-id="6d12f-109">Version</span><span class="sxs-lookup"><span data-stu-id="6d12f-109">Version</span></span>|<span data-ttu-id="6d12f-110">4.5.1</span><span class="sxs-lookup"><span data-stu-id="6d12f-110">4.5.1</span></span>|
+|<span data-ttu-id="6d12f-111">型</span><span class="sxs-lookup"><span data-stu-id="6d12f-111">Type</span></span>|<span data-ttu-id="6d12f-112">ランタイム</span><span class="sxs-lookup"><span data-stu-id="6d12f-112">Runtime</span></span>|
+

@@ -1,17 +1,18 @@
 ---
-ms.openlocfilehash: 3cd5052dffcb059c240a310e0b89384f28409264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0778285ef1b5702bd79743038a1bd21ba04612d6
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234464"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804361"
 ---
-### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a><span data-ttu-id="82dce-101">タッチ対応システムで System.Windows.Input.PenContext.Disable を呼び出すと ArgumentException がスローされることがある</span><span class="sxs-lookup"><span data-stu-id="82dce-101">Calls to System.Windows.Input.PenContext.Disable on touch-enabled systems may throw an ArgumentException</span></span>
+### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a><span data-ttu-id="ceb5b-101">タッチ対応システムで System.Windows.Input.PenContext.Disable を呼び出すと ArgumentException がスローされることがある</span><span class="sxs-lookup"><span data-stu-id="ceb5b-101">Calls to System.Windows.Input.PenContext.Disable on touch-enabled systems may throw an ArgumentException</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="82dce-102">説明</span><span class="sxs-lookup"><span data-stu-id="82dce-102">Details</span></span>|<span data-ttu-id="82dce-103">一部の状況では、タッチ対応システムで内部 <strong>System.Windows.Intput.PenContext.Disable</strong> メソッドを呼び出すと、再入に起因して未処理の <code>T:System.ArgumentException</code> がスローされることがあります。</span><span class="sxs-lookup"><span data-stu-id="82dce-103">Under some circumstances, calls to the internal <strong>System.Windows.Intput.PenContext.Disable</strong> method on touch-enabled systems may throw an unhandled <code>T:System.ArgumentException</code> because of reentrancy.</span></span>|
-|<span data-ttu-id="82dce-104">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="82dce-104">Suggestion</span></span>|<span data-ttu-id="82dce-105">この問題は、.NET Framework 4.7 では対処済みです。</span><span class="sxs-lookup"><span data-stu-id="82dce-105">This issue has been addressed in the .NET Framework 4.7.</span></span> <span data-ttu-id="82dce-106">例外を防ぐには、.NET Framework 4.7 以降のバージョンの .NET Framework にアップグレードします。</span><span class="sxs-lookup"><span data-stu-id="82dce-106">To prevent the exception, upgrade to a version of the .NET Framework starting with the .NET Framework 4.7.</span></span>|
-|<span data-ttu-id="82dce-107">スコープ</span><span class="sxs-lookup"><span data-stu-id="82dce-107">Scope</span></span>|<span data-ttu-id="82dce-108">エッジ</span><span class="sxs-lookup"><span data-stu-id="82dce-108">Edge</span></span>|
-|<span data-ttu-id="82dce-109">Version</span><span class="sxs-lookup"><span data-stu-id="82dce-109">Version</span></span>|<span data-ttu-id="82dce-110">4.6.1</span><span class="sxs-lookup"><span data-stu-id="82dce-110">4.6.1</span></span>|
-|<span data-ttu-id="82dce-111">型</span><span class="sxs-lookup"><span data-stu-id="82dce-111">Type</span></span>|<span data-ttu-id="82dce-112">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="82dce-112">Retargeting</span></span>|
+|<span data-ttu-id="ceb5b-102">説明</span><span class="sxs-lookup"><span data-stu-id="ceb5b-102">Details</span></span>|<span data-ttu-id="ceb5b-103">一部の状況では、タッチ対応システムで内部 <strong>System.Windows.Intput.PenContext.Disable</strong> メソッドを呼び出すと、再入に起因して未処理の <code>T:System.ArgumentException</code> がスローされることがあります。</span><span class="sxs-lookup"><span data-stu-id="ceb5b-103">Under some circumstances, calls to the internal <strong>System.Windows.Intput.PenContext.Disable</strong> method on touch-enabled systems may throw an unhandled <code>T:System.ArgumentException</code> because of reentrancy.</span></span>|
+|<span data-ttu-id="ceb5b-104">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="ceb5b-104">Suggestion</span></span>|<span data-ttu-id="ceb5b-105">この問題は、.NET Framework 4.7 では対処済みです。</span><span class="sxs-lookup"><span data-stu-id="ceb5b-105">This issue has been addressed in the .NET Framework 4.7.</span></span> <span data-ttu-id="ceb5b-106">例外を防ぐには、.NET Framework 4.7 以降のバージョンの .NET Framework にアップグレードします。</span><span class="sxs-lookup"><span data-stu-id="ceb5b-106">To prevent the exception, upgrade to a version of the .NET Framework starting with the .NET Framework 4.7.</span></span>|
+|<span data-ttu-id="ceb5b-107">スコープ</span><span class="sxs-lookup"><span data-stu-id="ceb5b-107">Scope</span></span>|<span data-ttu-id="ceb5b-108">エッジ</span><span class="sxs-lookup"><span data-stu-id="ceb5b-108">Edge</span></span>|
+|<span data-ttu-id="ceb5b-109">Version</span><span class="sxs-lookup"><span data-stu-id="ceb5b-109">Version</span></span>|<span data-ttu-id="ceb5b-110">4.6.1</span><span class="sxs-lookup"><span data-stu-id="ceb5b-110">4.6.1</span></span>|
+|<span data-ttu-id="ceb5b-111">型</span><span class="sxs-lookup"><span data-stu-id="ceb5b-111">Type</span></span>|<span data-ttu-id="ceb5b-112">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="ceb5b-112">Retargeting</span></span>|
+
