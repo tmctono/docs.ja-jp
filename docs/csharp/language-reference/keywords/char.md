@@ -8,48 +8,48 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424341"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661454"
 ---
-# <a name="char-c-reference"></a><span data-ttu-id="4a4f2-102">char (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="4a4f2-102">char (C# Reference)</span></span>
+# <a name="char-c-reference"></a><span data-ttu-id="b3de6-102">char (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b3de6-102">char (C# Reference)</span></span>
 
-<span data-ttu-id="4a4f2-103">`char` キーワードは、Unicode 文字を表すために .NET Framework によって使用される <xref:System.Char?displayProperty=nameWithType> 構造体のインスタンスを宣言するときに使用されます。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-103">The `char` keyword is used to declare an instance of the <xref:System.Char?displayProperty=nameWithType> structure that the .NET Framework uses to represent a Unicode character.</span></span> <span data-ttu-id="4a4f2-104">`Char` オブジェクトの値は、16 ビット数 (序数) 値です。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-104">The value of a `Char` object is a 16-bit numeric (ordinal) value.</span></span>
+<span data-ttu-id="b3de6-103">`char` キーワードは、Unicode 文字を表すために .NET Framework によって使用される <xref:System.Char?displayProperty=nameWithType> 構造体のインスタンスを宣言するときに使用されます。</span><span class="sxs-lookup"><span data-stu-id="b3de6-103">The `char` keyword is used to declare an instance of the <xref:System.Char?displayProperty=nameWithType> structure that the .NET Framework uses to represent a Unicode character.</span></span> <span data-ttu-id="b3de6-104">`Char` オブジェクトの値は、16 ビット数 (序数) 値です。</span><span class="sxs-lookup"><span data-stu-id="b3de6-104">The value of a `Char` object is a 16-bit numeric (ordinal) value.</span></span>
 
- <span data-ttu-id="4a4f2-105">Unicode 文字は、世界各国の文字言語の大半を表すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-105">Unicode characters are used to represent most of the written languages throughout the world.</span></span>
+ <span data-ttu-id="b3de6-105">Unicode 文字は、世界各国の文字言語の大半を表すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="b3de6-105">Unicode characters are used to represent most of the written languages throughout the world.</span></span>
 
-|<span data-ttu-id="4a4f2-106">型</span><span class="sxs-lookup"><span data-stu-id="4a4f2-106">Type</span></span>|<span data-ttu-id="4a4f2-107">範囲</span><span class="sxs-lookup"><span data-stu-id="4a4f2-107">Range</span></span>|<span data-ttu-id="4a4f2-108">サイズ</span><span class="sxs-lookup"><span data-stu-id="4a4f2-108">Size</span></span>|<span data-ttu-id="4a4f2-109">.NET 型</span><span class="sxs-lookup"><span data-stu-id="4a4f2-109">.NET type</span></span>|
+|<span data-ttu-id="b3de6-106">型</span><span class="sxs-lookup"><span data-stu-id="b3de6-106">Type</span></span>|<span data-ttu-id="b3de6-107">範囲</span><span class="sxs-lookup"><span data-stu-id="b3de6-107">Range</span></span>|<span data-ttu-id="b3de6-108">サイズ</span><span class="sxs-lookup"><span data-stu-id="b3de6-108">Size</span></span>|<span data-ttu-id="b3de6-109">.NET 型</span><span class="sxs-lookup"><span data-stu-id="b3de6-109">.NET type</span></span>|
 |----------|-----------|----------|-------------------------|
-|`char`|<span data-ttu-id="4a4f2-110">U+0000 ～ U+FFFF</span><span class="sxs-lookup"><span data-stu-id="4a4f2-110">U+0000 to U+FFFF</span></span>|<span data-ttu-id="4a4f2-111">Unicode 16 ビット文字</span><span class="sxs-lookup"><span data-stu-id="4a4f2-111">Unicode 16-bit character</span></span>|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|<span data-ttu-id="b3de6-110">U+0000 ～ U+FFFF</span><span class="sxs-lookup"><span data-stu-id="b3de6-110">U+0000 to U+FFFF</span></span>|<span data-ttu-id="b3de6-111">Unicode 16 ビット文字</span><span class="sxs-lookup"><span data-stu-id="b3de6-111">Unicode 16-bit character</span></span>|<xref:System.Char?displayProperty=nameWithType>|
 
-## <a name="literals"></a><span data-ttu-id="4a4f2-112">リテラル</span><span class="sxs-lookup"><span data-stu-id="4a4f2-112">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="b3de6-112">リテラル</span><span class="sxs-lookup"><span data-stu-id="b3de6-112">Literals</span></span>
 
-<span data-ttu-id="4a4f2-113">`char` 型の定数は、文字リテラル、16 進数のエスケープ シーケンス、または Unicode 表現として記述できます。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-113">Constants of the `char` type can be written as character literals, hexadecimal escape sequence, or Unicode representation.</span></span> <span data-ttu-id="4a4f2-114">また、整数の文字コードをキャストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-114">You can also cast the integral character codes.</span></span> <span data-ttu-id="4a4f2-115">次の例では、4 つの `char` 変数が `X` という同じ文字で初期化されています。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-115">In the following example four `char` variables are initialized with the same character `X`:</span></span>
+<span data-ttu-id="b3de6-113">`char` 型の定数は、文字リテラル、16 進数のエスケープ シーケンス、または Unicode 表現として記述できます。</span><span class="sxs-lookup"><span data-stu-id="b3de6-113">Constants of the `char` type can be written as character literals, hexadecimal escape sequence, or Unicode representation.</span></span> <span data-ttu-id="b3de6-114">また、整数の文字コードをキャストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="b3de6-114">You can also cast the integral character codes.</span></span> <span data-ttu-id="b3de6-115">次の例では、4 つの `char` 変数が `X` という同じ文字で初期化されています。</span><span class="sxs-lookup"><span data-stu-id="b3de6-115">In the following example four `char` variables are initialized with the same character `X`:</span></span>
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
-## <a name="conversions"></a><span data-ttu-id="4a4f2-116">変換</span><span class="sxs-lookup"><span data-stu-id="4a4f2-116">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="b3de6-116">変換</span><span class="sxs-lookup"><span data-stu-id="b3de6-116">Conversions</span></span>
 
-<span data-ttu-id="4a4f2-117">`char` は、[ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../../../csharp/language-reference/keywords/double.md)、または [decimal](../../../csharp/language-reference/keywords/decimal.md) に暗黙的に変換できます。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-117">A `char` can be implicitly converted to [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span> <span data-ttu-id="4a4f2-118">ただし、他の型から `char` 型へと暗黙的に変換することはできません。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-118">However, there are no implicit conversions from other types to the `char` type.</span></span>
+<span data-ttu-id="b3de6-117">`char` は、[ushort](../builtin-types/integral-numeric-types.md)、[int](../builtin-types/integral-numeric-types.md)、[uint](../builtin-types/integral-numeric-types.md)、[double](../builtin-types/floating-point-numeric-types.md)、または [decimal](../builtin-types/floating-point-numeric-types.md) に暗黙的に変換できます。</span><span class="sxs-lookup"><span data-stu-id="b3de6-117">A `char` can be implicitly converted to [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../builtin-types/floating-point-numeric-types.md), or [decimal](../builtin-types/floating-point-numeric-types.md).</span></span> <span data-ttu-id="b3de6-118">ただし、他の型から `char` 型へと暗黙的に変換することはできません。</span><span class="sxs-lookup"><span data-stu-id="b3de6-118">However, there are no implicit conversions from other types to the `char` type.</span></span>
 
-<span data-ttu-id="4a4f2-119"><xref:System.Char?displayProperty=nameWithType> 型では、`char` 値を操作するための静的メソッドがいくつか提供されています。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-119">The <xref:System.Char?displayProperty=nameWithType> type provides several static methods for working with `char` values.</span></span>
+<span data-ttu-id="b3de6-119"><xref:System.Char?displayProperty=nameWithType> 型では、`char` 値を操作するための静的メソッドがいくつか提供されています。</span><span class="sxs-lookup"><span data-stu-id="b3de6-119">The <xref:System.Char?displayProperty=nameWithType> type provides several static methods for working with `char` values.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="4a4f2-120">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="4a4f2-120">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="b3de6-120">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="b3de6-120">C# language specification</span></span>  
 
-<span data-ttu-id="4a4f2-121">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-121">For more information, see [Integral types](~/_csharplang/spec/types.md#integral-types) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="4a4f2-122">言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。</span><span class="sxs-lookup"><span data-stu-id="4a4f2-122">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="b3de6-121">詳細については、「[C# 言語仕様](../language-specification/index.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b3de6-121">For more information, see [Integral types](~/_csharplang/spec/types.md#integral-types) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="b3de6-122">言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。</span><span class="sxs-lookup"><span data-stu-id="b3de6-122">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4a4f2-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a4f2-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3de6-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3de6-123">See also</span></span>
 
 - <xref:System.Char>
-- [<span data-ttu-id="4a4f2-124">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="4a4f2-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="4a4f2-125">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="4a4f2-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="4a4f2-126">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="4a4f2-126">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
-- [<span data-ttu-id="4a4f2-127">整数型</span><span class="sxs-lookup"><span data-stu-id="4a4f2-127">Integral types</span></span>](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [<span data-ttu-id="4a4f2-128">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="4a4f2-128">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [<span data-ttu-id="4a4f2-129">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="4a4f2-129">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [<span data-ttu-id="4a4f2-130">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="4a4f2-130">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [<span data-ttu-id="4a4f2-131">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="4a4f2-131">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)
-- [<span data-ttu-id="4a4f2-132">文字列</span><span class="sxs-lookup"><span data-stu-id="4a4f2-132">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)
+- [<span data-ttu-id="b3de6-124">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="b3de6-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="b3de6-125">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="b3de6-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="b3de6-126">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="b3de6-126">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="b3de6-127">整数型</span><span class="sxs-lookup"><span data-stu-id="b3de6-127">Integral types</span></span>](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [<span data-ttu-id="b3de6-128">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="b3de6-128">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [<span data-ttu-id="b3de6-129">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="b3de6-129">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [<span data-ttu-id="b3de6-130">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="b3de6-130">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [<span data-ttu-id="b3de6-131">Null 許容型</span><span class="sxs-lookup"><span data-stu-id="b3de6-131">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)
+- [<span data-ttu-id="b3de6-132">文字列</span><span class="sxs-lookup"><span data-stu-id="b3de6-132">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)
