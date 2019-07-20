@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777082"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364346"
 ---
-# <a name="annotations-schema"></a><span data-ttu-id="435c1-102">注釈スキーマ</span><span class="sxs-lookup"><span data-stu-id="435c1-102">Annotations Schema</span></span>
+# <a name="annotations-schema"></a><span data-ttu-id="75290-102">注釈スキーマ</span><span class="sxs-lookup"><span data-stu-id="75290-102">Annotations Schema</span></span>
 
-<span data-ttu-id="435c1-103">このトピックでは、Microsoft Annotations Framework でユーザー注釈データの保存と取得に使用される XML スキーマ定義 (XSD) について説明します。</span><span class="sxs-lookup"><span data-stu-id="435c1-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>
+<span data-ttu-id="75290-103">このトピックでは、Microsoft Annotations Framework でユーザー注釈データの保存と取得に使用される XML スキーマ定義 (XSD) について説明します。</span><span class="sxs-lookup"><span data-stu-id="75290-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>
 
-<span data-ttu-id="435c1-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] は注釈データをシリアル化し、内部表現を XML 形式に変換します。</span><span class="sxs-lookup"><span data-stu-id="435c1-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="435c1-105">この変換に使用される XML 形式は [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD スキーマで表現されます。</span><span class="sxs-lookup"><span data-stu-id="435c1-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="435c1-106">このスキーマは実装非依存の XML 形式を定義します。実装非依存の XML 形式を利用し、アプリケーション間で注釈データを交換できます。</span><span class="sxs-lookup"><span data-stu-id="435c1-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>
+<span data-ttu-id="75290-104">注釈フレームワークは、内部表現から XML 形式に注釈データをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="75290-104">The Annotations Framework serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="75290-105">この変換に使用される XML 形式は、Annotations Framework XSD スキーマによって記述されています。</span><span class="sxs-lookup"><span data-stu-id="75290-105">The XML format used for this conversion is described by the Annotations Framework XSD Schema.</span></span>  <span data-ttu-id="75290-106">このスキーマは実装非依存の XML 形式を定義します。実装非依存の XML 形式を利用し、アプリケーション間で注釈データを交換できます。</span><span class="sxs-lookup"><span data-stu-id="75290-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>
 
-<span data-ttu-id="435c1-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML スキーマ定義は 2 つのサブスキーマから構成されています。</span><span class="sxs-lookup"><span data-stu-id="435c1-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>
+<span data-ttu-id="75290-107">注釈フレームワークの XML スキーマ定義は、2つのサブスキーマで構成されます。</span><span class="sxs-lookup"><span data-stu-id="75290-107">The Annotations Framework XML schema definition consists of two subschemas</span></span>
 
-- <span data-ttu-id="435c1-108">注釈 XML コア スキーマ (コア スキーマ)。</span><span class="sxs-lookup"><span data-stu-id="435c1-108">The Annotations XML Core Schema (Core Schema).</span></span>
+- <span data-ttu-id="75290-108">注釈 XML コア スキーマ (コア スキーマ)。</span><span class="sxs-lookup"><span data-stu-id="75290-108">The Annotations XML Core Schema (Core Schema).</span></span>
 
-- <span data-ttu-id="435c1-109">注釈 XML 基本スキーマ (基本スキーマ)。</span><span class="sxs-lookup"><span data-stu-id="435c1-109">The Annotations XML Base Schema (Base Schema).</span></span>
+- <span data-ttu-id="75290-109">注釈 XML 基本スキーマ (基本スキーマ)。</span><span class="sxs-lookup"><span data-stu-id="75290-109">The Annotations XML Base Schema (Base Schema).</span></span>
 
-<span data-ttu-id="435c1-110">コア スキーマは、のプライマリ XML 構造を定義、<xref:System.Windows.Annotations.Annotation>します。</span><span class="sxs-lookup"><span data-stu-id="435c1-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="435c1-111">コア スキーマで定義された XML 要素の大部分が型に対応、<xref:System.Windows.Annotations>名前空間。</span><span class="sxs-lookup"><span data-stu-id="435c1-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="435c1-112">コア スキーマは 3 つの拡張ポイントを公開します。そのポイントでアプリケーションは独自の XML データを追加できます。</span><span class="sxs-lookup"><span data-stu-id="435c1-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="435c1-113">これらの拡張ポイントを含める、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、「コンテンツ」とします。</span><span class="sxs-lookup"><span data-stu-id="435c1-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="435c1-114">(要素がの形式で提供されるコンテンツ、<xref:System.Xml.XmlElement>一覧です)。</span><span class="sxs-lookup"><span data-stu-id="435c1-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>
+<span data-ttu-id="75290-110">コアスキーマは、の<xref:System.Windows.Annotations.Annotation>プライマリ XML 構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="75290-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="75290-111">コアスキーマで定義されている XML 要素の大部分は、 <xref:System.Windows.Annotations>名前空間の型に対応しています。</span><span class="sxs-lookup"><span data-stu-id="75290-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="75290-112">コア スキーマは 3 つの拡張ポイントを公開します。そのポイントでアプリケーションは独自の XML データを追加できます。</span><span class="sxs-lookup"><span data-stu-id="75290-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="75290-113">これらの拡張ポイント<xref:System.Windows.Annotations.Annotation.Authors%2A>に<xref:System.Windows.Annotations.ContentLocatorPart>は、、、および "Content" が含まれます。</span><span class="sxs-lookup"><span data-stu-id="75290-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="75290-114">(コンテンツ要素は<xref:System.Xml.XmlElement>リストの形式で提供されます)。</span><span class="sxs-lookup"><span data-stu-id="75290-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>
 
-<span data-ttu-id="435c1-115">このトピックで説明されているベース スキーマの拡張機能を定義する、 <xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、コンテンツの種類の初期の Windows Presentation Foundation (WPF) のリリースに含まれているとします。</span><span class="sxs-lookup"><span data-stu-id="435c1-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial Windows Presentation Foundation (WPF) release.</span></span>
+<span data-ttu-id="75290-115">このトピックで説明する基本スキーマでは<xref:System.Windows.Annotations.Annotation.Authors%2A>、初期 Windows Presentation Foundation (WPF) リリースに含まれる、 <xref:System.Windows.Annotations.ContentLocatorPart>、およびコンテンツタイプの拡張機能を定義します。</span><span class="sxs-lookup"><span data-stu-id="75290-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial Windows Presentation Foundation (WPF) release.</span></span>
 
 <a name="CoreSchema"></a>
 
-## <a name="annotations-xml-core-schema"></a><span data-ttu-id="435c1-116">注釈 XML コア スキーマ</span><span class="sxs-lookup"><span data-stu-id="435c1-116">Annotations XML Core Schema</span></span>
+## <a name="annotations-xml-core-schema"></a><span data-ttu-id="75290-116">注釈 XML コア スキーマ</span><span class="sxs-lookup"><span data-stu-id="75290-116">Annotations XML Core Schema</span></span>
 
-<span data-ttu-id="435c1-117">注釈 XML コア スキーマ定義を格納するために使用される XML 構造<xref:System.Windows.Annotations.Annotation>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="435c1-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>
+<span data-ttu-id="75290-117">注釈 xml コアスキーマは、オブジェクトの格納<xref:System.Windows.Annotations.Annotation>に使用される xml 構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="75290-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -185,9 +185,9 @@ ms.locfileid: "61777082"
 
 <a name="BaseSchema"></a>
 
-## <a name="annotations-xml-base-schema"></a><span data-ttu-id="435c1-118">注釈 XML 基本スキーマ</span><span class="sxs-lookup"><span data-stu-id="435c1-118">Annotations XML Base Schema</span></span>
+## <a name="annotations-xml-base-schema"></a><span data-ttu-id="75290-118">注釈 XML 基本スキーマ</span><span class="sxs-lookup"><span data-stu-id="75290-118">Annotations XML Base Schema</span></span>
 
-<span data-ttu-id="435c1-119">基本スキーマは、コア スキーマで定義されている 3 つの抽象要素の XML 構造を定義します<xref:System.Windows.Annotations.Annotation.Authors%2A>、 <xref:System.Windows.Annotations.ContentLocatorPart>、および<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>します。</span><span class="sxs-lookup"><span data-stu-id="435c1-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>
+<span data-ttu-id="75290-119">基本スキーマでは<xref:System.Windows.Annotations.Annotation.Authors%2A>、コアスキーマに定義されている3つの抽象要素 (、 <xref:System.Windows.Annotations.ContentLocatorPart>、 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>) の XML 構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="75290-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -498,9 +498,9 @@ ms.locfileid: "61777082"
 
 <a name="SampleXML"></a>
 
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="435c1-120">注釈 XmlStreamStore で作成されたサンプル XML</span><span class="sxs-lookup"><span data-stu-id="435c1-120">Sample XML Produced by Annotations XmlStreamStore</span></span>
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="75290-120">注釈 XmlStreamStore で作成されたサンプル XML</span><span class="sxs-lookup"><span data-stu-id="75290-120">Sample XML Produced by Annotations XmlStreamStore</span></span>
 
-<span data-ttu-id="435c1-121">続く XML では、注釈の出力を示しています。<xref:System.Windows.Annotations.Storage.XmlStreamStore>と 3 つの注釈の強調表示や、テキスト付箋、インク付箋を含むサンプル ファイルの組織。</span><span class="sxs-lookup"><span data-stu-id="435c1-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>
+<span data-ttu-id="75290-121">次の XML は、注釈<xref:System.Windows.Annotations.Storage.XmlStreamStore>の出力と、3つの注釈 (強調表示、テキスト付箋、インクスティックメモ) を含むサンプルファイルの編成を示しています。</span><span class="sxs-lookup"><span data-stu-id="75290-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -588,11 +588,11 @@ ms.locfileid: "61777082"
 </anc:Annotations>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="435c1-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="435c1-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75290-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="75290-122">See also</span></span>
 
 - <xref:System.Windows.Annotations>
 - <xref:System.Windows.Annotations.Storage>
 - <xref:System.Windows.Annotations.Annotation>
 - <xref:System.Windows.Annotations.Storage.AnnotationStore>
 - <xref:System.Windows.Annotations.Storage.XmlStreamStore>
-- [<span data-ttu-id="435c1-123">注釈の概要</span><span class="sxs-lookup"><span data-stu-id="435c1-123">Annotations Overview</span></span>](annotations-overview.md)
+- [<span data-ttu-id="75290-123">注釈の概要</span><span class="sxs-lookup"><span data-stu-id="75290-123">Annotations Overview</span></span>](annotations-overview.md)
