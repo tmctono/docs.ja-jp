@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020544"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400376"
 ---
-# <a name="data"></a><span data-ttu-id="d9c84-102">データ</span><span class="sxs-lookup"><span data-stu-id="d9c84-102">Data</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="d9c84-103">データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。</span><span class="sxs-lookup"><span data-stu-id="d9c84-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="d9c84-104">要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="d9c84-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="d9c84-105">はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。</span><span class="sxs-lookup"><span data-stu-id="d9c84-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
+# <a name="data"></a><span data-ttu-id="60b3d-102">データ</span><span class="sxs-lookup"><span data-stu-id="60b3d-102">Data</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="60b3d-103">データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。</span><span class="sxs-lookup"><span data-stu-id="60b3d-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="60b3d-104">要素は、共通言語ランタイム (CLR) オブジェクトおよび XML の形式で、さまざまなデータソースのデータにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="60b3d-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="60b3d-105">はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。</span><span class="sxs-lookup"><span data-stu-id="60b3d-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d9c84-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d9c84-106">In This Section</span></span>  
- [<span data-ttu-id="d9c84-107">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="d9c84-107">Data Binding</span></span>](data-binding-wpf.md)  
- [<span data-ttu-id="d9c84-108">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="d9c84-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
+## <a name="in-this-section"></a><span data-ttu-id="60b3d-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="60b3d-106">In This Section</span></span>  
+ [<span data-ttu-id="60b3d-107">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="60b3d-107">Data Binding</span></span>](data-binding-wpf.md)  
+ [<span data-ttu-id="60b3d-108">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="60b3d-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a><span data-ttu-id="d9c84-109">参照</span><span class="sxs-lookup"><span data-stu-id="d9c84-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="60b3d-109">参照</span><span class="sxs-lookup"><span data-stu-id="60b3d-109">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -31,14 +31,14 @@ ms.locfileid: "62020544"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="d9c84-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9c84-110">Related Sections</span></span>  
- [<span data-ttu-id="d9c84-111">コントロール</span><span class="sxs-lookup"><span data-stu-id="d9c84-111">Controls</span></span>](../controls/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="60b3d-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="60b3d-110">Related Sections</span></span>  
+ [<span data-ttu-id="60b3d-111">コントロール</span><span class="sxs-lookup"><span data-stu-id="60b3d-111">Controls</span></span>](../controls/index.md)  
   
- [<span data-ttu-id="d9c84-112">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="d9c84-112">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+ [<span data-ttu-id="60b3d-112">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="60b3d-112">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
   
- [<span data-ttu-id="d9c84-113">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="d9c84-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="60b3d-113">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="60b3d-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d9c84-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9c84-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60b3d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="60b3d-114">See also</span></span>
 
-- [<span data-ttu-id="d9c84-115">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="d9c84-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [<span data-ttu-id="d9c84-116">チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="d9c84-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [<span data-ttu-id="60b3d-115">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="60b3d-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [<span data-ttu-id="60b3d-116">チュートリアル: WPF アプリケーションでのアプリケーションデータのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="60b3d-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
