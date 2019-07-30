@@ -1,82 +1,82 @@
 ---
 title: 名前空間
-description: 学習方法、F#名前空間では、プログラム要素のグループに名前を追加することによって関連する機能の領域にコードを整理できます。
+description: 名前F#空間を使用して、プログラム要素のグループに名前を添付できるようにすることで、関連する機能の領域にコードを整理する方法について説明します。
 ms.date: 12/08/2018
-ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d295f25cae81bc28b4fcb522bdcacde862f9517a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645265"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627379"
 ---
-# <a name="namespaces"></a><span data-ttu-id="98bcf-103">名前空間</span><span class="sxs-lookup"><span data-stu-id="98bcf-103">Namespaces</span></span>
+# <a name="namespaces"></a><span data-ttu-id="9eac0-103">名前空間</span><span class="sxs-lookup"><span data-stu-id="9eac0-103">Namespaces</span></span>
 
-<span data-ttu-id="98bcf-104">名前空間では、関連する機能の領域にへのグループに名前を追加できるコードを編成できます。F#プログラム要素です。</span><span class="sxs-lookup"><span data-stu-id="98bcf-104">A namespace lets you organize code into areas of related functionality by enabling you to attach a name to a grouping of F# program elements.</span></span> <span data-ttu-id="98bcf-105">名前空間は、通常の最上位の要素でF#ファイル。</span><span class="sxs-lookup"><span data-stu-id="98bcf-105">Namespaces are typically top-level elements in F# files.</span></span>
+<span data-ttu-id="9eac0-104">名前空間を使用すると、プログラム要素のF#グループに名前を付けることができるので、関連する機能の領域にコードを整理できます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-104">A namespace lets you organize code into areas of related functionality by enabling you to attach a name to a grouping of F# program elements.</span></span> <span data-ttu-id="9eac0-105">名前空間は、通常、ファイル内F#の最上位の要素です。</span><span class="sxs-lookup"><span data-stu-id="9eac0-105">Namespaces are typically top-level elements in F# files.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="98bcf-106">構文</span><span class="sxs-lookup"><span data-stu-id="98bcf-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9eac0-106">構文</span><span class="sxs-lookup"><span data-stu-id="9eac0-106">Syntax</span></span>
 
 ```fsharp
 namespace [rec] [parent-namespaces.]identifier
 ```
 
-## <a name="remarks"></a><span data-ttu-id="98bcf-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="98bcf-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9eac0-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="9eac0-107">Remarks</span></span>
 
-<span data-ttu-id="98bcf-108">名前空間にコードを配置する場合は、ファイル内の最初の宣言は名前空間を宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98bcf-108">If you want to put code in a namespace, the first declaration in the file must declare the namespace.</span></span> <span data-ttu-id="98bcf-109">ファイル全体の内容は、名前空間の一部となる、ファイルにさらにその他の名前空間宣言が存在しない指定します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-109">The contents of the entire file then become part of the namespace, provided no other namespaces declaration exists further in the file.</span></span> <span data-ttu-id="98bcf-110">場合は、[次へ] の名前空間宣言までのすべてのコードは最初の名前空間内にあると見なさします。</span><span class="sxs-lookup"><span data-stu-id="98bcf-110">If that is the case, then all code up until the next namespace declaration is considered to be within the first namespace.</span></span>
+<span data-ttu-id="9eac0-108">名前空間にコードを配置する場合は、ファイルの最初の宣言で名前空間を宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-108">If you want to put code in a namespace, the first declaration in the file must declare the namespace.</span></span> <span data-ttu-id="9eac0-109">ファイル内に他の名前空間宣言が存在しない場合は、ファイル全体の内容が名前空間の一部になります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-109">The contents of the entire file then become part of the namespace, provided no other namespaces declaration exists further in the file.</span></span> <span data-ttu-id="9eac0-110">その場合、次の名前空間宣言までのすべてのコードは、最初の名前空間内にあると見なされます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-110">If that is the case, then all code up until the next namespace declaration is considered to be within the first namespace.</span></span>
 
-<span data-ttu-id="98bcf-111">値および関数、名前空間を含める直接ことはできません。</span><span class="sxs-lookup"><span data-stu-id="98bcf-111">Namespaces cannot directly contain values and functions.</span></span> <span data-ttu-id="98bcf-112">代わりに、モジュールでは、値および関数を含める必要があるし、モジュールの名前空間に含まれます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-112">Instead, values and functions must be included in modules, and modules are included in namespaces.</span></span> <span data-ttu-id="98bcf-113">名前空間は、モジュールの種類を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-113">Namespaces can contain types, modules.</span></span>
+<span data-ttu-id="9eac0-111">名前空間には、値と関数を直接含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="9eac0-111">Namespaces cannot directly contain values and functions.</span></span> <span data-ttu-id="9eac0-112">代わりに、値と関数をモジュールに含める必要があり、モジュールは名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-112">Instead, values and functions must be included in modules, and modules are included in namespaces.</span></span> <span data-ttu-id="9eac0-113">名前空間には、型、モジュールを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-113">Namespaces can contain types, modules.</span></span>
 
-<span data-ttu-id="98bcf-114">名前空間の上、XML ドキュメント コメントを宣言できますが、無視されます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-114">XML doc comments can be declared above a namespace, but they're ignored.</span></span> <span data-ttu-id="98bcf-115">コンパイラ ディレクティブは、名前空間の上にも宣言できます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-115">Compiler directives can also be declared above a namespace.</span></span>
+<span data-ttu-id="9eac0-114">XML ドキュメントコメントは名前空間の上に宣言できますが、無視されます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-114">XML doc comments can be declared above a namespace, but they're ignored.</span></span> <span data-ttu-id="9eac0-115">コンパイラディレクティブは、名前空間の上に宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-115">Compiler directives can also be declared above a namespace.</span></span>
 
-<span data-ttu-id="98bcf-116">名前空間は明示的に宣言する名前空間キーワード、または暗黙的にモジュールを宣言するときに。</span><span class="sxs-lookup"><span data-stu-id="98bcf-116">Namespaces can be declared explicitly with the namespace keyword, or implicitly when declaring a module.</span></span> <span data-ttu-id="98bcf-117">名前空間を明示的に宣言するには、名前空間キーワードの後に名前空間の名前を使用します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-117">To declare a namespace explicitly, use the namespace keyword followed by the namespace name.</span></span> <span data-ttu-id="98bcf-118">次の例では、名前空間を宣言するコード ファイル`Widgets`型とその名前空間に含まれるモジュールを使用します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-118">The following example shows a code file that declares a namespace `Widgets` with a type and a module included in that namespace.</span></span>
+<span data-ttu-id="9eac0-116">名前空間は、namespace キーワードを使用して明示的に宣言することも、モジュールを宣言するときに暗黙的に宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-116">Namespaces can be declared explicitly with the namespace keyword, or implicitly when declaring a module.</span></span> <span data-ttu-id="9eac0-117">名前空間を明示的に宣言するには、namespace キーワードを使用し、その後に名前空間名を指定します。</span><span class="sxs-lookup"><span data-stu-id="9eac0-117">To declare a namespace explicitly, use the namespace keyword followed by the namespace name.</span></span> <span data-ttu-id="9eac0-118">次の例は、型とその名前空間に`Widgets`含まれるモジュールを持つ名前空間を宣言するコードファイルを示しています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-118">The following example shows a code file that declares a namespace `Widgets` with a type and a module included in that namespace.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-<span data-ttu-id="98bcf-119">ファイルの内容全体が 1 つのモジュールである場合は、宣言することも名前空間に暗黙的を使用して、`module`キーワードとモジュールの完全修飾名で新しい名前空間名を指定します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-119">If the entire contents of the file are in one module, you can also declare namespaces implicitly by using the `module` keyword and providing the new namespace name in the fully qualified module name.</span></span> <span data-ttu-id="98bcf-120">次の例では、名前空間を宣言するコード ファイル`Widgets`とモジュール`WidgetsModule`関数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="98bcf-120">The following example shows a code file that declares a namespace `Widgets` and a module `WidgetsModule`, which contains a function.</span></span>
+<span data-ttu-id="9eac0-119">ファイルの内容全体が1つのモジュールに含まれている場合は、 `module`キーワードを使用し、完全修飾モジュール名に新しい名前空間名を指定することで、名前空間を暗黙的に宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-119">If the entire contents of the file are in one module, you can also declare namespaces implicitly by using the `module` keyword and providing the new namespace name in the fully qualified module name.</span></span> <span data-ttu-id="9eac0-120">次の例は、関数を含む名前空間`Widgets`とモジュール`WidgetsModule`を宣言するコードファイルを示しています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-120">The following example shows a code file that declares a namespace `Widgets` and a module `WidgetsModule`, which contains a function.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
-<span data-ttu-id="98bcf-121">次のコードは上記のコードと同じですが、モジュールがローカル モジュールの宣言。</span><span class="sxs-lookup"><span data-stu-id="98bcf-121">The following code is equivalent to the preceding code, but the module is a local module declaration.</span></span> <span data-ttu-id="98bcf-122">その場合は、名前空間は、独自の行に表示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98bcf-122">In that case, the namespace must appear on its own line.</span></span>
+<span data-ttu-id="9eac0-121">次のコードは、前のコードに相当しますが、モジュールはローカルモジュール宣言です。</span><span class="sxs-lookup"><span data-stu-id="9eac0-121">The following code is equivalent to the preceding code, but the module is a local module declaration.</span></span> <span data-ttu-id="9eac0-122">この場合、名前空間は独自の行に記述する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-122">In that case, the namespace must appear on its own line.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-<span data-ttu-id="98bcf-123">1 つ以上のモジュールが 1 つまたは複数の名前空間で同じファイルで必要に応じて、ローカル モジュール宣言を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98bcf-123">If more than one module is required in the same file in one or more namespaces, you must use local module declarations.</span></span> <span data-ttu-id="98bcf-124">モジュールのローカル宣言を使用する場合は、モジュール宣言で修飾名前空間を使用できません。</span><span class="sxs-lookup"><span data-stu-id="98bcf-124">When you use local module declarations, you cannot use the qualified namespace in the module declarations.</span></span> <span data-ttu-id="98bcf-125">次のコードでは、名前空間の宣言と 2 つのモジュールのローカル宣言を持つファイルを示します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-125">The following code shows a file that has a namespace declaration and two local module declarations.</span></span> <span data-ttu-id="98bcf-126">この場合、モジュールが、名前空間で直接に含まれるファイルと同じ名前を持つ、暗黙的に作成されたモジュールはありません。</span><span class="sxs-lookup"><span data-stu-id="98bcf-126">In this case, the modules are contained directly in the namespace; there is no implicitly created module that has the same name as the file.</span></span> <span data-ttu-id="98bcf-127">などのファイルで、コードの他の`do`モジュール メンバーを修飾する必要があるため、内部のモジュールではなく、名前空間には、バインド、`widgetFunction`モジュール名を使用しています。</span><span class="sxs-lookup"><span data-stu-id="98bcf-127">Any other code in the file, such as a `do` binding, is in the namespace but not in the inner modules, so you need to qualify the module member `widgetFunction` by using the module name.</span></span>
+<span data-ttu-id="9eac0-123">1つ以上の名前空間で同じファイルに複数のモジュールが必要な場合は、ローカルモジュール宣言を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-123">If more than one module is required in the same file in one or more namespaces, you must use local module declarations.</span></span> <span data-ttu-id="9eac0-124">ローカルモジュール宣言を使用する場合、モジュール宣言で修飾された名前空間を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="9eac0-124">When you use local module declarations, you cannot use the qualified namespace in the module declarations.</span></span> <span data-ttu-id="9eac0-125">次のコードは、名前空間宣言と2つのローカルモジュール宣言を含むファイルを示しています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-125">The following code shows a file that has a namespace declaration and two local module declarations.</span></span> <span data-ttu-id="9eac0-126">この場合、モジュールは名前空間に直接含まれています。ファイルと同じ名前を持つ、暗黙的に作成されたモジュールはありません。</span><span class="sxs-lookup"><span data-stu-id="9eac0-126">In this case, the modules are contained directly in the namespace; there is no implicitly created module that has the same name as the file.</span></span> <span data-ttu-id="9eac0-127">`do`バインドなどのファイル内のその他のコードは、名前空間にありますが、内部モジュールには存在しないため、モジュール名を`widgetFunction`使用してモジュールメンバーを修飾する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-127">Any other code in the file, such as a `do` binding, is in the namespace but not in the inner modules, so you need to qualify the module member `widgetFunction` by using the module name.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
-<span data-ttu-id="98bcf-128">この例の出力は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="98bcf-128">The output of this example is as follows.</span></span>
+<span data-ttu-id="9eac0-128">この例の出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-128">The output of this example is as follows.</span></span>
 
 ```fsharp
 Module1 10 20
 Module2 5 6
 ```
 
-<span data-ttu-id="98bcf-129">詳細については、次を参照してください。[モジュール](modules.md)します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-129">For more information, see [Modules](modules.md).</span></span>
+<span data-ttu-id="9eac0-129">詳細については、「[モジュール](modules.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9eac0-129">For more information, see [Modules](modules.md).</span></span>
 
-## <a name="nested-namespaces"></a><span data-ttu-id="98bcf-130">入れ子になった名前空間</span><span class="sxs-lookup"><span data-stu-id="98bcf-130">Nested Namespaces</span></span>
+## <a name="nested-namespaces"></a><span data-ttu-id="9eac0-130">入れ子になった名前空間</span><span class="sxs-lookup"><span data-stu-id="9eac0-130">Nested Namespaces</span></span>
 
-<span data-ttu-id="98bcf-131">入れ子になった名前空間を作成するときに、完全修飾する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98bcf-131">When you create a nested namespace, you must fully qualify it.</span></span> <span data-ttu-id="98bcf-132">それ以外の場合、新しい最上位レベルの名前空間を作成します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-132">Otherwise, you create a new top-level namespace.</span></span> <span data-ttu-id="98bcf-133">インデントは、名前空間の宣言では無視されます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-133">Indentation is ignored in namespace declarations.</span></span>
+<span data-ttu-id="9eac0-131">入れ子になった名前空間を作成する場合は、完全修飾する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9eac0-131">When you create a nested namespace, you must fully qualify it.</span></span> <span data-ttu-id="9eac0-132">それ以外の場合は、新しい最上位レベルの名前空間を作成します。</span><span class="sxs-lookup"><span data-stu-id="9eac0-132">Otherwise, you create a new top-level namespace.</span></span> <span data-ttu-id="9eac0-133">名前空間の宣言では、インデントは無視されます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-133">Indentation is ignored in namespace declarations.</span></span>
 
-<span data-ttu-id="98bcf-134">次の例では、入れ子になった名前空間を宣言する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-134">The following example shows how to declare a nested namespace.</span></span>
+<span data-ttu-id="9eac0-134">次の例は、入れ子になった名前空間を宣言する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-134">The following example shows how to declare a nested namespace.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a><span data-ttu-id="98bcf-135">ファイルとアセンブリの名前空間</span><span class="sxs-lookup"><span data-stu-id="98bcf-135">Namespaces in Files and Assemblies</span></span>
+## <a name="namespaces-in-files-and-assemblies"></a><span data-ttu-id="9eac0-135">ファイルとアセンブリ内の名前空間</span><span class="sxs-lookup"><span data-stu-id="9eac0-135">Namespaces in Files and Assemblies</span></span>
 
-<span data-ttu-id="98bcf-136">名前空間は、1 つのプロジェクトやコンパイルで複数のファイルにまたがることができます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-136">Namespaces can span multiple files in a single project or compilation.</span></span> <span data-ttu-id="98bcf-137">用語*名前空間のフラグメント*1 つのファイルに含まれている名前空間の一部について説明します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-137">The term *namespace fragment* describes the part of a namespace that is included in one file.</span></span> <span data-ttu-id="98bcf-138">名前空間は、複数のアセンブリをまたがることもできます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-138">Namespaces can also span multiple assemblies.</span></span> <span data-ttu-id="98bcf-139">たとえば、`System`名前空間に多数のアセンブリにまたがり、多数の入れ子になった名前空間が含まれていますが、全体の .NET Framework が含まれています。</span><span class="sxs-lookup"><span data-stu-id="98bcf-139">For example, the `System` namespace includes the whole .NET Framework, which spans many assemblies and contains many nested namespaces.</span></span>
+<span data-ttu-id="9eac0-136">名前空間は、1つのプロジェクトまたはコンパイルで複数のファイルにまたがることができます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-136">Namespaces can span multiple files in a single project or compilation.</span></span> <span data-ttu-id="9eac0-137">*名前空間フラグメント*という用語は、1つのファイルに含まれる名前空間の部分を記述します。</span><span class="sxs-lookup"><span data-stu-id="9eac0-137">The term *namespace fragment* describes the part of a namespace that is included in one file.</span></span> <span data-ttu-id="9eac0-138">名前空間は、複数のアセンブリにまたがることもできます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-138">Namespaces can also span multiple assemblies.</span></span> <span data-ttu-id="9eac0-139">たとえば`System` 、名前空間には .NET Framework 全体が含まれています。これは多数のアセンブリにまたがり、入れ子になった多数の名前空間が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9eac0-139">For example, the `System` namespace includes the whole .NET Framework, which spans many assemblies and contains many nested namespaces.</span></span>
 
-## <a name="global-namespace"></a><span data-ttu-id="98bcf-140">グローバル Namespace</span><span class="sxs-lookup"><span data-stu-id="98bcf-140">Global Namespace</span></span>
+## <a name="global-namespace"></a><span data-ttu-id="9eac0-140">グローバル名前空間</span><span class="sxs-lookup"><span data-stu-id="9eac0-140">Global Namespace</span></span>
 
-<span data-ttu-id="98bcf-141">定義済みの名前空間を使用する`global`に最上位レベルの .NET 名前空間に名前を格納します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-141">You use the predefined namespace `global` to put names in the .NET top-level namespace.</span></span>
+<span data-ttu-id="9eac0-141">定義済みの名前`global`空間を使用して、.net の最上位レベルの名前空間に名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-141">You use the predefined namespace `global` to put names in the .NET top-level namespace.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-<span data-ttu-id="98bcf-142">使用することできますもグローバル他の名前空間と名前が競合を解決するのには、たとえば最上位レベルの .NET 名前空間を参照します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-142">You can also use global to reference the top-level .NET namespace, for example, to resolve name conflicts with other namespaces.</span></span>
+<span data-ttu-id="9eac0-142">また、グローバルを使用してトップレベルの .NET 名前空間を参照することもできます。たとえば、名前の競合を他の名前空間と解決するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-142">You can also use global to reference the top-level .NET namespace, for example, to resolve name conflicts with other namespaces.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-## <a name="recursive-namespaces"></a><span data-ttu-id="98bcf-143">再帰的な名前空間</span><span class="sxs-lookup"><span data-stu-id="98bcf-143">Recursive namespaces</span></span>
+## <a name="recursive-namespaces"></a><span data-ttu-id="9eac0-143">再帰的な名前空間</span><span class="sxs-lookup"><span data-stu-id="9eac0-143">Recursive namespaces</span></span>
 
-<span data-ttu-id="98bcf-144">名前空間は、再帰的に相互に含まれているすべてのコードを許可するには、再帰的なとしても宣言できます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-144">Namespaces can also be declared as recursive to allow for all contained code to be mutually recursive.</span></span>  <span data-ttu-id="98bcf-145">使用してこれには`namespace rec`します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-145">This is done via `namespace rec`.</span></span> <span data-ttu-id="98bcf-146">使用`namespace rec`されない型とモジュール間の相互参照コードを記述することでいくつかの問題を軽減することができます。</span><span class="sxs-lookup"><span data-stu-id="98bcf-146">Use of `namespace rec` can alleviate some pains in not being able to write mutually referential code between types and modules.</span></span> <span data-ttu-id="98bcf-147">この例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-147">The following is an example of this:</span></span>
+<span data-ttu-id="9eac0-144">また、含まれているすべてのコードが相互に再帰的になるように、名前空間を再帰として宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-144">Namespaces can also be declared as recursive to allow for all contained code to be mutually recursive.</span></span>  <span data-ttu-id="9eac0-145">これは、を`namespace rec`使用して行います。</span><span class="sxs-lookup"><span data-stu-id="9eac0-145">This is done via `namespace rec`.</span></span> <span data-ttu-id="9eac0-146">を使用`namespace rec`すると、型とモジュール間で相互参照コードを記述できないという問題を軽減できます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-146">Use of `namespace rec` can alleviate some pains in not being able to write mutually referential code between types and modules.</span></span> <span data-ttu-id="9eac0-147">この例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="9eac0-147">The following is an example of this:</span></span>
 
 ```fsharp
 namespace rec MutualReferences
@@ -117,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-<span data-ttu-id="98bcf-148">なお、例外`DontSqueezeTheBananaException`とクラス`Banana`両方には、互いを参照してください。</span><span class="sxs-lookup"><span data-stu-id="98bcf-148">Note that the exception `DontSqueezeTheBananaException` and the class `Banana` both refer to each other.</span></span>  <span data-ttu-id="98bcf-149">モジュールではさらに、`BananaHelpers`とクラス`Banana`も互いに参照してください。</span><span class="sxs-lookup"><span data-stu-id="98bcf-149">Additionally, the module `BananaHelpers` and the class `Banana` also refer to each other.</span></span> <span data-ttu-id="98bcf-150">表現することがあるF#を削除した場合、`rec`からキーワード、`MutualReferences`名前空間。</span><span class="sxs-lookup"><span data-stu-id="98bcf-150">This wouldn't be possible to express in F# if you removed the `rec` keyword from the `MutualReferences` namespace.</span></span>
+<span data-ttu-id="9eac0-148">例外`DontSqueezeTheBananaException`とクラス`Banana`は両方とも参照していることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="9eac0-148">Note that the exception `DontSqueezeTheBananaException` and the class `Banana` both refer to each other.</span></span>  <span data-ttu-id="9eac0-149">さらに、モジュール`BananaHelpers`とクラス`Banana`も相互に参照します。</span><span class="sxs-lookup"><span data-stu-id="9eac0-149">Additionally, the module `BananaHelpers` and the class `Banana` also refer to each other.</span></span> <span data-ttu-id="9eac0-150">名前空間からF# `rec`キーワードを削除した場合、でを表現することはできません。 `MutualReferences`</span><span class="sxs-lookup"><span data-stu-id="9eac0-150">This wouldn't be possible to express in F# if you removed the `rec` keyword from the `MutualReferences` namespace.</span></span>
 
-<span data-ttu-id="98bcf-151">この機能は使用できる最上位[モジュール](modules.md)します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-151">This feature is also available for top-level [Modules](modules.md).</span></span>
+<span data-ttu-id="9eac0-151">この機能は、最上位レベルの[モジュール](modules.md)でも使用できます。</span><span class="sxs-lookup"><span data-stu-id="9eac0-151">This feature is also available for top-level [Modules](modules.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="98bcf-152">関連項目</span><span class="sxs-lookup"><span data-stu-id="98bcf-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9eac0-152">関連項目</span><span class="sxs-lookup"><span data-stu-id="9eac0-152">See also</span></span>
 
-- [<span data-ttu-id="98bcf-153">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="98bcf-153">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="98bcf-154">モジュール</span><span class="sxs-lookup"><span data-stu-id="98bcf-154">Modules</span></span>](modules.md)
-- [<span data-ttu-id="98bcf-155">F#RFC FS-1009 - ファイル内でより大きな範囲経由で相互に参照型とモジュールを許可します。</span><span class="sxs-lookup"><span data-stu-id="98bcf-155">F# RFC FS-1009 - Allow mutually referential types and modules over larger scopes within files</span></span>](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [<span data-ttu-id="9eac0-153">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="9eac0-153">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="9eac0-154">モジュール</span><span class="sxs-lookup"><span data-stu-id="9eac0-154">Modules</span></span>](modules.md)
+- [<span data-ttu-id="9eac0-155">F#RFC FS-1009-ファイル内のより大きなスコープで相互参照型とモジュールを許可する</span><span class="sxs-lookup"><span data-stu-id="9eac0-155">F# RFC FS-1009 - Allow mutually referential types and modules over larger scopes within files</span></span>](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
