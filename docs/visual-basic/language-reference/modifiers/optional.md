@@ -8,66 +8,70 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3758f17634395236abf2cd7059418bf6f8b6c062
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661323"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630921"
 ---
-# <a name="optional-visual-basic"></a><span data-ttu-id="1aac2-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aac2-102">Optional (Visual Basic)</span></span>
-<span data-ttu-id="1aac2-103">プロシージャが呼び出されたときにプロシージャの引数を省略できますを指定します。</span><span class="sxs-lookup"><span data-stu-id="1aac2-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="1aac2-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="1aac2-104">Remarks</span></span>  
- <span data-ttu-id="1aac2-105">オプションのパラメーターごとに、そのパラメーターの既定値として定数式を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1aac2-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="1aac2-106">式が評価された場合[Nothing](../../../visual-basic/language-reference/nothing.md)値のデータ型の既定値は、パラメーターの既定値として使用されます。</span><span class="sxs-lookup"><span data-stu-id="1aac2-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>  
-  
- <span data-ttu-id="1aac2-107">パラメーター リストには、オプションのパラメーターが含まれています、それに続くすべてのパラメーターは省略可能な必要があります。</span><span class="sxs-lookup"><span data-stu-id="1aac2-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>  
-  
- <span data-ttu-id="1aac2-108">`Optional` 修飾子は、次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="1aac2-108">The `Optional` modifier can be used in these contexts:</span></span>  
-  
-- [<span data-ttu-id="1aac2-109">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="1aac2-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
-- [<span data-ttu-id="1aac2-110">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="1aac2-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
-- [<span data-ttu-id="1aac2-111">Property ステートメント</span><span class="sxs-lookup"><span data-stu-id="1aac2-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
-- [<span data-ttu-id="1aac2-112">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="1aac2-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-> [!NOTE]
->  <span data-ttu-id="1aac2-113">省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="1aac2-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="1aac2-114">詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)します。</span><span class="sxs-lookup"><span data-stu-id="1aac2-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="1aac2-115">オーバー ロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="1aac2-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="1aac2-116">1 つの省略可能なパラメーターがある場合、プロシージャ、ないおよびパラメーターを受け取るいずれかの 2 つのオーバー ロードされたバージョンを定義できます。</span><span class="sxs-lookup"><span data-stu-id="1aac2-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="1aac2-117">詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1aac2-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1aac2-118">例</span><span class="sxs-lookup"><span data-stu-id="1aac2-118">Example</span></span>  
- <span data-ttu-id="1aac2-119">次の例では、省略可能なパラメーターを持つプロシージャを定義します。</span><span class="sxs-lookup"><span data-stu-id="1aac2-119">The following example defines a procedure that has an optional parameter.</span></span>  
-  
-```  
-Public Function FindMatches(ByRef values As List(Of String),  
-                            ByVal searchString As String,  
-                            Optional ByVal matchCase As Boolean = False) As List(Of String)  
-  
-    Dim results As IEnumerable(Of String)  
-  
-    If matchCase Then  
-        results = From v In values  
-                  Where v.Contains(searchString)  
-    Else  
-        results = From v In values  
-                  Where UCase(v).Contains(UCase(searchString))  
-    End If  
-  
-    Return results.ToList()  
-End Function  
-```  
-  
-## <a name="example"></a><span data-ttu-id="1aac2-120">例</span><span class="sxs-lookup"><span data-stu-id="1aac2-120">Example</span></span>  
- <span data-ttu-id="1aac2-121">次の例では、位置によって渡される引数と名前によって渡される引数は、プロシージャを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="1aac2-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="1aac2-122">プロシージャが、2 つの省略可能なパラメーター。</span><span class="sxs-lookup"><span data-stu-id="1aac2-122">The procedure has two optional parameters.</span></span>  
-  
- [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
-  
-## <a name="see-also"></a><span data-ttu-id="1aac2-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="1aac2-123">See also</span></span>
+# <a name="optional-visual-basic"></a><span data-ttu-id="d5672-102">Optional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5672-102">Optional (Visual Basic)</span></span>
 
-- [<span data-ttu-id="1aac2-124">パラメーター リスト</span><span class="sxs-lookup"><span data-stu-id="1aac2-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [<span data-ttu-id="1aac2-125">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="1aac2-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [<span data-ttu-id="1aac2-126">キーワード</span><span class="sxs-lookup"><span data-stu-id="1aac2-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+<span data-ttu-id="d5672-103">プロシージャを呼び出すときにプロシージャ引数を省略できることを指定します。</span><span class="sxs-lookup"><span data-stu-id="d5672-103">Specifies that a procedure argument can be omitted when the procedure is called.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="d5672-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="d5672-104">Remarks</span></span>
+
+<span data-ttu-id="d5672-105">省略可能なパラメーターごとに、そのパラメーターの既定値として定数式を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d5672-105">For each optional parameter, you must specify a constant expression as the default value of that parameter.</span></span> <span data-ttu-id="d5672-106">式が[Nothing](../../../visual-basic/language-reference/nothing.md)と評価された場合、値のデータ型の既定値がパラメーターの既定値として使用されます。</span><span class="sxs-lookup"><span data-stu-id="d5672-106">If the expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the default value of the value data type is used as the default value of the parameter.</span></span>
+
+<span data-ttu-id="d5672-107">パラメーターリストに省略可能なパラメーターが含まれている場合は、その後に続くすべてのパラメーターも省略可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d5672-107">If the parameter list contains an optional parameter, every parameter that follows it must also be optional.</span></span>
+
+<span data-ttu-id="d5672-108">`Optional` 修飾子は、次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="d5672-108">The `Optional` modifier can be used in these contexts:</span></span>
+
+- [<span data-ttu-id="d5672-109">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="d5672-109">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [<span data-ttu-id="d5672-110">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="d5672-110">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [<span data-ttu-id="d5672-111">Property ステートメント</span><span class="sxs-lookup"><span data-stu-id="d5672-111">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [<span data-ttu-id="d5672-112">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="d5672-112">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+
+> [!NOTE]
+> <span data-ttu-id="d5672-113">省略可能なパラメーターを指定して、または使用せずにプロシージャを呼び出すと、位置または名前によって引数を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="d5672-113">When calling a procedure with or without optional parameters, you can pass arguments by position or by name.</span></span> <span data-ttu-id="d5672-114">詳細については、「[位置と名前による引数の引き渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5672-114">For more information, see [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="d5672-115">オーバーロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="d5672-115">You can also define a procedure with optional parameters by using overloading.</span></span> <span data-ttu-id="d5672-116">省略可能なパラメーターが1つある場合は、2つのオーバーロードされたバージョンのプロシージャを定義できます。1つはパラメーターを受け取り、もう1つはパラメーターを受け入れません。</span><span class="sxs-lookup"><span data-stu-id="d5672-116">If you have one optional parameter, you can define two overloaded versions of the procedure, one that accepts the parameter and one that doesn’t.</span></span> <span data-ttu-id="d5672-117">詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5672-117">For more information, see [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="d5672-118">例</span><span class="sxs-lookup"><span data-stu-id="d5672-118">Example</span></span>
+
+<span data-ttu-id="d5672-119">次の例では、省略可能なパラメーターを持つプロシージャを定義します。</span><span class="sxs-lookup"><span data-stu-id="d5672-119">The following example defines a procedure that has an optional parameter.</span></span>
+
+```vb
+Public Function FindMatches(ByRef values As List(Of String),
+                            ByVal searchString As String,
+                            Optional ByVal matchCase As Boolean = False) As List(Of String)
+
+    Dim results As IEnumerable(Of String)
+
+    If matchCase Then
+        results = From v In values
+                  Where v.Contains(searchString)
+    Else
+        results = From v In values
+                  Where UCase(v).Contains(UCase(searchString))
+    End If
+
+    Return results.ToList()
+End Function
+```
+
+## <a name="example"></a><span data-ttu-id="d5672-120">例</span><span class="sxs-lookup"><span data-stu-id="d5672-120">Example</span></span>
+
+<span data-ttu-id="d5672-121">次の例では、位置によって渡される引数と、名前で渡される引数を使用してプロシージャを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d5672-121">The following example demonstrates how to call a procedure with arguments passed by position and with arguments passed by name.</span></span> <span data-ttu-id="d5672-122">プロシージャには、2つの省略可能なパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="d5672-122">The procedure has two optional parameters.</span></span>
+
+[!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]
+
+## <a name="see-also"></a><span data-ttu-id="d5672-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5672-123">See also</span></span>
+
+- [<span data-ttu-id="d5672-124">パラメーター リスト</span><span class="sxs-lookup"><span data-stu-id="d5672-124">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [<span data-ttu-id="d5672-125">省略可能なパラメーター</span><span class="sxs-lookup"><span data-stu-id="d5672-125">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [<span data-ttu-id="d5672-126">キーワード</span><span class="sxs-lookup"><span data-stu-id="d5672-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
