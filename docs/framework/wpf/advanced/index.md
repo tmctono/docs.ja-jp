@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942806"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710209"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="1434d-102">詳細設定 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="1434d-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="1434d-103">このセクションでは、WPF の高度な領域について説明します。</span><span class="sxs-lookup"><span data-stu-id="1434d-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="804a9-102">詳細設定 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="804a9-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="804a9-103">このセクションでは、WPF の高度な領域について説明します。</span><span class="sxs-lookup"><span data-stu-id="804a9-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1434d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1434d-104">In This Section</span></span>  
- [<span data-ttu-id="1434d-105">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="1434d-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="1434d-106">基本要素</span><span class="sxs-lookup"><span data-stu-id="1434d-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="1434d-107">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="1434d-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="1434d-108">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="1434d-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="1434d-109">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="1434d-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="1434d-110">グローバライズとローカライズ</span><span class="sxs-lookup"><span data-stu-id="1434d-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="1434d-111">移行と相互運用性</span><span class="sxs-lookup"><span data-stu-id="1434d-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="1434d-112">パフォーマンス</span><span class="sxs-lookup"><span data-stu-id="1434d-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="1434d-113">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="1434d-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="1434d-114">WPF アドインの概要</span><span class="sxs-lookup"><span data-stu-id="1434d-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="1434d-115">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="1434d-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="1434d-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1434d-116">Related Sections</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="804a9-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="804a9-104">In This Section</span></span>
+
+[<span data-ttu-id="804a9-105">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="804a9-105">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="804a9-106">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="804a9-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
+[<span data-ttu-id="804a9-107">基本要素クラス</span><span class="sxs-lookup"><span data-stu-id="804a9-107">Base Element Classes</span></span>](base-elements.md)  
+[<span data-ttu-id="804a9-108">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="804a9-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="804a9-109">WPF プロパティシステム</span><span class="sxs-lookup"><span data-stu-id="804a9-109">WPF Property System</span></span>](properties-wpf.md)  
+[<span data-ttu-id="804a9-110">WPF のイベント</span><span class="sxs-lookup"><span data-stu-id="804a9-110">Events in WPF</span></span>](events-wpf.md)  
+[<span data-ttu-id="804a9-111">入力</span><span class="sxs-lookup"><span data-stu-id="804a9-111">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="804a9-112">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="804a9-112">Drag and Drop</span></span>](drag-and-drop.md)  
+[<span data-ttu-id="804a9-113">リソース</span><span class="sxs-lookup"><span data-stu-id="804a9-113">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="804a9-114">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="804a9-114">Documents</span></span>](documents.md)  
+[<span data-ttu-id="804a9-115">グローバライズとローカライズ</span><span class="sxs-lookup"><span data-stu-id="804a9-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
+[<span data-ttu-id="804a9-116">レイアウト</span><span class="sxs-lookup"><span data-stu-id="804a9-116">Layout</span></span>](layout.md)  
+[<span data-ttu-id="804a9-117">移行と相互運用性</span><span class="sxs-lookup"><span data-stu-id="804a9-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+[<span data-ttu-id="804a9-118">パフォーマンス</span><span class="sxs-lookup"><span data-stu-id="804a9-118">Performance</span></span>](performance.md)  
+[<span data-ttu-id="804a9-119">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="804a9-119">Threading Model</span></span>](threading-model.md)  
+[<span data-ttu-id="804a9-120">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="804a9-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
