@@ -1,29 +1,29 @@
 ---
-title: '方法: 名前空間 (LINQ to XML) を持つドキュメントの作成 (Visual Basic)'
+title: '方法: 名前空間を持つドキュメントを作成する (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c61076da5616d98673c4b9258125e3ff0c8821aa
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855518"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710444"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="09669-102">方法: 名前空間 (LINQ to XML) を持つドキュメントの作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09669-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="09669-103">このトピックでは、Visual Basic で名前空間を持つドキュメントを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="09669-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a><span data-ttu-id="4479c-102">方法: 名前空間を持つドキュメントを作成する (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4479c-102">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="4479c-103">このトピックでは、Visual Basic で名前空間を持つドキュメントを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4479c-103">This topic shows how to create a document with namespaces in Visual Basic.</span></span>  
   
- <span data-ttu-id="09669-104">Visual Basic で XML リテラルを使用している場合、ユーザーは 1 つのグローバルな既定の XML 名前空間を定義できます。</span><span class="sxs-lookup"><span data-stu-id="09669-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="09669-105">この名前空間は、XML リテラルと XML プロパティの両方の既定の名前空間です。</span><span class="sxs-lookup"><span data-stu-id="09669-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="09669-106">既定の XML 名前空間は、プロジェクト レベルまたはファイル レベルで定義できます。</span><span class="sxs-lookup"><span data-stu-id="09669-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="09669-107">ファイル レベルで定義すると、プロジェクト レベルの既定の名前空間がオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="09669-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
+ <span data-ttu-id="4479c-104">Visual Basic で XML リテラルを使用している場合、ユーザーは 1 つのグローバルな既定の XML 名前空間を定義できます。</span><span class="sxs-lookup"><span data-stu-id="4479c-104">When using XML literals in Visual Basic, users can define one global default XML namespace.</span></span> <span data-ttu-id="4479c-105">この名前空間は、XML リテラルと XML プロパティの両方の既定の名前空間です。</span><span class="sxs-lookup"><span data-stu-id="4479c-105">This namespace is the default namespace for both XML literals and XML properties.</span></span> <span data-ttu-id="4479c-106">既定の XML 名前空間は、プロジェクト レベルまたはファイル レベルで定義できます。</span><span class="sxs-lookup"><span data-stu-id="4479c-106">The default XML namespace can be defined at either the project level or the file level.</span></span> <span data-ttu-id="4479c-107">ファイル レベルで定義すると、プロジェクト レベルの既定の名前空間がオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="4479c-107">If it is defined at the file level, it overrides the default namespace at the project level.</span></span>  
   
- <span data-ttu-id="09669-108">他の名前空間を定義して、それらの名前空間のプレフィックスを指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="09669-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
+ <span data-ttu-id="4479c-108">他の名前空間を定義して、それらの名前空間のプレフィックスを指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="4479c-108">You can also define other namespaces, and specify the namespace prefixes for those namespaces.</span></span>  
   
- <span data-ttu-id="09669-109">既定の名前空間およびプレフィックスを持つ名前空間の両方を定義する場合は、`Imports` キーワードを使用します。</span><span class="sxs-lookup"><span data-stu-id="09669-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
+ <span data-ttu-id="4479c-109">既定の名前空間およびプレフィックスを持つ名前空間の両方を定義する場合は、`Imports` キーワードを使用します。</span><span class="sxs-lookup"><span data-stu-id="4479c-109">You define both default namespaces and namespaces with a prefix by using the `Imports` keyword.</span></span>  
   
- <span data-ttu-id="09669-110">詳細については、次を参照してください。 [Visual Basic で XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)します。</span><span class="sxs-lookup"><span data-stu-id="09669-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
+ <span data-ttu-id="4479c-110">詳細については、「 [Visual Basic での XML リテラルの概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4479c-110">For more information, see [Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md).</span></span>  
   
- <span data-ttu-id="09669-111">既定の XML 名前空間は要素だけに適用され、属性には適用されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="09669-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="09669-112">属性は、既定では常に名前空間に含まれません。</span><span class="sxs-lookup"><span data-stu-id="09669-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="09669-113">ただし、名前空間プレフィックスを使用して属性を名前空間に含めることができます。</span><span class="sxs-lookup"><span data-stu-id="09669-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
+ <span data-ttu-id="4479c-111">既定の XML 名前空間は要素だけに適用され、属性には適用されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="4479c-111">Note that the default XML namespace only applies to elements and not to attributes.</span></span> <span data-ttu-id="4479c-112">属性は、既定では常に名前空間に含まれません。</span><span class="sxs-lookup"><span data-stu-id="4479c-112">Attributes are by default always in no namespace.</span></span> <span data-ttu-id="4479c-113">ただし、名前空間プレフィックスを使用して属性を名前空間に含めることができます。</span><span class="sxs-lookup"><span data-stu-id="4479c-113">However, you can use a namespace prefix to put an attribute in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="09669-114">例</span><span class="sxs-lookup"><span data-stu-id="09669-114">Example</span></span>  
- <span data-ttu-id="09669-115">この例では、1 つの名前空間を含むドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="09669-115">This example creates a document that contains a namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="4479c-114">例</span><span class="sxs-lookup"><span data-stu-id="4479c-114">Example</span></span>  
+ <span data-ttu-id="4479c-115">この例では、1 つの名前空間を含むドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="4479c-115">This example creates a document that contains a namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -38,7 +38,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="09669-116">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="09669-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="4479c-116">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4479c-116">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -46,8 +46,8 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="09669-117">例</span><span class="sxs-lookup"><span data-stu-id="09669-117">Example</span></span>  
- <span data-ttu-id="09669-118">この例では、2 つの名前空間を含むドキュメントを作成します。このうちの 1 つは既定の名前空間です。</span><span class="sxs-lookup"><span data-stu-id="09669-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="4479c-117">例</span><span class="sxs-lookup"><span data-stu-id="4479c-117">Example</span></span>  
+ <span data-ttu-id="4479c-118">この例では、2 つの名前空間を含むドキュメントを作成します。このうちの 1 つは既定の名前空間です。</span><span class="sxs-lookup"><span data-stu-id="4479c-118">This example creates a document that contains two namespaces, one of which is the default namespace.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="09669-119">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="09669-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="4479c-119">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4479c-119">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns:fc="www.fourthcoffee.com" xmlns="http://www.adventure-works.com">  
@@ -76,10 +76,10 @@ End Module
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="09669-120">例</span><span class="sxs-lookup"><span data-stu-id="09669-120">Example</span></span>  
- <span data-ttu-id="09669-121">次の例では、名前空間プレフィックスを持つ名前空間を 2 つ含むドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="09669-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="4479c-120">例</span><span class="sxs-lookup"><span data-stu-id="4479c-120">Example</span></span>  
+ <span data-ttu-id="4479c-121">次の例では、名前空間プレフィックスを持つ名前空間を 2 つ含むドキュメントを作成します。</span><span class="sxs-lookup"><span data-stu-id="4479c-121">The following example creates a document that contains multiple namespaces, both with namespace prefixes.</span></span>  
   
- <span data-ttu-id="09669-122">XML ツリーをシリアル化するとき、各要素が指定された名前空間に含まれるように、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって必要に応じて名前空間宣言が生成されます。</span><span class="sxs-lookup"><span data-stu-id="09669-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
+ <span data-ttu-id="4479c-122">XML ツリーをシリアル化するとき、各要素が指定された名前空間に含まれるように、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって必要に応じて名前空間宣言が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4479c-122">When serializing an XML tree, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emits namespace declarations as required so that each element is in its designated namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -102,7 +102,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="09669-123">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="09669-123">This example produces the following output:</span></span>  
+ <span data-ttu-id="4479c-123">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4479c-123">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -114,6 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="09669-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="09669-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4479c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="4479c-124">See also</span></span>
 
-- [<span data-ttu-id="09669-125">XML 名前空間 (Visual Basic) の使用</span><span class="sxs-lookup"><span data-stu-id="09669-125">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="4479c-125">名前空間の概要 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4479c-125">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
