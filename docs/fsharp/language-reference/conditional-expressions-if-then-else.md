@@ -1,35 +1,35 @@
 ---
-title: '条件式: if... then... else'
-description: 条件式を記述する方法について説明しますF#コードの別の分岐を実行します。
+title: '条件式: if...そうしたら。。。さも'
+description: でF#条件式を記述して、異なるコードの分岐を実行する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641987"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630398"
 ---
-# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="46eed-103">条件式: `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="46eed-103">Conditional Expressions: `if...then...else`</span></span>
+# <a name="conditional-expressions-ifthenelse"></a><span data-ttu-id="2aa85-103">条件式:`if...then...else`</span><span class="sxs-lookup"><span data-stu-id="2aa85-103">Conditional Expressions: `if...then...else`</span></span>
 
-<span data-ttu-id="46eed-104">`if...then...else`式は、コードの別の分岐を実行し、指定されたブール式に応じて異なる値に評価されます。</span><span class="sxs-lookup"><span data-stu-id="46eed-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
+<span data-ttu-id="2aa85-104">式`if...then...else`は、コードの異なる分岐を実行し、指定されたブール式に応じて別の値に評価されます。</span><span class="sxs-lookup"><span data-stu-id="2aa85-104">The `if...then...else` expression runs different branches of code and also evaluates to a different value depending on the Boolean expression given.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="46eed-105">構文</span><span class="sxs-lookup"><span data-stu-id="46eed-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2aa85-105">構文</span><span class="sxs-lookup"><span data-stu-id="2aa85-105">Syntax</span></span>
 
 ```fsharp
 if boolean-expression then expression1 [ else expression2 ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="46eed-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="46eed-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2aa85-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="2aa85-106">Remarks</span></span>
 
-<span data-ttu-id="46eed-107">前の構文で*expression1*ブール式を評価するときに実行される`true`、それ以外の*expression2*を実行します。</span><span class="sxs-lookup"><span data-stu-id="46eed-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
+<span data-ttu-id="2aa85-107">前の構文では 、ブール式がに`true`評価されると、expression1 が実行されます。それ以外の場合は、 *expression2*が実行されます。</span><span class="sxs-lookup"><span data-stu-id="2aa85-107">In the previous syntax, *expression1* runs when the Boolean expression evaluates to `true`; otherwise, *expression2* runs.</span></span>
 
-<span data-ttu-id="46eed-108">異なり、他の言語で、`if...then...else`コンストラクトは式、ステートメントではありません。</span><span class="sxs-lookup"><span data-stu-id="46eed-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="46eed-109">つまり、実行する分岐の最後の式の値では、値が生成されます。</span><span class="sxs-lookup"><span data-stu-id="46eed-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="46eed-110">各分岐で生成された値の型が一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="46eed-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="46eed-111">明示的ながある場合`else`ブランチ、その型は、`unit`します。</span><span class="sxs-lookup"><span data-stu-id="46eed-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="46eed-112">そのため場合の種類、`then`分岐以外の任意の型は、 `unit`、必要があります、`else`ブランチと同じ戻り値の型。</span><span class="sxs-lookup"><span data-stu-id="46eed-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="46eed-113">チェーンと`if...then...else`キーワードを使用することができます、併せて式`elif`の代わりに`else if`; が等しい。</span><span class="sxs-lookup"><span data-stu-id="46eed-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
+<span data-ttu-id="2aa85-108">他の言語`if...then...else`とは異なり、コンストラクトはステートメントではなく、式です。</span><span class="sxs-lookup"><span data-stu-id="2aa85-108">Unlike in other languages, the `if...then...else` construct is an expression, not a statement.</span></span> <span data-ttu-id="2aa85-109">つまり、値が生成されます。これは、が実行される分岐の最後の式の値です。</span><span class="sxs-lookup"><span data-stu-id="2aa85-109">That means that it produces a value, which is the value of the last expression in the branch that executes.</span></span> <span data-ttu-id="2aa85-110">各分岐で生成される値の型が一致している必要があります。</span><span class="sxs-lookup"><span data-stu-id="2aa85-110">The types of the values produced in each branch must match.</span></span> <span data-ttu-id="2aa85-111">明示的`else`な分岐がない場合、その型`unit`はになります。</span><span class="sxs-lookup"><span data-stu-id="2aa85-111">If there is no explicit `else` branch, its type is `unit`.</span></span> <span data-ttu-id="2aa85-112">したがって、 `then`分岐の型が以外`unit`の型である場合は、同じ戻り値`else`の型を持つ分岐が存在する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2aa85-112">Therefore, if the type of the `then` branch is any type other than `unit`, there must be an `else` branch with the same return type.</span></span> <span data-ttu-id="2aa85-113">式を連結する場合は、の`else if`代わりに`elif`キーワードを使用できます。これらは等価です。 `if...then...else`</span><span class="sxs-lookup"><span data-stu-id="2aa85-113">When chaining `if...then...else` expressions together, you can use the keyword `elif` instead of `else if`; they are equivalent.</span></span>
 
-## <a name="example"></a><span data-ttu-id="46eed-114">例</span><span class="sxs-lookup"><span data-stu-id="46eed-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2aa85-114">例</span><span class="sxs-lookup"><span data-stu-id="2aa85-114">Example</span></span>
 
-<span data-ttu-id="46eed-115">次の例を使用する方法を示しています、`if...then...else`式。</span><span class="sxs-lookup"><span data-stu-id="46eed-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
+<span data-ttu-id="2aa85-115">次の例は、式の`if...then...else`使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="2aa85-115">The following example illustrates how to use the `if...then...else` expression.</span></span>
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
 10 is less than 20
@@ -38,6 +38,6 @@ How old are you? 9
 You are only 9 years old and already learning F#? Wow!
 ```
 
-## <a name="see-also"></a><span data-ttu-id="46eed-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="46eed-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2aa85-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="2aa85-116">See also</span></span>
 
-- [<span data-ttu-id="46eed-117">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="46eed-117">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="2aa85-117">F# 言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="2aa85-117">F# Language Reference</span></span>](index.md)
