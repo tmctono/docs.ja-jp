@@ -5,101 +5,101 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380098"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733448"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a><span data-ttu-id="4a06c-102">方法: 自動バインディング リダイレクトを有効/無効にする</span><span class="sxs-lookup"><span data-stu-id="4a06c-102">How to: Enable and Disable Automatic Binding Redirection</span></span>
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a><span data-ttu-id="0b122-102">方法: 自動バインディング リダイレクトを有効/無効にする</span><span class="sxs-lookup"><span data-stu-id="0b122-102">How to: Enable and Disable Automatic Binding Redirection</span></span>
 
-<span data-ttu-id="4a06c-103">Visual Studio .NET Framework 4.5.1 を対象と以降のバージョンでアプリをコンパイルするときにアセンブリの統一をオーバーライドするアプリの構成ファイルにバインド リダイレクトを自動的に追加可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4a06c-103">When you compile apps in Visual Studio that target the .NET Framework 4.5.1 and later versions, binding redirects may be automatically added to the app configuration file to override assembly unification.</span></span> <span data-ttu-id="4a06c-104">アプリの構成ファイルで手動でバインド リダイレクトを指定している場合でも、アプリまたはそのコンポーネントが同じアセンブリの複数バージョンを参照している場合、バインド リダイレクトが追加されます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-104">Binding redirects are added if your app or its components reference more than one version of the same assembly, even if you manually specify binding redirects in the configuration file for your app.</span></span> <span data-ttu-id="4a06c-105">自動バインド リダイレクトの機能に影響を与えますデスクトップ アプリと web アプリ .NET Framework 4.5.1 を対象にまたは以降のバージョンが動作は、web アプリに少しずつ異なります。</span><span class="sxs-lookup"><span data-stu-id="4a06c-105">The automatic binding redirection feature affects desktop apps and web apps that target the .NET Framework 4.5.1 or a later version, although the behavior is slightly different for a web app.</span></span> <span data-ttu-id="4a06c-106">既存のアプリ、.NET Framework のターゲットを以前のバージョンがあるか、バインド リダイレクトを手動で作成する場合は、この機能を無効にすることができる場合、自動バインド リダイレクトを有効にできます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-106">You can enable automatic binding redirection if you have existing apps that target previous versions of the .NET Framework, or you can disable this feature if you want to manually author binding redirects.</span></span>
+<span data-ttu-id="0b122-103">.NET Framework 4.5.1 以降のバージョンを対象とする Visual Studio でアプリをコンパイルすると、アセンブリの統一をオーバーライドするために、アプリケーション構成ファイルにバインドリダイレクトが自動的に追加される場合があります。</span><span class="sxs-lookup"><span data-stu-id="0b122-103">When you compile apps in Visual Studio that target the .NET Framework 4.5.1 and later versions, binding redirects may be automatically added to the app configuration file to override assembly unification.</span></span> <span data-ttu-id="0b122-104">アプリの構成ファイルで手動でバインド リダイレクトを指定している場合でも、アプリまたはそのコンポーネントが同じアセンブリの複数バージョンを参照している場合、バインド リダイレクトが追加されます。</span><span class="sxs-lookup"><span data-stu-id="0b122-104">Binding redirects are added if your app or its components reference more than one version of the same assembly, even if you manually specify binding redirects in the configuration file for your app.</span></span> <span data-ttu-id="0b122-105">自動バインドリダイレクト機能は、.NET Framework 4.5.1 以降のバージョンを対象とするデスクトップアプリと web アプリに影響します。ただし、web アプリで動作は少し異なります。</span><span class="sxs-lookup"><span data-stu-id="0b122-105">The automatic binding redirection feature affects desktop apps and web apps that target the .NET Framework 4.5.1 or a later version, although the behavior is slightly different for a web app.</span></span> <span data-ttu-id="0b122-106">以前のバージョンの .NET Framework を対象とする既存のアプリがある場合は、自動バインドリダイレクトを有効にすることができます。また、バインディングリダイレクトを手動で作成する場合は、この機能を無効にすることもできます。</span><span class="sxs-lookup"><span data-stu-id="0b122-106">You can enable automatic binding redirection if you have existing apps that target previous versions of the .NET Framework, or you can disable this feature if you want to manually author binding redirects.</span></span>
 
-## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a><span data-ttu-id="4a06c-107">デスクトップ アプリで自動バインド リダイレクトを無効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-107">Disable automatic binding redirects in desktop apps</span></span>
+## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a><span data-ttu-id="0b122-107">デスクトップアプリでの自動バインドリダイレクトを無効にする</span><span class="sxs-lookup"><span data-stu-id="0b122-107">Disable automatic binding redirects in desktop apps</span></span>
 
-<span data-ttu-id="4a06c-108">.NET Framework 4.5.1 以降のバージョンを対象にした Windows デスクトップ アプリの既定では、自動バインド リダイレクトが有効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-108">Automatic binding redirects are enabled by default for Windows desktop apps that target the .NET Framework 4.5.1 and later versions.</span></span> <span data-ttu-id="4a06c-109">バインド リダイレクトは、出力の構成に追加されます (**app.config**)、アプリがコンパイルされたときにファイルおよび配置する可能性のあるアセンブリの統一をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-109">The binding redirects are added to the output configuration (**app.config**) file when the app is compiled and override the assembly unification that might otherwise take place.</span></span> <span data-ttu-id="4a06c-110">ソース**app.config**ファイルは変更されません。</span><span class="sxs-lookup"><span data-stu-id="4a06c-110">The source **app.config** file is not modified.</span></span> <span data-ttu-id="4a06c-111">この機能を無効にするには、アプリのプロジェクト ファイルを変更するか、Visual Studio でプロジェクトのプロパティのチェック ボックスの選択を解除します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-111">You can disable this feature by modifying the project file for the app or by deselecting a checkbox in the project's properties in Visual Studio.</span></span>
+<span data-ttu-id="0b122-108">.NET Framework 4.5.1 以降のバージョンを対象とする Windows デスクトップアプリでは、自動バインドリダイレクトが既定で有効になっています。</span><span class="sxs-lookup"><span data-stu-id="0b122-108">Automatic binding redirects are enabled by default for Windows desktop apps that target the .NET Framework 4.5.1 and later versions.</span></span> <span data-ttu-id="0b122-109">バインドリダイレクトは、アプリがコンパイルされるときに出力構成 (**app.config**) ファイルに追加され、それ以外の場合に発生する可能性があるアセンブリの統一をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="0b122-109">The binding redirects are added to the output configuration (**app.config**) file when the app is compiled and override the assembly unification that might otherwise take place.</span></span> <span data-ttu-id="0b122-110">ソース**app.config**ファイルは変更されません。</span><span class="sxs-lookup"><span data-stu-id="0b122-110">The source **app.config** file is not modified.</span></span> <span data-ttu-id="0b122-111">この機能を無効にするには、アプリのプロジェクトファイルを変更するか、Visual Studio でプロジェクトの [プロパティ] のチェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="0b122-111">You can disable this feature by modifying the project file for the app or by deselecting a checkbox in the project's properties in Visual Studio.</span></span>
 
-### <a name="disable-through-project-properties"></a><span data-ttu-id="4a06c-112">プロジェクトのプロパティを無効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-112">Disable through project properties</span></span>
+### <a name="disable-through-project-properties"></a><span data-ttu-id="0b122-112">プロジェクトのプロパティを使用して無効化</span><span class="sxs-lookup"><span data-stu-id="0b122-112">Disable through project properties</span></span>
 
-<span data-ttu-id="4a06c-113">Visual Studio 2017 バージョン 15.7 以降があれば、簡単にプロジェクトのプロパティ ページで自動生成されたバインド リダイレクトを無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-113">If you have Visual Studio 2017 version 15.7 or later, you can easily disable autogenerated binding redirects in the project's property pages.</span></span>
+<span data-ttu-id="0b122-113">Visual Studio 2017 バージョン15.7 以降を使用している場合は、プロジェクトのプロパティページで自動生成されたバインドリダイレクトを無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="0b122-113">If you have Visual Studio 2017 version 15.7 or later, you can easily disable autogenerated binding redirects in the project's property pages.</span></span>
 
-1. <span data-ttu-id="4a06c-114">**ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-114">Right-click the project in **Solution Explorer** and select **Properties**.</span></span>
+1. <span data-ttu-id="0b122-114">**ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b122-114">Right-click the project in **Solution Explorer** and select **Properties**.</span></span>
 
-2. <span data-ttu-id="4a06c-115">**アプリケーション** ページで、オフに、**自動生成バインド リダイレクト**オプション。</span><span class="sxs-lookup"><span data-stu-id="4a06c-115">On the **Application** page, uncheck the **Auto-generate binding redirects** option.</span></span>
+2. <span data-ttu-id="0b122-115">[**アプリケーション**] ページで、[**バインドリダイレクトを自動生成**する] オプションをオフにします。</span><span class="sxs-lookup"><span data-stu-id="0b122-115">On the **Application** page, uncheck the **Auto-generate binding redirects** option.</span></span>
 
-3. <span data-ttu-id="4a06c-116">キーを押して**Ctrl**+**S**の変更を保存します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-116">Press **Ctrl**+**S** to save the change.</span></span>
+3. <span data-ttu-id="0b122-116">**Ctrl**+**S**キーを押して変更を保存します。</span><span class="sxs-lookup"><span data-stu-id="0b122-116">Press **Ctrl**+**S** to save the change.</span></span>
 
-### <a name="disable-manually-in-the-project-file"></a><span data-ttu-id="4a06c-117">プロジェクト ファイルを手動で無効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-117">Disable manually in the project file</span></span>
+### <a name="disable-manually-in-the-project-file"></a><span data-ttu-id="0b122-117">プロジェクトファイルで手動で無効にする</span><span class="sxs-lookup"><span data-stu-id="0b122-117">Disable manually in the project file</span></span>
 
-1. <span data-ttu-id="4a06c-118">次のメソッドのいずれかを使用して編集するためのプロジェクト ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-118">Open the project file for editing using one of the following methods:</span></span>
+1. <span data-ttu-id="0b122-118">次のいずれかの方法を使用して、プロジェクトファイルを編集用に開きます。</span><span class="sxs-lookup"><span data-stu-id="0b122-118">Open the project file for editing using one of the following methods:</span></span>
 
-   - <span data-ttu-id="4a06c-119">Visual studio でプロジェクトを選択**ソリューション エクスプ ローラー**を選び、**ファイル エクスプ ローラーでフォルダーを開く**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="4a06c-119">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="4a06c-120">ファイル エクスプ ローラーでプロジェクト (.csproj または .vbproj) ファイルを検索し、メモ帳で開きます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-120">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
-   - <span data-ttu-id="4a06c-121">Visual Studio での**ソリューション エクスプ ローラー**でプロジェクトを右クリックし、選択**プロジェクトのアンロード**します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-121">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="4a06c-122">ここでも、アンロードされたプロジェクトを右クリックして **編集 [projectname.csproj]** します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-122">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
+   - <span data-ttu-id="0b122-119">Visual Studio で**ソリューションエクスプローラー**でプロジェクトを選択し、ショートカットメニューの [**エクスプローラーでフォルダーを開く**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="0b122-119">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="0b122-120">ファイルエクスプローラーで、プロジェクト (.csproj または .vbproj) ファイルを見つけ、メモ帳で開きます。</span><span class="sxs-lookup"><span data-stu-id="0b122-120">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
+   - <span data-ttu-id="0b122-121">Visual Studio の**ソリューションエクスプローラー**で、プロジェクトを右クリックし、[**プロジェクトのアンロード**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b122-121">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="0b122-122">アンロードされたプロジェクトをもう一度右クリックし、[**編集] [projectname. .csproj]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="0b122-122">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
 
-2. <span data-ttu-id="4a06c-123">プロジェクト ファイルで、次のプロパティ エントリを検索します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-123">In the project file, find the following property entry:</span></span>
+2. <span data-ttu-id="0b122-123">プロジェクト ファイルで、次のプロパティ エントリを検索します。</span><span class="sxs-lookup"><span data-stu-id="0b122-123">In the project file, find the following property entry:</span></span>
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-3. <span data-ttu-id="4a06c-124">`true` を `false` に変更します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-124">Change `true` to `false`:</span></span>
+3. <span data-ttu-id="0b122-124">`true` を `false` に変更します。</span><span class="sxs-lookup"><span data-stu-id="0b122-124">Change `true` to `false`:</span></span>
 
    ```xml
    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
    ```
 
-## <a name="enable-automatic-binding-redirects-manually"></a><span data-ttu-id="4a06c-125">自動バインド リダイレクトを手動で有効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-125">Enable automatic binding redirects manually</span></span>
+## <a name="enable-automatic-binding-redirects-manually"></a><span data-ttu-id="0b122-125">自動バインドリダイレクトを手動で有効にする</span><span class="sxs-lookup"><span data-stu-id="0b122-125">Enable automatic binding redirects manually</span></span>
 
-<span data-ttu-id="4a06c-126">旧バージョンを対象を自動的に求められたら、リダイレクトを追加する場合や、.NET Framework の既存のアプリで自動バインド リダイレクトを有効にできます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-126">You can enable automatic binding redirects in existing apps that target older versions of the .NET Framework, or in cases where you're not automatically prompted to add a redirect.</span></span> <span data-ttu-id="4a06c-127">新しいバージョンの framework を対象としているリダイレクトの追加を自動的に求められません場合は、ビルド出力アセンブリを再マップすることを示す可能性がありますが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-127">If you're targeting a newer version of the framework but do not get automatically prompted to add a redirect, you'll likely get build output that suggests you remap assemblies.</span></span>
+<span data-ttu-id="0b122-126">以前のバージョンの .NET Framework を対象とする既存のアプリで自動バインドリダイレクトを有効にすることができます。また、自動的にリダイレクトを追加するように求められない場合は、リダイレクトを有効にすることもできます。</span><span class="sxs-lookup"><span data-stu-id="0b122-126">You can enable automatic binding redirects in existing apps that target older versions of the .NET Framework, or in cases where you're not automatically prompted to add a redirect.</span></span> <span data-ttu-id="0b122-127">新しいバージョンのフレームワークを対象としていても、自動的にリダイレクトの追加を求めるメッセージが表示されない場合は、アセンブリの再マップを提案するビルド出力が得られる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0b122-127">If you're targeting a newer version of the framework but do not get automatically prompted to add a redirect, you'll likely get build output that suggests you remap assemblies.</span></span>
 
-1. <span data-ttu-id="4a06c-128">次のメソッドのいずれかを使用して編集するためのプロジェクト ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-128">Open the project file for editing using one of the following methods:</span></span>
+1. <span data-ttu-id="0b122-128">次のいずれかの方法を使用して、プロジェクトファイルを編集用に開きます。</span><span class="sxs-lookup"><span data-stu-id="0b122-128">Open the project file for editing using one of the following methods:</span></span>
 
-   - <span data-ttu-id="4a06c-129">Visual studio でプロジェクトを選択**ソリューション エクスプ ローラー**を選び、**ファイル エクスプ ローラーでフォルダーを開く**ショートカット メニューから。</span><span class="sxs-lookup"><span data-stu-id="4a06c-129">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="4a06c-130">ファイル エクスプ ローラーでプロジェクト (.csproj または .vbproj) ファイルを検索し、メモ帳で開きます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-130">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
-   - <span data-ttu-id="4a06c-131">Visual Studio での**ソリューション エクスプ ローラー**でプロジェクトを右クリックし、選択**プロジェクトのアンロード**します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-131">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="4a06c-132">ここでも、アンロードされたプロジェクトを右クリックして **編集 [projectname.csproj]** します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-132">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
+   - <span data-ttu-id="0b122-129">Visual Studio で**ソリューションエクスプローラー**でプロジェクトを選択し、ショートカットメニューの [**エクスプローラーでフォルダーを開く**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="0b122-129">In Visual Studio, select the project in **Solution Explorer**, and then choose **Open Folder in File Explorer** from the shortcut menu.</span></span> <span data-ttu-id="0b122-130">ファイルエクスプローラーで、プロジェクト (.csproj または .vbproj) ファイルを見つけ、メモ帳で開きます。</span><span class="sxs-lookup"><span data-stu-id="0b122-130">In File Explorer, find the project (.csproj or .vbproj) file and open it in Notepad.</span></span>
+   - <span data-ttu-id="0b122-131">Visual Studio の**ソリューションエクスプローラー**で、プロジェクトを右クリックし、[**プロジェクトのアンロード**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="0b122-131">In Visual Studio, in **Solution Explorer**, right-click the project and choose **Unload Project**.</span></span> <span data-ttu-id="0b122-132">アンロードされたプロジェクトをもう一度右クリックし、[**編集] [projectname. .csproj]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="0b122-132">Right-click the unloaded project again, and then choose **Edit [projectname.csproj]**.</span></span>
 
-2. <span data-ttu-id="4a06c-133">最初の構成プロパティ グループに次の要素を追加 (で、 \<PropertyGroup > タグ)。</span><span class="sxs-lookup"><span data-stu-id="4a06c-133">Add the following element to the first configuration property group (under the \<PropertyGroup> tag):</span></span>
+2. <span data-ttu-id="0b122-133">最初の構成プロパティグループ (PropertyGroup > タグの\<下) に次の要素を追加します。</span><span class="sxs-lookup"><span data-stu-id="0b122-133">Add the following element to the first configuration property group (under the \<PropertyGroup> tag):</span></span>
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-   <span data-ttu-id="4a06c-134">次の要素が挿入されたプロジェクト ファイルの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-134">The following shows an example project file with the element inserted:</span></span>
+   <span data-ttu-id="0b122-134">要素が挿入されたプロジェクトファイルの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="0b122-134">The following shows an example project file with the element inserted:</span></span>
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-       <PropertyGroup>
-         <Configuration Condition=" '$(Configuration)' == ''     ">Debug</Configuration>
-         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-         <ProjectGuid>{123334}</ProjectGuid>
-         ...
-         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-       </PropertyGroup>
+     <PropertyGroup>
+       <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+       <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+       <ProjectGuid>{123334}</ProjectGuid>
+       ...
+       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+     </PropertyGroup>
      ...
    </Project>
    ```
 
-3. <span data-ttu-id="4a06c-135">アプリをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-135">Compile your app.</span></span>
+3. <span data-ttu-id="0b122-135">アプリをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="0b122-135">Compile your app.</span></span>
 
-## <a name="enable-automatic-binding-redirects-in-web-apps"></a><span data-ttu-id="4a06c-136">Web apps での自動バインド リダイレクトを有効にします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-136">Enable automatic binding redirects in web apps</span></span>
+## <a name="enable-automatic-binding-redirects-in-web-apps"></a><span data-ttu-id="0b122-136">Web アプリで自動バインドリダイレクトを有効にする</span><span class="sxs-lookup"><span data-stu-id="0b122-136">Enable automatic binding redirects in web apps</span></span>
 
-<span data-ttu-id="4a06c-137">自動バインド リダイレクトは、Web アプリでは異なる方法で実装されます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-137">Automatic binding redirects are implemented differently for web apps.</span></span> <span data-ttu-id="4a06c-138">ソースの構成 (**web.config**) ファイルは、web アプリを変更する必要があります、バインド リダイレクトは自動的に追加されません、構成ファイルにします。</span><span class="sxs-lookup"><span data-stu-id="4a06c-138">Because the source configuration (**web.config**) file must be modified for web apps, binding redirects are not automatically added to the configuration file.</span></span> <span data-ttu-id="4a06c-139">ただし、Visual Studio によってバインドの競合が通知されるため、バインド リダイレクトを追加して競合を解決できます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-139">However, Visual Studio notifies you of binding conflicts, and you can add binding redirects to resolve the conflicts.</span></span> <span data-ttu-id="4a06c-140">常にバインド リダイレクトを追加する指示に従い、ため、web アプリに対してこの機能を明示的に無効にする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="4a06c-140">Because you're always prompted to add binding redirects, you don't need to explicitly disable this feature for a web app.</span></span>
+<span data-ttu-id="0b122-137">自動バインド リダイレクトは、Web アプリでは異なる方法で実装されます。</span><span class="sxs-lookup"><span data-stu-id="0b122-137">Automatic binding redirects are implemented differently for web apps.</span></span> <span data-ttu-id="0b122-138">ソース構成 (**web.config**) ファイルは web apps 用に変更する必要があるため、バインドリダイレクトは構成ファイルに自動的に追加されません。</span><span class="sxs-lookup"><span data-stu-id="0b122-138">Because the source configuration (**web.config**) file must be modified for web apps, binding redirects are not automatically added to the configuration file.</span></span> <span data-ttu-id="0b122-139">ただし、Visual Studio によってバインドの競合が通知されるため、バインド リダイレクトを追加して競合を解決できます。</span><span class="sxs-lookup"><span data-stu-id="0b122-139">However, Visual Studio notifies you of binding conflicts, and you can add binding redirects to resolve the conflicts.</span></span> <span data-ttu-id="0b122-140">バインドリダイレクトを追加するように求められるので、web アプリに対してこの機能を明示的に無効にする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="0b122-140">Because you're always prompted to add binding redirects, you don't need to explicitly disable this feature for a web app.</span></span>
 
-<span data-ttu-id="4a06c-141">バインド リダイレクトを追加する、 **web.config**ファイル。</span><span class="sxs-lookup"><span data-stu-id="4a06c-141">To add binding redirects to a **web.config** file:</span></span>
+<span data-ttu-id="0b122-141">**Web.config** ファイルにバインドリダイレクトを追加するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="0b122-141">To add binding redirects to a **web.config** file:</span></span>
 
-1. <span data-ttu-id="4a06c-142">Visual Studio で、アプリをコンパイルし、ビルドの警告を確認します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-142">In Visual Studio, compile the app, and check for build warnings.</span></span>
+1. <span data-ttu-id="0b122-142">Visual Studio で、アプリをコンパイルし、ビルドの警告を確認します。</span><span class="sxs-lookup"><span data-stu-id="0b122-142">In Visual Studio, compile the app, and check for build warnings.</span></span>
 
-   <span data-ttu-id="4a06c-143">![ビルドのアセンブリ参照の競合の警告](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span><span class="sxs-lookup"><span data-stu-id="4a06c-143">![Build warning for assembly reference conflicts](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span></span>
+   <span data-ttu-id="0b122-143">![アセンブリ参照の競合に関するビルド警告](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span><span class="sxs-lookup"><span data-stu-id="0b122-143">![Build warning for assembly reference conflicts](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")</span></span>
 
-2. <span data-ttu-id="4a06c-144">アセンブリ バインドの競合がある場合、警告が表示されます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-144">If there are assembly binding conflicts, a warning appears.</span></span> <span data-ttu-id="4a06c-145">警告をダブルクリックするか、警告とキーを押して選択**Enter**します。</span><span class="sxs-lookup"><span data-stu-id="4a06c-145">Double-click the warning, or select the warning and press **Enter**.</span></span>
+2. <span data-ttu-id="0b122-144">アセンブリ バインドの競合がある場合、警告が表示されます。</span><span class="sxs-lookup"><span data-stu-id="0b122-144">If there are assembly binding conflicts, a warning appears.</span></span> <span data-ttu-id="0b122-145">警告をダブルクリックするか、警告を選択して**enter** キーを押します。</span><span class="sxs-lookup"><span data-stu-id="0b122-145">Double-click the warning, or select the warning and press **Enter**.</span></span>
 
-   <span data-ttu-id="4a06c-146">ダイアログ ボックスに自動的に必要なバインドを追加することができますが、ソースにリダイレクト**web.config**ファイルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4a06c-146">A dialog box that enables you to automatically add the necessary binding redirects to the source **web.config** file appears.</span></span>
+   <span data-ttu-id="0b122-146">ソースの**web.config**ファイルに必要なバインドリダイレクトを自動的に追加できるダイアログボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0b122-146">A dialog box that enables you to automatically add the necessary binding redirects to the source **web.config** file appears.</span></span>
 
-   <span data-ttu-id="4a06c-147">![バインド リダイレクトのアクセス許可ダイアログ](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span><span class="sxs-lookup"><span data-stu-id="4a06c-147">![Binding redirect permission dialog](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span></span>
+   <span data-ttu-id="0b122-147">![バインドリダイレクトのアクセス許可ダイアログ](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span><span class="sxs-lookup"><span data-stu-id="0b122-147">![Binding redirect permission dialog](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4a06c-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a06c-148">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b122-148">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b122-148">See also</span></span>
 
-- [<span data-ttu-id="4a06c-149">\<bindingRedirect > 要素</span><span class="sxs-lookup"><span data-stu-id="4a06c-149">\<bindingRedirect> Element</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
-- [<span data-ttu-id="4a06c-150">アセンブリ バージョンのリダイレクト</span><span class="sxs-lookup"><span data-stu-id="4a06c-150">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [<span data-ttu-id="0b122-149">\<bindingRedirect > 要素</span><span class="sxs-lookup"><span data-stu-id="0b122-149">\<bindingRedirect> Element</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
+- [<span data-ttu-id="0b122-150">アセンブリ バージョンのリダイレクト</span><span class="sxs-lookup"><span data-stu-id="0b122-150">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
