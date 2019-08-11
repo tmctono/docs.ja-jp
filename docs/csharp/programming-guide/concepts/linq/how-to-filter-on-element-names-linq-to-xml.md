@@ -2,20 +2,20 @@
 title: '方法: 要素名をフィルター処理する (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 18100e1097eca52531d28fac2eb6da18446204ef
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9c29183a7548a4551aca813b3d297f7e03484b36
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485692"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710111"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="16f69-102">方法: 要素名をフィルター処理する (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="16f69-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="16f69-103"><xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返すメソッドのいずれかを呼び出す際に、要素名をフィルター処理できます。</span><span class="sxs-lookup"><span data-stu-id="16f69-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="aa585-102">方法: 要素名をフィルター処理する (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aa585-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="aa585-103"><xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返すメソッドのいずれかを呼び出す際に、要素名をフィルター処理できます。</span><span class="sxs-lookup"><span data-stu-id="aa585-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="16f69-104">例</span><span class="sxs-lookup"><span data-stu-id="16f69-104">Example</span></span>  
- <span data-ttu-id="16f69-105">この例では、指定した名前を持つ子孫だけが含まれるようにフィルター処理された子孫のコレクションを取得します。</span><span class="sxs-lookup"><span data-stu-id="16f69-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa585-104">例</span><span class="sxs-lookup"><span data-stu-id="aa585-104">Example</span></span>  
+ <span data-ttu-id="aa585-105">この例では、指定した名前を持つ子孫だけが含まれるようにフィルター処理された子孫のコレクションを取得します。</span><span class="sxs-lookup"><span data-stu-id="aa585-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
   
- <span data-ttu-id="16f69-106">この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="16f69-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="aa585-106">この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="aa585-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -26,14 +26,14 @@ foreach(XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string) prdName);  
 ```  
   
- <span data-ttu-id="16f69-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="16f69-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="aa585-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="aa585-107">This code produces the following output:</span></span>  
   
 ```  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- <span data-ttu-id="16f69-108"><xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XElement> を返す他のメソッドは、同じパターンに従います。</span><span class="sxs-lookup"><span data-stu-id="16f69-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="16f69-109">そのシグネチャは、<xref:System.Xml.Linq.XContainer.Elements%2A> および <xref:System.Xml.Linq.XContainer.Descendants%2A> と似ています。</span><span class="sxs-lookup"><span data-stu-id="16f69-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="16f69-110">類似するシグネチャを持つメソッドの一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="16f69-110">The following is the complete list of methods that have similar method signatures:</span></span>  
+ <span data-ttu-id="aa585-108"><xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XElement> を返す他のメソッドは、同じパターンに従います。</span><span class="sxs-lookup"><span data-stu-id="aa585-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="aa585-109">そのシグネチャは、<xref:System.Xml.Linq.XContainer.Elements%2A> および <xref:System.Xml.Linq.XContainer.Descendants%2A> と似ています。</span><span class="sxs-lookup"><span data-stu-id="aa585-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="aa585-110">類似するシグネチャを持つメソッドの一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="aa585-110">The following is the complete list of methods that have similar method signatures:</span></span>  
   
 - <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -49,10 +49,10 @@ ProductName:Baby Monitor
   
 - <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
-## <a name="example"></a><span data-ttu-id="16f69-111">例</span><span class="sxs-lookup"><span data-stu-id="16f69-111">Example</span></span>  
- <span data-ttu-id="16f69-112">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="16f69-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="16f69-113">詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="16f69-113">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="aa585-111">例</span><span class="sxs-lookup"><span data-stu-id="aa585-111">Example</span></span>  
+ <span data-ttu-id="aa585-112">次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。</span><span class="sxs-lookup"><span data-stu-id="aa585-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="aa585-113">詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="aa585-113">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="16f69-114">この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="16f69-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="aa585-114">この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="aa585-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -64,13 +64,13 @@ foreach (XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string)prdName);  
 ```  
   
- <span data-ttu-id="16f69-115">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="16f69-115">This code produces the following output:</span></span>  
+ <span data-ttu-id="aa585-115">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="aa585-115">This code produces the following output:</span></span>  
   
 ```  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16f69-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="16f69-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa585-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa585-116">See also</span></span>
 
-- [<span data-ttu-id="16f69-117">LINQ to XML 軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="16f69-117">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="aa585-117">LINQ to XML 軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa585-117">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
