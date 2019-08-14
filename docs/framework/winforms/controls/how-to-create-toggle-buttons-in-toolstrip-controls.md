@@ -9,33 +9,34 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: 21da5564bfeec01d448c23d3e734bdd16fc1566b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a003b91cd4db5db2790a20db97dbaa4d8925e96
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666431"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972361"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="1753c-102">方法: ToolStrip コントロールにトグル ボタンを作成する</span><span class="sxs-lookup"><span data-stu-id="1753c-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
-<span data-ttu-id="1753c-103">ユーザーには、トグル ボタンがクリックすると、くぼんで表示し、もう一度ボタンをクリックするまで、くぼんだ外観を保持します。</span><span class="sxs-lookup"><span data-stu-id="1753c-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  
-  
-### <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="1753c-104">切り替えのオブジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="1753c-104">To create a toggling ToolStripButton</span></span>  
-  
-- <span data-ttu-id="1753c-105">次のコード例などのコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="1753c-105">Use code such as the following code example.</span></span> <span data-ttu-id="1753c-106">このコードでは、フォームが含まれている前提としています、<xref:System.Windows.Forms.ToolStrip>コントロール、およびその<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに含まれる、<xref:System.Windows.Forms.ToolStripButton>と呼ばれる`toolStripButton1`します。</span><span class="sxs-lookup"><span data-stu-id="1753c-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="1753c-107">呼ばれるイベント ハンドラーを設定することも想定`toolStripButton1_CheckedChanged`します。</span><span class="sxs-lookup"><span data-stu-id="1753c-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>  
-  
-    ```vb  
-    toolStripButton1.CheckOnClick = True  
-    toolStripButton1.CheckedChanged AddressOf _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
-    ```csharp  
-    toolStripButton1.CheckOnClick = true;  
-    toolStripButton1.CheckedChanged += new _  
-    EventHandler(toolStripButton1_CheckedChanged);  
-    ```  
-  
-## <a name="see-also"></a><span data-ttu-id="1753c-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="1753c-108">See also</span></span>
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="53772-102">方法: ToolStrip コントロールにトグル ボタンを作成する</span><span class="sxs-lookup"><span data-stu-id="53772-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
+
+<span data-ttu-id="53772-103">ユーザーがトグルボタンをクリックすると、くぼんで表示され、ユーザーがボタンを再度クリックするまで、くぼんだ外観を保持します。</span><span class="sxs-lookup"><span data-stu-id="53772-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>
+
+## <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="53772-104">切り替え ToolStripButton を作成するには</span><span class="sxs-lookup"><span data-stu-id="53772-104">To create a toggling ToolStripButton</span></span>
+
+- <span data-ttu-id="53772-105">次のコード例のようなコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="53772-105">Use code such as the following code example.</span></span> <span data-ttu-id="53772-106">このコードは<xref:System.Windows.Forms.ToolStrip> 、フォームにコントロールが含まれており、その<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに<xref:System.Windows.Forms.ToolStripButton>が`toolStripButton1`呼び出されたが含まれていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="53772-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="53772-107">また、という`toolStripButton1_CheckedChanged`イベントハンドラーがあることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="53772-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>
+
+    ```vb
+    toolStripButton1.CheckOnClick = True
+    toolStripButton1.CheckedChanged AddressOf _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
+    ```csharp
+    toolStripButton1.CheckOnClick = true;
+    toolStripButton1.CheckedChanged += new _
+    EventHandler(toolStripButton1_CheckedChanged);
+    ```
+
+## <a name="see-also"></a><span data-ttu-id="53772-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="53772-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripButton>
-- [<span data-ttu-id="1753c-109">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="1753c-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="53772-109">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="53772-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

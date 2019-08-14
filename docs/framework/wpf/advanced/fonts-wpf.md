@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cab39cdb13b92c0bfcb697de4bb8c05feae4c146
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703375"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972391"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="96ea9-102">フォント (WPF)</span><span class="sxs-lookup"><span data-stu-id="96ea9-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="96ea9-103">使用してテキストのリッチ プレゼンテーションのサポートが含まれています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォント。</span><span class="sxs-lookup"><span data-stu-id="96ea9-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="96ea9-104">サンプル パック[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォントが含まれています、[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="96ea9-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="63bb8-102">フォント (WPF)</span><span class="sxs-lookup"><span data-stu-id="63bb8-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="63bb8-103">フォントを使用し[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]たテキストのリッチ表示のサポートが含まれます。</span><span class="sxs-lookup"><span data-stu-id="63bb8-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="63bb8-104">フォントの[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]サンプルパックは、Windows SDK に含まれています。</span><span class="sxs-lookup"><span data-stu-id="63bb8-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="96ea9-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="96ea9-105">In This Section</span></span>  
- [<span data-ttu-id="96ea9-106">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="96ea9-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="96ea9-107">アプリケーションでのフォントのパッケージング</span><span class="sxs-lookup"><span data-stu-id="96ea9-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="96ea9-108">OpenType フォント パックのサンプル</span><span class="sxs-lookup"><span data-stu-id="96ea9-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="96ea9-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="96ea9-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="63bb8-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="63bb8-105">In This Section</span></span>  
+ [<span data-ttu-id="63bb8-106">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="63bb8-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="63bb8-107">アプリケーションでのフォントのパッケージング</span><span class="sxs-lookup"><span data-stu-id="63bb8-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="63bb8-108">OpenType フォント パックのサンプル</span><span class="sxs-lookup"><span data-stu-id="63bb8-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="63bb8-109">方法トピック</span><span class="sxs-lookup"><span data-stu-id="63bb8-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="96ea9-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="96ea9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63bb8-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="63bb8-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="96ea9-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="96ea9-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="96ea9-112">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="96ea9-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="63bb8-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="63bb8-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="63bb8-112">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="63bb8-112">Typography in WPF</span></span>](typography-in-wpf.md)
