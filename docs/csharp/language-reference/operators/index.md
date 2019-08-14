@@ -18,208 +18,40 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 0e49c28f05d52c704a46806559407381c7eb3530
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796484"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971251"
 ---
-# <a name="c-operators-c-reference"></a><span data-ttu-id="a8d0c-102">C# 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="a8d0c-102">C# operators (C# reference)</span></span>
-
-<span data-ttu-id="a8d0c-103">C# は組み込み型でサポートされている定義済みの演算子を多数提供します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-103">C# provides a number of predefined operators supported by the built-in types.</span></span> <span data-ttu-id="a8d0c-104">たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-104">For example, [arithmetic operators](arithmetic-operators.md) perform arithmetic operations with operands of built-in numeric types and [Boolean logical operators](boolean-logical-operators.md) perform logical operations with the [bool](../keywords/bool.md) operands.</span></span>
-
-<span data-ttu-id="a8d0c-105">ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-105">A user-defined type can overload certain operators to define the corresponding behavior for the operands of that type.</span></span> <span data-ttu-id="a8d0c-106">詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-106">For more information, see [Operator overloading](operator-overloading.md).</span></span>
-
-<span data-ttu-id="a8d0c-107">次のセクションは、C# の演算子を優先順位の高い順に示しています。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-107">The following sections list the C# operators starting with the highest precedence to the lowest.</span></span> <span data-ttu-id="a8d0c-108">各セクションの演算子の優先順位は同じです。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-108">The operators within each section share the same precedence level.</span></span>
-
-## <a name="primary-operators"></a><span data-ttu-id="a8d0c-109">主な演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-109">Primary operators</span></span>
-
-<span data-ttu-id="a8d0c-110">優先順位が最も高い演算子です。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-110">These are the highest precedence operators.</span></span>
-
-<span data-ttu-id="a8d0c-111">[x.y](member-access-operators.md#member-access-operator-) – メンバー アクセス。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-111">[x.y](member-access-operators.md#member-access-operator-) – member access.</span></span>
-
-<span data-ttu-id="a8d0c-112">[x?.y](member-access-operators.md#null-conditional-operators--and-) – null 条件付きのメンバー アクセス。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-112">[x?.y](member-access-operators.md#null-conditional-operators--and-) – null conditional member access.</span></span> <span data-ttu-id="a8d0c-113">左側のオペランドが `null` に評価される場合に `null` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-113">Returns `null` if the left-hand operand evaluates to `null`.</span></span>
-
-<span data-ttu-id="a8d0c-114">[x?[y]](member-access-operators.md#null-conditional-operators--and-) - null 条件付き配列要素または型インデクサーのアクセス。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-114">[x?[y]](member-access-operators.md#null-conditional-operators--and-) - null conditional array element or type indexer access.</span></span> <span data-ttu-id="a8d0c-115">左側のオペランドが `null` に評価される場合に `null` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-115">Returns `null` if the left-hand operand evaluates to `null`.</span></span>
-
-<span data-ttu-id="a8d0c-116">[f(x)](member-access-operators.md#invocation-operator-) – メソッドの呼び出しまたはデリゲートの呼び出し。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-116">[f(x)](member-access-operators.md#invocation-operator-) – method call or delegate invocation.</span></span>
-
-<span data-ttu-id="a8d0c-117">[a&#91;x&#93;](member-access-operators.md#indexer-operator-) – 配列要素または型インデクサーのアクセス。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-117">[a&#91;x&#93;](member-access-operators.md#indexer-operator-) – array element or type indexer access.</span></span>
-
-<span data-ttu-id="a8d0c-118">[x++](arithmetic-operators.md#increment-operator-) – 後置インクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-118">[x++](arithmetic-operators.md#increment-operator-) – postfix increment.</span></span> <span data-ttu-id="a8d0c-119">x の値を返した後、1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-119">Returns the value of x and then updates the storage location with the value of x that is one greater (typically adds the integer 1).</span></span>
-
-<span data-ttu-id="a8d0c-120">[x--](arithmetic-operators.md#decrement-operator---) – 後置デクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-120">[x--](arithmetic-operators.md#decrement-operator---) –  postfix decrement.</span></span> <span data-ttu-id="a8d0c-121">x の値を返した後、1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-121">Returns the value of x and then updates the storage location with the value of x that is one less (typically subtracts the integer 1).</span></span>
-
-<span data-ttu-id="a8d0c-122">[new](new-operator.md) – 型のインスタンス化。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-122">[new](new-operator.md) – type instantiation.</span></span>
-
-<span data-ttu-id="a8d0c-123">[typeof](type-testing-and-conversion-operators.md#typeof-operator) – オペランドを表す <xref:System.Type> オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-123">[typeof](type-testing-and-conversion-operators.md#typeof-operator) – returns the <xref:System.Type> object representing the operand.</span></span>
-
-<span data-ttu-id="a8d0c-124">[checked](../keywords/checked.md) – 整数演算のオーバーフロー チェックを有効にします。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-124">[checked](../keywords/checked.md) – enables overflow checking for integer operations.</span></span>
-
-<span data-ttu-id="a8d0c-125">[unchecked](../keywords/unchecked.md) – 整数演算のオーバーフロー チェックを無効にします。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-125">[unchecked](../keywords/unchecked.md) – disables overflow checking for integer operations.</span></span> <span data-ttu-id="a8d0c-126">これがコンパイラの既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-126">This is the default compiler behavior.</span></span>
-
-<span data-ttu-id="a8d0c-127">[default(T)](default.md) – 型 T の既定の値を生成します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-127">[default(T)](default.md) – produces the default value of type T.</span></span>
-
-<span data-ttu-id="a8d0c-128">[nameof](nameof.md) – 変数、型、またはメンバーの単純な (修飾されていない) 名前を定数文字列として取得します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-128">[nameof](nameof.md) - obtains the simple (unqualified) name of a variable, type, or member as a constant string.</span></span>
-
-<span data-ttu-id="a8d0c-129">[Delegate](delegate-operator.md) – delegate インスタンスを宣言して返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-129">[delegate](delegate-operator.md) – declares and returns a delegate instance.</span></span>
-
-<span data-ttu-id="a8d0c-130">[sizeof](sizeof.md) – 型オペランドのサイズをバイト単位で返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-130">[sizeof](sizeof.md) – returns the size in bytes of the type operand.</span></span>
-
-<span data-ttu-id="a8d0c-131">[stackalloc](stackalloc.md) – スタックにメモリ ブロックを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-131">[stackalloc](stackalloc.md) - allocates a block of memory on the stack.</span></span>
-
-<span data-ttu-id="a8d0c-132">[->](pointer-related-operators.md#pointer-member-access-operator--) – メンバー アクセスと組み合わせてポインターを間接参照します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-132">[->](pointer-related-operators.md#pointer-member-access-operator--) – pointer indirection combined with member access.</span></span>
-
-## <a name="unary-operators"></a><span data-ttu-id="a8d0c-133">単項演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-133">Unary operators</span></span>
-
-<span data-ttu-id="a8d0c-134">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-134">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-135">[+x](addition-operator.md) – x の値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-135">[+x](addition-operator.md) – returns the value of x.</span></span>
-
-<span data-ttu-id="a8d0c-136">[-x](subtraction-operator.md) – 数値の否定。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-136">[-x](subtraction-operator.md) – numeric negation.</span></span>
-
-<span data-ttu-id="a8d0c-137">[\!x](boolean-logical-operators.md#logical-negation-operator-) – 論理否定。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-137">[\!x](boolean-logical-operators.md#logical-negation-operator-) – logical negation.</span></span>
-
-<span data-ttu-id="a8d0c-138">[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – ビットごとの補数。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-138">[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – bitwise complement.</span></span>
-
-<span data-ttu-id="a8d0c-139">[++x](arithmetic-operators.md#increment-operator-) – 前置インクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-139">[++x](arithmetic-operators.md#increment-operator-) – prefix increment.</span></span> <span data-ttu-id="a8d0c-140">1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新した後に x の値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-140">Returns the value of x after updating the storage location with the value of x that is one greater (typically adds the integer 1).</span></span>
-
-<span data-ttu-id="a8d0c-141">[--x](arithmetic-operators.md#decrement-operator---) – 前置デクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-141">[--x](arithmetic-operators.md#decrement-operator---) – prefix decrement.</span></span> <span data-ttu-id="a8d0c-142">1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新した後に x の値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-142">Returns the value of x after updating the storage location with the value of x that is one less (typically subtracts the integer 1).</span></span>
-
-<span data-ttu-id="a8d0c-143">[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – 型キャスト。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-143">[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – type casting.</span></span>
-
-<span data-ttu-id="a8d0c-144">[await](../keywords/await.md) – `Task` を待機します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-144">[await](../keywords/await.md) – awaits a `Task`.</span></span>
-
-<span data-ttu-id="a8d0c-145">[&x](pointer-related-operators.md#address-of-operator-) – 変数のアドレス。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-145">[&x](pointer-related-operators.md#address-of-operator-) – address of a variable.</span></span>
-
-<span data-ttu-id="a8d0c-146">[\* x](pointer-related-operators.md#pointer-indirection-operator-) – ポインターの間接参照、または逆参照。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-146">[\*x](pointer-related-operators.md#pointer-indirection-operator-) – pointer indirection, or dereference.</span></span>
-
-<span data-ttu-id="a8d0c-147">[true 演算子](true-false-operators.md) - オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-147">[true operator](true-false-operators.md) - returns the [bool](../keywords/bool.md) value `true` to indicate that an operand is definitely true.</span></span>
-
-<span data-ttu-id="a8d0c-148">[false 演算子](true-false-operators.md) - オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-148">[false operator](true-false-operators.md) - returns the [bool](../keywords/bool.md) value `true` to indicate that an operand is definitely false.</span></span>
-
-## <a name="multiplicative-operators"></a><span data-ttu-id="a8d0c-149">乗算演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-149">Multiplicative operators</span></span>
-
-<span data-ttu-id="a8d0c-150">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-150">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-151">[x \* y](arithmetic-operators.md#multiplication-operator-) – 乗算。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-151">[x \* y](arithmetic-operators.md#multiplication-operator-) – multiplication.</span></span>
-
-<span data-ttu-id="a8d0c-152">[x / y](arithmetic-operators.md#division-operator-) – 除算。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-152">[x / y](arithmetic-operators.md#division-operator-) – division.</span></span> <span data-ttu-id="a8d0c-153">オペランドが整数の場合、結果は 0 に近い整数になるように切り捨てられます (例: `-7 / 2 is -3`)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-153">If the operands are integers, the result is an integer truncated toward zero (for example, `-7 / 2 is -3`).</span></span>
-
-<span data-ttu-id="a8d0c-154">[x % y](arithmetic-operators.md#remainder-operator-) – 剰余。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-154">[x % y](arithmetic-operators.md#remainder-operator-) – remainder.</span></span> <span data-ttu-id="a8d0c-155">オペランドが整数の場合、x を y で除算した剰余を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-155">If the operands are integers, this returns the remainder of dividing x by y.</span></span>  <span data-ttu-id="a8d0c-156">`q = x / y` で `r = x % y` の場合、`x = q * y + r` になります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-156">If `q = x / y` and `r = x % y`, then `x = q * y + r`.</span></span>
-
-## <a name="additive-operators"></a><span data-ttu-id="a8d0c-157">加法演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-157">Additive operators</span></span>
-
-<span data-ttu-id="a8d0c-158">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-158">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-159">[x + y](arithmetic-operators.md#addition-operator-) – 加算。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-159">[x + y](arithmetic-operators.md#addition-operator-) – addition.</span></span>
-
-<span data-ttu-id="a8d0c-160">[x – y](arithmetic-operators.md#subtraction-operator--) – 減算。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-160">[x – y](arithmetic-operators.md#subtraction-operator--) – subtraction.</span></span>
-
-## <a name="shift-operators"></a><span data-ttu-id="a8d0c-161">シフト演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-161">Shift operators</span></span>
-
-<span data-ttu-id="a8d0c-162">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-162">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-163">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – ビットを左へシフトし、右側には 0 を格納します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-163">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – shift bits left and fill with zero on the right.</span></span>
-
-<span data-ttu-id="a8d0c-164">[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – ビットを右へシフトします。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-164">[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – shift bits right.</span></span> <span data-ttu-id="a8d0c-165">左側のオペランドが `int` または `long` の場合、左側のビットには符号ビットが格納されます。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-165">If the left operand is `int` or `long`, then left bits are filled with the sign bit.</span></span> <span data-ttu-id="a8d0c-166">左側のオペランドが `uint` または `ulong` の場合、左側のビットには 0 が格納されます。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-166">If the left operand is `uint` or `ulong`, then left bits are filled with zero.</span></span>
-
-## <a name="relational-and-type-testing-operators"></a><span data-ttu-id="a8d0c-167">関係演算子と型検査演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-167">Relational and type-testing operators</span></span>
-
-<span data-ttu-id="a8d0c-168">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-168">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-169">[x \< y](comparison-operators.md#less-than-operator-) – より小さい (x が y より小さい場合は true)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-169">[x \< y](comparison-operators.md#less-than-operator-) – less than (true if x is less than y).</span></span>
-
-<span data-ttu-id="a8d0c-170">[x > y](comparison-operators.md#greater-than-operator-) – より大きい (x が y より大きい場合は true)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-170">[x > y](comparison-operators.md#greater-than-operator-) – greater than (true if x is greater than y).</span></span>
-
-<span data-ttu-id="a8d0c-171">[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – 以下。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-171">[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – less than or equal to.</span></span>
-
-<span data-ttu-id="a8d0c-172">[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 以上。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-172">[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – greater than or equal to.</span></span>
-
-<span data-ttu-id="a8d0c-173">[is](type-testing-and-conversion-operators.md#is-operator) – 型の互換性。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-173">[is](type-testing-and-conversion-operators.md#is-operator) – type compatibility.</span></span> <span data-ttu-id="a8d0c-174">評価される左側のオペランドを右側のオペランドで指定された型にキャストできる場合は、`true` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-174">Returns `true` if the evaluated left operand can be cast to the type specified by the right operand.</span></span>
-
-<span data-ttu-id="a8d0c-175">[as](type-testing-and-conversion-operators.md#as-operator) – 型変換。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-175">[as](type-testing-and-conversion-operators.md#as-operator) – type conversion.</span></span> <span data-ttu-id="a8d0c-176">左側のオペランドを右側のオペランドで指定された型にキャストして返します。ただし、`(T)x` が例外をスローした場合、`as` は `null` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-176">Returns the left operand cast to the type specified by the right operand, but `as` returns `null` where `(T)x` would throw an exception.</span></span>
-
-## <a name="equality-operators"></a><span data-ttu-id="a8d0c-177">等値演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-177">Equality operators</span></span>
-
-<span data-ttu-id="a8d0c-178">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-178">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-179">[x == y](equality-operators.md#equality-operator-) – 等価比較。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-179">[x == y](equality-operators.md#equality-operator-) – equality.</span></span> <span data-ttu-id="a8d0c-180">既定では、`string` 以外の参照型の場合、参照の等価性を返します (等価テスト)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-180">By default, for reference types other than `string`, this returns reference equality (identity test).</span></span> <span data-ttu-id="a8d0c-181">ただし、型は `==` をオーバーロードできるため、同一性のテストが目的の場合は `object` で `ReferenceEquals` メソッドを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-181">However, types can overload `==`, so if your intent is to test identity, it is best to use the `ReferenceEquals` method on `object`.</span></span>
-
-<span data-ttu-id="a8d0c-182">[x != y](equality-operators.md#inequality-operator-) – 等しくない。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-182">[x != y](equality-operators.md#inequality-operator-) – not equal.</span></span> <span data-ttu-id="a8d0c-183">`==` のコメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-183">See comment for `==`.</span></span> <span data-ttu-id="a8d0c-184">型が `==` をオーバーロードする場合は、`!=` をオーバーロードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-184">If a type overloads `==`, then it must overload `!=`.</span></span>
-
-## <a name="logical-and-operator"></a><span data-ttu-id="a8d0c-185">論理 AND 演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-185">Logical AND operator</span></span>
-
-<span data-ttu-id="a8d0c-186">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-186">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-187">`x & y` – `bool` オペランドの場合は[論理 AND](boolean-logical-operators.md#logical-and-operator-)、整数型のオペランドの場合は[ビットごとの論理 AND](bitwise-and-shift-operators.md#logical-and-operator-)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-187">`x & y` – [logical AND](boolean-logical-operators.md#logical-and-operator-) for the `bool` operands or [bitwise logical AND](bitwise-and-shift-operators.md#logical-and-operator-) for the operands of the integral types.</span></span>
-
-## <a name="logical-xor-operator"></a><span data-ttu-id="a8d0c-188">論理 XOR 演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-188">Logical XOR operator</span></span>
-
-<span data-ttu-id="a8d0c-189">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-189">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-190">`x ^ y` – `bool` オペランドの場合は[論理 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-)、整数型のオペランドの場合は[ビットごとの論理 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-190">`x ^ y` – [logical XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) for the `bool` operands or [bitwise logical XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) for the operands of the integral types.</span></span>
-
-## <a name="logical-or-operator"></a><span data-ttu-id="a8d0c-191">論理演算子 OR</span><span class="sxs-lookup"><span data-stu-id="a8d0c-191">Logical OR operator</span></span>
-
-<span data-ttu-id="a8d0c-192">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-192">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-193">`x | y` – `bool` オペランドの場合は[論理 OR](boolean-logical-operators.md#logical-or-operator-)、整数型のオペランドの場合は[ビットごとの論理 OR](bitwise-and-shift-operators.md#logical-or-operator-)。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-193">`x | y` – [logical OR](boolean-logical-operators.md#logical-or-operator-) for the `bool` operands or [bitwise logical OR](bitwise-and-shift-operators.md#logical-or-operator-) for the operands of the integral types.</span></span>
-
-## <a name="conditional-and-operator"></a><span data-ttu-id="a8d0c-194">条件 AND 演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-194">Conditional AND operator</span></span>
-
-<span data-ttu-id="a8d0c-195">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-195">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-196">[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 論理 AND。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-196">[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – logical AND.</span></span> <span data-ttu-id="a8d0c-197">`x` が `false` に評価される場合、`y` は評価されません。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-197">If `x` evaluates to `false`, then `y` is not evaluated.</span></span>
-
-## <a name="conditional-or-operator"></a><span data-ttu-id="a8d0c-198">条件 OR 演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-198">Conditional OR operator</span></span>
-
-<span data-ttu-id="a8d0c-199">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-199">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-200">[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 論理 OR。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-200">[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – logical OR.</span></span> <span data-ttu-id="a8d0c-201">`x` が `true` に評価される場合、`y` は評価されません。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-201">If `x` evaluates to `true`, then `y` is not evaluated.</span></span>
-
-## <a name="null-coalescing-operator"></a><span data-ttu-id="a8d0c-202">Null 合体演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-202">Null-coalescing operator</span></span>
-
-<span data-ttu-id="a8d0c-203">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-203">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-204">[x ?? y](null-coalescing-operator.md) – `x` が `null` 以外の場合は x を返します。null の場合は `y` を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-204">[x ?? y](null-coalescing-operator.md) – returns `x` if it is non-`null`; otherwise, returns `y`.</span></span>
-
-## <a name="conditional-operator"></a><span data-ttu-id="a8d0c-205">条件演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-205">Conditional operator</span></span>
-
-<span data-ttu-id="a8d0c-206">この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-206">This operator has higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-207">[t ? x : y](conditional-operator.md) – テスト `t` が true に評価される場合は `x` を評価して返します。それ以外の場合は `y` を評価して返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-207">[t ? x : y](conditional-operator.md) – if test `t` evaluates to true, then evaluate and return `x`; otherwise, evaluate and return `y`.</span></span>
-
-## <a name="assignment-and-lambda-operators"></a><span data-ttu-id="a8d0c-208">代入演算子とラムダ演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-208">Assignment and lambda operators</span></span>
-
-<span data-ttu-id="a8d0c-209">これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-209">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>
-
-<span data-ttu-id="a8d0c-210">[x = y](assignment-operator.md) – 代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-210">[x = y](assignment-operator.md) – assignment.</span></span>
-
-<span data-ttu-id="a8d0c-211">[x += y](arithmetic-operators.md#compound-assignment) – インクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-211">[x += y](arithmetic-operators.md#compound-assignment) – increment.</span></span> <span data-ttu-id="a8d0c-212">`y` の値を `x` の値に加算した結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-212">Add the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span> <span data-ttu-id="a8d0c-213">`x` が[イベント](../keywords/event.md)を指定した場合、`y` は、C# によってイベント ハンドラーとして追加される適切なメソッドである必要があります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-213">If `x` designates an [event](../keywords/event.md), then `y` must be an appropriate method that C# adds as an event handler.</span></span>
-
-<span data-ttu-id="a8d0c-214">[x -= y](arithmetic-operators.md#compound-assignment) – デクリメント。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-214">[x -= y](arithmetic-operators.md#compound-assignment) – decrement.</span></span> <span data-ttu-id="a8d0c-215">`y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-215">Subtract the value of `y` from the value of `x`, store the result in `x`, and return the new value.</span></span> <span data-ttu-id="a8d0c-216">`x` で[イベント](../keywords/event.md)を指定する場合、`y` は C# によってイベント ハンドラーとして削除される適切なメソッドである必要があります。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-216">If `x` designates an [event](../keywords/event.md), then `y` must be an appropriate method that C# removes as an event handler.</span></span>
-
-<span data-ttu-id="a8d0c-217">[x \*= y](arithmetic-operators.md#compound-assignment) – 乗算代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-217">[x \*= y](arithmetic-operators.md#compound-assignment) – multiplication assignment.</span></span> <span data-ttu-id="a8d0c-218">`y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-218">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-219">[x /= y](arithmetic-operators.md#compound-assignment) – 除算代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-219">[x /= y](arithmetic-operators.md#compound-assignment) – division assignment.</span></span> <span data-ttu-id="a8d0c-220">`x` の値を `y` の値で除算した結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-220">Divide the value of `x` by the value of `y`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-221">[x %= y](arithmetic-operators.md#compound-assignment) – 剰余代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-221">[x %= y](arithmetic-operators.md#compound-assignment) – remainder assignment.</span></span> <span data-ttu-id="a8d0c-222">`x` の値を `y` の値で除算した剰余を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-222">Divide the value of `x` by the value of `y`, store the remainder in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-223">[x &= y](boolean-logical-operators.md#compound-assignment) – AND 代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-223">[x &= y](boolean-logical-operators.md#compound-assignment) – AND assignment.</span></span> <span data-ttu-id="a8d0c-224">`y` の値と `x` の値の AND 演算を行った結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-224">AND the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-225">[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR 代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-225">[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR assignment.</span></span> <span data-ttu-id="a8d0c-226">`y` の値と `x` の値の OR 演算を行った結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-226">OR the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-227">[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR 代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-227">[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR assignment.</span></span> <span data-ttu-id="a8d0c-228">`y` の値と `x` の値の XOR 演算を行った結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-228">XOR the value of `y` with the value of `x`, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-229">[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – 左シフト代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-229">[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – left-shift assignment.</span></span> <span data-ttu-id="a8d0c-230">`x` の値を `y` で指定した分だけ左へシフトした結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-230">Shift the value of `x` left by `y` places, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-231">[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – 右シフト代入。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-231">[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – right-shift assignment.</span></span> <span data-ttu-id="a8d0c-232">`x` の値を `y` で指定した分だけ右へシフトした結果を `x` に格納し、新しい値を返します。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-232">Shift the value of `x` right by `y` places, store the result in `x`, and return the new value.</span></span>
-
-<span data-ttu-id="a8d0c-233">[=>](lambda-operator.md) – ラムダ宣言。</span><span class="sxs-lookup"><span data-stu-id="a8d0c-233">[=>](lambda-operator.md) – lambda declaration.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="a8d0c-234">関連項目</span><span class="sxs-lookup"><span data-stu-id="a8d0c-234">See also</span></span>
-
-- [<span data-ttu-id="a8d0c-235">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="a8d0c-235">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="a8d0c-236">演算子</span><span class="sxs-lookup"><span data-stu-id="a8d0c-236">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)
+# <a name="c-operators-c-reference"></a><span data-ttu-id="b414f-102">C# 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b414f-102">C# operators (C# reference)</span></span>
+
+<span data-ttu-id="b414f-103">C# は組み込み型でサポートされている定義済みの演算子を多数提供します。</span><span class="sxs-lookup"><span data-stu-id="b414f-103">C# provides a number of predefined operators supported by the built-in types.</span></span> <span data-ttu-id="b414f-104">たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。</span><span class="sxs-lookup"><span data-stu-id="b414f-104">For example, [arithmetic operators](arithmetic-operators.md) perform arithmetic operations with operands of built-in numeric types and [Boolean logical operators](boolean-logical-operators.md) perform logical operations with the [bool](../keywords/bool.md) operands.</span></span>
+
+<span data-ttu-id="b414f-105">ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。</span><span class="sxs-lookup"><span data-stu-id="b414f-105">A user-defined type can overload certain operators to define the corresponding behavior for the operands of that type.</span></span> <span data-ttu-id="b414f-106">詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b414f-106">For more information, see [Operator overloading](operator-overloading.md).</span></span>
+
+<span data-ttu-id="b414f-107">次の表は、C# の演算子を優先順位の高い順にまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="b414f-107">The following table lists the C# operators starting with the highest precedence to the lowest.</span></span> <span data-ttu-id="b414f-108">各行内の演算子の優先順位は同じです。</span><span class="sxs-lookup"><span data-stu-id="b414f-108">The operators within each row share the same precedence level.</span></span>
+
+| <span data-ttu-id="b414f-109">演算子</span><span class="sxs-lookup"><span data-stu-id="b414f-109">Operators</span></span> | <span data-ttu-id="b414f-110">カテゴリまたは名前</span><span class="sxs-lookup"><span data-stu-id="b414f-110">Category or name</span></span> |
+| --------- | ---------------- |
+| <span data-ttu-id="b414f-111">[x.y](member-access-operators.md#member-access-operator-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-operator-)、[a&#91;x&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-conversion-operators.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[->](pointer-related-operators.md#pointer-member-access-operator--)</span><span class="sxs-lookup"><span data-stu-id="b414f-111">[x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;x&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-conversion-operators.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [->](pointer-related-operators.md#pointer-member-access-operator--)</span></span> | <span data-ttu-id="b414f-112">1 次式</span><span class="sxs-lookup"><span data-stu-id="b414f-112">Primary</span></span> |
+| <span data-ttu-id="b414f-113">[+x](addition-operator.md)、[-x](subtraction-operator.md)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[(T)x](type-testing-and-conversion-operators.md#cast-operator-)、[await](../keywords/await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[\*x](pointer-related-operators.md#pointer-indirection-operator-)、[true および false](true-false-operators.md)</span><span class="sxs-lookup"><span data-stu-id="b414f-113">[+x](addition-operator.md), [-x](subtraction-operator.md), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [(T)x](type-testing-and-conversion-operators.md#cast-operator-), [await](../keywords/await.md), [&x](pointer-related-operators.md#address-of-operator-), [\*x](pointer-related-operators.md#pointer-indirection-operator-), [true and false](true-false-operators.md)</span></span> | <span data-ttu-id="b414f-114">単項</span><span class="sxs-lookup"><span data-stu-id="b414f-114">Unary</span></span> |
+| <span data-ttu-id="b414f-115">[x \* y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-115">[x \* y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-)</span></span> | <span data-ttu-id="b414f-116">乗法</span><span class="sxs-lookup"><span data-stu-id="b414f-116">Multiplicative</span></span>|
+| <span data-ttu-id="b414f-117">[x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--)</span><span class="sxs-lookup"><span data-stu-id="b414f-117">[x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--)</span></span> | <span data-ttu-id="b414f-118">加法</span><span class="sxs-lookup"><span data-stu-id="b414f-118">Additive</span></span> |
+| <span data-ttu-id="b414f-119">[x <\< y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-119">[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-)</span></span> | <span data-ttu-id="b414f-120">シフト</span><span class="sxs-lookup"><span data-stu-id="b414f-120">Shift</span></span> |
+| <span data-ttu-id="b414f-121">[x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-conversion-operators.md#is-operator)、[as](type-testing-and-conversion-operators.md#as-operator)</span><span class="sxs-lookup"><span data-stu-id="b414f-121">[x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x >= y](comparison-operators.md#greater-than-or-equal-operator-), [is](type-testing-and-conversion-operators.md#is-operator), [as](type-testing-and-conversion-operators.md#as-operator)</span></span> | <span data-ttu-id="b414f-122">関係式と型検査</span><span class="sxs-lookup"><span data-stu-id="b414f-122">Relational and type-testing</span></span> |
+| <span data-ttu-id="b414f-123">[x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-123">[x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-)</span></span> | <span data-ttu-id="b414f-124">等価比較</span><span class="sxs-lookup"><span data-stu-id="b414f-124">Equality</span></span> |
+| `x & y` | <span data-ttu-id="b414f-125">[ブール演算の論理 AND](boolean-logical-operators.md#logical-and-operator-) または[ビット演算の論理 AND](bitwise-and-shift-operators.md#logical-and-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-125">[Boolean logical AND](boolean-logical-operators.md#logical-and-operator-) or [bitwise logical AND](bitwise-and-shift-operators.md#logical-and-operator-)</span></span> |
+| `x ^ y` | <span data-ttu-id="b414f-126">[ブール演算の論理 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) または[ビット演算の論理 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-126">[Boolean logical XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) or [bitwise logical XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)</span></span> |
+| <code>x &#124; y</code> | <span data-ttu-id="b414f-127">[ブール演算の論理 OR](boolean-logical-operators.md#logical-or-operator-) または[ビット演算の論理 OR](bitwise-and-shift-operators.md#logical-or-operator-)</span><span class="sxs-lookup"><span data-stu-id="b414f-127">[Boolean logical OR](boolean-logical-operators.md#logical-or-operator-) or [bitwise logical OR](bitwise-and-shift-operators.md#logical-or-operator-)</span></span> |
+| [<span data-ttu-id="b414f-128">x && y</span><span class="sxs-lookup"><span data-stu-id="b414f-128">x && y</span></span>](boolean-logical-operators.md#conditional-logical-and-operator-) | <span data-ttu-id="b414f-129">条件 AND</span><span class="sxs-lookup"><span data-stu-id="b414f-129">Conditional AND</span></span> |
+| [<span data-ttu-id="b414f-130">x &#124;&#124; y</span><span class="sxs-lookup"><span data-stu-id="b414f-130">x &#124;&#124; y</span></span>](boolean-logical-operators.md#conditional-logical-or-operator-) | <span data-ttu-id="b414f-131">条件 OR</span><span class="sxs-lookup"><span data-stu-id="b414f-131">Conditional OR</span></span> |
+| [<span data-ttu-id="b414f-132">x ?? y</span><span class="sxs-lookup"><span data-stu-id="b414f-132">x ?? y</span></span>](null-coalescing-operator.md) | <span data-ttu-id="b414f-133">Null 合体演算子</span><span class="sxs-lookup"><span data-stu-id="b414f-133">Null-coalescing operator</span></span> |
+| [<span data-ttu-id="b414f-134">t ? x : y</span><span class="sxs-lookup"><span data-stu-id="b414f-134">t ? x : y</span></span>](conditional-operator.md) | <span data-ttu-id="b414f-135">条件演算子</span><span class="sxs-lookup"><span data-stu-id="b414f-135">Conditional operator</span></span> |
+| <span data-ttu-id="b414f-136">[x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x \*= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[=>](lambda-operator.md)</span><span class="sxs-lookup"><span data-stu-id="b414f-136">[x = y](assignment-operator.md), [x += y](arithmetic-operators.md#compound-assignment), [x -= y](arithmetic-operators.md#compound-assignment), [x \*= y](arithmetic-operators.md#compound-assignment), [x /= y](arithmetic-operators.md#compound-assignment), [x %= y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^= y](boolean-logical-operators.md#compound-assignment), [x <<= y](bitwise-and-shift-operators.md#compound-assignment), [x >>= y](bitwise-and-shift-operators.md#compound-assignment), [=>](lambda-operator.md)</span></span> | <span data-ttu-id="b414f-137">代入とラムダ宣言</span><span class="sxs-lookup"><span data-stu-id="b414f-137">Assignment and lambda declaration</span></span> |
+
+## <a name="see-also"></a><span data-ttu-id="b414f-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="b414f-138">See also</span></span>
+
+- [<span data-ttu-id="b414f-139">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="b414f-139">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="b414f-140">演算子</span><span class="sxs-lookup"><span data-stu-id="b414f-140">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)
