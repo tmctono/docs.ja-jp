@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238586"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039843"
 ---
-# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="0a05e-102">WPF アプリケーションへのグラス フレームの拡張</span><span class="sxs-lookup"><span data-stu-id="0a05e-102">Extend Glass Frame Into a WPF Application</span></span>
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="942b4-102">WPF アプリケーションへのグラス フレームの拡張</span><span class="sxs-lookup"><span data-stu-id="942b4-102">Extend Glass Frame Into a WPF Application</span></span>
 
-<span data-ttu-id="0a05e-103">このトピックでは、拡張する方法を示します、 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Windows Presentation Foundation (WPF) アプリケーションのクライアント領域にグラス フレーム。</span><span class="sxs-lookup"><span data-stu-id="0a05e-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="942b4-103">このトピックでは、Windows Presentation Foundation ( [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] WPF) アプリケーションのクライアント領域にグラスフレームを拡張する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="942b4-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a Windows Presentation Foundation (WPF) application.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0a05e-104">この例は、グラスが有効なデスクトップ ウィンドウ マネージャー (DWM) を実行している [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] コンピューターでしか動作しません。</span><span class="sxs-lookup"><span data-stu-id="0a05e-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] <span data-ttu-id="0a05e-105">Home Basic エディションは、透明グラス効果をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="0a05e-105">Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="0a05e-106">[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] の他のエディションで通常透明グラス効果がレンダリングされる領域は、不透明でレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="0a05e-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>
+> <span data-ttu-id="942b4-104">この例は、グラスが有効なデスクトップ ウィンドウ マネージャー (DWM) を実行している [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] コンピューターでしか動作しません。</span><span class="sxs-lookup"><span data-stu-id="942b4-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] <span data-ttu-id="942b4-105">Home Basic エディションは、透明グラス効果をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="942b4-105">Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="942b4-106">[!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] の他のエディションで通常透明グラス効果がレンダリングされる領域は、不透明でレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="942b4-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0a05e-107">例</span><span class="sxs-lookup"><span data-stu-id="0a05e-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="942b4-107">例</span><span class="sxs-lookup"><span data-stu-id="942b4-107">Example</span></span>
 
-<span data-ttu-id="0a05e-108">次の図に、アドレス バーの Internet Explorer 7 の拡張されたグラス フレームを示しています。</span><span class="sxs-lookup"><span data-stu-id="0a05e-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
+<span data-ttu-id="942b4-108">次の図は、Internet Explorer 7 のアドレスバーに拡張されたグラスフレームを示しています。</span><span class="sxs-lookup"><span data-stu-id="942b4-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7:</span></span>
 
-![スクリーン ショットのグラス フレームが IE7 のアドレス バーの背後に拡張します。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
+![IE7 アドレスバーの背後に拡張されたグラスフレームを示すスクリーンショット。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-<span data-ttu-id="0a05e-110">上のグラス フレームを拡張する、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションでは、アンマネージ API へのアクセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="0a05e-110">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged API is needed.</span></span> <span data-ttu-id="0a05e-111">次のコード例は、プラットフォーム呼び出し (pinvoke) は、クライアント領域にフレームを拡張するために必要な 2 つの api。</span><span class="sxs-lookup"><span data-stu-id="0a05e-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="0a05e-112">という名前のクラスで宣言されてこれらの API の各**NonClientRegionAPI**します。</span><span class="sxs-lookup"><span data-stu-id="0a05e-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
+<span data-ttu-id="942b4-110">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションのグラスフレームを拡張するには、アンマネージ API へのアクセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="942b4-110">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged API is needed.</span></span> <span data-ttu-id="942b4-111">次のコード例では、クライアント領域にフレームを拡張するために必要な2つの API のプラットフォーム呼び出し (pinvoke) を実行します。</span><span class="sxs-lookup"><span data-stu-id="942b4-111">The following code example does a Platform Invoke (pinvoke) for the two API needed to extend the frame into the client area.</span></span> <span data-ttu-id="942b4-112">これらの API はそれぞれ**Nonclientregionapi**と呼ばれるクラスで宣言されています。</span><span class="sxs-lookup"><span data-stu-id="942b4-112">Each of these API are declared in a class called **NonClientRegionAPI**.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-<span data-ttu-id="0a05e-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) は、クライアント領域にフレームを拡張する DWM 関数です。</span><span class="sxs-lookup"><span data-stu-id="0a05e-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="0a05e-114">ウィンドウ ハンドルと [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) 構造体の 2 つのパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="0a05e-114">It takes two parameters; a window handle and a [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) structure.</span></span> <span data-ttu-id="0a05e-115">[MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) は、フレームがクライアント領域に余分に拡張する量を DWM に通知するために使われます。</span><span class="sxs-lookup"><span data-stu-id="0a05e-115">[MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
+<span data-ttu-id="942b4-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) は、クライアント領域にフレームを拡張する DWM 関数です。</span><span class="sxs-lookup"><span data-stu-id="942b4-113">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="942b4-114">ウィンドウ ハンドルと [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 構造体の 2 つのパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="942b4-114">It takes two parameters; a window handle and a [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) structure.</span></span> <span data-ttu-id="942b4-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) は、フレームがクライアント領域に余分に拡張する量を DWM に通知するために使われます。</span><span class="sxs-lookup"><span data-stu-id="942b4-115">[MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0a05e-116">例</span><span class="sxs-lookup"><span data-stu-id="0a05e-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="942b4-116">例</span><span class="sxs-lookup"><span data-stu-id="942b4-116">Example</span></span>
 
-<span data-ttu-id="0a05e-117">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 関数を使うには、ウィンドウ ハンドルを取得する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0a05e-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="0a05e-118">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]から、ウィンドウ ハンドルを取得できます、<xref:System.Windows.Interop.HwndSource.Handle%2A>のプロパティ、<xref:System.Windows.Interop.HwndSource>します。</span><span class="sxs-lookup"><span data-stu-id="0a05e-118">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="0a05e-119">次の例では、クライアント領域にフレームを拡張で、<xref:System.Windows.FrameworkElement.Loaded>ウィンドウのイベント。</span><span class="sxs-lookup"><span data-stu-id="0a05e-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
+<span data-ttu-id="942b4-117">[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 関数を使うには、ウィンドウ ハンドルを取得する必要があります。</span><span class="sxs-lookup"><span data-stu-id="942b4-117">To use the [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) function, a window handle must be obtained.</span></span> <span data-ttu-id="942b4-118">で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は、ウィンドウハンドルはの<xref:System.Windows.Interop.HwndSource.Handle%2A> <xref:System.Windows.Interop.HwndSource>プロパティから取得できます。</span><span class="sxs-lookup"><span data-stu-id="942b4-118">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="942b4-119">次の例では、ウィンドウの<xref:System.Windows.FrameworkElement.Loaded>イベントでフレームがクライアント領域に拡張されます。</span><span class="sxs-lookup"><span data-stu-id="942b4-119">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -109,9 +109,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="0a05e-120">例</span><span class="sxs-lookup"><span data-stu-id="0a05e-120">Example</span></span>
+## <a name="example"></a><span data-ttu-id="942b4-120">例</span><span class="sxs-lookup"><span data-stu-id="942b4-120">Example</span></span>
 
-<span data-ttu-id="0a05e-121">次の例では、クライアント領域にフレームが拡張される簡単なウィンドウを示します。</span><span class="sxs-lookup"><span data-stu-id="0a05e-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="0a05e-122">フレームは、2 つを含む上罫線の背後にある<xref:System.Windows.Controls.TextBox>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="0a05e-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
+<span data-ttu-id="942b4-121">次の例では、クライアント領域にフレームが拡張される簡単なウィンドウを示します。</span><span class="sxs-lookup"><span data-stu-id="942b4-121">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="942b4-122">フレームは、2つ<xref:System.Windows.Controls.TextBox>のオブジェクトを含む上罫線の背後に拡張されます。</span><span class="sxs-lookup"><span data-stu-id="942b4-122">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-<span data-ttu-id="0a05e-123">次の図に拡張されたグラス フレームを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。</span><span class="sxs-lookup"><span data-stu-id="0a05e-123">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application:</span></span>
+<span data-ttu-id="942b4-123">次の図は、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに拡張されたグラスフレームを示しています。</span><span class="sxs-lookup"><span data-stu-id="942b4-123">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application:</span></span>
 
-![WPF アプリケーションに拡張されたグラス フレームを示すスクリーン ショット。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
+![WPF アプリケーションに拡張されたグラスフレームを示すスクリーンショット。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a><span data-ttu-id="0a05e-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a05e-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="942b4-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="942b4-125">See also</span></span>
 
-- [<span data-ttu-id="0a05e-126">デスクトップ ウィンドウ マネージャーの概要</span><span class="sxs-lookup"><span data-stu-id="0a05e-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
-- [<span data-ttu-id="0a05e-127">デスクトップ ウィンドウ マネージャーのぼかしの概要</span><span class="sxs-lookup"><span data-stu-id="0a05e-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
-- [<span data-ttu-id="0a05e-128">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="0a05e-128">DwmExtendFrameIntoClientArea</span></span>](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
+- [<span data-ttu-id="942b4-126">デスクトップウィンドウマネージャーの概要</span><span class="sxs-lookup"><span data-stu-id="942b4-126">Desktop Window Manager Overview</span></span>](/windows/desktop/dwm/dwm-overview)
+- [<span data-ttu-id="942b4-127">ぼかしのデスクトップウィンドウマネージャーの概要</span><span class="sxs-lookup"><span data-stu-id="942b4-127">Desktop Window Manager Blur Overview</span></span>](/windows/desktop/dwm/blur-ovw)
+- [<span data-ttu-id="942b4-128">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="942b4-128">DwmExtendFrameIntoClientArea</span></span>](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

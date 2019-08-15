@@ -5,27 +5,30 @@ helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6842d11c04e905d42734af939f2c3f0cfeacd47
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768551"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040126"
 ---
-# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a><span data-ttu-id="32b2f-102">方法: C 言語でアプリケーションに複数の設定セットを追加します。\#</span><span class="sxs-lookup"><span data-stu-id="32b2f-102">How To: Add Multiple Sets of Settings To Your Application in C\#</span></span>
-<span data-ttu-id="32b2f-103">場合によっては、アプリケーションで複数の設定のセットがある可能性があります。</span><span class="sxs-lookup"><span data-stu-id="32b2f-103">In some cases, you might want to have multiple sets of settings in an application.</span></span> <span data-ttu-id="32b2f-104">たとえば、アプリケーションを開発し、頻繁に変更する設定の特定のグループが必要な場合は場合があります、ファイルごとに、置換できるように、すべて 1 つのファイルにそれらを分離するその他の設定の影響を受けていません。</span><span class="sxs-lookup"><span data-stu-id="32b2f-104">For example, if you are developing an application where a particular group of settings is expected to change frequently, it might be wise to separate them all into a single file so that the file can be replaced wholesale, leaving other settings unaffected.</span></span> <span data-ttu-id="32b2f-105">Visual Studio プロジェクトに複数の設定セットを追加することができます。</span><span class="sxs-lookup"><span data-stu-id="32b2f-105">Visual Studio allows you to add multiple sets of settings to your project.</span></span> <span data-ttu-id="32b2f-106">設定の追加セットは、Properties.Settings オブジェクトを使用してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="32b2f-106">Additional sets of settings can be accessed via the Properties.Settings object.</span></span>  
-  
-### <a name="to-add-an-additional-set-of-setting-to-your-application"></a><span data-ttu-id="32b2f-107">アプリケーションに追加の設定セットを追加するには</span><span class="sxs-lookup"><span data-stu-id="32b2f-107">To Add an Additional Set of Setting to your Application</span></span>  
-  
-1. <span data-ttu-id="32b2f-108">**[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="32b2f-108">From the **Project** menu, choose **Add New Item**.</span></span> <span data-ttu-id="32b2f-109">**[新しい項目の追加]** ダイアログ ボックスが開きます。</span><span class="sxs-lookup"><span data-stu-id="32b2f-109">The **Add New Item** dialog box opens.</span></span>  
-  
-2. <span data-ttu-id="32b2f-110">**新しい項目の追加**ダイアログ ボックスで、**設定ファイル**ファイルの名前を入力し、をクリックして、**追加**をソリューションに新しい設定ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="32b2f-110">In the **Add New Item** dialog box, select **Settings File**, type in a name for the file, and click **Add** to add a new settings file to your solution.</span></span>  
-  
-3. <span data-ttu-id="32b2f-111">**ソリューション エクスプ ローラー**に、新しい設定ファイルをドラッグして、**プロパティ**フォルダー。</span><span class="sxs-lookup"><span data-stu-id="32b2f-111">In **Solution Explorer**, drag the new Settings file into the **Properties** folder.</span></span> <span data-ttu-id="32b2f-112">これにより、コードで使用できる新しい設定ができます。</span><span class="sxs-lookup"><span data-stu-id="32b2f-112">This allows your new settings to be available in code.</span></span>  
-  
-4. <span data-ttu-id="32b2f-113">追加し、他の設定ファイルと同様に、このファイルの設定を使用します。</span><span class="sxs-lookup"><span data-stu-id="32b2f-113">Add and use settings in this file as you would any other settings file.</span></span> <span data-ttu-id="32b2f-114">この Properties.Settings オブジェクトを使用して設定のグループにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="32b2f-114">You can access this group of settings via the Properties.Settings object.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="32b2f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="32b2f-115">See also</span></span>
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a><span data-ttu-id="7f210-102">方法: C でアプリケーションに複数の設定セットを追加する\#</span><span class="sxs-lookup"><span data-stu-id="7f210-102">How To: Add Multiple Sets of Settings To Your Application in C\#</span></span>
 
-- [<span data-ttu-id="32b2f-116">アプリケーション設定とユーザー設定の使用</span><span class="sxs-lookup"><span data-stu-id="32b2f-116">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
-- [<span data-ttu-id="32b2f-117">アプリケーション設定の概要</span><span class="sxs-lookup"><span data-stu-id="32b2f-117">Application Settings Overview</span></span>](application-settings-overview.md)
+<span data-ttu-id="7f210-103">場合によっては、アプリケーションに複数の設定セットを含めることが必要になることがあります。</span><span class="sxs-lookup"><span data-stu-id="7f210-103">In some cases, you might want to have multiple sets of settings in an application.</span></span> <span data-ttu-id="7f210-104">たとえば、特定の設定グループが頻繁に変更されることが予想されるアプリケーションを開発する場合は、ファイルをすべて1つのファイルに分割して、他の設定が影響を受けないようにすることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="7f210-104">For example, if you are developing an application where a particular group of settings is expected to change frequently, it might be wise to separate them all into a single file so that the file can be replaced wholesale, leaving other settings unaffected.</span></span> <span data-ttu-id="7f210-105">Visual Studio では、プロジェクトに複数の設定セットを追加できます。</span><span class="sxs-lookup"><span data-stu-id="7f210-105">Visual Studio allows you to add multiple sets of settings to your project.</span></span> <span data-ttu-id="7f210-106">その他の設定セットは、オブジェクトを`Properties.Settings`使用してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="7f210-106">Additional sets of settings can be accessed via the `Properties.Settings` object.</span></span>
+
+## <a name="add-an-additional-set-of-settings"></a><span data-ttu-id="7f210-107">追加の設定セットを追加する</span><span class="sxs-lookup"><span data-stu-id="7f210-107">Add an Additional Set of Settings</span></span>
+
+1. <span data-ttu-id="7f210-108">Visual Studio で、 **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="7f210-108">In Visual Studio, from the **Project** menu, choose **Add New Item**.</span></span>
+
+   <span data-ttu-id="7f210-109">**[新しい項目の追加]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="7f210-109">The **Add New Item** dialog box opens.</span></span>
+
+2. <span data-ttu-id="7f210-110">**[新しい項目の追加]** ダイアログボックスで、 **[設定ファイル]** を選択し、ファイルの名前を入力して **[追加]** をクリックし、ソリューションに新しい設定ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="7f210-110">In the **Add New Item** dialog box, select **Settings File**, enter a name for the file, and click **Add** to add a new settings file to your solution.</span></span>
+
+3. <span data-ttu-id="7f210-111">**ソリューションエクスプローラー**で、新しい設定ファイルを**Properties**フォルダーにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="7f210-111">In **Solution Explorer**, drag the new Settings file into the **Properties** folder.</span></span> <span data-ttu-id="7f210-112">これにより、新しい設定をコードで使用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="7f210-112">This allows your new settings to be available in code.</span></span>
+
+4. <span data-ttu-id="7f210-113">他の設定ファイルと同様に、このファイルに設定を追加して使用します。</span><span class="sxs-lookup"><span data-stu-id="7f210-113">Add and use settings in this file as you would any other settings file.</span></span> <span data-ttu-id="7f210-114">この設定のグループには、オブジェクトを`Properties.Settings`介してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="7f210-114">You can access this group of settings via the `Properties.Settings` object.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7f210-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f210-115">See also</span></span>
+
+- [<span data-ttu-id="7f210-116">アプリケーション設定とユーザー設定の使用</span><span class="sxs-lookup"><span data-stu-id="7f210-116">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="7f210-117">アプリケーション設定の概要</span><span class="sxs-lookup"><span data-stu-id="7f210-117">Application Settings Overview</span></span>](application-settings-overview.md)

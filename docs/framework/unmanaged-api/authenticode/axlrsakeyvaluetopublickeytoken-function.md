@@ -10,18 +10,18 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eca6c5fc61d4f7e80046102a560d228fc01e5292
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038410"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="a3904-102">\_AxlRSAKeyValueToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="a3904-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
+# <a name="_axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="7e3b9-102">\_AxlRSAKeyValueToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="7e3b9-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
 
-<span data-ttu-id="a3904-103">Modulus および Exponent を、厳密な名前の公開キー トークンに変換します。</span><span class="sxs-lookup"><span data-stu-id="a3904-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+<span data-ttu-id="7e3b9-103">Modulus および Exponent を、厳密な名前の公開キー トークンに変換します。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3904-104">構文</span><span class="sxs-lookup"><span data-stu-id="a3904-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e3b9-104">構文</span><span class="sxs-lookup"><span data-stu-id="7e3b9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
@@ -31,19 +31,19 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3904-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a3904-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e3b9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7e3b9-105">Parameters</span></span>  
  `pModulusBlob`  
- <span data-ttu-id="a3904-106">[in]Base64 でエンコードされた Modulus blob (から、 \<Modulus > 要素)。</span><span class="sxs-lookup"><span data-stu-id="a3904-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="a3904-107">参照してください、 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)構造体。</span><span class="sxs-lookup"><span data-stu-id="a3904-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="7e3b9-106">からBase64 でエンコードされた剰余 blob ( \<剰余 > 要素から)。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="7e3b9-107">[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造体を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-107">See the [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) structure.</span></span>  
   
  `pExponentBlob`  
- <span data-ttu-id="a3904-108">[in]Base64 でエンコードされた Exponent blob (から、\<指数 > 要素)。</span><span class="sxs-lookup"><span data-stu-id="a3904-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="a3904-109">参照してください、 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)構造体。</span><span class="sxs-lookup"><span data-stu-id="a3904-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="7e3b9-108">からBase64 でエンコードされた指数 ( \<指数 > 要素)。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="7e3b9-109">[CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob)構造体を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-109">See the [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) structure.</span></span>  
   
  `ppwszPublicKeyToken`  
- <span data-ttu-id="a3904-110">[out] 16 進エンコードされた公開キー トークンを受け取るための WCHAR \* へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a3904-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="7e3b9-110">[out] 16 進エンコードされた公開キー トークンを受け取るための WCHAR \* へのポインター。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3904-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="a3904-111">Return Value</span></span>  
- <span data-ttu-id="a3904-112">関数が成功した場合は `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="a3904-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="a3904-113">それ以外の場合はエラー コードを返します。</span><span class="sxs-lookup"><span data-stu-id="a3904-113">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7e3b9-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="7e3b9-111">Return Value</span></span>  
+ <span data-ttu-id="7e3b9-112">関数が成功した場合は `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="7e3b9-113">それ以外の場合はエラー コードを返します。</span><span class="sxs-lookup"><span data-stu-id="7e3b9-113">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3904-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3904-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e3b9-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="7e3b9-114">See also</span></span>
 
-- [<span data-ttu-id="a3904-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="a3904-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="7e3b9-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="7e3b9-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
