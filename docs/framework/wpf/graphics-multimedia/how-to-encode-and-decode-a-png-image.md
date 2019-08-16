@@ -13,30 +13,30 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
-ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a0a2f2625901f7ee32ba9fe70e71681a1b9ccd3
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947538"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545278"
 ---
-# <a name="how-to-encode-and-decode-a-png-image"></a><span data-ttu-id="db1ac-102">方法: PNG イメージのエンコードおよびデコード</span><span class="sxs-lookup"><span data-stu-id="db1ac-102">How to: Encode and Decode a PNG Image</span></span>
-<span data-ttu-id="db1ac-103">次の例では、デコードおよびエンコードする方法、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]特定を使用するイメージ<xref:System.Windows.Media.Imaging.PngBitmapDecoder>と<xref:System.Windows.Media.Imaging.PngBitmapEncoder>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="db1ac-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] image using the specific <xref:System.Windows.Media.Imaging.PngBitmapDecoder> and <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-png-image"></a><span data-ttu-id="21bfe-102">方法: PNG イメージのエンコードおよびデコード</span><span class="sxs-lookup"><span data-stu-id="21bfe-102">How to: Encode and Decode a PNG Image</span></span>
+<span data-ttu-id="21bfe-103">次の例は、特定<xref:System.Windows.Media.Imaging.PngBitmapDecoder>のオブジェクトと<xref:System.Windows.Media.Imaging.PngBitmapEncoder>オブジェクトを使用して PNG (Portable Network Graphics) イメージをデコードおよびエンコードする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="21bfe-103">The following examples show how to decode and encode a Portable Network Graphics (PNG) image using the specific <xref:System.Windows.Media.Imaging.PngBitmapDecoder> and <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db1ac-104">例</span><span class="sxs-lookup"><span data-stu-id="db1ac-104">Example</span></span>  
- <span data-ttu-id="db1ac-105">デコードする方法を示します、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]イメージを使用して、<xref:System.Windows.Media.Imaging.PngBitmapDecoder>から、<xref:System.IO.FileStream>します。</span><span class="sxs-lookup"><span data-stu-id="db1ac-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] image using a <xref:System.Windows.Media.Imaging.PngBitmapDecoder> from a <xref:System.IO.FileStream>.</span></span>  
+## <a name="example"></a><span data-ttu-id="21bfe-104">例</span><span class="sxs-lookup"><span data-stu-id="21bfe-104">Example</span></span>  
+ <span data-ttu-id="21bfe-105">この例では、 <xref:System.Windows.Media.Imaging.PngBitmapDecoder> <xref:System.IO.FileStream>からを使用して PNG イメージをデコードする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="21bfe-105">This example demonstrates how to decode a PNG image using a <xref:System.Windows.Media.Imaging.PngBitmapDecoder> from a <xref:System.IO.FileStream>.</span></span>  
   
  [!code-cpp[PngBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#1)]
  [!code-csharp[PngBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#1)]
  [!code-vb[PngBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="db1ac-106">例</span><span class="sxs-lookup"><span data-stu-id="db1ac-106">Example</span></span>  
- <span data-ttu-id="db1ac-107">エンコードする方法を示します、<xref:System.Windows.Media.Imaging.BitmapSource>に、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]イメージを使用して、<xref:System.Windows.Media.Imaging.PngBitmapEncoder>します。</span><span class="sxs-lookup"><span data-stu-id="db1ac-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] image using a <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="21bfe-106">例</span><span class="sxs-lookup"><span data-stu-id="21bfe-106">Example</span></span>  
+ <span data-ttu-id="21bfe-107">この例では、を<xref:System.Windows.Media.Imaging.BitmapSource> <xref:System.Windows.Media.Imaging.PngBitmapEncoder>使用して、を PNG イメージにエンコードする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="21bfe-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a PNG image using a <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.</span></span>  
   
  [!code-cpp[PngBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#4)]
  [!code-csharp[PngBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#4)]
  [!code-vb[PngBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="db1ac-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="db1ac-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21bfe-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="21bfe-108">See also</span></span>
 
-- [<span data-ttu-id="db1ac-109">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="db1ac-109">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="21bfe-109">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="21bfe-109">Imaging Overview</span></span>](imaging-overview.md)
