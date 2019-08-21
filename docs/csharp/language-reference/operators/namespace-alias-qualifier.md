@@ -1,51 +1,70 @@
 ---
 title: ':: 演算子 - C# リファレンス'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
+- global_CSharpKeyword
 helpviewer_keywords:
 - ':: operator [C#]'
-- 'namespaces [C#], :: operator'
-- namespace alias qualifier operator (::) [C#]
+- namespace alias qualifier [C#]
+- namespace [C#]
+- global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631366"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971237"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="fefe7-102">:: 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="fefe7-102">:: operator (C# reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="e7ff2-102">:: 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="e7ff2-102">:: operator (C# reference)</span></span>
 
-<span data-ttu-id="fefe7-103">名前空間エイリアス修飾子 (`::`) を使用して識別子を検索できます。</span><span class="sxs-lookup"><span data-stu-id="fefe7-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="fefe7-104">この例に示すように、常に 2 つの識別子の間に配置します。</span><span class="sxs-lookup"><span data-stu-id="fefe7-104">It is always positioned between two identifiers, as in this example:</span></span>
+<span data-ttu-id="e7ff2-103">エイリアスが設定された名前空間のメンバーにアクセスするには、名前空間エイリアス修飾子 `::` を使います。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-103">Use the namespace alias qualifier `::` to access members of an aliased namespace.</span></span> <span data-ttu-id="e7ff2-104">`::` 修飾子は 2 つの識別子の間で使用します。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-104">You use the `::` qualifier between two identifiers.</span></span> <span data-ttu-id="e7ff2-105">左側の識別子には、次のエイリアスのいずれかを指定できます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-105">The left-hand identifier can be any of the following aliases:</span></span>
 
-[!code-csharp[csRefOperators#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#27)]
+- <span data-ttu-id="e7ff2-106">[using エイリアス ディレクティブ](../keywords/using-directive.md)を使って作成された名前空間エイリアス:</span><span class="sxs-lookup"><span data-stu-id="e7ff2-106">A namespace alias created with the [using alias directive](../keywords/using-directive.md):</span></span>
+  
+  ```csharp
+  using forwinforms = System.Drawing;
+  using forwpf = System.Windows;
+  
+  public class Converters
+  {
+      public static forwpf::Point Convert(forwinforms::Point point) => new forwpf::Point(point.X, point.Y);
+  }
+  ```
 
-<span data-ttu-id="fefe7-105">`::` 演算子は、"*using 別名ディレクティブ*" と一緒に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="fefe7-105">The `::` operator can also be used with a *using alias directive*:</span></span>
+- <span data-ttu-id="e7ff2-107">[extern エイリアス](../keywords/extern-alias.md)。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-107">An [extern alias](../keywords/extern-alias.md).</span></span>
+- <span data-ttu-id="e7ff2-108">`global` エイリアス。これはグローバル名前空間エイリアスです。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-108">The `global` alias, which is the global namespace alias.</span></span> <span data-ttu-id="e7ff2-109">グローバル名前空間は、名前付き名前空間内で宣言されていない名前空間と型を含んだ名前空間です。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-109">The global namespace is the namespace that contains namespaces and types that are not declared inside a named namespace.</span></span> <span data-ttu-id="e7ff2-110">`global` エイリアスを `::` 修飾子と共に使った場合は、ユーザー定義の名前空間エイリアス `global` が存在していたとしても、常にグローバル名前空間が参照されます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-110">When used with the `::` qualifier, the `global` alias always references the global namespace, even if there is the user-defined `global` namespace alias.</span></span>
+  
+  <span data-ttu-id="e7ff2-111">次の例では、`global` エイリアスを使って、グローバル名前空間のメンバーである .NET の <xref:System> 名前空間にアクセスします。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-111">The following example uses the `global` alias to access the .NET <xref:System> namespace, which is a member of the global namespace.</span></span> <span data-ttu-id="e7ff2-112">`global` エイリアスを使わない場合は、`MyCompany.MyProduct` 名前空間のメンバーであるユーザー定義の `System` 名前空間がアクセスされます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-112">Without the `global` alias, the user-defined `System` namespace, which is a member of the `MyCompany.MyProduct` namespace, would be accessed:</span></span>
 
-```csharp
-// using Col=System.Collections.Generic;
-var numbers = new Col::List<int> { 1, 2, 3 };
-```
+  ```csharp
+  namespace MyCompany.MyProduct.System
+  {
+      class Program
+      {
+          static void Main() => global::System.Console.WriteLine("Using global alias");
+      }
+  
+      class Console
+      {
+          string Suggestion => "Consider renaming this class";
+      }
+  }
+  ```
+  
+  > [!NOTE]
+  > <span data-ttu-id="e7ff2-113">`global` キーワードは、`::` 修飾子の左側の識別子に指定した場合にのみ、グローバル名前空間エイリアスとなります。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-113">The `global` keyword is the global namespace alias only when it's the left-hand identifier of the `::` qualifier.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="fefe7-106">解説</span><span class="sxs-lookup"><span data-stu-id="fefe7-106">Remarks</span></span>
+<span data-ttu-id="e7ff2-114">また、[メンバー アクセス演算子 `.`](member-access-operators.md#member-access-operator-) を使って、エイリアスが設定された名前空間のメンバーにアクセスすることもできます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-114">You can also use the [member access `.` operator](member-access-operators.md#member-access-operator-) to access members of an aliased namespace.</span></span> <span data-ttu-id="e7ff2-115">ただし、`.` 演算子は型のメンバーにアクセスするためにも使用されます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-115">However, the `.` operator is also used to access members of a type.</span></span> <span data-ttu-id="e7ff2-116">`::` 修飾子を使う場合、その左側の識別子は、同じ名前を持つ型または名前空間が存在したとしても、常に名前空間エイリアスを参照することが保証されます。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-116">The `::` qualifier ensures that its left-hand identifier always references a namespace alias, even if there exists a type or namespace with the same name.</span></span>
 
-<span data-ttu-id="fefe7-107">名前空間エイリアス修飾子として `global` を指定できます。</span><span class="sxs-lookup"><span data-stu-id="fefe7-107">The namespace alias qualifier can be `global`.</span></span> <span data-ttu-id="fefe7-108">これにより、エイリアスを使用した名前空間ではなく、グローバル名前空間で検索が実行されます。</span><span class="sxs-lookup"><span data-stu-id="fefe7-108">This invokes a lookup in the global namespace, rather than an aliased namespace.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="e7ff2-117">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="e7ff2-117">C# language specification</span></span>
 
-## <a name="for-more-information"></a><span data-ttu-id="fefe7-109">詳細情報</span><span class="sxs-lookup"><span data-stu-id="fefe7-109">For more information</span></span>
+<span data-ttu-id="e7ff2-118">詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[名前空間エイリアス修飾子](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)」セクションをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="e7ff2-118">For more information, see the [Namespace alias qualifiers](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-<span data-ttu-id="fefe7-110">`::` 演算子の使用例については、次のセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fefe7-110">For an example of how to use the `::` operator, see the following section:</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7ff2-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7ff2-119">See also</span></span>
 
-- [<span data-ttu-id="fefe7-111">方法: グローバル名前空間エイリアスを使用する</span><span class="sxs-lookup"><span data-stu-id="fefe7-111">How to: Use the Global Namespace Alias</span></span>](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
-## <a name="c-language-specification"></a><span data-ttu-id="fefe7-112">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="fefe7-112">C# language specification</span></span>
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a><span data-ttu-id="fefe7-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="fefe7-113">See also</span></span>
-
-- [<span data-ttu-id="fefe7-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="fefe7-114">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="fefe7-115">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="fefe7-115">C# operators</span></span>](index.md)
-- [<span data-ttu-id="fefe7-116">演算子 .</span><span class="sxs-lookup"><span data-stu-id="fefe7-116">. operator</span></span>](member-access-operators.md#member-access-operator-)
-- [<span data-ttu-id="fefe7-117">extern エイリアス</span><span class="sxs-lookup"><span data-stu-id="fefe7-117">extern alias</span></span>](../keywords/extern-alias.md)
+- [<span data-ttu-id="e7ff2-120">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="e7ff2-120">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="e7ff2-121">C# 演算子</span><span class="sxs-lookup"><span data-stu-id="e7ff2-121">C# operators</span></span>](index.md)
+- [<span data-ttu-id="e7ff2-122">名前空間の使用</span><span class="sxs-lookup"><span data-stu-id="e7ff2-122">Using namespaces</span></span>](../../programming-guide/namespaces/using-namespaces.md)
