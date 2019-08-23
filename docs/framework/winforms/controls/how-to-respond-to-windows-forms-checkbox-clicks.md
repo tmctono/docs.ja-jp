@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff6b2aad9ef0775547af57f11af28839e69637c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914979"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="cce3f-102">方法: Windows フォーム CheckBox のクリックに応答する</span><span class="sxs-lookup"><span data-stu-id="cce3f-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
-<span data-ttu-id="cce3f-103">ユーザーが Windows フォームをクリックするたびに<xref:System.Windows.Forms.CheckBox>コントロール、<xref:System.Windows.Forms.Control.Click>イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="cce3f-104">チェック ボックスの状態に応じていくつかの操作を実行するアプリケーションをプログラミングできます。</span><span class="sxs-lookup"><span data-stu-id="cce3f-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a><span data-ttu-id="5d6da-102">方法: Windows フォーム CheckBox のクリックに応答する</span><span class="sxs-lookup"><span data-stu-id="5d6da-102">How to: Respond to Windows Forms CheckBox Clicks</span></span>
+<span data-ttu-id="5d6da-103">ユーザーが Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールをクリックするたび<xref:System.Windows.Forms.Control.Click>に、イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="5d6da-103">Whenever a user clicks a Windows Forms <xref:System.Windows.Forms.CheckBox> control, the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span> <span data-ttu-id="5d6da-104">チェックボックスの状態に応じて、何らかのアクションを実行するようにアプリケーションをプログラミングできます。</span><span class="sxs-lookup"><span data-stu-id="5d6da-104">You can program your application to perform some action depending upon the state of the check box.</span></span>  
   
-### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="cce3f-105">CheckBox のクリックに応答するには</span><span class="sxs-lookup"><span data-stu-id="cce3f-105">To respond to CheckBox clicks</span></span>  
+### <a name="to-respond-to-checkbox-clicks"></a><span data-ttu-id="5d6da-105">チェックボックスのクリックに応答するには</span><span class="sxs-lookup"><span data-stu-id="5d6da-105">To respond to CheckBox clicks</span></span>  
   
-1. <span data-ttu-id="cce3f-106"><xref:System.Windows.Forms.Control.Click>イベント ハンドラーを使用して、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティをコントロールの状態を確認し、必要なアクションを実行します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
+1. <span data-ttu-id="5d6da-106">イベントハンドラーで、 <xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティを使用してコントロールの状態を確認し、必要な操作を実行します。 <xref:System.Windows.Forms.Control.Click></span><span class="sxs-lookup"><span data-stu-id="5d6da-106">In the <xref:System.Windows.Forms.Control.Click> event handler, use the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine the control's state, and perform any necessary action.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -71,16 +71,16 @@ ms.locfileid: "61912939"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="cce3f-107">ユーザーをダブルクリックする場合、<xref:System.Windows.Forms.CheckBox>コントロール、1 回のクリックを個別に処理されます。 つまり、<xref:System.Windows.Forms.CheckBox>コントロールは、ダブルクリック イベントをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="cce3f-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
+    > <span data-ttu-id="5d6da-107">ユーザーが<xref:System.Windows.Forms.CheckBox>コントロールをダブルクリックしようとすると、各クリックは個別に処理されます。 <xref:System.Windows.Forms.CheckBox>つまり、コントロールはダブルクリックイベントをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="5d6da-107">If the user attempts to double-click the <xref:System.Windows.Forms.CheckBox> control, each click will be processed separately; that is, the <xref:System.Windows.Forms.CheckBox> control does not support the double-click event.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="cce3f-108">ときに、<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>プロパティは`true`(既定)、<xref:System.Windows.Forms.CheckBox>が自動的に選択されているかがクリックされたときにクリアします。</span><span class="sxs-lookup"><span data-stu-id="cce3f-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="cce3f-109">それ以外の場合、手動で設定する必要あります、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティと、<xref:System.Windows.Forms.Control.Click>イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
+    > <span data-ttu-id="5d6da-108">プロパティが`true` (既定値) の場合、が<xref:System.Windows.Forms.CheckBox>クリックされると、が自動的に選択またはクリアされます。 <xref:System.Windows.Forms.CheckBox.AutoCheck%2A></span><span class="sxs-lookup"><span data-stu-id="5d6da-108">When the <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> property is `true` (the default), the <xref:System.Windows.Forms.CheckBox> is automatically selected or cleared when it is clicked.</span></span> <span data-ttu-id="5d6da-109">それ以外の場合は、 <xref:System.Windows.Forms.CheckBox.Checked%2A> <xref:System.Windows.Forms.Control.Click>イベントが発生したときにプロパティを手動で設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d6da-109">Otherwise, you must manually set the <xref:System.Windows.Forms.CheckBox.Checked%2A> property when the <xref:System.Windows.Forms.Control.Click> event occurs.</span></span>  
   
-     <span data-ttu-id="cce3f-110">使用することも、<xref:System.Windows.Forms.CheckBox>一連の措置を決定するコントロール。</span><span class="sxs-lookup"><span data-stu-id="cce3f-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
+     <span data-ttu-id="5d6da-110">また、コントロールを使用<xref:System.Windows.Forms.CheckBox>して、一連のアクションを決定することもできます。</span><span class="sxs-lookup"><span data-stu-id="5d6da-110">You can also use the <xref:System.Windows.Forms.CheckBox> control to determine a course of action.</span></span>  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="cce3f-111">操作のチェック ボックスを決定するには、がクリックされます。</span><span class="sxs-lookup"><span data-stu-id="cce3f-111">To determine a course of action when a check box is clicked</span></span>  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a><span data-ttu-id="5d6da-111">チェックボックスがクリックされたときの動作を確認するには</span><span class="sxs-lookup"><span data-stu-id="5d6da-111">To determine a course of action when a check box is clicked</span></span>  
   
-1. <span data-ttu-id="cce3f-112">値をクエリする case ステートメントを使用して、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティを一連の措置を決定します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="cce3f-113">ときに、<xref:System.Windows.Forms.CheckBox.ThreeState%2A>プロパティに設定されて`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティは、チェック ボックスを表す 3 つの値を返す可能性があります ボックスがオフの場合、またはサードパーティ中間状態、ボックスが表示されます、淡色表示に外観をオプションを示すためには、ご利用いただけません。</span><span class="sxs-lookup"><span data-stu-id="cce3f-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
+1. <span data-ttu-id="5d6da-112">Case ステートメントを使用して<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティの値を照会し、一連のアクションを決定します。</span><span class="sxs-lookup"><span data-stu-id="5d6da-112">Use a case statement to query the value of the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property to determine a course of action.</span></span> <span data-ttu-id="5d6da-113">プロパティが`true`に<xref:System.Windows.Forms.CheckBox.CheckState%2A>設定されている場合、プロパティは、チェックされているボックス、オフになっているボックス、または淡色表示されたボックスが表示される3番目の不確定状態を表す3つの値を返すことができます。 <xref:System.Windows.Forms.CheckBox.ThreeState%2A>オプションが使用できないことを示す外観。</span><span class="sxs-lookup"><span data-stu-id="5d6da-113">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.CheckState%2A> property may return three possible values, which represent the box being checked, the box being unchecked, or a third indeterminate state in which the box is displayed with a dimmed appearance to indicate the option is unavailable.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -133,11 +133,11 @@ ms.locfileid: "61912939"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="cce3f-114">ときに、<xref:System.Windows.Forms.CheckBox.ThreeState%2A>プロパティに設定されて`true`、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティが返す`true`両方の<xref:System.Windows.Forms.CheckState.Checked>と<xref:System.Windows.Forms.CheckState.Indeterminate>します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
+    > <span data-ttu-id="5d6da-114">`true` <xref:System.Windows.Forms.CheckState.Indeterminate> `true` <xref:System.Windows.Forms.CheckState.Checked>プロパティがに<xref:System.Windows.Forms.CheckBox.Checked%2A>設定されている場合、プロパティはとの両方に対してを<xref:System.Windows.Forms.CheckBox.ThreeState%2A>返します。</span><span class="sxs-lookup"><span data-stu-id="5d6da-114">When the <xref:System.Windows.Forms.CheckBox.ThreeState%2A> property is set to `true`, the <xref:System.Windows.Forms.CheckBox.Checked%2A> property returns `true` for both <xref:System.Windows.Forms.CheckState.Checked> and <xref:System.Windows.Forms.CheckState.Indeterminate>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cce3f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="cce3f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d6da-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d6da-115">See also</span></span>
 
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="cce3f-116">CheckBox コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="cce3f-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="cce3f-117">方法: Windows フォームの CheckBox コントロールでオプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="cce3f-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [<span data-ttu-id="cce3f-118">CheckBox コントロール</span><span class="sxs-lookup"><span data-stu-id="cce3f-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="5d6da-116">CheckBox コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="5d6da-116">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="5d6da-117">方法: Windows フォーム CheckBox コントロールでオプションを設定する</span><span class="sxs-lookup"><span data-stu-id="5d6da-117">How to: Set Options with Windows Forms CheckBox Controls</span></span>](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [<span data-ttu-id="5d6da-118">CheckBox コントロール</span><span class="sxs-lookup"><span data-stu-id="5d6da-118">CheckBox Control</span></span>](checkbox-control-windows-forms.md)

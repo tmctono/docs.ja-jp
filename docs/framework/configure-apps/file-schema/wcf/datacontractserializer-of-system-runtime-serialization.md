@@ -1,21 +1,21 @@
 ---
-title: <dataContractSerializer> < system.runtime.serialization > の
+title: <dataContractSerializer>< の > の。
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 380d9ba5b8407d78b5045fd34fcdf37c0818d6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919348"
 ---
-# <a name="datacontractserializer-of-systemruntimeserialization"></a><span data-ttu-id="f22e8-102">\<dataContractSerializer > の\<system.runtime.serialization ></span><span class="sxs-lookup"><span data-stu-id="f22e8-102">\<dataContractSerializer> of \<system.runtime.serialization></span></span>
-<span data-ttu-id="f22e8-103"><xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f22e8-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="datacontractserializer-of-systemruntimeserialization"></a><span data-ttu-id="39e75-102">\<dataContractSerializer > の\<></span><span class="sxs-lookup"><span data-stu-id="39e75-102">\<dataContractSerializer> of \<system.runtime.serialization></span></span>
+<span data-ttu-id="39e75-103"><xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="39e75-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
- <span data-ttu-id="f22e8-104">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="f22e8-104">\<system.runtime.serialization></span></span>  
-<span data-ttu-id="f22e8-105">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="f22e8-105">\<dataContractSerializer></span></span>  
+ <span data-ttu-id="39e75-104">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="39e75-104">\<system.runtime.serialization></span></span>  
+<span data-ttu-id="39e75-105">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="39e75-105">\<dataContractSerializer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f22e8-106">構文</span><span class="sxs-lookup"><span data-stu-id="f22e8-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39e75-106">構文</span><span class="sxs-lookup"><span data-stu-id="39e75-106">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -35,33 +35,33 @@ ms.locfileid: "61700983"
 </configuration>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f22e8-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-107">Attributes and Elements</span></span>  
- <span data-ttu-id="f22e8-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="f22e8-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39e75-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="39e75-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="39e75-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="39e75-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f22e8-109">属性</span><span class="sxs-lookup"><span data-stu-id="f22e8-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="39e75-109">属性</span><span class="sxs-lookup"><span data-stu-id="39e75-109">Attributes</span></span>  
   
-|<span data-ttu-id="f22e8-110">要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-110">Element</span></span>|<span data-ttu-id="f22e8-111">説明</span><span class="sxs-lookup"><span data-stu-id="f22e8-111">Description</span></span>|  
+|<span data-ttu-id="39e75-110">要素</span><span class="sxs-lookup"><span data-stu-id="39e75-110">Element</span></span>|<span data-ttu-id="39e75-111">説明</span><span class="sxs-lookup"><span data-stu-id="39e75-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f22e8-112">ignoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="f22e8-112">ignoreExtensionDataObject</span></span>|<span data-ttu-id="f22e8-113">エンドポイントがシリアル化または逆シリアル化されているときに、そのエンドポイントにより提供されるデータを無視するかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="f22e8-113">A Boolean value that specifies whether to ignore data supplied by the endpoint when it is being serialized or deserialized.</span></span> <span data-ttu-id="f22e8-114">この属性は、`<dataContractSerializer>` 要素の下の `<behavior>` でのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="f22e8-114">This attribute is settable only on the `<dataContractSerializer>` under the `<behavior>` element.</span></span>|  
-|<span data-ttu-id="f22e8-115">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="f22e8-115">maxItemsInObjectGraph</span></span>|<span data-ttu-id="f22e8-116">シリアル化または逆シリアル化する項目の最大数を指定する整数。</span><span class="sxs-lookup"><span data-stu-id="f22e8-116">An integer that specifies the maximum number of items to serialize or deserialize.</span></span> <span data-ttu-id="f22e8-117">この属性は 65536 です。</span><span class="sxs-lookup"><span data-stu-id="f22e8-117">This attribute is 65536.</span></span>|  
+|<span data-ttu-id="39e75-112">ignoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="39e75-112">ignoreExtensionDataObject</span></span>|<span data-ttu-id="39e75-113">エンドポイントがシリアル化または逆シリアル化されているときに、そのエンドポイントにより提供されるデータを無視するかどうかを指定するブール値。</span><span class="sxs-lookup"><span data-stu-id="39e75-113">A Boolean value that specifies whether to ignore data supplied by the endpoint when it is being serialized or deserialized.</span></span> <span data-ttu-id="39e75-114">この属性は、`<dataContractSerializer>` 要素の下の `<behavior>` でのみ設定可能です。</span><span class="sxs-lookup"><span data-stu-id="39e75-114">This attribute is settable only on the `<dataContractSerializer>` under the `<behavior>` element.</span></span>|  
+|<span data-ttu-id="39e75-115">maxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="39e75-115">maxItemsInObjectGraph</span></span>|<span data-ttu-id="39e75-116">シリアル化または逆シリアル化する項目の最大数を指定する整数。</span><span class="sxs-lookup"><span data-stu-id="39e75-116">An integer that specifies the maximum number of items to serialize or deserialize.</span></span> <span data-ttu-id="39e75-117">この属性は 65536 です。</span><span class="sxs-lookup"><span data-stu-id="39e75-117">This attribute is 65536.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f22e8-118">子要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="39e75-118">子要素</span><span class="sxs-lookup"><span data-stu-id="39e75-118">Child Elements</span></span>  
   
-|<span data-ttu-id="f22e8-119">要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-119">Element</span></span>|<span data-ttu-id="f22e8-120">説明</span><span class="sxs-lookup"><span data-stu-id="f22e8-120">Description</span></span>|  
+|<span data-ttu-id="39e75-119">要素</span><span class="sxs-lookup"><span data-stu-id="39e75-119">Element</span></span>|<span data-ttu-id="39e75-120">説明</span><span class="sxs-lookup"><span data-stu-id="39e75-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f22e8-121">\<declaredTypes></span><span class="sxs-lookup"><span data-stu-id="f22e8-121">\<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<span data-ttu-id="f22e8-122">逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f22e8-122">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span><br /><br /> <span data-ttu-id="f22e8-123">データ コントラクトと既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="f22e8-123">For more information about data contracts and known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>|  
+|[<span data-ttu-id="39e75-121">\<declaredTypes></span><span class="sxs-lookup"><span data-stu-id="39e75-121">\<declaredTypes></span></span>](declaredtypes.md)|<span data-ttu-id="39e75-122">逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。</span><span class="sxs-lookup"><span data-stu-id="39e75-122">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span><br /><br /> <span data-ttu-id="39e75-123">データコントラクトと既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="39e75-123">For more information about data contracts and known types, see [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md).</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f22e8-124">親要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="39e75-124">親要素</span><span class="sxs-lookup"><span data-stu-id="39e75-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="f22e8-125">要素</span><span class="sxs-lookup"><span data-stu-id="f22e8-125">Element</span></span>|<span data-ttu-id="f22e8-126">説明</span><span class="sxs-lookup"><span data-stu-id="f22e8-126">Description</span></span>|  
+|<span data-ttu-id="39e75-125">要素</span><span class="sxs-lookup"><span data-stu-id="39e75-125">Element</span></span>|<span data-ttu-id="39e75-126">説明</span><span class="sxs-lookup"><span data-stu-id="39e75-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f22e8-127">\<system.runtime.serialization ></span><span class="sxs-lookup"><span data-stu-id="f22e8-127">\<system.runtime.serialization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<span data-ttu-id="f22e8-128"><xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。</span><span class="sxs-lookup"><span data-stu-id="f22e8-128">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="39e75-127">\<system.runtime.serialization ></span><span class="sxs-lookup"><span data-stu-id="39e75-127">\<system.runtime.serialization></span></span>](system-runtime-serialization.md)|<span data-ttu-id="39e75-128"><xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。</span><span class="sxs-lookup"><span data-stu-id="39e75-128">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f22e8-129">Remarks</span><span class="sxs-lookup"><span data-stu-id="f22e8-129">Remarks</span></span>  
- <span data-ttu-id="f22e8-130">既知の型の詳細については、次を参照してください。<xref:System.Runtime.Serialization.DataContractSerializer>と[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。</span><span class="sxs-lookup"><span data-stu-id="f22e8-130">For more information about known types, see <xref:System.Runtime.Serialization.DataContractSerializer> and [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39e75-129">Remarks</span><span class="sxs-lookup"><span data-stu-id="39e75-129">Remarks</span></span>  
+ <span data-ttu-id="39e75-130">既知の型の詳細について<xref:System.Runtime.Serialization.DataContractSerializer>は、「」および「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="39e75-130">For more information about known types, see <xref:System.Runtime.Serialization.DataContractSerializer> and [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f22e8-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="f22e8-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39e75-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="39e75-131">See also</span></span>
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
-- [<span data-ttu-id="f22e8-132">既知のデータ コントラクト型</span><span class="sxs-lookup"><span data-stu-id="f22e8-132">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [<span data-ttu-id="39e75-132">既知のデータ コントラクト型</span><span class="sxs-lookup"><span data-stu-id="39e75-132">Data Contract Known Types</span></span>](../../../wcf/feature-details/data-contract-known-types.md)
