@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff1365ddb46ca28cbcaa4f1383b293681e6ec214
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956773"
 ---
-# <a name="icordebugregistersetsetthreadcontext-method"></a><span data-ttu-id="9ff06-102">ICorDebugRegisterSet::SetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="9ff06-102">ICorDebugRegisterSet::SetThreadContext Method</span></span>
-<span data-ttu-id="9ff06-103">`SetThreadContext` .NET Framework version 2.0 では実装されていません。</span><span class="sxs-lookup"><span data-stu-id="9ff06-103">`SetThreadContext` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="9ff06-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="9ff06-104">Do not call this method.</span></span>  
+# <a name="icordebugregistersetsetthreadcontext-method"></a><span data-ttu-id="d6def-102">ICorDebugRegisterSet::SetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="d6def-102">ICorDebugRegisterSet::SetThreadContext Method</span></span>
+<span data-ttu-id="d6def-103">`SetThreadContext`は .NET Framework バージョン2.0 では実装されていません。</span><span class="sxs-lookup"><span data-stu-id="d6def-103">`SetThreadContext` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="d6def-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="d6def-104">Do not call this method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9ff06-105">高度な操作を使用して[icordebugnativeframe::setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)スレッドのコンテキストを設定します。</span><span class="sxs-lookup"><span data-stu-id="9ff06-105">Use the higher-level operation [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) to set the context of a thread.</span></span>  
+> <span data-ttu-id="d6def-105">スレッドのコンテキストを設定するには、高レベルの操作の[テキストフレーム:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="d6def-105">Use the higher-level operation [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) to set the context of a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ff06-106">構文</span><span class="sxs-lookup"><span data-stu-id="9ff06-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6def-106">構文</span><span class="sxs-lookup"><span data-stu-id="d6def-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetThreadContext (  
@@ -40,16 +40,16 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9ff06-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="9ff06-107">Requirements</span></span>  
- <span data-ttu-id="9ff06-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ff06-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6def-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="d6def-107">Requirements</span></span>  
+ <span data-ttu-id="d6def-108">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d6def-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ff06-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ff06-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d6def-109">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d6def-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ff06-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ff06-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d6def-110">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="d6def-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9ff06-111">**.NET framework のバージョン:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="9ff06-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="d6def-111">**.NET Framework のバージョン:** 1.1、1.0</span><span class="sxs-lookup"><span data-stu-id="d6def-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ff06-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ff06-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6def-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6def-112">See also</span></span>
 
-- [<span data-ttu-id="9ff06-113">ICorDebugRegisterSet インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ff06-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="9ff06-114">ICorDebugRegisterSet2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ff06-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="d6def-113">ICorDebugRegisterSet インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d6def-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="d6def-114">ICorDebugRegisterSet2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d6def-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
