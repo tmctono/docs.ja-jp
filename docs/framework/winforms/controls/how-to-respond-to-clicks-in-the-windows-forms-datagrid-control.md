@@ -12,23 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636809"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914997"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="46085-102">方法: Windows フォーム DataGrid コントロールのクリックに応答する</span><span class="sxs-lookup"><span data-stu-id="46085-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="6a3ce-102">方法: Windows フォーム DataGrid コントロールのクリックに応答する</span><span class="sxs-lookup"><span data-stu-id="6a3ce-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="46085-103">
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="46085-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="46085-104">詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="46085-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+> <span data-ttu-id="6a3ce-103"><xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="6a3ce-104">詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="46085-105">Windows フォームの後に<xref:System.Windows.Forms.DataGrid>が接続されているデータベースに、ユーザーがクリックされたセルを監視できます。</span><span class="sxs-lookup"><span data-stu-id="46085-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="6a3ce-105">Windows フォーム<xref:System.Windows.Forms.DataGrid>がデータベースに接続されると、ユーザーがクリックしたセルを監視できます。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="46085-106">DataGrid のユーザーを検出するには、別のセルを選択します</span><span class="sxs-lookup"><span data-stu-id="46085-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="6a3ce-106">DataGrid のユーザーが別のセルを選択したことを検出するには</span><span class="sxs-lookup"><span data-stu-id="6a3ce-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
-- <span data-ttu-id="46085-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged>イベント ハンドラーを適切に応答するコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="46085-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+- <span data-ttu-id="6a3ce-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged>イベントハンドラーで、適切に応答するコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -48,18 +47,18 @@ ms.locfileid: "64636809"
     }  
     ```  
   
-     <span data-ttu-id="46085-108">(Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="46085-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6a3ce-108">(ビジュアルC#)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="46085-109">ユーザーがクリックしたデータ グリッドのどの部分を決定するには</span><span class="sxs-lookup"><span data-stu-id="46085-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="6a3ce-109">ユーザーがクリックした DataGrid の部分を確認するには</span><span class="sxs-lookup"><span data-stu-id="6a3ce-109">To determine which part of the DataGrid the user clicked</span></span>  
   
-- <span data-ttu-id="46085-110">呼び出す、<xref:System.Windows.Forms.DataGrid.HitTest%2A>メソッドなど、適切なイベント ハンドラーで、<xref:System.Windows.Forms.Control.MouseDown>または<xref:System.Windows.Forms.Control.Click>イベント。</span><span class="sxs-lookup"><span data-stu-id="46085-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+- <span data-ttu-id="6a3ce-110"><xref:System.Windows.Forms.Control.MouseDown>イベントや<xref:System.Windows.Forms.DataGrid.HitTest%2A> イベント<xref:System.Windows.Forms.Control.Click>など、適切なイベントハンドラーでメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="46085-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A>メソッドを返します。 を<xref:System.Windows.Forms.DataGrid.HitTestInfo>行、クリックされた領域の列を含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="46085-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="6a3ce-111">メソッド<xref:System.Windows.Forms.DataGrid.HitTest%2A>は、クリック<xref:System.Windows.Forms.DataGrid.HitTestInfo>された領域の行と列を含むオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -133,7 +132,7 @@ ms.locfileid: "64636809"
     }  
     ```  
   
-     <span data-ttu-id="46085-112">(Visual C#)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="46085-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6a3ce-112">(ビジュアルC#)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="6a3ce-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -141,7 +140,7 @@ ms.locfileid: "64636809"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="46085-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="46085-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a3ce-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a3ce-113">See also</span></span>
 
-- [<span data-ttu-id="46085-114">DataGrid コントロール</span><span class="sxs-lookup"><span data-stu-id="46085-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
-- [<span data-ttu-id="46085-115">方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更</span><span class="sxs-lookup"><span data-stu-id="46085-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [<span data-ttu-id="6a3ce-114">DataGrid コントロール</span><span class="sxs-lookup"><span data-stu-id="6a3ce-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="6a3ce-115">方法: 実行時に表示されるデータを Windows フォーム DataGrid コントロールに変更する</span><span class="sxs-lookup"><span data-stu-id="6a3ce-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)

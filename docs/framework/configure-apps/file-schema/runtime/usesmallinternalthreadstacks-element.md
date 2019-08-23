@@ -7,62 +7,62 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663386"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920680"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="164be-102">\<UseSmallInternalThreadStacks > 要素</span><span class="sxs-lookup"><span data-stu-id="164be-102">\<UseSmallInternalThreadStacks> Element</span></span>
-<span data-ttu-id="164be-103">共通言語ランタイム (CLR) が、内部で使用する特定のスレッドを作成するときに明示的なスタックサイズを指定することによって、メモリの使用量を削減するように要求します。これらのスレッドの既定のスタックサイズは使用されません。</span><span class="sxs-lookup"><span data-stu-id="164be-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
+# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="9d28d-102">\<UseSmallInternalThreadStacks > 要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-102">\<UseSmallInternalThreadStacks> Element</span></span>
+<span data-ttu-id="9d28d-103">共通言語ランタイム (CLR) が、内部で使用する特定のスレッドを作成するときに明示的なスタックサイズを指定することによって、メモリの使用量を削減するように要求します。これらのスレッドの既定のスタックサイズは使用されません。</span><span class="sxs-lookup"><span data-stu-id="9d28d-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
   
- <span data-ttu-id="164be-104">\<configuration> 要素</span><span class="sxs-lookup"><span data-stu-id="164be-104">\<configuration> Element</span></span>  
-<span data-ttu-id="164be-105">\<runtime> 要素</span><span class="sxs-lookup"><span data-stu-id="164be-105">\<runtime> Element</span></span>  
-<span data-ttu-id="164be-106">\<UseSmallInternalThreadStacks > 要素</span><span class="sxs-lookup"><span data-stu-id="164be-106">\<UseSmallInternalThreadStacks> Element</span></span>  
+ <span data-ttu-id="9d28d-104">\<configuration> 要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-104">\<configuration> Element</span></span>  
+<span data-ttu-id="9d28d-105">\<runtime> 要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-105">\<runtime> Element</span></span>  
+<span data-ttu-id="9d28d-106">\<UseSmallInternalThreadStacks > 要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-106">\<UseSmallInternalThreadStacks> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="164be-107">構文</span><span class="sxs-lookup"><span data-stu-id="164be-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d28d-107">構文</span><span class="sxs-lookup"><span data-stu-id="9d28d-107">Syntax</span></span>  
   
 ```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="164be-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="164be-108">Attributes and Elements</span></span>  
- <span data-ttu-id="164be-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="164be-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9d28d-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="9d28d-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="9d28d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="164be-110">属性</span><span class="sxs-lookup"><span data-stu-id="164be-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9d28d-110">属性</span><span class="sxs-lookup"><span data-stu-id="9d28d-110">Attributes</span></span>  
   
-|<span data-ttu-id="164be-111">属性</span><span class="sxs-lookup"><span data-stu-id="164be-111">Attribute</span></span>|<span data-ttu-id="164be-112">説明</span><span class="sxs-lookup"><span data-stu-id="164be-112">Description</span></span>|  
+|<span data-ttu-id="9d28d-111">属性</span><span class="sxs-lookup"><span data-stu-id="9d28d-111">Attribute</span></span>|<span data-ttu-id="9d28d-112">説明</span><span class="sxs-lookup"><span data-stu-id="9d28d-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="164be-113">enabled</span><span class="sxs-lookup"><span data-stu-id="164be-113">enabled</span></span>|<span data-ttu-id="164be-114">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="164be-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="164be-115">内部で使用する特定のスレッドを作成するときに、CLR が既定のスタックサイズではなく明示的なスタックサイズを使用するように要求するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="164be-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="164be-116">明示的なスタックサイズは、既定のスタックサイズの 1 MB よりも小さくなっています。</span><span class="sxs-lookup"><span data-stu-id="164be-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
+|<span data-ttu-id="9d28d-113">enabled</span><span class="sxs-lookup"><span data-stu-id="9d28d-113">enabled</span></span>|<span data-ttu-id="9d28d-114">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="9d28d-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="9d28d-115">内部で使用する特定のスレッドを作成するときに、CLR が既定のスタックサイズではなく明示的なスタックサイズを使用するように要求するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="9d28d-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="9d28d-116">明示的なスタックサイズは、既定のスタックサイズの 1 MB よりも小さくなっています。</span><span class="sxs-lookup"><span data-stu-id="9d28d-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="164be-117">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="164be-117">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="9d28d-117">enabled 属性</span><span class="sxs-lookup"><span data-stu-id="9d28d-117">enabled Attribute</span></span>  
   
-|<span data-ttu-id="164be-118">値</span><span class="sxs-lookup"><span data-stu-id="164be-118">Value</span></span>|<span data-ttu-id="164be-119">説明</span><span class="sxs-lookup"><span data-stu-id="164be-119">Description</span></span>|  
+|<span data-ttu-id="9d28d-118">値</span><span class="sxs-lookup"><span data-stu-id="9d28d-118">Value</span></span>|<span data-ttu-id="9d28d-119">説明</span><span class="sxs-lookup"><span data-stu-id="9d28d-119">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="164be-120">true</span><span class="sxs-lookup"><span data-stu-id="164be-120">true</span></span>|<span data-ttu-id="164be-121">明示的なスタックサイズを要求します。</span><span class="sxs-lookup"><span data-stu-id="164be-121">Request explicit stack sizes.</span></span>|  
-|<span data-ttu-id="164be-122">False</span><span class="sxs-lookup"><span data-stu-id="164be-122">false</span></span>|<span data-ttu-id="164be-123">既定のスタックサイズを使用します。</span><span class="sxs-lookup"><span data-stu-id="164be-123">Use the default stack size.</span></span> <span data-ttu-id="164be-124">これは .NET Framework 4 の既定値です。</span><span class="sxs-lookup"><span data-stu-id="164be-124">This is the default for the .NET Framework 4.</span></span>|  
+|<span data-ttu-id="9d28d-120">true</span><span class="sxs-lookup"><span data-stu-id="9d28d-120">true</span></span>|<span data-ttu-id="9d28d-121">明示的なスタックサイズを要求します。</span><span class="sxs-lookup"><span data-stu-id="9d28d-121">Request explicit stack sizes.</span></span>|  
+|<span data-ttu-id="9d28d-122">False</span><span class="sxs-lookup"><span data-stu-id="9d28d-122">false</span></span>|<span data-ttu-id="9d28d-123">既定のスタックサイズを使用します。</span><span class="sxs-lookup"><span data-stu-id="9d28d-123">Use the default stack size.</span></span> <span data-ttu-id="9d28d-124">これは .NET Framework 4 の既定値です。</span><span class="sxs-lookup"><span data-stu-id="9d28d-124">This is the default for the .NET Framework 4.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="164be-125">子要素</span><span class="sxs-lookup"><span data-stu-id="164be-125">Child Elements</span></span>  
- <span data-ttu-id="164be-126">なし。</span><span class="sxs-lookup"><span data-stu-id="164be-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9d28d-125">子要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-125">Child Elements</span></span>  
+ <span data-ttu-id="9d28d-126">なし。</span><span class="sxs-lookup"><span data-stu-id="9d28d-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="164be-127">親要素</span><span class="sxs-lookup"><span data-stu-id="164be-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9d28d-127">親要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="164be-128">要素</span><span class="sxs-lookup"><span data-stu-id="164be-128">Element</span></span>|<span data-ttu-id="164be-129">説明</span><span class="sxs-lookup"><span data-stu-id="164be-129">Description</span></span>|  
+|<span data-ttu-id="9d28d-128">要素</span><span class="sxs-lookup"><span data-stu-id="9d28d-128">Element</span></span>|<span data-ttu-id="9d28d-129">説明</span><span class="sxs-lookup"><span data-stu-id="9d28d-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="164be-130">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="164be-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="164be-131">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="164be-131">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="9d28d-130">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="9d28d-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="9d28d-131">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="9d28d-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="164be-132">Remarks</span><span class="sxs-lookup"><span data-stu-id="164be-132">Remarks</span></span>  
- <span data-ttu-id="164be-133">この構成要素は、プロセスでの仮想メモリの使用量の削減を要求するために使用されます。これは、CLR が内部スレッドに使用する明示的なスレッドサイズ (要求が受け入れられた場合) が既定のサイズよりも小さいためです。</span><span class="sxs-lookup"><span data-stu-id="164be-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d28d-132">Remarks</span><span class="sxs-lookup"><span data-stu-id="9d28d-132">Remarks</span></span>  
+ <span data-ttu-id="9d28d-133">この構成要素は、プロセスでの仮想メモリの使用量の削減を要求するために使用されます。これは、CLR が内部スレッドに使用する明示的なスレッドサイズ (要求が受け入れられた場合) が既定のサイズよりも小さいためです。</span><span class="sxs-lookup"><span data-stu-id="9d28d-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="164be-134">この構成要素は、絶対的な要件ではなく、CLR への要求です。</span><span class="sxs-lookup"><span data-stu-id="164be-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="164be-135">.NET Framework 4 では、要求は x86 アーキテクチャに対してのみ受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="164be-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="164be-136">この要素は、CLR の将来のバージョンでは完全に無視される場合もあれば、選択した内部スレッドで常に使用される明示的なスタックサイズに置き換えられる場合もあります。</span><span class="sxs-lookup"><span data-stu-id="164be-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
+> <span data-ttu-id="9d28d-134">この構成要素は、絶対的な要件ではなく、CLR への要求です。</span><span class="sxs-lookup"><span data-stu-id="9d28d-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="9d28d-135">.NET Framework 4 では、要求は x86 アーキテクチャに対してのみ受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="9d28d-135">In the .NET Framework 4, the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="9d28d-136">この要素は、CLR の将来のバージョンでは完全に無視される場合もあれば、選択した内部スレッドで常に使用される明示的なスタックサイズに置き換えられる場合もあります。</span><span class="sxs-lookup"><span data-stu-id="9d28d-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
   
- <span data-ttu-id="164be-137">この構成要素を指定すると、CLR が要求を受け入れた場合に、より小さなスタックサイズによってスタックオーバーフローが発生する可能性があるため、仮想メモリの使用量が少なくなります。</span><span class="sxs-lookup"><span data-stu-id="164be-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
+ <span data-ttu-id="9d28d-137">この構成要素を指定すると、CLR が要求を受け入れた場合に、より小さなスタックサイズによってスタックオーバーフローが発生する可能性があるため、仮想メモリの使用量が少なくなります。</span><span class="sxs-lookup"><span data-stu-id="9d28d-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="164be-138">例</span><span class="sxs-lookup"><span data-stu-id="164be-138">Example</span></span>  
- <span data-ttu-id="164be-139">次の例は、CLR が内部で使用する特定のスレッドに対して明示的なスタックサイズを使用するように要求する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="164be-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
+## <a name="example"></a><span data-ttu-id="9d28d-138">例</span><span class="sxs-lookup"><span data-stu-id="9d28d-138">Example</span></span>  
+ <span data-ttu-id="9d28d-139">次の例は、CLR が内部で使用する特定のスレッドに対して明示的なスタックサイズを使用するように要求する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="9d28d-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "69663386"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="164be-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="164be-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d28d-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d28d-140">See also</span></span>
 
-- [<span data-ttu-id="164be-141">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="164be-141">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="164be-142">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="164be-142">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="9d28d-141">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="9d28d-141">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="9d28d-142">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="9d28d-142">Configuration File Schema</span></span>](../index.md)
