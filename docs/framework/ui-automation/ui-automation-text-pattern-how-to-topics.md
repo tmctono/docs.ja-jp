@@ -8,23 +8,23 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: b9489debb8d2dc9779bdc55b9333a94f3983e6b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954082"
 ---
-# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="9c6d3-102">UI オートメーション テキスト パターンに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9c6d3-102">UI Automation Text Pattern-How-to Topics</span></span>
+# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="f04bd-102">UI オートメーション テキスト パターンに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="f04bd-102">UI Automation Text Pattern-How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="9c6d3-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="9c6d3-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9c6d3-104">に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。</span><span class="sxs-lookup"><span data-stu-id="9c6d3-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="f04bd-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="f04bd-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f04bd-104">の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="f04bd-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="9c6d3-105">このセクションには、UI オートメーション テキスト パターンを使用する方法を説明するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="9c6d3-105">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
+ <span data-ttu-id="f04bd-105">このセクションには、UI オートメーションテキストパターンの使用方法について説明するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f04bd-105">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c6d3-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9c6d3-106">In This Section</span></span>  
- [<span data-ttu-id="9c6d3-107">UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加</span><span class="sxs-lookup"><span data-stu-id="9c6d3-107">Add Content to a Text Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [<span data-ttu-id="9c6d3-108">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="9c6d3-108">Find and Highlight Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [<span data-ttu-id="9c6d3-109">UI オートメーションを使用してテキスト属性を取得する</span><span class="sxs-lookup"><span data-stu-id="9c6d3-109">Obtain Text Attributes Using UI Automation</span></span>](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [<span data-ttu-id="9c6d3-110">UI オートメーションを使用して混合テキスト属性の詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="9c6d3-110">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [<span data-ttu-id="9c6d3-111">UI オートメーションを使用したテキストのスキャン</span><span class="sxs-lookup"><span data-stu-id="9c6d3-111">Traverse Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [<span data-ttu-id="9c6d3-112">UI オートメーションを使用した、埋め込みオブジェクトへのアクセス</span><span class="sxs-lookup"><span data-stu-id="9c6d3-112">Access Embedded Objects Using UI Automation</span></span>](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+## <a name="in-this-section"></a><span data-ttu-id="f04bd-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f04bd-106">In This Section</span></span>  
+ [<span data-ttu-id="f04bd-107">UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加</span><span class="sxs-lookup"><span data-stu-id="f04bd-107">Add Content to a Text Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [<span data-ttu-id="f04bd-108">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="f04bd-108">Find and Highlight Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [<span data-ttu-id="f04bd-109">UI オートメーションを使用してテキスト属性を取得する</span><span class="sxs-lookup"><span data-stu-id="f04bd-109">Obtain Text Attributes Using UI Automation</span></span>](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
+ [<span data-ttu-id="f04bd-110">UI オートメーションを使用して混合テキスト属性の詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="f04bd-110">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [<span data-ttu-id="f04bd-111">UI オートメーションを使用したテキストのスキャン</span><span class="sxs-lookup"><span data-stu-id="f04bd-111">Traverse Text Using UI Automation</span></span>](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [<span data-ttu-id="f04bd-112">UI オートメーションを使用した、埋め込みオブジェクトへのアクセス</span><span class="sxs-lookup"><span data-stu-id="f04bd-112">Access Embedded Objects Using UI Automation</span></span>](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
