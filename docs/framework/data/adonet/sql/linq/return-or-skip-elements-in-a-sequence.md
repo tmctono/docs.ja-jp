@@ -5,58 +5,58 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963860"
 ---
-# <a name="return-or-skip-elements-in-a-sequence"></a><span data-ttu-id="11f50-102">シーケンスの要素の取得またはスキップ</span><span class="sxs-lookup"><span data-stu-id="11f50-102">Return Or Skip Elements in a Sequence</span></span>
-<span data-ttu-id="11f50-103"><xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。</span><span class="sxs-lookup"><span data-stu-id="11f50-103">Use the <xref:System.Linq.Queryable.Take%2A> operator to return a given number of elements in a sequence and then skip over the remainder.</span></span>  
+# <a name="return-or-skip-elements-in-a-sequence"></a><span data-ttu-id="31e0d-102">シーケンスの要素の取得またはスキップ</span><span class="sxs-lookup"><span data-stu-id="31e0d-102">Return Or Skip Elements in a Sequence</span></span>
+<span data-ttu-id="31e0d-103"><xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-103">Use the <xref:System.Linq.Queryable.Take%2A> operator to return a given number of elements in a sequence and then skip over the remainder.</span></span>  
   
- <span data-ttu-id="11f50-104"><xref:System.Linq.Queryable.Skip%2A> 演算子を使用すると、シーケンス内の指定された数の要素をスキップし、残りを返すことができます。</span><span class="sxs-lookup"><span data-stu-id="11f50-104">Use the <xref:System.Linq.Queryable.Skip%2A> operator to skip over a given number of elements in a sequence and then return the remainder.</span></span>  
+ <span data-ttu-id="31e0d-104"><xref:System.Linq.Queryable.Skip%2A> 演算子を使用すると、シーケンス内の指定された数の要素をスキップし、残りを返すことができます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-104">Use the <xref:System.Linq.Queryable.Skip%2A> operator to skip over a given number of elements in a sequence and then return the remainder.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="11f50-105"><xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="11f50-105"><xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> have certain limitations when they are used in queries against SQL Server 2000.</span></span> <span data-ttu-id="11f50-106">詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。</span><span class="sxs-lookup"><span data-stu-id="11f50-106">For more information, see the "Skip and Take Exceptions in SQL Server 2000" entry in [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span></span>  
+> <span data-ttu-id="31e0d-105"><xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-105"><xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> have certain limitations when they are used in queries against SQL Server 2000.</span></span> <span data-ttu-id="31e0d-106">詳細については、「[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)」の「SQL Server 2000 でのスキップと Take 例外」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="31e0d-106">For more information, see the "Skip and Take Exceptions in SQL Server 2000" entry in [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="11f50-107">変換<xref:System.Linq.Queryable.Skip%2A>サブクエリを使用して、SQL を使用した、`NOT EXISTS`句。</span><span class="sxs-lookup"><span data-stu-id="11f50-107">translates <xref:System.Linq.Queryable.Skip%2A> by using a subquery with the SQL `NOT EXISTS` clause.</span></span> <span data-ttu-id="11f50-108">この変換には、次のような制限があります。</span><span class="sxs-lookup"><span data-stu-id="11f50-108">This translation has the following limitations:</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="31e0d-107">は<xref:System.Linq.Queryable.Skip%2A> 、SQL `NOT EXISTS`句でサブクエリを使用して変換されます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-107">translates <xref:System.Linq.Queryable.Skip%2A> by using a subquery with the SQL `NOT EXISTS` clause.</span></span> <span data-ttu-id="31e0d-108">この変換には、次のような制限があります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-108">This translation has the following limitations:</span></span>  
   
-- <span data-ttu-id="11f50-109">引数は、セットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="11f50-109">The argument must be a set.</span></span> <span data-ttu-id="11f50-110">順序が指定されていてもマルチセットはサポートされません。</span><span class="sxs-lookup"><span data-stu-id="11f50-110">Multisets are not supported, even if ordered.</span></span>  
+- <span data-ttu-id="31e0d-109">引数は、セットである必要があります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-109">The argument must be a set.</span></span> <span data-ttu-id="31e0d-110">順序が指定されていてもマルチセットはサポートされません。</span><span class="sxs-lookup"><span data-stu-id="31e0d-110">Multisets are not supported, even if ordered.</span></span>  
   
-- <span data-ttu-id="11f50-111">生成されるクエリは、<xref:System.Linq.Queryable.Skip%2A> が適用される基本クエリに対して生成されるクエリより複雑な場合があります。</span><span class="sxs-lookup"><span data-stu-id="11f50-111">The generated query can be much more complex than the query generated for the base query on which <xref:System.Linq.Queryable.Skip%2A> is applied.</span></span> <span data-ttu-id="11f50-112">複雑なために、パフォーマンスが低下したり、タイムアウトが発生することもあります。</span><span class="sxs-lookup"><span data-stu-id="11f50-112">This complexity can cause decrease in performance or even a time-out.</span></span>  
+- <span data-ttu-id="31e0d-111">生成されるクエリは、<xref:System.Linq.Queryable.Skip%2A> が適用される基本クエリに対して生成されるクエリより複雑な場合があります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-111">The generated query can be much more complex than the query generated for the base query on which <xref:System.Linq.Queryable.Skip%2A> is applied.</span></span> <span data-ttu-id="31e0d-112">複雑なために、パフォーマンスが低下したり、タイムアウトが発生することもあります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-112">This complexity can cause decrease in performance or even a time-out.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="11f50-113">例</span><span class="sxs-lookup"><span data-stu-id="11f50-113">Example</span></span>  
- <span data-ttu-id="11f50-114">次の例では、`Take` を使用して、雇用された最初の 5 人の `Employees` を選択します。</span><span class="sxs-lookup"><span data-stu-id="11f50-114">The following example uses `Take` to select the first five `Employees` hired.</span></span> <span data-ttu-id="11f50-115">コレクションは最初、`HireDate` 順に並べられます。</span><span class="sxs-lookup"><span data-stu-id="11f50-115">Note that the collection is first sorted by `HireDate`.</span></span>  
+## <a name="example"></a><span data-ttu-id="31e0d-113">例</span><span class="sxs-lookup"><span data-stu-id="31e0d-113">Example</span></span>  
+ <span data-ttu-id="31e0d-114">次の例では、`Take` を使用して、雇用された最初の 5 人の `Employees` を選択します。</span><span class="sxs-lookup"><span data-stu-id="31e0d-114">The following example uses `Take` to select the first five `Employees` hired.</span></span> <span data-ttu-id="31e0d-115">コレクションは最初、`HireDate` 順に並べられます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-115">Note that the collection is first sorted by `HireDate`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#16](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#16)]
  [!code-vb[DLinqQueryExamples#16](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#16)]  
   
-## <a name="example"></a><span data-ttu-id="11f50-116">例</span><span class="sxs-lookup"><span data-stu-id="11f50-116">Example</span></span>  
- <span data-ttu-id="11f50-117">次の例では、<xref:System.Linq.Queryable.Skip%2A> を使用して、最も値段が高い 10 個の `Products` 以外のすべてを選択します。</span><span class="sxs-lookup"><span data-stu-id="11f50-117">The following example uses <xref:System.Linq.Queryable.Skip%2A> to select all except the 10 most expensive `Products`.</span></span>  
+## <a name="example"></a><span data-ttu-id="31e0d-116">例</span><span class="sxs-lookup"><span data-stu-id="31e0d-116">Example</span></span>  
+ <span data-ttu-id="31e0d-117">次の例では、<xref:System.Linq.Queryable.Skip%2A> を使用して、最も値段が高い 10 個の `Products` 以外のすべてを選択します。</span><span class="sxs-lookup"><span data-stu-id="31e0d-117">The following example uses <xref:System.Linq.Queryable.Skip%2A> to select all except the 10 most expensive `Products`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#17](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#17)]
  [!code-vb[DLinqQueryExamples#17](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#17)]  
   
-## <a name="example"></a><span data-ttu-id="11f50-118">例</span><span class="sxs-lookup"><span data-stu-id="11f50-118">Example</span></span>  
- <span data-ttu-id="11f50-119">次の例では、<xref:System.Linq.Queryable.Skip%2A> メソッドと <xref:System.Linq.Queryable.Take%2A> メソッドを組み合わせて、最初の 50 レコードをスキップし、次の 10 レコードを返します。</span><span class="sxs-lookup"><span data-stu-id="11f50-119">The following example combines the <xref:System.Linq.Queryable.Skip%2A> and <xref:System.Linq.Queryable.Take%2A> methods to skip the first 50 records and then return the next 10.</span></span>  
+## <a name="example"></a><span data-ttu-id="31e0d-118">例</span><span class="sxs-lookup"><span data-stu-id="31e0d-118">Example</span></span>  
+ <span data-ttu-id="31e0d-119">次の例では、<xref:System.Linq.Queryable.Skip%2A> メソッドと <xref:System.Linq.Queryable.Take%2A> メソッドを組み合わせて、最初の 50 レコードをスキップし、次の 10 レコードを返します。</span><span class="sxs-lookup"><span data-stu-id="31e0d-119">The following example combines the <xref:System.Linq.Queryable.Skip%2A> and <xref:System.Linq.Queryable.Take%2A> methods to skip the first 50 records and then return the next 10.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <span data-ttu-id="11f50-120"><xref:System.Linq.Queryable.Take%2A> 操作と <xref:System.Linq.Queryable.Skip%2A> 操作は、順序付けされたセットに対してのみ正しく定義されます。</span><span class="sxs-lookup"><span data-stu-id="11f50-120"><xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> operations are well defined only against ordered sets.</span></span> <span data-ttu-id="11f50-121">順序付けされていないセットまたはマルチセットのセマンティクスは未定義です。</span><span class="sxs-lookup"><span data-stu-id="11f50-121">The semantics for unordered sets or multisets is undefined.</span></span>  
+ <span data-ttu-id="31e0d-120"><xref:System.Linq.Queryable.Take%2A> 操作と <xref:System.Linq.Queryable.Skip%2A> 操作は、順序付けされたセットに対してのみ正しく定義されます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-120"><xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> operations are well defined only against ordered sets.</span></span> <span data-ttu-id="31e0d-121">順序付けされていないセットまたはマルチセットのセマンティクスは未定義です。</span><span class="sxs-lookup"><span data-stu-id="31e0d-121">The semantics for unordered sets or multisets is undefined.</span></span>  
   
- <span data-ttu-id="11f50-122">SQL での順序付けの制限により、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Linq.Queryable.Take%2A> 演算子または <xref:System.Linq.Queryable.Skip%2A> 演算子の引数の順序を、演算子の結果に移動することを試みます。</span><span class="sxs-lookup"><span data-stu-id="11f50-122">Because of the limitations on ordering in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tries to move the ordering of the argument of the <xref:System.Linq.Queryable.Take%2A> or <xref:System.Linq.Queryable.Skip%2A> operator to the result of the operator.</span></span>  
+ <span data-ttu-id="31e0d-122">SQL での順序付けの制限により、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Linq.Queryable.Take%2A> 演算子または <xref:System.Linq.Queryable.Skip%2A> 演算子の引数の順序を、演算子の結果に移動することを試みます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-122">Because of the limitations on ordering in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tries to move the ordering of the argument of the <xref:System.Linq.Queryable.Take%2A> or <xref:System.Linq.Queryable.Skip%2A> operator to the result of the operator.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="11f50-123">変換は、SQL Server 2000 と SQL Server 2005 で異なります。</span><span class="sxs-lookup"><span data-stu-id="11f50-123">Translation is different for SQL Server 2000 and SQL Server 2005.</span></span> <span data-ttu-id="11f50-124">使用して行う場合<xref:System.Linq.Queryable.Skip%2A>複雑なクエリで SQL Server 2005 を使用します。</span><span class="sxs-lookup"><span data-stu-id="11f50-124">If you plan to use <xref:System.Linq.Queryable.Skip%2A> with a query of any complexity, use SQL Server 2005.</span></span>  
+> <span data-ttu-id="31e0d-123">変換は SQL Server 2000 と SQL Server 2005 で異なります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-123">Translation is different for SQL Server 2000 and SQL Server 2005.</span></span> <span data-ttu-id="31e0d-124">を複雑なクエリと<xref:System.Linq.Queryable.Skip%2A>共に使用する場合は、SQL Server 2005 を使用します。</span><span class="sxs-lookup"><span data-stu-id="31e0d-124">If you plan to use <xref:System.Linq.Queryable.Skip%2A> with a query of any complexity, use SQL Server 2005.</span></span>  
   
- <span data-ttu-id="11f50-125">次を考慮[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 2000 のクエリ。</span><span class="sxs-lookup"><span data-stu-id="11f50-125">Consider the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query for SQL Server 2000:</span></span>  
+ <span data-ttu-id="31e0d-125">SQL Server 2000 に[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]対する次のクエリについて考えてみます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-125">Consider the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query for SQL Server 2000:</span></span>  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="11f50-126">は、次に示すように、順序付けを SQL コードの最後に移動します。</span><span class="sxs-lookup"><span data-stu-id="11f50-126">moves the ordering to the end in the SQL code, as follows:</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="31e0d-126">は、次に示すように、順序付けを SQL コードの最後に移動します。</span><span class="sxs-lookup"><span data-stu-id="31e0d-126">moves the ordering to the end in the SQL code, as follows:</span></span>  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -74,11 +74,11 @@ WHERE (NOT (EXISTS(
 ORDER BY [t0].[CustomerID]  
 ```  
   
- <span data-ttu-id="11f50-127"><xref:System.Linq.Queryable.Take%2A> と <xref:System.Linq.Queryable.Skip%2A> を連結する場合は、指定されているすべての順序が一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="11f50-127">When <xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> are chained together, all the specified ordering must be consistent.</span></span> <span data-ttu-id="11f50-128">それ以外の場合、結果は未定義です。</span><span class="sxs-lookup"><span data-stu-id="11f50-128">Otherwise, the results are undefined.</span></span>  
+ <span data-ttu-id="31e0d-127"><xref:System.Linq.Queryable.Take%2A> と <xref:System.Linq.Queryable.Skip%2A> を連結する場合は、指定されているすべての順序が一致する必要があります。</span><span class="sxs-lookup"><span data-stu-id="31e0d-127">When <xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> are chained together, all the specified ordering must be consistent.</span></span> <span data-ttu-id="31e0d-128">それ以外の場合、結果は未定義です。</span><span class="sxs-lookup"><span data-stu-id="31e0d-128">Otherwise, the results are undefined.</span></span>  
   
- <span data-ttu-id="11f50-129">SQL の仕様に基づく負でない定数の整数引数に対して、<xref:System.Linq.Queryable.Take%2A> と <xref:System.Linq.Queryable.Skip%2A> の両方とも正しく定義されます。</span><span class="sxs-lookup"><span data-stu-id="11f50-129">For non-negative, constant integral arguments based on the SQL specification, both <xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> are well-defined.</span></span>  
+ <span data-ttu-id="31e0d-129">SQL の仕様に基づく負でない定数の整数引数に対して、<xref:System.Linq.Queryable.Take%2A> と <xref:System.Linq.Queryable.Skip%2A> の両方とも正しく定義されます。</span><span class="sxs-lookup"><span data-stu-id="31e0d-129">For non-negative, constant integral arguments based on the SQL specification, both <xref:System.Linq.Queryable.Take%2A> and <xref:System.Linq.Queryable.Skip%2A> are well-defined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11f50-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="11f50-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31e0d-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="31e0d-130">See also</span></span>
 
-- [<span data-ttu-id="11f50-131">クエリの例</span><span class="sxs-lookup"><span data-stu-id="11f50-131">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [<span data-ttu-id="11f50-132">標準クエリ演算子の変換</span><span class="sxs-lookup"><span data-stu-id="11f50-132">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [<span data-ttu-id="31e0d-131">クエリの例</span><span class="sxs-lookup"><span data-stu-id="31e0d-131">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [<span data-ttu-id="31e0d-132">標準クエリ演算子の変換</span><span class="sxs-lookup"><span data-stu-id="31e0d-132">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

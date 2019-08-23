@@ -13,41 +13,41 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957768"
 ---
-# <a name="rem-statement-visual-basic"></a><span data-ttu-id="db09f-102">REM ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db09f-102">REM Statement (Visual Basic)</span></span>
-<span data-ttu-id="db09f-103">プログラムのソース コードにコメントを記述するために使用します。</span><span class="sxs-lookup"><span data-stu-id="db09f-103">Used to include explanatory remarks in the source code of a program.</span></span>  
+# <a name="rem-statement-visual-basic"></a><span data-ttu-id="18bd9-102">REM ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="18bd9-102">REM Statement (Visual Basic)</span></span>
+<span data-ttu-id="18bd9-103">プログラムのソースコードに説明の解説を含めるために使用されます。</span><span class="sxs-lookup"><span data-stu-id="18bd9-103">Used to include explanatory remarks in the source code of a program.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db09f-104">構文</span><span class="sxs-lookup"><span data-stu-id="db09f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18bd9-104">構文</span><span class="sxs-lookup"><span data-stu-id="18bd9-104">Syntax</span></span>  
   
 ```  
 REM comment  
 ' comment  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="db09f-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="db09f-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="18bd9-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="18bd9-105">Parts</span></span>  
  `comment`  
- <span data-ttu-id="db09f-106">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="db09f-106">Optional.</span></span> <span data-ttu-id="db09f-107">含めるコメントのテキスト。</span><span class="sxs-lookup"><span data-stu-id="db09f-107">The text of any comment you want to include.</span></span> <span data-ttu-id="db09f-108">スペースは間で必要な`REM`キーワードと`comment`します。</span><span class="sxs-lookup"><span data-stu-id="db09f-108">A space is required between the `REM` keyword and `comment`.</span></span>  
+ <span data-ttu-id="18bd9-106">任意。</span><span class="sxs-lookup"><span data-stu-id="18bd9-106">Optional.</span></span> <span data-ttu-id="18bd9-107">追加するコメントのテキスト。</span><span class="sxs-lookup"><span data-stu-id="18bd9-107">The text of any comment you want to include.</span></span> <span data-ttu-id="18bd9-108">キーワードと`REM` `comment`の間にはスペースが必要です。</span><span class="sxs-lookup"><span data-stu-id="18bd9-108">A space is required between the `REM` keyword and `comment`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db09f-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="db09f-109">Remarks</span></span>  
- <span data-ttu-id="db09f-110">配置することができます、`REM`ステートメントまたは行に単独では別のステートメントの後にそれを配置できます。</span><span class="sxs-lookup"><span data-stu-id="db09f-110">You can put a `REM` statement alone on a line, or you can put it on a line following another statement.</span></span> <span data-ttu-id="db09f-111">`REM`ステートメントは、行の最後のステートメントである必要があります。</span><span class="sxs-lookup"><span data-stu-id="db09f-111">The `REM` statement must be the last statement on the line.</span></span> <span data-ttu-id="db09f-112">別のステートメントが続く場合、`REM`からそのステートメントをスペースで区切る必要があります。</span><span class="sxs-lookup"><span data-stu-id="db09f-112">If it follows another statement, the `REM` must be separated from that statement by a space.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18bd9-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="18bd9-109">Remarks</span></span>  
+ <span data-ttu-id="18bd9-110">ステートメントを`REM`行に単独で配置することも、別のステートメントの後の行に配置することもできます。</span><span class="sxs-lookup"><span data-stu-id="18bd9-110">You can put a `REM` statement alone on a line, or you can put it on a line following another statement.</span></span> <span data-ttu-id="18bd9-111">`REM`ステートメントは、行の最後のステートメントである必要があります。</span><span class="sxs-lookup"><span data-stu-id="18bd9-111">The `REM` statement must be the last statement on the line.</span></span> <span data-ttu-id="18bd9-112">別のステートメントの後にある`REM`場合は、をスペースでそのステートメントから区切る必要があります。</span><span class="sxs-lookup"><span data-stu-id="18bd9-112">If it follows another statement, the `REM` must be separated from that statement by a space.</span></span>  
   
- <span data-ttu-id="db09f-113">単一引用符を使用することができます (`'`) の代わりに`REM`します。</span><span class="sxs-lookup"><span data-stu-id="db09f-113">You can use a single quotation mark (`'`) instead of `REM`.</span></span> <span data-ttu-id="db09f-114">これはコメントが同じ行に依存して別のステートメントまたは行に単独ではかどうかに当てはまります。</span><span class="sxs-lookup"><span data-stu-id="db09f-114">This is true whether your comment follows another statement on the same line or sits alone on a line.</span></span>  
+ <span data-ttu-id="18bd9-113">では`'` `REM`なく単一引用符 () を使用できます。</span><span class="sxs-lookup"><span data-stu-id="18bd9-113">You can use a single quotation mark (`'`) instead of `REM`.</span></span> <span data-ttu-id="18bd9-114">これは、コメントが同じ行で別のステートメントに続くか、または行に単独で存在するかにかかわらず当てはまります。</span><span class="sxs-lookup"><span data-stu-id="18bd9-114">This is true whether your comment follows another statement on the same line or sits alone on a line.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="db09f-115">続行することはできません、`REM`行連結シーケンスを使用してステートメント (`_`)。</span><span class="sxs-lookup"><span data-stu-id="db09f-115">You cannot continue a `REM` statement by using a line-continuation sequence (`_`).</span></span> <span data-ttu-id="db09f-116">コメントが開始されると、コンパイラは特別な意味の文字をチェックしません。</span><span class="sxs-lookup"><span data-stu-id="db09f-116">Once a comment begins, the compiler does not examine the characters for special meaning.</span></span> <span data-ttu-id="db09f-117">複数行にコメントを記述する場合は、別の操作を使用して`REM`ステートメントまたはコメント記号 (`'`) 行ごとにします。</span><span class="sxs-lookup"><span data-stu-id="db09f-117">For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.</span></span>  
+> <span data-ttu-id="18bd9-115">行連結シーケンス ( `REM` `_`) を使用してステートメントを続行することはできません。</span><span class="sxs-lookup"><span data-stu-id="18bd9-115">You cannot continue a `REM` statement by using a line-continuation sequence (`_`).</span></span> <span data-ttu-id="18bd9-116">コメントが開始されると、コンパイラは文字が特別な意味を持つかどうかを検査しません。</span><span class="sxs-lookup"><span data-stu-id="18bd9-116">Once a comment begins, the compiler does not examine the characters for special meaning.</span></span> <span data-ttu-id="18bd9-117">複数行のコメントの場合は、各行`REM`に別のステートメントまたは`'`コメント記号 () を使用します。</span><span class="sxs-lookup"><span data-stu-id="18bd9-117">For a multiple-line comment, use another `REM` statement or a comment symbol (`'`) on each line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db09f-118">例</span><span class="sxs-lookup"><span data-stu-id="db09f-118">Example</span></span>  
- <span data-ttu-id="db09f-119">次の例を示しています、`REM`ステートメントでは、プログラムにコメントを記述するために使用します。</span><span class="sxs-lookup"><span data-stu-id="db09f-119">The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program.</span></span> <span data-ttu-id="db09f-120">単一引用符文字を使用する方法も示しています (`'`) の代わりに`REM`します。</span><span class="sxs-lookup"><span data-stu-id="db09f-120">It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.</span></span>  
+## <a name="example"></a><span data-ttu-id="18bd9-118">例</span><span class="sxs-lookup"><span data-stu-id="18bd9-118">Example</span></span>  
+ <span data-ttu-id="18bd9-119">次の例は、 `REM`ステートメントを示しています。これは、プログラムに説明の解説を含めるために使用されます。</span><span class="sxs-lookup"><span data-stu-id="18bd9-119">The following example illustrates the `REM` statement, which is used to include explanatory remarks in a program.</span></span> <span data-ttu-id="18bd9-120">また、の`'` `REM`代わりに単一引用符文字 () を使用する方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="18bd9-120">It also shows the alternative of using the single quotation-mark character (`'`) instead of `REM`.</span></span>  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="db09f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="db09f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18bd9-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="18bd9-121">See also</span></span>
 
-- [<span data-ttu-id="db09f-122">コード内のコメント</span><span class="sxs-lookup"><span data-stu-id="db09f-122">Comments in Code</span></span>](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
-- [<span data-ttu-id="db09f-123">方法: コード内でステートメントを分割および連結する</span><span class="sxs-lookup"><span data-stu-id="db09f-123">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [<span data-ttu-id="18bd9-122">コード内のコメント</span><span class="sxs-lookup"><span data-stu-id="18bd9-122">Comments in Code</span></span>](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [<span data-ttu-id="18bd9-123">方法: コード内でステートメントを分割および連結する</span><span class="sxs-lookup"><span data-stu-id="18bd9-123">How to: Break and Combine Statements in Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

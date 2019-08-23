@@ -1,5 +1,5 @@
 ---
-title: << 演算子 (Visual Basic)
+title: < < 演算子 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<
@@ -8,75 +8,75 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: e11dbc453934f1aac4a8092cdc6539ec11f0cc21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6b186ad519bcd7cf82cce12523f2d75e09317cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663181"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966886"
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="0bf6c-102">\<\< 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bf6c-102">\<\< Operator (Visual Basic)</span></span>
-<span data-ttu-id="0bf6c-103">ビット パターン上で算術左シフトを実行します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-103">Performs an arithmetic left shift on a bit pattern.</span></span>  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="b0151-102">\<\<演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0151-102">\<\< Operator (Visual Basic)</span></span>
+<span data-ttu-id="b0151-103">ビットパターンに対して算術左シフトを実行します。</span><span class="sxs-lookup"><span data-stu-id="b0151-103">Performs an arithmetic left shift on a bit pattern.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bf6c-104">構文</span><span class="sxs-lookup"><span data-stu-id="0bf6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0151-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0151-104">Syntax</span></span>  
   
 ```  
 result = pattern << amount  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="0bf6c-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="0bf6c-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="b0151-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="b0151-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="0bf6c-106">必須。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-106">Required.</span></span> <span data-ttu-id="0bf6c-107">整数値。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-107">Integral numeric value.</span></span> <span data-ttu-id="0bf6c-108">ビット パターンのシフトの結果。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-108">The result of shifting the bit pattern.</span></span> <span data-ttu-id="0bf6c-109">データ型がの場合と同じ`pattern`します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-109">The data type is the same as that of `pattern`.</span></span>  
+ <span data-ttu-id="b0151-106">必須。</span><span class="sxs-lookup"><span data-stu-id="b0151-106">Required.</span></span> <span data-ttu-id="b0151-107">整数の数値。</span><span class="sxs-lookup"><span data-stu-id="b0151-107">Integral numeric value.</span></span> <span data-ttu-id="b0151-108">ビットパターンをシフトした結果。</span><span class="sxs-lookup"><span data-stu-id="b0151-108">The result of shifting the bit pattern.</span></span> <span data-ttu-id="b0151-109">データ型は、の`pattern`データ型と同じです。</span><span class="sxs-lookup"><span data-stu-id="b0151-109">The data type is the same as that of `pattern`.</span></span>  
   
  `pattern`  
- <span data-ttu-id="0bf6c-110">必須。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-110">Required.</span></span> <span data-ttu-id="0bf6c-111">整数の数値式です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-111">Integral numeric expression.</span></span> <span data-ttu-id="0bf6c-112">シフトするビット パターンです。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-112">The bit pattern to be shifted.</span></span> <span data-ttu-id="0bf6c-113">データ型は整数型である必要があります (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、または`ULong`)。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-113">The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
+ <span data-ttu-id="b0151-110">必須。</span><span class="sxs-lookup"><span data-stu-id="b0151-110">Required.</span></span> <span data-ttu-id="b0151-111">整数の数値式。</span><span class="sxs-lookup"><span data-stu-id="b0151-111">Integral numeric expression.</span></span> <span data-ttu-id="b0151-112">シフトされるビットパターン。</span><span class="sxs-lookup"><span data-stu-id="b0151-112">The bit pattern to be shifted.</span></span> <span data-ttu-id="b0151-113">データ`SByte`型は、整数型 ( `UShort` `Short`、 `Byte`、、 `Integer` `UInteger` `ULong`、、、、または) である必要があります。 `Long`</span><span class="sxs-lookup"><span data-stu-id="b0151-113">The data type must be an integral type (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, or `ULong`).</span></span>  
   
  `amount`  
- <span data-ttu-id="0bf6c-114">必須。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-114">Required.</span></span> <span data-ttu-id="0bf6c-115">数値式。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-115">Numeric expression.</span></span> <span data-ttu-id="0bf6c-116">ビット パターンをシフトするビット数。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-116">The number of bits to shift the bit pattern.</span></span> <span data-ttu-id="0bf6c-117">データ型である必要があります`Integer`に拡大変換または`Integer`します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-117">The data type must be `Integer` or widen to `Integer`.</span></span>  
+ <span data-ttu-id="b0151-114">必須。</span><span class="sxs-lookup"><span data-stu-id="b0151-114">Required.</span></span> <span data-ttu-id="b0151-115">数値式。</span><span class="sxs-lookup"><span data-stu-id="b0151-115">Numeric expression.</span></span> <span data-ttu-id="b0151-116">ビットパターンをシフトするビット数。</span><span class="sxs-lookup"><span data-stu-id="b0151-116">The number of bits to shift the bit pattern.</span></span> <span data-ttu-id="b0151-117">データ型は、 `Integer`またはに`Integer`拡大変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b0151-117">The data type must be `Integer` or widen to `Integer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0bf6c-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="0bf6c-118">Remarks</span></span>  
- <span data-ttu-id="0bf6c-119">算術シフトは循環、つまり、もう一方の端に結果の 1 つの端のシフトは行われません。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-119">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="0bf6c-120">算術左シフトでは、結果のデータ型の範囲を超えてシフトが破棄され、右側の空いたビット位置が 0 に設定します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-120">In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0151-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0151-118">Remarks</span></span>  
+ <span data-ttu-id="b0151-119">算術シフトは循環していません。つまり、結果の一方の端からシフトされたビットはもう一方の端には再入されません。</span><span class="sxs-lookup"><span data-stu-id="b0151-119">Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end.</span></span> <span data-ttu-id="b0151-120">算術左シフトでは、結果のデータ型の範囲を超えてシフトされたビットは破棄され、右側に空いているビット位置は0に設定されます。</span><span class="sxs-lookup"><span data-stu-id="b0151-120">In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.</span></span>  
   
- <span data-ttu-id="0bf6c-121">結果が保持できるより多くのビットをシフトを防ぐためには、Visual Basic がの値をマスク`amount`のデータ型に対応するサイズのマスクを持つ`pattern`します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-121">To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`.</span></span> <span data-ttu-id="0bf6c-122">これらの値のバイナリとは、シフト数に使用されます。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-122">The binary AND of these values is used for the shift amount.</span></span> <span data-ttu-id="0bf6c-123">マスク サイズは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-123">The size masks are as follows:</span></span>  
+ <span data-ttu-id="b0151-121">結果よりも多くのビットでシフトを防止するために、Visual Basic はのデータ`amount` `pattern`型に対応するサイズマスクを使用しての値をマスクします。</span><span class="sxs-lookup"><span data-stu-id="b0151-121">To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`.</span></span> <span data-ttu-id="b0151-122">これらの値のバイナリとは、シフトの量に使用されます。</span><span class="sxs-lookup"><span data-stu-id="b0151-122">The binary AND of these values is used for the shift amount.</span></span> <span data-ttu-id="b0151-123">サイズマスクは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b0151-123">The size masks are as follows:</span></span>  
   
-|<span data-ttu-id="0bf6c-124">データ型 `pattern`</span><span class="sxs-lookup"><span data-stu-id="0bf6c-124">Data type of `pattern`</span></span>|<span data-ttu-id="0bf6c-125">サイズのマスク (10 進数)</span><span class="sxs-lookup"><span data-stu-id="0bf6c-125">Size mask (decimal)</span></span>|<span data-ttu-id="0bf6c-126">サイズのマスク (16 進数)</span><span class="sxs-lookup"><span data-stu-id="0bf6c-126">Size mask (hexadecimal)</span></span>|  
+|<span data-ttu-id="b0151-124">のデータ型`pattern`</span><span class="sxs-lookup"><span data-stu-id="b0151-124">Data type of `pattern`</span></span>|<span data-ttu-id="b0151-125">サイズマスク (10 進数)</span><span class="sxs-lookup"><span data-stu-id="b0151-125">Size mask (decimal)</span></span>|<span data-ttu-id="b0151-126">サイズマスク (16 進数)</span><span class="sxs-lookup"><span data-stu-id="b0151-126">Size mask (hexadecimal)</span></span>|  
 |----------------------------|---------------------------|-------------------------------|  
-|<span data-ttu-id="0bf6c-127">`SByte`, `Byte`</span><span class="sxs-lookup"><span data-stu-id="0bf6c-127">`SByte`, `Byte`</span></span>|<span data-ttu-id="0bf6c-128">7</span><span class="sxs-lookup"><span data-stu-id="0bf6c-128">7</span></span>|<span data-ttu-id="0bf6c-129">&AMP; H00000007</span><span class="sxs-lookup"><span data-stu-id="0bf6c-129">&H00000007</span></span>|  
-|<span data-ttu-id="0bf6c-130">`Short`, `UShort`</span><span class="sxs-lookup"><span data-stu-id="0bf6c-130">`Short`, `UShort`</span></span>|<span data-ttu-id="0bf6c-131">15</span><span class="sxs-lookup"><span data-stu-id="0bf6c-131">15</span></span>|<span data-ttu-id="0bf6c-132">&AMP; H0000000F</span><span class="sxs-lookup"><span data-stu-id="0bf6c-132">&H0000000F</span></span>|  
-|<span data-ttu-id="0bf6c-133">`Integer`, `UInteger`</span><span class="sxs-lookup"><span data-stu-id="0bf6c-133">`Integer`, `UInteger`</span></span>|<span data-ttu-id="0bf6c-134">31</span><span class="sxs-lookup"><span data-stu-id="0bf6c-134">31</span></span>|<span data-ttu-id="0bf6c-135">&AMP; H0000001F</span><span class="sxs-lookup"><span data-stu-id="0bf6c-135">&H0000001F</span></span>|  
-|<span data-ttu-id="0bf6c-136">`Long`, `ULong`</span><span class="sxs-lookup"><span data-stu-id="0bf6c-136">`Long`, `ULong`</span></span>|<span data-ttu-id="0bf6c-137">63</span><span class="sxs-lookup"><span data-stu-id="0bf6c-137">63</span></span>|<span data-ttu-id="0bf6c-138">&AMP; H0000003F</span><span class="sxs-lookup"><span data-stu-id="0bf6c-138">&H0000003F</span></span>|  
+|<span data-ttu-id="b0151-127">`SByte`, `Byte`</span><span class="sxs-lookup"><span data-stu-id="b0151-127">`SByte`, `Byte`</span></span>|<span data-ttu-id="b0151-128">7</span><span class="sxs-lookup"><span data-stu-id="b0151-128">7</span></span>|<span data-ttu-id="b0151-129">& H00000007</span><span class="sxs-lookup"><span data-stu-id="b0151-129">&H00000007</span></span>|  
+|<span data-ttu-id="b0151-130">`Short`, `UShort`</span><span class="sxs-lookup"><span data-stu-id="b0151-130">`Short`, `UShort`</span></span>|<span data-ttu-id="b0151-131">16</span><span class="sxs-lookup"><span data-stu-id="b0151-131">15</span></span>|<span data-ttu-id="b0151-132">& H0000000F</span><span class="sxs-lookup"><span data-stu-id="b0151-132">&H0000000F</span></span>|  
+|<span data-ttu-id="b0151-133">`Integer`, `UInteger`</span><span class="sxs-lookup"><span data-stu-id="b0151-133">`Integer`, `UInteger`</span></span>|<span data-ttu-id="b0151-134">31</span><span class="sxs-lookup"><span data-stu-id="b0151-134">31</span></span>|<span data-ttu-id="b0151-135">& H0000001F</span><span class="sxs-lookup"><span data-stu-id="b0151-135">&H0000001F</span></span>|  
+|<span data-ttu-id="b0151-136">`Long`, `ULong`</span><span class="sxs-lookup"><span data-stu-id="b0151-136">`Long`, `ULong`</span></span>|<span data-ttu-id="b0151-137">63</span><span class="sxs-lookup"><span data-stu-id="b0151-137">63</span></span>|<span data-ttu-id="b0151-138">& H0000003F</span><span class="sxs-lookup"><span data-stu-id="b0151-138">&H0000003F</span></span>|  
   
- <span data-ttu-id="0bf6c-139">場合`amount`の値は 0 が`result`の値と同一では、`pattern`します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-139">If `amount` is zero, the value of `result` is identical to the value of `pattern`.</span></span> <span data-ttu-id="0bf6c-140">場合`amount`が負の場合、符号なしの値として取得され、適切なサイズのマスクでマスクします。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-140">If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.</span></span>  
+ <span data-ttu-id="b0151-139">が`amount` 0 の場合、の`result`値はの`pattern`値と同じです。</span><span class="sxs-lookup"><span data-stu-id="b0151-139">If `amount` is zero, the value of `result` is identical to the value of `pattern`.</span></span> <span data-ttu-id="b0151-140">が`amount`負の場合は、符号なしの値として取得され、適切なサイズマスクでマスクされます。</span><span class="sxs-lookup"><span data-stu-id="b0151-140">If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.</span></span>  
   
- <span data-ttu-id="0bf6c-141">算術シフトでは、オーバーフロー例外が生成されません。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-141">Arithmetic shifts never generate overflow exceptions.</span></span>  
+ <span data-ttu-id="b0151-141">算術シフトではオーバーフロー例外は生成されません。</span><span class="sxs-lookup"><span data-stu-id="b0151-141">Arithmetic shifts never generate overflow exceptions.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0bf6c-142">`<<`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-142">The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="0bf6c-143">場合は、コードでは、この演算子を使用して、このようなクラスまたは構造体で、再定義された動作を理解していることを確認してあります。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-143">If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior.</span></span> <span data-ttu-id="0bf6c-144">詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-144">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+> <span data-ttu-id="b0151-142">演算子はオーバーロードできます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `<<`</span><span class="sxs-lookup"><span data-stu-id="b0151-142">The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="b0151-143">コードでこのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b0151-143">If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior.</span></span> <span data-ttu-id="b0151-144">詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0151-144">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0bf6c-145">例</span><span class="sxs-lookup"><span data-stu-id="0bf6c-145">Example</span></span>  
- <span data-ttu-id="0bf6c-146">次の例では、`<<`演算子を整数値の算術左シフトを実行します。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-146">The following example uses the `<<` operator to perform arithmetic left shifts on integral values.</span></span> <span data-ttu-id="0bf6c-147">結果は常に同じデータとしてシフトされる式の型を持ちます。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-147">The result always has the same data type as that of the expression being shifted.</span></span>  
+## <a name="example"></a><span data-ttu-id="b0151-145">例</span><span class="sxs-lookup"><span data-stu-id="b0151-145">Example</span></span>  
+ <span data-ttu-id="b0151-146">次の例では`<<` 、演算子を使用して、整数値に対する算術左シフトを実行します。</span><span class="sxs-lookup"><span data-stu-id="b0151-146">The following example uses the `<<` operator to perform arithmetic left shifts on integral values.</span></span> <span data-ttu-id="b0151-147">結果は、シフトする式と同じデータ型になります。</span><span class="sxs-lookup"><span data-stu-id="b0151-147">The result always has the same data type as that of the expression being shifted.</span></span>  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- <span data-ttu-id="0bf6c-148">前の例の結果は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-148">The results of the previous example are as follows:</span></span>  
+ <span data-ttu-id="b0151-148">前の例の結果は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="b0151-148">The results of the previous example are as follows:</span></span>  
   
-- <span data-ttu-id="0bf6c-149">`result1` 192 (0000 0000 1100 0000) です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-149">`result1` is 192 (0000 0000 1100 0000).</span></span>  
+- <span data-ttu-id="b0151-149">`result1`は 192 (0000 0000 1100 0000) です。</span><span class="sxs-lookup"><span data-stu-id="b0151-149">`result1` is 192 (0000 0000 1100 0000).</span></span>  
   
-- <span data-ttu-id="0bf6c-150">`result2` 3072 (0000 1100 0000 0000)。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-150">`result2` is 3072 (0000 1100 0000 0000).</span></span>  
+- <span data-ttu-id="b0151-150">`result2`は 3072 (0000 1100 0000 0000) です。</span><span class="sxs-lookup"><span data-stu-id="b0151-150">`result2` is 3072 (0000 1100 0000 0000).</span></span>  
   
-- <span data-ttu-id="0bf6c-151">`result3` -32768 (1000 0000 0000 0000) です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-151">`result3` is -32768 (1000 0000 0000 0000).</span></span>  
+- <span data-ttu-id="b0151-151">`result3`は-32768 (1000 0000 0000 0000) です。</span><span class="sxs-lookup"><span data-stu-id="b0151-151">`result3` is -32768 (1000 0000 0000 0000).</span></span>  
   
-- <span data-ttu-id="0bf6c-152">`result4` 384 (0000 0001 1000 0000) です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-152">`result4` is 384 (0000 0001 1000 0000).</span></span>  
+- <span data-ttu-id="b0151-152">`result4`は 384 (0000 0001 1000 0000) です。</span><span class="sxs-lookup"><span data-stu-id="b0151-152">`result4` is 384 (0000 0001 1000 0000).</span></span>  
   
-- <span data-ttu-id="0bf6c-153">`result5` 0 (シフト 15 桁) です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-153">`result5` is 0 (shifted 15 places to the left).</span></span>  
+- <span data-ttu-id="b0151-153">`result5`が 0 (左に15桁に移動) です。</span><span class="sxs-lookup"><span data-stu-id="b0151-153">`result5` is 0 (shifted 15 places to the left).</span></span>  
   
- <span data-ttu-id="0bf6c-154">シフト数`result4`17 として計算されますが 1 に等しいと 15 です。</span><span class="sxs-lookup"><span data-stu-id="0bf6c-154">The shift amount for `result4` is calculated as 17 AND 15, which equals 1.</span></span>  
+ <span data-ttu-id="b0151-154">の`result4`シフト量は、1に等しい17と15として計算されます。</span><span class="sxs-lookup"><span data-stu-id="b0151-154">The shift amount for `result4` is calculated as 17 AND 15, which equals 1.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bf6c-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="0bf6c-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0151-155">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0151-155">See also</span></span>
 
-- [<span data-ttu-id="0bf6c-156">ビット シフト演算子</span><span class="sxs-lookup"><span data-stu-id="0bf6c-156">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [<span data-ttu-id="0bf6c-157">代入演算子</span><span class="sxs-lookup"><span data-stu-id="0bf6c-157">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [<span data-ttu-id="0bf6c-158"><<= 演算子</span><span class="sxs-lookup"><span data-stu-id="0bf6c-158"><<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
-- [<span data-ttu-id="0bf6c-159">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="0bf6c-159">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="0bf6c-160">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="0bf6c-160">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="0bf6c-161">Visual Basic における算術演算子</span><span class="sxs-lookup"><span data-stu-id="0bf6c-161">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="b0151-156">ビット シフト演算子</span><span class="sxs-lookup"><span data-stu-id="b0151-156">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [<span data-ttu-id="b0151-157">代入演算子</span><span class="sxs-lookup"><span data-stu-id="b0151-157">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [<span data-ttu-id="b0151-158"><<= 演算子</span><span class="sxs-lookup"><span data-stu-id="b0151-158"><<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
+- [<span data-ttu-id="b0151-159">Visual Basic における演算子の優先順位</span><span class="sxs-lookup"><span data-stu-id="b0151-159">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="b0151-160">機能別の演算子一覧</span><span class="sxs-lookup"><span data-stu-id="b0151-160">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="b0151-161">Visual Basic の算術演算子</span><span class="sxs-lookup"><span data-stu-id="b0151-161">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
