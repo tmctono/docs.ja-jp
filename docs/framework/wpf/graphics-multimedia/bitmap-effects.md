@@ -9,28 +9,28 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935252"
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="08c8e-102">ビットマップ効果</span><span class="sxs-lookup"><span data-stu-id="08c8e-102">Bitmap Effects</span></span>
-<span data-ttu-id="08c8e-103">このセクションのトピックを使用してビットマップ イメージに視覚効果を適用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。</span><span class="sxs-lookup"><span data-stu-id="08c8e-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="fc135-102">ビットマップ効果</span><span class="sxs-lookup"><span data-stu-id="fc135-102">Bitmap Effects</span></span>
+<span data-ttu-id="fc135-103">このセクションのトピックでは、を使用してビットマップイメージに視覚[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]効果を適用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fc135-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="08c8e-104">.NET Framework 4 以降では、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは廃止されています。</span><span class="sxs-lookup"><span data-stu-id="08c8e-104">In the .NET Framework 4 or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="08c8e-105">使用しようとする場合、<xref:System.Windows.Media.Effects.BitmapEffect>クラス、廃止例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="08c8e-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="08c8e-106">旧式でない代わりに、<xref:System.Windows.Media.Effects.BitmapEffect>クラスは、<xref:System.Windows.Media.Effects.Effect>クラス。</span><span class="sxs-lookup"><span data-stu-id="08c8e-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="08c8e-107">ほとんどの場合、<xref:System.Windows.Media.Effects.Effect>クラスが大幅に高速です。</span><span class="sxs-lookup"><span data-stu-id="08c8e-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+> <span data-ttu-id="fc135-104">.NET Framework 4 <xref:System.Windows.Media.Effects.BitmapEffect>以降では、クラスは互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="fc135-104">In the .NET Framework 4 or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="fc135-105"><xref:System.Windows.Media.Effects.BitmapEffect>クラスを使用しようとすると、互換性のために残されている例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="fc135-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="fc135-106">クラスの代わり<xref:System.Windows.Media.Effects.BitmapEffect>に使用できない<xref:System.Windows.Media.Effects.Effect>ものは、クラスです。</span><span class="sxs-lookup"><span data-stu-id="fc135-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="fc135-107">ほとんどの場合、 <xref:System.Windows.Media.Effects.Effect>クラスは非常に高速です。</span><span class="sxs-lookup"><span data-stu-id="fc135-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="08c8e-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="08c8e-108">In This Section</span></span>  
- [<span data-ttu-id="08c8e-109">ビットマップ効果の概要</span><span class="sxs-lookup"><span data-stu-id="08c8e-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fc135-108">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fc135-108">In This Section</span></span>  
+ [<span data-ttu-id="fc135-109">ビットマップ効果の概要</span><span class="sxs-lookup"><span data-stu-id="fc135-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="08c8e-110">参照</span><span class="sxs-lookup"><span data-stu-id="08c8e-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fc135-110">参照</span><span class="sxs-lookup"><span data-stu-id="fc135-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="08c8e-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="08c8e-111">Related Sections</span></span>  
- [<span data-ttu-id="08c8e-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="08c8e-112">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="fc135-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc135-111">Related Sections</span></span>  
+ [<span data-ttu-id="fc135-112">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="fc135-112">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="08c8e-113">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="08c8e-113">Imaging Overview</span></span>](imaging-overview.md)
+ [<span data-ttu-id="fc135-113">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="fc135-113">Imaging Overview</span></span>](imaging-overview.md)

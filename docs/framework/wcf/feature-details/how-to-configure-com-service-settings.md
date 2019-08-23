@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912205"
 ---
-# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="98551-102">方法: COM+ サービス設定を構成する</span><span class="sxs-lookup"><span data-stu-id="98551-102">How to: Configure COM+ Service Settings</span></span>
-<span data-ttu-id="98551-103">COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。</span><span class="sxs-lookup"><span data-stu-id="98551-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="98551-104">COM + ホスト モードで、Application.config ファイルはアプリケーションのルート ディレクトリに配置 (アプリケーション %PROGRAMFILES%\ComPlus\\{appid} は既定値)。</span><span class="sxs-lookup"><span data-stu-id="98551-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="98551-105">いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。</span><span class="sxs-lookup"><span data-stu-id="98551-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
+# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="0867d-102">方法: COM+ サービス設定を構成する</span><span class="sxs-lookup"><span data-stu-id="0867d-102">How to: Configure COM+ Service Settings</span></span>
+<span data-ttu-id="0867d-103">COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。</span><span class="sxs-lookup"><span data-stu-id="0867d-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="0867d-104">Com + でホストされるモードでは、アプリケーションのルートディレクトリに app.config ファイルが配置され\\ます (%programfiles%\complus applications\ Applications {appid} が既定値です)。</span><span class="sxs-lookup"><span data-stu-id="0867d-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="0867d-105">いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。</span><span class="sxs-lookup"><span data-stu-id="0867d-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="98551-106">クライアントとサーバー間のメッセージの改ざんを防止するには、メッセージの署名を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98551-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="98551-107">また、クライアントとサーバー間のメッセージから情報が漏えいするのを防止するには、メッセージまたはトランスポート層の暗号化を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98551-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="98551-108">Windows Communication Foundation (WCF) サービスと同様する必要がありますを使用して、調整同時呼び出し数、接続、インスタンス、および保留中の操作の数を制限します。</span><span class="sxs-lookup"><span data-stu-id="98551-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="98551-109">これによりリソースの過剰消費を防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="98551-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="98551-110">調整の動作は、サービス構成ファイルの設定で指定します。</span><span class="sxs-lookup"><span data-stu-id="98551-110">Throttling behavior is specified through service configuration file settings.</span></span>  
+> <span data-ttu-id="0867d-106">クライアントとサーバー間のメッセージの改ざんを防止するには、メッセージの署名を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0867d-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="0867d-107">また、クライアントとサーバー間のメッセージから情報が漏えいするのを防止するには、メッセージまたはトランスポート層の暗号化を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0867d-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="0867d-108">Windows Communication Foundation (WCF) サービスと同様に、同時呼び出し、接続、インスタンス、および保留中の操作の数を制限するには、調整を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0867d-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="0867d-109">これによりリソースの過剰消費を防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="0867d-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="0867d-110">調整の動作は、サービス構成ファイルの設定で指定します。</span><span class="sxs-lookup"><span data-stu-id="0867d-110">Throttling behavior is specified through service configuration file settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98551-111">例</span><span class="sxs-lookup"><span data-stu-id="98551-111">Example</span></span>  
- <span data-ttu-id="98551-112">次のインターフェイスを実装するコンポーネントについて考えます。</span><span class="sxs-lookup"><span data-stu-id="98551-112">Consider a component that implements the following interface:</span></span>  
+## <a name="example"></a><span data-ttu-id="0867d-111">例</span><span class="sxs-lookup"><span data-stu-id="0867d-111">Example</span></span>  
+ <span data-ttu-id="0867d-112">次のインターフェイスを実装するコンポーネントについて考えます。</span><span class="sxs-lookup"><span data-stu-id="0867d-112">Consider a component that implements the following interface:</span></span>  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- <span data-ttu-id="98551-113">コンポーネントを Web サービスとして公開する場合、クライアントが準拠する必要のある対応の公開サービス コントラクトは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="98551-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
+ <span data-ttu-id="0867d-113">コンポーネントを Web サービスとして公開する場合、クライアントが準拠する必要のある対応の公開サービス コントラクトは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0867d-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
   
 ```  
 [ServiceContract(Session = true,  
@@ -45,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="98551-114">IID はコントラクトの初期名前空間の一部です。</span><span class="sxs-lookup"><span data-stu-id="98551-114">IID forms part of the initial namespace for the contract.</span></span>  
+> <span data-ttu-id="0867d-114">IID はコントラクトの初期名前空間の一部です。</span><span class="sxs-lookup"><span data-stu-id="0867d-114">IID forms part of the initial namespace for the contract.</span></span>  
   
- <span data-ttu-id="98551-115">このサービスを使用するクライアント アプリケーションはこのコントラクトに準拠し、さらにアプリケーションの構成に指定したバインディングと互換性のあるバインディングを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="98551-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
+ <span data-ttu-id="0867d-115">このサービスを使用するクライアント アプリケーションはこのコントラクトに準拠し、さらにアプリケーションの構成に指定したバインディングと互換性のあるバインディングを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0867d-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
   
- <span data-ttu-id="98551-116">次のコード例は、既定の構成ファイルの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="98551-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="98551-117">Windows Communication Foundation (WCF) Web サービスであるこの標準のサービス モデル構成スキーマに準拠しているし、その他の WCF サービス構成ファイルと同じ方法で編集できます。</span><span class="sxs-lookup"><span data-stu-id="98551-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
+ <span data-ttu-id="0867d-116">次のコード例は、既定の構成ファイルの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="0867d-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="0867d-117">これは、Windows Communication Foundation (WCF) Web サービスであり、これは標準のサービスモデル構成スキーマに準拠しており、他の WCF サービス構成ファイルと同じ方法で編集できます。</span><span class="sxs-lookup"><span data-stu-id="0867d-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
   
- <span data-ttu-id="98551-118">通常、次のような変更を行います。</span><span class="sxs-lookup"><span data-stu-id="98551-118">Typical modifications would include:</span></span>  
+ <span data-ttu-id="0867d-118">通常、次のような変更を行います。</span><span class="sxs-lookup"><span data-stu-id="0867d-118">Typical modifications would include:</span></span>  
   
-- <span data-ttu-id="98551-119">エンドポイント アドレスを既定の ApplicationName/ComponentName/InterfaceName という形式から、より利用しやすい形式に変更する。</span><span class="sxs-lookup"><span data-stu-id="98551-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
+- <span data-ttu-id="0867d-119">エンドポイント アドレスを既定の ApplicationName/ComponentName/InterfaceName という形式から、より利用しやすい形式に変更する。</span><span class="sxs-lookup"><span data-stu-id="0867d-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
   
-- <span data-ttu-id="98551-120">既定値からサービスの名前空間を変更する`http://tempuri.org/InterfaceID`フォーム関連性の高い形式にします。</span><span class="sxs-lookup"><span data-stu-id="98551-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
+- <span data-ttu-id="0867d-120">サービスの名前空間を既定`http://tempuri.org/InterfaceID`のフォームからより適切な形式に変更します。</span><span class="sxs-lookup"><span data-stu-id="0867d-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
   
-- <span data-ttu-id="98551-121">異なるトランスポート バインディングを使用するようにエンドポイントを変更する。</span><span class="sxs-lookup"><span data-stu-id="98551-121">Changing the endpoint to use a different transport binding.</span></span>  
+- <span data-ttu-id="0867d-121">異なるトランスポート バインディングを使用するようにエンドポイントを変更する。</span><span class="sxs-lookup"><span data-stu-id="0867d-121">Changing the endpoint to use a different transport binding.</span></span>  
   
-     <span data-ttu-id="98551-122">COM+ ホスト モードの場合、既定では名前付きパイプ トランスポートが使用されますが、その代わりに TCP などのコンピューターに関係のないトランスポートも使用できます。</span><span class="sxs-lookup"><span data-stu-id="98551-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
+     <span data-ttu-id="0867d-122">COM+ ホスト モードの場合、既定では名前付きパイプ トランスポートが使用されますが、その代わりに TCP などのコンピューターに関係のないトランスポートも使用できます。</span><span class="sxs-lookup"><span data-stu-id="0867d-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -96,6 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="98551-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="98551-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0867d-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="0867d-123">See also</span></span>
 
-- [<span data-ttu-id="98551-124">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="98551-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="0867d-124">COM+ アプリケーションとの統合</span><span class="sxs-lookup"><span data-stu-id="0867d-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

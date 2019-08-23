@@ -5,66 +5,66 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9746305b251e7d48ee34c2cccd5afae174ee90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962367"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a><span data-ttu-id="2c841-102">方法: シーケンシャル ワークフローの作成</span><span class="sxs-lookup"><span data-stu-id="2c841-102">How to: Create a Sequential Workflow</span></span>
-<span data-ttu-id="2c841-103">ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。</span><span class="sxs-lookup"><span data-stu-id="2c841-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="2c841-104">このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Sequence>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。</span><span class="sxs-lookup"><span data-stu-id="2c841-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Sequence> activity, and the custom activities from the previous [How to: Create an Activity](how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="2c841-105">このワークフローは、数値推測ゲームをモデル化しています。</span><span class="sxs-lookup"><span data-stu-id="2c841-105">The workflow models a number guessing game.</span></span>  
+# <a name="how-to-create-a-sequential-workflow"></a><span data-ttu-id="16006-102">方法: シーケンシャル ワークフローの作成</span><span class="sxs-lookup"><span data-stu-id="16006-102">How to: Create a Sequential Workflow</span></span>
+<span data-ttu-id="16006-103">ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。</span><span class="sxs-lookup"><span data-stu-id="16006-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="16006-104">このトピックでは、 <xref:System.Activities.Statements.Sequence>アクティビティなどの組み込みアクティビティと、前[の手順のカスタムアクティビティの両方を使用するワークフローを作成する手順について説明します。アクティビティ](how-to-create-an-activity.md)のトピックを作成します。</span><span class="sxs-lookup"><span data-stu-id="16006-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.Sequence> activity, and the custom activities from the previous [How to: Create an Activity](how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="16006-105">このワークフローは、数値推測ゲームをモデル化しています。</span><span class="sxs-lookup"><span data-stu-id="16006-105">The workflow models a number guessing game.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2c841-106">チュートリアル入門の各トピックは、前のトピックに応じて異なります。</span><span class="sxs-lookup"><span data-stu-id="2c841-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="2c841-107">このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](how-to-create-an-activity.md)です。</span><span class="sxs-lookup"><span data-stu-id="2c841-107">To complete this topic, you must first complete [How to: Create an Activity](how-to-create-an-activity.md).</span></span>  
+> <span data-ttu-id="16006-106">チュートリアル入門の各トピックは、前のトピックに応じて異なります。</span><span class="sxs-lookup"><span data-stu-id="16006-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="16006-107">このトピックを完了するには、まず[次の手順を完了する必要があります。アクティビティ](how-to-create-an-activity.md)を作成します。</span><span class="sxs-lookup"><span data-stu-id="16006-107">To complete this topic, you must first complete [How to: Create an Activity](how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2c841-108">チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2c841-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+> <span data-ttu-id="16006-108">チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="16006-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="to-create-the-workflow"></a><span data-ttu-id="2c841-109">ワークフローを作成するには</span><span class="sxs-lookup"><span data-stu-id="2c841-109">To create the workflow</span></span>  
+## <a name="to-create-the-workflow"></a><span data-ttu-id="16006-109">ワークフローを作成するには</span><span class="sxs-lookup"><span data-stu-id="16006-109">To create the workflow</span></span>  
   
-1. <span data-ttu-id="2c841-110">右クリック**NumberGuessWorkflowActivities**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の**します。</span><span class="sxs-lookup"><span data-stu-id="2c841-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
+1. <span data-ttu-id="16006-110">**ソリューションエクスプローラー**で **[NumberGuessWorkflowActivities]** を右クリックし、 **[追加]** 、 **[新しい項目]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="16006-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
   
-2. <span data-ttu-id="2c841-111">**インストール済み**、**一般的な項目**ノードの **ワークフロー**します。</span><span class="sxs-lookup"><span data-stu-id="2c841-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="2c841-112">選択**アクティビティ**から、**ワークフロー**一覧。</span><span class="sxs-lookup"><span data-stu-id="2c841-112">Select **Activity** from the **Workflow** list.</span></span>  
+2. <span data-ttu-id="16006-111">**[インストール済み]** の **[共通項目]** ノードで、 **[ワークフロー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="16006-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="16006-112">**[ワークフロー]** の一覧から **[アクティビティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="16006-112">Select **Activity** from the **Workflow** list.</span></span>  
   
-3. <span data-ttu-id="2c841-113">型`SequentialNumberGuessWorkflow`に、**名前**ボックスし、をクリックして**追加**します。</span><span class="sxs-lookup"><span data-stu-id="2c841-113">Type `SequentialNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
+3. <span data-ttu-id="16006-113">[ `SequentialNumberGuessWorkflow` **名前**] ボックスに「」と入力し、 **[追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-113">Type `SequentialNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-4. <span data-ttu-id="2c841-114">ドラッグ、**シーケンス**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**にドロップし、**ここにアクティビティをドロップ**のラベルをワークフロー デザイン サーフェイス。</span><span class="sxs-lookup"><span data-stu-id="2c841-114">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
+4. <span data-ttu-id="16006-114">**[ツールボックス]** の **[制御フロー]** セクションから**Sequence**アクティビティをドラッグし、ワークフローデザインサーフェイスの **[ここにアクティビティをドロップ]** ラベルの上にドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-114">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
   
-## <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="2c841-115">ワークフロー変数および引数を作成するには</span><span class="sxs-lookup"><span data-stu-id="2c841-115">To create the workflow variables and arguments</span></span>  
+## <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="16006-115">ワークフロー変数および引数を作成するには</span><span class="sxs-lookup"><span data-stu-id="16006-115">To create the workflow variables and arguments</span></span>  
   
-1. <span data-ttu-id="2c841-116">ダブルクリック**SequentialNumberGuessWorkflow.xaml**で**ソリューション エクスプ ローラー**まだ表示されていない場合に、デザイナーでワークフローを表示します。</span><span class="sxs-lookup"><span data-stu-id="2c841-116">Double-click **SequentialNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
+1. <span data-ttu-id="16006-116">**ソリューションエクスプローラー**で**sequentialnumberguessworkflow.xaml**をダブルクリックして、ワークフローをデザイナーに表示します (まだ表示されていない場合)。</span><span class="sxs-lookup"><span data-stu-id="16006-116">Double-click **SequentialNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
   
-2. <span data-ttu-id="2c841-117">クリックして**引数**を表示するワークフロー デザイナーの左下で、**引数**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="2c841-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
+2. <span data-ttu-id="16006-117">ワークフローデザイナーの左下にある **[引数]** をクリックして、 **[引数]** ペインを表示します。</span><span class="sxs-lookup"><span data-stu-id="16006-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-3. <span data-ttu-id="2c841-118">クリックして**引数の作成**です。</span><span class="sxs-lookup"><span data-stu-id="2c841-118">Click **Create Argument**.</span></span>  
+3. <span data-ttu-id="16006-118">**[引数の作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-118">Click **Create Argument**.</span></span>  
   
-4. <span data-ttu-id="2c841-119">型`MaxNumber`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、 **Int32** から**引数の型**ドロップダウン リスト、および引数を保存するには ENTER キーを押します。</span><span class="sxs-lookup"><span data-stu-id="2c841-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
+4. <span data-ttu-id="16006-119">[ `MaxNumber` **名前**] ボックスに「」と入力し、 **[方向]** ドロップダウンリストから **[In]** を選択します。次に、 **[引数の型]** ドロップダウンリストから **[Int32]** を選択し、enter キーを押して引数を保存します。</span><span class="sxs-lookup"><span data-stu-id="16006-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-5. <span data-ttu-id="2c841-120">クリックして**引数の作成**です。</span><span class="sxs-lookup"><span data-stu-id="2c841-120">Click **Create Argument**.</span></span>  
+5. <span data-ttu-id="16006-120">**[引数の作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-120">Click **Create Argument**.</span></span>  
   
-6. <span data-ttu-id="2c841-121">型`Turns`に、**名前**新しく追加された下にあるボックス`MaxNumber`引数で、**アウト**から、**方向**選択ドロップダウンリスト**Int32**から、**引数の型**ドロップダウン リスト、および ENTER キーを押します。</span><span class="sxs-lookup"><span data-stu-id="2c841-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
+6. <span data-ttu-id="16006-121">新しく`Turns`追加された引数の下にある [名前] ボックスに「」と入力し、[方向] ドロップダウンリストから [Out] を選択します。次に、[引数の型] ドロップダウンリストから [Int32] を選択し、enter キーを押します。 `MaxNumber`</span><span class="sxs-lookup"><span data-stu-id="16006-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-7. <span data-ttu-id="2c841-122">クリックして**引数**を閉じるアクティビティ デザイナーの左下で、**引数**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="2c841-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
+7. <span data-ttu-id="16006-122">アクティビティデザイナーの左下にある **[引数]** をクリックして、 **[引数]** ペインを閉じます。</span><span class="sxs-lookup"><span data-stu-id="16006-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-8. <span data-ttu-id="2c841-123">クリックして**変数**を表示するワークフロー デザイナーの左下で、**変数**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="2c841-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
+8. <span data-ttu-id="16006-123">ワークフローデザイナーの左下にある **[変数]** をクリックして、 **[変数]** ペインを表示します。</span><span class="sxs-lookup"><span data-stu-id="16006-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
   
-9. <span data-ttu-id="2c841-124">クリックして**変数作成**です。</span><span class="sxs-lookup"><span data-stu-id="2c841-124">Click **Create Variable**.</span></span>  
+9. <span data-ttu-id="16006-124">**[変数の作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-124">Click **Create Variable**.</span></span>  
   
     > [!TIP]
-    >  <span data-ttu-id="2c841-125">ない場合は**変数の作成**ボックスが表示されたら、をクリックして、**シーケンス**ことを選択するには、ワークフロー デザイナー画面上のアクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-125">If no **Create Variable** box is displayed, click the **Sequence** activity on the workflow designer surface to select it.</span></span>  
+    >  <span data-ttu-id="16006-125">**[変数の作成]** ボックスが表示されない場合は、ワークフローデザイナー画面で**Sequence**アクティビティをクリックして選択します。</span><span class="sxs-lookup"><span data-stu-id="16006-125">If no **Create Variable** box is displayed, click the **Sequence** activity on the workflow designer surface to select it.</span></span>  
   
-10. <span data-ttu-id="2c841-126">型`Guess`に、**名前**ボックスで、 **Int32**から、**変数の型**ドロップダウン リスト、および、変数に保存するには ENTER キーを押します。</span><span class="sxs-lookup"><span data-stu-id="2c841-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
+10. <span data-ttu-id="16006-126">[ `Guess` **名前**] ボックスに「」と入力し、 **[変数の型]** ドロップダウンリストから **[Int32]** を選択します。次に、enter キーを押して変数を保存します。</span><span class="sxs-lookup"><span data-stu-id="16006-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-11. <span data-ttu-id="2c841-127">クリックして**変数作成**です。</span><span class="sxs-lookup"><span data-stu-id="2c841-127">Click **Create Variable**.</span></span>  
+11. <span data-ttu-id="16006-127">**[変数の作成]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-127">Click **Create Variable**.</span></span>  
   
-12. <span data-ttu-id="2c841-128">型`Target`に、**名前**ボックスで、 **Int32**から、**変数の型**ドロップダウン リスト、および、変数に保存するには ENTER キーを押します。</span><span class="sxs-lookup"><span data-stu-id="2c841-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
+12. <span data-ttu-id="16006-128">[ `Target` **名前**] ボックスに「」と入力し、 **[変数の型]** ドロップダウンリストから **[Int32]** を選択します。次に、enter キーを押して変数を保存します。</span><span class="sxs-lookup"><span data-stu-id="16006-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-13. <span data-ttu-id="2c841-129">クリックして**変数**を閉じるアクティビティ デザイナーの左下で、**変数**ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="2c841-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
+13. <span data-ttu-id="16006-129">アクティビティデザイナーの左下にある **[変数]** をクリックして、 **[変数]** ペインを閉じます。</span><span class="sxs-lookup"><span data-stu-id="16006-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
   
-## <a name="to-add-the-workflow-activities"></a><span data-ttu-id="2c841-130">ワークフロー アクティビティを追加するには</span><span class="sxs-lookup"><span data-stu-id="2c841-130">To add the workflow activities</span></span>  
+## <a name="to-add-the-workflow-activities"></a><span data-ttu-id="16006-130">ワークフロー アクティビティを追加するには</span><span class="sxs-lookup"><span data-stu-id="16006-130">To add the workflow activities</span></span>  
   
-1. <span data-ttu-id="2c841-131">ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-131">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Sequence** activity.</span></span> <span data-ttu-id="2c841-132">型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-132">Type `Target` into the **To** box and the following expression into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
+1. <span data-ttu-id="16006-131">**ツールボックス**の **[プリミティブ]** セクションから**Assign**アクティビティをドラッグし、 **Sequence**アクティビティにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-131">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Sequence** activity.</span></span> <span data-ttu-id="16006-132">[ `Target` **To** ] ボックスに「」と入力し、[式の**入力C#**  ] または [ **VB の式を入力**してください] ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-132">Type `Target` into the **To** box and the following expression into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -75,11 +75,11 @@ ms.locfileid: "61945596"
     ```  
   
     > [!TIP]
-    >  <span data-ttu-id="2c841-133">場合、**ツールボックス**ウィンドウが表示されない場合、選択**ツールボックス**から、**ビュー**メニュー。</span><span class="sxs-lookup"><span data-stu-id="2c841-133">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
+    >  <span data-ttu-id="16006-133">**[ツールボックス]** ウィンドウが表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="16006-133">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-2. <span data-ttu-id="2c841-134">ドラッグ、 **DoWhile**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**下に、ワークフローにドロップし、**割り当てる**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-134">Drag a **DoWhile** activity from the **Control Flow** section of the **Toolbox** and drop it on the workflow so that it is below the **Assign** activity.</span></span>  
+2. <span data-ttu-id="16006-134">**ツールボックス**の **[制御フロー]** セクションから**dowhile**アクティビティをドラッグし、 **Assign**アクティビティの下になるようにワークフローにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-134">Drag a **DoWhile** activity from the **Control Flow** section of the **Toolbox** and drop it on the workflow so that it is below the **Assign** activity.</span></span>  
   
-3. <span data-ttu-id="2c841-135">次の式を入力、 **DoWhile**アクティビティの**条件**プロパティ値ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-135">Type the following expression into the **DoWhile** activity’s **Condition** property value box.</span></span>  
+3. <span data-ttu-id="16006-135">**Dowhile**アクティビティの **[Condition]** プロパティ値ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-135">Type the following expression into the **DoWhile** activity’s **Condition** property value box.</span></span>  
   
     ```vb  
     Guess <> Target  
@@ -89,11 +89,11 @@ ms.locfileid: "61945596"
     Guess != Target  
     ```  
   
-     <span data-ttu-id="2c841-136"><xref:System.Activities.Statements.DoWhile> アクティビティはその子アクティビティを実行し、その <xref:System.Activities.Statements.DoWhile.Condition%2A> を評価します。</span><span class="sxs-lookup"><span data-stu-id="2c841-136">A <xref:System.Activities.Statements.DoWhile> activity executes its child activities and then evaluates its <xref:System.Activities.Statements.DoWhile.Condition%2A>.</span></span> <span data-ttu-id="2c841-137"><xref:System.Activities.Statements.DoWhile.Condition%2A> が `True` と評価される場合、<xref:System.Activities.Statements.DoWhile> 内のアクティビティが再度実行されます。</span><span class="sxs-lookup"><span data-stu-id="2c841-137">If the <xref:System.Activities.Statements.DoWhile.Condition%2A> evaluates to `True`, then the activities in the <xref:System.Activities.Statements.DoWhile> execute again.</span></span> <span data-ttu-id="2c841-138">この例では、ユーザーの推定値が評価され、推定値が正しいと判断されるまで <xref:System.Activities.Statements.DoWhile> が続行されます。</span><span class="sxs-lookup"><span data-stu-id="2c841-138">In this example, the user’s guess is evaluated and the <xref:System.Activities.Statements.DoWhile> continues until the guess is correct.</span></span>  
+     <span data-ttu-id="16006-136"><xref:System.Activities.Statements.DoWhile> アクティビティはその子アクティビティを実行し、その <xref:System.Activities.Statements.DoWhile.Condition%2A> を評価します。</span><span class="sxs-lookup"><span data-stu-id="16006-136">A <xref:System.Activities.Statements.DoWhile> activity executes its child activities and then evaluates its <xref:System.Activities.Statements.DoWhile.Condition%2A>.</span></span> <span data-ttu-id="16006-137"><xref:System.Activities.Statements.DoWhile.Condition%2A> が `True` と評価される場合、<xref:System.Activities.Statements.DoWhile> 内のアクティビティが再度実行されます。</span><span class="sxs-lookup"><span data-stu-id="16006-137">If the <xref:System.Activities.Statements.DoWhile.Condition%2A> evaluates to `True`, then the activities in the <xref:System.Activities.Statements.DoWhile> execute again.</span></span> <span data-ttu-id="16006-138">この例では、ユーザーの推定値が評価され、推定値が正しいと判断されるまで <xref:System.Activities.Statements.DoWhile> が続行されます。</span><span class="sxs-lookup"><span data-stu-id="16006-138">In this example, the user’s guess is evaluated and the <xref:System.Activities.Statements.DoWhile> continues until the guess is correct.</span></span>  
   
-4. <span data-ttu-id="2c841-139">ドラッグ、**プロンプト**からのアクティビティ、 **NumberGuessWorkflowActivities**のセクション、**ツールボックス**にドロップし、 **DoWhile**アクティビティ前の手順。</span><span class="sxs-lookup"><span data-stu-id="2c841-139">Drag a **Prompt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **DoWhile** activity from the previous step.</span></span>  
+4. <span data-ttu-id="16006-139">**[ツールボックス]** の **[NumberGuessWorkflowActivities]** セクションから**Prompt**アクティビティをドラッグし、前の手順の**dowhile**アクティビティにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-139">Drag a **Prompt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **DoWhile** activity from the previous step.</span></span>  
   
-5. <span data-ttu-id="2c841-140">**プロパティ ウィンドウ**、型`"EnterGuess"`に引用符を含む、 **BookmarkName**のプロパティ値ボックスに、**プロンプト**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-140">In the **Properties Window**, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box for the **Prompt** activity.</span></span> <span data-ttu-id="2c841-141">型`Guess`に、**結果**プロパティの値のボックスとには、次の式を入力、**テキスト**プロパティ ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-141">Type `Guess` into the **Result** property value box, and type the following expression into the **Text** property box.</span></span>  
+5. <span data-ttu-id="16006-140">[**プロパティ] ウィンドウ**で、 `"EnterGuess"` **Prompt**アクティビティの **[BookmarkName]** プロパティ値ボックスに引用符を含めて「」と入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-140">In the **Properties Window**, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box for the **Prompt** activity.</span></span> <span data-ttu-id="16006-141">[ `Guess` **Result** ] プロパティ値ボックスに「」と入力し、 **[Text]** プロパティボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-141">Type `Guess` into the **Result** property value box, and type the following expression into the **Text** property box.</span></span>  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -104,18 +104,18 @@ ms.locfileid: "61945596"
     ```  
   
     > [!TIP]
-    >  <span data-ttu-id="2c841-142">場合、**プロパティ ウィンドウ**が表示されている、選択**プロパティ ウィンドウ**から、**ビュー**メニュー。</span><span class="sxs-lookup"><span data-stu-id="2c841-142">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
+    >  <span data-ttu-id="16006-142">[**プロパティ] ウィンドウ**が表示されていない場合は、 **[表示]** メニューの **[プロパティウィンドウ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="16006-142">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
   
-6. <span data-ttu-id="2c841-143">ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、 **DoWhile**アクティビティの後になるように、**プロンプト**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-143">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it in the **DoWhile** activity so that it follows the **Prompt** activity.</span></span>  
+6. <span data-ttu-id="16006-143">**ツールボックス**の **[プリミティブ]** セクションから**Assign**アクティビティをドラッグして、 **Prompt**アクティビティに続くように**dowhile**アクティビティにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-143">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it in the **DoWhile** activity so that it follows the **Prompt** activity.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="2c841-144">ドロップすると、**割り当てる**アクティビティをワークフロー デザイナーが自動的に追加する方法を確認、**シーケンス**両方を含むアクティビティ、**プロンプト**アクティビティと新しく追加されました。**割り当てる**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-144">When you drop the **Assign** activity, note how the workflow designer automatically adds a **Sequence** activity to contain both the **Prompt** activity and the newly added **Assign** activity.</span></span>  
+    > <span data-ttu-id="16006-144">**Assign**アクティビティを削除すると、ワークフローデザイナーが、 **Prompt**アクティビティと新しく追加された**Assign**アクティビティの両方を含む**Sequence**アクティビティを自動的に追加することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="16006-144">When you drop the **Assign** activity, note how the workflow designer automatically adds a **Sequence** activity to contain both the **Prompt** activity and the newly added **Assign** activity.</span></span>  
   
-7. <span data-ttu-id="2c841-145">型`Turns`に、**に**ボックスと`Turns + 1`に、 **c# 式を入力します**または**VB の式を入力します。** ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-145">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
+7. <span data-ttu-id="16006-145">[ `Turns` **To** ] ボックスに「 `Turns + 1` 」と入力し、[  **C#式を入力**するか、 **VB の式を入力**してください] ボックスに入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-145">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
-8. <span data-ttu-id="2c841-146">ドラッグ、**場合**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティの後になるように、新しく追加された**割り当てる**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-146">Drag an **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Sequence** activity so that it follows the newly added **Assign** activity.</span></span>  
+8. <span data-ttu-id="16006-146">**[ツールボックス]** の **[制御フロー]** セクションから**If**アクティビティをドラッグし、新しく追加した**Assign**アクティビティの後になるように**Sequence**アクティビティにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-146">Drag an **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Sequence** activity so that it follows the newly added **Assign** activity.</span></span>  
   
-9. <span data-ttu-id="2c841-147">次の式を入力、**場合**アクティビティの**条件**プロパティ値ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-147">Type the following expression into the **If** activity’s **Condition** property value box.</span></span>  
+9. <span data-ttu-id="16006-147">**If**アクティビティの **[Condition]** プロパティ値ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-147">Type the following expression into the **If** activity’s **Condition** property value box.</span></span>  
   
     ```vb  
     Guess <> Target  
@@ -125,44 +125,44 @@ ms.locfileid: "61945596"
     Guess != Target  
     ```  
   
-10. <span data-ttu-id="2c841-148">もう 1 つドラッグ**場合**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**にドロップし、**し**最初のセクション**場合**アクティビティ。</span><span class="sxs-lookup"><span data-stu-id="2c841-148">Drag another **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Then** section of the first **If** activity.</span></span>  
+10. <span data-ttu-id="16006-148">**ツールボックス**の **[制御フロー]** セクションから別の**if**アクティビティをドラッグし、最初の**if**アクティビティの**Then**セクションにドロップします。</span><span class="sxs-lookup"><span data-stu-id="16006-148">Drag another **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Then** section of the first **If** activity.</span></span>  
   
-11. <span data-ttu-id="2c841-149">新しく追加された次の式を入力**場合**アクティビティの**条件**プロパティ値ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-149">Type the following expression into the newly added **If** activity’s **Condition** property value box.</span></span>  
+11. <span data-ttu-id="16006-149">新しく追加された**If**アクティビティの **[Condition]** プロパティ値ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-149">Type the following expression into the newly added **If** activity’s **Condition** property value box.</span></span>  
   
     ```
     Guess < Target  
     ```  
   
-12. <span data-ttu-id="2c841-150">2 つをドラッグして**WriteLine**アクティビティから、**プリミティブ**のセクション、**ツールボックス**で 1 つがされるようにドロップし、**し**のセクション新しく追加された**場合**、もう 1 つは、 **Else**セクション。</span><span class="sxs-lookup"><span data-stu-id="2c841-150">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that one is in the **Then** section of the newly added **If** activity, and one is in the **Else** section.</span></span>  
+12. <span data-ttu-id="16006-150">**ツールボックス**の **[プリミティブ]** セクションから2つの**WriteLine**アクティビティをドラッグしてドロップします。1つは、新しく追加した**If**アクティビティの**Then**セクションにあり、もう1つは**Else**セクションにあります。</span><span class="sxs-lookup"><span data-stu-id="16006-150">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that one is in the **Then** section of the newly added **If** activity, and one is in the **Else** section.</span></span>  
   
-13. <span data-ttu-id="2c841-151">をクリックして、 **WriteLine**内のアクティビティ、**し**セクションを選択しとには、次の式を入力、**テキスト**プロパティ値ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-151">Click the **WriteLine** activity in the **Then** section to select it, and type the following expression into the **Text** property value box.</span></span>  
+13. <span data-ttu-id="16006-151">**[Then** ] セクションで **[WriteLine]** アクティビティをクリックして選択し、 **[Text]** プロパティ値ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-151">Click the **WriteLine** activity in the **Then** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
     ```text
     "Your guess is too low."  
     ```  
   
-14. <span data-ttu-id="2c841-152">をクリックして、 **WriteLine**内のアクティビティ、 **Else**セクションを選択しとには、次の式を入力、**テキスト**プロパティ値ボックス。</span><span class="sxs-lookup"><span data-stu-id="2c841-152">Click the **WriteLine** activity in the **Else** section to select it, and type the following expression into the **Text** property value box.</span></span>  
+14. <span data-ttu-id="16006-152">**[Else]** セクションの**WriteLine**アクティビティをクリックして選択し、 **[Text]** プロパティ値ボックスに次の式を入力します。</span><span class="sxs-lookup"><span data-stu-id="16006-152">Click the **WriteLine** activity in the **Else** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
     ```text
     "Your guess is too high."  
     ```  
   
-     <span data-ttu-id="2c841-153">次の例は、完了したワークフローを示しています。</span><span class="sxs-lookup"><span data-stu-id="2c841-153">The following example illustrates the completed workflow:</span></span>  
+     <span data-ttu-id="16006-153">完成したワークフローの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="16006-153">The following example illustrates the completed workflow:</span></span>  
   
-     ![完成したシーケンシャル ワークフローを示すスクリーン ショット。](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
+     ![完成したシーケンシャルワークフローを示すスクリーンショット。](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
-## <a name="to-build-the-workflow"></a><span data-ttu-id="2c841-155">ワークフローをビルドするには</span><span class="sxs-lookup"><span data-stu-id="2c841-155">To build the workflow</span></span>  
+## <a name="to-build-the-workflow"></a><span data-ttu-id="16006-155">ワークフローをビルドするには</span><span class="sxs-lookup"><span data-stu-id="16006-155">To build the workflow</span></span>  
   
-1. <span data-ttu-id="2c841-156">Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="2c841-156">Press CTRL+SHIFT+B to build the solution.</span></span>  
+1. <span data-ttu-id="16006-156">Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="16006-156">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-     <span data-ttu-id="2c841-157">ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。</span><span class="sxs-lookup"><span data-stu-id="2c841-157">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](how-to-run-a-workflow.md).</span></span> <span data-ttu-id="2c841-158">既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)さまざまなスタイルのワークフローにステップ イン、シーケンシャル ワークフローこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。</span><span class="sxs-lookup"><span data-stu-id="2c841-158">If you have already completed the [How to: Run a Workflow](how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the sequential workflow from this step, skip ahead to the [To build and run the application](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](how-to-run-a-workflow.md).</span></span>  
+     <span data-ttu-id="16006-157">ワークフローを実行する方法については、次のトピック[「方法:ワークフロー](how-to-run-a-workflow.md)を実行します。</span><span class="sxs-lookup"><span data-stu-id="16006-157">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](how-to-run-a-workflow.md).</span></span> <span data-ttu-id="16006-158">既に完了している[場合は、次の手順を実行します。別のスタイル](how-to-run-a-workflow.md)のワークフローを使用してワークフローステップを実行し、この手順のシーケンシャルワークフローを使用して実行するには、「方法:」の[「[アプリケーションをビルドして実行するに](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)は」に進んでください。ワークフロー](how-to-run-a-workflow.md)を実行します。</span><span class="sxs-lookup"><span data-stu-id="16006-158">If you have already completed the [How to: Run a Workflow](how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the sequential workflow from this step, skip ahead to the [To build and run the application](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](how-to-run-a-workflow.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c841-159">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c841-159">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16006-159">関連項目</span><span class="sxs-lookup"><span data-stu-id="16006-159">See also</span></span>
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [<span data-ttu-id="2c841-160">Windows Workflow Foundation プログラミング</span><span class="sxs-lookup"><span data-stu-id="2c841-160">Windows Workflow Foundation Programming</span></span>](programming.md)
-- [<span data-ttu-id="2c841-161">ワークフローの設計</span><span class="sxs-lookup"><span data-stu-id="2c841-161">Designing Workflows</span></span>](designing-workflows.md)
-- [<span data-ttu-id="2c841-162">チュートリアル入門</span><span class="sxs-lookup"><span data-stu-id="2c841-162">Getting Started Tutorial</span></span>](getting-started-tutorial.md)
-- [<span data-ttu-id="2c841-163">方法: アクティビティを作成します。</span><span class="sxs-lookup"><span data-stu-id="2c841-163">How to: Create an Activity</span></span>](how-to-create-an-activity.md)
-- [<span data-ttu-id="2c841-164">方法: ワークフローを実行します。</span><span class="sxs-lookup"><span data-stu-id="2c841-164">How to: Run a Workflow</span></span>](how-to-run-a-workflow.md)
+- [<span data-ttu-id="16006-160">Windows Workflow Foundation プログラミング</span><span class="sxs-lookup"><span data-stu-id="16006-160">Windows Workflow Foundation Programming</span></span>](programming.md)
+- [<span data-ttu-id="16006-161">ワークフローの設計</span><span class="sxs-lookup"><span data-stu-id="16006-161">Designing Workflows</span></span>](designing-workflows.md)
+- [<span data-ttu-id="16006-162">チュートリアル入門</span><span class="sxs-lookup"><span data-stu-id="16006-162">Getting Started Tutorial</span></span>](getting-started-tutorial.md)
+- [<span data-ttu-id="16006-163">方法: アクティビティを作成する</span><span class="sxs-lookup"><span data-stu-id="16006-163">How to: Create an Activity</span></span>](how-to-create-an-activity.md)
+- [<span data-ttu-id="16006-164">方法: ワークフローを実行する</span><span class="sxs-lookup"><span data-stu-id="16006-164">How to: Run a Workflow</span></span>](how-to-run-a-workflow.md)

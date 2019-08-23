@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779763"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962935"
 ---
-# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="750d1-102">ICLRMetaHost::GetVersionFromFile メソッド</span><span class="sxs-lookup"><span data-stu-id="750d1-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
-<span data-ttu-id="750d1-103">指定されたファイル パスから、アセンブリの元の .NET Framework コンパイル バージョン (メタデータに格納されている) を取得します。</span><span class="sxs-lookup"><span data-stu-id="750d1-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="750d1-104">このメソッドは、 [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="750d1-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
+# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="5f5c6-102">ICLRMetaHost::GetVersionFromFile メソッド</span><span class="sxs-lookup"><span data-stu-id="5f5c6-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
+<span data-ttu-id="5f5c6-103">ファイルパスを指定して、アセンブリの元の .NET Framework コンパイルバージョン (メタデータに格納されている) を取得します。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="5f5c6-104">このメソッドは、 [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)関数よりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="750d1-105">構文</span><span class="sxs-lookup"><span data-stu-id="750d1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f5c6-105">構文</span><span class="sxs-lookup"><span data-stu-id="5f5c6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionFromFile (  
@@ -37,40 +37,40 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="750d1-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="750d1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f5c6-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5f5c6-106">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="750d1-107">[in]アセンブリの完全ファイル パス。</span><span class="sxs-lookup"><span data-stu-id="750d1-107">[in] The complete assembly file path.</span></span>  
+ <span data-ttu-id="5f5c6-107">から完全なアセンブリファイルパス。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-107">[in] The complete assembly file path.</span></span>  
   
  `pwzbuffer`  
- <span data-ttu-id="750d1-108">[out]形式で、メタデータに格納されている .NET Framework のコンパイル バージョン"v*A*.*B*[.*X*]"。</span><span class="sxs-lookup"><span data-stu-id="750d1-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="750d1-109">*A*、 *B*、および*X*はメジャー バージョン、マイナー バージョン、およびビルド番号に対応する 10 進数。</span><span class="sxs-lookup"><span data-stu-id="750d1-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="750d1-110">この文字列の長さが MAX_PATH に制限されています。</span><span class="sxs-lookup"><span data-stu-id="750d1-110">The length of this string is limited to MAX_PATH.</span></span>  
+ <span data-ttu-id="5f5c6-108">入出力メタデータに格納されている .NET Framework のコンパイルバージョン。 "v*A と*いう形式になります。*B*[.*X*] "</span><span class="sxs-lookup"><span data-stu-id="5f5c6-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="5f5c6-109">*A*、 *B*、および*X*は、メジャーバージョン、マイナーバージョン、およびビルド番号に対応する10進数です。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="5f5c6-110">この文字列の長さは MAX_PATH に制限されています。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-110">The length of this string is limited to MAX_PATH.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="750d1-111">この出力には、C:\Windows\Microsoft.NET\Framework 下に表示されます、.NET Framework のバージョンのディレクトリ名が一致します。</span><span class="sxs-lookup"><span data-stu-id="750d1-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+> <span data-ttu-id="5f5c6-111">この出力は、C:\Windows\Microsoft.NET\Framework. の下に表示される .NET Framework バージョンのディレクトリ名と一致します。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="750d1-112">例の値は、"v1.0.3705"、"v1.1.4322"、"v2.0.50727"および"v4.0 です。*X*"ここで、 *X*インストールされているビルドの数によって異なります。</span><span class="sxs-lookup"><span data-stu-id="750d1-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="750d1-113">"V"プレフィックスが必要なことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="750d1-113">Note that the "v" prefix is required.</span></span>  
+ <span data-ttu-id="5f5c6-112">値の例としては、"v v1.0.3705"、"v 1.1.4322"、"v v2.0.50727"、および "v4.0" があります。*X*"。ここで*x*は、インストールされているビルド番号に依存します。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="5f5c6-113">"V" プレフィックスが必要であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-113">Note that the "v" prefix is required.</span></span>  
   
  `pcchBuffer`  
- <span data-ttu-id="750d1-114">[入力、出力]サイズ`pwzbuffer`バッファー オーバーランを回避します。</span><span class="sxs-lookup"><span data-stu-id="750d1-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
+ <span data-ttu-id="5f5c6-114">[入力、出力]バッファーオーバーランを`pwzbuffer`回避するためののサイズ。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="750d1-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="750d1-115">Return Value</span></span>  
- <span data-ttu-id="750d1-116">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="750d1-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f5c6-115">戻り値</span><span class="sxs-lookup"><span data-stu-id="5f5c6-115">Return Value</span></span>  
+ <span data-ttu-id="5f5c6-116">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="750d1-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="750d1-117">HRESULT</span></span>|<span data-ttu-id="750d1-118">説明</span><span class="sxs-lookup"><span data-stu-id="750d1-118">Description</span></span>|  
+|<span data-ttu-id="5f5c6-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5f5c6-117">HRESULT</span></span>|<span data-ttu-id="5f5c6-118">説明</span><span class="sxs-lookup"><span data-stu-id="5f5c6-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="750d1-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="750d1-119">S_OK</span></span>|<span data-ttu-id="750d1-120">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="750d1-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="750d1-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="750d1-121">E_POINTER</span></span>|<span data-ttu-id="750d1-122">`pwzbuffer` または `pcchBuffer` が null です。</span><span class="sxs-lookup"><span data-stu-id="750d1-122">`pwzbuffer` or `pcchBuffer` is null.</span></span>|  
-|<span data-ttu-id="750d1-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="750d1-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="750d1-124">バッファーが小さすぎます。</span><span class="sxs-lookup"><span data-stu-id="750d1-124">The buffer is too small.</span></span>|  
+|<span data-ttu-id="5f5c6-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="5f5c6-119">S_OK</span></span>|<span data-ttu-id="5f5c6-120">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="5f5c6-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5f5c6-121">E_POINTER</span></span>|<span data-ttu-id="5f5c6-122">`pwzbuffer` または `pcchBuffer` が null です。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-122">`pwzbuffer` or `pcchBuffer` is null.</span></span>|  
+|<span data-ttu-id="5f5c6-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="5f5c6-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="5f5c6-124">バッファーが小さすぎます。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-124">The buffer is too small.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="750d1-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="750d1-125">Requirements</span></span>  
- <span data-ttu-id="750d1-126">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="750d1-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f5c6-125">必要条件</span><span class="sxs-lookup"><span data-stu-id="5f5c6-125">Requirements</span></span>  
+ <span data-ttu-id="5f5c6-126">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5f5c6-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="750d1-127">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="750d1-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="5f5c6-127">**ヘッダー:** メタホスト .h</span><span class="sxs-lookup"><span data-stu-id="5f5c6-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="750d1-128">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="750d1-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5f5c6-128">**ライブラリ**Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="5f5c6-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="750d1-129">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="750d1-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="5f5c6-129">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f5c6-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="750d1-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="750d1-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f5c6-130">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f5c6-130">See also</span></span>
 
-- [<span data-ttu-id="750d1-131">ICLRMetaHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="750d1-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="750d1-132">ホスティング</span><span class="sxs-lookup"><span data-stu-id="750d1-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="5f5c6-131">ICLRMetaHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5f5c6-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="5f5c6-132">ホスティング</span><span class="sxs-lookup"><span data-stu-id="5f5c6-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

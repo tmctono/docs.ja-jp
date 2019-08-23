@@ -11,17 +11,17 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931750"
 ---
-# <a name="method-implementation-in-custom-controls"></a><span data-ttu-id="f5a00-102">カスタム コントロールへのメソッドの実装</span><span class="sxs-lookup"><span data-stu-id="f5a00-102">Method Implementation in Custom Controls</span></span>
-<span data-ttu-id="f5a00-103">コントロールにメソッドを実装する方法は、他のコンポーネントにメソッドを実装する場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="f5a00-103">A method is implemented in a control in the same manner a method would be implemented in any other component.</span></span>  
+# <a name="method-implementation-in-custom-controls"></a><span data-ttu-id="62bef-102">カスタム コントロールへのメソッドの実装</span><span class="sxs-lookup"><span data-stu-id="62bef-102">Method Implementation in Custom Controls</span></span>
+<span data-ttu-id="62bef-103">コントロールにメソッドを実装する方法は、他のコンポーネントにメソッドを実装する場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="62bef-103">A method is implemented in a control in the same manner a method would be implemented in any other component.</span></span>  
   
- <span data-ttu-id="f5a00-104">Visual Basic では、値を返す必要のあるメソッドは `Public Function` として実装されます。</span><span class="sxs-lookup"><span data-stu-id="f5a00-104">In Visual Basic, if a method is required to return a value, it is implemented as a `Public Function`.</span></span> <span data-ttu-id="f5a00-105">値が返されない場合は、`Public Sub` として実装されます。</span><span class="sxs-lookup"><span data-stu-id="f5a00-105">If no value is returned, it is implemented as a `Public Sub`.</span></span> <span data-ttu-id="f5a00-106">メソッドは次の構文で宣言します。</span><span class="sxs-lookup"><span data-stu-id="f5a00-106">Methods are declared using the following syntax:</span></span>  
+ <span data-ttu-id="62bef-104">Visual Basic では、値を返す必要のあるメソッドは `Public Function` として実装されます。</span><span class="sxs-lookup"><span data-stu-id="62bef-104">In Visual Basic, if a method is required to return a value, it is implemented as a `Public Function`.</span></span> <span data-ttu-id="62bef-105">値が返されない場合は、`Public Sub` として実装されます。</span><span class="sxs-lookup"><span data-stu-id="62bef-105">If no value is returned, it is implemented as a `Public Sub`.</span></span> <span data-ttu-id="62bef-106">メソッドは次の構文で宣言します。</span><span class="sxs-lookup"><span data-stu-id="62bef-106">Methods are declared using the following syntax:</span></span>  
   
 ```vb  
 Public Function ConvertMatterToEnergy(Matter as Integer) As Integer  
@@ -29,9 +29,9 @@ Public Function ConvertMatterToEnergy(Matter as Integer) As Integer
 End Function  
 ```  
   
- <span data-ttu-id="f5a00-107">関数は値を返すため、整数、文字列、オブジェクトなど、戻り値の型を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f5a00-107">Because functions return a value, they must specify a return type, such as integer, string, object, and so on.</span></span> <span data-ttu-id="f5a00-108">`Function` プロシージャや `Sub` プロシージャが引数をとる場合は、引数も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f5a00-108">The arguments `Function` or `Sub` procedures take, if any, must also be specified.</span></span>  
+ <span data-ttu-id="62bef-107">関数は値を返すため、整数、文字列、オブジェクトなど、戻り値の型を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="62bef-107">Because functions return a value, they must specify a return type, such as integer, string, object, and so on.</span></span> <span data-ttu-id="62bef-108">`Function` プロシージャや `Sub` プロシージャが引数をとる場合は、引数も指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="62bef-108">The arguments `Function` or `Sub` procedures take, if any, must also be specified.</span></span>  
   
- <span data-ttu-id="f5a00-109">Visual Basic とは異なり、C# では関数とプロシージャが区別されません。</span><span class="sxs-lookup"><span data-stu-id="f5a00-109">C# makes no distinction between functions and procedures, as Visual Basic does.</span></span> <span data-ttu-id="f5a00-110">メソッドは値を返すか、または `void` を返します。</span><span class="sxs-lookup"><span data-stu-id="f5a00-110">A method either returns a value or returns `void`.</span></span> <span data-ttu-id="f5a00-111">C# のパブリック メソッドを宣言する構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f5a00-111">The syntax for declaring a C# public method is:</span></span>  
+ <span data-ttu-id="62bef-109">Visual Basic とは異なり、C# では関数とプロシージャが区別されません。</span><span class="sxs-lookup"><span data-stu-id="62bef-109">C# makes no distinction between functions and procedures, as Visual Basic does.</span></span> <span data-ttu-id="62bef-110">メソッドは値を返すか、または `void` を返します。</span><span class="sxs-lookup"><span data-stu-id="62bef-110">A method either returns a value or returns `void`.</span></span> <span data-ttu-id="62bef-111">C# のパブリック メソッドを宣言する構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="62bef-111">The syntax for declaring a C# public method is:</span></span>  
   
 ```csharp  
 public int ConvertMatterToEnergy(int matter)  
@@ -40,17 +40,17 @@ public int ConvertMatterToEnergy(int matter)
 }  
 ```  
   
- <span data-ttu-id="f5a00-112">メソッドを宣言する際、可能な限り、メソッドのすべての引数を明示的なデータ型として宣言します。</span><span class="sxs-lookup"><span data-stu-id="f5a00-112">When you declare a method, declare all of its arguments as explicit data types whenever possible.</span></span> <span data-ttu-id="f5a00-113">オブジェクト参照を使用する引数は、特定のクラス型として宣言される必要があります (例: `As Widget` ではなく、`As Object`)。</span><span class="sxs-lookup"><span data-stu-id="f5a00-113">Arguments that take object references should be declared as specific class types — for example, `As Widget` instead of `As Object`.</span></span> <span data-ttu-id="f5a00-114">Visual Basic では、既定の設定 `Option Strict` によって自動的にこの規則が適用されます。</span><span class="sxs-lookup"><span data-stu-id="f5a00-114">In Visual Basic, the default setting `Option Strict` automatically enforces this rule.</span></span>  
+ <span data-ttu-id="62bef-112">メソッドを宣言する際、可能な限り、メソッドのすべての引数を明示的なデータ型として宣言します。</span><span class="sxs-lookup"><span data-stu-id="62bef-112">When you declare a method, declare all of its arguments as explicit data types whenever possible.</span></span> <span data-ttu-id="62bef-113">オブジェクト参照を使用する引数は、特定のクラス型として宣言される必要があります (例: `As Widget` ではなく、`As Object`)。</span><span class="sxs-lookup"><span data-stu-id="62bef-113">Arguments that take object references should be declared as specific class types — for example, `As Widget` instead of `As Object`.</span></span> <span data-ttu-id="62bef-114">Visual Basic では、既定の設定 `Option Strict` によって自動的にこの規則が適用されます。</span><span class="sxs-lookup"><span data-stu-id="62bef-114">In Visual Basic, the default setting `Option Strict` automatically enforces this rule.</span></span>  
   
- <span data-ttu-id="f5a00-115">型付き引数を使用することにより、開発者によるエラーの多くを、実行時ではなく、コンパイラによって検出できます。</span><span class="sxs-lookup"><span data-stu-id="f5a00-115">Typed arguments allow many developer errors to be caught by the compiler, rather than at run time.</span></span> <span data-ttu-id="f5a00-116">コンパイラは常に多くのエラーを検出するのに対し、ランタイム テストは、テスト スイートと同程度の精度しかありません。</span><span class="sxs-lookup"><span data-stu-id="f5a00-116">The compiler always catches errors, whereas run-time testing is only as good as the test suite.</span></span>  
+ <span data-ttu-id="62bef-115">型付き引数を使用することにより、開発者によるエラーの多くを、実行時ではなく、コンパイラによって検出できます。</span><span class="sxs-lookup"><span data-stu-id="62bef-115">Typed arguments allow many developer errors to be caught by the compiler, rather than at run time.</span></span> <span data-ttu-id="62bef-116">コンパイラは常に多くのエラーを検出するのに対し、ランタイム テストは、テスト スイートと同程度の精度しかありません。</span><span class="sxs-lookup"><span data-stu-id="62bef-116">The compiler always catches errors, whereas run-time testing is only as good as the test suite.</span></span>  
   
-## <a name="overloaded-methods"></a><span data-ttu-id="f5a00-117">オーバーロードされたメソッド</span><span class="sxs-lookup"><span data-stu-id="f5a00-117">Overloaded Methods</span></span>  
- <span data-ttu-id="f5a00-118">コントロールのユーザーが、メソッドにさまざまなパラメーターの組み合わせを指定できるようにするには、明示的なデータ型を使用して、メソッドのオーバーロードを複数提供します。</span><span class="sxs-lookup"><span data-stu-id="f5a00-118">If you want to allow users of your control to supply different combinations of parameters to a method, provide multiple overloads of the method, using explicit data types.</span></span> <span data-ttu-id="f5a00-119">テスト時にエラーが検出されない場合があるため、任意のデータ型を含めることのできる `As Object` として宣言するパラメーターは作成しないでください。</span><span class="sxs-lookup"><span data-stu-id="f5a00-119">Avoid creating parameters declared `As Object` that can contain any data type, as this can lead to errors that might not be caught in testing.</span></span>  
+## <a name="overloaded-methods"></a><span data-ttu-id="62bef-117">オーバーロードされたメソッド</span><span class="sxs-lookup"><span data-stu-id="62bef-117">Overloaded Methods</span></span>  
+ <span data-ttu-id="62bef-118">コントロールのユーザーが、メソッドにさまざまなパラメーターの組み合わせを指定できるようにするには、明示的なデータ型を使用して、メソッドのオーバーロードを複数提供します。</span><span class="sxs-lookup"><span data-stu-id="62bef-118">If you want to allow users of your control to supply different combinations of parameters to a method, provide multiple overloads of the method, using explicit data types.</span></span> <span data-ttu-id="62bef-119">テスト時にエラーが検出されない場合があるため、任意のデータ型を含めることのできる `As Object` として宣言するパラメーターは作成しないでください。</span><span class="sxs-lookup"><span data-stu-id="62bef-119">Avoid creating parameters declared `As Object` that can contain any data type, as this can lead to errors that might not be caught in testing.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f5a00-120">共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。</span><span class="sxs-lookup"><span data-stu-id="f5a00-120">The universal data type in the common language runtime is `Object` rather than `Variant`.</span></span> <span data-ttu-id="f5a00-121">`Variant` は、言語から削除されました。</span><span class="sxs-lookup"><span data-stu-id="f5a00-121">`Variant` has been removed from the language.</span></span>  
+> <span data-ttu-id="62bef-120">共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。</span><span class="sxs-lookup"><span data-stu-id="62bef-120">The universal data type in the common language runtime is `Object` rather than `Variant`.</span></span> <span data-ttu-id="62bef-121">`Variant` は、言語から削除されました。</span><span class="sxs-lookup"><span data-stu-id="62bef-121">`Variant` has been removed from the language.</span></span>  
   
- <span data-ttu-id="f5a00-122">たとえば、`Spin` という仮想のコントロールに `Widget` メソッドがあり、スピンの方向と速度を直接指定するか、角運動量を吸収する他の `Widget` オブジェクトを指定できます。</span><span class="sxs-lookup"><span data-stu-id="f5a00-122">For example, the `Spin` method of a hypothetical `Widget` control might allow either direct specification of spin direction and speed, or specification of another `Widget` object from which angular momentum is to be absorbed:</span></span>  
+ <span data-ttu-id="62bef-122">たとえば、`Spin` という仮想のコントロールに `Widget` メソッドがあり、スピンの方向と速度を直接指定するか、角運動量を吸収する他の `Widget` オブジェクトを指定できます。</span><span class="sxs-lookup"><span data-stu-id="62bef-122">For example, the `Spin` method of a hypothetical `Widget` control might allow either direct specification of spin direction and speed, or specification of another `Widget` object from which angular momentum is to be absorbed:</span></span>  
   
 ```vb  
 Overloads Public Sub Spin( _  
@@ -75,7 +75,7 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5a00-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5a00-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62bef-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="62bef-123">See also</span></span>
 
-- [<span data-ttu-id="f5a00-124">イベント</span><span class="sxs-lookup"><span data-stu-id="f5a00-124">Events</span></span>](../../../standard/events/index.md)
-- [<span data-ttu-id="f5a00-125">Windows フォーム コントロールのプロパティ</span><span class="sxs-lookup"><span data-stu-id="f5a00-125">Properties in Windows Forms Controls</span></span>](properties-in-windows-forms-controls.md)
+- [<span data-ttu-id="62bef-124">イベント</span><span class="sxs-lookup"><span data-stu-id="62bef-124">Events</span></span>](../../../standard/events/index.md)
+- [<span data-ttu-id="62bef-125">Windows フォーム コントロールのプロパティ</span><span class="sxs-lookup"><span data-stu-id="62bef-125">Properties in Windows Forms Controls</span></span>](properties-in-windows-forms-controls.md)

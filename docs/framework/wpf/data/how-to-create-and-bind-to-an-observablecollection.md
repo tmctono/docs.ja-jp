@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965477"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="560ef-102">方法: ObservableCollection を作成およびバインドする</span><span class="sxs-lookup"><span data-stu-id="560ef-102">How to: Create and Bind to an ObservableCollection</span></span>
-<span data-ttu-id="560ef-103">この例では、 <xref:System.Collections.ObjectModel.ObservableCollection%601>クラスから派生したコレクションを作成してバインドする方法を示します。これは、項目が追加または削除されたときに通知を提供するコレクションクラスです。</span><span class="sxs-lookup"><span data-stu-id="560ef-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="ab345-102">方法: ObservableCollection を作成およびバインドする</span><span class="sxs-lookup"><span data-stu-id="ab345-102">How to: Create and Bind to an ObservableCollection</span></span>
+<span data-ttu-id="ab345-103">この例では、 <xref:System.Collections.ObjectModel.ObservableCollection%601>クラスから派生したコレクションを作成してバインドする方法を示します。これは、項目が追加または削除されたときに通知を提供するコレクションクラスです。</span><span class="sxs-lookup"><span data-stu-id="ab345-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="560ef-104">例</span><span class="sxs-lookup"><span data-stu-id="560ef-104">Example</span></span>  
- <span data-ttu-id="560ef-105">`NameList` コレクションの実装例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="560ef-105">The following example shows the implementation of a `NameList` collection:</span></span>  
+## <a name="example"></a><span data-ttu-id="ab345-104">例</span><span class="sxs-lookup"><span data-stu-id="ab345-104">Example</span></span>  
+ <span data-ttu-id="ab345-105">`NameList` コレクションの実装例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ab345-105">The following example shows the implementation of a `NameList` collection:</span></span>  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- <span data-ttu-id="560ef-106">「 [XAML でデータをバインドできるよう](how-to-make-data-available-for-binding-in-xaml.md)にする」で説明されているように、他の共通言語ランタイム (CLR) オブジェクトと同じように、コレクションをバインドできるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="560ef-106">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="560ef-107">たとえば、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコレクションをインスタンス化し、次に示すように、そのコレクションをリソースとして指定します。</span><span class="sxs-lookup"><span data-stu-id="560ef-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
+ <span data-ttu-id="ab345-106">「 [XAML でデータをバインドできるよう](how-to-make-data-available-for-binding-in-xaml.md)にする」で説明されているように、他の共通言語ランタイム (CLR) オブジェクトと同じように、コレクションをバインドできるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="ab345-106">You can make the collection available for binding the same way you would with other common language runtime (CLR) objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="ab345-107">たとえば、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でコレクションをインスタンス化し、次に示すように、そのコレクションをリソースとして指定します。</span><span class="sxs-lookup"><span data-stu-id="ab345-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
   
 ```xaml  
 <Window  
@@ -124,7 +124,7 @@ End Class
 </Window.Resources>  
 ```  
   
- <span data-ttu-id="560ef-108">その後、コレクションにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="560ef-108">You can then bind to the collection:</span></span>  
+ <span data-ttu-id="ab345-108">その後、コレクションにバインドできます。</span><span class="sxs-lookup"><span data-stu-id="ab345-108">You can then bind to the collection:</span></span>  
   
 ```xaml  
 <ListBox Width="200"  
@@ -133,17 +133,17 @@ End Class
          IsSynchronizedWithCurrentItem="True"/>  
 ```  
   
- <span data-ttu-id="560ef-109">`NameItemTemplate` の定義は、ここには示していません。</span><span class="sxs-lookup"><span data-stu-id="560ef-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
+ <span data-ttu-id="ab345-109">`NameItemTemplate` の定義は、ここには示していません。</span><span class="sxs-lookup"><span data-stu-id="ab345-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="560ef-110">コレクション内のオブジェクトは、「[バインディング ソースの概要](binding-sources-overview.md)」で説明されている要件を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="560ef-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="560ef-111">特に、または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>を使用している場合 (ソースプロパティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]動的に変更されたときにを更新する場合など) は、次の<xref:System.ComponentModel.INotifyPropertyChanged>ような適切なプロパティ変更通知機構を実装する必要があります。インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="560ef-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
+> <span data-ttu-id="ab345-110">コレクション内のオブジェクトは、「[バインディング ソースの概要](binding-sources-overview.md)」で説明されている要件を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="ab345-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="ab345-111">特に、または<xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>を使用している場合 (ソースプロパティが[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]動的に変更されたときにを更新する場合など) は、次の<xref:System.ComponentModel.INotifyPropertyChanged>ような適切なプロパティ変更通知機構を実装する必要があります。インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="ab345-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
   
- <span data-ttu-id="560ef-112">詳しくは、「[データ バインディングの概要](data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="560ef-112">For more information, see the Binding to Collections section in the [Data Binding Overview](data-binding-overview.md).</span></span>  
+ <span data-ttu-id="ab345-112">詳しくは、「[データ バインディングの概要](data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="ab345-112">For more information, see the Binding to Collections section in the [Data Binding Overview](data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="560ef-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="560ef-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab345-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab345-113">See also</span></span>
 
-- [<span data-ttu-id="560ef-114">ビュー内のデータの並べ替え</span><span class="sxs-lookup"><span data-stu-id="560ef-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="560ef-115">ビュー内のデータをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="560ef-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="560ef-116">XAML でビューを使用してデータの並べ替えおよびグループ化を行う</span><span class="sxs-lookup"><span data-stu-id="560ef-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="560ef-117">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="560ef-117">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="560ef-118">方法トピック</span><span class="sxs-lookup"><span data-stu-id="560ef-118">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="ab345-114">ビュー内のデータの並べ替え</span><span class="sxs-lookup"><span data-stu-id="ab345-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="ab345-115">ビュー内のデータをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="ab345-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="ab345-116">XAML でビューを使用してデータの並べ替えおよびグループ化を行う</span><span class="sxs-lookup"><span data-stu-id="ab345-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="ab345-117">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="ab345-117">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="ab345-118">方法トピック</span><span class="sxs-lookup"><span data-stu-id="ab345-118">How-to Topics</span></span>](data-binding-how-to-topics.md)

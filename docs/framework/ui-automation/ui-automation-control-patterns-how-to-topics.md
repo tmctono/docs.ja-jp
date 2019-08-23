@@ -7,22 +7,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953095"
 ---
-# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="9d56f-102">UI オートメーション コントロール パターンに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="9d56f-102">UI Automation Control Patterns How-to Topics</span></span>
+# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="a163d-102">UI オートメーション コントロール パターンに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a163d-102">UI Automation Control Patterns How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="9d56f-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="9d56f-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9d56f-104">に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。</span><span class="sxs-lookup"><span data-stu-id="9d56f-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="a163d-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="a163d-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a163d-104">の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="a163d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="9d56f-105">ここでは、コントロール パターンの実装について詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="9d56f-105">This section contains detailed information about implementing control patterns.</span></span>  
+ <span data-ttu-id="a163d-105">ここでは、コントロール パターンの実装について詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="a163d-105">This section contains detailed information about implementing control patterns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d56f-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9d56f-106">In This Section</span></span>  
- [<span data-ttu-id="9d56f-107">UI オートメーションを使用したテーブルの内容の公開</span><span class="sxs-lookup"><span data-stu-id="9d56f-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [<span data-ttu-id="9d56f-108">サポートされている UI オートメーション コントロール パターンの取得</span><span class="sxs-lookup"><span data-stu-id="9d56f-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [<span data-ttu-id="9d56f-109">UI オートメーションを使用した、チェック ボックスのトグル状態の取得</span><span class="sxs-lookup"><span data-stu-id="9d56f-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [<span data-ttu-id="9d56f-110">UI オートメーションを使用したコントロールの呼び出し</span><span class="sxs-lookup"><span data-stu-id="9d56f-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [<span data-ttu-id="9d56f-111">Move a UI Automation Element</span><span class="sxs-lookup"><span data-stu-id="9d56f-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+## <a name="in-this-section"></a><span data-ttu-id="a163d-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a163d-106">In This Section</span></span>  
+ [<span data-ttu-id="a163d-107">UI オートメーションを使用したテーブルの内容の公開</span><span class="sxs-lookup"><span data-stu-id="a163d-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [<span data-ttu-id="a163d-108">サポートされている UI オートメーション コントロール パターンの取得</span><span class="sxs-lookup"><span data-stu-id="a163d-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [<span data-ttu-id="a163d-109">UI オートメーションを使用した、チェック ボックスのトグル状態の取得</span><span class="sxs-lookup"><span data-stu-id="a163d-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="a163d-110">UI オートメーションを使用したコントロールの呼び出し</span><span class="sxs-lookup"><span data-stu-id="a163d-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="a163d-111">Move a UI Automation Element</span><span class="sxs-lookup"><span data-stu-id="a163d-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
