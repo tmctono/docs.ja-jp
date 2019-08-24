@@ -12,40 +12,40 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c1255fa17d91daaa73001fea04f26e73dba0ae
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649222"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015828"
 ---
-# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="a6a5a-102">方法: WebBrowser コントロールで URL に移動する</span><span class="sxs-lookup"><span data-stu-id="a6a5a-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
-<span data-ttu-id="a6a5a-103">次のコード例は、移動する方法を示します、<xref:System.Windows.Forms.WebBrowser>コントロールを特定の URL。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
-  
- <span data-ttu-id="a6a5a-104">調べるには、新しいドキュメントが完全に読み込まれるときに、処理、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>イベント。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="a6a5a-105">このイベントのデモについては、次を参照してください。[方法。WebBrowser コントロールで印刷](how-to-print-with-a-webbrowser-control.md)します。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](how-to-print-with-a-webbrowser-control.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a6a5a-106">例</span><span class="sxs-lookup"><span data-stu-id="a6a5a-106">Example</span></span>  
-  
-```vb  
-Me.webBrowser1.Navigate("http://www.microsoft.com")  
-```  
-  
-```csharp  
-this.webBrowser1.Navigate("http://www.microsoft.com");  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="a6a5a-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="a6a5a-107">Compiling the Code</span></span>  
- <span data-ttu-id="a6a5a-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-108">This example requires:</span></span>  
-  
-- <span data-ttu-id="a6a5a-109">`webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
-  
-- <span data-ttu-id="a6a5a-110">`System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a6a5a-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6a5a-111">See also</span></span>
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="6cf09-102">方法: WebBrowser コントロールで URL に移動する</span><span class="sxs-lookup"><span data-stu-id="6cf09-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
+<span data-ttu-id="6cf09-103"><xref:System.Windows.Forms.WebBrowser>コントロールを特定の URL に移動する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="6cf09-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>
+
+ <span data-ttu-id="6cf09-104">新しいドキュメントが完全に読み込まれたことを確認する<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>には、イベントを処理します。</span><span class="sxs-lookup"><span data-stu-id="6cf09-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="6cf09-105">このイベントのデモンストレーションについては[、「方法:WebBrowser コントロール](how-to-print-with-a-webbrowser-control.md)を使用して印刷します。</span><span class="sxs-lookup"><span data-stu-id="6cf09-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](how-to-print-with-a-webbrowser-control.md).</span></span>
+
+## <a name="example"></a><span data-ttu-id="6cf09-106">例</span><span class="sxs-lookup"><span data-stu-id="6cf09-106">Example</span></span>
+
+```vb
+Me.webBrowser1.Navigate("http://www.microsoft.com")
+```
+
+```csharp
+this.webBrowser1.Navigate("http://www.microsoft.com");
+```
+
+## <a name="compiling-the-code"></a><span data-ttu-id="6cf09-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="6cf09-107">Compiling the Code</span></span>
+ <span data-ttu-id="6cf09-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="6cf09-108">This example requires:</span></span>
+
+- <span data-ttu-id="6cf09-109">`webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。</span><span class="sxs-lookup"><span data-stu-id="6cf09-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>
+
+- <span data-ttu-id="6cf09-110">`System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="6cf09-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6cf09-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="6cf09-111">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
-- [<span data-ttu-id="a6a5a-112">WebBrowser コントロール</span><span class="sxs-lookup"><span data-stu-id="a6a5a-112">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
-- [<span data-ttu-id="a6a5a-113">方法: WebBrowser コントロールを使用して印刷します。</span><span class="sxs-lookup"><span data-stu-id="a6a5a-113">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)
+- [<span data-ttu-id="6cf09-112">WebBrowser コントロール</span><span class="sxs-lookup"><span data-stu-id="6cf09-112">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
+- [<span data-ttu-id="6cf09-113">方法: WebBrowser コントロールを使用して印刷する</span><span class="sxs-lookup"><span data-stu-id="6cf09-113">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)

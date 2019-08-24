@@ -10,68 +10,68 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acc5ee47536772d98fcfe98849335933c24a41d7
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914747"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015908"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="f33e0-102">方法: ComboBox コントロールにサイズ変更可能なテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="f33e0-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
-<span data-ttu-id="f33e0-103">この例は、 <xref:System.Windows.Forms.ComboBox>コントロール内のテキストのカスタム描画を示しています。</span><span class="sxs-lookup"><span data-stu-id="f33e0-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="f33e0-104">項目が特定の条件を満たしている場合は、大きいフォントで描画され、赤色になります。</span><span class="sxs-lookup"><span data-stu-id="f33e0-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f33e0-105">例</span><span class="sxs-lookup"><span data-stu-id="f33e0-105">Example</span></span>  
-  
-```vb  
-Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
-System.Windows.Forms.MeasureItemEventArgs) Handles ComboBox1.MeasureItem  
-    Dim bFont As New Font("Arial", 8, FontStyle.Bold)  
-    Dim lFont As New Font("Arial", 12, FontStyle.Bold)  
-    Dim siText As SizeF  
-  
-    If ComboBox1.Items().Item(e.Index) = "Two" Then  
-        siText = e.Graphics.MeasureString(ComboBox1.Items().Item(e.Index), _  
-lFont)  
-    Else  
-        siText = e.Graphics.MeasureString(ComboBox1.Items().Item(e.Index), bFont)  
-    End If  
-  
-    e.ItemHeight = siText.Height  
-    e.ItemWidth = siText.Width  
-End Sub  
-  
-Private Sub ComboBox1_DrawItem(ByVal sender As Object, ByVal e As _  
-System.Windows.Forms.DrawItemEventArgs) Handles ComboBox1.DrawItem  
-    Dim g As Graphics = e.Graphics  
-    Dim bFont As New Font("Arial", 8, FontStyle.Bold)  
-    Dim lFont As New Font("Arial", 12, FontStyle.Bold)  
-  
-    If ComboBox1.Items().Item(e.Index) = "Two" Then  
-        g.DrawString(ComboBox1.Items.Item(e.Index), lfont, Brushes.Red, _  
-e.Bounds.X, e.Bounds.Y)  
-    Else  
-        g.DrawString(ComboBox1.Items.Item(e.Index), bFont, Brushes.Black, e.Bounds.X, e.Bounds.Y)  
-    End If  
-End Sub  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="f33e0-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="f33e0-106">Compiling the Code</span></span>  
- <span data-ttu-id="f33e0-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f33e0-107">This example requires:</span></span>  
-  
-- <span data-ttu-id="f33e0-108">Windows フォーム。</span><span class="sxs-lookup"><span data-stu-id="f33e0-108">A Windows form.</span></span>  
-  
-- <span data-ttu-id="f33e0-109">プロパティに 3 `ListBox1`つの項目<xref:System.Windows.Forms.ComboBox>を持つという名前<xref:System.Windows.Forms.ComboBox.Items%2A>のコントロール。</span><span class="sxs-lookup"><span data-stu-id="f33e0-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="f33e0-110">この例では、3つの項目`"One", Two", and Three"`に名前が付けられています。</span><span class="sxs-lookup"><span data-stu-id="f33e0-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="f33e0-111"><xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>の<xref:System.Windows.Forms.ComboBox.DrawMode%2A> プロパティ`ComboBox1`は、に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f33e0-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
-  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="8995a-102">方法: ComboBox コントロールにサイズ変更可能なテキストを作成する</span><span class="sxs-lookup"><span data-stu-id="8995a-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="8995a-103">この例は、 <xref:System.Windows.Forms.ComboBox>コントロール内のテキストのカスタム描画を示しています。</span><span class="sxs-lookup"><span data-stu-id="8995a-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="8995a-104">項目が特定の条件を満たしている場合は、大きいフォントで描画され、赤色になります。</span><span class="sxs-lookup"><span data-stu-id="8995a-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>
+
+## <a name="example"></a><span data-ttu-id="8995a-105">例</span><span class="sxs-lookup"><span data-stu-id="8995a-105">Example</span></span>
+
+```vb
+Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _
+System.Windows.Forms.MeasureItemEventArgs) Handles ComboBox1.MeasureItem
+    Dim bFont As New Font("Arial", 8, FontStyle.Bold)
+    Dim lFont As New Font("Arial", 12, FontStyle.Bold)
+    Dim siText As SizeF
+
+    If ComboBox1.Items().Item(e.Index) = "Two" Then
+        siText = e.Graphics.MeasureString(ComboBox1.Items().Item(e.Index), _
+lFont)
+    Else
+        siText = e.Graphics.MeasureString(ComboBox1.Items().Item(e.Index), bFont)
+    End If
+
+    e.ItemHeight = siText.Height
+    e.ItemWidth = siText.Width
+End Sub
+
+Private Sub ComboBox1_DrawItem(ByVal sender As Object, ByVal e As _
+System.Windows.Forms.DrawItemEventArgs) Handles ComboBox1.DrawItem
+    Dim g As Graphics = e.Graphics
+    Dim bFont As New Font("Arial", 8, FontStyle.Bold)
+    Dim lFont As New Font("Arial", 12, FontStyle.Bold)
+
+    If ComboBox1.Items().Item(e.Index) = "Two" Then
+        g.DrawString(ComboBox1.Items.Item(e.Index), lfont, Brushes.Red, _
+e.Bounds.X, e.Bounds.Y)
+    Else
+        g.DrawString(ComboBox1.Items.Item(e.Index), bFont, Brushes.Black, e.Bounds.X, e.Bounds.Y)
+    End If
+End Sub
+```
+
+## <a name="compiling-the-code"></a><span data-ttu-id="8995a-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="8995a-106">Compiling the Code</span></span>
+ <span data-ttu-id="8995a-107">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="8995a-107">This example requires:</span></span>
+
+- <span data-ttu-id="8995a-108">Windows フォーム。</span><span class="sxs-lookup"><span data-stu-id="8995a-108">A Windows form.</span></span>
+
+- <span data-ttu-id="8995a-109">プロパティに 3 `ListBox1`つの項目<xref:System.Windows.Forms.ComboBox>を持つという名前<xref:System.Windows.Forms.ComboBox.Items%2A>のコントロール。</span><span class="sxs-lookup"><span data-stu-id="8995a-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="8995a-110">この例では、3つの項目`"One", Two", and Three"`に名前が付けられています。</span><span class="sxs-lookup"><span data-stu-id="8995a-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="8995a-111"><xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>の<xref:System.Windows.Forms.ComboBox.DrawMode%2A> プロパティ`ComboBox1`は、に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8995a-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>
+
     > [!NOTE]
-    > <span data-ttu-id="f33e0-112">この手法は<xref:System.Windows.Forms.ListBox>コントロールにも適用でき<xref:System.Windows.Forms.ComboBox>ます。のを<xref:System.Windows.Forms.ListBox>に置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="f33e0-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
-  
-- <span data-ttu-id="f33e0-113"><xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間と <xref:System.Drawing?displayProperty=nameWithType> 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="f33e0-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f33e0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="f33e0-114">See also</span></span>
+    > <span data-ttu-id="8995a-112">この手法は<xref:System.Windows.Forms.ListBox>コントロールにも適用でき<xref:System.Windows.Forms.ComboBox>ます。のを<xref:System.Windows.Forms.ListBox>に置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="8995a-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>
+
+- <span data-ttu-id="8995a-113"><xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間と <xref:System.Drawing?displayProperty=nameWithType> 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="8995a-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="8995a-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8995a-114">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [<span data-ttu-id="f33e0-115">組み込みのオーナー描画サポートを備えたコントロール</span><span class="sxs-lookup"><span data-stu-id="f33e0-115">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="f33e0-116">ListBox コントロール</span><span class="sxs-lookup"><span data-stu-id="f33e0-116">ListBox Control</span></span>](listbox-control-windows-forms.md)
-- [<span data-ttu-id="f33e0-117">ComboBox コントロール</span><span class="sxs-lookup"><span data-stu-id="f33e0-117">ComboBox Control</span></span>](combobox-control-windows-forms.md)
+- [<span data-ttu-id="8995a-115">組み込みのオーナー描画サポートを備えたコントロール</span><span class="sxs-lookup"><span data-stu-id="8995a-115">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="8995a-116">ListBox コントロール</span><span class="sxs-lookup"><span data-stu-id="8995a-116">ListBox Control</span></span>](listbox-control-windows-forms.md)
+- [<span data-ttu-id="8995a-117">ComboBox コントロール</span><span class="sxs-lookup"><span data-stu-id="8995a-117">ComboBox Control</span></span>](combobox-control-windows-forms.md)
