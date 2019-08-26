@@ -1,21 +1,21 @@
 ---
-title: '方法: グループ化を使用して階層を作成する (C#)'
+title: 方法:グループ化を使用して階層を作成する (C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485846"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593854"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="2167e-102">方法: グループ化を使用して階層を作成する (C#)</span><span class="sxs-lookup"><span data-stu-id="2167e-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
-<span data-ttu-id="2167e-103">この例では、データをグループ化し、そのグループ化に基づいて XML を生成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="2167e-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="b14bb-102">方法:グループ化を使用して階層を作成する (C#)</span><span class="sxs-lookup"><span data-stu-id="b14bb-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
+<span data-ttu-id="b14bb-103">この例では、データをグループ化し、そのグループ化に基づいて XML を生成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b14bb-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2167e-104">例</span><span class="sxs-lookup"><span data-stu-id="2167e-104">Example</span></span>  
- <span data-ttu-id="2167e-105">この例では、まずデータをカテゴリごとにグループ化し、次にグループ化を反映した XML 階層を含む新しい XML ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="2167e-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="b14bb-104">例</span><span class="sxs-lookup"><span data-stu-id="b14bb-104">Example</span></span>  
+ <span data-ttu-id="b14bb-105">この例では、まずデータをカテゴリごとにグループ化し、次にグループ化を反映した XML 階層を含む新しい XML ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="b14bb-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="2167e-106">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:数値データ (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)」。</span><span class="sxs-lookup"><span data-stu-id="2167e-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="b14bb-106">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:数値データ (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)」。</span><span class="sxs-lookup"><span data-stu-id="b14bb-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="2167e-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2167e-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="b14bb-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b14bb-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
