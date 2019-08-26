@@ -1,23 +1,23 @@
 ---
-title: '方法: 子要素を検索する (XPath-LINQ to XML) (C#)'
+title: 方法:子要素を検索する (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 315cf782aa886bba484eb1fb06a4c4dbcf3cb4df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485724"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593724"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="e485f-102">方法: 子要素を検索する (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e485f-102">How to: Find a Child Element (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="e485f-103">このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを比較します。</span><span class="sxs-lookup"><span data-stu-id="e485f-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="52752-102">方法:子要素を検索する (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="52752-102">How to: Find a Child Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="52752-103">このトピックでは、XPath の子要素軸と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを比較します。</span><span class="sxs-lookup"><span data-stu-id="52752-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
   
- <span data-ttu-id="e485f-104">XPath 式は `DeliveryNotes` です。</span><span class="sxs-lookup"><span data-stu-id="e485f-104">The XPath expression is `DeliveryNotes`.</span></span>  
+ <span data-ttu-id="52752-104">XPath 式は `DeliveryNotes` です。</span><span class="sxs-lookup"><span data-stu-id="52752-104">The XPath expression is `DeliveryNotes`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e485f-105">例</span><span class="sxs-lookup"><span data-stu-id="e485f-105">Example</span></span>  
- <span data-ttu-id="e485f-106">この例では、`DeliveryNotes` 子要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="e485f-106">This example finds the child element `DeliveryNotes`.</span></span>  
+## <a name="example"></a><span data-ttu-id="52752-105">例</span><span class="sxs-lookup"><span data-stu-id="52752-105">Example</span></span>  
+ <span data-ttu-id="52752-106">この例では、`DeliveryNotes` 子要素を検索します。</span><span class="sxs-lookup"><span data-stu-id="52752-106">This example finds the child element `DeliveryNotes`.</span></span>  
   
- <span data-ttu-id="e485f-107">この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="e485f-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="52752-107">この例では、次の XML ドキュメントを使用します。「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="52752-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +38,7 @@ else
 Console.WriteLine(el1);  
 ```  
   
- <span data-ttu-id="e485f-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e485f-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="52752-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="52752-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  

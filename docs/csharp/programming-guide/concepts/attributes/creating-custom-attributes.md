@@ -2,15 +2,15 @@
 title: カスタム属性の作成 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674636"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595403"
 ---
-# <a name="creating-custom-attributes-c"></a><span data-ttu-id="5476a-102">カスタム属性の作成 (C#)</span><span class="sxs-lookup"><span data-stu-id="5476a-102">Creating Custom Attributes (C#)</span></span>
-<span data-ttu-id="5476a-103">属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。</span><span class="sxs-lookup"><span data-stu-id="5476a-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="5476a-104">型にそれを記述したプログラマーの名前でタグを付けるとします。</span><span class="sxs-lookup"><span data-stu-id="5476a-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="5476a-105">`Author` というカスタム属性クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="5476a-105">You might define a custom `Author` attribute class:</span></span>  
+# <a name="creating-custom-attributes-c"></a><span data-ttu-id="eb28e-102">カスタム属性の作成 (C#)</span><span class="sxs-lookup"><span data-stu-id="eb28e-102">Creating Custom Attributes (C#)</span></span>
+<span data-ttu-id="eb28e-103">属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。</span><span class="sxs-lookup"><span data-stu-id="eb28e-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="eb28e-104">型にそれを記述したプログラマーの名前でタグを付けるとします。</span><span class="sxs-lookup"><span data-stu-id="eb28e-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="eb28e-105">`Author` というカスタム属性クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="eb28e-105">You might define a custom `Author` attribute class:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -29,9 +29,9 @@ public class Author : System.Attribute
 }  
 ```  
   
- <span data-ttu-id="5476a-106">クラス名は属性の名前の `Author` です。</span><span class="sxs-lookup"><span data-stu-id="5476a-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="5476a-107">このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。</span><span class="sxs-lookup"><span data-stu-id="5476a-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="5476a-108">コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="5476a-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="5476a-109">この例では、`name` が位置指定パラメーターになります。</span><span class="sxs-lookup"><span data-stu-id="5476a-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="5476a-110">パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="5476a-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="5476a-111">この場合は、`version` が唯一の名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="5476a-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="5476a-112">`AttributeUsage` 属性を使用して、クラスと `struct` の宣言に対してのみ `Author` 属性を有効にしていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="5476a-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `struct` declarations.</span></span>  
+ <span data-ttu-id="eb28e-106">クラス名は属性の名前の `Author` です。</span><span class="sxs-lookup"><span data-stu-id="eb28e-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="eb28e-107">このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。</span><span class="sxs-lookup"><span data-stu-id="eb28e-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="eb28e-108">コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="eb28e-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="eb28e-109">この例では、`name` が位置指定パラメーターになります。</span><span class="sxs-lookup"><span data-stu-id="eb28e-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="eb28e-110">パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="eb28e-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="eb28e-111">この場合は、`version` が唯一の名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="eb28e-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="eb28e-112">`AttributeUsage` 属性を使用して、クラスと `struct` の宣言に対してのみ `Author` 属性を有効にしていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="eb28e-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `struct` declarations.</span></span>  
   
- <span data-ttu-id="5476a-113">この新しい属性の使用方法は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="5476a-113">You could use this new attribute as follows:</span></span>  
+ <span data-ttu-id="eb28e-113">この新しい属性の使用方法は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="eb28e-113">You could use this new attribute as follows:</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -41,7 +41,7 @@ class SampleClass
 }  
 ```  
   
- <span data-ttu-id="5476a-114">`AttributeUsage` には名前付きパラメーター `AllowMultiple` があります。これを使用すると、カスタム属性が 1 回しか指定できない属性か、または複数回指定できる属性かを設定できます。</span><span class="sxs-lookup"><span data-stu-id="5476a-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="5476a-115">次のコード例では、複数回指定できる属性が作成されます。</span><span class="sxs-lookup"><span data-stu-id="5476a-115">In the following code example, a multiuse attribute is created.</span></span>  
+ <span data-ttu-id="eb28e-114">`AttributeUsage` には名前付きパラメーター `AllowMultiple` があります。これを使用すると、カスタム属性が 1 回しか指定できない属性か、または複数回指定できる属性かを設定できます。</span><span class="sxs-lookup"><span data-stu-id="eb28e-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="eb28e-115">次のコード例では、複数回指定できる属性が作成されます。</span><span class="sxs-lookup"><span data-stu-id="eb28e-115">In the following code example, a multiuse attribute is created.</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -51,7 +51,7 @@ class SampleClass
 public class Author : System.Attribute  
 ```  
   
- <span data-ttu-id="5476a-116">次のコード例では、同じ型の複数の属性が 1 つのクラスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="5476a-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
+ <span data-ttu-id="eb28e-116">次のコード例では、同じ型の複数の属性が 1 つのクラスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="eb28e-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5476a-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="5476a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb28e-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="eb28e-117">See also</span></span>
 
 - <xref:System.Reflection>
-- [<span data-ttu-id="5476a-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="5476a-118">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="5476a-119">カスタム属性の記述</span><span class="sxs-lookup"><span data-stu-id="5476a-119">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
-- [<span data-ttu-id="5476a-120">リフレクション (C#)</span><span class="sxs-lookup"><span data-stu-id="5476a-120">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="5476a-121">属性 (C#)</span><span class="sxs-lookup"><span data-stu-id="5476a-121">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [<span data-ttu-id="5476a-122">リフレクションを使用した属性へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="5476a-122">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [<span data-ttu-id="5476a-123">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="5476a-123">AttributeUsage (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="eb28e-118">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="eb28e-118">C# Programming Guide</span></span>](../../index.md)
+- [<span data-ttu-id="eb28e-119">カスタム属性の記述</span><span class="sxs-lookup"><span data-stu-id="eb28e-119">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
+- [<span data-ttu-id="eb28e-120">リフレクション (C#)</span><span class="sxs-lookup"><span data-stu-id="eb28e-120">Reflection (C#)</span></span>](../reflection.md)
+- [<span data-ttu-id="eb28e-121">属性 (C#)</span><span class="sxs-lookup"><span data-stu-id="eb28e-121">Attributes (C#)</span></span>](./index.md)
+- [<span data-ttu-id="eb28e-122">リフレクションを使用した属性へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="eb28e-122">Accessing Attributes by Using Reflection (C#)</span></span>](./accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="eb28e-123">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="eb28e-123">AttributeUsage (C#)</span></span>](./attributeusage.md)

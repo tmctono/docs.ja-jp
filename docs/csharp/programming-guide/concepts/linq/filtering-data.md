@@ -2,31 +2,31 @@
 title: データのフィルター処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826068"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594396"
 ---
-# <a name="filtering-data-c"></a><span data-ttu-id="b498f-102">データのフィルター処理 (C#)</span><span class="sxs-lookup"><span data-stu-id="b498f-102">Filtering Data (C#)</span></span>
-<span data-ttu-id="b498f-103">フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。</span><span class="sxs-lookup"><span data-stu-id="b498f-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="b498f-104">選択とも呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="b498f-104">It is also known as selection.</span></span>  
+# <a name="filtering-data-c"></a><span data-ttu-id="72fa8-102">データのフィルター処理 (C#)</span><span class="sxs-lookup"><span data-stu-id="72fa8-102">Filtering Data (C#)</span></span>
+<span data-ttu-id="72fa8-103">フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。</span><span class="sxs-lookup"><span data-stu-id="72fa8-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="72fa8-104">選択とも呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="72fa8-104">It is also known as selection.</span></span>  
   
- <span data-ttu-id="b498f-105">次の図は、文字のシーケンスをフィルター処理した結果を示したものです。</span><span class="sxs-lookup"><span data-stu-id="b498f-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="b498f-106">フィルター処理操作の述語では、文字が "A" でなければならないことが指定されています。</span><span class="sxs-lookup"><span data-stu-id="b498f-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
+ <span data-ttu-id="72fa8-105">次の図は、文字のシーケンスをフィルター処理した結果を示したものです。</span><span class="sxs-lookup"><span data-stu-id="72fa8-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="72fa8-106">フィルター処理操作の述語では、文字が "A" でなければならないことが指定されています。</span><span class="sxs-lookup"><span data-stu-id="72fa8-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
   
  ![LINQ のフィルター操作を示す図。](./media/filtering-data/linq-filter-operation.png)  
   
- <span data-ttu-id="b498f-108">次のセクションでは、選択を実行する標準クエリ演算子メソッドの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="b498f-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
+ <span data-ttu-id="72fa8-108">次のセクションでは、選択を実行する標準クエリ演算子メソッドの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="72fa8-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b498f-109">メソッド</span><span class="sxs-lookup"><span data-stu-id="b498f-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="72fa8-109">メソッド</span><span class="sxs-lookup"><span data-stu-id="72fa8-109">Methods</span></span>  
   
-|<span data-ttu-id="b498f-110">メソッド名</span><span class="sxs-lookup"><span data-stu-id="b498f-110">Method Name</span></span>|<span data-ttu-id="b498f-111">説明</span><span class="sxs-lookup"><span data-stu-id="b498f-111">Description</span></span>|<span data-ttu-id="b498f-112">C# のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="b498f-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="b498f-113">説明</span><span class="sxs-lookup"><span data-stu-id="b498f-113">More Information</span></span>|  
+|<span data-ttu-id="72fa8-110">メソッド名</span><span class="sxs-lookup"><span data-stu-id="72fa8-110">Method Name</span></span>|<span data-ttu-id="72fa8-111">説明</span><span class="sxs-lookup"><span data-stu-id="72fa8-111">Description</span></span>|<span data-ttu-id="72fa8-112">C# のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="72fa8-112">C# Query Expression Syntax</span></span>|<span data-ttu-id="72fa8-113">詳細情報</span><span class="sxs-lookup"><span data-stu-id="72fa8-113">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="b498f-114">OfType</span><span class="sxs-lookup"><span data-stu-id="b498f-114">OfType</span></span>|<span data-ttu-id="b498f-115">指定した型にキャストできるかどうかにより、値を選択します。</span><span class="sxs-lookup"><span data-stu-id="b498f-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="b498f-116">該当なし。</span><span class="sxs-lookup"><span data-stu-id="b498f-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="b498f-117">Where</span><span class="sxs-lookup"><span data-stu-id="b498f-117">Where</span></span>|<span data-ttu-id="b498f-118">述語関数に基づいて値を選択します。</span><span class="sxs-lookup"><span data-stu-id="b498f-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="72fa8-114">OfType</span><span class="sxs-lookup"><span data-stu-id="72fa8-114">OfType</span></span>|<span data-ttu-id="72fa8-115">指定した型にキャストできるかどうかにより、値を選択します。</span><span class="sxs-lookup"><span data-stu-id="72fa8-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="72fa8-116">適用不可。</span><span class="sxs-lookup"><span data-stu-id="72fa8-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="72fa8-117">Where</span><span class="sxs-lookup"><span data-stu-id="72fa8-117">Where</span></span>|<span data-ttu-id="72fa8-118">述語関数に基づいて値を選択します。</span><span class="sxs-lookup"><span data-stu-id="72fa8-118">Selects values that are based on a predicate function.</span></span>|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="b498f-119">クエリ式の構文例</span><span class="sxs-lookup"><span data-stu-id="b498f-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="b498f-120">次の例では、`where` 句を使って、配列から特定の長さを持つ文字列をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="b498f-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="72fa8-119">クエリ式の構文例</span><span class="sxs-lookup"><span data-stu-id="72fa8-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="72fa8-120">次の例では、`where` 句を使って、配列から特定の長さを持つ文字列をフィルター処理します。</span><span class="sxs-lookup"><span data-stu-id="72fa8-120">The following example uses the `where` clause to filter from an array those strings that have a specific length.</span></span>  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -45,12 +45,12 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b498f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="b498f-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72fa8-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="72fa8-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="b498f-122">標準クエリ演算子の概要 (C#)</span><span class="sxs-lookup"><span data-stu-id="b498f-122">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="b498f-123">where 句</span><span class="sxs-lookup"><span data-stu-id="b498f-123">where clause</span></span>](../../../../csharp/language-reference/keywords/where-clause.md)
-- [<span data-ttu-id="b498f-124">方法: 実行時に述語フィルターを動的に指定する</span><span class="sxs-lookup"><span data-stu-id="b498f-124">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-- [<span data-ttu-id="b498f-125">方法: リフレクションを使用してアセンブリのメタデータを照会する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b498f-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [<span data-ttu-id="b498f-126">方法: 指定された属性または名前のファイルをクエリする (C#)</span><span class="sxs-lookup"><span data-stu-id="b498f-126">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [<span data-ttu-id="b498f-127">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b498f-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="72fa8-122">標準クエリ演算子の概要 (C#)</span><span class="sxs-lookup"><span data-stu-id="72fa8-122">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="72fa8-123">where 句</span><span class="sxs-lookup"><span data-stu-id="72fa8-123">where clause</span></span>](../../../language-reference/keywords/where-clause.md)
+- [<span data-ttu-id="72fa8-124">方法: 実行時に述語フィルターを動的に指定する</span><span class="sxs-lookup"><span data-stu-id="72fa8-124">How to: Dynamically Specify Predicate Filters at Runtime</span></span>](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [<span data-ttu-id="72fa8-125">方法: リフレクションを使用してアセンブリのメタデータを照会する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="72fa8-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (C#)</span></span>](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [<span data-ttu-id="72fa8-126">方法: 指定された属性または名前のファイルをクエリする (C#)</span><span class="sxs-lookup"><span data-stu-id="72fa8-126">How to: Query for Files with a Specified Attribute or Name (C#)</span></span>](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [<span data-ttu-id="72fa8-127">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="72fa8-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -7,50 +7,50 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 063cee694e8367a86fead2f1258c3cbda5ab7018
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635833"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606630"
 ---
-# <a name="-pathmap-c-compiler-options"></a><span data-ttu-id="0eece-102">-pathmap (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="0eece-102">-pathmap (C# Compiler Options)</span></span>
+# <a name="-pathmap-c-compiler-options"></a><span data-ttu-id="67c44-102">-pathmap (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="67c44-102">-pathmap (C# Compiler Options)</span></span>
 
-<span data-ttu-id="0eece-103">**-pathmap** コンパイラ オプションは、コンパイラによるソース パス名出力への物理パスのマップ方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="0eece-103">The **-pathmap** compiler option specifies how to map physical paths to source path names output by the compiler.</span></span>
+<span data-ttu-id="67c44-103">**-pathmap** コンパイラ オプションは、コンパイラによるソース パス名出力への物理パスのマップ方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="67c44-103">The **-pathmap** compiler option specifies how to map physical paths to source path names output by the compiler.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0eece-104">構文</span><span class="sxs-lookup"><span data-stu-id="0eece-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="67c44-104">構文</span><span class="sxs-lookup"><span data-stu-id="67c44-104">Syntax</span></span>
 
 ```console
 -pathmap:path1=sourcePath1,path2=sourcePath2
 ```
 
-## <a name="arguments"></a><span data-ttu-id="0eece-105">引数</span><span class="sxs-lookup"><span data-stu-id="0eece-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="67c44-105">引数</span><span class="sxs-lookup"><span data-stu-id="67c44-105">Arguments</span></span>
 
- <span data-ttu-id="0eece-106">`path1` 現在の環境でのソース ファイルへの完全なパス</span><span class="sxs-lookup"><span data-stu-id="0eece-106">`path1` The full path to the source files in the current environment</span></span>
+ <span data-ttu-id="67c44-106">`path1` 現在の環境でのソース ファイルへの完全なパス</span><span class="sxs-lookup"><span data-stu-id="67c44-106">`path1` The full path to the source files in the current environment</span></span>
 
- <span data-ttu-id="0eece-107">`sourcePath1` 出力ファイルにおいて `path1` の代わりに使用されるソース パス。</span><span class="sxs-lookup"><span data-stu-id="0eece-107">`sourcePath1` The source path substituted for `path1` in any output files.</span></span>
+ <span data-ttu-id="67c44-107">`sourcePath1` 出力ファイルにおいて `path1` の代わりに使用されるソース パス。</span><span class="sxs-lookup"><span data-stu-id="67c44-107">`sourcePath1` The source path substituted for `path1` in any output files.</span></span>
 
-<span data-ttu-id="0eece-108">複数のマップされるソース パスを指定するには、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="0eece-108">To specify multiple mapped source paths, separate each with a comma.</span></span>
+<span data-ttu-id="67c44-108">複数のマップされるソース パスを指定するには、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="67c44-108">To specify multiple mapped source paths, separate each with a comma.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0eece-109">コメント</span><span class="sxs-lookup"><span data-stu-id="0eece-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="67c44-109">解説</span><span class="sxs-lookup"><span data-stu-id="67c44-109">Remarks</span></span>
 
-<span data-ttu-id="0eece-110">コンパイラは、次の理由でその出力にソース パスを書き込みます。</span><span class="sxs-lookup"><span data-stu-id="0eece-110">The compiler writes the source path into its output for the following reasons:</span></span>
+<span data-ttu-id="67c44-110">コンパイラは、次の理由でその出力にソース パスを書き込みます。</span><span class="sxs-lookup"><span data-stu-id="67c44-110">The compiler writes the source path into its output for the following reasons:</span></span>
 
-1. <span data-ttu-id="0eece-111"><xref:System.Runtime.CompilerServices.CallerFilePathAttribute> が省略可能なパラメーターに適用される場合、引数はソース パスに置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="0eece-111">The source path is substituted for an argument when the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> is applied to an optional parameter.</span></span>
-1. <span data-ttu-id="0eece-112">ソース パスは、PDB ファイルに埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="0eece-112">The source path is embedded in a PDB file.</span></span>
-1. <span data-ttu-id="0eece-113">PDB ファイルのパスは、PE (ポータブル実行可能) ファイルに埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="0eece-113">The path of the PDB file is embedded into a PE (portable executable) file.</span></span>
+1. <span data-ttu-id="67c44-111"><xref:System.Runtime.CompilerServices.CallerFilePathAttribute> が省略可能なパラメーターに適用される場合、引数はソース パスに置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="67c44-111">The source path is substituted for an argument when the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> is applied to an optional parameter.</span></span>
+1. <span data-ttu-id="67c44-112">ソース パスは、PDB ファイルに埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="67c44-112">The source path is embedded in a PDB file.</span></span>
+1. <span data-ttu-id="67c44-113">PDB ファイルのパスは、PE (ポータブル実行可能) ファイルに埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="67c44-113">The path of the PDB file is embedded into a PE (portable executable) file.</span></span>
 
-<span data-ttu-id="0eece-114">このオプションは、コンパイラが実行されるコンピューター上の各物理パスを、出力ファイルに書き込まれる必要がある対応するパスにマップします。</span><span class="sxs-lookup"><span data-stu-id="0eece-114">This option maps each physical path on the machine where the compiler runs to a corresponding path that should be written in the output files.</span></span>
+<span data-ttu-id="67c44-114">このオプションは、コンパイラが実行されるコンピューター上の各物理パスを、出力ファイルに書き込まれる必要がある対応するパスにマップします。</span><span class="sxs-lookup"><span data-stu-id="67c44-114">This option maps each physical path on the machine where the compiler runs to a corresponding path that should be written in the output files.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0eece-115">例</span><span class="sxs-lookup"><span data-stu-id="0eece-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="67c44-115">例</span><span class="sxs-lookup"><span data-stu-id="67c44-115">Example</span></span>
 
-<span data-ttu-id="0eece-116">ディレクトリ **C:\\work\\tests** 内の `t.cs` をコンパイルし、出力ではそのディレクトリを **\publish** にマップします。</span><span class="sxs-lookup"><span data-stu-id="0eece-116">Compile `t.cs` in the directory **C:\\work\\tests** and map that directory to **\publish** in the output:</span></span>
+<span data-ttu-id="67c44-116">ディレクトリ **C:\\work\\tests** 内の `t.cs` をコンパイルし、出力ではそのディレクトリを **\publish** にマップします。</span><span class="sxs-lookup"><span data-stu-id="67c44-116">Compile `t.cs` in the directory **C:\\work\\tests** and map that directory to **\publish** in the output:</span></span>
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs
 ```
 
-## <a name="see-also"></a><span data-ttu-id="0eece-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="0eece-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67c44-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="67c44-117">See also</span></span>
 
-- [<span data-ttu-id="0eece-118">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="0eece-118">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="0eece-119">プロジェクトおよびソリューションのプロパティの管理</span><span class="sxs-lookup"><span data-stu-id="0eece-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="67c44-118">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="67c44-118">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="67c44-119">プロジェクトおよびソリューションのプロパティの管理</span><span class="sxs-lookup"><span data-stu-id="67c44-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

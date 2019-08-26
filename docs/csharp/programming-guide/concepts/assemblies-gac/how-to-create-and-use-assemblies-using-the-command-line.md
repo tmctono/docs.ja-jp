@@ -1,26 +1,26 @@
 ---
-title: '方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)'
+title: 方法:コマンド ラインを使用してアセンブリを作成および使用する (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586029"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595968"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="8dec1-102">方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)</span><span class="sxs-lookup"><span data-stu-id="8dec1-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
-<span data-ttu-id="8dec1-103">アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。</span><span class="sxs-lookup"><span data-stu-id="8dec1-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="8dec1-104">DLL のビルド例および使用例として、次に示すシナリオを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="8dec1-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="ecf54-102">方法:コマンド ラインを使用してアセンブリを作成および使用する (C#)</span><span class="sxs-lookup"><span data-stu-id="ecf54-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
+<span data-ttu-id="ecf54-103">アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。</span><span class="sxs-lookup"><span data-stu-id="ecf54-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="ecf54-104">DLL のビルド例および使用例として、次に示すシナリオを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="ecf54-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
-- <span data-ttu-id="8dec1-105">`MathLibrary.DLL`:実行時に呼び出されるメソッドが格納されているライブラリ ファイル。</span><span class="sxs-lookup"><span data-stu-id="8dec1-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="8dec1-106">この例では、DLL には 2 つのメソッド `Add` と `Multiply` が含まれています。</span><span class="sxs-lookup"><span data-stu-id="8dec1-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
+- <span data-ttu-id="ecf54-105">`MathLibrary.DLL`:実行時に呼び出されるメソッドが格納されているライブラリ ファイル。</span><span class="sxs-lookup"><span data-stu-id="ecf54-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="ecf54-106">この例では、DLL には 2 つのメソッド `Add` と `Multiply` が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ecf54-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
-- <span data-ttu-id="8dec1-107">`Add`:`Add` メソッドが格納されているソース ファイル。</span><span class="sxs-lookup"><span data-stu-id="8dec1-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="8dec1-108">パラメーターの和を返します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="8dec1-109">`Add` メソッドを含む `AddClass` クラスは `UtilityMethods` 名前空間のメンバーです。</span><span class="sxs-lookup"><span data-stu-id="8dec1-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="ecf54-107">`Add`:`Add` メソッドが格納されているソース ファイル。</span><span class="sxs-lookup"><span data-stu-id="ecf54-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="ecf54-108">パラメーターの和を返します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="ecf54-109">`Add` メソッドを含む `AddClass` クラスは `UtilityMethods` 名前空間のメンバーです。</span><span class="sxs-lookup"><span data-stu-id="ecf54-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="8dec1-110">`Mult`:`Multiply` メソッドが格納されているソース コード。</span><span class="sxs-lookup"><span data-stu-id="8dec1-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="8dec1-111">パラメーターの積を返します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-111">It returns the product of its parameters.</span></span> <span data-ttu-id="8dec1-112">`Multiply` メソッドを含む `MultiplyClass` クラスも `UtilityMethods` 名前空間のメンバーです。</span><span class="sxs-lookup"><span data-stu-id="8dec1-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="ecf54-110">`Mult`:`Multiply` メソッドが格納されているソース コード。</span><span class="sxs-lookup"><span data-stu-id="ecf54-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="ecf54-111">パラメーターの積を返します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-111">It returns the product of its parameters.</span></span> <span data-ttu-id="ecf54-112">`Multiply` メソッドを含む `MultiplyClass` クラスも `UtilityMethods` 名前空間のメンバーです。</span><span class="sxs-lookup"><span data-stu-id="ecf54-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="8dec1-113">`TestCode`:`Main` メソッドが格納されているファイル。</span><span class="sxs-lookup"><span data-stu-id="8dec1-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="8dec1-114">DLL ファイルのメソッドを使用して、実行時引数の和と積を計算します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
+- <span data-ttu-id="ecf54-113">`TestCode`:`Main` メソッドが格納されているファイル。</span><span class="sxs-lookup"><span data-stu-id="ecf54-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="ecf54-114">DLL ファイルのメソッドを使用して、実行時引数の和と積を計算します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8dec1-115">例</span><span class="sxs-lookup"><span data-stu-id="8dec1-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ecf54-115">例</span><span class="sxs-lookup"><span data-stu-id="ecf54-115">Example</span></span>  
   
 ```csharp  
 // File: Add.cs   
@@ -84,27 +84,27 @@ class TestCode
 */  
 ```  
   
- <span data-ttu-id="8dec1-116">このファイルには、DLL のメソッド `Add` と `Multiply` を使用するアルゴリズムが格納されています。</span><span class="sxs-lookup"><span data-stu-id="8dec1-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="8dec1-117">最初に、コマンド ラインから入力された引数 `num1` と `num2` を解析します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="8dec1-118">次に、`AddClass` クラスの `Add` メソッドを使用して和を計算し、`MultiplyClass` クラスの `Multiply` メソッドを使って積を計算します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
+ <span data-ttu-id="ecf54-116">このファイルには、DLL のメソッド `Add` と `Multiply` を使用するアルゴリズムが格納されています。</span><span class="sxs-lookup"><span data-stu-id="ecf54-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="ecf54-117">最初に、コマンド ラインから入力された引数 `num1` と `num2` を解析します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="ecf54-118">次に、`AddClass` クラスの `Add` メソッドを使用して和を計算し、`MultiplyClass` クラスの `Multiply` メソッドを使って積を計算します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- <span data-ttu-id="8dec1-119">ファイルの先頭で `using` ディレクティブを指定すると、次のように、コンパイル時に非修飾クラス名を使用して、DLL メソッドを参照できます。</span><span class="sxs-lookup"><span data-stu-id="8dec1-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
+ <span data-ttu-id="ecf54-119">ファイルの先頭で `using` ディレクティブを指定すると、次のように、コンパイル時に非修飾クラス名を使用して、DLL メソッドを参照できます。</span><span class="sxs-lookup"><span data-stu-id="ecf54-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- <span data-ttu-id="8dec1-120">ディレクティブを指定しない場合は、次のように、完全修飾名を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dec1-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
+ <span data-ttu-id="ecf54-120">ディレクティブを指定しない場合は、次のように、完全修飾名を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ecf54-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
-## <a name="execution"></a><span data-ttu-id="8dec1-121">実行</span><span class="sxs-lookup"><span data-stu-id="8dec1-121">Execution</span></span>  
- <span data-ttu-id="8dec1-122">プログラムを実行するには、次のように、EXE ファイルの名前と 2 つの数値を順に入力します。</span><span class="sxs-lookup"><span data-stu-id="8dec1-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
+## <a name="execution"></a><span data-ttu-id="ecf54-121">Execution</span><span class="sxs-lookup"><span data-stu-id="ecf54-121">Execution</span></span>  
+ <span data-ttu-id="ecf54-122">プログラムを実行するには、次のように、EXE ファイルの名前と 2 つの数値を順に入力します。</span><span class="sxs-lookup"><span data-stu-id="ecf54-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="see-also"></a><span data-ttu-id="8dec1-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="8dec1-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ecf54-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="ecf54-123">See also</span></span>
 
-- [<span data-ttu-id="8dec1-124">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="8dec1-124">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="8dec1-125">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="8dec1-125">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
-- [<span data-ttu-id="8dec1-126">DLL 関数を保持するクラスの作成</span><span class="sxs-lookup"><span data-stu-id="8dec1-126">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [<span data-ttu-id="ecf54-124">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="ecf54-124">C# Programming Guide</span></span>](../../index.md)
+- [<span data-ttu-id="ecf54-125">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="ecf54-125">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="ecf54-126">DLL 関数を保持するクラスの作成</span><span class="sxs-lookup"><span data-stu-id="ecf54-126">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

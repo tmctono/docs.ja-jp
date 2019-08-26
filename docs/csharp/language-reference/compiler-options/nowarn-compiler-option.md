@@ -8,51 +8,51 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa3079bf1431ba1a16b5a2eef0dd5500fe95909c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592805"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606621"
 ---
-# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="5770c-102">-nowarn (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="5770c-102">-nowarn (C# Compiler Options)</span></span>
-<span data-ttu-id="5770c-103">**-nowarn** オプションを使用すると、コンパイラから警告が出力されないようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="5770c-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="5770c-104">警告番号が複数ある場合は、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="5770c-104">Separate multiple warning numbers with a comma.</span></span>  
+# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="ca2b5-102">-nowarn (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="ca2b5-102">-nowarn (C# Compiler Options)</span></span>
+<span data-ttu-id="ca2b5-103">**-nowarn** オプションを使用すると、コンパイラから警告が出力されないようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="ca2b5-104">警告番号が複数ある場合は、コンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-104">Separate multiple warning numbers with a comma.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5770c-105">構文</span><span class="sxs-lookup"><span data-stu-id="5770c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca2b5-105">構文</span><span class="sxs-lookup"><span data-stu-id="ca2b5-105">Syntax</span></span>  
   
 ```console  
 -nowarn:number1[,number2,...]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="5770c-106">引数</span><span class="sxs-lookup"><span data-stu-id="5770c-106">Arguments</span></span>  
- <span data-ttu-id="5770c-107">`number1`、 `number2`</span><span class="sxs-lookup"><span data-stu-id="5770c-107">`number1`, `number2`</span></span>  
- <span data-ttu-id="5770c-108">コンパイラで表示しないようにする警告番号。</span><span class="sxs-lookup"><span data-stu-id="5770c-108">Warning number(s) that you want the compiler to suppress.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ca2b5-106">引数</span><span class="sxs-lookup"><span data-stu-id="ca2b5-106">Arguments</span></span>  
+ <span data-ttu-id="ca2b5-107">`number1`、`number2`</span><span class="sxs-lookup"><span data-stu-id="ca2b5-107">`number1`, `number2`</span></span>  
+ <span data-ttu-id="ca2b5-108">コンパイラで表示しないようにする警告番号。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-108">Warning number(s) that you want the compiler to suppress.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5770c-109">解説</span><span class="sxs-lookup"><span data-stu-id="5770c-109">Remarks</span></span>  
- <span data-ttu-id="5770c-110">警告 ID の数値だけを指定します。</span><span class="sxs-lookup"><span data-stu-id="5770c-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="5770c-111">たとえば、CS0028 を抑制する場合は、`-nowarn:28` と指定します。</span><span class="sxs-lookup"><span data-stu-id="5770c-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ca2b5-109">解説</span><span class="sxs-lookup"><span data-stu-id="ca2b5-109">Remarks</span></span>  
+ <span data-ttu-id="ca2b5-110">警告 ID の数値だけを指定します。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="ca2b5-111">たとえば、CS0028 を抑制する場合は、`-nowarn:28` と指定します。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
   
- <span data-ttu-id="5770c-112">`-nowarn` に渡された警告番号が以前のリリースでは有効であったが、今はコンパイラから削除されている場合、コンパイラはその番号を自動的に無視します。</span><span class="sxs-lookup"><span data-stu-id="5770c-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="5770c-113">たとえば、CS0679 は Visual Studio .NET 2002 のコンパイラでは有効でしたが、その後削除されました。</span><span class="sxs-lookup"><span data-stu-id="5770c-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
+ <span data-ttu-id="ca2b5-112">`-nowarn` に渡された警告番号が以前のリリースでは有効であったが、今はコンパイラから削除されている場合、コンパイラはその番号を自動的に無視します。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="ca2b5-113">たとえば、CS0679 は Visual Studio .NET 2002 のコンパイラでは有効でしたが、その後削除されました。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
   
- <span data-ttu-id="5770c-114">`-nowarn` オプションでは、次の警告は抑制されません。</span><span class="sxs-lookup"><span data-stu-id="5770c-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
+ <span data-ttu-id="ca2b5-114">`-nowarn` オプションでは、次の警告は抑制されません。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
   
-- <span data-ttu-id="5770c-115">コンパイラの警告 (レベル 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="5770c-115">Compiler Warning (level 1) CS2002</span></span>  
+- <span data-ttu-id="ca2b5-115">コンパイラの警告 (レベル 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="ca2b5-115">Compiler Warning (level 1) CS2002</span></span>  
   
-- <span data-ttu-id="5770c-116">コンパイラの警告 (レベル 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="5770c-116">Compiler Warning (level 1) CS2023</span></span>  
+- <span data-ttu-id="ca2b5-116">コンパイラの警告 (レベル 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="ca2b5-116">Compiler Warning (level 1) CS2023</span></span>  
   
-- <span data-ttu-id="5770c-117">コンパイラの警告 (レベル 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="5770c-117">Compiler Warning (level 1) CS2029</span></span>  
+- <span data-ttu-id="ca2b5-117">コンパイラの警告 (レベル 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="ca2b5-117">Compiler Warning (level 1) CS2029</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="5770c-118">Visual Studio 開発環境でこのコンパイラ オプションを設定するには</span><span class="sxs-lookup"><span data-stu-id="5770c-118">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="ca2b5-118">Visual Studio 開発環境でこのコンパイラ オプションを設定するには</span><span class="sxs-lookup"><span data-stu-id="ca2b5-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="5770c-119">プロジェクトの **[プロパティ]** ページを開きます。</span><span class="sxs-lookup"><span data-stu-id="5770c-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="5770c-120">詳細については、「[[ビルド] ページ (プロジェクト デザイナー) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5770c-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+1. <span data-ttu-id="ca2b5-119">プロジェクトの **[プロパティ]** ページを開きます。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="ca2b5-120">詳細については、「[[ビルド] ページ (プロジェクト デザイナー) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-2. <span data-ttu-id="5770c-121">**[ビルド]** プロパティ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="5770c-121">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="ca2b5-121">**[ビルド]** プロパティ ページをクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-121">Click the **Build** property page.</span></span>  
   
-3. <span data-ttu-id="5770c-122">**[警告の表示なし]** プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="5770c-122">Modify the **Suppress Warnings** property.</span></span>  
+3. <span data-ttu-id="ca2b5-122">**[警告の表示なし]** プロパティを変更します。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-122">Modify the **Suppress Warnings** property.</span></span>  
   
- <span data-ttu-id="5770c-123">このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.DelaySign%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5770c-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
+ <span data-ttu-id="ca2b5-123">このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.DelaySign%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ca2b5-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5770c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="5770c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca2b5-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="ca2b5-124">See also</span></span>
 
-- [<span data-ttu-id="5770c-125">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="5770c-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="5770c-126">プロジェクトおよびソリューションのプロパティの管理</span><span class="sxs-lookup"><span data-stu-id="5770c-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
-- [<span data-ttu-id="5770c-127">C# コンパイラ エラー</span><span class="sxs-lookup"><span data-stu-id="5770c-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
+- [<span data-ttu-id="ca2b5-125">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="ca2b5-125">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="ca2b5-126">プロジェクトおよびソリューションのプロパティの管理</span><span class="sxs-lookup"><span data-stu-id="ca2b5-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="ca2b5-127">C# コンパイラ エラー</span><span class="sxs-lookup"><span data-stu-id="ca2b5-127">C# Compiler Errors</span></span>](../compiler-messages/index.md)
