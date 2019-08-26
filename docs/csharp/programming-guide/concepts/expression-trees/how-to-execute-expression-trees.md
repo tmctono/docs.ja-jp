@@ -1,26 +1,26 @@
 ---
-title: '方法: 式ツリーを実行する (C#)'
+title: 方法:式ツリーを実行する (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: acf841194ef0990d2eb00481454c89088f4616c8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586133"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924371"
 ---
-# <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="64205-102">方法: 式ツリーを実行する (C#)</span><span class="sxs-lookup"><span data-stu-id="64205-102">How to: Execute Expression Trees (C#)</span></span>
-<span data-ttu-id="64205-103">このトピックでは、式ツリーを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="64205-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="64205-104">式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。</span><span class="sxs-lookup"><span data-stu-id="64205-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
+# <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="25852-102">方法:式ツリーを実行する (C#)</span><span class="sxs-lookup"><span data-stu-id="25852-102">How to: Execute Expression Trees (C#)</span></span>
+<span data-ttu-id="25852-103">このトピックでは、式ツリーを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="25852-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="25852-104">式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。</span><span class="sxs-lookup"><span data-stu-id="25852-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- <span data-ttu-id="64205-105">実行できるのは、ラムダ式を表す式ツリーのみです。</span><span class="sxs-lookup"><span data-stu-id="64205-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="64205-106">ラムダ式を表す式ツリーの型は、<xref:System.Linq.Expressions.LambdaExpression> または <xref:System.Linq.Expressions.Expression%601> です。</span><span class="sxs-lookup"><span data-stu-id="64205-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="64205-107">このような式ツリーを実行するには、<xref:System.Linq.Expressions.LambdaExpression.Compile%2A> メソッドを呼び出して実行可能なデリゲートを作成した後、そのデリゲートを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="64205-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
+ <span data-ttu-id="25852-105">実行できるのは、ラムダ式を表す式ツリーのみです。</span><span class="sxs-lookup"><span data-stu-id="25852-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="25852-106">ラムダ式を表す式ツリーの型は、<xref:System.Linq.Expressions.LambdaExpression> または <xref:System.Linq.Expressions.Expression%601> です。</span><span class="sxs-lookup"><span data-stu-id="25852-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="25852-107">このような式ツリーを実行するには、<xref:System.Linq.Expressions.LambdaExpression.Compile%2A> メソッドを呼び出して実行可能なデリゲートを作成した後、そのデリゲートを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="25852-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="64205-108">デリゲートの型が不明な場合、つまり、ラムダ式が <xref:System.Linq.Expressions.LambdaExpression> 型であり <xref:System.Linq.Expressions.Expression%601> 型ではない場合には、デリゲートを直接呼び出さずに、デリゲートに対して <xref:System.Delegate.DynamicInvoke%2A> メソッドを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="64205-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
+> <span data-ttu-id="25852-108">デリゲートの型が不明な場合、つまり、ラムダ式が <xref:System.Linq.Expressions.LambdaExpression> 型であり <xref:System.Linq.Expressions.Expression%601> 型ではない場合には、デリゲートを直接呼び出さずに、デリゲートに対して <xref:System.Delegate.DynamicInvoke%2A> メソッドを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="25852-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- <span data-ttu-id="64205-109">式ツリーがラムダ式を表さない場合、<xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> メソッドを呼び出すことで、元の式ツリーを本体に含む新しいラムダ式を作成できます。</span><span class="sxs-lookup"><span data-stu-id="64205-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="64205-110">その後、このセクションの説明のとおりにラムダ式を実行できます。</span><span class="sxs-lookup"><span data-stu-id="64205-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
+ <span data-ttu-id="25852-109">式ツリーがラムダ式を表さない場合、<xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> メソッドを呼び出すことで、元の式ツリーを本体に含む新しいラムダ式を作成できます。</span><span class="sxs-lookup"><span data-stu-id="25852-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="25852-110">その後、このセクションの説明のとおりにラムダ式を実行できます。</span><span class="sxs-lookup"><span data-stu-id="25852-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64205-111">例</span><span class="sxs-lookup"><span data-stu-id="64205-111">Example</span></span>  
- <span data-ttu-id="64205-112">次のコード例は、ラムダ式を作成して実行することで数値の累乗を表す式ツリーの実行方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="64205-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="64205-113">このコードを実行すると、累乗された数値を表す結果が表示されます。</span><span class="sxs-lookup"><span data-stu-id="64205-113">The result, which represents the number raised to the power, is displayed.</span></span>  
+## <a name="example"></a><span data-ttu-id="25852-111">例</span><span class="sxs-lookup"><span data-stu-id="25852-111">Example</span></span>  
+ <span data-ttu-id="25852-112">次のコード例は、ラムダ式を作成して実行することで数値の累乗を表す式ツリーの実行方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="25852-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="25852-113">このコードを実行すると、累乗された数値を表す結果が表示されます。</span><span class="sxs-lookup"><span data-stu-id="25852-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```csharp  
 // The expression tree to execute.  
@@ -42,11 +42,11 @@ Console.WriteLine(result);
 // 8  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="64205-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="64205-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="25852-114">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="25852-114">Compiling the Code</span></span>  
   
-- <span data-ttu-id="64205-115">System.Linq.Expressions 名前空間をインクルードします。</span><span class="sxs-lookup"><span data-stu-id="64205-115">Include the System.Linq.Expressions namespace.</span></span>  
+- <span data-ttu-id="25852-115">System.Linq.Expressions 名前空間をインクルードします。</span><span class="sxs-lookup"><span data-stu-id="25852-115">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64205-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="64205-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25852-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="25852-116">See also</span></span>
 
-- [<span data-ttu-id="64205-117">式ツリー (C#)</span><span class="sxs-lookup"><span data-stu-id="64205-117">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [<span data-ttu-id="64205-118">方法: 式ツリーを変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="64205-118">How to: Modify Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [<span data-ttu-id="25852-117">式ツリー (C#)</span><span class="sxs-lookup"><span data-stu-id="25852-117">Expression Trees (C#)</span></span>](./index.md)
+- [<span data-ttu-id="25852-118">方法: 式ツリーを変更する (C#)</span><span class="sxs-lookup"><span data-stu-id="25852-118">How to: Modify Expression Trees (C#)</span></span>](./how-to-modify-expression-trees.md)

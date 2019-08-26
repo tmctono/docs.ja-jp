@@ -6,49 +6,49 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 29b66c52f2f9ac022784c5704c47893aed264c42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f35222d958f8b02f83c6575d940d24e359c3ae00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914715"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="7e522-102">方法: Visual Basic で特定のパターンに一致するファイルを検索する</span><span class="sxs-lookup"><span data-stu-id="7e522-102">How to: Find Files with a Specific Pattern in Visual Basic</span></span>
-<span data-ttu-id="7e522-103"><xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> メソッドは、ファイルのパス名を表す文字列の読み取り専用のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="7e522-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="7e522-104">`wildCards` パラメーターを使用して、特定のパターンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="7e522-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="7e522-105">サブディレクトリを検索対象に含めるには、`searchType` パラメーターを `SearchOption.SearchAllSubDirectories` に設定します。</span><span class="sxs-lookup"><span data-stu-id="7e522-105">If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="33bb2-102">方法: Visual Basic で特定のパターンに一致するファイルを検索する</span><span class="sxs-lookup"><span data-stu-id="33bb2-102">How to: Find Files with a Specific Pattern in Visual Basic</span></span>
+<span data-ttu-id="33bb2-103"><xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> メソッドは、ファイルのパス名を表す文字列の読み取り専用のコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="33bb2-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="33bb2-104">`wildCards` パラメーターを使用して、特定のパターンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="33bb2-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="33bb2-105">サブディレクトリを検索対象に含めるには、`searchType` パラメーターを `SearchOption.SearchAllSubDirectories` に設定します。</span><span class="sxs-lookup"><span data-stu-id="33bb2-105">If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
   
- <span data-ttu-id="7e522-106">指定したパターンに一致するファイルがない場合は、空のコレクションが返されます。</span><span class="sxs-lookup"><span data-stu-id="7e522-106">An empty collection is returned if no files matching the specified pattern are found.</span></span>  
+ <span data-ttu-id="33bb2-106">指定したパターンに一致するファイルがない場合は、空のコレクションが返されます。</span><span class="sxs-lookup"><span data-stu-id="33bb2-106">An empty collection is returned if no files matching the specified pattern are found.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7e522-107">`System.IO` 名前空間の `DirectoryInfo` クラスを使用してファイルの一覧を返す方法については、「<xref:System.IO.DirectoryInfo.GetFiles%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7e522-107">For information about returning a file list by using the `DirectoryInfo` class of the `System.IO` namespace, see <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span></span>  
+> <span data-ttu-id="33bb2-107">`System.IO` 名前空間の `DirectoryInfo` クラスを使用してファイルの一覧を返す方法については、「<xref:System.IO.DirectoryInfo.GetFiles%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="33bb2-107">For information about returning a file list by using the `DirectoryInfo` class of the `System.IO` namespace, see <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span></span>  
   
-### <a name="to-find-files-with-a-specified-pattern"></a><span data-ttu-id="7e522-108">特定のパターンに一致するファイルを検索するには</span><span class="sxs-lookup"><span data-stu-id="7e522-108">To find files with a specified pattern</span></span>  
+### <a name="to-find-files-with-a-specified-pattern"></a><span data-ttu-id="33bb2-108">特定のパターンに一致するファイルを検索するには</span><span class="sxs-lookup"><span data-stu-id="33bb2-108">To find files with a specified pattern</span></span>  
   
-- <span data-ttu-id="7e522-109">検索するディレクトリの名前とパス、およびパターンを指定して、`GetFiles` メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="7e522-109">Use the `GetFiles` method, supplying the name and path of the directory you want to search and specifying the pattern.</span></span> <span data-ttu-id="7e522-110">次の例では、ディレクトリ内にある拡張子が `.dll` のファイルがすべて返され、`ListBox1` に追加されます。</span><span class="sxs-lookup"><span data-stu-id="7e522-110">The following example returns all files with the extension `.dll` in the directory and adds them to `ListBox1`.</span></span>  
+- <span data-ttu-id="33bb2-109">検索するディレクトリの名前とパス、およびパターンを指定して、`GetFiles` メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="33bb2-109">Use the `GetFiles` method, supplying the name and path of the directory you want to search and specifying the pattern.</span></span> <span data-ttu-id="33bb2-110">次の例では、ディレクトリ内にある拡張子が `.dll` のファイルがすべて返され、`ListBox1` に追加されます。</span><span class="sxs-lookup"><span data-stu-id="33bb2-110">The following example returns all files with the extension `.dll` in the directory and adds them to `ListBox1`.</span></span>  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="7e522-111">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="7e522-111">.NET Framework Security</span></span>  
- <span data-ttu-id="7e522-112">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7e522-112">The following conditions may cause an exception:</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="33bb2-111">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="33bb2-111">.NET Framework Security</span></span>  
+ <span data-ttu-id="33bb2-112">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="33bb2-112">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="7e522-113">パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="33bb2-113">パスが正しくない。長さが 0 の文字列である、空白だけが含まれている、使用できない文字が含まれている、デバイス パスである (先頭が \\\\.\\)、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
-- <span data-ttu-id="7e522-114">パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="7e522-114">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="33bb2-114">パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)</span><span class="sxs-lookup"><span data-stu-id="33bb2-114">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
-- <span data-ttu-id="7e522-115">`directory` が存在しない (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
+- <span data-ttu-id="33bb2-115">`directory` が存在しない (<xref:System.IO.DirectoryNotFoundException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
-- <span data-ttu-id="7e522-116">`directory` が既存のファイルを指している (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="33bb2-116">`directory` が既存のファイルを指している (<xref:System.IO.IOException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
   
-- <span data-ttu-id="7e522-117">パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+- <span data-ttu-id="33bb2-117">パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
-- <span data-ttu-id="7e522-118">パス内のファイル名またはフォルダー名にコロン (:) が含まれている、または形式が無効である (<xref:System.NotSupportedException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+- <span data-ttu-id="33bb2-118">パス内のファイル名またはフォルダー名にコロン (:) が含まれている、または形式が無効である (<xref:System.NotSupportedException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
-- <span data-ttu-id="7e522-119">ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)</span><span class="sxs-lookup"><span data-stu-id="7e522-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="33bb2-119">ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)</span><span class="sxs-lookup"><span data-stu-id="33bb2-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
-- <span data-ttu-id="7e522-120">ユーザーに必要な権限がない (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="7e522-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="33bb2-120">ユーザーに必要な権限がない (<xref:System.UnauthorizedAccessException>)。</span><span class="sxs-lookup"><span data-stu-id="33bb2-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e522-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="7e522-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33bb2-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="33bb2-121">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [<span data-ttu-id="7e522-122">方法: 特定のパターンに一致するサブディレクトリを検索する</span><span class="sxs-lookup"><span data-stu-id="7e522-122">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [<span data-ttu-id="7e522-123">トラブルシューティング : テキスト ファイルの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="7e522-123">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [<span data-ttu-id="7e522-124">方法: ディレクトリにあるファイルのコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="7e522-124">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [<span data-ttu-id="33bb2-122">方法: 特定のパターンに一致するサブディレクトリを検索する</span><span class="sxs-lookup"><span data-stu-id="33bb2-122">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [<span data-ttu-id="33bb2-123">トラブルシューティング : テキスト ファイルの読み取りと書き込み</span><span class="sxs-lookup"><span data-stu-id="33bb2-123">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [<span data-ttu-id="33bb2-124">方法: ディレクトリにあるファイルのコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="33bb2-124">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
