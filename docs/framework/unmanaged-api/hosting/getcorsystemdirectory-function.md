@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deec4d40270a11b9e48a0ab39504d774314c077c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d30384ea8b9ff4eee41abd43ae39486f770039e7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736190"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041420"
 ---
-# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="ef3cd-102">GetCORSystemDirectory 関数</span><span class="sxs-lookup"><span data-stu-id="ef3cd-102">GetCORSystemDirectory Function</span></span>
-<span data-ttu-id="ef3cd-103">プロセスに読み込まれる共通言語ランタイム (CLR) のインストール ディレクトリを返します。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="ef3cd-104">インストール ディレクトリは、完全修飾"c:\windows\microsoft.net\framework\v1.0.3705"など。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
+# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="6ce4f-102">GetCORSystemDirectory 関数</span><span class="sxs-lookup"><span data-stu-id="6ce4f-102">GetCORSystemDirectory Function</span></span>
+<span data-ttu-id="6ce4f-103">プロセスに読み込まれる共通言語ランタイム (CLR) のインストールディレクトリを返します。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="6ce4f-104">インストールディレクトリは完全に修飾されています。たとえば、"c:\windows\microsoft.net\framework\v1.0.3705" のようになります。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
   
- <span data-ttu-id="ef3cd-105">この関数が非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-105">This function is deprecated.</span></span> <span data-ttu-id="ef3cd-106">それは置き換えられて、 [iclrruntimeinfo::getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4 で提供されるメソッド。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="6ce4f-105">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-105">This function is deprecated.</span></span> <span data-ttu-id="6ce4f-106">.NET Framework 4 で提供される[ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)メソッドに置き換えられています。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef3cd-107">構文</span><span class="sxs-lookup"><span data-stu-id="ef3cd-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ce4f-107">構文</span><span class="sxs-lookup"><span data-stu-id="6ce4f-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (   
@@ -39,30 +39,30 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef3cd-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ef3cd-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6ce4f-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6ce4f-108">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="ef3cd-109">[out]ランタイムがプロセスに読み込まれたランタイムのインストール ディレクトリの完全修飾名を含む文字列を返すバッファー。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="ef3cd-110">ランタイムがプロセスにまだ読み込まれていない場合は、コンピューターにインストールされているランタイムの最新バージョンの適切なディレクトリ情報を返します。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="6ce4f-109">入出力プロセスに読み込まれたランタイムのインストールディレクトリの完全修飾名が含まれた文字列をランタイムが返すバッファー。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="6ce4f-110">ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="ef3cd-111">[in]サイズ (バイト単位) の`pbuffer`します。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
+ <span data-ttu-id="6ce4f-111">からの`pbuffer`サイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="ef3cd-112">[out]返される文字数`pbuffer`します。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-112">[out] The number of characters returned in `pbuffer`.</span></span>  
+ <span data-ttu-id="6ce4f-112">入出力で`pbuffer`返された文字数。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-112">[out] The number of characters returned in `pbuffer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef3cd-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="ef3cd-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6ce4f-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="6ce4f-113">Remarks</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="ef3cd-114">CLR の version 4 を実行しているプロセスでは、この関数は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="ef3cd-115">CLR の以前のバージョンは、コンピューターにインストールされて、この関数はそのバージョンのインストール ディレクトリを返します。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
+> <span data-ttu-id="6ce4f-114">CLR のバージョン4を実行しているプロセスでは、この関数を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="6ce4f-115">コンピューターに以前のバージョンの CLR がインストールされている場合、この関数はそのバージョンのインストールディレクトリを返します。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef3cd-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="ef3cd-116">Requirements</span></span>  
- <span data-ttu-id="ef3cd-117">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ef3cd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ce4f-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="6ce4f-116">Requirements</span></span>  
+ <span data-ttu-id="6ce4f-117">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6ce4f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef3cd-118">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ef3cd-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6ce4f-118">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="6ce4f-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ef3cd-119">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ef3cd-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="6ce4f-119">**ライブラリ**Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="6ce4f-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ef3cd-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef3cd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6ce4f-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ce4f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef3cd-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef3cd-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ce4f-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ce4f-121">See also</span></span>
 
-- [<span data-ttu-id="ef3cd-122">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="ef3cd-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="6ce4f-122">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="6ce4f-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
