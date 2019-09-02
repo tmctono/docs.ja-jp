@@ -7,53 +7,53 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602484"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202914"
 ---
-# <a name="-c-compiler-options"></a><span data-ttu-id="a2afa-102">@ (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="a2afa-102">@ (C# Compiler Options)</span></span>
-<span data-ttu-id="a2afa-103">@ オプションを使用すると、コンパイラ オプションおよびコンパイルするソース コード ファイルを含むファイルを指定できます。</span><span class="sxs-lookup"><span data-stu-id="a2afa-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
+# <a name="-c-compiler-options"></a><span data-ttu-id="5f72f-102">@ (C# コンパイラ オプション)</span><span class="sxs-lookup"><span data-stu-id="5f72f-102">@ (C# Compiler Options)</span></span>
+<span data-ttu-id="5f72f-103">@ オプションを使用すると、コンパイラ オプションおよびコンパイルするソース コード ファイルを含むファイルを指定できます。</span><span class="sxs-lookup"><span data-stu-id="5f72f-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2afa-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2afa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f72f-104">構文</span><span class="sxs-lookup"><span data-stu-id="5f72f-104">Syntax</span></span>  
   
-```  
+```console  
 @response_file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a2afa-105">引数</span><span class="sxs-lookup"><span data-stu-id="a2afa-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="5f72f-105">引数</span><span class="sxs-lookup"><span data-stu-id="5f72f-105">Arguments</span></span>  
  `response_file`  
- <span data-ttu-id="a2afa-106">コンパイラ オプションやコンパイルするソース コード ファイルの一覧を含むファイルです。</span><span class="sxs-lookup"><span data-stu-id="a2afa-106">A file that lists compiler options or source code files to compile.</span></span>  
+ <span data-ttu-id="5f72f-106">コンパイラ オプションやコンパイルするソース コード ファイルの一覧を含むファイルです。</span><span class="sxs-lookup"><span data-stu-id="5f72f-106">A file that lists compiler options or source code files to compile.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2afa-107">解説</span><span class="sxs-lookup"><span data-stu-id="a2afa-107">Remarks</span></span>  
- <span data-ttu-id="a2afa-108">コンパイラ オプションとソース コード ファイルは、コマンド ラインで指定した場合と同じように、コンパイラによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="a2afa-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f72f-107">解説</span><span class="sxs-lookup"><span data-stu-id="5f72f-107">Remarks</span></span>  
+ <span data-ttu-id="5f72f-108">コンパイラ オプションとソース コード ファイルは、コマンド ラインで指定した場合と同じように、コンパイラによって処理されます。</span><span class="sxs-lookup"><span data-stu-id="5f72f-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
   
- <span data-ttu-id="a2afa-109">コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="a2afa-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="a2afa-110">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="a2afa-110">For example:</span></span>  
+ <span data-ttu-id="5f72f-109">コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="5f72f-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="5f72f-110">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="5f72f-110">For example:</span></span>  
   
-```  
+```console  
 @file1.rsp @file2.rsp  
 ```  
   
- <span data-ttu-id="a2afa-111">応答ファイルでは、複数のコンパイラ オプションとソース コード ファイルを 1 行に記述できます。</span><span class="sxs-lookup"><span data-stu-id="a2afa-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="a2afa-112">1 つのコンパイラ オプションは 1 行に指定する必要があり、複数行にわたって指定できません。</span><span class="sxs-lookup"><span data-stu-id="a2afa-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="a2afa-113">応答ファイルには、シャープ記号 (#) で始まるコメントを記述できます。</span><span class="sxs-lookup"><span data-stu-id="a2afa-113">Response files can have comments that begin with the # symbol.</span></span>  
+ <span data-ttu-id="5f72f-111">応答ファイルでは、複数のコンパイラ オプションとソース コード ファイルを 1 行に記述できます。</span><span class="sxs-lookup"><span data-stu-id="5f72f-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="5f72f-112">1 つのコンパイラ オプションは 1 行に指定する必要があり、複数行にわたって指定できません。</span><span class="sxs-lookup"><span data-stu-id="5f72f-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="5f72f-113">応答ファイルには、シャープ記号 (#) で始まるコメントを記述できます。</span><span class="sxs-lookup"><span data-stu-id="5f72f-113">Response files can have comments that begin with the # symbol.</span></span>  
   
- <span data-ttu-id="a2afa-114">応答ファイルでのコンパイラ オプションの指定方法は、コマンド ラインでのコンパイラ オプションの指定方法と同じです。</span><span class="sxs-lookup"><span data-stu-id="a2afa-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="a2afa-115">詳細については、「[Building from the Command Line](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)」(コマンド ラインからのビルド) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2afa-115">See [Building from the Command Line](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
+ <span data-ttu-id="5f72f-114">応答ファイルでのコンパイラ オプションの指定方法は、コマンド ラインでのコンパイラ オプションの指定方法と同じです。</span><span class="sxs-lookup"><span data-stu-id="5f72f-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="5f72f-115">詳細については、「[Building from the Command Line](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)」(コマンド ラインからのビルド) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5f72f-115">See [Building from the Command Line](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
   
- <span data-ttu-id="a2afa-116">コンパイラは、検出した順にコマンド オプションを処理します。</span><span class="sxs-lookup"><span data-stu-id="a2afa-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="a2afa-117">このため、コマンド ライン引数によって、応答ファイルで先に指定したオプションをオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="a2afa-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="a2afa-118">逆に、応答ファイルのオプションが、コマンド ラインや他の応答ファイルで先に指定したオプションをオーバーライドすることもあります。</span><span class="sxs-lookup"><span data-stu-id="a2afa-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
+ <span data-ttu-id="5f72f-116">コンパイラは、検出した順にコマンド オプションを処理します。</span><span class="sxs-lookup"><span data-stu-id="5f72f-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="5f72f-117">このため、コマンド ライン引数によって、応答ファイルで先に指定したオプションをオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="5f72f-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="5f72f-118">逆に、応答ファイルのオプションが、コマンド ラインや他の応答ファイルで先に指定したオプションをオーバーライドすることもあります。</span><span class="sxs-lookup"><span data-stu-id="5f72f-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
   
- <span data-ttu-id="a2afa-119">C# では、csc.exe ファイルと同じディレクトリに csc.rsp ファイルがあります。</span><span class="sxs-lookup"><span data-stu-id="a2afa-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="a2afa-120">csc.rsp の詳細については、「[-noconfig](./noconfig-compiler-option.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2afa-120">See [-noconfig](./noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
+ <span data-ttu-id="5f72f-119">C# では、csc.exe ファイルと同じディレクトリに csc.rsp ファイルがあります。</span><span class="sxs-lookup"><span data-stu-id="5f72f-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="5f72f-120">csc.rsp の詳細については、「[-noconfig](./noconfig-compiler-option.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5f72f-120">See [-noconfig](./noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
   
- <span data-ttu-id="a2afa-121">このコンパイラ オプションは、Visual Studio 開発環境で設定することはできません。また、プログラムで変更することもできません。</span><span class="sxs-lookup"><span data-stu-id="a2afa-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
+ <span data-ttu-id="5f72f-121">このコンパイラ オプションは、Visual Studio 開発環境で設定することはできません。また、プログラムで変更することもできません。</span><span class="sxs-lookup"><span data-stu-id="5f72f-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2afa-122">例</span><span class="sxs-lookup"><span data-stu-id="a2afa-122">Example</span></span>  
- <span data-ttu-id="a2afa-123">サンプルの応答ファイルの一部を次に示します。</span><span class="sxs-lookup"><span data-stu-id="a2afa-123">The following are a few lines from a sample response file:</span></span>  
+## <a name="example"></a><span data-ttu-id="5f72f-122">例</span><span class="sxs-lookup"><span data-stu-id="5f72f-122">Example</span></span>  
+ <span data-ttu-id="5f72f-123">サンプルの応答ファイルの一部を次に示します。</span><span class="sxs-lookup"><span data-stu-id="5f72f-123">The following are a few lines from a sample response file:</span></span>  
   
 ```console  
 # build the first output file  
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a2afa-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="a2afa-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f72f-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f72f-124">See also</span></span>
 
-- [<span data-ttu-id="a2afa-125">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="a2afa-125">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="5f72f-125">C# コンパイラ オプション</span><span class="sxs-lookup"><span data-stu-id="5f72f-125">C# Compiler Options</span></span>](./index.md)

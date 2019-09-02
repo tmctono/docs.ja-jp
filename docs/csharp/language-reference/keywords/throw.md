@@ -12,67 +12,66 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4536a5caa789712227bfd637d65cfc4c22adf80
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 4a9a235da06427e12bb5866a48f76f9c5896a572
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422695"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168743"
 ---
-# <a name="throw-c-reference"></a><span data-ttu-id="05a81-102">throw (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="05a81-102">throw (C# Reference)</span></span>
+# <a name="throw-c-reference"></a><span data-ttu-id="10bd9-102">throw (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="10bd9-102">throw (C# Reference)</span></span>
 
-<span data-ttu-id="05a81-103">プログラムの実行中に例外が発生したことを通知します。</span><span class="sxs-lookup"><span data-stu-id="05a81-103">Signals the occurrence of an exception during program execution.</span></span>  
+<span data-ttu-id="10bd9-103">プログラムの実行中に例外が発生したことを通知します。</span><span class="sxs-lookup"><span data-stu-id="10bd9-103">Signals the occurrence of an exception during program execution.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05a81-104">コメント</span><span class="sxs-lookup"><span data-stu-id="05a81-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="10bd9-104">コメント</span><span class="sxs-lookup"><span data-stu-id="10bd9-104">Remarks</span></span>
 
-<span data-ttu-id="05a81-105">`throw` の構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="05a81-105">The syntax of `throw` is:</span></span>
+<span data-ttu-id="10bd9-105">`throw` の構文は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="10bd9-105">The syntax of `throw` is:</span></span>
 
 ```csharp
 throw [e]
 ```
 
-<span data-ttu-id="05a81-106">ここで `e` は <xref:System.Exception?displayProperty=nameWithType> から派生したクラスのインスタンスです。</span><span class="sxs-lookup"><span data-stu-id="05a81-106">where `e` is an instance of a class derived from <xref:System.Exception?displayProperty=nameWithType>.</span></span> <span data-ttu-id="05a81-107">次の例では、`GetNumber` という名前のメソッドに渡された引数が内部配列の有効なインデックスに対応していない場合に、`throw` ステートメントを使用して <xref:System.IndexOutOfRangeException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="05a81-107">The following example uses the `throw` statement to throw an <xref:System.IndexOutOfRangeException> if the argument passed to a method named `GetNumber` does not correspond to a valid index of an internal array.</span></span>
+<span data-ttu-id="10bd9-106">ここで `e` は <xref:System.Exception?displayProperty=nameWithType> から派生したクラスのインスタンスです。</span><span class="sxs-lookup"><span data-stu-id="10bd9-106">where `e` is an instance of a class derived from <xref:System.Exception?displayProperty=nameWithType>.</span></span> <span data-ttu-id="10bd9-107">次の例では、`GetNumber` という名前のメソッドに渡された引数が内部配列の有効なインデックスに対応していない場合に、`throw` ステートメントを使用して <xref:System.IndexOutOfRangeException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="10bd9-107">The following example uses the `throw` statement to throw an <xref:System.IndexOutOfRangeException> if the argument passed to a method named `GetNumber` does not correspond to a valid index of an internal array.</span></span>
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 
-<span data-ttu-id="05a81-108">その後、メソッドの呼び出し元が `try-catch` ブロックまたは `try-catch-finally` ブロックを使用して、スローされた例外を処理します。</span><span class="sxs-lookup"><span data-stu-id="05a81-108">Method callers then use a `try-catch` or `try-catch-finally` block to handle the thrown exception.</span></span> <span data-ttu-id="05a81-109">次の例では、`GetNumber` メソッドによってスローされた例外を処理します。</span><span class="sxs-lookup"><span data-stu-id="05a81-109">The following example handles the exception thrown by the `GetNumber` method.</span></span>
+<span data-ttu-id="10bd9-108">その後、メソッドの呼び出し元が `try-catch` ブロックまたは `try-catch-finally` ブロックを使用して、スローされた例外を処理します。</span><span class="sxs-lookup"><span data-stu-id="10bd9-108">Method callers then use a `try-catch` or `try-catch-finally` block to handle the thrown exception.</span></span> <span data-ttu-id="10bd9-109">次の例では、`GetNumber` メソッドによってスローされた例外を処理します。</span><span class="sxs-lookup"><span data-stu-id="10bd9-109">The following example handles the exception thrown by the `GetNumber` method.</span></span>
 
 [!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]  
 
-## <a name="re-throwing-an-exception"></a><span data-ttu-id="05a81-110">例外の再スロー</span><span class="sxs-lookup"><span data-stu-id="05a81-110">Re-throwing an exception</span></span>
+## <a name="re-throwing-an-exception"></a><span data-ttu-id="10bd9-110">例外の再スロー</span><span class="sxs-lookup"><span data-stu-id="10bd9-110">Re-throwing an exception</span></span>
 
-<span data-ttu-id="05a81-111">`throw` を `catch` ブロックで使用すると、`catch` ブロックで処理された例外を再スローすることもできます。</span><span class="sxs-lookup"><span data-stu-id="05a81-111">`throw` can also be used in a `catch` block to re-throw an exception handled in a `catch` block.</span></span>  <span data-ttu-id="05a81-112">この場合、`throw` は例外オペランドを使用しません。</span><span class="sxs-lookup"><span data-stu-id="05a81-112">In this case, `throw` does not take an exception operand.</span></span> <span data-ttu-id="05a81-113">これは、メソッドが呼び出し元から他のライブラリ メソッドに引数を渡し、そのライブラリ メソッドが、呼び出し元に渡す必要がある例外をスローするときに最も役立ちます。</span><span class="sxs-lookup"><span data-stu-id="05a81-113">It is most useful when a method passes on an argument from a caller to some other library method, and the library method throws an exception that must be passed on to the caller.</span></span> <span data-ttu-id="05a81-114">たとえば、次の例では、初期化されていない文字列の最初の文字を取得しようとしたときにスローされた <xref:System.NullReferenceException> を再スローします。</span><span class="sxs-lookup"><span data-stu-id="05a81-114">For example, the following example re-throws an <xref:System.NullReferenceException> that is thrown when attempting to retrieve the first character of an uninitialized string.</span></span>
+<span data-ttu-id="10bd9-111">`throw` を `catch` ブロックで使用すると、`catch` ブロックで処理された例外を再スローすることもできます。</span><span class="sxs-lookup"><span data-stu-id="10bd9-111">`throw` can also be used in a `catch` block to re-throw an exception handled in a `catch` block.</span></span>  <span data-ttu-id="10bd9-112">この場合、`throw` は例外オペランドを使用しません。</span><span class="sxs-lookup"><span data-stu-id="10bd9-112">In this case, `throw` does not take an exception operand.</span></span> <span data-ttu-id="10bd9-113">これは、メソッドが呼び出し元から他のライブラリ メソッドに引数を渡し、そのライブラリ メソッドが、呼び出し元に渡す必要がある例外をスローするときに最も役立ちます。</span><span class="sxs-lookup"><span data-stu-id="10bd9-113">It is most useful when a method passes on an argument from a caller to some other library method, and the library method throws an exception that must be passed on to the caller.</span></span> <span data-ttu-id="10bd9-114">たとえば、次の例では、初期化されていない文字列の最初の文字を取得しようとしたときにスローされた <xref:System.NullReferenceException> を再スローします。</span><span class="sxs-lookup"><span data-stu-id="10bd9-114">For example, the following example re-throws an <xref:System.NullReferenceException> that is thrown when attempting to retrieve the first character of an uninitialized string.</span></span>
 
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]  
 
 > [!IMPORTANT]
-> <span data-ttu-id="05a81-115">`catch` ブロックで `throw e` 構文を使用すると、呼び出し元に渡す新しい例外をインスタンス化することもできます。</span><span class="sxs-lookup"><span data-stu-id="05a81-115">You can also use the `throw e` syntax in a `catch` block to instantiate a new exception that you pass on to the caller.</span></span> <span data-ttu-id="05a81-116">この場合、<xref:System.Exception.StackTrace> プロパティから使用できる、元の例外のスタック トレースが保持されません。</span><span class="sxs-lookup"><span data-stu-id="05a81-116">In this case, the stack trace of the original exception, which is available from the <xref:System.Exception.StackTrace> property, is not preserved.</span></span>
+> <span data-ttu-id="10bd9-115">`catch` ブロックで `throw e` 構文を使用すると、呼び出し元に渡す新しい例外をインスタンス化することもできます。</span><span class="sxs-lookup"><span data-stu-id="10bd9-115">You can also use the `throw e` syntax in a `catch` block to instantiate a new exception that you pass on to the caller.</span></span> <span data-ttu-id="10bd9-116">この場合、<xref:System.Exception.StackTrace> プロパティから使用できる、元の例外のスタック トレースが保持されません。</span><span class="sxs-lookup"><span data-stu-id="10bd9-116">In this case, the stack trace of the original exception, which is available from the <xref:System.Exception.StackTrace> property, is not preserved.</span></span>
 
-## <a name="the-throw-expression"></a><span data-ttu-id="05a81-117">`throw` 式</span><span class="sxs-lookup"><span data-stu-id="05a81-117">The `throw` expression</span></span>
+## <a name="the-throw-expression"></a><span data-ttu-id="10bd9-117">`throw` 式</span><span class="sxs-lookup"><span data-stu-id="10bd9-117">The `throw` expression</span></span>
 
-<span data-ttu-id="05a81-118">C# 7.0 以降、`throw` は、式およびステートメントとして使用できます。</span><span class="sxs-lookup"><span data-stu-id="05a81-118">Starting with C# 7.0, `throw` can be used as an expression as well as a statement.</span></span> <span data-ttu-id="05a81-119">これにより、以前サポートされていなかったコンテキストでの例外のスローが可能になります。</span><span class="sxs-lookup"><span data-stu-id="05a81-119">This allows an exception to be thrown in contexts that were previously unsupported.</span></span> <span data-ttu-id="05a81-120">次の設定があります。</span><span class="sxs-lookup"><span data-stu-id="05a81-120">These include:</span></span>
+<span data-ttu-id="10bd9-118">C# 7.0 以降、`throw` は、式およびステートメントとして使用できます。</span><span class="sxs-lookup"><span data-stu-id="10bd9-118">Starting with C# 7.0, `throw` can be used as an expression as well as a statement.</span></span> <span data-ttu-id="10bd9-119">これにより、以前サポートされていなかったコンテキストでの例外のスローが可能になります。</span><span class="sxs-lookup"><span data-stu-id="10bd9-119">This allows an exception to be thrown in contexts that were previously unsupported.</span></span> <span data-ttu-id="10bd9-120">次の設定があります。</span><span class="sxs-lookup"><span data-stu-id="10bd9-120">These include:</span></span>
 
-- <span data-ttu-id="05a81-121">[条件演算子](../operators/conditional-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="05a81-121">[the conditional operator](../operators/conditional-operator.md).</span></span> <span data-ttu-id="05a81-122">次の例では、`throw` 式を使用して、メソッドに空の文字列配列が渡された場合に <xref:System.ArgumentException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="05a81-122">The following example uses a `throw` expression to throw an <xref:System.ArgumentException> if a method is passed an empty string array.</span></span> <span data-ttu-id="05a81-123">C# 7.0 より前では、このロジックが `if`/`else` ステートメントで使用されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="05a81-123">Before C# 7.0, this logic would need to appear in an `if`/`else` statement.</span></span>
+- <span data-ttu-id="10bd9-121">[条件演算子](../operators/conditional-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="10bd9-121">[the conditional operator](../operators/conditional-operator.md).</span></span> <span data-ttu-id="10bd9-122">次の例では、`throw` 式を使用して、メソッドに空の文字列配列が渡された場合に <xref:System.ArgumentException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="10bd9-122">The following example uses a `throw` expression to throw an <xref:System.ArgumentException> if a method is passed an empty string array.</span></span> <span data-ttu-id="10bd9-123">C# 7.0 より前では、このロジックが `if`/`else` ステートメントで使用されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="10bd9-123">Before C# 7.0, this logic would need to appear in an `if`/`else` statement.</span></span>
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
-- <span data-ttu-id="05a81-124">[Null 合体演算子](../operators/null-coalescing-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="05a81-124">[the null-coalescing operator](../operators/null-coalescing-operator.md).</span></span> <span data-ttu-id="05a81-125">次の例では、null 合体演算子と共に `throw` 式を使用して、`Name` プロパティに割り当てられた文字列が `null` の場合に例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="05a81-125">In the following example, a `throw` expression is used with a null-coalescing operator to throw an exception if the string assigned to a `Name` property is `null`.</span></span>
+- <span data-ttu-id="10bd9-124">[Null 合体演算子](../operators/null-coalescing-operator.md)。</span><span class="sxs-lookup"><span data-stu-id="10bd9-124">[the null-coalescing operator](../operators/null-coalescing-operator.md).</span></span> <span data-ttu-id="10bd9-125">次の例では、null 合体演算子と共に `throw` 式を使用して、`Name` プロパティに割り当てられた文字列が `null` の場合に例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="10bd9-125">In the following example, a `throw` expression is used with a null-coalescing operator to throw an exception if the string assigned to a `Name` property is `null`.</span></span>
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 
-- <span data-ttu-id="05a81-126">式形式の[ラムダ](../../programming-guide/statements-expressions-operators/lambda-expressions.md)またはメソッド。</span><span class="sxs-lookup"><span data-stu-id="05a81-126">an expression-bodied [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) or method.</span></span> <span data-ttu-id="05a81-127">次の例では、<xref:System.DateTime> 値への変換がサポートされていないため <xref:System.InvalidCastException> をスローする、式形式のメソッドを示しています。</span><span class="sxs-lookup"><span data-stu-id="05a81-127">The following example illustrates an expression-bodied method that throws an <xref:System.InvalidCastException> because a conversion to a <xref:System.DateTime> value is not supported.</span></span>
+- <span data-ttu-id="10bd9-126">式形式の[ラムダ](../../programming-guide/statements-expressions-operators/lambda-expressions.md)またはメソッド。</span><span class="sxs-lookup"><span data-stu-id="10bd9-126">an expression-bodied [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) or method.</span></span> <span data-ttu-id="10bd9-127">次の例では、<xref:System.DateTime> 値への変換がサポートされていないため <xref:System.InvalidCastException> をスローする、式形式のメソッドを示しています。</span><span class="sxs-lookup"><span data-stu-id="10bd9-127">The following example illustrates an expression-bodied method that throws an <xref:System.InvalidCastException> because a conversion to a <xref:System.DateTime> value is not supported.</span></span>
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
 
-## <a name="c-language-specification"></a><span data-ttu-id="05a81-128">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="05a81-128">C# language specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="10bd9-128">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="10bd9-128">C# language specification</span></span>  
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="05a81-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="05a81-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10bd9-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="10bd9-129">See also</span></span>
 
-- [<span data-ttu-id="05a81-130">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="05a81-130">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="05a81-131">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="05a81-131">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="05a81-132">try-catch</span><span class="sxs-lookup"><span data-stu-id="05a81-132">try-catch</span></span>](try-catch.md)
-- [<span data-ttu-id="05a81-133">C++ の try、catch、および throw ステートメント</span><span class="sxs-lookup"><span data-stu-id="05a81-133">The try, catch, and throw Statements in C++</span></span>](try-catch.md)
-- [<span data-ttu-id="05a81-134">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="05a81-134">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="05a81-135">方法: 例外を明示的にスローする</span><span class="sxs-lookup"><span data-stu-id="05a81-135">How to: Explicitly Throw Exceptions</span></span>](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [<span data-ttu-id="10bd9-130">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="10bd9-130">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="10bd9-131">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="10bd9-131">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="10bd9-132">try-catch</span><span class="sxs-lookup"><span data-stu-id="10bd9-132">try-catch</span></span>](try-catch.md)
+- [<span data-ttu-id="10bd9-133">C# のキーワード</span><span class="sxs-lookup"><span data-stu-id="10bd9-133">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="10bd9-134">方法: 例外を明示的にスローする</span><span class="sxs-lookup"><span data-stu-id="10bd9-134">How to: Explicitly Throw Exceptions</span></span>](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
