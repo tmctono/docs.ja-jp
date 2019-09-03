@@ -17,43 +17,43 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69659437"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="fe739-102">\<webRequestModules の > 要素のクリア (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="fe739-102">\<clear> Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="fe739-103">アプリケーションから、登録されているすべての Web 要求モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="fe739-103">Removes all registered Web request modules from the application.</span></span>  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="8818f-102">webRequestModules の \<clear> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="8818f-102">\<clear> Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="8818f-103">アプリケーションから、登録されているすべての Web 要求モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="8818f-103">Removes all registered Web request modules from the application.</span></span>  
   
- <span data-ttu-id="fe739-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fe739-104">\<configuration></span></span>  
-<span data-ttu-id="fe739-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="fe739-105">\<system.net></span></span>  
-<span data-ttu-id="fe739-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="fe739-106">\<webRequestModules></span></span>  
-<span data-ttu-id="fe739-107">\<clear></span><span class="sxs-lookup"><span data-stu-id="fe739-107">\<clear></span></span>  
+ <span data-ttu-id="8818f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8818f-104">\<configuration></span></span>  
+<span data-ttu-id="8818f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="8818f-105">\<system.net></span></span>  
+<span data-ttu-id="8818f-106">\<webRequestModules></span><span class="sxs-lookup"><span data-stu-id="8818f-106">\<webRequestModules></span></span>  
+<span data-ttu-id="8818f-107">\<clear></span><span class="sxs-lookup"><span data-stu-id="8818f-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe739-108">構文</span><span class="sxs-lookup"><span data-stu-id="fe739-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8818f-108">構文</span><span class="sxs-lookup"><span data-stu-id="8818f-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="fe739-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="fe739-109">Attributes and Elements</span></span>  
- <span data-ttu-id="fe739-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="fe739-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8818f-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="8818f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="8818f-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="8818f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="fe739-111">属性</span><span class="sxs-lookup"><span data-stu-id="fe739-111">Attributes</span></span>  
- <span data-ttu-id="fe739-112">なし。</span><span class="sxs-lookup"><span data-stu-id="fe739-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8818f-111">属性</span><span class="sxs-lookup"><span data-stu-id="8818f-111">Attributes</span></span>  
+ <span data-ttu-id="8818f-112">なし。</span><span class="sxs-lookup"><span data-stu-id="8818f-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="fe739-113">子要素</span><span class="sxs-lookup"><span data-stu-id="fe739-113">Child Elements</span></span>  
- <span data-ttu-id="fe739-114">なし。</span><span class="sxs-lookup"><span data-stu-id="fe739-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8818f-113">子要素</span><span class="sxs-lookup"><span data-stu-id="8818f-113">Child Elements</span></span>  
+ <span data-ttu-id="8818f-114">なし。</span><span class="sxs-lookup"><span data-stu-id="8818f-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="fe739-115">親要素</span><span class="sxs-lookup"><span data-stu-id="fe739-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8818f-115">親要素</span><span class="sxs-lookup"><span data-stu-id="8818f-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="fe739-116">**要素**</span><span class="sxs-lookup"><span data-stu-id="fe739-116">**Element**</span></span>|<span data-ttu-id="fe739-117">**説明**</span><span class="sxs-lookup"><span data-stu-id="fe739-117">**Description**</span></span>|  
+|<span data-ttu-id="8818f-116">**要素**</span><span class="sxs-lookup"><span data-stu-id="8818f-116">**Element**</span></span>|<span data-ttu-id="8818f-117">**説明**</span><span class="sxs-lookup"><span data-stu-id="8818f-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="fe739-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="fe739-118">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="fe739-119">ネットワークホストから情報を要求するために使用するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="fe739-119">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="8818f-118">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="8818f-118">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="8818f-119">ネットワークホストから情報を要求するために使用するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="8818f-119">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe739-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="fe739-120">Remarks</span></span>  
- <span data-ttu-id="fe739-121">要素`clear`は、構成ファイルで既に定義されている、または構成階層の上位レベルに定義されている、登録済みのすべての Web 要求モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="fe739-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8818f-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="8818f-120">Remarks</span></span>  
+ <span data-ttu-id="8818f-121">要素`clear`は、構成ファイルで既に定義されている、または構成階層の上位レベルに定義されている、登録済みのすべての Web 要求モジュールを削除します。</span><span class="sxs-lookup"><span data-stu-id="8818f-121">The `clear` element removes all registered Web request modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="fe739-122">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="fe739-122">Configuration Files</span></span>  
- <span data-ttu-id="fe739-123">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="fe739-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="8818f-122">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="8818f-122">Configuration Files</span></span>  
+ <span data-ttu-id="8818f-123">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="8818f-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe739-124">例</span><span class="sxs-lookup"><span data-stu-id="fe739-124">Example</span></span>  
- <span data-ttu-id="fe739-125">次の例では、すべての Web 要求モジュールをクリアし、Web 要求モジュールを HTTP に登録します。</span><span class="sxs-lookup"><span data-stu-id="fe739-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
+## <a name="example"></a><span data-ttu-id="8818f-124">例</span><span class="sxs-lookup"><span data-stu-id="8818f-124">Example</span></span>  
+ <span data-ttu-id="8818f-125">次の例では、すべての Web 要求モジュールをクリアし、Web 要求モジュールを HTTP に登録します。</span><span class="sxs-lookup"><span data-stu-id="8818f-125">The following example clears all Web request modules and then registers a Web request module for HTTP.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "69659437"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe739-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe739-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8818f-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="8818f-126">See also</span></span>
 
 - <xref:System.Net.WebRequest>
-- [<span data-ttu-id="fe739-127">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="fe739-127">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="8818f-127">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="8818f-127">Network Settings Schema</span></span>](index.md)
