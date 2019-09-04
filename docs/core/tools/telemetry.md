@@ -1,133 +1,141 @@
 ---
 title: .NET Core SDK 製品利用統計情報
-description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能と収集されるデータについて、およびこの機能を無効にする方法を説明します。
-author: richlander
-ms.date: 06/20/2018
+description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能や収集されるデータ、およびこの機能を無効にする方法について説明します。
+author: KathleenDollard
+ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397751"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133692"
 ---
-# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="7bf47-103">.NET Core SDK 製品利用統計情報</span><span class="sxs-lookup"><span data-stu-id="7bf47-103">.NET Core SDK telemetry</span></span>
+# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="0b04a-103">.NET Core SDK 製品利用統計情報</span><span class="sxs-lookup"><span data-stu-id="0b04a-103">.NET Core SDK telemetry</span></span>
 
-<span data-ttu-id="7bf47-104">[.NET Core SDK](index.md) には、利用情報を収集する[製品利用統計情報機能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)があります。</span><span class="sxs-lookup"><span data-stu-id="7bf47-104">The [.NET Core SDK](index.md) includes a [telemetry feature](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) that collects usage information.</span></span> <span data-ttu-id="7bf47-105">このツールがどのように利用されているかを .NET Team が理解することが重要です。それにより、ツールを改善できます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-105">It's important that the .NET Team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="7bf47-106">詳細については、「[What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)」 (.NET Core SDK 製品利用統計情報からわかったこと) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7bf47-106">For more information, see [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).</span></span>
+<span data-ttu-id="0b04a-104">[.NET Core SDK](index.md) には、.NET Core CLI がクラッシュしたとき、利用データと例外情報を収集する製品利用統計情報機能が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0b04a-104">The [.NET Core SDK](index.md) includes a telemetry feature that collects usage data and exception information when the .NET Core CLI crashes.</span></span> <span data-ttu-id="0b04a-105">.NET Core CLI は .NET Core SDK を備える、.NET Core アプリのビルド、テスト、発行を可能にする動詞のセットです。</span><span class="sxs-lookup"><span data-stu-id="0b04a-105">The .NET Core CLI comes with the .NET Core SDK and is the set of verbs that enable you to build, test, and publish your .NET Core apps.</span></span> <span data-ttu-id="0b04a-106">.NET Team が、ツールの改善に向けて、その使用方法を把握することが重要です。</span><span class="sxs-lookup"><span data-stu-id="0b04a-106">It's important that the .NET team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="0b04a-107">エラーに関する情報は、チームが問題を解決し、バグを修正するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-107">Information on failures helps the team resolve problems and fix bugs.</span></span>
 
-<span data-ttu-id="7bf47-107">収集されたデータは匿名で、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で、Microsoft とコミュニティの両者が利用するために集計された形で公開されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-107">The collected data is anonymous and published in an aggregated form for use by both Microsoft and the community under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span>
+<span data-ttu-id="0b04a-108">収集されたデータは匿名であり、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で全体が公開されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-108">The collected data is anonymous and published in aggregate under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span> 
 
-## <a name="scope"></a><span data-ttu-id="7bf47-108">スコープ</span><span class="sxs-lookup"><span data-stu-id="7bf47-108">Scope</span></span>
+## <a name="scope"></a><span data-ttu-id="0b04a-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="0b04a-109">Scope</span></span>
 
-<span data-ttu-id="7bf47-109">`dotnet` コマンドは、アプリと .NET Core CLI の両方の起動に使用されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-109">The `dotnet` command is used to launch both apps and the .NET Core CLI.</span></span> <span data-ttu-id="7bf47-110">`dotnet` コマンド自体は製品利用統計情報を収集しません。</span><span class="sxs-lookup"><span data-stu-id="7bf47-110">The `dotnet` command itself doesn't collect telemetry.</span></span> <span data-ttu-id="7bf47-111">`dotnet` コマンドで実行される .NET Core CLI コマンドが製品利用統計情報を収集します。</span><span class="sxs-lookup"><span data-stu-id="7bf47-111">The .NET Core CLI commands run by the `dotnet` command collect the telemetry.</span></span>
+<span data-ttu-id="0b04a-110">`dotnet` には、アプリを実行し、CLI コマンドを実行するための 2 つの関数があります。</span><span class="sxs-lookup"><span data-stu-id="0b04a-110">`dotnet` has two functions: to run apps, and to execute CLI commands.</span></span> <span data-ttu-id="0b04a-111">`dotnet` を使用して次の形式でアプリケーションを起動するとき、製品利用統計情報は "*収集されません*"。</span><span class="sxs-lookup"><span data-stu-id="0b04a-111">Telemetry *isn't collected* when using `dotnet` to start an application in the following format:</span></span>
 
-<span data-ttu-id="7bf47-112">コマンドを添付せずに `dotnet` コマンドそのものを使うと、製品利用統計情報は*有効になりません*。</span><span class="sxs-lookup"><span data-stu-id="7bf47-112">Telemetry *isn't enabled* when using the `dotnet` command itself, with no command attached:</span></span>
+- `dotnet [path-to-app].dll`
 
-- `dotnet`
-- `dotnet [path-to-app]`
-
-<span data-ttu-id="7bf47-113">次のような [.NET Core CLI コマンド](index.md)を使用すると、製品利用統計情報が*有効になります*。</span><span class="sxs-lookup"><span data-stu-id="7bf47-113">Telemetry *is enabled* when using the [.NET Core CLI commands](index.md), such as:</span></span>
+<span data-ttu-id="0b04a-112">次のような [.NET Core CLI コマンド](index.md)を使用するとき、製品利用統計情報は "*収集されます*"。</span><span class="sxs-lookup"><span data-stu-id="0b04a-112">Telemetry *is collected* when using any of the [.NET Core CLI commands](index.md), such as:</span></span>
 
 - `dotnet build`
 - `dotnet pack`
-- `dotnet restore`
 - `dotnet run`
 
-## <a name="how-to-opt-out"></a><span data-ttu-id="7bf47-114">オプトアウトする方法</span><span class="sxs-lookup"><span data-stu-id="7bf47-114">How to opt out</span></span>
+## <a name="how-to-opt-out"></a><span data-ttu-id="0b04a-113">オプトアウトする方法</span><span class="sxs-lookup"><span data-stu-id="0b04a-113">How to opt out</span></span>
 
-<span data-ttu-id="7bf47-115">.NET Core SDK の製品利用統計情報機能は既定では有効になっています。</span><span class="sxs-lookup"><span data-stu-id="7bf47-115">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="7bf47-116">`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定して、製品利用統計情報の機能をオプトアウトします。</span><span class="sxs-lookup"><span data-stu-id="7bf47-116">Opt out of the telemetry feature by setting the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span>
+<span data-ttu-id="0b04a-114">.NET Core SDK の製品利用統計情報機能は既定では有効になっています。</span><span class="sxs-lookup"><span data-stu-id="0b04a-114">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="0b04a-115">製品利用統計情報機能をオプトアウトするには、`DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を `1` または `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="0b04a-115">To opt out of the telemetry feature, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span> 
 
-## <a name="data-points"></a><span data-ttu-id="7bf47-117">データ ポイント</span><span class="sxs-lookup"><span data-stu-id="7bf47-117">Data points</span></span>
+<span data-ttu-id="0b04a-116">正常にインストールされると、製品利用統計情報のエントリ 1 件も .NET Core SDK インストーラーによって送信されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-116">A single telemetry entry is also sent by the .NET Core SDK installer when a successful installation happens.</span></span> <span data-ttu-id="0b04a-117">オプトアウトするには、.NET Core SDK をインストールする前に `DOTNET_CLI_TELEMETRY_OPTOUT` 環境変数を設定します。</span><span class="sxs-lookup"><span data-stu-id="0b04a-117">To opt out, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable before you install the .NET Core SDK.</span></span>
 
-<span data-ttu-id="7bf47-118">この機能は次のデータを収集します。</span><span class="sxs-lookup"><span data-stu-id="7bf47-118">The feature collects the following data:</span></span>
+## <a name="disclosure"></a><span data-ttu-id="0b04a-118">開示</span><span class="sxs-lookup"><span data-stu-id="0b04a-118">Disclosure</span></span>
 
-- <span data-ttu-id="7bf47-119">呼び出しのタイムスタンプ&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-119">Timestamp of invocation&#8224;</span></span>
-- <span data-ttu-id="7bf47-120">呼び出されたコマンド ("build" など)&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-120">Command invoked (for example, "build")&#8224;</span></span>
-- <span data-ttu-id="7bf47-121">地理的な場所を決定するために使用する 3 つのオクテットの IP アドレス&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-121">Three octet IP address used to determine geographical location&#8224;</span></span>
-- <span data-ttu-id="7bf47-122">コマンドの `ExitCode`</span><span class="sxs-lookup"><span data-stu-id="7bf47-122">`ExitCode` of the command</span></span>
-- <span data-ttu-id="7bf47-123">(テスト プロジェクトの) テスト ランナー</span><span class="sxs-lookup"><span data-stu-id="7bf47-123">Test runner (for test projects)</span></span>
-- <span data-ttu-id="7bf47-124">オペレーティング システムとバージョン&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-124">Operating system and version&#8224;</span></span>
-- <span data-ttu-id="7bf47-125">ランタイム ノードにランタイム ID が存在するかどうか</span><span class="sxs-lookup"><span data-stu-id="7bf47-125">Whether runtime IDs are present in the runtimes node</span></span>
-- <span data-ttu-id="7bf47-126">.NET Core SDK バージョン&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-126">.NET Core SDK version&#8224;</span></span>
-
-<span data-ttu-id="7bf47-127">&#8224; このメトリックは公開されています。</span><span class="sxs-lookup"><span data-stu-id="7bf47-127">&#8224;This metric is published.</span></span>
-
-<span data-ttu-id="7bf47-128">.NET Core 2.0 SDK 以降、新しいデータ ポイントが収集されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-128">Starting with .NET Core 2.0 SDK, new data points are collected:</span></span>
-
-- <span data-ttu-id="7bf47-129">`dotnet` コマンドの引数とオプション: (任意の文字列ではなく) 既知の引数とオプションのみが収集されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-129">`dotnet` command arguments and options: only known arguments and options are collected (not arbitrary strings).</span></span>
-- <span data-ttu-id="7bf47-130">SDK がコンテナーで実行されているかどうか。</span><span class="sxs-lookup"><span data-stu-id="7bf47-130">Whether the SDK is running in a container.</span></span>
-- <span data-ttu-id="7bf47-131">ターゲット フレームワーク。</span><span class="sxs-lookup"><span data-stu-id="7bf47-131">Target frameworks.</span></span>
-- <span data-ttu-id="7bf47-132">ハッシュされた MAC アドレス: 暗号化の面で (SHA256) 匿名であり、マシンの一意の ID。</span><span class="sxs-lookup"><span data-stu-id="7bf47-132">Hashed MAC address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> <span data-ttu-id="7bf47-133">このメトリックは公開されていません。</span><span class="sxs-lookup"><span data-stu-id="7bf47-133">This metric isn't published.</span></span>
-- <span data-ttu-id="7bf47-134">ハッシュされた現在の作業ディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="7bf47-134">Hashed current working directory.</span></span>
-
-<span data-ttu-id="7bf47-135">この機能では、ユーザー名やメール アドレスなどの個人データは収集されません。</span><span class="sxs-lookup"><span data-stu-id="7bf47-135">The feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="7bf47-136">コードはスキャンされず、名前、リポジトリ、作成者などのプロジェクト レベルの機密データは抽出されません。</span><span class="sxs-lookup"><span data-stu-id="7bf47-136">It doesn't scan your code and doesn't extract sensitive project-level data, such as name, repo, or author.</span></span> <span data-ttu-id="7bf47-137">データは [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから公開されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-137">The data is sent securely to Microsoft servers using [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
-
-<span data-ttu-id="7bf47-138">.NET チームは、ツールで構築しているものではなく、ツールがどのように使われ、問題なく機能しているかどうかを知る必要があります。</span><span class="sxs-lookup"><span data-stu-id="7bf47-138">The .NET team wants to know how the tools are used and if they're working well, not what you're building with the tools.</span></span> <span data-ttu-id="7bf47-139">利用統計情報で機密情報が収集されているのではないか、データがセキュリティ上問題がある、不適切な方法で処理されているのではないかという疑いがある場合は、調査のために [dotnet/cli](https://github.com/dotnet/cli/issues) リポジトリで問題を提起してください。</span><span class="sxs-lookup"><span data-stu-id="7bf47-139">If you suspect that the telemetry is collecting sensitive data or that the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository for investigation.</span></span>
-
-## <a name="published-data"></a><span data-ttu-id="7bf47-140">公開データ</span><span class="sxs-lookup"><span data-stu-id="7bf47-140">Published data</span></span>
-
-<span data-ttu-id="7bf47-141">公開データは四半期ごとに利用可能で、「[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)」 (.NET core SDK の使用状況データ) に一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-141">Published data is available quarterly and are listed at [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md).</span></span> <span data-ttu-id="7bf47-142">データ ファイルの列は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="7bf47-142">The columns of a data file are:</span></span>
-
-- <span data-ttu-id="7bf47-143">Timestamp</span><span class="sxs-lookup"><span data-stu-id="7bf47-143">Timestamp</span></span>
-- <span data-ttu-id="7bf47-144">Occurrences&#8224;</span><span class="sxs-lookup"><span data-stu-id="7bf47-144">Occurrences&#8224;</span></span>
-- <span data-ttu-id="7bf47-145">コマンド</span><span class="sxs-lookup"><span data-stu-id="7bf47-145">Command</span></span>
-- <span data-ttu-id="7bf47-146">Geography&#8225;</span><span class="sxs-lookup"><span data-stu-id="7bf47-146">Geography&#8225;</span></span>
-- <span data-ttu-id="7bf47-147">OSFamily</span><span class="sxs-lookup"><span data-stu-id="7bf47-147">OSFamily</span></span>
-- <span data-ttu-id="7bf47-148">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="7bf47-148">RuntimeID</span></span>
-- <span data-ttu-id="7bf47-149">OSVersion</span><span class="sxs-lookup"><span data-stu-id="7bf47-149">OSVersion</span></span>
-- <span data-ttu-id="7bf47-150">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="7bf47-150">SDKVersion</span></span>
-
-<span data-ttu-id="7bf47-151">&#8224; *Occurrences* 列には、その行のメトリックに対するコマンドの使用回数の、その日の合計数が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-151">&#8224;The *Occurrences* column displays the aggregate count of that command's use for that row's metrics that day.</span></span>
-
-<span data-ttu-id="7bf47-152">&#8225; 通常、*Geography* 列には、国/地域の名前が表示されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-152">&#8225;Typically, the *Geography* column displays the name of a country/region.</span></span> <span data-ttu-id="7bf47-153">場合によっては、調査担当者が南極や不正な場所データを使用して .NET Core を使用していることが原因で、この列に南極大陸が表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="7bf47-153">In some cases, the continent of Antarctica appears in this column, either due to researchers using .NET Core in Antarctica or incorrect location data.</span></span>
-
-### <a name="example"></a><span data-ttu-id="7bf47-154">例</span><span class="sxs-lookup"><span data-stu-id="7bf47-154">Example</span></span>
-
-| <span data-ttu-id="7bf47-155">Timestamp</span><span class="sxs-lookup"><span data-stu-id="7bf47-155">Timestamp</span></span>      | <span data-ttu-id="7bf47-156">Occurrences</span><span class="sxs-lookup"><span data-stu-id="7bf47-156">Occurrences</span></span> | <span data-ttu-id="7bf47-157">コマンド</span><span class="sxs-lookup"><span data-stu-id="7bf47-157">Command</span></span> | <span data-ttu-id="7bf47-158">Geography</span><span class="sxs-lookup"><span data-stu-id="7bf47-158">Geography</span></span> | <span data-ttu-id="7bf47-159">OSFamily</span><span class="sxs-lookup"><span data-stu-id="7bf47-159">OSFamily</span></span> | <span data-ttu-id="7bf47-160">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="7bf47-160">RuntimeID</span></span>     | <span data-ttu-id="7bf47-161">OSVersion</span><span class="sxs-lookup"><span data-stu-id="7bf47-161">OSVersion</span></span> | <span data-ttu-id="7bf47-162">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="7bf47-162">SDKVersion</span></span> |
-| -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| <span data-ttu-id="7bf47-163">4/16/2017 0:00</span><span class="sxs-lookup"><span data-stu-id="7bf47-163">4/16/2017 0:00</span></span> | <span data-ttu-id="7bf47-164">8</span><span class="sxs-lookup"><span data-stu-id="7bf47-164">8</span></span>           | <span data-ttu-id="7bf47-165">実行</span><span class="sxs-lookup"><span data-stu-id="7bf47-165">run</span></span>     | <span data-ttu-id="7bf47-166">Uganda</span><span class="sxs-lookup"><span data-stu-id="7bf47-166">Uganda</span></span>    | <span data-ttu-id="7bf47-167">Darwin</span><span class="sxs-lookup"><span data-stu-id="7bf47-167">Darwin</span></span>   | <span data-ttu-id="7bf47-168">osx.10.12-x64</span><span class="sxs-lookup"><span data-stu-id="7bf47-168">osx.10.12-x64</span></span> | <span data-ttu-id="7bf47-169">10.12</span><span class="sxs-lookup"><span data-stu-id="7bf47-169">10.12</span></span>     | <span data-ttu-id="7bf47-170">1.0.1</span><span class="sxs-lookup"><span data-stu-id="7bf47-170">1.0.1</span></span>      |
-
-### <a name="datasets"></a><span data-ttu-id="7bf47-171">データセット</span><span class="sxs-lookup"><span data-stu-id="7bf47-171">Datasets</span></span>
-
-- [<span data-ttu-id="7bf47-172">2016 - Q3</span><span class="sxs-lookup"><span data-stu-id="7bf47-172">2016 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
-- [<span data-ttu-id="7bf47-173">2016 - Q4</span><span class="sxs-lookup"><span data-stu-id="7bf47-173">2016 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
-- [<span data-ttu-id="7bf47-174">2017 - Q1</span><span class="sxs-lookup"><span data-stu-id="7bf47-174">2017 - Q1</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
-- [<span data-ttu-id="7bf47-175">2017 - Q2</span><span class="sxs-lookup"><span data-stu-id="7bf47-175">2017 - Q2</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
-- [<span data-ttu-id="7bf47-176">2017 - Q3</span><span class="sxs-lookup"><span data-stu-id="7bf47-176">2017 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
-- [<span data-ttu-id="7bf47-177">2017 - Q4</span><span class="sxs-lookup"><span data-stu-id="7bf47-177">2017 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
-
-<span data-ttu-id="7bf47-178">追加のデータセットは、標準の URL 形式を使用してポストされます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-178">Additional datasets are posted using a standard URL format.</span></span> <span data-ttu-id="7bf47-179">`<YEAR>` を年で置き換え、`<QUARTER>` を四半期に置き換えます (`1`、`2`、`3`、 または `4` を使用)。</span><span class="sxs-lookup"><span data-stu-id="7bf47-179">Replace `<YEAR>` with the year and replace `<QUARTER>` with the quarter of the year (use `1`, `2`, `3`, or `4`).</span></span> <span data-ttu-id="7bf47-180">ファイルはタブ区切り値 (*TSV*) 形式です。</span><span class="sxs-lookup"><span data-stu-id="7bf47-180">The files are in tab-separated values (*TSV*) format.</span></span>
-
-`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
-
-## <a name="license"></a><span data-ttu-id="7bf47-181">ライセンス</span><span class="sxs-lookup"><span data-stu-id="7bf47-181">License</span></span>
-
-<span data-ttu-id="7bf47-182">Microsoft による .NET Core の配信は、[マイクロソフト ソフトウェア ライセンス条項:Microsoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)に基づいてライセンスが付与されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-182">The Microsoft distribution of .NET Core is licensed with the [Microsoft Software License Terms: Microsoft .NET Library](https://aka.ms/dotnet-core-eula).</span></span> <span data-ttu-id="7bf47-183">データの収集と処理について詳しくは、タイトルに「データ」と付くセクションをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7bf47-183">For details on data collection and processing, see the section entitled "Data."</span></span>
-
-<span data-ttu-id="7bf47-184">[.NET NuGet パッケージ](https://www.nuget.org/profiles/dotnetframework)は同じライセンスを使用しますが、製品利用統計情報を有効にしません (「[スコープ](#scope)」を参照)。</span><span class="sxs-lookup"><span data-stu-id="7bf47-184">[.NET NuGet packages](https://www.nuget.org/profiles/dotnetframework) use the same license but don't enable telemetry (see [Scope](#scope)).</span></span>
-
-## <a name="disclosure"></a><span data-ttu-id="7bf47-185">開示</span><span class="sxs-lookup"><span data-stu-id="7bf47-185">Disclosure</span></span>
-
-<span data-ttu-id="7bf47-186">いずれかの [.NET Core CLI コマンド](index.md) (`dotnet restore` など) をはじめて実行するときに、.NET Core SDK では次のテキストが表示されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-186">The .NET Core SDK displays the following text when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet restore`).</span></span> <span data-ttu-id="7bf47-187">テキストは、実行している SDK のバージョンによって多少異なります。</span><span class="sxs-lookup"><span data-stu-id="7bf47-187">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="7bf47-188">この "最初の実行" の際に、Microsoft がデータ回収に関して通知する方法が示されます。</span><span class="sxs-lookup"><span data-stu-id="7bf47-188">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
+<span data-ttu-id="0b04a-119">いずれかの [.NET Core CLI コマンド](index.md) (`dotnet build` など) を初めて実行するときは、.NET Core SDK では次のテキストと同様のものが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-119">The .NET Core SDK displays text similar to the following when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet build`).</span></span> <span data-ttu-id="0b04a-120">テキストは、実行している SDK のバージョンによって多少異なります。</span><span class="sxs-lookup"><span data-stu-id="0b04a-120">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="0b04a-121">この "最初の実行" の際に、Microsoft がデータ回収に関して通知する方法が示されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-121">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
 
 ```console
-Welcome to .NET Core!
----------------------
-Learn more about .NET Core: https://aka.ms/dotnet-docs
-Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
-
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience.
-The data is anonymous and doesn't include command-line arguments.
-The data is collected by Microsoft and shared with the community.
-You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7bf47-189">関連項目</span><span class="sxs-lookup"><span data-stu-id="7bf47-189">See also</span></span>
+## <a name="data-points"></a><span data-ttu-id="0b04a-122">データ ポイント</span><span class="sxs-lookup"><span data-stu-id="0b04a-122">Data points</span></span>
 
-- [<span data-ttu-id="7bf47-190">.NET Core SDK 製品利用統計情報からわかったこと</span><span class="sxs-lookup"><span data-stu-id="7bf47-190">What we've learned from .NET Core SDK Telemetry</span></span>](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
-- [<span data-ttu-id="7bf47-191">製品利用統計情報の参照のソース (dotnet/cli リポジトリ)</span><span class="sxs-lookup"><span data-stu-id="7bf47-191">Telemetry reference source (dotnet/cli repo)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
-- [<span data-ttu-id="7bf47-192">.NET core SDK の使用状況データ</span><span class="sxs-lookup"><span data-stu-id="7bf47-192">.NET Core SDK Usage Data</span></span>](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+<span data-ttu-id="0b04a-123">製品利用統計情報機能では、ユーザー名やメール アドレスなどの個人データは収集されません。</span><span class="sxs-lookup"><span data-stu-id="0b04a-123">The telemetry feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="0b04a-124">コードはスキャンされず、名前、リポジトリ、作成者などのプロジェクト レベルのデータは抽出されません。</span><span class="sxs-lookup"><span data-stu-id="0b04a-124">It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author.</span></span> <span data-ttu-id="0b04a-125">データは、[Azure Monitor](https://azure.microsoft.com/services/monitor/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で、安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから公開されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-125">The data is sent securely to Microsoft servers using [Azure Monitor](https://azure.microsoft.com/services/monitor/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
+
+<span data-ttu-id="0b04a-126">ユーザーのプライバシー保護は Microsoft にとって重要です。</span><span class="sxs-lookup"><span data-stu-id="0b04a-126">Protecting your privacy is important to us.</span></span> <span data-ttu-id="0b04a-127">製品利用統計情報で機密データが収集されている、またはデータが安全でないか不適切な方法で処理されていることが疑われる場合、[dotnet/cli](https://github.com/dotnet/cli/issues) リポジトリで問題を提出するか、[dotnet@microsoft.com](mailto:dotnet@microsoft.com) に電子メールを送信し、調査を依頼してください。</span><span class="sxs-lookup"><span data-stu-id="0b04a-127">If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository or send an email to [dotnet@microsoft.com](mailto:dotnet@microsoft.com) for investigation.</span></span>
+
+<span data-ttu-id="0b04a-128">製品利用統計情報の機能では次のデータが収集されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-128">The telemetry feature collects the following data:</span></span>
+
+| <span data-ttu-id="0b04a-129">SDK バージョン</span><span class="sxs-lookup"><span data-stu-id="0b04a-129">SDK versions</span></span> | <span data-ttu-id="0b04a-130">データ</span><span class="sxs-lookup"><span data-stu-id="0b04a-130">Data</span></span> |
+|--------------|------|
+| <span data-ttu-id="0b04a-131">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-131">All</span></span>          | <span data-ttu-id="0b04a-132">呼び出しのタイムスタンプ。</span><span class="sxs-lookup"><span data-stu-id="0b04a-132">Timestamp of invocation.</span></span> |
+| <span data-ttu-id="0b04a-133">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-133">All</span></span>          | <span data-ttu-id="0b04a-134">呼び出されたコマンド ("build" など)、2.1 以降はハッシュされます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-134">Command invoked (for example, "build"), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="0b04a-135">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-135">All</span></span>          | <span data-ttu-id="0b04a-136">地理的な場所を決定するために使用する 3 つのオクテットの IP アドレス。</span><span class="sxs-lookup"><span data-stu-id="0b04a-136">Three octet IP address used to determine the geographical location.</span></span> |
+| <span data-ttu-id="0b04a-137">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-137">All</span></span>          | <span data-ttu-id="0b04a-138">オペレーティング システムとバージョン。</span><span class="sxs-lookup"><span data-stu-id="0b04a-138">Operating system and version.</span></span> |
+| <span data-ttu-id="0b04a-139">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-139">All</span></span>          | <span data-ttu-id="0b04a-140">SDK が実行されているランタイム ID (RID)。</span><span class="sxs-lookup"><span data-stu-id="0b04a-140">Runtime ID (RID) the SDK is running on.</span></span> |
+| <span data-ttu-id="0b04a-141">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-141">All</span></span>          | <span data-ttu-id="0b04a-142">.NET Core SDK バージョン。</span><span class="sxs-lookup"><span data-stu-id="0b04a-142">.NET Core SDK version.</span></span> |
+| <span data-ttu-id="0b04a-143">すべて</span><span class="sxs-lookup"><span data-stu-id="0b04a-143">All</span></span>          | <span data-ttu-id="0b04a-144">製品利用統計情報プロファイル: 明示的なユーザー オプトインでのみ使用され、Microsoft では内部で使用される任意の値。</span><span class="sxs-lookup"><span data-stu-id="0b04a-144">Telemetry profile: an optional value only used with explicit user opt-in and used internally at Microsoft.</span></span> |
+| <span data-ttu-id="0b04a-145">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-145">>=2.0</span></span>        | <span data-ttu-id="0b04a-146">コマンドの引数とオプション: (任意の文字列ではなく) いくつかの引数とオプションが収集されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-146">Command arguments and options: several arguments and options are collected (not arbitrary strings).</span></span> <span data-ttu-id="0b04a-147">[収集されるオプション](#collected-options)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b04a-147">See [collected options](#collected-options).</span></span> <span data-ttu-id="0b04a-148">2\.1.300 以降はハッシュされます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-148">Hashed after 2.1.300.</span></span> |
+| <span data-ttu-id="0b04a-149">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-149">>=2.0</span></span>         | <span data-ttu-id="0b04a-150">SDK がコンテナーで実行されているかどうか。</span><span class="sxs-lookup"><span data-stu-id="0b04a-150">Whether the SDK is running in a container.</span></span> |
+| <span data-ttu-id="0b04a-151">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-151">>=2.0</span></span>         | <span data-ttu-id="0b04a-152">ターゲット フレームワーク (`TargetFramework` イベントから)、2.1 以降はハッシュされます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-152">Target frameworks (from the `TargetFramework` event), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="0b04a-153">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-153">>=2.0</span></span>         | <span data-ttu-id="0b04a-154">ハッシュされたメディア アクセス制御 (MAC) アドレス: マシンの、暗号化された (SHA256) 匿名で一意の ID。</span><span class="sxs-lookup"><span data-stu-id="0b04a-154">Hashed Media Access Control (MAC) address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> |
+| <span data-ttu-id="0b04a-155">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-155">>=2.0</span></span>         | <span data-ttu-id="0b04a-156">ハッシュされた現在の作業ディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="0b04a-156">Hashed current working directory.</span></span> |
+| <span data-ttu-id="0b04a-157">>=2.0</span><span class="sxs-lookup"><span data-stu-id="0b04a-157">>=2.0</span></span>         | <span data-ttu-id="0b04a-158">インストール成功レポート、インストーラーの実行ファイルの名前がハッシュされます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-158">Install success report, with hashed installer exe filename.</span></span> |
+| <span data-ttu-id="0b04a-159">>=2.1.300</span><span class="sxs-lookup"><span data-stu-id="0b04a-159">>=2.1.300</span></span>     | <span data-ttu-id="0b04a-160">カーネル バージョン。</span><span class="sxs-lookup"><span data-stu-id="0b04a-160">Kernel version.</span></span> |
+| <span data-ttu-id="0b04a-161">>=2.1.300</span><span class="sxs-lookup"><span data-stu-id="0b04a-161">>=2.1.300</span></span>     | <span data-ttu-id="0b04a-162">Libc リリース/バージョン。</span><span class="sxs-lookup"><span data-stu-id="0b04a-162">Libc release/version.</span></span> |
+| <span data-ttu-id="0b04a-163">>=3.0.100</span><span class="sxs-lookup"><span data-stu-id="0b04a-163">>=3.0.100</span></span>     | <span data-ttu-id="0b04a-164">出力がリダイレクトされるかどうか (True または False)。</span><span class="sxs-lookup"><span data-stu-id="0b04a-164">Whether the output was redirected (true or false).</span></span> |
+| <span data-ttu-id="0b04a-165">>=3.0.100</span><span class="sxs-lookup"><span data-stu-id="0b04a-165">>=3.0.100</span></span>     | <span data-ttu-id="0b04a-166">CLI/SDK クラッシュ時の例外の種類とそのスタック トレース (CLI/SDK コードのみ、送信されたスタック トレースに含まれます)。</span><span class="sxs-lookup"><span data-stu-id="0b04a-166">On a CLI/SDK crash, the exception type and its stack trace (only CLI/SDK code is included in the stack trace sent).</span></span> <span data-ttu-id="0b04a-167">詳細は、[.NET Core CLI/SDK クラッシュ例外製品利用統計情報の収集](#net-core-clisdk-crash-exception-telemetry-collected)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b04a-167">For more information, see [.NET Core CLI/SDK crash exception telemetry collected](#net-core-clisdk-crash-exception-telemetry-collected).</span></span> |
+
+### <a name="collected-options"></a><span data-ttu-id="0b04a-168">収集されるオプション</span><span class="sxs-lookup"><span data-stu-id="0b04a-168">Collected options</span></span>
+
+<span data-ttu-id="0b04a-169">一部のコマンドでは、追加データが送信されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-169">Certain commands send additional data.</span></span> <span data-ttu-id="0b04a-170">コマンドのサブセットで最初の引数が送信されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-170">A subset of commands sends the first argument:</span></span>
+
+| <span data-ttu-id="0b04a-171">コマンド</span><span class="sxs-lookup"><span data-stu-id="0b04a-171">Command</span></span>               | <span data-ttu-id="0b04a-172">送信される最初の引数データ</span><span class="sxs-lookup"><span data-stu-id="0b04a-172">First argument data sent</span></span>                |
+|-----------------------|-----------------------------------------|
+| `dotnet help <arg>`   | <span data-ttu-id="0b04a-173">コマンドのヘルプが求められます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-173">The command help is being queried for.</span></span>  |
+| `dotnet new <arg>`    | <span data-ttu-id="0b04a-174">テンプレート名 (ハッシュ済み)。</span><span class="sxs-lookup"><span data-stu-id="0b04a-174">The template name (hashed).</span></span>             |
+| `dotnet add <arg>`    | <span data-ttu-id="0b04a-175">`package` または `reference` という単語。</span><span class="sxs-lookup"><span data-stu-id="0b04a-175">The word `package` or `reference`.</span></span>      |
+| `dotnet remove <arg>` | <span data-ttu-id="0b04a-176">`package` または `reference` という単語。</span><span class="sxs-lookup"><span data-stu-id="0b04a-176">The word `package` or `reference`.</span></span>      |
+| `dotnet list <arg>`   | <span data-ttu-id="0b04a-177">`package` または `reference` という単語。</span><span class="sxs-lookup"><span data-stu-id="0b04a-177">The word `package` or `reference`.</span></span>      |
+| `dotnet sln <arg>`    | <span data-ttu-id="0b04a-178">`add`、`list`、または `remove` という単語。</span><span class="sxs-lookup"><span data-stu-id="0b04a-178">The word `add`, `list`, or `remove`.</span></span>    |
+| `dotnet nuget <arg>`  | <span data-ttu-id="0b04a-179">`delete`、`locals`、または `push` という単語。</span><span class="sxs-lookup"><span data-stu-id="0b04a-179">The word `delete`, `locals`, or `push`.</span></span> |
+
+<span data-ttu-id="0b04a-180">選択されたオプションが使用される場合は、コマンドのサブセットによって、その値と共に送信されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-180">A subset of commands sends selected options if they're used, along with their values:</span></span>
+
+| <span data-ttu-id="0b04a-181">オプション</span><span class="sxs-lookup"><span data-stu-id="0b04a-181">Option</span></span>                  | <span data-ttu-id="0b04a-182">コマンド</span><span class="sxs-lookup"><span data-stu-id="0b04a-182">Commands</span></span>                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| `--verbosity`           | <span data-ttu-id="0b04a-183">すべてのコマンド</span><span class="sxs-lookup"><span data-stu-id="0b04a-183">All commands</span></span>                                                                                   |
+| `--language`            | `dotnet new`                                                                                   |
+| `--configuration`       | <span data-ttu-id="0b04a-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span><span class="sxs-lookup"><span data-stu-id="0b04a-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span></span>                  |
+| `--framework`           | <span data-ttu-id="0b04a-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span><span class="sxs-lookup"><span data-stu-id="0b04a-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span></span> |
+| `--runtime`             | <span data-ttu-id="0b04a-186">`dotnet build`、`dotnet publish`</span><span class="sxs-lookup"><span data-stu-id="0b04a-186">`dotnet build`,  `dotnet publish`</span></span>                                                              |
+| `--platform`            | `dotnet vstest`                                                                                |
+| `--logger`              | `dotnet vstest`                                                                                |
+| `--sdk-package-version` | `dotnet migrate`                                                                               |
+
+<span data-ttu-id="0b04a-187">`--verbosity` と `--sdk-package-version` を除き、他のすべての値は .Net Core 2.1.100 SDK 以降、ハッシュされます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-187">Except for `--verbosity` and `--sdk-package-version`, all the other values are hashed starting with .NET Core 2.1.100 SDK.</span></span>
+
+## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a><span data-ttu-id="0b04a-188">収集される .NET Core CLI/SDK クラッシュ例外製品利用統計情報</span><span class="sxs-lookup"><span data-stu-id="0b04a-188">.NET Core CLI/SDK crash exception telemetry collected</span></span>
+
+<span data-ttu-id="0b04a-189">.NET Core CLI/SDK がクラッシュした場合、例外の名前と CLI/SDK コードのスタック トレースが収集されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-189">If the .NET Core CLI/SDK crashes, it collects the name of the exception and stack trace of the CLI/SDK code.</span></span> <span data-ttu-id="0b04a-190">この情報は、問題を評価し、.NET Core SDK と CLI の品質を向上させる目的で収集されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-190">This information is collected to assess problems and improve the quality of the .NET Core SDK and CLI.</span></span> <span data-ttu-id="0b04a-191">この記事では、Microsoft が収集するデータについて説明します。</span><span class="sxs-lookup"><span data-stu-id="0b04a-191">This article provides information about the data we collect.</span></span> <span data-ttu-id="0b04a-192">また、独自のバージョンの .NET Core SDK をビルドするユーザーが個人情報や機密情報の不注意による漏洩を回避する方法に関するヒントも提供します。</span><span class="sxs-lookup"><span data-stu-id="0b04a-192">It also provides tips on how users building their own version of the .NET Core SDK can avoid inadvertent disclosure of personal or sensitive information.</span></span>
+
+### <a name="types-of-collected-data"></a><span data-ttu-id="0b04a-193">収集されるデータの種類</span><span class="sxs-lookup"><span data-stu-id="0b04a-193">Types of collected data</span></span>
+
+<span data-ttu-id="0b04a-194">.NET Core CLI では、お使いのアプリケーションの例外についてではなく、CLI/SDK の例外についてのみ、情報が収集されます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-194">.NET Core CLI collects information for CLI/SDK exceptions only, not exceptions in your application.</span></span> <span data-ttu-id="0b04a-195">収集されたデータには、例外の名前とスタック トレースが含まれます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-195">The collected data contains the name of the exception and the stack trace.</span></span> <span data-ttu-id="0b04a-196">このスタック トレースは CLI/SDK コードです。</span><span class="sxs-lookup"><span data-stu-id="0b04a-196">This stack trace is of CLI/SDK code.</span></span>
+
+<span data-ttu-id="0b04a-197">次の例では、収集されたデータの種類を確認できます。</span><span class="sxs-lookup"><span data-stu-id="0b04a-197">The following example shows the kind of data that is collected:</span></span>
+
+```
+System.IO.IOException
+at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+at System.IO.StreamWriter.Write(Char[] buffer)
+at System.IO.TextWriter.WriteLine()
+at System.IO.TextWriter.SyncTextWriter.WriteLine()
+at Microsoft.DotNet.Cli.Utils.Reporter.WriteLine()
+at Microsoft.DotNet.Tools.Run.RunCommand.EnsureProjectIsBuilt()
+at Microsoft.DotNet.Tools.Run.RunCommand.Execute()
+at Microsoft.DotNet.Tools.Run.RunCommand.Run(String[] args)
+at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryClient)
+at Microsoft.DotNet.Cli.Program.Main(String[] args)
+```
+
+### <a name="avoid-inadvertent-disclosure-information"></a><span data-ttu-id="0b04a-198">不注意による情報開示を避ける</span><span class="sxs-lookup"><span data-stu-id="0b04a-198">Avoid inadvertent disclosure information</span></span>
+
+<span data-ttu-id="0b04a-199">.NET Core の共同作成者と、自分でビルドした .NET Core SDK のバージョンを実行しているユーザーは、SDK ソース コードのパスを考慮する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b04a-199">.NET Core contributors and anyone else running a version of the .NET Core SDK that they built themselves should consider the path to their SDK source code.</span></span> <span data-ttu-id="0b04a-200">カスタムのデバッグ ビルドであるか、カスタムのビルド シンボル ファイルで構成されている .NET Core SDK の使用時にクラッシュが発生した場合、ビルド コンピューターからの SDK ソース ファイル パスはスタック トレースの一部としては収集されず、ハッシュされません。</span><span class="sxs-lookup"><span data-stu-id="0b04a-200">If a crash occurs while using a .NET Core SDK that is a custom debug build or configured with custom build symbol files, the SDK source file path from the build machine is collected as part of the stack trace and isn't hashed.</span></span>
+
+<span data-ttu-id="0b04a-201">そのため、.NET Core SDK のカスタム ビルドは、パス名によって個人情報や機密情報が公開されるディレクトリには置かないでください。</span><span class="sxs-lookup"><span data-stu-id="0b04a-201">Because of this, custom builds of the .NET Core SDK shouldn't be located in directories whose path names expose personal or sensitive information.</span></span> 
+
+## <a name="see-also"></a><span data-ttu-id="0b04a-202">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b04a-202">See also</span></span>
+
+- [<span data-ttu-id="0b04a-203">.NET Core CLI 製品利用統計情報 - 2019 年第 2 四半期データ</span><span class="sxs-lookup"><span data-stu-id="0b04a-203">.NET Core CLI Telemetry - 2019 Q2 Data</span></span>](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [<span data-ttu-id="0b04a-204">製品利用統計情報の参照のソース (dotnet/cli リポジトリ)</span><span class="sxs-lookup"><span data-stu-id="0b04a-204">Telemetry reference source (dotnet/cli repository)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
