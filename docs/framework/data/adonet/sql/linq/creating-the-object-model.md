@@ -2,40 +2,40 @@
 title: オブジェクト モデルの作成
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68fb4ce79b5ee2277821e8a06ceab910cf35480a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743578"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247717"
 ---
-# <a name="creating-the-object-model"></a><span data-ttu-id="0a71f-102">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="0a71f-102">Creating the Object Model</span></span>
-<span data-ttu-id="0a71f-103">既存のデータベースからオブジェクト モデルを作成し、このオブジェクト モデルを既定の状態で使用できます。</span><span class="sxs-lookup"><span data-stu-id="0a71f-103">You can create your object model from an existing database and use the model in its default state.</span></span> <span data-ttu-id="0a71f-104">オブジェクト モデルの多くの側面と動作をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="0a71f-104">You can also customize many aspects of the model and its behavior.</span></span>  
+# <a name="creating-the-object-model"></a><span data-ttu-id="9040b-102">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="9040b-102">Creating the Object Model</span></span>
+<span data-ttu-id="9040b-103">既存のデータベースからオブジェクト モデルを作成し、このオブジェクト モデルを既定の状態で使用できます。</span><span class="sxs-lookup"><span data-stu-id="9040b-103">You can create your object model from an existing database and use the model in its default state.</span></span> <span data-ttu-id="9040b-104">オブジェクト モデルの多くの側面と動作をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="9040b-104">You can also customize many aspects of the model and its behavior.</span></span>  
   
- <span data-ttu-id="0a71f-105">Visual Studio を使用している場合は、オブジェクト モデルを作成するオブジェクト リレーショナル デザイナーを使用できます。</span><span class="sxs-lookup"><span data-stu-id="0a71f-105">If you are using Visual Studio, you can use the Object Relational Designer to create your object model.</span></span>  
+ <span data-ttu-id="9040b-105">Visual Studio を使用している場合は、オブジェクトリレーショナルデザイナーを使用してオブジェクトモデルを作成できます。</span><span class="sxs-lookup"><span data-stu-id="9040b-105">If you are using Visual Studio, you can use the Object Relational Designer to create your object model.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0a71f-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="0a71f-106">In This Section</span></span>  
- [<span data-ttu-id="0a71f-107">方法: Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="0a71f-107">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- <span data-ttu-id="0a71f-108">SQLMetal コマンド ライン ツールの使い方について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-108">Describes how to use the SQLMetal command-line tool.</span></span> <span data-ttu-id="0a71f-109">Visual Studio のユーザー リンクをオブジェクト リレーショナル デザイナーも提供します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-109">Also provides a link to the Object Relational Designer for Visual Studio users</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9040b-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9040b-106">In This Section</span></span>  
+ [<span data-ttu-id="9040b-107">方法: Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="9040b-107">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ <span data-ttu-id="9040b-108">SQLMetal コマンド ライン ツールの使い方について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-108">Describes how to use the SQLMetal command-line tool.</span></span> <span data-ttu-id="9040b-109">また、Visual Studio ユーザーのオブジェクトリレーショナルデザイナーへのリンクも提供します。</span><span class="sxs-lookup"><span data-stu-id="9040b-109">Also provides a link to the Object Relational Designer for Visual Studio users</span></span>  
   
- [<span data-ttu-id="0a71f-110">方法: 外部ファイルとしてのオブジェクト モデルを生成します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-110">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- <span data-ttu-id="0a71f-111">属性ベースの対応付けを使用する代わりに外部マッピング ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-111">Describes how to generate an external mapping file instead of using attribute-based mapping.</span></span>  
+ [<span data-ttu-id="9040b-110">方法: 外部ファイルとしてオブジェクトモデルを生成する</span><span class="sxs-lookup"><span data-stu-id="9040b-110">How to: Generate the Object Model as an External File</span></span>](how-to-generate-the-object-model-as-an-external-file.md)  
+ <span data-ttu-id="9040b-111">属性ベースの対応付けを使用する代わりに外部マッピング ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-111">Describes how to generate an external mapping file instead of using attribute-based mapping.</span></span>  
   
- [<span data-ttu-id="0a71f-112">方法: DBML ファイルを変更してカスタマイズ コードを生成します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-112">How to: Generate Customized Code by Modifying a DBML File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-customized-code-by-modifying-a-dbml-file.md)  
- <span data-ttu-id="0a71f-113">Visual Basic を生成する方法を説明またはC#コードを DBML メタデータ ファイルから。</span><span class="sxs-lookup"><span data-stu-id="0a71f-113">Describes how to generate Visual Basic or C# code from a DBML metadata file.</span></span>  
+ [<span data-ttu-id="9040b-112">方法: DBML ファイルを変更してカスタマイズしたコードを生成する</span><span class="sxs-lookup"><span data-stu-id="9040b-112">How to: Generate Customized Code by Modifying a DBML File</span></span>](how-to-generate-customized-code-by-modifying-a-dbml-file.md)  
+ <span data-ttu-id="9040b-113">DBML メタデータファイルから Visual Basic C#またはコードを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-113">Describes how to generate Visual Basic or C# code from a DBML metadata file.</span></span>  
   
- [<span data-ttu-id="0a71f-114">方法: DBML ファイルおよび外部マッピング ファイルを検証します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-114">How to: Validate DBML and External Mapping Files</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)  
- <span data-ttu-id="0a71f-115">変更したマッピング ファイルを検証する方法について説明します (上級)。</span><span class="sxs-lookup"><span data-stu-id="0a71f-115">Describes how to validate mapping files that you have modified (advanced).</span></span>  
+ [<span data-ttu-id="9040b-114">方法: DBML ファイルと外部マッピングファイルの検証</span><span class="sxs-lookup"><span data-stu-id="9040b-114">How to: Validate DBML and External Mapping Files</span></span>](how-to-validate-dbml-and-external-mapping-files.md)  
+ <span data-ttu-id="9040b-115">変更したマッピング ファイルを検証する方法について説明します (上級)。</span><span class="sxs-lookup"><span data-stu-id="9040b-115">Describes how to validate mapping files that you have modified (advanced).</span></span>  
   
- [<span data-ttu-id="0a71f-116">方法: エンティティをシリアル化可能にします。</span><span class="sxs-lookup"><span data-stu-id="0a71f-116">How to: Make Entities Serializable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)  
- <span data-ttu-id="0a71f-117">適切な属性を追加してエンティティをシリアル化可能にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-117">Describes how to add appropriate attributes to make entities serializable.</span></span>  
+ [<span data-ttu-id="9040b-116">方法: エンティティをシリアル化可能にする</span><span class="sxs-lookup"><span data-stu-id="9040b-116">How to: Make Entities Serializable</span></span>](how-to-make-entities-serializable.md)  
+ <span data-ttu-id="9040b-117">適切な属性を追加してエンティティをシリアル化可能にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-117">Describes how to add appropriate attributes to make entities serializable.</span></span>  
   
- [<span data-ttu-id="0a71f-118">方法: コード エディターを使用してエンティティ クラスをカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="0a71f-118">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)  
- <span data-ttu-id="0a71f-119">コード エディターを使用して、独自のマッピング コードを書いたり、自動的に生成されたコードをカスタマイズしたりする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-119">Describes how to use the code editor to write your own mapping code, or customize code that has been autogenerated.</span></span>  
+ [<span data-ttu-id="9040b-118">方法: コードエディターを使用してエンティティクラスをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="9040b-118">How to: Customize Entity Classes by Using the Code Editor</span></span>](how-to-customize-entity-classes-by-using-the-code-editor.md)  
+ <span data-ttu-id="9040b-119">コード エディターを使用して、独自のマッピング コードを書いたり、自動的に生成されたコードをカスタマイズしたりする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-119">Describes how to use the code editor to write your own mapping code, or customize code that has been autogenerated.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="0a71f-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a71f-120">Related Sections</span></span>  
- [<span data-ttu-id="0a71f-121">LINQ to SQL オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="0a71f-121">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- <span data-ttu-id="0a71f-122">詳細について説明します、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オブジェクト モデルです。</span><span class="sxs-lookup"><span data-stu-id="0a71f-122">Provides details about the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="9040b-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="9040b-120">Related Sections</span></span>  
+ [<span data-ttu-id="9040b-121">LINQ to SQL オブジェクト モデル</span><span class="sxs-lookup"><span data-stu-id="9040b-121">The LINQ to SQL Object Model</span></span>](the-linq-to-sql-object-model.md)  
+ <span data-ttu-id="9040b-122">オブジェクトモデルの[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-122">Provides details about the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.</span></span>  
   
- [<span data-ttu-id="0a71f-123">一般的な LINQ to SQL の使用手順</span><span class="sxs-lookup"><span data-stu-id="0a71f-123">Typical Steps for Using LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md)  
- <span data-ttu-id="0a71f-124">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを実装する標準的な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a71f-124">Explains the typical steps that you follow to implement a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] application.</span></span>
+ [<span data-ttu-id="9040b-123">一般的な LINQ to SQL の使用手順</span><span class="sxs-lookup"><span data-stu-id="9040b-123">Typical Steps for Using LINQ to SQL</span></span>](typical-steps-for-using-linq-to-sql.md)  
+ <span data-ttu-id="9040b-124">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを実装する標準的な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="9040b-124">Explains the typical steps that you follow to implement a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] application.</span></span>
