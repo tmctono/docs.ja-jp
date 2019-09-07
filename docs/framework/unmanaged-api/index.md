@@ -9,58 +9,58 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677bee7319a80e405098f0dd5c8684765806c5f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984166"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796872"
 ---
-# <a name="unmanaged-api-reference"></a><span data-ttu-id="e6b66-102">アンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="e6b66-102">Unmanaged API Reference</span></span>
-<span data-ttu-id="e6b66-103">このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e6b66-103">This section includes information on unmanaged APIs that can be used by managed-code-related applications, such as runtime hosts, compilers, disassemblers, obfuscators, debuggers, and profilers.</span></span>  
+# <a name="unmanaged-api-reference"></a><span data-ttu-id="28119-102">アンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="28119-102">Unmanaged API Reference</span></span>
+<span data-ttu-id="28119-103">このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="28119-103">This section includes information on unmanaged APIs that can be used by managed-code-related applications, such as runtime hosts, compilers, disassemblers, obfuscators, debuggers, and profilers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e6b66-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e6b66-104">In This Section</span></span>  
- [<span data-ttu-id="e6b66-105">共有のデータ型</span><span class="sxs-lookup"><span data-stu-id="e6b66-105">Common Data Types</span></span>](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
- <span data-ttu-id="e6b66-106">特にアンマネージ プロファイリング API とデバッギング API で使用される一般的なデータ型を示します。</span><span class="sxs-lookup"><span data-stu-id="e6b66-106">Lists the common data types that are used, particularly in the unmanaged profiling and debugging APIs.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="28119-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="28119-104">In This Section</span></span>  
+ [<span data-ttu-id="28119-105">共有のデータ型</span><span class="sxs-lookup"><span data-stu-id="28119-105">Common Data Types</span></span>](common-data-types-unmanaged-api-reference.md)  
+ <span data-ttu-id="28119-106">特にアンマネージ プロファイリング API とデバッギング API で使用される一般的なデータ型を示します。</span><span class="sxs-lookup"><span data-stu-id="28119-106">Lists the common data types that are used, particularly in the unmanaged profiling and debugging APIs.</span></span>  
   
- [<span data-ttu-id="e6b66-107">ALink</span><span class="sxs-lookup"><span data-stu-id="e6b66-107">ALink</span></span>](../../../docs/framework/unmanaged-api/alink/index.md)  
- <span data-ttu-id="e6b66-108">ALink API について説明します。この API は .NET Framework アセンブリおよび非バインド モジュールの作成をサポートします。</span><span class="sxs-lookup"><span data-stu-id="e6b66-108">Describes the ALink API, which supports the creation of .NET Framework assemblies and unbound modules.</span></span>  
+ [<span data-ttu-id="28119-107">ALink</span><span class="sxs-lookup"><span data-stu-id="28119-107">ALink</span></span>](./alink/index.md)  
+ <span data-ttu-id="28119-108">ALink API について説明します。この API は .NET Framework アセンブリおよび非バインド モジュールの作成をサポートします。</span><span class="sxs-lookup"><span data-stu-id="28119-108">Describes the ALink API, which supports the creation of .NET Framework assemblies and unbound modules.</span></span>  
   
- [<span data-ttu-id="e6b66-109">Authenticode</span><span class="sxs-lookup"><span data-stu-id="e6b66-109">Authenticode</span></span>](../../../docs/framework/unmanaged-api/authenticode/index.md)  
- <span data-ttu-id="e6b66-110">Authenticode XrML ライセンスの作成および検証モジュールをサポートします。</span><span class="sxs-lookup"><span data-stu-id="e6b66-110">Supports the Authenticode XrML license creation and verification module.</span></span>  
+ [<span data-ttu-id="28119-109">Authenticode</span><span class="sxs-lookup"><span data-stu-id="28119-109">Authenticode</span></span>](./authenticode/index.md)  
+ <span data-ttu-id="28119-110">Authenticode XrML ライセンスの作成および検証モジュールをサポートします。</span><span class="sxs-lookup"><span data-stu-id="28119-110">Supports the Authenticode XrML license creation and verification module.</span></span>  
   
- [<span data-ttu-id="e6b66-111">定数</span><span class="sxs-lookup"><span data-stu-id="e6b66-111">Constants</span></span>](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
- <span data-ttu-id="e6b66-112">CorSym.idl で定義される定数について説明します。</span><span class="sxs-lookup"><span data-stu-id="e6b66-112">Describes the constants that are defined in CorSym.idl.</span></span>  
+ [<span data-ttu-id="28119-111">定数</span><span class="sxs-lookup"><span data-stu-id="28119-111">Constants</span></span>](constants-unmanaged-api-reference.md)  
+ <span data-ttu-id="28119-112">CorSym.idl で定義される定数について説明します。</span><span class="sxs-lookup"><span data-stu-id="28119-112">Describes the constants that are defined in CorSym.idl.</span></span>  
   
- <span data-ttu-id="e6b66-113">[カスタム インターフェイス属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="e6b66-113">[Custom Interface Attributes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))</span></span>  
- <span data-ttu-id="e6b66-114">コンポーネント オブジェクト モデル (COM) のカスタム インターフェイス属性について説明します。</span><span class="sxs-lookup"><span data-stu-id="e6b66-114">Describes component object model (COM) custom interface attributes.</span></span>  
+ <span data-ttu-id="28119-113">[カスタム インターフェイス属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="28119-113">[Custom Interface Attributes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))</span></span>  
+ <span data-ttu-id="28119-114">コンポーネント オブジェクト モデル (COM) のカスタム インターフェイス属性について説明します。</span><span class="sxs-lookup"><span data-stu-id="28119-114">Describes component object model (COM) custom interface attributes.</span></span>  
   
- [<span data-ttu-id="e6b66-115">デバッグ</span><span class="sxs-lookup"><span data-stu-id="e6b66-115">Debugging</span></span>](../../../docs/framework/unmanaged-api/debugging/index.md)  
- <span data-ttu-id="e6b66-116">デバッグ API について説明します。これによりデバッガーは、共通言語ランタイム (CLR) 環境で実行するコードをデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-116">Describes the debugging API, which enables a debugger to debug code that runs in the common language runtime (CLR) environment.</span></span>  
+ [<span data-ttu-id="28119-115">デバッグ</span><span class="sxs-lookup"><span data-stu-id="28119-115">Debugging</span></span>](./debugging/index.md)  
+ <span data-ttu-id="28119-116">デバッグ API について説明します。これによりデバッガーは、共通言語ランタイム (CLR) 環境で実行するコードをデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="28119-116">Describes the debugging API, which enables a debugger to debug code that runs in the common language runtime (CLR) environment.</span></span>  
   
- [<span data-ttu-id="e6b66-117">シンボル ストア診断</span><span class="sxs-lookup"><span data-stu-id="e6b66-117">Diagnostics Symbol Store</span></span>](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
- <span data-ttu-id="e6b66-118">シンボル ストア診断 API について説明します。これによりコンパイラは、デバッガーが使用するためのシンボル情報を生成できます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-118">Describes the diagnostics symbol store API, which enables a compiler to generate symbol information for use by a debugger.</span></span>  
+ [<span data-ttu-id="28119-117">シンボル ストア診断</span><span class="sxs-lookup"><span data-stu-id="28119-117">Diagnostics Symbol Store</span></span>](./diagnostics/index.md)  
+ <span data-ttu-id="28119-118">シンボル ストア診断 API について説明します。これによりコンパイラは、デバッガーが使用するためのシンボル情報を生成できます。</span><span class="sxs-lookup"><span data-stu-id="28119-118">Describes the diagnostics symbol store API, which enables a compiler to generate symbol information for use by a debugger.</span></span>  
   
- [<span data-ttu-id="e6b66-119">Fusion</span><span class="sxs-lookup"><span data-stu-id="e6b66-119">Fusion</span></span>](../../../docs/framework/unmanaged-api/fusion/index.md)  
- <span data-ttu-id="e6b66-120">Fusion API について説明します。これによりランタイム ホストは、アプリケーションに対するリソースの正しいバージョンを見つけるために、アプリケーションのリソースのプロパティにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-120">Describes the fusion API, which enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  
+ [<span data-ttu-id="28119-119">Fusion</span><span class="sxs-lookup"><span data-stu-id="28119-119">Fusion</span></span>](./fusion/index.md)  
+ <span data-ttu-id="28119-120">Fusion API について説明します。これによりランタイム ホストは、アプリケーションに対するリソースの正しいバージョンを見つけるために、アプリケーションのリソースのプロパティにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="28119-120">Describes the fusion API, which enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  
   
- [<span data-ttu-id="e6b66-121">ホスティング</span><span class="sxs-lookup"><span data-stu-id="e6b66-121">Hosting</span></span>](../../../docs/framework/unmanaged-api/hosting/index.md)  
- <span data-ttu-id="e6b66-122">ホスト API について説明します。これにより、アンマネージ ホストが CLR をホストのアプリケーションに統合できます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-122">Describes the hosting API, which enables unmanaged hosts to integrate the CLR into their applications.</span></span>  
+ [<span data-ttu-id="28119-121">ホスティング</span><span class="sxs-lookup"><span data-stu-id="28119-121">Hosting</span></span>](./hosting/index.md)  
+ <span data-ttu-id="28119-122">ホスト API について説明します。これにより、アンマネージ ホストが CLR をホストのアプリケーションに統合できます。</span><span class="sxs-lookup"><span data-stu-id="28119-122">Describes the hosting API, which enables unmanaged hosts to integrate the CLR into their applications.</span></span>  
   
- [<span data-ttu-id="e6b66-123">メタデータ</span><span class="sxs-lookup"><span data-stu-id="e6b66-123">Metadata</span></span>](../../../docs/framework/unmanaged-api/metadata/index.md)  
- <span data-ttu-id="e6b66-124">メタデータ API について説明します。これによりコンパイラなどのクライアントは、CLR によって読み込まれる型を使用せずに、コンポーネントのメタデータを生成したり、メタデータにアクセスしたりできます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-124">Describes the metadata API, which enables a client such as a compiler to generate or access a component's metadata without the types being loaded by the CLR.</span></span>  
+ [<span data-ttu-id="28119-123">メタデータ</span><span class="sxs-lookup"><span data-stu-id="28119-123">Metadata</span></span>](./metadata/index.md)  
+ <span data-ttu-id="28119-124">メタデータ API について説明します。これによりコンパイラなどのクライアントは、CLR によって読み込まれる型を使用せずに、コンポーネントのメタデータを生成したり、メタデータにアクセスしたりできます。</span><span class="sxs-lookup"><span data-stu-id="28119-124">Describes the metadata API, which enables a client such as a compiler to generate or access a component's metadata without the types being loaded by the CLR.</span></span>  
   
- [<span data-ttu-id="e6b66-125">プロファイル</span><span class="sxs-lookup"><span data-stu-id="e6b66-125">Profiling</span></span>](../../../docs/framework/unmanaged-api/profiling/index.md)  
- <span data-ttu-id="e6b66-126">プロファイル API について説明します。これによりプロファイラーは CLR によるプログラムの実行を監視できます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-126">Describes the profiling API, which enables a profiler to monitor a program's execution by the CLR.</span></span>  
+ [<span data-ttu-id="28119-125">プロファイル</span><span class="sxs-lookup"><span data-stu-id="28119-125">Profiling</span></span>](./profiling/index.md)  
+ <span data-ttu-id="28119-126">プロファイル API について説明します。これによりプロファイラーは CLR によるプログラムの実行を監視できます。</span><span class="sxs-lookup"><span data-stu-id="28119-126">Describes the profiling API, which enables a profiler to monitor a program's execution by the CLR.</span></span>  
   
- [<span data-ttu-id="e6b66-127">厳密な名前付け</span><span class="sxs-lookup"><span data-stu-id="e6b66-127">Strong Naming</span></span>](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
- <span data-ttu-id="e6b66-128">厳密な名前付け API について説明します。これによりクライアントは、アセンブリに対する厳密な名前の署名を管理できます。</span><span class="sxs-lookup"><span data-stu-id="e6b66-128">Describes the strong naming API, which enables a client to administer strong name signing for assemblies.</span></span>  
+ [<span data-ttu-id="28119-127">厳密な名前付け</span><span class="sxs-lookup"><span data-stu-id="28119-127">Strong Naming</span></span>](./strong-naming/index.md)  
+ <span data-ttu-id="28119-128">厳密な名前付け API について説明します。これによりクライアントは、アセンブリに対する厳密な名前の署名を管理できます。</span><span class="sxs-lookup"><span data-stu-id="28119-128">Describes the strong naming API, which enables a client to administer strong name signing for assemblies.</span></span>  
 
- [<span data-ttu-id="e6b66-129">WMI およびパフォーマンス カウンター</span><span class="sxs-lookup"><span data-stu-id="e6b66-129">WMI and Performance Counters</span></span>](wmi/index.md)  
- <span data-ttu-id="e6b66-130">Windows Management Instrumentation (WMI) ライブラリへの呼び出しをラッピングするAPI について説明します。</span><span class="sxs-lookup"><span data-stu-id="e6b66-130">Describes the APIs that wrap calls to Windows Management Instrumentation (WMI) libraries.</span></span>
+ [<span data-ttu-id="28119-129">WMI およびパフォーマンス カウンター</span><span class="sxs-lookup"><span data-stu-id="28119-129">WMI and Performance Counters</span></span>](wmi/index.md)  
+ <span data-ttu-id="28119-130">Windows Management Instrumentation (WMI) ライブラリへの呼び出しをラッピングするAPI について説明します。</span><span class="sxs-lookup"><span data-stu-id="28119-130">Describes the APIs that wrap calls to Windows Management Instrumentation (WMI) libraries.</span></span>
   
- [<span data-ttu-id="e6b66-131">Tlbexp ヘルパー関数</span><span class="sxs-lookup"><span data-stu-id="e6b66-131">Tlbexp Helper Functions</span></span>](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- <span data-ttu-id="e6b66-132">タイプ ライブラリ エクスポーター (Tlbexp.exe) がアセンブリからタイプ ライブラリへの変換プロセス中に使用する、2 つのヘルパー関数とインターフェイスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="e6b66-132">Describes the two helper functions and interface used by the Type Library Exporter (Tlbexp.exe) during the assembly-to-type-library conversion process.</span></span>  
+ [<span data-ttu-id="28119-131">Tlbexp ヘルパー関数</span><span class="sxs-lookup"><span data-stu-id="28119-131">Tlbexp Helper Functions</span></span>](./tlbexp/index.md)  
+ <span data-ttu-id="28119-132">タイプ ライブラリ エクスポーター (Tlbexp.exe) がアセンブリからタイプ ライブラリへの変換プロセス中に使用する、2 つのヘルパー関数とインターフェイスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="28119-132">Describes the two helper functions and interface used by the Type Library Exporter (Tlbexp.exe) during the assembly-to-type-library conversion process.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="e6b66-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6b66-133">Related Sections</span></span>  
- [<span data-ttu-id="e6b66-134">開発ガイド</span><span class="sxs-lookup"><span data-stu-id="e6b66-134">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="28119-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="28119-133">Related Sections</span></span>  
+ [<span data-ttu-id="28119-134">開発ガイド</span><span class="sxs-lookup"><span data-stu-id="28119-134">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
