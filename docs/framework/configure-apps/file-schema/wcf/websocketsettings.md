@@ -2,21 +2,24 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940317"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399133"
 ---
-# <a name="websocketsettings"></a><span data-ttu-id="5e7e7-101">\<webSocketSettings ></span><span class="sxs-lookup"><span data-stu-id="5e7e7-101">\<webSocketSettings></span></span>
-<span data-ttu-id="5e7e7-102">Web ソケット設定を指定するために使用される構成要素。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-102">A configuration element used to specify Web Socket settings.</span></span>  
+# <a name="websocketsettings"></a><span data-ttu-id="60904-101">\<webSocketSettings ></span><span class="sxs-lookup"><span data-stu-id="60904-101">\<webSocketSettings></span></span>
+<span data-ttu-id="60904-102">Web ソケット設定を指定するために使用される構成要素。</span><span class="sxs-lookup"><span data-stu-id="60904-102">A configuration element used to specify Web Socket settings.</span></span>  
   
-<span data-ttu-id="5e7e7-103">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="5e7e7-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="5e7e7-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="5e7e7-104">\<bindings></span></span>  
-<span data-ttu-id="5e7e7-105">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="5e7e7-105">\<netHttpBinding></span></span>  
+<span data-ttu-id="60904-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="60904-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="60904-104">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="60904-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="60904-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)</span><span class="sxs-lookup"><span data-stu-id="60904-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)</span></span>\
+<span data-ttu-id="60904-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="60904-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)</span></span>\
+<span data-ttu-id="60904-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** </span><span class="sxs-lookup"><span data-stu-id="60904-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**</span></span>\
+<span data-ttu-id="60904-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**</span><span class="sxs-lookup"><span data-stu-id="60904-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e7e7-106">構文</span><span class="sxs-lookup"><span data-stu-id="5e7e7-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60904-109">構文</span><span class="sxs-lookup"><span data-stu-id="60904-109">Syntax</span></span>  
   
 ```xml  
 <netHttpBinding>
@@ -33,41 +36,41 @@ ms.locfileid: "69940317"
 </netHttpBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5e7e7-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="5e7e7-107">Attributes and Elements</span></span>  
- <span data-ttu-id="5e7e7-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="60904-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="60904-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="60904-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="60904-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5e7e7-109">属性</span><span class="sxs-lookup"><span data-stu-id="5e7e7-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="60904-112">属性</span><span class="sxs-lookup"><span data-stu-id="60904-112">Attributes</span></span>  
   
-|<span data-ttu-id="5e7e7-110">属性</span><span class="sxs-lookup"><span data-stu-id="5e7e7-110">Attribute</span></span>|<span data-ttu-id="5e7e7-111">説明</span><span class="sxs-lookup"><span data-stu-id="5e7e7-111">Description</span></span>|  
+|<span data-ttu-id="60904-113">属性</span><span class="sxs-lookup"><span data-stu-id="60904-113">Attribute</span></span>|<span data-ttu-id="60904-114">説明</span><span class="sxs-lookup"><span data-stu-id="60904-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="5e7e7-112">createNotificationOnConnection</span><span class="sxs-lookup"><span data-stu-id="5e7e7-112">createNotificationOnConnection</span></span>|<span data-ttu-id="5e7e7-113">通知を接続時に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-113">Specifies whether a notification is sent upon connection.</span></span>|  
-|<span data-ttu-id="5e7e7-114">disablePayloadMasking</span><span class="sxs-lookup"><span data-stu-id="5e7e7-114">disablePayloadMasking</span></span>|<span data-ttu-id="5e7e7-115">Web ソケットのマスクが無効であるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-115">Specifies whether Web Socket masking is disabled.</span></span>|  
-|<span data-ttu-id="5e7e7-116">keepAliveInterval</span><span class="sxs-lookup"><span data-stu-id="5e7e7-116">keepAliveInterval</span></span>|<span data-ttu-id="5e7e7-117">接続維持の間隔を指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-117">Specifies the keep alive interval.</span></span>|  
-|<span data-ttu-id="5e7e7-118">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="5e7e7-118">maxPendingConnections</span></span>|<span data-ttu-id="5e7e7-119">サービスでのディスパッチを待機している接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-119">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
-|<span data-ttu-id="5e7e7-120">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="5e7e7-120">receiveBufferSize</span></span>|<span data-ttu-id="5e7e7-121">受信バッファーのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-121">Specifies the size of the receive buffer.</span></span>|  
-|<span data-ttu-id="5e7e7-122">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="5e7e7-122">sendBufferSize</span></span>|<span data-ttu-id="5e7e7-123">送信バッファーのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-123">Specifies the size of the send buffer.</span></span>|  
-|<span data-ttu-id="5e7e7-124">subProtocol</span><span class="sxs-lookup"><span data-stu-id="5e7e7-124">subProtocol</span></span>|<span data-ttu-id="5e7e7-125">Web ソケットのサブプロトコルを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-125">Specifies the Web Socket subprotocol.</span></span>|  
-|<span data-ttu-id="5e7e7-126">transportUsage</span><span class="sxs-lookup"><span data-stu-id="5e7e7-126">transportUsage</span></span>|<span data-ttu-id="5e7e7-127">Web ソケットを使用するタイミングを指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-127">Specifies when to use Web Sockets.</span></span>|  
+|<span data-ttu-id="60904-115">createNotificationOnConnection</span><span class="sxs-lookup"><span data-stu-id="60904-115">createNotificationOnConnection</span></span>|<span data-ttu-id="60904-116">通知を接続時に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-116">Specifies whether a notification is sent upon connection.</span></span>|  
+|<span data-ttu-id="60904-117">disablePayloadMasking</span><span class="sxs-lookup"><span data-stu-id="60904-117">disablePayloadMasking</span></span>|<span data-ttu-id="60904-118">Web ソケットのマスクが無効であるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-118">Specifies whether Web Socket masking is disabled.</span></span>|  
+|<span data-ttu-id="60904-119">keepAliveInterval</span><span class="sxs-lookup"><span data-stu-id="60904-119">keepAliveInterval</span></span>|<span data-ttu-id="60904-120">接続維持の間隔を指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-120">Specifies the keep alive interval.</span></span>|  
+|<span data-ttu-id="60904-121">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="60904-121">maxPendingConnections</span></span>|<span data-ttu-id="60904-122">サービスでのディスパッチを待機している接続の最大数を指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-122">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
+|<span data-ttu-id="60904-123">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="60904-123">receiveBufferSize</span></span>|<span data-ttu-id="60904-124">受信バッファーのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-124">Specifies the size of the receive buffer.</span></span>|  
+|<span data-ttu-id="60904-125">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="60904-125">sendBufferSize</span></span>|<span data-ttu-id="60904-126">送信バッファーのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-126">Specifies the size of the send buffer.</span></span>|  
+|<span data-ttu-id="60904-127">subProtocol</span><span class="sxs-lookup"><span data-stu-id="60904-127">subProtocol</span></span>|<span data-ttu-id="60904-128">Web ソケットのサブプロトコルを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-128">Specifies the Web Socket subprotocol.</span></span>|  
+|<span data-ttu-id="60904-129">transportUsage</span><span class="sxs-lookup"><span data-stu-id="60904-129">transportUsage</span></span>|<span data-ttu-id="60904-130">Web ソケットを使用するタイミングを指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-130">Specifies when to use Web Sockets.</span></span>|  
   
-## <a name="transportusage-attribute"></a><span data-ttu-id="5e7e7-128">transportUsage 属性</span><span class="sxs-lookup"><span data-stu-id="5e7e7-128">transportUsage Attribute</span></span>  
+## <a name="transportusage-attribute"></a><span data-ttu-id="60904-131">transportUsage 属性</span><span class="sxs-lookup"><span data-stu-id="60904-131">transportUsage Attribute</span></span>  
   
-|<span data-ttu-id="5e7e7-129">値</span><span class="sxs-lookup"><span data-stu-id="5e7e7-129">Value</span></span>|<span data-ttu-id="5e7e7-130">説明</span><span class="sxs-lookup"><span data-stu-id="5e7e7-130">Description</span></span>|  
+|<span data-ttu-id="60904-132">値</span><span class="sxs-lookup"><span data-stu-id="60904-132">Value</span></span>|<span data-ttu-id="60904-133">説明</span><span class="sxs-lookup"><span data-stu-id="60904-133">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="5e7e7-131">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="5e7e7-131">WhenDuplex</span></span>|<span data-ttu-id="5e7e7-132">コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-132">Use the Web Socket protocol when the contract is duplex.</span></span>|  
-|<span data-ttu-id="5e7e7-133">Always</span><span class="sxs-lookup"><span data-stu-id="5e7e7-133">Always</span></span>|<span data-ttu-id="5e7e7-134">コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-134">Always use the Web Socket protocol regardless of the contract.</span></span>|  
-|<span data-ttu-id="5e7e7-135">しない</span><span class="sxs-lookup"><span data-stu-id="5e7e7-135">Never</span></span>|<span data-ttu-id="5e7e7-136">Web ソケット プロトコルを使用しません。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-136">Never use the Web Socket protocol.</span></span>|  
+|<span data-ttu-id="60904-134">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="60904-134">WhenDuplex</span></span>|<span data-ttu-id="60904-135">コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。</span><span class="sxs-lookup"><span data-stu-id="60904-135">Use the Web Socket protocol when the contract is duplex.</span></span>|  
+|<span data-ttu-id="60904-136">Always</span><span class="sxs-lookup"><span data-stu-id="60904-136">Always</span></span>|<span data-ttu-id="60904-137">コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。</span><span class="sxs-lookup"><span data-stu-id="60904-137">Always use the Web Socket protocol regardless of the contract.</span></span>|  
+|<span data-ttu-id="60904-138">しない</span><span class="sxs-lookup"><span data-stu-id="60904-138">Never</span></span>|<span data-ttu-id="60904-139">Web ソケット プロトコルを使用しません。</span><span class="sxs-lookup"><span data-stu-id="60904-139">Never use the Web Socket protocol.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="5e7e7-137">子要素</span><span class="sxs-lookup"><span data-stu-id="5e7e7-137">Child Elements</span></span>  
- <span data-ttu-id="5e7e7-138">なし</span><span class="sxs-lookup"><span data-stu-id="5e7e7-138">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="60904-140">子要素</span><span class="sxs-lookup"><span data-stu-id="60904-140">Child Elements</span></span>  
+ <span data-ttu-id="60904-141">なし</span><span class="sxs-lookup"><span data-stu-id="60904-141">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="5e7e7-139">親要素</span><span class="sxs-lookup"><span data-stu-id="5e7e7-139">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="60904-142">親要素</span><span class="sxs-lookup"><span data-stu-id="60904-142">Parent Elements</span></span>  
   
-|<span data-ttu-id="5e7e7-140">要素</span><span class="sxs-lookup"><span data-stu-id="5e7e7-140">Element</span></span>|<span data-ttu-id="5e7e7-141">説明</span><span class="sxs-lookup"><span data-stu-id="5e7e7-141">Description</span></span>|  
+|<span data-ttu-id="60904-143">要素</span><span class="sxs-lookup"><span data-stu-id="60904-143">Element</span></span>|<span data-ttu-id="60904-144">説明</span><span class="sxs-lookup"><span data-stu-id="60904-144">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5e7e7-142">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="5e7e7-142">\<netHttpBinding></span></span>|<span data-ttu-id="5e7e7-143">NetHttpBinding を指定します。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-143">Specifies the NetHttpBinding</span></span>|  
+|<span data-ttu-id="60904-145">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="60904-145">\<netHttpBinding></span></span>|<span data-ttu-id="60904-146">NetHttpBinding を指定します。</span><span class="sxs-lookup"><span data-stu-id="60904-146">Specifies the NetHttpBinding</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="5e7e7-144">例</span><span class="sxs-lookup"><span data-stu-id="5e7e7-144">Example</span></span>  
- <span data-ttu-id="5e7e7-145">次の例は、webSocketSettings > 要素\<の使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="5e7e7-145">The following example shows how to use the \<webSocketSettings> element.</span></span>  
+## <a name="example"></a><span data-ttu-id="60904-147">例</span><span class="sxs-lookup"><span data-stu-id="60904-147">Example</span></span>  
+ <span data-ttu-id="60904-148">次の例は、webSocketSettings > 要素\<の使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="60904-148">The following example shows how to use the \<webSocketSettings> element.</span></span>  
   
 ```xml  
 <netHttpBinding>
@@ -84,13 +87,13 @@ ms.locfileid: "69940317"
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e7e7-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e7e7-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60904-149">関連項目</span><span class="sxs-lookup"><span data-stu-id="60904-149">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [<span data-ttu-id="5e7e7-147">バインディング</span><span class="sxs-lookup"><span data-stu-id="5e7e7-147">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="5e7e7-148">システムが提供するバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="5e7e7-148">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="5e7e7-149">サービスとクライアントを構成するためのバインディングの使用</span><span class="sxs-lookup"><span data-stu-id="5e7e7-149">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="5e7e7-150">\<binding></span><span class="sxs-lookup"><span data-stu-id="5e7e7-150">\<binding></span></span>](../../../misc/binding.md)
+- [<span data-ttu-id="60904-150">バインディング</span><span class="sxs-lookup"><span data-stu-id="60904-150">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="60904-151">システムが提供するバインディングの構成</span><span class="sxs-lookup"><span data-stu-id="60904-151">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="60904-152">サービスとクライアントを構成するためのバインディングの使用</span><span class="sxs-lookup"><span data-stu-id="60904-152">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="60904-153">\<binding></span><span class="sxs-lookup"><span data-stu-id="60904-153">\<binding></span></span>](../../../misc/binding.md)
