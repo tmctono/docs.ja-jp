@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798220"
 ---
-# <a name="spawninstance-function"></a><span data-ttu-id="4b912-103">SpawnInstance 関数</span><span class="sxs-lookup"><span data-stu-id="4b912-103">SpawnInstance function</span></span>
-<span data-ttu-id="4b912-104">クラスの新しいインスタンスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="4b912-104">Creates a new instance of a class.</span></span>    
+# <a name="spawninstance-function"></a><span data-ttu-id="5e124-103">SpawnInstance 関数</span><span class="sxs-lookup"><span data-stu-id="5e124-103">SpawnInstance function</span></span>
+<span data-ttu-id="5e124-104">クラスの新しいインスタンスが作成されます。</span><span class="sxs-lookup"><span data-stu-id="5e124-104">Creates a new instance of a class.</span></span>    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="4b912-105">構文</span><span class="sxs-lookup"><span data-stu-id="4b912-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e124-105">構文</span><span class="sxs-lookup"><span data-stu-id="5e124-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SpawnInstance (
@@ -38,46 +38,46 @@ HRESULT SpawnInstance (
    [out] IWbemClassObject**  ppNewInstance); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4b912-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4b912-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="5e124-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5e124-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="4b912-107">[in]このパラメーターは使用されません。</span><span class="sxs-lookup"><span data-stu-id="4b912-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="5e124-107">からこのパラメーターは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="5e124-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="4b912-108">[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。</span><span class="sxs-lookup"><span data-stu-id="4b912-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="5e124-108">から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="5e124-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="4b912-109">[in] 予約されています。</span><span class="sxs-lookup"><span data-stu-id="4b912-109">[in] Reserved.</span></span> <span data-ttu-id="4b912-110">このパラメーターは、0 を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4b912-110">This parameter must be 0.</span></span>
+<span data-ttu-id="5e124-109">[in] 予約されています。</span><span class="sxs-lookup"><span data-stu-id="5e124-109">[in] Reserved.</span></span> <span data-ttu-id="5e124-110">このパラメーターには0を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e124-110">This parameter must be 0.</span></span>
 
 `ppNewInstance`  
-<span data-ttu-id="4b912-111">[out]クラスの新しいインスタンスへのポインターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="4b912-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="4b912-112">新しいオブジェクトでないエラーが発生する場合、返されると`ppNewInstance`は左未変更の状態します。</span><span class="sxs-lookup"><span data-stu-id="4b912-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
+<span data-ttu-id="5e124-111">入出力クラスの新しいインスタンスへのポインターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="5e124-111">[out] Receives the pointer to the new instance of the class.</span></span> <span data-ttu-id="5e124-112">エラーが発生した場合、新しいオブジェクトは返さ`ppNewInstance`れず、未変更のままになります。</span><span class="sxs-lookup"><span data-stu-id="5e124-112">If an error occurs, a new object is not returned, and `ppNewInstance` is left unmodified.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="4b912-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="4b912-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="5e124-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="5e124-113">Return value</span></span>
 
-<span data-ttu-id="4b912-114">この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。</span><span class="sxs-lookup"><span data-stu-id="4b912-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="5e124-114">この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="5e124-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="4b912-115">定数</span><span class="sxs-lookup"><span data-stu-id="4b912-115">Constant</span></span>  |<span data-ttu-id="4b912-116">Value</span><span class="sxs-lookup"><span data-stu-id="4b912-116">Value</span></span>  |<span data-ttu-id="4b912-117">説明</span><span class="sxs-lookup"><span data-stu-id="4b912-117">Description</span></span>  |
+|<span data-ttu-id="5e124-115">定数</span><span class="sxs-lookup"><span data-stu-id="5e124-115">Constant</span></span>  |<span data-ttu-id="5e124-116">Value</span><span class="sxs-lookup"><span data-stu-id="5e124-116">Value</span></span>  |<span data-ttu-id="5e124-117">説明</span><span class="sxs-lookup"><span data-stu-id="5e124-117">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="4b912-118">0x80041020</span><span class="sxs-lookup"><span data-stu-id="4b912-118">0x80041020</span></span> | <span data-ttu-id="4b912-119">`ptr` 有効なクラス定義ではないと、新しいインスタンスを生成することはできません。</span><span class="sxs-lookup"><span data-stu-id="4b912-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="4b912-120">完了しないか、それが登録されていない Windows の管理を呼び出すことによって[PutClassWmi](putclasswmi.md)します。</span><span class="sxs-lookup"><span data-stu-id="4b912-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="4b912-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="4b912-121">0x80041006</span></span> | <span data-ttu-id="4b912-122">操作を完了するのに十分なメモリがあります。</span><span class="sxs-lookup"><span data-stu-id="4b912-122">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="4b912-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="4b912-123">0x80041008</span></span> | <span data-ttu-id="4b912-124">`ppNewClass` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="4b912-124">`ppNewClass` is `null`.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="4b912-125">0</span><span class="sxs-lookup"><span data-stu-id="4b912-125">0</span></span> | <span data-ttu-id="4b912-126">関数呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="4b912-126">The function call was successful.</span></span>  |
+| `WBEM_E_INCOMPLETE_CLASS` | <span data-ttu-id="5e124-118">0x80040</span><span class="sxs-lookup"><span data-stu-id="5e124-118">0x80041020</span></span> | <span data-ttu-id="5e124-119">`ptr`は有効なクラス定義ではなく、新しいインスタンスを生成できません。</span><span class="sxs-lookup"><span data-stu-id="5e124-119">`ptr` is not a valid class definition and cannot spawn new instances.</span></span> <span data-ttu-id="5e124-120">このファイルが不完全であるか、 [Putclasswmi](putclasswmi.md)を呼び出して Windows Management に登録されていません。</span><span class="sxs-lookup"><span data-stu-id="5e124-120">Either it is incomplete or it has not been registered with Windows Management by calling [PutClassWmi](putclasswmi.md).</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="5e124-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="5e124-121">0x80041006</span></span> | <span data-ttu-id="5e124-122">操作を完了するために必要なメモリが不足しています。</span><span class="sxs-lookup"><span data-stu-id="5e124-122">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="5e124-123">0x80041008</span><span class="sxs-lookup"><span data-stu-id="5e124-123">0x80041008</span></span> | <span data-ttu-id="5e124-124">`ppNewClass` は `null` です。</span><span class="sxs-lookup"><span data-stu-id="5e124-124">`ppNewClass` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="5e124-125">0</span><span class="sxs-lookup"><span data-stu-id="5e124-125">0</span></span> | <span data-ttu-id="5e124-126">関数の呼び出しに成功しました。</span><span class="sxs-lookup"><span data-stu-id="5e124-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="4b912-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="4b912-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5e124-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="5e124-127">Remarks</span></span>
 
-<span data-ttu-id="4b912-128">この関数の呼び出しをラップする、 [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)メソッド。</span><span class="sxs-lookup"><span data-stu-id="4b912-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
+<span data-ttu-id="5e124-128">この関数は、 [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)メソッドの呼び出しをラップします。</span><span class="sxs-lookup"><span data-stu-id="5e124-128">This function wraps a call to the [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) method.</span></span>
 
-<span data-ttu-id="4b912-129">`ptr` 取得する必要があるクラス定義から Windows の管理。</span><span class="sxs-lookup"><span data-stu-id="4b912-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="4b912-130">(インスタンスからインスタンスの生成がサポートされていることに注意してください。 ただし、返されたインスタンスが空)。このクラスの定義を使用するには、新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="4b912-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="4b912-131">呼び出し、 [PutInstanceWmi](putinstancewmi.md) Windows 管理インスタンスを作成する場合は、関数が必要です。</span><span class="sxs-lookup"><span data-stu-id="4b912-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
+<span data-ttu-id="5e124-129">`ptr`は、Windows 管理から取得したクラス定義である必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e124-129">`ptr` must be a class definition obtained from Windows Management.</span></span> <span data-ttu-id="5e124-130">(インスタンスからインスタンスを生成することはサポートされていますが、返されたインスタンスが空であることに注意してください)。次に、このクラス定義を使用して、新しいインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="5e124-130">(Note that spawning an instance from an instance is supported but the returned instance is empty.) You then use this class definition to create new instances.</span></span> <span data-ttu-id="5e124-131">Windows Management にインスタンスを書き込む場合は、 [Putinstancewmi](putinstancewmi.md)関数を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e124-131">A call to the [PutInstanceWmi](putinstancewmi.md) function is required if you intend to write the instance to Windows Management.</span></span>
 
-<span data-ttu-id="4b912-132">返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。</span><span class="sxs-lookup"><span data-stu-id="4b912-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="4b912-133">この動作を上書きすることはできません。</span><span class="sxs-lookup"><span data-stu-id="4b912-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="4b912-134">サブクラス (派生クラス) を作成できる他の方法はありません。</span><span class="sxs-lookup"><span data-stu-id="4b912-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
+<span data-ttu-id="5e124-132">で`ppNewClass`返された新しいオブジェクトは、自動的に現在のオブジェクトのサブクラスになります。</span><span class="sxs-lookup"><span data-stu-id="5e124-132">The new object returned in `ppNewClass` automatically becomes a subclass of the current object.</span></span> <span data-ttu-id="5e124-133">この動作をオーバーライドすることはできません。</span><span class="sxs-lookup"><span data-stu-id="5e124-133">This behavior cannot be overridden.</span></span> <span data-ttu-id="5e124-134">サブクラス (派生クラス) を作成する方法は他にもありません。</span><span class="sxs-lookup"><span data-stu-id="5e124-134">There is no other method by which subclasses (derived classes) can be created.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4b912-135">必要条件</span><span class="sxs-lookup"><span data-stu-id="4b912-135">Requirements</span></span>  
- <span data-ttu-id="4b912-136">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4b912-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e124-135">必要条件</span><span class="sxs-lookup"><span data-stu-id="5e124-135">Requirements</span></span>  
+ <span data-ttu-id="5e124-136">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="5e124-136">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4b912-137">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4b912-137">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="5e124-137">**ヘッダー:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="5e124-137">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4b912-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4b912-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="5e124-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5e124-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b912-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b912-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e124-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e124-139">See also</span></span>
 
-- [<span data-ttu-id="4b912-140">WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="4b912-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="5e124-140">WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="5e124-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

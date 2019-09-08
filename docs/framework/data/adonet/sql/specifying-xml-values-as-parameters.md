@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964735"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780873"
 ---
-# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="ad67f-102">パラメーターとしての XML 値の指定</span><span class="sxs-lookup"><span data-stu-id="ad67f-102">Specifying XML Values as Parameters</span></span>
-<span data-ttu-id="ad67f-103">XML 文字列の値を持つパラメーターがクエリに必要な場合、開発者は、 **SqlXml**データ型のインスタンスを使用してその値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="ad67f-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="ad67f-104">実際にはトリックがありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="ad67f-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="e7655-102">パラメーターとしての XML 値の指定</span><span class="sxs-lookup"><span data-stu-id="e7655-102">Specifying XML Values as Parameters</span></span>
+<span data-ttu-id="e7655-103">XML 文字列の値を持つパラメーターがクエリに必要な場合、開発者は、 **SqlXml**データ型のインスタンスを使用してその値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="e7655-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="e7655-104">実際にはトリックがありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="e7655-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ad67f-105">例</span><span class="sxs-lookup"><span data-stu-id="ad67f-105">Example</span></span>  
- <span data-ttu-id="ad67f-106">次のコンソールアプリケーションでは、 **AdventureWorks**データベースに新しいテーブルを作成します。</span><span class="sxs-lookup"><span data-stu-id="ad67f-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="ad67f-107">新しいテーブルには、 **Salesid**という名前の列と、 **salesid**という名前の XML 列が含まれています。</span><span class="sxs-lookup"><span data-stu-id="ad67f-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
+## <a name="example"></a><span data-ttu-id="e7655-105">例</span><span class="sxs-lookup"><span data-stu-id="e7655-105">Example</span></span>  
+ <span data-ttu-id="e7655-106">次のコンソールアプリケーションでは、 **AdventureWorks**データベースに新しいテーブルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e7655-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="e7655-107">新しいテーブルには、 **Salesid**という名前の列と、 **salesid**という名前の XML 列が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e7655-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ad67f-108">SQL Server をインストールした場合、既定では、 **AdventureWorks**サンプルデータベースはインストールされません。</span><span class="sxs-lookup"><span data-stu-id="ad67f-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="ad67f-109">SQL Server Setup を実行してインストールします。</span><span class="sxs-lookup"><span data-stu-id="ad67f-109">You can install it by running SQL Server Setup.</span></span>  
+> <span data-ttu-id="e7655-108">SQL Server をインストールした場合、既定では、 **AdventureWorks**サンプルデータベースはインストールされません。</span><span class="sxs-lookup"><span data-stu-id="e7655-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="e7655-109">SQL Server Setup を実行してインストールします。</span><span class="sxs-lookup"><span data-stu-id="e7655-109">You can install it by running SQL Server Setup.</span></span>  
   
- <span data-ttu-id="ad67f-110">この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。</span><span class="sxs-lookup"><span data-stu-id="ad67f-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="ad67f-111">保存されたファイルは、 **Salesinfo**列に必要な XML データを提供します。</span><span class="sxs-lookup"><span data-stu-id="ad67f-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
+ <span data-ttu-id="e7655-110">この例では、新しいテーブルに行を挿入するために <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。</span><span class="sxs-lookup"><span data-stu-id="e7655-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="e7655-111">保存されたファイルは、 **Salesinfo**列に必要な XML データを提供します。</span><span class="sxs-lookup"><span data-stu-id="e7655-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- <span data-ttu-id="ad67f-112">この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="ad67f-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="ad67f-113">ファイルに MyTestStoreData.xml という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="ad67f-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="ad67f-114">ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="ad67f-114">Open the file in Notepad and copy and paste the following text:</span></span>  
+ <span data-ttu-id="e7655-112">この例を実行させるために必要なファイルを作成するには、プロジェクトと同じフォルダー内に新しいテキスト ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e7655-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="e7655-113">ファイルに MyTestStoreData.xml という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="e7655-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="e7655-114">ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="e7655-114">Open the file in Notepad and copy and paste the following text:</span></span>  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -159,8 +159,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad67f-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ad67f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7655-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="e7655-115">See also</span></span>
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [<span data-ttu-id="ad67f-116">SQL Server における XML データ</span><span class="sxs-lookup"><span data-stu-id="ad67f-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [<span data-ttu-id="ad67f-117">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="ad67f-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="e7655-116">SQL Server における XML データ</span><span class="sxs-lookup"><span data-stu-id="e7655-116">XML Data in SQL Server</span></span>](xml-data-in-sql-server.md)
+- [<span data-ttu-id="e7655-117">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="e7655-117">ADO.NET Overview</span></span>](../ado-net-overview.md)

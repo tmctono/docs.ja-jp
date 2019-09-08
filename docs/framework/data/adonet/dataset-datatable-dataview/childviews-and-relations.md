@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205185"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786588"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="510bb-102">ChildView とリレーション</span><span class="sxs-lookup"><span data-stu-id="510bb-102">ChildViews and Relations</span></span>
-<span data-ttu-id="510bb-103"><xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="510bb-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="510bb-104">たとえば、次のコードでは、**カテゴリ**とその関連**製品**が、**区分**番号と**ProductName**順にアルファベット順に表示されます。</span><span class="sxs-lookup"><span data-stu-id="510bb-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="e13cd-102">ChildView とリレーション</span><span class="sxs-lookup"><span data-stu-id="e13cd-102">ChildViews and Relations</span></span>
+<span data-ttu-id="e13cd-103"><xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="e13cd-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="e13cd-104">たとえば、次のコードでは、**カテゴリ**とその関連**製品**が、**区分**番号と**ProductName**順にアルファベット順に表示されます。</span><span class="sxs-lookup"><span data-stu-id="e13cd-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="510bb-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="510bb-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e13cd-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="e13cd-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="510bb-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="510bb-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="510bb-107">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="510bb-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="e13cd-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="e13cd-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="e13cd-107">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="e13cd-107">ADO.NET Overview</span></span>](../ado-net-overview.md)

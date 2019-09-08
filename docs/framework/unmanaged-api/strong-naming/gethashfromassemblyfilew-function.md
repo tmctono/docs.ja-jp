@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d034f15db8f3d452a055c127bb7095667c089ffe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d4b748370ff1aff042923002ad827a0e39d99963
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799273"
 ---
-# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="d8853-102">GetHashFromAssemblyFileW 関数</span><span class="sxs-lookup"><span data-stu-id="d8853-102">GetHashFromAssemblyFileW Function</span></span>
-<span data-ttu-id="d8853-103">指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。</span><span class="sxs-lookup"><span data-stu-id="d8853-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="d8853-104">アセンブリ ファイルへのパスは、Unicode 文字列として指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8853-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
+# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="330de-102">GetHashFromAssemblyFileW 関数</span><span class="sxs-lookup"><span data-stu-id="330de-102">GetHashFromAssemblyFileW Function</span></span>
+<span data-ttu-id="330de-103">指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。</span><span class="sxs-lookup"><span data-stu-id="330de-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="330de-104">アセンブリファイルへのパスは、Unicode 文字列として指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="330de-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
   
- <span data-ttu-id="d8853-105">この関数は非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="d8853-105">This function has been deprecated.</span></span> <span data-ttu-id="d8853-106">使用して、 [iclrstrongname::gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)メソッド代わりにします。</span><span class="sxs-lookup"><span data-stu-id="d8853-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
+ <span data-ttu-id="330de-105">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="330de-105">This function has been deprecated.</span></span> <span data-ttu-id="330de-106">代わりに[ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="330de-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8853-107">構文</span><span class="sxs-lookup"><span data-stu-id="d8853-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="330de-107">構文</span><span class="sxs-lookup"><span data-stu-id="330de-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHashFromAssemblyFileW (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8853-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d8853-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="330de-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="330de-108">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="d8853-109">[in]ハッシュされるファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="d8853-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="d8853-110">このパラメーターは、Unicode 文字列である必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8853-110">This parameter must be a Unicode string.</span></span>  
+ <span data-ttu-id="330de-109">からハッシュされるファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="330de-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="330de-110">このパラメーターは Unicode 文字列である必要があります。</span><span class="sxs-lookup"><span data-stu-id="330de-110">This parameter must be a Unicode string.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="d8853-111">[入力、出力]ハッシュ アルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="d8853-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="d8853-112">既定のハッシュ アルゴリズムのゼロを使用します。</span><span class="sxs-lookup"><span data-stu-id="d8853-112">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="330de-111">[入力、出力]ハッシュアルゴリズムを指定する定数。</span><span class="sxs-lookup"><span data-stu-id="330de-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="330de-112">既定のハッシュアルゴリズムには0を使用します。</span><span class="sxs-lookup"><span data-stu-id="330de-112">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="d8853-113">[out]返されたハッシュ バッファー。</span><span class="sxs-lookup"><span data-stu-id="d8853-113">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="330de-113">入出力返されたハッシュバッファー。</span><span class="sxs-lookup"><span data-stu-id="330de-113">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="d8853-114">[in]要求の最大サイズの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="d8853-114">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="330de-114">から要求された最大`pbHash`サイズ。</span><span class="sxs-lookup"><span data-stu-id="330de-114">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="d8853-115">[out]サイズ (バイト単位) が返されますの`pbHash`します。</span><span class="sxs-lookup"><span data-stu-id="d8853-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="330de-115">入出力の`pbHash`返されたサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="330de-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8853-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="d8853-116">Requirements</span></span>  
- <span data-ttu-id="d8853-117">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d8853-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="330de-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="330de-116">Requirements</span></span>  
+ <span data-ttu-id="330de-117">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="330de-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8853-118">**ヘッダー:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="d8853-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="330de-118">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="330de-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="d8853-119">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="d8853-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="330de-119">**ライブラリ**Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="330de-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d8853-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8853-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="330de-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="330de-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8853-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8853-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="330de-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="330de-121">See also</span></span>
 
-- [<span data-ttu-id="d8853-122">GetHashFromAssemblyFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="d8853-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="d8853-123">GetHashFromAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="d8853-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="d8853-124">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8853-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="330de-122">GetHashFromAssemblyFileW メソッド</span><span class="sxs-lookup"><span data-stu-id="330de-122">GetHashFromAssemblyFileW Method</span></span>](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="330de-123">GetHashFromAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="330de-123">GetHashFromAssemblyFile Method</span></span>](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="330de-124">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="330de-124">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)

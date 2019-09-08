@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f97f46595f43c7576c499c6b9944f7e3509662fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0ae4ddd07a2a3d3ab9b5d024eceb43329db96915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742008"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787509"
 ---
-# <a name="exporttypeforwarder-method"></a><span data-ttu-id="90de4-102">ExportTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="90de4-102">ExportTypeForwarder Method</span></span>
-<span data-ttu-id="90de4-103">指定したアセンブリの type テーブルへの型フォワーダーを追加します。</span><span class="sxs-lookup"><span data-stu-id="90de4-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
+# <a name="exporttypeforwarder-method"></a><span data-ttu-id="f8f4c-102">ExportTypeForwarder メソッド</span><span class="sxs-lookup"><span data-stu-id="f8f4c-102">ExportTypeForwarder Method</span></span>
+<span data-ttu-id="f8f4c-103">指定されたアセンブリの型テーブルに型フォワーダーを追加します。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-103">Adds a type forwarder to the type table of the given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90de4-104">構文</span><span class="sxs-lookup"><span data-stu-id="90de4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8f4c-104">構文</span><span class="sxs-lookup"><span data-stu-id="f8f4c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportTypeForwarder(  
@@ -37,27 +37,27 @@ HRESULT ExportTypeForwarder(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="90de4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="90de4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8f4c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f8f4c-105">Parameters</span></span>  
  `tkAssemblyRef`  
- <span data-ttu-id="90de4-106">型フォワーダーが参照するアセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="90de4-106">Reference to the assembly to which the type forwarder refers.</span></span>  
+ <span data-ttu-id="f8f4c-106">型フォワーダーが参照するアセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-106">Reference to the assembly to which the type forwarder refers.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="90de4-107">エクスポートする完全修飾型名。</span><span class="sxs-lookup"><span data-stu-id="90de4-107">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="f8f4c-107">エクスポートする完全修飾型名。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-107">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="90de4-108">`ComType` フラグなど`tdPublic`または`tdNested`します。</span><span class="sxs-lookup"><span data-stu-id="90de4-108">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="90de4-109">この値に渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="90de4-109">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="f8f4c-108">`ComType``tdPublic` や`tdNested`などのフラグ。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-108">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="f8f4c-109">この値は、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-109">This value may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="90de4-110">エクスポートされた型のトークンを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="90de4-110">Receives the token of the exported type.</span></span> <span data-ttu-id="90de4-111">これは、入れ子にされた型の生成にのみ必要です。</span><span class="sxs-lookup"><span data-stu-id="90de4-111">This is necessary only for emitting nested types.</span></span>  
+ <span data-ttu-id="f8f4c-110">エクスポートされた型のトークンを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-110">Receives the token of the exported type.</span></span> <span data-ttu-id="f8f4c-111">これは、入れ子にされた型を出力する場合にのみ必要です。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-111">This is necessary only for emitting nested types.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="90de4-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="90de4-112">Return Value</span></span>  
- <span data-ttu-id="90de4-113">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="90de4-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f8f4c-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="f8f4c-112">Return Value</span></span>  
+ <span data-ttu-id="f8f4c-113">メソッドが成功した場合、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90de4-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="90de4-114">Requirements</span></span>  
- <span data-ttu-id="90de4-115">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="90de4-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8f4c-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="f8f4c-114">Requirements</span></span>  
+ <span data-ttu-id="f8f4c-115">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="f8f4c-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90de4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="90de4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8f4c-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8f4c-116">See also</span></span>
 
-- [<span data-ttu-id="90de4-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90de4-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="90de4-118">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90de4-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="90de4-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="90de4-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="f8f4c-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8f4c-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="f8f4c-118">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8f4c-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="f8f4c-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="f8f4c-119">ALink API</span></span>](index.md)
