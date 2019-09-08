@@ -2,27 +2,27 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938891"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783268"
 ---
-# <a name="oracletypes"></a><span data-ttu-id="6c241-102">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="6c241-102">OracleTypes</span></span>
-<span data-ttu-id="6c241-103">.NET Framework Data Provider for Oracle には、Oracle データ型で使用されるいくつかの構造体が含まれています。</span><span class="sxs-lookup"><span data-stu-id="6c241-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="6c241-104">その中には、<xref:System.Data.OracleClient.OracleNumber> や <xref:System.Data.OracleClient.OracleString> があります。</span><span class="sxs-lookup"><span data-stu-id="6c241-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
+# <a name="oracletypes"></a><span data-ttu-id="b9867-102">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="b9867-102">OracleTypes</span></span>
+<span data-ttu-id="b9867-103">.NET Framework Data Provider for Oracle には、Oracle データ型で使用されるいくつかの構造体が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b9867-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="b9867-104">その中には、<xref:System.Data.OracleClient.OracleNumber> や <xref:System.Data.OracleClient.OracleString> があります。</span><span class="sxs-lookup"><span data-stu-id="b9867-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6c241-105">これらの構造体に関する詳細な一覧については、「<xref:System.Data.OracleClient>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6c241-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
+> <span data-ttu-id="b9867-105">これらの構造体に関する詳細な一覧については、「<xref:System.Data.OracleClient>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b9867-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
   
- <span data-ttu-id="6c241-106">C# の例を以下に示します。</span><span class="sxs-lookup"><span data-stu-id="6c241-106">The following C# examples:</span></span>  
+ <span data-ttu-id="b9867-106">C# の例を以下に示します。</span><span class="sxs-lookup"><span data-stu-id="b9867-106">The following C# examples:</span></span>  
   
-- <span data-ttu-id="6c241-107">Oracle テーブルを作成し、データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="6c241-107">Create an Oracle table and load it with data.</span></span>  
+- <span data-ttu-id="b9867-107">Oracle テーブルを作成し、データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="b9867-107">Create an Oracle table and load it with data.</span></span>  
   
-- <span data-ttu-id="6c241-108"><xref:System.Data.OracleClient.OracleDataReader> を使用してデータにアクセスし、いくつかの <xref:System.Data.OracleClient.OracleType> 構造体を使用してデータを表示します。</span><span class="sxs-lookup"><span data-stu-id="6c241-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
+- <span data-ttu-id="b9867-108"><xref:System.Data.OracleClient.OracleDataReader> を使用してデータにアクセスし、いくつかの <xref:System.Data.OracleClient.OracleType> 構造体を使用してデータを表示します。</span><span class="sxs-lookup"><span data-stu-id="b9867-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
   
-## <a name="creating-an-oracle-table"></a><span data-ttu-id="6c241-109">Oracle テーブルの作成</span><span class="sxs-lookup"><span data-stu-id="6c241-109">Creating an Oracle Table</span></span>  
- <span data-ttu-id="6c241-110">この例では、Oracle テーブルを作成し、データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="6c241-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="6c241-111">次の例を実行する前に、この例を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6c241-111">You must run this example before running the next example.</span></span>  
+## <a name="creating-an-oracle-table"></a><span data-ttu-id="b9867-109">Oracle テーブルの作成</span><span class="sxs-lookup"><span data-stu-id="b9867-109">Creating an Oracle Table</span></span>  
+ <span data-ttu-id="b9867-110">この例では、Oracle テーブルを作成し、データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="b9867-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="b9867-111">次の例を実行する前に、この例を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b9867-111">You must run this example before running the next example.</span></span>  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +51,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="6c241-112">Oracle テーブルからのデータの取得</span><span class="sxs-lookup"><span data-stu-id="6c241-112">Retrieving Data from the Oracle Table</span></span>  
- <span data-ttu-id="6c241-113">この例では、 **OracleDataReader**を使用してデータにアクセスし、いくつかの**OracleType**構造を使用してデータを表示します。</span><span class="sxs-lookup"><span data-stu-id="6c241-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
+## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="b9867-112">Oracle テーブルからのデータの取得</span><span class="sxs-lookup"><span data-stu-id="b9867-112">Retrieving Data from the Oracle Table</span></span>  
+ <span data-ttu-id="b9867-113">この例では、 **OracleDataReader**を使用してデータにアクセスし、いくつかの**OracleType**構造を使用してデータを表示します。</span><span class="sxs-lookup"><span data-stu-id="b9867-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -115,7 +115,7 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6c241-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6c241-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9867-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b9867-114">See also</span></span>
 
-- [<span data-ttu-id="6c241-115">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6c241-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="6c241-116">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="6c241-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="b9867-115">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b9867-115">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)
+- [<span data-ttu-id="b9867-116">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="b9867-116">ADO.NET Overview</span></span>](ado-net-overview.md)

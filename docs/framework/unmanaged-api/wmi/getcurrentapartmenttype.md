@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037961"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798615"
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="23d57-103">GetCurrentApartmentType 関数</span><span class="sxs-lookup"><span data-stu-id="23d57-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="23d57-104">呼び出し元が実行されているアパートメントの種類が取得されます。</span><span class="sxs-lookup"><span data-stu-id="23d57-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="2ac08-103">GetCurrentApartmentType 関数</span><span class="sxs-lookup"><span data-stu-id="2ac08-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="2ac08-104">呼び出し元が実行されているアパートメントの種類が取得されます。</span><span class="sxs-lookup"><span data-stu-id="2ac08-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="23d57-105">構文</span><span class="sxs-lookup"><span data-stu-id="23d57-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ac08-105">構文</span><span class="sxs-lookup"><span data-stu-id="2ac08-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentApartmentType (
@@ -38,35 +38,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="23d57-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="23d57-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2ac08-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2ac08-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="23d57-107">からこのパラメーターは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="23d57-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="2ac08-107">からこのパラメーターは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="2ac08-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="23d57-108">から[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)インスタンスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="23d57-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
+<span data-ttu-id="2ac08-108">から[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)インスタンスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2ac08-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="23d57-109">入出力呼び出し元のアパートメントを示す[Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列挙値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="23d57-109">[out] A pointer to an [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="2ac08-109">入出力呼び出し元のアパートメントを示す[Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列挙値へのポインター。</span><span class="sxs-lookup"><span data-stu-id="2ac08-109">[out] A pointer to an [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="23d57-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="23d57-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2ac08-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="2ac08-110">Return value</span></span>
 
-|<span data-ttu-id="23d57-111">定数</span><span class="sxs-lookup"><span data-stu-id="23d57-111">Constant</span></span>  |<span data-ttu-id="23d57-112">Value</span><span class="sxs-lookup"><span data-stu-id="23d57-112">Value</span></span>  |<span data-ttu-id="23d57-113">説明</span><span class="sxs-lookup"><span data-stu-id="23d57-113">Description</span></span>  |
+|<span data-ttu-id="2ac08-111">定数</span><span class="sxs-lookup"><span data-stu-id="2ac08-111">Constant</span></span>  |<span data-ttu-id="2ac08-112">Value</span><span class="sxs-lookup"><span data-stu-id="2ac08-112">Value</span></span>  |<span data-ttu-id="2ac08-113">説明</span><span class="sxs-lookup"><span data-stu-id="2ac08-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="23d57-114">0</span><span class="sxs-lookup"><span data-stu-id="23d57-114">0</span></span> | <span data-ttu-id="23d57-115">関数は正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="23d57-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="23d57-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="23d57-116">0x80000008</span></span> | <span data-ttu-id="23d57-117">呼び出し元がアパートメント内で実行されていません。</span><span class="sxs-lookup"><span data-stu-id="23d57-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="2ac08-114">0</span><span class="sxs-lookup"><span data-stu-id="2ac08-114">0</span></span> | <span data-ttu-id="2ac08-115">関数は正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="2ac08-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="2ac08-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="2ac08-116">0x80000008</span></span> | <span data-ttu-id="2ac08-117">呼び出し元がアパートメント内で実行されていません。</span><span class="sxs-lookup"><span data-stu-id="2ac08-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="23d57-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="23d57-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2ac08-118">Remarks</span><span class="sxs-lookup"><span data-stu-id="2ac08-118">Remarks</span></span>
 
-<span data-ttu-id="23d57-119">この関数は、 [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)メソッドの呼び出しをラップします。</span><span class="sxs-lookup"><span data-stu-id="23d57-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="2ac08-119">この関数は、 [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)メソッドの呼び出しをラップします。</span><span class="sxs-lookup"><span data-stu-id="2ac08-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="23d57-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="23d57-120">Requirements</span></span>  
- <span data-ttu-id="23d57-121">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="23d57-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ac08-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="2ac08-120">Requirements</span></span>  
+ <span data-ttu-id="2ac08-121">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2ac08-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23d57-122">**ヘッダー:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="23d57-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="2ac08-122">**ヘッダー:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="2ac08-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="23d57-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="23d57-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="2ac08-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2ac08-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23d57-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="23d57-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ac08-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="2ac08-124">See also</span></span>
 
-- [<span data-ttu-id="23d57-125">WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="23d57-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="2ac08-125">WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="2ac08-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744526"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796592"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="e629a-102">IAssemblyName::GetProperty メソッド</span><span class="sxs-lookup"><span data-stu-id="e629a-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="e629a-103">指定したプロパティの識別子によって参照されるプロパティにポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="e629a-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="536d6-102">IAssemblyName::GetProperty メソッド</span><span class="sxs-lookup"><span data-stu-id="536d6-102">IAssemblyName::GetProperty Method</span></span>
+<span data-ttu-id="536d6-103">指定したプロパティ識別子によって参照されるプロパティへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="536d6-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e629a-104">構文</span><span class="sxs-lookup"><span data-stu-id="e629a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="536d6-104">構文</span><span class="sxs-lookup"><span data-stu-id="536d6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProperty (  
@@ -37,23 +37,23 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e629a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e629a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="536d6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="536d6-105">Parameters</span></span>  
  `PropertyId`  
- <span data-ttu-id="e629a-106">[in]要求されたプロパティの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="e629a-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="536d6-106">から要求されたプロパティの一意の識別子。</span><span class="sxs-lookup"><span data-stu-id="536d6-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="e629a-107">[out]返されたプロパティのデータ。</span><span class="sxs-lookup"><span data-stu-id="e629a-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="536d6-107">入出力返されたプロパティデータ。</span><span class="sxs-lookup"><span data-stu-id="536d6-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="e629a-108">[入力、出力]サイズ (バイト単位) の`pvProperty`します。</span><span class="sxs-lookup"><span data-stu-id="e629a-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="536d6-108">[入力、出力]の`pvProperty`サイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="536d6-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e629a-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="e629a-109">Requirements</span></span>  
- <span data-ttu-id="e629a-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e629a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="536d6-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="536d6-109">Requirements</span></span>  
+ <span data-ttu-id="536d6-110">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="536d6-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e629a-111">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e629a-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="536d6-111">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="536d6-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="e629a-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e629a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="536d6-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="536d6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e629a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e629a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="536d6-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="536d6-113">See also</span></span>
 
-- [<span data-ttu-id="e629a-114">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e629a-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="536d6-114">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="536d6-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

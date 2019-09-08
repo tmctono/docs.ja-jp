@@ -2,20 +2,20 @@
 title: System.DateTime メソッド
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792421"
 ---
-# <a name="systemdatetime-methods"></a><span data-ttu-id="c36fa-102">System.DateTime メソッド</span><span class="sxs-lookup"><span data-stu-id="c36fa-102">System.DateTime Methods</span></span>
-<span data-ttu-id="c36fa-103">LINQ to SQL でサポートされている以下のメソッド、演算子、およびプロパティは、LINQ to SQL のクエリで使用できます。</span><span class="sxs-lookup"><span data-stu-id="c36fa-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="c36fa-104">メソッド、演算子、またはプロパティがサポートされていない場合は、LINQ to SQL でメンバーを変換して SQL Server で実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="c36fa-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="c36fa-105">これらのメンバーはコード内で使用できますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後で評価する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c36fa-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
+# <a name="systemdatetime-methods"></a><span data-ttu-id="c29d6-102">System.DateTime メソッド</span><span class="sxs-lookup"><span data-stu-id="c29d6-102">System.DateTime Methods</span></span>
+<span data-ttu-id="c29d6-103">LINQ to SQL でサポートされている以下のメソッド、演算子、およびプロパティは、LINQ to SQL のクエリで使用できます。</span><span class="sxs-lookup"><span data-stu-id="c29d6-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="c29d6-104">メソッド、演算子、またはプロパティがサポートされていない場合は、LINQ to SQL でメンバーを変換して SQL Server で実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="c29d6-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="c29d6-105">これらのメンバーはコード内で使用できますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後で評価する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c29d6-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-## <a name="supported-systemdatetime-members"></a><span data-ttu-id="c36fa-106">サポートされている System.DateTime メンバー</span><span class="sxs-lookup"><span data-stu-id="c36fa-106">Supported System.DateTime Members</span></span>  
- <span data-ttu-id="c36fa-107">オブジェクト モデルまたは外部マッピング ファイルにマッピングされると、LINQ to SQL クエリ内で次の <xref:System.DateTime?displayProperty=nameWithType> メンバーを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="c36fa-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
+## <a name="supported-systemdatetime-members"></a><span data-ttu-id="c29d6-106">サポートされている System.DateTime メンバー</span><span class="sxs-lookup"><span data-stu-id="c29d6-106">Supported System.DateTime Members</span></span>  
+ <span data-ttu-id="c29d6-107">オブジェクト モデルまたは外部マッピング ファイルにマッピングされると、LINQ to SQL クエリ内で次の <xref:System.DateTime?displayProperty=nameWithType> メンバーを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="c29d6-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
   
-|<span data-ttu-id="c36fa-108">サポートされている <xref:System.DateTime> メソッド</span><span class="sxs-lookup"><span data-stu-id="c36fa-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="c36fa-109">サポートされている <xref:System.DateTime> 演算子</span><span class="sxs-lookup"><span data-stu-id="c36fa-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="c36fa-110">サポートされている <xref:System.DateTime> プロパティ</span><span class="sxs-lookup"><span data-stu-id="c36fa-110">Supported <xref:System.DateTime> Properties</span></span>|  
+|<span data-ttu-id="c29d6-108">サポートされている <xref:System.DateTime> メソッド</span><span class="sxs-lookup"><span data-stu-id="c29d6-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="c29d6-109">サポートされている <xref:System.DateTime> 演算子</span><span class="sxs-lookup"><span data-stu-id="c29d6-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="c29d6-110">サポートされている <xref:System.DateTime> プロパティ</span><span class="sxs-lookup"><span data-stu-id="c29d6-110">Supported <xref:System.DateTime> Properties</span></span>|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
@@ -31,8 +31,8 @@ ms.locfileid: "61876773"
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="c36fa-111">LINQ to SQL でサポートされていないメンバー</span><span class="sxs-lookup"><span data-stu-id="c36fa-111">Members Not Supported by LINQ to SQL</span></span>  
- <span data-ttu-id="c36fa-112">以下のメンバーは LINQ to SQL クエリ内でサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="c36fa-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
+## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="c29d6-111">LINQ to SQL でサポートされていないメンバー</span><span class="sxs-lookup"><span data-stu-id="c29d6-111">Members Not Supported by LINQ to SQL</span></span>  
+ <span data-ttu-id="c29d6-112">以下のメンバーは LINQ to SQL クエリ内でサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="c29d6-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
   
 |||  
 |-|-|  
@@ -46,17 +46,17 @@ ms.locfileid: "61876773"
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## <a name="method-translation-example"></a><span data-ttu-id="c36fa-113">メソッドの変換例</span><span class="sxs-lookup"><span data-stu-id="c36fa-113">Method Translation Example</span></span>  
- <span data-ttu-id="c36fa-114">LINQ to SQL でサポートされているメソッドはすべて、SQL Server に送信される前に Transact-SQL に変換されます。</span><span class="sxs-lookup"><span data-stu-id="c36fa-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="c36fa-115">たとえば、次のようなパターンを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="c36fa-115">For example, consider the following pattern.</span></span>  
+## <a name="method-translation-example"></a><span data-ttu-id="c29d6-113">メソッドの変換例</span><span class="sxs-lookup"><span data-stu-id="c29d6-113">Method Translation Example</span></span>  
+ <span data-ttu-id="c29d6-114">LINQ to SQL でサポートされているメソッドはすべて、SQL Server に送信される前に Transact-SQL に変換されます。</span><span class="sxs-lookup"><span data-stu-id="c29d6-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="c29d6-115">たとえば、次のようなパターンを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="c29d6-115">For example, consider the following pattern.</span></span>  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
- <span data-ttu-id="c36fa-116">認識されると、次のように SQL Server の `DATEDIFF` 関数の直接呼び出しに変換されます。</span><span class="sxs-lookup"><span data-stu-id="c36fa-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
+ <span data-ttu-id="c29d6-116">認識されると、次のように SQL Server の `DATEDIFF` 関数の直接呼び出しに変換されます。</span><span class="sxs-lookup"><span data-stu-id="c29d6-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="c36fa-117">SQLMethods の日付と時刻のメソッド</span><span class="sxs-lookup"><span data-stu-id="c36fa-117">SQLMethods Date and Time Methods</span></span>  
- <span data-ttu-id="c36fa-118">LINQ to SQL では、<xref:System.DateTime> 構造体で提供されるメソッドの他に、次の表に示すように、日付と時刻を操作する <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> クラスのメソッドも提供しています。</span><span class="sxs-lookup"><span data-stu-id="c36fa-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
+## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="c29d6-117">SQLMethods の日付と時刻のメソッド</span><span class="sxs-lookup"><span data-stu-id="c29d6-117">SQLMethods Date and Time Methods</span></span>  
+ <span data-ttu-id="c29d6-118">LINQ to SQL では、<xref:System.DateTime> 構造体で提供されるメソッドの他に、次の表に示すように、日付と時刻を操作する <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> クラスのメソッドも提供しています。</span><span class="sxs-lookup"><span data-stu-id="c29d6-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
   
 ||||  
 |-|-|-|  
@@ -64,9 +64,9 @@ ms.locfileid: "61876773"
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="c36fa-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c36fa-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c29d6-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="c29d6-119">See also</span></span>
 
-- [<span data-ttu-id="c36fa-120">クエリの概念</span><span class="sxs-lookup"><span data-stu-id="c36fa-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [<span data-ttu-id="c36fa-121">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="c36fa-121">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [<span data-ttu-id="c36fa-122">SQL と CLR の型マッピング</span><span class="sxs-lookup"><span data-stu-id="c36fa-122">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [<span data-ttu-id="c36fa-123">データ型と関数</span><span class="sxs-lookup"><span data-stu-id="c36fa-123">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [<span data-ttu-id="c29d6-120">クエリの概念</span><span class="sxs-lookup"><span data-stu-id="c29d6-120">Query Concepts</span></span>](query-concepts.md)
+- [<span data-ttu-id="c29d6-121">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="c29d6-121">Creating the Object Model</span></span>](creating-the-object-model.md)
+- [<span data-ttu-id="c29d6-122">SQL と CLR の型マッピング</span><span class="sxs-lookup"><span data-stu-id="c29d6-122">SQL-CLR Type Mapping</span></span>](sql-clr-type-mapping.md)
+- [<span data-ttu-id="c29d6-123">データ型と関数</span><span class="sxs-lookup"><span data-stu-id="c29d6-123">Data Types and Functions</span></span>](data-types-and-functions.md)

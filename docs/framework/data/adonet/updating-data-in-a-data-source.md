@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780615"
 ---
-# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="685ef-102">データ ソースのデータの更新</span><span class="sxs-lookup"><span data-stu-id="685ef-102">Updating Data in a Data Source</span></span>
-<span data-ttu-id="685ef-103">データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。</span><span class="sxs-lookup"><span data-stu-id="685ef-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="685ef-104">同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。</span><span class="sxs-lookup"><span data-stu-id="685ef-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="685ef-105">行を返さないコマンドを実行するには、作成、**コマンド**適切な SQL コマンドを使用してオブジェクトと**接続**など必要な**パラメーター**します。</span><span class="sxs-lookup"><span data-stu-id="685ef-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="685ef-106">コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="685ef-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="1e4cc-102">データ ソースのデータの更新</span><span class="sxs-lookup"><span data-stu-id="1e4cc-102">Updating Data in a Data Source</span></span>
+<span data-ttu-id="1e4cc-103">データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="1e4cc-104">同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="1e4cc-105">行を返さないコマンドを実行するには、適切な SQL コマンドと**接続**(必要な**パラメーター**を含む) を指定して**command**オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="1e4cc-106">**Command オブジェクトの** **ExecuteNonQuery**メソッドを使用してコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="685ef-107">**ExecuteNonQuery**ステートメントまたはが実行されたストアド プロシージャによって影響を受ける行の数を表す整数を返します。</span><span class="sxs-lookup"><span data-stu-id="685ef-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="685ef-108">複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。</span><span class="sxs-lookup"><span data-stu-id="685ef-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
+ <span data-ttu-id="1e4cc-107">**ExecuteNonQuery**メソッドは、実行されたステートメントまたはストアドプロシージャの影響を受ける行の数を表す整数を返します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="1e4cc-108">複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="685ef-109">例</span><span class="sxs-lookup"><span data-stu-id="685ef-109">Example</span></span>  
- <span data-ttu-id="685ef-110">次のコード例を使用してデータベースにレコードを挿入する INSERT ステートメントを実行する**ExecuteNonQuery**します。</span><span class="sxs-lookup"><span data-stu-id="685ef-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e4cc-109">例</span><span class="sxs-lookup"><span data-stu-id="1e4cc-109">Example</span></span>  
+ <span data-ttu-id="1e4cc-110">次のコード例では、INSERT ステートメントを実行して、 **ExecuteNonQuery**を使用してデータベースにレコードを挿入します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- <span data-ttu-id="685ef-111">次のコード例のサンプル コードで作成したストアド プロシージャを実行する[カタログ操作の実行](../../../../docs/framework/data/adonet/performing-catalog-operations.md)します。</span><span class="sxs-lookup"><span data-stu-id="685ef-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span></span> <span data-ttu-id="685ef-112">ストアド プロシージャによって行が返されないため、 **ExecuteNonQuery**メソッドを使用するが、ストアド プロシージャが受け取る入力パラメーターと出力パラメーターと戻り値を返します。</span><span class="sxs-lookup"><span data-stu-id="685ef-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
+ <span data-ttu-id="1e4cc-111">次のコード例では、[カタログ操作の実行](performing-catalog-operations.md)時にサンプルコードによって作成されたストアドプロシージャを実行します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](performing-catalog-operations.md).</span></span> <span data-ttu-id="1e4cc-112">ストアドプロシージャによって返される行は存在しないため、 **ExecuteNonQuery**メソッドが使用されますが、ストアドプロシージャは入力パラメーターを受け取り、出力パラメーターと戻り値を返します。</span><span class="sxs-lookup"><span data-stu-id="1e4cc-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
   
- <span data-ttu-id="685ef-113"><xref:System.Data.OleDb.OleDbCommand>オブジェクト、 **ReturnValue**にパラメーターを追加する必要があります、**パラメーター**コレクション最初。</span><span class="sxs-lookup"><span data-stu-id="685ef-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
+ <span data-ttu-id="1e4cc-113">オブジェクトの場合は、最初に**パラメーター**コレクションに戻りパラメーターを追加する必要があります。 <xref:System.Data.OleDb.OleDbCommand></span><span class="sxs-lookup"><span data-stu-id="1e4cc-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -91,9 +91,9 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="685ef-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="685ef-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e4cc-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e4cc-114">See also</span></span>
 
-- [<span data-ttu-id="685ef-115">コマンドを使用したデータ変更</span><span class="sxs-lookup"><span data-stu-id="685ef-115">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [<span data-ttu-id="685ef-116">DataAdapter によるデータ ソースの更新</span><span class="sxs-lookup"><span data-stu-id="685ef-116">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [<span data-ttu-id="685ef-117">コマンドおよびパラメーター</span><span class="sxs-lookup"><span data-stu-id="685ef-117">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="685ef-118">ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター</span><span class="sxs-lookup"><span data-stu-id="685ef-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="1e4cc-115">コマンドを使用したデータ変更</span><span class="sxs-lookup"><span data-stu-id="1e4cc-115">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="1e4cc-116">DataAdapter によるデータ ソースの更新</span><span class="sxs-lookup"><span data-stu-id="1e4cc-116">Updating Data Sources with DataAdapters</span></span>](updating-data-sources-with-dataadapters.md)
+- [<span data-ttu-id="1e4cc-117">コマンドおよびパラメーター</span><span class="sxs-lookup"><span data-stu-id="1e4cc-117">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="1e4cc-118">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="1e4cc-118">ADO.NET Overview</span></span>](ado-net-overview.md)

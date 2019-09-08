@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741874"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777217"
 ---
-# <a name="getpublickeytoken-method"></a><span data-ttu-id="d4297-102">GetPublicKeyToken メソッド</span><span class="sxs-lookup"><span data-stu-id="d4297-102">GetPublicKeyToken Method</span></span>
-<span data-ttu-id="d4297-103">指定したキー ファイルまたはキー コンテナーの公開キー トークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="d4297-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
+# <a name="getpublickeytoken-method"></a><span data-ttu-id="f5a44-102">GetPublicKeyToken メソッド</span><span class="sxs-lookup"><span data-stu-id="f5a44-102">GetPublicKeyToken Method</span></span>
+<span data-ttu-id="f5a44-103">指定されたキーキーまたはキーコンテナーの公開キートークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="f5a44-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4297-104">構文</span><span class="sxs-lookup"><span data-stu-id="d4297-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5a44-104">構文</span><span class="sxs-lookup"><span data-stu-id="f5a44-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
@@ -37,27 +37,27 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d4297-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d4297-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f5a44-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f5a44-105">Parameters</span></span>  
  `pszKeyFile`  
- <span data-ttu-id="d4297-106">キーのファイル名。</span><span class="sxs-lookup"><span data-stu-id="d4297-106">Filename of the key.</span></span>  
+ <span data-ttu-id="f5a44-106">キーのファイル名。</span><span class="sxs-lookup"><span data-stu-id="f5a44-106">Filename of the key.</span></span>  
   
  `pszKeyContainer`  
- <span data-ttu-id="d4297-107">キー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="d4297-107">Name of the key container.</span></span>  
+ <span data-ttu-id="f5a44-107">キーコンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="f5a44-107">Name of the key container.</span></span>  
   
  `pvPublicKeyToken`  
- <span data-ttu-id="d4297-108">キー トークンが格納されるアドレスです。</span><span class="sxs-lookup"><span data-stu-id="d4297-108">Address where key token is to be stored.</span></span>  
+ <span data-ttu-id="f5a44-108">キートークンを格納するアドレス。</span><span class="sxs-lookup"><span data-stu-id="f5a44-108">Address where key token is to be stored.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="d4297-109">バイト単位で示されるバッファーのサイズを指定`pvPublicKeyToken`します。</span><span class="sxs-lookup"><span data-stu-id="d4297-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="d4297-110">戻り時に、実際の使用バイト数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="d4297-110">Upon return, contains actual number of bytes used.</span></span>  
+ <span data-ttu-id="f5a44-109">によって`pvPublicKeyToken`示されるバッファーのサイズ (バイト単位) を指定します。</span><span class="sxs-lookup"><span data-stu-id="f5a44-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="f5a44-110">戻り時には、実際に使用されたバイト数が含まれます。</span><span class="sxs-lookup"><span data-stu-id="f5a44-110">Upon return, contains actual number of bytes used.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d4297-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="d4297-111">Return Value</span></span>  
- <span data-ttu-id="d4297-112">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="d4297-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f5a44-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="f5a44-111">Return Value</span></span>  
+ <span data-ttu-id="f5a44-112">メソッドが成功した場合、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="f5a44-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4297-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="d4297-113">Requirements</span></span>  
- <span data-ttu-id="d4297-114">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="d4297-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5a44-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="f5a44-113">Requirements</span></span>  
+ <span data-ttu-id="f5a44-114">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="f5a44-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4297-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="d4297-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5a44-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5a44-115">See also</span></span>
 
-- [<span data-ttu-id="d4297-116">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d4297-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="d4297-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d4297-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="d4297-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="d4297-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="f5a44-116">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f5a44-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="f5a44-117">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f5a44-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="f5a44-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="f5a44-118">ALink API</span></span>](index.md)

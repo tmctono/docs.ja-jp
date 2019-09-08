@@ -8,38 +8,38 @@ helpviewer_keywords:
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffee9084bd07882079b2d44de25391f2491a1520
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936462"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795333"
 ---
-# <a name="fusion-enumerations"></a><span data-ttu-id="e1ed2-102">fusion 列挙体</span><span class="sxs-lookup"><span data-stu-id="e1ed2-102">Fusion Enumerations</span></span>
-<span data-ttu-id="e1ed2-103">このセクションでは、fusion API を使用するアンマネージ列挙について説明します。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-103">This section describes the unmanaged enumerations that the fusion API uses.</span></span>  
+# <a name="fusion-enumerations"></a><span data-ttu-id="fb324-102">fusion 列挙体</span><span class="sxs-lookup"><span data-stu-id="fb324-102">Fusion Enumerations</span></span>
+<span data-ttu-id="fb324-103">このセクションでは、fusion API が使用するアンマネージ列挙について説明します。</span><span class="sxs-lookup"><span data-stu-id="fb324-103">This section describes the unmanaged enumerations that the fusion API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e1ed2-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e1ed2-104">In This Section</span></span>  
- [<span data-ttu-id="e1ed2-105">ASM_CACHE_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-105">ASM_CACHE_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)  
- <span data-ttu-id="e1ed2-106">によって表されるアセンブリのソースを示す[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)グローバル アセンブリ キャッシュにします。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-106">Indicates the source of an assembly represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="fb324-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fb324-104">In This Section</span></span>  
+ [<span data-ttu-id="fb324-105">ASM_CACHE_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-105">ASM_CACHE_FLAGS Enumeration</span></span>](asm-cache-flags-enumeration.md)  
+ <span data-ttu-id="fb324-106">グローバルアセンブリキャッシュ内の[Iassemblycacheitem](iassemblycacheitem-interface.md)によって表されるアセンブリのソースを示します。</span><span class="sxs-lookup"><span data-stu-id="fb324-106">Indicates the source of an assembly represented by [IAssemblyCacheItem](iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
   
- [<span data-ttu-id="e1ed2-107">ASM_CMP_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-107">ASM_CMP_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md)  
- <span data-ttu-id="e1ed2-108">バージョン、ビルド、カルチャ、署名、および比較する 2 つのアセンブリのことを示します、 [iassemblyname::isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-108">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) method.</span></span>  
+ [<span data-ttu-id="fb324-107">ASM_CMP_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-107">ASM_CMP_FLAGS Enumeration</span></span>](asm-cmp-flags-enumeration.md)  
+ <span data-ttu-id="fb324-108">[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md)メソッドによって比較される2つのアセンブリのバージョン、ビルド、カルチャ、署名などを示します。</span><span class="sxs-lookup"><span data-stu-id="fb324-108">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
- [<span data-ttu-id="e1ed2-109">ASM_DISPLAY_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-109">ASM_DISPLAY_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md)  
- <span data-ttu-id="e1ed2-110">バージョン、ビルド、カルチャ、署名、および表示名を持つはによって取得するアセンブリのことを示します、 [iassemblyname::getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-110">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) method.</span></span>  
+ [<span data-ttu-id="fb324-109">ASM_DISPLAY_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-109">ASM_DISPLAY_FLAGS Enumeration</span></span>](asm-display-flags-enumeration.md)  
+ <span data-ttu-id="fb324-110">[IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md)メソッドによって表示名が取得されるアセンブリのバージョン、ビルド、カルチャ、署名などを示します。</span><span class="sxs-lookup"><span data-stu-id="fb324-110">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](iassemblyname-getdisplayname-method.md) method.</span></span>  
   
- [<span data-ttu-id="e1ed2-111">ASM_NAME 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-111">ASM_NAME Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-name-enumeration.md)  
- <span data-ttu-id="e1ed2-112">バージョン、ビルド、カルチャ、署名、およびプロパティを取得または設定は、アセンブリのことを示します[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-112">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) methods.</span></span>  
+ [<span data-ttu-id="fb324-111">ASM_NAME 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-111">ASM_NAME Enumeration</span></span>](asm-name-enumeration.md)  
+ <span data-ttu-id="fb324-112">[IAssemblyName](iassemblyname-interface.md)メソッドによって取得または設定されるプロパティを持つアセンブリのバージョン、ビルド、カルチャ、署名などを示します。</span><span class="sxs-lookup"><span data-stu-id="fb324-112">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
   
- [<span data-ttu-id="e1ed2-113">AssemblyComparisonResult 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-113">AssemblyComparisonResult Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)  
- <span data-ttu-id="e1ed2-114">によって決定される 2 つのアセンブリ id の等価性を示す、 [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-114">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) function.</span></span>  
+ [<span data-ttu-id="fb324-113">AssemblyComparisonResult 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-113">AssemblyComparisonResult Enumeration</span></span>](assemblycomparisonresult-enumeration.md)  
+ <span data-ttu-id="fb324-114">[CompareAssemblyIdentity](compareassemblyidentity-function.md)関数によって決定される2つのアセンブリ id の等価性を示します。</span><span class="sxs-lookup"><span data-stu-id="fb324-114">Indicates the equivalence of two assembly identities, as determined by the [CompareAssemblyIdentity](compareassemblyidentity-function.md) function.</span></span>  
   
- [<span data-ttu-id="e1ed2-115">CREATE_ASM_NAME_OBJ_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="e1ed2-115">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/create-asm-name-obj-flags-enumeration.md)  
- <span data-ttu-id="e1ed2-116">属性を指定します、`IAssemblyName`オブジェクトは、によって作成時に、 [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="e1ed2-116">Specifies the attributes of an `IAssemblyName` object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
+ [<span data-ttu-id="fb324-115">CREATE_ASM_NAME_OBJ_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="fb324-115">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>](create-asm-name-obj-flags-enumeration.md)  
+ <span data-ttu-id="fb324-116">[Createassemblynameobject](createassemblynameobject-function.md)関数`IAssemblyName`によって構築されるときのオブジェクトの属性を指定します。</span><span class="sxs-lookup"><span data-stu-id="fb324-116">Specifies the attributes of an `IAssemblyName` object when it is constructed by the [CreateAssemblyNameObject](createassemblynameobject-function.md) function.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="e1ed2-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="e1ed2-117">Related Sections</span></span>  
- [<span data-ttu-id="e1ed2-118">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e1ed2-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="fb324-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="fb324-117">Related Sections</span></span>  
+ [<span data-ttu-id="fb324-118">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fb324-118">Fusion Interfaces</span></span>](fusion-interfaces.md)  
   
- [<span data-ttu-id="e1ed2-119">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="e1ed2-119">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [<span data-ttu-id="fb324-119">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="fb324-119">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)  
   
- [<span data-ttu-id="e1ed2-120">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="e1ed2-120">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+ [<span data-ttu-id="fb324-120">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="fb324-120">Fusion Structures</span></span>](fusion-structures.md)

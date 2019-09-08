@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c0abc63610f3f1ed6e8a556c44ee15edc1ea20b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f08c4a97b8cbc61a735bb9c1e6a31a698e7eefc1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741839"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787349"
 ---
-# <a name="getscope2-method"></a><span data-ttu-id="569ac-102">GetScope2 メソッド</span><span class="sxs-lookup"><span data-stu-id="569ac-102">GetScope2 Method</span></span>
-<span data-ttu-id="569ac-103">インポート スコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="569ac-103">Gets an import scope.</span></span>  
+# <a name="getscope2-method"></a><span data-ttu-id="fea65-102">GetScope2 メソッド</span><span class="sxs-lookup"><span data-stu-id="fea65-102">GetScope2 Method</span></span>
+<span data-ttu-id="fea65-103">インポートスコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="fea65-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="569ac-104">構文</span><span class="sxs-lookup"><span data-stu-id="569ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fea65-104">構文</span><span class="sxs-lookup"><span data-stu-id="fea65-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScope2(  
@@ -37,27 +37,27 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="569ac-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="569ac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fea65-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fea65-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="569ac-106">ターゲット アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="569ac-106">ID of target assembly.</span></span>  
+ <span data-ttu-id="fea65-106">ターゲットアセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="fea65-106">ID of target assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="569ac-107">インポート元のファイルの ID。</span><span class="sxs-lookup"><span data-stu-id="569ac-107">ID of file from which to import.</span></span>  
+ <span data-ttu-id="fea65-107">インポート元のファイルの ID。</span><span class="sxs-lookup"><span data-stu-id="fea65-107">ID of file from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="569ac-108">インポートする 0 から始まるスコープです。</span><span class="sxs-lookup"><span data-stu-id="569ac-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="fea65-108">インポートする0から始まるスコープ。</span><span class="sxs-lookup"><span data-stu-id="fea65-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="569ac-109">ポインターを受け取る[IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指定のスコープのインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="569ac-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
+ <span data-ttu-id="fea65-109">指定されたスコープの[IMetaDataImport2 インターフェイス](../metadata/imetadataimport2-interface.md)インターフェイスへのポインターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="fea65-109">Receives pointer to [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="569ac-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="569ac-110">Return Value</span></span>  
- <span data-ttu-id="569ac-111">メソッドが成功した場合は、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="569ac-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fea65-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="fea65-110">Return Value</span></span>  
+ <span data-ttu-id="fea65-111">メソッドが成功した場合、S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="fea65-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="569ac-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="569ac-112">Requirements</span></span>  
- <span data-ttu-id="569ac-113">Alink.h が必要です。</span><span class="sxs-lookup"><span data-stu-id="569ac-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fea65-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="fea65-112">Requirements</span></span>  
+ <span data-ttu-id="fea65-113">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="fea65-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="569ac-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="569ac-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fea65-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="fea65-114">See also</span></span>
 
-- [<span data-ttu-id="569ac-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="569ac-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="569ac-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="569ac-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="569ac-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="569ac-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="fea65-115">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fea65-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="fea65-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fea65-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="fea65-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="fea65-117">ALink API</span></span>](index.md)

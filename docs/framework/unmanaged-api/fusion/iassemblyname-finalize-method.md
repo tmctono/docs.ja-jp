@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5ea24594f5c7547dc75e6be9d53dd632513ff8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754012"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796618"
 ---
-# <a name="iassemblynamefinalize-method"></a><span data-ttu-id="0a133-102">IAssemblyName::Finalize メソッド</span><span class="sxs-lookup"><span data-stu-id="0a133-102">IAssemblyName::Finalize Method</span></span>
-<span data-ttu-id="0a133-103">これにより、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト リソースを解放し、そのデストラクターが呼び出される前に、他のクリーンアップ操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="0a133-103">Allows this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  
+# <a name="iassemblynamefinalize-method"></a><span data-ttu-id="0f4da-102">IAssemblyName::Finalize メソッド</span><span class="sxs-lookup"><span data-stu-id="0f4da-102">IAssemblyName::Finalize Method</span></span>
+<span data-ttu-id="0f4da-103">この[IAssemblyName](iassemblyname-interface.md)オブジェクトが、デストラクターが呼び出される前にリソースを解放し、その他のクリーンアップ操作を実行できるようにします。</span><span class="sxs-lookup"><span data-stu-id="0f4da-103">Allows this [IAssemblyName](iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a133-104">構文</span><span class="sxs-lookup"><span data-stu-id="0a133-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f4da-104">構文</span><span class="sxs-lookup"><span data-stu-id="0f4da-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Finalize ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0a133-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="0a133-105">Requirements</span></span>  
- <span data-ttu-id="0a133-106">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0a133-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f4da-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="0f4da-105">Requirements</span></span>  
+ <span data-ttu-id="0f4da-106">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0f4da-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a133-107">**ヘッダー:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0a133-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="0f4da-107">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="0f4da-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="0a133-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a133-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0f4da-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f4da-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a133-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a133-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f4da-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0f4da-109">See also</span></span>
 
-- [<span data-ttu-id="0a133-110">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0a133-110">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="0f4da-110">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0f4da-110">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
