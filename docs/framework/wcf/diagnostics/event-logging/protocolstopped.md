@@ -2,24 +2,24 @@
 title: ProtocolStopped
 ms.date: 03/30/2017
 ms.assetid: bc4c892f-b5ed-40cd-979c-382f4bed41b6
-ms.openlocfilehash: b2c2ca8ac54e4a8cee18660f55a632fb5605c30b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4d2b9dd26e1b31322f09f68c6ee48182ccf88ab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999012"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797599"
 ---
-# <a name="protocolstopped"></a><span data-ttu-id="a3d29-102">ProtocolStopped</span><span class="sxs-lookup"><span data-stu-id="a3d29-102">ProtocolStopped</span></span>
-<span data-ttu-id="a3d29-103">Id:151</span><span class="sxs-lookup"><span data-stu-id="a3d29-103">Id: 151</span></span>  
+# <a name="protocolstopped"></a><span data-ttu-id="b6672-102">ProtocolStopped</span><span class="sxs-lookup"><span data-stu-id="b6672-102">ProtocolStopped</span></span>
+<span data-ttu-id="b6672-103">Id:151</span><span class="sxs-lookup"><span data-stu-id="b6672-103">Id: 151</span></span>  
   
- <span data-ttu-id="a3d29-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="a3d29-104">Severity: Error</span></span>  
+ <span data-ttu-id="b6672-104">順Error</span><span class="sxs-lookup"><span data-stu-id="b6672-104">Severity: Error</span></span>  
   
- <span data-ttu-id="a3d29-105">カテゴリ:TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="a3d29-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="b6672-105">[カテゴリ]:TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="b6672-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a3d29-106">説明</span><span class="sxs-lookup"><span data-stu-id="a3d29-106">Description</span></span>  
- <span data-ttu-id="a3d29-107">このイベントは、WS-AtomicTransaction プロトコル サービスが停止したことを示します。</span><span class="sxs-lookup"><span data-stu-id="a3d29-107">This event indicates that the WS-Atomic Transaction protocol service was stopped.</span></span> <span data-ttu-id="a3d29-108">イベントには、プロトコル ID、プロトコル名、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a3d29-108">The event lists the protocol ID, protocol name, process name and process ID.</span></span> <span data-ttu-id="a3d29-109">.</span><span class="sxs-lookup"><span data-stu-id="a3d29-109">.</span></span>  
+## <a name="description"></a><span data-ttu-id="b6672-106">説明</span><span class="sxs-lookup"><span data-stu-id="b6672-106">Description</span></span>  
+ <span data-ttu-id="b6672-107">このイベントは、WS-AtomicTransaction プロトコル サービスが停止したことを示します。</span><span class="sxs-lookup"><span data-stu-id="b6672-107">This event indicates that the WS-Atomic Transaction protocol service was stopped.</span></span> <span data-ttu-id="b6672-108">イベントには、プロトコル ID、プロトコル名、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="b6672-108">The event lists the protocol ID, protocol name, process name and process ID.</span></span> <span data-ttu-id="b6672-109">.</span><span class="sxs-lookup"><span data-stu-id="b6672-109">.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3d29-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3d29-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6672-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6672-110">See also</span></span>
 
-- [<span data-ttu-id="a3d29-111">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="a3d29-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="a3d29-112">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="a3d29-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="b6672-111">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="b6672-111">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="b6672-112">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="b6672-112">Events General Reference</span></span>](events-general-reference.md)

@@ -2,18 +2,18 @@
 title: '方法: XmlSerializer を使用してシリアル化する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 2a9d51bbae905a128d6d5846423a5c02fe1d67d0
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a3b9976dc4aaf132e8c3c8f03c678724db2b6989
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484879"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253331"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="2c5b4-102">方法: XmlSerializer を使用してシリアル化する (C#)</span><span class="sxs-lookup"><span data-stu-id="2c5b4-102">How to: Serialize Using XmlSerializer (C#)</span></span>
-<span data-ttu-id="2c5b4-103">このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="2c5b4-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="7108b-102">方法: XmlSerializer を使用してシリアル化する (C#)</span><span class="sxs-lookup"><span data-stu-id="7108b-102">How to: Serialize Using XmlSerializer (C#)</span></span>
+<span data-ttu-id="7108b-103">このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="7108b-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c5b4-104">例</span><span class="sxs-lookup"><span data-stu-id="2c5b4-104">Example</span></span>  
- <span data-ttu-id="2c5b4-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="2c5b4-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="2c5b4-106">次に、それらのオブジェクトをメモリ ストリームにシリアル化し、メモリ ストリームから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="2c5b4-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="7108b-104">例</span><span class="sxs-lookup"><span data-stu-id="7108b-104">Example</span></span>  
+ <span data-ttu-id="7108b-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="7108b-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="7108b-106">次に、それらのオブジェクトをメモリ ストリームにシリアル化し、メモリ ストリームから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="7108b-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```csharp  
 using System;  
@@ -78,9 +78,9 @@ class XLinqTest
 }  
 ```  
   
- <span data-ttu-id="2c5b4-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2c5b4-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="7108b-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="7108b-107">This example produces the following output:</span></span>  
   
-```  
+```output  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  

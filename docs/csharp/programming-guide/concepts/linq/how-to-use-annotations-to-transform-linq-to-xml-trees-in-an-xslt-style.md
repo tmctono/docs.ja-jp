@@ -2,46 +2,46 @@
 title: '方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 3aaf141a8ac5d8f3fc75d0a31b460fc84733a62e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d6975601855e736082662ffb0319b5c6563cedc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484801"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253261"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a><span data-ttu-id="b91d3-102">方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)</span><span class="sxs-lookup"><span data-stu-id="b91d3-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>
-<span data-ttu-id="b91d3-103">注釈を使用することで、XML ツリーの変換が容易になります。</span><span class="sxs-lookup"><span data-stu-id="b91d3-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a><span data-ttu-id="7abf2-102">方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)</span><span class="sxs-lookup"><span data-stu-id="7abf2-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (C#)</span></span>
+<span data-ttu-id="7abf2-103">注釈を使用することで、XML ツリーの変換が容易になります。</span><span class="sxs-lookup"><span data-stu-id="7abf2-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  
   
- <span data-ttu-id="b91d3-104">XML ドキュメントには、"ドキュメント中心で混合コンテンツを含んでいる" ものがあります。</span><span class="sxs-lookup"><span data-stu-id="b91d3-104">Some XML documents are "document centric with mixed content."</span></span> <span data-ttu-id="b91d3-105">このようなドキュメントでは、必ずしも要素の子ノードの構造を把握する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="b91d3-105">With such documents, you don't necessarily know the shape of child nodes of an element.</span></span> <span data-ttu-id="b91d3-106">たとえば、テキストを含んでいるノードは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="b91d3-106">For instance, a node that contains text may look like this:</span></span>  
+ <span data-ttu-id="7abf2-104">XML ドキュメントには、"ドキュメント中心で混合コンテンツを含んでいる" ものがあります。</span><span class="sxs-lookup"><span data-stu-id="7abf2-104">Some XML documents are "document centric with mixed content."</span></span> <span data-ttu-id="7abf2-105">このようなドキュメントでは、必ずしも要素の子ノードの構造を把握する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="7abf2-105">With such documents, you don't necessarily know the shape of child nodes of an element.</span></span> <span data-ttu-id="7abf2-106">たとえば、テキストを含んでいるノードは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="7abf2-106">For instance, a node that contains text may look like this:</span></span>  
   
 ```xml  
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- <span data-ttu-id="b91d3-107">どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b91d3-107">For any given text node, there may be any number of child `<b>` and `<i>` elements.</span></span> <span data-ttu-id="b91d3-108">この方法は、その他の複数の状況にも適用されます。たとえば、通常の段落、箇条書きの段落、ビットマップといったさまざまな子要素を含む可能性のあるページなどです。</span><span class="sxs-lookup"><span data-stu-id="b91d3-108">This approach extends to a number of other situations, such as pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps.</span></span> <span data-ttu-id="b91d3-109">テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。</span><span class="sxs-lookup"><span data-stu-id="b91d3-109">Cells in a table may contain text, drop down lists, or bitmaps.</span></span> <span data-ttu-id="b91d3-110">ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。</span><span class="sxs-lookup"><span data-stu-id="b91d3-110">One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.</span></span>  
+ <span data-ttu-id="7abf2-107">どのテキスト ノードにも、任意の数の `<b>` と `<i>` が子要素として存在する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7abf2-107">For any given text node, there may be any number of child `<b>` and `<i>` elements.</span></span> <span data-ttu-id="7abf2-108">この方法は、その他の複数の状況にも適用されます。たとえば、通常の段落、箇条書きの段落、ビットマップといったさまざまな子要素を含む可能性のあるページなどです。</span><span class="sxs-lookup"><span data-stu-id="7abf2-108">This approach extends to a number of other situations, such as pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps.</span></span> <span data-ttu-id="7abf2-109">テーブルのセルには、テキスト、ドロップダウン リスト、またはビットマップが含まれている場合があります。</span><span class="sxs-lookup"><span data-stu-id="7abf2-109">Cells in a table may contain text, drop down lists, or bitmaps.</span></span> <span data-ttu-id="7abf2-110">ドキュメント中心の XML の主要な特性の 1 つは、特定の要素がどの子要素を持つかがわからない点です。</span><span class="sxs-lookup"><span data-stu-id="7abf2-110">One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.</span></span>  
   
- <span data-ttu-id="b91d3-111">ツリー内の要素を変換するとき、その要素の子について詳しく理解している必要がない場合は、注釈を使用するこの方法が効果的です。</span><span class="sxs-lookup"><span data-stu-id="b91d3-111">If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.</span></span>  
+ <span data-ttu-id="7abf2-111">ツリー内の要素を変換するとき、その要素の子について詳しく理解している必要がない場合は、注釈を使用するこの方法が効果的です。</span><span class="sxs-lookup"><span data-stu-id="7abf2-111">If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.</span></span>  
   
- <span data-ttu-id="b91d3-112">この方法の概要は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b91d3-112">The summary of the approach is:</span></span>  
+ <span data-ttu-id="7abf2-112">この方法の概要は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="7abf2-112">The summary of the approach is:</span></span>  
   
-- <span data-ttu-id="b91d3-113">最初に、ツリー内の要素に置換要素を使用して注釈を付けます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-113">First, annotate elements in the tree with a replacement element.</span></span>  
+- <span data-ttu-id="7abf2-113">最初に、ツリー内の要素に置換要素を使用して注釈を付けます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-113">First, annotate elements in the tree with a replacement element.</span></span>  
   
-- <span data-ttu-id="b91d3-114">2 番目に、ツリー全体を反復処理して、各要素をその注釈で置換する新しいツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-114">Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation.</span></span> <span data-ttu-id="b91d3-115">ここで示す例では、`XForm` という関数で新しいツリーの反復処理と作成を実装しています。</span><span class="sxs-lookup"><span data-stu-id="b91d3-115">This example implements the iteration and creation of the new tree in a function named `XForm`.</span></span>  
+- <span data-ttu-id="7abf2-114">2 番目に、ツリー全体を反復処理して、各要素をその注釈で置換する新しいツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-114">Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation.</span></span> <span data-ttu-id="7abf2-115">ここで示す例では、`XForm` という関数で新しいツリーの反復処理と作成を実装しています。</span><span class="sxs-lookup"><span data-stu-id="7abf2-115">This example implements the iteration and creation of the new tree in a function named `XForm`.</span></span>  
   
- <span data-ttu-id="b91d3-116">この方法の詳細な構成は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b91d3-116">In detail, the approach consists of:</span></span>  
+ <span data-ttu-id="7abf2-116">この方法の詳細な構成は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="7abf2-116">In detail, the approach consists of:</span></span>  
   
-- <span data-ttu-id="b91d3-117">構造を変換する一連の要素を返す 1 つ以上の LINQ to XML クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-117">Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another.</span></span> <span data-ttu-id="b91d3-118">クエリ内の要素ごとに、新しい <xref:System.Xml.Linq.XElement> オブジェクトをその要素に対する注釈として追加します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-118">For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element.</span></span> <span data-ttu-id="b91d3-119">変換後の新しいツリーでは、注釈付きの要素がこの新しい要素で置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-119">This new element will replace the annotated element in the new, transformed tree.</span></span> <span data-ttu-id="b91d3-120">例で示すように、このコードは簡単に記述できます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-120">This is simple code to write, as demonstrated by the example.</span></span>  
+- <span data-ttu-id="7abf2-117">構造を変換する一連の要素を返す 1 つ以上の LINQ to XML クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-117">Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another.</span></span> <span data-ttu-id="7abf2-118">クエリ内の要素ごとに、新しい <xref:System.Xml.Linq.XElement> オブジェクトをその要素に対する注釈として追加します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-118">For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element.</span></span> <span data-ttu-id="7abf2-119">変換後の新しいツリーでは、注釈付きの要素がこの新しい要素で置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-119">This new element will replace the annotated element in the new, transformed tree.</span></span> <span data-ttu-id="7abf2-120">例で示すように、このコードは簡単に記述できます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-120">This is simple code to write, as demonstrated by the example.</span></span>  
   
-- <span data-ttu-id="b91d3-121">注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-121">The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.</span></span>  
+- <span data-ttu-id="7abf2-121">注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-121">The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.</span></span>  
   
-- <span data-ttu-id="b91d3-122">特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。</span><span class="sxs-lookup"><span data-stu-id="b91d3-122">There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree.</span></span> <span data-ttu-id="b91d3-123">代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。</span><span class="sxs-lookup"><span data-stu-id="b91d3-123">Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).</span></span>  
+- <span data-ttu-id="7abf2-122">特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。</span><span class="sxs-lookup"><span data-stu-id="7abf2-122">There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree.</span></span> <span data-ttu-id="7abf2-123">代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。</span><span class="sxs-lookup"><span data-stu-id="7abf2-123">Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).</span></span>  
   
-- <span data-ttu-id="b91d3-124">これは、XSL での変換の仕様にある程度似ています。</span><span class="sxs-lookup"><span data-stu-id="b91d3-124">This is somewhat analogous to the specification of transforms in XSL.</span></span> <span data-ttu-id="b91d3-125">一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。</span><span class="sxs-lookup"><span data-stu-id="b91d3-125">The query that selects a set of nodes is analogous to the XPath expression for a template.</span></span> <span data-ttu-id="b91d3-126">注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。</span><span class="sxs-lookup"><span data-stu-id="b91d3-126">The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.</span></span>  
+- <span data-ttu-id="7abf2-124">これは、XSL での変換の仕様にある程度似ています。</span><span class="sxs-lookup"><span data-stu-id="7abf2-124">This is somewhat analogous to the specification of transforms in XSL.</span></span> <span data-ttu-id="7abf2-125">一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。</span><span class="sxs-lookup"><span data-stu-id="7abf2-125">The query that selects a set of nodes is analogous to the XPath expression for a template.</span></span> <span data-ttu-id="7abf2-126">注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。</span><span class="sxs-lookup"><span data-stu-id="7abf2-126">The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.</span></span>  
   
-- <span data-ttu-id="b91d3-127">この方法の利点の 1 つは、クエリを作成するときに、常に未変更のソース ツリーに対してクエリを記述する点です。</span><span class="sxs-lookup"><span data-stu-id="b91d3-127">One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree.</span></span> <span data-ttu-id="b91d3-128">ツリーに対する変更が記述中のクエリに与える影響を考慮する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="b91d3-128">You need not worry about how modifications to the tree affect the queries that you are writing.</span></span>  
+- <span data-ttu-id="7abf2-127">この方法の利点の 1 つは、クエリを作成するときに、常に未変更のソース ツリーに対してクエリを記述する点です。</span><span class="sxs-lookup"><span data-stu-id="7abf2-127">One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree.</span></span> <span data-ttu-id="7abf2-128">ツリーに対する変更が記述中のクエリに与える影響を考慮する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="7abf2-128">You need not worry about how modifications to the tree affect the queries that you are writing.</span></span>  
   
-## <a name="transforming-a-tree"></a><span data-ttu-id="b91d3-129">ツリーの変換</span><span class="sxs-lookup"><span data-stu-id="b91d3-129">Transforming a Tree</span></span>  
- <span data-ttu-id="b91d3-130">最初の例では、`Paragraph` ノードの名前をすべて `para` に変更します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-130">This first example renames all `Paragraph` nodes to `para`.</span></span>  
+## <a name="transforming-a-tree"></a><span data-ttu-id="7abf2-129">ツリーの変換</span><span class="sxs-lookup"><span data-stu-id="7abf2-129">Transforming a Tree</span></span>  
+ <span data-ttu-id="7abf2-130">最初の例では、`Paragraph` ノードの名前をすべて `para` に変更します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-130">This first example renames all `Paragraph` nodes to `para`.</span></span>  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -68,7 +68,7 @@ XElement newRoot = XForm(root);
 Console.WriteLine(newRoot);  
 ```  
   
- <span data-ttu-id="b91d3-131">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="7abf2-131">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -77,8 +77,8 @@ Console.WriteLine(newRoot);
 </Root>  
 ```  
   
-## <a name="a-more-complicated-transform"></a><span data-ttu-id="b91d3-132">より複雑な変換</span><span class="sxs-lookup"><span data-stu-id="b91d3-132">A More Complicated Transform</span></span>  
- <span data-ttu-id="b91d3-133">次の例では、ツリーに対してクエリを実行し、`Data` 要素の平均と合計を計算して、それらを新しい要素としてツリーに追加します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-133">The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.</span></span>  
+## <a name="a-more-complicated-transform"></a><span data-ttu-id="7abf2-132">より複雑な変換</span><span class="sxs-lookup"><span data-stu-id="7abf2-132">A More Complicated Transform</span></span>  
+ <span data-ttu-id="7abf2-133">次の例では、ツリーに対してクエリを実行し、`Data` 要素の平均と合計を計算して、それらを新しい要素としてツリーに追加します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-133">The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.</span></span>  
   
 ```csharp  
 XNamespace xf = "http://www.microsoft.com/LinqToXmlTransform/2007";  
@@ -120,9 +120,9 @@ Console.WriteLine("----------------");
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="b91d3-134">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-134">This example produces the following output:</span></span>  
+ <span data-ttu-id="7abf2-134">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-134">This example produces the following output:</span></span>  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -142,12 +142,12 @@ After Transform
 </Root>  
 ```  
   
-## <a name="effecting-the-transform"></a><span data-ttu-id="b91d3-135">変換の実施</span><span class="sxs-lookup"><span data-stu-id="b91d3-135">Effecting the Transform</span></span>  
- <span data-ttu-id="b91d3-136">小さな関数 `XForm` によって、元の注釈付きツリーから変換された新しいツリーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-136">A small function, `XForm`, creates a new transformed tree from the original, annotated tree.</span></span>  
+## <a name="effecting-the-transform"></a><span data-ttu-id="7abf2-135">変換の実施</span><span class="sxs-lookup"><span data-stu-id="7abf2-135">Effecting the Transform</span></span>  
+ <span data-ttu-id="7abf2-136">小さな関数 `XForm` によって、元の注釈付きツリーから変換された新しいツリーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-136">A small function, `XForm`, creates a new transformed tree from the original, annotated tree.</span></span>  
   
-- <span data-ttu-id="b91d3-137">この関数の擬似コードはかなり単純です。</span><span class="sxs-lookup"><span data-stu-id="b91d3-137">The pseudo code for the function is quite simple:</span></span>  
+- <span data-ttu-id="7abf2-137">この関数の擬似コードはかなり単純です。</span><span class="sxs-lookup"><span data-stu-id="7abf2-137">The pseudo code for the function is quite simple:</span></span>  
   
-```  
+```text  
 The function takes an XElement as an argument and returns an XElement.   
 If an element has an XElement annotation, then  
     Return a new XElement  
@@ -171,7 +171,7 @@ If an element is not annotated
             is transformed by calling this function recursively.  
 ```  
   
- <span data-ttu-id="b91d3-138">この関数の実装を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b91d3-138">Following is the implementation of this function:</span></span>  
+ <span data-ttu-id="7abf2-138">この関数の実装を次に示します。</span><span class="sxs-lookup"><span data-stu-id="7abf2-138">Following is the implementation of this function:</span></span>  
   
 ```csharp  
 // Build a transformed XML tree per the annotations  
@@ -236,8 +236,8 @@ static XElement XForm(XElement source)
 }   
 ```  
   
-## <a name="complete-example"></a><span data-ttu-id="b91d3-139">コード例全体</span><span class="sxs-lookup"><span data-stu-id="b91d3-139">Complete Example</span></span>  
- <span data-ttu-id="b91d3-140">次に示すのは、`XForm` 関数を含んだ完全なサンプル コードです。</span><span class="sxs-lookup"><span data-stu-id="b91d3-140">The following code is a complete example that includes the `XForm` function.</span></span> <span data-ttu-id="b91d3-141">ここには、この種の変換の一般的な使用方法がいくつか示されています。</span><span class="sxs-lookup"><span data-stu-id="b91d3-141">It includes a few of the typical uses of this type of transform:</span></span>  
+## <a name="complete-example"></a><span data-ttu-id="7abf2-139">コード例全体</span><span class="sxs-lookup"><span data-stu-id="7abf2-139">Complete Example</span></span>  
+ <span data-ttu-id="7abf2-140">次に示すのは、`XForm` 関数を含んだ完全なサンプル コードです。</span><span class="sxs-lookup"><span data-stu-id="7abf2-140">The following code is a complete example that includes the `XForm` function.</span></span> <span data-ttu-id="7abf2-141">ここには、この種の変換の一般的な使用方法がいくつか示されています。</span><span class="sxs-lookup"><span data-stu-id="7abf2-141">It includes a few of the typical uses of this type of transform:</span></span>  
   
 ```csharp  
 using System;  
@@ -391,9 +391,9 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="b91d3-142">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b91d3-142">This example produces the following output:</span></span>  
+ <span data-ttu-id="7abf2-142">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="7abf2-142">This example produces the following output:</span></span>  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  

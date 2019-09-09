@@ -2,22 +2,22 @@
 title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593160"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253547"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="7ec7f-102">方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7ec7f-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="4b775-102">方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="4b775-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="7ec7f-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="7ec7f-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="7ec7f-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="4b775-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="4b775-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="4b775-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="4b775-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="4b775-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="4b775-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="7ec7f-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="7ec7f-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="4b775-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="4b775-106">To create the data files</span></span>
   
-1. <span data-ttu-id="7ec7f-107">次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="7ec7f-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="7ec7f-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="4b775-107">次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="4b775-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="4b775-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="4b775-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="4b775-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="4b775-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -32,9 +32,9 @@ ms.locfileid: "69593160"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="7ec7f-110">次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="7ec7f-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="7ec7f-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="4b775-110">次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="4b775-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="4b775-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="4b775-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  
@@ -49,7 +49,7 @@ ms.locfileid: "69593160"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="7ec7f-112">例</span><span class="sxs-lookup"><span data-stu-id="7ec7f-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4b775-112">例</span><span class="sxs-lookup"><span data-stu-id="4b775-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7ec7f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="7ec7f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b775-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b775-113">See also</span></span>
 
-- [<span data-ttu-id="7ec7f-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="7ec7f-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="7ec7f-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="7ec7f-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="4b775-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="4b775-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="4b775-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="4b775-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

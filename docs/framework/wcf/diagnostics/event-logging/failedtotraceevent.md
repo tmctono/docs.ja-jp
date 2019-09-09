@@ -2,24 +2,24 @@
 title: FailedToTraceEvent
 ms.date: 03/30/2017
 ms.assetid: a13f19e3-a6e0-4e58-bb45-73bed6cf4421
-ms.openlocfilehash: 7b99d9984cc9312506494c86b590628d3f705491
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a7359c7205a216830e6557d78340bc8a1de480b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999324"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796250"
 ---
-# <a name="failedtotraceevent"></a><span data-ttu-id="9712e-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="9712e-102">FailedToTraceEvent</span></span>
-<span data-ttu-id="9712e-103">Id:104</span><span class="sxs-lookup"><span data-stu-id="9712e-103">Id: 104</span></span>  
+# <a name="failedtotraceevent"></a><span data-ttu-id="ea988-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="ea988-102">FailedToTraceEvent</span></span>
+<span data-ttu-id="ea988-103">Id:104</span><span class="sxs-lookup"><span data-stu-id="ea988-103">Id: 104</span></span>  
   
- <span data-ttu-id="9712e-104">重大度:Error</span><span class="sxs-lookup"><span data-stu-id="9712e-104">Severity: Error</span></span>  
+ <span data-ttu-id="ea988-104">順Error</span><span class="sxs-lookup"><span data-stu-id="ea988-104">Severity: Error</span></span>  
   
- <span data-ttu-id="9712e-105">カテゴリ:トレース</span><span class="sxs-lookup"><span data-stu-id="9712e-105">Category: Tracing</span></span>  
+ <span data-ttu-id="ea988-105">[カテゴリ]:トレース</span><span class="sxs-lookup"><span data-stu-id="ea988-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9712e-106">説明</span><span class="sxs-lookup"><span data-stu-id="9712e-106">Description</span></span>  
- <span data-ttu-id="9712e-107">イベント (1 つまたは複数) はトレースされませんでした。</span><span class="sxs-lookup"><span data-stu-id="9712e-107">An event or events were not traced.</span></span> <span data-ttu-id="9712e-108">イベントには、元のイベント文字列、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="9712e-108">The event lists the original event string, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="ea988-106">説明</span><span class="sxs-lookup"><span data-stu-id="ea988-106">Description</span></span>  
+ <span data-ttu-id="ea988-107">イベント (1 つまたは複数) はトレースされませんでした。</span><span class="sxs-lookup"><span data-stu-id="ea988-107">An event or events were not traced.</span></span> <span data-ttu-id="ea988-108">イベントには、元のイベント文字列、プロセス名、およびプロセス ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="ea988-108">The event lists the original event string, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9712e-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9712e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea988-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="ea988-109">See also</span></span>
 
-- [<span data-ttu-id="9712e-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="9712e-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="9712e-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="9712e-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="ea988-110">イベント ログ</span><span class="sxs-lookup"><span data-stu-id="ea988-110">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="ea988-111">イベント一覧</span><span class="sxs-lookup"><span data-stu-id="ea988-111">Events General Reference</span></span>](events-general-reference.md)
