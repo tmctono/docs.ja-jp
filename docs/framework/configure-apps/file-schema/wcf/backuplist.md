@@ -2,22 +2,23 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: d5feab6cb374f98e683cf15f797de4f478e23131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 478211755b9131c03b72777ee95ff7223b9092c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919919"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850276"
 ---
-# <a name="backuplist"></a><span data-ttu-id="d0770-101">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="d0770-101">\<backupList></span></span>
-<span data-ttu-id="d0770-102">プライマリエンドポイントに到達できない場合に、ルーティングサービスによって使用される一連のエンドポイントを列挙するバックアップリストを定義するための構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="d0770-102">Represents a configuration section for defining a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="d0770-103">リストの最初のエンドポイントがダウンしていると、ルーティング サービスは自動的にリスト内で次にあるエンドポイントにフェールオーバーします。</span><span class="sxs-lookup"><span data-stu-id="d0770-103">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="d0770-104">これにより、クライアント アプリケーションに複雑なパターンの処理方法やサービスの配置場所を示すことなく、アプリケーションの信頼性を高めることができます。</span><span class="sxs-lookup"><span data-stu-id="d0770-104">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
+# <a name="backuplist"></a><span data-ttu-id="fc79f-101">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="fc79f-101">\<backupList></span></span>
+<span data-ttu-id="fc79f-102">プライマリエンドポイントに到達できない場合に、ルーティングサービスによって使用される一連のエンドポイントを列挙するバックアップリストを定義するための構成セクションを表します。</span><span class="sxs-lookup"><span data-stu-id="fc79f-102">Represents a configuration section for defining a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="fc79f-103">リストの最初のエンドポイントがダウンしていると、ルーティング サービスは自動的にリスト内で次にあるエンドポイントにフェールオーバーします。</span><span class="sxs-lookup"><span data-stu-id="fc79f-103">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="fc79f-104">これにより、クライアント アプリケーションに複雑なパターンの処理方法やサービスの配置場所を示すことなく、アプリケーションの信頼性を高めることができます。</span><span class="sxs-lookup"><span data-stu-id="fc79f-104">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  
   
- <span data-ttu-id="d0770-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="d0770-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="d0770-106">\<ルーティング ></span><span class="sxs-lookup"><span data-stu-id="d0770-106">\<routing></span></span>  
-<span data-ttu-id="d0770-107">\<backupLists ></span><span class="sxs-lookup"><span data-stu-id="d0770-107">\<backupLists></span></span>  
-<span data-ttu-id="d0770-108">\<backupList ></span><span class="sxs-lookup"><span data-stu-id="d0770-108">\<backupList></span></span>  
+<span data-ttu-id="fc79f-105">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="fc79f-105">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="fc79f-106">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="fc79f-106">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="fc79f-107">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)</span><span class="sxs-lookup"><span data-stu-id="fc79f-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)</span></span>\
+<span data-ttu-id="fc79f-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupLists >** ](backuplists.md)</span><span class="sxs-lookup"><span data-stu-id="fc79f-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<backupLists>**](backuplists.md)</span></span>\
+<span data-ttu-id="fc79f-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<backupList >**</span><span class="sxs-lookup"><span data-stu-id="fc79f-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<backupList>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0770-109">構文</span><span class="sxs-lookup"><span data-stu-id="d0770-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc79f-110">構文</span><span class="sxs-lookup"><span data-stu-id="fc79f-110">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -29,33 +30,33 @@ ms.locfileid: "69919919"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d0770-110">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d0770-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d0770-111">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d0770-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fc79f-111">属性および要素</span><span class="sxs-lookup"><span data-stu-id="fc79f-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="fc79f-112">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="fc79f-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d0770-112">属性</span><span class="sxs-lookup"><span data-stu-id="d0770-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fc79f-113">属性</span><span class="sxs-lookup"><span data-stu-id="fc79f-113">Attributes</span></span>  
   
-|<span data-ttu-id="d0770-113">属性</span><span class="sxs-lookup"><span data-stu-id="d0770-113">Attribute</span></span>|<span data-ttu-id="d0770-114">説明</span><span class="sxs-lookup"><span data-stu-id="d0770-114">Description</span></span>|  
+|<span data-ttu-id="fc79f-114">属性</span><span class="sxs-lookup"><span data-stu-id="fc79f-114">Attribute</span></span>|<span data-ttu-id="fc79f-115">説明</span><span class="sxs-lookup"><span data-stu-id="fc79f-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d0770-115">name</span><span class="sxs-lookup"><span data-stu-id="d0770-115">name</span></span>|<span data-ttu-id="d0770-116">このエンドポイント リストを指定するために使用される名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="d0770-116">A string that specifies the name used to identify this endpoint list.</span></span>|  
+|<span data-ttu-id="fc79f-116">name</span><span class="sxs-lookup"><span data-stu-id="fc79f-116">name</span></span>|<span data-ttu-id="fc79f-117">このエンドポイント リストを指定するために使用される名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="fc79f-117">A string that specifies the name used to identify this endpoint list.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d0770-117">子要素</span><span class="sxs-lookup"><span data-stu-id="d0770-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fc79f-118">子要素</span><span class="sxs-lookup"><span data-stu-id="fc79f-118">Child Elements</span></span>  
   
-|<span data-ttu-id="d0770-118">要素</span><span class="sxs-lookup"><span data-stu-id="d0770-118">Element</span></span>|<span data-ttu-id="d0770-119">説明</span><span class="sxs-lookup"><span data-stu-id="d0770-119">Description</span></span>|  
+|<span data-ttu-id="fc79f-119">要素</span><span class="sxs-lookup"><span data-stu-id="fc79f-119">Element</span></span>|<span data-ttu-id="fc79f-120">説明</span><span class="sxs-lookup"><span data-stu-id="fc79f-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d0770-120">\<filter></span><span class="sxs-lookup"><span data-stu-id="d0770-120">\<filter></span></span>](filter.md)||  
+|[<span data-ttu-id="fc79f-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="fc79f-121">\<filter></span></span>](filter.md)||  
   
-### <a name="parent-elements"></a><span data-ttu-id="d0770-121">親要素</span><span class="sxs-lookup"><span data-stu-id="d0770-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fc79f-122">親要素</span><span class="sxs-lookup"><span data-stu-id="fc79f-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="d0770-122">要素</span><span class="sxs-lookup"><span data-stu-id="d0770-122">Element</span></span>|<span data-ttu-id="d0770-123">説明</span><span class="sxs-lookup"><span data-stu-id="d0770-123">Description</span></span>|  
+|<span data-ttu-id="fc79f-123">要素</span><span class="sxs-lookup"><span data-stu-id="fc79f-123">Element</span></span>|<span data-ttu-id="fc79f-124">説明</span><span class="sxs-lookup"><span data-stu-id="fc79f-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d0770-124">\<ルーティング ></span><span class="sxs-lookup"><span data-stu-id="d0770-124">\<routing></span></span>](routing.md)|<span data-ttu-id="d0770-125">バックアップ エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="d0770-125">A list of backup endpoints.</span></span>|  
+|[<span data-ttu-id="fc79f-125">\<ルーティング ></span><span class="sxs-lookup"><span data-stu-id="fc79f-125">\<routing></span></span>](routing.md)|<span data-ttu-id="fc79f-126">バックアップ エンドポイントの一覧。</span><span class="sxs-lookup"><span data-stu-id="fc79f-126">A list of backup endpoints.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d0770-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="d0770-126">Remarks</span></span>  
- <span data-ttu-id="d0770-127">このセクションには、プライマリ エンドポイントへの送信時に通信例外が発生した場合にメッセージが送信されるエンドポイントの、順序付けられたコレクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="d0770-127">This section contains an ordered collection of endpoints that a message will be transmitted to in the event of a communications exception when sending to the primary endpoint.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc79f-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="fc79f-127">Remarks</span></span>  
+ <span data-ttu-id="fc79f-128">このセクションには、プライマリ エンドポイントへの送信時に通信例外が発生した場合にメッセージが送信されるエンドポイントの、順序付けられたコレクションが含まれます。</span><span class="sxs-lookup"><span data-stu-id="fc79f-128">This section contains an ordered collection of endpoints that a message will be transmitted to in the event of a communications exception when sending to the primary endpoint.</span></span>  
   
- <span data-ttu-id="d0770-128">`endpointName` [ \<追加 >](add-of-entries.md)の属性に示されているプライマリエンドポイントへの送信が通信例外で失敗した場合、ルーティングサービスは、この構成セクションの最初のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="d0770-128">If a send to the primary endpoint listed in the `endpointName` attribute of [\<add>](add-of-entries.md) fails with a communications exception, the Routing Service will attempt to send the message to the first endpoint in this configuration section.</span></span> <span data-ttu-id="d0770-129">これも通信例外によって失敗した場合、ルーティング サービスは、送信に成功するか、通信例外以外のエラーを返すか、コレクション内のすべてのエンドポイントがエラーを返すまで、このセクションに格納された次のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="d0770-129">If this also fails with a communications exception, the Routing Service will attempt to send the message to the next message contained in this section until the send attempt succeeds, returns a failure other than a communication exception, or all endpoints in the collection have returned a failure.</span></span>  
+ <span data-ttu-id="fc79f-129">`endpointName` [ \<追加 >](add-of-entries.md)の属性に示されているプライマリエンドポイントへの送信が通信例外で失敗した場合、ルーティングサービスは、この構成セクションの最初のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="fc79f-129">If a send to the primary endpoint listed in the `endpointName` attribute of [\<add>](add-of-entries.md) fails with a communications exception, the Routing Service will attempt to send the message to the first endpoint in this configuration section.</span></span> <span data-ttu-id="fc79f-130">これも通信例外によって失敗した場合、ルーティング サービスは、送信に成功するか、通信例外以外のエラーを返すか、コレクション内のすべてのエンドポイントがエラーを返すまで、このセクションに格納された次のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="fc79f-130">If this also fails with a communications exception, the Routing Service will attempt to send the message to the next message contained in this section until the send attempt succeeds, returns a failure other than a communication exception, or all endpoints in the collection have returned a failure.</span></span>  
   
- <span data-ttu-id="d0770-130">次の例では、"Destination" という名前のプライマリエンドポイントへの送信で通信例外が返された場合、サービスは "alternateServiceQueue" にメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="d0770-130">In the following example, if a send to the primary endpoint named "Destination" returns a communication exception, the service will attempt to send the message to the "alternateServiceQueue".</span></span> <span data-ttu-id="d0770-131">この試行でも通信例外が返された場合、ルーティング サービスはコレクション内の次のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="d0770-131">If this attempt also returns a communication exception, the Routing Service will attempt to send the message to the next endpoint in the collection.</span></span>  
+ <span data-ttu-id="fc79f-131">次の例では、"Destination" という名前のプライマリエンドポイントへの送信で通信例外が返された場合、サービスは "alternateServiceQueue" にメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="fc79f-131">In the following example, if a send to the primary endpoint named "Destination" returns a communication exception, the service will attempt to send the message to the "alternateServiceQueue".</span></span> <span data-ttu-id="fc79f-132">この試行でも通信例外が返された場合、ルーティング サービスはコレクション内の次のエンドポイントにメッセージを送信しようとします。</span><span class="sxs-lookup"><span data-stu-id="fc79f-132">If this attempt also returns a communication exception, the Routing Service will attempt to send the message to the next endpoint in the collection.</span></span>  
   
 ```xml  
 <filterTables>
@@ -73,6 +74,6 @@ ms.locfileid: "69919919"
 </backupLists>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0770-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0770-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc79f-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc79f-133">See also</span></span>
 
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

@@ -2,20 +2,22 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 3dc7fb19c5c7729620a5d9f3df1111b2dbdacf78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da57ca3ba3bc0036727a749f1cab9ec3657a4fda
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925836"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855344"
 ---
-# <a name="dynamicendpoint"></a><span data-ttu-id="d4b44-101">\<dynamicEndpoint ></span><span class="sxs-lookup"><span data-stu-id="d4b44-101">\<dynamicEndpoint></span></span>
-<span data-ttu-id="d4b44-102">この構成要素は、アプリケーションが、実行時に動的にエンドポイント アドレスを検索するクライアント プログラムとして機能するための情報を格納する標準エンドポイントを定義します。</span><span class="sxs-lookup"><span data-stu-id="d4b44-102">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
+# <a name="dynamicendpoint"></a><span data-ttu-id="5328b-101">\<dynamicEndpoint ></span><span class="sxs-lookup"><span data-stu-id="5328b-101">\<dynamicEndpoint></span></span>
+<span data-ttu-id="5328b-102">この構成要素は、アプリケーションが、実行時に動的にエンドポイント アドレスを検索するクライアント プログラムとして機能するための情報を格納する標準エンドポイントを定義します。</span><span class="sxs-lookup"><span data-stu-id="5328b-102">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  
   
-<span data-ttu-id="d4b44-103">\<system.ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d4b44-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="d4b44-104">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="d4b44-104">\<standardEndpoints></span></span>  
+<span data-ttu-id="5328b-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="5328b-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="5328b-104">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="5328b-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="5328b-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)</span><span class="sxs-lookup"><span data-stu-id="5328b-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)</span></span>\
+<span data-ttu-id="5328b-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dynamicEndpoint >**</span><span class="sxs-lookup"><span data-stu-id="5328b-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dynamicEndpoint>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4b44-105">構文</span><span class="sxs-lookup"><span data-stu-id="d4b44-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5328b-107">構文</span><span class="sxs-lookup"><span data-stu-id="5328b-107">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -42,25 +44,25 @@ ms.locfileid: "69925836"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d4b44-106">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d4b44-106">Attributes and Elements</span></span>  
- <span data-ttu-id="d4b44-107">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d4b44-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5328b-108">属性および要素</span><span class="sxs-lookup"><span data-stu-id="5328b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="5328b-109">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="5328b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d4b44-108">属性</span><span class="sxs-lookup"><span data-stu-id="d4b44-108">Attributes</span></span>  
- <span data-ttu-id="d4b44-109">なし。</span><span class="sxs-lookup"><span data-stu-id="d4b44-109">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5328b-110">属性</span><span class="sxs-lookup"><span data-stu-id="5328b-110">Attributes</span></span>  
+ <span data-ttu-id="5328b-111">なし。</span><span class="sxs-lookup"><span data-stu-id="5328b-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="d4b44-110">子要素</span><span class="sxs-lookup"><span data-stu-id="d4b44-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5328b-112">子要素</span><span class="sxs-lookup"><span data-stu-id="5328b-112">Child Elements</span></span>  
   
-|<span data-ttu-id="d4b44-111">要素</span><span class="sxs-lookup"><span data-stu-id="d4b44-111">Element</span></span>|<span data-ttu-id="d4b44-112">説明</span><span class="sxs-lookup"><span data-stu-id="d4b44-112">Description</span></span>|  
+|<span data-ttu-id="5328b-113">要素</span><span class="sxs-lookup"><span data-stu-id="5328b-113">Element</span></span>|<span data-ttu-id="5328b-114">説明</span><span class="sxs-lookup"><span data-stu-id="5328b-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d4b44-113">\<discoveryClientSettings></span><span class="sxs-lookup"><span data-stu-id="d4b44-113">\<discoveryClientSettings></span></span>](discoveryclientsettings.md)|<span data-ttu-id="d4b44-114">サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。</span><span class="sxs-lookup"><span data-stu-id="d4b44-114">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
+|[<span data-ttu-id="5328b-115">\<discoveryClientSettings></span><span class="sxs-lookup"><span data-stu-id="5328b-115">\<discoveryClientSettings></span></span>](discoveryclientsettings.md)|<span data-ttu-id="5328b-116">サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。</span><span class="sxs-lookup"><span data-stu-id="5328b-116">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="d4b44-115">親要素</span><span class="sxs-lookup"><span data-stu-id="d4b44-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5328b-117">親要素</span><span class="sxs-lookup"><span data-stu-id="5328b-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="d4b44-116">要素</span><span class="sxs-lookup"><span data-stu-id="d4b44-116">Element</span></span>|<span data-ttu-id="d4b44-117">説明</span><span class="sxs-lookup"><span data-stu-id="d4b44-117">Description</span></span>|  
+|<span data-ttu-id="5328b-118">要素</span><span class="sxs-lookup"><span data-stu-id="5328b-118">Element</span></span>|<span data-ttu-id="5328b-119">説明</span><span class="sxs-lookup"><span data-stu-id="5328b-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d4b44-118">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="d4b44-118">\<standardEndpoints></span></span>](standardendpoints.md)|<span data-ttu-id="d4b44-119">1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。</span><span class="sxs-lookup"><span data-stu-id="d4b44-119">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="5328b-120">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="5328b-120">\<standardEndpoints></span></span>](standardendpoints.md)|<span data-ttu-id="5328b-121">1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。</span><span class="sxs-lookup"><span data-stu-id="5328b-121">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d4b44-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="d4b44-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5328b-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="5328b-122">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

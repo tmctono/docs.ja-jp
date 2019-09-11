@@ -2,38 +2,38 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251422"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854566"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="751e5-102">方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する</span><span class="sxs-lookup"><span data-stu-id="751e5-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
-<span data-ttu-id="751e5-103">このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="751e5-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="9f279-102">方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する</span><span class="sxs-lookup"><span data-stu-id="9f279-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
+<span data-ttu-id="9f279-103">このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9f279-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
   
-- <span data-ttu-id="751e5-104">概念モデル (.csdl ファイル)</span><span class="sxs-lookup"><span data-stu-id="751e5-104">A conceptual model (a .csdl file).</span></span>  
+- <span data-ttu-id="9f279-104">概念モデル (.csdl ファイル)</span><span class="sxs-lookup"><span data-stu-id="9f279-104">A conceptual model (a .csdl file).</span></span>  
   
-- <span data-ttu-id="751e5-105">ストレージ モデル (.ssdl ファイル)</span><span class="sxs-lookup"><span data-stu-id="751e5-105">A storage model (a .ssdl file).</span></span>  
+- <span data-ttu-id="9f279-105">ストレージ モデル (.ssdl ファイル)</span><span class="sxs-lookup"><span data-stu-id="9f279-105">A storage model (a .ssdl file).</span></span>  
   
-- <span data-ttu-id="751e5-106">概念モデルとストレージ モデル間のマッピング (.msl ファイル)</span><span class="sxs-lookup"><span data-stu-id="751e5-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
+- <span data-ttu-id="9f279-106">概念モデルとストレージ モデル間のマッピング (.msl ファイル)</span><span class="sxs-lookup"><span data-stu-id="9f279-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
   
-- <span data-ttu-id="751e5-107">Visual Basic または C# のオブジェクト レイヤー コード</span><span class="sxs-lookup"><span data-stu-id="751e5-107">Object-layer code in Visual Basic or C#.</span></span>  
+- <span data-ttu-id="9f279-107">Visual Basic または C# のオブジェクト レイヤー コード</span><span class="sxs-lookup"><span data-stu-id="9f279-107">Object-layer code in Visual Basic or C#.</span></span>  
   
-- <span data-ttu-id="751e5-108">ビュー ファイル</span><span class="sxs-lookup"><span data-stu-id="751e5-108">View files.</span></span>  
+- <span data-ttu-id="9f279-108">ビュー ファイル</span><span class="sxs-lookup"><span data-stu-id="9f279-108">View files.</span></span>  
   
- <span data-ttu-id="751e5-109">EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="751e5-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="751e5-110">Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](edm-generator-edmgen-exe.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="751e5-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
+ <span data-ttu-id="9f279-109">EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="9f279-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="9f279-110">Edmgen.exe コマンドの詳細については、「 [EDM Generator (edmgen.exe)](edm-generator-edmgen-exe.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f279-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
   
- <span data-ttu-id="751e5-111">Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を使用するように Visual Studio プロジェクトを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="751e5-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="751e5-112">詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。</span><span class="sxs-lookup"><span data-stu-id="751e5-112">For more information, see [How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
+ <span data-ttu-id="9f279-111">Edmgen.exe を使用してモデルファイルとマッピングファイルを生成する場合でも、Entity Framework を使用するように Visual Studio プロジェクトを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f279-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the Entity Framework.</span></span> <span data-ttu-id="9f279-112">詳細については、「[方法 :Entity Framework プロジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))を手動で構成します。</span><span class="sxs-lookup"><span data-stu-id="9f279-112">For more information, see [How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="751e5-113">EdmGen.exe によって生成された概念モデルには、データベース内のすべてのオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="751e5-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="751e5-114">特定のオブジェクトだけを含んだ概念モデルを生成する場合は、Entity Data Model ウィザードを使用してください。</span><span class="sxs-lookup"><span data-stu-id="751e5-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="751e5-115">詳細については、「[方法 :Entity Data Model ウィザード](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))を使用します。</span><span class="sxs-lookup"><span data-stu-id="751e5-115">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
+> <span data-ttu-id="9f279-113">EdmGen.exe によって生成された概念モデルには、データベース内のすべてのオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="9f279-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="9f279-114">特定のオブジェクトだけを含んだ概念モデルを生成する場合は、Entity Data Model ウィザードを使用してください。</span><span class="sxs-lookup"><span data-stu-id="9f279-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="9f279-115">詳細については、「[方法 :Entity Data Model ウィザード](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))を使用します。</span><span class="sxs-lookup"><span data-stu-id="9f279-115">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
   
-### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="751e5-116">EdmGen.exe を使用して Visual Basic プロジェクト用の School モデルを生成するには</span><span class="sxs-lookup"><span data-stu-id="751e5-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="9f279-116">EdmGen.exe を使用して Visual Basic プロジェクト用の School モデルを生成するには</span><span class="sxs-lookup"><span data-stu-id="9f279-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="751e5-117">School データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="751e5-117">Create the School database.</span></span> <span data-ttu-id="751e5-118">詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="751e5-118">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="9f279-117">School データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="9f279-117">Create the School database.</span></span> <span data-ttu-id="9f279-118">詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f279-118">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="751e5-119">コマンド プロンプトで、次のコマンド (改行なし) を実行します。</span><span class="sxs-lookup"><span data-stu-id="751e5-119">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="9f279-119">コマンド プロンプトで、次のコマンド (改行なし) を実行します。</span><span class="sxs-lookup"><span data-stu-id="9f279-119">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -41,11 +41,11 @@ ms.locfileid: "70251422"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
     ```  
   
-### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="751e5-120">EdmGen.exe を使用して C# プロジェクト用の School モデルを生成するには</span><span class="sxs-lookup"><span data-stu-id="751e5-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="9f279-120">EdmGen.exe を使用して C# プロジェクト用の School モデルを生成するには</span><span class="sxs-lookup"><span data-stu-id="9f279-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="751e5-121">School データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="751e5-121">Create the School database.</span></span> <span data-ttu-id="751e5-122">詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="751e5-122">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="9f279-121">School データベースを作成します。</span><span class="sxs-lookup"><span data-stu-id="9f279-121">Create the School database.</span></span> <span data-ttu-id="9f279-122">詳細については、「 [School サンプルデータベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9f279-122">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="751e5-123">コマンド プロンプトで、次のコマンド (改行なし) を実行します。</span><span class="sxs-lookup"><span data-stu-id="751e5-123">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="9f279-123">コマンド プロンプトで、次のコマンド (改行なし) を実行します。</span><span class="sxs-lookup"><span data-stu-id="9f279-123">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -53,10 +53,10 @@ ms.locfileid: "70251422"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="751e5-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="751e5-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f279-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f279-124">See also</span></span>
 
-- [<span data-ttu-id="751e5-125">モデリングとマッピング</span><span class="sxs-lookup"><span data-stu-id="751e5-125">Modeling and Mapping</span></span>](modeling-and-mapping.md)
-- <span data-ttu-id="751e5-126">[方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="751e5-126">[How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
-- <span data-ttu-id="751e5-127">[方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="751e5-127">[How to: Pre-Generate Views to Improve Query Performance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
-- <span data-ttu-id="751e5-128">[ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="751e5-128">[ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
-- [<span data-ttu-id="751e5-129">方法: Edmgen.exe を使用してモデルファイルとマッピングファイルを検証する</span><span class="sxs-lookup"><span data-stu-id="751e5-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [<span data-ttu-id="9f279-125">モデリングとマッピング</span><span class="sxs-lookup"><span data-stu-id="9f279-125">Modeling and Mapping</span></span>](modeling-and-mapping.md)
+- <span data-ttu-id="9f279-126">[方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9f279-126">[How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
+- <span data-ttu-id="9f279-127">[方法: クエリのパフォーマンスを向上させるためのビューを事前に生成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9f279-127">[How to: Pre-Generate Views to Improve Query Performance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
+- <span data-ttu-id="9f279-128">[ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="9f279-128">[ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
+- [<span data-ttu-id="9f279-129">方法: Edmgen.exe を使用してモデルファイルとマッピングファイルを検証する</span><span class="sxs-lookup"><span data-stu-id="9f279-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
