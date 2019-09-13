@@ -3,24 +3,25 @@ title: WIF の機能
 ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
-ms.openlocfilehash: faccf8a9705355943a74daa975fc0d88a420a1f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d86ac2c48b58a58a9002db3755b001d1689a46f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592249"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927001"
 ---
-# <a name="wif-features"></a><span data-ttu-id="4ff30-102">WIF の機能</span><span class="sxs-lookup"><span data-stu-id="4ff30-102">WIF Features</span></span>
-- [<span data-ttu-id="4ff30-103">Visual Studio 2012 の ID およびアクセス ツール</span><span class="sxs-lookup"><span data-stu-id="4ff30-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
-  
-- [<span data-ttu-id="4ff30-104">WIF セッション管理</span><span class="sxs-lookup"><span data-stu-id="4ff30-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
-  
-- [<span data-ttu-id="4ff30-105">WIF および Web ファーム</span><span class="sxs-lookup"><span data-stu-id="4ff30-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
-  
-- [<span data-ttu-id="4ff30-106">WSFederation 認証モジュールの概要</span><span class="sxs-lookup"><span data-stu-id="4ff30-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
-  
-- [<span data-ttu-id="4ff30-107">WSTrustChannelFactory および WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="4ff30-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="4ff30-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="4ff30-108">See also</span></span>
+# <a name="wif-features"></a><span data-ttu-id="49426-102">WIF の機能</span><span class="sxs-lookup"><span data-stu-id="49426-102">WIF Features</span></span>
 
-- [<span data-ttu-id="4ff30-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="4ff30-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+- [<span data-ttu-id="49426-103">Visual Studio 2012 の ID およびアクセス ツール</span><span class="sxs-lookup"><span data-stu-id="49426-103">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+  
+- [<span data-ttu-id="49426-104">WIF セッション管理</span><span class="sxs-lookup"><span data-stu-id="49426-104">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
+  
+- [<span data-ttu-id="49426-105">WIF および Web ファーム</span><span class="sxs-lookup"><span data-stu-id="49426-105">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
+  
+- [<span data-ttu-id="49426-106">WSFederation 認証モジュールの概要</span><span class="sxs-lookup"><span data-stu-id="49426-106">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+  
+- [<span data-ttu-id="49426-107">WSTrustChannelFactory および WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="49426-107">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="49426-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="49426-108">See also</span></span>
+
+- [<span data-ttu-id="49426-109">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="49426-109">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)

@@ -9,33 +9,34 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928432"
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="01ab6-102">プロパティ (WPF)</span><span class="sxs-lookup"><span data-stu-id="01ab6-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="01ab6-103">共通言語ランタイム (CLR) プロパティの機能を拡張するために使用できる一連のサービスを提供します。</span><span class="sxs-lookup"><span data-stu-id="01ab6-103">provides a set of services that can be used to extend the functionality of a common language runtime (CLR) property.</span></span> <span data-ttu-id="01ab6-104">通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。</span><span class="sxs-lookup"><span data-stu-id="01ab6-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="01ab6-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="01ab6-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="77061-102">プロパティ (WPF)</span><span class="sxs-lookup"><span data-stu-id="77061-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="77061-103">共通言語ランタイム (CLR) プロパティの機能を拡張するために使用できる一連のサービスを提供します。</span><span class="sxs-lookup"><span data-stu-id="77061-103">provides a set of services that can be used to extend the functionality of a common language runtime (CLR) property.</span></span> <span data-ttu-id="77061-104">通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。</span><span class="sxs-lookup"><span data-stu-id="77061-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="77061-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="77061-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="01ab6-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="01ab6-106">In This Section</span></span>  
-- [<span data-ttu-id="01ab6-107">依存関係プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="01ab6-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
-- [<span data-ttu-id="01ab6-108">添付プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="01ab6-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
-- [<span data-ttu-id="01ab6-109">カスタム依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="01ab6-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
-- [<span data-ttu-id="01ab6-110">依存関係プロパティのメタデータ</span><span class="sxs-lookup"><span data-stu-id="01ab6-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
-- [<span data-ttu-id="01ab6-111">依存関係プロパティのコールバックと検証</span><span class="sxs-lookup"><span data-stu-id="01ab6-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
-- [<span data-ttu-id="01ab6-112">フレームワーク プロパティ メタデータ</span><span class="sxs-lookup"><span data-stu-id="01ab6-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
-- [<span data-ttu-id="01ab6-113">依存関係プロパティ値の優先順位</span><span class="sxs-lookup"><span data-stu-id="01ab6-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
-- [<span data-ttu-id="01ab6-114">読み取り専用の依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="01ab6-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
-- [<span data-ttu-id="01ab6-115">プロパティ値の継承</span><span class="sxs-lookup"><span data-stu-id="01ab6-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
-- [<span data-ttu-id="01ab6-116">依存関係プロパティのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="01ab6-116">Dependency Property Security</span></span>](dependency-property-security.md)
-- [<span data-ttu-id="01ab6-117">DependencyObject の安全なコンストラクター パターン</span><span class="sxs-lookup"><span data-stu-id="01ab6-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
-- [<span data-ttu-id="01ab6-118">コレクション型依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="01ab6-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
-- [<span data-ttu-id="01ab6-119">XAML 読み込みと依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="01ab6-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
-- [<span data-ttu-id="01ab6-120">方法トピック</span><span class="sxs-lookup"><span data-stu-id="01ab6-120">How-to Topics</span></span>](properties-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="77061-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="77061-106">In This Section</span></span>  
+
+- [<span data-ttu-id="77061-107">依存関係プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="77061-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
+- [<span data-ttu-id="77061-108">添付プロパティの概要</span><span class="sxs-lookup"><span data-stu-id="77061-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
+- [<span data-ttu-id="77061-109">カスタム依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="77061-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
+- [<span data-ttu-id="77061-110">依存関係プロパティのメタデータ</span><span class="sxs-lookup"><span data-stu-id="77061-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
+- [<span data-ttu-id="77061-111">依存関係プロパティのコールバックと検証</span><span class="sxs-lookup"><span data-stu-id="77061-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
+- [<span data-ttu-id="77061-112">フレームワーク プロパティ メタデータ</span><span class="sxs-lookup"><span data-stu-id="77061-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
+- [<span data-ttu-id="77061-113">依存関係プロパティ値の優先順位</span><span class="sxs-lookup"><span data-stu-id="77061-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
+- [<span data-ttu-id="77061-114">読み取り専用の依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="77061-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
+- [<span data-ttu-id="77061-115">プロパティ値の継承</span><span class="sxs-lookup"><span data-stu-id="77061-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
+- [<span data-ttu-id="77061-116">依存関係プロパティのセキュリティ</span><span class="sxs-lookup"><span data-stu-id="77061-116">Dependency Property Security</span></span>](dependency-property-security.md)
+- [<span data-ttu-id="77061-117">DependencyObject の安全なコンストラクター パターン</span><span class="sxs-lookup"><span data-stu-id="77061-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
+- [<span data-ttu-id="77061-118">コレクション型依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="77061-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
+- [<span data-ttu-id="77061-119">XAML 読み込みと依存関係プロパティ</span><span class="sxs-lookup"><span data-stu-id="77061-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
+- [<span data-ttu-id="77061-120">方法トピック</span><span class="sxs-lookup"><span data-stu-id="77061-120">How-to Topics</span></span>](properties-how-to-topics.md)
   
-## <a name="reference"></a><span data-ttu-id="01ab6-121">参照</span><span class="sxs-lookup"><span data-stu-id="01ab6-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="77061-121">参照</span><span class="sxs-lookup"><span data-stu-id="77061-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -44,13 +45,13 @@ ms.locfileid: "68400870"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="01ab6-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="01ab6-122">Related Sections</span></span>  
- [<span data-ttu-id="01ab6-123">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="01ab6-123">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="01ab6-124">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="01ab6-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="01ab6-125">基本要素</span><span class="sxs-lookup"><span data-stu-id="01ab6-125">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="01ab6-126">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="01ab6-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="01ab6-127">イベント</span><span class="sxs-lookup"><span data-stu-id="01ab6-127">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="01ab6-128">入力</span><span class="sxs-lookup"><span data-stu-id="01ab6-128">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="01ab6-129">リソース</span><span class="sxs-lookup"><span data-stu-id="01ab6-129">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="01ab6-130">WPF のコンテンツ モデル</span><span class="sxs-lookup"><span data-stu-id="01ab6-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
-  [<span data-ttu-id="01ab6-131">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="01ab6-131">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="77061-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="77061-122">Related Sections</span></span>  
+ [<span data-ttu-id="77061-123">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="77061-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="77061-124">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="77061-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="77061-125">基本要素</span><span class="sxs-lookup"><span data-stu-id="77061-125">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="77061-126">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="77061-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="77061-127">イベント</span><span class="sxs-lookup"><span data-stu-id="77061-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="77061-128">入力</span><span class="sxs-lookup"><span data-stu-id="77061-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="77061-129">リソース</span><span class="sxs-lookup"><span data-stu-id="77061-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="77061-130">WPF のコンテンツ モデル</span><span class="sxs-lookup"><span data-stu-id="77061-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="77061-131">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="77061-131">Threading Model</span></span>](threading-model.md)
