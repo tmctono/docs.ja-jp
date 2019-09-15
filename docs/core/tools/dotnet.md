@@ -2,31 +2,33 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373745"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969777"
 ---
-# <a name="dotnet-command"></a><span data-ttu-id="11b75-103">dotnet コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-103">dotnet command</span></span>
+# <a name="dotnet-command"></a><span data-ttu-id="3d0d1-103">dotnet コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-103">dotnet command</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="11b75-104">name</span><span class="sxs-lookup"><span data-stu-id="11b75-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="3d0d1-104">name</span><span class="sxs-lookup"><span data-stu-id="3d0d1-104">Name</span></span>
 
-<span data-ttu-id="11b75-105">`dotnet` - .NET のソース コードとバイナリを管理するためのツール。</span><span class="sxs-lookup"><span data-stu-id="11b75-105">`dotnet` - A tool for managing .NET source code and binaries.</span></span>
+<span data-ttu-id="3d0d1-105">`dotnet` - .NET のソース コードとバイナリを管理するためのツール。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-105">`dotnet` - A tool for managing .NET source code and binaries.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="11b75-106">構文</span><span class="sxs-lookup"><span data-stu-id="11b75-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="3d0d1-106">構文</span><span class="sxs-lookup"><span data-stu-id="3d0d1-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="11b75-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="11b75-107">.NET Core 2.1</span></span>](#tab/netcore21)
+<!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="3d0d1-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3d0d1-107">.NET Core 2.1</span></span>](#tab/netcore21)
 
 ```console
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="11b75-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="11b75-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="3d0d1-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3d0d1-108">.NET Core 2.0</span></span>](#tab/netcore20)
 
 ```console
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -34,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="11b75-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="11b75-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3d0d1-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3d0d1-109">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```console
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -43,356 +45,357 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a><span data-ttu-id="11b75-110">説明</span><span class="sxs-lookup"><span data-stu-id="11b75-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="3d0d1-110">説明</span><span class="sxs-lookup"><span data-stu-id="3d0d1-110">Description</span></span>
 
-<span data-ttu-id="11b75-111">`dotnet` は .NET のソース コードとバイナリを管理するためのツールです。</span><span class="sxs-lookup"><span data-stu-id="11b75-111">`dotnet` is a tool for managing .NET source code and binaries.</span></span> <span data-ttu-id="11b75-112">[`dotnet build`](dotnet-build.md) や [`dotnet run`](dotnet-run.md) のような特定のタスクを実行するコマンドを公開します。</span><span class="sxs-lookup"><span data-stu-id="11b75-112">It exposes commands that perform specific tasks, such as [`dotnet build`](dotnet-build.md) and [`dotnet run`](dotnet-run.md).</span></span> <span data-ttu-id="11b75-113">各コマンドによって、それ自体の引数が定義されます。</span><span class="sxs-lookup"><span data-stu-id="11b75-113">Each command defines its own arguments.</span></span> <span data-ttu-id="11b75-114">各コマンドの後ろに `--help` と入力すると、短いヘルプ ドキュメントにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="11b75-114">Type `--help` after each command to access brief help documentation.</span></span>
+<span data-ttu-id="3d0d1-111">`dotnet` は .NET のソース コードとバイナリを管理するためのツールです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-111">`dotnet` is a tool for managing .NET source code and binaries.</span></span> <span data-ttu-id="3d0d1-112">[`dotnet build`](dotnet-build.md) や [`dotnet run`](dotnet-run.md) のような特定のタスクを実行するコマンドを公開します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-112">It exposes commands that perform specific tasks, such as [`dotnet build`](dotnet-build.md) and [`dotnet run`](dotnet-run.md).</span></span> <span data-ttu-id="3d0d1-113">各コマンドによって、それ自体の引数が定義されます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-113">Each command defines its own arguments.</span></span> <span data-ttu-id="3d0d1-114">各コマンドの後ろに `--help` と入力すると、短いヘルプ ドキュメントにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-114">Type `--help` after each command to access brief help documentation.</span></span>
 
-<span data-ttu-id="11b75-115">`dotnet` は、`dotnet myapp.dll` など、アプリケーション DLL を指定することで、アプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="11b75-115">`dotnet` can be used to run applications, by specifying an application DLL, such as `dotnet myapp.dll`.</span></span> <span data-ttu-id="11b75-116">展開オプションについては、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-116">See [.NET Core application deployment](../deploying/index.md) for to learn about deployment options.</span></span>
+<span data-ttu-id="3d0d1-115">`dotnet` は、`dotnet myapp.dll` など、アプリケーション DLL を指定することで、アプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-115">`dotnet` can be used to run applications, by specifying an application DLL, such as `dotnet myapp.dll`.</span></span> <span data-ttu-id="3d0d1-116">展開オプションについては、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-116">See [.NET Core application deployment](../deploying/index.md) for to learn about deployment options.</span></span>
 
-## <a name="options"></a><span data-ttu-id="11b75-117">オプション</span><span class="sxs-lookup"><span data-stu-id="11b75-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="3d0d1-117">オプション</span><span class="sxs-lookup"><span data-stu-id="3d0d1-117">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="11b75-118">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="11b75-118">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="3d0d1-118">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3d0d1-118">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
-<span data-ttu-id="11b75-119">追加の *.deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-119">Path to an additional *.deps.json* file.</span></span>
+<span data-ttu-id="3d0d1-119">追加の *.deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-119">Path to an additional *.deps.json* file.</span></span>
 
 `--additionalprobingpath <PATH>`
 
-<span data-ttu-id="11b75-120">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="11b75-120">Path containing probing policy and assemblies to probe.</span></span>
+<span data-ttu-id="3d0d1-120">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-120">Path containing probing policy and assemblies to probe.</span></span>
 
 `--depsfile`
 
-<span data-ttu-id="11b75-121">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-121">Path to a *deps.json* file.</span></span>
+<span data-ttu-id="3d0d1-121">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-121">Path to a *deps.json* file.</span></span>
 
-<span data-ttu-id="11b75-122">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="11b75-122">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="11b75-123">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-123">For more information about this file, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
+<span data-ttu-id="3d0d1-122">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-122">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3d0d1-123">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-123">For more information about this file, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
 
 `-d|--diagnostics`
 
-<span data-ttu-id="11b75-124">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-124">Enables diagnostic output.</span></span>
+<span data-ttu-id="3d0d1-124">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-124">Enables diagnostic output.</span></span>
 
 `--fx-version <VERSION>`
 
-<span data-ttu-id="11b75-125">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="11b75-125">Version of the .NET Core runtime to use to run the application.</span></span>
+<span data-ttu-id="3d0d1-125">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-125">Version of the .NET Core runtime to use to run the application.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="11b75-126">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-126">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="11b75-127">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="11b75-127">`dotnet --help` prints a list of available commands.</span></span>
+<span data-ttu-id="3d0d1-126">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-126">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3d0d1-127">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-127">`dotnet --help` prints a list of available commands.</span></span>
 
 `--info`
 
-<span data-ttu-id="11b75-128">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-128">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
+<span data-ttu-id="3d0d1-128">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-128">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
 
 `--list-runtimes`
 
-<span data-ttu-id="11b75-129">インストールされている .NET Core ランタイムを表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-129">Displays the installed .NET Core runtimes.</span></span>
+<span data-ttu-id="3d0d1-129">インストールされている .NET Core ランタイムを表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-129">Displays the installed .NET Core runtimes.</span></span>
 
 `--list-sdks`
 
-<span data-ttu-id="11b75-130">インストールされている .NET Core SDK を表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-130">Displays the installed .NET Core SDKs.</span></span>
+<span data-ttu-id="3d0d1-130">インストールされている .NET Core SDK を表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-130">Displays the installed .NET Core SDKs.</span></span>
 
 `--roll-forward-on-no-candidate-fx <N>`
 
-<span data-ttu-id="11b75-131">必要な共有フレームワークが利用できない場合の動作を定義します。</span><span class="sxs-lookup"><span data-stu-id="11b75-131">Defines behavior when the required shared framework is not available.</span></span> <span data-ttu-id="11b75-132">`N` には以下があります。</span><span class="sxs-lookup"><span data-stu-id="11b75-132">`N` can be:</span></span>
-- <span data-ttu-id="11b75-133">`0` - マイナー バージョンのロールフォワードでも無効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-133">`0` - Disable even minor version roll forward.</span></span>
-- <span data-ttu-id="11b75-134">`1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。</span><span class="sxs-lookup"><span data-stu-id="11b75-134">`1` - Roll forward on minor version, but not on major version.</span></span> <span data-ttu-id="11b75-135">これが既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="11b75-135">This is the default behavior.</span></span>
-- <span data-ttu-id="11b75-136">`2` - マイナー バージョンとメジャー バージョンをロール フォワードします。</span><span class="sxs-lookup"><span data-stu-id="11b75-136">`2` - Roll forward on minor and major versions.</span></span>
+<span data-ttu-id="3d0d1-131">必要な共有フレームワークが利用できない場合の動作を定義します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-131">Defines behavior when the required shared framework is not available.</span></span> <span data-ttu-id="3d0d1-132">`N` には以下があります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-132">`N` can be:</span></span>
 
- <span data-ttu-id="11b75-137">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-137">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
+- <span data-ttu-id="3d0d1-133">`0` - マイナー バージョンのロールフォワードでも無効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-133">`0` - Disable even minor version roll forward.</span></span>
+- <span data-ttu-id="3d0d1-134">`1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-134">`1` - Roll forward on minor version, but not on major version.</span></span> <span data-ttu-id="3d0d1-135">これが既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-135">This is the default behavior.</span></span>
+- <span data-ttu-id="3d0d1-136">`2` - マイナー バージョンとメジャー バージョンをロール フォワードします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-136">`2` - Roll forward on minor and major versions.</span></span>
+
+ <span data-ttu-id="3d0d1-137">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-137">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
 
 `--runtimeconfig`
 
-<span data-ttu-id="11b75-138">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-138">Path to a *runtimeconfig.json* file.</span></span>
+<span data-ttu-id="3d0d1-138">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-138">Path to a *runtimeconfig.json* file.</span></span>
 
-<span data-ttu-id="11b75-139">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="11b75-139">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="11b75-140">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-140">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
+<span data-ttu-id="3d0d1-139">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-139">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="3d0d1-140">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-140">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="11b75-141">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-141">Sets the verbosity level of the command.</span></span> <span data-ttu-id="11b75-142">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="11b75-142">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="11b75-143">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-143">Not supported in every command; see specific command page to determine if this option is available.</span></span>
+<span data-ttu-id="3d0d1-141">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-141">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3d0d1-142">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-142">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3d0d1-143">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-143">Not supported in every command; see specific command page to determine if this option is available.</span></span>
 
 `--version`
 
-<span data-ttu-id="11b75-144">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="11b75-144">Prints out the version of the .NET Core SDK in use.</span></span>
+<span data-ttu-id="3d0d1-144">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-144">Prints out the version of the .NET Core SDK in use.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="11b75-145">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="11b75-145">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="3d0d1-145">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3d0d1-145">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
-<span data-ttu-id="11b75-146">追加の *.deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-146">Path to an additional *.deps.json* file.</span></span>
+<span data-ttu-id="3d0d1-146">追加の *.deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-146">Path to an additional *.deps.json* file.</span></span>
 
 `--additionalprobingpath <PATH>`
 
-<span data-ttu-id="11b75-147">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="11b75-147">Path containing probing policy and assemblies to probe.</span></span>
+<span data-ttu-id="3d0d1-147">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-147">Path containing probing policy and assemblies to probe.</span></span>
 
 `--depsfile`
 
-<span data-ttu-id="11b75-148">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-148">Path to a *deps.json* file.</span></span>
+<span data-ttu-id="3d0d1-148">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-148">Path to a *deps.json* file.</span></span>
 
-<span data-ttu-id="11b75-149">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="11b75-149">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="11b75-150">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-150">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
+<span data-ttu-id="3d0d1-149">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-149">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3d0d1-150">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-150">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
 
 `-d|--diagnostics`
 
-<span data-ttu-id="11b75-151">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-151">Enables diagnostic output.</span></span>
+<span data-ttu-id="3d0d1-151">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-151">Enables diagnostic output.</span></span>
 
 `--fx-version <VERSION>`
 
-<span data-ttu-id="11b75-152">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="11b75-152">Version of the .NET Core runtime to use to run the application.</span></span>
+<span data-ttu-id="3d0d1-152">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-152">Version of the .NET Core runtime to use to run the application.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="11b75-153">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-153">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="11b75-154">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="11b75-154">`dotnet --help` prints a list of available commands.</span></span>
+<span data-ttu-id="3d0d1-153">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-153">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3d0d1-154">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-154">`dotnet --help` prints a list of available commands.</span></span>
 
 `--info`
 
-<span data-ttu-id="11b75-155">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-155">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
+<span data-ttu-id="3d0d1-155">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-155">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
 
 `--roll-forward-on-no-candidate-fx`
 
- <span data-ttu-id="11b75-156">`0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-156">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="11b75-157">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-157">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
+ <span data-ttu-id="3d0d1-156">`0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-156">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="3d0d1-157">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-157">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
 
 `--runtimeconfig`
 
-<span data-ttu-id="11b75-158">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-158">Path to a *runtimeconfig.json* file.</span></span>
+<span data-ttu-id="3d0d1-158">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-158">Path to a *runtimeconfig.json* file.</span></span>
 
-<span data-ttu-id="11b75-159">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="11b75-159">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="11b75-160">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-160">For more details, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
+<span data-ttu-id="3d0d1-159">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-159">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="3d0d1-160">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-160">For more details, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="11b75-161">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-161">Sets the verbosity level of the command.</span></span> <span data-ttu-id="11b75-162">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="11b75-162">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="11b75-163">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-163">Not supported in every command; see specific command page to determine if this option is available.</span></span>
+<span data-ttu-id="3d0d1-161">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-161">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3d0d1-162">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-162">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3d0d1-163">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-163">Not supported in every command; see specific command page to determine if this option is available.</span></span>
 
 `--version`
 
-<span data-ttu-id="11b75-164">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="11b75-164">Prints out the version of the .NET Core SDK in use.</span></span>
+<span data-ttu-id="3d0d1-164">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-164">Prints out the version of the .NET Core SDK in use.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="11b75-165">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="11b75-165">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3d0d1-165">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3d0d1-165">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
-<span data-ttu-id="11b75-166">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="11b75-166">Path containing probing policy and assemblies to probe.</span></span>
+<span data-ttu-id="3d0d1-166">プローブ ポリシーとプローブするアセンブリを含むパスです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-166">Path containing probing policy and assemblies to probe.</span></span>
 
 `--depsfile`
 
-<span data-ttu-id="11b75-167">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-167">Path to a *deps.json* file.</span></span>
+<span data-ttu-id="3d0d1-167">*deps.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-167">Path to a *deps.json* file.</span></span>
 
-<span data-ttu-id="11b75-168">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="11b75-168">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="11b75-169">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-169">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
+<span data-ttu-id="3d0d1-168">*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-168">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3d0d1-169">このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-169">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
 
 `-d|--diagnostics`
 
-<span data-ttu-id="11b75-170">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-170">Enables diagnostic output.</span></span>
+<span data-ttu-id="3d0d1-170">診断出力を有効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-170">Enables diagnostic output.</span></span>
 
 `--fx-version <VERSION>`
 
-<span data-ttu-id="11b75-171">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="11b75-171">Version of the .NET Core runtime to use to run the application.</span></span>
+<span data-ttu-id="3d0d1-171">アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-171">Version of the .NET Core runtime to use to run the application.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="11b75-172">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-172">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="11b75-173">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="11b75-173">`dotnet --help` prints a list of available commands.</span></span>
+<span data-ttu-id="3d0d1-172">`dotnet build --help` など、特定のコマンドのドキュメントを出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-172">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3d0d1-173">`dotnet --help` では、使用できるコマンドの一覧が出力されます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-173">`dotnet --help` prints a list of available commands.</span></span>
 
 `--info`
 
-<span data-ttu-id="11b75-174">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="11b75-174">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
+<span data-ttu-id="3d0d1-174">現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-174">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
 
 `--runtimeconfig`
 
-<span data-ttu-id="11b75-175">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="11b75-175">Path to a *runtimeconfig.json* file.</span></span>
+<span data-ttu-id="3d0d1-175">*runtimeconfig.json* ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-175">Path to a *runtimeconfig.json* file.</span></span>
 
-<span data-ttu-id="11b75-176">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="11b75-176">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="11b75-177">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-177">For more details, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
+<span data-ttu-id="3d0d1-176">*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-176">A *runtimeconfig.json* file is a configuration file containing runtime configuration settings.</span></span> <span data-ttu-id="3d0d1-177">詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-177">For more details, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="11b75-178">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-178">Sets the verbosity level of the command.</span></span> <span data-ttu-id="11b75-179">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="11b75-179">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="11b75-180">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-180">Not supported in every command; see specific command page to determine if this option is available.</span></span>
+<span data-ttu-id="3d0d1-178">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-178">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3d0d1-179">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-179">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3d0d1-180">一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-180">Not supported in every command; see specific command page to determine if this option is available.</span></span>
 
 `--version`
 
-<span data-ttu-id="11b75-181">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="11b75-181">Prints out the version of the .NET Core SDK in use.</span></span>
+<span data-ttu-id="3d0d1-181">使用中の .NET Core SDK のバージョンを印刷します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-181">Prints out the version of the .NET Core SDK in use.</span></span>
 
 ---
 
-## <a name="dotnet-commands"></a><span data-ttu-id="11b75-182">dotnet コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-182">dotnet commands</span></span>
+## <a name="dotnet-commands"></a><span data-ttu-id="3d0d1-182">dotnet コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-182">dotnet commands</span></span>
 
-### <a name="general"></a><span data-ttu-id="11b75-183">全般</span><span class="sxs-lookup"><span data-stu-id="11b75-183">General</span></span>
+### <a name="general"></a><span data-ttu-id="3d0d1-183">全般</span><span class="sxs-lookup"><span data-stu-id="3d0d1-183">General</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="11b75-184">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="11b75-184">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="3d0d1-184">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3d0d1-184">.NET Core 2.1</span></span>](#tab/netcore21)
 
-| <span data-ttu-id="11b75-185">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-185">Command</span></span>                                       | <span data-ttu-id="11b75-186">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-186">Function</span></span>                                                            |
+| <span data-ttu-id="3d0d1-185">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-185">Command</span></span>                                       | <span data-ttu-id="3d0d1-186">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-186">Function</span></span>                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="11b75-187">dotnet build</span><span class="sxs-lookup"><span data-stu-id="11b75-187">dotnet build</span></span>](dotnet-build.md)               | <span data-ttu-id="11b75-188">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="11b75-188">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="11b75-189">dotnet build-server</span><span class="sxs-lookup"><span data-stu-id="11b75-189">dotnet build-server</span></span>](dotnet-build-server.md) | <span data-ttu-id="11b75-190">ビルドによって起動されたサーバーとやり取りします。</span><span class="sxs-lookup"><span data-stu-id="11b75-190">Interacts with servers started by a build.</span></span>                          |
-| [<span data-ttu-id="11b75-191">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="11b75-191">dotnet clean</span></span>](dotnet-clean.md)               | <span data-ttu-id="11b75-192">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="11b75-192">Clean build outputs.</span></span>                                                |
-| [<span data-ttu-id="11b75-193">dotnet help</span><span class="sxs-lookup"><span data-stu-id="11b75-193">dotnet help</span></span>](dotnet-help.md)                 | <span data-ttu-id="11b75-194">コマンドのより詳細なドキュメントをオンラインで表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-194">Shows more detailed documentation online for the command.</span></span>           |
-| [<span data-ttu-id="11b75-195">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="11b75-195">dotnet migrate</span></span>](dotnet-migrate.md)           | <span data-ttu-id="11b75-196">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-196">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="11b75-197">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="11b75-197">dotnet msbuild</span></span>](dotnet-msbuild.md)           | <span data-ttu-id="11b75-198">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="11b75-198">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="11b75-199">dotnet new</span><span class="sxs-lookup"><span data-stu-id="11b75-199">dotnet new</span></span>](dotnet-new.md)                   | <span data-ttu-id="11b75-200">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="11b75-200">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="11b75-201">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="11b75-201">dotnet pack</span></span>](dotnet-pack.md)                 | <span data-ttu-id="11b75-202">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="11b75-202">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="11b75-203">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="11b75-203">dotnet publish</span></span>](dotnet-publish.md)           | <span data-ttu-id="11b75-204">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-204">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="11b75-205">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="11b75-205">dotnet restore</span></span>](dotnet-restore.md)           | <span data-ttu-id="11b75-206">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="11b75-206">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="11b75-207">dotnet run</span><span class="sxs-lookup"><span data-stu-id="11b75-207">dotnet run</span></span>](dotnet-run.md)                   | <span data-ttu-id="11b75-208">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-208">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="11b75-209">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="11b75-209">dotnet sln</span></span>](dotnet-sln.md)                   | <span data-ttu-id="11b75-210">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="11b75-210">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="11b75-211">dotnet store</span><span class="sxs-lookup"><span data-stu-id="11b75-211">dotnet store</span></span>](dotnet-store.md)               | <span data-ttu-id="11b75-212">ランタイム パッケージ ストアにアセンブリを格納します。</span><span class="sxs-lookup"><span data-stu-id="11b75-212">Stores assemblies in the runtime package store.</span></span>                     |
-| [<span data-ttu-id="11b75-213">dotnet test</span><span class="sxs-lookup"><span data-stu-id="11b75-213">dotnet test</span></span>](dotnet-test.md)                 | <span data-ttu-id="11b75-214">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-214">Runs tests using a test runner.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-187">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3d0d1-187">dotnet build</span></span>](dotnet-build.md)               | <span data-ttu-id="3d0d1-188">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-188">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-189">dotnet build-server</span><span class="sxs-lookup"><span data-stu-id="3d0d1-189">dotnet build-server</span></span>](dotnet-build-server.md) | <span data-ttu-id="3d0d1-190">ビルドによって起動されたサーバーとやり取りします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-190">Interacts with servers started by a build.</span></span>                          |
+| [<span data-ttu-id="3d0d1-191">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3d0d1-191">dotnet clean</span></span>](dotnet-clean.md)               | <span data-ttu-id="3d0d1-192">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-192">Clean build outputs.</span></span>                                                |
+| [<span data-ttu-id="3d0d1-193">dotnet help</span><span class="sxs-lookup"><span data-stu-id="3d0d1-193">dotnet help</span></span>](dotnet-help.md)                 | <span data-ttu-id="3d0d1-194">コマンドのより詳細なドキュメントをオンラインで表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-194">Shows more detailed documentation online for the command.</span></span>           |
+| [<span data-ttu-id="3d0d1-195">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3d0d1-195">dotnet migrate</span></span>](dotnet-migrate.md)           | <span data-ttu-id="3d0d1-196">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-196">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="3d0d1-197">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3d0d1-197">dotnet msbuild</span></span>](dotnet-msbuild.md)           | <span data-ttu-id="3d0d1-198">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-198">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="3d0d1-199">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3d0d1-199">dotnet new</span></span>](dotnet-new.md)                   | <span data-ttu-id="3d0d1-200">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-200">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="3d0d1-201">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3d0d1-201">dotnet pack</span></span>](dotnet-pack.md)                 | <span data-ttu-id="3d0d1-202">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-202">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="3d0d1-203">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3d0d1-203">dotnet publish</span></span>](dotnet-publish.md)           | <span data-ttu-id="3d0d1-204">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-204">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="3d0d1-205">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3d0d1-205">dotnet restore</span></span>](dotnet-restore.md)           | <span data-ttu-id="3d0d1-206">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-206">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="3d0d1-207">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3d0d1-207">dotnet run</span></span>](dotnet-run.md)                   | <span data-ttu-id="3d0d1-208">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-208">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="3d0d1-209">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3d0d1-209">dotnet sln</span></span>](dotnet-sln.md)                   | <span data-ttu-id="3d0d1-210">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-210">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="3d0d1-211">dotnet store</span><span class="sxs-lookup"><span data-stu-id="3d0d1-211">dotnet store</span></span>](dotnet-store.md)               | <span data-ttu-id="3d0d1-212">ランタイム パッケージ ストアにアセンブリを格納します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-212">Stores assemblies in the runtime package store.</span></span>                     |
+| [<span data-ttu-id="3d0d1-213">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3d0d1-213">dotnet test</span></span>](dotnet-test.md)                 | <span data-ttu-id="3d0d1-214">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-214">Runs tests using a test runner.</span></span>                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="11b75-215">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="11b75-215">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="3d0d1-215">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3d0d1-215">.NET Core 2.0</span></span>](#tab/netcore20)
 
-| <span data-ttu-id="11b75-216">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-216">Command</span></span>                             | <span data-ttu-id="11b75-217">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-217">Function</span></span>                                                            |
+| <span data-ttu-id="3d0d1-216">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-216">Command</span></span>                             | <span data-ttu-id="3d0d1-217">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-217">Function</span></span>                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="11b75-218">dotnet build</span><span class="sxs-lookup"><span data-stu-id="11b75-218">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="11b75-219">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="11b75-219">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="11b75-220">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="11b75-220">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="11b75-221">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="11b75-221">Clean build outputs.</span></span>                                              |
-| [<span data-ttu-id="11b75-222">dotnet help</span><span class="sxs-lookup"><span data-stu-id="11b75-222">dotnet help</span></span>](dotnet-help.md)       | <span data-ttu-id="11b75-223">コマンドのより詳細なドキュメントをオンラインで表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-223">Shows more detailed documentation online for the command.</span></span>           |
-| [<span data-ttu-id="11b75-224">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="11b75-224">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="11b75-225">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-225">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="11b75-226">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="11b75-226">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="11b75-227">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="11b75-227">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="11b75-228">dotnet new</span><span class="sxs-lookup"><span data-stu-id="11b75-228">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="11b75-229">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="11b75-229">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="11b75-230">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="11b75-230">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="11b75-231">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="11b75-231">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="11b75-232">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="11b75-232">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="11b75-233">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-233">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="11b75-234">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="11b75-234">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="11b75-235">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="11b75-235">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="11b75-236">dotnet run</span><span class="sxs-lookup"><span data-stu-id="11b75-236">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="11b75-237">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-237">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="11b75-238">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="11b75-238">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="11b75-239">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="11b75-239">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="11b75-240">dotnet store</span><span class="sxs-lookup"><span data-stu-id="11b75-240">dotnet store</span></span>](dotnet-store.md)     | <span data-ttu-id="11b75-241">ランタイム パッケージ ストアにアセンブリを格納します。</span><span class="sxs-lookup"><span data-stu-id="11b75-241">Stores assemblies in the runtime package store.</span></span>                     |
-| [<span data-ttu-id="11b75-242">dotnet test</span><span class="sxs-lookup"><span data-stu-id="11b75-242">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="11b75-243">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-243">Runs tests using a test runner.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-218">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3d0d1-218">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="3d0d1-219">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-219">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-220">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3d0d1-220">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="3d0d1-221">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-221">Clean build outputs.</span></span>                                              |
+| [<span data-ttu-id="3d0d1-222">dotnet help</span><span class="sxs-lookup"><span data-stu-id="3d0d1-222">dotnet help</span></span>](dotnet-help.md)       | <span data-ttu-id="3d0d1-223">コマンドのより詳細なドキュメントをオンラインで表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-223">Shows more detailed documentation online for the command.</span></span>           |
+| [<span data-ttu-id="3d0d1-224">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3d0d1-224">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="3d0d1-225">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-225">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="3d0d1-226">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3d0d1-226">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="3d0d1-227">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-227">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="3d0d1-228">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3d0d1-228">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="3d0d1-229">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-229">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="3d0d1-230">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3d0d1-230">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="3d0d1-231">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-231">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="3d0d1-232">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3d0d1-232">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="3d0d1-233">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-233">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="3d0d1-234">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3d0d1-234">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="3d0d1-235">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-235">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="3d0d1-236">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3d0d1-236">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="3d0d1-237">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-237">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="3d0d1-238">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3d0d1-238">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="3d0d1-239">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-239">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="3d0d1-240">dotnet store</span><span class="sxs-lookup"><span data-stu-id="3d0d1-240">dotnet store</span></span>](dotnet-store.md)     | <span data-ttu-id="3d0d1-241">ランタイム パッケージ ストアにアセンブリを格納します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-241">Stores assemblies in the runtime package store.</span></span>                     |
+| [<span data-ttu-id="3d0d1-242">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3d0d1-242">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="3d0d1-243">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-243">Runs tests using a test runner.</span></span>                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="11b75-244">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="11b75-244">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3d0d1-244">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3d0d1-244">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-| <span data-ttu-id="11b75-245">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-245">Command</span></span>                             | <span data-ttu-id="11b75-246">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-246">Function</span></span>                                                            |
+| <span data-ttu-id="3d0d1-245">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-245">Command</span></span>                             | <span data-ttu-id="3d0d1-246">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-246">Function</span></span>                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="11b75-247">dotnet build</span><span class="sxs-lookup"><span data-stu-id="11b75-247">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="11b75-248">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="11b75-248">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="11b75-249">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="11b75-249">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="11b75-250">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="11b75-250">Clean build outputs.</span></span>                                              |
-| [<span data-ttu-id="11b75-251">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="11b75-251">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="11b75-252">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-252">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="11b75-253">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="11b75-253">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="11b75-254">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="11b75-254">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="11b75-255">dotnet new</span><span class="sxs-lookup"><span data-stu-id="11b75-255">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="11b75-256">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="11b75-256">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="11b75-257">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="11b75-257">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="11b75-258">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="11b75-258">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="11b75-259">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="11b75-259">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="11b75-260">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-260">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="11b75-261">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="11b75-261">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="11b75-262">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="11b75-262">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="11b75-263">dotnet run</span><span class="sxs-lookup"><span data-stu-id="11b75-263">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="11b75-264">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-264">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="11b75-265">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="11b75-265">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="11b75-266">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="11b75-266">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="11b75-267">dotnet test</span><span class="sxs-lookup"><span data-stu-id="11b75-267">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="11b75-268">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-268">Runs tests using a test runner.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-247">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3d0d1-247">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="3d0d1-248">.NET Core アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-248">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="3d0d1-249">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3d0d1-249">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="3d0d1-250">クリーン ビルド出力です。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-250">Clean build outputs.</span></span>                                              |
+| [<span data-ttu-id="3d0d1-251">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3d0d1-251">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="3d0d1-252">有効な Preview 2 プロジェクトを .NET Core SDK 1.0 プロジェクトに移行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-252">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="3d0d1-253">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3d0d1-253">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="3d0d1-254">MSBuild コマンド ラインへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-254">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="3d0d1-255">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3d0d1-255">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="3d0d1-256">指定されたテンプレートの C# または F# プロジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-256">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="3d0d1-257">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3d0d1-257">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="3d0d1-258">コードの NuGet パッケージを作成します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-258">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="3d0d1-259">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3d0d1-259">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="3d0d1-260">.NET Framework に依存するアプリケーションまたは自己完結型アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-260">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="3d0d1-261">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3d0d1-261">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="3d0d1-262">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-262">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="3d0d1-263">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3d0d1-263">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="3d0d1-264">ソースからアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-264">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="3d0d1-265">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3d0d1-265">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="3d0d1-266">ソリューション ファイルのプロジェクトを追加、削除、一覧表示するオプション。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-266">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="3d0d1-267">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3d0d1-267">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="3d0d1-268">テスト ランナーを使用してテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-268">Runs tests using a test runner.</span></span>                                     |
 
 ---
 
-### <a name="project-references"></a><span data-ttu-id="11b75-269">プロジェクト参照</span><span class="sxs-lookup"><span data-stu-id="11b75-269">Project references</span></span>
+### <a name="project-references"></a><span data-ttu-id="3d0d1-269">プロジェクト参照</span><span class="sxs-lookup"><span data-stu-id="3d0d1-269">Project references</span></span>
 
-<span data-ttu-id="11b75-270">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-270">Command</span></span> | <span data-ttu-id="11b75-271">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-271">Function</span></span>
+<span data-ttu-id="3d0d1-270">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-270">Command</span></span> | <span data-ttu-id="3d0d1-271">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-271">Function</span></span>
 --- | ---
-[<span data-ttu-id="11b75-272">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="11b75-272">dotnet add reference</span></span>](dotnet-add-reference.md) | <span data-ttu-id="11b75-273">プロジェクト参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="11b75-273">Adds a project reference.</span></span>
-[<span data-ttu-id="11b75-274">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="11b75-274">dotnet list reference</span></span>](dotnet-list-reference.md) | <span data-ttu-id="11b75-275">プロジェクト参照をリストします。</span><span class="sxs-lookup"><span data-stu-id="11b75-275">Lists project references.</span></span>
-[<span data-ttu-id="11b75-276">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="11b75-276">dotnet remove reference</span></span>](dotnet-remove-reference.md) | <span data-ttu-id="11b75-277">プロジェクト参照を削除します。</span><span class="sxs-lookup"><span data-stu-id="11b75-277">Removes a project reference.</span></span>
+[<span data-ttu-id="3d0d1-272">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="3d0d1-272">dotnet add reference</span></span>](dotnet-add-reference.md) | <span data-ttu-id="3d0d1-273">プロジェクト参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-273">Adds a project reference.</span></span>
+[<span data-ttu-id="3d0d1-274">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="3d0d1-274">dotnet list reference</span></span>](dotnet-list-reference.md) | <span data-ttu-id="3d0d1-275">プロジェクト参照をリストします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-275">Lists project references.</span></span>
+[<span data-ttu-id="3d0d1-276">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="3d0d1-276">dotnet remove reference</span></span>](dotnet-remove-reference.md) | <span data-ttu-id="3d0d1-277">プロジェクト参照を削除します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-277">Removes a project reference.</span></span>
 
-### <a name="nuget-packages"></a><span data-ttu-id="11b75-278">NuGet パッケージ</span><span class="sxs-lookup"><span data-stu-id="11b75-278">NuGet packages</span></span>
+### <a name="nuget-packages"></a><span data-ttu-id="3d0d1-278">NuGet パッケージ</span><span class="sxs-lookup"><span data-stu-id="3d0d1-278">NuGet packages</span></span>
 
-<span data-ttu-id="11b75-279">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-279">Command</span></span> | <span data-ttu-id="11b75-280">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-280">Function</span></span>
+<span data-ttu-id="3d0d1-279">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-279">Command</span></span> | <span data-ttu-id="3d0d1-280">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-280">Function</span></span>
 --- | ---
-[<span data-ttu-id="11b75-281">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="11b75-281">dotnet add package</span></span>](dotnet-add-package.md) | <span data-ttu-id="11b75-282">NuGet パッケージを追加します。</span><span class="sxs-lookup"><span data-stu-id="11b75-282">Adds a NuGet package.</span></span>
-[<span data-ttu-id="11b75-283">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="11b75-283">dotnet remove package</span></span>](dotnet-remove-package.md) | <span data-ttu-id="11b75-284">NuGet パッケージを削除します。</span><span class="sxs-lookup"><span data-stu-id="11b75-284">Removes a NuGet package.</span></span>
+[<span data-ttu-id="3d0d1-281">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="3d0d1-281">dotnet add package</span></span>](dotnet-add-package.md) | <span data-ttu-id="3d0d1-282">NuGet パッケージを追加します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-282">Adds a NuGet package.</span></span>
+[<span data-ttu-id="3d0d1-283">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="3d0d1-283">dotnet remove package</span></span>](dotnet-remove-package.md) | <span data-ttu-id="3d0d1-284">NuGet パッケージを削除します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-284">Removes a NuGet package.</span></span>
 
-### <a name="nuget-commands"></a><span data-ttu-id="11b75-285">NuGet コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-285">NuGet commands</span></span>
+### <a name="nuget-commands"></a><span data-ttu-id="3d0d1-285">NuGet コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-285">NuGet commands</span></span>
 
-<span data-ttu-id="11b75-286">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-286">Command</span></span> | <span data-ttu-id="11b75-287">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-287">Function</span></span>
+<span data-ttu-id="3d0d1-286">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-286">Command</span></span> | <span data-ttu-id="3d0d1-287">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-287">Function</span></span>
 --- | ---
-[<span data-ttu-id="11b75-288">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="11b75-288">dotnet nuget delete</span></span>](dotnet-nuget-delete.md) | <span data-ttu-id="11b75-289">サーバーからパッケージを削除または一覧から削除します。</span><span class="sxs-lookup"><span data-stu-id="11b75-289">Deletes or unlists a package from the server.</span></span>
-[<span data-ttu-id="11b75-290">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="11b75-290">dotnet nuget locals</span></span>](dotnet-nuget-locals.md) | <span data-ttu-id="11b75-291">HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-291">Clears or lists local NuGet resources such as http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
-[<span data-ttu-id="11b75-292">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="11b75-292">dotnet nuget push</span></span>](dotnet-nuget-push.md) | <span data-ttu-id="11b75-293">パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-293">Pushes a package to the server and publishes it.</span></span>
+[<span data-ttu-id="3d0d1-288">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="3d0d1-288">dotnet nuget delete</span></span>](dotnet-nuget-delete.md) | <span data-ttu-id="3d0d1-289">サーバーからパッケージを削除または一覧から削除します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-289">Deletes or unlists a package from the server.</span></span>
+[<span data-ttu-id="3d0d1-290">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="3d0d1-290">dotnet nuget locals</span></span>](dotnet-nuget-locals.md) | <span data-ttu-id="3d0d1-291">HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-291">Clears or lists local NuGet resources such as http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
+[<span data-ttu-id="3d0d1-292">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="3d0d1-292">dotnet nuget push</span></span>](dotnet-nuget-push.md) | <span data-ttu-id="3d0d1-293">パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-293">Pushes a package to the server and publishes it.</span></span>
 
-### <a name="global-tools-commands"></a><span data-ttu-id="11b75-294">グローバル ツール コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-294">Global Tools commands</span></span>
+### <a name="global-tools-commands"></a><span data-ttu-id="3d0d1-294">グローバル ツール コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-294">Global Tools commands</span></span>
 
-<span data-ttu-id="11b75-295">[.NET Core グローバル ツール](global-tools.md)は .NET Core SDK 2.1.300 以降で使用できます。</span><span class="sxs-lookup"><span data-stu-id="11b75-295">[.NET Core Global Tools](global-tools.md) are available starting with .NET Core SDK 2.1.300:</span></span>
+<span data-ttu-id="3d0d1-295">[.NET Core グローバル ツール](global-tools.md)は .NET Core SDK 2.1.300 以降で使用できます。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-295">[.NET Core Global Tools](global-tools.md) are available starting with .NET Core SDK 2.1.300:</span></span>
 
-<span data-ttu-id="11b75-296">コマンド</span><span class="sxs-lookup"><span data-stu-id="11b75-296">Command</span></span> | <span data-ttu-id="11b75-297">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-297">Function</span></span>
+<span data-ttu-id="3d0d1-296">コマンド</span><span class="sxs-lookup"><span data-stu-id="3d0d1-296">Command</span></span> | <span data-ttu-id="3d0d1-297">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-297">Function</span></span>
 --- | ---
-[<span data-ttu-id="11b75-298">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="11b75-298">dotnet tool install</span></span>](dotnet-tool-install.md) | <span data-ttu-id="11b75-299">グローバル ツールをマシンにインストールします。</span><span class="sxs-lookup"><span data-stu-id="11b75-299">Installs a Global Tool on your machine.</span></span>
-[<span data-ttu-id="11b75-300">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="11b75-300">dotnet tool list</span></span>](dotnet-tool-list.md) | <span data-ttu-id="11b75-301">マシン上の既定のディレクトリまたは指定したパスに現在インストールされているすべてのグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-301">Lists all Global Tools currently installed in the default directory on your machine or in the specified path.</span></span>
-[<span data-ttu-id="11b75-302">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="11b75-302">dotnet tool uninstall</span></span>](dotnet-tool-uninstall.md) | <span data-ttu-id="11b75-303">グローバル ツールをマシンからアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="11b75-303">Uninstalls a Global Tool from your machine.</span></span>
-[<span data-ttu-id="11b75-304">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="11b75-304">dotnet tool update</span></span>](dotnet-tool-update.md) | <span data-ttu-id="11b75-305">マシン上のグローバル ツールを更新します。</span><span class="sxs-lookup"><span data-stu-id="11b75-305">Updates a Global Tool on your machine.</span></span>
+[<span data-ttu-id="3d0d1-298">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="3d0d1-298">dotnet tool install</span></span>](dotnet-tool-install.md) | <span data-ttu-id="3d0d1-299">グローバル ツールをマシンにインストールします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-299">Installs a Global Tool on your machine.</span></span>
+[<span data-ttu-id="3d0d1-300">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="3d0d1-300">dotnet tool list</span></span>](dotnet-tool-list.md) | <span data-ttu-id="3d0d1-301">マシン上の既定のディレクトリまたは指定したパスに現在インストールされているすべてのグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-301">Lists all Global Tools currently installed in the default directory on your machine or in the specified path.</span></span>
+[<span data-ttu-id="3d0d1-302">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="3d0d1-302">dotnet tool uninstall</span></span>](dotnet-tool-uninstall.md) | <span data-ttu-id="3d0d1-303">グローバル ツールをマシンからアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-303">Uninstalls a Global Tool from your machine.</span></span>
+[<span data-ttu-id="3d0d1-304">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="3d0d1-304">dotnet tool update</span></span>](dotnet-tool-update.md) | <span data-ttu-id="3d0d1-305">マシン上のグローバル ツールを更新します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-305">Updates a Global Tool on your machine.</span></span>
 
-### <a name="additional-tools"></a><span data-ttu-id="11b75-306">その他のツール</span><span class="sxs-lookup"><span data-stu-id="11b75-306">Additional tools</span></span>
+### <a name="additional-tools"></a><span data-ttu-id="3d0d1-306">その他のツール</span><span class="sxs-lookup"><span data-stu-id="3d0d1-306">Additional tools</span></span>
 
-<span data-ttu-id="11b75-307">.NET Core SDK 2.1.300 以降では、`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="11b75-307">Starting with .NET Core SDK 2.1.300, a number of tools that were available only on a per project basis using `DotnetCliToolReference` are now available as part of the .NET Core SDK.</span></span> <span data-ttu-id="11b75-308">これらのツールを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="11b75-308">These tools are listed in the following table:</span></span>
+<span data-ttu-id="3d0d1-307">.NET Core SDK 2.1.300 以降では、`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-307">Starting with .NET Core SDK 2.1.300, a number of tools that were available only on a per project basis using `DotnetCliToolReference` are now available as part of the .NET Core SDK.</span></span> <span data-ttu-id="3d0d1-308">これらのツールを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-308">These tools are listed in the following table:</span></span>
 
-| <span data-ttu-id="11b75-309">ツール</span><span class="sxs-lookup"><span data-stu-id="11b75-309">Tool</span></span>                                              | <span data-ttu-id="11b75-310">関数</span><span class="sxs-lookup"><span data-stu-id="11b75-310">Function</span></span>                                                     |
+| <span data-ttu-id="3d0d1-309">ツール</span><span class="sxs-lookup"><span data-stu-id="3d0d1-309">Tool</span></span>                                              | <span data-ttu-id="3d0d1-310">関数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-310">Function</span></span>                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| <span data-ttu-id="11b75-311">dev-certs</span><span class="sxs-lookup"><span data-stu-id="11b75-311">dev-certs</span></span>                                         | <span data-ttu-id="11b75-312">開発証明書を作成および管理します。</span><span class="sxs-lookup"><span data-stu-id="11b75-312">Creates and manages development certificates.</span></span>                |
-| [<span data-ttu-id="11b75-313">ef</span><span class="sxs-lookup"><span data-stu-id="11b75-313">ef</span></span>](/ef/core/miscellaneous/cli/dotnet)           | <span data-ttu-id="11b75-314">Entity Framework Core コマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="11b75-314">Entity Framework Core command-line tools.</span></span>                    |
-| <span data-ttu-id="11b75-315">sql-cache</span><span class="sxs-lookup"><span data-stu-id="11b75-315">sql-cache</span></span>                                         | <span data-ttu-id="11b75-316">SQL Server キャッシュ コマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="11b75-316">SQL Server cache command-line tools.</span></span>                         |
-| [<span data-ttu-id="11b75-317">user-secrets</span><span class="sxs-lookup"><span data-stu-id="11b75-317">user-secrets</span></span>](/aspnet/core/security/app-secrets) | <span data-ttu-id="11b75-318">開発ユーザーのシークレットを管理します。</span><span class="sxs-lookup"><span data-stu-id="11b75-318">Manages development user secrets.</span></span>                            |
-| [<span data-ttu-id="11b75-319">watch</span><span class="sxs-lookup"><span data-stu-id="11b75-319">watch</span></span>](/aspnet/core/tutorials/dotnet-watch)      | <span data-ttu-id="11b75-320">ファイルが変化するとコマンドを実行するファイル ウォッチャーを起動します。</span><span class="sxs-lookup"><span data-stu-id="11b75-320">Starts a file watcher that runs a command when files change.</span></span> |
+| <span data-ttu-id="3d0d1-311">dev-certs</span><span class="sxs-lookup"><span data-stu-id="3d0d1-311">dev-certs</span></span>                                         | <span data-ttu-id="3d0d1-312">開発証明書を作成および管理します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-312">Creates and manages development certificates.</span></span>                |
+| [<span data-ttu-id="3d0d1-313">ef</span><span class="sxs-lookup"><span data-stu-id="3d0d1-313">ef</span></span>](/ef/core/miscellaneous/cli/dotnet)           | <span data-ttu-id="3d0d1-314">Entity Framework Core コマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-314">Entity Framework Core command-line tools.</span></span>                    |
+| <span data-ttu-id="3d0d1-315">sql-cache</span><span class="sxs-lookup"><span data-stu-id="3d0d1-315">sql-cache</span></span>                                         | <span data-ttu-id="3d0d1-316">SQL Server キャッシュ コマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-316">SQL Server cache command-line tools.</span></span>                         |
+| [<span data-ttu-id="3d0d1-317">user-secrets</span><span class="sxs-lookup"><span data-stu-id="3d0d1-317">user-secrets</span></span>](/aspnet/core/security/app-secrets) | <span data-ttu-id="3d0d1-318">開発ユーザーのシークレットを管理します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-318">Manages development user secrets.</span></span>                            |
+| [<span data-ttu-id="3d0d1-319">watch</span><span class="sxs-lookup"><span data-stu-id="3d0d1-319">watch</span></span>](/aspnet/core/tutorials/dotnet-watch)      | <span data-ttu-id="3d0d1-320">ファイルが変化するとコマンドを実行するファイル ウォッチャーを起動します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-320">Starts a file watcher that runs a command when files change.</span></span> |
 
-<span data-ttu-id="11b75-321">各ツールの詳細については、`dotnet <tool-name> --help` と入力してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-321">For more information about each tool, type `dotnet <tool-name> --help`.</span></span>
+<span data-ttu-id="3d0d1-321">各ツールの詳細については、`dotnet <tool-name> --help` と入力してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-321">For more information about each tool, type `dotnet <tool-name> --help`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="11b75-322">使用例</span><span class="sxs-lookup"><span data-stu-id="11b75-322">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="3d0d1-322">使用例</span><span class="sxs-lookup"><span data-stu-id="3d0d1-322">Examples</span></span>
 
-<span data-ttu-id="11b75-323">新しい .NET Core コンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="11b75-323">Creates a new .NET Core console application:</span></span>
+<span data-ttu-id="3d0d1-323">新しい .NET Core コンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-323">Creates a new .NET Core console application:</span></span>
 
 `dotnet new console`
 
-<span data-ttu-id="11b75-324">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="11b75-324">Restore dependencies for a given application:</span></span>
+<span data-ttu-id="3d0d1-324">指定されたアプリケーションの依存関係を復元します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-324">Restore dependencies for a given application:</span></span>
 
 `dotnet restore`
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-<span data-ttu-id="11b75-325">指定されたディレクトリにプロジェクトとその依存関係をビルドします。</span><span class="sxs-lookup"><span data-stu-id="11b75-325">Build a project and its dependencies in a given directory:</span></span>
+<span data-ttu-id="3d0d1-325">指定されたディレクトリにプロジェクトとその依存関係をビルドします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-325">Build a project and its dependencies in a given directory:</span></span>
 
 `dotnet build`
 
-<span data-ttu-id="11b75-326">`myapp.dll` など、アプリケーション DLL を実行します。</span><span class="sxs-lookup"><span data-stu-id="11b75-326">Run an application DLL, such as `myapp.dll`:</span></span>
+<span data-ttu-id="3d0d1-326">`myapp.dll` など、アプリケーション DLL を実行します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-326">Run an application DLL, such as `myapp.dll`:</span></span>
 
 `dotnet myapp.dll`
 
-## <a name="environment-variables"></a><span data-ttu-id="11b75-327">環境変数</span><span class="sxs-lookup"><span data-stu-id="11b75-327">Environment variables</span></span>
+## <a name="environment-variables"></a><span data-ttu-id="3d0d1-327">環境変数</span><span class="sxs-lookup"><span data-stu-id="3d0d1-327">Environment variables</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="11b75-328">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="11b75-328">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="3d0d1-328">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3d0d1-328">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
-<span data-ttu-id="11b75-329">グローバル パッケージ フォルダー。</span><span class="sxs-lookup"><span data-stu-id="11b75-329">The global packages folder.</span></span> <span data-ttu-id="11b75-330">設定されていない場合は、既定で `~/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="11b75-330">If not set, it defaults to `~/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+<span data-ttu-id="3d0d1-329">グローバル パッケージ フォルダー。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-329">The global packages folder.</span></span> <span data-ttu-id="3d0d1-330">設定されていない場合は、既定で `~/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-330">If not set, it defaults to `~/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
 
 `DOTNET_SERVICING`
 
-<span data-ttu-id="11b75-331">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-331">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+<span data-ttu-id="3d0d1-331">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-331">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-<span data-ttu-id="11b75-332">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-332">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="11b75-333">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-333">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="11b75-334">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-334">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="11b75-335">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="11b75-335">If not set, the default is `false` and the telemetry feature is active.</span></span>
+<span data-ttu-id="3d0d1-332">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-332">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3d0d1-333">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-333">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3d0d1-334">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-334">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3d0d1-335">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-335">If not set, the default is `false` and the telemetry feature is active.</span></span>
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-<span data-ttu-id="11b75-336">.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-336">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="11b75-337">設定されていない場合は、既定で `true` になります。</span><span class="sxs-lookup"><span data-stu-id="11b75-337">If not set, it defaults to `true`.</span></span> <span data-ttu-id="11b75-338">`false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。</span><span class="sxs-lookup"><span data-stu-id="11b75-338">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="11b75-339">複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-339">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
+<span data-ttu-id="3d0d1-336">.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-336">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="3d0d1-337">設定されていない場合は、既定で `true` になります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-337">If not set, it defaults to `true`.</span></span> <span data-ttu-id="3d0d1-338">`false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-338">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="3d0d1-339">複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-339">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-<span data-ttu-id="11b75-340">`0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。</span><span class="sxs-lookup"><span data-stu-id="11b75-340">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="11b75-341">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-341">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
+<span data-ttu-id="3d0d1-340">`0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-340">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="3d0d1-341">詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-341">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="11b75-342">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="11b75-342">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="3d0d1-342">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3d0d1-342">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
-<span data-ttu-id="11b75-343">プライマリ パッケージのキャッシュです。</span><span class="sxs-lookup"><span data-stu-id="11b75-343">The primary package cache.</span></span> <span data-ttu-id="11b75-344">設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="11b75-344">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+<span data-ttu-id="3d0d1-343">プライマリ パッケージのキャッシュです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-343">The primary package cache.</span></span> <span data-ttu-id="3d0d1-344">設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-344">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
 
 `DOTNET_SERVICING`
 
-<span data-ttu-id="11b75-345">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-345">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+<span data-ttu-id="3d0d1-345">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-345">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-<span data-ttu-id="11b75-346">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-346">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="11b75-347">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-347">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="11b75-348">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-348">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="11b75-349">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="11b75-349">If not set, the default is `false` and the telemetry feature is active.</span></span>
+<span data-ttu-id="3d0d1-346">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-346">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3d0d1-347">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-347">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3d0d1-348">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-348">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3d0d1-349">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-349">If not set, the default is `false` and the telemetry feature is active.</span></span>
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-<span data-ttu-id="11b75-350">.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-350">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="11b75-351">設定されていない場合は、既定で `true` になります。</span><span class="sxs-lookup"><span data-stu-id="11b75-351">If not set, it defaults to `true`.</span></span> <span data-ttu-id="11b75-352">`false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。</span><span class="sxs-lookup"><span data-stu-id="11b75-352">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="11b75-353">複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11b75-353">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
+<span data-ttu-id="3d0d1-350">.NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-350">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="3d0d1-351">設定されていない場合は、既定で `true` になります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-351">If not set, it defaults to `true`.</span></span> <span data-ttu-id="3d0d1-352">`false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-352">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="3d0d1-353">複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-353">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="11b75-354">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="11b75-354">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="3d0d1-354">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3d0d1-354">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
-<span data-ttu-id="11b75-355">プライマリ パッケージのキャッシュです。</span><span class="sxs-lookup"><span data-stu-id="11b75-355">The primary package cache.</span></span> <span data-ttu-id="11b75-356">設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="11b75-356">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+<span data-ttu-id="3d0d1-355">プライマリ パッケージのキャッシュです。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-355">The primary package cache.</span></span> <span data-ttu-id="3d0d1-356">設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-356">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
 
 `DOTNET_SERVICING`
 
-<span data-ttu-id="11b75-357">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-357">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+<span data-ttu-id="3d0d1-357">ランタイムの読み込み時に共有ホストで使用するサービス インデックスの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-357">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-<span data-ttu-id="11b75-358">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11b75-358">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="11b75-359">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-359">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="11b75-360">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="11b75-360">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="11b75-361">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="11b75-361">If not set, the default is `false` and the telemetry feature is active.</span></span>
+<span data-ttu-id="3d0d1-358">.NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-358">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3d0d1-359">`true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-359">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3d0d1-360">それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-360">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3d0d1-361">設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。</span><span class="sxs-lookup"><span data-stu-id="3d0d1-361">If not set, the default is `false` and the telemetry feature is active.</span></span>
 
 ---
 
-## <a name="see-also"></a><span data-ttu-id="11b75-362">関連項目</span><span class="sxs-lookup"><span data-stu-id="11b75-362">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d0d1-362">関連項目</span><span class="sxs-lookup"><span data-stu-id="3d0d1-362">See also</span></span>
 
-- [<span data-ttu-id="11b75-363">ランタイム構成ファイル</span><span class="sxs-lookup"><span data-stu-id="11b75-363">Runtime Configuration Files</span></span>](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [<span data-ttu-id="3d0d1-363">ランタイム構成ファイル</span><span class="sxs-lookup"><span data-stu-id="3d0d1-363">Runtime Configuration Files</span></span>](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
