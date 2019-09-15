@@ -2,32 +2,32 @@
 title: カスタム式エディターの使用
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9e179914a56874ddc9f3f170d35ae04c97dd859e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169963"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988788"
 ---
-# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="d8b2d-102">カスタム式エディターの使用</span><span class="sxs-lookup"><span data-stu-id="d8b2d-102">Using a Custom Expression Editor</span></span>
-<span data-ttu-id="d8b2d-103">カスタム式エディターを実装して、式の編集を多機能化したり単純化したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="d8b2d-104">たとえば、次のような場合にカスタム式エディターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
+# <a name="using-a-custom-expression-editor"></a><span data-ttu-id="c9033-102">カスタム式エディターの使用</span><span class="sxs-lookup"><span data-stu-id="c9033-102">Using a Custom Expression Editor</span></span>
+<span data-ttu-id="c9033-103">カスタム式エディターを実装して、式の編集を多機能化したり単純化したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="c9033-103">A custom expression editor can be implemented to provide a richer or simpler expression editing experience.</span></span> <span data-ttu-id="c9033-104">たとえば、次のような場合にカスタム式エディターを使用できます。</span><span class="sxs-lookup"><span data-stu-id="c9033-104">There are several scenarios in which you might want to use a custom expression editor:</span></span>  
   
-- <span data-ttu-id="d8b2d-105">再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="d8b2d-106">Visual Studio の既定の式エディターは、再ホストされたアプリケーションで使用できないために、この機能を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-106">This functionality must be provided because the default Visual Studio expression editor cannot be used in rehosted applications.</span></span>  
+- <span data-ttu-id="c9033-105">再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。</span><span class="sxs-lookup"><span data-stu-id="c9033-105">To provide support for IntelliSense and other rich editing features in a rehosted workflow designer.</span></span> <span data-ttu-id="c9033-106">既定の Visual Studio 式エディターは再ホストされたアプリケーションでは使用できないため、この機能を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c9033-106">This functionality must be provided because the default Visual Studio expression editor cannot be used in rehosted applications.</span></span>  
   
-- <span data-ttu-id="d8b2d-107">Visual Basic の学習または Visual Basic 式を処理するなどの必要はありません、ように式のビジネス アナリスト ユーザーのエクスペリエンスを編集しやすいようにします。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
+- <span data-ttu-id="c9033-107">ビジネスアナリストのユーザーのための式の編集エクスペリエンスを単純化するために、たとえば Visual Basic 式の Visual Basic 学習や処理を行うために必要とされないようにします。</span><span class="sxs-lookup"><span data-stu-id="c9033-107">To simplify the expression editing experience for the business analyst users, so that they are not, for example, required to learn Visual Basic or deal with Visual Basic expressions.</span></span>  
   
- <span data-ttu-id="d8b2d-108">カスタム式エディターを実装するには、次の 3 つの基本的な手順を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
+ <span data-ttu-id="c9033-108">カスタム式エディターを実装するには、次の 3 つの基本的な手順を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c9033-108">Three basic steps are needed to implement a custom expression editor:</span></span>  
   
-1. <span data-ttu-id="d8b2d-109"><xref:System.Activities.Presentation.View.IExpressionEditorService> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="d8b2d-110">このインターフェイスは、式エディターの作成と破棄を管理します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-110">This interface manages the creation and destruction of expression editors.</span></span>  
+1. <span data-ttu-id="c9033-109"><xref:System.Activities.Presentation.View.IExpressionEditorService> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="c9033-109">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="c9033-110">このインターフェイスは、式エディターの作成と破棄を管理します。</span><span class="sxs-lookup"><span data-stu-id="c9033-110">This interface manages the creation and destruction of expression editors.</span></span>  
   
-2. <span data-ttu-id="d8b2d-111"><xref:System.Activities.Presentation.View.IExpressionEditorInstance> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="d8b2d-112">このインターフェイスは、式エディター UI に UI を実装します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-112">This interface implements the UI for expression editing UI.</span></span>  
+2. <span data-ttu-id="c9033-111"><xref:System.Activities.Presentation.View.IExpressionEditorInstance> インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="c9033-111">Implement the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface.</span></span> <span data-ttu-id="c9033-112">このインターフェイスは、式エディター UI に UI を実装します。</span><span class="sxs-lookup"><span data-stu-id="c9033-112">This interface implements the UI for expression editing UI.</span></span>  
   
-3. <span data-ttu-id="d8b2d-113">再ホストされたワークフロー アプリケーションで <xref:System.Activities.Presentation.View.IExpressionEditorService> を公開します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
+3. <span data-ttu-id="c9033-113">再ホストされたワークフロー アプリケーションで <xref:System.Activities.Presentation.View.IExpressionEditorService> を公開します。</span><span class="sxs-lookup"><span data-stu-id="c9033-113">Publish the <xref:System.Activities.Presentation.View.IExpressionEditorService> in your rehosted workflow application.</span></span>  
   
-## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="d8b2d-114">クラス ライブラリ内のカスタム式エディターを実装する</span><span class="sxs-lookup"><span data-stu-id="d8b2d-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
- <span data-ttu-id="d8b2d-115">次のコードは、MyExpressionEditorService ライブラリ プロジェクトに含まれている `MyEditorService` インターフェイスを実装する (概念実証) <xref:System.Activities.Presentation.View.IExpressionEditorService> クラスのサンプル コードです。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
+## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a><span data-ttu-id="c9033-114">クラス ライブラリ内のカスタム式エディターを実装する</span><span class="sxs-lookup"><span data-stu-id="c9033-114">Implementing a Custom Expression Editor in a Class Library</span></span>  
+ <span data-ttu-id="c9033-115">次のコードは、MyExpressionEditorService ライブラリ プロジェクトに含まれている `MyEditorService` インターフェイスを実装する (概念実証) <xref:System.Activities.Presentation.View.IExpressionEditorService> クラスのサンプル コードです。</span><span class="sxs-lookup"><span data-stu-id="c9033-115">Here is a sample of code for a (proof of concept) `MyEditorService` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface is contained in a MyExpressionEditorService library project.</span></span>  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Activities.Presentation.View;  
@@ -71,9 +71,9 @@ namespace MyExpressionEditorService
 }  
 ```  
   
- <span data-ttu-id="d8b2d-116">MyExpressionEditorService ライブラリ プロジェクトの `MyExpressionEditorInstance` インターフェイスを実装する <xref:System.Activities.Presentation.View.IExpressionEditorInstance> クラスのコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
+ <span data-ttu-id="c9033-116">MyExpressionEditorService ライブラリ プロジェクトの `MyExpressionEditorInstance` インターフェイスを実装する <xref:System.Activities.Presentation.View.IExpressionEditorInstance> クラスのコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="c9033-116">Here is the code for a `MyExpressionEditorInstance` class that implements the <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interface in a MyExpressionEditorService library project.</span></span>  
   
-```  
+```csharp  
 using System;  
 using System.Activities.Presentation.View;  
 using System.Windows;  
@@ -221,10 +221,10 @@ namespace MyExpressionEditorService
 }  
 ```  
   
-### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="d8b2d-117">WPF プロジェクトでカスタム式エディターを公開する</span><span class="sxs-lookup"><span data-stu-id="d8b2d-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
- <span data-ttu-id="d8b2d-118">作成して発行する方法と WPF アプリケーションでデザイナーを再ホストする方法を示すコードをここでは、`MyEditorService`サービス。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-118">Here is the code that shows how to rehost the designer in a WPF application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="d8b2d-119">このコードを使用する前に、avalon2 アプリケーションを含むプロジェクトから、MyExpressionEditorService ライブラリ プロジェクトへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
+### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a><span data-ttu-id="c9033-117">WPF プロジェクトでカスタム式エディターを公開する</span><span class="sxs-lookup"><span data-stu-id="c9033-117">Publishing a Custom Expression Editor in a WPF Project</span></span>  
+ <span data-ttu-id="c9033-118">WPF アプリケーションでデザイナーを再ホストする方法と、 `MyEditorService`サービスを作成して発行する方法を示すコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="c9033-118">Here is the code that shows how to rehost the designer in a WPF application and how to create and publish the `MyEditorService` service.</span></span> <span data-ttu-id="c9033-119">このコードを使用する前に、avalon2 アプリケーションを含むプロジェクトから、MyExpressionEditorService ライブラリ プロジェクトへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="c9033-119">Before using this code, add a reference to the MyExpressionEditorService library project from the project that contains the avalon2 application.</span></span>  
   
-```  
+```csharp  
 using System.Windows;  
 using System.Windows.Controls;  
 using System.Activities.Presentation;  
@@ -275,11 +275,11 @@ namespace WpfApplication1
 }  
 ```  
   
-### <a name="notes"></a><span data-ttu-id="d8b2d-120">メモ</span><span class="sxs-lookup"><span data-stu-id="d8b2d-120">Notes</span></span>  
- <span data-ttu-id="d8b2d-121">使用する場合、 **ExpressionTextBox**コントロール、カスタム アクティビティ デザイナーで必要はありません作成し、破棄を使用して式エディターに、<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>と<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>のメソッド、<xref:System.Activities.Presentation.View.IExpressionEditorService>インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="d8b2d-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。</span><span class="sxs-lookup"><span data-stu-id="d8b2d-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
+### <a name="notes"></a><span data-ttu-id="c9033-120">メモ</span><span class="sxs-lookup"><span data-stu-id="c9033-120">Notes</span></span>  
+ <span data-ttu-id="c9033-121">カスタムアクティビティデザイナーで式の**textbox**コントロールを使用している場合は、 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService>インターフェイスのメソッドおよび<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>メソッドを使用して、式エディターを作成および破棄する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="c9033-121">If you are using an **ExpressionTextBox** control in a custom activity designer, it is not necessary to create and destroy expression editors using the <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> and <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> methods of the <xref:System.Activities.Presentation.View.IExpressionEditorService> interface.</span></span> <span data-ttu-id="c9033-122"><xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。</span><span class="sxs-lookup"><span data-stu-id="c9033-122">The <xref:System.Activities.Presentation.View.ExpressionTextBox> class manages this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8b2d-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8b2d-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9033-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9033-123">See also</span></span>
 
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [<span data-ttu-id="d8b2d-124">カスタム アクティビティ デザイナーでの ExpressionTextBox の使用</span><span class="sxs-lookup"><span data-stu-id="d8b2d-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [<span data-ttu-id="c9033-124">カスタム アクティビティ デザイナーでの ExpressionTextBox の使用</span><span class="sxs-lookup"><span data-stu-id="c9033-124">Using the ExpressionTextBox in a Custom Activity Designer</span></span>](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
