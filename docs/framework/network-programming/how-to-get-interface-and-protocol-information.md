@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624577"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894710"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="d2b4d-102">方法: インターフェイス情報とプロトコル情報を取得する</span><span class="sxs-lookup"><span data-stu-id="d2b4d-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="d2b4d-103">このサンプルでは、ネットワーク インターフェイスの TCP 統計情報を読み取る方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d2b4d-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="ceacd-102">方法: インターフェイス情報とプロトコル情報を取得する</span><span class="sxs-lookup"><span data-stu-id="ceacd-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="ceacd-103">このサンプルでは、ネットワーク インターフェイスの TCP 統計情報を読み取る方法を示します。</span><span class="sxs-lookup"><span data-stu-id="ceacd-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2b4d-104">例</span><span class="sxs-lookup"><span data-stu-id="d2b4d-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ceacd-104">例</span><span class="sxs-lookup"><span data-stu-id="ceacd-104">Example</span></span>  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  
@@ -69,7 +69,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d2b4d-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d2b4d-105">Compiling the Code</span></span>  
- <span data-ttu-id="d2b4d-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d2b4d-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ceacd-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="ceacd-105">Compiling the Code</span></span>  
+ <span data-ttu-id="ceacd-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="ceacd-106">This example requires:</span></span>  
   
-- <span data-ttu-id="d2b4d-107">**System.Net** 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="d2b4d-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="ceacd-107">**System.Net** 名前空間への参照。</span><span class="sxs-lookup"><span data-stu-id="ceacd-107">References to the **System.Net** namespace.</span></span>
