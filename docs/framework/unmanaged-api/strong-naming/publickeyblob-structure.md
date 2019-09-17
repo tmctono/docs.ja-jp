@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799160"
 ---
-# <a name="publickeyblob-structure"></a><span data-ttu-id="f7fec-102">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="f7fec-102">PublicKeyBlob Structure</span></span>
-<span data-ttu-id="f7fec-103">公開/秘密キーのペアの公開キーをバイナリ形式で表します。</span><span class="sxs-lookup"><span data-stu-id="f7fec-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
+# <a name="publickeyblob-structure"></a><span data-ttu-id="623c2-102">PublicKeyBlob 構造体</span><span class="sxs-lookup"><span data-stu-id="623c2-102">PublicKeyBlob Structure</span></span>
+<span data-ttu-id="623c2-103">公開キーと秘密キーのペアの公開キーをバイナリ形式で表します。</span><span class="sxs-lookup"><span data-stu-id="623c2-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7fec-104">構文</span><span class="sxs-lookup"><span data-stu-id="f7fec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="623c2-104">構文</span><span class="sxs-lookup"><span data-stu-id="623c2-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -37,28 +37,28 @@ typedef struct {
 } PublicKeyBlob;   
 ```  
   
-## <a name="members"></a><span data-ttu-id="f7fec-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f7fec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="623c2-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="623c2-105">Members</span></span>  
   
-|<span data-ttu-id="f7fec-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f7fec-106">Member</span></span>|<span data-ttu-id="f7fec-107">説明</span><span class="sxs-lookup"><span data-stu-id="f7fec-107">Description</span></span>|  
+|<span data-ttu-id="623c2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="623c2-106">Member</span></span>|<span data-ttu-id="623c2-107">説明</span><span class="sxs-lookup"><span data-stu-id="623c2-107">Description</span></span>|  
 |------------|-----------------|  
-|`SigAlgId`|<span data-ttu-id="f7fec-108">署名アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。</span><span class="sxs-lookup"><span data-stu-id="f7fec-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`HashAlgId`|<span data-ttu-id="f7fec-109">ハッシュ アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。</span><span class="sxs-lookup"><span data-stu-id="f7fec-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
-|`cbPublicKey`|<span data-ttu-id="f7fec-110">(バイト単位)、キーの長さ。</span><span class="sxs-lookup"><span data-stu-id="f7fec-110">The length of the key in bytes.</span></span>|  
-|`PublicKey`|<span data-ttu-id="f7fec-111">CryptoAPI によって返される形式でキーの値を含む可変長バイト配列を指定します。</span><span class="sxs-lookup"><span data-stu-id="f7fec-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
+|`SigAlgId`|<span data-ttu-id="623c2-108">公開キーの署名アルゴリズム (wincrypt .h `ALG_ID`で定義されている型の) の識別子。</span><span class="sxs-lookup"><span data-stu-id="623c2-108">The identifier for the signature algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`HashAlgId`|<span data-ttu-id="623c2-109">公開キーのハッシュアルゴリズム (wincrypt .h `ALG_ID`で定義されている型の) の識別子。</span><span class="sxs-lookup"><span data-stu-id="623c2-109">The identifier for the hash algorithm (of type `ALG_ID`, as defined in WinCrypt.h) of the public key.</span></span>|  
+|`cbPublicKey`|<span data-ttu-id="623c2-110">キーの長さ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="623c2-110">The length of the key in bytes.</span></span>|  
+|`PublicKey`|<span data-ttu-id="623c2-111">CryptoAPI によって返される形式のキー値を格納する可変長バイト配列。</span><span class="sxs-lookup"><span data-stu-id="623c2-111">A variable-length byte array that contains the key value in the format returned by the CryptoAPI.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f7fec-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="f7fec-112">Remarks</span></span>  
- <span data-ttu-id="f7fec-113">`PublicKeyBlob`構造が使用者[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)、および他の厳密な名前の関数を公開/秘密キーのペアの公開キーを表します。</span><span class="sxs-lookup"><span data-stu-id="f7fec-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="623c2-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="623c2-112">Remarks</span></span>  
+ <span data-ttu-id="623c2-113">構造体は、公開キーと秘密キーのペアの公開キーを表すために、 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、[StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数によって使用されます。`PublicKeyBlob`</span><span class="sxs-lookup"><span data-stu-id="623c2-113">The `PublicKeyBlob` structure is used by [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md), and other strong name functions to represent the public key of a public/private key pair.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7fec-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="f7fec-114">Requirements</span></span>  
- <span data-ttu-id="f7fec-115">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f7fec-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="623c2-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="623c2-114">Requirements</span></span>  
+ <span data-ttu-id="623c2-115">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="623c2-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7fec-116">**ヘッダー:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="f7fec-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="623c2-116">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="623c2-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="f7fec-117">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="f7fec-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="623c2-117">**ライブラリ**Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="623c2-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f7fec-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7fec-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="623c2-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="623c2-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7fec-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="f7fec-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="623c2-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="623c2-119">See also</span></span>
 
-- [<span data-ttu-id="f7fec-120">StrongNameGetPublicKey 関数</span><span class="sxs-lookup"><span data-stu-id="f7fec-120">StrongNameGetPublicKey Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [<span data-ttu-id="f7fec-121">StrongNameSignatureGeneration 関数</span><span class="sxs-lookup"><span data-stu-id="f7fec-121">StrongNameSignatureGeneration Function</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [<span data-ttu-id="623c2-120">StrongNameGetPublicKey 関数</span><span class="sxs-lookup"><span data-stu-id="623c2-120">StrongNameGetPublicKey Function</span></span>](strongnamegetpublickey-function.md)
+- [<span data-ttu-id="623c2-121">StrongNameSignatureGeneration 関数</span><span class="sxs-lookup"><span data-stu-id="623c2-121">StrongNameSignatureGeneration Function</span></span>](strongnamesignaturegeneration-function.md)
