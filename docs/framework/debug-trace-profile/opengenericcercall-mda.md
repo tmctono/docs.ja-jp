@@ -12,36 +12,36 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa6ad656a5f762bf86d277d986bb087c97d7a78f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753713"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052413"
 ---
-# <a name="opengenericcercall-mda"></a><span data-ttu-id="a6fd4-102">openGenericCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="a6fd4-102">openGenericCERCall MDA</span></span>
-<span data-ttu-id="a6fd4-103">`openGenericCERCall` マネージド デバッグ アシスタントは、ルート メソッドにジェネリック型変数を持つ制約された実行領域 (CER) グラフが JIT コンパイル時またはネイティブ イメージ生成時に処理されている場合に、少なくとも 1 つのジェネリック型変数がオブジェクト参照型であることを警告するためにアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
+# <a name="opengenericcercall-mda"></a><span data-ttu-id="c2288-102">openGenericCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="c2288-102">openGenericCERCall MDA</span></span>
+<span data-ttu-id="c2288-103">`openGenericCERCall` マネージド デバッグ アシスタントは、ルート メソッドにジェネリック型変数を持つ制約された実行領域 (CER) グラフが JIT コンパイル時またはネイティブ イメージ生成時に処理されている場合に、少なくとも 1 つのジェネリック型変数がオブジェクト参照型であることを警告するためにアクティブ化されます。</span><span class="sxs-lookup"><span data-stu-id="c2288-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="a6fd4-104">症状</span><span class="sxs-lookup"><span data-stu-id="a6fd4-104">Symptoms</span></span>  
- <span data-ttu-id="a6fd4-105">スレッドが中止されたとき、またはアプリケーション ドメインがアンロードされたときに CER コードが実行されません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="c2288-104">症状</span><span class="sxs-lookup"><span data-stu-id="c2288-104">Symptoms</span></span>  
+ <span data-ttu-id="c2288-105">スレッドが中止されたとき、またはアプリケーション ドメインがアンロードされたときに CER コードが実行されません。</span><span class="sxs-lookup"><span data-stu-id="c2288-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="a6fd4-106">原因</span><span class="sxs-lookup"><span data-stu-id="a6fd4-106">Cause</span></span>  
- <span data-ttu-id="a6fd4-107">JIT コンパイル時には、処理結果のコードが共有され、オブジェクト参照型変数がそれぞれ任意のオブジェクト参照型になる可能性があるため、オブジェクト参照型を含むインスタンス化は代理にすぎません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="a6fd4-108">このため、一部のランタイム リソースを前もって準備することが妨げられる場合があります。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
+## <a name="cause"></a><span data-ttu-id="c2288-106">原因</span><span class="sxs-lookup"><span data-stu-id="c2288-106">Cause</span></span>  
+ <span data-ttu-id="c2288-107">JIT コンパイル時には、処理結果のコードが共有され、オブジェクト参照型変数がそれぞれ任意のオブジェクト参照型になる可能性があるため、オブジェクト参照型を含むインスタンス化は代理にすぎません。</span><span class="sxs-lookup"><span data-stu-id="c2288-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="c2288-108">このため、一部のランタイム リソースを前もって準備することが妨げられる場合があります。</span><span class="sxs-lookup"><span data-stu-id="c2288-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
   
- <span data-ttu-id="a6fd4-109">特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="a6fd4-110">このようなメソッドは、ジェネリック辞書エントリと呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="a6fd4-111">たとえば、`T` がジェネリック型変数である `List<T> list = new List<T>();` というステートメントの場合、ランタイムは、実行時に正確なインスタンス化を検索する必要があり、さらにその作成が必要になる場合があります (`List<Object>, List<String>` など)。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="a6fd4-112">この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
+ <span data-ttu-id="c2288-109">特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。</span><span class="sxs-lookup"><span data-stu-id="c2288-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="c2288-110">このようなメソッドは、ジェネリック辞書エントリと呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="c2288-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="c2288-111">たとえば、`T` がジェネリック型変数である `List<T> list = new List<T>();` というステートメントの場合、ランタイムは、実行時に正確なインスタンス化を検索する必要があり、さらにその作成が必要になる場合があります (`List<Object>, List<String>` など)。</span><span class="sxs-lookup"><span data-stu-id="c2288-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="c2288-112">この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。</span><span class="sxs-lookup"><span data-stu-id="c2288-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
   
- <span data-ttu-id="a6fd4-113">この MDA は、JIT コンパイル時にのみアクティブになり、正確なインスタンス化が存在するときにはアクティブになりません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
+ <span data-ttu-id="c2288-113">この MDA は、JIT コンパイル時にのみアクティブになり、正確なインスタンス化が存在するときにはアクティブになりません。</span><span class="sxs-lookup"><span data-stu-id="c2288-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
   
- <span data-ttu-id="a6fd4-114">この MDA がアクティブになるとき、正しくないインスタンス化に対して CER が機能しないという症状が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="a6fd4-115">実際、MDA がアクティブになる状況下では、ランタイムは CER の実装を試みません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="a6fd4-116">そのため、開発者が CER の共有インスタンス化を使用している場合、目的の CER の領域内で発生した JIT コンパイル エラー、ジェネリック型の読み込みエラー、スレッドの中止などはキャッチされません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
+ <span data-ttu-id="c2288-114">この MDA がアクティブになるとき、正しくないインスタンス化に対して CER が機能しないという症状が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="c2288-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="c2288-115">実際、MDA がアクティブになる状況下では、ランタイムは CER の実装を試みません。</span><span class="sxs-lookup"><span data-stu-id="c2288-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="c2288-116">そのため、開発者が CER の共有インスタンス化を使用している場合、目的の CER の領域内で発生した JIT コンパイル エラー、ジェネリック型の読み込みエラー、スレッドの中止などはキャッチされません。</span><span class="sxs-lookup"><span data-stu-id="c2288-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="a6fd4-117">解像度</span><span class="sxs-lookup"><span data-stu-id="a6fd4-117">Resolution</span></span>  
- <span data-ttu-id="a6fd4-118">CER が存在する可能性があるメソッドには、オブジェクト参照型であるジェネリック型変数を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="c2288-117">解決策</span><span class="sxs-lookup"><span data-stu-id="c2288-117">Resolution</span></span>  
+ <span data-ttu-id="c2288-118">CER が存在する可能性があるメソッドには、オブジェクト参照型であるジェネリック型変数を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="c2288-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="a6fd4-119">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="a6fd4-119">Effect on the Runtime</span></span>  
- <span data-ttu-id="a6fd4-120">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-120">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="c2288-119">ランタイムへの影響</span><span class="sxs-lookup"><span data-stu-id="c2288-119">Effect on the Runtime</span></span>  
+ <span data-ttu-id="c2288-120">この MDA は CLR に影響しません。</span><span class="sxs-lookup"><span data-stu-id="c2288-120">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="a6fd4-121">出力</span><span class="sxs-lookup"><span data-stu-id="a6fd4-121">Output</span></span>  
- <span data-ttu-id="a6fd4-122">この MDA の出力サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-122">The following is a sample of output from this MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="c2288-121">出力</span><span class="sxs-lookup"><span data-stu-id="c2288-121">Output</span></span>  
+ <span data-ttu-id="c2288-122">この MDA の出力サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="c2288-122">The following is a sample of output from this MDA.</span></span>  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61753713"
   
  `declaringType name="OpenGenericCERCall"`  
   
-## <a name="configuration"></a><span data-ttu-id="a6fd4-123">構成</span><span class="sxs-lookup"><span data-stu-id="a6fd4-123">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="c2288-123">構成</span><span class="sxs-lookup"><span data-stu-id="c2288-123">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -61,8 +61,8 @@ ms.locfileid: "61753713"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a6fd4-124">例</span><span class="sxs-lookup"><span data-stu-id="a6fd4-124">Example</span></span>  
- <span data-ttu-id="a6fd4-125">CER コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="a6fd4-125">The CER code is not executed.</span></span>  
+## <a name="example"></a><span data-ttu-id="c2288-124">例</span><span class="sxs-lookup"><span data-stu-id="c2288-124">Example</span></span>  
+ <span data-ttu-id="c2288-125">CER コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="c2288-125">The CER code is not executed.</span></span>  
   
 ```csharp
 using System;  
@@ -106,8 +106,8 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a6fd4-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6fd4-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2288-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2288-126">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [<span data-ttu-id="a6fd4-127">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="a6fd4-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="c2288-127">マネージド デバッグ アシスタントによるエラーの診断</span><span class="sxs-lookup"><span data-stu-id="c2288-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)

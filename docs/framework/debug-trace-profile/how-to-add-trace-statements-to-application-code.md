@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948009"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052736"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="22e38-102">方法: アプリケーション コードにトレース ステートメントを追加する</span><span class="sxs-lookup"><span data-stu-id="22e38-102">How to: Add Trace Statements to Application Code</span></span>
-<span data-ttu-id="22e38-103">トレースで最も頻繁に使用されるメソッドは、出力をリスナーに書き込むためのメソッドです。**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**、および**Fail**。</span><span class="sxs-lookup"><span data-stu-id="22e38-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="22e38-104">これらのメソッドは、次の2つのカテゴリに分けることができます。**Write**、 **WriteLine**、および**Fail**はすべて無条件に出力を生成します。一方、 **WriteIf**、 **WriteLineIf**、および**Assert**はブール条件をテストし、条件の値に基づいて書き込みまたは書き込みを行いません。</span><span class="sxs-lookup"><span data-stu-id="22e38-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="22e38-105">**WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。</span><span class="sxs-lookup"><span data-stu-id="22e38-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
+# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="f16db-102">方法: アプリケーション コードにトレース ステートメントを追加する</span><span class="sxs-lookup"><span data-stu-id="f16db-102">How to: Add Trace Statements to Application Code</span></span>
+<span data-ttu-id="f16db-103">トレースで最も頻繁に使用されるメソッドは、出力をリスナーに書き込むためのメソッドです。**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**、および**Fail**。</span><span class="sxs-lookup"><span data-stu-id="f16db-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="f16db-104">これらのメソッドは、次の2つのカテゴリに分けることができます。**Write**、 **WriteLine**、および**Fail**はすべて無条件に出力を生成します。一方、 **WriteIf**、 **WriteLineIf**、および**Assert**はブール条件をテストし、条件の値に基づいて書き込みまたは書き込みを行いません。</span><span class="sxs-lookup"><span data-stu-id="f16db-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="f16db-105">**WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。</span><span class="sxs-lookup"><span data-stu-id="f16db-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
   
- <span data-ttu-id="22e38-106">トレースおよびデバッグの方法をデザインするときは、出力の表示方法について検討する必要があります。</span><span class="sxs-lookup"><span data-stu-id="22e38-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="22e38-107">関連のない情報で埋め尽くされた複数の **Write** ステートメントの場合、読みにくいログが作成されます。</span><span class="sxs-lookup"><span data-stu-id="22e38-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="22e38-108">その一方で、**WriteLine** を使用して関連のあるステートメントを別々の行に出力すると、どの情報が関連し合っているかを読み取るのが困難になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="22e38-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="22e38-109">一般に、複数のソースからの情報を結合する場合には複数の **Write** ステートメントを使用して 1 つの情報メッセージを作成し、単一の完全なメッセージを作成する場合には **WriteLine** ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="22e38-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
+ <span data-ttu-id="f16db-106">トレースおよびデバッグの方法をデザインするときは、出力の表示方法について検討する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f16db-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="f16db-107">関連のない情報で埋め尽くされた複数の **Write** ステートメントの場合、読みにくいログが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f16db-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="f16db-108">その一方で、**WriteLine** を使用して関連のあるステートメントを別々の行に出力すると、どの情報が関連し合っているかを読み取るのが困難になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="f16db-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="f16db-109">一般に、複数のソースからの情報を結合する場合には複数の **Write** ステートメントを使用して 1 つの情報メッセージを作成し、単一の完全なメッセージを作成する場合には **WriteLine** ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="f16db-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
   
-### <a name="to-write-a-complete-line"></a><span data-ttu-id="22e38-110">完結した行を書き込むには</span><span class="sxs-lookup"><span data-stu-id="22e38-110">To write a complete line</span></span>  
+### <a name="to-write-a-complete-line"></a><span data-ttu-id="f16db-110">完結した行を書き込むには</span><span class="sxs-lookup"><span data-stu-id="f16db-110">To write a complete line</span></span>  
   
-1. <span data-ttu-id="22e38-111"><xref:System.Diagnostics.Trace.WriteLine%2A> メソッドまたは <xref:System.Diagnostics.Trace.WriteLineIf%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="22e38-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
+1. <span data-ttu-id="f16db-111"><xref:System.Diagnostics.Trace.WriteLine%2A> メソッドまたは <xref:System.Diagnostics.Trace.WriteLineIf%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f16db-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
   
-     <span data-ttu-id="22e38-112">このメソッドが返すメッセージの末尾には、キャリッジ リターンが追加されます。したがって、次回の **Write**、**WriteIf**、**WriteLine**、または **WriteLineIf** が返すメッセージは、次の行から開始されます。</span><span class="sxs-lookup"><span data-stu-id="22e38-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
+     <span data-ttu-id="f16db-112">このメソッドが返すメッセージの末尾には、キャリッジ リターンが追加されます。したがって、次回の **Write**、**WriteIf**、**WriteLine**、または **WriteLineIf** が返すメッセージは、次の行から開始されます。</span><span class="sxs-lookup"><span data-stu-id="f16db-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -46,11 +46,11 @@ ms.locfileid: "69948009"
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a><span data-ttu-id="22e38-113">完結しない行を書き込むには</span><span class="sxs-lookup"><span data-stu-id="22e38-113">To write a partial line</span></span>  
+### <a name="to-write-a-partial-line"></a><span data-ttu-id="f16db-113">完結しない行を書き込むには</span><span class="sxs-lookup"><span data-stu-id="f16db-113">To write a partial line</span></span>  
   
-1. <span data-ttu-id="22e38-114"><xref:System.Diagnostics.Trace.Write%2A> メソッドまたは <xref:System.Diagnostics.Trace.WriteIf%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="22e38-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
+1. <span data-ttu-id="f16db-114"><xref:System.Diagnostics.Trace.Write%2A> メソッドまたは <xref:System.Diagnostics.Trace.WriteIf%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f16db-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
   
-     <span data-ttu-id="22e38-115">**Write**、**WriteIf**、**WriteLine** または **WriteLineIf** によって次に書き込まれるメッセージは、今回の **Write** または **WriteIf** ステートメントによって書き込まれるメッセージと同じ行から開始されます。</span><span class="sxs-lookup"><span data-stu-id="22e38-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
+     <span data-ttu-id="f16db-115">**Write**、**WriteIf**、**WriteLine** または **WriteLineIf** によって次に書き込まれるメッセージは、今回の **Write** または **WriteIf** ステートメントによって書き込まれるメッセージと同じ行から開始されます。</span><span class="sxs-lookup"><span data-stu-id="f16db-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -67,9 +67,9 @@ ms.locfileid: "69948009"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="22e38-116">メソッドの実行前または実行後に特定の条件が存在するかどうかを確認するには</span><span class="sxs-lookup"><span data-stu-id="22e38-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="f16db-116">メソッドの実行前または実行後に特定の条件が存在するかどうかを確認するには</span><span class="sxs-lookup"><span data-stu-id="f16db-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
   
-1. <span data-ttu-id="22e38-117"><xref:System.Diagnostics.Trace.Assert%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="22e38-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
+1. <span data-ttu-id="f16db-117"><xref:System.Diagnostics.Trace.Assert%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f16db-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
   
     ```vb  
     Dim i As Integer = 4  
@@ -82,15 +82,15 @@ ms.locfileid: "69948009"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="22e38-118">**Assert** は、トレースとデバッグの両方で使用できます。</span><span class="sxs-lookup"><span data-stu-id="22e38-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="22e38-119">この例では、呼び出し履歴を **Listeners** コレクションのリスナーに出力しています。</span><span class="sxs-lookup"><span data-stu-id="22e38-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="22e38-120">詳細については、「[マネージド コードのアサーション](/visualstudio/debugger/assertions-in-managed-code)」および「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="22e38-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
+    > <span data-ttu-id="f16db-118">**Assert** は、トレースとデバッグの両方で使用できます。</span><span class="sxs-lookup"><span data-stu-id="f16db-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="f16db-119">この例では、呼び出し履歴を **Listeners** コレクションのリスナーに出力しています。</span><span class="sxs-lookup"><span data-stu-id="f16db-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="f16db-120">詳細については、「[マネージド コードのアサーション](/visualstudio/debugger/assertions-in-managed-code)」および「<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f16db-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22e38-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="22e38-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f16db-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f16db-121">See also</span></span>
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="22e38-122">アプリケーションのトレースとインストルメント</span><span class="sxs-lookup"><span data-stu-id="22e38-122">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [<span data-ttu-id="22e38-123">方法: トレーススイッチを作成、初期化、および構成する</span><span class="sxs-lookup"><span data-stu-id="22e38-123">How to: Create, Initialize and Configure Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [<span data-ttu-id="22e38-124">トレース スイッチ</span><span class="sxs-lookup"><span data-stu-id="22e38-124">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [<span data-ttu-id="22e38-125">トレース リスナー</span><span class="sxs-lookup"><span data-stu-id="22e38-125">Trace Listeners</span></span>](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="f16db-122">アプリケーションのトレースとインストルメント</span><span class="sxs-lookup"><span data-stu-id="f16db-122">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
+- [<span data-ttu-id="f16db-123">方法: トレーススイッチを作成、初期化、および構成する</span><span class="sxs-lookup"><span data-stu-id="f16db-123">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
+- [<span data-ttu-id="f16db-124">トレース スイッチ</span><span class="sxs-lookup"><span data-stu-id="f16db-124">Trace Switches</span></span>](trace-switches.md)
+- [<span data-ttu-id="f16db-125">トレース リスナー</span><span class="sxs-lookup"><span data-stu-id="f16db-125">Trace Listeners</span></span>](trace-listeners.md)

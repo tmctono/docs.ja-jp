@@ -7,25 +7,25 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042533"
 ---
-# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="01f9a-102">マネージド コード用の UI オートメーション クライアントに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="01f9a-102">UI Automation Clients for Managed Code How-to Topics</span></span>
+# <a name="ui-automation-clients-for-managed-code-how-to-topics"></a><span data-ttu-id="d65bd-102">マネージド コード用の UI オートメーション クライアントに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="d65bd-102">UI Automation Clients for Managed Code How-to Topics</span></span>
 > [!NOTE]
-> <span data-ttu-id="01f9a-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="01f9a-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="01f9a-104">の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="01f9a-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="d65bd-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="d65bd-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="d65bd-104">の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="d65bd-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="01f9a-105">ここでは、クライアントアプリケーションでのの[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]機能を実装する方法について詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="01f9a-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
+ <span data-ttu-id="d65bd-105">ここでは、クライアントアプリケーションでのの[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]機能を実装する方法について詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="d65bd-105">This section provides detailed information about implementing features of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in a client application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="01f9a-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="01f9a-106">In This Section</span></span>  
- [<span data-ttu-id="01f9a-107">プロパティ条件に基づく UI オートメーション要素の検索</span><span class="sxs-lookup"><span data-stu-id="01f9a-107">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [<span data-ttu-id="01f9a-108">TreeWalker を使用した UI オートメーション要素間の移動</span><span class="sxs-lookup"><span data-stu-id="01f9a-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [<span data-ttu-id="01f9a-109">リスト項目の UI オートメーション要素の検索</span><span class="sxs-lookup"><span data-stu-id="01f9a-109">Find a UI Automation Element for a List Item</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [<span data-ttu-id="01f9a-110">UI オートメーション要素のプロパティの取得</span><span class="sxs-lookup"><span data-stu-id="01f9a-110">Get UI Automation Element Properties</span></span>](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [<span data-ttu-id="01f9a-111">UI オートメーションにおけるキャッシュの使用</span><span class="sxs-lookup"><span data-stu-id="01f9a-111">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [<span data-ttu-id="01f9a-112">UI オートメーション イベントのサブスクライブ</span><span class="sxs-lookup"><span data-stu-id="01f9a-112">Subscribe to UI Automation Events</span></span>](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [<span data-ttu-id="01f9a-113">クライアント側プロバイダー アセンブリの登録</span><span class="sxs-lookup"><span data-stu-id="01f9a-113">Register a Client-Side Provider Assembly</span></span>](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [<span data-ttu-id="01f9a-114">AutomationID プロパティの使用</span><span class="sxs-lookup"><span data-stu-id="01f9a-114">Use the AutomationID Property</span></span>](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+## <a name="in-this-section"></a><span data-ttu-id="d65bd-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d65bd-106">In This Section</span></span>  
+ [<span data-ttu-id="d65bd-107">プロパティ条件に基づく UI オートメーション要素の検索</span><span class="sxs-lookup"><span data-stu-id="d65bd-107">Find a UI Automation Element Based on a Property Condition</span></span>](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="d65bd-108">TreeWalker を使用した UI オートメーション要素間の移動</span><span class="sxs-lookup"><span data-stu-id="d65bd-108">Navigate Among UI Automation Elements with TreeWalker</span></span>](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [<span data-ttu-id="d65bd-109">リスト項目の UI オートメーション要素の検索</span><span class="sxs-lookup"><span data-stu-id="d65bd-109">Find a UI Automation Element for a List Item</span></span>](find-a-ui-automation-element-for-a-list-item.md)  
+ [<span data-ttu-id="d65bd-110">UI オートメーション要素のプロパティの取得</span><span class="sxs-lookup"><span data-stu-id="d65bd-110">Get UI Automation Element Properties</span></span>](get-ui-automation-element-properties.md)  
+ [<span data-ttu-id="d65bd-111">UI オートメーションにおけるキャッシュの使用</span><span class="sxs-lookup"><span data-stu-id="d65bd-111">Use Caching in UI Automation</span></span>](use-caching-in-ui-automation.md)  
+ [<span data-ttu-id="d65bd-112">UI オートメーション イベントのサブスクライブ</span><span class="sxs-lookup"><span data-stu-id="d65bd-112">Subscribe to UI Automation Events</span></span>](subscribe-to-ui-automation-events.md)  
+ [<span data-ttu-id="d65bd-113">クライアント側プロバイダー アセンブリの登録</span><span class="sxs-lookup"><span data-stu-id="d65bd-113">Register a Client-Side Provider Assembly</span></span>](register-a-client-side-provider-assembly.md)  
+ [<span data-ttu-id="d65bd-114">AutomationID プロパティの使用</span><span class="sxs-lookup"><span data-stu-id="d65bd-114">Use the AutomationID Property</span></span>](use-the-automationid-property.md)
