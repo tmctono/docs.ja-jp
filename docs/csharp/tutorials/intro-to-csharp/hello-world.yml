@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="a3f5f-101">Hello World - C# の概要に関する対話型チュートリアル</span><span class="sxs-lookup"><span data-stu-id="a3f5f-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
+title: <span data-ttu-id="33079-101">Hello World - C# の概要に関する対話型チュートリアル</span><span class="sxs-lookup"><span data-stu-id="33079-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
 metadata:
   title: Hello World - C# の概要に関する対話型チュートリアル
   description: このチュートリアルでは、ブラウザーを使用して C# を対話形式で学習できます。 C# コードを記述し、ブラウザーで直接コードをコンパイルして、実行した結果を確認します。
@@ -7,24 +7,24 @@ metadata:
   level: Beginner
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
-  nextTutorialTitle: <span data-ttu-id="a3f5f-105">C# の数値</span><span class="sxs-lookup"><span data-stu-id="a3f5f-105">Numbers in C#</span></span>
+  nextTutorialTitle: <span data-ttu-id="33079-105">C# の数値</span><span class="sxs-lookup"><span data-stu-id="33079-105">Numbers in C#</span></span>
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370320"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850797"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="a3f5f-106">このチュートリアルでは C# を対話形式で学習できます。ブラウザーを使用して C# を記述し、コードをコンパイルして実行した結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="a3f5f-107">このチュートリアルには、"Hello World" プログラムを開始する一連のレッスンが含まれています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="a3f5f-108">これらのレッスンでは、C# 言語の基本を説明します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="a3f5f-109">最初の C# プログラムの実行</span><span class="sxs-lookup"><span data-stu-id="a3f5f-109">Run your first C# program</span></span>
+    <span data-ttu-id="33079-106">このチュートリアルでは C# を対話形式で学習できます。ブラウザーを使用して C# を記述し、コードをコンパイルして実行した結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="33079-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="33079-107">このチュートリアルには、"Hello World" プログラムを開始する一連のレッスンが含まれています。</span><span class="sxs-lookup"><span data-stu-id="33079-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="33079-108">これらのレッスンでは、C# 言語の基本を説明します。</span><span class="sxs-lookup"><span data-stu-id="33079-108">These lessons teach you the fundamentals of the C# language.</span></span>
+- title: <span data-ttu-id="33079-109">最初の C# プログラムの実行</span><span class="sxs-lookup"><span data-stu-id="33079-109">Run your first C# program</span></span>
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="a3f5f-110">対話型ウィンドウで次のコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="a3f5f-111">そのためには、対話型ウィンドウで次のコード ブロックを入力し、**[実行]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    <span data-ttu-id="33079-110">対話型ウィンドウで次のコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="33079-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="33079-111">そのためには、対話型ウィンドウで次のコード ブロックを入力し、**[実行]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="33079-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -34,29 +34,29 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-112">おめでとうございます! </span><span class="sxs-lookup"><span data-stu-id="a3f5f-112">Congratulations!</span></span> <span data-ttu-id="a3f5f-113">最初の C# プログラムを実行しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-113">You've run your first C# program.</span></span> <span data-ttu-id="a3f5f-114">これは "Hello World!" というメッセージを出力する単純なプログラムです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="a3f5f-115"><xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="a3f5f-116">`Console` は、コンソール ウィンドウを表す型です。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="a3f5f-117">`WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+    <span data-ttu-id="33079-112">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="33079-112">Congratulations!</span></span> <span data-ttu-id="33079-113">最初の C# プログラムを実行しました。</span><span class="sxs-lookup"><span data-stu-id="33079-113">You've run your first C# program.</span></span> <span data-ttu-id="33079-114">これは "Hello World!" というメッセージを出力する単純なプログラムです。</span><span class="sxs-lookup"><span data-stu-id="33079-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="33079-115"><xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。</span><span class="sxs-lookup"><span data-stu-id="33079-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="33079-116">`Console` は、コンソール ウィンドウを表す型です。</span><span class="sxs-lookup"><span data-stu-id="33079-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="33079-117">`WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。</span><span class="sxs-lookup"><span data-stu-id="33079-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
 
 
-    <span data-ttu-id="a3f5f-118">次に進んで、さらに詳しく見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-118">Let's move on and explore more.</span></span> <span data-ttu-id="a3f5f-119">このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="a3f5f-120">`Console` 型と同じように、`string` 型にもメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="a3f5f-121">`string` メソッドはテキストを処理します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-121">The `string` methods work with text.</span></span>
+    <span data-ttu-id="33079-118">次に進んで、さらに詳しく見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="33079-118">Let's move on and explore more.</span></span> <span data-ttu-id="33079-119">このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。</span><span class="sxs-lookup"><span data-stu-id="33079-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="33079-120">`Console` 型と同じように、`string` 型にもメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="33079-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="33079-121">`string` メソッドはテキストを処理します。</span><span class="sxs-lookup"><span data-stu-id="33079-121">The `string` methods work with text.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-122">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-123">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="a3f5f-124">変数の宣言と使用</span><span class="sxs-lookup"><span data-stu-id="a3f5f-124">Declare and use variables</span></span>
+    > <span data-ttu-id="33079-122">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-123">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="33079-124">変数の宣言と使用</span><span class="sxs-lookup"><span data-stu-id="33079-124">Declare and use variables</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="a3f5f-125">最初のプログラムでは、`string` の "Hello World!" を</span><span class="sxs-lookup"><span data-stu-id="a3f5f-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="a3f5f-126">画面に出力しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-126">on the screen.</span></span>
+    <span data-ttu-id="33079-125">最初のプログラムでは、`string` の "Hello World!" を</span><span class="sxs-lookup"><span data-stu-id="33079-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="33079-126">画面に出力しました。</span><span class="sxs-lookup"><span data-stu-id="33079-126">on the screen.</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="a3f5f-127">C# (または何らかのプログラミング言語) について詳しく学習するに従い、コードを記述する際にミスをすることもあるでしょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="a3f5f-128">**コンパイラ**は、そうしたエラーを発見して報告します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="a3f5f-129">エラー メッセージが出力された場合は、例のコードをよく確認して、対話型ウィンドウで修正すべきコードを見つけます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > <span data-ttu-id="33079-127">C# (または何らかのプログラミング言語) について詳しく学習するに従い、コードを記述する際にミスをすることもあるでしょう。</span><span class="sxs-lookup"><span data-stu-id="33079-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="33079-128">**コンパイラ**は、そうしたエラーを発見して報告します。</span><span class="sxs-lookup"><span data-stu-id="33079-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="33079-129">エラー メッセージが出力された場合は、例のコードをよく確認して、対話型ウィンドウで修正すべきコードを見つけます。</span><span class="sxs-lookup"><span data-stu-id="33079-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
 
-    > <span data-ttu-id="a3f5f-130">こうした実習が C# コードの構造を理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-130">That exercise will help you learn the structure of C# code.</span></span>
+    > <span data-ttu-id="33079-130">こうした実習が C# コードの構造を理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="33079-130">That exercise will help you learn the structure of C# code.</span></span>
 
 
-    <span data-ttu-id="a3f5f-131">最初のプログラムは、1 つのメッセージしか出力できません。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="a3f5f-132">**変数**を使用すると、もっと役立つプログラムを記述できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="a3f5f-133">**変数**は、同じコードを別の値で実行するのに使用できる記号です。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="a3f5f-134">試してみましょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-134">Let's try it!</span></span> <span data-ttu-id="a3f5f-135">対話型ウィンドウで記述したコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-135">Replace the code you've written in the interactive window with the following code:</span></span>
+    <span data-ttu-id="33079-131">最初のプログラムは、1 つのメッセージしか出力できません。</span><span class="sxs-lookup"><span data-stu-id="33079-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="33079-132">**変数**を使用すると、もっと役立つプログラムを記述できます。</span><span class="sxs-lookup"><span data-stu-id="33079-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="33079-133">**変数**は、同じコードを別の値で実行するのに使用できる記号です。</span><span class="sxs-lookup"><span data-stu-id="33079-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="33079-134">試してみましょう。</span><span class="sxs-lookup"><span data-stu-id="33079-134">Let's try it!</span></span> <span data-ttu-id="33079-135">対話型ウィンドウで記述したコードを次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="33079-135">Replace the code you've written in the interactive window with the following code:</span></span>
 
 
     ```csharp
@@ -68,10 +68,10 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-136">最初の行で変数 `aFriend` を宣言し、その変数に "Bill" という値を代入しています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="a3f5f-137">2 番目の行でその名前を出力しています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-137">The second line prints out the name.</span></span>
+    <span data-ttu-id="33079-136">最初の行で変数 `aFriend` を宣言し、その変数に "Bill" という値を代入しています。</span><span class="sxs-lookup"><span data-stu-id="33079-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="33079-137">2 番目の行でその名前を出力しています。</span><span class="sxs-lookup"><span data-stu-id="33079-137">The second line prints out the name.</span></span>
 
 
-    <span data-ttu-id="a3f5f-138">宣言した変数に別の値を代入できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="a3f5f-139">この名前を友人の名前に変更できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="a3f5f-140">対話型ウィンドウで、先ほど追加したコードのあとに次の 2 行を追加します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+    <span data-ttu-id="33079-138">宣言した変数に別の値を代入できます。</span><span class="sxs-lookup"><span data-stu-id="33079-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="33079-139">この名前を友人の名前に変更できます。</span><span class="sxs-lookup"><span data-stu-id="33079-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="33079-140">対話型ウィンドウで、先ほど追加したコードのあとに次の 2 行を追加します。</span><span class="sxs-lookup"><span data-stu-id="33079-140">Add these two lines in the interactive window following the code you've already added:</span></span>
 
 
     ```csharp
@@ -83,10 +83,10 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-141">`aFriend` 変数に格納された値に基づいて、コードの同じ行に 2 つの異なるメッセージが表示されていることに注目してください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+    <span data-ttu-id="33079-141">`aFriend` 変数に格納された値に基づいて、コードの同じ行に 2 つの異なるメッセージが表示されていることに注目してください。</span><span class="sxs-lookup"><span data-stu-id="33079-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
 
 
-    <span data-ttu-id="a3f5f-142">お気付きかと思いますが、最後の 2 つのメッセージから "Hello" という言葉がなくなっています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="a3f5f-143">修正しましょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-143">Let's fix that now.</span></span>  <span data-ttu-id="a3f5f-144">メッセージを出力する行を次のように変更します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-144">Modify the lines that print the message to the following:</span></span>
+    <span data-ttu-id="33079-142">お気付きかと思いますが、最後の 2 つのメッセージから "Hello" という言葉がなくなっています。</span><span class="sxs-lookup"><span data-stu-id="33079-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="33079-143">修正しましょう。</span><span class="sxs-lookup"><span data-stu-id="33079-143">Let's fix that now.</span></span>  <span data-ttu-id="33079-144">メッセージを出力する行を次のように変更します。</span><span class="sxs-lookup"><span data-stu-id="33079-144">Modify the lines that print the message to the following:</span></span>
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-145">もう一度 **[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-145">Click **Run** again to see the results.</span></span>
+    <span data-ttu-id="33079-145">もう一度 **[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="33079-145">Click **Run** again to see the results.</span></span>
 
 
-    <span data-ttu-id="a3f5f-146">**変数**と**定数**の文字列から文字列を作成するには、`+` を使用していました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="a3f5f-147">もっと良い方法があります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-147">There's a better way.</span></span>
+    <span data-ttu-id="33079-146">**変数**と**定数**の文字列から文字列を作成するには、`+` を使用していました。</span><span class="sxs-lookup"><span data-stu-id="33079-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="33079-147">もっと良い方法があります。</span><span class="sxs-lookup"><span data-stu-id="33079-147">There's a better way.</span></span>
 
-    <span data-ttu-id="a3f5f-148">変数を `{` と `}` の文字間に配置して、そのテキストを変数の値で置き換えるように C# に指示することができます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
-
-
-    <span data-ttu-id="a3f5f-149">これは、[文字列補間](../../language-reference/tokens/interpolated.md)と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+    <span data-ttu-id="33079-148">変数を `{` と `}` の文字間に配置して、そのテキストを変数の値で置き換えるように C# に指示することができます。</span><span class="sxs-lookup"><span data-stu-id="33079-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
 
 
-    <span data-ttu-id="a3f5f-150">文字列の開始引用符の前に `$` を追加する場合、中かっこの間にある文字列内に、`aFriend` などの変数を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="a3f5f-151">ぜひ試してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-151">Give it a try:</span></span>
+    <span data-ttu-id="33079-149">これは、[文字列補間](../../language-reference/tokens/interpolated.md)と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="33079-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+
+
+    <span data-ttu-id="33079-150">文字列の開始引用符の前に `$` を追加する場合、中かっこの間にある文字列内に、`aFriend` などの変数を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="33079-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="33079-151">ぜひ試してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-151">Give it a try:</span></span>
 
 
 
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-152">もう一度 **[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="a3f5f-153">メッセージは "Hello {aFriend}" ではなく、"Hello Maira" であるはずです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
+    <span data-ttu-id="33079-152">もう一度 **[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="33079-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="33079-153">メッセージは "Hello {aFriend}" ではなく、"Hello Maira" であるはずです。</span><span class="sxs-lookup"><span data-stu-id="33079-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-154">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-155">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="a3f5f-156">文字列の処理</span><span class="sxs-lookup"><span data-stu-id="a3f5f-156">Work with strings</span></span>
+    > <span data-ttu-id="33079-154">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-155">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="33079-156">文字列の処理</span><span class="sxs-lookup"><span data-stu-id="33079-156">Work with strings</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="a3f5f-157">先ほどの編集を通して、文字列を使って何ができるかを初めて確認しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="a3f5f-158">さらに詳しく見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-158">Let's explore more.</span></span>
+    <span data-ttu-id="33079-157">先ほどの編集を通して、文字列を使って何ができるかを初めて確認しました。</span><span class="sxs-lookup"><span data-stu-id="33079-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="33079-158">さらに詳しく見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="33079-158">Let's explore more.</span></span>
 
 
-    <span data-ttu-id="a3f5f-159">中かっこの間の変数は 1 つに制限されません。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="a3f5f-160">これを試してみます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-160">Try this:</span></span>
+    <span data-ttu-id="33079-159">中かっこの間の変数は 1 つに制限されません。</span><span class="sxs-lookup"><span data-stu-id="33079-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="33079-160">これを試してみます。</span><span class="sxs-lookup"><span data-stu-id="33079-160">Try this:</span></span>
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-161">文字列についてさらに調べると、文字列は単なる文字のコレクションではないことがわかります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="a3f5f-162">文字列の長さを確認するには、`Length` を使用します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="a3f5f-163">`Length` は文字列の**プロパティ**であり、その文字列の文字数を返します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="a3f5f-164">対話型ウィンドウの下部に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-164">Add the following code at the bottom of the interactive window:</span></span>
+    <span data-ttu-id="33079-161">文字列についてさらに調べると、文字列は単なる文字のコレクションではないことがわかります。</span><span class="sxs-lookup"><span data-stu-id="33079-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="33079-162">文字列の長さを確認するには、`Length` を使用します。</span><span class="sxs-lookup"><span data-stu-id="33079-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="33079-163">`Length` は文字列の**プロパティ**であり、その文字列の文字数を返します。</span><span class="sxs-lookup"><span data-stu-id="33079-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="33079-164">対話型ウィンドウの下部に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="33079-164">Add the following code at the bottom of the interactive window:</span></span>
 
 
     ```csharp
@@ -158,21 +158,21 @@ items:
 
     > [!TIP]
 
-    > <span data-ttu-id="a3f5f-165">このあたりで、自分で試してみるといいでしょう。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="a3f5f-166">`Console.WriteLine()` を使用して画面にテキストを出力できることを学習しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="a3f5f-167">変数を宣言して文字列同士を連結する方法についても学習しました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="a3f5f-168">対話型ウィンドウで実際に確認してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-168">Experiment in the interactive window.</span></span> <span data-ttu-id="a3f5f-169">このウィンドウには、実行できることの候補を作成する **IntelliSense** という機能があります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="a3f5f-170">`firstFriend` で `d` の後に `.` を入力します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="a3f5f-171">使用できるプロパティとメソッドの候補の一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
+    > <span data-ttu-id="33079-165">このあたりで、自分で試してみるといいでしょう。</span><span class="sxs-lookup"><span data-stu-id="33079-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="33079-166">`Console.WriteLine()` を使用して画面にテキストを出力できることを学習しました。</span><span class="sxs-lookup"><span data-stu-id="33079-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="33079-167">変数を宣言して文字列同士を連結する方法についても学習しました。</span><span class="sxs-lookup"><span data-stu-id="33079-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="33079-168">対話型ウィンドウで実際に確認してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-168">Experiment in the interactive window.</span></span> <span data-ttu-id="33079-169">このウィンドウには、実行できることの候補を作成する **IntelliSense** という機能があります。</span><span class="sxs-lookup"><span data-stu-id="33079-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="33079-170">`firstFriend` で `d` の後に `.` を入力します。</span><span class="sxs-lookup"><span data-stu-id="33079-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="33079-171">使用できるプロパティとメソッドの候補の一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="33079-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-172">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-173">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="a3f5f-174">文字列の追加操作</span><span class="sxs-lookup"><span data-stu-id="a3f5f-174">Do more with strings</span></span>
+    > <span data-ttu-id="33079-172">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-173">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="33079-174">文字列の追加操作</span><span class="sxs-lookup"><span data-stu-id="33079-174">Do more with strings</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="a3f5f-175">メッセージを出力するのに <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **メソッド**を使用してきました。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="a3f5f-176">**メソッド**は、何らかのアクションを実装したコードのブロックです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="a3f5f-177">メソッドに名前があることで、それにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-177">It has a name, so you can access it.</span></span>
+    <span data-ttu-id="33079-175">メッセージを出力するのに <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> **メソッド**を使用してきました。</span><span class="sxs-lookup"><span data-stu-id="33079-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="33079-176">**メソッド**は、何らかのアクションを実装したコードのブロックです。</span><span class="sxs-lookup"><span data-stu-id="33079-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="33079-177">メソッドに名前があることで、それにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="33079-177">It has a name, so you can access it.</span></span>
 
 
-    <span data-ttu-id="a3f5f-178">文字列の先頭または末尾に表示したくないスペースがあるとします。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="a3f5f-179">それらのスペースを文字列から**トリミング**したいと考えています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-179">You want to **trim** the spaces from the strings.</span></span>
+    <span data-ttu-id="33079-178">文字列の先頭または末尾に表示したくないスペースがあるとします。</span><span class="sxs-lookup"><span data-stu-id="33079-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="33079-179">それらのスペースを文字列から**トリミング**したいと考えています。</span><span class="sxs-lookup"><span data-stu-id="33079-179">You want to **trim** the spaces from the strings.</span></span>
 
-    <span data-ttu-id="a3f5f-180">この処理には、<xref:System.String.Trim%2A> メソッドと、それに関連した <xref:System.String.TrimStart%2A> と <xref:System.String.TrimEnd%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="a3f5f-181">これらのメソッドを使用するだけで、先頭と末尾のスペースを削除できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="a3f5f-182">次のコードを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-182">Try the following code:</span></span>
+    <span data-ttu-id="33079-180">この処理には、<xref:System.String.Trim%2A> メソッドと、それに関連した <xref:System.String.TrimStart%2A> と <xref:System.String.TrimEnd%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="33079-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="33079-181">これらのメソッドを使用するだけで、先頭と末尾のスペースを削除できます。</span><span class="sxs-lookup"><span data-stu-id="33079-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="33079-182">次のコードを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-182">Try the following code:</span></span>
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-183">このサンプルでは、文字列を処理するための重要な概念のいくつかを説明しています。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="a3f5f-184">文字列を操作するメソッドは、定位置に変更を加えるのではなく、新しい文字列オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="a3f5f-185">`Trim` メソッドのいずれかに対する各呼び出しは新しい文字列を返すが元のメッセージを変更しない、ということが確認できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
+    <span data-ttu-id="33079-183">このサンプルでは、文字列を処理するための重要な概念のいくつかを説明しています。</span><span class="sxs-lookup"><span data-stu-id="33079-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="33079-184">文字列を操作するメソッドは、定位置に変更を加えるのではなく、新しい文字列オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="33079-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="33079-185">`Trim` メソッドのいずれかに対する各呼び出しは新しい文字列を返すが元のメッセージを変更しない、ということが確認できます。</span><span class="sxs-lookup"><span data-stu-id="33079-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
 
 
-    <span data-ttu-id="a3f5f-186">文字列を処理するメソッドは他にもあります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="a3f5f-187">たとえば、エディターやワード プロセッサで検索と置換のコマンドを以前使用したことがあるかもしれません。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="a3f5f-188"><xref:System.String.Replace%2A> メソッドはそれと似た処理を文字列で行います。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="a3f5f-189">このメソッドは部分文字列を検索し、それを別のテキストに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="a3f5f-190"><xref:System.String.Replace%2A> メソッドは、2 つの**パラメーター**を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="a3f5f-191">パラメーターは丸かっこ内の文字列です。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="a3f5f-192">最初の文字列は、検索対象のテキストです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-192">The first string is the text to search for.</span></span> <span data-ttu-id="a3f5f-193">2 つ目の文字列は、置換後のテキストです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="a3f5f-194">ご自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-194">Try it for yourself.</span></span> <span data-ttu-id="a3f5f-195">このコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-195">Add this code.</span></span> <span data-ttu-id="a3f5f-196">`sayHello` 変数の後ろに `.Re` と入力するとヒントが表示されます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
+    <span data-ttu-id="33079-186">文字列を処理するメソッドは他にもあります。</span><span class="sxs-lookup"><span data-stu-id="33079-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="33079-187">たとえば、エディターやワード プロセッサで検索と置換のコマンドを以前使用したことがあるかもしれません。</span><span class="sxs-lookup"><span data-stu-id="33079-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="33079-188"><xref:System.String.Replace%2A> メソッドはそれと似た処理を文字列で行います。</span><span class="sxs-lookup"><span data-stu-id="33079-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="33079-189">このメソッドは部分文字列を検索し、それを別のテキストに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="33079-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="33079-190"><xref:System.String.Replace%2A> メソッドは、2 つの**パラメーター**を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="33079-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="33079-191">パラメーターは丸かっこ内の文字列です。</span><span class="sxs-lookup"><span data-stu-id="33079-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="33079-192">最初の文字列は、検索対象のテキストです。</span><span class="sxs-lookup"><span data-stu-id="33079-192">The first string is the text to search for.</span></span> <span data-ttu-id="33079-193">2 つ目の文字列は、置換後のテキストです。</span><span class="sxs-lookup"><span data-stu-id="33079-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="33079-194">ご自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-194">Try it for yourself.</span></span> <span data-ttu-id="33079-195">このコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="33079-195">Add this code.</span></span> <span data-ttu-id="33079-196">`sayHello` 変数の後ろに `.Re` と入力するとヒントが表示されます。</span><span class="sxs-lookup"><span data-stu-id="33079-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-197">その他にも役立つメソッドが 2 つあり、1 つは文字列のすべてを大文字にし、もう 1 つは文字列のすべてを小文字にします。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="a3f5f-198">次のコードを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-198">Try the following code.</span></span> <span data-ttu-id="a3f5f-199">入力して、`To` と入力し始めると **IntelliSense** でどのようにヒントが表示されるかを確認します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
+    <span data-ttu-id="33079-197">その他にも役立つメソッドが 2 つあり、1 つは文字列のすべてを大文字にし、もう 1 つは文字列のすべてを小文字にします。</span><span class="sxs-lookup"><span data-stu-id="33079-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="33079-198">次のコードを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-198">Try the following code.</span></span> <span data-ttu-id="33079-199">入力して、`To` と入力し始めると **IntelliSense** でどのようにヒントが表示されるかを確認します。</span><span class="sxs-lookup"><span data-stu-id="33079-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
 
 
     ```csharp
@@ -232,11 +232,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-200">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-201">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="a3f5f-202">検索文字列</span><span class="sxs-lookup"><span data-stu-id="a3f5f-202">Search strings</span></span>
+    > <span data-ttu-id="33079-200">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-201">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="33079-202">検索文字列</span><span class="sxs-lookup"><span data-stu-id="33079-202">Search strings</span></span>
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="a3f5f-203">*検索と置換*の演算子は他にも、文字列内のテキストを検索できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="a3f5f-204">検索には <xref:System.String.Contains%2A> メソッドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="a3f5f-205">これにより、文字列内に部分文字列が含まれているかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="a3f5f-206">次のコードを試してみて、<xref:System.String.Contains%2A> を確認してください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+    <span data-ttu-id="33079-203">*検索と置換*の演算子は他にも、文字列内のテキストを検索できます。</span><span class="sxs-lookup"><span data-stu-id="33079-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="33079-204">検索には <xref:System.String.Contains%2A> メソッドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="33079-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="33079-205">これにより、文字列内に部分文字列が含まれているかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="33079-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="33079-206">次のコードを試してみて、<xref:System.String.Contains%2A> を確認してください。</span><span class="sxs-lookup"><span data-stu-id="33079-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
 
 
     ```csharp
@@ -250,30 +250,30 @@ items:
     ```
 
 
-    <span data-ttu-id="a3f5f-207"><xref:System.String.Contains%2A> メソッドは**ブール値**を返し、検索した文字列が見つかったかどうかを知らせます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="a3f5f-208">**ブール値**は `true` か `false` どちらかの値を格納します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="a3f5f-209">**ブール値**については、この後のレッスンで詳しく学習します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-209">You'll learn more about **boolean** values in a later lesson.</span></span>
+    <span data-ttu-id="33079-207"><xref:System.String.Contains%2A> メソッドは**ブール値**を返し、検索した文字列が見つかったかどうかを知らせます。</span><span class="sxs-lookup"><span data-stu-id="33079-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="33079-208">**ブール値**は `true` か `false` どちらかの値を格納します。</span><span class="sxs-lookup"><span data-stu-id="33079-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="33079-209">**ブール値**については、この後のレッスンで詳しく学習します。</span><span class="sxs-lookup"><span data-stu-id="33079-209">You'll learn more about **boolean** values in a later lesson.</span></span>
 
 
-    <span data-ttu-id="a3f5f-210">***課題***</span><span class="sxs-lookup"><span data-stu-id="a3f5f-210">***Challenge***</span></span>
+    <span data-ttu-id="33079-210">***課題***</span><span class="sxs-lookup"><span data-stu-id="33079-210">***Challenge***</span></span>
 
 
-    <span data-ttu-id="a3f5f-211">似たような 2 つのメソッドがあり、<xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> も文字列内の部分文字列を検索します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="a3f5f-212">これらは文字列の先頭または末尾の部分文字列を検索します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="a3f5f-213">先述のサンプルを変更して、<xref:System.String.Contains%2A> の代わりに <xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> を使用してみてください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="a3f5f-214">文字列の先頭にある "You" または "goodbye" を検索します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="a3f5f-215">文字列の末尾にある "hello" または "goodbye" を検索します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
-
-
-    > [!NOTE]
-
-    > <span data-ttu-id="a3f5f-216">文字列の末尾にあるテキストをテストするときは、句読点に注意します。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="a3f5f-217">文字列が句点で終わる場合は、末尾に句点を含めた文字列を検索する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
-
-
-    <span data-ttu-id="a3f5f-218">先頭が "You" で末尾が "hello" の場合は `true`、先頭または末尾が "goodbye" の場合は false になります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+    <span data-ttu-id="33079-211">似たような 2 つのメソッドがあり、<xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> も文字列内の部分文字列を検索します。</span><span class="sxs-lookup"><span data-stu-id="33079-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="33079-212">これらは文字列の先頭または末尾の部分文字列を検索します。</span><span class="sxs-lookup"><span data-stu-id="33079-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="33079-213">先述のサンプルを変更して、<xref:System.String.Contains%2A> の代わりに <xref:System.String.StartsWith%2A> と <xref:System.String.EndsWith%2A> を使用してみてください。</span><span class="sxs-lookup"><span data-stu-id="33079-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="33079-214">文字列の先頭にある "You" または "goodbye" を検索します。</span><span class="sxs-lookup"><span data-stu-id="33079-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="33079-215">文字列の末尾にある "hello" または "goodbye" を検索します。</span><span class="sxs-lookup"><span data-stu-id="33079-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-219">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-220">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="a3f5f-221">課題完了</span><span class="sxs-lookup"><span data-stu-id="a3f5f-221">Complete challenge</span></span>
+    > <span data-ttu-id="33079-216">文字列の末尾にあるテキストをテストするときは、句読点に注意します。</span><span class="sxs-lookup"><span data-stu-id="33079-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="33079-217">文字列が句点で終わる場合は、末尾に句点を含めた文字列を検索する必要があります。</span><span class="sxs-lookup"><span data-stu-id="33079-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
+
+
+    <span data-ttu-id="33079-218">先頭が "You" で末尾が "hello" の場合は `true`、先頭または末尾が "goodbye" の場合は false になります。</span><span class="sxs-lookup"><span data-stu-id="33079-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="33079-219">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-220">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="33079-221">課題完了</span><span class="sxs-lookup"><span data-stu-id="33079-221">Complete challenge</span></span>
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="a3f5f-222">コードは次のようになりましたか?</span><span class="sxs-lookup"><span data-stu-id="a3f5f-222">Did you come up with something like this?</span></span>
+    <span data-ttu-id="33079-222">コードは次のようになりましたか?</span><span class="sxs-lookup"><span data-stu-id="33079-222">Did you come up with something like this?</span></span>
 
 
     ```csharp
@@ -294,13 +294,13 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="a3f5f-223">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="a3f5f-224">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="33079-223">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="33079-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="33079-224">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="33079-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 - content: >-
-    <span data-ttu-id="a3f5f-225">C# 概要の "Hello C#" チュートリアルはこれで終了です。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="a3f5f-226">下の **C# における数値** リンクをクリックすることで次の対話式チュートリアルを開始することも、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="a3f5f-227">"学習の継続" の手順では、これらのチュートリアルに戻ります。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-227">The "Keep Learning" step brings you back to these tutorials.</span></span>
+    <span data-ttu-id="33079-225">C# 概要の "Hello C#" チュートリアルはこれで終了です。</span><span class="sxs-lookup"><span data-stu-id="33079-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="33079-226">下の **C# における数値** リンクをクリックすることで次の対話式チュートリアルを開始することも、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。</span><span class="sxs-lookup"><span data-stu-id="33079-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="33079-227">"次の手順" セクションでは、これらのチュートリアルに戻ります。</span><span class="sxs-lookup"><span data-stu-id="33079-227">The "Next steps" section brings you back to these tutorials.</span></span>
 
 
-    <span data-ttu-id="a3f5f-228">`string` 型の詳細については次を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-228">For further reading on the `string` type:</span></span>
+    <span data-ttu-id="33079-228">`string` 型の詳細については次を参照してください。</span><span class="sxs-lookup"><span data-stu-id="33079-228">For further reading on the `string` type:</span></span>
 
-    - <span data-ttu-id="a3f5f-229">「[C# プログラミング ガイド](../../programming-guide/index.md)」の「[文字列](../../programming-guide/strings/index.md)」</span><span class="sxs-lookup"><span data-stu-id="a3f5f-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
+    - <span data-ttu-id="33079-229">「[C# プログラミング ガイド](../../programming-guide/index.md)」の「[文字列](../../programming-guide/strings/index.md)」</span><span class="sxs-lookup"><span data-stu-id="33079-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
 
-    - <span data-ttu-id="a3f5f-230">[文字列の処理に関するヒント](../../how-to/index.md#working-with-strings)もご覧ください。</span><span class="sxs-lookup"><span data-stu-id="a3f5f-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
+    - <span data-ttu-id="33079-230">[文字列の処理に関するヒント](../../how-to/index.md#working-with-strings)もご覧ください。</span><span class="sxs-lookup"><span data-stu-id="33079-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
