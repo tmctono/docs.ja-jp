@@ -3,127 +3,127 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 87557f606dead921961349fec4575394e6d359fd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3299f79ec62aebdcdbef38f1e8b09a2dc5529ec4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202548"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117495"
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="33d7d-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="33d7d-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="ffd4c-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="ffd4c-103">dotnet nuget push</span></span>
 
-<span data-ttu-id="33d7d-104">**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="33d7d-104">**This topic applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+<span data-ttu-id="ffd4c-104">**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="ffd4c-104">**This topic applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a><span data-ttu-id="33d7d-105">name</span><span class="sxs-lookup"><span data-stu-id="33d7d-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ffd4c-105">name</span><span class="sxs-lookup"><span data-stu-id="ffd4c-105">Name</span></span>
 
-<span data-ttu-id="33d7d-106">`dotnet nuget push` - パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-106">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="ffd4c-106">`dotnet nuget push` - パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-106">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="33d7d-107">構文</span><span class="sxs-lookup"><span data-stu-id="33d7d-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="ffd4c-107">構文</span><span class="sxs-lookup"><span data-stu-id="ffd4c-107">Synopsis</span></span>
 
-```console
+```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="33d7d-108">説明</span><span class="sxs-lookup"><span data-stu-id="33d7d-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="ffd4c-108">説明</span><span class="sxs-lookup"><span data-stu-id="ffd4c-108">Description</span></span>
 
-<span data-ttu-id="33d7d-109">`dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-109">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="33d7d-110">プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-110">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="33d7d-111">構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="33d7d-111">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="33d7d-112">NuGet の既定の構成は、 *%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。</span><span class="sxs-lookup"><span data-stu-id="33d7d-112">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="ffd4c-109">`dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-109">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="ffd4c-110">プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-110">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="ffd4c-111">構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-111">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="ffd4c-112">NuGet の既定の構成は、 *%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-112">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="33d7d-113">引数</span><span class="sxs-lookup"><span data-stu-id="33d7d-113">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="ffd4c-113">引数</span><span class="sxs-lookup"><span data-stu-id="ffd4c-113">Arguments</span></span>
 
 * **`ROOT`**
 
-  <span data-ttu-id="33d7d-114">プッシュされるパッケージのファイル パスを指定します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-114">Specifies the file path to the package to be pushed.</span></span>
+  <span data-ttu-id="ffd4c-114">プッシュされるパッケージのファイル パスを指定します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-114">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="33d7d-115">オプション</span><span class="sxs-lookup"><span data-stu-id="33d7d-115">Options</span></span>
+## <a name="options"></a><span data-ttu-id="ffd4c-115">オプション</span><span class="sxs-lookup"><span data-stu-id="ffd4c-115">Options</span></span>
 
 * **`-d|--disable-buffering`**
 
-  <span data-ttu-id="33d7d-116">メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-116">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+  <span data-ttu-id="ffd4c-116">メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-116">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
 * **`--force-english-output`**
 
-  <span data-ttu-id="33d7d-117">インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-117">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="ffd4c-117">インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-117">Forces the application to run using an invariant, English-based culture.</span></span>
 
 * **`-h|--help`**
 
-<span data-ttu-id="33d7d-118">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-118">Prints out a short help for the command.</span></span>
+<span data-ttu-id="ffd4c-118">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-118">Prints out a short help for the command.</span></span>
 
 * **`--interactive`**
 
-  <span data-ttu-id="33d7d-119">コマンドが認証などの操作をブロックして、手動アクションを要求することを許可します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-119">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="33d7d-120">.NET Core 2.2 SDK 以降、使用できるオプションです。</span><span class="sxs-lookup"><span data-stu-id="33d7d-120">Option available since .NET Core 2.2 SDK.</span></span>
+  <span data-ttu-id="ffd4c-119">コマンドが認証などの操作をブロックして、手動アクションを要求することを許可します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-119">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="ffd4c-120">.NET Core 2.2 SDK 以降、使用できるオプションです。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-120">Option available since .NET Core 2.2 SDK.</span></span>
 
 * **`-k|--api-key <API_KEY>`**
 
-  <span data-ttu-id="33d7d-121">サーバーの API キーです。</span><span class="sxs-lookup"><span data-stu-id="33d7d-121">The API key for the server.</span></span>
+  <span data-ttu-id="ffd4c-121">サーバーの API キーです。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-121">The API key for the server.</span></span>
 
 * **`-n|--no-symbols`**
 
-  <span data-ttu-id="33d7d-122">シンボルをプッシュしません (存在する場合でも)。</span><span class="sxs-lookup"><span data-stu-id="33d7d-122">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="ffd4c-122">シンボルをプッシュしません (存在する場合でも)。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-122">Doesn't push symbols (even if present).</span></span>
 
 * **`--no-service-endpoint`**
 
-  <span data-ttu-id="33d7d-123">ソース URL に "api/v2/package" を追加しません。</span><span class="sxs-lookup"><span data-stu-id="33d7d-123">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="33d7d-124">.NET Core 2.1 SDK 以降、使用できるオプションです。</span><span class="sxs-lookup"><span data-stu-id="33d7d-124">Option available since .NET Core 2.1 SDK.</span></span>
+  <span data-ttu-id="ffd4c-123">ソース URL に "api/v2/package" を追加しません。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-123">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="ffd4c-124">.NET Core 2.1 SDK 以降、使用できるオプションです。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-124">Option available since .NET Core 2.1 SDK.</span></span>
 
 * **`-s|--source <SOURCE>`**
 
-  <span data-ttu-id="33d7d-125">サーバー URL を指定します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-125">Specifies the server URL.</span></span> <span data-ttu-id="33d7d-126">`DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。</span><span class="sxs-lookup"><span data-stu-id="33d7d-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="ffd4c-125">サーバー URL を指定します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-125">Specifies the server URL.</span></span> <span data-ttu-id="ffd4c-126">`DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 * **`-sk|--symbol-api-key <API_KEY>`**
 
-  <span data-ttu-id="33d7d-127">シンボル サーバーの API キーです。</span><span class="sxs-lookup"><span data-stu-id="33d7d-127">The API key for the symbol server.</span></span>
+  <span data-ttu-id="ffd4c-127">シンボル サーバーの API キーです。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-127">The API key for the symbol server.</span></span>
 
 * **`-ss|--symbol-source <SOURCE>`**
 
-  <span data-ttu-id="33d7d-128">シンボル サーバーの URL を指定します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-128">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="ffd4c-128">シンボル サーバーの URL を指定します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-128">Specifies the symbol server URL.</span></span>
 
 * **`-t|--timeout <TIMEOUT>`**
 
-  <span data-ttu-id="33d7d-129">秒単位でサーバーにプッシュする場合のタイムアウトを指定します。</span><span class="sxs-lookup"><span data-stu-id="33d7d-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="33d7d-130">既定値は 300 秒 (5 分) です。</span><span class="sxs-lookup"><span data-stu-id="33d7d-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="33d7d-131">0 (0 秒) を指定すると、既定値が適用されます。</span><span class="sxs-lookup"><span data-stu-id="33d7d-131">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="ffd4c-129">秒単位でサーバーにプッシュする場合のタイムアウトを指定します。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-129">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="ffd4c-130">既定値は 300 秒 (5 分) です。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-130">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="ffd4c-131">0 (0 秒) を指定すると、既定値が適用されます。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-131">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="33d7d-132">使用例</span><span class="sxs-lookup"><span data-stu-id="33d7d-132">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="ffd4c-132">使用例</span><span class="sxs-lookup"><span data-stu-id="ffd4c-132">Examples</span></span>
 
-* <span data-ttu-id="33d7d-133">API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-133">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
+* <span data-ttu-id="ffd4c-133">API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-133">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* <span data-ttu-id="33d7d-134">API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-134">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
+* <span data-ttu-id="ffd4c-134">API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-134">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* <span data-ttu-id="33d7d-135">既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-135">Pushes *foo.nupkg* to the default push source:</span></span>
+* <span data-ttu-id="ffd4c-135">既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-135">Pushes *foo.nupkg* to the default push source:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* <span data-ttu-id="33d7d-136">既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-136">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+* <span data-ttu-id="ffd4c-136">既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-136">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* <span data-ttu-id="33d7d-137">360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-137">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
+* <span data-ttu-id="ffd4c-137">360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-137">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* <span data-ttu-id="33d7d-138">既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。</span><span class="sxs-lookup"><span data-stu-id="33d7d-138">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+* <span data-ttu-id="ffd4c-138">既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-138">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
 
-  ```console
+  ```dotnetcli
   dotnet nuget push *.nupkg
   ```
   
   > [!NOTE]
-  > <span data-ttu-id="33d7d-139">このコマンドがうまくいかない場合は、古いバージョンの SDK (.NET Core 2.1 SDK 以前のバージョン) に存在したバグが原因である可能性があります。</span><span class="sxs-lookup"><span data-stu-id="33d7d-139">If this command doesn't work, it might be due to a bug that existed in older versions of the SDK (.NET Core 2.1 SDK and earlier versions).</span></span>
-  > <span data-ttu-id="33d7d-140">これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push **/*.nupkg`</span><span class="sxs-lookup"><span data-stu-id="33d7d-140">To fix this, upgrade your SDK version or run the following command instead: `dotnet nuget push **/*.nupkg`</span></span>
+  > <span data-ttu-id="ffd4c-139">このコマンドがうまくいかない場合は、古いバージョンの SDK (.NET Core 2.1 SDK 以前のバージョン) に存在したバグが原因である可能性があります。</span><span class="sxs-lookup"><span data-stu-id="ffd4c-139">If this command doesn't work, it might be due to a bug that existed in older versions of the SDK (.NET Core 2.1 SDK and earlier versions).</span></span>
+  > <span data-ttu-id="ffd4c-140">これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push **/*.nupkg`</span><span class="sxs-lookup"><span data-stu-id="ffd4c-140">To fix this, upgrade your SDK version or run the following command instead: `dotnet nuget push **/*.nupkg`</span></span>
