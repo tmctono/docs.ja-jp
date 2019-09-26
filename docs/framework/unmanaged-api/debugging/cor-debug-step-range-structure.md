@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740774"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274200"
 ---
-# <a name="cordebugsteprange-structure"></a><span data-ttu-id="2fea4-102">COR_DEBUG_STEP_RANGE 構造体</span><span class="sxs-lookup"><span data-stu-id="2fea4-102">COR_DEBUG_STEP_RANGE Structure</span></span>
-<span data-ttu-id="2fea4-103">コードの範囲に関するオフセット情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="2fea4-103">Contains the offset information for a range of code.</span></span>  
+# <a name="cor_debug_step_range-structure"></a><span data-ttu-id="f1aff-102">COR_DEBUG_STEP_RANGE 構造体</span><span class="sxs-lookup"><span data-stu-id="f1aff-102">COR_DEBUG_STEP_RANGE Structure</span></span>
+<span data-ttu-id="f1aff-103">コードの範囲に関するオフセット情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="f1aff-103">Contains the offset information for a range of code.</span></span>  
   
- <span data-ttu-id="2fea4-104">この構造が使用者、 [icordebugstepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="2fea4-104">This structure is used by the [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) method.</span></span>  
+ <span data-ttu-id="f1aff-104">この構造体は、 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md)メソッドによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="f1aff-104">This structure is used by the [ICorDebugStepper::StepRange](icordebugstepper-steprange-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2fea4-105">構文</span><span class="sxs-lookup"><span data-stu-id="2fea4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1aff-105">構文</span><span class="sxs-lookup"><span data-stu-id="f1aff-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -37,24 +37,24 @@ typedef struct {
 } COR_DEBUG_STEP_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2fea4-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="2fea4-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f1aff-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f1aff-106">Members</span></span>  
   
-|<span data-ttu-id="2fea4-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="2fea4-107">Member</span></span>|<span data-ttu-id="2fea4-108">説明</span><span class="sxs-lookup"><span data-stu-id="2fea4-108">Description</span></span>|  
+|<span data-ttu-id="f1aff-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="f1aff-107">Member</span></span>|<span data-ttu-id="f1aff-108">説明</span><span class="sxs-lookup"><span data-stu-id="f1aff-108">Description</span></span>|  
 |------------|-----------------|  
-|`startOffset`|<span data-ttu-id="2fea4-109">範囲の先頭のオフセット。</span><span class="sxs-lookup"><span data-stu-id="2fea4-109">The offset of the beginning of the range.</span></span>|  
-|`endOffset`|<span data-ttu-id="2fea4-110">範囲の最後のオフセット。</span><span class="sxs-lookup"><span data-stu-id="2fea4-110">The offset of the end of the range.</span></span>|  
+|`startOffset`|<span data-ttu-id="f1aff-109">範囲の先頭のオフセット。</span><span class="sxs-lookup"><span data-stu-id="f1aff-109">The offset of the beginning of the range.</span></span>|  
+|`endOffset`|<span data-ttu-id="f1aff-110">範囲の末尾のオフセット。</span><span class="sxs-lookup"><span data-stu-id="f1aff-110">The offset of the end of the range.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2fea4-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="2fea4-111">Requirements</span></span>  
- <span data-ttu-id="2fea4-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2fea4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1aff-111">要件</span><span class="sxs-lookup"><span data-stu-id="f1aff-111">Requirements</span></span>  
+ <span data-ttu-id="f1aff-112">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1aff-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2fea4-113">**ヘッダー:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="2fea4-113">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="f1aff-113">**ヘッダー:** CorDebug .idl</span><span class="sxs-lookup"><span data-stu-id="f1aff-113">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="2fea4-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fea4-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f1aff-114">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="f1aff-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2fea4-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fea4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f1aff-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1aff-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fea4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="2fea4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1aff-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1aff-116">See also</span></span>
 
-- [<span data-ttu-id="2fea4-117">StepRange メソッド</span><span class="sxs-lookup"><span data-stu-id="2fea4-117">StepRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [<span data-ttu-id="2fea4-118">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="2fea4-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="2fea4-119">デバッグ</span><span class="sxs-lookup"><span data-stu-id="2fea4-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="f1aff-117">StepRange メソッド</span><span class="sxs-lookup"><span data-stu-id="f1aff-117">StepRange Method</span></span>](icordebugstepper-steprange-method.md)
+- [<span data-ttu-id="f1aff-118">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="f1aff-118">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="f1aff-119">デバッグ</span><span class="sxs-lookup"><span data-stu-id="f1aff-119">Debugging</span></span>](index.md)

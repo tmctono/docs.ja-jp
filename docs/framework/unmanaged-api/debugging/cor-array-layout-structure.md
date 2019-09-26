@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740812"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274214"
 ---
-# <a name="corarraylayout-structure"></a><span data-ttu-id="a1a0c-102">COR_ARRAY_LAYOUT 構造体</span><span class="sxs-lookup"><span data-stu-id="a1a0c-102">COR_ARRAY_LAYOUT Structure</span></span>
-<span data-ttu-id="a1a0c-103">メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-103">Provides information about the layout of an array object in memory.</span></span>  
+# <a name="cor_array_layout-structure"></a><span data-ttu-id="226ad-102">COR_ARRAY_LAYOUT 構造体</span><span class="sxs-lookup"><span data-stu-id="226ad-102">COR_ARRAY_LAYOUT Structure</span></span>
+<span data-ttu-id="226ad-103">メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。</span><span class="sxs-lookup"><span data-stu-id="226ad-103">Provides information about the layout of an array object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1a0c-104">構文</span><span class="sxs-lookup"><span data-stu-id="a1a0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="226ad-104">構文</span><span class="sxs-lookup"><span data-stu-id="226ad-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
@@ -41,34 +41,34 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a1a0c-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="a1a0c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="226ad-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="226ad-105">Members</span></span>  
   
-|<span data-ttu-id="a1a0c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="a1a0c-106">Member</span></span>|<span data-ttu-id="a1a0c-107">説明</span><span class="sxs-lookup"><span data-stu-id="a1a0c-107">Description</span></span>|  
+|<span data-ttu-id="226ad-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="226ad-106">Member</span></span>|<span data-ttu-id="226ad-107">説明</span><span class="sxs-lookup"><span data-stu-id="226ad-107">Description</span></span>|  
 |------------|-----------------|  
-|`componentID`|<span data-ttu-id="a1a0c-108">配列が含まれているオブジェクトの種類の識別子。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-108">The identifier of the type of objects that the array contains.</span></span>|  
-|`componentType`|<span data-ttu-id="a1a0c-109">コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
-|`firstElementOffset`|<span data-ttu-id="a1a0c-110">配列の最初の要素のオフセット。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-110">The offset to the first element in the array.</span></span>|  
-|`elementSize`|<span data-ttu-id="a1a0c-111">各要素のサイズ。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-111">The size of each element.</span></span>|  
-|`countOffset`|<span data-ttu-id="a1a0c-112">配列内の要素の数にオフセットします。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-112">The offset to the number of elements in the array.</span></span>|  
-|`rankSize`|<span data-ttu-id="a1a0c-113">(バイト単位)、ランクのサイズ。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-113">The size of the rank, in bytes.</span></span>|  
-|`numRanks`|<span data-ttu-id="a1a0c-114">配列のランクの数。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-114">The number of ranks in the array.</span></span>|  
-|`rankOffset`|<span data-ttu-id="a1a0c-115">ランクの開始位置のオフセット。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-115">The offset at which the ranks start.</span></span>|  
+|`componentID`|<span data-ttu-id="226ad-108">配列に格納されているオブジェクトの型の識別子。</span><span class="sxs-lookup"><span data-stu-id="226ad-108">The identifier of the type of objects that the array contains.</span></span>|  
+|`componentType`|<span data-ttu-id="226ad-109">コンポーネントがガベージコレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。</span><span class="sxs-lookup"><span data-stu-id="226ad-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
+|`firstElementOffset`|<span data-ttu-id="226ad-110">配列内の最初の要素へのオフセット。</span><span class="sxs-lookup"><span data-stu-id="226ad-110">The offset to the first element in the array.</span></span>|  
+|`elementSize`|<span data-ttu-id="226ad-111">各要素のサイズ。</span><span class="sxs-lookup"><span data-stu-id="226ad-111">The size of each element.</span></span>|  
+|`countOffset`|<span data-ttu-id="226ad-112">配列内の要素の数へのオフセット。</span><span class="sxs-lookup"><span data-stu-id="226ad-112">The offset to the number of elements in the array.</span></span>|  
+|`rankSize`|<span data-ttu-id="226ad-113">ランクのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="226ad-113">The size of the rank, in bytes.</span></span>|  
+|`numRanks`|<span data-ttu-id="226ad-114">配列内のランクの数。</span><span class="sxs-lookup"><span data-stu-id="226ad-114">The number of ranks in the array.</span></span>|  
+|`rankOffset`|<span data-ttu-id="226ad-115">ランクの開始位置を示すオフセット。</span><span class="sxs-lookup"><span data-stu-id="226ad-115">The offset at which the ranks start.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a1a0c-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="a1a0c-116">Remarks</span></span>  
- <span data-ttu-id="a1a0c-117">`rankSize`フィールドは、多次元配列のランクのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="a1a0c-118">1 次元の配列も正確になります。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-118">It is accurate for single-dimensional arrays as well.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="226ad-116">コメント</span><span class="sxs-lookup"><span data-stu-id="226ad-116">Remarks</span></span>  
+ <span data-ttu-id="226ad-117">この`rankSize`フィールドは、多次元配列内のランクのサイズを指定します。</span><span class="sxs-lookup"><span data-stu-id="226ad-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="226ad-118">これは、1次元配列に対しても正確です。</span><span class="sxs-lookup"><span data-stu-id="226ad-118">It is accurate for single-dimensional arrays as well.</span></span>  
   
- <span data-ttu-id="a1a0c-119">値`numRanks`は 1 次元配列の 1 と`N`の多次元配列の`N`ディメンション。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
+ <span data-ttu-id="226ad-119">の`numRanks`値は、1次元`N`配列の場合は1、次元の`N`多次元配列の場合は1になります。</span><span class="sxs-lookup"><span data-stu-id="226ad-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1a0c-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="a1a0c-120">Requirements</span></span>  
- <span data-ttu-id="a1a0c-121">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a1a0c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="226ad-120">要件</span><span class="sxs-lookup"><span data-stu-id="226ad-120">Requirements</span></span>  
+ <span data-ttu-id="226ad-121">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="226ad-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1a0c-122">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1a0c-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="226ad-122">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="226ad-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a1a0c-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1a0c-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="226ad-123">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="226ad-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a1a0c-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1a0c-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="226ad-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="226ad-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1a0c-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="a1a0c-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="226ad-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="226ad-125">See also</span></span>
 
-- [<span data-ttu-id="a1a0c-126">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="a1a0c-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="a1a0c-127">デバッグ</span><span class="sxs-lookup"><span data-stu-id="a1a0c-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="226ad-126">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="226ad-126">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="226ad-127">デバッグ</span><span class="sxs-lookup"><span data-stu-id="226ad-127">Debugging</span></span>](index.md)

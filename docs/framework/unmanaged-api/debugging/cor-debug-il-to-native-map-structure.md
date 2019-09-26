@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740786"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274072"
 ---
-# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="1dfb8-102">COR_DEBUG_IL_TO_NATIVE_MAP 構造体</span><span class="sxs-lookup"><span data-stu-id="1dfb8-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="1dfb8-103">Microsoft intermediate language (MSIL) コードをネイティブ コードにマップするために使用するオフセットが含まれます。</span><span class="sxs-lookup"><span data-stu-id="1dfb8-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cor_debug_il_to_native_map-structure"></a><span data-ttu-id="7d66b-102">COR_DEBUG_IL_TO_NATIVE_MAP 構造体</span><span class="sxs-lookup"><span data-stu-id="7d66b-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="7d66b-103">Microsoft intermediate language (MSIL) コードをネイティブ コードにマップするために使用するオフセットが含まれます。</span><span class="sxs-lookup"><span data-stu-id="7d66b-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dfb8-104">構文</span><span class="sxs-lookup"><span data-stu-id="1dfb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d66b-104">構文</span><span class="sxs-lookup"><span data-stu-id="7d66b-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
@@ -36,26 +36,26 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1dfb8-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="1dfb8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7d66b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="7d66b-105">Members</span></span>  
   
-|<span data-ttu-id="1dfb8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="1dfb8-106">Member</span></span>|<span data-ttu-id="1dfb8-107">説明</span><span class="sxs-lookup"><span data-stu-id="1dfb8-107">Description</span></span>|  
+|<span data-ttu-id="7d66b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="7d66b-106">Member</span></span>|<span data-ttu-id="7d66b-107">説明</span><span class="sxs-lookup"><span data-stu-id="7d66b-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="1dfb8-108">MSIL コードのオフセット。</span><span class="sxs-lookup"><span data-stu-id="1dfb8-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="1dfb8-109">ネイティブ コードの開始のオフセット。</span><span class="sxs-lookup"><span data-stu-id="1dfb8-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="1dfb8-110">ネイティブ コードの最後のオフセット。</span><span class="sxs-lookup"><span data-stu-id="1dfb8-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="7d66b-108">MSIL コードのオフセット。</span><span class="sxs-lookup"><span data-stu-id="7d66b-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="7d66b-109">ネイティブコードの開始位置のオフセット。</span><span class="sxs-lookup"><span data-stu-id="7d66b-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="7d66b-110">ネイティブコードの末尾のオフセット。</span><span class="sxs-lookup"><span data-stu-id="7d66b-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1dfb8-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="1dfb8-111">Requirements</span></span>  
- <span data-ttu-id="1dfb8-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dfb8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d66b-111">要件</span><span class="sxs-lookup"><span data-stu-id="7d66b-111">Requirements</span></span>  
+ <span data-ttu-id="7d66b-112">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7d66b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1dfb8-113">**ヘッダー:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="1dfb8-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="7d66b-113">**ヘッダー:** Corprof.idl、CorDebug .idl</span><span class="sxs-lookup"><span data-stu-id="7d66b-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="1dfb8-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1dfb8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d66b-114">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="7d66b-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1dfb8-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dfb8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7d66b-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d66b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1dfb8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dfb8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d66b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d66b-116">See also</span></span>
 
-- [<span data-ttu-id="1dfb8-117">GetILToNativeMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="1dfb8-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [<span data-ttu-id="1dfb8-118">GetILToNativeMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="1dfb8-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="1dfb8-119">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="1dfb8-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="1dfb8-120">デバッグ</span><span class="sxs-lookup"><span data-stu-id="1dfb8-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="7d66b-117">GetILToNativeMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="7d66b-117">GetILToNativeMapping Method</span></span>](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="7d66b-118">GetILToNativeMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="7d66b-118">GetILToNativeMapping Method</span></span>](icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="7d66b-119">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="7d66b-119">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="7d66b-120">デバッグ</span><span class="sxs-lookup"><span data-stu-id="7d66b-120">Debugging</span></span>](index.md)
