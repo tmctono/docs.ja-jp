@@ -1,27 +1,27 @@
 ---
-title: ステートメント A ~ E (Visual Basic)
+title: -E ステートメント (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
-ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfe28b28f197759bb2620d12d550a057d47f4d74
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054342"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592001"
 ---
-# <a name="a-e-statements"></a><span data-ttu-id="a03ef-102">ステートメント A ～ E</span><span class="sxs-lookup"><span data-stu-id="a03ef-102">A-E Statements</span></span>
-<span data-ttu-id="a03ef-103">次の表には、Visual Basic 言語のステートメントの一覧が含まれています。</span><span class="sxs-lookup"><span data-stu-id="a03ef-103">The following table contains a listing of Visual Basic language statements.</span></span>  
+# <a name="a-e-statements"></a><span data-ttu-id="270c0-102">ステートメント A ～ E</span><span class="sxs-lookup"><span data-stu-id="270c0-102">A-E Statements</span></span>
+<span data-ttu-id="270c0-103">次の表に、Visual Basic 言語ステートメントの一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="270c0-103">The following table contains a listing of Visual Basic language statements.</span></span>  
   
 |||||  
 |---|---|---|---|  
-|[<span data-ttu-id="a03ef-104">AddHandler</span><span class="sxs-lookup"><span data-stu-id="a03ef-104">AddHandler</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[<span data-ttu-id="a03ef-105">Call</span><span class="sxs-lookup"><span data-stu-id="a03ef-105">Call</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)|[<span data-ttu-id="a03ef-106">Class</span><span class="sxs-lookup"><span data-stu-id="a03ef-106">Class</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)|[<span data-ttu-id="a03ef-107">Const</span><span class="sxs-lookup"><span data-stu-id="a03ef-107">Const</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[<span data-ttu-id="a03ef-108">Continue</span><span class="sxs-lookup"><span data-stu-id="a03ef-108">Continue</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)|[<span data-ttu-id="a03ef-109">Declare</span><span class="sxs-lookup"><span data-stu-id="a03ef-109">Declare</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)|[<span data-ttu-id="a03ef-110">Delegate</span><span class="sxs-lookup"><span data-stu-id="a03ef-110">Delegate</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)|[<span data-ttu-id="a03ef-111">Dim</span><span class="sxs-lookup"><span data-stu-id="a03ef-111">Dim</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[<span data-ttu-id="a03ef-112">Do...Loop</span><span class="sxs-lookup"><span data-stu-id="a03ef-112">Do...Loop</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[<span data-ttu-id="a03ef-113">Else</span><span class="sxs-lookup"><span data-stu-id="a03ef-113">Else</span></span>](../../../visual-basic/language-reference/statements/else-statement.md)|[<span data-ttu-id="a03ef-114">End</span><span class="sxs-lookup"><span data-stu-id="a03ef-114">End</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)|[<span data-ttu-id="a03ef-115">End \<キーワード></span><span class="sxs-lookup"><span data-stu-id="a03ef-115">End \<keyword></span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
-|[<span data-ttu-id="a03ef-116">Enum</span><span class="sxs-lookup"><span data-stu-id="a03ef-116">Enum</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)|[<span data-ttu-id="a03ef-117">Erase</span><span class="sxs-lookup"><span data-stu-id="a03ef-117">Erase</span></span>](../../../visual-basic/language-reference/statements/erase-statement.md)|[<span data-ttu-id="a03ef-118">Error</span><span class="sxs-lookup"><span data-stu-id="a03ef-118">Error</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)|[<span data-ttu-id="a03ef-119">Event</span><span class="sxs-lookup"><span data-stu-id="a03ef-119">Event</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[<span data-ttu-id="a03ef-120">Exit</span><span class="sxs-lookup"><span data-stu-id="a03ef-120">Exit</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[<span data-ttu-id="270c0-104">AddHandler</span><span class="sxs-lookup"><span data-stu-id="270c0-104">AddHandler</span></span>](addhandler-statement.md)|[<span data-ttu-id="270c0-105">Call</span><span class="sxs-lookup"><span data-stu-id="270c0-105">Call</span></span>](call-statement.md)|[<span data-ttu-id="270c0-106">Class</span><span class="sxs-lookup"><span data-stu-id="270c0-106">Class</span></span>](class-statement.md)|[<span data-ttu-id="270c0-107">Const</span><span class="sxs-lookup"><span data-stu-id="270c0-107">Const</span></span>](const-statement.md)|  
+|[<span data-ttu-id="270c0-108">Continue</span><span class="sxs-lookup"><span data-stu-id="270c0-108">Continue</span></span>](continue-statement.md)|[<span data-ttu-id="270c0-109">Declare</span><span class="sxs-lookup"><span data-stu-id="270c0-109">Declare</span></span>](declare-statement.md)|[<span data-ttu-id="270c0-110">Delegate</span><span class="sxs-lookup"><span data-stu-id="270c0-110">Delegate</span></span>](delegate-statement.md)|[<span data-ttu-id="270c0-111">Dim</span><span class="sxs-lookup"><span data-stu-id="270c0-111">Dim</span></span>](dim-statement.md)|  
+|[<span data-ttu-id="270c0-112">Do...Loop</span><span class="sxs-lookup"><span data-stu-id="270c0-112">Do...Loop</span></span>](do-loop-statement.md)|[<span data-ttu-id="270c0-113">Else</span><span class="sxs-lookup"><span data-stu-id="270c0-113">Else</span></span>](else-statement.md)|[<span data-ttu-id="270c0-114">End</span><span class="sxs-lookup"><span data-stu-id="270c0-114">End</span></span>](end-statement.md)|[<span data-ttu-id="270c0-115">End \<キーワード></span><span class="sxs-lookup"><span data-stu-id="270c0-115">End \<keyword></span></span>](end-keyword-statement.md)|  
+|[<span data-ttu-id="270c0-116">Enum</span><span class="sxs-lookup"><span data-stu-id="270c0-116">Enum</span></span>](enum-statement.md)|[<span data-ttu-id="270c0-117">Erase</span><span class="sxs-lookup"><span data-stu-id="270c0-117">Erase</span></span>](erase-statement.md)|[<span data-ttu-id="270c0-118">Error</span><span class="sxs-lookup"><span data-stu-id="270c0-118">Error</span></span>](error-statement.md)|[<span data-ttu-id="270c0-119">Event</span><span class="sxs-lookup"><span data-stu-id="270c0-119">Event</span></span>](event-statement.md)|  
+|[<span data-ttu-id="270c0-120">Exit</span><span class="sxs-lookup"><span data-stu-id="270c0-120">Exit</span></span>](exit-statement.md)||||  
   
-## <a name="see-also"></a><span data-ttu-id="a03ef-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="a03ef-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="270c0-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="270c0-121">See also</span></span>
 
-- [<span data-ttu-id="a03ef-122">ステートメント F ～ P</span><span class="sxs-lookup"><span data-stu-id="a03ef-122">F-P Statements</span></span>](../../../visual-basic/language-reference/statements/f-p-statements.md)
-- [<span data-ttu-id="a03ef-123">ステートメント Q ～ Z</span><span class="sxs-lookup"><span data-stu-id="a03ef-123">Q-Z Statements</span></span>](../../../visual-basic/language-reference/statements/q-z-statements.md)
-- [<span data-ttu-id="a03ef-124">Visual Basic の言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="a03ef-124">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)
+- [<span data-ttu-id="270c0-122">ステートメント F ～ P</span><span class="sxs-lookup"><span data-stu-id="270c0-122">F-P Statements</span></span>](f-p-statements.md)
+- [<span data-ttu-id="270c0-123">ステートメント Q ～ Z</span><span class="sxs-lookup"><span data-stu-id="270c0-123">Q-Z Statements</span></span>](q-z-statements.md)
+- [<span data-ttu-id="270c0-124">Visual Basic の言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="270c0-124">Visual Basic Language Reference</span></span>](../index.md)

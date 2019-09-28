@@ -16,50 +16,50 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331633"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353170"
 ---
-# <a name="ensuring-data-integrity-with-hash-codes"></a><span data-ttu-id="482d3-102">ハッシュ コードによるデータの整合性の保証</span><span class="sxs-lookup"><span data-stu-id="482d3-102">Ensuring Data Integrity with Hash Codes</span></span>
-<span data-ttu-id="482d3-103">ハッシュ値は、データを一意に識別する固定長の数値です。</span><span class="sxs-lookup"><span data-stu-id="482d3-103">A hash value is a numeric value of a fixed length that uniquely identifies data.</span></span> <span data-ttu-id="482d3-104">ハッシュ値は、大量のデータを非常に小さな数値として表現するため、デジタル署名と一緒に使用されます。</span><span class="sxs-lookup"><span data-stu-id="482d3-104">Hash values represent large amounts of data as much smaller numeric values, so they are used with digital signatures.</span></span> <span data-ttu-id="482d3-105">大きな値で署名するよりも、ハッシュ値を使用すれば効率的に署名できます。</span><span class="sxs-lookup"><span data-stu-id="482d3-105">You can sign a hash value more efficiently than signing the larger value.</span></span> <span data-ttu-id="482d3-106">ハッシュ値は、安全でないチャネルを介して送信されたデータの整合性を検証するためにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="482d3-106">Hash values are also useful for verifying the integrity of data sent through insecure channels.</span></span> <span data-ttu-id="482d3-107">受信したデータのハッシュ値を送信したデータのハッシュ値と比較すると、データが変更されたかどうかを判断できます。</span><span class="sxs-lookup"><span data-stu-id="482d3-107">The hash value of received data can be compared to the hash value of data as it was sent to determine whether the data was altered.</span></span>  
+# <a name="ensuring-data-integrity-with-hash-codes"></a><span data-ttu-id="034af-102">ハッシュ コードによるデータの整合性の保証</span><span class="sxs-lookup"><span data-stu-id="034af-102">Ensuring Data Integrity with Hash Codes</span></span>
+<span data-ttu-id="034af-103">ハッシュ値は、データを一意に識別する固定長の数値です。</span><span class="sxs-lookup"><span data-stu-id="034af-103">A hash value is a numeric value of a fixed length that uniquely identifies data.</span></span> <span data-ttu-id="034af-104">ハッシュ値は、大量のデータを非常に小さな数値として表現するため、デジタル署名と一緒に使用されます。</span><span class="sxs-lookup"><span data-stu-id="034af-104">Hash values represent large amounts of data as much smaller numeric values, so they are used with digital signatures.</span></span> <span data-ttu-id="034af-105">大きな値で署名するよりも、ハッシュ値を使用すれば効率的に署名できます。</span><span class="sxs-lookup"><span data-stu-id="034af-105">You can sign a hash value more efficiently than signing the larger value.</span></span> <span data-ttu-id="034af-106">ハッシュ値は、安全でないチャネルを介して送信されたデータの整合性を検証するためにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="034af-106">Hash values are also useful for verifying the integrity of data sent through insecure channels.</span></span> <span data-ttu-id="034af-107">受信したデータのハッシュ値を送信したデータのハッシュ値と比較すると、データが変更されたかどうかを判断できます。</span><span class="sxs-lookup"><span data-stu-id="034af-107">The hash value of received data can be compared to the hash value of data as it was sent to determine whether the data was altered.</span></span>  
   
- <span data-ttu-id="482d3-108">このトピックでは、<xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスを使用してハッシュ コードの生成と検証を実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="482d3-108">This topic describes how to generate and verify hash codes by using the classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="034af-108">このトピックでは、<xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスを使用してハッシュ コードの生成と検証を実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="034af-108">This topic describes how to generate and verify hash codes by using the classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="generating-a-hash"></a><span data-ttu-id="482d3-109">ハッシュの生成</span><span class="sxs-lookup"><span data-stu-id="482d3-109">Generating a Hash</span></span>  
- <span data-ttu-id="482d3-110">マネージド ハッシュ クラスでは、バイト配列またはマネージド ストリーム オブジェクトのいずれかをハッシュできます。</span><span class="sxs-lookup"><span data-stu-id="482d3-110">The managed hash classes can hash either an array of bytes or a managed stream object.</span></span> <span data-ttu-id="482d3-111">SHA1 ハッシュ アルゴリズムを使用して文字列のハッシュ値を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="482d3-111">The following example uses the SHA1 hash algorithm to create a hash value for a string.</span></span> <span data-ttu-id="482d3-112">この例では、<xref:System.Text.UnicodeEncoding> クラスを使用して文字列をバイト配列に変換し、<xref:System.Security.Cryptography.SHA1Managed> クラスを使用してバイト配列をハッシュします。</span><span class="sxs-lookup"><span data-stu-id="482d3-112">The example uses the <xref:System.Text.UnicodeEncoding> class to convert the string into an array of bytes that are hashed by using the <xref:System.Security.Cryptography.SHA1Managed> class.</span></span> <span data-ttu-id="482d3-113">ハッシュ値はコンソールに表示されます。</span><span class="sxs-lookup"><span data-stu-id="482d3-113">The hash value is then displayed to the console.</span></span>  
+## <a name="generating-a-hash"></a><span data-ttu-id="034af-109">ハッシュの生成</span><span class="sxs-lookup"><span data-stu-id="034af-109">Generating a Hash</span></span>  
+ <span data-ttu-id="034af-110">マネージド ハッシュ クラスでは、バイト配列またはマネージド ストリーム オブジェクトのいずれかをハッシュできます。</span><span class="sxs-lookup"><span data-stu-id="034af-110">The managed hash classes can hash either an array of bytes or a managed stream object.</span></span> <span data-ttu-id="034af-111">SHA1 ハッシュ アルゴリズムを使用して文字列のハッシュ値を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="034af-111">The following example uses the SHA1 hash algorithm to create a hash value for a string.</span></span> <span data-ttu-id="034af-112">この例では、<xref:System.Text.UnicodeEncoding> クラスを使用して文字列をバイト配列に変換し、<xref:System.Security.Cryptography.SHA1Managed> クラスを使用してバイト配列をハッシュします。</span><span class="sxs-lookup"><span data-stu-id="034af-112">The example uses the <xref:System.Text.UnicodeEncoding> class to convert the string into an array of bytes that are hashed by using the <xref:System.Security.Cryptography.SHA1Managed> class.</span></span> <span data-ttu-id="034af-113">ハッシュ値はコンソールに表示されます。</span><span class="sxs-lookup"><span data-stu-id="034af-113">The hash value is then displayed to the console.</span></span>  
 
- <span data-ttu-id="482d3-114">SHA1 の衝突の問題のため、SHA256 以上をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="482d3-114">Due to collision problems with SHA1, Microsoft recommends SHA256 or better.</span></span>
+ <span data-ttu-id="034af-114">SHA1 の衝突の問題のため、SHA256 以上をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="034af-114">Due to collision problems with SHA1, Microsoft recommends SHA256 or better.</span></span>
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
   
- <span data-ttu-id="482d3-115">上記のコードは、次の文字列をコンソールに表示します。</span><span class="sxs-lookup"><span data-stu-id="482d3-115">This code will display the following string to the console:</span></span>  
+ <span data-ttu-id="034af-115">上記のコードは、次の文字列をコンソールに表示します。</span><span class="sxs-lookup"><span data-stu-id="034af-115">This code will display the following string to the console:</span></span>  
   
  `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
   
-## <a name="verifying-a-hash"></a><span data-ttu-id="482d3-116">ハッシュの検証</span><span class="sxs-lookup"><span data-stu-id="482d3-116">Verifying a Hash</span></span>  
- <span data-ttu-id="482d3-117">データをハッシュ値と比較すると、整合性を判断できます。</span><span class="sxs-lookup"><span data-stu-id="482d3-117">Data can be compared to a hash value to determine its integrity.</span></span> <span data-ttu-id="482d3-118">通常、データは特定のタイミングでハッシュされ、ハッシュ値はなんらかの方法で保護されます。</span><span class="sxs-lookup"><span data-stu-id="482d3-118">Usually, data is hashed at a certain time and the hash value is protected in some way.</span></span> <span data-ttu-id="482d3-119">後でデータをもう一度ハッシュし、保護されている値と比較できます。</span><span class="sxs-lookup"><span data-stu-id="482d3-119">At a later time, the data can be hashed again and compared to the protected value.</span></span> <span data-ttu-id="482d3-120">ハッシュ値が一致する場合、データは変更されていません。</span><span class="sxs-lookup"><span data-stu-id="482d3-120">If the hash values match, the data has not been altered.</span></span> <span data-ttu-id="482d3-121">値が一致しない場合は、データが破損しています。</span><span class="sxs-lookup"><span data-stu-id="482d3-121">If the values do not match, the data has been corrupted.</span></span> <span data-ttu-id="482d3-122">このシステムを機能させるには、保護されたハッシュを暗号化するか、信頼されていないあらゆる対象に対して内密を保つ必要があります。</span><span class="sxs-lookup"><span data-stu-id="482d3-122">For this system to work, the protected hash must be encrypted or kept secret from all untrusted parties.</span></span>  
+## <a name="verifying-a-hash"></a><span data-ttu-id="034af-116">ハッシュの検証</span><span class="sxs-lookup"><span data-stu-id="034af-116">Verifying a Hash</span></span>  
+ <span data-ttu-id="034af-117">データをハッシュ値と比較すると、整合性を判断できます。</span><span class="sxs-lookup"><span data-stu-id="034af-117">Data can be compared to a hash value to determine its integrity.</span></span> <span data-ttu-id="034af-118">通常、データは特定のタイミングでハッシュされ、ハッシュ値はなんらかの方法で保護されます。</span><span class="sxs-lookup"><span data-stu-id="034af-118">Usually, data is hashed at a certain time and the hash value is protected in some way.</span></span> <span data-ttu-id="034af-119">後でデータをもう一度ハッシュし、保護されている値と比較できます。</span><span class="sxs-lookup"><span data-stu-id="034af-119">At a later time, the data can be hashed again and compared to the protected value.</span></span> <span data-ttu-id="034af-120">ハッシュ値が一致する場合、データは変更されていません。</span><span class="sxs-lookup"><span data-stu-id="034af-120">If the hash values match, the data has not been altered.</span></span> <span data-ttu-id="034af-121">値が一致しない場合は、データが破損しています。</span><span class="sxs-lookup"><span data-stu-id="034af-121">If the values do not match, the data has been corrupted.</span></span> <span data-ttu-id="034af-122">このシステムを機能させるには、保護されたハッシュを暗号化するか、信頼されていないあらゆる対象に対して内密を保つ必要があります。</span><span class="sxs-lookup"><span data-stu-id="034af-122">For this system to work, the protected hash must be encrypted or kept secret from all untrusted parties.</span></span>  
   
- <span data-ttu-id="482d3-123">文字列の前のハッシュ値を新しいハッシュ値と比較する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="482d3-123">The following example compares the previous hash value of a string to a new hash value.</span></span> <span data-ttu-id="482d3-124">この例では、ループ処理でハッシュ値の各バイトをすべて比較します。</span><span class="sxs-lookup"><span data-stu-id="482d3-124">This example loops through each byte of the hash values and makes a comparison.</span></span>  
+ <span data-ttu-id="034af-123">文字列の前のハッシュ値を新しいハッシュ値と比較する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="034af-123">The following example compares the previous hash value of a string to a new hash value.</span></span> <span data-ttu-id="034af-124">この例では、ループ処理でハッシュ値の各バイトをすべて比較します。</span><span class="sxs-lookup"><span data-stu-id="034af-124">This example loops through each byte of the hash values and makes a comparison.</span></span>  
   
  [!code-csharp[VerifyingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/verifyingahash/cs/program.cs#1)]
  [!code-vb[VerifyingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/verifyingahash/vb/program.vb#1)]  
   
- <span data-ttu-id="482d3-125">2 つのハッシュ値が一致する場合は、上記のコードによってコンソールに次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="482d3-125">If the two hash values match, this code displays the following to the console:</span></span>  
+ <span data-ttu-id="034af-125">2 つのハッシュ値が一致する場合は、上記のコードによってコンソールに次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="034af-125">If the two hash values match, this code displays the following to the console:</span></span>  
   
-```  
+```console  
 The hash codes match.  
 ```  
   
- <span data-ttu-id="482d3-126">一致しない場合は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="482d3-126">If they do not match, the code displays the following:</span></span>  
+ <span data-ttu-id="034af-126">一致しない場合は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="034af-126">If they do not match, the code displays the following:</span></span>  
   
-```  
+```console  
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="482d3-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="482d3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="034af-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="034af-127">See also</span></span>
 
-- [<span data-ttu-id="482d3-128">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="482d3-128">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="034af-128">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="034af-128">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
