@@ -10,32 +10,32 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946451"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353153"
 ---
-# <a name="plinq-data-sample"></a><span data-ttu-id="7a5da-102">PLINQ データのサンプル</span><span class="sxs-lookup"><span data-stu-id="7a5da-102">PLINQ Data Sample</span></span>
-<span data-ttu-id="7a5da-103">このサンプルには、.csv 形式のデータ例と、データを顧客、製品、注文、その他の詳細のメモリ内コレクションに変換するメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="7a5da-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="7a5da-104">PLINQ でさらに試す場合は、他の特定のトピックのコード例をこのトピックのコードに貼り付けて、`Main` メソッドから呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="7a5da-105">また、独自の PLINQ クエリでこのデータを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-105">You can also use this data with your own PLINQ queries.</span></span>  
+# <a name="plinq-data-sample"></a><span data-ttu-id="c3cdc-102">PLINQ データのサンプル</span><span class="sxs-lookup"><span data-stu-id="c3cdc-102">PLINQ Data Sample</span></span>
+<span data-ttu-id="c3cdc-103">このサンプルには、.csv 形式のデータ例と、データを顧客、製品、注文、その他の詳細のメモリ内コレクションに変換するメソッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="c3cdc-104">PLINQ でさらに試す場合は、他の特定のトピックのコード例をこのトピックのコードに貼り付けて、`Main` メソッドから呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="c3cdc-105">また、独自の PLINQ クエリでこのデータを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-105">You can also use this data with your own PLINQ queries.</span></span>  
   
- <span data-ttu-id="7a5da-106">データは、Northwind データベースのサブセットを表します。</span><span class="sxs-lookup"><span data-stu-id="7a5da-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="7a5da-107">50 の顧客レコードが含まれていますが、すべてのフィールドが含まれているわけではありません。</span><span class="sxs-lookup"><span data-stu-id="7a5da-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="7a5da-108">すべての顧客の注文および対応する Order_Detail データからの行のサブセットが含まれます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="7a5da-109">製品はすべて含まれます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-109">All Products are included.</span></span>  
+ <span data-ttu-id="c3cdc-106">データは、Northwind データベースのサブセットを表します。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="c3cdc-107">50 の顧客レコードが含まれていますが、すべてのフィールドが含まれているわけではありません。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="c3cdc-108">すべての顧客の注文および対応する Order_Detail データからの行のサブセットが含まれます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="c3cdc-109">製品はすべて含まれます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-109">All Products are included.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="7a5da-110">データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。</span><span class="sxs-lookup"><span data-stu-id="7a5da-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="7a5da-111">このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="7a5da-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
+> <span data-ttu-id="c3cdc-110">データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="c3cdc-111">このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
   
-### <a name="to-set-up-this-sample"></a><span data-ttu-id="7a5da-112">このサンプルをセットアップするには</span><span class="sxs-lookup"><span data-stu-id="7a5da-112">To set up this sample</span></span>  
+### <a name="to-set-up-this-sample"></a><span data-ttu-id="c3cdc-112">このサンプルをセットアップするには</span><span class="sxs-lookup"><span data-stu-id="c3cdc-112">To set up this sample</span></span>  
   
-1. <span data-ttu-id="7a5da-113">Visual Basic または Visual C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="7a5da-113">Create a Visual Basic or Visual C# console application project.</span></span>  
+1. <span data-ttu-id="c3cdc-113">Visual Basic または Visual C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-113">Create a Visual Basic or Visual C# console application project.</span></span>  
   
-2. <span data-ttu-id="7a5da-114">これらの手順の次に示すコードを使用して、Module1.vb または Program.cs のコンテンツを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
+2. <span data-ttu-id="c3cdc-114">これらの手順の次に示すコードを使用して、Module1.vb または Program.cs のコンテンツを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
   
-3. <span data-ttu-id="7a5da-115">**[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="7a5da-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="7a5da-116">**[テキスト ファイル]** を選択してから **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="7a5da-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="7a5da-117">このトピックのデータをコピーし、新しいテキスト ファイルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="7a5da-118">**[ファイル]** メニューで **[保存]** をクリックし、ファイルに Plinqdata.csv という名前を付けてから、ソース コード ファイルを含むフォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="7a5da-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
+3. <span data-ttu-id="c3cdc-115">**[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="c3cdc-116">**[テキスト ファイル]** を選択してから **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="c3cdc-117">このトピックのデータをコピーし、新しいテキスト ファイルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="c3cdc-118">**[ファイル]** メニューで **[保存]** をクリックし、ファイルに Plinqdata.csv という名前を付けてから、ソース コード ファイルを含むフォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
   
-4. <span data-ttu-id="7a5da-119">F5 キーを押し、プロジェクトが正常にビルドされ、実行されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="7a5da-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="7a5da-120">次の出力がコンソール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="7a5da-120">The following output should be displayed in the console window.</span></span>  
+4. <span data-ttu-id="c3cdc-119">F5 キーを押し、プロジェクトが正常にビルドされ、実行されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="c3cdc-120">次の出力がコンソール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="c3cdc-120">The following output should be displayed in the console window.</span></span>  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -46,9 +46,9 @@ ms.locfileid: "69946451"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a><span data-ttu-id="7a5da-121">データ</span><span class="sxs-lookup"><span data-stu-id="7a5da-121">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="c3cdc-121">データ</span><span class="sxs-lookup"><span data-stu-id="c3cdc-121">Data</span></span>  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  
@@ -862,6 +862,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7a5da-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a5da-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3cdc-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="c3cdc-122">See also</span></span>
 
-- [<span data-ttu-id="7a5da-123">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="7a5da-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="c3cdc-123">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="c3cdc-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
