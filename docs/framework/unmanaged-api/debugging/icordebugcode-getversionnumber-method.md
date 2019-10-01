@@ -17,38 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747525"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700819"
 ---
-# <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="6550c-102">ICorDebugCode::GetVersionNumber メソッド</span><span class="sxs-lookup"><span data-stu-id="6550c-102">ICorDebugCode::GetVersionNumber Method</span></span>
-<span data-ttu-id="6550c-103">この"ICorDebugCode"を表すコードのバージョンを識別する 1 から始まる番号を取得します。</span><span class="sxs-lookup"><span data-stu-id="6550c-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="6550c-104">構文</span><span class="sxs-lookup"><span data-stu-id="6550c-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT GetVersionNumber (  
-    [out] ULONG32    *nVersion  
-);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="6550c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6550c-105">Parameters</span></span>  
+# <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="f49c8-102">ICorDebugCode::GetVersionNumber メソッド</span><span class="sxs-lookup"><span data-stu-id="f49c8-102">ICorDebugCode::GetVersionNumber Method</span></span>
+
+<span data-ttu-id="f49c8-103">この "" コード "が表すコードのバージョンを識別する、1から始まる番号を取得します。</span><span class="sxs-lookup"><span data-stu-id="f49c8-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="f49c8-104">構文</span><span class="sxs-lookup"><span data-stu-id="f49c8-104">Syntax</span></span>
+
+```cpp
+HRESULT GetVersionNumber (
+    [out] ULONG32    *nVersion
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="f49c8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f49c8-105">Parameters</span></span>
+
  `nVersion`  
- <span data-ttu-id="6550c-106">[out]コードのバージョン番号へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6550c-106">[out] A pointer to the version number of the code.</span></span>  
+ <span data-ttu-id="f49c8-106">入出力コードのバージョン番号へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f49c8-106">[out] A pointer to the version number of the code.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="f49c8-107">コメント</span><span class="sxs-lookup"><span data-stu-id="f49c8-107">Remarks</span></span>
+
+ <span data-ttu-id="f49c8-108">バージョン番号は、エディットコンティニュ (EnC) 操作がコードで実行されるたびにインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="f49c8-108">The version number is incremented each time an edit-and-continue (EnC) operation is performed on the code.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="f49c8-109">要件</span><span class="sxs-lookup"><span data-stu-id="f49c8-109">Requirements</span></span>
+
+ <span data-ttu-id="f49c8-110">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f49c8-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6550c-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="6550c-107">Remarks</span></span>  
- <span data-ttu-id="6550c-108">バージョン番号は、コードに対してエディット コンティニュ (EnC) 操作を実行するたびにインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="6550c-108">The version number is incremented each time an edit-and-continue (EnC) operation is performed on the code.</span></span>  
+ <span data-ttu-id="f49c8-111">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f49c8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6550c-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="6550c-109">Requirements</span></span>  
- <span data-ttu-id="6550c-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6550c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="f49c8-112">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="f49c8-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6550c-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6550c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="6550c-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6550c-112">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="6550c-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6550c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6550c-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6550c-114">See also</span></span>
+ <span data-ttu-id="f49c8-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f49c8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

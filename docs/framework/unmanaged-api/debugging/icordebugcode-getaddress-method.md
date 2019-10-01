@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdf8649e3cb2221e5c74eefd22959dc4b382236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7df668487601e4278b56e196a43d1154b643fd29
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747685"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700745"
 ---
-# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="caeca-102">ICorDebugCode::GetAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="caeca-102">ICorDebugCode::GetAddress Method</span></span>
-<span data-ttu-id="caeca-103">この"ICorDebugCode"インターフェイスを表すコード セグメントの相対仮想アドレス (RVA) を取得します。</span><span class="sxs-lookup"><span data-stu-id="caeca-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
+# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="b77f2-102">ICorDebugCode::GetAddress メソッド</span><span class="sxs-lookup"><span data-stu-id="b77f2-102">ICorDebugCode::GetAddress Method</span></span>
+<span data-ttu-id="b77f2-103">この "" コード "インターフェイスが表すコードセグメントの相対仮想アドレス (RVA) を取得します。</span><span class="sxs-lookup"><span data-stu-id="b77f2-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="caeca-104">構文</span><span class="sxs-lookup"><span data-stu-id="caeca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b77f2-104">構文</span><span class="sxs-lookup"><span data-stu-id="b77f2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -35,17 +35,15 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="caeca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="caeca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b77f2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b77f2-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="caeca-106">[out]コード セグメントの RVA へのポインター。</span><span class="sxs-lookup"><span data-stu-id="caeca-106">[out] A pointer to the RVA of the code segment.</span></span>  
+ <span data-ttu-id="b77f2-106">入出力コードセグメントの RVA へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b77f2-106">[out] A pointer to the RVA of the code segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="caeca-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="caeca-107">Requirements</span></span>  
- <span data-ttu-id="caeca-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="caeca-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b77f2-107">要件</span><span class="sxs-lookup"><span data-stu-id="b77f2-107">Requirements</span></span>  
+ <span data-ttu-id="b77f2-108">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b77f2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="caeca-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="caeca-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b77f2-109">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b77f2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="caeca-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="caeca-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b77f2-110">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="b77f2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="caeca-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="caeca-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="caeca-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="caeca-112">See also</span></span>
+ <span data-ttu-id="b77f2-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b77f2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

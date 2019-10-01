@@ -2,22 +2,22 @@
 title: schemeSettings の <remove> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 4a891eb8a2fd2d66b6435e2ae774ecd4a157c0f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0dc8c6111157ba1f23d4a0449bee8f6626027e23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659219"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697861"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a><span data-ttu-id="efd69-102">\<schemeSettings (Uri 設定) の > 要素の削除</span><span class="sxs-lookup"><span data-stu-id="efd69-102">\<remove> Element for schemeSettings (Uri Settings)</span></span>
-<span data-ttu-id="efd69-103">スキーム名のスキーム設定を削除します。</span><span class="sxs-lookup"><span data-stu-id="efd69-103">Removes a scheme setting for a scheme name.</span></span>  
+# <a name="remove-element-for-schemesettings-uri-settings"></a><span data-ttu-id="11d0f-102">schemeSettings (Uri 設定) の @no__t 0remove > 要素</span><span class="sxs-lookup"><span data-stu-id="11d0f-102">\<remove> Element for schemeSettings (Uri Settings)</span></span>
+<span data-ttu-id="11d0f-103">スキーム名のスキーム設定を削除します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-103">Removes a scheme setting for a scheme name.</span></span>  
   
- <span data-ttu-id="efd69-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="efd69-104">\<configuration></span></span>  
-<span data-ttu-id="efd69-105">\<uri></span><span class="sxs-lookup"><span data-stu-id="efd69-105">\<uri></span></span>  
-<span data-ttu-id="efd69-106">\<schemeSettings></span><span class="sxs-lookup"><span data-stu-id="efd69-106">\<schemeSettings></span></span>  
-<span data-ttu-id="efd69-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="efd69-107">\<remove></span></span>  
+[<span data-ttu-id="11d0f-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="11d0f-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="11d0f-105">&nbsp; @ no__t-1[ **\< uri >** ](uri-element-uri-settings.md)</span><span class="sxs-lookup"><span data-stu-id="11d0f-105">&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)</span></span>  
+<span data-ttu-id="11d0f-106">&nbsp; @ no__t-1 @ no__t @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)</span><span class="sxs-lookup"><span data-stu-id="11d0f-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)</span></span>  
+<span data-ttu-id="11d0f-107">&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 **\<remove を削除**します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efd69-108">構文</span><span class="sxs-lookup"><span data-stu-id="efd69-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11d0f-108">構文</span><span class="sxs-lookup"><span data-stu-id="11d0f-108">Syntax</span></span>  
   
 ```xml  
 <remove
@@ -25,44 +25,44 @@ ms.locfileid: "69659219"
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="efd69-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="efd69-109">Attributes and Elements</span></span>  
- <span data-ttu-id="efd69-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="efd69-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="11d0f-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="11d0f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="11d0f-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="efd69-111">属性</span><span class="sxs-lookup"><span data-stu-id="efd69-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="11d0f-111">属性</span><span class="sxs-lookup"><span data-stu-id="11d0f-111">Attributes</span></span>  
   
-|<span data-ttu-id="efd69-112">属性</span><span class="sxs-lookup"><span data-stu-id="efd69-112">Attribute</span></span>|<span data-ttu-id="efd69-113">説明</span><span class="sxs-lookup"><span data-stu-id="efd69-113">Description</span></span>|  
+|<span data-ttu-id="11d0f-112">属性</span><span class="sxs-lookup"><span data-stu-id="11d0f-112">Attribute</span></span>|<span data-ttu-id="11d0f-113">説明</span><span class="sxs-lookup"><span data-stu-id="11d0f-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="efd69-114">name</span><span class="sxs-lookup"><span data-stu-id="efd69-114">name</span></span>|<span data-ttu-id="efd69-115">この設定を適用するスキーム名。</span><span class="sxs-lookup"><span data-stu-id="efd69-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="efd69-116">サポートされている値は、name = "http" と name = "https" だけです。</span><span class="sxs-lookup"><span data-stu-id="efd69-116">The only supported values are name="http" and name="https".</span></span>|  
+|<span data-ttu-id="11d0f-114">NAME</span><span class="sxs-lookup"><span data-stu-id="11d0f-114">name</span></span>|<span data-ttu-id="11d0f-115">この設定を適用するスキーム名。</span><span class="sxs-lookup"><span data-stu-id="11d0f-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="11d0f-116">サポートされている値は、name = "http" と name = "https" だけです。</span><span class="sxs-lookup"><span data-stu-id="11d0f-116">The only supported values are name="http" and name="https".</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="efd69-117">子要素</span><span class="sxs-lookup"><span data-stu-id="efd69-117">Child Elements</span></span>  
- <span data-ttu-id="efd69-118">なし。</span><span class="sxs-lookup"><span data-stu-id="efd69-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="11d0f-117">子要素</span><span class="sxs-lookup"><span data-stu-id="11d0f-117">Child Elements</span></span>  
+ <span data-ttu-id="11d0f-118">なし。</span><span class="sxs-lookup"><span data-stu-id="11d0f-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="efd69-119">親要素</span><span class="sxs-lookup"><span data-stu-id="efd69-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="11d0f-119">親要素</span><span class="sxs-lookup"><span data-stu-id="11d0f-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="efd69-120">要素</span><span class="sxs-lookup"><span data-stu-id="efd69-120">Element</span></span>|<span data-ttu-id="efd69-121">説明</span><span class="sxs-lookup"><span data-stu-id="efd69-121">Description</span></span>|  
+|<span data-ttu-id="11d0f-120">要素</span><span class="sxs-lookup"><span data-stu-id="11d0f-120">Element</span></span>|<span data-ttu-id="11d0f-121">説明</span><span class="sxs-lookup"><span data-stu-id="11d0f-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="efd69-122">\<schemeSettings> 要素 (Uri 設定)</span><span class="sxs-lookup"><span data-stu-id="efd69-122">\<schemeSettings> Element (Uri Settings)</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="efd69-123"><xref:System.Uri> が特定のスキームに解析される方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="efd69-123">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
+|[<span data-ttu-id="11d0f-122">\<schemeSettings> 要素 (Uri 設定)</span><span class="sxs-lookup"><span data-stu-id="11d0f-122">\<schemeSettings> Element (Uri Settings)</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="11d0f-123"><xref:System.Uri> が特定のスキームに解析される方法を指定します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-123">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efd69-124">Remarks</span><span class="sxs-lookup"><span data-stu-id="efd69-124">Remarks</span></span>  
- <span data-ttu-id="efd69-125">既定では、 <xref:System.Uri?displayProperty=nameWithType>クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。</span><span class="sxs-lookup"><span data-stu-id="efd69-125">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="efd69-126">これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。</span><span class="sxs-lookup"><span data-stu-id="efd69-126">This was implemented as a security mechanism against attacks like the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="11d0f-124">コメント</span><span class="sxs-lookup"><span data-stu-id="11d0f-124">Remarks</span></span>  
+ <span data-ttu-id="11d0f-125">既定では、<xref:System.Uri?displayProperty=nameWithType> クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-125">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="11d0f-126">これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。</span><span class="sxs-lookup"><span data-stu-id="11d0f-126">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="efd69-127">% Encoded 文字を正しく処理しないモジュールにこの URI が渡された場合、サーバーによって次のコマンドが実行される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="efd69-127">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
+ <span data-ttu-id="11d0f-127">% Encoded 文字を正しく処理しないモジュールにこの URI が渡された場合、サーバーによって次のコマンドが実行される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="11d0f-127">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- <span data-ttu-id="efd69-128">このため、クラス<xref:System.Uri?displayProperty=nameWithType>はまずパスの区切り記号をエスケープ解除し、次にパスの圧縮を適用します。</span><span class="sxs-lookup"><span data-stu-id="efd69-128">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="efd69-129">上の悪意のある URL をクラスコンストラクター <xref:System.Uri?displayProperty=nameWithType>に渡すと、次の URI が生成されます。</span><span class="sxs-lookup"><span data-stu-id="efd69-129">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
+ <span data-ttu-id="11d0f-128">このため、<xref:System.Uri?displayProperty=nameWithType> クラスはまずパスの区切り記号をエスケープ解除し、次にパスの圧縮を適用します。</span><span class="sxs-lookup"><span data-stu-id="11d0f-128">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="11d0f-129">上記の悪意のある URL を <xref:System.Uri?displayProperty=nameWithType> クラスコンストラクターに渡すと、次の URI になります。</span><span class="sxs-lookup"><span data-stu-id="11d0f-129">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="efd69-130">この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。</span><span class="sxs-lookup"><span data-stu-id="efd69-130">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
+ <span data-ttu-id="11d0f-130">この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。</span><span class="sxs-lookup"><span data-stu-id="11d0f-130">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="efd69-131">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="efd69-131">Configuration Files</span></span>  
- <span data-ttu-id="efd69-132">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="efd69-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="11d0f-131">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="11d0f-131">Configuration Files</span></span>  
+ <span data-ttu-id="11d0f-132">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="11d0f-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efd69-133">例</span><span class="sxs-lookup"><span data-stu-id="efd69-133">Example</span></span>  
- <span data-ttu-id="efd69-134">次の例は、http スキームのスキーム<xref:System.Uri>設定をすべて削除するクラスによって使用される構成を示しています。</span><span class="sxs-lookup"><span data-stu-id="efd69-134">The following example shows a configuration used by the <xref:System.Uri> class that removes any scheme settings for the http scheme.</span></span>  
+## <a name="example"></a><span data-ttu-id="11d0f-133">例</span><span class="sxs-lookup"><span data-stu-id="11d0f-133">Example</span></span>  
+ <span data-ttu-id="11d0f-134">次の例は、http スキームのスキーム設定をすべて削除する <xref:System.Uri> クラスによって使用される構成を示しています。</span><span class="sxs-lookup"><span data-stu-id="11d0f-134">The following example shows a configuration used by the <xref:System.Uri> class that removes any scheme settings for the http scheme.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ ms.locfileid: "69659219"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="efd69-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="efd69-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11d0f-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="11d0f-135">See also</span></span>
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
@@ -82,4 +82,4 @@ ms.locfileid: "69659219"
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [<span data-ttu-id="efd69-136">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="efd69-136">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="11d0f-136">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="11d0f-136">Network Settings Schema</span></span>](index.md)

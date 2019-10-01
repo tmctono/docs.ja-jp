@@ -8,50 +8,50 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927530"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698443"
 ---
-# <a name="oidmap-element"></a><span data-ttu-id="3985a-102">\<oidMap > 要素</span><span class="sxs-lookup"><span data-stu-id="3985a-102">\<oidMap> Element</span></span>
-<span data-ttu-id="3985a-103">クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。</span><span class="sxs-lookup"><span data-stu-id="3985a-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  
+# <a name="oidmap-element"></a><span data-ttu-id="e3f5e-102">\<oidMap > 要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-102">\<oidMap> Element</span></span>
+<span data-ttu-id="e3f5e-103">クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-103">Contains ASN.1 object identifier (OID) mappings to classes.</span></span>  
   
- <span data-ttu-id="3985a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3985a-104">\<configuration></span></span>  
-<span data-ttu-id="3985a-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="3985a-105">\<mscorlib></span></span>  
-<span data-ttu-id="3985a-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="3985a-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="3985a-107">\<oidMap></span><span class="sxs-lookup"><span data-stu-id="3985a-107">\<oidMap></span></span>  
+[<span data-ttu-id="e3f5e-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="e3f5e-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="e3f5e-105">&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)</span><span class="sxs-lookup"><span data-stu-id="e3f5e-105">&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)</span></span>  
+<span data-ttu-id="e3f5e-106">&nbsp; @ no__t-1 @ no__t @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)</span><span class="sxs-lookup"><span data-stu-id="e3f5e-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)</span></span>  
+<span data-ttu-id="e3f5e-107">&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-5 **\<oidMap >** を行います。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3985a-108">構文</span><span class="sxs-lookup"><span data-stu-id="3985a-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3f5e-108">構文</span><span class="sxs-lookup"><span data-stu-id="e3f5e-108">Syntax</span></span>  
   
 ```xml  
 <oidMap>   
 </oidMap>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3985a-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="3985a-109">Attributes and Elements</span></span>  
- <span data-ttu-id="3985a-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="3985a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e3f5e-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e3f5e-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3985a-111">属性</span><span class="sxs-lookup"><span data-stu-id="3985a-111">Attributes</span></span>  
- <span data-ttu-id="3985a-112">なし。</span><span class="sxs-lookup"><span data-stu-id="3985a-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e3f5e-111">属性</span><span class="sxs-lookup"><span data-stu-id="e3f5e-111">Attributes</span></span>  
+ <span data-ttu-id="e3f5e-112">[なし] :</span><span class="sxs-lookup"><span data-stu-id="e3f5e-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="3985a-113">子要素</span><span class="sxs-lookup"><span data-stu-id="3985a-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e3f5e-113">子要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-113">Child Elements</span></span>  
   
-|<span data-ttu-id="3985a-114">要素</span><span class="sxs-lookup"><span data-stu-id="3985a-114">Element</span></span>|<span data-ttu-id="3985a-115">説明</span><span class="sxs-lookup"><span data-stu-id="3985a-115">Description</span></span>|  
+|<span data-ttu-id="e3f5e-114">要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-114">Element</span></span>|<span data-ttu-id="e3f5e-115">説明</span><span class="sxs-lookup"><span data-stu-id="e3f5e-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3985a-116">\<oidEntry></span><span class="sxs-lookup"><span data-stu-id="3985a-116">\<oidEntry></span></span>](oidentry-element.md)|<span data-ttu-id="3985a-117">Asn.1 OID をフレンドリ名にマップします。</span><span class="sxs-lookup"><span data-stu-id="3985a-117">Maps an ASN.1 OID to a friendly name.</span></span>|  
+|[<span data-ttu-id="e3f5e-116">\<oidEntry></span><span class="sxs-lookup"><span data-stu-id="e3f5e-116">\<oidEntry></span></span>](oidentry-element.md)|<span data-ttu-id="e3f5e-117">Asn.1 OID をフレンドリ名にマップします。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-117">Maps an ASN.1 OID to a friendly name.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="3985a-118">親要素</span><span class="sxs-lookup"><span data-stu-id="3985a-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e3f5e-118">親要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="3985a-119">要素</span><span class="sxs-lookup"><span data-stu-id="3985a-119">Element</span></span>|<span data-ttu-id="3985a-120">説明</span><span class="sxs-lookup"><span data-stu-id="3985a-120">Description</span></span>|  
+|<span data-ttu-id="e3f5e-119">要素</span><span class="sxs-lookup"><span data-stu-id="e3f5e-119">Element</span></span>|<span data-ttu-id="e3f5e-120">説明</span><span class="sxs-lookup"><span data-stu-id="e3f5e-120">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="3985a-121">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="3985a-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="3985a-122">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="3985a-122">Contains cryptography settings.</span></span>|  
-|`mscorlib`|<span data-ttu-id="3985a-123">`cryptographySettings`要素を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="3985a-123">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="e3f5e-121">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="e3f5e-122">暗号設定を含みます。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-122">Contains cryptography settings.</span></span>|  
+|`mscorlib`|<span data-ttu-id="e3f5e-123">`cryptographySettings`要素を含んでいます。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-123">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="3985a-124">例</span><span class="sxs-lookup"><span data-stu-id="3985a-124">Example</span></span>  
- <span data-ttu-id="3985a-125">次の例では、  **\<oidMap >** 要素を使用して、RIPEMD-160 ハッシュアルゴリズムの OID とそのハッシュアルゴリズムの実装とのマッピングを格納する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3985a-125">The following example shows how to use the **\<oidMap>** element to contain a mapping of an OID for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
+## <a name="example"></a><span data-ttu-id="e3f5e-124">例</span><span class="sxs-lookup"><span data-stu-id="e3f5e-124">Example</span></span>  
+ <span data-ttu-id="e3f5e-125">次の例では、 **\<oidMap >** 要素を使用して、そのハッシュアルゴリズムの実装への RIPEMD-160 ハッシュアルゴリズムの OID のマッピングを格納する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e3f5e-125">The following example shows how to use the **\<oidMap>** element to contain a mapping of an OID for the RIPEMD-160 hash algorithm to an implementation of that hash algorithm.</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ ms.locfileid: "69927530"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3985a-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="3985a-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3f5e-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="e3f5e-126">See also</span></span>
 
-- [<span data-ttu-id="3985a-127">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="3985a-127">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="3985a-128">暗号化設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="3985a-128">Cryptography Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="3985a-129">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="3985a-129">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
-- [<span data-ttu-id="3985a-130">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="3985a-130">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)
-- [<span data-ttu-id="3985a-131">暗号化アルゴリズムへのオブジェクト ID の割り当て</span><span class="sxs-lookup"><span data-stu-id="3985a-131">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../map-object-identifiers-to-cryptography-algorithms.md)
+- [<span data-ttu-id="e3f5e-127">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="e3f5e-127">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="e3f5e-128">暗号化設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="e3f5e-128">Cryptography Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="e3f5e-129">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="e3f5e-129">Cryptographic Services</span></span>](../../../../standard/security/cryptographic-services.md)
+- [<span data-ttu-id="e3f5e-130">暗号化クラスの設定</span><span class="sxs-lookup"><span data-stu-id="e3f5e-130">Configuring Cryptography Classes</span></span>](../../configure-cryptography-classes.md)
+- [<span data-ttu-id="e3f5e-131">暗号化アルゴリズムへのオブジェクト ID の割り当て</span><span class="sxs-lookup"><span data-stu-id="e3f5e-131">Mapping Object Identifiers to Cryptography Algorithms</span></span>](../../map-object-identifiers-to-cryptography-algorithms.md)
