@@ -2,28 +2,28 @@
 title: '方法: オブジェクト モデルを外部ファイルとして生成する'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793592"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002742"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="694de-102">方法: オブジェクト モデルを外部ファイルとして生成する</span><span class="sxs-lookup"><span data-stu-id="694de-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="694de-103">属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。</span><span class="sxs-lookup"><span data-stu-id="694de-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="694de-104">詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="694de-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="694de-105">外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。</span><span class="sxs-lookup"><span data-stu-id="694de-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="694de-106">さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。</span><span class="sxs-lookup"><span data-stu-id="694de-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="694de-107">詳細については、「[外部マッピング](external-mapping.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="694de-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="57917-102">方法: オブジェクト モデルを外部ファイルとして生成する</span><span class="sxs-lookup"><span data-stu-id="57917-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="57917-103">属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。</span><span class="sxs-lookup"><span data-stu-id="57917-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="57917-104">詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="57917-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="57917-105">外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。</span><span class="sxs-lookup"><span data-stu-id="57917-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="57917-106">さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。</span><span class="sxs-lookup"><span data-stu-id="57917-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="57917-107">詳細については、「[外部マッピング](external-mapping.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57917-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="694de-108">オブジェクトリレーショナルデザイナーは、外部マッピングファイルの生成をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="694de-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
+> <span data-ttu-id="57917-108">オブジェクトリレーショナルデザイナーは、外部マッピングファイルの生成をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="57917-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="694de-109">例</span><span class="sxs-lookup"><span data-stu-id="694de-109">Example</span></span>  
- <span data-ttu-id="694de-110">次のコマンドは、Northwind サンプル データベースから外部マッピング ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="694de-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="57917-109">例</span><span class="sxs-lookup"><span data-stu-id="57917-109">Example</span></span>  
+ <span data-ttu-id="57917-110">次のコマンドは、Northwind サンプル データベースから外部マッピング ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="57917-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
-```  
+```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="694de-111">例</span><span class="sxs-lookup"><span data-stu-id="694de-111">Example</span></span>  
- <span data-ttu-id="694de-112">以下は、Northwind サンプル データベース内の Customers テーブルのマッピングを示す、外部マッピング ファイルの一部分です。</span><span class="sxs-lookup"><span data-stu-id="694de-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="694de-113">この抜粋は、 **/map**オプションを指定して SQLMetal を実行することによって生成されました。</span><span class="sxs-lookup"><span data-stu-id="694de-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="57917-111">例</span><span class="sxs-lookup"><span data-stu-id="57917-111">Example</span></span>  
+ <span data-ttu-id="57917-112">以下は、Northwind サンプル データベース内の Customers テーブルのマッピングを示す、外部マッピング ファイルの一部分です。</span><span class="sxs-lookup"><span data-stu-id="57917-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="57917-113">この抜粋は、 **/map**オプションを指定して SQLMetal を実行することによって生成されました。</span><span class="sxs-lookup"><span data-stu-id="57917-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,8 +48,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="694de-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="694de-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57917-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="57917-114">See also</span></span>
 
-- [<span data-ttu-id="694de-115">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="694de-115">Creating the Object Model</span></span>](creating-the-object-model.md)
-- [<span data-ttu-id="694de-116">外部マップ</span><span class="sxs-lookup"><span data-stu-id="694de-116">External Mapping</span></span>](external-mapping.md)
-- [<span data-ttu-id="694de-117">方法: Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="694de-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="57917-115">オブジェクト モデルの作成</span><span class="sxs-lookup"><span data-stu-id="57917-115">Creating the Object Model</span></span>](creating-the-object-model.md)
+- [<span data-ttu-id="57917-116">外部マップ</span><span class="sxs-lookup"><span data-stu-id="57917-116">External Mapping</span></span>](external-mapping.md)
+- [<span data-ttu-id="57917-117">2 つのオブジェクトが等しいかどうかをテストする方法Visual Basic または C# でオブジェクト モデルを生成する</span><span class="sxs-lookup"><span data-stu-id="57917-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
