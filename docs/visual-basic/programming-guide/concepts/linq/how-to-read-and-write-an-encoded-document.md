@@ -1,25 +1,25 @@
 ---
-title: '方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)'
+title: '方法: エンコードされたドキュメントを読み書きする (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a490d6915201b4e1069ae0249dea09d761aea6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008877"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321015"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="8f988-102">方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f988-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
-<span data-ttu-id="8f988-103">エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。</span><span class="sxs-lookup"><span data-stu-id="8f988-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="8b221-102">方法: エンコードされたドキュメントを読み書きする (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b221-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
+<span data-ttu-id="8b221-103">エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。</span><span class="sxs-lookup"><span data-stu-id="8b221-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- <span data-ttu-id="8f988-104"><xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。</span><span class="sxs-lookup"><span data-stu-id="8f988-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
+ <span data-ttu-id="8b221-104"><xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。</span><span class="sxs-lookup"><span data-stu-id="8b221-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- <span data-ttu-id="8f988-105">エンコードされたドキュメントを読み込むと、<xref:System.Xml.Linq.XDeclaration.Encoding%2A> プロパティがコード ページ名に設定されます。</span><span class="sxs-lookup"><span data-stu-id="8f988-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
+ <span data-ttu-id="8b221-105">エンコードされたドキュメントを読み込むと、<xref:System.Xml.Linq.XDeclaration.Encoding%2A> プロパティがコード ページ名に設定されます。</span><span class="sxs-lookup"><span data-stu-id="8b221-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- <span data-ttu-id="8f988-106"><xref:System.Xml.Linq.XDeclaration.Encoding%2A> を有効なコード ページ名に設定すると、指定したエンコーディングで [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="8f988-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
+ <span data-ttu-id="8b221-106"><xref:System.Xml.Linq.XDeclaration.Encoding%2A> を有効なコード ページ名に設定すると、指定したエンコーディングで [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="8b221-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f988-107">例</span><span class="sxs-lookup"><span data-stu-id="8f988-107">Example</span></span>  
- <span data-ttu-id="8f988-108">次の例では、UTF-8 エンコーディングのドキュメントと UTF-16 エンコーディングのドキュメントを 1 つずつ作成します。</span><span class="sxs-lookup"><span data-stu-id="8f988-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="8f988-109">次に、ドキュメントを読み込み、エンコーディングをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="8f988-109">It then loads the documents and prints the encoding to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="8b221-107">例</span><span class="sxs-lookup"><span data-stu-id="8b221-107">Example</span></span>  
+ <span data-ttu-id="8b221-108">次の例では、UTF-8 エンコーディングのドキュメントと UTF-16 エンコーディングのドキュメントを 1 つずつ作成します。</span><span class="sxs-lookup"><span data-stu-id="8b221-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="8b221-109">次に、ドキュメントを読み込み、エンコーディングをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="8b221-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```vb  
 Console.WriteLine("Creating a document with utf-8 encoding")  
@@ -54,9 +54,9 @@ Console.WriteLine()
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding)  
 ```  
   
- <span data-ttu-id="8f988-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8f988-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="8b221-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="8b221-110">This example produces the following output:</span></span>  
   
-```  
+```console  
 Creating a document with utf-8 encoding  
 Encoding is:utf-8  
   
@@ -76,7 +76,7 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f988-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="8f988-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b221-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b221-111">See also</span></span>
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="8f988-112">高度な LINQ to XML プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f988-112">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="8b221-112">高度な LINQ to XML プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b221-112">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
