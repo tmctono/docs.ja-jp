@@ -4,21 +4,21 @@ description: .NET Core 用の Windows フォームにおける破壊的変更の
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436088836ff5441e426379bb41f96821cbc7e500
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 3ca02e41039fa5c7a6f7f6a9e303ea25be55977a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272720"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003008"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="2bede-103">Windows フォームでの破壊的変更</span><span class="sxs-lookup"><span data-stu-id="2bede-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="e95a4-103">Windows フォームでの破壊的変更</span><span class="sxs-lookup"><span data-stu-id="e95a4-103">Breaking changes in Windows Forms</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="2bede-104">この記事は作成中です。</span><span class="sxs-lookup"><span data-stu-id="2bede-104">This article is under construction.</span></span> <span data-ttu-id="2bede-105">これは、.NET Core の破壊的変更の完全なリストではありません。</span><span class="sxs-lookup"><span data-stu-id="2bede-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="2bede-106">.NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。</span><span class="sxs-lookup"><span data-stu-id="2bede-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
+> <span data-ttu-id="e95a4-104">この記事は作成中です。</span><span class="sxs-lookup"><span data-stu-id="e95a4-104">This article is under construction.</span></span> <span data-ttu-id="e95a4-105">これは、.NET Core の破壊的変更の完全なリストではありません。</span><span class="sxs-lookup"><span data-stu-id="e95a4-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="e95a4-106">.NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。</span><span class="sxs-lookup"><span data-stu-id="e95a4-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
 
-<span data-ttu-id="2bede-107">.NET Core のバージョンごとに Windows フォームに関する破壊的変更の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="2bede-107">The following is a list of breaking changes in Windows Forms by .NET Core version.</span></span>
+<span data-ttu-id="e95a4-107">.NET Core のバージョンごとに Windows フォームに関する破壊的変更の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e95a4-107">The following is a list of breaking changes in Windows Forms by .NET Core version.</span></span>
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="2bede-108">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="2bede-108">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="e95a4-108">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="e95a4-108">.NET Core 3.0 Preview 9</span></span>
 
 [!INCLUDE[Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
 
@@ -54,7 +54,15 @@ ms.locfileid: "71272720"
 
 [!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/remove-serializationattribute.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="2bede-109">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="2bede-109">.NET Core 3.0</span></span>
+## <a name="net-core-30-rc1"></a><span data-ttu-id="e95a4-109">.NET Core 3.0 RC1</span><span class="sxs-lookup"><span data-stu-id="e95a4-109">.NET Core 3.0 RC1</span></span>
+
+[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/changed-access-for-runtimeidfirstitem.md)]
+
+***
+
+[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/remove-duplicated-apis.md)]
+
+## <a name="net-core-30"></a><span data-ttu-id="e95a4-110">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="e95a4-110">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 

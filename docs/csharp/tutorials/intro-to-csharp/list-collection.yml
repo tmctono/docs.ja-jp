@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="0dddc-101">リスト型を使用したデータ コレクションの管理について説明します</span><span class="sxs-lookup"><span data-stu-id="0dddc-101">Learn to manage data collections using the generic list type</span></span>
+title: リスト型を使用したデータ コレクションの管理について説明します
 metadata:
   title: データ コレクション - C# の概要に関する対話型チュートリアル
   description: このチュートリアルでは、ブラウザーを使用して C# を対話形式で学習できます。 C# コードを記述し、ブラウザーで直接コードをコンパイルして、実行した結果を確認します。
@@ -9,20 +9,20 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850741"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179009"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="0dddc-105">このチュートリアルでは C# を対話形式で学習できます。ブラウザーを使用して C# コードを記述し、コードをコンパイルして実行した結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-105">This tutorial teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="0dddc-106">このチュートリアルには、コレクションと配列を作成、変更、確認する一連のレッスンが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0dddc-106">It contains a series of lessons that create, modify, and explore collections and arrays.</span></span>
-- title: <span data-ttu-id="0dddc-107">リストを作成する</span><span class="sxs-lookup"><span data-stu-id="0dddc-107">Create lists</span></span>
+    このチュートリアルでは C# を対話形式で学習できます。ブラウザーを使用して C# コードを記述し、コードをコンパイルして実行した結果を確認します。 このチュートリアルには、コレクションと配列を作成、変更、確認する一連のレッスンが含まれています。
+- title: リストを作成する
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="0dddc-108">対話型ウィンドウで次のコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="0dddc-109">そのためには、対話型ウィンドウで次のコード ブロックを入力し (`<name>` を自分の名前に置き換えて)、**[実行]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="0dddc-109">To do that, type the following code block in the interactive window (replace `<name>` with your name) and click the **Run** button:</span></span>
+    対話型ウィンドウで次のコードを実行します。 そのためには、対話型ウィンドウで次のコード ブロックを入力し (`<name>` を自分の名前に置き換えて)、**[実行]** をクリックします。
 
 
     ```csharp
@@ -38,25 +38,28 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-110">文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。</span><span class="sxs-lookup"><span data-stu-id="0dddc-110">You've created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="0dddc-111">先のチュートリアルで学習した概念を使用して、リストをループしています。</span><span class="sxs-lookup"><span data-stu-id="0dddc-111">You're using concepts that you've learned in earlier tutorials to loop through the list.</span></span>
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](arrays-and-collections.md)に関する指示に従ってください。
 
 
-    <span data-ttu-id="0dddc-112">名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-112">The code to display names makes use of the [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="0dddc-113">`string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="0dddc-114">実際の文字列は、生成する値でその C# コードを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="0dddc-115">この例では、<xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。</span><span class="sxs-lookup"><span data-stu-id="0dddc-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A?displayProperty=nameWithType> method.</span></span>
+    文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
 
-    <span data-ttu-id="0dddc-116">続けて確認していきましょう。</span><span class="sxs-lookup"><span data-stu-id="0dddc-116">Let's keep exploring.</span></span>
+    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、<xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。
+
+
+    続けて確認していきましょう。
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-117">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-118">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="0dddc-119">リスト コンテンツを変更する</span><span class="sxs-lookup"><span data-stu-id="0dddc-119">Modify list contents</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: リスト コンテンツを変更する
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="0dddc-120">作成したコレクションは <xref:System.Collections.Generic.List%601> 型を使用します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="0dddc-121">この型は、要素のシーケンスを格納します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-121">This type stores sequences of elements.</span></span> <span data-ttu-id="0dddc-122">要素の型を山かっこの内側で指定します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-122">You specify the type of the elements between the angle brackets.</span></span>
+    作成したコレクションは <xref:System.Collections.Generic.List%601> 型を使用します。 この型は、要素のシーケンスを格納します。 要素の型を山かっこの内側で指定します。
 
 
-    <span data-ttu-id="0dddc-123">この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="0dddc-124">その内容を表示した後で内容を変更することにより、結果を確認できます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-124">You can see the results by modifying the contents after you've displayed its contents.</span></span> <span data-ttu-id="0dddc-125">既に記述したコードの下に、次のコードを追加します (内容を出力するループの下)。</span><span class="sxs-lookup"><span data-stu-id="0dddc-125">Add the following code below the code you've already written (below the loop that prints the contents):</span></span>
+    この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 その内容を表示した後で内容を変更することにより、結果を確認できます。 既に記述したコードの下に、次のコードを追加します (内容を出力するループの下)。
 
 
     ```csharp
@@ -78,10 +81,10 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-126">さらに 2 つの名前をリストの末尾に追加しました。</span><span class="sxs-lookup"><span data-stu-id="0dddc-126">You've added two more names to the end of the list.</span></span> <span data-ttu-id="0dddc-127">また、1 つを削除しました。</span><span class="sxs-lookup"><span data-stu-id="0dddc-127">You've also removed one as well.</span></span> <span data-ttu-id="0dddc-128">このコード ブロックからの出力では、初期の内容が示された後、空白行と新しい内容が出力されます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-128">The output from this block of code shows the initial contents, then prints a blank line and the new contents.</span></span>
+    さらに 2 つの名前をリストの末尾に追加しました。 また、1 つを削除しました。 このコード ブロックからの出力では、初期の内容が示された後、空白行と新しい内容が出力されます。
 
 
-    <span data-ttu-id="0dddc-129"><xref:System.Collections.Generic.List%601> を使用すると、**インデックス**でも個々の項目を参照できます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-129">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="0dddc-130">`[` と `]` のトークンを使用して項目にアクセスします。</span><span class="sxs-lookup"><span data-stu-id="0dddc-130">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="0dddc-131">既に記述したコードの下に、次のコードを追加して試してみます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-131">Add the following code below what you've already written and try it:</span></span>
+    <xref:System.Collections.Generic.List%601> を使用すると、**インデックス**でも個々の項目を参照できます。 `[` と `]` のトークンを使用して項目にアクセスします。 既に記述したコードの下に、次のコードを追加して試してみます。
 
 
     ```csharp
@@ -93,7 +96,7 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-132">リストの末尾を越えてアクセスすることはできません。</span><span class="sxs-lookup"><span data-stu-id="0dddc-132">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="0dddc-133"><xref:System.Collections.Generic.List%601.Count%2A> プロパティを使用すれば、リストの長さを確認できます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-133">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="0dddc-134">次のコードを追加して試してみます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-134">Add the following code to try it:</span></span>
+    リストの末尾を越えてアクセスすることはできません。 <xref:System.Collections.Generic.List%601.Count%2A> プロパティを使用すれば、リストの長さを確認できます。 次のコードを追加して試してみます。
 
 
     ```csharp
@@ -103,16 +106,16 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-135">もう一度 **[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-135">Click **Run** again to see the results.</span></span> <span data-ttu-id="0dddc-136">C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。</span><span class="sxs-lookup"><span data-stu-id="0dddc-136">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+    もう一度 **[実行]** をクリックして結果を確認します。 C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-137">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-137">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-138">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-138">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="0dddc-139">リストを検索して並び替える</span><span class="sxs-lookup"><span data-stu-id="0dddc-139">Search and sort lists</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: リストを検索して並び替える
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="0dddc-140">サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。</span><span class="sxs-lookup"><span data-stu-id="0dddc-140">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="0dddc-141">そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0dddc-141">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="0dddc-142"><xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-142">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="0dddc-143">それを試して動作を確認してください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-143">Try it to see how it works.</span></span>  <span data-ttu-id="0dddc-144">これまでに記述したコードの下に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-144">Add the following code below what you've written so far:</span></span>
+    サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 それを試して動作を確認してください。  これまでに記述したコードの下に、次のコードを追加します。
 
 
     ```csharp
@@ -127,10 +130,10 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-145">リストに項目があるかどうかわからないこともあるため、常に <xref:System.Collections.Generic.List%601.IndexOf%2A> によって返されるインデックスをチェックする必要があります。</span><span class="sxs-lookup"><span data-stu-id="0dddc-145">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="0dddc-146">それが -1 だった場合は、項目が見つからなかったことを意味します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-146">If it is -1, the item was not found.</span></span>
+    リストに項目があるかどうかわからないこともあるため、常に <xref:System.Collections.Generic.List%601.IndexOf%2A> によって返されるインデックスをチェックする必要があります。 それが -1 だった場合は、項目が見つからなかったことを意味します。
 
 
-    <span data-ttu-id="0dddc-147">同じように、リスト内の項目を並び替えできます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-147">The items in your list can be sorted as well.</span></span> <span data-ttu-id="0dddc-148"><xref:System.Collections.Generic.List%601.Sort%2A> メソッドは、リスト内のすべての項目を正規順序 (文字列の場合はアルファベット順) で並び替えます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-148">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="0dddc-149">次のコードを追加し、もう一度実行します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-149">Add this code and run again:</span></span>
+    同じように、リスト内の項目を並び替えできます。 <xref:System.Collections.Generic.List%601.Sort%2A> メソッドは、リスト内のすべての項目を正規順序 (文字列の場合はアルファベット順) で並び替えます。 次のコードを追加し、もう一度実行します。
 
 
     ```csharp
@@ -148,11 +151,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-150">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-150">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-151">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-151">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="0dddc-152">その他の型のリスト</span><span class="sxs-lookup"><span data-stu-id="0dddc-152">Lists of other types</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: その他の型のリスト
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="0dddc-153">ここまでは、リスト内で `string` 型を使用してきました。</span><span class="sxs-lookup"><span data-stu-id="0dddc-153">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="0dddc-154">別の型を使用して <xref:System.Collections.Generic.List%601> を作成してみましょう。</span><span class="sxs-lookup"><span data-stu-id="0dddc-154">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="0dddc-155">数値のセットを作成します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-155">Let's build a set of numbers.</span></span> <span data-ttu-id="0dddc-156">これまでに記述したコードを削除し、次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-156">Delete the code you wrote so far, and replace it with the following code:</span></span>
+    ここまでは、リスト内で `string` 型を使用してきました。 別の型を使用して <xref:System.Collections.Generic.List%601> を作成してみましょう。 数値のセットを作成します。 これまでに記述したコードを削除し、次のコードに置き換えます。
 
 
     ```csharp
@@ -162,7 +165,7 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-157">これにより整数のリストが作成され、最初の 2 つの整数が値 1 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-157">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="0dddc-158">"*フィボナッチ数列*" (一連の数値) は、2 つの 1 から始まります。</span><span class="sxs-lookup"><span data-stu-id="0dddc-158">The *Fibonacci Sequence*, a sequence of numbers, starts with two 1s.</span></span> <span data-ttu-id="0dddc-159">次のフィボナッチ数はそれぞれ、その直前の 2 つの数値の合計を取得することによって得られます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-159">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="0dddc-160">このコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-160">Add this code:</span></span>
+    これにより整数のリストが作成され、最初の 2 つの整数が値 1 に設定されます。 "*フィボナッチ数列*" (一連の数値) は、2 つの 1 から始まります。 次のフィボナッチ数はそれぞれ、その直前の 2 つの数値の合計を取得することによって得られます。 このコードを追加します。
 
 
     ```csharp
@@ -180,25 +183,25 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-161">**[実行]** をクリックして結果を確認します。</span><span class="sxs-lookup"><span data-stu-id="0dddc-161">Press **Run** to see the results;</span></span>
+    **[実行]** をクリックして結果を確認します。
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-162">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-163">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="0dddc-164">課題</span><span class="sxs-lookup"><span data-stu-id="0dddc-164">Challenge</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: 課題
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="0dddc-165">このレッスンと以前のレッスンの中から、いくつかの概念を理解できているかどうかを確認してみましょう。</span><span class="sxs-lookup"><span data-stu-id="0dddc-165">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="0dddc-166">ここまでフィボナッチ数を使用して作成してきたコードを使ってください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-166">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="0dddc-167">シーケンスの最初の 20 個の数を生成するコードを記述してみましょう。</span><span class="sxs-lookup"><span data-stu-id="0dddc-167">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="0dddc-168">(ヒント: フィボナッチ数の 20 番目の数は 6765 です。)</span><span class="sxs-lookup"><span data-stu-id="0dddc-168">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+    このレッスンと以前のレッスンの中から、いくつかの概念を理解できているかどうかを確認してみましょう。 ここまでフィボナッチ数を使用して作成してきたコードを使ってください。 シーケンスの最初の 20 個の数を生成するコードを記述してみましょう。 (ヒント: フィボナッチ数の 20 番目の数は 6765 です。)
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-169">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-169">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-170">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-170">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="0dddc-171">課題完了</span><span class="sxs-lookup"><span data-stu-id="0dddc-171">Complete challenge</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+- title: 課題完了
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="0dddc-172">コードは次のようになりましたか?</span><span class="sxs-lookup"><span data-stu-id="0dddc-172">Did you come up with something like this?</span></span>
+    コードは次のようになりましたか?
 
 
     ```csharp
@@ -220,20 +223,20 @@ items:
     ```
 
 
-    <span data-ttu-id="0dddc-173">ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。</span><span class="sxs-lookup"><span data-stu-id="0dddc-173">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id="0dddc-174">このループは、20 個の項目がリストに追加されるまで繰り返されます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-174">The loop repeats until you've added 20 items to the list.</span></span>
+    ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="0dddc-175">このオンライン コーディング体験はプレビュー モードです。</span><span class="sxs-lookup"><span data-stu-id="0dddc-175">This online coding experience is in preview mode.</span></span> <span data-ttu-id="0dddc-176">問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。</span><span class="sxs-lookup"><span data-stu-id="0dddc-176">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    <span data-ttu-id="0dddc-177">これで、対話型チュートリアルは終了です。</span><span class="sxs-lookup"><span data-stu-id="0dddc-177">You've completed the list interactive tutorial.</span></span> <span data-ttu-id="0dddc-178">これは、C# の対話型チュートリアルの最後の概要です。</span><span class="sxs-lookup"><span data-stu-id="0dddc-178">That's the final introduction to C# interactive tutorial.</span></span> <span data-ttu-id="0dddc-179">[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-179">You can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="0dddc-180">"次の手順" セクションでは、これらのチュートリアルに戻ります。</span><span class="sxs-lookup"><span data-stu-id="0dddc-180">The "Next steps" section brings you back to these tutorials.</span></span>
+    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
-    <span data-ttu-id="0dddc-181">[.NET コレクション](../../../standard/collections/index.md)の詳細については、次の記事で学習できます。</span><span class="sxs-lookup"><span data-stu-id="0dddc-181">You can learn more about [.NET collections](../../../standard/collections/index.md) in the following articles:</span></span>
+    [.NET コレクション](../../../standard/collections/index.md)の詳細については、次の記事で学習できます。
 
-    - [<span data-ttu-id="0dddc-182">コレクション型の選択</span><span class="sxs-lookup"><span data-stu-id="0dddc-182">Selecting a collection type</span></span>](../../../standard/collections/selecting-a-collection-class.md)
+    - [コレクション型の選択](../../../standard/collections/selecting-a-collection-class.md)
 
-    - [<span data-ttu-id="0dddc-183">一般的に使用されるコレクション型</span><span class="sxs-lookup"><span data-stu-id="0dddc-183">Commonly used collection types</span></span>](../../../standard/collections/commonly-used-collection-types.md)
+    - [一般的に使用されるコレクション型](../../../standard/collections/commonly-used-collection-types.md)
 
-    - [<span data-ttu-id="0dddc-184">ジェネリック コレクションを使用する状況</span><span class="sxs-lookup"><span data-stu-id="0dddc-184">When to use generic collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
+    - [ジェネリック コレクションを使用する状況](../../../standard/collections/when-to-use-generic-collections.md)
