@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 25349f7c8274b818df2cd1bc5d67856e31efecc4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700809"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395538"
 ---
-# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="b4fa4-102">ICorDebugCode::GetSize メソッド</span><span class="sxs-lookup"><span data-stu-id="b4fa4-102">ICorDebugCode::GetSize Method</span></span>
+# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="72977-102">ICorDebugCode::GetSize メソッド</span><span class="sxs-lookup"><span data-stu-id="72977-102">ICorDebugCode::GetSize Method</span></span>
 
-<span data-ttu-id="b4fa4-103">この "コード" によって表されるバイナリコードのサイズ (バイト単位) を取得します。</span><span class="sxs-lookup"><span data-stu-id="b4fa4-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>
+<span data-ttu-id="72977-103">この "コード" によって表されるバイナリコードのサイズ (バイト単位) を取得します。</span><span class="sxs-lookup"><span data-stu-id="72977-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b4fa4-104">構文</span><span class="sxs-lookup"><span data-stu-id="b4fa4-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="72977-104">構文</span><span class="sxs-lookup"><span data-stu-id="72977-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetSize (
@@ -36,18 +36,17 @@ HRESULT GetSize (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="b4fa4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b4fa4-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="72977-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="72977-105">Parameters</span></span>
 
- `pcBytes`  
- <span data-ttu-id="b4fa4-106">入出力この @no__t 0 オブジェクトが表すバイナリコードのサイズ (バイト単位) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b4fa4-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>
+`pcBytes`  
+<span data-ttu-id="72977-106">入出力この @no__t 0 オブジェクトが表すバイナリコードのサイズ (バイト単位) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="72977-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b4fa4-107">要件</span><span class="sxs-lookup"><span data-stu-id="b4fa4-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="72977-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="72977-107">Requirements</span></span>
 
- <span data-ttu-id="b4fa4-108">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b4fa4-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+<span data-ttu-id="72977-108">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="72977-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="b4fa4-109">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b4fa4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="72977-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="72977-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
- <span data-ttu-id="b4fa4-110">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="b4fa4-110">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="72977-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72977-110">**Library:** CorGuids.lib</span></span>
 
- <span data-ttu-id="b4fa4-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4fa4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
- 
+<span data-ttu-id="72977-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72977-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

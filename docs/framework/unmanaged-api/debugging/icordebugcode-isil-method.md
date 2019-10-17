@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700795"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395495"
 ---
-# <a name="icordebugcodeisil-method"></a><span data-ttu-id="cadcc-102">ICorDebugCode::IsIL メソッド</span><span class="sxs-lookup"><span data-stu-id="cadcc-102">ICorDebugCode::IsIL Method</span></span>
+# <a name="icordebugcodeisil-method"></a><span data-ttu-id="1efba-102">ICorDebugCode::IsIL メソッド</span><span class="sxs-lookup"><span data-stu-id="1efba-102">ICorDebugCode::IsIL Method</span></span>
 
-<span data-ttu-id="cadcc-103">この "コードが、Microsoft 中間言語 (MSIL) でコンパイルされたコードを表しているかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="cadcc-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>
+<span data-ttu-id="1efba-103">この "コードが、Microsoft 中間言語 (MSIL) でコンパイルされたコードを表しているかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="1efba-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="cadcc-104">構文</span><span class="sxs-lookup"><span data-stu-id="cadcc-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1efba-104">構文</span><span class="sxs-lookup"><span data-stu-id="1efba-104">Syntax</span></span>
 
 ```cpp
 HRESULT IsIL (
@@ -36,17 +36,17 @@ HRESULT IsIL (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="cadcc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cadcc-105">Parameters</span></span>
- `pbIL`  
- <span data-ttu-id="cadcc-106">[out] `true` @no__t が MSIL でコンパイルされたコードを表している場合は0。それ以外の場合は、`false` です。</span><span class="sxs-lookup"><span data-stu-id="cadcc-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>
+## <a name="parameters"></a><span data-ttu-id="1efba-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1efba-105">Parameters</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="cadcc-107">要件</span><span class="sxs-lookup"><span data-stu-id="cadcc-107">Requirements</span></span>
+`pbIL`  
+<span data-ttu-id="1efba-106">[out] `true` @no__t が MSIL でコンパイルされたコードを表している場合は0。それ以外の場合は、`false` です。</span><span class="sxs-lookup"><span data-stu-id="1efba-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>
 
- <span data-ttu-id="cadcc-108">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cadcc-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1efba-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="1efba-107">Requirements</span></span>
 
- <span data-ttu-id="cadcc-109">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="cadcc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+<span data-ttu-id="1efba-108">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1efba-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="cadcc-110">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="cadcc-110">**Library:** CorGuids.lib</span></span>  
+<span data-ttu-id="1efba-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1efba-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
- <span data-ttu-id="cadcc-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cadcc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
- 
+<span data-ttu-id="1efba-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1efba-110">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="1efba-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1efba-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

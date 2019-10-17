@@ -1,219 +1,389 @@
 ---
-title: 非同期プログラミング
-description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
-ms.date: 06/20/2016
-ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+title: での非同期プログラミングF#
+description: がコアF#関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンなサポートを提供する方法について説明します。
+ms.date: 12/17/2018
+ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753596"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395790"
 ---
-# <a name="async-programming-in-f"></a><span data-ttu-id="d7a12-103">F での非同期プログラミング\#</span><span class="sxs-lookup"><span data-stu-id="d7a12-103">Async Programming in F\#</span></span>
+# <a name="async-programming-in-f"></a><span data-ttu-id="47ca1-103">F @ no__t での非同期プログラミング-0</span><span class="sxs-lookup"><span data-stu-id="47ca1-103">Async programming in F\#</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="d7a12-104">この記事では、いくつか誤りが検出されました。</span><span class="sxs-lookup"><span data-stu-id="d7a12-104">Some inaccuracies have been discovered in this article.</span></span>  <span data-ttu-id="d7a12-105">書き換えられます。</span><span class="sxs-lookup"><span data-stu-id="d7a12-105">It is being rewritten.</span></span>  <span data-ttu-id="d7a12-106">参照してください[問題 #666](https://github.com/dotnet/docs/issues/666)への変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-106">See [Issue #666](https://github.com/dotnet/docs/issues/666) to learn about the changes.</span></span>
+<span data-ttu-id="47ca1-104">非同期プログラミングは、さまざまな理由で、最新のアプリケーションに不可欠なメカニズムです。</span><span class="sxs-lookup"><span data-stu-id="47ca1-104">Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons.</span></span> <span data-ttu-id="47ca1-105">ほとんどの開発者が直面する主なユースケースには、次の2つがあります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-105">There are two primary use cases that most developers will encounter:</span></span>
 
-<span data-ttu-id="d7a12-107">非同期のプログラミングF#言語レベルのプログラミング モデルが使いやすく、自然言語にするように設計を行います。</span><span class="sxs-lookup"><span data-stu-id="d7a12-107">Async programming in F# can be accomplished through a language-level programming model designed to be easy to use and natural to the language.</span></span>
+- <span data-ttu-id="47ca1-106">多数の同時受信要求を処理できるサーバープロセスを提示する一方で、要求の処理中に使用されるシステムリソースを最小限に抑えながら、そのプロセスの外部のシステムまたはサービスからの入力を待機します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-106">Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</span></span>
+- <span data-ttu-id="47ca1-107">バックグラウンド作業の同時進行中に応答性の高い UI またはメインスレッドを維持する</span><span class="sxs-lookup"><span data-stu-id="47ca1-107">Maintaining a responsive UI or main thread while concurrently progressing background work</span></span>
 
-<span data-ttu-id="d7a12-108">非同期のプログラミングの中核となるF#は`Async<'T>`に、バック グラウンドで実行される作業の表現を`'T`特殊を介して、いずれかの型が返されます`return`キーワードまたは`unit`場合、非同期ワークフロー返される結果がありません。</span><span class="sxs-lookup"><span data-stu-id="d7a12-108">The core of async programming in F# is `Async<'T>`, a representation of work that can be triggered to run in the background, where `'T` is either the type returned via the special `return` keyword or `unit` if the async workflow has no result to return.</span></span>
+<span data-ttu-id="47ca1-108">多くの場合、バックグラウンド作業には複数のスレッドの使用が含まれますが、非同期性とマルチスレッドの概念を個別に考慮することが重要です。</span><span class="sxs-lookup"><span data-stu-id="47ca1-108">Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately.</span></span> <span data-ttu-id="47ca1-109">実際には、個別の懸念事項であり、もう一方については意味がありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-109">In fact, they are separate concerns, and one does not imply the other.</span></span> <span data-ttu-id="47ca1-110">この記事では、これについてさらに詳しく説明します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-110">What follows in this article will describe this in more detail.</span></span>
 
-<span data-ttu-id="d7a12-109">キーの概念を理解するが非同期式の型があること`Async<'T>`、これは単に、_仕様_非同期のコンテキストで実行する作業の。</span><span class="sxs-lookup"><span data-stu-id="d7a12-109">The key concept to understand is that an async expression’s type is `Async<'T>`, which is merely a _specification_ of work to be done in an asynchronous context.</span></span> <span data-ttu-id="d7a12-110">開始関数のいずれかで明示的に開始されるまでは実行されません (など`Async.RunSynchronously`)。</span><span class="sxs-lookup"><span data-stu-id="d7a12-110">It is not executed until you explicitly start it with one of the starting functions (such as `Async.RunSynchronously`).</span></span> <span data-ttu-id="d7a12-111">作業についての考え方を別の方法ですが、実際には非常に簡単に終了します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-111">Although this is a different way of thinking about doing work, it ends up being quite simple in practice.</span></span>
+## <a name="asynchrony-defined"></a><span data-ttu-id="47ca1-111">定義された非同期性</span><span class="sxs-lookup"><span data-stu-id="47ca1-111">Asynchrony defined</span></span>
 
-<span data-ttu-id="d7a12-112">たとえば、メイン スレッドをブロックすることがなく dotnetfoundation.org から HTML をダウンロードしたいとします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-112">For example, say you wanted to download the HTML from dotnetfoundation.org without blocking the main thread.</span></span> <span data-ttu-id="d7a12-113">このようなことを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="d7a12-113">You can accomplish it like this:</span></span>
+<span data-ttu-id="47ca1-112">前の点では、非同期性は複数のスレッドの使用状況に依存していません。もう少し説明しておくことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="47ca1-112">The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further.</span></span> <span data-ttu-id="47ca1-113">関連することがある3つの概念がありますが、厳密に独立しています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-113">There are three concepts that are sometimes related, but strictly independent of one another:</span></span>
 
-```fsharp
-open System
-open System.Net
+- <span data-ttu-id="47ca1-114">多重複数の計算が重複する時間間隔で実行される場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-114">Concurrency; when multiple computations execute in overlapping time periods.</span></span>
+- <span data-ttu-id="47ca1-115">次数複数の計算または1つの計算の一部が同時に実行される場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-115">Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</span></span>
+- <span data-ttu-id="47ca1-116">非同期性メインプログラムフローとは別に1つ以上の計算を実行する場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-116">Asynchrony; when one or more computations can execute separately from the main program flow.</span></span>
 
-let fetchHtmlAsync url =
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
+<span data-ttu-id="47ca1-117">これら3つは直交概念ですが、特に一緒に使用する場合は、簡単にまとめることができます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-117">All three are orthogonal concepts, but can be easily conflated, especially when they are used together.</span></span> <span data-ttu-id="47ca1-118">たとえば、複数の非同期計算を並行して実行することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-118">For example, you may need to execute multiple asynchronous computations in parallel.</span></span> <span data-ttu-id="47ca1-119">これは、並列処理または非同期性が互いを意味するという意味ではありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-119">This does not mean that parallelism or asynchrony imply one another.</span></span>
 
-        // Execution of fetchHtmlAsync won't continue until the result
-        // of AsyncDownloadString is bound.
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+<span data-ttu-id="47ca1-120">"非同期" という単語の etymology を検討している場合は、次の2つの部分が関係します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-120">If you consider the etymology of the word "asynchronous", there are two pieces involved:</span></span>
 
-let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-printfn "%s" html
-```
+- <span data-ttu-id="47ca1-121">"a"、つまり "not" を意味します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-121">"a", meaning "not".</span></span>
+- <span data-ttu-id="47ca1-122">"同期"、つまり "同時に"。</span><span class="sxs-lookup"><span data-stu-id="47ca1-122">"synchronous", meaning "at the same time".</span></span>
 
-<span data-ttu-id="d7a12-114">以上です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-114">And that’s it!</span></span> <span data-ttu-id="d7a12-115">使用を除き`async`、 `let!`、および`return`、これはごく普通F#コード。</span><span class="sxs-lookup"><span data-stu-id="d7a12-115">Aside from the use of `async`, `let!`, and `return`, this is just normal F# code.</span></span>
+<span data-ttu-id="47ca1-123">これらの2つの用語をまとめておくと、"非同期" とは "同時に実行しない" ことを意味します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-123">When you put these two terms together, you'll see that "asynchronous" means "not at the same time".</span></span> <span data-ttu-id="47ca1-124">これで完了です。</span><span class="sxs-lookup"><span data-stu-id="47ca1-124">That's it!</span></span> <span data-ttu-id="47ca1-125">この定義では、同時実行または並列処理には意味がありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-125">There is no implication of concurrency or parallelism in this definition.</span></span> <span data-ttu-id="47ca1-126">これは実際にも当てはまります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-126">This is also true in practice.</span></span>
 
-<span data-ttu-id="d7a12-116">注目すべきである、いくつかの構文構造があります。</span><span class="sxs-lookup"><span data-stu-id="d7a12-116">There are a few syntactical constructs which are worth noting:</span></span>
+<span data-ttu-id="47ca1-127">実際には、のF#非同期計算は、メインプログラムフローとは別に実行するようにスケジュールされています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-127">In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow.</span></span> <span data-ttu-id="47ca1-128">これは、同時実行または並列処理を意味しません。また、計算が常にバックグラウンドで発生することも意味しません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-128">This doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background.</span></span> <span data-ttu-id="47ca1-129">実際、非同期計算は、計算の性質と計算が実行されている環境に応じて、同期的に実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-129">In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</span></span>
 
-* <span data-ttu-id="d7a12-117">`let!` (別のコンテキストで実行) される非同期式の結果にバインドします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-117">`let!` binds the result of an async expression (which runs on another context).</span></span>
-* <span data-ttu-id="d7a12-118">`use!` 同様の機能`let!`がスコープ外になったときに、そのバインドされているリソースを破棄します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-118">`use!` works just like `let!`, but disposes its bound resources when it goes out of scope.</span></span>
-* <span data-ttu-id="d7a12-119">`do!` 何も返しませんが、非同期ワークフローを待機します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-119">`do!` will await an async workflow which doesn’t return anything.</span></span>
-* <span data-ttu-id="d7a12-120">`return` 単に非同期式から結果を返します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-120">`return` simply returns a result from an async expression.</span></span>
-* <span data-ttu-id="d7a12-121">`return!` 別の非同期ワークフローを実行し、結果としてその戻り値を返します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-121">`return!` executes another async workflow and returns its return value as a result.</span></span>
+<span data-ttu-id="47ca1-130">主な通じ重要は、非同期計算はメインプログラムフローに依存しないことです。</span><span class="sxs-lookup"><span data-stu-id="47ca1-130">The main takeaway you should have is that asynchronous computations are independent of the main program flow.</span></span> <span data-ttu-id="47ca1-131">非同期計算を実行するタイミングと方法については、いくつかの保証はありますが、調整とスケジュール設定にはいくつかの方法があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-131">Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them.</span></span> <span data-ttu-id="47ca1-132">この記事の残りの部分では、 F#非同期性の主要な概念と、にF#組み込まれている型、関数、および式の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-132">The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</span></span>
 
-<span data-ttu-id="d7a12-122">さらに、通常`let`、 `use`、および`do`キーワードは、通常の関数内にある場合と同様、非同期バージョンと共に使用できます。</span><span class="sxs-lookup"><span data-stu-id="d7a12-122">Additionally, normal `let`, `use`, and `do` keywords can be used alongside the async versions just as they would in a normal function.</span></span>
+## <a name="core-concepts"></a><span data-ttu-id="47ca1-133">主要な概念</span><span class="sxs-lookup"><span data-stu-id="47ca1-133">Core concepts</span></span>
 
-## <a name="how-to-start-async-code-in-f"></a><span data-ttu-id="d7a12-123">F での非同期コードを起動する方法\#</span><span class="sxs-lookup"><span data-stu-id="d7a12-123">How to start Async Code in F\#</span></span>
+<span data-ttu-id="47ca1-134">でF#は、非同期プログラミングは次の3つの主要な概念を中心にしています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-134">In F#, asynchronous programming is centered around three core concepts:</span></span>
 
-<span data-ttu-id="d7a12-124">前述のように、非同期コードを明示的に開始する必要がある別のコンテキストで実行する作業の仕様です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-124">As mentioned earlier, async code is a specification of work to be done in another context which needs to be explicitly started.</span></span> <span data-ttu-id="d7a12-125">これを実現する 2 つの主な方法を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-125">Here are two primary ways to accomplish this:</span></span>
+- <span data-ttu-id="47ca1-135">@No__t-0 型。これは、コンポーザブルな非同期計算を表します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-135">The `Async<'T>` type, which represents a composable asynchronous computation.</span></span>
+- <span data-ttu-id="47ca1-136">@No__t-0 モジュール関数を使用すると、非同期処理のスケジュール、非同期計算の作成、および非同期結果の変換を実行できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-136">The `Async` module functions, which let you schedule asynchronous work, compose asynchronous computations, and transform asynchronous results.</span></span>
+- <span data-ttu-id="47ca1-137">@No__t-0[コンピュテーション式](../../language-reference/computation-expressions.md)。非同期計算を構築および制御するための便利な構文を提供します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-137">The `async { }` [computation expression](../../language-reference/computation-expressions.md), which provides a convenient syntax for building and controlling asynchronous computations.</span></span>
 
-1. <span data-ttu-id="d7a12-126">`Async.RunSynchronously` 別のスレッドで非同期ワークフローを開始し、その結果を待機します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-126">`Async.RunSynchronously` will start an async workflow on another thread and await its result.</span></span>
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let fetchHtmlAsync url =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            let! html = webClient.AsyncDownloadString(uri)
-            return html
-        }
-
-    // Execution will pause until fetchHtmlAsync finishes
-    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
-
-    // you actually have the result from fetchHtmlAsync now!
-    printfn "%s" html
-    ```
-
-2. <span data-ttu-id="d7a12-127">`Async.Start` 別のスレッドで非同期ワークフローが開始され、**いない**その結果を待機します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-127">`Async.Start` will start an async workflow on another thread, and will **not** await its result.</span></span>
-
-    ```fsharp
-    open System
-    open System.Net
-
-    let uploadDataAsync url data =
-        async {
-            let uri = Uri(url)
-            use webClient = new WebClient()
-            webClient.UploadStringAsync(uri, data)
-        }
-
-    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
-
-    // Execution will continue after calling this!
-    Async.Start(workflow)
-
-    printfn "%s" "uploadDataAsync is running in the background..."
-    ```
-
-<span data-ttu-id="d7a12-128">具体的なシナリオで使用可能な非同期ワークフローを開始するには、その他の方法はあります。</span><span class="sxs-lookup"><span data-stu-id="d7a12-128">There are other ways to start an async workflow available for more specific scenarios.</span></span> <span data-ttu-id="d7a12-129">詳細については[非同期リファレンス](https://msdn.microsoft.com/library/ee370232.aspx)します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-129">They are detailed [in the Async reference](https://msdn.microsoft.com/library/ee370232.aspx).</span></span>
-
-### <a name="a-note-on-threads"></a><span data-ttu-id="d7a12-130">スレッドに関する注意事項</span><span class="sxs-lookup"><span data-stu-id="d7a12-130">A Note on Threads</span></span>
-
-<span data-ttu-id="d7a12-131">別のスレッド"の"という語句は、上記のように、ことを把握することが重要**非同期ワークフローのためのファサードであるわけではないマルチ スレッド**します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-131">The phrase "on another thread" is mentioned above, but it is important to know that **this does not mean that async workflows are a facade for multithreading**.</span></span> <span data-ttu-id="d7a12-132">ワークフロー実際に「移動」有益な処理の実行時間の短時間にそれらを借りて、スレッド間でします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-132">The workflow actually "jumps" between threads, borrowing them for a small amount of time to do useful work.</span></span> <span data-ttu-id="d7a12-133">非同期ワークフローは実質的に「待機中に」(たとえば、何かを返すネットワーク呼び出しの待機など)、まで他の有益な処理を移動操作を実行時にそれを借りてが任意のスレッドが解放されます。</span><span class="sxs-lookup"><span data-stu-id="d7a12-133">When an async workflow is effectively "waiting" (for example, waiting for a network call to return something), any thread it was borrowing at the time is freed up to go do useful work on something else.</span></span> <span data-ttu-id="d7a12-134">これにより、非同期ワークフローで、できるだけ効率的に実行されるシステムを利用して大量の I/O シナリオの特に強力になります。</span><span class="sxs-lookup"><span data-stu-id="d7a12-134">This allows async workflows to utilize the system they run on as effectively as possible, and makes them especially strong for high-volume I/O scenarios.</span></span>
-
-## <a name="how-to-add-parallelism-to-async-code"></a><span data-ttu-id="d7a12-135">非同期コードを並列処理を追加する方法</span><span class="sxs-lookup"><span data-stu-id="d7a12-135">How to Add Parallelism to Async Code</span></span>
-
-<span data-ttu-id="d7a12-136">場合があります可能性があります必要がありますを並列では、複数の非同期ジョブを実行する、その結果を収集し、何らかの方法で解釈します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-136">Sometimes you may need to perform multiple asynchronous jobs in parallel, collect their results, and interpret them in some way.</span></span> <span data-ttu-id="d7a12-137">`Async.Parallel` これを強制的に変換しなくても含まれるタスク並列ライブラリを使用することがなく実行できる`Task<'T>`と`Async<'T>`型。</span><span class="sxs-lookup"><span data-stu-id="d7a12-137">`Async.Parallel` allows you to do this without needing to use the Task Parallel Library, which would involve needing to coerce `Task<'T>` and `Async<'T>` types.</span></span>
-
-<span data-ttu-id="d7a12-138">次の例を使用して`Async.Parallel`を並列で 4 つの人気のあるサイトから HTML をダウンロードするこれらのタスクを完了するまで待機し、ダウンロードされた HTML を印刷します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-138">The following example will use `Async.Parallel` to download the HTML from four popular sites in parallel, wait for those tasks to complete, and then print the HTML which was downloaded.</span></span>
+<span data-ttu-id="47ca1-138">次の例では、これら3つの概念を確認できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-138">You can see these three concepts in the following example:</span></span>
 
 ```fsharp
 open System
-open System.Net
+open System.IO
 
-let urlList =
-    [ "https://www.microsoft.com"
-      "https://www.google.com"
-      "https://www.amazon.com"
-      "https://www.facebook.com" ]
-
-let fetchHtmlAsync url =
+let printTotalFileBytes path =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let getHtmlList urls =
-    urls
-    |> Seq.map fetchHtmlAsync   // Build an Async<'T> for each site
-    |> Async.Parallel           // Returns an Async<'T []>
-    |> Async.RunSynchronously   // Wait for the result of the parallel work
+[<EntryPoint>]
+let main argv =
+    printTotalFileBytes "path-to-file.txt"
+    |> Async.RunSynchronously
 
-let htmlList = getHtmlList urlList
-
-// We now have the downloaded HTML for each site!
-for html in htmlList do
-    printfn "%s" html
+    Console.Read() |> ignore
+    0
 ```
 
-## <a name="important-info-and-advice"></a><span data-ttu-id="d7a12-139">重要な情報とアドバイス</span><span class="sxs-lookup"><span data-stu-id="d7a12-139">Important Info and Advice</span></span>
+<span data-ttu-id="47ca1-139">この例では、@no__t 0 関数の型は `string -> Async<unit>` です。</span><span class="sxs-lookup"><span data-stu-id="47ca1-139">In the example, the `printTotalFileBytes` function is of type `string -> Async<unit>`.</span></span> <span data-ttu-id="47ca1-140">関数を呼び出すと、実際には非同期計算が実行されません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-140">Calling the function does not actually execute the asynchronous computation.</span></span> <span data-ttu-id="47ca1-141">代わりに、非同期的に実行する作業の \* 仕様として機能する @no__t 0 を返します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-141">Instead, it returns an `Async<unit>` that acts as a \*specification- of the work that is to execute asynchronously.</span></span> <span data-ttu-id="47ca1-142">このメソッドは、本文で `Async.AwaitTask` を呼び出します。これにより、<xref:System.IO.File.WriteAllBytesAsync%2A> の結果が呼び出されたときに、適切な型に変換されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-142">It will call `Async.AwaitTask` in its body, which will convert the result of <xref:System.IO.File.WriteAllBytesAsync%2A> to an appropriate type when it is called.</span></span>
 
-* <span data-ttu-id="d7a12-140">使用するすべての関数の最後に"Async"を追加します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-140">Append "Async" to the end of any functions you’ll consume</span></span>
+<span data-ttu-id="47ca1-143">もう1つの重要な行は `Async.RunSynchronously` の呼び出しです。</span><span class="sxs-lookup"><span data-stu-id="47ca1-143">Another important line is the call to `Async.RunSynchronously`.</span></span> <span data-ttu-id="47ca1-144">これは、 F#非同期計算を実際に実行する場合に呼び出す必要がある非同期モジュール開始関数の1つです。</span><span class="sxs-lookup"><span data-stu-id="47ca1-144">This is one of the Async module starting functions that you'll need to call if you want to actually execute an F# asynchronous computation.</span></span>
 
- <span data-ttu-id="d7a12-141">これは単なる名前付け規則が、これはやすく API の発見など。</span><span class="sxs-lookup"><span data-stu-id="d7a12-141">Although this is just a naming convention, it does make things like API discoverability easier.</span></span> <span data-ttu-id="d7a12-142">同じルーチンの同期および非同期のバージョンがある場合に特には、明示的に名前を使用して非同期であることをお勧めです。</span><span class="sxs-lookup"><span data-stu-id="d7a12-142">Particularly if there are synchronous and asynchronous versions of the same routine, it’s a good idea to explicitly state which is asynchronous via the name.</span></span>
+<span data-ttu-id="47ca1-145">これは、@no__t 1 プログラミングのC#/VB スタイルとの基本的な違いです。</span><span class="sxs-lookup"><span data-stu-id="47ca1-145">This is a fundamental difference with the C#/VB style of `async` programming.</span></span> <span data-ttu-id="47ca1-146">でF#は、非同期計算は**コールドタスク**と考えることができます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-146">In F#, asynchronous computations can be thought of as **Cold tasks**.</span></span> <span data-ttu-id="47ca1-147">実際に実行するには、明示的に開始する必要があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-147">They must be explicitly started to actually execute.</span></span> <span data-ttu-id="47ca1-148">これにはいくつかの利点があります。これにより、またはC#/vbよりもはるかに簡単に非同期作業を組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-148">This has some advantages, as it allows you to combine and sequence asynchronous work much more easily than in C#/VB.</span></span>
 
-* <span data-ttu-id="d7a12-143">コンパイラをリッスンします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-143">Listen to the compiler!</span></span>
+## <a name="combining-asynchronous-computations"></a><span data-ttu-id="47ca1-149">非同期計算の組み合わせ</span><span class="sxs-lookup"><span data-stu-id="47ca1-149">Combining asynchronous computations</span></span>
 
-<span data-ttu-id="d7a12-144">F#コンパイラは非常に厳格な"async"コードを同期的に実行を行うような問題とされることはほぼ不可能です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-144">F#’s compiler is very strict, making it nearly impossible to do something troubling like run "async" code synchronously.</span></span> <span data-ttu-id="d7a12-145">警告に遭遇した場合はどのように考えるかをコードが実行されません記号です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-145">If you come across a warning, that’s a sign that the code won’t execute how you think it will.</span></span> <span data-ttu-id="d7a12-146">コンパイラを満足することができますと、ほとんどの場合に、コードは、想定どおりに実行されます。</span><span class="sxs-lookup"><span data-stu-id="d7a12-146">If you can make the compiler happy, your code will most likely execute as expected.</span></span>
-
-## <a name="for-the-cvb-programmer-looking-into-f"></a><span data-ttu-id="d7a12-147">C#または VB プログラマが F を見る\#</span><span class="sxs-lookup"><span data-stu-id="d7a12-147">For the C#/VB Programmer Looking Into F\#</span></span>
-
-<span data-ttu-id="d7a12-148">このセクションでは、非同期モデルに使い慣れている前提としていますC#/VB。</span><span class="sxs-lookup"><span data-stu-id="d7a12-148">This section assumes you’re familiar with the async model in C#/VB.</span></span> <span data-ttu-id="d7a12-149">そうでない場合[での非同期プログラミングC#](../../../csharp/async.md)は開始点です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-149">If you are not, [Async Programming in C#](../../../csharp/async.md) is a starting point.</span></span>
-
-<span data-ttu-id="d7a12-150">基本的な違いは、C#または VB の非同期モデルとF#非同期モデル。</span><span class="sxs-lookup"><span data-stu-id="d7a12-150">There is a fundamental difference between the C#/VB async model and the F# async model.</span></span>
-
-<span data-ttu-id="d7a12-151">返す関数を呼び出すと、`Task`または`Task<'T>`、そのジョブがすでに実行を開始します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-151">When you call a function which returns a `Task` or `Task<'T>`, that job has already begun execution.</span></span> <span data-ttu-id="d7a12-152">返されたハンドルは、既に実行中の非同期ジョブを表します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-152">The handle returned represents an already-running asynchronous job.</span></span> <span data-ttu-id="d7a12-153">非同期関数を呼び出すこととこれに対し、 F#、`Async<'a>`返されるとなるジョブを表す**生成**時点。</span><span class="sxs-lookup"><span data-stu-id="d7a12-153">In contrast, when you call an async function in F#, the `Async<'a>` returned represents a job which will be **generated** at some point.</span></span> <span data-ttu-id="d7a12-154">非同期ジョブのために強力ですが、このモデルを理解することがF#を連結して、簡単に条件付きで実行され、コントロールの細かい粒度で開始します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-154">Understanding this model is powerful, because it allows for asynchronous jobs in F# to be chained together easier, performed conditionally, and be started with a finer grain of control.</span></span>
-
-<span data-ttu-id="d7a12-155">その他のいくつかの類似点と注目すべき違いがあります。</span><span class="sxs-lookup"><span data-stu-id="d7a12-155">There are a few other similarities and differences worth noting.</span></span>
-
-### <a name="similarities"></a><span data-ttu-id="d7a12-156">類似点</span><span class="sxs-lookup"><span data-stu-id="d7a12-156">Similarities</span></span>
-
-* <span data-ttu-id="d7a12-157">`let!`、 `use!`、および`do!`に似ています`await`内から、非同期ジョブを呼び出すときに、`async{ }`ブロックします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-157">`let!`, `use!`, and `do!` are analogous to `await` when calling an async job from within an `async{ }` block.</span></span>
-
-  <span data-ttu-id="d7a12-158">次の 3 つのキーワードは内でのみ使用できます、`async { }`ブロック、方法と似ています`await`内で呼び出すことができますのみ、`async`メソッド。</span><span class="sxs-lookup"><span data-stu-id="d7a12-158">The three keywords can only be used within an `async { }` block, similar to how `await` can only be invoked inside an `async` method.</span></span> <span data-ttu-id="d7a12-159">つまり、`let!`キャプチャし、結果を使用する場合に`use!`は同じですが、何かのリソースが使用すると、後にクリーンアップする必要がありますと`do!`戻り値を完了する非同期ワークフローを待機する場合に続行する前にします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-159">In short, `let!` is for when you want to capture and use a result, `use!` is the same but for something whose resources should get cleaned after it’s used, and `do!` is for when you want to wait for an async workflow with no return value to finish before moving on.</span></span>
-
-* <span data-ttu-id="d7a12-160">F#同様の方法でデータを並列化をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="d7a12-160">F# supports data-parallelism in a similar way.</span></span>
-
-  <span data-ttu-id="d7a12-161">非常に異なる方法で動作が`Async.Parallel`に対応する`Task.WhenAll`をすべて終了すると、一連の非同期ジョブの結果としているシナリオでは。</span><span class="sxs-lookup"><span data-stu-id="d7a12-161">Although it operates very differently, `Async.Parallel` corresponds to `Task.WhenAll` for the scenario of wanting the results of a set of async jobs when they all complete.</span></span>
-
-### <a name="differences"></a><span data-ttu-id="d7a12-162">相違点</span><span class="sxs-lookup"><span data-stu-id="d7a12-162">Differences</span></span>
-
-* <span data-ttu-id="d7a12-163">入れ子になった`let!`いないは許可されているとは異なり、入れ子になった `await`</span><span class="sxs-lookup"><span data-stu-id="d7a12-163">Nested `let!` is not allowed, unlike nested `await`</span></span>
-
-  <span data-ttu-id="d7a12-164">異なり`await`、無期限にネストできます`let!`ことはできませんし、その結果を別の内部で使用する前にバインドされている必要があります`let!`、 `do!`、または`use!`します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-164">Unlike `await`, which can be nested indefinitely, `let!` cannot and must have its result bound before using it inside of another `let!`, `do!`, or `use!`.</span></span>
-
-* <span data-ttu-id="d7a12-165">キャンセルのサポートは、非常に簡単F#よりもC#/VB.</span><span class="sxs-lookup"><span data-stu-id="d7a12-165">Cancellation support is simpler in F# than in C#/VB.</span></span>
-
-  <span data-ttu-id="d7a12-166">タスクの途中での実行でのキャンセルをサポートしているC#または VB では、チェックが必要、`IsCancellationRequested`プロパティまたは呼び出す`ThrowIfCancellationRequested()`上、`CancellationToken`非同期メソッドに渡されるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d7a12-166">Supporting cancellation of a task midway through its execution in C#/VB requires checking the `IsCancellationRequested` property or calling `ThrowIfCancellationRequested()` on a `CancellationToken` object that’s passed into the async method.</span></span>
-
-<span data-ttu-id="d7a12-167">これに対し、F#非同期ワークフローがより自然にキャンセル可能です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-167">In contrast, F# async workflows are more naturally cancellable.</span></span> <span data-ttu-id="d7a12-168">キャンセルは、単純な 3 段階のプロセスです。</span><span class="sxs-lookup"><span data-stu-id="d7a12-168">Cancellation is a simple three-step process.</span></span>
-
-1. <span data-ttu-id="d7a12-169">新規の `CancellationTokenSource` を作成します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-169">Create a new `CancellationTokenSource`.</span></span>
-2. <span data-ttu-id="d7a12-170">開始関数に渡します。</span><span class="sxs-lookup"><span data-stu-id="d7a12-170">Pass it into a starting function.</span></span>
-3. <span data-ttu-id="d7a12-171">呼び出す`Cancel`トークンにします。</span><span class="sxs-lookup"><span data-stu-id="d7a12-171">Call `Cancel` on the token.</span></span>
-
-<span data-ttu-id="d7a12-172">例:</span><span class="sxs-lookup"><span data-stu-id="d7a12-172">Example:</span></span>
+<span data-ttu-id="47ca1-150">次に、計算を組み合わせることによって、前の例に基づいて構築する例を示します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-150">Here is an example that builds upon the previous one by combining computations:</span></span>
 
 ```fsharp
-open System.Threading
+open System
+open System.IO
 
-// Create a workflow which will loop forever.
-let workflow =
+let printTotalFileBytes path =
     async {
-        while true do
-            printfn "Working..."
-            do! Async.Sleep 1000
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
     }
 
-let tokenSource = new CancellationTokenSource()
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Parallel
+    |> Async.Ignore
+    |> Async.RunSynchronously
 
-// Start the workflow in the background
-Async.Start (workflow, tokenSource.Token)
-
-// Executing the next line will stop the workflow
-tokenSource.Cancel()
+    0
 ```
 
-<span data-ttu-id="d7a12-173">以上です。</span><span class="sxs-lookup"><span data-stu-id="d7a12-173">And that’s it!</span></span>
+<span data-ttu-id="47ca1-151">ご覧のように、@no__t 0 関数には、さらに多くの呼び出しが行われています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-151">As you can see, the `main` function has quite a few more calls made.</span></span> <span data-ttu-id="47ca1-152">概念的には、次のことが行われます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-152">Conceptually, it does the following:</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="d7a12-174">他のリソース:</span><span class="sxs-lookup"><span data-stu-id="d7a12-174">Further resources:</span></span>
+1. <span data-ttu-id="47ca1-153">コマンドライン引数を、`Array.map` を指定して @no__t 0 の計算に変換します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-153">Transform the command-line arguments into `Async<unit>` computations with `Array.map`.</span></span>
+2. <span data-ttu-id="47ca1-154">実行時に並列で `printTotalFileBytes` の計算をスケジュールして実行する @no__t 0 を作成します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-154">Create an `Async<'T[]>` that schedules and runs the `printTotalFileBytes` computations in parallel when it runs.</span></span>
+3. <span data-ttu-id="47ca1-155">並列計算を実行し、その結果を無視する @no__t 0 を作成します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-155">Create an `Async<unit>` that will run the parallel computation and ignore its result.</span></span>
+4. <span data-ttu-id="47ca1-156">@No__t-0 で最後の計算を明示的に実行し、完了するまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="47ca1-156">Explicitly run the last computation with `Async.RunSynchronously` and block until it is completes.</span></span>
 
-* [<span data-ttu-id="d7a12-175">MSDN での非同期ワークフロー</span><span class="sxs-lookup"><span data-stu-id="d7a12-175">Async Workflows on MSDN</span></span>](https://msdn.microsoft.com/library/dd233250.aspx)
-* [<span data-ttu-id="d7a12-176">非同期のシーケンスF#</span><span class="sxs-lookup"><span data-stu-id="d7a12-176">Asynchronous Sequences for F#</span></span>](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-* [<span data-ttu-id="d7a12-177">F#データを HTTP ユーティリティ</span><span class="sxs-lookup"><span data-stu-id="d7a12-177">F# Data HTTP Utilities</span></span>](https://fsharp.github.io/FSharp.Data/library/Http.html)
+<span data-ttu-id="47ca1-157">このプログラムを実行すると、コマンドライン引数ごとに `printTotalFileBytes` が並列実行されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-157">When this program runs, `printTotalFileBytes` runs in parallel for each command-line argument.</span></span> <span data-ttu-id="47ca1-158">非同期計算はプログラムフローとは無関係に実行されるため、情報を出力して実行を終了する順序はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-158">Because asynchronous computations execute independently of program flow, there is no order in which they print their information and finish executing.</span></span> <span data-ttu-id="47ca1-159">計算は並列でスケジュールされますが、実行の順序は保証されません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-159">The computations will be scheduled in parallel, but their order of execution is not guaranteed.</span></span>
+
+## <a name="sequencing-asynchronous-computations"></a><span data-ttu-id="47ca1-160">シーケンス処理 (非同期計算の)</span><span class="sxs-lookup"><span data-stu-id="47ca1-160">Sequencing asynchronous computations</span></span>
+
+<span data-ttu-id="47ca1-161">@No__t-0 は既に実行されているタスクではなく作業の仕様であるため、より複雑な変換を簡単に実行できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-161">Because `Async<'T>` is a specification of work rather than an already-running task, you can perform more intricate transformations easily.</span></span> <span data-ttu-id="47ca1-162">非同期計算のセットをシーケンス処理して、1つずつ実行する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-162">Here is an example that sequences a set of Async computations so they execute one after another.</span></span>
+
+```fsharp
+let printTotalFileBytes path =
+    async {
+        let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
+        let fileName = Path.GetFileName(path)
+        printfn "File %s has %d bytes" fileName bytes.Length
+    }
+
+[<EntryPoint>]
+let main argv =
+    argv
+    |> Array.map printTotalFileBytes
+    |> Async.Sequential
+    |> Async.RunSynchronously
+    |> ignore
+```
+
+<span data-ttu-id="47ca1-163">これにより、`printTotalFileBytes` が `argv` の要素の順序で実行されるようにスケジュールされます。並列でスケジュールする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-163">This will schedule `printTotalFileBytes` to execute in the order of the elements of `argv` rather than scheduling them in parallel.</span></span> <span data-ttu-id="47ca1-164">次の項目は、最後の計算の実行が完了するまではスケジュールされないため、実行中に重複が発生しないように計算がシーケンス処理されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-164">Because the next item will not be scheduled until after the last computation has finished executing, the computations are sequenced such that there is no overlap in their execution.</span></span>
+
+## <a name="important-async-module-functions"></a><span data-ttu-id="47ca1-165">重要な非同期モジュール関数</span><span class="sxs-lookup"><span data-stu-id="47ca1-165">Important Async module functions</span></span>
+
+<span data-ttu-id="47ca1-166">非同期コードF#を記述する場合は、通常、計算のスケジューリングを処理するフレームワークと対話します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-166">When you write async code in F# you'll usually interact with a framework that handles scheduling of computations for you.</span></span> <span data-ttu-id="47ca1-167">ただし、これは常にであるとは限りません。そのため、非同期処理をスケジュールするためのさまざまな開始関数について学習することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="47ca1-167">However, this is not always the case, so it is good to learn the various starting functions to schedule asynchronous work.</span></span>
+
+<span data-ttu-id="47ca1-168">非同期F#計算は、既に実行されている作業の表現ではなく、作業の_仕様_であるため、開始関数を使用して明示的に開始する必要があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-168">Because F# asynchronous computations are a _specification_ of work rather than a representation of work that is already executing, they must be explicitly started with a starting function.</span></span> <span data-ttu-id="47ca1-169">さまざまなコンテキストで役に立つ[非同期開始関数](https://msdn.microsoft.com/library/ee370232.aspx)が多数あります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-169">There are many [Async starting functions](https://msdn.microsoft.com/library/ee370232.aspx) that are helpful in different contexts.</span></span> <span data-ttu-id="47ca1-170">次のセクションでは、より一般的な開始関数のいくつかについて説明します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-170">The following section describes some of the more common starting functions.</span></span>
+
+### <a name="asyncstartchild"></a><span data-ttu-id="47ca1-171">Async. StartChild</span><span class="sxs-lookup"><span data-stu-id="47ca1-171">Async.StartChild</span></span>
+
+<span data-ttu-id="47ca1-172">非同期計算内で子計算を開始します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-172">Starts a child computation within an asynchronous computation.</span></span> <span data-ttu-id="47ca1-173">これにより、複数の非同期計算を同時に実行できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-173">This allows multiple asynchronous computations to be executed concurrently.</span></span> <span data-ttu-id="47ca1-174">子の計算では、キャンセルトークンを親計算と共有します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-174">The child computation shares a cancellation token with the parent computation.</span></span> <span data-ttu-id="47ca1-175">親の計算が取り消された場合は、子の計算も取り消されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-175">If the parent computation is canceled, the child computation is also canceled.</span></span>
+
+<span data-ttu-id="47ca1-176">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-176">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
+```
+
+<span data-ttu-id="47ca1-177">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-177">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-178">一度に1つずつではなく、複数の非同期計算を同時に実行するが、並列でスケジュールされていない場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-178">When you want to execute multiple asynchronous computations concurrently rather than one at a time, but not have them scheduled in parallel.</span></span>
+- <span data-ttu-id="47ca1-179">子計算の有効期間を親計算の有効期間に関連付ける場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-179">When you wish to tie the lifetime of a child computation to that of a parent computation.</span></span>
+
+<span data-ttu-id="47ca1-180">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-180">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-181">@No__t-0 を使用して複数の計算を開始することは、並列でのスケジュール設定と同じではありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-181">Starting multiple computations with `Async.StartChild` isn't the same as scheduling them in parallel.</span></span> <span data-ttu-id="47ca1-182">計算を並列でスケジュールする場合は、`Async.Parallel` を使用します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-182">If you wish to schedule computations in parallel, use `Async.Parallel`.</span></span>
+- <span data-ttu-id="47ca1-183">親計算を取り消すと、開始したすべての子計算の取り消しがトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-183">Canceling a parent computation will trigger cancellation of all child computations it started.</span></span>
+
+### <a name="asyncstartimmediate"></a><span data-ttu-id="47ca1-184">StartImmediate</span><span class="sxs-lookup"><span data-stu-id="47ca1-184">Async.StartImmediate</span></span>
+
+<span data-ttu-id="47ca1-185">非同期計算を実行し、現在のオペレーティング システムのスレッドですぐに開始します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-185">Runs an asynchronous computation, starting immediately on the current operating system thread.</span></span> <span data-ttu-id="47ca1-186">これは、計算中に呼び出し元のスレッドで何かを更新する必要がある場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="47ca1-186">This is helpful if you need to update something on the calling thread during the computation.</span></span> <span data-ttu-id="47ca1-187">たとえば、非同期計算で UI を更新する必要がある場合 (進行状況バーを更新するなど)、`Async.StartImmediate` を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-187">For example, if an asynchronous computation must update a UI (such as updating a progress bar), then `Async.StartImmediate` should be used.</span></span>
+
+<span data-ttu-id="47ca1-188">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-188">Signature:</span></span>
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+<span data-ttu-id="47ca1-189">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-189">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-190">非同期計算の途中で、呼び出し元のスレッドで何かを更新する必要がある場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-190">When you need to update something on the calling thread in the middle of an asynchronous computation.</span></span>
+
+<span data-ttu-id="47ca1-191">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-191">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-192">非同期計算のコードは、スケジュールされている任意のスレッドで実行されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-192">Code in the asynchronous computation will run on whatever thread one happens to be scheduled on.</span></span> <span data-ttu-id="47ca1-193">これは、そのスレッドが UI スレッドなど、何らかの方法で重要な場合に問題になることがあります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-193">This can be problematic if that thread is in some way sensitive, such as a UI thread.</span></span> <span data-ttu-id="47ca1-194">このような場合は、@no__t 0 を使用するのが不適切である可能性があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-194">In such cases, `Async.StartImmediate` is likely inappropriate to use.</span></span>
+
+### <a name="asyncstartastask"></a><span data-ttu-id="47ca1-195">Async.startastask</span><span class="sxs-lookup"><span data-stu-id="47ca1-195">Async.StartAsTask</span></span>
+
+<span data-ttu-id="47ca1-196">スレッド プールで計算を実行します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-196">Executes a computation in the thread pool.</span></span> <span data-ttu-id="47ca1-197">計算が終了した後、対応する状態で完了する @no__t 0 を返します (結果を生成するか、例外をスローするか、または取り消されます)。</span><span class="sxs-lookup"><span data-stu-id="47ca1-197">Returns a <xref:System.Threading.Tasks.Task%601> that will be completed on the corresponding state once the computation terminates (produces the result, throws exception, or gets canceled).</span></span> <span data-ttu-id="47ca1-198">キャンセルトークンが指定されていない場合は、既定のキャンセルトークンが使用されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-198">If no cancellation token is provided, then the default cancellation token is used.</span></span>
+
+<span data-ttu-id="47ca1-199">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-199">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+```
+
+<span data-ttu-id="47ca1-200">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-200">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-201">非同期計算の結果を表すために @no__t 0 を想定している .NET API を呼び出す必要がある場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-201">When you need to call into a .NET API that expects a <xref:System.Threading.Tasks.Task%601> to represent the result of an asynchronous computation.</span></span>
+
+<span data-ttu-id="47ca1-202">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-202">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-203">この呼び出しでは、追加の `Task` オブジェクトが割り当てられます。これにより、頻繁に使用される場合にオーバーヘッドが増加する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-203">This call will allocate an additional `Task` object, which can increase overhead if it is used often.</span></span>
+
+### <a name="asyncparallel"></a><span data-ttu-id="47ca1-204">Async. Parallel</span><span class="sxs-lookup"><span data-stu-id="47ca1-204">Async.Parallel</span></span>
+
+<span data-ttu-id="47ca1-205">並列で実行される一連の非同期計算をスケジュールします。</span><span class="sxs-lookup"><span data-stu-id="47ca1-205">Schedules a sequence of asynchronous computations to be executed in parallel.</span></span> <span data-ttu-id="47ca1-206">並列処理の次数は、`maxDegreesOfParallelism` パラメーターを指定することによって、必要に応じてチューニング/調整できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-206">The degree of parallelism can be optionally tuned/throttled by specifying the `maxDegreesOfParallelism` parameter.</span></span>
+
+<span data-ttu-id="47ca1-207">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-207">Signature:</span></span>
+
+```fsharp
+computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+```
+
+<span data-ttu-id="47ca1-208">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-208">When to use it:</span></span>
+
+- <span data-ttu-id="47ca1-209">一連の計算を同時に実行する必要があり、実行の順序に依存しない場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-209">If you need to run a set of computations at the same time and have no reliance on their order of execution.</span></span>
+- <span data-ttu-id="47ca1-210">すべてが完了するまで並列でスケジュールされた計算結果を必要としない場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-210">If you don't require results from computations scheduled in parallel until they have all completed.</span></span>
+
+<span data-ttu-id="47ca1-211">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-211">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-212">すべての計算が完了すると、結果として得られる値の配列にのみアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-212">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="47ca1-213">計算は実行されますが、スケジュールが設定されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-213">Computations will be run however they end up getting scheduled.</span></span> <span data-ttu-id="47ca1-214">つまり、実行の順序に依存することはできません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-214">This means you cannot rely on their order of their execution.</span></span>
+
+### <a name="asyncsequential"></a><span data-ttu-id="47ca1-215">Async。シーケンシャル</span><span class="sxs-lookup"><span data-stu-id="47ca1-215">Async.Sequential</span></span>
+
+<span data-ttu-id="47ca1-216">渡された順序で実行される一連の非同期計算をスケジュールします。</span><span class="sxs-lookup"><span data-stu-id="47ca1-216">Schedules a sequence of asynchronous computations to be executed in the order that they are passed.</span></span> <span data-ttu-id="47ca1-217">最初の計算が実行され、その後、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-217">The first computation will be executed, then the next, and so on.</span></span> <span data-ttu-id="47ca1-218">並列では計算は実行されません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-218">No computations will be executed in parallel.</span></span>
+
+<span data-ttu-id="47ca1-219">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-219">Signature:</span></span>
+
+```fsharp
+computations: seq<Async<'T>> -> Async<'T[]>
+```
+
+<span data-ttu-id="47ca1-220">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-220">When to use it:</span></span>
+
+- <span data-ttu-id="47ca1-221">複数の計算を順番に実行する必要がある場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-221">If you need to execute multiple computations in order.</span></span>
+
+<span data-ttu-id="47ca1-222">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-222">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-223">すべての計算が完了すると、結果として得られる値の配列にのみアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-223">You can only access the resulting array of values once all computations have finished.</span></span>
+- <span data-ttu-id="47ca1-224">計算は、この関数に渡される順序で実行されます。そのため、結果が返されるまでに時間がかかることがあります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-224">Computations will be run in the order that they are passed to this function, which can mean that more time will elapse before the results are returned.</span></span>
+
+### <a name="asyncawaittask"></a><span data-ttu-id="47ca1-225">Async. AwaitTask</span><span class="sxs-lookup"><span data-stu-id="47ca1-225">Async.AwaitTask</span></span>
+
+<span data-ttu-id="47ca1-226">指定された <xref:System.Threading.Tasks.Task%601> が完了するまで待機し、その結果を `Async<'T>` として返す非同期計算を返します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-226">Returns an asynchronous computation that waits for the given <xref:System.Threading.Tasks.Task%601> to complete and returns its result as an `Async<'T>`</span></span>
+
+<span data-ttu-id="47ca1-227">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-227">Signature:</span></span>
+
+```fsharp
+task: Task<'T>  -> Async<'T>
+```
+
+<span data-ttu-id="47ca1-228">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-228">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-229">F#非同期計算内で @no__t 0 を返す .net API を使用する場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-229">When you are consuming a .NET API that returns a <xref:System.Threading.Tasks.Task%601> within an F# asynchronous computation.</span></span>
+
+<span data-ttu-id="47ca1-230">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-230">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-231">例外は、タスク並列ライブラリの規則に従って @no__t 0 でラップされます。これは、 F#非同期による例外の処理方法とは異なります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-231">Exceptions are wrapped in <xref:System.AggregateException> following the convention of the Task Parallel Library, and this is different from how F# async generally surfaces exceptions.</span></span>
+
+### <a name="asynccatch"></a><span data-ttu-id="47ca1-232">Async. Catch</span><span class="sxs-lookup"><span data-stu-id="47ca1-232">Async.Catch</span></span>
+
+<span data-ttu-id="47ca1-233">指定された @no__t 0 を実行する非同期計算を作成し、`Async<Choice<'T, exn>>` を返します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-233">Creates an asynchronous computation that executes a given `Async<'T>`, returning an `Async<Choice<'T, exn>>`.</span></span> <span data-ttu-id="47ca1-234">指定された @no__t 0 が正常に完了した場合、結果の値と共に `Choice1Of2` が返されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-234">If the given `Async<'T>` completes successfully, then a `Choice1Of2` is returned with the resultant value.</span></span> <span data-ttu-id="47ca1-235">完了前に例外がスローされた場合は、発生した例外と共に `Choice2of2` が返されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-235">If an exception is thrown before it completes, then a `Choice2of2` is returned with the raised exception.</span></span> <span data-ttu-id="47ca1-236">多くの計算で構成され、その計算の1つが例外をスローする非同期計算で使用される場合、外側の計算は完全に停止されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-236">If it is used on an asynchronous computation that is itself composed of many computations, and one of those computations throws an exception, the encompassing computation will be stopped entirely.</span></span>
+
+<span data-ttu-id="47ca1-237">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-237">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> -> Async<Choice<'T, exn>>
+```
+
+<span data-ttu-id="47ca1-238">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-238">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-239">例外によって失敗する可能性があり、呼び出し元でその例外を処理する必要がある非同期処理を実行する場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-239">When you are performing asynchronous work that may fail with an exception and you want to handle that exception in the caller.</span></span>
+
+<span data-ttu-id="47ca1-240">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-240">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-241">結合またはシーケンスされた非同期計算を使用する場合、その "内部" 計算の1つが例外をスローすると、外側の計算が完全に停止します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-241">When using combined or sequenced asynchronous computations, the encompassing computation will fully stop if one of its "internal" computations throws an exception.</span></span>
+
+### <a name="asyncignore"></a><span data-ttu-id="47ca1-242">Async. Ignore</span><span class="sxs-lookup"><span data-stu-id="47ca1-242">Async.Ignore</span></span>
+
+<span data-ttu-id="47ca1-243">指定された計算を実行し、その結果を無視する非同期計算を作成します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-243">Creates an asynchronous computation that runs the given computation and ignores its result.</span></span>
+
+<span data-ttu-id="47ca1-244">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-244">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> -> Async<unit>
+```
+
+<span data-ttu-id="47ca1-245">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-245">When to use:</span></span>
+
+- <span data-ttu-id="47ca1-246">結果が不要な非同期計算がある場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-246">When you have an asynchronous computation whose result is not needed.</span></span> <span data-ttu-id="47ca1-247">これは、非非同期コードの @no__t 0 コードに似ています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-247">This is analogous to the `ignore` code for non-asynchronous code.</span></span>
+
+<span data-ttu-id="47ca1-248">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-248">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-249">@No__t-0 または `Async<unit>` を必要とする別の関数を使用する必要があるため、これを使用する必要がある場合は、結果が破棄される可能性があるかどうかを検討してください。</span><span class="sxs-lookup"><span data-stu-id="47ca1-249">If you must use this because you wish to use `Async.Start` or another function that requires `Async<unit>`, consider if discarding the result is okay to do.</span></span> <span data-ttu-id="47ca1-250">型シグネチャに一致するように結果を破棄することは、通常はできません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-250">Discarding results just to fit a type signature should not generally be done.</span></span>
+
+### <a name="asyncrunsynchronously"></a><span data-ttu-id="47ca1-251">Async. RunSynchronously</span><span class="sxs-lookup"><span data-stu-id="47ca1-251">Async.RunSynchronously</span></span>
+
+<span data-ttu-id="47ca1-252">非同期計算を実行し、呼び出し元のスレッドでその結果を待機します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-252">Runs an asynchronous computation and awaits its result on the calling thread.</span></span> <span data-ttu-id="47ca1-253">この呼び出しはブロックされています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-253">This call is blocking.</span></span>
+
+<span data-ttu-id="47ca1-254">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-254">Signature:</span></span>
+
+```fsharp
+computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+```
+
+<span data-ttu-id="47ca1-255">使用する場合:</span><span class="sxs-lookup"><span data-stu-id="47ca1-255">When to use it:</span></span>
+
+- <span data-ttu-id="47ca1-256">必要に応じて、実行可能ファイルのエントリポイントで、アプリケーション内で1回だけ使用します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-256">If you need it, use it only once in an application - at the entry point for an executable.</span></span>
+- <span data-ttu-id="47ca1-257">パフォーマンスを気にせずに、他の一連の非同期操作を一度に実行する場合。</span><span class="sxs-lookup"><span data-stu-id="47ca1-257">When you don't care about performance and want to execute a set of other asynchronous operations at once.</span></span>
+
+<span data-ttu-id="47ca1-258">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-258">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-259">@No__t-0 を呼び出すと、実行が完了するまで呼び出し元のスレッドがブロックされます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-259">Calling `Async.RunSynchronously` blocks the calling thread until the execution completes.</span></span>
+
+### <a name="asyncstart"></a><span data-ttu-id="47ca1-260">Async。開始</span><span class="sxs-lookup"><span data-stu-id="47ca1-260">Async.Start</span></span>
+
+<span data-ttu-id="47ca1-261">@No__t-0 を返すスレッドプール内の非同期計算を開始します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-261">Starts an asynchronous computation in the thread pool that returns `unit`.</span></span> <span data-ttu-id="47ca1-262">は結果を待機しません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-262">Doesn't wait for its result.</span></span> <span data-ttu-id="47ca1-263">@No__t-0 で始まる入れ子になった計算は、それを呼び出した親計算とは無関係に完全に開始されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-263">Nested computations started with `Async.Start` are started completely independently of the parent computation that called them.</span></span> <span data-ttu-id="47ca1-264">有効期間は、どの親計算にも関連付けられていません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-264">Their lifetime is not tied to any parent computation.</span></span> <span data-ttu-id="47ca1-265">親計算が取り消された場合、子計算は取り消されません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-265">If the parent computation is canceled, no child computations are cancelled.</span></span>
+
+<span data-ttu-id="47ca1-266">折本</span><span class="sxs-lookup"><span data-stu-id="47ca1-266">Signature:</span></span>
+
+```fsharp
+computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+```
+
+<span data-ttu-id="47ca1-267">次の場合にのみ使用します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-267">Use only when:</span></span>
+
+- <span data-ttu-id="47ca1-268">非同期計算によって結果が得られないか、または処理が必要ありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-268">You have an asynchronous computation that doesn't yield a result and/or require processing of one.</span></span>
+- <span data-ttu-id="47ca1-269">非同期計算がいつ完了するかを知る必要はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-269">You don't need to know when an asynchronous computation completes.</span></span>
+- <span data-ttu-id="47ca1-270">非同期計算を実行するスレッドを気にする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-270">You don't care which thread an asynchronous computation runs on.</span></span>
+- <span data-ttu-id="47ca1-271">タスクの結果として発生した例外を認識したり、報告したりする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-271">You don't have any need to be aware of or report exceptions resulting from the task.</span></span>
+
+<span data-ttu-id="47ca1-272">注意事項:</span><span class="sxs-lookup"><span data-stu-id="47ca1-272">What to watch out for:</span></span>
+
+- <span data-ttu-id="47ca1-273">@No__t 0 で開始された計算によって発生した例外は、呼び出し元に反映されません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-273">Exceptions raised by computations started with `Async.Start` aren't propagated to the caller.</span></span> <span data-ttu-id="47ca1-274">呼び出し履歴は完全にアンワインドされます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-274">The call stack will be completely unwound.</span></span>
+- <span data-ttu-id="47ca1-275">@No__t-1 で開始された effectful 作業 (`printfn` の呼び出しなど) では、プログラムの実行のメインスレッドで効果が発生しません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-275">Any effectful work (such as calling `printfn`) started with `Async.Start` won't cause the effect to happen on the main thread of a program's execution.</span></span>
+
+## <a name="interoperating-with-net"></a><span data-ttu-id="47ca1-276">.NET との相互運用</span><span class="sxs-lookup"><span data-stu-id="47ca1-276">Interoperating with .NET</span></span>
+
+<span data-ttu-id="47ca1-277">非同期[/await](../../../standard/async.md)スタイルの非同期プログラミングを使用C#する .net ライブラリまたはコードベースを使用する場合があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-277">You may be working with a .NET library or C# codebase that uses [async/await](../../../standard/async.md)-style asynchronous programming.</span></span> <span data-ttu-id="47ca1-278">とC#ほとんどの .net ライブラリでは、<xref:System.Threading.Tasks.Task%601> と @no__t の型が `Async<'T>` ではなくコアの抽象化として使用されるため、これら2つの方法の間の境界を非同期性に越える必要があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-278">Because C# and the majority of .NET libraries use the <xref:System.Threading.Tasks.Task%601> and <xref:System.Threading.Tasks.Task> types as their core abstractions rather than `Async<'T>`, you must cross a boundary between these two approaches to asynchrony.</span></span>
+
+### <a name="how-to-work-with-net-async-and-taskt"></a><span data-ttu-id="47ca1-279">.NET async と @no__t を使用する方法-0</span><span class="sxs-lookup"><span data-stu-id="47ca1-279">How to work with .NET async and `Task<T>`</span></span>
+
+<span data-ttu-id="47ca1-280">@No__t-0 (つまり、戻り値を持つ非同期計算) を使用する .NET 非同期ライブラリおよびコードベースを操作するのは簡単であり、のF#サポートが組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="47ca1-280">Working with .NET async libraries and codebases that use <xref:System.Threading.Tasks.Task%601> (that is, async computations that have return values) is straightforward and has built-in support with F#.</span></span>
+
+<span data-ttu-id="47ca1-281">@No__t-0 関数を使用すると、.NET の非同期計算を待機できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-281">You can use the `Async.AwaitTask` function to await a .NET asynchronous computation:</span></span>
+
+```fsharp
+let getValueFromLibrary param =
+    async {
+        let! value = DotNetLibrary.GetValueAsync param |> Async.AwaitTask
+        return value
+    }
+```
+
+<span data-ttu-id="47ca1-282">@No__t-0 関数を使用して、非同期計算を .NET 呼び出し元に渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-282">You can use the `Async.StartAsTask` function to pass an asynchronous computation to a .NET caller:</span></span>
+
+```fsharp
+let computationForCaller param =
+    async {
+        let! result = getAsyncResult param
+        return result
+    } |> Async.StartAsTask
+```
+
+### <a name="how-to-work-with-net-async-and-task"></a><span data-ttu-id="47ca1-283">.NET async と @no__t を使用する方法-0</span><span class="sxs-lookup"><span data-stu-id="47ca1-283">How to work with .NET async and `Task`</span></span>
+
+<span data-ttu-id="47ca1-284">@No__t-0 (つまり、値を返さない .NET 非同期計算) を使用する Api を操作するには、`Async<'T>` を <xref:System.Threading.Tasks.Task> に変換する関数を追加することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="47ca1-284">To work with APIs that use <xref:System.Threading.Tasks.Task> (that is, .NET async computations that do not return a value), you may need to add an additional function that will convert an `Async<'T>` to a <xref:System.Threading.Tasks.Task>:</span></span>
+
+```fsharp
+module Async =
+    // Async<unit> -> Task
+    let startTaskFromAsyncUnit (comp: Async<unit>) =
+        Async.StartAsTask comp :> Task
+```
+
+<span data-ttu-id="47ca1-285">@No__t-1 を入力として受け取る @no__t 0 が既に存在します。</span><span class="sxs-lookup"><span data-stu-id="47ca1-285">There is already an `Async.AwaitTask` that accepts a <xref:System.Threading.Tasks.Task> as input.</span></span> <span data-ttu-id="47ca1-286">これと以前に定義した @no__t 0 関数を使用すると、 F#非同期計算から <xref:System.Threading.Tasks.Task> 型を開始および待機できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-286">With this and the previously defined `startTaskFromAsyncUnit` function, you can start and await <xref:System.Threading.Tasks.Task> types from an F# async computation.</span></span>
+
+## <a name="relationship-to-multithreading"></a><span data-ttu-id="47ca1-287">マルチスレッドとの関係</span><span class="sxs-lookup"><span data-stu-id="47ca1-287">Relationship to multithreading</span></span>
+
+<span data-ttu-id="47ca1-288">この記事ではスレッド処理について説明していますが、次の2つの重要な点に注意してください。</span><span class="sxs-lookup"><span data-stu-id="47ca1-288">Although threading is mentioned throughout this article, there are two important things to remember:</span></span>
+
+1. <span data-ttu-id="47ca1-289">現在のスレッドで明示的に開始されている場合を除き、非同期計算とスレッド間の関係はありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-289">There is no affinity between an asynchronous computation and a thread, unless explicitly started on the current thread.</span></span>
+1. <span data-ttu-id="47ca1-290">での非同期F#プログラミングは、マルチスレッドの抽象的なものではありません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-290">Asynchronous programming in F# is not an abstraction for multi-threading.</span></span>
+
+<span data-ttu-id="47ca1-291">たとえば、作業の性質に応じて、実際には、呼び出し元のスレッドで計算が実行されます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-291">For example, a computation may actually run on its caller's thread, depending on the nature of the work.</span></span> <span data-ttu-id="47ca1-292">また、計算では、スレッド間の "ジャンプ" によって、"待機中" の期間 (ネットワーク呼び出しが転送中の場合など) の間に有用な作業を行うために、スレッド間を "移動" できます。</span><span class="sxs-lookup"><span data-stu-id="47ca1-292">A computation could also "jump" between threads, borrowing them for a small amount of time to do useful work in between periods of "waiting" (such as when a network call is in transit).</span></span>
+
+<span data-ttu-id="47ca1-293">はF# 、現在のスレッドで (または現在のスレッドではなく) 非同期計算を開始する機能を提供しますが、非同期性は通常、特定のスレッド処理方法に関連付けられていません。</span><span class="sxs-lookup"><span data-stu-id="47ca1-293">Although F# provides some abilities to start an asynchronous computation on the current thread (or explicitly not on the current thread), asynchrony generally is not associated with a particular threading strategy.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="47ca1-294">関連項目</span><span class="sxs-lookup"><span data-stu-id="47ca1-294">See also</span></span>
+
+- [<span data-ttu-id="47ca1-295">F#非同期プログラミングモデル</span><span class="sxs-lookup"><span data-stu-id="47ca1-295">The F# Asynchronous Programming Model</span></span>](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [<span data-ttu-id="47ca1-296">Jet com のF#非同期ガイド</span><span class="sxs-lookup"><span data-stu-id="47ca1-296">Jet.com's F# Async Guide</span></span>](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [<span data-ttu-id="47ca1-297">F#楽しいと利益の非同期プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="47ca1-297">F# for fun and profit's Asynchronous Programming guide</span></span>](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [<span data-ttu-id="47ca1-298">とF#でC#の非同期: 非同期の注意事項C#</span><span class="sxs-lookup"><span data-stu-id="47ca1-298">Async in C# and F#: Asynchronous gotchas in C#</span></span>](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
