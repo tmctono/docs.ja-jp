@@ -1,65 +1,67 @@
 ---
-title: '方法: 文字列 (LINQ) (Visual Basic) での単語の出現回数をカウント'
+title: '方法: 文字列内の単語の出現回数をカウントする (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: 2292b0b943eefb5e837256f273db73699de30a2d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a2ae52a3380e4a0d8df4adb580e84362e3f13f3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593217"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524167"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="cd777-102">方法: 文字列 (LINQ) (Visual Basic) での単語の出現回数をカウント</span><span class="sxs-lookup"><span data-stu-id="cd777-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="cd777-103">この例では、LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cd777-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="cd777-104">カウントを実行するには、まず <xref:System.String.Split%2A> メソッドを呼び出して単語の配列を作成します。</span><span class="sxs-lookup"><span data-stu-id="cd777-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="cd777-105"><xref:System.String.Split%2A> メソッドを呼び出すと、パフォーマンスが低下します。</span><span class="sxs-lookup"><span data-stu-id="cd777-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="cd777-106">文字列に対する操作が単語のカウントのみである場合は、<xref:System.Text.RegularExpressions.Regex.Matches%2A> または <xref:System.String.IndexOf%2A> メソッドの使用を検討してください。</span><span class="sxs-lookup"><span data-stu-id="cd777-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="cd777-107">ただし、パフォーマンスが重要でない場合や、他の種類のクエリを実行する目的で事前に文章を分割している場合は、LINQ を使用して単語や語句をカウントすることにも意味があります。</span><span class="sxs-lookup"><span data-stu-id="cd777-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="cd777-108">例</span><span class="sxs-lookup"><span data-stu-id="cd777-108">Example</span></span>  
-  
-```vb  
-Class CountWords  
-  
-    Shared Sub Main()  
-  
-        Dim text As String = "Historically, the world of data and the world of objects" &   
-                  " have not been well integrated. Programmers work in C# or Visual Basic" &   
-                  " and also in SQL or XQuery. On the one side are concepts such as classes," &   
-                  " objects, fields, inheritance, and .NET Framework APIs. On the other side" &   
-                  " are tables, columns, rows, nodes, and separate languages for dealing with" &   
-                  " them. Data types often require translation between the two worlds; there are" &   
-                  " different standard functions. Because the object world has no notion of query, a" &   
-                  " query can only be represented as a string without compile-time type checking or" &   
-                  " IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" &   
-                  " objects in memory is often tedious and error-prone."  
-  
-        Dim searchTerm As String = "data"  
-  
-        ' Convert the string into an array of words.  
-        Dim dataSource As String() = text.Split(New Char() {" ", ",", ".", ";", ":"},   
-                                                 StringSplitOptions.RemoveEmptyEntries)  
-  
-        ' Create and execute the query. It executes immediately   
-        ' because a singleton value is produced.  
-        ' Use ToLower to match "data" and "Data"   
-        Dim matchQuery = From word In dataSource   
-                      Where word.ToLowerInvariant() = searchTerm.ToLowerInvariant()   
-                      Select word  
-  
-        ' Count the matches.  
-        Dim count As Integer = matchQuery.Count()  
-        Console.WriteLine(count & " occurrence(s) of the search term """ &   
-                          searchTerm & """ were found.")  
-  
-        ' Keep console window open in debug mode.  
-        Console.WriteLine("Press any key to exit.")  
-        Console.ReadKey()  
-    End Sub  
-End Class  
-' Output:  
-' 3 occurrence(s) of the search term "data" were found.  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="cd777-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="cd777-109">Compiling the Code</span></span>  
-<span data-ttu-id="cd777-110">VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。</span><span class="sxs-lookup"><span data-stu-id="cd777-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="cd777-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd777-111">See also</span></span>
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="14a1d-102">方法: 文字列内の単語の出現回数をカウントする (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14a1d-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
 
-- [<span data-ttu-id="cd777-112">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd777-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+<span data-ttu-id="14a1d-103">この例では、LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="14a1d-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="14a1d-104">カウントを実行するには、まず <xref:System.String.Split%2A> メソッドを呼び出して単語の配列を作成します。</span><span class="sxs-lookup"><span data-stu-id="14a1d-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="14a1d-105"><xref:System.String.Split%2A> メソッドを呼び出すと、パフォーマンスが低下します。</span><span class="sxs-lookup"><span data-stu-id="14a1d-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="14a1d-106">文字列に対する操作が単語のカウントのみである場合は、<xref:System.Text.RegularExpressions.Regex.Matches%2A> または <xref:System.String.IndexOf%2A> メソッドの使用を検討してください。</span><span class="sxs-lookup"><span data-stu-id="14a1d-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="14a1d-107">ただし、パフォーマンスが重要でない場合や、他の種類のクエリを実行する目的で事前に文章を分割している場合は、LINQ を使用して単語や語句をカウントすることにも意味があります。</span><span class="sxs-lookup"><span data-stu-id="14a1d-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
+
+## <a name="example"></a><span data-ttu-id="14a1d-108">例</span><span class="sxs-lookup"><span data-stu-id="14a1d-108">Example</span></span>
+
+```vb
+Class CountWords
+
+    Shared Sub Main()
+
+        Dim text As String = "Historically, the world of data and the world of objects" &
+                  " have not been well integrated. Programmers work in C# or Visual Basic" &
+                  " and also in SQL or XQuery. On the one side are concepts such as classes," &
+                  " objects, fields, inheritance, and .NET Framework APIs. On the other side" &
+                  " are tables, columns, rows, nodes, and separate languages for dealing with" &
+                  " them. Data types often require translation between the two worlds; there are" &
+                  " different standard functions. Because the object world has no notion of query, a" &
+                  " query can only be represented as a string without compile-time type checking or" &
+                  " IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" &
+                  " objects in memory is often tedious and error-prone."
+
+        Dim searchTerm As String = "data"
+
+        ' Convert the string into an array of words.
+        Dim dataSource As String() = text.Split(New Char() {" ", ",", ".", ";", ":"},
+                                                 StringSplitOptions.RemoveEmptyEntries)
+
+        ' Create and execute the query. It executes immediately
+        ' because a singleton value is produced.
+        ' Use ToLower to match "data" and "Data"
+        Dim matchQuery = From word In dataSource
+                      Where word.ToLowerInvariant() = searchTerm.ToLowerInvariant()
+                      Select word
+
+        ' Count the matches.
+        Dim count As Integer = matchQuery.Count()
+        Console.WriteLine(count & " occurrence(s) of the search term """ &
+                          searchTerm & """ were found.")
+
+        ' Keep console window open in debug mode.
+        Console.WriteLine("Press any key to exit.")
+        Console.ReadKey()
+    End Sub
+End Class
+' Output:
+' 3 occurrence(s) of the search term "data" were found.
+```
+
+## <a name="compiling-the-code"></a><span data-ttu-id="14a1d-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="14a1d-109">Compiling the Code</span></span>
+
+<span data-ttu-id="14a1d-110">VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="14a1d-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="14a1d-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="14a1d-111">See also</span></span>
+
+- [<span data-ttu-id="14a1d-112">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14a1d-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
