@@ -8,57 +8,57 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005326"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775615"
 ---
-# <a name="-optioninfer"></a><span data-ttu-id="1f0f6-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="1f0f6-102">-optioninfer</span></span>
-<span data-ttu-id="1f0f6-103">変数宣言でローカル型推論を使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-103">Enables the use of local type inference in variable declarations.</span></span>  
+# <a name="-optioninfer"></a><span data-ttu-id="6e001-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="6e001-102">-optioninfer</span></span>
+<span data-ttu-id="6e001-103">変数宣言でローカル型推論を使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="6e001-103">Enables the use of local type inference in variable declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f0f6-104">構文</span><span class="sxs-lookup"><span data-stu-id="1f0f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e001-104">構文</span><span class="sxs-lookup"><span data-stu-id="6e001-104">Syntax</span></span>  
   
 ```console  
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="1f0f6-105">引数</span><span class="sxs-lookup"><span data-stu-id="1f0f6-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="6e001-105">引数</span><span class="sxs-lookup"><span data-stu-id="6e001-105">Arguments</span></span>  
   
-|<span data-ttu-id="1f0f6-106">項目</span><span class="sxs-lookup"><span data-stu-id="1f0f6-106">Term</span></span>|<span data-ttu-id="1f0f6-107">定義</span><span class="sxs-lookup"><span data-stu-id="1f0f6-107">Definition</span></span>|  
+|<span data-ttu-id="6e001-106">用語</span><span class="sxs-lookup"><span data-stu-id="6e001-106">Term</span></span>|<span data-ttu-id="6e001-107">定義</span><span class="sxs-lookup"><span data-stu-id="6e001-107">Definition</span></span>|  
 |---|---|  
-|<span data-ttu-id="1f0f6-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="1f0f6-108">`+` &#124; `-`</span></span>|<span data-ttu-id="1f0f6-109">任意。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-109">Optional.</span></span> <span data-ttu-id="1f0f6-110">`-optioninfer+` を指定してローカル型推論を有効にするか、または `-optioninfer-` を指定してローカル型推論をブロックします。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="1f0f6-111">`-optioninfer` オプションは、何も値を指定しない場合、`-optioninfer+` と同じです。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="1f0f6-112">`-optioninfer` スイッチが存在しない場合の既定値も `-optioninfer+` です。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="1f0f6-113">既定値は、Vbc.rsp 応答ファイル内に設定されています。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-113">The default value is set in the Vbc.rsp response file.</span></span>|  
+|<span data-ttu-id="6e001-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="6e001-108">`+` &#124; `-`</span></span>|<span data-ttu-id="6e001-109">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="6e001-109">Optional.</span></span> <span data-ttu-id="6e001-110">`-optioninfer+` を指定してローカル型推論を有効にするか、または `-optioninfer-` を指定してローカル型推論をブロックします。</span><span class="sxs-lookup"><span data-stu-id="6e001-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="6e001-111">`-optioninfer` オプションは、何も値を指定しない場合、`-optioninfer+` と同じです。</span><span class="sxs-lookup"><span data-stu-id="6e001-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="6e001-112">`-optioninfer` スイッチが存在しない場合の既定値も `-optioninfer+` です。</span><span class="sxs-lookup"><span data-stu-id="6e001-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="6e001-113">既定値は、Vbc.rsp 応答ファイル内に設定されています。</span><span class="sxs-lookup"><span data-stu-id="6e001-113">The default value is set in the Vbc.rsp response file.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="1f0f6-114">`-noconfig` オプションを使用すると、vbc.rsp に指定するのではなく、コンパイラの内部既定値を保持できます。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="1f0f6-115">このオプションのコンパイラの既定値は `-optioninfer-` です。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-115">The compiler default for this option is `-optioninfer-`.</span></span>  
+> <span data-ttu-id="6e001-114">`-noconfig` オプションを使用すると、vbc.rsp に指定するのではなく、コンパイラの内部既定値を保持できます。</span><span class="sxs-lookup"><span data-stu-id="6e001-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="6e001-115">このオプションのコンパイラの既定値は `-optioninfer-` です。</span><span class="sxs-lookup"><span data-stu-id="6e001-115">The compiler default for this option is `-optioninfer-`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f0f6-116">コメント</span><span class="sxs-lookup"><span data-stu-id="1f0f6-116">Remarks</span></span>  
- <span data-ttu-id="1f0f6-117">ソースコードファイルに[Option 推論ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)が含まれている場合、ステートメントは `-optioninfer` コマンドラインコンパイラ設定をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6e001-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="6e001-116">Remarks</span></span>  
+ <span data-ttu-id="6e001-117">ソースコードファイルに[オプションの推定ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)が含まれている場合、ステートメントは `-optioninfer` のコマンドラインコンパイラ設定をオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="6e001-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="1f0f6-118">Visual Studio IDE で-optioninfer を設定するには</span><span class="sxs-lookup"><span data-stu-id="1f0f6-118">To set -optioninfer in the Visual Studio IDE</span></span>  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="6e001-118">Visual Studio IDE で-optioninfer を設定するには</span><span class="sxs-lookup"><span data-stu-id="6e001-118">To set -optioninfer in the Visual Studio IDE</span></span>  
   
-1. <span data-ttu-id="1f0f6-119">**ソリューションエクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="1f0f6-120">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-120">On the **Project** menu, click **Properties**.</span></span>  
+1. <span data-ttu-id="6e001-119">**ソリューションエクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="6e001-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="6e001-120">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6e001-120">On the **Project** menu, click **Properties**.</span></span>  
   
-2. <span data-ttu-id="1f0f6-121">**[コンパイル]** タブで、 **[推定]** 値の指定 ボックスの値を変更します。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
+2. <span data-ttu-id="6e001-121">**[コンパイル]** タブで、 **[推定]** 値の指定 ボックスの値を変更します。</span><span class="sxs-lookup"><span data-stu-id="6e001-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1f0f6-122">例</span><span class="sxs-lookup"><span data-stu-id="1f0f6-122">Example</span></span>  
- <span data-ttu-id="1f0f6-123">次のコードは、ローカル型推論を有効にした状態で `test.vb` をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="1f0f6-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
+## <a name="example"></a><span data-ttu-id="6e001-122">例</span><span class="sxs-lookup"><span data-stu-id="6e001-122">Example</span></span>  
+ <span data-ttu-id="6e001-123">次のコードは、ローカル型推論を有効にした状態で `test.vb` をコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="6e001-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
   
 ```console
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f0f6-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f0f6-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e001-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e001-124">See also</span></span>
 
-- [<span data-ttu-id="1f0f6-125">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="1f0f6-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="1f0f6-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="1f0f6-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [<span data-ttu-id="1f0f6-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="1f0f6-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [<span data-ttu-id="1f0f6-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="1f0f6-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [<span data-ttu-id="1f0f6-129">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="1f0f6-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="1f0f6-130">Option Infer ステートメント</span><span class="sxs-lookup"><span data-stu-id="1f0f6-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="1f0f6-131">ローカル型の推論</span><span class="sxs-lookup"><span data-stu-id="1f0f6-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- <span data-ttu-id="1f0f6-132">[[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span><span class="sxs-lookup"><span data-stu-id="1f0f6-132">[Visual Basic Defaults, Projects, Options Dialog Box](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span></span>
-- <span data-ttu-id="1f0f6-133">[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="1f0f6-133">[Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)</span></span>
-- [<span data-ttu-id="1f0f6-134">/noconfig</span><span class="sxs-lookup"><span data-stu-id="1f0f6-134">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="1f0f6-135">コマンド ラインからのビルド</span><span class="sxs-lookup"><span data-stu-id="1f0f6-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [<span data-ttu-id="6e001-125">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="6e001-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="6e001-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="6e001-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [<span data-ttu-id="6e001-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="6e001-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [<span data-ttu-id="6e001-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="6e001-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [<span data-ttu-id="6e001-129">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="6e001-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="6e001-130">Option Infer ステートメント</span><span class="sxs-lookup"><span data-stu-id="6e001-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="6e001-131">ローカル型の推論</span><span class="sxs-lookup"><span data-stu-id="6e001-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- <span data-ttu-id="6e001-132">[[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span><span class="sxs-lookup"><span data-stu-id="6e001-132">[Visual Basic Defaults, Projects, Options Dialog Box](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span></span>
+- <span data-ttu-id="6e001-133">[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="6e001-133">[Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)</span></span>
+- [<span data-ttu-id="6e001-134">-noconfig</span><span class="sxs-lookup"><span data-stu-id="6e001-134">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="6e001-135">コマンド ラインからのビルド</span><span class="sxs-lookup"><span data-stu-id="6e001-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
