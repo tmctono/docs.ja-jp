@@ -9,62 +9,62 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005271"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775604"
 ---
-# <a name="-reference-visual-basic"></a><span data-ttu-id="84fd0-102">-reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84fd0-102">-reference (Visual Basic)</span></span>
-<span data-ttu-id="84fd0-103">コンパイラは、指定したアセンブリ内の型情報を、現在コンパイルしているプロジェクトで使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="84fd0-103">Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.</span></span>  
+# <a name="-reference-visual-basic"></a><span data-ttu-id="3554b-102">-reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3554b-102">-reference (Visual Basic)</span></span>
+<span data-ttu-id="3554b-103">コンパイラは、指定したアセンブリ内の型情報を、現在コンパイルしているプロジェクトで使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="3554b-103">Causes the compiler to make type information in the specified assemblies available to the project you are currently compiling.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84fd0-104">構文</span><span class="sxs-lookup"><span data-stu-id="84fd0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3554b-104">構文</span><span class="sxs-lookup"><span data-stu-id="3554b-104">Syntax</span></span>  
   
 ```console  
 -reference:fileList  
 ```
 
-<span data-ttu-id="84fd0-105">または</span><span class="sxs-lookup"><span data-stu-id="84fd0-105">or</span></span>
+<span data-ttu-id="3554b-105">、または</span><span class="sxs-lookup"><span data-stu-id="3554b-105">or</span></span>
 
 ```console
 -r:fileList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="84fd0-106">引数</span><span class="sxs-lookup"><span data-stu-id="84fd0-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3554b-106">引数</span><span class="sxs-lookup"><span data-stu-id="3554b-106">Arguments</span></span>  
   
-|<span data-ttu-id="84fd0-107">項目</span><span class="sxs-lookup"><span data-stu-id="84fd0-107">Term</span></span>|<span data-ttu-id="84fd0-108">定義</span><span class="sxs-lookup"><span data-stu-id="84fd0-108">Definition</span></span>|  
+|<span data-ttu-id="3554b-107">用語</span><span class="sxs-lookup"><span data-stu-id="3554b-107">Term</span></span>|<span data-ttu-id="3554b-108">定義</span><span class="sxs-lookup"><span data-stu-id="3554b-108">Definition</span></span>|  
 |---|---|  
-|`fileList`|<span data-ttu-id="84fd0-109">必須。</span><span class="sxs-lookup"><span data-stu-id="84fd0-109">Required.</span></span> <span data-ttu-id="84fd0-110">アセンブリ ファイル名のコンマ区切りリスト。</span><span class="sxs-lookup"><span data-stu-id="84fd0-110">Comma-delimited list of assembly file names.</span></span> <span data-ttu-id="84fd0-111">ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。</span><span class="sxs-lookup"><span data-stu-id="84fd0-111">If the file name contains a space, enclose the name in quotation marks.</span></span>|  
+|`fileList`|<span data-ttu-id="3554b-109">必須です。</span><span class="sxs-lookup"><span data-stu-id="3554b-109">Required.</span></span> <span data-ttu-id="3554b-110">アセンブリ ファイル名のコンマ区切りリスト。</span><span class="sxs-lookup"><span data-stu-id="3554b-110">Comma-delimited list of assembly file names.</span></span> <span data-ttu-id="3554b-111">ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。</span><span class="sxs-lookup"><span data-stu-id="3554b-111">If the file name contains a space, enclose the name in quotation marks.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="84fd0-112">コメント</span><span class="sxs-lookup"><span data-stu-id="84fd0-112">Remarks</span></span>  
- <span data-ttu-id="84fd0-113">インポートするファイルには、アセンブリメタデータが含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="84fd0-113">The file(s) you import must contain assembly metadata.</span></span> <span data-ttu-id="84fd0-114">アセンブリの外部で参照できるのはパブリック型だけです。</span><span class="sxs-lookup"><span data-stu-id="84fd0-114">Only public types are visible outside the assembly.</span></span> <span data-ttu-id="84fd0-115">[/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。</span><span class="sxs-lookup"><span data-stu-id="84fd0-115">The [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3554b-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="3554b-112">Remarks</span></span>  
+ <span data-ttu-id="3554b-113">インポートするファイルには、アセンブリメタデータが含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="3554b-113">The file(s) you import must contain assembly metadata.</span></span> <span data-ttu-id="3554b-114">アセンブリの外部で参照できるのはパブリック型だけです。</span><span class="sxs-lookup"><span data-stu-id="3554b-114">Only public types are visible outside the assembly.</span></span> <span data-ttu-id="3554b-115">[-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。</span><span class="sxs-lookup"><span data-stu-id="3554b-115">The [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) option imports metadata from a module.</span></span>  
   
- <span data-ttu-id="84fd0-116">別のアセンブリ (アセンブリ B) を参照するアセンブリ (アセンブリ A) を参照する場合は、次の場合にアセンブリ B を参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="84fd0-116">If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:</span></span>  
+ <span data-ttu-id="3554b-116">別のアセンブリ (アセンブリ B) を参照するアセンブリ (アセンブリ A) を参照する場合は、次の場合にアセンブリ B を参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3554b-116">If you reference an assembly (Assembly A) which itself references another assembly (Assembly B), you need to reference Assembly B if:</span></span>  
   
-- <span data-ttu-id="84fd0-117">アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。</span><span class="sxs-lookup"><span data-stu-id="84fd0-117">A type from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
+- <span data-ttu-id="3554b-117">アセンブリ A の型がアセンブリ B の型から継承されているか、アセンブリ B のインターフェイスを実装する。</span><span class="sxs-lookup"><span data-stu-id="3554b-117">A type from Assembly A inherits from a type or implements an interface from Assembly B.</span></span>  
   
-- <span data-ttu-id="84fd0-118">アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。</span><span class="sxs-lookup"><span data-stu-id="84fd0-118">A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.</span></span>  
+- <span data-ttu-id="3554b-118">アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。</span><span class="sxs-lookup"><span data-stu-id="3554b-118">A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.</span></span>  
   
- <span data-ttu-id="84fd0-119">アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="84fd0-119">Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.</span></span>  
+ <span data-ttu-id="3554b-119">アセンブリ参照が1つ以上存在するディレクトリを指定するには、 [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="3554b-119">Use [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) to specify the directory in which one or more of your assembly references is located.</span></span>  
   
- <span data-ttu-id="84fd0-120">コンパイラがアセンブリ (モジュールではない) の型を認識するには、型を強制的に解決する必要があります。</span><span class="sxs-lookup"><span data-stu-id="84fd0-120">For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type.</span></span> <span data-ttu-id="84fd0-121">これを行う方法の1つの例は、型のインスタンスを定義することです。</span><span class="sxs-lookup"><span data-stu-id="84fd0-121">One example of how you can do this is to define an instance of the type.</span></span> <span data-ttu-id="84fd0-122">コンパイラのアセンブリの型名を解決するために、他の方法を使用できます。</span><span class="sxs-lookup"><span data-stu-id="84fd0-122">Other ways are available to resolve type names in an assembly for the compiler.</span></span> <span data-ttu-id="84fd0-123">たとえば、アセンブリ内の型から継承する場合、型名はコンパイラに認識されます。</span><span class="sxs-lookup"><span data-stu-id="84fd0-123">For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.</span></span>  
+ <span data-ttu-id="3554b-120">コンパイラがアセンブリ (モジュールではない) の型を認識するには、型を強制的に解決する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3554b-120">For the compiler to recognize a type in an assembly (not a module), it must be forced to resolve the type.</span></span> <span data-ttu-id="3554b-121">これを行う方法の1つの例は、型のインスタンスを定義することです。</span><span class="sxs-lookup"><span data-stu-id="3554b-121">One example of how you can do this is to define an instance of the type.</span></span> <span data-ttu-id="3554b-122">コンパイラのアセンブリの型名を解決するために、他の方法を使用できます。</span><span class="sxs-lookup"><span data-stu-id="3554b-122">Other ways are available to resolve type names in an assembly for the compiler.</span></span> <span data-ttu-id="3554b-123">たとえば、アセンブリ内の型から継承する場合、型名はコンパイラに認識されます。</span><span class="sxs-lookup"><span data-stu-id="3554b-123">For example, if you inherit from a type in an assembly, the type name then becomes known to the compiler.</span></span>  
   
- <span data-ttu-id="84fd0-124">Vbc.exe ファイルは、一般的に使用される .NET Framework アセンブリを参照します。既定では、このファイルが使用されます。</span><span class="sxs-lookup"><span data-stu-id="84fd0-124">The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default.</span></span> <span data-ttu-id="84fd0-125">コンパイラで Vbc.exe を使用しない場合は、`-noconfig` を使用します。</span><span class="sxs-lookup"><span data-stu-id="84fd0-125">Use `-noconfig` if you do not want the compiler to use Vbc.rsp.</span></span>  
+ <span data-ttu-id="3554b-124">Vbc.exe ファイルは、一般的に使用される .NET Framework アセンブリを参照します。既定では、このファイルが使用されます。</span><span class="sxs-lookup"><span data-stu-id="3554b-124">The Vbc.rsp response file, which references commonly used .NET Framework assemblies, is used by default.</span></span> <span data-ttu-id="3554b-125">コンパイラで Vbc.exe を使用しない場合は、`-noconfig` を使用します。</span><span class="sxs-lookup"><span data-stu-id="3554b-125">Use `-noconfig` if you do not want the compiler to use Vbc.rsp.</span></span>  
   
- <span data-ttu-id="84fd0-126">`-reference` の省略形は `/r` です。</span><span class="sxs-lookup"><span data-stu-id="84fd0-126">The short form of `-reference` is `/r`.</span></span>  
+ <span data-ttu-id="3554b-126">`-reference` の省略形は `/r` です。</span><span class="sxs-lookup"><span data-stu-id="3554b-126">The short form of `-reference` is `/r`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="84fd0-127">例</span><span class="sxs-lookup"><span data-stu-id="84fd0-127">Example</span></span>  
- <span data-ttu-id="84fd0-128">次のコマンドは、ソースファイル `Input.vb` および参照アセンブリを `Metad1.dll` と `Metad2.dll` からコンパイルして、`Out.exe` を生成します。</span><span class="sxs-lookup"><span data-stu-id="84fd0-128">The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.</span></span>  
+## <a name="example"></a><span data-ttu-id="3554b-127">例</span><span class="sxs-lookup"><span data-stu-id="3554b-127">Example</span></span>  
+ <span data-ttu-id="3554b-128">次のコマンドは、`Metad1.dll` と `Metad2.dll` からソースファイル `Input.vb` と参照アセンブリをコンパイルして `Out.exe` を生成します。</span><span class="sxs-lookup"><span data-stu-id="3554b-128">The following command compiles source file `Input.vb` and reference assemblies from `Metad1.dll` and `Metad2.dll` to produce `Out.exe`.</span></span>  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="84fd0-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="84fd0-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3554b-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="3554b-129">See also</span></span>
 
-- [<span data-ttu-id="84fd0-130">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="84fd0-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="84fd0-131">-noconfig</span><span class="sxs-lookup"><span data-stu-id="84fd0-131">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="84fd0-132">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84fd0-132">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
-- [<span data-ttu-id="84fd0-133">Public</span><span class="sxs-lookup"><span data-stu-id="84fd0-133">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
-- [<span data-ttu-id="84fd0-134">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="84fd0-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="3554b-130">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="3554b-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="3554b-131">-noconfig</span><span class="sxs-lookup"><span data-stu-id="3554b-131">-noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="3554b-132">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3554b-132">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="3554b-133">Public</span><span class="sxs-lookup"><span data-stu-id="3554b-133">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
+- [<span data-ttu-id="3554b-134">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="3554b-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
