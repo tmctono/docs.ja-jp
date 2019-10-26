@@ -1,5 +1,5 @@
 ---
-title: '方法: Web サービスにバインドする'
+title: '方法 : Web サービスにバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954285"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920146"
 ---
-# <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="34385-102">方法: Web サービスにバインドする</span><span class="sxs-lookup"><span data-stu-id="34385-102">How to: Bind to a Web Service</span></span>
-<span data-ttu-id="34385-103">この例では、Web サービス メソッドの呼び出しによって返されるオブジェクトにバインドする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="34385-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  
+# <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="1e438-102">方法 : Web サービスにバインドする</span><span class="sxs-lookup"><span data-stu-id="1e438-102">How to: Bind to a Web Service</span></span>
+<span data-ttu-id="1e438-103">この例では、Web サービスメソッド呼び出しによって返されるオブジェクトにバインドする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="1e438-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="34385-104">例</span><span class="sxs-lookup"><span data-stu-id="34385-104">Example</span></span>  
- <span data-ttu-id="34385-105">この例では、 [MSDN/TechNet Publishing System (MTPS) コンテンツ サービス](https://go.microsoft.com/fwlink/?LinkId=95677)指定されたドキュメントでサポートされる言語の一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="34385-105">This example uses the [MSDN/TechNet Publishing System (MTPS) Content Service](https://go.microsoft.com/fwlink/?LinkId=95677) to retrieve the list of languages supported by a specified document.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e438-104">例</span><span class="sxs-lookup"><span data-stu-id="1e438-104">Example</span></span>  
+ <span data-ttu-id="1e438-105">この例では、 [MSDN/TechNet Publishing System (MTPS) コンテンツサービス](https://go.microsoft.com/fwlink/?LinkId=95677)を使用して、指定されたドキュメントでサポートされている言語の一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="1e438-105">This example uses the [MSDN/TechNet Publishing System (MTPS) Content Service](https://go.microsoft.com/fwlink/?LinkId=95677) to retrieve the list of languages supported by a specified document.</span></span>  
   
- <span data-ttu-id="34385-106">Web サービスを呼び出す前への参照を作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="34385-106">Before you call a Web service, you need to create a reference to it.</span></span> <span data-ttu-id="34385-107">MTPS のサービスを使用する Web 参照を作成する[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="34385-107">To create a Web reference to the MTPS service using [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], follow the following steps:</span></span>  
+ <span data-ttu-id="1e438-106">Web サービスを呼び出す前に、その Web サービスへの参照を作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1e438-106">Before you call a Web service, you need to create a reference to it.</span></span> <span data-ttu-id="1e438-107">Visual Studio を使用して MTPS サービスへの Web 参照を作成するには、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="1e438-107">To create a Web reference to the MTPS service using Visual Studio, follow the following steps:</span></span>  
   
-1. <span data-ttu-id="34385-108">[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="34385-108">Open your project in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].</span></span>  
+1. <span data-ttu-id="1e438-108">Visual Studio でプロジェクトを開きます。</span><span class="sxs-lookup"><span data-stu-id="1e438-108">Open your project in Visual Studio.</span></span>  
   
-2. <span data-ttu-id="34385-109">**プロジェクト** メニューのをクリックして**Web 参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="34385-109">From the **Project** menu, click **Add Web Reference**.</span></span>  
+2. <span data-ttu-id="1e438-109">**[プロジェクト]** メニューの **[Web 参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="1e438-109">From the **Project** menu, click **Add Web Reference**.</span></span>  
   
-3. <span data-ttu-id="34385-110">ダイアログ ボックスで、設定、 **URL**に[ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)します。</span><span class="sxs-lookup"><span data-stu-id="34385-110">In the dialog box, set the **URL** to [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span></span>  
+3. <span data-ttu-id="1e438-110">ダイアログボックスで、 **URL**を[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)に設定します。</span><span class="sxs-lookup"><span data-stu-id="1e438-110">In the dialog box, set the **URL** to [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span></span>  
   
-4. <span data-ttu-id="34385-111">キーを押して**移動**し**参照の追加**します。</span><span class="sxs-lookup"><span data-stu-id="34385-111">Press **Go** and then **Add Reference**.</span></span>  
+4. <span data-ttu-id="1e438-111">[実行 **] をクリックし、[** 参照の**追加**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="1e438-111">Press **Go** and then **Add Reference**.</span></span>  
   
- <span data-ttu-id="34385-112">次に、Web サービス メソッドを呼び出して設定と、<xref:System.Windows.FrameworkElement.DataContext%2A>の適切なコントロールまたはウィンドウに返されるオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="34385-112">Next, you call the Web service method and set the <xref:System.Windows.FrameworkElement.DataContext%2A> of the appropriate control or window to the returned object.</span></span> <span data-ttu-id="34385-113">**GetContent** MTPS サービスのメソッドへの参照を受け取り、 **getContentRequest**オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="34385-113">The **GetContent** method of the MTPS service takes a reference to the **getContentRequest** object.</span></span> <span data-ttu-id="34385-114">そのため、次の例は、要求オブジェクトを最初に設定します。</span><span class="sxs-lookup"><span data-stu-id="34385-114">Therefore, the following example first sets up a request object:</span></span>  
+ <span data-ttu-id="1e438-112">次に、Web サービスメソッドを呼び出し、適切なコントロールまたはウィンドウの <xref:System.Windows.FrameworkElement.DataContext%2A> を、返されたオブジェクトに設定します。</span><span class="sxs-lookup"><span data-stu-id="1e438-112">Next, you call the Web service method and set the <xref:System.Windows.FrameworkElement.DataContext%2A> of the appropriate control or window to the returned object.</span></span> <span data-ttu-id="1e438-113">MTPS サービスの**GetContent**メソッドは、 **getcontentrequest**オブジェクトへの参照を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="1e438-113">The **GetContent** method of the MTPS service takes a reference to the **getContentRequest** object.</span></span> <span data-ttu-id="1e438-114">したがって、次の例では、最初に要求オブジェクトを設定します。</span><span class="sxs-lookup"><span data-stu-id="1e438-114">Therefore, the following example first sets up a request object:</span></span>  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <span data-ttu-id="34385-115">後に、<xref:System.Windows.FrameworkElement.DataContext%2A>するオブジェクトのプロパティへのバインドを作成できます、設定されている、<xref:System.Windows.FrameworkElement.DataContext%2A>に設定されています。</span><span class="sxs-lookup"><span data-stu-id="34385-115">After the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set, you can create bindings to the properties of the object that the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set to.</span></span> <span data-ttu-id="34385-116">この例で、<xref:System.Windows.FrameworkElement.DataContext%2A>に設定されている、 **getContentResponse**によって返されるオブジェクト、 **GetContent**メソッド。</span><span class="sxs-lookup"><span data-stu-id="34385-116">In this example, the <xref:System.Windows.FrameworkElement.DataContext%2A> is set to the **getContentResponse** object returned by the **GetContent** method.</span></span> <span data-ttu-id="34385-117">次の例では、<xref:System.Windows.Controls.ItemsControl>にバインドし、表示、**ロケール**の値**availableVersionsAndLocales**の**getContentResponse**します。</span><span class="sxs-lookup"><span data-stu-id="34385-117">In the following example, the <xref:System.Windows.Controls.ItemsControl> binds to and displays the **locale** values of **availableVersionsAndLocales** of **getContentResponse**.</span></span>  
+ <span data-ttu-id="1e438-115"><xref:System.Windows.FrameworkElement.DataContext%2A> が設定されたら、<xref:System.Windows.FrameworkElement.DataContext%2A> が設定されているオブジェクトのプロパティへのバインドを作成できます。</span><span class="sxs-lookup"><span data-stu-id="1e438-115">After the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set, you can create bindings to the properties of the object that the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set to.</span></span> <span data-ttu-id="1e438-116">この例では、<xref:System.Windows.FrameworkElement.DataContext%2A> は、 **GetContent**メソッドによって返される**getcontentresponse**オブジェクトに設定されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-116">In this example, the <xref:System.Windows.FrameworkElement.DataContext%2A> is set to the **getContentResponse** object returned by the **GetContent** method.</span></span> <span data-ttu-id="1e438-117">次の例では、<xref:System.Windows.Controls.ItemsControl> にバインドされ、 **Getcontentresponse**の**availableVersionsAndLocales**の**ロケール**値が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-117">In the following example, the <xref:System.Windows.Controls.ItemsControl> binds to and displays the **locale** values of **availableVersionsAndLocales** of **getContentResponse**.</span></span>  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- <span data-ttu-id="34385-118">構造体について**getContentResponse**を参照してください[コンテンツ サービス ドキュメント](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)します。</span><span class="sxs-lookup"><span data-stu-id="34385-118">For information about the structure of **getContentResponse**, see [Content Service documentation](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span></span>  
+ <span data-ttu-id="1e438-118">**Getcontentresponse**の構造の詳細については、[コンテンツサービスのドキュメント](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1e438-118">For information about the structure of **getContentResponse**, see [Content Service documentation](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34385-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="34385-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e438-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e438-119">See also</span></span>
 
-- [<span data-ttu-id="34385-120">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="34385-120">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="34385-121">バインディング ソースの概要</span><span class="sxs-lookup"><span data-stu-id="34385-121">Binding Sources Overview</span></span>](binding-sources-overview.md)
-- [<span data-ttu-id="34385-122">XAML でデータをバインディング可能にする</span><span class="sxs-lookup"><span data-stu-id="34385-122">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
+- [<span data-ttu-id="1e438-120">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="1e438-120">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="1e438-121">バインディング ソースの概要</span><span class="sxs-lookup"><span data-stu-id="1e438-121">Binding Sources Overview</span></span>](binding-sources-overview.md)
+- [<span data-ttu-id="1e438-122">XAML でデータをバインディング可能にする</span><span class="sxs-lookup"><span data-stu-id="1e438-122">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
