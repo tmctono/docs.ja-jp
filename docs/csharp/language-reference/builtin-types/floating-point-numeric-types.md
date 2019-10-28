@@ -1,7 +1,7 @@
 ---
 title: 浮動小数点数値型 - C# リファレンス
 description: Overview of the built-in C# floating-point types (組み込みの C# 浮動小数点型の概要)
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,92 +18,116 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002196"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579368"
 ---
-# <a name="floating-point-numeric-types-c-reference"></a><span data-ttu-id="31903-103">浮動小数点数値型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="31903-103">Floating-point numeric types (C# reference)</span></span>
+# <a name="floating-point-numeric-types-c-reference"></a><span data-ttu-id="165ab-103">浮動小数点数値型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="165ab-103">Floating-point numeric types (C# reference)</span></span>
 
-<span data-ttu-id="31903-104">**浮動小数点型**は**単純型**のサブセットであり、[*リテラル*](#floating-point-literals)を使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="31903-104">The **floating-point types** are a subset of the **simple types** and can be initialized with [*literals*](#floating-point-literals).</span></span> <span data-ttu-id="31903-105">すべての浮動小数点型は値の型でもあります。</span><span class="sxs-lookup"><span data-stu-id="31903-105">All floating-point types are also value types.</span></span> <span data-ttu-id="31903-106">すべての浮動小数点数値型では、[算術](../operators/arithmetic-operators.md)、[比較、および等値](../operators/equality-operators.md)演算子がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="31903-106">All floating-point numeric types support [arithmetic](../operators/arithmetic-operators.md), [comparison, and equality](../operators/equality-operators.md) operators.</span></span>
+<span data-ttu-id="165ab-104">**浮動小数点型**は**単純型**のサブセットであり、[*リテラル*](#real-literals)を使用して初期化できます。</span><span class="sxs-lookup"><span data-stu-id="165ab-104">The **floating-point types** are a subset of the **simple types** and can be initialized with [*literals*](#real-literals).</span></span> <span data-ttu-id="165ab-105">すべての浮動小数点型は値の型でもあります。</span><span class="sxs-lookup"><span data-stu-id="165ab-105">All floating-point types are also value types.</span></span> <span data-ttu-id="165ab-106">すべての浮動小数点数値型は、[算術](../operators/arithmetic-operators.md)、[比較](../operators/comparison-operators.md)、および[等値](../operators/equality-operators.md)演算子をサポートしています。</span><span class="sxs-lookup"><span data-stu-id="165ab-106">All floating-point numeric types support [arithmetic](../operators/arithmetic-operators.md), [comparison](../operators/comparison-operators.md), and [equality](../operators/equality-operators.md) operators.</span></span>
 
-## <a name="characteristics-of-the-floating-point-types"></a><span data-ttu-id="31903-107">浮動小数点型の特性</span><span class="sxs-lookup"><span data-stu-id="31903-107">Characteristics of the floating-point types</span></span>
+## <a name="characteristics-of-the-floating-point-types"></a><span data-ttu-id="165ab-107">浮動小数点型の特性</span><span class="sxs-lookup"><span data-stu-id="165ab-107">Characteristics of the floating-point types</span></span>
 
-<span data-ttu-id="31903-108">C# では、次の定義済みの浮動小数点型がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="31903-108">C# supports the following predefined floating-point types:</span></span>
+<span data-ttu-id="165ab-108">C# では、次の定義済みの浮動小数点型がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="165ab-108">C# supports the following predefined floating-point types:</span></span>
   
-|<span data-ttu-id="31903-109">C# 型/キーワード</span><span class="sxs-lookup"><span data-stu-id="31903-109">C# type/keyword</span></span>|<span data-ttu-id="31903-110">おおよその範囲</span><span class="sxs-lookup"><span data-stu-id="31903-110">Approximate range</span></span>|<span data-ttu-id="31903-111">Precision</span><span class="sxs-lookup"><span data-stu-id="31903-111">Precision</span></span>|<span data-ttu-id="31903-112">Size</span><span class="sxs-lookup"><span data-stu-id="31903-112">Size</span></span>|<span data-ttu-id="31903-113">.NET 型</span><span class="sxs-lookup"><span data-stu-id="31903-113">.NET type</span></span>|
+|<span data-ttu-id="165ab-109">C# 型/キーワード</span><span class="sxs-lookup"><span data-stu-id="165ab-109">C# type/keyword</span></span>|<span data-ttu-id="165ab-110">おおよその範囲</span><span class="sxs-lookup"><span data-stu-id="165ab-110">Approximate range</span></span>|<span data-ttu-id="165ab-111">有効桁数</span><span class="sxs-lookup"><span data-stu-id="165ab-111">Precision</span></span>|<span data-ttu-id="165ab-112">サイズ</span><span class="sxs-lookup"><span data-stu-id="165ab-112">Size</span></span>|<span data-ttu-id="165ab-113">.NET 型</span><span class="sxs-lookup"><span data-stu-id="165ab-113">.NET type</span></span>|
 |----------|-----------------------|---------------|--------------|--------------|
-|`float`|<span data-ttu-id="31903-114">±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="31903-114">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="31903-115">~6 ～9 桁</span><span class="sxs-lookup"><span data-stu-id="31903-115">~6-9 digits</span></span>|<span data-ttu-id="31903-116">4 バイト</span><span class="sxs-lookup"><span data-stu-id="31903-116">4 bytes</span></span>|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|<span data-ttu-id="31903-117">±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup></span><span class="sxs-lookup"><span data-stu-id="31903-117">±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></span></span>|<span data-ttu-id="31903-118">~15-17 桁</span><span class="sxs-lookup"><span data-stu-id="31903-118">~15-17 digits</span></span>|<span data-ttu-id="31903-119">8 バイト</span><span class="sxs-lookup"><span data-stu-id="31903-119">8 bytes</span></span>|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|<span data-ttu-id="31903-120">±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup></span><span class="sxs-lookup"><span data-stu-id="31903-120">±1.0 x 10<sup>-28</sup> to ±7.9228 x 10<sup>28</sup></span></span>|<span data-ttu-id="31903-121">28 から 29 桁の数字</span><span class="sxs-lookup"><span data-stu-id="31903-121">28-29 digits</span></span>|<span data-ttu-id="31903-122">16 バイト</span><span class="sxs-lookup"><span data-stu-id="31903-122">16 bytes</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|
+|`float`|<span data-ttu-id="165ab-114">±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="165ab-114">±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></span></span>|<span data-ttu-id="165ab-115">~6 ～9 桁</span><span class="sxs-lookup"><span data-stu-id="165ab-115">~6-9 digits</span></span>|<span data-ttu-id="165ab-116">4 バイト</span><span class="sxs-lookup"><span data-stu-id="165ab-116">4 bytes</span></span>|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|<span data-ttu-id="165ab-117">±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup></span><span class="sxs-lookup"><span data-stu-id="165ab-117">±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></span></span>|<span data-ttu-id="165ab-118">~15-17 桁</span><span class="sxs-lookup"><span data-stu-id="165ab-118">~15-17 digits</span></span>|<span data-ttu-id="165ab-119">8 バイト</span><span class="sxs-lookup"><span data-stu-id="165ab-119">8 bytes</span></span>|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|<span data-ttu-id="165ab-120">±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup></span><span class="sxs-lookup"><span data-stu-id="165ab-120">±1.0 x 10<sup>-28</sup> to ±7.9228 x 10<sup>28</sup></span></span>|<span data-ttu-id="165ab-121">28 から 29 桁の数字</span><span class="sxs-lookup"><span data-stu-id="165ab-121">28-29 digits</span></span>|<span data-ttu-id="165ab-122">16 バイト</span><span class="sxs-lookup"><span data-stu-id="165ab-122">16 bytes</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|
 
-<span data-ttu-id="31903-123">上の表の左端の列にある各 C# 型/キーワードは、対応する .NET 型の別名です。</span><span class="sxs-lookup"><span data-stu-id="31903-123">In the preceding table, each C# type keyword from the leftmost column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="31903-124">これらは交換可能です。</span><span class="sxs-lookup"><span data-stu-id="31903-124">They are interchangeable.</span></span> <span data-ttu-id="31903-125">たとえば、次の宣言では、同じ型の変数が宣言されています。</span><span class="sxs-lookup"><span data-stu-id="31903-125">For example, the following declarations declare variables of the same type:</span></span>
+<span data-ttu-id="165ab-123">上の表の左端の列にある各 C# 型/キーワードは、対応する .NET 型の別名です。</span><span class="sxs-lookup"><span data-stu-id="165ab-123">In the preceding table, each C# type keyword from the leftmost column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="165ab-124">これらは交換可能です。</span><span class="sxs-lookup"><span data-stu-id="165ab-124">They are interchangeable.</span></span> <span data-ttu-id="165ab-125">たとえば、次の宣言では、同じ型の変数が宣言されています。</span><span class="sxs-lookup"><span data-stu-id="165ab-125">For example, the following declarations declare variables of the same type:</span></span>
 
 ```csharp
 double a = 12.3;
 System.Double b = 12.3;
 ```
 
-<span data-ttu-id="31903-126">各浮動小数点型の既定値はゼロ `0` です。</span><span class="sxs-lookup"><span data-stu-id="31903-126">The default value of each floating-point type is zero, `0`.</span></span> <span data-ttu-id="31903-127">各浮動小数点型には、その型の最小および最大有限値を指定する `MinValue` および `MaxValue` 定数があります。</span><span class="sxs-lookup"><span data-stu-id="31903-127">Each of the floating-point types has the `MinValue` and `MaxValue` constants that provide the minimum and maximum finite value of that type.</span></span> <span data-ttu-id="31903-128">`float` および `double` 型では、数字ではない値や無限値を表す定数も提供されています。</span><span class="sxs-lookup"><span data-stu-id="31903-128">The `float` and `double` types also provide constants that represent not-a-number and infinity values.</span></span> <span data-ttu-id="31903-129">たとえば、`double` 型では、定数 <xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType>、<xref:System.Double.PositiveInfinity?displayProperty=nameWithType> が提供されています。</span><span class="sxs-lookup"><span data-stu-id="31903-129">For example, the `double` type provides the following constants: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, and <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="165ab-126">各浮動小数点型の既定値はゼロ `0` です。</span><span class="sxs-lookup"><span data-stu-id="165ab-126">The default value of each floating-point type is zero, `0`.</span></span> <span data-ttu-id="165ab-127">各浮動小数点型には、その型の最小および最大有限値を指定する `MinValue` および `MaxValue` 定数があります。</span><span class="sxs-lookup"><span data-stu-id="165ab-127">Each of the floating-point types has the `MinValue` and `MaxValue` constants that provide the minimum and maximum finite value of that type.</span></span> <span data-ttu-id="165ab-128">`float` および `double` 型では、数字ではない値や無限値を表す定数も提供されています。</span><span class="sxs-lookup"><span data-stu-id="165ab-128">The `float` and `double` types also provide constants that represent not-a-number and infinity values.</span></span> <span data-ttu-id="165ab-129">たとえば、`double` 型では、定数 <xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType>、<xref:System.Double.PositiveInfinity?displayProperty=nameWithType> が提供されています。</span><span class="sxs-lookup"><span data-stu-id="165ab-129">For example, the `double` type provides the following constants: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, and <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.</span></span>
 
-<span data-ttu-id="31903-130">`decimal` 型は、`float` と `double` の両方よりも有効桁数が多く、範囲が狭いため、財務や金融の計算に適しています。</span><span class="sxs-lookup"><span data-stu-id="31903-130">Because the `decimal` type has more precision and a smaller range than both `float` and `double`, it's appropriate for financial and monetary calculations.</span></span>
+<span data-ttu-id="165ab-130">`decimal` 型は、`float` と `double` の両方よりも有効桁数が多く、範囲が狭いため、財務や金融の計算に適しています。</span><span class="sxs-lookup"><span data-stu-id="165ab-130">Because the `decimal` type has more precision and a smaller range than both `float` and `double`, it's appropriate for financial and monetary calculations.</span></span>
 
-<span data-ttu-id="31903-131">[整数](integral-numeric-types.md)型と浮動小数点型を 1 つの式の中で混在させることができます。</span><span class="sxs-lookup"><span data-stu-id="31903-131">You can mix [integral](integral-numeric-types.md) types and floating-point types in an expression.</span></span> <span data-ttu-id="31903-132">この場合、整数型が浮動小数点型に変換されます。</span><span class="sxs-lookup"><span data-stu-id="31903-132">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="31903-133">式の評価は、次の規則に従って実行されます。</span><span class="sxs-lookup"><span data-stu-id="31903-133">The evaluation of the expression is performed according to the following rules:</span></span>
+<span data-ttu-id="165ab-131">[整数](integral-numeric-types.md)型と浮動小数点型を 1 つの式の中で混在させることができます。</span><span class="sxs-lookup"><span data-stu-id="165ab-131">You can mix [integral](integral-numeric-types.md) types and floating-point types in an expression.</span></span> <span data-ttu-id="165ab-132">この場合、整数型が浮動小数点型に変換されます。</span><span class="sxs-lookup"><span data-stu-id="165ab-132">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="165ab-133">式の評価は、次の規則に従って実行されます。</span><span class="sxs-lookup"><span data-stu-id="165ab-133">The evaluation of the expression is performed according to the following rules:</span></span>
 
-- <span data-ttu-id="31903-134">浮動小数点型の 1 つが `double` の場合、式は `double` または [bool](../keywords/bool.md) (リレーショナル比較または等価比較の場合) と評価されます。</span><span class="sxs-lookup"><span data-stu-id="31903-134">If one of the floating-point types is `double`, the expression evaluates to `double`, or to [bool](../keywords/bool.md) in relational comparisons or comparisons for equality.</span></span>
-- <span data-ttu-id="31903-135">式に `double` 型が含まれない場合は、式は `float` または [bool](../keywords/bool.md) (リレーショナル比較または等価比較の場合) と評価されます。</span><span class="sxs-lookup"><span data-stu-id="31903-135">If there is no `double` type in the expression, the expression evaluates to `float`, or to [bool](../keywords/bool.md) in relational comparisons or comparisons for equality.</span></span>
+- <span data-ttu-id="165ab-134">浮動小数点型のいずれかが `double` の場合、リレーショナル比較と等価比較で、式は `double`、または[ブール](../keywords/bool.md)に評価されます。</span><span class="sxs-lookup"><span data-stu-id="165ab-134">If one of the floating-point types is `double`, the expression evaluates to `double`, or to [bool](../keywords/bool.md) in relational and equality comparisons.</span></span>
+- <span data-ttu-id="165ab-135">式に `double` 型がない場合、リレーショナル比較と等価比較で、式は `float`、または[ブール](../keywords/bool.md)に評価されます。</span><span class="sxs-lookup"><span data-stu-id="165ab-135">If there is no `double` type in the expression, the expression evaluates to `float`, or to [bool](../keywords/bool.md) in relational and equality comparisons.</span></span>
 
-<span data-ttu-id="31903-136">浮動小数点式は、次の値のセットを含むことができます。</span><span class="sxs-lookup"><span data-stu-id="31903-136">A floating-point expression can contain the following sets of values:</span></span>
+<span data-ttu-id="165ab-136">浮動小数点式は、次の値のセットを含むことができます。</span><span class="sxs-lookup"><span data-stu-id="165ab-136">A floating-point expression can contain the following sets of values:</span></span>
 
-- <span data-ttu-id="31903-137">正および負のゼロ</span><span class="sxs-lookup"><span data-stu-id="31903-137">Positive and negative zero</span></span>
-- <span data-ttu-id="31903-138">正および負の無限大</span><span class="sxs-lookup"><span data-stu-id="31903-138">Positive and negative infinity</span></span>
-- <span data-ttu-id="31903-139">Not-a-Number (NaN) 値</span><span class="sxs-lookup"><span data-stu-id="31903-139">Not-a-Number value (NaN)</span></span>
-- <span data-ttu-id="31903-140">ゼロ以外の値の有限のセット</span><span class="sxs-lookup"><span data-stu-id="31903-140">The finite set of nonzero values</span></span>
+- <span data-ttu-id="165ab-137">正および負のゼロ</span><span class="sxs-lookup"><span data-stu-id="165ab-137">Positive and negative zero</span></span>
+- <span data-ttu-id="165ab-138">正および負の無限大</span><span class="sxs-lookup"><span data-stu-id="165ab-138">Positive and negative infinity</span></span>
+- <span data-ttu-id="165ab-139">Not-a-Number (NaN) 値</span><span class="sxs-lookup"><span data-stu-id="165ab-139">Not-a-Number value (NaN)</span></span>
+- <span data-ttu-id="165ab-140">ゼロ以外の値の有限のセット</span><span class="sxs-lookup"><span data-stu-id="165ab-140">The finite set of nonzero values</span></span>
 
-<span data-ttu-id="31903-141">これらの値について詳しくは、[IEEE](https://www.ieee.org) の Web サイトで入手できるバイナリ浮動小数点演算の IEEE 標準に関する資料をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="31903-141">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) website.</span></span>
+<span data-ttu-id="165ab-141">これらの値について詳しくは、[IEEE](https://www.ieee.org) の Web サイトで入手できるバイナリ浮動小数点演算の IEEE 標準に関する資料をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="165ab-141">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) website.</span></span>
 
-<span data-ttu-id="31903-142">浮動小数点値の書式指定には、[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)または[カスタムの数値書式指定文字列](../../../standard/base-types/custom-numeric-format-strings.md)のいずれかを使用できます。</span><span class="sxs-lookup"><span data-stu-id="31903-142">You can use either [standard numeric format strings](../../../standard/base-types/standard-numeric-format-strings.md) or [custom numeric format strings](../../../standard/base-types/custom-numeric-format-strings.md) to format a floating-point value.</span></span>
+<span data-ttu-id="165ab-142">浮動小数点値の書式指定には、[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)または[カスタムの数値書式指定文字列](../../../standard/base-types/custom-numeric-format-strings.md)のいずれかを使用できます。</span><span class="sxs-lookup"><span data-stu-id="165ab-142">You can use either [standard numeric format strings](../../../standard/base-types/standard-numeric-format-strings.md) or [custom numeric format strings](../../../standard/base-types/custom-numeric-format-strings.md) to format a floating-point value.</span></span>
 
-## <a name="floating-point-literals"></a><span data-ttu-id="31903-143">浮動小数点リテラル</span><span class="sxs-lookup"><span data-stu-id="31903-143">Floating-point literals</span></span>
+## <a name="real-literals"></a><span data-ttu-id="165ab-143">実数リテラル</span><span class="sxs-lookup"><span data-stu-id="165ab-143">Real literals</span></span>
 
-<span data-ttu-id="31903-144">既定では、代入演算子の右側にある浮動小数点数リテラルは `double` として扱われます。</span><span class="sxs-lookup"><span data-stu-id="31903-144">By default, a floating-point numeric literal on the right side of the assignment operator is treated as `double`.</span></span> <span data-ttu-id="31903-145">サフィックスを使用して、浮動小数点リテラルまたは整数リテラルを特定の型に変換できます。</span><span class="sxs-lookup"><span data-stu-id="31903-145">You can use suffixes to convert a floating-point or integral literal to a specific type:</span></span>
+<span data-ttu-id="165ab-144">実数リテラルの型は、サフィックスによって次のように決まります。</span><span class="sxs-lookup"><span data-stu-id="165ab-144">The type of a real literal is determined by its suffix as follows:</span></span>
 
-- <span data-ttu-id="31903-146">`d` または `D` サフィックスによって、リテラルは `double` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="31903-146">The `d` or `D` suffix converts a literal to a `double`.</span></span>
-- <span data-ttu-id="31903-147">`f` または `F` サフィックスによって、リテラルは `float` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="31903-147">The `f` or `F` suffix converts a literal to a `float`.</span></span>
-- <span data-ttu-id="31903-148">`m` または `M` サフィックスによって、リテラルは `decimal` に変換されます。</span><span class="sxs-lookup"><span data-stu-id="31903-148">The `m` or `M` suffix converts a literal to a `decimal`.</span></span>
+- <span data-ttu-id="165ab-145">サフィックスがない、または `d` または `D` のリテラルは `double` 型です</span><span class="sxs-lookup"><span data-stu-id="165ab-145">The literal without suffix or with the `d` or `D` suffix is of type `double`</span></span>
+- <span data-ttu-id="165ab-146">サフィックスが `f` または `F` のリテラルは `float` 型です</span><span class="sxs-lookup"><span data-stu-id="165ab-146">The literal with the `f` or `F` suffix is of type `float`</span></span>
+- <span data-ttu-id="165ab-147">サフィックスが `m` または `M` のリテラルは `decimal` 型です</span><span class="sxs-lookup"><span data-stu-id="165ab-147">The literal with the `m` or `M` suffix is of type `decimal`</span></span>
 
-<span data-ttu-id="31903-149">次の例は、各サフィックスを示しています。</span><span class="sxs-lookup"><span data-stu-id="31903-149">The following examples show each suffix:</span></span>
+<span data-ttu-id="165ab-148">次のコードは、それぞれの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="165ab-148">The following code demonstrates an example of each:</span></span>
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-## <a name="conversions"></a><span data-ttu-id="31903-150">変換</span><span class="sxs-lookup"><span data-stu-id="31903-150">Conversions</span></span>
+<span data-ttu-id="165ab-149">前述の例は、C# 7.0 以降でサポートされている "*桁区切り記号*" としての `_` の使用法も示しています。</span><span class="sxs-lookup"><span data-stu-id="165ab-149">The preceding example also shows the use of `_` as a *digit separator*, which is supported starting with C# 7.0.</span></span> <span data-ttu-id="165ab-150">数字区切り記号は、あらゆる種類の数値リテラルで使用できます。</span><span class="sxs-lookup"><span data-stu-id="165ab-150">You can use the digit separator with all kinds of numeric literals.</span></span>
 
-<span data-ttu-id="31903-151">`float` から `double` への暗黙の変換があります (*拡大変換*と呼ばれます)。`float` 値の範囲は `double` の真部分集合であり、`float` から `double` に有効桁数の損失はないためです。</span><span class="sxs-lookup"><span data-stu-id="31903-151">There's an implicit conversion (called a *widening conversion*) from `float` to `double` because the range of `float` values is a proper subset of `double` and there is no loss of precision from `float` to `double`.</span></span>
+<span data-ttu-id="165ab-151">次の例に示すように、指数表記を使用して、実数リテラルの指数部を指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="165ab-151">You also can use scientific notation, that is, specify an exponent part of a real literal, as the following example shows:</span></span>
 
-<span data-ttu-id="31903-152">ソース型からターゲット型への暗黙の型変換が定義されていない場合、ある浮動小数点型を別の浮動小数点型に変換するには、明示的なキャストを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="31903-152">You must use an explicit cast to convert one floating-point type to another floating-point type when an implicit conversion isn't defined from the source type to the destination type.</span></span> <span data-ttu-id="31903-153">これは*縮小変換*と呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="31903-153">This is called a *narrowing conversion*.</span></span> <span data-ttu-id="31903-154">変換によりデータが失われる場合があるため、明示的なケースが必要となります。</span><span class="sxs-lookup"><span data-stu-id="31903-154">The explicit case is required because the conversion can result in data loss.</span></span> <span data-ttu-id="31903-155">`decimal` 型は `float` または `double` よりも有効桁数が多いため、他の浮動小数点型と `decimal` 型の間の暗黙の変換はありません。</span><span class="sxs-lookup"><span data-stu-id="31903-155">There's no implicit conversion between other floating-point types and the `decimal` type because the `decimal` type has greater precision than either `float` or `double`.</span></span>
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
 
-<span data-ttu-id="31903-156">暗黙的な数値変換の詳細については、「[暗黙的な数値変換の一覧表](../keywords/implicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="31903-156">For more information about implicit numeric conversions, see [Implicit Numeric Conversions Table](../keywords/implicit-numeric-conversions-table.md).</span></span>
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
 
-<span data-ttu-id="31903-157">明示的な数値変換の詳細については、「[明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="31903-157">For more information about explicit numeric conversions, see [Explicit Numeric Conversions Table](../keywords/explicit-numeric-conversions-table.md).</span></span>
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
+```
 
-## <a name="see-also"></a><span data-ttu-id="31903-158">関連項目</span><span class="sxs-lookup"><span data-stu-id="31903-158">See also</span></span>
+## <a name="conversions"></a><span data-ttu-id="165ab-152">変換</span><span class="sxs-lookup"><span data-stu-id="165ab-152">Conversions</span></span>
 
-- [<span data-ttu-id="31903-159">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="31903-159">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="31903-160">整数型</span><span class="sxs-lookup"><span data-stu-id="31903-160">Integral types</span></span>](integral-numeric-types.md)
-- [<span data-ttu-id="31903-161">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="31903-161">Built-in types table</span></span>](../keywords/built-in-types-table.md)
-- [<span data-ttu-id="31903-162">.NET における数値</span><span class="sxs-lookup"><span data-stu-id="31903-162">Numerics in .NET</span></span>](../../../standard/numerics.md)
-- [<span data-ttu-id="31903-163">キャストと型変換</span><span class="sxs-lookup"><span data-stu-id="31903-163">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)
-- [<span data-ttu-id="31903-164">暗黙的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="31903-164">Implicit Numeric Conversions Table</span></span>](../keywords/implicit-numeric-conversions-table.md)
-- [<span data-ttu-id="31903-165">明示的な数値変換の一覧表</span><span class="sxs-lookup"><span data-stu-id="31903-165">Explicit Numeric Conversions Table</span></span>](../keywords/explicit-numeric-conversions-table.md)
+<span data-ttu-id="165ab-153">`float` から `double` への暗黙の変換があります (*拡大変換*と呼ばれます)。`float` 値の範囲は `double` の真部分集合であり、`float` から `double` に有効桁数の損失はないためです。</span><span class="sxs-lookup"><span data-stu-id="165ab-153">There's an implicit conversion (called a *widening conversion*) from `float` to `double` because the range of `float` values is a proper subset of `double` and there is no loss of precision from `float` to `double`.</span></span>
+
+<span data-ttu-id="165ab-154">ソース型からターゲット型への暗黙の型変換が定義されていない場合、ある浮動小数点型を別の浮動小数点型に変換するには、明示的なキャストを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="165ab-154">You must use an explicit cast to convert one floating-point type to another floating-point type when an implicit conversion isn't defined from the source type to the destination type.</span></span> <span data-ttu-id="165ab-155">これは*縮小変換*と呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="165ab-155">This is called a *narrowing conversion*.</span></span> <span data-ttu-id="165ab-156">変換によりデータが失われる場合があるため、明示的なケースが必要となります。</span><span class="sxs-lookup"><span data-stu-id="165ab-156">The explicit case is required because the conversion can result in data loss.</span></span> <span data-ttu-id="165ab-157">`decimal` 型は `float` または `double` よりも有効桁数が多いため、他の浮動小数点型と `decimal` 型の間の暗黙の変換はありません。</span><span class="sxs-lookup"><span data-stu-id="165ab-157">There's no implicit conversion between other floating-point types and the `decimal` type because the `decimal` type has greater precision than either `float` or `double`.</span></span>
+
+<span data-ttu-id="165ab-158">暗黙的な数値変換の詳細については、「[暗黙的な数値変換の一覧表](../keywords/implicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="165ab-158">For more information about implicit numeric conversions, see [Implicit Numeric Conversions Table](../keywords/implicit-numeric-conversions-table.md).</span></span>
+
+<span data-ttu-id="165ab-159">明示的な数値変換の詳細については、「[明示的な数値変換の一覧表](../keywords/explicit-numeric-conversions-table.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="165ab-159">For more information about explicit numeric conversions, see [Explicit Numeric Conversions Table](../keywords/explicit-numeric-conversions-table.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="165ab-160">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="165ab-160">C# language specification</span></span>
+
+<span data-ttu-id="165ab-161">詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の次のセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="165ab-161">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
+
+- [<span data-ttu-id="165ab-162">浮動小数点型</span><span class="sxs-lookup"><span data-stu-id="165ab-162">Floating-point types</span></span>](~/_csharplang/spec/types.md#floating-point-types)
+- [<span data-ttu-id="165ab-163">decimal 型</span><span class="sxs-lookup"><span data-stu-id="165ab-163">The decimal type</span></span>](~/_csharplang/spec/types.md#the-decimal-type)
+- [<span data-ttu-id="165ab-164">実数リテラル</span><span class="sxs-lookup"><span data-stu-id="165ab-164">Real literals</span></span>](~/_csharplang/spec/lexical-structure.md#real-literals)
+
+## <a name="see-also"></a><span data-ttu-id="165ab-165">関連項目</span><span class="sxs-lookup"><span data-stu-id="165ab-165">See also</span></span>
+
+- [<span data-ttu-id="165ab-166">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="165ab-166">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="165ab-167">整数型</span><span class="sxs-lookup"><span data-stu-id="165ab-167">Integral types</span></span>](integral-numeric-types.md)
+- [<span data-ttu-id="165ab-168">組み込み型の一覧表</span><span class="sxs-lookup"><span data-stu-id="165ab-168">Built-in types table</span></span>](../keywords/built-in-types-table.md)
+- [<span data-ttu-id="165ab-169">.NET における数値</span><span class="sxs-lookup"><span data-stu-id="165ab-169">Numerics in .NET</span></span>](../../../standard/numerics.md)
+- [<span data-ttu-id="165ab-170">キャストと型変換</span><span class="sxs-lookup"><span data-stu-id="165ab-170">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
-- [<span data-ttu-id="31903-166">数値結果テーブルの書式設定</span><span class="sxs-lookup"><span data-stu-id="31903-166">Formatting numeric results table</span></span>](../keywords/formatting-numeric-results-table.md)
-- [<span data-ttu-id="31903-167">標準の数値書式指定文字列</span><span class="sxs-lookup"><span data-stu-id="31903-167">Standard Numeric Format Strings</span></span>](../../../standard/base-types/standard-numeric-format-strings.md)
+- [<span data-ttu-id="165ab-171">数値結果テーブルの書式設定</span><span class="sxs-lookup"><span data-stu-id="165ab-171">Formatting numeric results table</span></span>](../keywords/formatting-numeric-results-table.md)
+- [<span data-ttu-id="165ab-172">標準の数値書式指定文字列</span><span class="sxs-lookup"><span data-stu-id="165ab-172">Standard numeric format strings</span></span>](../../../standard/base-types/standard-numeric-format-strings.md)
