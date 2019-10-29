@@ -2,21 +2,22 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd6aeb32e0994bceb9e56bcb1c6267f4cb64a5a4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919788"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039145"
 ---
-# <a name="bindingextensions"></a><span data-ttu-id="f1b52-101">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="f1b52-101">\<bindingExtensions></span></span>
-<span data-ttu-id="f1b52-102">このセクションは、コンピューターまたはアプリケーションの構成ファイルからユーザー定義のバインディングを使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1b52-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="f1b52-103">このコレクションにユーザー定義のバインディングを追加するには、`add` キーワードを使用し、要素の `type` 属性をユーザー定義のバインディングに設定して、`name` 属性をユーザー定義のバインディングの名前に設定します。</span><span class="sxs-lookup"><span data-stu-id="f1b52-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
-  
- <span data-ttu-id="f1b52-104">バインディングの拡張により、ユーザーは、エンドポイント構成の一部として使用するユーザー定義のバインディングを作成できます。</span><span class="sxs-lookup"><span data-stu-id="f1b52-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="f1b52-105">プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.Binding> を実装する型です。</span><span class="sxs-lookup"><span data-stu-id="f1b52-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
-  
- <span data-ttu-id="f1b52-106">次の例は、`add` 要素と `name` 属性を使用して、構成ファイルの `bindingElementExtensions` セクションにバインディング拡張を追加します。</span><span class="sxs-lookup"><span data-stu-id="f1b52-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
-  
-```xml  
+# <a name="bindingextensions"></a><span data-ttu-id="d33b6-101">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="d33b6-101">\<bindingExtensions></span></span>
+
+<span data-ttu-id="d33b6-102">このセクションは、コンピューターまたはアプリケーションの構成ファイルからユーザー定義のバインディングを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d33b6-102">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="d33b6-103">このコレクションにユーザー定義のバインディングを追加するには、`add` キーワードを使用し、要素の `type` 属性をユーザー定義のバインディングに設定して、`name` 属性をユーザー定義のバインディングの名前に設定します。</span><span class="sxs-lookup"><span data-stu-id="d33b6-103">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>
+
+<span data-ttu-id="d33b6-104">バインディングの拡張により、ユーザーは、エンドポイント構成の一部として使用するユーザー定義のバインディングを作成できます。</span><span class="sxs-lookup"><span data-stu-id="d33b6-104">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="d33b6-105">プログラムではバインディング拡張は、抽象クラス <xref:System.ServiceModel.Channels.Binding> を実装する型です。</span><span class="sxs-lookup"><span data-stu-id="d33b6-105">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>
+
+<span data-ttu-id="d33b6-106">次の例では、`add` 要素と `name` 属性を使用して、構成ファイルの `bindingExtensions` セクションにバインド拡張を追加します。</span><span class="sxs-lookup"><span data-stu-id="d33b6-106">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingExtensions` section of the configuration file:</span></span>
+
+```xml
 <system.serviceModel>
   <extensions>
     <bindingExtensions>
@@ -26,21 +27,21 @@ ms.locfileid: "69919788"
     </bindingExtensions>
   </extensions>
 </system.serviceModel>
-```  
-  
- <span data-ttu-id="f1b52-107">構成機能を要素に追加するには、ユーザーは `bindingSection` を記述して登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1b52-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="f1b52-108">詳細については、<xref:System.Configuration> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1b52-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
-  
- <span data-ttu-id="f1b52-109">要素とその構成の型を定義したら、次の例に示すように拡張をエンドポイントの一部として使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1b52-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
-  
-```xml  
+```
+
+<span data-ttu-id="d33b6-107">構成機能を要素に追加するには、ユーザーは `bindingSection` を記述して登録する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d33b6-107">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="d33b6-108">詳細については、<xref:System.Configuration> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d33b6-108">For more information on this, see the <xref:System.Configuration> documentation.</span></span>
+
+<span data-ttu-id="d33b6-109">要素とその構成の種類を定義した後、次の例に示すように、エンドポイントの一部として拡張機能を使用できます。</span><span class="sxs-lookup"><span data-stu-id="d33b6-109">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example:</span></span>
+
+```xml
 <services>
   <service name="MyService">
     <endpoint address="myAddress"
               binding="MyBinding" />
   </service>
 </services>
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="f1b52-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="f1b52-110">See also</span></span>
+```
 
-- [<span data-ttu-id="f1b52-111">バインディングの拡張</span><span class="sxs-lookup"><span data-stu-id="f1b52-111">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="d33b6-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="d33b6-110">See also</span></span>
+
+- [<span data-ttu-id="d33b6-111">バインディングの拡張</span><span class="sxs-lookup"><span data-stu-id="d33b6-111">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
