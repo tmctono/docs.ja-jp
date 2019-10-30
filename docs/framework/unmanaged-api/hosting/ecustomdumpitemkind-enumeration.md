@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747400"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131191"
 ---
-# <a name="ecustomdumpitemkind-enumeration"></a><span data-ttu-id="9805f-102">ECustomDumpItemKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="9805f-102">ECustomDumpItemKind Enumeration</span></span>
-<span data-ttu-id="9805f-103">将来の拡張機能用に予約されて、 [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)構造体。</span><span class="sxs-lookup"><span data-stu-id="9805f-103">Reserved for future extension of the [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
+# <a name="ecustomdumpitemkind-enumeration"></a><span data-ttu-id="077cd-102">ECustomDumpItemKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="077cd-102">ECustomDumpItemKind Enumeration</span></span>
+<span data-ttu-id="077cd-103">[Customdumpitem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)構造体の将来の拡張のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="077cd-103">Reserved for future extension of the [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9805f-104">構文</span><span class="sxs-lookup"><span data-stu-id="9805f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="077cd-104">構文</span><span class="sxs-lookup"><span data-stu-id="077cd-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,22 +32,22 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9805f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="9805f-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="077cd-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="077cd-105">Members</span></span>  
   
-|<span data-ttu-id="9805f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="9805f-106">Member</span></span>|<span data-ttu-id="9805f-107">説明</span><span class="sxs-lookup"><span data-stu-id="9805f-107">Description</span></span>|  
+|<span data-ttu-id="077cd-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="077cd-106">Member</span></span>|<span data-ttu-id="077cd-107">説明</span><span class="sxs-lookup"><span data-stu-id="077cd-107">Description</span></span>|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|<span data-ttu-id="9805f-108">将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="9805f-108">Reserved for future use.</span></span>|  
+|`DUMP_ITEM_None`|<span data-ttu-id="077cd-108">将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="077cd-108">Reserved for future use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9805f-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="9805f-109">Requirements</span></span>  
- <span data-ttu-id="9805f-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9805f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="077cd-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="077cd-109">Requirements</span></span>  
+ <span data-ttu-id="077cd-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="077cd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9805f-111">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9805f-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="077cd-111">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="077cd-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9805f-112">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9805f-112">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="077cd-112">**ライブラリ:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="077cd-112">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9805f-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9805f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="077cd-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="077cd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9805f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="9805f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="077cd-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="077cd-114">See also</span></span>
 
-- [<span data-ttu-id="9805f-115">ICLRErrorReportingManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9805f-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="9805f-116">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="9805f-116">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="077cd-115">ICLRErrorReportingManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="077cd-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="077cd-116">ホスティングの列挙型</span><span class="sxs-lookup"><span data-stu-id="077cd-116">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

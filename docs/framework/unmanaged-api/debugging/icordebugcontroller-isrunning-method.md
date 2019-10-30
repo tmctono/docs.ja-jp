@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f24c07a654dc2345cb65226463573576a6fb3658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125341"
 ---
-# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="d47ee-102">ICorDebugController::IsRunning メソッド</span><span class="sxs-lookup"><span data-stu-id="d47ee-102">ICorDebugController::IsRunning Method</span></span>
-<span data-ttu-id="d47ee-103">プロセスのスレッドが自由に実行して現在かどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="d47ee-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
+# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="c4723-102">ICorDebugController::IsRunning メソッド</span><span class="sxs-lookup"><span data-stu-id="c4723-102">ICorDebugController::IsRunning Method</span></span>
+<span data-ttu-id="c4723-103">プロセス内のスレッドが現在実行中であるかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="c4723-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d47ee-104">構文</span><span class="sxs-lookup"><span data-stu-id="d47ee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4723-104">構文</span><span class="sxs-lookup"><span data-stu-id="c4723-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsRunning (  
@@ -35,17 +33,17 @@ HRESULT IsRunning (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d47ee-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d47ee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4723-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c4723-105">Parameters</span></span>  
  `pbRunning`  
- <span data-ttu-id="d47ee-106">[out]ある値へのポインター`true`自由に。 そうしないと、プロセスのスレッドを実行している場合`false`します。</span><span class="sxs-lookup"><span data-stu-id="d47ee-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
+ <span data-ttu-id="c4723-106">入出力プロセス内のスレッドが自由に実行されている場合に `true` される値へのポインター。それ以外の場合は、`false`ます。</span><span class="sxs-lookup"><span data-stu-id="c4723-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d47ee-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="d47ee-107">Requirements</span></span>  
- <span data-ttu-id="d47ee-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d47ee-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4723-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="c4723-107">Requirements</span></span>  
+ <span data-ttu-id="c4723-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c4723-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d47ee-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d47ee-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4723-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4723-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d47ee-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d47ee-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4723-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4723-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d47ee-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d47ee-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c4723-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4723-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d47ee-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d47ee-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4723-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c4723-112">See also</span></span>

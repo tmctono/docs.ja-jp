@@ -16,29 +16,27 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e59ec88ea001640ba0dc3e923fa62a064a2d007
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d9ae66b7c77a0d3482b7c68a824a8a148ba2595
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752484"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139155"
 ---
-# <a name="shutdowndbgtransportmanager-function"></a><span data-ttu-id="95c59-102">ShutdownDbgTransportManager 関数</span><span class="sxs-lookup"><span data-stu-id="95c59-102">ShutdownDbgTransportManager Function</span></span>
-<span data-ttu-id="95c59-103">リモート ターゲット コンピューターへの接続のためにトランスポート マネージャーをシャットダウンします。</span><span class="sxs-lookup"><span data-stu-id="95c59-103">Shuts down the transport manager for a connection to a remote target machine.</span></span>  
+# <a name="shutdowndbgtransportmanager-function"></a><span data-ttu-id="08300-102">ShutdownDbgTransportManager 関数</span><span class="sxs-lookup"><span data-stu-id="08300-102">ShutdownDbgTransportManager Function</span></span>
+<span data-ttu-id="08300-103">リモート ターゲット コンピューターへの接続のためにトランスポート マネージャーをシャットダウンします。</span><span class="sxs-lookup"><span data-stu-id="08300-103">Shuts down the transport manager for a connection to a remote target machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95c59-104">構文</span><span class="sxs-lookup"><span data-stu-id="95c59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08300-104">構文</span><span class="sxs-lookup"><span data-stu-id="08300-104">Syntax</span></span>  
   
 ```cpp  
 void InitDbgTransportManager ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="95c59-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="95c59-105">Requirements</span></span>  
- <span data-ttu-id="95c59-106">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="95c59-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08300-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="08300-105">Requirements</span></span>  
+ <span data-ttu-id="08300-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="08300-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95c59-107">**ヘッダー:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="95c59-107">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="08300-107">**ヘッダー:** Coreclrremoteデバッグインターフェイス .h</span><span class="sxs-lookup"><span data-stu-id="08300-107">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="95c59-108">**ライブラリ:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="95c59-108">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="08300-108">**ライブラリ:** mscordbi_macx86</span><span class="sxs-lookup"><span data-stu-id="08300-108">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="95c59-109">**.NET framework のバージョン:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="95c59-109">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="08300-109">**.NET Framework のバージョン:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="08300-109">**.NET Framework Versions:** 3.5 SP1</span></span>
