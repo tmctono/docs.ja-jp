@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768061"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136980"
 ---
-# <a name="corgcthreadstats-structure"></a><span data-ttu-id="198db-102">COR_GC_THREAD_STATS 構造体</span><span class="sxs-lookup"><span data-stu-id="198db-102">COR_GC_THREAD_STATS Structure</span></span>
-<span data-ttu-id="198db-103">ガベージ コレクションに関連するスレッドごとの統計情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="198db-103">Contains per-thread statistics pertaining to garbage collection.</span></span>  
+# <a name="cor_gc_thread_stats-structure"></a><span data-ttu-id="38f3e-102">COR_GC_THREAD_STATS 構造体</span><span class="sxs-lookup"><span data-stu-id="38f3e-102">COR_GC_THREAD_STATS Structure</span></span>
+<span data-ttu-id="38f3e-103">ガベージコレクションに関連するスレッドごとの統計情報を格納します。</span><span class="sxs-lookup"><span data-stu-id="38f3e-103">Contains per-thread statistics pertaining to garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="198db-104">構文</span><span class="sxs-lookup"><span data-stu-id="198db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38f3e-104">構文</span><span class="sxs-lookup"><span data-stu-id="38f3e-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
@@ -35,26 +33,26 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="198db-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="198db-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="38f3e-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="38f3e-105">Members</span></span>  
   
-|<span data-ttu-id="198db-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="198db-106">Member</span></span>|<span data-ttu-id="198db-107">説明</span><span class="sxs-lookup"><span data-stu-id="198db-107">Description</span></span>|  
+|<span data-ttu-id="38f3e-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="38f3e-106">Member</span></span>|<span data-ttu-id="38f3e-107">説明</span><span class="sxs-lookup"><span data-stu-id="38f3e-107">Description</span></span>|  
 |------------|-----------------|  
-|`PerThreadAllocation`|<span data-ttu-id="198db-108">現在関連付けられているスレッドに割り当てられたメモリのバイト数`COR_GC_THREAD_STATS`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="198db-108">The number of bytes of memory allocated on the thread that is associated with the current `COR_GC_THREAD_STATS` instance.</span></span> <span data-ttu-id="198db-109">この数は、ジェネレーション 0 ガベージ コレクションが発生するたびに 0 にクリアされます。</span><span class="sxs-lookup"><span data-stu-id="198db-109">This number is cleared to zero each time a generation-zero garbage collection occurs.</span></span>|  
-|`Flags`|<span data-ttu-id="198db-110">バイト数では、最新のガベージ コレクションを上位のジェネレーションに昇格します。</span><span class="sxs-lookup"><span data-stu-id="198db-110">The number of bytes promoted to a higher generation at the most recent garbage collection.</span></span>|  
+|`PerThreadAllocation`|<span data-ttu-id="38f3e-108">現在の `COR_GC_THREAD_STATS` インスタンスに関連付けられているスレッドに割り当てられたメモリのバイト数。</span><span class="sxs-lookup"><span data-stu-id="38f3e-108">The number of bytes of memory allocated on the thread that is associated with the current `COR_GC_THREAD_STATS` instance.</span></span> <span data-ttu-id="38f3e-109">ジェネレーション0のガベージコレクションが発生するたびに、この数値はゼロにクリアされます。</span><span class="sxs-lookup"><span data-stu-id="38f3e-109">This number is cleared to zero each time a generation-zero garbage collection occurs.</span></span>|  
+|`Flags`|<span data-ttu-id="38f3e-110">最新のガベージコレクションで上位のジェネレーションに昇格されたバイト数。</span><span class="sxs-lookup"><span data-stu-id="38f3e-110">The number of bytes promoted to a higher generation at the most recent garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="198db-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="198db-111">Remarks</span></span>  
- <span data-ttu-id="198db-112">[Iclrtask::getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)型の出力パラメーターを受け取る`COR_GC_THREAD_STATS`します。</span><span class="sxs-lookup"><span data-stu-id="198db-112">[ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) takes an output parameter of type `COR_GC_THREAD_STATS`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38f3e-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="38f3e-111">Remarks</span></span>  
+ <span data-ttu-id="38f3e-112">[ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)は `COR_GC_THREAD_STATS`型の出力パラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="38f3e-112">[ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) takes an output parameter of type `COR_GC_THREAD_STATS`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="198db-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="198db-113">Requirements</span></span>  
- <span data-ttu-id="198db-114">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="198db-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38f3e-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="38f3e-113">Requirements</span></span>  
+ <span data-ttu-id="38f3e-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="38f3e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="198db-115">**ヘッダー:** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="198db-115">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="38f3e-115">**ヘッダー:** GCHost</span><span class="sxs-lookup"><span data-stu-id="38f3e-115">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="198db-116">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="198db-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="38f3e-116">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="38f3e-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="198db-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="198db-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="38f3e-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38f3e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="198db-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="198db-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38f3e-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="38f3e-118">See also</span></span>
 
-- [<span data-ttu-id="198db-119">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="198db-119">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="198db-120">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="198db-120">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="38f3e-119">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="38f3e-119">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="38f3e-120">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="38f3e-120">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

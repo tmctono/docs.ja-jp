@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767808"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128664"
 ---
-# <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a><span data-ttu-id="e9e56-102">IHostMemoryManager::NeedsVirtualAddressSpace メソッド</span><span class="sxs-lookup"><span data-stu-id="e9e56-102">IHostMemoryManager::NeedsVirtualAddressSpace Method</span></span>
-<span data-ttu-id="e9e56-103">共通言語ランタイム (CLR) が指定されたメモリを使用しようとしています。 しようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="e9e56-103">Notifies the host that the common language runtime (CLR) is going to attempt to use the specified memory.</span></span>  
+# <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a><span data-ttu-id="84838-102">IHostMemoryManager::NeedsVirtualAddressSpace メソッド</span><span class="sxs-lookup"><span data-stu-id="84838-102">IHostMemoryManager::NeedsVirtualAddressSpace Method</span></span>
+<span data-ttu-id="84838-103">共通言語ランタイム (CLR) が、指定されたメモリを使用しようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="84838-103">Notifies the host that the common language runtime (CLR) is going to attempt to use the specified memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9e56-104">構文</span><span class="sxs-lookup"><span data-stu-id="e9e56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84838-104">構文</span><span class="sxs-lookup"><span data-stu-id="84838-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT NeedsVirtualAddressSpace (  
@@ -36,27 +34,27 @@ HRESULT NeedsVirtualAddressSpace (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9e56-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e9e56-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84838-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="84838-105">Parameters</span></span>  
  `startAddress`  
- <span data-ttu-id="e9e56-106">[in]メモリの開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="e9e56-106">[in] The starting address of the memory.</span></span>  
+ <span data-ttu-id="84838-106">からメモリの開始アドレス。</span><span class="sxs-lookup"><span data-stu-id="84838-106">[in] The starting address of the memory.</span></span>  
   
  `size`  
- <span data-ttu-id="e9e56-107">[in]メモリのバイト単位のサイズ。</span><span class="sxs-lookup"><span data-stu-id="e9e56-107">[in] The size, in bytes, of the memory.</span></span>  
+ <span data-ttu-id="84838-107">からメモリのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="84838-107">[in] The size, in bytes, of the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9e56-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="e9e56-108">Remarks</span></span>  
- <span data-ttu-id="e9e56-109">`NeedsVirtualAddressSpace`メソッドは、コールバック メソッドであり、ホスト アプリケーションの作成者によって実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e9e56-109">The `NeedsVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="e9e56-110">CLR によって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="e9e56-110">It is called by the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84838-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="84838-108">Remarks</span></span>  
+ <span data-ttu-id="84838-109">`NeedsVirtualAddressSpace` メソッドはコールバックメソッドであり、ホストアプリケーションのライターによって実装される必要があります。</span><span class="sxs-lookup"><span data-stu-id="84838-109">The `NeedsVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="84838-110">これは CLR によって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="84838-110">It is called by the CLR.</span></span>  
   
- <span data-ttu-id="e9e56-111">ホストが指定されたメモリを使用する CLR をしない場合は、E_OUTOFMEMORY HRESULT が返される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e9e56-111">If the host does not want the CLR to use the specified memory, it may return an E_OUTOFMEMORY HRESULT.</span></span>  
+ <span data-ttu-id="84838-111">ホストが、指定されたメモリを使用しないようにする場合は、E_OUTOFMEMORY HRESULT を返すことがあります。</span><span class="sxs-lookup"><span data-stu-id="84838-111">If the host does not want the CLR to use the specified memory, it may return an E_OUTOFMEMORY HRESULT.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9e56-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="e9e56-112">Requirements</span></span>  
- <span data-ttu-id="e9e56-113">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e9e56-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84838-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="84838-112">Requirements</span></span>  
+ <span data-ttu-id="84838-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84838-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9e56-114">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e9e56-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84838-114">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="84838-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e9e56-115">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="e9e56-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84838-115">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="84838-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9e56-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9e56-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="84838-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84838-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9e56-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="e9e56-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84838-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="84838-117">See also</span></span>
 
-- [<span data-ttu-id="e9e56-118">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e9e56-118">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="84838-118">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84838-118">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

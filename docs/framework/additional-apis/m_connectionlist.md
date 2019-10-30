@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup.m_ConnectionList フィールド
+title: M_ConnectionList フィールド
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,34 +10,34 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120014"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a><span data-ttu-id="b06e3-102">ConnectionGroup.m\_ConnectionList フィールド</span><span class="sxs-lookup"><span data-stu-id="b06e3-102">ConnectionGroup.m\_ConnectionList Field</span></span>
+# <a name="connectiongroupm_connectionlist-field"></a><span data-ttu-id="80f7c-102">ConnectionGroup. m\_Connectiongroup フィールド</span><span class="sxs-lookup"><span data-stu-id="80f7c-102">ConnectionGroup.m\_ConnectionList Field</span></span>
 
-<span data-ttu-id="b06e3-103">`ConnectionGroup.m_ConnectionList` <xref:System.Collections.ArrayList>同じ URI と共有サービスを提供する接続オブジェクトの他のいくつかのプロパティの値は同じなどの有効期限と認証します。</span><span class="sxs-lookup"><span data-stu-id="b06e3-103">`ConnectionGroup.m_ConnectionList` is an <xref:System.Collections.ArrayList> of connection objects that serves the same URI and share the same values for some other properties like expiration and authentication.</span></span>
+<span data-ttu-id="80f7c-103">`ConnectionGroup.m_ConnectionList` は、同じ URI を提供し、有効期限や認証などの他のいくつかのプロパティで同じ値を共有する接続オブジェクトの <xref:System.Collections.ArrayList> です。</span><span class="sxs-lookup"><span data-stu-id="80f7c-103">`ConnectionGroup.m_ConnectionList` is an <xref:System.Collections.ArrayList> of connection objects that serves the same URI and share the same values for some other properties like expiration and authentication.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b06e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="b06e3-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="80f7c-104">構文</span><span class="sxs-lookup"><span data-stu-id="80f7c-104">Syntax</span></span>
   
 ```csharp  
 private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> <span data-ttu-id="b06e3-105">`ConnectionGroup.m_ConnectionList`フィールドはプライベートであり、コード内で直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="b06e3-105">The `ConnectionGroup.m_ConnectionList` field is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="80f7c-105">`ConnectionGroup.m_ConnectionList` フィールドはプライベートであり、コードで直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="80f7c-105">The `ConnectionGroup.m_ConnectionList` field is private and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="b06e3-106">Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="b06e3-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="80f7c-106">Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="80f7c-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b06e3-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="b06e3-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="80f7c-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="80f7c-107">Requirements</span></span>
 
-<span data-ttu-id="b06e3-108">**名前空間:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="b06e3-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="80f7c-108">**名前空間:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="80f7c-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="b06e3-109">**アセンブリ:** (System.dll) のシステム</span><span class="sxs-lookup"><span data-stu-id="b06e3-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="80f7c-109">**アセンブリ:** システム (.dll 内)</span><span class="sxs-lookup"><span data-stu-id="80f7c-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="b06e3-110">**.NET framework のバージョン:** 2.0 以降で使用可能です。</span><span class="sxs-lookup"><span data-stu-id="b06e3-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="80f7c-110">**.NET Framework のバージョン:** 2.0 以降で使用できます。</span><span class="sxs-lookup"><span data-stu-id="80f7c-110">**.NET Framework versions:** Available since 2.0.</span></span>
