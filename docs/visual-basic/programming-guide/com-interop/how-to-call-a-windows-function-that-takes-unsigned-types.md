@@ -21,21 +21,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053323"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="f0eea-102">方法: 符号なしの型を受け取る Windows 関数を呼び出す (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0eea-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="42d19-102">方法: 符号なしの型を受け取る Windows 関数を呼び出す (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42d19-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
 
-<span data-ttu-id="f0eea-103">符号なし整数型のメンバーを持つクラス、モジュール、または構造体を使用している場合、これらのメンバーには Visual Basic でアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="f0eea-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>
+<span data-ttu-id="42d19-103">符号なし整数型のメンバーを持つクラス、モジュール、または構造体を使用している場合、これらのメンバーには Visual Basic でアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="42d19-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>
 
-## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="f0eea-104">符号なしの型を受け取る Windows 関数を呼び出すには</span><span class="sxs-lookup"><span data-stu-id="f0eea-104">To call a Windows function that takes an unsigned type</span></span>
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="42d19-104">符号なしの型を受け取る Windows 関数を呼び出すには</span><span class="sxs-lookup"><span data-stu-id="42d19-104">To call a Windows function that takes an unsigned type</span></span>
 
-1. <span data-ttu-id="f0eea-105">[Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md) を使用して、どのライブラリに関数が格納されているか、そのライブラリ内でその名前がどのようなものであるか、呼び出し元のシーケンスについて、および文字列を呼び出すときに文字列を変換する方法を Visual Basic に通知します。</span><span class="sxs-lookup"><span data-stu-id="f0eea-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>
+1. <span data-ttu-id="42d19-105">[Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md) を使用して、どのライブラリに関数が格納されているか、そのライブラリ内でその名前がどのようなものであるか、呼び出し元のシーケンスについて、および文字列を呼び出すときに文字列を変換する方法を Visual Basic に通知します。</span><span class="sxs-lookup"><span data-stu-id="42d19-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>
 
-2. <span data-ttu-id="f0eea-106">`ULong` `UInteger` `Byte` `UShort`ステートメントでは、符号なしの型を持つ各パラメーターに適切な、、、、またはを使用します。 `Declare`</span><span class="sxs-lookup"><span data-stu-id="f0eea-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>
+2. <span data-ttu-id="42d19-106">`Declare` ステートメントでは、各パラメーターの必要に応じて符号なしの型である `UInteger` 、 `ULong` 、 `UShort` 、 `Byte` を使用します。</span><span class="sxs-lookup"><span data-stu-id="42d19-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>
 
-3. <span data-ttu-id="f0eea-107">使用している定数の名前と値を調べるには、呼び出し元の Windows 関数のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0eea-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="f0eea-108">これらの多くは、WinUser.h ファイルで定義されています。</span><span class="sxs-lookup"><span data-stu-id="f0eea-108">Many of these are defined in the WinUser.h file.</span></span>
+3. <span data-ttu-id="42d19-107">使用している定数の名前と値を調べるには、呼び出し元の Windows 関数のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="42d19-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="42d19-108">これらの多くは、WinUser.h ファイルで定義されています。</span><span class="sxs-lookup"><span data-stu-id="42d19-108">Many of these are defined in the WinUser.h file.</span></span>
 
-4. <span data-ttu-id="f0eea-109">コードで必要な定数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="f0eea-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="f0eea-110">多くの Windows 定数は 32 ビットの符号なしの値であるため、`As UInteger`でこれらを宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f0eea-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.</span></span>
+4. <span data-ttu-id="42d19-109">コードで必要な定数を宣言します。</span><span class="sxs-lookup"><span data-stu-id="42d19-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="42d19-110">多くの Windows 定数は 32 ビットの符号なしの値であるため、`As UInteger`でこれらを宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42d19-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As UInteger`.</span></span>
 
-5. <span data-ttu-id="f0eea-111">通常の方法で関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="f0eea-111">Call the function in the normal way.</span></span> <span data-ttu-id="f0eea-112">次の例では、Windows `MessageBox`関数を呼び出します。この関数は、符号なし整数引数を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="f0eea-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>
+5. <span data-ttu-id="42d19-111">通常の方法で関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="42d19-111">Call the function in the normal way.</span></span> <span data-ttu-id="42d19-112">次の例では、Windows 関数の `MessageBox` を呼び出します。この関数は、符号なし整数引数を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="42d19-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "71053323"
     End Class
     ```
 
-     <span data-ttu-id="f0eea-113">`messageThroughWindows` 関数をテストするには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="f0eea-113">You can test the function `messageThroughWindows` with the following code.</span></span>
+     <span data-ttu-id="42d19-113">`messageThroughWindows` 関数をテストするには、次のコードを使用します。</span><span class="sxs-lookup"><span data-stu-id="42d19-113">You can test the function `messageThroughWindows` with the following code.</span></span>
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,18 +70,18 @@ ms.locfileid: "71053323"
     ```
 
     > [!CAUTION]
-    > <span data-ttu-id="f0eea-114">`UInteger` 、`ULong`、 、および`SByte`の各データ型は、言語への非[依存性と言語に依存](../../../standard/language-independence-and-language-independent-components.md)しないコンポーネント (cls) の一部ではないため、cls 準拠のコードでは、それらを使用するコンポーネントを使用できません。 `UShort`</span><span class="sxs-lookup"><span data-stu-id="f0eea-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>
+    > <span data-ttu-id="42d19-114">`UInteger` 、`ULong` 、 `UShort` 、および `SByte` の各データ型は、[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) の一部ではないため、CLS 準拠のコードでは、それらを使用するコンポーネントを使用できません。</span><span class="sxs-lookup"><span data-stu-id="42d19-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="f0eea-115">Windows アプリケーション プログラミング インターフェイス (API) などのアンマネージ コードを呼び出すと、コードは潜在的なセキュリティリスクにさらされます。</span><span class="sxs-lookup"><span data-stu-id="f0eea-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>
+    > <span data-ttu-id="42d19-115">Windows アプリケーション プログラミング インターフェイス (API) などのアンマネージ コードを呼び出すと、コードは潜在的なセキュリティリスクにさらされます。</span><span class="sxs-lookup"><span data-stu-id="42d19-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="f0eea-116">Windows API を呼び出すには、アンマネージコードのアクセス許可が必要です。これは、部分信頼状況での実行に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f0eea-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="f0eea-117">詳細については<xref:System.Security.Permissions.SecurityPermission> 、「」および「[コードアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0eea-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span></span>
+    > <span data-ttu-id="42d19-116">Windows API を呼び出すには、アンマネージコードのアクセス許可が必要です。これは、部分信頼状況での実行に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="42d19-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="42d19-117">詳細については<xref:System.Security.Permissions.SecurityPermission> 、「」および「[コードアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42d19-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f0eea-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0eea-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42d19-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="42d19-118">See also</span></span>
 
-- [<span data-ttu-id="f0eea-119">データの種類</span><span class="sxs-lookup"><span data-stu-id="f0eea-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
-- [<span data-ttu-id="f0eea-120">Integer データ型</span><span class="sxs-lookup"><span data-stu-id="f0eea-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [<span data-ttu-id="f0eea-121">UInteger データ型</span><span class="sxs-lookup"><span data-stu-id="f0eea-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [<span data-ttu-id="f0eea-122">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="f0eea-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="f0eea-123">チュートリアル: Windows API の呼び出し</span><span class="sxs-lookup"><span data-stu-id="f0eea-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [<span data-ttu-id="42d19-119">データの種類</span><span class="sxs-lookup"><span data-stu-id="42d19-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+- [<span data-ttu-id="42d19-120">Integer データ型</span><span class="sxs-lookup"><span data-stu-id="42d19-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [<span data-ttu-id="42d19-121">UInteger データ型</span><span class="sxs-lookup"><span data-stu-id="42d19-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [<span data-ttu-id="42d19-122">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="42d19-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="42d19-123">チュートリアル: Windows API の呼び出し</span><span class="sxs-lookup"><span data-stu-id="42d19-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
