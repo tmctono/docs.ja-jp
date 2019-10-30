@@ -14,45 +14,43 @@ helpviewer_keywords:
 ms.assetid: fce34531-2687-406d-9131-d6ad94f2ce0e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cad998ec30ee97cf6c1eb27640567b3fe233a19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49c1b97540644fb48509be3bb988c51c5d11fd8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084859"
 ---
-# <a name="icordebugeval2-interface"></a><span data-ttu-id="6d9b3-102">ICorDebugEval2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6d9b3-102">ICorDebugEval2 Interface</span></span>
+# <a name="icordebugeval2-interface"></a><span data-ttu-id="d31bd-102">ICorDebugEval2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d31bd-102">ICorDebugEval2 Interface</span></span>
 
-<span data-ttu-id="6d9b3-103">"" は、"" "のように拡張して、ジェネリック型のサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-103">Extends "ICorDebugEval" to provide support for generic types.</span></span>  
+<span data-ttu-id="d31bd-103">"" は、"" "のように拡張して、ジェネリック型のサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-103">Extends "ICorDebugEval" to provide support for generic types.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6d9b3-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d31bd-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-104">Methods</span></span>  
   
-|<span data-ttu-id="6d9b3-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-105">Method</span></span>|<span data-ttu-id="6d9b3-106">説明</span><span class="sxs-lookup"><span data-stu-id="6d9b3-106">Description</span></span>|  
+|<span data-ttu-id="d31bd-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-105">Method</span></span>|<span data-ttu-id="d31bd-106">説明</span><span class="sxs-lookup"><span data-stu-id="d31bd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6d9b3-107">CallParameterizedFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-107">CallParameterizedFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|<span data-ttu-id="6d9b3-108">指定された "" の呼び出しを設定します。この関数は、コンストラクターが型パラメーターを受け取る型の内部に入れ子にすることも、型パラメーターを受け取ることもできます。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-108">Sets up a call to the specified "ICorDebugFunction", which can be nested inside a type whose constructor takes type parameters, or can itself take type parameters.</span></span>|  
-|[<span data-ttu-id="6d9b3-109">CreateValueForType メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-109">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|<span data-ttu-id="6d9b3-110">初期値が null または0の、指定した型の新しい "ICorDebugValue" へのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-110">Gets a pointer to a new "ICorDebugValue" of the specified type, with an initial value of null or zero.</span></span>|  
-|[<span data-ttu-id="6d9b3-111">NewParameterizedArray メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-111">NewParameterizedArray Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|<span data-ttu-id="6d9b3-112">指定した要素の型と次元の新しい配列を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-112">Allocates a new array of the specified element type and dimensions.</span></span>|  
-|[<span data-ttu-id="6d9b3-113">NewParameterizedObject メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-113">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|<span data-ttu-id="6d9b3-114">新しいパラメーター化された型オブジェクトをインスタンス化し、オブジェクトのコンストラクターメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-114">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>|  
-|[<span data-ttu-id="6d9b3-115">NewParameterizedObjectNoConstructor メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|<span data-ttu-id="6d9b3-116">コンストラクターメソッドを呼び出さずに、指定したクラスの新しいパラメーター化された型オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-116">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method</span></span>|  
-|[<span data-ttu-id="6d9b3-117">NewStringWithLength メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-117">NewStringWithLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|<span data-ttu-id="6d9b3-118">指定したコンテンツを使用して、指定した長さの新しい文字列を作成します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-118">Creates a new string of the specified length with the specified contents.</span></span>|  
-|[<span data-ttu-id="6d9b3-119">RudeAbort メソッド</span><span class="sxs-lookup"><span data-stu-id="6d9b3-119">RudeAbort Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|<span data-ttu-id="6d9b3-120">この`ICorDebugEval2`が現在実行している計算を中止します。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-120">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>|  
+|[<span data-ttu-id="d31bd-107">CallParameterizedFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-107">CallParameterizedFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|<span data-ttu-id="d31bd-108">指定された "" の呼び出しを設定します。この関数は、コンストラクターが型パラメーターを受け取る型の内部に入れ子にすることも、型パラメーターを受け取ることもできます。</span><span class="sxs-lookup"><span data-stu-id="d31bd-108">Sets up a call to the specified "ICorDebugFunction", which can be nested inside a type whose constructor takes type parameters, or can itself take type parameters.</span></span>|  
+|[<span data-ttu-id="d31bd-109">CreateValueForType メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-109">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|<span data-ttu-id="d31bd-110">初期値が null または0の、指定した型の新しい "ICorDebugValue" へのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-110">Gets a pointer to a new "ICorDebugValue" of the specified type, with an initial value of null or zero.</span></span>|  
+|[<span data-ttu-id="d31bd-111">NewParameterizedArray メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-111">NewParameterizedArray Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|<span data-ttu-id="d31bd-112">指定した要素の型と次元の新しい配列を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="d31bd-112">Allocates a new array of the specified element type and dimensions.</span></span>|  
+|[<span data-ttu-id="d31bd-113">NewParameterizedObject メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-113">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|<span data-ttu-id="d31bd-114">新しいパラメーター化された型オブジェクトをインスタンス化し、オブジェクトのコンストラクターメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-114">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>|  
+|[<span data-ttu-id="d31bd-115">NewParameterizedObjectNoConstructor メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|<span data-ttu-id="d31bd-116">コンストラクターメソッドを呼び出さずに、指定したクラスの新しいパラメーター化された型オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-116">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method</span></span>|  
+|[<span data-ttu-id="d31bd-117">NewStringWithLength メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-117">NewStringWithLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|<span data-ttu-id="d31bd-118">指定したコンテンツを使用して、指定した長さの新しい文字列を作成します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-118">Creates a new string of the specified length with the specified contents.</span></span>|  
+|[<span data-ttu-id="d31bd-119">RudeAbort メソッド</span><span class="sxs-lookup"><span data-stu-id="d31bd-119">RudeAbort Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|<span data-ttu-id="d31bd-120">この `ICorDebugEval2` が現在実行している計算を中止します。</span><span class="sxs-lookup"><span data-stu-id="d31bd-120">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6d9b3-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="6d9b3-121">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d31bd-121">Remarks</span><span class="sxs-lookup"><span data-stu-id="d31bd-121">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6d9b3-122">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="d31bd-122">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="d31bd-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d9b3-123">必要条件</span><span class="sxs-lookup"><span data-stu-id="6d9b3-123">Requirements</span></span>  
- <span data-ttu-id="6d9b3-124">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6d9b3-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d31bd-123">［要件］</span><span class="sxs-lookup"><span data-stu-id="d31bd-123">Requirements</span></span>  
+ <span data-ttu-id="d31bd-124">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d31bd-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d9b3-125">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6d9b3-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d31bd-125">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d31bd-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6d9b3-126">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="6d9b3-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d31bd-126">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d31bd-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6d9b3-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d9b3-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d31bd-127">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d31bd-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d9b3-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="6d9b3-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d31bd-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="d31bd-128">See also</span></span>
 
-- [<span data-ttu-id="6d9b3-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6d9b3-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d31bd-129">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d31bd-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

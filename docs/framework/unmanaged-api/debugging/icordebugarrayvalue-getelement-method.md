@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088487"
 ---
-# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="fee61-102">ICorDebugArrayValue::GetElement メソッド</span><span class="sxs-lookup"><span data-stu-id="fee61-102">ICorDebugArrayValue::GetElement Method</span></span>
-<span data-ttu-id="fee61-103">指定した配列の要素の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="fee61-103">Gets the value of the given array element.</span></span>  
+# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="56a08-102">ICorDebugArrayValue::GetElement メソッド</span><span class="sxs-lookup"><span data-stu-id="56a08-102">ICorDebugArrayValue::GetElement Method</span></span>
+<span data-ttu-id="56a08-103">指定された配列要素の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="56a08-103">Gets the value of the given array element.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fee61-104">構文</span><span class="sxs-lookup"><span data-stu-id="fee61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56a08-104">構文</span><span class="sxs-lookup"><span data-stu-id="56a08-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetElement (  
@@ -38,25 +36,25 @@ HRESULT GetElement (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fee61-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fee61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56a08-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="56a08-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="fee61-106">[in]これの次元数`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fee61-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="56a08-106">からこの `ICorDebugArrayValue` オブジェクトの次元数。</span><span class="sxs-lookup"><span data-stu-id="56a08-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="fee61-107">この値のサイズでも、`indices`配列のサイズがの次元数と等しいので、`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fee61-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="56a08-107">この値は、サイズが `ICorDebugArrayValue` オブジェクトの次元数と同じであるため、`indices` 配列のサイズでもあります。</span><span class="sxs-lookup"><span data-stu-id="56a08-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indices`  
- <span data-ttu-id="fee61-108">[in]ディメンション内の位置を指定のインデックス値の配列、`ICorDebugArrayValue`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="fee61-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="56a08-108">からインデックス値の配列。それぞれが `ICorDebugArrayValue` オブジェクトのディメンション内の位置を指定します。</span><span class="sxs-lookup"><span data-stu-id="56a08-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="fee61-109">この値は null にできません。</span><span class="sxs-lookup"><span data-stu-id="fee61-109">This value must not be null.</span></span>  
+ <span data-ttu-id="56a08-109">この値を null にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="56a08-109">This value must not be null.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="fee61-110">[out]指定した要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fee61-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
+ <span data-ttu-id="56a08-110">入出力指定した要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="56a08-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fee61-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="fee61-111">Requirements</span></span>  
- <span data-ttu-id="fee61-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fee61-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56a08-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="56a08-111">Requirements</span></span>  
+ <span data-ttu-id="56a08-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="56a08-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fee61-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fee61-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="56a08-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56a08-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fee61-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fee61-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56a08-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56a08-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fee61-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fee61-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="56a08-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56a08-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
