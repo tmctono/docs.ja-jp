@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 621b4543-a8f7-4117-98e4-930992cd688a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17cb3440c5b33d461b1624608ce115e1942d6beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766132"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129717"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="67268-102">ICorDebugObjectValue2::GetVirtualMethodAndType メソッド</span><span class="sxs-lookup"><span data-stu-id="67268-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="67268-103">このメソッドはまだ実装されていません。</span><span class="sxs-lookup"><span data-stu-id="67268-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="9b57b-102">ICorDebugObjectValue2::GetVirtualMethodAndType メソッド</span><span class="sxs-lookup"><span data-stu-id="9b57b-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="9b57b-103">このメソッドはまだ実装されていません。</span><span class="sxs-lookup"><span data-stu-id="9b57b-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67268-104">構文</span><span class="sxs-lookup"><span data-stu-id="67268-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b57b-104">構文</span><span class="sxs-lookup"><span data-stu-id="9b57b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVirtualMethodAndType (  
@@ -37,7 +35,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="67268-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="67268-105">Remarks</span></span>  
- <span data-ttu-id="67268-106">取得、最派生メソッドと、指定したメンバーの参照の型を表す"ICorDebugFunction"と"ICorDebugType"のインスタンスへのポインターをインターフェイスします。</span><span class="sxs-lookup"><span data-stu-id="67268-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9b57b-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="9b57b-105">Remarks</span></span>  
+ <span data-ttu-id="9b57b-106">指定されたメンバー参照の最も派生したメソッドと型を表す "の型の関数" インスタンスおよび "参照型" インスタンスへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="9b57b-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67268-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="67268-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b57b-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="9b57b-107">See also</span></span>

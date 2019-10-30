@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbb0b6191c74c2b7ebdc8267701f246c17b016f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779522"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134774"
 ---
-# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="8cd08-102">IGCHostControl::RequestVirtualMemLimit メソッド</span><span class="sxs-lookup"><span data-stu-id="8cd08-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
-<span data-ttu-id="8cd08-103">仮想メモリの制限を変更するホストを要求します。</span><span class="sxs-lookup"><span data-stu-id="8cd08-103">Requests the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrolrequestvirtualmemlimit-method"></a><span data-ttu-id="e8882-102">IGCHostControl::RequestVirtualMemLimit メソッド</span><span class="sxs-lookup"><span data-stu-id="e8882-102">IGCHostControl::RequestVirtualMemLimit Method</span></span>
+<span data-ttu-id="e8882-103">仮想メモリの制限を変更するようにホストに要求します。</span><span class="sxs-lookup"><span data-stu-id="e8882-103">Requests the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cd08-104">構文</span><span class="sxs-lookup"><span data-stu-id="8cd08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8882-104">構文</span><span class="sxs-lookup"><span data-stu-id="e8882-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RequestVirtualMemLimit (  
@@ -36,22 +34,22 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8cd08-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8cd08-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e8882-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e8882-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="8cd08-106">[in]メモリ割り当ての要求されたサイズ。</span><span class="sxs-lookup"><span data-stu-id="8cd08-106">[in] The requested size of memory to be allocated.</span></span>  
+ <span data-ttu-id="e8882-106">から割り当てられるメモリの要求サイズ。</span><span class="sxs-lookup"><span data-stu-id="e8882-106">[in] The requested size of memory to be allocated.</span></span>  
   
  `psztNewMaxVirtualMemMB`  
- <span data-ttu-id="8cd08-107">[入力、出力]割り当てられたメモリの実際のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8cd08-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
+ <span data-ttu-id="e8882-107">[入力、出力]割り当てられたメモリの実際のサイズへのポインター。</span><span class="sxs-lookup"><span data-stu-id="e8882-107">[in, out] A pointer to the actual size of memory allocated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8cd08-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="8cd08-108">Requirements</span></span>  
- <span data-ttu-id="8cd08-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cd08-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8882-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="e8882-108">Requirements</span></span>  
+ <span data-ttu-id="e8882-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e8882-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8cd08-110">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8cd08-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e8882-110">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="e8882-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8cd08-111">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="8cd08-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e8882-111">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="e8882-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8cd08-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cd08-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e8882-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8882-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cd08-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8cd08-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8882-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8882-113">See also</span></span>
 
-- [<span data-ttu-id="8cd08-114">IGCHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8cd08-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+- [<span data-ttu-id="e8882-114">IGCHostControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e8882-114">IGCHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

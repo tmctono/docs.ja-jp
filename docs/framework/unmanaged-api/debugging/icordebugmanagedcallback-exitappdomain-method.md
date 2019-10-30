@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ba6ce4e59057442a9f17338ec7bfff787bd5d05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130795"
 ---
-# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="dbc23-102">ICorDebugManagedCallback::ExitAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="dbc23-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
-<span data-ttu-id="dbc23-103">アプリケーション ドメインが終了していることをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="dbc23-103">Notifies the debugger that an application domain has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitappdomain-method"></a><span data-ttu-id="cb464-102">ICorDebugManagedCallback::ExitAppDomain メソッド</span><span class="sxs-lookup"><span data-stu-id="cb464-102">ICorDebugManagedCallback::ExitAppDomain Method</span></span>
+<span data-ttu-id="cb464-103">アプリケーションドメインが終了したことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="cb464-103">Notifies the debugger that an application domain has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbc23-104">構文</span><span class="sxs-lookup"><span data-stu-id="dbc23-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb464-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb464-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExitAppDomain (  
@@ -36,22 +34,22 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dbc23-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="dbc23-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb464-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb464-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="dbc23-106">[in]特定のアプリケーション ドメインが含まれるプロセスを表す ICorDebugProcess オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="dbc23-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
+ <span data-ttu-id="cb464-106">から指定されたアプリケーションドメインを含むプロセスを表す、のオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cb464-106">[in] A pointer to an ICorDebugProcess object that represents the process that contains the given application domain.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="dbc23-107">[in]終了するアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="dbc23-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
+ <span data-ttu-id="cb464-107">から終了したアプリケーションドメインを表す、のオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cb464-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has exited.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbc23-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="dbc23-108">Requirements</span></span>  
- <span data-ttu-id="dbc23-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="dbc23-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb464-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="cb464-108">Requirements</span></span>  
+ <span data-ttu-id="cb464-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb464-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbc23-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dbc23-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cb464-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb464-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dbc23-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbc23-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cb464-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb464-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbc23-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbc23-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cb464-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb464-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbc23-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="dbc23-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb464-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb464-113">See also</span></span>
 
-- [<span data-ttu-id="dbc23-114">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dbc23-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="cb464-114">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb464-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

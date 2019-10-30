@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088529"
 ---
-# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="b6f28-102">ICorDebugArrayValue::GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="b6f28-102">ICorDebugArrayValue::GetCount Method</span></span>
-<span data-ttu-id="b6f28-103">配列の要素の合計数を取得します。</span><span class="sxs-lookup"><span data-stu-id="b6f28-103">Gets the total number of elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="bc644-102">ICorDebugArrayValue::GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="bc644-102">ICorDebugArrayValue::GetCount Method</span></span>
+<span data-ttu-id="bc644-103">配列内の要素の合計数を取得します。</span><span class="sxs-lookup"><span data-stu-id="bc644-103">Gets the total number of elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6f28-104">構文</span><span class="sxs-lookup"><span data-stu-id="b6f28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc644-104">構文</span><span class="sxs-lookup"><span data-stu-id="bc644-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -35,15 +33,15 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6f28-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b6f28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bc644-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bc644-105">Parameters</span></span>  
  `pnCount`  
- <span data-ttu-id="b6f28-106">[out]配列内の要素の総数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b6f28-106">[out] A pointer to the total number of elements in the array.</span></span>  
+ <span data-ttu-id="bc644-106">入出力配列内の要素の合計数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="bc644-106">[out] A pointer to the total number of elements in the array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6f28-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="b6f28-107">Requirements</span></span>  
- <span data-ttu-id="b6f28-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6f28-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc644-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="bc644-107">Requirements</span></span>  
+ <span data-ttu-id="bc644-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bc644-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6f28-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b6f28-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bc644-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc644-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b6f28-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6f28-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bc644-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc644-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6f28-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6f28-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="bc644-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc644-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
