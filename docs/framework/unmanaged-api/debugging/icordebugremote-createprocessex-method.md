@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05384af8201fae8cf81650d38c99a5c44e6bd16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131290"
 ---
-# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="d8aa4-102">ICorDebugRemote::CreateProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="d8aa4-102">ICorDebugRemote::CreateProcessEx Method</span></span>
-<span data-ttu-id="d8aa4-103">デバッガーでのリモート コンピューター上のプロセスを起動します。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-103">Launches a process on a remote machine under the debugger.</span></span>  
+# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="2bbc1-102">ICorDebugRemote::CreateProcessEx メソッド</span><span class="sxs-lookup"><span data-stu-id="2bbc1-102">ICorDebugRemote::CreateProcessEx Method</span></span>
+<span data-ttu-id="2bbc1-103">デバッガーでリモートコンピューター上のプロセスを起動します。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-103">Launches a process on a remote machine under the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8aa4-104">構文</span><span class="sxs-lookup"><span data-stu-id="d8aa4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bbc1-104">構文</span><span class="sxs-lookup"><span data-stu-id="2bbc1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateProcessEx (  
@@ -47,68 +45,68 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8aa4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d8aa4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2bbc1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2bbc1-105">Parameters</span></span>  
  `pRemoteTarget`  
- <span data-ttu-id="d8aa4-106">[in]ポインター、 [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)します。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="d8aa4-107">プロセスの起動をリモート コンピューターを決定するために使用します。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-107">Used to determine the remote machine on which the process will be launched.</span></span>  
+ <span data-ttu-id="2bbc1-106">からツールの[ターゲットインターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)を指すポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="2bbc1-107">プロセスを起動するリモートコンピューターを決定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-107">Used to determine the remote machine on which the process will be launched.</span></span>  
   
  `lpApplicationName`  
- <span data-ttu-id="d8aa4-108">[in]実行中のプロセスによって実行されるモジュールを指定する null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="d8aa4-109">モジュールは、呼び出し元のプロセスのセキュリティ コンテキストで実行されます。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-109">The module is executed in the security context of the calling process.</span></span>  
+ <span data-ttu-id="2bbc1-108">から起動されたプロセスによって実行されるモジュールを指定する、null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="2bbc1-109">モジュールは、呼び出し元プロセスのセキュリティコンテキストで実行されます。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-109">The module is executed in the security context of the calling process.</span></span>  
   
  `lpCommandLine`  
- <span data-ttu-id="d8aa4-110">[in]実行中のプロセスによって実行されるコマンドラインを指定する null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
+ <span data-ttu-id="2bbc1-110">から起動されたプロセスによって実行されるコマンドラインを指定する、null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
   
  `lpProcessAttributes`  
- <span data-ttu-id="d8aa4-111">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-111">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-111">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-111">[in] Unused for remote debugging.</span></span>  
   
  `lpThreadAttributes`  
- <span data-ttu-id="d8aa4-112">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-112">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-112">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-112">[in] Unused for remote debugging.</span></span>  
   
  `bInheritHandles`  
- <span data-ttu-id="d8aa4-113">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-113">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-113">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-113">[in] Unused for remote debugging.</span></span>  
   
  `dwCreationFlags`  
- <span data-ttu-id="d8aa4-114">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-114">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-114">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-114">[in] Unused for remote debugging.</span></span>  
   
  `lpEnvironment`  
- <span data-ttu-id="d8aa4-115">[in]新しいプロセスの環境ブロックへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-115">[in] Pointer to an environment block for the new process.</span></span>  
+ <span data-ttu-id="2bbc1-115">から新しいプロセスの環境ブロックへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-115">[in] Pointer to an environment block for the new process.</span></span>  
   
  `lpCurrentDirectory`  
- <span data-ttu-id="d8aa4-116">[in]プロセスの現在のディレクトリにフルパスを指定する null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="d8aa4-117">このパラメーターが null の場合、新しいプロセスは、呼び出し元プロセスとして同じの現在のドライブとディレクトリがあります。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
+ <span data-ttu-id="2bbc1-116">からプロセスの現在のディレクトリへの完全パスを指定する、null で終わる文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="2bbc1-117">このパラメーターが null の場合、新しいプロセスは呼び出しプロセスと同じ現在のドライブとディレクトリを持ちます。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
   
  `lpStartupInfo`  
- <span data-ttu-id="d8aa4-118">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-118">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-118">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-118">[in] Unused for remote debugging.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="d8aa4-119">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-119">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-119">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-119">[in] Unused for remote debugging.</span></span>  
   
  `debuggingFlags`  
- <span data-ttu-id="d8aa4-120">[in]リモート デバッグに使用されていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-120">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2bbc1-120">からリモートデバッグには使用されません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-120">[in] Unused for remote debugging.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="d8aa4-121">[out]プロセスを表す「ICorDebugProcess インターフェイス」オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
+ <span data-ttu-id="2bbc1-121">入出力プロセスを表す "いいプロセスインターフェイス" オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d8aa4-122">戻り値</span><span class="sxs-lookup"><span data-stu-id="d8aa4-122">Return Value</span></span>  
- <span data-ttu-id="d8aa4-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="d8aa4-123">S_OK</span></span>  
- <span data-ttu-id="d8aa4-124">デバッグ、リモート コンピューターに返される「ICorDebugProcess インターフェイス」プロセスが正常に起動します。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2bbc1-122">戻り値</span><span class="sxs-lookup"><span data-stu-id="2bbc1-122">Return Value</span></span>  
+ <span data-ttu-id="2bbc1-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="2bbc1-123">S_OK</span></span>  
+ <span data-ttu-id="2bbc1-124">リモートコンピューターでプロセスが正常に起動され、デバッグのために "のプロセスインターフェイス" が返されました。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
   
- <span data-ttu-id="d8aa4-125">E_FAIL (またはその他の E_ リターン コード)</span><span class="sxs-lookup"><span data-stu-id="d8aa4-125">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="d8aa4-126">リモート コンピューター上のプロセスを起動してデバッグ「ICorDebugProcess インターフェイス」を返すことができません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
+ <span data-ttu-id="2bbc1-125">E_FAIL (またはその他の E_ リターン コード)</span><span class="sxs-lookup"><span data-stu-id="2bbc1-125">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="2bbc1-126">リモートコンピューターでプロセスを起動できず、デバッグのために "のプロセスインターフェイス" を返します。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8aa4-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="d8aa4-127">Remarks</span></span>  
- <span data-ttu-id="d8aa4-128">Silverlight では、混合モード デバッグはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2bbc1-127">Remarks</span><span class="sxs-lookup"><span data-stu-id="2bbc1-127">Remarks</span></span>  
+ <span data-ttu-id="2bbc1-128">混合モードのデバッグは、Silverlight ではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8aa4-129">必要条件</span><span class="sxs-lookup"><span data-stu-id="d8aa4-129">Requirements</span></span>  
- <span data-ttu-id="d8aa4-130">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d8aa4-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2bbc1-129">［要件］</span><span class="sxs-lookup"><span data-stu-id="2bbc1-129">Requirements</span></span>  
+ <span data-ttu-id="2bbc1-130">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2bbc1-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8aa4-131">**ヘッダー:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="d8aa4-131">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="2bbc1-131">**ヘッダー:** CorDebug .idl</span><span class="sxs-lookup"><span data-stu-id="2bbc1-131">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="d8aa4-132">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8aa4-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2bbc1-132">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bbc1-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d8aa4-133">**.NET framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d8aa4-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="2bbc1-133">**.NET Framework のバージョン:** 4.5、4、3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="2bbc1-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8aa4-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8aa4-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bbc1-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="2bbc1-134">See also</span></span>
 
-- [<span data-ttu-id="d8aa4-135">ICorDebugRemote インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8aa4-135">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [<span data-ttu-id="d8aa4-136">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8aa4-136">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="2bbc1-135">ICorDebugRemote インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2bbc1-135">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [<span data-ttu-id="2bbc1-136">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2bbc1-136">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [<span data-ttu-id="d8aa4-137">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8aa4-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2bbc1-137">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2bbc1-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

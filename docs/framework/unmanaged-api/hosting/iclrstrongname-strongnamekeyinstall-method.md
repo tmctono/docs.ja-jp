@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135032"
 ---
-# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="19de4-102">ICLRStrongName::StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="19de4-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
-<span data-ttu-id="19de4-103">公開/秘密キーの組がコンテナーにインポートされます。</span><span class="sxs-lookup"><span data-stu-id="19de4-103">Imports a public/private key pair into a container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="1f66b-102">ICLRStrongName::StrongNameKeyInstall メソッド</span><span class="sxs-lookup"><span data-stu-id="1f66b-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
+<span data-ttu-id="1f66b-103">公開/秘密キーの組がコンテナーにインポートされます。</span><span class="sxs-lookup"><span data-stu-id="1f66b-103">Imports a public/private key pair into a container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19de4-104">構文</span><span class="sxs-lookup"><span data-stu-id="19de4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f66b-104">構文</span><span class="sxs-lookup"><span data-stu-id="1f66b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameKeyInstall (  
@@ -37,32 +35,32 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="19de4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="19de4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1f66b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1f66b-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="19de4-106">[in]キー コンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="19de4-106">[in] The name of the key container.</span></span> <span data-ttu-id="19de4-107">`wszKeyContainer` 空でない文字列である必要があります。</span><span class="sxs-lookup"><span data-stu-id="19de4-107">`wszKeyContainer` must be a non-empty string.</span></span>  
+ <span data-ttu-id="1f66b-106">からキーコンテナーの名前。</span><span class="sxs-lookup"><span data-stu-id="1f66b-106">[in] The name of the key container.</span></span> <span data-ttu-id="1f66b-107">`wszKeyContainer` は空でない文字列である必要があります。</span><span class="sxs-lookup"><span data-stu-id="1f66b-107">`wszKeyContainer` must be a non-empty string.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="19de4-108">[in]バイナリ キーのペアです。</span><span class="sxs-lookup"><span data-stu-id="19de4-108">[in] The binary key pair.</span></span>  
+ <span data-ttu-id="1f66b-108">からバイナリキーペア。</span><span class="sxs-lookup"><span data-stu-id="1f66b-108">[in] The binary key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="19de4-109">[in]サイズ (バイト単位) の`pbKeyBlob`します。</span><span class="sxs-lookup"><span data-stu-id="19de4-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="1f66b-109">から`pbKeyBlob`のサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="1f66b-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="19de4-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="19de4-110">Return Value</span></span>  
- <span data-ttu-id="19de4-111">`S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。</span><span class="sxs-lookup"><span data-stu-id="19de4-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1f66b-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="1f66b-110">Return Value</span></span>  
+ <span data-ttu-id="1f66b-111">メソッドが正常に完了した場合は `S_OK`。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](https://go.microsoft.com/fwlink/?LinkId=213878)」を参照してください)。</span><span class="sxs-lookup"><span data-stu-id="1f66b-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="19de4-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="19de4-112">Remarks</span></span>  
- <span data-ttu-id="19de4-113">使用して、 [iclrstrongname::strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)キー コンテナーを削除するメソッド。</span><span class="sxs-lookup"><span data-stu-id="19de4-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f66b-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="1f66b-112">Remarks</span></span>  
+ <span data-ttu-id="1f66b-113">[ICLRStrongName:: StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)メソッドを使用して、キーコンテナーを削除します。</span><span class="sxs-lookup"><span data-stu-id="1f66b-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19de4-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="19de4-114">Requirements</span></span>  
- <span data-ttu-id="19de4-115">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="19de4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1f66b-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="1f66b-114">Requirements</span></span>  
+ <span data-ttu-id="1f66b-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1f66b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19de4-116">**ヘッダー:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="19de4-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="1f66b-116">**ヘッダー:** メタホスト .h</span><span class="sxs-lookup"><span data-stu-id="1f66b-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="19de4-117">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="19de4-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1f66b-117">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="1f66b-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="19de4-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19de4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1f66b-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f66b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19de4-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="19de4-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f66b-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f66b-119">See also</span></span>
 
-- [<span data-ttu-id="19de4-120">StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="19de4-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [<span data-ttu-id="19de4-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="19de4-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="1f66b-120">StrongNameKeyDelete メソッド</span><span class="sxs-lookup"><span data-stu-id="1f66b-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [<span data-ttu-id="1f66b-121">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1f66b-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

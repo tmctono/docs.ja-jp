@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abbfd21736d220f1cba029235c71a85bf3048ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130675"
 ---
-# <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="0e04c-102">ICorDebugManagedCallback::NameChange メソッド</span><span class="sxs-lookup"><span data-stu-id="0e04c-102">ICorDebugManagedCallback::NameChange Method</span></span>
-<span data-ttu-id="0e04c-103">アプリケーション ドメインまたはスレッドのいずれかの名前が変更されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="0e04c-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  
+# <a name="icordebugmanagedcallbacknamechange-method"></a><span data-ttu-id="f533f-102">ICorDebugManagedCallback::NameChange メソッド</span><span class="sxs-lookup"><span data-stu-id="f533f-102">ICorDebugManagedCallback::NameChange Method</span></span>
+<span data-ttu-id="f533f-103">アプリケーションドメインまたはスレッドの名前が変更されたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="f533f-103">Notifies the debugger that the name of either an application domain or a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e04c-104">構文</span><span class="sxs-lookup"><span data-stu-id="0e04c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f533f-104">構文</span><span class="sxs-lookup"><span data-stu-id="f533f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT NameChange (  
@@ -36,22 +34,22 @@ HRESULT NameChange (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e04c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0e04c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f533f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f533f-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="0e04c-106">[in]または名前の変更があったか、アプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインターには、名前の変更のあるスレッドが含まれています。</span><span class="sxs-lookup"><span data-stu-id="0e04c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that either had a name change or that contains the thread that had a name change.</span></span>  
+ <span data-ttu-id="f533f-106">から名前が変更されたか、または名前の変更があったスレッドを含むアプリケーションドメインを表す、ツールオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f533f-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that either had a name change or that contains the thread that had a name change.</span></span>  
   
  `pThread`  
- <span data-ttu-id="0e04c-107">[in]名前の変更のあるスレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="0e04c-107">[in] A pointer to an ICorDebugThread object that represents the thread that had a name change.</span></span>  
+ <span data-ttu-id="f533f-107">から名前の変更があったスレッドを表す、スレッドオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f533f-107">[in] A pointer to an ICorDebugThread object that represents the thread that had a name change.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e04c-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="0e04c-108">Requirements</span></span>  
- <span data-ttu-id="0e04c-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0e04c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f533f-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="f533f-108">Requirements</span></span>  
+ <span data-ttu-id="f533f-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f533f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e04c-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0e04c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f533f-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f533f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0e04c-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e04c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f533f-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f533f-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e04c-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e04c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f533f-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f533f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e04c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e04c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f533f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f533f-113">See also</span></span>
 
-- [<span data-ttu-id="0e04c-114">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0e04c-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="f533f-114">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f533f-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d672cf2375a5354c48608b3e4156867ba406992a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e9f7f1fc0f04e8cc8c69d533c1dbba380d04ebfb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765017"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140488"
 ---
-# <a name="icorpublishenumclone-method"></a><span data-ttu-id="d869b-102">ICorPublishEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="d869b-102">ICorPublishEnum::Clone Method</span></span>
-<span data-ttu-id="d869b-103">このコピーを作成します[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d869b-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
+# <a name="icorpublishenumclone-method"></a><span data-ttu-id="ce32e-102">ICorPublishEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="ce32e-102">ICorPublishEnum::Clone Method</span></span>
+<span data-ttu-id="ce32e-103">この[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)オブジェクトのコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="ce32e-103">Creates a copy of this [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d869b-104">構文</span><span class="sxs-lookup"><span data-stu-id="d869b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce32e-104">構文</span><span class="sxs-lookup"><span data-stu-id="ce32e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -35,19 +33,19 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d869b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d869b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce32e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ce32e-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="d869b-106">[out]アドレスへのポインター、`ICorPublishEnum`オブジェクトのこのコピーである`ICorPublishEnum`オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="d869b-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
+ <span data-ttu-id="ce32e-106">入出力この `ICorPublishEnum` オブジェクトのコピーである `ICorPublishEnum` オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="ce32e-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d869b-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="d869b-107">Requirements</span></span>  
- <span data-ttu-id="d869b-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d869b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce32e-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="ce32e-107">Requirements</span></span>  
+ <span data-ttu-id="ce32e-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ce32e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d869b-109">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="d869b-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="ce32e-109">**ヘッダー:** CorPub .idl、CorPub .h</span><span class="sxs-lookup"><span data-stu-id="ce32e-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="d869b-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d869b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce32e-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce32e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d869b-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d869b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ce32e-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce32e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d869b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d869b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce32e-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce32e-112">See also</span></span>
 
-- [<span data-ttu-id="d869b-113">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d869b-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [<span data-ttu-id="ce32e-113">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ce32e-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

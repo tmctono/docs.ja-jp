@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ed875059730e91e28ff0903ab93fb25c68910b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738165"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134111"
 ---
-# <a name="icordebuggetprocess-method"></a><span data-ttu-id="f74a8-102">ICorDebug::GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="f74a8-102">ICorDebug::GetProcess Method</span></span>
-<span data-ttu-id="f74a8-103">指定されたプロセスの"ICorDebugProcess"のインスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="f74a8-103">Gets a pointer to the "ICorDebugProcess" instance for the specified process.</span></span>  
+# <a name="icordebuggetprocess-method"></a><span data-ttu-id="bd4eb-102">ICorDebug::GetProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="bd4eb-102">ICorDebug::GetProcess Method</span></span>
+<span data-ttu-id="bd4eb-103">指定されたプロセスの "いいプロセス" インスタンスへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="bd4eb-103">Gets a pointer to the "ICorDebugProcess" instance for the specified process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f74a8-104">構文</span><span class="sxs-lookup"><span data-stu-id="f74a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd4eb-104">構文</span><span class="sxs-lookup"><span data-stu-id="bd4eb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProcess (  
@@ -36,22 +34,22 @@ HRESULT GetProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f74a8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f74a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bd4eb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bd4eb-105">Parameters</span></span>  
  `dwProcessId`  
- <span data-ttu-id="f74a8-106">[in]プロセスの ID。</span><span class="sxs-lookup"><span data-stu-id="f74a8-106">[in] The ID of the process.</span></span>  
+ <span data-ttu-id="bd4eb-106">からプロセスの ID。</span><span class="sxs-lookup"><span data-stu-id="bd4eb-106">[in] The ID of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="f74a8-107">[out]アドレスへのポインター、`ICorDebugProcess`指定されたプロセスのインスタンス。</span><span class="sxs-lookup"><span data-stu-id="f74a8-107">[out] A pointer to the address of a `ICorDebugProcess` instance for the specified process.</span></span>  
+ <span data-ttu-id="bd4eb-107">入出力指定されたプロセスの `ICorDebugProcess` インスタンスのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="bd4eb-107">[out] A pointer to the address of a `ICorDebugProcess` instance for the specified process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f74a8-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="f74a8-108">Requirements</span></span>  
- <span data-ttu-id="f74a8-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f74a8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd4eb-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="bd4eb-108">Requirements</span></span>  
+ <span data-ttu-id="bd4eb-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bd4eb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f74a8-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f74a8-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bd4eb-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bd4eb-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f74a8-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f74a8-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bd4eb-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd4eb-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f74a8-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f74a8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bd4eb-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd4eb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f74a8-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="f74a8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd4eb-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="bd4eb-113">See also</span></span>
 
-- [<span data-ttu-id="f74a8-114">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f74a8-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="bd4eb-114">ICorDebug インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bd4eb-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

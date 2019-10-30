@@ -15,36 +15,34 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9486b8ad0acb53e13f6a9202ce2d713ffe5fce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765004"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140467"
 ---
-# <a name="icorpublishenumreset-method"></a><span data-ttu-id="3b6dd-102">ICorPublishEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="3b6dd-102">ICorPublishEnum::Reset Method</span></span>
-<span data-ttu-id="3b6dd-103">列挙体の先頭のカーソルを移動します。</span><span class="sxs-lookup"><span data-stu-id="3b6dd-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
+# <a name="icorpublishenumreset-method"></a><span data-ttu-id="e25ca-102">ICorPublishEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="e25ca-102">ICorPublishEnum::Reset Method</span></span>
+<span data-ttu-id="e25ca-103">のカーソルを列挙体の先頭に移動します。</span><span class="sxs-lookup"><span data-stu-id="e25ca-103">Moves the cursor of to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b6dd-104">構文</span><span class="sxs-lookup"><span data-stu-id="3b6dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e25ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="e25ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset ();  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3b6dd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3b6dd-105">Parameters</span></span>  
- <span data-ttu-id="3b6dd-106">`Reset` パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="3b6dd-106">`Reset` takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e25ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e25ca-105">Parameters</span></span>  
+ <span data-ttu-id="e25ca-106">`Reset` はパラメーターを受け取りません。</span><span class="sxs-lookup"><span data-stu-id="e25ca-106">`Reset` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b6dd-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="3b6dd-107">Requirements</span></span>  
- <span data-ttu-id="3b6dd-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3b6dd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e25ca-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="e25ca-107">Requirements</span></span>  
+ <span data-ttu-id="e25ca-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e25ca-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b6dd-109">**ヘッダー:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="3b6dd-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="e25ca-109">**ヘッダー:** CorPub .idl、CorPub .h</span><span class="sxs-lookup"><span data-stu-id="e25ca-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="3b6dd-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b6dd-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e25ca-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e25ca-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b6dd-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b6dd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e25ca-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e25ca-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b6dd-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="3b6dd-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e25ca-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="e25ca-112">See also</span></span>
 
-- [<span data-ttu-id="3b6dd-113">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3b6dd-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [<span data-ttu-id="e25ca-113">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e25ca-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetLocationType メソッド
+title: 'いい変数 Home:: GetLocationType メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLocationType
@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b7b95c79b41737ade42e6a9a2741f9c43a41130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125105"
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="de57c-102">ICorDebugVariableHome::GetLocationType メソッド</span><span class="sxs-lookup"><span data-stu-id="de57c-102">ICorDebugVariableHome::GetLocationType Method</span></span>
-<span data-ttu-id="de57c-103">変数のネイティブの場所の種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="de57c-103">Gets the type of the variable's native location.</span></span>  
+# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="96ee0-102">いい変数 Home:: GetLocationType メソッド</span><span class="sxs-lookup"><span data-stu-id="96ee0-102">ICorDebugVariableHome::GetLocationType Method</span></span>
+<span data-ttu-id="96ee0-103">変数のネイティブな場所の型を取得します。</span><span class="sxs-lookup"><span data-stu-id="96ee0-103">Gets the type of the variable's native location.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de57c-104">構文</span><span class="sxs-lookup"><span data-stu-id="de57c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96ee0-104">構文</span><span class="sxs-lookup"><span data-stu-id="96ee0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocationType(  
@@ -35,20 +33,20 @@ HRESULT GetLocationType(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="de57c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="de57c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96ee0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="96ee0-105">Parameters</span></span>  
  `pLocationType`  
- <span data-ttu-id="de57c-106">[out]変数のネイティブの場所の種類へのポインター。</span><span class="sxs-lookup"><span data-stu-id="de57c-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="de57c-107">参照してください、 [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)詳細情報を列挙します。</span><span class="sxs-lookup"><span data-stu-id="de57c-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
+ <span data-ttu-id="96ee0-106">入出力変数のネイティブな場所の型へのポインター。</span><span class="sxs-lookup"><span data-stu-id="96ee0-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="96ee0-107">詳細については、 [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)列挙体を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96ee0-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de57c-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="de57c-108">Requirements</span></span>  
- <span data-ttu-id="de57c-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="de57c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96ee0-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="96ee0-108">Requirements</span></span>  
+ <span data-ttu-id="96ee0-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96ee0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de57c-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="de57c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96ee0-110">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96ee0-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="de57c-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="de57c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96ee0-111">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96ee0-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="de57c-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de57c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="96ee0-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96ee0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de57c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="de57c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96ee0-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="96ee0-113">See also</span></span>
 
-- [<span data-ttu-id="de57c-114">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="de57c-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [<span data-ttu-id="de57c-115">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="de57c-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [<span data-ttu-id="96ee0-114">ICorDebugVariableHome インターフェイス</span><span class="sxs-lookup"><span data-stu-id="96ee0-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="96ee0-115">VariableLocationType 列挙型</span><span class="sxs-lookup"><span data-stu-id="96ee0-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)

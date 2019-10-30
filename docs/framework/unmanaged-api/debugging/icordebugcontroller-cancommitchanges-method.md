@@ -15,15 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7050e94b-f197-4ffd-88fa-ed2ecdf19663
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a0b35b4782ca173133523aa9e9d0fe48ea728d0
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3219ec752d74a6fb999e494716acd167bdb21a13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125456"
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="4fb4d-102">ICorDebugController::CanCommitChanges メソッド</span><span class="sxs-lookup"><span data-stu-id="4fb4d-102">ICorDebugController::CanCommitChanges Method</span></span>
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="9e2e0-102">ICorDebugController::CanCommitChanges メソッド</span><span class="sxs-lookup"><span data-stu-id="9e2e0-102">ICorDebugController::CanCommitChanges Method</span></span>
 
-<span data-ttu-id="4fb4d-103">`CanCommitChanges` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="4fb4d-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="4fb4d-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="4fb4d-104">Do not call this method.</span></span>
+<span data-ttu-id="9e2e0-103">`CanCommitChanges` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="9e2e0-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="9e2e0-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="9e2e0-104">Do not call this method.</span></span>

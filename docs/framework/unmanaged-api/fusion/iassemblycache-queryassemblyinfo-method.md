@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e975db68252e866a0bf7898f1c9d3cbe67bbe24f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134579"
 ---
-# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="ef615-102">IAssemblyCache::QueryAssemblyInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="ef615-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
-<span data-ttu-id="ef615-103">指定したアセンブリに関する要求されたデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="ef615-103">Gets the requested data about the specified assembly.</span></span>  
+# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="5485d-102">IAssemblyCache::QueryAssemblyInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="5485d-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
+<span data-ttu-id="5485d-103">指定したアセンブリに関する要求されたデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="5485d-103">Gets the requested data about the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef615-104">構文</span><span class="sxs-lookup"><span data-stu-id="ef615-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5485d-104">構文</span><span class="sxs-lookup"><span data-stu-id="5485d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT QueryAssemblyInfo (  
@@ -37,27 +35,27 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef615-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ef615-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5485d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5485d-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="ef615-106">からFusion に定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="ef615-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="ef615-107">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="ef615-107">The following values are supported:</span></span>  
+ <span data-ttu-id="5485d-106">からFusion に定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="5485d-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="5485d-107">次の値がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="5485d-107">The following values are supported:</span></span>  
   
-- <span data-ttu-id="ef615-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="ef615-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
+- <span data-ttu-id="5485d-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="5485d-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
   
-- <span data-ttu-id="ef615-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="ef615-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
+- <span data-ttu-id="5485d-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="5485d-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="ef615-110">からデータの取得対象となるアセンブリの名前。</span><span class="sxs-lookup"><span data-stu-id="ef615-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
+ <span data-ttu-id="5485d-110">からデータの取得対象となるアセンブリの名前。</span><span class="sxs-lookup"><span data-stu-id="5485d-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
   
  `pAsmInfo`  
- <span data-ttu-id="ef615-111">[入力、出力]アセンブリに関するデータを格納する[ASSEMBLY_INFO](assembly-info-structure.md)構造体。</span><span class="sxs-lookup"><span data-stu-id="ef615-111">[in, out] An [ASSEMBLY_INFO](assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
+ <span data-ttu-id="5485d-111">[入力、出力]アセンブリに関するデータを格納する[ASSEMBLY_INFO](assembly-info-structure.md)構造体。</span><span class="sxs-lookup"><span data-stu-id="5485d-111">[in, out] An [ASSEMBLY_INFO](assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef615-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="ef615-112">Requirements</span></span>  
- <span data-ttu-id="ef615-113">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ef615-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5485d-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="5485d-112">Requirements</span></span>  
+ <span data-ttu-id="5485d-113">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5485d-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef615-114">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="ef615-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5485d-114">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="5485d-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="ef615-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef615-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5485d-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5485d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef615-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef615-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5485d-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5485d-116">See also</span></span>
 
-- [<span data-ttu-id="ef615-117">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ef615-117">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)
+- [<span data-ttu-id="5485d-117">IAssemblyCache インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5485d-117">IAssemblyCache Interface</span></span>](iassemblycache-interface.md)

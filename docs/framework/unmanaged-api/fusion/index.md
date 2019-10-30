@@ -6,27 +6,25 @@ helpviewer_keywords:
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed9020aac5b9196eb9e074161371c4e42e79509e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2bf7bbb59cf983ed536a579ee3a418603f78b49a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131639"
 ---
-# <a name="fusion-unmanaged-api-reference"></a><span data-ttu-id="24894-102">fusion (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="24894-102">Fusion (Unmanaged API Reference)</span></span>
-<span data-ttu-id="24894-103">Fusion API を使うと、ランタイム ホストで、アプリケーションに対するリソースの正しいバージョンを見つけるために、アプリケーションのリソースのプロパティにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="24894-103">The fusion API enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  
+# <a name="fusion-unmanaged-api-reference"></a><span data-ttu-id="8ed01-102">fusion (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="8ed01-102">Fusion (Unmanaged API Reference)</span></span>
+<span data-ttu-id="8ed01-103">Fusion API を使うと、ランタイム ホストで、アプリケーションに対するリソースの正しいバージョンを見つけるために、アプリケーションのリソースのプロパティにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="8ed01-103">The fusion API enables a runtime host to access the properties of an application's resources in order to locate the correct versions of those resources for the application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="24894-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="24894-104">In This Section</span></span>  
- [<span data-ttu-id="24894-105">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="24894-105">Fusion Interfaces</span></span>](fusion-interfaces.md)  
- <span data-ttu-id="24894-106">Fusion API で使用されるアンマネージド インターフェイスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="24894-106">Describes the unmanaged interfaces that the fusion API uses.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8ed01-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="8ed01-104">In This Section</span></span>  
+ [<span data-ttu-id="8ed01-105">Fusion インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ed01-105">Fusion Interfaces</span></span>](fusion-interfaces.md)  
+ <span data-ttu-id="8ed01-106">Fusion API で使用されるアンマネージド インターフェイスについて説明します。</span><span class="sxs-lookup"><span data-stu-id="8ed01-106">Describes the unmanaged interfaces that the fusion API uses.</span></span>  
   
- [<span data-ttu-id="24894-107">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="24894-107">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)  
- <span data-ttu-id="24894-108">Fusion API で使用されるアンマネージド グローバル静的関数について説明します。</span><span class="sxs-lookup"><span data-stu-id="24894-108">Describes the unmanaged global static functions that the fusion API uses.</span></span>  
+ [<span data-ttu-id="8ed01-107">Fusion グローバル静的関数</span><span class="sxs-lookup"><span data-stu-id="8ed01-107">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)  
+ <span data-ttu-id="8ed01-108">Fusion API で使用されるアンマネージド グローバル静的関数について説明します。</span><span class="sxs-lookup"><span data-stu-id="8ed01-108">Describes the unmanaged global static functions that the fusion API uses.</span></span>  
   
- [<span data-ttu-id="24894-109">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="24894-109">Fusion Enumerations</span></span>](fusion-enumerations.md)  
- <span data-ttu-id="24894-110">Fusion API で使用されるアンマネージド列挙体について説明します。</span><span class="sxs-lookup"><span data-stu-id="24894-110">Describes the unmanaged enumerations that the fusion API uses.</span></span>  
+ [<span data-ttu-id="8ed01-109">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="8ed01-109">Fusion Enumerations</span></span>](fusion-enumerations.md)  
+ <span data-ttu-id="8ed01-110">Fusion API で使用されるアンマネージド列挙体について説明します。</span><span class="sxs-lookup"><span data-stu-id="8ed01-110">Describes the unmanaged enumerations that the fusion API uses.</span></span>  
   
- [<span data-ttu-id="24894-111">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="24894-111">Fusion Structures</span></span>](fusion-structures.md)  
- <span data-ttu-id="24894-112">Fusion API で使用されるアンマネージド構造体について説明します。</span><span class="sxs-lookup"><span data-stu-id="24894-112">Describes the unmanaged structures that the fusion API uses.</span></span>
+ [<span data-ttu-id="8ed01-111">Fusion 構造体</span><span class="sxs-lookup"><span data-stu-id="8ed01-111">Fusion Structures</span></span>](fusion-structures.md)  
+ <span data-ttu-id="8ed01-112">Fusion API で使用されるアンマネージド構造体について説明します。</span><span class="sxs-lookup"><span data-stu-id="8ed01-112">Describes the unmanaged structures that the fusion API uses.</span></span>

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130771"
 ---
-# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="2114a-102">ICorDebugManagedCallback::ExitThread メソッド</span><span class="sxs-lookup"><span data-stu-id="2114a-102">ICorDebugManagedCallback::ExitThread Method</span></span>
-<span data-ttu-id="2114a-103">マネージ コードが実行しているスレッドが終了していることをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="2114a-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitthread-method"></a><span data-ttu-id="96829-102">ICorDebugManagedCallback::ExitThread メソッド</span><span class="sxs-lookup"><span data-stu-id="96829-102">ICorDebugManagedCallback::ExitThread Method</span></span>
+<span data-ttu-id="96829-103">マネージコードを実行していたスレッドが終了したことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="96829-103">Notifies the debugger that a thread that was executing managed code has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2114a-104">構文</span><span class="sxs-lookup"><span data-stu-id="2114a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96829-104">構文</span><span class="sxs-lookup"><span data-stu-id="96829-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExitThread (  
@@ -36,25 +34,25 @@ HRESULT ExitThread (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2114a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2114a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="96829-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="96829-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="2114a-106">[in]マネージ スレッドを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2114a-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
+ <span data-ttu-id="96829-106">からマネージスレッドを含むアプリケーションドメインを表す、コードの Appdomain オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="96829-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread.</span></span>  
   
  `thread`  
- <span data-ttu-id="2114a-107">[in]マネージ スレッドを表す ICorDebugThread オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="2114a-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="96829-107">からマネージスレッドを表す、コードスレッドオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="96829-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2114a-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="2114a-108">Remarks</span></span>  
- <span data-ttu-id="2114a-109">1 回、`ExitThread`コールバックが発生した、スレッドはスレッドの列挙型では削除されます。</span><span class="sxs-lookup"><span data-stu-id="2114a-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96829-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="96829-108">Remarks</span></span>  
+ <span data-ttu-id="96829-109">`ExitThread` コールバックが発生すると、スレッドはスレッド列挙に表示されなくなります。</span><span class="sxs-lookup"><span data-stu-id="96829-109">Once the `ExitThread` callback is fired, the thread will no longer appear in thread enumerations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2114a-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="2114a-110">Requirements</span></span>  
- <span data-ttu-id="2114a-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2114a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="96829-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="96829-110">Requirements</span></span>  
+ <span data-ttu-id="96829-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96829-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2114a-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2114a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="96829-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="96829-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2114a-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2114a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="96829-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96829-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2114a-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2114a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="96829-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96829-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2114a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="2114a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96829-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="96829-115">See also</span></span>
 
-- [<span data-ttu-id="2114a-116">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2114a-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="96829-116">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="96829-116">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

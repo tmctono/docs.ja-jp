@@ -1,20 +1,18 @@
 ---
-title: ICorDebugSymbolProvider2::GetFrameProps メソッド
+title: 'ICorDebugSymbolProvider2:: Getフレーム Props メソッド'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133642"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a><span data-ttu-id="a4ac3-102">ICorDebugSymbolProvider2::GetFrameProps メソッド</span><span class="sxs-lookup"><span data-stu-id="a4ac3-102">ICorDebugSymbolProvider2::GetFrameProps Method</span></span>
-<span data-ttu-id="a4ac3-103">メソッドのメソッド開始位置を示す相対仮想アドレスと、指定されたコード相対仮想アドレスを持つ親フレームを返します。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-103">Returns the method starting relative virtual address of a method and the parent frame given a code relative virtual address.</span></span>  
+# <a name="icordebugsymbolprovider2getframeprops-method"></a><span data-ttu-id="17f65-102">ICorDebugSymbolProvider2:: Getフレーム Props メソッド</span><span class="sxs-lookup"><span data-stu-id="17f65-102">ICorDebugSymbolProvider2::GetFrameProps Method</span></span>
+<span data-ttu-id="17f65-103">メソッドのメソッド開始位置を示す相対仮想アドレスと、指定されたコード相対仮想アドレスを持つ親フレームを返します。</span><span class="sxs-lookup"><span data-stu-id="17f65-103">Returns the method starting relative virtual address of a method and the parent frame given a code relative virtual address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4ac3-104">構文</span><span class="sxs-lookup"><span data-stu-id="a4ac3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17f65-104">構文</span><span class="sxs-lookup"><span data-stu-id="17f65-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFrameProps(  
@@ -24,31 +22,31 @@ HRESULT GetFrameProps(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4ac3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a4ac3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17f65-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="17f65-105">Parameters</span></span>  
  `codeRva`  
- <span data-ttu-id="a4ac3-106">[in] コード相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-106">[in] A code relative virtual address.</span></span>  
+ <span data-ttu-id="17f65-106">[in] コード相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="17f65-106">[in] A code relative virtual address.</span></span>  
   
  `pCodeStartRva`  
- <span data-ttu-id="a4ac3-107">[out] メソッドの開始相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-107">[out] A pointer to the method's starting relative virtual address.</span></span>  
+ <span data-ttu-id="17f65-107">[out] メソッドの開始相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="17f65-107">[out] A pointer to the method's starting relative virtual address.</span></span>  
   
  `pParentFrameStartRva`  
- <span data-ttu-id="a4ac3-108">[out] フレームの開始相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-108">[out] A pointer to the frame's starting relative virtual address.</span></span>  
+ <span data-ttu-id="17f65-108">[out] フレームの開始相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="17f65-108">[out] A pointer to the frame's starting relative virtual address.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a4ac3-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="a4ac3-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17f65-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="17f65-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a4ac3-110">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-110">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="17f65-110">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="17f65-110">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4ac3-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="a4ac3-111">Requirements</span></span>  
- <span data-ttu-id="a4ac3-112">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a4ac3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17f65-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="17f65-111">Requirements</span></span>  
+ <span data-ttu-id="17f65-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="17f65-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a4ac3-113">**ヘッダー:** CorDebug .idl、CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="a4ac3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17f65-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17f65-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a4ac3-114">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="a4ac3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17f65-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17f65-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a4ac3-115">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4ac3-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="17f65-115">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17f65-115">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4ac3-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4ac3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17f65-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="17f65-116">See also</span></span>
 
-- [<span data-ttu-id="a4ac3-117">ICorDebugSymbolProvider2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a4ac3-117">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [<span data-ttu-id="a4ac3-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a4ac3-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="17f65-117">ICorDebugSymbolProvider2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17f65-117">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [<span data-ttu-id="17f65-118">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17f65-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

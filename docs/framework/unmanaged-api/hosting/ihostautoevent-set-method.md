@@ -15,47 +15,45 @@ helpviewer_keywords:
 ms.assetid: 46becf3e-bc0e-4338-85c0-9ab0df76a1d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e443ec3f743d56f0fe7e4e1c794f16bab2db8314
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 792b735522580eb7460da703899a00781e525419
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124445"
 ---
-# <a name="ihostautoeventset-method"></a><span data-ttu-id="114a2-102">IHostAutoEvent::Set メソッド</span><span class="sxs-lookup"><span data-stu-id="114a2-102">IHostAutoEvent::Set Method</span></span>
-<span data-ttu-id="114a2-103">現在の設定[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)インスタンスがシグナル状態にします。</span><span class="sxs-lookup"><span data-stu-id="114a2-103">Sets the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to a signaled state.</span></span>  
+# <a name="ihostautoeventset-method"></a><span data-ttu-id="11f18-102">IHostAutoEvent::Set メソッド</span><span class="sxs-lookup"><span data-stu-id="11f18-102">IHostAutoEvent::Set Method</span></span>
+<span data-ttu-id="11f18-103">現在の[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)インスタンスをシグナル状態に設定します。</span><span class="sxs-lookup"><span data-stu-id="11f18-103">Sets the current [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance to a signaled state.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="114a2-104">構文</span><span class="sxs-lookup"><span data-stu-id="114a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11f18-104">構文</span><span class="sxs-lookup"><span data-stu-id="11f18-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Set ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="114a2-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="114a2-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="11f18-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="11f18-105">Return Value</span></span>  
   
-|<span data-ttu-id="114a2-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="114a2-106">HRESULT</span></span>|<span data-ttu-id="114a2-107">説明</span><span class="sxs-lookup"><span data-stu-id="114a2-107">Description</span></span>|  
+|<span data-ttu-id="11f18-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="11f18-106">HRESULT</span></span>|<span data-ttu-id="11f18-107">説明</span><span class="sxs-lookup"><span data-stu-id="11f18-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="114a2-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="114a2-108">S_OK</span></span>|<span data-ttu-id="114a2-109">`Set` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="114a2-109">`Set` returned successfully.</span></span>|  
-|<span data-ttu-id="114a2-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="114a2-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="114a2-111">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="114a2-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="114a2-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="114a2-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="114a2-113">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="114a2-113">The call timed out.</span></span>|  
-|<span data-ttu-id="114a2-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="114a2-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="114a2-115">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="114a2-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="114a2-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="114a2-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="114a2-117">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="114a2-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="114a2-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="114a2-118">E_FAIL</span></span>|<span data-ttu-id="114a2-119">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="114a2-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="114a2-120">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="114a2-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="114a2-121">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="114a2-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="11f18-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="11f18-108">S_OK</span></span>|<span data-ttu-id="11f18-109">`Set` が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="11f18-109">`Set` returned successfully.</span></span>|  
+|<span data-ttu-id="11f18-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="11f18-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="11f18-111">共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。</span><span class="sxs-lookup"><span data-stu-id="11f18-111">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="11f18-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="11f18-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="11f18-113">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="11f18-113">The call timed out.</span></span>|  
+|<span data-ttu-id="11f18-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="11f18-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="11f18-115">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="11f18-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="11f18-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="11f18-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="11f18-117">ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。</span><span class="sxs-lookup"><span data-stu-id="11f18-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="11f18-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="11f18-118">E_FAIL</span></span>|<span data-ttu-id="11f18-119">原因不明の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="11f18-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="11f18-120">メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="11f18-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="11f18-121">後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="11f18-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="114a2-122">必要条件</span><span class="sxs-lookup"><span data-stu-id="114a2-122">Requirements</span></span>  
- <span data-ttu-id="114a2-123">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="114a2-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11f18-122">［要件］</span><span class="sxs-lookup"><span data-stu-id="11f18-122">Requirements</span></span>  
+ <span data-ttu-id="11f18-123">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11f18-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="114a2-124">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="114a2-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="11f18-124">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="11f18-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="114a2-125">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="114a2-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="11f18-125">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="11f18-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="114a2-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="114a2-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="11f18-126">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11f18-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="114a2-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="114a2-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11f18-127">関連項目</span><span class="sxs-lookup"><span data-stu-id="11f18-127">See also</span></span>
 
-- [<span data-ttu-id="114a2-128">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="114a2-128">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="114a2-129">IHostAutoEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="114a2-129">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="114a2-130">IHostManualEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="114a2-130">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="114a2-131">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="114a2-131">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="11f18-128">ICLRSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="11f18-128">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="11f18-129">IHostAutoEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="11f18-129">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="11f18-130">IHostManualEvent インターフェイス</span><span class="sxs-lookup"><span data-stu-id="11f18-130">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="11f18-131">IHostSyncManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="11f18-131">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

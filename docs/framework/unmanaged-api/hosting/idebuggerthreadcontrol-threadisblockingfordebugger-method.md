@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9324e1596913fdafb13239dbefd631cbe3c6ffe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780486"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134937"
 ---
-# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="c73d8-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger メソッド</span><span class="sxs-lookup"><span data-stu-id="c73d8-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
-<span data-ttu-id="c73d8-103">このコールバックを送信しているスレッドは、ホストに通知デバッグ サービス内でブロックします。</span><span class="sxs-lookup"><span data-stu-id="c73d8-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
+# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="315a0-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger メソッド</span><span class="sxs-lookup"><span data-stu-id="315a0-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
+<span data-ttu-id="315a0-103">このコールバックを送信しているスレッドがデバッグサービス内でブロックされようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="315a0-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c73d8-104">構文</span><span class="sxs-lookup"><span data-stu-id="c73d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="315a0-104">構文</span><span class="sxs-lookup"><span data-stu-id="315a0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c73d8-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="c73d8-105">Remarks</span></span>  
- <span data-ttu-id="c73d8-106">`ThreadIsBlockingForDebugger`メソッドはランタイムのスレッドで常に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="c73d8-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="315a0-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="315a0-105">Remarks</span></span>  
+ <span data-ttu-id="315a0-106">`ThreadIsBlockingForDebugger` メソッドは常にランタイムスレッドで呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="315a0-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
   
- <span data-ttu-id="c73d8-107">`ThreadIsBlockingForDebugger`メソッドに、ホスト、スレッドがブロックの中に別の操作を実行する機会が与えられます。</span><span class="sxs-lookup"><span data-stu-id="c73d8-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
+ <span data-ttu-id="315a0-107">`ThreadIsBlockingForDebugger` メソッドは、スレッドがブロックされている間に、ホストに別のアクションを実行する機会を与えます。</span><span class="sxs-lookup"><span data-stu-id="315a0-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c73d8-108">必要条件</span><span class="sxs-lookup"><span data-stu-id="c73d8-108">Requirements</span></span>  
- <span data-ttu-id="c73d8-109">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c73d8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="315a0-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="315a0-108">Requirements</span></span>  
+ <span data-ttu-id="315a0-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="315a0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c73d8-110">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c73d8-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="315a0-110">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="315a0-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c73d8-111">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="c73d8-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="315a0-111">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="315a0-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c73d8-112">**NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c73d8-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="315a0-112">**.Net Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="315a0-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c73d8-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="c73d8-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="315a0-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="315a0-113">See also</span></span>
 
-- [<span data-ttu-id="c73d8-114">IDebuggerThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c73d8-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [<span data-ttu-id="315a0-114">IDebuggerThreadControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="315a0-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137335"
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="6149d-102">ICorDebugNativeFrame::GetIP メソッド</span><span class="sxs-lookup"><span data-stu-id="6149d-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="6149d-103">ネイティブ コードのオフセット命令ポインターが現在設定されている場所を取得します。</span><span class="sxs-lookup"><span data-stu-id="6149d-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="8adf6-102">ICorDebugNativeFrame::GetIP メソッド</span><span class="sxs-lookup"><span data-stu-id="8adf6-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="8adf6-103">命令ポインターが現在設定されているネイティブコードのオフセット位置を取得します。</span><span class="sxs-lookup"><span data-stu-id="8adf6-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6149d-104">構文</span><span class="sxs-lookup"><span data-stu-id="6149d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8adf6-104">構文</span><span class="sxs-lookup"><span data-stu-id="8adf6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIP (  
@@ -35,20 +33,20 @@ HRESULT GetIP (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6149d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6149d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8adf6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8adf6-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="6149d-106">[out]ネイティブ コード内のオフセット位置へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6149d-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="8adf6-106">入出力ネイティブコード内のオフセット位置を指すポインター。</span><span class="sxs-lookup"><span data-stu-id="8adf6-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6149d-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="6149d-107">Remarks</span></span>  
- <span data-ttu-id="6149d-108">この"ICorDebugNativeFrame"で表されるスタック フレームがアクティブな場合は、オフセットは、実行する次の命令のアドレスです。</span><span class="sxs-lookup"><span data-stu-id="6149d-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="6149d-109">このスタック フレームがアクティブでない場合、オフセットは、次のスタック フレームが再アクティブ化時に実行される命令のアドレスです。</span><span class="sxs-lookup"><span data-stu-id="6149d-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8adf6-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="8adf6-107">Remarks</span></span>  
+ <span data-ttu-id="8adf6-108">この "テキストフレーム" によって表されるスタックフレームがアクティブな場合、オフセットは次に実行される命令のアドレスになります。</span><span class="sxs-lookup"><span data-stu-id="8adf6-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="8adf6-109">このスタックフレームがアクティブでない場合、オフセットは、スタックフレームが再アクティブ化されたときに実行される次の命令のアドレスになります。</span><span class="sxs-lookup"><span data-stu-id="8adf6-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6149d-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="6149d-110">Requirements</span></span>  
- <span data-ttu-id="6149d-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6149d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8adf6-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="8adf6-110">Requirements</span></span>  
+ <span data-ttu-id="8adf6-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8adf6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6149d-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6149d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8adf6-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8adf6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6149d-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6149d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8adf6-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8adf6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6149d-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6149d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8adf6-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8adf6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6149d-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="6149d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8adf6-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="8adf6-115">See also</span></span>

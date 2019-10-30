@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755386"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139672"
 ---
-# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="59265-102">ICorDebugProcess::SetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="59265-102">ICorDebugProcess::SetThreadContext Method</span></span>
-<span data-ttu-id="59265-103">このプロセスでは、特定のスレッドのコンテキストを設定します。</span><span class="sxs-lookup"><span data-stu-id="59265-103">Sets the context for the given thread in this process.</span></span>  
+# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="0a132-102">ICorDebugProcess::SetThreadContext メソッド</span><span class="sxs-lookup"><span data-stu-id="0a132-102">ICorDebugProcess::SetThreadContext Method</span></span>
+<span data-ttu-id="0a132-103">このプロセス内の指定されたスレッドのコンテキストを設定します。</span><span class="sxs-lookup"><span data-stu-id="0a132-103">Sets the context for the given thread in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59265-104">構文</span><span class="sxs-lookup"><span data-stu-id="59265-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a132-104">構文</span><span class="sxs-lookup"><span data-stu-id="0a132-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetThreadContext(  
@@ -37,30 +35,30 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="59265-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="59265-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a132-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0a132-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="59265-106">[in]コンテキストを設定する対象のスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="59265-106">[in] The ID of the thread for which to set the context.</span></span>  
+ <span data-ttu-id="0a132-106">からコンテキストを設定するスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="0a132-106">[in] The ID of the thread for which to set the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="59265-107">[in] `context` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="59265-107">[in] The size of the `context` array.</span></span>  
+ <span data-ttu-id="0a132-107">[in] `context` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="0a132-107">[in] The size of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="59265-108">[in]スレッドのコンテキストを表すバイトの配列。</span><span class="sxs-lookup"><span data-stu-id="59265-108">[in] An array of bytes that describe the thread's context.</span></span>  
+ <span data-ttu-id="0a132-108">からスレッドのコンテキストを記述するバイト配列。</span><span class="sxs-lookup"><span data-stu-id="0a132-108">[in] An array of bytes that describe the thread's context.</span></span>  
   
- <span data-ttu-id="59265-109">コンテキストには、スレッドが実行されているプロセッサのアーキテクチャを指定します。</span><span class="sxs-lookup"><span data-stu-id="59265-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
+ <span data-ttu-id="0a132-109">コンテキストは、スレッドが実行されているプロセッサのアーキテクチャを指定します。</span><span class="sxs-lookup"><span data-stu-id="0a132-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59265-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="59265-110">Remarks</span></span>  
- <span data-ttu-id="59265-111">デバッガーは、Win32 ではなく、このメソッドを呼び出す必要があります`SetThreadContext`関数は、スレッドは、「ハイジャック」をそのコンテキストが一時的に変更された状態で実際にできるためです。</span><span class="sxs-lookup"><span data-stu-id="59265-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="59265-112">ネイティブ コードでスレッドがある場合にのみ、このメソッドを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="59265-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="59265-113">使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)マネージ コード内のスレッドにします。</span><span class="sxs-lookup"><span data-stu-id="59265-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="59265-114">帯域外の (OOB) のデバッグ イベント時に、スレッドのコンテキストを変更する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="59265-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a132-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="0a132-110">Remarks</span></span>  
+ <span data-ttu-id="0a132-111">デバッガーは、Win32 `SetThreadContext` 関数ではなく、このメソッドを呼び出す必要があります。これは、スレッドが実際には "ハイジャック" 状態にあり、そのコンテキストが一時的に変更されている可能性があるためです。</span><span class="sxs-lookup"><span data-stu-id="0a132-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="0a132-112">このメソッドは、スレッドがネイティブコード内にある場合にのみ使用してください。</span><span class="sxs-lookup"><span data-stu-id="0a132-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="0a132-113">マネージコード内のスレッドには、コード[を使用し](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)ます。</span><span class="sxs-lookup"><span data-stu-id="0a132-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="0a132-114">アウトオブバンド (OOB) デバッグイベント中は、スレッドのコンテキストを変更する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="0a132-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
   
- <span data-ttu-id="59265-115">渡されたデータは、現在のプラットフォームの context 構造体である必要があります。</span><span class="sxs-lookup"><span data-stu-id="59265-115">The data passed must be a context structure for the current platform.</span></span>  
+ <span data-ttu-id="0a132-115">渡されるデータは、現在のプラットフォームのコンテキスト構造である必要があります。</span><span class="sxs-lookup"><span data-stu-id="0a132-115">The data passed must be a context structure for the current platform.</span></span>  
   
- <span data-ttu-id="59265-116">このメソッドは、誤って使用すると、ランタイムを破壊できます。</span><span class="sxs-lookup"><span data-stu-id="59265-116">This method can corrupt the runtime if used improperly.</span></span>  
+ <span data-ttu-id="0a132-116">不適切に使用された場合、このメソッドはランタイムを破損する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0a132-116">This method can corrupt the runtime if used improperly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59265-117">必要条件</span><span class="sxs-lookup"><span data-stu-id="59265-117">Requirements</span></span>  
- <span data-ttu-id="59265-118">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="59265-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a132-117">［要件］</span><span class="sxs-lookup"><span data-stu-id="0a132-117">Requirements</span></span>  
+ <span data-ttu-id="0a132-118">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0a132-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59265-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="59265-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0a132-119">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a132-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="59265-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59265-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a132-120">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a132-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59265-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59265-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="0a132-121">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a132-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

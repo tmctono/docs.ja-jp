@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16916d62a528222db952a1d29dc7c69de2352191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749711"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133122"
 ---
-# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="1fa3a-102">IHostTaskManager::CreateTask メソッド</span><span class="sxs-lookup"><span data-stu-id="1fa3a-102">IHostTaskManager::CreateTask Method</span></span>
-<span data-ttu-id="1fa3a-103">ホストが新しいタスクを作成することを要求します。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-103">Requests that the host create a new task.</span></span>  
+# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="84dc7-102">IHostTaskManager::CreateTask メソッド</span><span class="sxs-lookup"><span data-stu-id="84dc7-102">IHostTaskManager::CreateTask Method</span></span>
+<span data-ttu-id="84dc7-103">ホストが新しいタスクを作成することを要求します。</span><span class="sxs-lookup"><span data-stu-id="84dc7-103">Requests that the host create a new task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1fa3a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1fa3a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84dc7-104">構文</span><span class="sxs-lookup"><span data-stu-id="84dc7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateTask (  
@@ -38,46 +36,46 @@ HRESULT CreateTask (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1fa3a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1fa3a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84dc7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="84dc7-105">Parameters</span></span>  
  `stacksize`  
- <span data-ttu-id="1fa3a-106">[in]要求されたスタック、または 0 (ゼロ) の既定のサイズのバイト単位で要求されたサイズ。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
+ <span data-ttu-id="84dc7-106">から要求されたスタックの要求されたサイズ (バイト単位)、または既定のサイズの 0 (ゼロ)。</span><span class="sxs-lookup"><span data-stu-id="84dc7-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
   
  `pStartAddress`  
- <span data-ttu-id="1fa3a-107">[in]実行するタスクが、関数へのポインターです。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-107">[in] A pointer to the function the task is to execute.</span></span>  
+ <span data-ttu-id="84dc7-107">からタスクが実行する関数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="84dc7-107">[in] A pointer to the function the task is to execute.</span></span>  
   
  `pParameter`  
- <span data-ttu-id="1fa3a-108">[in]関数は、関数、または null の場合に渡されるユーザー データへのポインターには、パラメーターはありません。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
+ <span data-ttu-id="84dc7-108">から関数に渡されるユーザーデータへのポインター。関数がパラメーターを受け取らない場合は null。</span><span class="sxs-lookup"><span data-stu-id="84dc7-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
   
  `ppTask`  
- <span data-ttu-id="1fa3a-109">[out]アドレスへのポインター、 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)タスクを作成できない場合に、ホスト、または null によって作成されたインスタンス。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-109">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="1fa3a-110">タスクへの呼び出しで明示的に開始されるまで中断された状態のまま[ihosttask::start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)します。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span></span>  
+ <span data-ttu-id="84dc7-109">入出力ホストによって作成された[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスのアドレスへのポインター。タスクを作成できない場合は null。</span><span class="sxs-lookup"><span data-stu-id="84dc7-109">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="84dc7-110">このタスクは、 [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)の呼び出しによって明示的に開始されるまで、中断状態のままになります。</span><span class="sxs-lookup"><span data-stu-id="84dc7-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1fa3a-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="1fa3a-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84dc7-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="84dc7-111">Return Value</span></span>  
   
-|<span data-ttu-id="1fa3a-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1fa3a-112">HRESULT</span></span>|<span data-ttu-id="1fa3a-113">説明</span><span class="sxs-lookup"><span data-stu-id="1fa3a-113">Description</span></span>|  
+|<span data-ttu-id="84dc7-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="84dc7-112">HRESULT</span></span>|<span data-ttu-id="84dc7-113">説明</span><span class="sxs-lookup"><span data-stu-id="84dc7-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1fa3a-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="1fa3a-114">S_OK</span></span>|<span data-ttu-id="1fa3a-115">`CreateTask` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-115">`CreateTask` returned successfully.</span></span>|  
-|<span data-ttu-id="1fa3a-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1fa3a-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1fa3a-117">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1fa3a-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1fa3a-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1fa3a-119">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-119">The call timed out.</span></span>|  
-|<span data-ttu-id="1fa3a-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1fa3a-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1fa3a-121">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1fa3a-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1fa3a-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1fa3a-123">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1fa3a-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1fa3a-124">E_FAIL</span></span>|<span data-ttu-id="1fa3a-125">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1fa3a-126">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1fa3a-127">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="1fa3a-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="1fa3a-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="1fa3a-129">メモリが不足は、要求されたタスクを作成できませんでした。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-129">Not enough memory was available to create the requested task.</span></span>|  
+|<span data-ttu-id="84dc7-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="84dc7-114">S_OK</span></span>|<span data-ttu-id="84dc7-115">`CreateTask` が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="84dc7-115">`CreateTask` returned successfully.</span></span>|  
+|<span data-ttu-id="84dc7-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="84dc7-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="84dc7-117">共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。</span><span class="sxs-lookup"><span data-stu-id="84dc7-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="84dc7-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="84dc7-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="84dc7-119">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="84dc7-119">The call timed out.</span></span>|  
+|<span data-ttu-id="84dc7-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="84dc7-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="84dc7-121">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="84dc7-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="84dc7-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="84dc7-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="84dc7-123">ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。</span><span class="sxs-lookup"><span data-stu-id="84dc7-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="84dc7-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="84dc7-124">E_FAIL</span></span>|<span data-ttu-id="84dc7-125">原因不明の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="84dc7-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="84dc7-126">メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="84dc7-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="84dc7-127">後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="84dc7-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="84dc7-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="84dc7-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="84dc7-129">要求されたタスクを作成するのに十分なメモリがありませんでした。</span><span class="sxs-lookup"><span data-stu-id="84dc7-129">Not enough memory was available to create the requested task.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1fa3a-130">Remarks</span><span class="sxs-lookup"><span data-stu-id="1fa3a-130">Remarks</span></span>  
- <span data-ttu-id="1fa3a-131">CLR 呼び出し`CreateTask`ホストが新しいタスクを作成することを要求します。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="1fa3a-132">ホストへのインターフェイス ポインターを返します、`IHostTask`インスタンス。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="1fa3a-133">呼び出しによって起動された明示的になるまで、返されたタスクがする必要があります中断`IHostTask::Start`します。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84dc7-130">Remarks</span><span class="sxs-lookup"><span data-stu-id="84dc7-130">Remarks</span></span>  
+ <span data-ttu-id="84dc7-131">CLR は `CreateTask` を呼び出して、ホストが新しいタスクを作成するように要求します。</span><span class="sxs-lookup"><span data-stu-id="84dc7-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="84dc7-132">ホストは、`IHostTask` インスタンスへのインターフェイスポインターを返します。</span><span class="sxs-lookup"><span data-stu-id="84dc7-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="84dc7-133">返されたタスクは、`IHostTask::Start`の呼び出しによって明示的に開始されるまで、中断されたままになります。</span><span class="sxs-lookup"><span data-stu-id="84dc7-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1fa3a-134">必要条件</span><span class="sxs-lookup"><span data-stu-id="1fa3a-134">Requirements</span></span>  
- <span data-ttu-id="1fa3a-135">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1fa3a-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84dc7-134">［要件］</span><span class="sxs-lookup"><span data-stu-id="84dc7-134">Requirements</span></span>  
+ <span data-ttu-id="84dc7-135">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84dc7-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1fa3a-136">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1fa3a-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="84dc7-136">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="84dc7-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1fa3a-137">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="1fa3a-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84dc7-137">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="84dc7-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1fa3a-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1fa3a-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="84dc7-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84dc7-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fa3a-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="1fa3a-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84dc7-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="84dc7-139">See also</span></span>
 
-- [<span data-ttu-id="1fa3a-140">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1fa3a-140">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="1fa3a-141">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1fa3a-141">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="1fa3a-142">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1fa3a-142">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="1fa3a-143">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1fa3a-143">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="84dc7-140">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84dc7-140">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="84dc7-141">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84dc7-141">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="84dc7-142">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84dc7-142">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="84dc7-143">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84dc7-143">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

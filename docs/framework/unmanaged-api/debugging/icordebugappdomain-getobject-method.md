@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134715"
 ---
-# <a name="icordebugappdomaingetobject-method"></a><span data-ttu-id="8ad59-102">ICorDebugAppDomain::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="8ad59-102">ICorDebugAppDomain::GetObject Method</span></span>
-<span data-ttu-id="8ad59-103">共通言語ランタイム (CLR) のアプリケーション ドメインにインターフェイス ポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="8ad59-103">Gets an interface pointer to the common language runtime (CLR) application domain.</span></span>  
+# <a name="icordebugappdomaingetobject-method"></a><span data-ttu-id="30037-102">ICorDebugAppDomain::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="30037-102">ICorDebugAppDomain::GetObject Method</span></span>
+<span data-ttu-id="30037-103">共通言語ランタイム (CLR) アプリケーションドメインへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="30037-103">Gets an interface pointer to the common language runtime (CLR) application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ad59-104">構文</span><span class="sxs-lookup"><span data-stu-id="8ad59-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30037-104">構文</span><span class="sxs-lookup"><span data-stu-id="30037-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObject (  
@@ -35,21 +33,21 @@ HRESULT GetObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8ad59-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8ad59-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30037-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="30037-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="8ad59-106">[out]CLR のアプリケーション ドメインを表す ICorDebugValue インターフェイス オブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8ad59-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR application domain.</span></span>  
+ <span data-ttu-id="30037-106">入出力CLR アプリケーションドメインを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="30037-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR application domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8ad59-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="8ad59-107">Return Value</span></span>  
- <span data-ttu-id="8ad59-108">マネージ場合<xref:System.AppDomain?displayProperty=nameWithType>このアプリケーション ドメインのオブジェクトが作成されていないメソッドを返します`S_FALSE`配置`NULL`で`*ppObject`します。</span><span class="sxs-lookup"><span data-stu-id="8ad59-108">If a managed <xref:System.AppDomain?displayProperty=nameWithType> object hasn't been constructed for this application domain, the method returns `S_FALSE` and places `NULL` in `*ppObject`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="30037-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="30037-107">Return Value</span></span>  
+ <span data-ttu-id="30037-108">このアプリケーションドメインに対してマネージ <xref:System.AppDomain?displayProperty=nameWithType> オブジェクトが構築されていない場合、メソッドは `S_FALSE` を返し、`NULL` を `*ppObject`に配置します。</span><span class="sxs-lookup"><span data-stu-id="30037-108">If a managed <xref:System.AppDomain?displayProperty=nameWithType> object hasn't been constructed for this application domain, the method returns `S_FALSE` and places `NULL` in `*ppObject`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8ad59-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="8ad59-109">Remarks</span></span>  
- <span data-ttu-id="8ad59-110">マネージ プロセス内の各アプリケーション ドメインがあります<xref:System.AppDomain?displayProperty=nameWithType>それを表す、ランタイム内のオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8ad59-110">Each application domain in a process may have a managed <xref:System.AppDomain?displayProperty=nameWithType> object in the runtime that represents it.</span></span> <span data-ttu-id="8ad59-111">この関数は、この管理に対応する ICorDebugValue インターフェイス オブジェクトを取得します<xref:System.AppDomain?displayProperty=nameWithType>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="8ad59-111">This function gets an ICorDebugValue interface object that corresponds to this managed <xref:System.AppDomain?displayProperty=nameWithType> object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30037-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="30037-109">Remarks</span></span>  
+ <span data-ttu-id="30037-110">プロセス内の各アプリケーションドメインは、それを表すランタイムにマネージ <xref:System.AppDomain?displayProperty=nameWithType> オブジェクトを持つことができます。</span><span class="sxs-lookup"><span data-stu-id="30037-110">Each application domain in a process may have a managed <xref:System.AppDomain?displayProperty=nameWithType> object in the runtime that represents it.</span></span> <span data-ttu-id="30037-111">この関数は、このマネージ <xref:System.AppDomain?displayProperty=nameWithType> オブジェクトに対応する ICorDebugValue インターフェイスオブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="30037-111">This function gets an ICorDebugValue interface object that corresponds to this managed <xref:System.AppDomain?displayProperty=nameWithType> object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8ad59-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="8ad59-112">Requirements</span></span>  
- <span data-ttu-id="8ad59-113">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ad59-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30037-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="30037-112">Requirements</span></span>  
+ <span data-ttu-id="30037-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="30037-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ad59-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8ad59-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="30037-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30037-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8ad59-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8ad59-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30037-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30037-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8ad59-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ad59-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>
+ <span data-ttu-id="30037-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30037-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>

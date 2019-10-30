@@ -14,39 +14,37 @@ helpviewer_keywords:
 ms.assetid: 820330a4-244c-4f67-ab5e-f24b0b3c2080
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 238b054d240437df64a83a9c4daad34d4bd5d36a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f7158bcac7ad22647104e2041da959285d2be8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130487"
 ---
-# <a name="ihostgcmanager-interface"></a><span data-ttu-id="e4140-102">IHostGCManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-102">IHostGCManager Interface</span></span>
-<span data-ttu-id="e4140-103">共通言語ランタイム (CLR) によって実装されるガベージ コレクションのメカニズムでイベントをホストに通知するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="e4140-103">Provides methods that notify the host of events in the garbage collection mechanism implemented by the common language runtime (CLR).</span></span>  
+# <a name="ihostgcmanager-interface"></a><span data-ttu-id="17808-102">IHostGCManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-102">IHostGCManager Interface</span></span>
+<span data-ttu-id="17808-103">共通言語ランタイム (CLR) によって実装されるガベージコレクション機構でイベントのホストに通知するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="17808-103">Provides methods that notify the host of events in the garbage collection mechanism implemented by the common language runtime (CLR).</span></span>  
   
-## <a name="members"></a><span data-ttu-id="e4140-104">メンバー</span><span class="sxs-lookup"><span data-stu-id="e4140-104">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="17808-104">メンバー</span><span class="sxs-lookup"><span data-stu-id="17808-104">Members</span></span>  
   
-|<span data-ttu-id="e4140-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e4140-105">Member</span></span>|<span data-ttu-id="e4140-106">説明</span><span class="sxs-lookup"><span data-stu-id="e4140-106">Description</span></span>|  
+|<span data-ttu-id="17808-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="17808-105">Member</span></span>|<span data-ttu-id="17808-106">説明</span><span class="sxs-lookup"><span data-stu-id="17808-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e4140-107">SuspensionEnding メソッド</span><span class="sxs-lookup"><span data-stu-id="e4140-107">SuspensionEnding Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|<span data-ttu-id="e4140-108">CLR がガベージ コレクションの中断されていたスレッド上のタスクの実行を再開することをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="e4140-108">Notifies the host that the CLR is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>|  
-|[<span data-ttu-id="e4140-109">SuspensionStarting メソッド</span><span class="sxs-lookup"><span data-stu-id="e4140-109">SuspensionStarting Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|<span data-ttu-id="e4140-110">CLR がガベージ コレクションを実行するタスクの実行を中断していることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="e4140-110">Notifies the host that the CLR is suspending execution of tasks, to perform a garbage collection.</span></span>|  
-|[<span data-ttu-id="e4140-111">ThreadIsBlockingForSuspension メソッド</span><span class="sxs-lookup"><span data-stu-id="e4140-111">ThreadIsBlockingForSuspension Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md)|<span data-ttu-id="e4140-112">メソッドの呼び出し元のスレッドは、ホストに通知のガベージ コレクションをブロックします。</span><span class="sxs-lookup"><span data-stu-id="e4140-112">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>|  
+|[<span data-ttu-id="17808-107">SuspensionEnding メソッド</span><span class="sxs-lookup"><span data-stu-id="17808-107">SuspensionEnding Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|<span data-ttu-id="17808-108">CLR がガベージコレクションのために中断されたスレッドでタスクの実行を再開していることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="17808-108">Notifies the host that the CLR is resuming execution of tasks on threads that had been suspended for a garbage collection.</span></span>|  
+|[<span data-ttu-id="17808-109">SuspensionStarting メソッド</span><span class="sxs-lookup"><span data-stu-id="17808-109">SuspensionStarting Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|<span data-ttu-id="17808-110">ガベージコレクションを実行するために、CLR がタスクの実行を中断していることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="17808-110">Notifies the host that the CLR is suspending execution of tasks, to perform a garbage collection.</span></span>|  
+|[<span data-ttu-id="17808-111">ThreadIsBlockingForSuspension メソッド</span><span class="sxs-lookup"><span data-stu-id="17808-111">ThreadIsBlockingForSuspension Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md)|<span data-ttu-id="17808-112">メソッド呼び出しが行われたスレッドがガベージコレクションに対してブロックされようとしていることをホストに通知します。</span><span class="sxs-lookup"><span data-stu-id="17808-112">Notifies the host that the thread from which the method call was made is about to block for a garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e4140-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="e4140-113">Requirements</span></span>  
- <span data-ttu-id="e4140-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e4140-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17808-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="17808-113">Requirements</span></span>  
+ <span data-ttu-id="17808-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="17808-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e4140-115">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e4140-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="17808-115">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="17808-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e4140-116">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="e4140-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="17808-116">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="17808-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e4140-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4140-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="17808-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17808-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4140-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="e4140-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17808-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="17808-118">See also</span></span>
 
-- [<span data-ttu-id="e4140-119">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-119">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="e4140-120">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-120">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="e4140-121">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-121">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="e4140-122">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-122">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="e4140-123">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e4140-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="17808-119">ICLRTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-119">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="17808-120">ICLRTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-120">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="17808-121">IHostTask インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-121">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="17808-122">IHostTaskManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-122">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="17808-123">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17808-123">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

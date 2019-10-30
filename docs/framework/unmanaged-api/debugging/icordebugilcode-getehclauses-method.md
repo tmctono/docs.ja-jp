@@ -12,21 +12,19 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131095"
 ---
-# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="9a459-102">ICorDebugILCode::GetEHClauses メソッド</span><span class="sxs-lookup"><span data-stu-id="9a459-102">ICorDebugILCode::GetEHClauses Method</span></span>
-<span data-ttu-id="9a459-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="9a459-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="980eb-102">ICorDebugILCode::GetEHClauses メソッド</span><span class="sxs-lookup"><span data-stu-id="980eb-102">ICorDebugILCode::GetEHClauses Method</span></span>
+<span data-ttu-id="980eb-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="980eb-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="9a459-104">この中間言語 (IL) に対して定義されている例外処理 (EH) 句のリストへのポインターを返します。</span><span class="sxs-lookup"><span data-stu-id="9a459-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
+ <span data-ttu-id="980eb-104">この中間言語 (IL) に対して定義されている例外処理 (EH) 句のリストへのポインターを返します。</span><span class="sxs-lookup"><span data-stu-id="980eb-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a459-105">構文</span><span class="sxs-lookup"><span data-stu-id="9a459-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="980eb-105">構文</span><span class="sxs-lookup"><span data-stu-id="980eb-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetEHClauses(  
@@ -35,30 +33,30 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a459-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9a459-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="980eb-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="980eb-106">Parameters</span></span>  
  `cClauses`  
- <span data-ttu-id="9a459-107">[入力] `clauses` 配列の記憶容量。</span><span class="sxs-lookup"><span data-stu-id="9a459-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="9a459-108">詳細については、次の「解説」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a459-108">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="980eb-107">[入力] `clauses` 配列の記憶容量。</span><span class="sxs-lookup"><span data-stu-id="980eb-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="980eb-108">詳細については、次の「解説」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="980eb-108">See the Remarks section for more information.</span></span>  
   
  `pcClauses`  
- <span data-ttu-id="9a459-109">[out] 情報が `clauses` アレイに書き込まれる場合に、対象となる句の数。</span><span class="sxs-lookup"><span data-stu-id="9a459-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
+ <span data-ttu-id="980eb-109">[out] 情報が `clauses` アレイに書き込まれる場合に、対象となる句の数。</span><span class="sxs-lookup"><span data-stu-id="980eb-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
   
- <span data-ttu-id="9a459-110">clauses</span><span class="sxs-lookup"><span data-stu-id="9a459-110">clauses</span></span>  
- <span data-ttu-id="9a459-111">[out]配列の[CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)例外処理句をこの IL に対して定義されている情報を含むオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="9a459-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
+ <span data-ttu-id="980eb-110">clauses</span><span class="sxs-lookup"><span data-stu-id="980eb-110">clauses</span></span>  
+ <span data-ttu-id="980eb-111">入出力この IL に対して定義されている例外処理句に関する情報を格納する[CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)オブジェクトの配列。</span><span class="sxs-lookup"><span data-stu-id="980eb-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a459-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="9a459-112">Remarks</span></span>  
- <span data-ttu-id="9a459-113">場合`cClauses`は 0 と`pcClauses`以外**null**、`pcClauses`使用可能な例外処理句の数に設定されています。</span><span class="sxs-lookup"><span data-stu-id="9a459-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="9a459-114">`cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。</span><span class="sxs-lookup"><span data-stu-id="9a459-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="9a459-115">メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。</span><span class="sxs-lookup"><span data-stu-id="9a459-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="980eb-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="980eb-112">Remarks</span></span>  
+ <span data-ttu-id="980eb-113">`cClauses` が0で `pcClauses` が**null**以外の場合、`pcClauses` は使用可能な例外処理句の数に設定されます。</span><span class="sxs-lookup"><span data-stu-id="980eb-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="980eb-114">`cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。</span><span class="sxs-lookup"><span data-stu-id="980eb-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="980eb-115">メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。</span><span class="sxs-lookup"><span data-stu-id="980eb-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a459-116">必要条件</span><span class="sxs-lookup"><span data-stu-id="9a459-116">Requirements</span></span>  
- <span data-ttu-id="9a459-117">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a459-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="980eb-116">［要件］</span><span class="sxs-lookup"><span data-stu-id="980eb-116">Requirements</span></span>  
+ <span data-ttu-id="980eb-117">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="980eb-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a459-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a459-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="980eb-118">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="980eb-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a459-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a459-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="980eb-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="980eb-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a459-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a459-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="980eb-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="980eb-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a459-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a459-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="980eb-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="980eb-121">See also</span></span>
 
-- [<span data-ttu-id="9a459-122">ICorDebugILCode インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9a459-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="9a459-123">CorDebugEHClause 構造体</span><span class="sxs-lookup"><span data-stu-id="9a459-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [<span data-ttu-id="9a459-124">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9a459-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="980eb-122">ICorDebugILCode インターフェイス</span><span class="sxs-lookup"><span data-stu-id="980eb-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="980eb-123">CorDebugEHClause 構造体</span><span class="sxs-lookup"><span data-stu-id="980eb-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
+- [<span data-ttu-id="980eb-124">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="980eb-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

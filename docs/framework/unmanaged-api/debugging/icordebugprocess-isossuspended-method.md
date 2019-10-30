@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da69d4bff0f17eb607dda45fb7dbafea8c59f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755462"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128767"
 ---
-# <a name="icordebugprocessisossuspended-method"></a><span data-ttu-id="3dc4d-102">ICorDebugProcess::IsOSSuspended メソッド</span><span class="sxs-lookup"><span data-stu-id="3dc4d-102">ICorDebugProcess::IsOSSuspended Method</span></span>
-<span data-ttu-id="3dc4d-103">このプロセスを停止するデバッガーの結果として、指定したスレッドが中断されたかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-103">Gets a value that indicates whether the specified thread has been suspended as a result of the debugger stopping this process.</span></span>  
+# <a name="icordebugprocessisossuspended-method"></a><span data-ttu-id="7c974-102">ICorDebugProcess::IsOSSuspended メソッド</span><span class="sxs-lookup"><span data-stu-id="7c974-102">ICorDebugProcess::IsOSSuspended Method</span></span>
+<span data-ttu-id="7c974-103">デバッガーがこのプロセスを停止した結果として、指定されたスレッドが中断されたかどうかを示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="7c974-103">Gets a value that indicates whether the specified thread has been suspended as a result of the debugger stopping this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3dc4d-104">構文</span><span class="sxs-lookup"><span data-stu-id="3dc4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c974-104">構文</span><span class="sxs-lookup"><span data-stu-id="7c974-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsOSSuspended(  
@@ -35,23 +33,23 @@ HRESULT IsOSSuspended(
     [out] BOOL  *pbSuspended);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3dc4d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3dc4d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c974-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7c974-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="3dc4d-106">[in]対象のスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-106">[in] The ID of thread in question.</span></span>  
+ <span data-ttu-id="7c974-106">から対象のスレッドの ID。</span><span class="sxs-lookup"><span data-stu-id="7c974-106">[in] The ID of thread in question.</span></span>  
   
  `pbSuspended`  
- <span data-ttu-id="3dc4d-107">[out]ブール値へのポインター`true`中断されている以外の場合、指定したスレッドがされている場合 \*`pbSuspended`は`false`します。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise \*`pbSuspended` is `false`.</span></span>  
+ <span data-ttu-id="7c974-107">入出力指定したスレッドが中断された場合に `true` されるブール値へのポインター。それ以外の場合、\*`pbSuspended` は `false`です。</span><span class="sxs-lookup"><span data-stu-id="7c974-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise \*`pbSuspended` is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3dc4d-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="3dc4d-108">Remarks</span></span>  
- <span data-ttu-id="3dc4d-109">指定したスレッドの Win32 中断回数でデバッガーがこのプロセスの停止の結果として、指定されたスレッドが中断されたときに 1 ずつインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-109">When the specified thread has been suspended as a result of the debugger stopping this process, the specified thread's Win32 suspend count is incremented by one.</span></span> <span data-ttu-id="3dc4d-110">デバッガー ユーザー インターフェイス (UI) が、オペレーティング システムに表示される場合は、アカウントには、この情報を取得する可能性があります (OS) がユーザーに、スレッドの数を中断します。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-110">The debugger user interface (UI) may want to take this information into account if it displays the operating system (OS) suspend count of the thread to the user.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7c974-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="7c974-108">Remarks</span></span>  
+ <span data-ttu-id="7c974-109">デバッガーがこのプロセスを停止した結果として、指定されたスレッドが中断された場合、指定されたスレッドの Win32 中断カウントは1だけインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="7c974-109">When the specified thread has been suspended as a result of the debugger stopping this process, the specified thread's Win32 suspend count is incremented by one.</span></span> <span data-ttu-id="7c974-110">デバッガーのユーザーインターフェイス (UI) では、ユーザーに対してスレッドのオペレーティングシステム (OS) の中断カウントを表示すると、この情報を考慮に入れることができます。</span><span class="sxs-lookup"><span data-stu-id="7c974-110">The debugger user interface (UI) may want to take this information into account if it displays the operating system (OS) suspend count of the thread to the user.</span></span>  
   
- <span data-ttu-id="3dc4d-111">`IsOSSuspended`メソッドがアンマネージ デバッグのコンテキストでのみ意味します。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-111">The `IsOSSuspended` method makes sense only in the context of unmanaged debugging.</span></span> <span data-ttu-id="3dc4d-112">マネージ デバッグ中のスレッドは協調的中断なく OS 中断です。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-112">During managed debugging, threads are cooperatively suspended rather than OS-suspended.</span></span>  
+ <span data-ttu-id="7c974-111">`IsOSSuspended` メソッドは、アンマネージデバッグのコンテキストでのみ意味があります。</span><span class="sxs-lookup"><span data-stu-id="7c974-111">The `IsOSSuspended` method makes sense only in the context of unmanaged debugging.</span></span> <span data-ttu-id="7c974-112">マネージデバッグ中に、スレッドは、OS が中断するのではなく協調的に中断されます。</span><span class="sxs-lookup"><span data-stu-id="7c974-112">During managed debugging, threads are cooperatively suspended rather than OS-suspended.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3dc4d-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="3dc4d-113">Requirements</span></span>  
- <span data-ttu-id="3dc4d-114">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3dc4d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c974-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="7c974-113">Requirements</span></span>  
+ <span data-ttu-id="7c974-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7c974-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3dc4d-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3dc4d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7c974-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7c974-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3dc4d-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3dc4d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7c974-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c974-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3dc4d-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3dc4d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7c974-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c974-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -1,5 +1,5 @@
 ---
-title: '方法: コマンド ラインから Windows フォーム アプリケーションを作成する。'
+title: '方法: コマンドラインから Windows フォームアプリケーションを作成する'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,113 +9,111 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834808"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127248"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="29f31-102">方法: コマンド ラインから Windows フォーム アプリケーションを作成する。</span><span class="sxs-lookup"><span data-stu-id="29f31-102">How to: Create a Windows Forms application from the command line</span></span>
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a><span data-ttu-id="62ce7-102">方法: コマンドラインから Windows フォームアプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="62ce7-102">How to: Create a Windows Forms application from the command line</span></span>
 
-<span data-ttu-id="29f31-103">次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="29f31-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="29f31-104">Visual Studio では、これらの手順に対する広範なサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="29f31-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="29f31-105">[チュートリアル: WPF での Windows フォーム コントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29f31-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>
+<span data-ttu-id="62ce7-103">次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-103">The following procedures describe the basic steps that you must complete to create and run a Windows Forms application from the command line.</span></span> <span data-ttu-id="62ce7-104">Visual Studio では、これらの手順に対する広範なサポートが用意されています。</span><span class="sxs-lookup"><span data-stu-id="62ce7-104">There is extensive support for these procedures in Visual Studio.</span></span>  <span data-ttu-id="62ce7-105">「[チュートリアル: WPF での Windows フォームコントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="62ce7-105">Also see [Walkthrough: Hosting a Windows Forms Control in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).</span></span>
   
-## <a name="procedure"></a><span data-ttu-id="29f31-106">手順</span><span class="sxs-lookup"><span data-stu-id="29f31-106">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="62ce7-106">プロシージャ</span><span class="sxs-lookup"><span data-stu-id="62ce7-106">Procedure</span></span>  
   
-#### <a name="to-create-the-form"></a><span data-ttu-id="29f31-107">フォームを作成するには</span><span class="sxs-lookup"><span data-stu-id="29f31-107">To create the form</span></span>  
+#### <a name="to-create-the-form"></a><span data-ttu-id="62ce7-107">フォームを作成するには</span><span class="sxs-lookup"><span data-stu-id="62ce7-107">To create the form</span></span>  
   
-1. <span data-ttu-id="29f31-108">空のコードファイルで、次の `Imports` または `using` ステートメントを入力します。</span><span class="sxs-lookup"><span data-stu-id="29f31-108">In an empty code file, type the following `Imports` or `using` statements:</span></span>  
+1. <span data-ttu-id="62ce7-108">空のコードファイルに、次の `Imports` または `using` ステートメントを入力します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-108">In an empty code file, type the following `Imports` or `using` statements:</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. <span data-ttu-id="29f31-109">Form クラスから継承する `Form1` という名前のクラスを宣言します。</span><span class="sxs-lookup"><span data-stu-id="29f31-109">Declare a class named `Form1` that inherits from the Form class:</span></span>
+2. <span data-ttu-id="62ce7-109">Form クラスから継承する `Form1` という名前のクラスを宣言します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-109">Declare a class named `Form1` that inherits from the Form class:</span></span>
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. <span data-ttu-id="29f31-110">のパラメーターなしの`Form1`コンストラクターを作成します。</span><span class="sxs-lookup"><span data-stu-id="29f31-110">Create a parameterless constructor for `Form1`.</span></span>
+3. <span data-ttu-id="62ce7-110">`Form1`のパラメーターなしのコンストラクターを作成します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-110">Create a parameterless constructor for `Form1`.</span></span>
   
-     <span data-ttu-id="29f31-111">後続の手順で、コンストラクターにさらにコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="29f31-111">You will add more code to the constructor in a subsequent procedure.</span></span>
+     <span data-ttu-id="62ce7-111">後続の手順で、コンストラクターにさらにコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-111">You will add more code to the constructor in a subsequent procedure.</span></span>
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. <span data-ttu-id="29f31-112">`Main` メソッドをクラスに追加します。</span><span class="sxs-lookup"><span data-stu-id="29f31-112">Add a `Main` method to the class.</span></span>
+4. <span data-ttu-id="62ce7-112">`Main` メソッドをクラスに追加します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-112">Add a `Main` method to the class.</span></span>
   
-    1. <span data-ttu-id="29f31-113"><xref:System.STAThreadAttribute>をメソッド`Main`にC#適用して、Windows フォームアプリケーションがシングルスレッドアパートメントであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="29f31-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="29f31-114">(Visual Basic で開発された Windows フォームアプリケーションでは、既定でシングルスレッドアパートメントモデルが使用されるため、Visual Basic では属性は必要ありません)。</span><span class="sxs-lookup"><span data-stu-id="29f31-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
+    1. <span data-ttu-id="62ce7-113">C# `Main` メソッドに <xref:System.STAThreadAttribute> を適用して、Windows フォームアプリケーションがシングルスレッドアパートメントであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-113">Apply the <xref:System.STAThreadAttribute> to the C# `Main` method to specify your Windows Forms application is a single-threaded apartment.</span></span> <span data-ttu-id="62ce7-114">(Visual Basic で開発された Windows フォームアプリケーションでは、既定でシングルスレッドアパートメントモデルが使用されるため、Visual Basic では属性は必要ありません)。</span><span class="sxs-lookup"><span data-stu-id="62ce7-114">(The attribute is not necessary in Visual Basic, since Windows forms applications developed with Visual Basic use a single-threaded apartment model by default.)</span></span>  
   
-    2. <span data-ttu-id="29f31-115">を<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>呼び出して、オペレーティングシステムのスタイルをアプリケーションに適用します。</span><span class="sxs-lookup"><span data-stu-id="29f31-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
+    2. <span data-ttu-id="62ce7-115">オペレーティングシステムのスタイルをアプリケーションに適用するには、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A> を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-115">Call <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> to apply operating system styles to your application.</span></span>  
   
-    3. <span data-ttu-id="29f31-116">フォームのインスタンスを作成して実行します。</span><span class="sxs-lookup"><span data-stu-id="29f31-116">Create an instance of the form and run it.</span></span>  
+    3. <span data-ttu-id="62ce7-116">フォームのインスタンスを作成して実行します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-116">Create an instance of the form and run it.</span></span>  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="29f31-117">アプリケーションをコンパイルして実行するには</span><span class="sxs-lookup"><span data-stu-id="29f31-117">To compile and run the application</span></span>  
+#### <a name="to-compile-and-run-the-application"></a><span data-ttu-id="62ce7-117">アプリケーションをコンパイルして実行するには</span><span class="sxs-lookup"><span data-stu-id="62ce7-117">To compile and run the application</span></span>  
   
-1. <span data-ttu-id="29f31-118">.NET Framework コマンド プロンプトで、`Form1` クラスを作成したディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="29f31-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
+1. <span data-ttu-id="62ce7-118">.NET Framework コマンド プロンプトで、`Form1` クラスを作成したディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-118">At the .NET Framework command prompt, navigate to the directory you created the `Form1` class.</span></span>  
   
-2. <span data-ttu-id="29f31-119">フォームをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="29f31-119">Compile the form.</span></span>  
+2. <span data-ttu-id="62ce7-119">フォームをコンパイルします。</span><span class="sxs-lookup"><span data-stu-id="62ce7-119">Compile the form.</span></span>  
   
-    - <span data-ttu-id="29f31-120">を使用してC#いる場合は、次のように入力します。`csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="29f31-120">If you are using C#, type: `csc form1.cs`</span></span>  
+    - <span data-ttu-id="62ce7-120">を使用してC#いる場合は、次のように入力します。 `csc form1.cs`</span><span class="sxs-lookup"><span data-stu-id="62ce7-120">If you are using C#, type: `csc form1.cs`</span></span>  
   
          `-or-`  
   
-    - <span data-ttu-id="29f31-121">Visual Basic を使用している場合は、次のように入力します。`vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="29f31-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
+    - <span data-ttu-id="62ce7-121">Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`</span><span class="sxs-lookup"><span data-stu-id="62ce7-121">If you are using Visual Basic, type: `vbc form1.vb`</span></span>  
   
-3. <span data-ttu-id="29f31-122">コマンドプロンプトで、次のように入力します。`Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="29f31-122">At the command prompt, type: `Form1.exe`</span></span>  
+3. <span data-ttu-id="62ce7-122">コマンドプロンプトで、次のように入力し `Form1.exe`</span><span class="sxs-lookup"><span data-stu-id="62ce7-122">At the command prompt, type: `Form1.exe`</span></span>  
   
-## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="29f31-123">コントロールの追加とイベントの処理</span><span class="sxs-lookup"><span data-stu-id="29f31-123">Adding a control and handling an event</span></span>
+## <a name="adding-a-control-and-handling-an-event"></a><span data-ttu-id="62ce7-123">コントロールの追加とイベントの処理</span><span class="sxs-lookup"><span data-stu-id="62ce7-123">Adding a control and handling an event</span></span>
 
-<span data-ttu-id="29f31-124">前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。</span><span class="sxs-lookup"><span data-stu-id="29f31-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="29f31-125">次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="29f31-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="29f31-126">Windows フォームに追加できるコントロールの詳細については、「[コントロールの Windows フォーム](./controls/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29f31-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](./controls/index.md).</span></span>
+<span data-ttu-id="62ce7-124">前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。</span><span class="sxs-lookup"><span data-stu-id="62ce7-124">The previous procedure steps demonstrated how to just create a basic Windows Form that compiles and runs.</span></span> <span data-ttu-id="62ce7-125">次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-125">The next procedure will show you how to create and add a control to the form, and handle an event for the control.</span></span> <span data-ttu-id="62ce7-126">Windows フォームに追加できるコントロールの詳細については、「[コントロールの Windows フォーム](./controls/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="62ce7-126">For more information about the controls you can add to Windows Forms, see [Windows Forms Controls](./controls/index.md).</span></span>
   
- <span data-ttu-id="29f31-127">Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。</span><span class="sxs-lookup"><span data-stu-id="29f31-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="29f31-128">詳細については、「 [Windows フォームでのイベントハンドラーの作成](creating-event-handlers-in-windows-forms.md)」および「[ユーザー入力の処理](./controls/handling-user-input.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29f31-128">For more information, see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md), and [Handling User Input](./controls/handling-user-input.md)</span></span>  
+ <span data-ttu-id="62ce7-127">Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。</span><span class="sxs-lookup"><span data-stu-id="62ce7-127">In addition to understanding how to create Windows Forms applications, you should understand event-based programming and how to handle user input.</span></span> <span data-ttu-id="62ce7-128">詳細については、「 [Windows フォームでのイベントハンドラーの作成](creating-event-handlers-in-windows-forms.md)」および「[ユーザー入力の処理](./controls/handling-user-input.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="62ce7-128">For more information, see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md), and [Handling User Input](./controls/handling-user-input.md)</span></span>  
   
-#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="29f31-129">ボタン コントロールを宣言して、クリック イベントを処理するには</span><span class="sxs-lookup"><span data-stu-id="29f31-129">To declare a button control and handle its click event</span></span>  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a><span data-ttu-id="62ce7-129">ボタン コントロールを宣言して、クリック イベントを処理するには</span><span class="sxs-lookup"><span data-stu-id="62ce7-129">To declare a button control and handle its click event</span></span>  
   
-1. <span data-ttu-id="29f31-130">`button1` という名前のボタン コントロールを宣言します。</span><span class="sxs-lookup"><span data-stu-id="29f31-130">Declare a button control named `button1`.</span></span>  
+1. <span data-ttu-id="62ce7-130">`button1` という名前のボタン コントロールを宣言します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-130">Declare a button control named `button1`.</span></span>  
   
-2. <span data-ttu-id="29f31-131">コンストラクターでボタンを作成し、<xref:System.Windows.Forms.Control.Size%2A>、<xref:System.Windows.Forms.Control.Location%2A>、および <xref:System.Windows.Forms.Control.Text%2A> の各プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="29f31-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
+2. <span data-ttu-id="62ce7-131">コンストラクターでボタンを作成し、<xref:System.Windows.Forms.Control.Size%2A>、<xref:System.Windows.Forms.Control.Location%2A>、および <xref:System.Windows.Forms.Control.Text%2A> の各プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-131">In the constructor, create the button and set its <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Text%2A> properties.</span></span>  
   
-3. <span data-ttu-id="29f31-132">フォームにボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="29f31-132">Add the button to the form.</span></span>  
+3. <span data-ttu-id="62ce7-132">フォームにボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-132">Add the button to the form.</span></span>  
   
-     <span data-ttu-id="29f31-133">次のコード例は、ボタンコントロールを宣言する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="29f31-133">The following code example demonstrates how to declare the button control:</span></span>
+     <span data-ttu-id="62ce7-133">次のコード例は、ボタンコントロールを宣言する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="62ce7-133">The following code example demonstrates how to declare the button control:</span></span>
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4. <span data-ttu-id="29f31-134">ボタンで <xref:System.Windows.Forms.Control.Click> イベントを処理するメソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="29f31-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
+4. <span data-ttu-id="62ce7-134">ボタンで <xref:System.Windows.Forms.Control.Click> イベントを処理するメソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-134">Create a method to handle the <xref:System.Windows.Forms.Control.Click> event for the button.</span></span>  
   
-5. <span data-ttu-id="29f31-135">クリック イベント ハンドラーで、メッセージ "Hello World" と共に <xref:System.Windows.Forms.MessageBox> を表示します。</span><span class="sxs-lookup"><span data-stu-id="29f31-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
+5. <span data-ttu-id="62ce7-135">クリック イベント ハンドラーで、メッセージ "Hello World" と共に <xref:System.Windows.Forms.MessageBox> を表示します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-135">In the click event handler, display a <xref:System.Windows.Forms.MessageBox> with the message, "Hello World".</span></span>  
   
-     <span data-ttu-id="29f31-136">次のコード例は、ボタンコントロールの click イベントを処理する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="29f31-136">The following code example demonstrates how to handle the button control's click event:</span></span>
+     <span data-ttu-id="62ce7-136">次のコード例は、ボタンコントロールの click イベントを処理する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="62ce7-136">The following code example demonstrates how to handle the button control's click event:</span></span>
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6. <span data-ttu-id="29f31-137"><xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。</span><span class="sxs-lookup"><span data-stu-id="29f31-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
+6. <span data-ttu-id="62ce7-137"><xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。</span><span class="sxs-lookup"><span data-stu-id="62ce7-137">Associate the <xref:System.Windows.Forms.Control.Click> event with the method you created.</span></span>  
   
-     <span data-ttu-id="29f31-138">次のコード例は、イベントをメソッドに関連付ける方法を示します。</span><span class="sxs-lookup"><span data-stu-id="29f31-138">The following code example demonstrates how to associate the event with the method.</span></span>  
+     <span data-ttu-id="62ce7-138">次のコード例は、イベントをメソッドに関連付ける方法を示します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-138">The following code example demonstrates how to associate the event with the method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7. <span data-ttu-id="29f31-139">前の手順で説明したように、アプリケーションをコンパイルして実行します。</span><span class="sxs-lookup"><span data-stu-id="29f31-139">Compile and run the application as described in the previous procedure.</span></span>  
+7. <span data-ttu-id="62ce7-139">前の手順で説明したように、アプリケーションをコンパイルして実行します。</span><span class="sxs-lookup"><span data-stu-id="62ce7-139">Compile and run the application as described in the previous procedure.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="29f31-140">例</span><span class="sxs-lookup"><span data-stu-id="29f31-140">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="62ce7-140">例</span><span class="sxs-lookup"><span data-stu-id="62ce7-140">Example</span></span>  
  
-<span data-ttu-id="29f31-141">次のコード例は、前の手順の完全な例です。</span><span class="sxs-lookup"><span data-stu-id="29f31-141">The following code example is the complete example from the previous procedures:</span></span>
+<span data-ttu-id="62ce7-141">次のコード例は、前の手順の完全な例です。</span><span class="sxs-lookup"><span data-stu-id="62ce7-141">The following code example is the complete example from the previous procedures:</span></span>
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="29f31-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="29f31-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62ce7-142">関連項目</span><span class="sxs-lookup"><span data-stu-id="62ce7-142">See also</span></span>
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [<span data-ttu-id="29f31-143">Windows フォームの表示形式の変更</span><span class="sxs-lookup"><span data-stu-id="29f31-143">Changing the Appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)
-- [<span data-ttu-id="29f31-144">Windows フォーム アプリケーションの拡張</span><span class="sxs-lookup"><span data-stu-id="29f31-144">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
-- [<span data-ttu-id="29f31-145">Windows フォームについて</span><span class="sxs-lookup"><span data-stu-id="29f31-145">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
+- [<span data-ttu-id="62ce7-143">Windows フォームの表示形式の変更</span><span class="sxs-lookup"><span data-stu-id="62ce7-143">Changing the Appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)
+- [<span data-ttu-id="62ce7-144">Windows フォーム アプリケーションの拡張</span><span class="sxs-lookup"><span data-stu-id="62ce7-144">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
+- [<span data-ttu-id="62ce7-145">Windows フォームについて</span><span class="sxs-lookup"><span data-stu-id="62ce7-145">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)

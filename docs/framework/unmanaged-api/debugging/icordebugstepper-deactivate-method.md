@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131763"
 ---
-# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="8d531-102">ICorDebugStepper::Deactivate メソッド</span><span class="sxs-lookup"><span data-stu-id="8d531-102">ICorDebugStepper::Deactivate Method</span></span>
-<span data-ttu-id="8d531-103">Icordebugstepper にすると、受信した最後の手順のコマンドをキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="8d531-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
+# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="655b7-102">ICorDebugStepper::Deactivate メソッド</span><span class="sxs-lookup"><span data-stu-id="655b7-102">ICorDebugStepper::Deactivate Method</span></span>
+<span data-ttu-id="655b7-103">この ICorDebugStepper は、受け取った最後のステップコマンドをキャンセルします。</span><span class="sxs-lookup"><span data-stu-id="655b7-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d531-104">構文</span><span class="sxs-lookup"><span data-stu-id="8d531-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="655b7-104">構文</span><span class="sxs-lookup"><span data-stu-id="655b7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Deactivate ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="8d531-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="8d531-105">Remarks</span></span>  
- <span data-ttu-id="8d531-106">最後に受信したステップ コマンドが取り消された後、新しいステップ実行コマンドを発行できます。</span><span class="sxs-lookup"><span data-stu-id="8d531-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="655b7-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="655b7-105">Remarks</span></span>  
+ <span data-ttu-id="655b7-106">最後に受信したステップコマンドが取り消された後に、新しいステップ実行コマンドが発行される場合があります。</span><span class="sxs-lookup"><span data-stu-id="655b7-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8d531-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="8d531-107">Requirements</span></span>  
- <span data-ttu-id="8d531-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8d531-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="655b7-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="655b7-107">Requirements</span></span>  
+ <span data-ttu-id="655b7-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="655b7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d531-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d531-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="655b7-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="655b7-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8d531-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d531-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="655b7-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="655b7-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8d531-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d531-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="655b7-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="655b7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

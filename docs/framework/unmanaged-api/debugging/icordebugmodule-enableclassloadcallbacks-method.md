@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9b4867ad19f25e35ca31c007c0d238b949abab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c18ed781d44c873b4cd1957bf0102a4ce0cccad4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139220"
 ---
-# <a name="icordebugmoduleenableclassloadcallbacks-method"></a><span data-ttu-id="cb2cf-102">ICorDebugModule::EnableClassLoadCallbacks メソッド</span><span class="sxs-lookup"><span data-stu-id="cb2cf-102">ICorDebugModule::EnableClassLoadCallbacks Method</span></span>
-<span data-ttu-id="cb2cf-103">コントロールかどうか、 [icordebugmanagedcallback::loadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)と[icordebugmanagedcallback::unloadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)このモジュールのコールバックが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-103">Controls whether the [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) and [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) callbacks are called for this module.</span></span>  
+# <a name="icordebugmoduleenableclassloadcallbacks-method"></a><span data-ttu-id="87578-102">ICorDebugModule::EnableClassLoadCallbacks メソッド</span><span class="sxs-lookup"><span data-stu-id="87578-102">ICorDebugModule::EnableClassLoadCallbacks Method</span></span>
+<span data-ttu-id="87578-103">このモジュールに対して、" [UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) " コール[バック:: loadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)との各コールバックを呼び出すかどうかを制御します。</span><span class="sxs-lookup"><span data-stu-id="87578-103">Controls whether the [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) and [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) callbacks are called for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb2cf-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb2cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87578-104">構文</span><span class="sxs-lookup"><span data-stu-id="87578-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnableClassLoadCallbacks(  
@@ -35,22 +33,22 @@ HRESULT EnableClassLoadCallbacks(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb2cf-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb2cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87578-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="87578-105">Parameters</span></span>  
  `bClassLoadCallbacks`  
- <span data-ttu-id="cb2cf-106">[in]この値に設定`true`共通言語ランタイム (CLR) に呼び出しを有効にする、`ICorDebugManagedCallback::LoadClass`と`ICorDebugManagedCallback::UnloadClass`メソッド、関連するイベントが発生するとします。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-106">[in] Set this value to `true` to enable the common language runtime (CLR) to call the `ICorDebugManagedCallback::LoadClass` and `ICorDebugManagedCallback::UnloadClass` methods when their associated events occur.</span></span>  
+ <span data-ttu-id="87578-106">からこの値を `true` に設定すると、共通言語ランタイム (CLR) が、関連付けられたイベントが発生したときに `ICorDebugManagedCallback::LoadClass` および `ICorDebugManagedCallback::UnloadClass` メソッドを呼び出すことができるようになります。</span><span class="sxs-lookup"><span data-stu-id="87578-106">[in] Set this value to `true` to enable the common language runtime (CLR) to call the `ICorDebugManagedCallback::LoadClass` and `ICorDebugManagedCallback::UnloadClass` methods when their associated events occur.</span></span>  
   
- <span data-ttu-id="cb2cf-107">既定値は`false`非動的モジュール。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-107">The default value is `false` for non-dynamic modules.</span></span> <span data-ttu-id="cb2cf-108">値は常に`true`動的モジュールを変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-108">The value is always `true` for dynamic modules and cannot be changed.</span></span>  
+ <span data-ttu-id="87578-107">既定値は、非動的モジュールの場合は `false` です。</span><span class="sxs-lookup"><span data-stu-id="87578-107">The default value is `false` for non-dynamic modules.</span></span> <span data-ttu-id="87578-108">動的モジュールの値は常に `true`、変更することはできません。</span><span class="sxs-lookup"><span data-stu-id="87578-108">The value is always `true` for dynamic modules and cannot be changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb2cf-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="cb2cf-109">Remarks</span></span>  
- <span data-ttu-id="cb2cf-110">`ICorDebugManagedCallback::LoadClass`と`ICorDebugManagedCallback::UnloadClass`コールバックは、動的モジュールが常に有効し、無効にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-110">The `ICorDebugManagedCallback::LoadClass` and `ICorDebugManagedCallback::UnloadClass` callbacks are always enabled for dynamic modules and cannot be disabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87578-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="87578-109">Remarks</span></span>  
+ <span data-ttu-id="87578-110">`ICorDebugManagedCallback::LoadClass` と `ICorDebugManagedCallback::UnloadClass` のコールバックは動的モジュールに対して常に有効であり、無効にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="87578-110">The `ICorDebugManagedCallback::LoadClass` and `ICorDebugManagedCallback::UnloadClass` callbacks are always enabled for dynamic modules and cannot be disabled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb2cf-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="cb2cf-111">Requirements</span></span>  
- <span data-ttu-id="cb2cf-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb2cf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87578-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="87578-111">Requirements</span></span>  
+ <span data-ttu-id="87578-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="87578-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb2cf-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb2cf-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="87578-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="87578-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cb2cf-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb2cf-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="87578-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87578-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb2cf-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb2cf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="87578-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87578-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb2cf-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb2cf-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87578-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="87578-116">See also</span></span>

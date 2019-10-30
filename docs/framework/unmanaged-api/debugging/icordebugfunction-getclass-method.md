@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 218818097846709ec92e20f33a0707314edd562a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754740"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124031"
 ---
-# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="db811-102">ICorDebugFunction::GetClass メソッド</span><span class="sxs-lookup"><span data-stu-id="db811-102">ICorDebugFunction::GetClass Method</span></span>
-<span data-ttu-id="db811-103">この関数のメンバーであるクラスを表す ICorDebugClass オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="db811-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
+# <a name="icordebugfunctiongetclass-method"></a><span data-ttu-id="e245f-102">ICorDebugFunction::GetClass メソッド</span><span class="sxs-lookup"><span data-stu-id="e245f-102">ICorDebugFunction::GetClass Method</span></span>
+<span data-ttu-id="e245f-103">この関数がメンバーとなっているクラスを表す、のオブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="e245f-103">Gets an ICorDebugClass object that represents the class this function is a member of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db811-104">構文</span><span class="sxs-lookup"><span data-stu-id="db811-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e245f-104">構文</span><span class="sxs-lookup"><span data-stu-id="e245f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClass (  
@@ -35,15 +33,15 @@ HRESULT GetClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db811-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="db811-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e245f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e245f-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="db811-106">[out]アドレスへのポインター、`ICorDebugClass`オブジェクトを表すクラス、または null の場合、この関数は、クラスのメンバーではない場合。</span><span class="sxs-lookup"><span data-stu-id="db811-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
+ <span data-ttu-id="e245f-106">入出力クラスを表す `ICorDebugClass` オブジェクトのアドレスへのポインター。この関数がクラスのメンバーでない場合は null。</span><span class="sxs-lookup"><span data-stu-id="e245f-106">[out] A pointer to the address of the `ICorDebugClass` object that represents the class, or null, if this function is not a member of a class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db811-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="db811-107">Requirements</span></span>  
- <span data-ttu-id="db811-108">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="db811-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e245f-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="e245f-107">Requirements</span></span>  
+ <span data-ttu-id="e245f-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e245f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db811-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db811-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e245f-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e245f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="db811-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db811-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e245f-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e245f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="db811-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db811-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e245f-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e245f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
