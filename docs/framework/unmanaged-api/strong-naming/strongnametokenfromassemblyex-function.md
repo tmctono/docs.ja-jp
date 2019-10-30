@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c000aad12000a9c76fb6dd805a9b002c021be6ef
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7866b92be3195b0a767a823a0d7fb1c0aa4918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104248"
 ---
-# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="43581-102">StrongNameTokenFromAssemblyEx 関数</span><span class="sxs-lookup"><span data-stu-id="43581-102">StrongNameTokenFromAssemblyEx Function</span></span>
-<span data-ttu-id="43581-103">指定したアセンブリファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。</span><span class="sxs-lookup"><span data-stu-id="43581-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
+# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="74228-102">StrongNameTokenFromAssemblyEx 関数</span><span class="sxs-lookup"><span data-stu-id="74228-102">StrongNameTokenFromAssemblyEx Function</span></span>
+<span data-ttu-id="74228-103">指定したアセンブリファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。</span><span class="sxs-lookup"><span data-stu-id="74228-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
   
- <span data-ttu-id="43581-104">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="43581-104">This function has been deprecated.</span></span> <span data-ttu-id="43581-105">代わりに[ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="43581-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
+ <span data-ttu-id="74228-104">この関数は非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="74228-104">This function has been deprecated.</span></span> <span data-ttu-id="74228-105">代わりに[ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)メソッドを使用してください。</span><span class="sxs-lookup"><span data-stu-id="74228-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43581-106">構文</span><span class="sxs-lookup"><span data-stu-id="43581-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74228-106">構文</span><span class="sxs-lookup"><span data-stu-id="74228-106">Syntax</span></span>  
   
 ```cpp  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
@@ -40,43 +38,43 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="43581-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="43581-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="74228-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="74228-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="43581-108">からアセンブリのポータブル実行可能 (PE) ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="43581-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="74228-108">からアセンブリのポータブル実行可能 (PE) ファイルへのパス。</span><span class="sxs-lookup"><span data-stu-id="74228-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="43581-109">入出力返された厳密な名前トークン。</span><span class="sxs-lookup"><span data-stu-id="43581-109">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="74228-109">入出力返された厳密な名前トークン。</span><span class="sxs-lookup"><span data-stu-id="74228-109">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="43581-110">入出力厳密な名前トークンのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="43581-110">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="74228-110">入出力厳密な名前トークンのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="74228-110">[out] The size, in bytes, of the strong name token.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="43581-111">入出力返された公開キー。</span><span class="sxs-lookup"><span data-stu-id="43581-111">[out] The returned public key.</span></span>  
+ <span data-ttu-id="74228-111">入出力返された公開キー。</span><span class="sxs-lookup"><span data-stu-id="74228-111">[out] The returned public key.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="43581-112">入出力公開キーのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="43581-112">[out] The size, in bytes, of the public key.</span></span>  
+ <span data-ttu-id="74228-112">入出力公開キーのサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="74228-112">[out] The size, in bytes, of the public key.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="43581-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="43581-113">Return Value</span></span>  
- <span data-ttu-id="43581-114">`true`正常に完了した場合は。それ以外`false`の場合は。</span><span class="sxs-lookup"><span data-stu-id="43581-114">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="74228-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="74228-113">Return Value</span></span>  
+ <span data-ttu-id="74228-114">正常に完了した場合は `true`。それ以外の場合は、`false`ます。</span><span class="sxs-lookup"><span data-stu-id="74228-114">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="43581-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="43581-115">Remarks</span></span>  
- <span data-ttu-id="43581-116">厳密な名前トークンは、公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="43581-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="43581-117">トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。</span><span class="sxs-lookup"><span data-stu-id="43581-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="43581-118">トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="43581-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="74228-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="74228-115">Remarks</span></span>  
+ <span data-ttu-id="74228-116">厳密な名前トークンは、公開キーの短縮形です。</span><span class="sxs-lookup"><span data-stu-id="74228-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="74228-117">トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。</span><span class="sxs-lookup"><span data-stu-id="74228-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="74228-118">トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="74228-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="43581-119">キーを取得してトークンを作成したら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を呼び出して、割り当てられたメモリを解放する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43581-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+ <span data-ttu-id="74228-119">キーを取得してトークンを作成したら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を呼び出して、割り当てられたメモリを解放する必要があります。</span><span class="sxs-lookup"><span data-stu-id="74228-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="43581-120">関数が正常に完了しない場合は、[StrongNameErrorInfo](strongnameerrorinfo-function.md) 関数を呼び出して、最後に生成されたエラーを取得します。`StrongNameTokenFromAssemblyEx`</span><span class="sxs-lookup"><span data-stu-id="43581-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="74228-120">`StrongNameTokenFromAssemblyEx` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。</span><span class="sxs-lookup"><span data-stu-id="74228-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43581-121">必要条件</span><span class="sxs-lookup"><span data-stu-id="43581-121">Requirements</span></span>  
- <span data-ttu-id="43581-122">**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="43581-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74228-121">［要件］</span><span class="sxs-lookup"><span data-stu-id="74228-121">Requirements</span></span>  
+ <span data-ttu-id="74228-122">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="74228-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43581-123">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="43581-123">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="74228-123">**ヘッダー:** StrongName</span><span class="sxs-lookup"><span data-stu-id="74228-123">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="43581-124">**ライブラリ**Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="43581-124">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="74228-124">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="74228-124">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="43581-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43581-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="74228-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74228-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43581-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="43581-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74228-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="74228-126">See also</span></span>
 
-- [<span data-ttu-id="43581-127">StrongNameTokenFromAssemblyEx メソッド</span><span class="sxs-lookup"><span data-stu-id="43581-127">StrongNameTokenFromAssemblyEx Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [<span data-ttu-id="43581-128">StrongNameTokenFromAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="43581-128">StrongNameTokenFromAssembly Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [<span data-ttu-id="43581-129">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="43581-129">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="74228-127">StrongNameTokenFromAssemblyEx メソッド</span><span class="sxs-lookup"><span data-stu-id="74228-127">StrongNameTokenFromAssemblyEx Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [<span data-ttu-id="74228-128">StrongNameTokenFromAssembly メソッド</span><span class="sxs-lookup"><span data-stu-id="74228-128">StrongNameTokenFromAssembly Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [<span data-ttu-id="74228-129">ICLRStrongName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="74228-129">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
