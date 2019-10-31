@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195959"
 ---
-# <a name="bucketparameters-structure"></a><span data-ttu-id="910e8-102">BucketParameters 構造体</span><span class="sxs-lookup"><span data-stu-id="910e8-102">BucketParameters Structure</span></span>
-<span data-ttu-id="910e8-103">イベントに関連付けられている現在の例外のイベントと、パラメーターの型名を格納します。</span><span class="sxs-lookup"><span data-stu-id="910e8-103">Stores the type name of an event and the parameters for the current exception that is associated with the event.</span></span>  
+# <a name="bucketparameters-structure"></a><span data-ttu-id="ceb2a-102">BucketParameters 構造体</span><span class="sxs-lookup"><span data-stu-id="ceb2a-102">BucketParameters Structure</span></span>
+<span data-ttu-id="ceb2a-103">イベントの型名と、イベントに関連付けられている現在の例外のパラメーターを格納します。</span><span class="sxs-lookup"><span data-stu-id="ceb2a-103">Stores the type name of an event and the parameters for the current exception that is associated with the event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="910e8-104">構文</span><span class="sxs-lookup"><span data-stu-id="910e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ceb2a-104">構文</span><span class="sxs-lookup"><span data-stu-id="ceb2a-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _BucketParameters {  
@@ -36,21 +34,21 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="910e8-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="910e8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ceb2a-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="ceb2a-105">Members</span></span>  
   
-|<span data-ttu-id="910e8-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="910e8-106">Member</span></span>|<span data-ttu-id="910e8-107">説明</span><span class="sxs-lookup"><span data-stu-id="910e8-107">Description</span></span>|  
+|<span data-ttu-id="ceb2a-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="ceb2a-106">Member</span></span>|<span data-ttu-id="ceb2a-107">説明</span><span class="sxs-lookup"><span data-stu-id="ceb2a-107">Description</span></span>|  
 |------------|-----------------|  
-|`fInited`|<span data-ttu-id="910e8-108">`true`、この構造体の残りの部分が有効な場合それ以外の場合、`false`します。</span><span class="sxs-lookup"><span data-stu-id="910e8-108">`true`, if the rest of this structure is valid; otherwise, `false`.</span></span>|  
-|`pszEventTypeName`|<span data-ttu-id="910e8-109">イベントの種類の名前です。</span><span class="sxs-lookup"><span data-stu-id="910e8-109">Name of the event type.</span></span>|  
-|`pszParams`|<span data-ttu-id="910e8-110">文字列の配列、各イベントに関連付けられている現在の例外のパラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="910e8-110">An array of strings, each of which specifies a parameter for the current exception associated with the event.</span></span>|  
+|`fInited`|<span data-ttu-id="ceb2a-108">この構造体の残りの部分が有効である場合は `true`。それ以外の場合は、`false`ます。</span><span class="sxs-lookup"><span data-stu-id="ceb2a-108">`true`, if the rest of this structure is valid; otherwise, `false`.</span></span>|  
+|`pszEventTypeName`|<span data-ttu-id="ceb2a-109">イベントの種類の名前。</span><span class="sxs-lookup"><span data-stu-id="ceb2a-109">Name of the event type.</span></span>|  
+|`pszParams`|<span data-ttu-id="ceb2a-110">文字列の配列。各文字列は、イベントに関連付けられている現在の例外のパラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="ceb2a-110">An array of strings, each of which specifies a parameter for the current exception associated with the event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="910e8-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="910e8-111">Requirements</span></span>  
- <span data-ttu-id="910e8-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="910e8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ceb2a-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="ceb2a-111">Requirements</span></span>  
+ <span data-ttu-id="ceb2a-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ceb2a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="910e8-113">**ヘッダー:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="910e8-113">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="ceb2a-113">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="ceb2a-113">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="910e8-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="910e8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ceb2a-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ceb2a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="910e8-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="910e8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ceb2a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="ceb2a-115">See also</span></span>
 
-- [<span data-ttu-id="910e8-116">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="910e8-116">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="ceb2a-116">ホスト構造体</span><span class="sxs-lookup"><span data-stu-id="ceb2a-116">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

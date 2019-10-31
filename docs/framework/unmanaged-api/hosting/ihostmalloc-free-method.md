@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6de6d12322e29ddcc854f6b9aed0a4790af089e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7ae4e4cbb757edea242c57720baeb70ced5c428
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780722"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192052"
 ---
-# <a name="ihostmallocfree-method"></a><span data-ttu-id="fb2c6-102">IHostMAlloc::Free メソッド</span><span class="sxs-lookup"><span data-stu-id="fb2c6-102">IHostMAlloc::Free Method</span></span>
-<span data-ttu-id="fb2c6-103">使用して割り当てられたメモリを解放、[アロケーション](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)関数。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-103">Frees memory that was allocated by using the [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) function.</span></span>  
+# <a name="ihostmallocfree-method"></a><span data-ttu-id="119ca-102">IHostMAlloc::Free メソッド</span><span class="sxs-lookup"><span data-stu-id="119ca-102">IHostMAlloc::Free Method</span></span>
+<span data-ttu-id="119ca-103">[Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)関数を使用して割り当てられたメモリを解放します。</span><span class="sxs-lookup"><span data-stu-id="119ca-103">Frees memory that was allocated by using the [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb2c6-104">構文</span><span class="sxs-lookup"><span data-stu-id="fb2c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="119ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="119ca-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Free (  
@@ -35,35 +33,35 @@ HRESULT Free (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fb2c6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fb2c6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="119ca-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="119ca-105">Parameters</span></span>  
  `pMem`  
- <span data-ttu-id="fb2c6-106">[in]解放するメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-106">[in] A pointer to the memory to be freed.</span></span>  
+ <span data-ttu-id="119ca-106">から解放するメモリへのポインター。</span><span class="sxs-lookup"><span data-stu-id="119ca-106">[in] A pointer to the memory to be freed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fb2c6-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="fb2c6-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="119ca-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="119ca-107">Return Value</span></span>  
   
-|<span data-ttu-id="fb2c6-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fb2c6-108">HRESULT</span></span>|<span data-ttu-id="fb2c6-109">説明</span><span class="sxs-lookup"><span data-stu-id="fb2c6-109">Description</span></span>|  
+|<span data-ttu-id="119ca-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="119ca-108">HRESULT</span></span>|<span data-ttu-id="119ca-109">説明</span><span class="sxs-lookup"><span data-stu-id="119ca-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fb2c6-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="fb2c6-110">S_OK</span></span>|<span data-ttu-id="fb2c6-111">`Free` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-111">`Free` returned successfully.</span></span>|  
-|<span data-ttu-id="fb2c6-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fb2c6-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fb2c6-113">共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="fb2c6-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fb2c6-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fb2c6-115">呼び出しがタイムアウトになりました。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-115">The call timed out.</span></span>|  
-|<span data-ttu-id="fb2c6-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fb2c6-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fb2c6-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="fb2c6-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fb2c6-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fb2c6-119">イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="fb2c6-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fb2c6-120">E_FAIL</span></span>|<span data-ttu-id="fb2c6-121">不明な致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fb2c6-122">メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fb2c6-123">メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="fb2c6-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="fb2c6-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="fb2c6-125">ホストを通じて割り当てられていないメモリを解放しようとしました。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-125">An attempt was made to free memory that was not allocated through the host.</span></span>|  
+|<span data-ttu-id="119ca-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="119ca-110">S_OK</span></span>|<span data-ttu-id="119ca-111">`Free` が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="119ca-111">`Free` returned successfully.</span></span>|  
+|<span data-ttu-id="119ca-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="119ca-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="119ca-113">共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。</span><span class="sxs-lookup"><span data-stu-id="119ca-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="119ca-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="119ca-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="119ca-115">呼び出しがタイムアウトしました。</span><span class="sxs-lookup"><span data-stu-id="119ca-115">The call timed out.</span></span>|  
+|<span data-ttu-id="119ca-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="119ca-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="119ca-117">呼び出し元がロックを所有していません。</span><span class="sxs-lookup"><span data-stu-id="119ca-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="119ca-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="119ca-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="119ca-119">ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。</span><span class="sxs-lookup"><span data-stu-id="119ca-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="119ca-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="119ca-120">E_FAIL</span></span>|<span data-ttu-id="119ca-121">原因不明の致命的なエラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="119ca-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="119ca-122">メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="119ca-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="119ca-123">後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。</span><span class="sxs-lookup"><span data-stu-id="119ca-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="119ca-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="119ca-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="119ca-125">ホストを通じて割り当てられていないメモリを解放しようとしました。</span><span class="sxs-lookup"><span data-stu-id="119ca-125">An attempt was made to free memory that was not allocated through the host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fb2c6-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="fb2c6-126">Remarks</span></span>  
- <span data-ttu-id="fb2c6-127">場合、`pMem`パラメーターへの呼び出しを使用して割り当てられていないメモリの領域を指す`Alloc`ホストは HOST_E_INVALIDOPERATION を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-127">If the `pMem` parameter refers to a region of memory that was not allocated by using a call to `Alloc`, the host should return HOST_E_INVALIDOPERATION.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="119ca-126">Remarks</span><span class="sxs-lookup"><span data-stu-id="119ca-126">Remarks</span></span>  
+ <span data-ttu-id="119ca-127">`pMem` パラメーターが `Alloc`の呼び出しを使用して割り当てられていないメモリ領域を参照している場合、ホストは HOST_E_INVALIDOPERATION を返します。</span><span class="sxs-lookup"><span data-stu-id="119ca-127">If the `pMem` parameter refers to a region of memory that was not allocated by using a call to `Alloc`, the host should return HOST_E_INVALIDOPERATION.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb2c6-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="fb2c6-128">Requirements</span></span>  
- <span data-ttu-id="fb2c6-129">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="fb2c6-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="119ca-128">［要件］</span><span class="sxs-lookup"><span data-stu-id="119ca-128">Requirements</span></span>  
+ <span data-ttu-id="119ca-129">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="119ca-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb2c6-130">**ヘッダー:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fb2c6-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="119ca-130">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="119ca-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fb2c6-131">**ライブラリ:** MSCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="fb2c6-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="119ca-131">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="119ca-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fb2c6-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb2c6-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="119ca-132">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="119ca-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb2c6-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="fb2c6-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="119ca-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="119ca-133">See also</span></span>
 
-- [<span data-ttu-id="fb2c6-134">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fb2c6-134">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="fb2c6-135">IHostMalloc インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fb2c6-135">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [<span data-ttu-id="119ca-134">IHostMemoryManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="119ca-134">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="119ca-135">IHostMalloc インターフェイス</span><span class="sxs-lookup"><span data-stu-id="119ca-135">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
