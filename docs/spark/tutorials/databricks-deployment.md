@@ -4,175 +4,225 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583519"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72961072"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="87ba9-103">.NET for Apache Spark アプリケーションを Databricks にデプロイする</span><span class="sxs-lookup"><span data-stu-id="87ba9-103">Deploy a .NET for Apache Spark application to Databricks</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a><span data-ttu-id="11cae-103">チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする</span><span class="sxs-lookup"><span data-stu-id="11cae-103">Tutorial: Deploy a .NET for Apache Spark application to Databricks</span></span>
 
-<span data-ttu-id="87ba9-104">このチュートリアルでは、.NET for Apache Spark アプリケーションを Databricks にデプロイする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Databricks.</span></span>
+<span data-ttu-id="11cae-104">このチュートリアルでは、Azure Databricks を使用してクラウドにアプリをデプロイする方法について説明します。Azure Databricks は、ワンクリックでセットアップでき、ワークフローを合理化し、コラボレーションを可能にするインタラクティブなワークスペースを提供する、Apache Spark ベースの分析プラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="11cae-104">This tutorial teaches you how to deploy your app to the cloud through Azure Databricks, an Apache Spark-based analytics platform with one-click setup, streamlined workflows, and interactive workspace that enables collaboration.</span></span>
 
-<span data-ttu-id="87ba9-105">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="11cae-105">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="11cae-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
->
-> * <span data-ttu-id="87ba9-106">Microsoft.Spark.Worker を準備する</span><span class="sxs-lookup"><span data-stu-id="87ba9-106">Prepare Microsoft.Spark.Worker</span></span>
-> * <span data-ttu-id="87ba9-107">Spark .NET アプリを発行する</span><span class="sxs-lookup"><span data-stu-id="87ba9-107">Publish your Spark .NET app</span></span>
-> * <span data-ttu-id="87ba9-108">Databricks にアプリをデプロイする</span><span class="sxs-lookup"><span data-stu-id="87ba9-108">Deploy your app to Databricks</span></span>
-> * <span data-ttu-id="87ba9-109">アプリの実行</span><span class="sxs-lookup"><span data-stu-id="87ba9-109">Run your app</span></span>
+> <span data-ttu-id="11cae-106">Azure Databricks ワークスペースを作成する。</span><span class="sxs-lookup"><span data-stu-id="11cae-106">Create an Azure Databricks workspace.</span></span>
+> <span data-ttu-id="11cae-107">.NET for Apache Spark アプリを発行する。</span><span class="sxs-lookup"><span data-stu-id="11cae-107">Publish your .NET for Apache Spark app.</span></span>
+> <span data-ttu-id="11cae-108">Spark ジョブと Spark クラスターを作成する。</span><span class="sxs-lookup"><span data-stu-id="11cae-108">Create a Spark job and Spark cluster.</span></span>
+> <span data-ttu-id="11cae-109">Spark クラスターでアプリを実行する。</span><span class="sxs-lookup"><span data-stu-id="11cae-109">Run your app on the Spark cluster.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="87ba9-110">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="87ba9-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="11cae-110">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="11cae-110">Prerequisites</span></span>
 
-<span data-ttu-id="87ba9-111">開始する前に、以下を行います。</span><span class="sxs-lookup"><span data-stu-id="87ba9-111">Before you start, do the following:</span></span>
+<span data-ttu-id="11cae-111">開始する前に、以下の作業を行います。</span><span class="sxs-lookup"><span data-stu-id="11cae-111">Before you start, do the following tasks:</span></span>
 
-* <span data-ttu-id="87ba9-112">[Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-112">Download the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-* <span data-ttu-id="87ba9-113">[install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をお使いのローカル コンピューターにダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="87ba9-114">これは、後で .NET for Apache Spark の依存ファイルを Spark クラスターのワーカー ノードにコピーするために使用するヘルパー スクリプトです。</span><span class="sxs-lookup"><span data-stu-id="87ba9-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="11cae-112">Azure アカウントがない場合は、[無料アカウント](https://azure.microsoft.com/free/)を作成します。</span><span class="sxs-lookup"><span data-stu-id="11cae-112">If you don't have an Azure account, create a [free account](https://azure.microsoft.com/free/).</span></span>
+* <span data-ttu-id="11cae-113">[Azure Portal](https://portal.azure.com/) にサインインします。</span><span class="sxs-lookup"><span data-stu-id="11cae-113">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="11cae-114">「[.NET for Apache Spark - 10 分で開始する](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」のチュートリアルを完了します。</span><span class="sxs-lookup"><span data-stu-id="11cae-114">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="87ba9-115">ワーカーの依存関係を準備する</span><span class="sxs-lookup"><span data-stu-id="87ba9-115">Prepare worker dependencies</span></span>
+## <a name="create-an-azure-databricks-workspace"></a><span data-ttu-id="11cae-115">Azure Databricks ワークスペースを作成する</span><span class="sxs-lookup"><span data-stu-id="11cae-115">Create an Azure Databricks workspace</span></span>
 
-<span data-ttu-id="87ba9-116">**Microsoft.Spark.Worker** は、Spark クラスターの個々のワーカー ノードに存在するバックエンド コンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="87ba9-116">**Microsoft.Spark.Worker** is a back-end component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="87ba9-117">C# UDF (ユーザー定義関数) を実行する場合、.NET CLR を起動して UDF を実行する方法を Spark が理解している必要があります。</span><span class="sxs-lookup"><span data-stu-id="87ba9-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="87ba9-118">**Microsoft.Spark.Worker** により、この機能を有効にするクラスのコレクションが Spark に提供されます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+> [!Note]
+> <span data-ttu-id="11cae-116">**Azure 無料試用版サブスクリプション**を使用してこのチュートリアルを実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="11cae-116">This tutorial cannot be carried out using **Azure Free Trial Subscription**.</span></span>
+> <span data-ttu-id="11cae-117">無料アカウントをお持ちの場合は、お使いのプロファイルにアクセスし、サブスクリプションを **[従量課金制]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="11cae-117">If you have a free account, go to your profile and change your subscription to **pay-as-you-go**.</span></span> <span data-ttu-id="11cae-118">詳細については、[Azure 無料アカウント](https://azure.microsoft.com/free/)に関するページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="11cae-118">For more information, see [Azure free account](https://azure.microsoft.com/free/).</span></span> <span data-ttu-id="11cae-119">次に、リージョン内の vCPU について[使用制限を削除し](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)、[クォータの増加を依頼](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)します。</span><span class="sxs-lookup"><span data-stu-id="11cae-119">Then, [remove the spending limit](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit), and [request a quota increase](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) for vCPUs in your region.</span></span> <span data-ttu-id="11cae-120">Azure Databricks ワークスペースを作成するときに、 **[Trial (Premium - 14-Days Free DBUs)]\(試用版 (Premium - 14 日間の無料 DBU)\)** の価格レベルを選択し、ワークスペースから 14 日間無料の Premium Azure Databricks DBU にアクセスできるようにします。</span><span class="sxs-lookup"><span data-stu-id="11cae-120">When you create your Azure Databricks workspace, you can select the **Trial (Premium - 14-Days Free DBUs)** pricing tier to give the workspace access to free Premium Azure Databricks DBUs for 14 days.</span></span>
 
-1. <span data-ttu-id="87ba9-119">お使いのクラスターにデプロイされる [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp リリースを選択します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+<span data-ttu-id="11cae-121">このセクションでは、Azure Portal を使って Azure Databricks ワークスペースを作成します。</span><span class="sxs-lookup"><span data-stu-id="11cae-121">In this section, you create an Azure Databricks workspace using the Azure portal.</span></span>
 
-   <span data-ttu-id="87ba9-120">たとえば、`netcoreapp2.1` を使用する `.NET for Apache Spark v0.1.0` が必要な場合は、[Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz) をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+1. <span data-ttu-id="11cae-122">Azure portal で、 **[リソースの作成]**  >  **[分析]**  >  **[Azure Databricks]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-122">In the Azure portal, select **Create a resource** > **Analytics** > **Azure Databricks**.</span></span>
 
-2. <span data-ttu-id="87ba9-121">クラスターからアクセスできる分散ファイル システム (DBFS など) に、`Microsoft.Spark.Worker.<release>.tar.gz` と [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (for example, DBFS) that your cluster has access to.</span></span>
+   ![Azure portal で Azure Databricks リソースを作成する](./media/databricks-deployment/create-databricks-resource.png)
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="87ba9-122">.NET for Apache Spark アプリを準備する</span><span class="sxs-lookup"><span data-stu-id="87ba9-122">Prepare your .NET for Apache Spark app</span></span>
+2. <span data-ttu-id="11cae-124">**[Azure Databricks サービス]** で値を指定して、Databricks ワークスペースを作成します。</span><span class="sxs-lookup"><span data-stu-id="11cae-124">Under **Azure Databricks Service**, provide the values to create a Databricks workspace.</span></span>
+    
+    |<span data-ttu-id="11cae-125">プロパティ</span><span class="sxs-lookup"><span data-stu-id="11cae-125">Property</span></span>  |<span data-ttu-id="11cae-126">説明</span><span class="sxs-lookup"><span data-stu-id="11cae-126">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="11cae-127">**ワークスペース名**</span><span class="sxs-lookup"><span data-stu-id="11cae-127">**Workspace name**</span></span>     | <span data-ttu-id="11cae-128">Databricks ワークスペースの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="11cae-128">Provide a name for your Databricks workspace.</span></span>        |
+    |<span data-ttu-id="11cae-129">**サブスクリプション**</span><span class="sxs-lookup"><span data-stu-id="11cae-129">**Subscription**</span></span>     | <span data-ttu-id="11cae-130">ドロップダウンから Azure サブスクリプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-130">From the drop-down, select your Azure subscription.</span></span>        |
+    |<span data-ttu-id="11cae-131">**リソース グループ**</span><span class="sxs-lookup"><span data-stu-id="11cae-131">**Resource group**</span></span>     | <span data-ttu-id="11cae-132">新しいリソース グループを作成するか、既存のリソース グループを使用するかを指定します。</span><span class="sxs-lookup"><span data-stu-id="11cae-132">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="11cae-133">リソース グループは、Azure ソリューションの関連するリソースを保持するコンテナーです。</span><span class="sxs-lookup"><span data-stu-id="11cae-133">A resource group is a container that holds related resources for an Azure solution.</span></span> <span data-ttu-id="11cae-134">詳しくは、[Azure リソース グループの概要](/azure/azure-databricks/azure-resource-manager/resource-group-overview)に関するページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="11cae-134">For more information, see [Azure Resource Group overview](/azure/azure-databricks/azure-resource-manager/resource-group-overview).</span></span> |
+    |<span data-ttu-id="11cae-135">**場所**</span><span class="sxs-lookup"><span data-stu-id="11cae-135">**Location**</span></span>     | <span data-ttu-id="11cae-136">優先リージョンを選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-136">Select your preferred region.</span></span> <span data-ttu-id="11cae-137">使用可能なリージョンについては、[リージョン別の利用可能な Azure サービス](https://azure.microsoft.com/regions/services/)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="11cae-137">For information about available regions, see [Azure services available by region](https://azure.microsoft.com/regions/services/).</span></span>        |
+    |<span data-ttu-id="11cae-138">**Pricing Tier**</span><span class="sxs-lookup"><span data-stu-id="11cae-138">**Pricing Tier**</span></span>     |  <span data-ttu-id="11cae-139">**Standard**、**Premium**、**Trial** のいずれかを選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-139">Choose between **Standard**, **Premium**, or **Trial**.</span></span> <span data-ttu-id="11cae-140">これらのレベルの詳細については、[Databricks の価格に関するページ](https://azure.microsoft.com/pricing/details/databricks/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="11cae-140">For more information on these tiers, see [Databricks pricing page](https://azure.microsoft.com/pricing/details/databricks/).</span></span>       |
+    |<span data-ttu-id="11cae-141">**Virtual Network**</span><span class="sxs-lookup"><span data-stu-id="11cae-141">**Virtual Network**</span></span>     |   <span data-ttu-id="11cae-142">いいえ</span><span class="sxs-lookup"><span data-stu-id="11cae-142">No</span></span>       |
 
-1. <span data-ttu-id="87ba9-123">[入門](get-started.md)チュートリアルに従ってアプリをビルドします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+3. <span data-ttu-id="11cae-143">**[作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-143">Select **Create**.</span></span> <span data-ttu-id="11cae-144">ワークスペースの作成には数分かかります。</span><span class="sxs-lookup"><span data-stu-id="11cae-144">The workspace creation takes a few minutes.</span></span> <span data-ttu-id="11cae-145">ワークスペースの作成中に、 **[通知]** でデプロイの状態を表示できます。</span><span class="sxs-lookup"><span data-stu-id="11cae-145">During workspace creation, you can view the deployment status in **Notifications**.</span></span>
 
-2. <span data-ttu-id="87ba9-124">Spark .NET アプリを自己完結型として発行します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-124">Publish your Spark .NET app as self-contained.</span></span>
+## <a name="install-azure-databricks-tools"></a><span data-ttu-id="11cae-146">Azure Databricks ツールのインストール</span><span class="sxs-lookup"><span data-stu-id="11cae-146">Install Azure Databricks tools</span></span>
 
-   <span data-ttu-id="87ba9-125">Linux では、次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-125">You can run the following command on Linux.</span></span>
+<span data-ttu-id="11cae-147">**Databricks CLI** を使用して Azure Databricks クラスターに接続し、ローカル コンピューターからそれらのクラスターにファイルをアップロードすることができます。</span><span class="sxs-lookup"><span data-stu-id="11cae-147">You can use the **Databricks CLI** to connect to Azure Databricks clusters and upload files to them from your local machine.</span></span> <span data-ttu-id="11cae-148">Databricks クラスターからファイルへのアクセスは、DBFS (Databricks ファイル システム) を介して行われます。</span><span class="sxs-lookup"><span data-stu-id="11cae-148">Databricks clusters access files through DBFS (Databricks File System).</span></span> 
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
-   ```
+1. <span data-ttu-id="11cae-149">Databricks CLI には、Python 3.6 以降が必要です。</span><span class="sxs-lookup"><span data-stu-id="11cae-149">The Databricks CLI requires Python 3.6 or above.</span></span> <span data-ttu-id="11cae-150">Python を既にインストール済みである場合は、この手順をスキップできます。</span><span class="sxs-lookup"><span data-stu-id="11cae-150">If you already have Python installed, you can skip this step.</span></span>
+ 
+   <span data-ttu-id="11cae-151">**Windows の場合:**</span><span class="sxs-lookup"><span data-stu-id="11cae-151">**For Windows:**</span></span>
 
-3. <span data-ttu-id="87ba9-126">発行されたファイル用に `<your app>.zip` を生成します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-126">Produce `<your app>.zip` for the published files.</span></span>
+   [<span data-ttu-id="11cae-152">Windows 用 Python のダウンロード</span><span class="sxs-lookup"><span data-stu-id="11cae-152">Download Python for Windows</span></span>](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
 
-   <span data-ttu-id="87ba9-127">Linux では、`zip` を使用して次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-127">You can run the following command on Linux using `zip`.</span></span>
-
-   ```bash
-   zip -r <your app>.zip .
-   ```
-
-4. <span data-ttu-id="87ba9-128">クラスターからアクセスできる分散ファイル システム (DBFS など) に、次をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-128">Upload the following to a distributed file system (for example, DBFS) that your cluster has access to:</span></span>
-
-   * <span data-ttu-id="87ba9-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`:この jar は、[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet パッケージの一部として含まれており、アプリのビルド出力ディレクトリに併置されています。</span><span class="sxs-lookup"><span data-stu-id="87ba9-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
-   * `<your app>.zip`
-   * <span data-ttu-id="87ba9-130">各 Executor の作業ディレクトリ内に配置されるファイル (依存関係ファイルや、すべてのワーカーからアクセスできる共通データなど) またはアセンブリ (アプリが依存しているユーザー定義関数またはライブラリを含む DLL など)。</span><span class="sxs-lookup"><span data-stu-id="87ba9-130">Files (like dependency files or common data accessible to every worker) or assemblies (like DLLs that contain your user-defined functions or libraries that your app depends on) to be placed in the working directory of each executor.</span></span>
-
-## <a name="deploy-to-databricks"></a><span data-ttu-id="87ba9-131">Databricks のデプロイする</span><span class="sxs-lookup"><span data-stu-id="87ba9-131">Deploy to Databricks</span></span>
-
-<span data-ttu-id="87ba9-132">[Databricks](https://databricks.com) は、Apache Spark を使用してクラウドベースのビッグ データ処理を提供するプラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="87ba9-132">[Databricks](https://databricks.com) is a platform that provides cloud-based big data processing using Apache Spark.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="87ba9-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) と [AWS Databricks](https://databricks.com/aws) は Linux ベースです。</span><span class="sxs-lookup"><span data-stu-id="87ba9-133">[Azure Databricks](https://azure.microsoft.com/services/databricks/) and [AWS Databricks](https://databricks.com/aws) are Linux-based.</span></span> <span data-ttu-id="87ba9-134">そのため、Databricks へのアプリのデプロイに関心がある場合は、アプリが .NET Standard と互換性があることと、アプリのコンパイルに [.NET Core コンパイラ](https://dotnet.microsoft.com/download)を使用していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="87ba9-134">Therefore, if you are interested in deploying your app to Databricks, make sure your app is .NET Standard compatible and that you use [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
-
-<span data-ttu-id="87ba9-135">Databricks を使用すると、.NET for Apache Spark アプリを既存のアクティブなクラスターに送信したり、ジョブを起動するたびに新しいクラスターを作成したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-135">Databricks allows you to submit .NET for Apache Spark apps to an existing active cluster or create a new cluster every time you launch a job.</span></span> <span data-ttu-id="87ba9-136">これには、.NET for Apache Spark アプリを送信する前に、**Microsoft.Spark.Worker** をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="87ba9-136">This requires the **Microsoft.Spark.Worker** to be installed before you submit a .NET for Apache Spark app.</span></span>
-
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="87ba9-137">Microsoft.Spark.Worker をデプロイする</span><span class="sxs-lookup"><span data-stu-id="87ba9-137">Deploy Microsoft.Spark.Worker</span></span>
-
-<span data-ttu-id="87ba9-138">この手順は、クラスターに対して 1 回のみ必要です。</span><span class="sxs-lookup"><span data-stu-id="87ba9-138">This step is only required once for a cluster.</span></span>
-
-1. <span data-ttu-id="87ba9-139">[db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) と [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) をローカル コンピューターにダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-139">Download [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
-) onto your local machine.</span></span>
-
-2. <span data-ttu-id="87ba9-140">クラスターにダウンロードしてインストールする **Microsoft.Spark.Worker** リリースをポイントするように、**db-init.sh** を変更します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-140">Modify **db-init.sh** to point to the **Microsoft.Spark.Worker** release you want to download and install on your cluster.</span></span>
-
-3. <span data-ttu-id="87ba9-141">[Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-141">Install the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).</span></span>
-
-4. <span data-ttu-id="87ba9-142">Databricks CLI の[認証の詳細を設定](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication)します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-142">[Setup authentication](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html#set-up-authentication) details for the Databricks CLI.</span></span>
-
-5. <span data-ttu-id="87ba9-143">次のコマンドを使用して、ファイルを Databricks クラスターにアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-143">Upload the files to your Databricks cluster using the following command:</span></span>
+   <span data-ttu-id="11cae-153">**Linux の場合:** Python は、ほとんどの Linux ディストリビューションにプレインストールされています。</span><span class="sxs-lookup"><span data-stu-id="11cae-153">**For Linux:** Python comes preinstalled on most Linux distributions.</span></span> <span data-ttu-id="11cae-154">次のコマンドを実行して、どのバージョンがインストールされているかを確認します。</span><span class="sxs-lookup"><span data-stu-id="11cae-154">Run the following command to see which version you have installed:</span></span>
 
    ```bash
-   cd <path-to-db-init-and-install-worker>
+   python3 --version
+   ```
+
+2. <span data-ttu-id="11cae-155">pip を使用して Databricks CLI をインストールします。</span><span class="sxs-lookup"><span data-stu-id="11cae-155">Use pip to install the Databricks CLI.</span></span> <span data-ttu-id="11cae-156">Python 3.4 以降では、既定で pip が含まれています。</span><span class="sxs-lookup"><span data-stu-id="11cae-156">Python 3.4 and later include pip by default.</span></span> <span data-ttu-id="11cae-157">Python 3 には pip3 を使用します。</span><span class="sxs-lookup"><span data-stu-id="11cae-157">Use pip3 for Python 3.</span></span> <span data-ttu-id="11cae-158">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="11cae-158">Run the following command:</span></span>
+
+   ```bash
+   pip3 install databricks-cli
+   ```
+
+3. <span data-ttu-id="11cae-159">Databricks CLI をインストールしたら、新しいコマンド プロンプトを開き、`databricks` コマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="11cae-159">Once you've installed the Databricks CLI, open a new command prompt and run the command `databricks`.</span></span> <span data-ttu-id="11cae-160">**'databricks' が内部または外部コマンドとして認識されないエラー**が発生した場合は、新しいコマンド プロンプトを開いたことを確認してください。</span><span class="sxs-lookup"><span data-stu-id="11cae-160">If you receive a **'databricks' is not recognized as an internal or external command error**, make sure you opened a new command prompt.</span></span>
+
+## <a name="set-up-azure-databricks"></a><span data-ttu-id="11cae-161">Azure Databricks の設定</span><span class="sxs-lookup"><span data-stu-id="11cae-161">Set up Azure Databricks</span></span>
+
+<span data-ttu-id="11cae-162">Databricks CLI がインストールされたので、認証の詳細を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="11cae-162">Now that you have the Databricks CLI installed, you need to set up authentication details.</span></span>
+
+1. <span data-ttu-id="11cae-163">Databricks CLI コマンド `databricks configure --token` を実行します。</span><span class="sxs-lookup"><span data-stu-id="11cae-163">Run the Databricks CLI command `databricks configure --token`.</span></span>
+
+2. <span data-ttu-id="11cae-164">構成コマンドの実行後、ホストを入力するように求められます。</span><span class="sxs-lookup"><span data-stu-id="11cae-164">After running the configure command, you are prompted to enter a host.</span></span> <span data-ttu-id="11cae-165">ホスト URL には、**https://<\Location>.azuredatabricks.net** の形式を使用します。</span><span class="sxs-lookup"><span data-stu-id="11cae-165">Your host URL uses the format: **https://<\Location>.azuredatabricks.net**.</span></span> <span data-ttu-id="11cae-166">たとえば、Azure Databricks サービスの作成時に **eastus2** を選択した場合、ホストは **https://eastus2.azuredatabricks.net** となります。</span><span class="sxs-lookup"><span data-stu-id="11cae-166">For instance, if you selected **eastus2** during Azure Databricks Service creation, the host would be **https://eastus2.azuredatabricks.net**.</span></span>
+
+3. <span data-ttu-id="11cae-167">ホストの入力後、トークンを入力するように求められます。</span><span class="sxs-lookup"><span data-stu-id="11cae-167">After entering your host, you are prompted to enter a token.</span></span> <span data-ttu-id="11cae-168">Azure portal で **[ワークスペースの起動]** を選択して、Azure Databricks ワークスペースを起動します。</span><span class="sxs-lookup"><span data-stu-id="11cae-168">In the Azure portal, select **Launch Workspace** to launch your Azure Databricks workspace.</span></span>
+
+   ![Azure Databricks ワークスペースを起動する](./media/databricks-deployment/launch-databricks-workspace.png)
+
+4. <span data-ttu-id="11cae-170">ワークスペースのホーム ページで、 **[ユーザー設定]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-170">On the home page of your workspace, select **User Settings**.</span></span>
+
+   ![Azure Databricks ワークスペースのユーザー設定](./media/databricks-deployment/databricks-user-settings.png)
+
+5. <span data-ttu-id="11cae-172">[ユーザー設定] ページで、新しいトークンを生成できます。</span><span class="sxs-lookup"><span data-stu-id="11cae-172">On the User Settings page, you can generate a new token.</span></span> <span data-ttu-id="11cae-173">生成されたトークンをコピーして、コマンド プロンプトに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="11cae-173">Copy the generated token and paste it back into your command prompt.</span></span>
+
+   ![Azure Databricks ワークスペースで新しいアクセス トークンを生成する](./media/databricks-deployment/generate-token.png)
+
+<span data-ttu-id="11cae-175">これで、作成する Azure Databricks クラスターにアクセスして、DBFS にファイルをアップロードできるようになります。</span><span class="sxs-lookup"><span data-stu-id="11cae-175">You should now be able to access any Azure Databricks clusters you create and upload files to the DBFS.</span></span>
+
+## <a name="download-worker-dependencies"></a><span data-ttu-id="11cae-176">ワーカーの依存関係のダウンロード</span><span class="sxs-lookup"><span data-stu-id="11cae-176">Download worker dependencies</span></span>
+
+1. <span data-ttu-id="11cae-177">Microsoft.Spark.Worker は、自分で作成したユーザー定義関数 (UDF) などのアプリを Apache Spark で実行するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="11cae-177">Microsoft.Spark.Worker helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="11cae-178">[Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz) をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="11cae-178">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).</span></span>
+
+2. <span data-ttu-id="11cae-179">*install-worker.sh* は、.NET for Apache Spark 依存ファイルをクラスターのノードにコピーできるスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="11cae-179">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span> 
+
+   <span data-ttu-id="11cae-180">ご使用のローカル コンピューターで、**install-worker.sh** という名前の新しいファイルを作成し、GitHub 上にある [install-worker.sh のコンテンツ](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)を貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="11cae-180">Create a new file named **install-worker.sh** on your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span> 
+
+3. <span data-ttu-id="11cae-181">*db-init.sh* は、依存関係を Databricks Spark クラスターにインストールするスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="11cae-181">The *db-init.sh* is a script that installs dependencies onto your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="11cae-182">ご使用のローカル コンピューターで、**db-init.sh** という名前の新しいファイルを作成し、GitHub 上にある [db-init.sh のコンテンツ](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)を貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="11cae-182">Create a new file named **db-init.sh** on your local computer, and paste the [db-init.sh contents](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) located on GitHub.</span></span> 
+   
+   <span data-ttu-id="11cae-183">先ほど作成したファイルで、`DOTNET_SPARK_RELEASE` 変数を `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` に設定します。</span><span class="sxs-lookup"><span data-stu-id="11cae-183">In the file you just created, set the `DOTNET_SPARK_RELEASE` variable to `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`.</span></span> <span data-ttu-id="11cae-184">*db-init.sh* ファイルの残りの部分はそのままにしておきます。</span><span class="sxs-lookup"><span data-stu-id="11cae-184">Leave the rest of the *db-init.sh* file as-is.</span></span>
+
+> [!Note]
+> <span data-ttu-id="11cae-185">Windows を使用している場合は、*install-worker.sh* および *db-init.sh* スクリプト内の行の終わりが Unix 形式 (LF) であることを確認します。</span><span class="sxs-lookup"><span data-stu-id="11cae-185">If you are using Windows, verify that the line-endings in your *install-worker.sh* and *db-init.sh* scripts are Unix-style (LF).</span></span> <span data-ttu-id="11cae-186">行の終わりは、Notepad++ や Atom などのテキスト エディターを使用して変更できます。</span><span class="sxs-lookup"><span data-stu-id="11cae-186">You can change line endings through text editors like Notepad++ and Atom.</span></span>
+
+## <a name="publish-your-app"></a><span data-ttu-id="11cae-187">アプリケーションの発行</span><span class="sxs-lookup"><span data-stu-id="11cae-187">Publish your app</span></span>
+
+<span data-ttu-id="11cae-188">次に、「[.NET for Apache Spark - 10 分で開始する](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」のチュートリアルで作成した *mySparkApp* を発行し、自分の Spark クラスターから、アプリを実行するために必要なすべてのファイルにアクセスできることを確認します。</span><span class="sxs-lookup"><span data-stu-id="11cae-188">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial to ensure your Spark cluster has access to all the files it needs to run your app.</span></span> 
+
+1. <span data-ttu-id="11cae-189">次のコマンドを実行して、*mySparkApp* を発行します。</span><span class="sxs-lookup"><span data-stu-id="11cae-189">Run the following commands to publish the *mySparkApp*:</span></span>
+
+   <span data-ttu-id="11cae-190">**Windows の場合:**</span><span class="sxs-lookup"><span data-stu-id="11cae-190">**On Windows:**</span></span>
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   ```
+
+   <span data-ttu-id="11cae-191">**Linux の場合:**</span><span class="sxs-lookup"><span data-stu-id="11cae-191">**On Linux:**</span></span>
+
+   ```bash
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
+   ```
+
+2. <span data-ttu-id="11cae-192">発行したアプリケーション ファイルを Databricks Spark クラスターに簡単にアップロードできるように、次のタスクを実行してファイルを圧縮します。</span><span class="sxs-lookup"><span data-stu-id="11cae-192">Do the following tasks to zip your published app files so that you can easily upload them to your Databricks Spark cluster.</span></span>
+
+   <span data-ttu-id="11cae-193">**Windows の場合:**</span><span class="sxs-lookup"><span data-stu-id="11cae-193">**On Windows:**</span></span>
+
+   <span data-ttu-id="11cae-194">mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64 に移動します。</span><span class="sxs-lookup"><span data-stu-id="11cae-194">Navigate to mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64.</span></span> <span data-ttu-id="11cae-195">次に、**発行**フォルダーを右クリックして、 **[送信先] > [圧縮 (zip 形式) フォルダー]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-195">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="11cae-196">新しいフォルダーに **publish.zip** という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="11cae-196">Name the new folder **publish.zip**.</span></span>
+
+   <span data-ttu-id="11cae-197">**Linux の場合は、次のコマンドを実行します。**</span><span class="sxs-lookup"><span data-stu-id="11cae-197">**On Linux, run the following command:**</span></span>
+
+   ```bash
+   zip -r publish.zip .
+   ```
+
+## <a name="upload-files"></a><span data-ttu-id="11cae-198">ファイルのアップロード</span><span class="sxs-lookup"><span data-stu-id="11cae-198">Upload files</span></span>
+
+<span data-ttu-id="11cae-199">このセクションでは、DBFS に複数のファイルをアップロードして、クラウドでアプリを実行するために必要なすべてのものがクラスターに含まれるようにします。</span><span class="sxs-lookup"><span data-stu-id="11cae-199">In this section, you upload several files to DBFS so that your cluster has everything it needs to run your app in the cloud.</span></span> <span data-ttu-id="11cae-200">DBFS にファイルをアップロードするときは、そのつど、ご使用のコンピューター上でそのファイルがあるディレクトリにいることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="11cae-200">Each time you upload a file to the DBFS, make sure you are in the directory where that file is located on your computer.</span></span>
+
+1. <span data-ttu-id="11cae-201">次のコマンドを実行して、*db-init.sh*、*install-worker.sh*、*Microsoft.Spark.Worker* を DBFS にアップロードします。</span><span class="sxs-lookup"><span data-stu-id="11cae-201">Run the following commands to upload the *db-init.sh*, *install-worker.sh*, and *Microsoft.Spark.Worker* to DBFS:</span></span>
+
+   ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-6. <span data-ttu-id="87ba9-144">Databricks ワークスペースに移動します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-144">Go to your Databricks workspace.</span></span> <span data-ttu-id="87ba9-145">左側のメニューから **[クラスター]** を選択し、 **[クラスターの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-145">Select **Clusters** from the left-side menu, and then select **Create Cluster**.</span></span>
+2. <span data-ttu-id="11cae-202">次のコマンドを実行して、アプリを実行するためにクラスターに必要な残りのファイル (zip 形式の発行フォルダー、*input.txt*、*microsoft-spark-2.4.x-0.3.0.jar*) をアップロードします。</span><span class="sxs-lookup"><span data-stu-id="11cae-202">Run the following commands to upload the remaining files your cluster will need to run your app: the zipped publish folder, *input.txt*, and *microsoft-spark-2.4.x-0.3.0.jar*.</span></span> 
 
-7. <span data-ttu-id="87ba9-146">クラスターを適切に構成したら、**Init スクリプト**を設定し、クラスターを作成します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-146">After configuring the cluster appropriately, set the **Init Script** and create the cluster.</span></span>
+   ```console
+   cd mySparkApp 
+   databricks fs cp input.txt dbfs:/input.txt
+   
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   ```
 
-   ![スクリプト アクションの画像](./media/databricks-deployment/deployment-databricks-init-script.png)
+## <a name="create-a-job"></a><span data-ttu-id="11cae-203">ジョブを作成する</span><span class="sxs-lookup"><span data-stu-id="11cae-203">Create a job</span></span>
 
-## <a name="run-your-app"></a><span data-ttu-id="87ba9-148">アプリの実行</span><span class="sxs-lookup"><span data-stu-id="87ba9-148">Run your app</span></span>
+<span data-ttu-id="11cae-204">アプリは、**spark-submit** を実行するジョブを介して Azure Databricks で実行されます。spark-submit は、.NET for Apache Spark ジョブを実行するために使用するコマンドです。</span><span class="sxs-lookup"><span data-stu-id="11cae-204">Your app runs on Azure Databricks through a job that runs **spark-submit**, which is the command you use to run .NET for Apache Spark jobs.</span></span>
 
-<span data-ttu-id="87ba9-149">`set JAR` または `spark-submit` を使用して、ジョブを Databricks に送信できます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-149">You can use `set JAR` or `spark-submit` to submit your job to Databricks.</span></span>
+1. <span data-ttu-id="11cae-205">Azure Databricks ワークスペースで、 **[ジョブ]** アイコンを選択し、次に **[+ ジョブの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-205">In your Azure Databricks Workspace, select the **Jobs** icon and then **+ Create Job**.</span></span> 
 
-### <a name="use-set-jar"></a><span data-ttu-id="87ba9-150">Set JAR を使用する</span><span class="sxs-lookup"><span data-stu-id="87ba9-150">Use Set JAR</span></span>
+   ![Azure Databricks ジョブを作成する](./media/databricks-deployment/create-job.png)
 
-<span data-ttu-id="87ba9-151">[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) を使用すると、既存のアクティブなクラスターにジョブを送信できます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-151">[Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) allows you to submit a job to an existing active cluster.</span></span>
+2. <span data-ttu-id="11cae-207">ジョブのタイトルを選択し、 **[Configure spark-submit]\(spark-submit の構成\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-207">Choose a title for your job, and then select **Configure spark-submit**.</span></span>
 
-#### <a name="one-time-setup"></a><span data-ttu-id="87ba9-152">1 回限りのセットアップ</span><span class="sxs-lookup"><span data-stu-id="87ba9-152">One-time setup</span></span>
+   ![Databricks ジョブの spark-submit を構成する](./media/databricks-deployment/configure-spark-submit.png)
 
-1. <span data-ttu-id="87ba9-153">Databricks クラスターに移動し、左側のメニューから **[ジョブ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-153">Go to your Databricks cluster and select **Jobs** from the left-side menu.</span></span> <span data-ttu-id="87ba9-154">次に、 **[Set JAR]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-154">Then select **Set JAR**.</span></span>
+3. <span data-ttu-id="11cae-209">ジョブ構成に次のパラメーターを貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="11cae-209">Paste the following parameters in the job configuration.</span></span> <span data-ttu-id="11cae-210">次に、 **[確認]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-210">Then, select **Confirm**.</span></span>
 
-2. <span data-ttu-id="87ba9-155">適切な `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` ファイルをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-155">Upload the appropriate `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` file.</span></span>
+   ```
+   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ```
 
-3. <span data-ttu-id="87ba9-156">パラメーターを適切に設定します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-156">Set the parameters appropriately.</span></span>
+## <a name="create-a-cluster"></a><span data-ttu-id="11cae-211">クラスターの作成</span><span class="sxs-lookup"><span data-stu-id="11cae-211">Create a cluster</span></span>
 
-   | <span data-ttu-id="87ba9-157">パラメーター</span><span class="sxs-lookup"><span data-stu-id="87ba9-157">Parameter</span></span>   | <span data-ttu-id="87ba9-158">[値]</span><span class="sxs-lookup"><span data-stu-id="87ba9-158">Value</span></span>                                                |
-   |-------------|------------------------------------------------------|
-   | <span data-ttu-id="87ba9-159">Main クラス</span><span class="sxs-lookup"><span data-stu-id="87ba9-159">Main Class</span></span>  | <span data-ttu-id="87ba9-160">org.apache.spark.deploy.dotnet.DotnetRunner</span><span class="sxs-lookup"><span data-stu-id="87ba9-160">org.apache.spark.deploy.dotnet.DotnetRunner</span></span>          |
-   | <span data-ttu-id="87ba9-161">引数</span><span class="sxs-lookup"><span data-stu-id="87ba9-161">Arguments</span></span>   | <span data-ttu-id="87ba9-162">/dbfs/apps/\<your-app-name>.zip \<your-app-main-class></span><span class="sxs-lookup"><span data-stu-id="87ba9-162">/dbfs/apps/\<your-app-name>.zip \<your-app-main-class></span></span> |
+1. <span data-ttu-id="11cae-212">ジョブに移動し、 **[編集]** を選択して、ジョブのクラスターを構成します。</span><span class="sxs-lookup"><span data-stu-id="11cae-212">Navigate to your job and select **Edit** to configure your job's cluster.</span></span>
 
-4. <span data-ttu-id="87ba9-163">前のセクションで、**Init スクリプト**を作成した既存のクラスターを指すように**クラスター**を構成します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-163">Configure the **Cluster** to point to the existing cluster you created the **Init Script** for in the previous section.</span></span>
+2. <span data-ttu-id="11cae-213">クラスターを **Spark 2.4.1** に設定します。</span><span class="sxs-lookup"><span data-stu-id="11cae-213">Set your cluster to **Spark 2.4.1**.</span></span> <span data-ttu-id="11cae-214">次に、 **[詳細オプション]**  >  **[Init Scripts]\(Init スクリプト\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-214">Then, select **Advanced Options** > **Init Scripts**.</span></span> <span data-ttu-id="11cae-215">Init スクリプトのパスを `dbfs:/spark-dotnet/db-init.sh` として設定します。</span><span class="sxs-lookup"><span data-stu-id="11cae-215">Set Init Script Path as `dbfs:/spark-dotnet/db-init.sh`.</span></span> 
 
-#### <a name="publish-and-run-your-app"></a><span data-ttu-id="87ba9-164">アプリを発行して実行する</span><span class="sxs-lookup"><span data-stu-id="87ba9-164">Publish and run your app</span></span>
+   ![Azure Databricks で Spark クラスターを構成する](./media/databricks-deployment/cluster-config.png)
 
-1. <span data-ttu-id="87ba9-165">[Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) を使用して、Databricks クラスターにアプリケーションをアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-165">Use the [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) to upload your application to your Databricks cluster.</span></span>
+3. <span data-ttu-id="11cae-217">**[確認]** を選択して、クラスターの設定を確認します。</span><span class="sxs-lookup"><span data-stu-id="11cae-217">Select **Confirm** to confirm your cluster settings.</span></span>
 
-    ```bash
-    cd <path-to-your-app-publish-directory>
-    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-    ```
+## <a name="run-your-app"></a><span data-ttu-id="11cae-218">アプリの実行</span><span class="sxs-lookup"><span data-stu-id="11cae-218">Run your app</span></span>
 
-2. <span data-ttu-id="87ba9-166">この手順は、アプリ アセンブリ (たとえば、ユーザー定義関数とその依存関係を含む DLL) を各 **Microsoft Spark.Worker** の作業ディレクトリに配置する必要がある場合にのみ必要です。</span><span class="sxs-lookup"><span data-stu-id="87ba9-166">This step is only required if your app assemblies (for example, DLLs that contain user-defined functions along with their dependencies) need to be placed in the working directory of each **Microsoft.Spark.Worker**.</span></span>
+1. <span data-ttu-id="11cae-219">ジョブに移動し、 **[今すぐ実行]** を選択して、新しく構成した Spark クラスターでジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="11cae-219">Navigate to your job and select **Run Now** to run your job on your newly configured Spark cluster.</span></span>
 
-   * <span data-ttu-id="87ba9-167">アプリケーション アセンブリを Databricks クラスターにアップロードする</span><span class="sxs-lookup"><span data-stu-id="87ba9-167">Upload your application assemblies to your Databricks cluster</span></span>
+2. <span data-ttu-id="11cae-220">ジョブのクラスターが作成されるまで数分かかります。</span><span class="sxs-lookup"><span data-stu-id="11cae-220">It takes a few minutes for the job's cluster to create.</span></span> <span data-ttu-id="11cae-221">作成されると、ジョブが送信され、出力を表示できるようになります。</span><span class="sxs-lookup"><span data-stu-id="11cae-221">Once it is created, your job will be submitted, and you can view the output.</span></span>
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <assembly>.dll dbfs:/apps/dependencies
-      ```
+3. <span data-ttu-id="11cae-222">左側のメニューから **[クラスター]** を選択し、ジョブの名前と実行を選択します。</span><span class="sxs-lookup"><span data-stu-id="11cae-222">Select **Clusters** from the left menu, and then the name and run of your job.</span></span> 
 
-   * <span data-ttu-id="87ba9-168">[db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) 内のアプリの依存関係セクションをコメント解除して、ご自分のアプリの依存関係パスをポイントするように変更し、Databricks クラスターにアップロードします。</span><span class="sxs-lookup"><span data-stu-id="87ba9-168">Uncomment and modify the app dependencies section in [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) to point to your app dependencies path and upload to your Databricks cluster.</span></span>
+4. <span data-ttu-id="11cae-223">**[Driver Logs]\(ドライバー ログ\)** を選択して、ジョブの出力を表示します。</span><span class="sxs-lookup"><span data-stu-id="11cae-223">Select **Driver Logs** to view the output of your job.</span></span> <span data-ttu-id="11cae-224">アプリの実行が完了すると、標準出力コンソールに書き込まれた、「開始する」のローカル実行と同じ単語件数のテーブルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="11cae-224">When your app finishes executing, you see the same word count table from the getting started local run written to the standard output console.</span></span>
 
-      ```bash
-      cd <path-to-db-init-and-install-worker>
-      databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
-      ```
+   ![Azure Databricks ジョブ出力のテーブル](./media/databricks-deployment/table-output.png)
 
-   * <span data-ttu-id="87ba9-169">クラスターを再起動します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-169">Restart your cluster.</span></span>
+   <span data-ttu-id="11cae-226">これで、初めての .NET for Apache Spark アプリケーションをクラウドで実行できました。</span><span class="sxs-lookup"><span data-stu-id="11cae-226">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
 
-3. <span data-ttu-id="87ba9-170">Databricks ワークスペース内の Databricks クラスターに移動します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-170">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="87ba9-171">**[ジョブ]** の下でジョブを選択し、 **[今すぐ実行]** を選択してジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-171">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="11cae-227">リソースをクリーンアップする</span><span class="sxs-lookup"><span data-stu-id="11cae-227">Clean up resources</span></span>
 
-### <a name="use-spark-submit"></a><span data-ttu-id="87ba9-172">spark-submit を使用する</span><span class="sxs-lookup"><span data-stu-id="87ba9-172">Use spark-submit</span></span>
+<span data-ttu-id="11cae-228">Databricks ワークスペースが不要になった場合は、Azure portal で Azure Databricks リソースを削除できます。</span><span class="sxs-lookup"><span data-stu-id="11cae-228">If you no longer need the Databricks workspace, you can delete your Azure Databricks resource in the Azure portal.</span></span> <span data-ttu-id="11cae-229">リソース グループ名を選び、リソース グループ ページを開いて、 **[リソース グループの削除]** を選ぶこともできます。</span><span class="sxs-lookup"><span data-stu-id="11cae-229">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span>
 
-<span data-ttu-id="87ba9-173">[spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) コマンドを使用すると、新しいクラスターにジョブを送信できます。</span><span class="sxs-lookup"><span data-stu-id="87ba9-173">The [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command allows you to submit a job to a new cluster.</span></span>
+## <a name="next-steps"></a><span data-ttu-id="11cae-230">次の手順</span><span class="sxs-lookup"><span data-stu-id="11cae-230">Next steps</span></span>
 
-1. <span data-ttu-id="87ba9-174">[ジョブを作成](https://docs.databricks.com/user-guide/jobs.html)し、 **[Configure spark-submit]\(spark-submit の構成\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-174">[Create a Job](https://docs.databricks.com/user-guide/jobs.html) and select **Configure spark-submit**.</span></span>
-
-2. <span data-ttu-id="87ba9-175">次のパラメーターを指定して `spark-submit` を構成します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-175">Configure `spark-submit` with the following parameters:</span></span>
-
-    ```bash
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-    ```
-
-3. <span data-ttu-id="87ba9-176">Databricks ワークスペース内の Databricks クラスターに移動します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-176">Go to your Databricks cluster in your Databricks workspace.</span></span> <span data-ttu-id="87ba9-177">**[ジョブ]** の下でジョブを選択し、 **[今すぐ実行]** を選択してジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="87ba9-177">Under **Jobs**, select your job and then select **Run Now** to run your job.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="87ba9-178">次の手順</span><span class="sxs-lookup"><span data-stu-id="87ba9-178">Next steps</span></span>
-
-<span data-ttu-id="87ba9-179">このチュートリアルでは、.NET for Apache Spark アプリケーションを Databricks にデプロイしました。</span><span class="sxs-lookup"><span data-stu-id="87ba9-179">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="87ba9-180">Databricks の詳細については、Azure Databricks のドキュメントに進んでください。</span><span class="sxs-lookup"><span data-stu-id="87ba9-180">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
+<span data-ttu-id="11cae-231">このチュートリアルでは、.NET for Apache Spark アプリケーションを Databricks にデプロイしました。</span><span class="sxs-lookup"><span data-stu-id="11cae-231">In this tutorial, you deployed your .NET for Apache Spark application to Databricks.</span></span> <span data-ttu-id="11cae-232">Databricks の詳細については、Azure Databricks のドキュメントに進んでください。</span><span class="sxs-lookup"><span data-stu-id="11cae-232">To learn more about Databricks, continue to the Azure Databricks Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="87ba9-181">Azure Databricks のドキュメント</span><span class="sxs-lookup"><span data-stu-id="87ba9-181">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
+> [<span data-ttu-id="11cae-233">Azure Databricks のドキュメント</span><span class="sxs-lookup"><span data-stu-id="11cae-233">Azure Databricks Documentation</span></span>](https://docs.microsoft.com/azure/azure-databricks/)
