@@ -10,69 +10,69 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017658"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460414"
 ---
-# <a name="control-styles-and-templates"></a><span data-ttu-id="5b83f-102">コントロールのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-102">Control Styles and Templates</span></span>
-<span data-ttu-id="5b83f-103">Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。</span><span class="sxs-lookup"><span data-stu-id="5b83f-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="5b83f-104">構造とコントロールの外観を変更するには変更することによって、<xref:System.Windows.Controls.ControlTemplate>を制御するのです。</span><span class="sxs-lookup"><span data-stu-id="5b83f-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="5b83f-105">コントロールのビジュアル ツリーの一部だけを置換する方法はありません。設定する必要があります、コントロールのビジュアル ツリーを変更する、<xref:System.Windows.Controls.Control.Template%2A>その新しいと完全にコントロールのプロパティ<xref:System.Windows.Controls.ControlTemplate>します。</span><span class="sxs-lookup"><span data-stu-id="5b83f-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
+# <a name="control-styles-and-templates"></a><span data-ttu-id="b032d-102">コントロールのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-102">Control Styles and Templates</span></span>
+<span data-ttu-id="b032d-103">Windows Presentation Foundation (WPF) のコントロールには、そのコントロールのビジュアルツリーを含む <xref:System.Windows.Controls.ControlTemplate> があります。</span><span class="sxs-lookup"><span data-stu-id="b032d-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="b032d-104">コントロールの構造と外観を変更するには、コントロールの <xref:System.Windows.Controls.ControlTemplate> を変更します。</span><span class="sxs-lookup"><span data-stu-id="b032d-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="b032d-105">コントロールのビジュアルツリーの一部だけを置換することはできません。コントロールのビジュアルツリーを変更するには、コントロールの [<xref:System.Windows.Controls.Control.Template%2A>] プロパティを新しい完全な <xref:System.Windows.Controls.ControlTemplate>に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b032d-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
   
- <span data-ttu-id="5b83f-106">デスクトップ テーマにより、使用するリソース ディクショナリが決まります。</span><span class="sxs-lookup"><span data-stu-id="5b83f-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="5b83f-107">デスクトップ テーマのリソース ディクショナリを取得するには、「[既定の WPF テーマ](https://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b83f-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
+ <span data-ttu-id="b032d-106">デスクトップ テーマにより、使用するリソース ディクショナリが決まります。</span><span class="sxs-lookup"><span data-stu-id="b032d-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="b032d-107">デスクトップ テーマのリソース ディクショナリを取得するには、「[既定の WPF テーマ](https://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b032d-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
- <span data-ttu-id="5b83f-108">次の表は、リソース ディクショナリ ファイル名とデスクトップ テーマの対応関係をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="5b83f-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
+ <span data-ttu-id="b032d-108">次の表は、リソース ディクショナリ ファイル名とデスクトップ テーマの対応関係をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="b032d-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
   
-|<span data-ttu-id="5b83f-109">テーマ ファイル</span><span class="sxs-lookup"><span data-stu-id="5b83f-109">Theme file</span></span>|<span data-ttu-id="5b83f-110">デスクトップ テーマ</span><span class="sxs-lookup"><span data-stu-id="5b83f-110">Desktop theme</span></span>|  
+|<span data-ttu-id="b032d-109">テーマ ファイル</span><span class="sxs-lookup"><span data-stu-id="b032d-109">Theme file</span></span>|<span data-ttu-id="b032d-110">デスクトップ テーマ</span><span class="sxs-lookup"><span data-stu-id="b032d-110">Desktop theme</span></span>|  
 |----------------|-------------------|  
-|<span data-ttu-id="5b83f-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-111">Classic.xaml</span></span>|<span data-ttu-id="5b83f-112">Windows XP オペレーティング システムのクラシック Windows (Windows 95、Windows 98、および Windows 2000) の外観。</span><span class="sxs-lookup"><span data-stu-id="5b83f-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
-|<span data-ttu-id="5b83f-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="5b83f-114">Windows XP の既定の青のテーマ。</span><span class="sxs-lookup"><span data-stu-id="5b83f-114">Default blue theme on Windows XP.</span></span>|  
-|<span data-ttu-id="5b83f-115">Luna.Homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="5b83f-116">Windows XP のオリーブのテーマ。</span><span class="sxs-lookup"><span data-stu-id="5b83f-116">Olive theme on Windows XP.</span></span>|  
-|<span data-ttu-id="5b83f-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="5b83f-118">Windows XP のシルバーのテーマ。</span><span class="sxs-lookup"><span data-stu-id="5b83f-118">Silver theme on Windows XP.</span></span>|  
-|<span data-ttu-id="5b83f-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="5b83f-120">Windows XP Media Center Edition オペレーティング システムの既定テーマ。</span><span class="sxs-lookup"><span data-stu-id="5b83f-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
-|<span data-ttu-id="5b83f-121">Aero.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="5b83f-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="5b83f-122">Windows Vista オペレーティング システムの既定テーマ。</span><span class="sxs-lookup"><span data-stu-id="5b83f-122">Default theme on the Windows Vista operating system.</span></span>|  
+|<span data-ttu-id="b032d-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-111">Classic.xaml</span></span>|<span data-ttu-id="b032d-112">Windows XP オペレーティング システムのクラシック Windows (Windows 95、Windows 98、および Windows 2000) の外観。</span><span class="sxs-lookup"><span data-stu-id="b032d-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
+|<span data-ttu-id="b032d-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="b032d-114">Windows XP の既定の青のテーマ。</span><span class="sxs-lookup"><span data-stu-id="b032d-114">Default blue theme on Windows XP.</span></span>|  
+|<span data-ttu-id="b032d-115">Luna.Homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="b032d-116">Windows XP のオリーブのテーマ。</span><span class="sxs-lookup"><span data-stu-id="b032d-116">Olive theme on Windows XP.</span></span>|  
+|<span data-ttu-id="b032d-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="b032d-118">Windows XP のシルバーのテーマ。</span><span class="sxs-lookup"><span data-stu-id="b032d-118">Silver theme on Windows XP.</span></span>|  
+|<span data-ttu-id="b032d-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="b032d-120">Windows XP Media Center Edition オペレーティング システムの既定テーマ。</span><span class="sxs-lookup"><span data-stu-id="b032d-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
+|<span data-ttu-id="b032d-121">Aero.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="b032d-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="b032d-122">Windows Vista オペレーティング システムの既定テーマ。</span><span class="sxs-lookup"><span data-stu-id="b032d-122">Default theme on the Windows Vista operating system.</span></span>|  
   
-## <a name="in-this-section"></a><span data-ttu-id="5b83f-123">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5b83f-123">In This Section</span></span>  
- [<span data-ttu-id="5b83f-124">ボタンのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-125">カレンダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-126">CheckBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-127">ComboBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-128">ContextMenu のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-129">DataGrid のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-130">DatePicker のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-131">DocumentViewer のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-132">エクスパンダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-133">フレームのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-134">GroupBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-135">ラベルのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-136">ListBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-137">ListView のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-138">メニューのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-139">NavigationWindow のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-140">PasswordBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-141">ProgressBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-142">RadioButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-143">RepeatButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-144">ScrollBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-145">ScrollViewer のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-146">スライダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-147">StatusBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-148">TabControl のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-149">TextBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-150">つまみのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-151">ToggleButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-152">ToolBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-153">ToolTip のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-154">TreeView のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
- [<span data-ttu-id="5b83f-155">ウィンドウのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b032d-123">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b032d-123">In This Section</span></span>  
+ [<span data-ttu-id="b032d-124">ボタンのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-125">カレンダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-126">CheckBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-127">ComboBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-128">ContextMenu のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-129">DataGrid のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-130">DatePicker のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-131">DocumentViewer のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-132">エクスパンダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-133">フレームのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-134">GroupBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-135">ラベルのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-136">ListBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-137">ListView のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-138">メニューのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-139">NavigationWindow のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-140">PasswordBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-141">ProgressBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-142">RadioButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-143">RepeatButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-144">ScrollBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-145">ScrollViewer のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-146">スライダーのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-147">StatusBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-148">TabControl のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-149">TextBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-150">Thumb のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-151">ToggleButton のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-152">ToolBar のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-153">ToolTip のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-154">TreeView のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
+ [<span data-ttu-id="b032d-155">ウィンドウのスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
   
-## <a name="reference"></a><span data-ttu-id="5b83f-156">参照</span><span class="sxs-lookup"><span data-stu-id="5b83f-156">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b032d-156">辞書／辞典／その他</span><span class="sxs-lookup"><span data-stu-id="b032d-156">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="5b83f-157">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b83f-157">Related Sections</span></span>  
- [<span data-ttu-id="5b83f-158">コントロールの作成の概要</span><span class="sxs-lookup"><span data-stu-id="5b83f-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="b032d-157">関連項目</span><span class="sxs-lookup"><span data-stu-id="b032d-157">Related Sections</span></span>  
+ [<span data-ttu-id="b032d-158">コントロールの作成の概要</span><span class="sxs-lookup"><span data-stu-id="b032d-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
   
- [<span data-ttu-id="5b83f-159">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="5b83f-159">Styling and Templating</span></span>](styling-and-templating.md)
+ [<span data-ttu-id="b032d-159">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="b032d-159">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

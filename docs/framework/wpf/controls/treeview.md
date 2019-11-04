@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761336"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458292"
 ---
-# <a name="treeview"></a><span data-ttu-id="344ce-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="344ce-102">TreeView</span></span>
-<span data-ttu-id="344ce-103"><xref:System.Windows.Controls.TreeView>コントロールは、折りたたみ可能なノードを使用して階層構造で情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="344ce-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
+# <a name="treeview"></a><span data-ttu-id="360a9-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="360a9-102">TreeView</span></span>
+<span data-ttu-id="360a9-103"><xref:System.Windows.Controls.TreeView> コントロールは、折りたたみ可能なノードを使用して階層構造で情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="360a9-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
   
- <span data-ttu-id="344ce-104">次の図の例に示します、<xref:System.Windows.Controls.TreeView>に入れ子になったコントロール<xref:System.Windows.Controls.TreeViewItem>コントロール。</span><span class="sxs-lookup"><span data-stu-id="344ce-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
+ <span data-ttu-id="360a9-104">次の図は、入れ子になった <xref:System.Windows.Controls.TreeViewItem> コントロールを持つ <xref:System.Windows.Controls.TreeView> コントロールの例です。</span><span class="sxs-lookup"><span data-stu-id="360a9-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
   
- ![TreeViewItem の入れ子になったコントロールを示す図。](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![入れ子になった TreeViewItem コントロールを示す図。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="344ce-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="344ce-106">In This Section</span></span>  
- [<span data-ttu-id="344ce-107">TreeView の概要</span><span class="sxs-lookup"><span data-stu-id="344ce-107">TreeView Overview</span></span>](treeview-overview.md)  
- [<span data-ttu-id="344ce-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="344ce-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="360a9-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="360a9-106">In This Section</span></span>  
+ [<span data-ttu-id="360a9-107">TreeView の概要</span><span class="sxs-lookup"><span data-stu-id="360a9-107">TreeView Overview</span></span>](treeview-overview.md)  
+ [<span data-ttu-id="360a9-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="360a9-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="344ce-109">参照</span><span class="sxs-lookup"><span data-stu-id="344ce-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="360a9-109">辞書／辞典／その他</span><span class="sxs-lookup"><span data-stu-id="360a9-109">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="344ce-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="344ce-110">Related Sections</span></span>  
- [<span data-ttu-id="344ce-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="344ce-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="344ce-112">データ テンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="344ce-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="360a9-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="360a9-110">Related Sections</span></span>  
+ [<span data-ttu-id="360a9-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="360a9-111">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)  
+  [<span data-ttu-id="360a9-112">データ テンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="360a9-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
