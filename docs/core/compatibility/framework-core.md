@@ -2,23 +2,21 @@
 title: 破壊的変更、.NET Framework から .NET Core 3.0 - .NET Core
 description: .NET Framework から .NET Core 3.0 への Windows フォームと Windows Presentation Foundation の破壊的変更の一覧を示します。
 ms.date: 09/10/2019
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 28da6a99e86d6c6f5cfc3b05c0a3a6419c310127
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089573"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="9e46a-103">.NET Framework から .NET Core 3.0 への移行の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="9e46a-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="95c4c-103">.NET Framework から .NET Core 3.0 への移行の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="95c4c-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9e46a-104">この記事は作成中です。</span><span class="sxs-lookup"><span data-stu-id="9e46a-104">This article is under construction.</span></span> <span data-ttu-id="9e46a-105">これは、.NET Core の破壊的変更の完全なリストではありません。</span><span class="sxs-lookup"><span data-stu-id="9e46a-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="9e46a-106">.NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。</span><span class="sxs-lookup"><span data-stu-id="9e46a-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span> 
+> <span data-ttu-id="95c4c-104">この記事は作成中です。</span><span class="sxs-lookup"><span data-stu-id="95c4c-104">This article is under construction.</span></span> <span data-ttu-id="95c4c-105">これは、.NET Core の破壊的変更の完全なリストではありません。</span><span class="sxs-lookup"><span data-stu-id="95c4c-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="95c4c-106">.NET Core の破壊的変更の詳細については、GitHub の dotnet/docs リポジトリで個別の[破壊的変更の問題](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change)について調べてください。</span><span class="sxs-lookup"><span data-stu-id="95c4c-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span> 
 
-<span data-ttu-id="9e46a-107">.NET Framework から .NET Core 3.0 に Windows フォームまたは Windows Presentation Foundation のアプリケーションを移行する場合、ご使用のアプリに影響する可能性がある破壊的変更について次のトピックを確認してください。</span><span class="sxs-lookup"><span data-stu-id="9e46a-107">If you are migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
+<span data-ttu-id="95c4c-107">.NET Framework から .NET Core 3.0 に Windows フォームまたは Windows Presentation Foundation のアプリケーションを移行する場合、ご使用のアプリに影響する可能性がある破壊的変更について次のトピックを確認してください。</span><span class="sxs-lookup"><span data-stu-id="95c4c-107">If you are migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
 
-## <a name="windows-forms"></a><span data-ttu-id="9e46a-108">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="9e46a-108">Windows Forms</span></span>
+## <a name="windows-forms"></a><span data-ttu-id="95c4c-108">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="95c4c-108">Windows Forms</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 

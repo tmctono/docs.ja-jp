@@ -6,51 +6,51 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596748"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419338"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="3c6c1-102">方法: ToString メソッドをオーバーライドする (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="3c6c1-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="3f589-102">方法: ToString メソッドをオーバーライドする (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="3f589-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
 
-<span data-ttu-id="3c6c1-103">C# では、すべてのクラスまたは構造体が、暗黙的に <xref:System.Object> クラスを継承します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="3c6c1-104">そのため、C# のすべてのオブジェクトが <xref:System.Object.ToString%2A> メソッドを取得し、そのオブジェクトの文字列表現を返します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="3c6c1-105">たとえば、`int` 型の変数はすべて `ToString` メソッドを持ち、次のようにその変数の内容を文字列として返すことができます。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  
+<span data-ttu-id="3f589-103">C# では、すべてのクラスまたは構造体が、暗黙的に <xref:System.Object> クラスを継承します。</span><span class="sxs-lookup"><span data-stu-id="3f589-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="3f589-104">そのため、C# のすべてのオブジェクトが <xref:System.Object.ToString%2A> メソッドを取得し、そのオブジェクトの文字列表現を返します。</span><span class="sxs-lookup"><span data-stu-id="3f589-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="3f589-105">たとえば、`int` 型の変数はすべて `ToString` メソッドを持ち、次のようにその変数の内容を文字列として返すことができます。</span><span class="sxs-lookup"><span data-stu-id="3f589-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
   
- <span data-ttu-id="3c6c1-106">カスタムのクラスまたは構造体を作成するときは、クライアント コードにカスタム型の情報を提供するため、<xref:System.Object.ToString%2A> メソッドをオーバーライドする必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-106">When you create a custom class or struct, you should override the <xref:System.Object.ToString%2A> method in order to provide information about your type to client code.</span></span>  
+ <span data-ttu-id="3f589-106">カスタムのクラスまたは構造体を作成するときは、クライアント コードにカスタム型の情報を提供するため、<xref:System.Object.ToString%2A> メソッドをオーバーライドする必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f589-106">When you create a custom class or struct, you should override the <xref:System.Object.ToString%2A> method in order to provide information about your type to client code.</span></span>  
   
- <span data-ttu-id="3c6c1-107">`ToString` メソッドで書式設定文字列やその他のカスタム形式を使用する方法については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-107">For information about how to use format strings and other types of custom formatting with the `ToString` method, see [Formatting Types](../../../standard/base-types/formatting-types.md).</span></span>  
+ <span data-ttu-id="3f589-107">`ToString` メソッドで書式設定文字列やその他のカスタム形式を使用する方法については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f589-107">For information about how to use format strings and other types of custom formatting with the `ToString` method, see [Formatting Types](../../../standard/base-types/formatting-types.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="3c6c1-108">このメソッドを使用して提供する情報を決定するときは、作成したクラスまたは構造体が信頼関係のないコードによって使用されるかどうかを考慮します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-108">When you decide what information to provide through this method, consider whether your class or struct will ever be used by untrusted code.</span></span> <span data-ttu-id="3c6c1-109">悪意があるコードで利用される可能性がある情報を提供しないように注意してください。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-109">Be careful to ensure that you do not provide any information that could be exploited by malicious code.</span></span>  
+> <span data-ttu-id="3f589-108">このメソッドを使用して提供する情報を決定するときは、作成したクラスまたは構造体が信頼関係のないコードによって使用されるかどうかを考慮します。</span><span class="sxs-lookup"><span data-stu-id="3f589-108">When you decide what information to provide through this method, consider whether your class or struct will ever be used by untrusted code.</span></span> <span data-ttu-id="3f589-109">悪意があるコードで利用される可能性がある情報を提供しないように注意してください。</span><span class="sxs-lookup"><span data-stu-id="3f589-109">Be careful to ensure that you do not provide any information that could be exploited by malicious code.</span></span>  
   
-<span data-ttu-id="3c6c1-110">クラスまたは構造体内の `ToString` メソッドをオーバーライドする手順</span><span class="sxs-lookup"><span data-stu-id="3c6c1-110">To override the `ToString` method in your class or struct:</span></span>
+<span data-ttu-id="3f589-110">クラスまたは構造体内の `ToString` メソッドをオーバーライドする手順</span><span class="sxs-lookup"><span data-stu-id="3f589-110">To override the `ToString` method in your class or struct:</span></span>
   
-1. <span data-ttu-id="3c6c1-111">次の修飾子および戻り値の値を指定して、`ToString` メソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-111">Declare a `ToString` method with the following modifiers and return type:</span></span>  
+1. <span data-ttu-id="3f589-111">次の修飾子および戻り値の値を指定して、`ToString` メソッドを宣言します。</span><span class="sxs-lookup"><span data-stu-id="3f589-111">Declare a `ToString` method with the following modifiers and return type:</span></span>  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2. <span data-ttu-id="3c6c1-112">文字列を返すように、メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-112">Implement the method so that it returns a string.</span></span>  
+2. <span data-ttu-id="3f589-112">文字列を返すように、メソッドを実装します。</span><span class="sxs-lookup"><span data-stu-id="3f589-112">Implement the method so that it returns a string.</span></span>  
   
-     <span data-ttu-id="3c6c1-113">次の例では、特定のクラス インスタンスに固有のデータに加えて、クラス名も返されます。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-113">The following example returns the name of the class in addition to the data specific to a particular instance of the class.</span></span>  
+     <span data-ttu-id="3f589-113">次の例では、特定のクラス インスタンスに固有のデータに加えて、クラス名も返されます。</span><span class="sxs-lookup"><span data-stu-id="3f589-113">The following example returns the name of the class in addition to the data specific to a particular instance of the class.</span></span>  
   
      [!code-csharp[csProgGuideInheritance#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#36)]  
   
-     <span data-ttu-id="3c6c1-114">`ToString` メソッドをテストする方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="3c6c1-114">You can test the `ToString` method as shown in the following code example:</span></span>  
+     <span data-ttu-id="3f589-114">`ToString` メソッドをテストする方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="3f589-114">You can test the `ToString` method as shown in the following code example:</span></span>  
   
      [!code-csharp[csProgGuideInheritance#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#38)]  
   
-## <a name="see-also"></a><span data-ttu-id="3c6c1-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c6c1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f589-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f589-115">See also</span></span>
 
 - <xref:System.IFormattable>
-- [<span data-ttu-id="3c6c1-116">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="3c6c1-116">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="3c6c1-117">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="3c6c1-117">Classes and Structs</span></span>](./index.md)
-- [<span data-ttu-id="3c6c1-118">文字列</span><span class="sxs-lookup"><span data-stu-id="3c6c1-118">Strings</span></span>](../strings/index.md)
-- [<span data-ttu-id="3c6c1-119">string</span><span class="sxs-lookup"><span data-stu-id="3c6c1-119">string</span></span>](../../language-reference/keywords/string.md)
-- [<span data-ttu-id="3c6c1-120">override</span><span class="sxs-lookup"><span data-stu-id="3c6c1-120">override</span></span>](../../language-reference/keywords/override.md)
-- [<span data-ttu-id="3c6c1-121">virtual</span><span class="sxs-lookup"><span data-stu-id="3c6c1-121">virtual</span></span>](../../language-reference/keywords/virtual.md)
-- [<span data-ttu-id="3c6c1-122">型の書式設定</span><span class="sxs-lookup"><span data-stu-id="3c6c1-122">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)
+- [<span data-ttu-id="3f589-116">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="3f589-116">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="3f589-117">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="3f589-117">Classes and Structs</span></span>](./index.md)
+- [<span data-ttu-id="3f589-118">文字列</span><span class="sxs-lookup"><span data-stu-id="3f589-118">Strings</span></span>](../strings/index.md)
+- [<span data-ttu-id="3f589-119">string</span><span class="sxs-lookup"><span data-stu-id="3f589-119">string</span></span>](../../language-reference/builtin-types/reference-types.md)
+- [<span data-ttu-id="3f589-120">override</span><span class="sxs-lookup"><span data-stu-id="3f589-120">override</span></span>](../../language-reference/keywords/override.md)
+- [<span data-ttu-id="3f589-121">virtual</span><span class="sxs-lookup"><span data-stu-id="3f589-121">virtual</span></span>](../../language-reference/keywords/virtual.md)
+- [<span data-ttu-id="3f589-122">型の書式設定</span><span class="sxs-lookup"><span data-stu-id="3f589-122">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)
