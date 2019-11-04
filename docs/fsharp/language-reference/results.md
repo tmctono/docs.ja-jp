@@ -1,39 +1,39 @@
 ---
 title: 結果
-description: 使用する方法について説明します、 F# 'Result' の入力エラー トレラントなコードを作成できるようにします。
+description: "\"Result\" 型をF#使用して、エラートレラントなコードを記述する方法について説明します。"
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645320"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424846"
 ---
-# <a name="results"></a><span data-ttu-id="12a59-103">結果</span><span class="sxs-lookup"><span data-stu-id="12a59-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="b0eb8-103">結果</span><span class="sxs-lookup"><span data-stu-id="b0eb8-103">Results</span></span>
 
-<span data-ttu-id="12a59-104">以降でF#4.1 は、`Result<'T,'TFailure>`できるエラー トレラントのコードを書くために使用できる型。</span><span class="sxs-lookup"><span data-stu-id="12a59-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="b0eb8-104">F# 4.1 以降では、構成可能なエラートレラントコードを記述するために使用できる `Result<'T,'TFailure>` 型があります。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="12a59-105">構文</span><span class="sxs-lookup"><span data-stu-id="12a59-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b0eb8-105">構文</span><span class="sxs-lookup"><span data-stu-id="b0eb8-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="12a59-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="12a59-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b0eb8-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0eb8-106">Remarks</span></span>
 
-<span data-ttu-id="12a59-107">結果型は、[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)、F# 4.1 で導入されたもう 1 つの機能であります。</span><span class="sxs-lookup"><span data-stu-id="12a59-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="12a59-108">構造の等値セマンティクスがここに適用されます。</span><span class="sxs-lookup"><span data-stu-id="12a59-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="b0eb8-107">結果の型は、4.1 でF#導入された別の機能である[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="b0eb8-108">ここでは構造的等値セマンティクスが適用されます。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="12a59-109">`Result`モナディック エラー処理と呼ばれるに多くの場合で、型が通常使用される[鉄道指向プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F# コミュニティ内で。</span><span class="sxs-lookup"><span data-stu-id="12a59-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="12a59-110">次の単純な例では、この方法を示します。</span><span class="sxs-lookup"><span data-stu-id="12a59-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="b0eb8-109">`Result` の種類は、通常、monadic のエラー処理で使用されます。これは、 F#コミュニティ内では、"[フロント指向" プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)と呼ばれることがよくあります。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="b0eb8-110">次の簡単な例は、この方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,9 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="12a59-111">非常に簡単に返すためにすべてを強制する場合は、さまざまな検証機能を連結、ご覧のとおり、`Result`します。</span><span class="sxs-lookup"><span data-stu-id="12a59-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="12a59-112">このような機能を必要に応じて、コンポーザブルである小規模なを分割するこのことができます。</span><span class="sxs-lookup"><span data-stu-id="12a59-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="12a59-113">これも、追加の値を持つ*を適用する*の使用[パターンに一致する](pattern-matching.md)検証のラウンドの末尾には、プログラムの正確性の高いを適用すると、それに続いて。</span><span class="sxs-lookup"><span data-stu-id="12a59-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="b0eb8-111">ご覧のように、すべてを強制的に `Result`を返す場合は、さまざまな検証関数を連結するのが非常に簡単です。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="b0eb8-112">これにより、このような機能を、必要に応じてコンポーザブルな小さな部分に分割できます。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="b0eb8-113">これには、検証のラウンドの最後に[パターン一致](pattern-matching.md)の使用を*強制*するための追加の値も含まれます。これにより、より高度なプログラムの正確性が適用されます。</span><span class="sxs-lookup"><span data-stu-id="b0eb8-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="12a59-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="12a59-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0eb8-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0eb8-114">See also</span></span>
 
-- [<span data-ttu-id="12a59-115">判別共用体</span><span class="sxs-lookup"><span data-stu-id="12a59-115">Discriminated Unions</span></span>](discriminated-unions.md)
-- [<span data-ttu-id="12a59-116">パターン一致</span><span class="sxs-lookup"><span data-stu-id="12a59-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="b0eb8-115">判別共用体</span><span class="sxs-lookup"><span data-stu-id="b0eb8-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="b0eb8-116">パターン一致</span><span class="sxs-lookup"><span data-stu-id="b0eb8-116">Pattern Matching</span></span>](pattern-matching.md)
