@@ -1,0 +1,40 @@
+---
+title: Wcf のバインディングとトランスポート-WCF 開発者向け gRPC
+description: さまざまな WCF バインドとトランスポートが gRPC とどのように比較されるかについて説明します。
+author: markrendle
+ms.date: 09/02/2019
+ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "73841319"
+---
+# <a name="wcf-bindings-and-transports"></a><span data-ttu-id="9ef44-103">WCF のバインドとトランスポート</span><span class="sxs-lookup"><span data-stu-id="9ef44-103">WCF bindings and transports</span></span>
+
+<span data-ttu-id="9ef44-104">WCF には、さまざまなネットワークプロトコル、ワイヤ形式、およびその他の実装の詳細を指定するさまざまな組み込み*バインド*があります。</span><span class="sxs-lookup"><span data-stu-id="9ef44-104">WCF has lots of different built-in *bindings* that specify different network protocols, wire formats, and other implementation details.</span></span> <span data-ttu-id="9ef44-105">gRPC には、ネットワークプロトコルとワイヤ形式が1つだけあります (技術的には、ワイヤ形式は*カスタマイズできます*が、このブックの範囲を超えています)。</span><span class="sxs-lookup"><span data-stu-id="9ef44-105">gRPC effectively has just one network protocol and one wire format (technically the wire format *may* be customized, but that is beyond the scope of this book).</span></span> <span data-ttu-id="9ef44-106">GRPC はほとんどの場合、最適なソリューションを提供していることがよくわかります。</span><span class="sxs-lookup"><span data-stu-id="9ef44-106">You are likely to discover that gRPC offers the best solution in most cases.</span></span> <span data-ttu-id="9ef44-107">ここでは、最も関連性の高い WCF バインドについて簡単に説明し、gRPC で同等のバインドと比較する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="9ef44-107">What follows is a short discussion about the most relevant WCF bindings and how they compare to their equivalent in gRPC.</span></span>
+
+## <a name="nettcp"></a><span data-ttu-id="9ef44-108">Wcf-nettcp</span><span class="sxs-lookup"><span data-stu-id="9ef44-108">NetTCP</span></span>
+
+<span data-ttu-id="9ef44-109">WCF の NetTCP バインドでは、永続的な接続、小さいメッセージ、双方向メッセージングが可能ですが、.NET クライアントとサーバーの間でのみ機能します。</span><span class="sxs-lookup"><span data-stu-id="9ef44-109">WCF's NetTCP binding allows for persistent connections, small messages, and two-way messaging but only works between .NET clients and servers.</span></span> <span data-ttu-id="9ef44-110">gRPC では同じ機能を使用できますが、複数のプログラミング言語とプラットフォームでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="9ef44-110">gRPC allows the same functionality but is supported across multiple programming languages and platforms.</span></span> <span data-ttu-id="9ef44-111">gRPC には WCF NetTCP バインディングの多くの機能がありますが、常に同じ方法で実装されるわけではありません。</span><span class="sxs-lookup"><span data-stu-id="9ef44-111">gRPC has many of the features of WCF NetTCP binding, although not always implemented in the same way.</span></span> <span data-ttu-id="9ef44-112">たとえば、WCF では、暗号化は構成によって制御され、フレームワークで処理されます。</span><span class="sxs-lookup"><span data-stu-id="9ef44-112">For example, in WCF, encryption is controlled through configuration and handled in the framework.</span></span> <span data-ttu-id="9ef44-113">GRPC では、TLS 経由の HTTP/2 を使用して接続レベルで暗号化が行われます。</span><span class="sxs-lookup"><span data-stu-id="9ef44-113">In gRPC, encryption is achieved at the connection level using HTTP/2 over TLS.</span></span>
+
+## <a name="http"></a><span data-ttu-id="9ef44-114">HTTP</span><span class="sxs-lookup"><span data-stu-id="9ef44-114">HTTP</span></span>
+
+<span data-ttu-id="9ef44-115">WCF の BasicHttpBinding は通常、ワイヤ形式の SOAP を使用したテキストベースであり、NetTCP バインドと比較すると低速です。</span><span class="sxs-lookup"><span data-stu-id="9ef44-115">WCF's BasicHttpBinding is usually text based, using SOAP as the wire format, and is slow compared to the NetTCP binding.</span></span> <span data-ttu-id="9ef44-116">一般に、クロスプラットフォームの相互運用性、またはインターネットインフラストラクチャ経由の接続を提供するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="9ef44-116">It's generally used to provide cross-platform interoperability, or connection over internet infrastructure.</span></span> <span data-ttu-id="9ef44-117">GRPC の場合と同等です。これは、メッセージのバイナリ Protobuf ワイヤ形式で、基になるトランスポート層として HTTP/2 が使用されるため、NetTCP サービスレベルのパフォーマンスを提供できますが、すべての最新のプログラミング言語とフレームワークと完全なクロスプラットフォームの相互運用性を備えています。</span><span class="sxs-lookup"><span data-stu-id="9ef44-117">The equivalent in gRPC—because it uses HTTP/2 as the underlying transport layer with the binary Protobuf wire format for messages—can offer NetTCP service level performance but with full cross-platform interoperability with all modern programming languages and frameworks.</span></span>
+
+## <a name="named-pipes"></a><span data-ttu-id="9ef44-118">名前付きパイプ</span><span class="sxs-lookup"><span data-stu-id="9ef44-118">Named Pipes</span></span>
+
+<span data-ttu-id="9ef44-119">WCF は、同じ物理マシン上のプロセス間の通信に使用する名前付きパイプのバインドを提供しました。</span><span class="sxs-lookup"><span data-stu-id="9ef44-119">WCF provided a Named Pipes binding for communication between processes on the same physical machine.</span></span> <span data-ttu-id="9ef44-120">名前付きパイプは ASP.NET Core gRPC の最初のリリースではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="9ef44-120">Named pipes are not supported by the first release of ASP.NET Core gRPC.</span></span> <span data-ttu-id="9ef44-121">名前付きパイプ (および Unix ドメインソケット) のクライアントとサーバーのサポートを追加することは、将来のリリースの目的です。</span><span class="sxs-lookup"><span data-stu-id="9ef44-121">Adding client and server support for named pipes (and Unix domain sockets) is a goal for a future release.</span></span>
+
+## <a name="msmq"></a><span data-ttu-id="9ef44-122">MSMQ</span><span class="sxs-lookup"><span data-stu-id="9ef44-122">MSMQ</span></span>
+
+<span data-ttu-id="9ef44-123">MSMQ は専用の Windows メッセージキューです。</span><span class="sxs-lookup"><span data-stu-id="9ef44-123">MSMQ is a proprietary Windows message queue.</span></span> <span data-ttu-id="9ef44-124">WCF による MSMQ へのバインドを使用すると、後でいつでも処理できるクライアントからの "火災および忘れる" 要求を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="9ef44-124">WCF's binding to MSMQ enables "fire and forget" requests from clients that may be processed at any time in the future.</span></span> <span data-ttu-id="9ef44-125">gRPC では、メッセージキュー機能はネイティブには提供されません。</span><span class="sxs-lookup"><span data-stu-id="9ef44-125">gRPC doesn't natively provide any message queue functionality.</span></span> <span data-ttu-id="9ef44-126">最適な方法は、Azure Service Bus、RabbitMQ、Kafka などのメッセージングシステムを直接使用することです。</span><span class="sxs-lookup"><span data-stu-id="9ef44-126">The best alternative would be to directly use a messaging system like Azure Service Bus, RabbitMQ, or Kafka.</span></span> <span data-ttu-id="9ef44-127">これは、メッセージをキューに直接配置するクライアント、またはメッセージをキューに入れる gRPC クライアントストリーミングサービスと共に実装できます。</span><span class="sxs-lookup"><span data-stu-id="9ef44-127">This could be implemented with the client placing messages directly onto the queue, or a gRPC client streaming service that enqueues the messages.</span></span>
+
+## <a name="webhttpbinding"></a><span data-ttu-id="9ef44-128">WebHttpBinding</span><span class="sxs-lookup"><span data-stu-id="9ef44-128">WebHttpBinding</span></span>
+
+<span data-ttu-id="9ef44-129">`WebGet` 属性と `WebInvoke` 属性を持つ WebHttpBinding (WCF ReST とも呼ばれます) は、現時点では、これがあまり一般的ではないときに JSON を話す可能性のある ReSTful Api を開発することを可能にしています。</span><span class="sxs-lookup"><span data-stu-id="9ef44-129">The WebHttpBinding (also known as WCF ReST), with the `WebGet` and `WebInvoke` attributes, enabled you to develop ReSTful APIs that could speak JSON at a time when this was less common than now.</span></span> <span data-ttu-id="9ef44-130">そのため、WCF REST でビルドされた RESTful API を使用している場合は、通常の ASP.NET Core MVC Web API アプリケーションに移行することを検討してください。これは、gRPC に変換するのではなく、同等の機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="9ef44-130">Therefore, if you have a RESTful API built with WCF REST, consider migrating it to a regular ASP.NET Core MVC Web API application, which would provide equivalent functionality, rather than converting to gRPC.</span></span>
+
+>[!div class="step-by-step"]
+><span data-ttu-id="9ef44-131">[前へ](wcf-endpoints-grpc-methods.md)
+>[次へ](rpc-types.md)</span><span class="sxs-lookup"><span data-stu-id="9ef44-131">[Previous](wcf-endpoints-grpc-methods.md)
+[Next](rpc-types.md)</span></span>
