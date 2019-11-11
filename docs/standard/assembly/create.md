@@ -7,48 +7,47 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740506"
 ---
-# <a name="create-assemblies"></a><span data-ttu-id="49e89-102">アセンブリを作成する</span><span class="sxs-lookup"><span data-stu-id="49e89-102">Create assemblies</span></span>
+# <a name="create-assemblies"></a><span data-ttu-id="8e8aa-102">アセンブリを作成する</span><span class="sxs-lookup"><span data-stu-id="8e8aa-102">Create assemblies</span></span>
 
-<span data-ttu-id="49e89-103">Visual Studio などの IDE や、Windows SDK によって提供されるコンパイラやツールを使って、単一ファイルまたはマルチファイルのアセンブリを作成できます。</span><span class="sxs-lookup"><span data-stu-id="49e89-103">You can create single-file or multifile assemblies using an IDE, such as Visual Studio, or the compilers and tools provided by the Windows SDK.</span></span> <span data-ttu-id="49e89-104">最も単純なアセンブリは、単純な名前を持ち、単一のアプリケーション ドメインに読み込まれる単一のファイルです。</span><span class="sxs-lookup"><span data-stu-id="49e89-104">The simplest assembly is a single file that has a simple name and is loaded into a single application domain.</span></span> <span data-ttu-id="49e89-105">このアセンブリはアプリケーション ディレクトリの外部にある他のアセンブリからは参照できず、バージョン チェックが行われません。</span><span class="sxs-lookup"><span data-stu-id="49e89-105">This assembly cannot be referenced by other assemblies outside the application directory and does not undergo version checking.</span></span> <span data-ttu-id="49e89-106">アセンブリで構成されるアプリケーションをアンインストールするには、アプリケーションが存在するディレクトリを削除します。</span><span class="sxs-lookup"><span data-stu-id="49e89-106">To uninstall the application made up of the assembly, you simply delete the directory where it resides.</span></span> <span data-ttu-id="49e89-107">多くの開発者は、このような機能を含むアセンブリがあれば、アプリケーションを展開できます。</span><span class="sxs-lookup"><span data-stu-id="49e89-107">For many developers, an assembly with these features is all that is needed to deploy an application.</span></span>
+<span data-ttu-id="8e8aa-103">Visual Studio などの IDE や、Windows SDK によって提供されるコンパイラやツールを使って、単一ファイルまたはマルチファイルのアセンブリを作成できます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-103">You can create single-file or multifile assemblies using an IDE, such as Visual Studio, or the compilers and tools provided by the Windows SDK.</span></span> <span data-ttu-id="8e8aa-104">最も単純なアセンブリは、単純な名前を持ち、単一のアプリケーション ドメインに読み込まれる単一のファイルです。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-104">The simplest assembly is a single file that has a simple name and is loaded into a single application domain.</span></span> <span data-ttu-id="8e8aa-105">このアセンブリはアプリケーション ディレクトリの外部にある他のアセンブリからは参照できず、バージョン チェックが行われません。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-105">This assembly cannot be referenced by other assemblies outside the application directory and does not undergo version checking.</span></span> <span data-ttu-id="8e8aa-106">アセンブリで構成されるアプリケーションをアンインストールするには、アプリケーションが存在するディレクトリを削除します。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-106">To uninstall the application made up of the assembly, you simply delete the directory where it resides.</span></span> <span data-ttu-id="8e8aa-107">多くの開発者は、このような機能を含むアセンブリがあれば、アプリケーションを展開できます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-107">For many developers, an assembly with these features is all that is needed to deploy an application.</span></span>
 
-<span data-ttu-id="49e89-108">マルチファイル アセンブリは、複数のコード モジュールおよびリソース ファイルから作成できます。</span><span class="sxs-lookup"><span data-stu-id="49e89-108">You can create a multifile assembly from several code modules and resource files.</span></span> <span data-ttu-id="49e89-109">複数のアプリケーションで共有できるアセンブリも作成できます。</span><span class="sxs-lookup"><span data-stu-id="49e89-109">You can also create an assembly that can be shared by multiple applications.</span></span> <span data-ttu-id="49e89-110">共有アセンブリは厳密な名前を持つ必要があり、グローバル アセンブリ キャッシュに展開することができます。</span><span class="sxs-lookup"><span data-stu-id="49e89-110">A shared assembly must have a strong name and can be deployed in the global assembly cache.</span></span>
+<span data-ttu-id="8e8aa-108">マルチファイル アセンブリは、複数のコード モジュールおよびリソース ファイルから作成できます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-108">You can create a multifile assembly from several code modules and resource files.</span></span> <span data-ttu-id="8e8aa-109">複数のアプリケーションで共有できるアセンブリも作成できます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-109">You can also create an assembly that can be shared by multiple applications.</span></span> <span data-ttu-id="8e8aa-110">共有アセンブリは厳密な名前を持つ必要があり、グローバル アセンブリ キャッシュに展開することができます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-110">A shared assembly must have a strong name and can be deployed in the global assembly cache.</span></span>
 
-<span data-ttu-id="49e89-111">コード モジュールとリソースをアセンブリにグループ化する場合、次のような要因に応じていくつかのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="49e89-111">You have several options when grouping code modules and resources into assemblies, depending on the following factors:</span></span>
+<span data-ttu-id="8e8aa-111">コード モジュールとリソースをアセンブリにグループ化する場合、次のような要因に応じていくつかのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-111">You have several options when grouping code modules and resources into assemblies, depending on the following factors:</span></span>
 
-- <span data-ttu-id="49e89-112">バージョン管理</span><span class="sxs-lookup"><span data-stu-id="49e89-112">Versioning</span></span>
+- <span data-ttu-id="8e8aa-112">バージョン管理</span><span class="sxs-lookup"><span data-stu-id="8e8aa-112">Versioning</span></span>
 
-     <span data-ttu-id="49e89-113">同じバージョン情報が含まれている必要があるグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="49e89-113">Group modules that should have the same version information.</span></span>
+     <span data-ttu-id="8e8aa-113">同じバージョン情報が含まれている必要があるグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-113">Group modules that should have the same version information.</span></span>
 
-- <span data-ttu-id="49e89-114">配置</span><span class="sxs-lookup"><span data-stu-id="49e89-114">Deployment</span></span>
+- <span data-ttu-id="8e8aa-114">配置</span><span class="sxs-lookup"><span data-stu-id="8e8aa-114">Deployment</span></span>
 
-     <span data-ttu-id="49e89-115">展開のモデルをサポートするグループ コードのモジュールおよびリソース。</span><span class="sxs-lookup"><span data-stu-id="49e89-115">Group code modules and resources that support your model of deployment.</span></span>
+     <span data-ttu-id="8e8aa-115">展開のモデルをサポートするグループ コードのモジュールおよびリソース。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-115">Group code modules and resources that support your model of deployment.</span></span>
 
-- <span data-ttu-id="49e89-116">再利用</span><span class="sxs-lookup"><span data-stu-id="49e89-116">Reuse</span></span>
+- <span data-ttu-id="8e8aa-116">再利用</span><span class="sxs-lookup"><span data-stu-id="8e8aa-116">Reuse</span></span>
 
-     <span data-ttu-id="49e89-117">いくつかの目的のために論理的に同時に使用できる場合はグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="49e89-117">Group modules if they can be logically used together for some purpose.</span></span> <span data-ttu-id="49e89-118">たとえば、プログラムのメンテナンスで頻繁に使用される型とクラスで構成されるアセンブリは同じアセンブリに配置することができます。</span><span class="sxs-lookup"><span data-stu-id="49e89-118">For example, an assembly consisting of types and classes used infrequently for program maintenance can be put in the same assembly.</span></span> <span data-ttu-id="49e89-119">さらに、複数のアプリケーションで共有する予定の型をアセンブリにグループ化し、そのアセンブリを厳密な名前で署名する必要があります。</span><span class="sxs-lookup"><span data-stu-id="49e89-119">In addition, types that you intend to share with multiple applications should be grouped into an assembly and the assembly should be signed with a strong name.</span></span>
+     <span data-ttu-id="8e8aa-117">いくつかの目的のために論理的に同時に使用できる場合はグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-117">Group modules if they can be logically used together for some purpose.</span></span> <span data-ttu-id="8e8aa-118">たとえば、プログラムのメンテナンスで頻繁に使用される型とクラスで構成されるアセンブリは同じアセンブリに配置することができます。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-118">For example, an assembly consisting of types and classes used infrequently for program maintenance can be put in the same assembly.</span></span> <span data-ttu-id="8e8aa-119">さらに、複数のアプリケーションで共有する予定の型をアセンブリにグループ化し、そのアセンブリを厳密な名前で署名する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-119">In addition, types that you intend to share with multiple applications should be grouped into an assembly and the assembly should be signed with a strong name.</span></span>
 
-- <span data-ttu-id="49e89-120">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="49e89-120">Security</span></span>
+- <span data-ttu-id="8e8aa-120">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="8e8aa-120">Security</span></span>
 
-     <span data-ttu-id="49e89-121">同じセキュリティ アクセス許可が必要な型を含むグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="49e89-121">Group modules containing types that require the same security permissions.</span></span>
+     <span data-ttu-id="8e8aa-121">同じセキュリティ アクセス許可が必要な型を含むグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-121">Group modules containing types that require the same security permissions.</span></span>
 
-- <span data-ttu-id="49e89-122">スコープ</span><span class="sxs-lookup"><span data-stu-id="49e89-122">Scoping</span></span>
+- <span data-ttu-id="8e8aa-122">スコープ</span><span class="sxs-lookup"><span data-stu-id="8e8aa-122">Scoping</span></span>
 
-     <span data-ttu-id="49e89-123">参照可能範囲を同じアセンブリに制限する必要がある型で構成されるグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="49e89-123">Group modules containing types whose visibility should be restricted to the same assembly.</span></span>
+     <span data-ttu-id="8e8aa-123">参照可能範囲を同じアセンブリに制限する必要がある型で構成されるグループ モジュール。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-123">Group modules containing types whose visibility should be restricted to the same assembly.</span></span>
 
-<span data-ttu-id="49e89-124">アンマネージド COM アプリケーションで使用できる共通言語ランタイム アセンブリを作成するときは、特別な考慮事項があります。</span><span class="sxs-lookup"><span data-stu-id="49e89-124">There are special considerations when making common language runtime assemblies available to unmanaged COM applications.</span></span> <span data-ttu-id="49e89-125">アンマネージド コードの使用の詳細については、「[COM への .NET コンポーネントの公開](../../framework/interop/exposing-dotnet-components-to-com.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="49e89-125">For more information about working with unmanaged code, see [Expose .NET Framework components to COM](../../framework/interop/exposing-dotnet-components-to-com.md).</span></span>
+<span data-ttu-id="8e8aa-124">アンマネージド COM アプリケーションで使用できる共通言語ランタイム アセンブリを作成するときは、特別な考慮事項があります。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-124">There are special considerations when making common language runtime assemblies available to unmanaged COM applications.</span></span> <span data-ttu-id="8e8aa-125">アンマネージド コードの使用の詳細については、「[COM への .NET コンポーネントの公開](../../framework/interop/exposing-dotnet-components-to-com.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8e8aa-125">For more information about working with unmanaged code, see [Expose .NET Framework components to COM](../../framework/interop/exposing-dotnet-components-to-com.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="49e89-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="49e89-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e8aa-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e8aa-126">See also</span></span>
 
-- [<span data-ttu-id="49e89-127">アセンブリを使用したプログラム</span><span class="sxs-lookup"><span data-stu-id="49e89-127">Program with assemblies</span></span>](program.md)
-- [<span data-ttu-id="49e89-128">アセンブリのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="49e89-128">Assembly versioning</span></span>](versioning.md)
-- [<span data-ttu-id="49e89-129">方法: シングルファイル アセンブリをビルドする</span><span class="sxs-lookup"><span data-stu-id="49e89-129">How to: Build a single-file assembly</span></span>](../../framework/app-domains/build-single-file-assembly.md)
-- [<span data-ttu-id="49e89-130">方法: マルチファイル アセンブリをビルドする</span><span class="sxs-lookup"><span data-stu-id="49e89-130">How to: Build a multifile assembly</span></span>](../../framework/app-domains/build-multifile-assembly.md)
-- [<span data-ttu-id="49e89-131">ランタイムがアセンブリを検索する方法</span><span class="sxs-lookup"><span data-stu-id="49e89-131">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
-- [<span data-ttu-id="49e89-132">マルチファイル アセンブリ</span><span class="sxs-lookup"><span data-stu-id="49e89-132">Multifile assemblies</span></span>](../../framework/app-domains/multifile-assemblies.md)
+- [<span data-ttu-id="8e8aa-127">アセンブリのバージョン管理</span><span class="sxs-lookup"><span data-stu-id="8e8aa-127">Assembly versioning</span></span>](versioning.md)
+- [<span data-ttu-id="8e8aa-128">方法: シングルファイル アセンブリをビルドする</span><span class="sxs-lookup"><span data-stu-id="8e8aa-128">How to: Build a single-file assembly</span></span>](../../framework/app-domains/build-single-file-assembly.md)
+- [<span data-ttu-id="8e8aa-129">方法: マルチファイル アセンブリをビルドする</span><span class="sxs-lookup"><span data-stu-id="8e8aa-129">How to: Build a multifile assembly</span></span>](../../framework/app-domains/build-multifile-assembly.md)
+- [<span data-ttu-id="8e8aa-130">ランタイムがアセンブリを検索する方法</span><span class="sxs-lookup"><span data-stu-id="8e8aa-130">How the runtime locates assemblies</span></span>](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="8e8aa-131">マルチファイル アセンブリ</span><span class="sxs-lookup"><span data-stu-id="8e8aa-131">Multifile assemblies</span></span>](../../framework/app-domains/multifile-assemblies.md)
