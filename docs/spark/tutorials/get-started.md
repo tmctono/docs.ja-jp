@@ -1,135 +1,225 @@
 ---
 title: .NET for Apache Spark の概要
 description: Windows で .NET Core を使用して .NET for Apache Spark アプリを実行する方法について説明します。
-ms.date: 06/27/2019
+ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774377"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740531"
 ---
-# <a name="tutorial-get-started-with-net-for-apache-spark"></a><span data-ttu-id="0a61e-103">チュートリアル: .NET for Apache Spark の概要</span><span class="sxs-lookup"><span data-stu-id="0a61e-103">Tutorial: Get started with .NET for Apache Spark</span></span>
+# <a name="tutorial-get-started-with-net-for-apache-spark"></a><span data-ttu-id="e536e-103">チュートリアル: .NET for Apache Spark の概要</span><span class="sxs-lookup"><span data-stu-id="e536e-103">Tutorial: Get started with .NET for Apache Spark</span></span>
 
-<span data-ttu-id="0a61e-104">このチュートリアルでは、Windows で .NET Core を使用して .NET for Apache Spark アプリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-104">This tutorial teaches you how to run a .NET for Apache Spark app using .NET Core on Windows.</span></span>
+<span data-ttu-id="e536e-104">このチュートリアルでは、Windows で .NET Core を使用して .NET for Apache Spark アプリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e536e-104">This tutorial teaches you how to run a .NET for Apache Spark app using .NET Core on Windows.</span></span>
 
-<span data-ttu-id="0a61e-105">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="e536e-105">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e536e-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="0a61e-106">.NET for Apache Spark 用に Windows 環境を準備する</span><span class="sxs-lookup"><span data-stu-id="0a61e-106">Prepare your Windows environment for .NET for Apache Spark</span></span>
-> * <span data-ttu-id="0a61e-107">**Microsoft.Spark.Worker** をダウンロードする</span><span class="sxs-lookup"><span data-stu-id="0a61e-107">Download the **Microsoft.Spark.Worker**</span></span>
-> * <span data-ttu-id="0a61e-108">.NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="0a61e-108">Build and run a simple .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="e536e-106">.NET for Apache Spark 用に Windows 環境を準備する</span><span class="sxs-lookup"><span data-stu-id="e536e-106">Prepare your Windows environment for .NET for Apache Spark</span></span>
+> * <span data-ttu-id="e536e-107">最初の .NET for Apache Spark アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="e536e-107">Write your first .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="e536e-108">.NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="e536e-108">Build and run your simple .NET for Apache Spark application</span></span>
 
-## <a name="prepare-your-environment"></a><span data-ttu-id="0a61e-109">環境を準備する</span><span class="sxs-lookup"><span data-stu-id="0a61e-109">Prepare your environment</span></span>
+## <a name="prepare-your-environment"></a><span data-ttu-id="e536e-109">環境を準備する</span><span class="sxs-lookup"><span data-stu-id="e536e-109">Prepare your environment</span></span>
 
-<span data-ttu-id="0a61e-110">開始する前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="0a61e-110">Before you begin, make sure you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line.</span></span> <span data-ttu-id="0a61e-111">環境が既に準備されている場合は、次のセクションに進むことができます。</span><span class="sxs-lookup"><span data-stu-id="0a61e-111">If your environment is already prepared, you can skip to the next section.</span></span> <span data-ttu-id="0a61e-112">コマンドのいずれかまたはすべてを実行できない場合は、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="0a61e-112">If you cannot run any or all of the commands, follow the steps below.</span></span>
+<span data-ttu-id="e536e-110">アプリの作成を開始する前に、いくつかの前提条件となる依存関係を設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e536e-110">Before you begin writing your app, you need to setup some prerequisite dependencies.</span></span> <span data-ttu-id="e536e-111">コマンドライン環境から `dotnet`、`java`、`mvn`、`spark-shell` を実行できる場合は、環境が既に準備されているため、次のセクションに進むことができます。</span><span class="sxs-lookup"><span data-stu-id="e536e-111">If you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line environment, then your environment is already prepared and you can skip to the next section.</span></span> <span data-ttu-id="e536e-112">コマンドのいずれかまたはすべてを実行できない場合は、次の手順を行います。</span><span class="sxs-lookup"><span data-stu-id="e536e-112">If you cannot run any or all of the commands, do the following steps.</span></span>
 
-1. <span data-ttu-id="0a61e-113">[.NET Core 2.1x SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1) をダウンロードしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-113">Download and install the [.NET Core 2.1x SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1).</span></span> <span data-ttu-id="0a61e-114">SDK をインストールすると、`dotnet` ツールチェーンが PATH に追加されます。</span><span class="sxs-lookup"><span data-stu-id="0a61e-114">Installing the SDK adds the `dotnet` toolchain to your PATH.</span></span> <span data-ttu-id="0a61e-115">PowerShell コマンド `dotnet --version` を使用して、インストールを確認します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-115">Use the PowerShell command `dotnet --version` to verify the installation.</span></span>
+### <a name="1-install-net"></a><span data-ttu-id="e536e-113">1..NET のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-113">1. Install .NET</span></span>
 
-2. <span data-ttu-id="0a61e-116">最新の更新プログラムを使用して、[Visual Studio 2017](https://www.visualstudio.com/downloads/) または [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-116">Install [Visual Studio 2017](https://www.visualstudio.com/downloads/) or [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) with the latest updates.</span></span> <span data-ttu-id="0a61e-117">Community、Professional、Enterprise のいずれかを使用できます。</span><span class="sxs-lookup"><span data-stu-id="0a61e-117">You can use Community, Professional, or Enterprise.</span></span> <span data-ttu-id="0a61e-118">Community バージョンは無料です。</span><span class="sxs-lookup"><span data-stu-id="0a61e-118">The Community version is free.</span></span>
+<span data-ttu-id="e536e-114">.NET アプリのビルドを開始するには、.NET SDK (ソフトウェア開発キット) をダウンロードしてインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e536e-114">To start building .NET apps, you need to download and install the .NET SDK (Software Development Kit).</span></span>
 
-   <span data-ttu-id="0a61e-119">インストール時に次のワークロードを選択します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-119">Choose the following workloads during installation:</span></span>
-      * <span data-ttu-id="0a61e-120">.NET デスクトップ開発</span><span class="sxs-lookup"><span data-stu-id="0a61e-120">.NET desktop development</span></span>
-          * <span data-ttu-id="0a61e-121">すべての必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="0a61e-121">All required components</span></span>
-          * <span data-ttu-id="0a61e-122">.NET Framework 4.6.1 開発ツール</span><span class="sxs-lookup"><span data-stu-id="0a61e-122">.NET Framework 4.6.1 Development Tools</span></span>
-      * <span data-ttu-id="0a61e-123">.NET Core クロスプラットフォームの開発</span><span class="sxs-lookup"><span data-stu-id="0a61e-123">.NET Core cross-platform development</span></span>
-          * <span data-ttu-id="0a61e-124">すべての必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="0a61e-124">All required components</span></span>
+<span data-ttu-id="e536e-115">[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) をダウンロードしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="e536e-115">Download and install the [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0).</span></span> <span data-ttu-id="e536e-116">SDK をインストールすると、`dotnet` ツールチェーンが PATH に追加されます。</span><span class="sxs-lookup"><span data-stu-id="e536e-116">Installing the SDK adds the `dotnet` toolchain to your PATH.</span></span> 
 
-3. <span data-ttu-id="0a61e-125">[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-125">Install [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span></span>
+<span data-ttu-id="e536e-117">.NET Core SDK をインストールしたら、新しいコマンド プロンプトを開き、`dotnet` を実行します。</span><span class="sxs-lookup"><span data-stu-id="e536e-117">Once you've installed the .NET Core SDK, open a new command prompt and run `dotnet`.</span></span>
 
-    * <span data-ttu-id="0a61e-126">ご使用のオペレーティング システムに適したバージョンを選択します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-126">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="0a61e-127">たとえば、Windows x64 マシンには、**jdk-8u201-windows-x64.exe** を選択します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-127">For example, select **jdk-8u201-windows-x64.exe** for a Windows x64 machine.</span></span>
-    * <span data-ttu-id="0a61e-128">PowerShell コマンド `java -version` を使用して、インストールを確認します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-128">Use the PowerShell command `java -version` to verify the installation.</span></span>
+<span data-ttu-id="e536e-118">コマンドが実行され、dotnet の使用方法に関する情報が出力された場合は、次の手順に進むことができます。</span><span class="sxs-lookup"><span data-stu-id="e536e-118">If the command runs and prints out information about how to use dotnet, can move to the next step.</span></span> <span data-ttu-id="e536e-119">`'dotnet' is not recognized as an internal or external command` エラーが発生した場合は、コマンドを実行する前に**新しい**コマンド プロンプトを開いたことを確認してください。</span><span class="sxs-lookup"><span data-stu-id="e536e-119">If you receive a `'dotnet' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt before running the command.</span></span> 
 
-4. <span data-ttu-id="0a61e-129">[Apache Maven 3.6.0 以降](https://maven.apache.org/download.cgi)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-129">Install [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi).</span></span>
-    * <span data-ttu-id="0a61e-130">[Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip) をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-130">Download [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip).</span></span>
-    * <span data-ttu-id="0a61e-131">ローカル ディレクトリに抽出します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-131">Extract to a local directory.</span></span> <span data-ttu-id="0a61e-132">たとえば、`c:\bin\apache-maven-3.6.2\` のようにします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-132">For example, `c:\bin\apache-maven-3.6.2\`.</span></span>
-    * <span data-ttu-id="0a61e-133">Apache Maven をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-133">Add Apache Maven to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="0a61e-134">`c:\bin\apache-maven-3.6.2\` に抽出した場合は、`c:\bin\apache-maven-3.6.2\bin` を PATH に追加します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-134">If you extracted to `c:\bin\apache-maven-3.6.2\`, you would add `c:\bin\apache-maven-3.6.2\bin` to your PATH.</span></span>
-    * <span data-ttu-id="0a61e-135">PowerShell コマンド `mvn -version` を使用して、インストールを確認します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-135">Use the PowerShell command `mvn -version` to verify the installation.</span></span>
+### <a name="2-install-java"></a><span data-ttu-id="e536e-120">2.Java のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-120">2. Install Java</span></span>
 
-5. <span data-ttu-id="0a61e-136">[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-136">Install [Apache Spark 2.3+](https://spark.apache.org/downloads.html).</span></span> <span data-ttu-id="0a61e-137">Apache Spark 2.4 以降はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="0a61e-137">Apache Spark 2.4+ isn't supported.</span></span>
-    * <span data-ttu-id="0a61e-138">[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をダウンロードし、[7-zip](https://www.7-zip.org/) や [WinZip](https://www.winzip.com/) などのツールを使用してローカル フォルダーに抽出します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-138">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder using a tool like [7-zip](https://www.7-zip.org/) or [WinZip](https://www.winzip.com/).</span></span> <span data-ttu-id="0a61e-139">たとえば、`c:\bin\spark-2.3.2-bin-hadoop2.7\` に抽出します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-139">For example, you might extract it to `c:\bin\spark-2.3.2-bin-hadoop2.7\`.</span></span>
-    * <span data-ttu-id="0a61e-140">Apache Spark をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-140">Add Apache Spark to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="0a61e-141">`c:\bin\spark-2.3.2-bin-hadoop2.7\` に抽出した場合は、`c:\bin\spark-2.3.2-bin-hadoop2.7\bin` を PATH に追加します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-141">If you extracted to `c:\bin\spark-2.3.2-bin-hadoop2.7\`, you would add `c:\bin\spark-2.3.2-bin-hadoop2.7\bin` to your PATH.</span></span>
-    * <span data-ttu-id="0a61e-142">`SPARK_HOME` という[新しい環境変数](https://www.java.com/en/download/help/path.xml)を追加します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-142">Add a [new environment variable](https://www.java.com/en/download/help/path.xml) called `SPARK_HOME`.</span></span> <span data-ttu-id="0a61e-143">`C:\bin\spark-2.3.2-bin-hadoop2.7\` に抽出した場合は、**変数値**に `C:\bin\spark-2.3.2-bin-hadoop2.7\` を使用します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-143">If you extracted to `C:\bin\spark-2.3.2-bin-hadoop2.7\`, use  `C:\bin\spark-2.3.2-bin-hadoop2.7\` for the **Variable value**.</span></span>
-    * <span data-ttu-id="0a61e-144">コマンド ラインから `spark-shell` を実行できることを確認します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-144">Verify you are able to run `spark-shell` from your command line.</span></span>
+<span data-ttu-id="e536e-121">[Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="e536e-121">Install [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).</span></span>
 
-6. <span data-ttu-id="0a61e-145">[WinUtils](https://github.com/steveloughran/winutils) を設定します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-145">Set up [WinUtils](https://github.com/steveloughran/winutils).</span></span>
-    * <span data-ttu-id="0a61e-146">[Winutils リポジトリ](https://github.com/steveloughran/winutils)から **winutils.exe** バイナリをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-146">Download the **winutils.exe** binary from [WinUtils repository](https://github.com/steveloughran/winutils).</span></span> <span data-ttu-id="0a61e-147">Spark ディストリビューションをコンパイルした Hadoop のバージョンを選択します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-147">Select the version of Hadoop the Spark distribution was compiled with.</span></span> <span data-ttu-id="0a61e-148">たとえば、**Spark 2.3.2** には **hadoop-2.7.1** を使用します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-148">For example, you use **hadoop-2.7.1** for **Spark 2.3.2**.</span></span> <span data-ttu-id="0a61e-149">Hadoop のバージョンは、Spark インストール フォルダー名の末尾に注釈付けされています。</span><span class="sxs-lookup"><span data-stu-id="0a61e-149">The Hadoop version is annotated at the end of your Spark install folder name.</span></span>
-    * <span data-ttu-id="0a61e-150">**winutils.exe** バイナリを任意のディレクトリに保存します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-150">Save the **winutils.exe** binary to a directory of your choice.</span></span> <span data-ttu-id="0a61e-151">たとえば、`c:\hadoop\bin` のようにします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-151">For example, `c:\hadoop\bin`.</span></span>
-    * <span data-ttu-id="0a61e-152">**winutils.exe** 含むディレクトリを反映するように、`bin` なしで `HADOOP_HOME` を設定します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-152">Set `HADOOP_HOME` to reflect the directory with **winutils.exe** without `bin`.</span></span> <span data-ttu-id="0a61e-153">たとえば、`c:\hadoop` のようにします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-153">For example, `c:\hadoop`.</span></span>
-    * <span data-ttu-id="0a61e-154">`%HADOOP_HOME%\bin` が含まれるように PATH 環境変数を設定します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-154">Set the PATH environment variable to include `%HADOOP_HOME%\bin`.</span></span>
+<span data-ttu-id="e536e-122">ご使用のオペレーティング システムに適したバージョンを選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-122">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="e536e-123">たとえば、Windows x64 マシンには、**jdk-8u201-windows-x64.exe** を選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-123">For example, select **jdk-8u201-windows-x64.exe** for a Windows x64 machine.</span></span> <span data-ttu-id="e536e-124">次に、コマンド `java` を使用してインストールを確認します。</span><span class="sxs-lookup"><span data-stu-id="e536e-124">Then, use the command `java` to verify the installation.</span></span>
+   
+![Java のダウンロード](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
-<span data-ttu-id="0a61e-155">次のセクションに進む前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを再度確認します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-155">Double check that you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span>
+### <a name="3-install-7-zip"></a><span data-ttu-id="e536e-126">3.7-zip のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-126">3. Install 7-zip</span></span>
 
-## <a name="download-the-microsoftsparkworker-release"></a><span data-ttu-id="0a61e-156">Microsoft.Spark.Worker リリースをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="0a61e-156">Download the Microsoft.Spark.Worker release</span></span>
+<span data-ttu-id="e536e-127">Apache Spark は、圧縮された .tgz ファイルとしてダウンロードされます。</span><span class="sxs-lookup"><span data-stu-id="e536e-127">Apache Spark is downloaded as a compressed .tgz file.</span></span> <span data-ttu-id="e536e-128">7-zip などの抽出プログラムを使用して、ファイルを抽出します。</span><span class="sxs-lookup"><span data-stu-id="e536e-128">Use an extraction program, like 7-zip, to extract the file.</span></span>
 
-1. <span data-ttu-id="0a61e-157">.NET for Apache Spark GitHub リリース ページから、[Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) リリースをローカル コンピューターにダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-157">Download the [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) release from the .NET for Apache Spark GitHub Releases page to your local machine.</span></span> <span data-ttu-id="0a61e-158">たとえば、`c:\bin\Microsoft.Spark.Worker\` というパスにダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="0a61e-158">For example, you might download it to the path, `c:\bin\Microsoft.Spark.Worker\`.</span></span>
+* <span data-ttu-id="e536e-129">[7-Zip のダウンロード](https://www.7-zip.org/) ページにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="e536e-129">Visit [7-Zip downloads](https://www.7-zip.org/).</span></span>
+* <span data-ttu-id="e536e-130">ページの最初の表で、使用しているオペレーティング システムに応じて、32-bit x86 または 64-bit x64 ダウンロードを選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-130">In the first table on the page, select the 32-bit x86 or 64-bit x64 download, depending on your operating system.</span></span>
+* <span data-ttu-id="e536e-131">ダウンロードが完了したら、インストーラーを実行します。</span><span class="sxs-lookup"><span data-stu-id="e536e-131">When the download completes, run the installer.</span></span>
+   
+![7Zip のダウンロード](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
-2. <span data-ttu-id="0a61e-159">`DOTNET_WORKER_DIR` という名前の[新しい環境変数](https://www.java.com/en/download/help/path.xml)を作成し、**Microsoft.Spark.Worker** をダウンロードして抽出したディレクトリに設定します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-159">Create a [new environment variable](https://www.java.com/en/download/help/path.xml) called `DOTNET_WORKER_DIR` and set it to the directory where you downloaded and extracted the **Microsoft.Spark.Worker**.</span></span> <span data-ttu-id="0a61e-160">たとえば、`c:\bin\Microsoft.Spark.Worker` のようにします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-160">For example, `c:\bin\Microsoft.Spark.Worker`.</span></span>
+### <a name="4-install-apache-spark"></a><span data-ttu-id="e536e-133">4.Apache Spark のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-133">4. Install Apache Spark</span></span>
 
-## <a name="clone-the-net-for-apache-spark-github-repo"></a><span data-ttu-id="0a61e-161">.NET for Apache Spark GitHub リポジトリの複製</span><span class="sxs-lookup"><span data-stu-id="0a61e-161">Clone the .NET for Apache Spark GitHub repo</span></span>
+<span data-ttu-id="e536e-134">[Apache Spark をダウンロードしてインストールします](https://spark.apache.org/downloads.html)。</span><span class="sxs-lookup"><span data-stu-id="e536e-134">[Download and install Apache Spark](https://spark.apache.org/downloads.html).</span></span> <span data-ttu-id="e536e-135">バージョン 2.3.\*、2.4.0、2.4.1、2.4.3、または 2.4.4 から選択する必要があります (.NET for Apache Spark は、他のバージョンの Apache Spark と互換性がありません)。</span><span class="sxs-lookup"><span data-stu-id="e536e-135">You'll need to select from version 2.3.\* or 2.4.0, 2.4.1, 2.4.3, or 2.4.4 (.NET for Apache Spark is not compatible with other versions of Apache Spark).</span></span>  
 
-<span data-ttu-id="0a61e-162">次の [GitBash](https://gitforwindows.org/) コマンドを使用して、.NET for Apache Spark リポジトリをご使用のマシンに複製します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-162">Use the following [GitBash](https://gitforwindows.org/) command to clone the .NET for Apache Spark repo to your machine.</span></span>
+<span data-ttu-id="e536e-136">次の手順で使用するコマンドは、[Apache Spark 2.4.1 をダウンロードしてインストールしていること](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)を前提としています。</span><span class="sxs-lookup"><span data-stu-id="e536e-136">The commands used in the following steps assume you have [downloaded and installed Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz).</span></span> <span data-ttu-id="e536e-137">別のバージョンを使用する場合は、**2.4.1** を適切なバージョン番号に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="e536e-137">If you wish to use a different version, replace **2.4.1** with the appropriate version number.</span></span> <span data-ttu-id="e536e-138">その後、 **.tar** ファイルと Apache Spark ファイルを抽出します。</span><span class="sxs-lookup"><span data-stu-id="e536e-138">Then, extract the **.tar** file and the Apache Spark files.</span></span>
 
-```bash
-git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
+<span data-ttu-id="e536e-139">入れ子になった **.tar** ファイルを抽出するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="e536e-139">To extract the nested **.tar** file:</span></span>
+
+* <span data-ttu-id="e536e-140">ダウンロードした **spark-2.4.1-bin-hadoop2.7.tgz** ファイルを見つけます。</span><span class="sxs-lookup"><span data-stu-id="e536e-140">Locate the **spark-2.4.1-bin-hadoop2.7.tgz** file that you downloaded.</span></span>
+* <span data-ttu-id="e536e-141">ファイルを右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-141">Right click on the file and select **7-Zip -> Extract here**.</span></span>
+* <span data-ttu-id="e536e-142">ダウンロードした **.tgz** ファイルの横に **spark-2.4.1-bin-hadoop2.7.tar** が作成されます。</span><span class="sxs-lookup"><span data-stu-id="e536e-142">**spark-2.4.1-bin-hadoop2.7.tar** is created alongside the **.tgz** file you downloaded.</span></span>
+
+<span data-ttu-id="e536e-143">Apache Spark ファイルを抽出するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="e536e-143">To extract the Apache Spark files:</span></span>
+
+* <span data-ttu-id="e536e-144">**spark-2.4.1-bin-hadoop2.7.tar** を右クリックし、 **[7-Zip] -> [展開]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-144">Right click on **spark-2.4.1-bin-hadoop2.7.tar** and select **7-Zip -> Extract files...**</span></span>
+* <span data-ttu-id="e536e-145">**[展開先]** フィールドに「**C:\bin**」と入力します。</span><span class="sxs-lookup"><span data-stu-id="e536e-145">Enter **C:\bin** in the **Extract to** field.</span></span>
+* <span data-ttu-id="e536e-146">**[展開先]** フィールドの下のチェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="e536e-146">Uncheck the checkbox below the **Extract to** field.</span></span>
+* <span data-ttu-id="e536e-147">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-147">Select **OK**.</span></span>
+* <span data-ttu-id="e536e-148">Apache Spark ファイルが C:\bin\spark-2.4.1-bin-hadoop2.7\ に抽出されます。</span><span class="sxs-lookup"><span data-stu-id="e536e-148">The Apache Spark files are extracted to C:\bin\spark-2.4.1-bin-hadoop2.7\</span></span>
+      
+![Spark のインストール](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+    
+<span data-ttu-id="e536e-150">次のコマンドを実行して、Apache Spark を検索するために使用する環境変数を設定します。</span><span class="sxs-lookup"><span data-stu-id="e536e-150">Run the following commands to set the environment variables used to locate Apache Spark:</span></span>
+
+```console
+setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 ```
 
-## <a name="write-a-net-for-apache-spark-app"></a><span data-ttu-id="0a61e-163">.NET for Apache Spark アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="0a61e-163">Write a .NET for Apache Spark app</span></span>
+<span data-ttu-id="e536e-151">すべてをインストールし、環境変数を設定したら、**新しい**コマンド プロンプトを開き、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="e536e-151">Once you've installed everything and set your environment variables, open a **new** command prompt and run the following command:</span></span>
 
-1. <span data-ttu-id="0a61e-164">**Visual Studio** を開き、 **[ファイル]、[新しいプロジェクトの作成]、[コンソール アプリ (.NET Core)]** の順に移動します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-164">Open **Visual Studio** and navigate to **File > Create New Project > Console App (.NET Core)**.</span></span> <span data-ttu-id="0a61e-165">アプリケーションに「**HelloSpark**」という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="0a61e-165">Name the application **HelloSpark**.</span></span>
+`%SPARK_HOME%\bin\spark-submit --version`
 
-2. <span data-ttu-id="0a61e-166">[Microsoft.Spark NuGet パッケージ](https://www.nuget.org/profiles/spark)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-166">Install the [Microsoft.Spark NuGet package](https://www.nuget.org/profiles/spark).</span></span> <span data-ttu-id="0a61e-167">Nuget パッケージのインストールの詳細については、[NuGet パッケージをインストールするためのさまざまな方法](https://docs.microsoft.com/nuget/consume-packages/ways-to-install-a-package)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0a61e-167">For more information on installing NuGet packages, see [Different ways to install a NuGet Package](https://docs.microsoft.com/nuget/consume-packages/ways-to-install-a-package).</span></span>
+<span data-ttu-id="e536e-152">コマンドが実行され、バージョン情報が出力された場合は、次の手順に進むことができます。</span><span class="sxs-lookup"><span data-stu-id="e536e-152">If the command runs and prints version information, you can move to the next step.</span></span>
 
-3. <span data-ttu-id="0a61e-168">**ソリューション エクスプローラー**で、**Program.cs** を開き、次の C# コードを記述します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-168">In **Solution Explorer**, open **Program.cs** and write the following C# code:</span></span>
+<span data-ttu-id="e536e-153">`'spark-submit' is not recognized as an internal or external command` エラーが発生した場合は、**新しい**コマンド プロンプトを開いたことを確認してください。</span><span class="sxs-lookup"><span data-stu-id="e536e-153">If you receive a `'spark-submit' is not recognized as an internal or external command` error, make sure you opened a **new** command prompt.</span></span>
 
-   ```csharp
-     var spark = SparkSession.Builder().GetOrCreate();
-     var df = spark.Read().Json("people.json");
-     df.Show();
+### <a name="5-install-net-for-apache-spark"></a><span data-ttu-id="e536e-154">5..NET for Apache Spark のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-154">5. Install .NET for Apache Spark</span></span>
+
+<span data-ttu-id="e536e-155">.NET for Apache Spark GitHub から、[Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) リリースをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="e536e-155">Download the [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) release from the .NET for Apache Spark GitHub.</span></span> <span data-ttu-id="e536e-156">たとえば、Windows マシンを使用していて、.NET Core の使用を計画している場合は、[Windows x64 netcoreapp2.1 リリースをダウンロード](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip)します。</span><span class="sxs-lookup"><span data-stu-id="e536e-156">For example if you're on a Windows machine and plan to use .NET Core, [download the Windows x64 netcoreapp2.1 release](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).</span></span>
+
+<span data-ttu-id="e536e-157">Microsoft.Spark.Worker を抽出するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="e536e-157">To extract the Microsoft.Spark.Worker:</span></span>
+
+* <span data-ttu-id="e536e-158">ダウンロードした **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip** ファイルを見つけます。</span><span class="sxs-lookup"><span data-stu-id="e536e-158">Locate the **Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip** file that you downloaded.</span></span>
+* <span data-ttu-id="e536e-159">右クリックし、 **[7-Zip] -> [ここに展開]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-159">Right click and select **7-Zip -> Extract files...**.</span></span>
+* <span data-ttu-id="e536e-160">**[展開先]** フィールドに「**C:\bin**」と入力します。</span><span class="sxs-lookup"><span data-stu-id="e536e-160">Enter **C:\bin** in the **Extract to** field.</span></span>
+* <span data-ttu-id="e536e-161">**[展開先]** フィールドの下のチェックボックスをオフにします。</span><span class="sxs-lookup"><span data-stu-id="e536e-161">Uncheck the checkbox below the **Extract to** field.</span></span>
+* <span data-ttu-id="e536e-162">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="e536e-162">Select **OK**.</span></span>
+  
+![.NET Spark のインストール](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
+
+### <a name="6-install-winutils"></a><span data-ttu-id="e536e-164">6.WinUtils のインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-164">6. Install WinUtils</span></span>
+
+<span data-ttu-id="e536e-165">.NET for Apache Spark では、Apache Spark と共に WinUtils をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e536e-165">.NET for Apache Spark requires WinUtils to be installed alongside Apache Spark.</span></span> <span data-ttu-id="e536e-166">[winutils.exe をダウンロード](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)します。</span><span class="sxs-lookup"><span data-stu-id="e536e-166">[Download winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe).</span></span> <span data-ttu-id="e536e-167">次に、WinUtils を **C:\bin\spark-2.4.1-bin-hadoop2.7\bin** にコピーします。</span><span class="sxs-lookup"><span data-stu-id="e536e-167">Then, copy WinUtils into **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="e536e-168">Spark インストール フォルダー名の末尾に注釈が付けられている別のバージョンの Hadoop を使用している場合は、使用している Hadoop のバージョンと互換性のある[バージョンの WinUtils を選択](https://github.com/steveloughran/winutils)します。</span><span class="sxs-lookup"><span data-stu-id="e536e-168">If you are using a different version of Hadoop, which is annotated at the end of your Spark install folder name, [select the version of WinUtils](https://github.com/steveloughran/winutils) that's compatible with your version of Hadoop.</span></span> 
+
+### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a><span data-ttu-id="e536e-169">7.DOTNET_WORKER_DIR の設定と依存関係の確認</span><span class="sxs-lookup"><span data-stu-id="e536e-169">7. Set DOTNET_WORKER_DIR and check dependencies</span></span>
+
+<span data-ttu-id="e536e-170">次のコマンドを実行して `DOTNET_WORKER_DIR` 環境変数を設定します。この変数は、.NET アプリで .NET for Apache Spark を検索するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="e536e-170">Run the following command to set the `DOTNET_WORKER_DIR` Environment Variable, which is used by .NET apps to locate .NET for Apache Spark:</span></span>
+
+`setx DOTNET_WORKER_DIR "C:\bin\Microsoft.Spark.Worker-0.6.0"`
+
+<span data-ttu-id="e536e-171">最後に、次のセクションに進む前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを再度確認します。</span><span class="sxs-lookup"><span data-stu-id="e536e-171">Finally, double-check that you can run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span>
+
+## <a name="write-a-net-for-apache-spark-app"></a><span data-ttu-id="e536e-172">.NET for Apache Spark アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="e536e-172">Write a .NET for Apache Spark app</span></span>
+
+### <a name="1-create-a-console-app"></a><span data-ttu-id="e536e-173">1.コンソール アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="e536e-173">1. Create a console app</span></span>
+
+<span data-ttu-id="e536e-174">コマンド プロンプトで、次のコマンドを実行して、新しいコンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="e536e-174">In your command prompt, run the following commands to create a new console application:</span></span>
+
+```console
+dotnet new console -o mySparkApp
+cd mySparkApp
+```
+
+<span data-ttu-id="e536e-175">`dotnet` コマンドで、種類が `console` の `new` アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="e536e-175">The `dotnet` command creates a `new` application of type `console` for you.</span></span> <span data-ttu-id="e536e-176">`-o` パラメーターで、アプリが格納されるディレクトリ *mySparkApp* を作成し、必要なファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="e536e-176">The `-o` parameter creates a directory named *mySparkApp* where your app is stored and populates it with the required files.</span></span> <span data-ttu-id="e536e-177">`cd mySparkApp` コマンドで、ディレクトリを、先ほど作成したアプリ ディレクトリに変更します。</span><span class="sxs-lookup"><span data-stu-id="e536e-177">The `cd mySparkApp` command changes the directory to the app directory you just created.</span></span>
+
+### <a name="2-install-nuget-package"></a><span data-ttu-id="e536e-178">2.NuGet パッケージのインストール</span><span class="sxs-lookup"><span data-stu-id="e536e-178">2. Install NuGet package</span></span>
+
+<span data-ttu-id="e536e-179">アプリで .NET for Apache Spark を使用するには、Microsoft.Spark パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="e536e-179">To use .NET for Apache Spark in an app, install the Microsoft.Spark package.</span></span> <span data-ttu-id="e536e-180">コマンド プロンプトで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="e536e-180">In your command prompt, run the following command:</span></span>
+
+`dotnet add package Microsoft.Spark --version 0.6.0`
+
+### <a name="3-code-your-app"></a><span data-ttu-id="e536e-181">3.アプリのコーディング</span><span class="sxs-lookup"><span data-stu-id="e536e-181">3. Code your app</span></span>
+
+<span data-ttu-id="e536e-182">Visual Studio Code または任意のテキスト エディターで *Program.cs* を開き、すべてのコードを次のコードで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="e536e-182">Open *Program.cs* in Visual Studio Code, or any text editor, and replace all of the code with the following:</span></span>
+
+```csharp
+using Microsoft.Spark.Sql;
+
+namespace MySparkApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a Spark session.
+            var spark = SparkSession
+                .Builder()
+                .AppName("word_count_sample")
+                .GetOrCreate();
+
+            // Create initial DataFrame.
+            DataFrame dataFrame = spark.Read().Text("input.txt");
+
+            // Count words.
+            var words = dataFrame
+                .Select(Functions.Split(Functions.Col("value"), " ").Alias("words"))
+                .Select(Functions.Explode(Functions.Col("words"))
+                .Alias("word"))
+                .GroupBy("word")
+                .Count()
+                .OrderBy(Functions.Col("count").Desc());
+
+            // Show results.
+            words.Show();
+
+            // Stop Spark session.
+            spark.Stop();
+        }
+    }
+}
+```
+
+### <a name="4-add-data-file"></a><span data-ttu-id="e536e-183">4.データ ファイルの追加</span><span class="sxs-lookup"><span data-stu-id="e536e-183">4. Add data file</span></span>
+
+<span data-ttu-id="e536e-184">アプリでは、テキスト行を含むファイルが処理されます。</span><span class="sxs-lookup"><span data-stu-id="e536e-184">Your app processes a file containing lines of text.</span></span> <span data-ttu-id="e536e-185">*mySparkApp* ディレクトリに、次のテキストを含む *input.txt* ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e536e-185">Create an *input.txt* file in your *mySparkApp* directory, containing the following text:</span></span>
+
+```text
+Hello World
+This .NET app uses .NET for Apache Spark
+This .NET app counts words with Apache Spark
+```
+
+## <a name="run-your-net-for-apache-spark-app"></a><span data-ttu-id="e536e-186">.NET for Apache Spark アプリを実行する</span><span class="sxs-lookup"><span data-stu-id="e536e-186">Run your .NET for Apache Spark app</span></span>
+
+1. <span data-ttu-id="e536e-187">次のコマンドを実行して、アプリケーションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="e536e-187">Run the following command to build your application:</span></span>
+
+   ```dotnetcli
+   dotnet build
    ```
 
-4. <span data-ttu-id="0a61e-169">ソリューションをビルドします。</span><span class="sxs-lookup"><span data-stu-id="0a61e-169">Build the solution.</span></span>
-
-## <a name="run-your-net-for-apache-spark-app"></a><span data-ttu-id="0a61e-170">.NET for Apache Spark アプリを実行する</span><span class="sxs-lookup"><span data-stu-id="0a61e-170">Run your .NET for Apache Spark app</span></span>
-
-1. <span data-ttu-id="0a61e-171">**PowerShell** を開き、ディレクトリを、アプリが格納されているフォルダーに変更します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-171">Open **PowerShell** and change the directory to the folder where your app is stored.</span></span>
+2. <span data-ttu-id="e536e-188">次のコマンドを実行して、Apache Spark で実行するようにアプリケーションを送信します。</span><span class="sxs-lookup"><span data-stu-id="e536e-188">Run the following command to submit your application to run on Apache Spark:</span></span>
 
    ```powershell
-   cd <your-app-output-directory>
+   %SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local bin\Debug\netcoreapp3.0\microsoft-spark-2.4.x-0.6.0.jar dotnet bin\Debug\netcoreapp3.0\mySparkApp.dll
    ```
 
-2. <span data-ttu-id="0a61e-172">次の内容を含む **people.json** という名前のファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-172">Create a file called **people.json** with the following content:</span></span>
+3. <span data-ttu-id="e536e-189">アプリを実行すると、*input.txt* ファイルのワード カウント データがコンソールに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="e536e-189">When your app runs, the word count data of the *input.txt* file is written to the console.</span></span>
 
-   ```json
-   {"name":"Michael"}
-   {"name":"Andy", "age":30}
-   {"name":"Justin", "age":19}
-   ```
+<span data-ttu-id="e536e-190">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="e536e-190">Congratulations!</span></span> <span data-ttu-id="e536e-191">.NET for Apache Spark アプリの作成と実行が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="e536e-191">You successfully authored and ran a .NET for Apache Spark app.</span></span>
 
-3. <span data-ttu-id="0a61e-173">次の PowerShell コマンドを使用して、アプリを実行します。</span><span class="sxs-lookup"><span data-stu-id="0a61e-173">Use the following PowerShell command to run your app:</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e536e-192">次の手順</span><span class="sxs-lookup"><span data-stu-id="e536e-192">Next steps</span></span>
 
-   ```powershell
-    spark-submit `
-    --class org.apache.spark.deploy.dotnet.DotnetRunner `
-    --master local `
-    microsoft-spark-2.4.x-<version>.jar `
-    dotnet HelloSpark.dll
-    ```
-
-<span data-ttu-id="0a61e-174">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="0a61e-174">Congratulations!</span></span> <span data-ttu-id="0a61e-175">.NET for Apache Spark アプリの作成と実行が正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="0a61e-175">You successfully authored and ran a .NET for Apache Spark app.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="0a61e-176">次の手順</span><span class="sxs-lookup"><span data-stu-id="0a61e-176">Next steps</span></span>
-
-<span data-ttu-id="0a61e-177">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="0a61e-177">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="e536e-193">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="e536e-193">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="0a61e-178">.NET for Apache Spark 用に Windows 環境を準備する</span><span class="sxs-lookup"><span data-stu-id="0a61e-178">Prepare your Windows environment for .NET for Apache Spark</span></span>
-> * <span data-ttu-id="0a61e-179">**Microsoft.Spark.Worker** をダウンロードする</span><span class="sxs-lookup"><span data-stu-id="0a61e-179">Download the **Microsoft.Spark.Worker**</span></span>
-> * <span data-ttu-id="0a61e-180">.NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="0a61e-180">Build and run a simple .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="e536e-194">.NET for Apache Spark 用に Windows 環境を準備する</span><span class="sxs-lookup"><span data-stu-id="e536e-194">Prepare your Windows environment for .NET for Apache Spark</span></span>
+> * <span data-ttu-id="e536e-195">最初の .NET for Apache Spark アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="e536e-195">Write your first .NET for Apache Spark application</span></span>
+> * <span data-ttu-id="e536e-196">.NET for Apache Spark アプリケーション用の単純な .NET をビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="e536e-196">Build and run your simple .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="0a61e-181">詳細については、リソースのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0a61e-181">Check out the resources page to learn more.</span></span>
+<span data-ttu-id="e536e-197">上記の手順を説明したビデオを見るには、[.NET for Apache Spark 101 ビデオ シリーズ](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e536e-197">To see a video explaining the steps above, checkout the [.NET for Apache Spark 101 video series](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App).</span></span>
+
+<span data-ttu-id="e536e-198">詳細については、リソースのページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e536e-198">Check out the resources page to learn more.</span></span>
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="0a61e-182">.NET for Apache Spark のリソース</span><span class="sxs-lookup"><span data-stu-id="0a61e-182">.NET for Apache Spark Resources</span></span>](../resources/index.md)
+> [<span data-ttu-id="e536e-199">.NET for Apache Spark のリソース</span><span class="sxs-lookup"><span data-stu-id="e536e-199">.NET for Apache Spark Resources</span></span>](../resources/index.md)
