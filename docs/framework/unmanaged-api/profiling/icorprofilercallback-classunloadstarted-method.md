@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3a305835651867a533e17f1c5c3b85b16975c3b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3b729d3be84571a48cc9a770d7f06b99723c0d1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745385"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445070"
 ---
-# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="84b29-102">ICorProfilerCallback::ClassUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="84b29-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
-<span data-ttu-id="84b29-103">クラスがアンロードされることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="84b29-103">Notifies the profiler that a class is being unloaded.</span></span>  
+# <a name="icorprofilercallbackclassunloadstarted-method"></a><span data-ttu-id="729e2-102">ICorProfilerCallback::ClassUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="729e2-102">ICorProfilerCallback::ClassUnloadStarted Method</span></span>
+<span data-ttu-id="729e2-103">Notifies the profiler that a class is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="729e2-103">Notifies the profiler that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84b29-104">構文</span><span class="sxs-lookup"><span data-stu-id="84b29-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="729e2-104">構文</span><span class="sxs-lookup"><span data-stu-id="729e2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ClassUnloadStarted(  
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="84b29-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="84b29-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="729e2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="729e2-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="84b29-106">[in]アンロードされているクラスを識別します。</span><span class="sxs-lookup"><span data-stu-id="84b29-106">[in] Identifies the class that is being unloaded.</span></span>  
+ <span data-ttu-id="729e2-106">[in] Identifies the class that is being unloaded.</span><span class="sxs-lookup"><span data-stu-id="729e2-106">[in] Identifies the class that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="84b29-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="84b29-107">Remarks</span></span>  
- <span data-ttu-id="84b29-108">値`classId`は後の情報の要求は無効です、`ClassUnloadStarted`メソッドを返します。-これは、プロファイラーの最後のチャンスをこのクラスについての情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="84b29-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="729e2-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="729e2-107">Remarks</span></span>  
+ <span data-ttu-id="729e2-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span><span class="sxs-lookup"><span data-stu-id="729e2-108">The value of `classId` is not valid for an information request after the `ClassUnloadStarted` method returns — this is the profiler's last chance to obtain information about this class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84b29-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="84b29-109">Requirements</span></span>  
- <span data-ttu-id="84b29-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="84b29-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="729e2-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="729e2-109">Requirements</span></span>  
+ <span data-ttu-id="729e2-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="729e2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84b29-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="84b29-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="729e2-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="729e2-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="84b29-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84b29-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="729e2-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="729e2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="84b29-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84b29-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="729e2-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="729e2-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84b29-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="84b29-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="729e2-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="729e2-114">See also</span></span>
 
-- [<span data-ttu-id="84b29-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="84b29-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="84b29-116">ClassUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="84b29-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)
+- [<span data-ttu-id="729e2-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="729e2-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="729e2-116">ClassUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="729e2-116">ClassUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)

@@ -15,43 +15,41 @@ helpviewer_keywords:
 ms.assetid: 1a6e5dae-d366-4497-9c02-7b5b1f43f9ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c4eefbb100b215cf4ac98352f37488b21cde49d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ba3c378b93e3ae1ef288c0edabfacfcfd7070d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772138"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438678"
 ---
-# <a name="icorprofilerinfosetfunctionidmapper-method"></a><span data-ttu-id="49d01-102">ICorProfilerInfo::SetFunctionIDMapper メソッド</span><span class="sxs-lookup"><span data-stu-id="49d01-102">ICorProfilerInfo::SetFunctionIDMapper Method</span></span>
-<span data-ttu-id="49d01-103">`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。</span><span class="sxs-lookup"><span data-stu-id="49d01-103">Specifies the profiler-implemented function that will be called to map `FunctionID` values to alternative values, which are passed to the profiler's function entry/exit hooks.</span></span>  
+# <a name="icorprofilerinfosetfunctionidmapper-method"></a><span data-ttu-id="b0486-102">ICorProfilerInfo::SetFunctionIDMapper メソッド</span><span class="sxs-lookup"><span data-stu-id="b0486-102">ICorProfilerInfo::SetFunctionIDMapper Method</span></span>
+<span data-ttu-id="b0486-103">`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。</span><span class="sxs-lookup"><span data-stu-id="b0486-103">Specifies the profiler-implemented function that will be called to map `FunctionID` values to alternative values, which are passed to the profiler's function entry/exit hooks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49d01-104">構文</span><span class="sxs-lookup"><span data-stu-id="49d01-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0486-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0486-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFunctionIDMapper (  
     [in] FunctionIDMapper *pFunc);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49d01-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="49d01-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0486-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b0486-105">Parameters</span></span>  
  `pFunc`  
- <span data-ttu-id="49d01-106">[in]ポインター、 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)実装にマップするときに呼び出される、`FunctionID`値の代替値にします。</span><span class="sxs-lookup"><span data-stu-id="49d01-106">[in] A pointer to the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) implementation that will be called to map the `FunctionID` values to their alternative values.</span></span>  
+ <span data-ttu-id="b0486-106">[in] A pointer to the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) implementation that will be called to map the `FunctionID` values to their alternative values.</span><span class="sxs-lookup"><span data-stu-id="b0486-106">[in] A pointer to the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) implementation that will be called to map the `FunctionID` values to their alternative values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="49d01-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="49d01-107">Remarks</span></span>  
- <span data-ttu-id="49d01-108">ための選択肢、`FunctionID`プロファイラーの関数の開始/終了フックに渡される値 ([FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)、および[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md))指定されている、 [icorprofilerinfo 2::setenterleavefunctionhooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="49d01-108">The alternatives for the `FunctionID` values will be passed to the profiler's function entry/exit hooks ([FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)) that are specified by the [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b0486-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0486-107">Remarks</span></span>  
+ <span data-ttu-id="b0486-108">The alternatives for the `FunctionID` values will be passed to the profiler's function entry/exit hooks ([FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)) that are specified by the [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="b0486-108">The alternatives for the `FunctionID` values will be passed to the profiler's function entry/exit hooks ([FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), and [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)) that are specified by the [ICorProfilerInfo2::SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) method.</span></span>  
   
- <span data-ttu-id="49d01-109">`FunctionIDMapper` 1 回だけ設定でき設定することをお勧め、 [icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)コールバック。</span><span class="sxs-lookup"><span data-stu-id="49d01-109">The `FunctionIDMapper` can be set only once and it is recommended that you set it in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="b0486-109">The `FunctionIDMapper` can be set only once and it is recommended that you set it in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="b0486-109">The `FunctionIDMapper` can be set only once and it is recommended that you set it in the [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49d01-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="49d01-110">Requirements</span></span>  
- <span data-ttu-id="49d01-111">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="49d01-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0486-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="b0486-110">Requirements</span></span>  
+ <span data-ttu-id="b0486-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0486-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49d01-112">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="49d01-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b0486-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b0486-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="49d01-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49d01-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b0486-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0486-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49d01-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49d01-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0486-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0486-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49d01-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="49d01-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0486-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0486-115">See also</span></span>
 
-- [<span data-ttu-id="49d01-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="49d01-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b0486-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0486-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

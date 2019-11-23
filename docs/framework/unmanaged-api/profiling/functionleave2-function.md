@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781266"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446017"
 ---
-# <a name="functionleave2-function"></a><span data-ttu-id="48e6f-102">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="48e6f-102">FunctionLeave2 Function</span></span>
-<span data-ttu-id="48e6f-103">プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="48e6f-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
+# <a name="functionleave2-function"></a><span data-ttu-id="af9af-102">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="af9af-102">FunctionLeave2 Function</span></span>
+<span data-ttu-id="af9af-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span><span class="sxs-lookup"><span data-stu-id="af9af-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48e6f-104">構文</span><span class="sxs-lookup"><span data-stu-id="48e6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af9af-104">構文</span><span class="sxs-lookup"><span data-stu-id="af9af-104">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionLeave2 (  
@@ -37,50 +35,50 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48e6f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="48e6f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af9af-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="af9af-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="48e6f-106">[in]返す関数の識別子。</span><span class="sxs-lookup"><span data-stu-id="48e6f-106">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="af9af-106">[in] The identifier of the function that is returning.</span><span class="sxs-lookup"><span data-stu-id="af9af-106">[in] The identifier of the function that is returning.</span></span>  
   
  `clientData`  
- <span data-ttu-id="48e6f-107">[in]プロファイラーを使用して以前に指定されたマップが変更された関数の識別子、 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)関数。</span><span class="sxs-lookup"><span data-stu-id="48e6f-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
+ <span data-ttu-id="af9af-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span><span class="sxs-lookup"><span data-stu-id="af9af-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
   
  `func`  
- <span data-ttu-id="48e6f-108">[in]A`COR_PRF_FRAME_INFO`スタック フレームに関する情報を示す値。</span><span class="sxs-lookup"><span data-stu-id="48e6f-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="af9af-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span><span class="sxs-lookup"><span data-stu-id="af9af-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="48e6f-109">プロファイラーはこれを不透明なハンドルでの実行エンジンに渡すことができるとして扱う必要があります、 [icorprofilerinfo 2::getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッド。</span><span class="sxs-lookup"><span data-stu-id="48e6f-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="af9af-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="af9af-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
  `retvalRange`  
- <span data-ttu-id="48e6f-110">[in]ポインターを[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)構造体、関数の戻り値のメモリの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="48e6f-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
+ <span data-ttu-id="af9af-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span><span class="sxs-lookup"><span data-stu-id="af9af-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
   
- <span data-ttu-id="48e6f-111">戻り値の情報にアクセスするために、`COR_PRF_ENABLE_FUNCTION_RETVAL`フラグを設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48e6f-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="48e6f-112">プロファイラーは、使用、 [icorprofilerinfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)イベント フラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="48e6f-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
+ <span data-ttu-id="af9af-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span><span class="sxs-lookup"><span data-stu-id="af9af-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="af9af-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span><span class="sxs-lookup"><span data-stu-id="af9af-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48e6f-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="48e6f-113">Remarks</span></span>  
- <span data-ttu-id="48e6f-114">値、`func`と`retvalRange`パラメーターが後に有効でない、`FunctionLeave2`関数は、値が変わる可能性がありますまたは破棄されるためを返します。</span><span class="sxs-lookup"><span data-stu-id="48e6f-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af9af-113">Remarks</span><span class="sxs-lookup"><span data-stu-id="af9af-113">Remarks</span></span>  
+ <span data-ttu-id="af9af-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span><span class="sxs-lookup"><span data-stu-id="af9af-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
   
- <span data-ttu-id="48e6f-115">`FunctionLeave2`関数は、コールバックは、これを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48e6f-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="48e6f-116">実装を使用する必要があります、 `__declspec`(`naked`) ストレージ クラス属性。</span><span class="sxs-lookup"><span data-stu-id="48e6f-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="af9af-115">The `FunctionLeave2` function is a callback; you must implement it.</span><span class="sxs-lookup"><span data-stu-id="af9af-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="af9af-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span><span class="sxs-lookup"><span data-stu-id="af9af-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="48e6f-117">実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。</span><span class="sxs-lookup"><span data-stu-id="48e6f-117">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="af9af-117">The execution engine does not save any registers before calling this function.</span><span class="sxs-lookup"><span data-stu-id="af9af-117">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="48e6f-118">項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48e6f-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="af9af-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span><span class="sxs-lookup"><span data-stu-id="af9af-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="48e6f-119">終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48e6f-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="af9af-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span><span class="sxs-lookup"><span data-stu-id="af9af-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="48e6f-120">実装`FunctionLeave2`ガベージ コレクションは延期されますブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="48e6f-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="48e6f-121">実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。</span><span class="sxs-lookup"><span data-stu-id="48e6f-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="48e6f-122">ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionLeave2`を返します。</span><span class="sxs-lookup"><span data-stu-id="48e6f-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
+ <span data-ttu-id="af9af-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span><span class="sxs-lookup"><span data-stu-id="af9af-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="af9af-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span><span class="sxs-lookup"><span data-stu-id="af9af-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="af9af-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span><span class="sxs-lookup"><span data-stu-id="af9af-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
   
- <span data-ttu-id="48e6f-123">また、`FunctionLeave2`関数を呼び出してはならないようにまたはマネージ コードにマネージ メモリの割り当て。</span><span class="sxs-lookup"><span data-stu-id="48e6f-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="af9af-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span><span class="sxs-lookup"><span data-stu-id="af9af-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48e6f-124">必要条件</span><span class="sxs-lookup"><span data-stu-id="48e6f-124">Requirements</span></span>  
- <span data-ttu-id="48e6f-125">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="48e6f-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af9af-124">［要件］</span><span class="sxs-lookup"><span data-stu-id="af9af-124">Requirements</span></span>  
+ <span data-ttu-id="af9af-125">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af9af-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48e6f-126">**ヘッダー:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="48e6f-126">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="af9af-126">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="af9af-126">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="48e6f-127">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48e6f-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="af9af-127">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af9af-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="48e6f-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48e6f-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="af9af-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af9af-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48e6f-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="48e6f-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af9af-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="af9af-129">See also</span></span>
 
-- [<span data-ttu-id="48e6f-130">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="48e6f-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="48e6f-131">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="48e6f-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="48e6f-132">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="48e6f-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="48e6f-133">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="48e6f-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="af9af-130">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="af9af-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="af9af-131">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="af9af-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="af9af-132">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="af9af-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="af9af-133">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="af9af-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

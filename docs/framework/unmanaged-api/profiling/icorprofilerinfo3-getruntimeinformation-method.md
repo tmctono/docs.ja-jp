@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7087864d0305f0cdb0b4977f037cf5a7c4dee18d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783141"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449685"
 ---
-# <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="93447-102">ICorProfilerInfo3::GetRuntimeInformation メソッド</span><span class="sxs-lookup"><span data-stu-id="93447-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
-<span data-ttu-id="93447-103">プロファイリングされている共通言語ランタイム (CLR) のバージョンについて説明します。</span><span class="sxs-lookup"><span data-stu-id="93447-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  
+# <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="f6be4-102">ICorProfilerInfo3::GetRuntimeInformation メソッド</span><span class="sxs-lookup"><span data-stu-id="f6be4-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
+<span data-ttu-id="f6be4-103">Provides version information about the common language runtime (CLR) that is being profiled.</span><span class="sxs-lookup"><span data-stu-id="f6be4-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93447-104">構文</span><span class="sxs-lookup"><span data-stu-id="93447-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6be4-104">構文</span><span class="sxs-lookup"><span data-stu-id="f6be4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRuntimeInformation(  
@@ -43,48 +41,48 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93447-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="93447-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6be4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f6be4-105">Parameters</span></span>  
  `pClrInstanceId`  
- <span data-ttu-id="93447-106">[out]プロセスで実行中の CLR インスタンスの担当者の ID。</span><span class="sxs-lookup"><span data-stu-id="93447-106">[out] The representative ID of a running CLR instance in a process.</span></span> <span data-ttu-id="93447-107">これと同じ、 `ClrInstanceID` Windows (ETW) のスタートアップ イベント トレーシングのイベントをレポートすることです。</span><span class="sxs-lookup"><span data-stu-id="93447-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span></span>  
+ <span data-ttu-id="f6be4-106">[out] The representative ID of a running CLR instance in a process.</span><span class="sxs-lookup"><span data-stu-id="f6be4-106">[out] The representative ID of a running CLR instance in a process.</span></span> <span data-ttu-id="f6be4-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span><span class="sxs-lookup"><span data-stu-id="f6be4-107">This is the same as the `ClrInstanceID` that the event tracing for Windows (ETW) startup event reports.</span></span>  
   
  `pRuntimeType`  
- <span data-ttu-id="93447-108">[out]ランタイム型。</span><span class="sxs-lookup"><span data-stu-id="93447-108">[out] The runtime type.</span></span> <span data-ttu-id="93447-109">このパラメーターを返します`COR_PRF_DESKTOP_CLR`、CLR のデスクトップ バージョンのまたは`COR_PRF_CORE_CLR`Silverlight で使用されている CLR の core バージョン。</span><span class="sxs-lookup"><span data-stu-id="93447-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span></span>  
+ <span data-ttu-id="f6be4-108">[out] The runtime type.</span><span class="sxs-lookup"><span data-stu-id="f6be4-108">[out] The runtime type.</span></span> <span data-ttu-id="f6be4-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="f6be4-109">This parameter returns `COR_PRF_DESKTOP_CLR` for the desktop version of the CLR, or `COR_PRF_CORE_CLR` for the core version of the CLR used in Silverlight.</span></span>  
   
  `pMajorVersion`  
- <span data-ttu-id="93447-110">[out]CLR のメジャー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="93447-110">[out] The major version number of the CLR.</span></span>  
+ <span data-ttu-id="f6be4-110">[out] The major version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="f6be4-110">[out] The major version number of the CLR.</span></span>  
   
  `pMinorVersion`  
- <span data-ttu-id="93447-111">[out]CLR のマイナー バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="93447-111">[out] The minor version number of the CLR.</span></span>  
+ <span data-ttu-id="f6be4-111">[out] The minor version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="f6be4-111">[out] The minor version number of the CLR.</span></span>  
   
  `pBuildVersion`  
- <span data-ttu-id="93447-112">[out]CLR のビルド バージョン番号。</span><span class="sxs-lookup"><span data-stu-id="93447-112">[out] The build version number of the CLR.</span></span>  
+ <span data-ttu-id="f6be4-112">[out] The build version number of the CLR.</span><span class="sxs-lookup"><span data-stu-id="f6be4-112">[out] The build version number of the CLR.</span></span>  
   
  `pQFEVersion`  
- <span data-ttu-id="93447-113">[out]ソフトウェア更新プログラムに関連付けられている CLR のバージョン番号。</span><span class="sxs-lookup"><span data-stu-id="93447-113">[out] The version number of the CLR that is associated with a software update.</span></span>  
+ <span data-ttu-id="f6be4-113">[out] The version number of the CLR that is associated with a software update.</span><span class="sxs-lookup"><span data-stu-id="f6be4-113">[out] The version number of the CLR that is associated with a software update.</span></span>  
   
  `cchVersionString`  
- <span data-ttu-id="93447-114">[in]バッファーの文字の長さを`szVersionString`を指します。</span><span class="sxs-lookup"><span data-stu-id="93447-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span></span>  
+ <span data-ttu-id="f6be4-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span><span class="sxs-lookup"><span data-stu-id="f6be4-114">[in] The length, in characters, of the buffer that `szVersionString` points to.</span></span>  
   
  `pcchVersionString`  
- <span data-ttu-id="93447-115">[out]長さを文字単位の`szVersionString`します。</span><span class="sxs-lookup"><span data-stu-id="93447-115">[out] The length, in characters, of `szVersionString`.</span></span>  
+ <span data-ttu-id="f6be4-115">[out] The length, in characters, of `szVersionString`.</span><span class="sxs-lookup"><span data-stu-id="f6be4-115">[out] The length, in characters, of `szVersionString`.</span></span>  
   
  `szVersionString`  
- <span data-ttu-id="93447-116">[out]CLR バージョン文字列です。</span><span class="sxs-lookup"><span data-stu-id="93447-116">[out] The CLR version string.</span></span>  
+ <span data-ttu-id="f6be4-116">[out] The CLR version string.</span><span class="sxs-lookup"><span data-stu-id="f6be4-116">[out] The CLR version string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="93447-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="93447-117">Remarks</span></span>  
- <span data-ttu-id="93447-118">任意のパラメーターに null を渡すことがあります。</span><span class="sxs-lookup"><span data-stu-id="93447-118">You may pass null for any parameter.</span></span> <span data-ttu-id="93447-119">ただし、 `pcchVersionString` null にすることはできませんしない限り、`szVersionString`も null です。</span><span class="sxs-lookup"><span data-stu-id="93447-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6be4-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="f6be4-117">Remarks</span></span>  
+ <span data-ttu-id="f6be4-118">You may pass null for any parameter.</span><span class="sxs-lookup"><span data-stu-id="f6be4-118">You may pass null for any parameter.</span></span> <span data-ttu-id="f6be4-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span><span class="sxs-lookup"><span data-stu-id="f6be4-119">However, `pcchVersionString` cannot be null unless `szVersionString` is also null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93447-120">必要条件</span><span class="sxs-lookup"><span data-stu-id="93447-120">Requirements</span></span>  
- <span data-ttu-id="93447-121">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="93447-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6be4-120">［要件］</span><span class="sxs-lookup"><span data-stu-id="f6be4-120">Requirements</span></span>  
+ <span data-ttu-id="f6be4-121">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f6be4-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93447-122">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="93447-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f6be4-122">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f6be4-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="93447-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93447-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6be4-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6be4-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93447-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93447-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f6be4-124">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6be4-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93447-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="93447-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6be4-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="f6be4-125">See also</span></span>
 
-- [<span data-ttu-id="93447-126">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="93447-126">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="93447-127">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="93447-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="93447-128">プロファイル</span><span class="sxs-lookup"><span data-stu-id="93447-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="f6be4-126">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6be4-126">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="f6be4-127">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f6be4-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="f6be4-128">プロファイル</span><span class="sxs-lookup"><span data-stu-id="f6be4-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

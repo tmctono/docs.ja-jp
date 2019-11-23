@@ -15,46 +15,44 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01e407b726ce4426f3b58bc29854b30bd6add257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953878"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445328"
 ---
-# <a name="icorprofilercallbackexceptionthrown-method"></a><span data-ttu-id="02d73-102">ICorProfilerCallback::ExceptionThrown メソッド</span><span class="sxs-lookup"><span data-stu-id="02d73-102">ICorProfilerCallback::ExceptionThrown Method</span></span>
-<span data-ttu-id="02d73-103">例外がスローされたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="02d73-103">Notifies the profiler that an exception has been thrown.</span></span>  
+# <a name="icorprofilercallbackexceptionthrown-method"></a><span data-ttu-id="8840f-102">ICorProfilerCallback::ExceptionThrown メソッド</span><span class="sxs-lookup"><span data-stu-id="8840f-102">ICorProfilerCallback::ExceptionThrown Method</span></span>
+<span data-ttu-id="8840f-103">Notifies the profiler that an exception has been thrown.</span><span class="sxs-lookup"><span data-stu-id="8840f-103">Notifies the profiler that an exception has been thrown.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="02d73-104">この関数は、例外がマネージコードに到達した場合にのみ呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="02d73-104">This function is called only if the exception reaches managed code.</span></span>  
+> <span data-ttu-id="8840f-104">This function is called only if the exception reaches managed code.</span><span class="sxs-lookup"><span data-stu-id="8840f-104">This function is called only if the exception reaches managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02d73-105">構文</span><span class="sxs-lookup"><span data-stu-id="02d73-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8840f-105">構文</span><span class="sxs-lookup"><span data-stu-id="8840f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionThrown(  
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02d73-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="02d73-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8840f-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8840f-106">Parameters</span></span>  
  `thrownObjectId`  
- <span data-ttu-id="02d73-107">から例外がスローされる原因となったオブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="02d73-107">[in] The ID of the object that caused the exception to be thrown.</span></span>  
+ <span data-ttu-id="8840f-107">[in] The ID of the object that caused the exception to be thrown.</span><span class="sxs-lookup"><span data-stu-id="8840f-107">[in] The ID of the object that caused the exception to be thrown.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02d73-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="02d73-108">Remarks</span></span>  
- <span data-ttu-id="02d73-109">プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。</span><span class="sxs-lookup"><span data-stu-id="02d73-109">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="02d73-110">プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。</span><span class="sxs-lookup"><span data-stu-id="02d73-110">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8840f-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="8840f-108">Remarks</span></span>  
+ <span data-ttu-id="8840f-109">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span><span class="sxs-lookup"><span data-stu-id="8840f-109">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="8840f-110">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span><span class="sxs-lookup"><span data-stu-id="8840f-110">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="02d73-111">プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。</span><span class="sxs-lookup"><span data-stu-id="02d73-111">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="8840f-111">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span><span class="sxs-lookup"><span data-stu-id="8840f-111">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02d73-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="02d73-112">Requirements</span></span>  
- <span data-ttu-id="02d73-113">**・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="02d73-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8840f-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="8840f-112">Requirements</span></span>  
+ <span data-ttu-id="8840f-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8840f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02d73-114">**ヘッダー:** Corprof.idl、Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="02d73-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8840f-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8840f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="02d73-115">**ライブラリ**CorGuids .lib</span><span class="sxs-lookup"><span data-stu-id="02d73-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8840f-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8840f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02d73-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02d73-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8840f-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8840f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02d73-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="02d73-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8840f-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="8840f-117">See also</span></span>
 
-- [<span data-ttu-id="02d73-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="02d73-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="8840f-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8840f-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

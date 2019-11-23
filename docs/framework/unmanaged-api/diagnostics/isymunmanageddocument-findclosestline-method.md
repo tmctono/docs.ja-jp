@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e95255479792c7056bee7ee4f6c507e0f41eb6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776791"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449214"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="3ab21-102">ISymUnmanagedDocument::FindClosestLine メソッド</span><span class="sxs-lookup"><span data-stu-id="3ab21-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="3ab21-103">行を指定したシーケンス ポイントができない可能性がありますが、このドキュメントでは、シーケンス ポイントである最も近い行を返します。</span><span class="sxs-lookup"><span data-stu-id="3ab21-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="554f7-102">ISymUnmanagedDocument::FindClosestLine メソッド</span><span class="sxs-lookup"><span data-stu-id="554f7-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="554f7-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span><span class="sxs-lookup"><span data-stu-id="554f7-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ab21-104">構文</span><span class="sxs-lookup"><span data-stu-id="3ab21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="554f7-104">構文</span><span class="sxs-lookup"><span data-stu-id="554f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindClosestLine(  
@@ -35,16 +33,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ab21-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3ab21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="554f7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="554f7-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="3ab21-106">[in]このドキュメント内の行。</span><span class="sxs-lookup"><span data-stu-id="3ab21-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="554f7-106">[in] A line in this document.</span><span class="sxs-lookup"><span data-stu-id="554f7-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="3ab21-107">[out]行を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3ab21-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="554f7-107">[out] A pointer to a variable that receives the line.</span><span class="sxs-lookup"><span data-stu-id="554f7-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3ab21-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="3ab21-108">Return Value</span></span>  
- <span data-ttu-id="3ab21-109">メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。</span><span class="sxs-lookup"><span data-stu-id="3ab21-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="554f7-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="554f7-108">Return Value</span></span>  
+ <span data-ttu-id="554f7-109">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="554f7-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ab21-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ab21-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="554f7-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="554f7-110">See also</span></span>
 
-- [<span data-ttu-id="3ab21-111">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3ab21-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="554f7-111">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554f7-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

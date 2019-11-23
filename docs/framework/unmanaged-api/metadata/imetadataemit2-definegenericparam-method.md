@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 027547098edefdca71317b8f885e71f468dc6e77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777202"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444653"
 ---
-# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="8b825-102">IMetaDataEmit2::DefineGenericParam メソッド</span><span class="sxs-lookup"><span data-stu-id="8b825-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
-<span data-ttu-id="8b825-103">ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="8b825-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
+# <a name="imetadataemit2definegenericparam-method"></a><span data-ttu-id="923e2-102">IMetaDataEmit2::DefineGenericParam メソッド</span><span class="sxs-lookup"><span data-stu-id="923e2-102">IMetaDataEmit2::DefineGenericParam Method</span></span>
+<span data-ttu-id="923e2-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-103">Creates a definition for a generic type parameter, and gets a token to that generic type parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b825-104">構文</span><span class="sxs-lookup"><span data-stu-id="8b825-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="923e2-104">構文</span><span class="sxs-lookup"><span data-stu-id="923e2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineGenericParam (   
@@ -41,38 +39,38 @@ HRESULT DefineGenericParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8b825-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8b825-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="923e2-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="923e2-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="8b825-106">[in]`mdTypeDef`または`mdMethodDef`メソッドまたはジェネリック パラメーターを定義する対象のコンス トラクターを表すトークン。</span><span class="sxs-lookup"><span data-stu-id="8b825-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
+ <span data-ttu-id="923e2-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-106">[in] An `mdTypeDef` or `mdMethodDef` token that represents the method or constructor for which to define a generic parameter.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="8b825-107">[in]ジェネリック パラメーターのインデックス。</span><span class="sxs-lookup"><span data-stu-id="8b825-107">[in] The index of the generic parameter.</span></span>  
+ <span data-ttu-id="923e2-107">[in] The index of the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-107">[in] The index of the generic parameter.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="8b825-108">[in]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)ジェネリック パラメーターの型を表す列挙体。</span><span class="sxs-lookup"><span data-stu-id="8b825-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
+ <span data-ttu-id="923e2-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-108">[in] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the type for the generic parameter.</span></span>  
   
  `szname`  
- <span data-ttu-id="8b825-109">[in]パラメーターの名前。</span><span class="sxs-lookup"><span data-stu-id="8b825-109">[in] The name of the parameter.</span></span>  
+ <span data-ttu-id="923e2-109">[in] The name of the parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-109">[in] The name of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="8b825-110">[in]このパラメーターは、将来の機能拡張予約されています。</span><span class="sxs-lookup"><span data-stu-id="8b825-110">[in] This parameter is reserved for future extensibility.</span></span>  
+ <span data-ttu-id="923e2-110">[in] This parameter is reserved for future extensibility.</span><span class="sxs-lookup"><span data-stu-id="923e2-110">[in] This parameter is reserved for future extensibility.</span></span>  
   
  `rtkConstraints`  
- <span data-ttu-id="8b825-111">[in]型の制約の 0 で終わる配列。</span><span class="sxs-lookup"><span data-stu-id="8b825-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="8b825-112">配列のメンバーである必要があります、 `mdTypeDef`、 `mdTypeRef`、または`mdTypeSpec`メタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="8b825-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
+ <span data-ttu-id="923e2-111">[in] A zero-terminated array of type constraints.</span><span class="sxs-lookup"><span data-stu-id="923e2-111">[in] A zero-terminated array of type constraints.</span></span> <span data-ttu-id="923e2-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span><span class="sxs-lookup"><span data-stu-id="923e2-112">Array members must be an `mdTypeDef`, `mdTypeRef`, or `mdTypeSpec` metadata token.</span></span>  
   
  `pgp`  
- <span data-ttu-id="8b825-113">[out]ジェネリック パラメーターを表すトークン。</span><span class="sxs-lookup"><span data-stu-id="8b825-113">[out] A token that represents the generic parameter.</span></span>  
+ <span data-ttu-id="923e2-113">[out] A token that represents the generic parameter.</span><span class="sxs-lookup"><span data-stu-id="923e2-113">[out] A token that represents the generic parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b825-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="8b825-114">Requirements</span></span>  
- <span data-ttu-id="8b825-115">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8b825-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="923e2-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="923e2-114">Requirements</span></span>  
+ <span data-ttu-id="923e2-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="923e2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b825-116">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8b825-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="923e2-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="923e2-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8b825-117">**ライブラリ:** MsCorEE.dll にリソースとして使用</span><span class="sxs-lookup"><span data-stu-id="8b825-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="923e2-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="923e2-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8b825-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b825-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="923e2-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="923e2-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b825-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b825-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="923e2-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="923e2-119">See also</span></span>
 
-- [<span data-ttu-id="8b825-120">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b825-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="8b825-121">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8b825-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="923e2-120">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="923e2-120">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="923e2-121">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="923e2-121">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72e1349eee90bbe5078fec037b5f29c51c84b8ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042779"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438454"
 ---
-# <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="6a706-102">クライアント側プロバイダー アセンブリの登録</span><span class="sxs-lookup"><span data-stu-id="6a706-102">Register a Client-Side Provider Assembly</span></span>
+# <a name="register-a-client-side-provider-assembly"></a><span data-ttu-id="541c5-102">クライアント側プロバイダー アセンブリの登録</span><span class="sxs-lookup"><span data-stu-id="541c5-102">Register a Client-Side Provider Assembly</span></span>
 > [!NOTE]
-> <span data-ttu-id="6a706-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="6a706-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="6a706-104">の最新情報[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については[、「Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="6a706-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="541c5-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="541c5-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="541c5-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="541c5-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="6a706-105">このトピックでは、クライアント側 UI オートメーション プロバイダーを格納する DLL を登録する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="6a706-105">This topic shows how to register a DLL that contains client-side UI Automation providers.</span></span>  
+ <span data-ttu-id="541c5-105">このトピックでは、クライアント側 UI オートメーション プロバイダーを格納する DLL を登録する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="541c5-105">This topic shows how to register a DLL that contains client-side UI Automation providers.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6a706-106">例</span><span class="sxs-lookup"><span data-stu-id="6a706-106">Example</span></span>  
- <span data-ttu-id="6a706-107">次の例では、コンソール ウィンドウのプロバイダーを格納するアセンブリを登録する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6a706-107">The following example shows how to register an assembly that contains a provider for a console window.</span></span>  
+## <a name="example"></a><span data-ttu-id="541c5-106">例</span><span class="sxs-lookup"><span data-stu-id="541c5-106">Example</span></span>  
+ <span data-ttu-id="541c5-107">次の例では、コンソール ウィンドウのプロバイダーを格納するアセンブリを登録する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="541c5-107">The following example shows how to register an assembly that contains a provider for a console window.</span></span>  
   
  [!code-csharp[UIAClientSideProvider_snip#102](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/CSClientProgram.cs#102)]
  [!code-vb[UIAClientSideProvider_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csclientprogram.vb#102)]  
   
-## <a name="see-also"></a><span data-ttu-id="6a706-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a706-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="541c5-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="541c5-108">See also</span></span>
 
-- [<span data-ttu-id="6a706-109">クライアント側 UI オートメーション プロバイダーの作成</span><span class="sxs-lookup"><span data-stu-id="6a706-109">Create a Client-Side UI Automation Provider</span></span>](create-a-client-side-ui-automation-provider.md)
+- [<span data-ttu-id="541c5-109">クライアント側 UI オートメーション プロバイダーの作成</span><span class="sxs-lookup"><span data-stu-id="541c5-109">Create a Client-Side UI Automation Provider</span></span>](create-a-client-side-ui-automation-provider.md)
