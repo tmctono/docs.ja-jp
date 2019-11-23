@@ -9,19 +9,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72319199"
 ---
-# <a name="variables-entity-sql"></a><span data-ttu-id="35e86-102">変数 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="35e86-102">Variables (Entity SQL)</span></span>
-## <a name="variable"></a><span data-ttu-id="35e86-103">変数</span><span class="sxs-lookup"><span data-stu-id="35e86-103">Variable</span></span>  
- <span data-ttu-id="35e86-104">変数式は、現在のスコープで定義されている名前付きの式への参照です。</span><span class="sxs-lookup"><span data-stu-id="35e86-104">A variable expression is a reference to a named expression defined in the current scope.</span></span> <span data-ttu-id="35e86-105">変数参照は、[識別子](identifiers-entity-sql.md)で定義されているように、有効な @no__t 0 識別子である必要があります。</span><span class="sxs-lookup"><span data-stu-id="35e86-105">A variable reference must be a valid [!INCLUDE[esql](../../../../../../includes/esql-md.md)] identifier, as defined in [Identifiers](identifiers-entity-sql.md).</span></span>  
+# <a name="variables-entity-sql"></a><span data-ttu-id="77561-102">変数 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="77561-102">Variables (Entity SQL)</span></span>
+## <a name="variable"></a><span data-ttu-id="77561-103">[Variable]</span><span class="sxs-lookup"><span data-stu-id="77561-103">Variable</span></span>  
+ <span data-ttu-id="77561-104">変数式は、現在のスコープで定義されている名前付きの式への参照です。</span><span class="sxs-lookup"><span data-stu-id="77561-104">A variable expression is a reference to a named expression defined in the current scope.</span></span> <span data-ttu-id="77561-105">変数参照は、[識別子](identifiers-entity-sql.md)で定義されている有効な [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 識別子である必要があります。</span><span class="sxs-lookup"><span data-stu-id="77561-105">A variable reference must be a valid [!INCLUDE[esql](../../../../../../includes/esql-md.md)] identifier, as defined in [Identifiers](identifiers-entity-sql.md).</span></span>  
   
- <span data-ttu-id="35e86-106">次の例は、式における変数の使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="35e86-106">The following example shows the use of a variable in the expression.</span></span> <span data-ttu-id="35e86-107">FROM 句の `c` は変数の定義です。</span><span class="sxs-lookup"><span data-stu-id="35e86-107">The `c` in the FROM clause is the definition of the variable.</span></span> <span data-ttu-id="35e86-108">SELECT 句内で使用された `c` は、変数参照を表します。</span><span class="sxs-lookup"><span data-stu-id="35e86-108">The use of `c` in the SELECT clause represents the variable reference.</span></span>  
+ <span data-ttu-id="77561-106">次の例は、式における変数の使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="77561-106">The following example shows the use of a variable in the expression.</span></span> <span data-ttu-id="77561-107">FROM 句の `c` は変数の定義です。</span><span class="sxs-lookup"><span data-stu-id="77561-107">The `c` in the FROM clause is the definition of the variable.</span></span> <span data-ttu-id="77561-108">SELECT 句内で使用された `c` は、変数参照を表します。</span><span class="sxs-lookup"><span data-stu-id="77561-108">The use of `c` in the SELECT clause represents the variable reference.</span></span>  
   
 ```sql  
 select c   
 from LOB.customers as c  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="35e86-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="35e86-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77561-109">参照</span><span class="sxs-lookup"><span data-stu-id="77561-109">See also</span></span>
 
-- [<span data-ttu-id="35e86-110">識別子</span><span class="sxs-lookup"><span data-stu-id="35e86-110">Identifiers</span></span>](identifiers-entity-sql.md)
-- [<span data-ttu-id="35e86-111">パラメーター</span><span class="sxs-lookup"><span data-stu-id="35e86-111">Parameters</span></span>](parameters-entity-sql.md)
-- [<span data-ttu-id="35e86-112">Entity SQL の概要</span><span class="sxs-lookup"><span data-stu-id="35e86-112">Entity SQL Overview</span></span>](entity-sql-overview.md)
+- [<span data-ttu-id="77561-110">識別子</span><span class="sxs-lookup"><span data-stu-id="77561-110">Identifiers</span></span>](identifiers-entity-sql.md)
+- [<span data-ttu-id="77561-111">パラメーター</span><span class="sxs-lookup"><span data-stu-id="77561-111">Parameters</span></span>](parameters-entity-sql.md)
+- [<span data-ttu-id="77561-112">Entity SQL の概要</span><span class="sxs-lookup"><span data-stu-id="77561-112">Entity SQL Overview</span></span>](entity-sql-overview.md)

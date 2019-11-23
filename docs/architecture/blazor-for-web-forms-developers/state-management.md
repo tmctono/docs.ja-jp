@@ -11,11 +11,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840785"
 ---
-# <a name="state-management"></a><span data-ttu-id="20fec-103">状態管理</span><span class="sxs-lookup"><span data-stu-id="20fec-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="b6da7-103">状態管理</span><span class="sxs-lookup"><span data-stu-id="b6da7-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="20fec-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="20fec-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="b6da7-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="b6da7-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +25,6 @@ ms.locfileid: "73840785"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="20fec-105">[前へ](pages-routing-layouts.md)
->[次へ](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="20fec-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="b6da7-105">[前へ](pages-routing-layouts.md)
+>[次へ](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="b6da7-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>

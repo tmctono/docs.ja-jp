@@ -11,11 +11,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "73840821"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="3d4a4-103">データアクセスと管理</span><span class="sxs-lookup"><span data-stu-id="3d4a4-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="6d7f4-103">データアクセスと管理</span><span class="sxs-lookup"><span data-stu-id="6d7f4-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="3d4a4-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="3d4a4-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="6d7f4-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="6d7f4-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "73840821"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="3d4a4-105">[前へ](forms-validation.md)
->[次へ](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="3d4a4-105">[Previous](forms-validation.md)
+><span data-ttu-id="6d7f4-105">[前へ](forms-validation.md)
+>[次へ](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="6d7f4-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>
