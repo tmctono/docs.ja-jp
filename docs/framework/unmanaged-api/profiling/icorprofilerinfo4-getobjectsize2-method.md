@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f72984da8f75eec35517da6ec1f8a73bc96c4609
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdfba34f35e40b2a50dbc4edc5b6b6c45f17194f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780817"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442874"
 ---
-# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="f5829-102">ICorProfilerInfo4::GetObjectSize2 メソッド</span><span class="sxs-lookup"><span data-stu-id="f5829-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
-<span data-ttu-id="f5829-103">指定したオブジェクトのサイズを返します。</span><span class="sxs-lookup"><span data-stu-id="f5829-103">Returns the size of a specified object.</span></span> <span data-ttu-id="f5829-104">置換、 [icorprofilerinfo::getobjectsize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md)メソッドで表現できる内容よりも大きいオブジェクトのサイズを報告することによって、`ULONG`します。</span><span class="sxs-lookup"><span data-stu-id="f5829-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
+# <a name="icorprofilerinfo4getobjectsize2-method"></a><span data-ttu-id="cbaa4-102">ICorProfilerInfo4::GetObjectSize2 メソッド</span><span class="sxs-lookup"><span data-stu-id="cbaa4-102">ICorProfilerInfo4::GetObjectSize2 Method</span></span>
+<span data-ttu-id="cbaa4-103">Returns the size of a specified object.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-103">Returns the size of a specified object.</span></span> <span data-ttu-id="cbaa4-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-104">Replaces the [ICorProfilerInfo::GetObjectSize](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getobjectsize-method.md) method by reporting sizes of objects that are larger than what can be expressed in a `ULONG`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5829-105">構文</span><span class="sxs-lookup"><span data-stu-id="f5829-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbaa4-105">構文</span><span class="sxs-lookup"><span data-stu-id="cbaa4-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectSize2(  
@@ -35,25 +33,25 @@ HRESULT GetObjectSize2(
     [out] SIZE_T *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f5829-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f5829-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbaa4-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cbaa4-106">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="f5829-107">[in]オブジェクトの ID。</span><span class="sxs-lookup"><span data-stu-id="f5829-107">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="cbaa4-107">[in] The ID of the object.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-107">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="f5829-108">[out]オブジェクトのサイズ (バイト) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f5829-108">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="cbaa4-108">[out] A pointer to the object's size, in bytes.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-108">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f5829-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="f5829-109">Remarks</span></span>  
- <span data-ttu-id="f5829-110">多くの場合、同じ種類の異なるオブジェクトと同じサイズである場合します。</span><span class="sxs-lookup"><span data-stu-id="f5829-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="f5829-111">ただし、配列や文字列など、一部の種類には、オブジェクトごとに別のサイズがあります。</span><span class="sxs-lookup"><span data-stu-id="f5829-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbaa4-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="cbaa4-109">Remarks</span></span>  
+ <span data-ttu-id="cbaa4-110">Different objects of the same types often have the same size.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-110">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="cbaa4-111">However, some types, such as arrays or strings, may have a different size for each object.</span><span class="sxs-lookup"><span data-stu-id="cbaa4-111">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5829-112">必要条件</span><span class="sxs-lookup"><span data-stu-id="f5829-112">Requirements</span></span>  
- <span data-ttu-id="f5829-113">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f5829-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbaa4-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="cbaa4-112">Requirements</span></span>  
+ <span data-ttu-id="cbaa4-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cbaa4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f5829-114">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f5829-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cbaa4-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cbaa4-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f5829-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5829-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbaa4-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbaa4-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f5829-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5829-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="cbaa4-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbaa4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5829-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5829-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbaa4-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbaa4-117">See also</span></span>
 
-- [<span data-ttu-id="f5829-118">ICorProfilerInfo4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f5829-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="cbaa4-118">ICorProfilerInfo4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cbaa4-118">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
