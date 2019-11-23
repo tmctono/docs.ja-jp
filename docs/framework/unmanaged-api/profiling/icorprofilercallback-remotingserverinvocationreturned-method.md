@@ -15,33 +15,31 @@ helpviewer_keywords:
 ms.assetid: a4de6805-e159-4280-99e5-3390c86166d0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 731907d69f3257306c536d73112300ffd5225538
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c121e403d116581ce3fa823d5d8cadbb2a58e296
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782891"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445787"
 ---
-# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="0056b-102">ICorProfilerCallback::RemotingServerInvocationReturned メソッド</span><span class="sxs-lookup"><span data-stu-id="0056b-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
-<span data-ttu-id="0056b-103">プロセスで、リモート メソッド呼び出しの要求に応答におけるメソッドの呼び出しが完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="0056b-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a><span data-ttu-id="59345-102">ICorProfilerCallback::RemotingServerInvocationReturned メソッド</span><span class="sxs-lookup"><span data-stu-id="59345-102">ICorProfilerCallback::RemotingServerInvocationReturned Method</span></span>
+<span data-ttu-id="59345-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span><span class="sxs-lookup"><span data-stu-id="59345-103">Notifies the profiler that the process has finished invoking a method in response to a remote method invocation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0056b-104">構文</span><span class="sxs-lookup"><span data-stu-id="0056b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59345-104">構文</span><span class="sxs-lookup"><span data-stu-id="59345-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingServerInvocationReturned();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0056b-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="0056b-105">Requirements</span></span>  
- <span data-ttu-id="0056b-106">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0056b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59345-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="59345-105">Requirements</span></span>  
+ <span data-ttu-id="59345-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="59345-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0056b-107">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0056b-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="59345-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="59345-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0056b-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0056b-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="59345-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59345-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0056b-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0056b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="59345-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59345-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0056b-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="0056b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59345-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="59345-110">See also</span></span>
 
-- [<span data-ttu-id="0056b-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0056b-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="59345-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="59345-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

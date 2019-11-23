@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775008"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428151"
 ---
-# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="787e4-102">ICorProfilerObjectEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="787e4-102">ICorProfilerObjectEnum::Next Method</span></span>
-<span data-ttu-id="787e4-103">列挙子の現在の位置から、オブジェクトのシーケンシャル コレクションから指定した数の隣接するオブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="787e4-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="6b8ce-102">ICorProfilerObjectEnum::Next メソッド</span><span class="sxs-lookup"><span data-stu-id="6b8ce-102">ICorProfilerObjectEnum::Next Method</span></span>
+<span data-ttu-id="6b8ce-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span><span class="sxs-lookup"><span data-stu-id="6b8ce-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="787e4-104">構文</span><span class="sxs-lookup"><span data-stu-id="787e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b8ce-104">構文</span><span class="sxs-lookup"><span data-stu-id="6b8ce-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,25 +36,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="787e4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="787e4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b8ce-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6b8ce-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="787e4-106">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="787e4-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="6b8ce-106">[in] 取得するオブジェクトの数。</span><span class="sxs-lookup"><span data-stu-id="6b8ce-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="787e4-107">[out]配列の`ObjectID`取得したオブジェクトを表す値。</span><span class="sxs-lookup"><span data-stu-id="787e4-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
+ <span data-ttu-id="6b8ce-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span><span class="sxs-lookup"><span data-stu-id="6b8ce-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="787e4-108">[out] `objects` 配列で実際に返されるモジュールの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="787e4-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
+ <span data-ttu-id="6b8ce-108">[out] `objects` 配列で実際に返されるモジュールの数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6b8ce-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="787e4-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="787e4-109">Requirements</span></span>  
- <span data-ttu-id="787e4-110">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="787e4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b8ce-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="6b8ce-109">Requirements</span></span>  
+ <span data-ttu-id="6b8ce-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6b8ce-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="787e4-111">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="787e4-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6b8ce-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6b8ce-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="787e4-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="787e4-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6b8ce-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6b8ce-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="787e4-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="787e4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b8ce-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b8ce-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="787e4-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="787e4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b8ce-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b8ce-114">See also</span></span>
 
-- [<span data-ttu-id="787e4-115">ICorProfilerObjectEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="787e4-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="6b8ce-115">ICorProfilerObjectEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b8ce-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

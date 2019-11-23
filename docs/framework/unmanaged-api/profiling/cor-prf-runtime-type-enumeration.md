@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751967"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450373"
 ---
-# <a name="corprfruntimetype-enumeration"></a><span data-ttu-id="1880a-102">COR_PRF_RUNTIME_TYPE 列挙体</span><span class="sxs-lookup"><span data-stu-id="1880a-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
-<span data-ttu-id="1880a-103">共通言語ランタイム (CLR) のバージョンを示す値を含みます。 デスクトップまたは CoreCLR は Silverlight で使用します。</span><span class="sxs-lookup"><span data-stu-id="1880a-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
+# <a name="cor_prf_runtime_type-enumeration"></a><span data-ttu-id="102f5-102">COR_PRF_RUNTIME_TYPE 列挙体</span><span class="sxs-lookup"><span data-stu-id="102f5-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
+<span data-ttu-id="102f5-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="102f5-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1880a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1880a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="102f5-104">構文</span><span class="sxs-lookup"><span data-stu-id="102f5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -36,24 +34,24 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1880a-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="1880a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="102f5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="102f5-105">Members</span></span>  
   
-|<span data-ttu-id="1880a-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="1880a-106">Member</span></span>|<span data-ttu-id="1880a-107">説明</span><span class="sxs-lookup"><span data-stu-id="1880a-107">Description</span></span>|  
+|<span data-ttu-id="102f5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="102f5-106">Member</span></span>|<span data-ttu-id="102f5-107">説明</span><span class="sxs-lookup"><span data-stu-id="102f5-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="1880a-108">デスクトップ CLR のバージョン。</span><span class="sxs-lookup"><span data-stu-id="1880a-108">The desktop version of the CLR.</span></span>|  
-|`COR_PRF_CORE_CLR`|<span data-ttu-id="1880a-109">Silverlight で使用される、CLR の core バージョン。</span><span class="sxs-lookup"><span data-stu-id="1880a-109">The core version of the CLR, used in Silverlight.</span></span>|  
+|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="102f5-108">The desktop version of the CLR.</span><span class="sxs-lookup"><span data-stu-id="102f5-108">The desktop version of the CLR.</span></span>|  
+|`COR_PRF_CORE_CLR`|<span data-ttu-id="102f5-109">The core version of the CLR, used in Silverlight.</span><span class="sxs-lookup"><span data-stu-id="102f5-109">The core version of the CLR, used in Silverlight.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1880a-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="1880a-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="102f5-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="102f5-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1880a-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="1880a-111">Requirements</span></span>  
- <span data-ttu-id="1880a-112">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1880a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="102f5-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="102f5-111">Requirements</span></span>  
+ <span data-ttu-id="102f5-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="102f5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1880a-113">**ヘッダー:** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1880a-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="102f5-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="102f5-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1880a-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1880a-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="102f5-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="102f5-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1880a-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1880a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="102f5-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="102f5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1880a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="1880a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="102f5-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="102f5-116">See also</span></span>
 
-- [<span data-ttu-id="1880a-117">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="1880a-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="102f5-117">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="102f5-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

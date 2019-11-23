@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777881"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446306"
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="0b254-102">ISymUnmanagedScope::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="0b254-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="0b254-103">このスコープ内で使用されている名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="0b254-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="e8e88-102">ISymUnmanagedScope::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="e8e88-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="e8e88-103">Gets the namespaces that are being used within this scope.</span><span class="sxs-lookup"><span data-stu-id="e8e88-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b254-104">構文</span><span class="sxs-lookup"><span data-stu-id="0b254-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8e88-104">構文</span><span class="sxs-lookup"><span data-stu-id="e8e88-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespaces(  
@@ -38,22 +36,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0b254-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0b254-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e8e88-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e8e88-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="0b254-106">[in] `namespaces` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="0b254-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="e8e88-106">[in] `namespaces` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="e8e88-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="0b254-107">[out]ポインターを`ULONG32`名前空間の格納に必要なバッファーのサイズを受け取る。</span><span class="sxs-lookup"><span data-stu-id="0b254-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="e8e88-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span><span class="sxs-lookup"><span data-stu-id="e8e88-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="0b254-108">[out]名前空間を受け取る配列。</span><span class="sxs-lookup"><span data-stu-id="0b254-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="e8e88-108">[out] The array that receives the namespaces.</span><span class="sxs-lookup"><span data-stu-id="e8e88-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0b254-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="0b254-109">Return Value</span></span>  
- <span data-ttu-id="0b254-110">メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。</span><span class="sxs-lookup"><span data-stu-id="0b254-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e8e88-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="e8e88-109">Return Value</span></span>  
+ <span data-ttu-id="e8e88-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e8e88-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b254-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="0b254-111">Requirements</span></span>  
- <span data-ttu-id="0b254-112">**ヘッダー:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0b254-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8e88-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="e8e88-111">Requirements</span></span>  
+ <span data-ttu-id="e8e88-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e8e88-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b254-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b254-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8e88-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8e88-113">See also</span></span>
 
-- [<span data-ttu-id="0b254-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0b254-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="e8e88-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e8e88-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

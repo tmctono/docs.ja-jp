@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff298f73f02f148fc389f389ba86fd9a550998c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781775"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450231"
 ---
-# <a name="cormethodattr-enumeration"></a><span data-ttu-id="c9b02-102">CorMethodAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="c9b02-102">CorMethodAttr Enumeration</span></span>
-<span data-ttu-id="c9b02-103">メソッドの機能を記述する値が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c9b02-103">Contains values that describe the features of a method.</span></span>  
+# <a name="cormethodattr-enumeration"></a><span data-ttu-id="95908-102">CorMethodAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="95908-102">CorMethodAttr Enumeration</span></span>
+<span data-ttu-id="95908-103">Contains values that describe the features of a method.</span><span class="sxs-lookup"><span data-stu-id="95908-103">Contains values that describe the features of a method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9b02-104">構文</span><span class="sxs-lookup"><span data-stu-id="c9b02-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95908-104">構文</span><span class="sxs-lookup"><span data-stu-id="95908-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodAttr {  
@@ -64,42 +62,42 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c9b02-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="c9b02-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="95908-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="95908-105">Members</span></span>  
   
-|<span data-ttu-id="c9b02-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="c9b02-106">Member</span></span>|<span data-ttu-id="c9b02-107">説明</span><span class="sxs-lookup"><span data-stu-id="c9b02-107">Description</span></span>|  
+|<span data-ttu-id="95908-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="95908-106">Member</span></span>|<span data-ttu-id="95908-107">説明</span><span class="sxs-lookup"><span data-stu-id="95908-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|<span data-ttu-id="c9b02-108">メンバーへのアクセスを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-108">Specifies member access.</span></span>|  
-|`mdPrivateScope`|<span data-ttu-id="c9b02-109">メンバーを参照できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-109">Specifies that the member cannot be referenced.</span></span>|  
-|`mdPrivate`|<span data-ttu-id="c9b02-110">メンバーが親の型からのみアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-110">Specifies that the member is accessible only by the parent type.</span></span>|  
-|`mdFamANDAssem`|<span data-ttu-id="c9b02-111">メンバーがこのアセンブリでのみサブタイプ アクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
-|`mdAssem`|<span data-ttu-id="c9b02-112">メンバーがアクセスできます。 アセンブリ内のすべてのユーザーがあることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
-|`mdFamily`|<span data-ttu-id="c9b02-113">メンバーが型とサブタイプによってのみアクセスできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
-|`mdFamORAssem`|<span data-ttu-id="c9b02-114">メンバーがアクセスできるは、そのアセンブリ内の他の型と派生クラスであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
-|`mdPublic`|<span data-ttu-id="c9b02-115">メンバーがスコープにアクセスできるアクセス権を持つすべての種類であることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
-|`mdStatic`|<span data-ttu-id="c9b02-116">インスタンスのメンバーではなく、型の一部として、メンバーが定義されていることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
-|`mdFinal`|<span data-ttu-id="c9b02-117">メソッドをオーバーライドできないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-117">Specifies that the method cannot be overridden.</span></span>|  
-|`mdVirtual`|<span data-ttu-id="c9b02-118">メソッドをオーバーライドできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-118">Specifies that the method can be overridden.</span></span>|  
-|`mdHideBySig`|<span data-ttu-id="c9b02-119">メソッドには、名前だけではなく、名前とシグネチャで非表示にするを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
-|`mdVtableLayoutMask`|<span data-ttu-id="c9b02-120">仮想テーブルのレイアウトを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-120">Specifies virtual table layout.</span></span>|  
-|`mdReuseSlot`|<span data-ttu-id="c9b02-121">仮想テーブルでは、このメソッドの使用、スロットが再利用することを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="c9b02-122">既定値です。</span><span class="sxs-lookup"><span data-stu-id="c9b02-122">This is the default.</span></span>|  
-|`mdNewSlot`|<span data-ttu-id="c9b02-123">メソッドは、仮想テーブルの新しいスロットを常に取得を指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
-|`mdCheckAccessOnOverride`|<span data-ttu-id="c9b02-124">表示は同じ型でメソッドをオーバーライドできることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
-|`mdAbstract`|<span data-ttu-id="c9b02-125">メソッドが実装されていないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-125">Specifies that the method is not implemented.</span></span>|  
-|`mdSpecialName`|<span data-ttu-id="c9b02-126">メソッドが、特別なと、その名前を記述しているを指定する方法。</span><span class="sxs-lookup"><span data-stu-id="c9b02-126">Specifies that the method is special, and that its name describes how.</span></span>|  
-|`mdPinvokeImpl`|<span data-ttu-id="c9b02-127">メソッドの実装が PInvoke を使用して転送されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
-|`mdUnmanagedExport`|<span data-ttu-id="c9b02-128">メソッドがアンマネージ コードにエクスポートする管理対象のメソッドを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
-|`mdReservedMask`|<span data-ttu-id="c9b02-129">共通言語ランタイムでは、内部使用のため予約されています。</span><span class="sxs-lookup"><span data-stu-id="c9b02-129">Reserved for internal use by the common language runtime.</span></span>|  
-|`mdRTSpecialName`|<span data-ttu-id="c9b02-130">共通言語ランタイムがメソッド名のエンコードを確認する必要がありますように指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
-|`mdHasSecurity`|<span data-ttu-id="c9b02-131">メソッドに関連付けられているセキュリティを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-131">Specifies that the method has security associated with it.</span></span>|  
-|`mdRequireSecObject`|<span data-ttu-id="c9b02-132">メソッドがセキュリティ コードを含む他のメソッドを呼び出すことを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9b02-132">Specifies that the method calls another method containing security code.</span></span>|  
+|`mdMemberAccessMask`|<span data-ttu-id="95908-108">Specifies member access.</span><span class="sxs-lookup"><span data-stu-id="95908-108">Specifies member access.</span></span>|  
+|`mdPrivateScope`|<span data-ttu-id="95908-109">Specifies that the member cannot be referenced.</span><span class="sxs-lookup"><span data-stu-id="95908-109">Specifies that the member cannot be referenced.</span></span>|  
+|`mdPrivate`|<span data-ttu-id="95908-110">Specifies that the member is accessible only by the parent type.</span><span class="sxs-lookup"><span data-stu-id="95908-110">Specifies that the member is accessible only by the parent type.</span></span>|  
+|`mdFamANDAssem`|<span data-ttu-id="95908-111">Specifies that the member is accessible by subtypes only in this assembly.</span><span class="sxs-lookup"><span data-stu-id="95908-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
+|`mdAssem`|<span data-ttu-id="95908-112">Specifies that the member is accessibly by anyone in the assembly.</span><span class="sxs-lookup"><span data-stu-id="95908-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
+|`mdFamily`|<span data-ttu-id="95908-113">Specifies that the member is accessible only by type and subtypes.</span><span class="sxs-lookup"><span data-stu-id="95908-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
+|`mdFamORAssem`|<span data-ttu-id="95908-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span><span class="sxs-lookup"><span data-stu-id="95908-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
+|`mdPublic`|<span data-ttu-id="95908-115">Specifies that the member is accessible by all types with access to the scope.</span><span class="sxs-lookup"><span data-stu-id="95908-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
+|`mdStatic`|<span data-ttu-id="95908-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span><span class="sxs-lookup"><span data-stu-id="95908-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
+|`mdFinal`|<span data-ttu-id="95908-117">Specifies that the method cannot be overridden.</span><span class="sxs-lookup"><span data-stu-id="95908-117">Specifies that the method cannot be overridden.</span></span>|  
+|`mdVirtual`|<span data-ttu-id="95908-118">Specifies that the method can be overridden.</span><span class="sxs-lookup"><span data-stu-id="95908-118">Specifies that the method can be overridden.</span></span>|  
+|`mdHideBySig`|<span data-ttu-id="95908-119">Specifies that the method hides by name and signature, rather than just by name.</span><span class="sxs-lookup"><span data-stu-id="95908-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
+|`mdVtableLayoutMask`|<span data-ttu-id="95908-120">Specifies virtual table layout.</span><span class="sxs-lookup"><span data-stu-id="95908-120">Specifies virtual table layout.</span></span>|  
+|`mdReuseSlot`|<span data-ttu-id="95908-121">Specifies that the slot used for this method in the virtual table be reused.</span><span class="sxs-lookup"><span data-stu-id="95908-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="95908-122">既定値です。</span><span class="sxs-lookup"><span data-stu-id="95908-122">This is the default.</span></span>|  
+|`mdNewSlot`|<span data-ttu-id="95908-123">Specifies that the method always gets a new slot in the virtual table.</span><span class="sxs-lookup"><span data-stu-id="95908-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
+|`mdCheckAccessOnOverride`|<span data-ttu-id="95908-124">Specifies that the method can be overridden by the same types to which it is visible.</span><span class="sxs-lookup"><span data-stu-id="95908-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
+|`mdAbstract`|<span data-ttu-id="95908-125">Specifies that the method is not implemented.</span><span class="sxs-lookup"><span data-stu-id="95908-125">Specifies that the method is not implemented.</span></span>|  
+|`mdSpecialName`|<span data-ttu-id="95908-126">Specifies that the method is special, and that its name describes how.</span><span class="sxs-lookup"><span data-stu-id="95908-126">Specifies that the method is special, and that its name describes how.</span></span>|  
+|`mdPinvokeImpl`|<span data-ttu-id="95908-127">Specifies that the method implementation is forwarded using PInvoke.</span><span class="sxs-lookup"><span data-stu-id="95908-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
+|`mdUnmanagedExport`|<span data-ttu-id="95908-128">Specifies that the method is a managed method exported to unmanaged code.</span><span class="sxs-lookup"><span data-stu-id="95908-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
+|`mdReservedMask`|<span data-ttu-id="95908-129">Reserved for internal use by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="95908-129">Reserved for internal use by the common language runtime.</span></span>|  
+|`mdRTSpecialName`|<span data-ttu-id="95908-130">Specifies that the common language runtime should check the encoding of the method name.</span><span class="sxs-lookup"><span data-stu-id="95908-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
+|`mdHasSecurity`|<span data-ttu-id="95908-131">Specifies that the method has security associated with it.</span><span class="sxs-lookup"><span data-stu-id="95908-131">Specifies that the method has security associated with it.</span></span>|  
+|`mdRequireSecObject`|<span data-ttu-id="95908-132">Specifies that the method calls another method containing security code.</span><span class="sxs-lookup"><span data-stu-id="95908-132">Specifies that the method calls another method containing security code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c9b02-133">必要条件</span><span class="sxs-lookup"><span data-stu-id="c9b02-133">Requirements</span></span>  
- <span data-ttu-id="c9b02-134">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c9b02-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95908-133">［要件］</span><span class="sxs-lookup"><span data-stu-id="95908-133">Requirements</span></span>  
+ <span data-ttu-id="95908-134">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="95908-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9b02-135">**ヘッダー:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c9b02-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="95908-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="95908-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="c9b02-136">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9b02-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="95908-136">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95908-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9b02-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9b02-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95908-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="95908-137">See also</span></span>
 
-- [<span data-ttu-id="c9b02-138">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="c9b02-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="95908-138">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="95908-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
