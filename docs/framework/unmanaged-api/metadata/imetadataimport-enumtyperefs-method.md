@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774620"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449985"
 ---
-# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="2495c-102">IMetaDataImport::EnumTypeRefs メソッド</span><span class="sxs-lookup"><span data-stu-id="2495c-102">IMetaDataImport::EnumTypeRefs Method</span></span>
-<span data-ttu-id="2495c-103">現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="2495c-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="7a5d7-102">IMetaDataImport::EnumTypeRefs メソッド</span><span class="sxs-lookup"><span data-stu-id="7a5d7-102">IMetaDataImport::EnumTypeRefs Method</span></span>
+<span data-ttu-id="7a5d7-103">現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="7a5d7-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2495c-104">構文</span><span class="sxs-lookup"><span data-stu-id="2495c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a5d7-104">構文</span><span class="sxs-lookup"><span data-stu-id="7a5d7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumTypeRefs (  
@@ -38,39 +36,39 @@ HRESULT EnumTypeRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2495c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2495c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7a5d7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7a5d7-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="2495c-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="2495c-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="2495c-107">このメソッドの最初の呼び出しで NULL があります。</span><span class="sxs-lookup"><span data-stu-id="2495c-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="7a5d7-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7a5d7-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-107">This must be NULL for the first call of this method.</span></span>  
   
  `rTypeRefs`  
- <span data-ttu-id="2495c-108">[out]TypeRef トークンを格納するために使用する配列。</span><span class="sxs-lookup"><span data-stu-id="2495c-108">[out] The array used to store the TypeRef tokens.</span></span>  
+ <span data-ttu-id="7a5d7-108">[out] The array used to store the TypeRef tokens.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-108">[out] The array used to store the TypeRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="2495c-109">[in] `rTypeRefs` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="2495c-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
+ <span data-ttu-id="7a5d7-109">[in] `rTypeRefs` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="7a5d7-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
   
  `pcTypeRefs`  
- <span data-ttu-id="2495c-110">[out]返される TypeRef トークンの数へのポインター`rTypeRefs`します。</span><span class="sxs-lookup"><span data-stu-id="2495c-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
+ <span data-ttu-id="7a5d7-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2495c-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="2495c-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7a5d7-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="7a5d7-111">Return Value</span></span>  
   
-|<span data-ttu-id="2495c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2495c-112">HRESULT</span></span>|<span data-ttu-id="2495c-113">説明</span><span class="sxs-lookup"><span data-stu-id="2495c-113">Description</span></span>|  
+|<span data-ttu-id="7a5d7-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7a5d7-112">HRESULT</span></span>|<span data-ttu-id="7a5d7-113">説明</span><span class="sxs-lookup"><span data-stu-id="7a5d7-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="2495c-114">`EnumTypeRefs` 正常に返されます。</span><span class="sxs-lookup"><span data-stu-id="2495c-114">`EnumTypeRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="2495c-115">トークンを列挙することはありません。</span><span class="sxs-lookup"><span data-stu-id="2495c-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="2495c-116">その場合は、`pcTypeRefs`は 0 です。</span><span class="sxs-lookup"><span data-stu-id="2495c-116">In that case, `pcTypeRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="7a5d7-114">`EnumTypeRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-114">`EnumTypeRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="7a5d7-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="7a5d7-116">In that case, `pcTypeRefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-116">In that case, `pcTypeRefs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2495c-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="2495c-117">Remarks</span></span>  
- <span data-ttu-id="2495c-118">TypeRef トークンは、型への参照を表します。</span><span class="sxs-lookup"><span data-stu-id="2495c-118">A TypeRef token represents a reference to a type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a5d7-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="7a5d7-117">Remarks</span></span>  
+ <span data-ttu-id="7a5d7-118">A TypeRef token represents a reference to a type.</span><span class="sxs-lookup"><span data-stu-id="7a5d7-118">A TypeRef token represents a reference to a type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2495c-119">必要条件</span><span class="sxs-lookup"><span data-stu-id="2495c-119">Requirements</span></span>  
- <span data-ttu-id="2495c-120">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="2495c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a5d7-119">［要件］</span><span class="sxs-lookup"><span data-stu-id="7a5d7-119">Requirements</span></span>  
+ <span data-ttu-id="7a5d7-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7a5d7-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2495c-121">**ヘッダー:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2495c-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a5d7-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7a5d7-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2495c-122">**ライブラリ:** MsCorEE.dll でリソースとして含まれます</span><span class="sxs-lookup"><span data-stu-id="2495c-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7a5d7-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7a5d7-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2495c-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2495c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a5d7-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a5d7-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2495c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="2495c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a5d7-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="7a5d7-124">See also</span></span>
 
-- [<span data-ttu-id="2495c-125">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2495c-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="2495c-126">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2495c-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="7a5d7-125">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7a5d7-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7a5d7-126">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7a5d7-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
