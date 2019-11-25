@@ -1,5 +1,5 @@
 ---
-title: Visual Basic ランタイム ライブラリのメンバー
+title: Runtime Library Members
 ms.date: 07/20/2015
 f1_keywords:
 - VisualBasic
@@ -9,30 +9,31 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945185"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349614"
 ---
-# <a name="visual-basic-runtime-library-members"></a><span data-ttu-id="210b0-102">Visual Basic ランタイム ライブラリのメンバー</span><span class="sxs-lookup"><span data-stu-id="210b0-102">Visual Basic Runtime Library Members</span></span>
-<span data-ttu-id="210b0-103">`Microsoft.VisualBasic`名前空間には、クラス、モジュール、定数、および Visual Basic ランタイム ライブラリを構成する列挙体が含まれています。</span><span class="sxs-lookup"><span data-stu-id="210b0-103">The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library.</span></span> <span data-ttu-id="210b0-104">これらのライブラリ メンバーは、プロシージャ、プロパティ、およびコードで使用できる定数値を提供します。</span><span class="sxs-lookup"><span data-stu-id="210b0-104">These library members provide procedures, properties, and constant values you can use in your code.</span></span> <span data-ttu-id="210b0-105">各モジュールとクラスは、特定のカテゴリの機能を表します。</span><span class="sxs-lookup"><span data-stu-id="210b0-105">Each module and class represents a particular category of functionality.</span></span>  
+# <a name="visual-basic-runtime-library-members"></a><span data-ttu-id="bf992-102">Visual Basic ランタイム ライブラリのメンバー</span><span class="sxs-lookup"><span data-stu-id="bf992-102">Visual Basic Runtime Library Members</span></span>
+
+<span data-ttu-id="bf992-103">The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library.</span><span class="sxs-lookup"><span data-stu-id="bf992-103">The `Microsoft.VisualBasic` namespace contains the classes, modules, constants, and enumerations that constitute the Visual Basic runtime library.</span></span> <span data-ttu-id="bf992-104">These library members provide procedures, properties, and constant values you can use in your code.</span><span class="sxs-lookup"><span data-stu-id="bf992-104">These library members provide procedures, properties, and constant values you can use in your code.</span></span> <span data-ttu-id="bf992-105">Each module and class represents a particular category of functionality.</span><span class="sxs-lookup"><span data-stu-id="bf992-105">Each module and class represents a particular category of functionality.</span></span>  
   
-## <a name="microsoftvisualbasiccollection-class"></a><span data-ttu-id="210b0-106">Microsoft.VisualBasic.Collection クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-106">Microsoft.VisualBasic.Collection Class</span></span>  
+## <a name="microsoftvisualbasiccollection-class"></a><span data-ttu-id="bf992-106">Microsoft.VisualBasic.Collection Class</span><span class="sxs-lookup"><span data-stu-id="bf992-106">Microsoft.VisualBasic.Collection Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Collection.Add%2A>|<xref:Microsoft.VisualBasic.Collection.Clear%2A>|<xref:Microsoft.VisualBasic.Collection.Contains%2A>|<xref:Microsoft.VisualBasic.Collection.Count%2A>|  
 |<xref:Microsoft.VisualBasic.Collection.GetEnumerator%2A>|<xref:Microsoft.VisualBasic.Collection.Item%2A>|<xref:Microsoft.VisualBasic.Collection.Remove%2A>||  
   
-## <a name="microsoftvisualbasiccomclassattribute-class"></a><span data-ttu-id="210b0-107">'Microsoft.visualbasic.comclassattribute' クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-107">Microsoft.VisualBasic.ComClassAttribute Class</span></span>  
+## <a name="microsoftvisualbasiccomclassattribute-class"></a><span data-ttu-id="bf992-107">Microsoft.VisualBasic.ComClassAttribute Class</span><span class="sxs-lookup"><span data-stu-id="bf992-107">Microsoft.VisualBasic.ComClassAttribute Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a><span data-ttu-id="210b0-108">Microsoft.VisualBasic.ControlChars クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-108">Microsoft.VisualBasic.ControlChars Class</span></span>  
+## <a name="microsoftvisualbasiccontrolchars-class"></a><span data-ttu-id="bf992-108">Microsoft.VisualBasic.ControlChars Class</span><span class="sxs-lookup"><span data-stu-id="bf992-108">Microsoft.VisualBasic.ControlChars Class</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +41,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a><span data-ttu-id="210b0-109">Microsoft.VisualBasic.Constants クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-109">Microsoft.VisualBasic.Constants Class</span></span>  
+## <a name="microsoftvisualbasicconstants-class"></a><span data-ttu-id="bf992-109">Microsoft.VisualBasic.Constants Class</span><span class="sxs-lookup"><span data-stu-id="bf992-109">Microsoft.VisualBasic.Constants Class</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -71,14 +72,14 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Constants.vbVolume>|<xref:Microsoft.VisualBasic.Constants.vbWednesday>|<xref:Microsoft.VisualBasic.Constants.vbWide>|<xref:Microsoft.VisualBasic.Constants.vbYes>|  
 |<xref:Microsoft.VisualBasic.Constants.vbYesNo>|<xref:Microsoft.VisualBasic.Constants.vbYesNoCancel>|||  
   
-## <a name="microsoftvisualbasicconversion-module"></a><span data-ttu-id="210b0-110">Microsoft.VisualBasic.Conversion モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-110">Microsoft.VisualBasic.Conversion Module</span></span>  
+## <a name="microsoftvisualbasicconversion-module"></a><span data-ttu-id="bf992-110">Microsoft.VisualBasic.Conversion Module</span><span class="sxs-lookup"><span data-stu-id="bf992-110">Microsoft.VisualBasic.Conversion Module</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a><span data-ttu-id="210b0-111">Microsoft.VisualBasic.DateAndTime モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-111">Microsoft.VisualBasic.DateAndTime Module</span></span>  
+## <a name="microsoftvisualbasicdateandtime-module"></a><span data-ttu-id="bf992-111">Microsoft.VisualBasic.DateAndTime Module</span><span class="sxs-lookup"><span data-stu-id="bf992-111">Microsoft.VisualBasic.DateAndTime Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -89,7 +90,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a><span data-ttu-id="210b0-112">Microsoft.VisualBasic.ErrObject クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-112">Microsoft.VisualBasic.ErrObject Class</span></span>  
+## <a name="microsoftvisualbasicerrobject-class"></a><span data-ttu-id="bf992-112">Microsoft.VisualBasic.ErrObject Class</span><span class="sxs-lookup"><span data-stu-id="bf992-112">Microsoft.VisualBasic.ErrObject Class</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -97,7 +98,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a><span data-ttu-id="210b0-113">Microsoft.VisualBasic.FileSystem モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-113">Microsoft.VisualBasic.FileSystem Module</span></span>  
+## <a name="microsoftvisualbasicfilesystem-module"></a><span data-ttu-id="bf992-113">Microsoft.VisualBasic.FileSystem Module</span><span class="sxs-lookup"><span data-stu-id="bf992-113">Microsoft.VisualBasic.FileSystem Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -112,7 +113,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a><span data-ttu-id="210b0-114">Microsoft.VisualBasic.Financial モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-114">Microsoft.VisualBasic.Financial Module</span></span>  
+## <a name="microsoftvisualbasicfinancial-module"></a><span data-ttu-id="bf992-114">Microsoft.VisualBasic.Financial Module</span><span class="sxs-lookup"><span data-stu-id="bf992-114">Microsoft.VisualBasic.Financial Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -121,19 +122,19 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a><span data-ttu-id="210b0-115">Microsoft.VisualBasic.Globals モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-115">Microsoft.VisualBasic.Globals Module</span></span>  
+## <a name="microsoftvisualbasicglobals-module"></a><span data-ttu-id="bf992-115">Microsoft.VisualBasic.Globals Module</span><span class="sxs-lookup"><span data-stu-id="bf992-115">Microsoft.VisualBasic.Globals Module</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|  
   
-## <a name="microsoftvisualbasichidemodulenameattribute-class"></a><span data-ttu-id="210b0-116">Microsoft.VisualBasic.HideModuleNameAttribute クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-116">Microsoft.VisualBasic.HideModuleNameAttribute Class</span></span>  
+## <a name="microsoftvisualbasichidemodulenameattribute-class"></a><span data-ttu-id="bf992-116">Microsoft.VisualBasic.HideModuleNameAttribute Class</span><span class="sxs-lookup"><span data-stu-id="bf992-116">Microsoft.VisualBasic.HideModuleNameAttribute Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>||||  
   
-## <a name="microsoftvisualbasicinformation-module"></a><span data-ttu-id="210b0-117">Microsoft.VisualBasic.Information モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-117">Microsoft.VisualBasic.Information Module</span></span>  
+## <a name="microsoftvisualbasicinformation-module"></a><span data-ttu-id="bf992-117">Microsoft.VisualBasic.Information Module</span><span class="sxs-lookup"><span data-stu-id="bf992-117">Microsoft.VisualBasic.Information Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -143,7 +144,7 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Information.SystemTypeName%2A>|<xref:Microsoft.VisualBasic.Information.TypeName%2A>|<xref:Microsoft.VisualBasic.Information.UBound%2A>|<xref:Microsoft.VisualBasic.Information.VarType%2A>|  
 |<xref:Microsoft.VisualBasic.Information.VbTypeName%2A>||||  
   
-## <a name="microsoftvisualbasicinteraction-module"></a><span data-ttu-id="210b0-118">Microsoft.VisualBasic.Interaction モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-118">Microsoft.VisualBasic.Interaction Module</span></span>  
+## <a name="microsoftvisualbasicinteraction-module"></a><span data-ttu-id="bf992-118">Microsoft.VisualBasic.Interaction Module</span><span class="sxs-lookup"><span data-stu-id="bf992-118">Microsoft.VisualBasic.Interaction Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -153,13 +154,13 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|<xref:Microsoft.VisualBasic.Interaction.Partition%2A>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
 |<xref:Microsoft.VisualBasic.Interaction.Shell%2A>|<xref:Microsoft.VisualBasic.Interaction.Switch%2A>|||  
   
-## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a><span data-ttu-id="210b0-119">Microsoft.VisualBasic.MyGroupCollectionAttribute クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-119">Microsoft.VisualBasic.MyGroupCollectionAttribute Class</span></span>  
+## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a><span data-ttu-id="bf992-119">Microsoft.VisualBasic.MyGroupCollectionAttribute Class</span><span class="sxs-lookup"><span data-stu-id="bf992-119">Microsoft.VisualBasic.MyGroupCollectionAttribute Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a><span data-ttu-id="210b0-120">Microsoft.VisualBasic.Strings モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-120">Microsoft.VisualBasic.Strings Module</span></span>  
+## <a name="microsoftvisualbasicstrings-module"></a><span data-ttu-id="bf992-120">Microsoft.VisualBasic.Strings Module</span><span class="sxs-lookup"><span data-stu-id="bf992-120">Microsoft.VisualBasic.Strings Module</span></span>  
   
 |||||  
 |---|---|---|---|  
@@ -172,28 +173,29 @@ ms.locfileid: "61945185"
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|  
   
-## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a><span data-ttu-id="210b0-121">Microsoft.VisualBasic.VBFixedArrayAttribute クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-121">Microsoft.VisualBasic.VBFixedArrayAttribute Class</span></span>  
+## <a name="microsoftvisualbasicvbfixedarrayattribute-class"></a><span data-ttu-id="bf992-121">Microsoft.VisualBasic.VBFixedArrayAttribute Class</span><span class="sxs-lookup"><span data-stu-id="bf992-121">Microsoft.VisualBasic.VBFixedArrayAttribute Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Bounds%2A>|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute.Length%2A>|||  
   
-## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a><span data-ttu-id="210b0-122">Microsoft.VisualBasic.VBFixedStringAttribute クラス</span><span class="sxs-lookup"><span data-stu-id="210b0-122">Microsoft.VisualBasic.VBFixedStringAttribute Class</span></span>  
+## <a name="microsoftvisualbasicvbfixedstringattribute-class"></a><span data-ttu-id="bf992-122">Microsoft.VisualBasic.VBFixedStringAttribute Class</span><span class="sxs-lookup"><span data-stu-id="bf992-122">Microsoft.VisualBasic.VBFixedStringAttribute Class</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a><span data-ttu-id="210b0-123">Microsoft.VisualBasic.VbMath モジュール</span><span class="sxs-lookup"><span data-stu-id="210b0-123">Microsoft.VisualBasic.VbMath Module</span></span>  
+## <a name="microsoftvisualbasicvbmath-module"></a><span data-ttu-id="bf992-123">Microsoft.VisualBasic.VbMath Module</span><span class="sxs-lookup"><span data-stu-id="bf992-123">Microsoft.VisualBasic.VbMath Module</span></span>  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a><span data-ttu-id="210b0-124">Microsoft.VisualBasic 定数と列挙型</span><span class="sxs-lookup"><span data-stu-id="210b0-124">Microsoft.VisualBasic Constants and Enumerations</span></span>  
- <span data-ttu-id="210b0-125">`Microsoft.VisualBasic`名前空間が、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。</span><span class="sxs-lookup"><span data-stu-id="210b0-125">The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library.</span></span> <span data-ttu-id="210b0-126">コードでは、これらの定数値を使用できます。</span><span class="sxs-lookup"><span data-stu-id="210b0-126">You can use these constant values in your code.</span></span> <span data-ttu-id="210b0-127">各列挙体は、特定のカテゴリの機能を表します。</span><span class="sxs-lookup"><span data-stu-id="210b0-127">Each enumeration represents a particular category of functionality.</span></span> <span data-ttu-id="210b0-128">詳細については、次を参照してください。[定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)します。</span><span class="sxs-lookup"><span data-stu-id="210b0-128">For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="210b0-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="210b0-129">See also</span></span>
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a><span data-ttu-id="bf992-124">Microsoft.VisualBasic Constants and Enumerations</span><span class="sxs-lookup"><span data-stu-id="bf992-124">Microsoft.VisualBasic Constants and Enumerations</span></span>  
 
-- [<span data-ttu-id="210b0-130">定数と列挙体</span><span class="sxs-lookup"><span data-stu-id="210b0-130">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [<span data-ttu-id="210b0-131">キーワード</span><span class="sxs-lookup"><span data-stu-id="210b0-131">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+ <span data-ttu-id="bf992-125">The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library.</span><span class="sxs-lookup"><span data-stu-id="bf992-125">The `Microsoft.VisualBasic` namespace provides constants and enumerations as part of the Visual Basic run-time library.</span></span> <span data-ttu-id="bf992-126">You can use these constant values in your code.</span><span class="sxs-lookup"><span data-stu-id="bf992-126">You can use these constant values in your code.</span></span> <span data-ttu-id="bf992-127">Each enumeration represents a particular category of functionality.</span><span class="sxs-lookup"><span data-stu-id="bf992-127">Each enumeration represents a particular category of functionality.</span></span> <span data-ttu-id="bf992-128">For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).</span><span class="sxs-lookup"><span data-stu-id="bf992-128">For more information, see [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="bf992-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf992-129">See also</span></span>
+
+- [<span data-ttu-id="bf992-130">定数と列挙体</span><span class="sxs-lookup"><span data-stu-id="bf992-130">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [<span data-ttu-id="bf992-131">キーワード</span><span class="sxs-lookup"><span data-stu-id="bf992-131">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

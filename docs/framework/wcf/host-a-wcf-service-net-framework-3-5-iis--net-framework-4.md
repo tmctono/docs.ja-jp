@@ -1,30 +1,31 @@
 ---
-title: '方法: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする'
+title: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする方法
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: 6a87fd5e3997e9d15810a5efb079da629908f854
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d827fe82e8b355c8818d96645b463c1840910a9c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291523"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283273"
 ---
-# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a><span data-ttu-id="ef590-102">方法: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする</span><span class="sxs-lookup"><span data-stu-id="ef590-102">How to: Host a WCF Service Written with .NET Framework 3.5 in IIS Running Under .NET Framework 4</span></span>
-<span data-ttu-id="ef590-103">@No__t-1 を実行しているコンピューターで [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] で記述された Windows Communication Foundation (WCF) サービスをホストすると、次のテキストを含む <xref:System.ServiceModel.ProtocolException> が表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="ef590-103">When hosting a Windows Communication Foundation (WCF) service written with [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] on a machine running [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], you may get a <xref:System.ServiceModel.ProtocolException> with the following text.</span></span>  
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a><span data-ttu-id="dd27a-102">.NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする方法</span><span class="sxs-lookup"><span data-stu-id="dd27a-102">How to: Host a WCF Service Written with .NET Framework 3.5 in IIS Running Under .NET Framework 4</span></span>
+
+<span data-ttu-id="dd27a-103">.NET Framework 4 を実行しているコンピューターで .NET Framework 3.5 で記述された Windows Communication Foundation (WCF) サービスをホストすると、次のテキストを含む <xref:System.ServiceModel.ProtocolException> が表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-103">When hosting a Windows Communication Foundation (WCF) service written with .NET Framework 3.5 on a machine running .NET Framework 4, you may get a <xref:System.ServiceModel.ProtocolException> with the following text.</span></span>
   
 ```output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
- <span data-ttu-id="ef590-104">または、サービスの .svc ファイルを参照する際に、次のテキストのエラー ページが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="ef590-104">Or if you try to browse to the service's .svc file you may see an error page with the following text.</span></span>  
+ <span data-ttu-id="dd27a-104">または、サービスの .svc ファイルを参照する際に、次のテキストのエラー ページが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-104">Or if you try to browse to the service's .svc file you may see an error page with the following text.</span></span>  
   
 ```output  
 The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- <span data-ttu-id="ef590-105">これらのエラーは、IIS が実行されているアプリケーション ドメインが [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] を実行していて、WCF サービスが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] で実行されるように構成されている場合に発生します。</span><span class="sxs-lookup"><span data-stu-id="ef590-105">These errors occur because the application domain IIS is running within is running [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] and the WCF service is expecting to run under [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="ef590-106">このトピックでは、このサービスを実行するために必要な変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="ef590-106">This topic explains the modifications required to get the service to run.</span></span>  
+ <span data-ttu-id="dd27a-105">このようなエラーが発生するのは、IIS が実行されているアプリケーションドメインが .NET Framework 4 で実行されており、WCF サービスが .NET Framework 3.5 で実行されることを想定しているためです。</span><span class="sxs-lookup"><span data-stu-id="dd27a-105">These errors occur because the application domain IIS is running within is running .NET Framework 4 and the WCF service is expecting to run under .NET Framework 3.5.</span></span> <span data-ttu-id="dd27a-106">このトピックでは、このサービスを実行するために必要な変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="dd27a-106">This topic explains the modifications required to get the service to run.</span></span>
   
- <span data-ttu-id="ef590-107">次に、< @no__t 0 > 要素を検索し、CompilerVersion provider オプションの値を4.0 に変更します。</span><span class="sxs-lookup"><span data-stu-id="ef590-107">Next find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="ef590-108">既定では、< `compilers` > 要素の下に < @no__t 0 > 要素が2つあります。</span><span class="sxs-lookup"><span data-stu-id="ef590-108">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="ef590-109">次の例に示すように、両方の CompilerVersion プロバイダー オプションを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef590-109">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
+ <span data-ttu-id="dd27a-107">次に、<`compilers`> 要素を検索し、CompilerVersion provider オプションの値を4.0 に変更します。</span><span class="sxs-lookup"><span data-stu-id="dd27a-107">Next find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="dd27a-108">既定では、<`compilers`> 要素の下に > 要素`compiler`< が2つあります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-108">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="dd27a-109">次の例に示すように、両方の CompilerVersion プロバイダー オプションを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-109">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
 ```xml  
 <system.codedom>  
@@ -44,11 +45,11 @@ The application domain or application pool is currently running version 4.0 or l
     </system.codedom>  
 ```  
   
-### <a name="add-the-required-targetframework-attribute"></a><span data-ttu-id="ef590-110">必要な targetFramework 属性の追加</span><span class="sxs-lookup"><span data-stu-id="ef590-110">Add the required targetFramework attribute</span></span>  
+### <a name="add-the-required-targetframework-attribute"></a><span data-ttu-id="dd27a-110">必要な targetFramework 属性の追加</span><span class="sxs-lookup"><span data-stu-id="dd27a-110">Add the required targetFramework attribute</span></span>  
   
-1. <span data-ttu-id="ef590-111">サービスの Web.config ファイルを開き、< `compilation` > 要素を探します。</span><span class="sxs-lookup"><span data-stu-id="ef590-111">Open the service's Web.config file and look for the <`compilation`> element.</span></span>  
+1. <span data-ttu-id="dd27a-111">サービスの Web.config ファイルを開き、<`compilation`> 要素を探します。</span><span class="sxs-lookup"><span data-stu-id="dd27a-111">Open the service's Web.config file and look for the <`compilation`> element.</span></span>  
   
-2. <span data-ttu-id="ef590-112">次の例に示すように、`targetFramework` 属性を < `compilation` > 要素に追加します。</span><span class="sxs-lookup"><span data-stu-id="ef590-112">Add the `targetFramework` attribute to the <`compilation`> element as shown in the following example.</span></span>  
+2. <span data-ttu-id="dd27a-112">次の例に示すように、`targetFramework` 属性を <`compilation`> 要素に追加します。</span><span class="sxs-lookup"><span data-stu-id="dd27a-112">Add the `targetFramework` attribute to the <`compilation`> element as shown in the following example.</span></span>  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +65,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3. <span data-ttu-id="ef590-113">< @No__t-0 > 要素を見つけ、CompilerVersion provider オプションの値を4.0 に変更します。</span><span class="sxs-lookup"><span data-stu-id="ef590-113">Find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="ef590-114">既定では、< `compilers` > 要素の下に < @no__t 0 > 要素が2つあります。</span><span class="sxs-lookup"><span data-stu-id="ef590-114">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="ef590-115">次の例に示すように、両方の CompilerVersion プロバイダー オプションを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef590-115">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
+3. <span data-ttu-id="dd27a-113"><`compilers`> 要素を見つけ、CompilerVersion provider オプションの値を4.0 に変更します。</span><span class="sxs-lookup"><span data-stu-id="dd27a-113">Find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="dd27a-114">既定では、<`compilers`> 要素の下に > 要素`compiler`< が2つあります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-114">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="dd27a-115">次の例に示すように、両方の CompilerVersion プロバイダー オプションを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dd27a-115">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
     ```xml  
     <system.codedom>  
