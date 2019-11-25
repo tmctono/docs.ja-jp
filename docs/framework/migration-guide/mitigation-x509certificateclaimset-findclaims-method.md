@@ -2,25 +2,23 @@
 title: '軽減策: X509CertificateClaimSet.FindClaims メソッド'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778942"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457757"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="a9e47-102">軽減策: X509CertificateClaimSet.FindClaims メソッド</span><span class="sxs-lookup"><span data-stu-id="a9e47-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
-<span data-ttu-id="a9e47-103"><xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> メソッドは、.NET Framework 4.6.1 を対象とするアプリから、`claimType` 引数と SAN フィールド内のすべての DNS エントリとの照合を試みます。</span><span class="sxs-lookup"><span data-stu-id="a9e47-103">Starting with apps that target the .NET Framework 4.6.1,  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a><span data-ttu-id="b3fcb-102">軽減策: X509CertificateClaimSet.FindClaims メソッド</span><span class="sxs-lookup"><span data-stu-id="b3fcb-102">Mitigation: X509CertificateClaimSet.FindClaims Method</span></span>
+<span data-ttu-id="b3fcb-103"><xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> メソッドは、.NET Framework 4.6.1 を対象とするアプリから、`claimType` 引数と SAN フィールド内のすべての DNS エントリとの照合を試みます。</span><span class="sxs-lookup"><span data-stu-id="b3fcb-103">Starting with apps that target the .NET Framework 4.6.1,  the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method will attempt to match the `claimType` argument with all the DNS entries in its SAN field.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="a9e47-104">影響</span><span class="sxs-lookup"><span data-stu-id="a9e47-104">Impact</span></span>  
- <span data-ttu-id="a9e47-105">この変更によって影響を受けるのは、.NET Framework 4.6.1 以降のバージョンの .NET Framework を対象とするアプリのみです。</span><span class="sxs-lookup"><span data-stu-id="a9e47-105">This change only affects apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1.</span></span>  
+## <a name="impact"></a><span data-ttu-id="b3fcb-104">影響</span><span class="sxs-lookup"><span data-stu-id="b3fcb-104">Impact</span></span>  
+ <span data-ttu-id="b3fcb-105">この変更によって影響を受けるのは、.NET Framework 4.6.1 以降のバージョンの .NET Framework を対象とするアプリのみです。</span><span class="sxs-lookup"><span data-stu-id="b3fcb-105">This change only affects apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1.</span></span>  
   
- <span data-ttu-id="a9e47-106">.NET Framework の以前のバージョンを対象とするアプリの場合、<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> メソッドは、`claimType` 引数と最後の DNS エントリのみの照合を試みます。</span><span class="sxs-lookup"><span data-stu-id="a9e47-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
+ <span data-ttu-id="b3fcb-106">.NET Framework の以前のバージョンを対象とするアプリの場合、<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> メソッドは、`claimType` 引数と最後の DNS エントリのみの照合を試みます。</span><span class="sxs-lookup"><span data-stu-id="b3fcb-106">For apps that target previous versions of the .NET Framework, the <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> method attempts to match the `claimType` argument only with the last  DNS entry.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="a9e47-107">軽減策</span><span class="sxs-lookup"><span data-stu-id="a9e47-107">Mitigation</span></span>  
- <span data-ttu-id="a9e47-108">この変更が望ましくない場合は、.NET Framework 4.6.1 バージョン以降の .NET Framework を対象とするアプリで無効にできます。これは、そのアプリの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の構成設定を追加して行います。</span><span class="sxs-lookup"><span data-stu-id="a9e47-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1 can opt out of it by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="b3fcb-107">軽減策</span><span class="sxs-lookup"><span data-stu-id="b3fcb-107">Mitigation</span></span>  
+ <span data-ttu-id="b3fcb-108">この変更が望ましくない場合は、.NET Framework 4.6.1 バージョン以降の .NET Framework を対象とするアプリで無効にできます。これは、そのアプリの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の構成設定を追加して行います。</span><span class="sxs-lookup"><span data-stu-id="b3fcb-108">If this change is undesirable, apps that target versions of the .NET Framework starting with the .NET Framework 4.6.1 can opt out of it by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -28,7 +26,7 @@ ms.locfileid: "70778942"
 </runtime>  
 ```  
   
- <span data-ttu-id="a9e47-109">また、以前のバージョンの .NET Framework を対象とするものの、.NET Framework 4.6.1 以降のバージョンで実行されているアプリでは、そのアプリの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに構成設定を追加して、この動作を有効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="a9e47-109">In addition, apps that target previous versions of the .NET Framework but are running under the .NET Framework 4.6.1 and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
+ <span data-ttu-id="b3fcb-109">また、以前のバージョンの .NET Framework を対象とするものの、.NET Framework 4.6.1 以降のバージョンで実行されているアプリでは、そのアプリの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに構成設定を追加して、この動作を有効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="b3fcb-109">In addition, apps that target previous versions of the .NET Framework but are running under the .NET Framework 4.6.1 and later versions can opt in to this behavior by adding the following configuration setting to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the app’s configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -36,6 +34,6 @@ ms.locfileid: "70778942"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9e47-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a9e47-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3fcb-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3fcb-110">See also</span></span>
 
-- [<span data-ttu-id="a9e47-111">変更の再ターゲット</span><span class="sxs-lookup"><span data-stu-id="a9e47-111">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [<span data-ttu-id="b3fcb-111">アプリケーションの互換性</span><span class="sxs-lookup"><span data-stu-id="b3fcb-111">Application compatibility</span></span>](application-compatibility.md)

@@ -7,42 +7,42 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672008"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459567"
 ---
-# <a name="xaml-in-wpf"></a><span data-ttu-id="90ca8-102">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="90ca8-102">XAML in WPF</span></span>
+# <a name="xaml-in-wpf"></a><span data-ttu-id="038dc-102">WPF の XAML</span><span class="sxs-lookup"><span data-stu-id="038dc-102">XAML in WPF</span></span>
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="90ca8-103">は、宣言型アプリケーションプログラミングのマークアップ言語です。</span><span class="sxs-lookup"><span data-stu-id="90ca8-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="90ca8-104">XAML プロセッサ実装を実装し、XAML 言語サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="90ca8-104">implements a XAML processor implementation and provides XAML language support.</span></span> <span data-ttu-id="90ca8-105">型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、XAML 表現のために必要な型を提供できるように実装されています。</span><span class="sxs-lookup"><span data-stu-id="90ca8-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="90ca8-106">一般に、XAML マークアップで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション UI の大部分を作成できます。</span><span class="sxs-lookup"><span data-stu-id="90ca8-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="038dc-103">は、宣言型アプリケーションプログラミングのマークアップ言語です。</span><span class="sxs-lookup"><span data-stu-id="038dc-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="038dc-104">は、XAML プロセッサの実装を実装し、XAML 言語のサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="038dc-104">implements a XAML processor implementation and provides XAML language support.</span></span> <span data-ttu-id="038dc-105">XAML 表現のために必要な型を提供できるように、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型が実装されています。</span><span class="sxs-lookup"><span data-stu-id="038dc-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="038dc-106">一般に、XAML マークアップで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーション UI の大部分を作成できます。</span><span class="sxs-lookup"><span data-stu-id="038dc-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="90ca8-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="90ca8-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="038dc-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="038dc-107">In This Section</span></span>  
 
-[<span data-ttu-id="90ca8-108">XAML の概要 (WPF)</span><span class="sxs-lookup"><span data-stu-id="90ca8-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
-[<span data-ttu-id="90ca8-109">XAML 構文の詳細</span><span class="sxs-lookup"><span data-stu-id="90ca8-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
-[<span data-ttu-id="90ca8-110">WPF における分離コードと XAML</span><span class="sxs-lookup"><span data-stu-id="90ca8-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
-[<span data-ttu-id="90ca8-111">WPF における XAML とカスタム クラス</span><span class="sxs-lookup"><span data-stu-id="90ca8-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
-[<span data-ttu-id="90ca8-112">マークアップ拡張機能と WPF XAML</span><span class="sxs-lookup"><span data-stu-id="90ca8-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
-[<span data-ttu-id="90ca8-113">XAML 名前空間および WPF XAML の名前空間の割り当て</span><span class="sxs-lookup"><span data-stu-id="90ca8-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
-[<span data-ttu-id="90ca8-114">WPF XAML 名前スコープ</span><span class="sxs-lookup"><span data-stu-id="90ca8-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
-[<span data-ttu-id="90ca8-115">インライン スタイルおよびテンプレート</span><span class="sxs-lookup"><span data-stu-id="90ca8-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
-[<span data-ttu-id="90ca8-116">XAML での空白の処理</span><span class="sxs-lookup"><span data-stu-id="90ca8-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
-[<span data-ttu-id="90ca8-117">TypeConverters および XAML</span><span class="sxs-lookup"><span data-stu-id="90ca8-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
-[<span data-ttu-id="90ca8-118">XML 文字エンティティと XAML</span><span class="sxs-lookup"><span data-stu-id="90ca8-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
-[<span data-ttu-id="90ca8-119">XAML 名前空間 (x:)言語機能</span><span class="sxs-lookup"><span data-stu-id="90ca8-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
-[<span data-ttu-id="90ca8-120">WPF XAML 拡張機能</span><span class="sxs-lookup"><span data-stu-id="90ca8-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
-[<span data-ttu-id="90ca8-121">マークアップの互換性 (mc:)言語機能</span><span class="sxs-lookup"><span data-stu-id="90ca8-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
+[<span data-ttu-id="038dc-108">XAML の概要 (WPF)</span><span class="sxs-lookup"><span data-stu-id="038dc-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
+[<span data-ttu-id="038dc-109">XAML 構文の詳細</span><span class="sxs-lookup"><span data-stu-id="038dc-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
+[<span data-ttu-id="038dc-110">WPF における分離コードと XAML</span><span class="sxs-lookup"><span data-stu-id="038dc-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
+[<span data-ttu-id="038dc-111">WPF における XAML とカスタム クラス</span><span class="sxs-lookup"><span data-stu-id="038dc-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
+[<span data-ttu-id="038dc-112">マークアップ拡張機能と WPF XAML</span><span class="sxs-lookup"><span data-stu-id="038dc-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
+[<span data-ttu-id="038dc-113">XAML 名前空間および WPF XAML の名前空間の割り当て</span><span class="sxs-lookup"><span data-stu-id="038dc-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+[<span data-ttu-id="038dc-114">WPF XAML 名前スコープ</span><span class="sxs-lookup"><span data-stu-id="038dc-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
+[<span data-ttu-id="038dc-115">インライン スタイルおよびテンプレート</span><span class="sxs-lookup"><span data-stu-id="038dc-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
+[<span data-ttu-id="038dc-116">XAML での空白の処理</span><span class="sxs-lookup"><span data-stu-id="038dc-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
+[<span data-ttu-id="038dc-117">TypeConverters および XAML</span><span class="sxs-lookup"><span data-stu-id="038dc-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
+[<span data-ttu-id="038dc-118">XML 文字エンティティと XAML</span><span class="sxs-lookup"><span data-stu-id="038dc-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
+[<span data-ttu-id="038dc-119">XAML 名前空間 (x:) 言語機能</span><span class="sxs-lookup"><span data-stu-id="038dc-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
+[<span data-ttu-id="038dc-120">WPF XAML 拡張機能</span><span class="sxs-lookup"><span data-stu-id="038dc-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
+[<span data-ttu-id="038dc-121">マークアップの互換性 (mc:) 言語機能</span><span class="sxs-lookup"><span data-stu-id="038dc-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="90ca8-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="90ca8-122">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="038dc-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="038dc-122">Related Sections</span></span>  
 
-[<span data-ttu-id="90ca8-123">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="90ca8-123">WPF Architecture</span></span>](wpf-architecture.md)  
-[<span data-ttu-id="90ca8-124">基本要素</span><span class="sxs-lookup"><span data-stu-id="90ca8-124">Base Elements</span></span>](base-elements.md)  
-[<span data-ttu-id="90ca8-125">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="90ca8-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-[<span data-ttu-id="90ca8-126">Properties</span><span class="sxs-lookup"><span data-stu-id="90ca8-126">Properties</span></span>](properties-wpf.md)  
-[<span data-ttu-id="90ca8-127">イベント</span><span class="sxs-lookup"><span data-stu-id="90ca8-127">Events</span></span>](events-wpf.md)  
-[<span data-ttu-id="90ca8-128">入力</span><span class="sxs-lookup"><span data-stu-id="90ca8-128">Input</span></span>](input-wpf.md)  
-[<span data-ttu-id="90ca8-129">リソース</span><span class="sxs-lookup"><span data-stu-id="90ca8-129">Resources</span></span>](resources-wpf.md)  
-[<span data-ttu-id="90ca8-130">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="90ca8-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-[<span data-ttu-id="90ca8-131">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="90ca8-131">Threading Model</span></span>](threading-model.md)
+[<span data-ttu-id="038dc-123">WPF アーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="038dc-123">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="038dc-124">基本要素</span><span class="sxs-lookup"><span data-stu-id="038dc-124">Base Elements</span></span>](base-elements.md)  
+[<span data-ttu-id="038dc-125">要素のツリーおよびシリアル化</span><span class="sxs-lookup"><span data-stu-id="038dc-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="038dc-126">プロパティ</span><span class="sxs-lookup"><span data-stu-id="038dc-126">Properties</span></span>](properties-wpf.md)  
+[<span data-ttu-id="038dc-127">イベント</span><span class="sxs-lookup"><span data-stu-id="038dc-127">Events</span></span>](events-wpf.md)  
+[<span data-ttu-id="038dc-128">入力</span><span class="sxs-lookup"><span data-stu-id="038dc-128">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="038dc-129">リソース</span><span class="sxs-lookup"><span data-stu-id="038dc-129">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="038dc-130">スタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="038dc-130">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+[<span data-ttu-id="038dc-131">スレッド モデル</span><span class="sxs-lookup"><span data-stu-id="038dc-131">Threading Model</span></span>](threading-model.md)

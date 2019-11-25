@@ -5,38 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789680"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457741"
 ---
-# <a name="mitigation-xml-schema-validation"></a><span data-ttu-id="3aa00-102">軽減策: XML スキーマ検証</span><span class="sxs-lookup"><span data-stu-id="3aa00-102">Mitigation: XML Schema Validation</span></span>
-<span data-ttu-id="3aa00-103">.NET Framework 4.6 では、複合キーが使用され、1 つのキーが空の場合、XSD スキーマ検証で一意制約の違反が検出されます。</span><span class="sxs-lookup"><span data-stu-id="3aa00-103">In the .NET Framework 4.6, XSD schema validation detects a violation of the unique constraint if a compound key is used and one key is empty.</span></span>  
+# <a name="mitigation-xml-schema-validation"></a><span data-ttu-id="8bcde-102">軽減策: XML スキーマ検証</span><span class="sxs-lookup"><span data-stu-id="8bcde-102">Mitigation: XML Schema Validation</span></span>
+<span data-ttu-id="8bcde-103">.NET Framework 4.6 では、複合キーが使用され、1 つのキーが空の場合、XSD スキーマ検証で一意制約の違反が検出されます。</span><span class="sxs-lookup"><span data-stu-id="8bcde-103">In the .NET Framework 4.6, XSD schema validation detects a violation of the unique constraint if a compound key is used and one key is empty.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="3aa00-104">影響</span><span class="sxs-lookup"><span data-stu-id="3aa00-104">Impact</span></span>  
- <span data-ttu-id="3aa00-105">この変更の影響は最小限のものになります。スキーマの仕様に基づき、複合キーが空のキーと共に使用されて `xsd:unique` の違反が発生した場合、スキーマの検証エラーの発生が予期されます。</span><span class="sxs-lookup"><span data-stu-id="3aa00-105">The impact of this change should be minimal: based on the schema specification, a schema validation error is expected if `xsd:unique` is violated by using a compound key with an empty key.</span></span>  
+## <a name="impact"></a><span data-ttu-id="8bcde-104">影響</span><span class="sxs-lookup"><span data-stu-id="8bcde-104">Impact</span></span>  
+ <span data-ttu-id="8bcde-105">この変更の影響は最小限のものになります。スキーマの仕様に基づき、複合キーが空のキーと共に使用されて `xsd:unique` の違反が発生した場合、スキーマの検証エラーの発生が予期されます。</span><span class="sxs-lookup"><span data-stu-id="8bcde-105">The impact of this change should be minimal: based on the schema specification, a schema validation error is expected if `xsd:unique` is violated by using a compound key with an empty key.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="3aa00-106">軽減策</span><span class="sxs-lookup"><span data-stu-id="3aa00-106">Mitigation</span></span>  
- <span data-ttu-id="3aa00-107">複合キーに空の 1 つのキーがある場合にスキーマ検証エラーが検出されるようにするかどうかは、構成可能な機能です。</span><span class="sxs-lookup"><span data-stu-id="3aa00-107">Whether a schema validation error is detected if a compound key has one empty key is a configurable feature:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="8bcde-106">軽減策</span><span class="sxs-lookup"><span data-stu-id="8bcde-106">Mitigation</span></span>  
+ <span data-ttu-id="8bcde-107">複合キーに空の 1 つのキーがある場合にスキーマ検証エラーが検出されるようにするかどうかは、構成可能な機能です。</span><span class="sxs-lookup"><span data-stu-id="8bcde-107">Whether a schema validation error is detected if a compound key has one empty key is a configurable feature:</span></span>  
   
-- <span data-ttu-id="3aa00-108">.NET Framework 4.6 以降を対象とするアプリでは、スキーマ検証エラーの検出が既定で有効になっていますが、この動作を無効にして、スキーマ検証エラーが検出されないようにすることも可能です。</span><span class="sxs-lookup"><span data-stu-id="3aa00-108">Starting with the apps that target the .NET Framework 4.6, detection of the schema validation error is enabled by default; however, it is possible to opt out of it, so that the schema validation error will not be detected.</span></span>  
+- <span data-ttu-id="8bcde-108">.NET Framework 4.6 以降を対象とするアプリでは、スキーマ検証エラーの検出が既定で有効になっていますが、この動作を無効にして、スキーマ検証エラーが検出されないようにすることも可能です。</span><span class="sxs-lookup"><span data-stu-id="8bcde-108">Starting with the apps that target the .NET Framework 4.6, detection of the schema validation error is enabled by default; however, it is possible to opt out of it, so that the schema validation error will not be detected.</span></span>  
   
-- <span data-ttu-id="3aa00-109">.NET Framework 4.6 の下で実行されているものの、.NET Framework 4.5.2 以前のバージョンを対象とするアプリでは、既定ではスキーマ検証エラーが検出されませんが、この動作を有効にして、スキーマ検証エラーが検出されるようにすることも可能です。</span><span class="sxs-lookup"><span data-stu-id="3aa00-109">In apps that run under the .NET Framework 4.6 but target the .NET Framework 4.5.2 and earlier versions, a schema validation error is not detected by default; however, it is possible to opt into it, so that the schema validation error will be detected.</span></span>  
+- <span data-ttu-id="8bcde-109">.NET Framework 4.6 の下で実行されているものの、.NET Framework 4.5.2 以前のバージョンを対象とするアプリでは、既定ではスキーマ検証エラーが検出されませんが、この動作を有効にして、スキーマ検証エラーが検出されるようにすることも可能です。</span><span class="sxs-lookup"><span data-stu-id="8bcde-109">In apps that run under the .NET Framework 4.6 but target the .NET Framework 4.5.2 and earlier versions, a schema validation error is not detected by default; however, it is possible to opt into it, so that the schema validation error will be detected.</span></span>  
   
- <span data-ttu-id="3aa00-110">この動作は、<xref:System.AppContext> クラスを使用して `System.Xml.IgnoreEmptyKeySequences` スイッチの値を定義することにより構成できます。</span><span class="sxs-lookup"><span data-stu-id="3aa00-110">This behavior can be configured by using the <xref:System.AppContext> class to define the value of the `System.Xml.IgnoreEmptyKeySequences` switch.</span></span> <span data-ttu-id="3aa00-111">スイッチの既定値が `false` (空のキー シーケンスが無視されない) であるため、.NET Framework 4.6 を対象とするアプリは、以下のコードを使用してスイッチの値を `true` に設定することにより、その動作を無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="3aa00-111">Because the switch's default value is `false` (empty key sequences are not ignored), apps that target the .NET Framework 4.6 can opt out of the behavior by using the following code to set the switch's value to `true`:</span></span>  
+ <span data-ttu-id="8bcde-110">この動作は、<xref:System.AppContext> クラスを使用して `System.Xml.IgnoreEmptyKeySequences` スイッチの値を定義することにより構成できます。</span><span class="sxs-lookup"><span data-stu-id="8bcde-110">This behavior can be configured by using the <xref:System.AppContext> class to define the value of the `System.Xml.IgnoreEmptyKeySequences` switch.</span></span> <span data-ttu-id="8bcde-111">スイッチの既定値が `false` (空のキー シーケンスが無視されない) であるため、.NET Framework 4.6 を対象とするアプリは、以下のコードを使用してスイッチの値を `true` に設定することにより、その動作を無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="8bcde-111">Because the switch's default value is `false` (empty key sequences are not ignored), apps that target the .NET Framework 4.6 can opt out of the behavior by using the following code to set the switch's value to `true`:</span></span>  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#1)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#1)]  
   
- <span data-ttu-id="3aa00-112">.NET Framework 4.5.2 以前のバージョンを対象とするアプリでは、スイッチの既定値が `true` (空のキー シーケンスが無視される) であるため、以下のコードを使用してスイッチの値を `false` に設定することにより、複合キーに空のキーがある場合にスキーマ検証エラーを生成させることが可能です。</span><span class="sxs-lookup"><span data-stu-id="3aa00-112">For apps that target the .NET Framework 4.5.2 and earlier versions, because the switch's default value is `true` (empty key sequences are ignored), it is possible to ensure that a compound key with an empty key does generate a schema validation error by using the following code to set the switch's value to `false`.</span></span>  
+ <span data-ttu-id="8bcde-112">.NET Framework 4.5.2 以前のバージョンを対象とするアプリでは、スイッチの既定値が `true` (空のキー シーケンスが無視される) であるため、以下のコードを使用してスイッチの値を `false` に設定することにより、複合キーに空のキーがある場合にスキーマ検証エラーを生成させることが可能です。</span><span class="sxs-lookup"><span data-stu-id="8bcde-112">For apps that target the .NET Framework 4.5.2 and earlier versions, because the switch's default value is `true` (empty key sequences are ignored), it is possible to ensure that a compound key with an empty key does generate a schema validation error by using the following code to set the switch's value to `false`.</span></span>  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="3aa00-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="3aa00-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bcde-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bcde-113">See also</span></span>
 
-- [<span data-ttu-id="3aa00-114">変更の再ターゲット</span><span class="sxs-lookup"><span data-stu-id="3aa00-114">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6.md)
+- [<span data-ttu-id="8bcde-114">アプリケーションの互換性</span><span class="sxs-lookup"><span data-stu-id="8bcde-114">Application compatibility</span></span>](application-compatibility.md)
