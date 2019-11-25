@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6b80a885f43facf4b3d4dd1dcb56d937d4f8de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: 5457eab1f34eb3e7424d508509f5dd6a42ffb51f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188801"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976932"
 ---
-# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="1e200-102">XML ドキュメントの名前空間宣言の変更</span><span class="sxs-lookup"><span data-stu-id="1e200-102">Changing Namespace Declarations in an XML Document</span></span>
-<span data-ttu-id="1e200-103">**XmlDocument** は、名前空間宣言と **xmlns** 属性をドキュメント オブジェクト モデルの一部として公開します。</span><span class="sxs-lookup"><span data-stu-id="1e200-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="1e200-104">名前空間宣言と xmlns 属性は **XmlDocument** に格納されるため、ドキュメントの保存時にはこれらの属性の場所を保持できます。</span><span class="sxs-lookup"><span data-stu-id="1e200-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="1e200-105">これらの属性を変更しても、ツリーに既に存在する別のノードの **Name**、**NamespaceURI**、**Prefix** プロパティは影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="1e200-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="1e200-106">たとえば、次のドキュメントを読み込むと、`test` 要素の **NamespaceURI** は `123.` になります。</span><span class="sxs-lookup"><span data-stu-id="1e200-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
+# <a name="changing-namespace-declarations-in-an-xml-document"></a><span data-ttu-id="b99f1-102">XML ドキュメントの名前空間宣言の変更</span><span class="sxs-lookup"><span data-stu-id="b99f1-102">Changing Namespace Declarations in an XML Document</span></span>
+<span data-ttu-id="b99f1-103">**XmlDocument** は、名前空間宣言と **xmlns** 属性をドキュメント オブジェクト モデルの一部として公開します。</span><span class="sxs-lookup"><span data-stu-id="b99f1-103">The **XmlDocument** exposes namespace declarations and **xmlns** attributes as part of the document object model.</span></span> <span data-ttu-id="b99f1-104">名前空間宣言と xmlns 属性は **XmlDocument** に格納されるため、ドキュメントの保存時にはこれらの属性の場所を保持できます。</span><span class="sxs-lookup"><span data-stu-id="b99f1-104">These are stored in the **XmlDocument**, so when you save the document, it can preserve the location of those attributes.</span></span> <span data-ttu-id="b99f1-105">これらの属性を変更しても、ツリーに既に存在する別のノードの **Name**、**NamespaceURI**、**Prefix** プロパティは影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="b99f1-105">Changing these attributes has no affect on the **Name**, **NamespaceURI**, and **Prefix** properties of other nodes already in the tree.</span></span> <span data-ttu-id="b99f1-106">たとえば、次のドキュメントを読み込むと、`test` 要素の **NamespaceURI** は `123.` になります。</span><span class="sxs-lookup"><span data-stu-id="b99f1-106">For example, if you load the following document, then the `test` element has **NamespaceURI** `123.`</span></span>  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- <span data-ttu-id="1e200-107">その後、次のように `xmlns` 要素を削除しても、`test` 要素の **NamespaceURI** は `123` のまま変わりません。</span><span class="sxs-lookup"><span data-stu-id="1e200-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
+ <span data-ttu-id="b99f1-107">その後、次のように `xmlns` 要素を削除しても、`test` 要素の **NamespaceURI** は `123` のまま変わりません。</span><span class="sxs-lookup"><span data-stu-id="b99f1-107">If you remove the `xmlns` attribute as follows, then the `test` element still has the **NamespaceURI** of `123`.</span></span>  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -32,18 +32,18 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- <span data-ttu-id="1e200-108">同様に、次のように別の `xmlns` 属性を `doc` 要素に追加しても、`test` 要素の **NamespaceURI** は `123` のまま変わりません。</span><span class="sxs-lookup"><span data-stu-id="1e200-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
+ <span data-ttu-id="b99f1-108">同様に、次のように別の `xmlns` 属性を `doc` 要素に追加しても、`test` 要素の **NamespaceURI** は `123` のまま変わりません。</span><span class="sxs-lookup"><span data-stu-id="b99f1-108">Likewise, if you add a different `xmlns` attribute to the `doc` element as follows, then the `test` element still has **NamespaceURI** `123`.</span></span>  
   
 ```vb  
-doc.documentElement.SetAttribute("xmlns","456");  
+doc.documentElement.SetAttribute("xmlns","456")
 ```  
   
 ```csharp  
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- <span data-ttu-id="1e200-109">つまり、`xmlns` 属性を変更しても、**XmlDocument** オブジェクトを保存して再び読み込むまで、プロパティは影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="1e200-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
+ <span data-ttu-id="b99f1-109">つまり、`xmlns` 属性を変更しても、**XmlDocument** オブジェクトを保存して再び読み込むまで、プロパティは影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="b99f1-109">Therefore, changing `xmlns` attributes will have no affect until you save and reload the **XmlDocument** object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e200-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e200-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b99f1-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b99f1-110">See also</span></span>
 
-- [<span data-ttu-id="1e200-111">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="1e200-111">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="b99f1-111">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="b99f1-111">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

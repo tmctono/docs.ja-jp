@@ -1,42 +1,48 @@
 ---
 title: ML.NET の概要とそのしくみ
 description: ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ML.NET を使うためにネットワークに接続する必要はありません。 この記事では、ML.NET の機械学習の基本について説明します。
-ms.date: 09/27/2019
+ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 1ae6b82ada841ad172cbe6a59b667aaaf619e714
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592046"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976740"
 ---
-# <a name="what-is-mlnet-and-how-does-it-work"></a><span data-ttu-id="58f13-105">ML.NET の概要とそのしくみ</span><span class="sxs-lookup"><span data-stu-id="58f13-105">What is ML.NET and how does it work?</span></span>
+# <a name="what-is-mlnet-and-how-does-it-work"></a><span data-ttu-id="768db-105">ML.NET の概要とそのしくみ</span><span class="sxs-lookup"><span data-stu-id="768db-105">What is ML.NET and how does it work?</span></span>
 
-<span data-ttu-id="58f13-106">ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。</span><span class="sxs-lookup"><span data-stu-id="58f13-106">ML.NET gives you the ability to add machine learning to .NET applications, in either online or offline scenarios.</span></span> <span data-ttu-id="58f13-107">この機能により、データを使った自動予測をアプリケーションで利用できるようになります。ネットワークに接続する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="58f13-107">With this capability, you can make automatic predictions using the data available to your application without having to be connected to a network.</span></span> <span data-ttu-id="58f13-108">この記事では、ML.NET の機械学習の基本について説明します。</span><span class="sxs-lookup"><span data-stu-id="58f13-108">This article explains the basics of machine learning in ML.NET.</span></span>
+<span data-ttu-id="768db-106">ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。</span><span class="sxs-lookup"><span data-stu-id="768db-106">ML.NET gives you the ability to add machine learning to .NET applications, in either online or offline scenarios.</span></span> <span data-ttu-id="768db-107">この機能により、データを使う自動予測をアプリケーションに利用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="768db-107">With this capability, you can make automatic predictions using the data available to your application.</span></span>
 
-<span data-ttu-id="58f13-109">ML.NET は、.NET Core を使用して Windows、Linux、macOS 上で動作します。また、.NET Framework を使用して Windows 上で動作します。</span><span class="sxs-lookup"><span data-stu-id="58f13-109">ML.NET runs on Windows, Linux, and macOS using .NET Core, or Windows using .NET Framework.</span></span> <span data-ttu-id="58f13-110">64 ビットはすべてのプラットフォームでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="58f13-110">64 bit is supported on all platforms.</span></span> <span data-ttu-id="58f13-111">TensorFlow、LightGBM、および ONNX 関連の機能を除き、32 ビットは Windows 上でサポートされています。</span><span class="sxs-lookup"><span data-stu-id="58f13-111">32 bit is supported on Windows, except for TensorFlow, LightGBM, and ONNX related functionality.</span></span>
+<span data-ttu-id="768db-108">ML.NET の中心となるのは、機械学習**モデル**です。</span><span class="sxs-lookup"><span data-stu-id="768db-108">Central to ML.NET is a machine learning **model**.</span></span> <span data-ttu-id="768db-109">このモデルでは、入力データを予測に変換するために必要な手順が指定されます。</span><span class="sxs-lookup"><span data-stu-id="768db-109">The model specifies the steps needed to transform your input data into a prediction.</span></span> <span data-ttu-id="768db-110">.ML.NET を使用すると、アルゴリズムを指定してカスタム モデルをトレーニングすることができます。または、事前トレーニング済みの TensorFlow および ONNX モデルをインポートすることもできます。</span><span class="sxs-lookup"><span data-stu-id="768db-110">With ML.NET, you can train a custom model by specifying an algorithm, or you can import pre-trained TensorFlow and ONNX models.</span></span>
 
-<span data-ttu-id="58f13-112">ML.NET を使用して作成できる予測の種類の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="58f13-112">Examples of the type of predictions that you can make with ML.NET include:</span></span>
+<span data-ttu-id="768db-111">モデルを用意したら、それをアプリケーションに追加して予測を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="768db-111">Once you have a model, you can add it to your application to make the predictions.</span></span>
+
+<span data-ttu-id="768db-112">ML.NET は、.NET Core を使用して Windows、Linux、macOS 上で動作します。また、.NET Framework を使用して Windows 上で動作します。</span><span class="sxs-lookup"><span data-stu-id="768db-112">ML.NET runs on Windows, Linux, and macOS using .NET Core, or Windows using .NET Framework.</span></span> <span data-ttu-id="768db-113">64 ビットはすべてのプラットフォームでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="768db-113">64 bit is supported on all platforms.</span></span> <span data-ttu-id="768db-114">TensorFlow、LightGBM、および ONNX 関連の機能を除き、32 ビットは Windows 上でサポートされています。</span><span class="sxs-lookup"><span data-stu-id="768db-114">32 bit is supported on Windows, except for TensorFlow, LightGBM, and ONNX related functionality.</span></span>
+
+<span data-ttu-id="768db-115">ML.NET で行うことができる予測の種類の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="768db-115">Examples of the type of predictions that you can make with ML.NET:</span></span>
 
 |||
 |-|-|
-|<span data-ttu-id="58f13-113">分類/カテゴリ化</span><span class="sxs-lookup"><span data-stu-id="58f13-113">Classification/Categorization</span></span>|<span data-ttu-id="58f13-114">カスタマー フィードバックを自動的に肯定的なカテゴリと否定的なカテゴリに分類する</span><span class="sxs-lookup"><span data-stu-id="58f13-114">Automatically divide customer feedback into positive and negative categories</span></span>|
-|<span data-ttu-id="58f13-115">回帰/連続値の予測</span><span class="sxs-lookup"><span data-stu-id="58f13-115">Regression/Predict continuous values</span></span>|<span data-ttu-id="58f13-116">サイズと場所に基づいて住宅の価格を予測する</span><span class="sxs-lookup"><span data-stu-id="58f13-116">Predict the price of houses based on size and location</span></span>|
-|<span data-ttu-id="58f13-117">異常検出</span><span class="sxs-lookup"><span data-stu-id="58f13-117">Anomaly Detection</span></span>|<span data-ttu-id="58f13-118">不正な銀行取引を検出する</span><span class="sxs-lookup"><span data-stu-id="58f13-118">Detect fraudulent banking transactions</span></span> |
-|<span data-ttu-id="58f13-119">推奨事項</span><span class="sxs-lookup"><span data-stu-id="58f13-119">Recommendations</span></span>|<span data-ttu-id="58f13-120">以前の購入に基づいてオンラインの買い物客が購入する可能性がある商品を提案する</span><span class="sxs-lookup"><span data-stu-id="58f13-120">Suggest products that online shoppers may want to buy, based on their previous purchases</span></span>|
+|<span data-ttu-id="768db-116">分類/カテゴリ化</span><span class="sxs-lookup"><span data-stu-id="768db-116">Classification/Categorization</span></span>|<span data-ttu-id="768db-117">カスタマー フィードバックを自動的に肯定的なカテゴリと否定的なカテゴリに分類する</span><span class="sxs-lookup"><span data-stu-id="768db-117">Automatically divide customer feedback into positive and negative categories</span></span>|
+|<span data-ttu-id="768db-118">回帰/連続値の予測</span><span class="sxs-lookup"><span data-stu-id="768db-118">Regression/Predict continuous values</span></span>|<span data-ttu-id="768db-119">サイズと場所に基づいて住宅の価格を予測する</span><span class="sxs-lookup"><span data-stu-id="768db-119">Predict the price of houses based on size and location</span></span>|
+|<span data-ttu-id="768db-120">異常検出</span><span class="sxs-lookup"><span data-stu-id="768db-120">Anomaly Detection</span></span>|<span data-ttu-id="768db-121">不正な銀行取引を検出する</span><span class="sxs-lookup"><span data-stu-id="768db-121">Detect fraudulent banking transactions</span></span> |
+|<span data-ttu-id="768db-122">推奨事項</span><span class="sxs-lookup"><span data-stu-id="768db-122">Recommendations</span></span>|<span data-ttu-id="768db-123">以前の購入に基づいてオンラインの買い物客が購入する可能性がある商品を提案する</span><span class="sxs-lookup"><span data-stu-id="768db-123">Suggest products that online shoppers may want to buy, based on their previous purchases</span></span>|
+|<span data-ttu-id="768db-124">時系列/シーケンシャル データ</span><span class="sxs-lookup"><span data-stu-id="768db-124">Time series/sequential data</span></span>|<span data-ttu-id="768db-125">天気/製品売上を予測する</span><span class="sxs-lookup"><span data-stu-id="768db-125">Forecast the weather/product sales</span></span>|
+|<span data-ttu-id="768db-126">画像の分類</span><span class="sxs-lookup"><span data-stu-id="768db-126">Image classification</span></span>|<span data-ttu-id="768db-127">病状を医療画像で分類する</span><span class="sxs-lookup"><span data-stu-id="768db-127">Categorize pathologies in medical images</span></span>|
 
-## <a name="hello-mlnet-world"></a><span data-ttu-id="58f13-121">ML.NET の基本</span><span class="sxs-lookup"><span data-stu-id="58f13-121">Hello ML.NET World</span></span>
+## <a name="hello-mlnet-world"></a><span data-ttu-id="768db-128">ML.NET の基本</span><span class="sxs-lookup"><span data-stu-id="768db-128">Hello ML.NET World</span></span>
 
-<span data-ttu-id="58f13-122">次のスニペットのコードは、最も簡単な ML.NET アプリケーションの例です。</span><span class="sxs-lookup"><span data-stu-id="58f13-122">The code in the following snippet demonstrates the simplest ML.NET application.</span></span> <span data-ttu-id="58f13-123">この例では、住宅のサイズと価格のデータを使用して住宅価格を予測する線形回帰モデルを構築します。</span><span class="sxs-lookup"><span data-stu-id="58f13-123">This example constructs a linear regression model to predict house prices using house size and price data.</span></span> <span data-ttu-id="58f13-124">実際のアプリケーションでは、データとモデルははるかに複雑になります。</span><span class="sxs-lookup"><span data-stu-id="58f13-124">In your real-life applications, your data and model will be much more complex.</span></span>
+<span data-ttu-id="768db-129">次のスニペットのコードは、最も簡単な ML.NET アプリケーションの例です。</span><span class="sxs-lookup"><span data-stu-id="768db-129">The code in the following snippet demonstrates the simplest ML.NET application.</span></span> <span data-ttu-id="768db-130">この例では、住宅のサイズと価格のデータを使用して住宅価格を予測する線形回帰モデルを構築します。</span><span class="sxs-lookup"><span data-stu-id="768db-130">This example constructs a linear regression model to predict house prices using house size and price data.</span></span> 
 
  ```csharp
     using System;
     using Microsoft.ML;
     using Microsoft.ML.Data;
-    
+
     class Program
     {
         public class HouseData
@@ -44,17 +50,17 @@ ms.locfileid: "71592046"
             public float Size { get; set; }
             public float Price { get; set; }
         }
-    
+
         public class Prediction
         {
             [ColumnName("Score")]
             public float Price { get; set; }
         }
-    
+
         static void Main(string[] args)
         {
             MLContext mlContext = new MLContext();
-    
+
             // 1. Import or create training data
             HouseData[] houseData = {
                 new HouseData() { Size = 1.1F, Price = 1.2F },
@@ -66,10 +72,10 @@ ms.locfileid: "71592046"
             // 2. Specify data preparation and model training pipeline
             var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
                 .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
-    
+
             // 3. Train model
             var model = pipeline.Fit(trainingData);
-    
+
             // 4. Make a prediction
             var size = new HouseData() { Size = 2.5F };
             var price = mlContext.Model.CreatePredictionEngine<HouseData, Prediction>(model).Predict(size);
@@ -78,64 +84,64 @@ ms.locfileid: "71592046"
 
             // Predicted price for size: 2500 sq ft= $261.98k
         }
-    } 
+    }
 ```
 
-## <a name="code-workflow"></a><span data-ttu-id="58f13-125">コードのワークフロー</span><span class="sxs-lookup"><span data-stu-id="58f13-125">Code workflow</span></span>
+## <a name="code-workflow"></a><span data-ttu-id="768db-131">コードのワークフロー</span><span class="sxs-lookup"><span data-stu-id="768db-131">Code workflow</span></span>
 
-<span data-ttu-id="58f13-126">次の図は、アプリケーション コードの構造とモデル開発の反復処理を表しています。</span><span class="sxs-lookup"><span data-stu-id="58f13-126">The following diagram represents the application code structure, as well as the iterative process of model development:</span></span>
+<span data-ttu-id="768db-132">次の図は、アプリケーション コードの構造とモデル開発の反復処理を表しています。</span><span class="sxs-lookup"><span data-stu-id="768db-132">The following diagram represents the application code structure, as well as the iterative process of model development:</span></span>
 
-- <span data-ttu-id="58f13-127">トレーニング データを収集して **IDataView** オブジェクトに読み込む</span><span class="sxs-lookup"><span data-stu-id="58f13-127">Collect and load training data into an **IDataView** object</span></span>
-- <span data-ttu-id="58f13-128">特徴を抽出し、機械学習アルゴリズムを適用するように操作のパイプラインを指定する</span><span class="sxs-lookup"><span data-stu-id="58f13-128">Specify a pipeline of operations to extract features and apply a machine learning algorithm</span></span>
-- <span data-ttu-id="58f13-129">パイプラインに対して **Fit()** を呼び出してモデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="58f13-129">Train a model by calling **Fit()** on the pipeline</span></span>
-- <span data-ttu-id="58f13-130">モデルを評価し、反復処理で改善する</span><span class="sxs-lookup"><span data-stu-id="58f13-130">Evaluate the model and iterate to improve</span></span>
-- <span data-ttu-id="58f13-131">アプリケーションで使用できるようにモデルをバイナリ形式で保存する</span><span class="sxs-lookup"><span data-stu-id="58f13-131">Save the model into binary format, for use in an application</span></span>
-- <span data-ttu-id="58f13-132">モデルを **ITransformer** オブジェクトに読み込む</span><span class="sxs-lookup"><span data-stu-id="58f13-132">Load the model back into an **ITransformer** object</span></span>
-- <span data-ttu-id="58f13-133">**CreatePredictionEngine.Predict()** を呼び出して予測を行う</span><span class="sxs-lookup"><span data-stu-id="58f13-133">Make predictions by calling **CreatePredictionEngine.Predict()**</span></span>
+- <span data-ttu-id="768db-133">トレーニング データを収集して **IDataView** オブジェクトに読み込む</span><span class="sxs-lookup"><span data-stu-id="768db-133">Collect and load training data into an **IDataView** object</span></span>
+- <span data-ttu-id="768db-134">特徴を抽出し、機械学習アルゴリズムを適用するように操作のパイプラインを指定する</span><span class="sxs-lookup"><span data-stu-id="768db-134">Specify a pipeline of operations to extract features and apply a machine learning algorithm</span></span>
+- <span data-ttu-id="768db-135">パイプラインに対して **Fit()** を呼び出してモデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="768db-135">Train a model by calling **Fit()** on the pipeline</span></span>
+- <span data-ttu-id="768db-136">モデルを評価し、反復処理で改善する</span><span class="sxs-lookup"><span data-stu-id="768db-136">Evaluate the model and iterate to improve</span></span>
+- <span data-ttu-id="768db-137">アプリケーションで使用できるようにモデルをバイナリ形式で保存する</span><span class="sxs-lookup"><span data-stu-id="768db-137">Save the model into binary format, for use in an application</span></span>
+- <span data-ttu-id="768db-138">モデルを **ITransformer** オブジェクトに読み込む</span><span class="sxs-lookup"><span data-stu-id="768db-138">Load the model back into an **ITransformer** object</span></span>
+- <span data-ttu-id="768db-139">**CreatePredictionEngine.Predict()** を呼び出して予測を行う</span><span class="sxs-lookup"><span data-stu-id="768db-139">Make predictions by calling **CreatePredictionEngine.Predict()**</span></span>
 
-![データ生成、パイプライン開発、モデル トレーニング、モデル評価、およびモデル使用のためのコンポーネントを含む ML.NET アプリケーション開発フロー](./media/mldotnet-annotated-workflow.png) 
+![データ生成、パイプライン開発、モデル トレーニング、モデル評価、およびモデル使用のためのコンポーネントを含む ML.NET アプリケーション開発フロー](./media/mldotnet-annotated-workflow.png)
 
-<span data-ttu-id="58f13-135">これらの概念についてもう少し詳しく掘り下げてみましょう。</span><span class="sxs-lookup"><span data-stu-id="58f13-135">Let's dig a little deeper into those concepts.</span></span>
+<span data-ttu-id="768db-141">これらの概念についてもう少し詳しく掘り下げてみましょう。</span><span class="sxs-lookup"><span data-stu-id="768db-141">Let's dig a little deeper into those concepts.</span></span>
 
-## <a name="machine-learning-model"></a><span data-ttu-id="58f13-136">機械学習モデル</span><span class="sxs-lookup"><span data-stu-id="58f13-136">Machine learning model</span></span>
+## <a name="machine-learning-model"></a><span data-ttu-id="768db-142">機械学習モデル</span><span class="sxs-lookup"><span data-stu-id="768db-142">Machine learning model</span></span>
 
-<span data-ttu-id="58f13-137">ML.NET モデルは、予測される出力に到達するために入力データに対して実行される変換を含むオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="58f13-137">An ML.NET model is an object that contains transformations to perform on your input data to arrive at the predicted output.</span></span>
+<span data-ttu-id="768db-143">ML.NET モデルは、予測される出力に到達するために入力データに対して実行される変換を含むオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="768db-143">An ML.NET model is an object that contains transformations to perform on your input data to arrive at the predicted output.</span></span>
 
-### <a name="basic"></a><span data-ttu-id="58f13-138">Basic</span><span class="sxs-lookup"><span data-stu-id="58f13-138">Basic</span></span>
+### <a name="basic"></a><span data-ttu-id="768db-144">Basic</span><span class="sxs-lookup"><span data-stu-id="768db-144">Basic</span></span>
 
-<span data-ttu-id="58f13-139">最も基本的なモデルは、前述の住宅価格の例のように、ある連続的な数量が別の連続的な数量と比例する 2 次元の線形回帰です。</span><span class="sxs-lookup"><span data-stu-id="58f13-139">The most basic model is two-dimensional linear regression, where one continuous quantity is proportional to another, as in the house price example above.</span></span> 
+<span data-ttu-id="768db-145">最も基本的なモデルは、前述の住宅価格の例のように、ある連続的な数量が別の連続的な数量と比例する 2 次元の線形回帰です。</span><span class="sxs-lookup"><span data-stu-id="768db-145">The most basic model is two-dimensional linear regression, where one continuous quantity is proportional to another, as in the house price example above.</span></span>
 
 ![バイアスと重みのパラメーターがある線形回帰モデル](./media/linear-regression-model.svg)
 
-<span data-ttu-id="58f13-141">このモデルは $Price = b + Size \* w$ のようにシンプルです。</span><span class="sxs-lookup"><span data-stu-id="58f13-141">The model is simply: $Price = b + Size \* w$.</span></span> <span data-ttu-id="58f13-142">パラメーター $b$ と $w$ は、(サイズ、価格) ペアのセットに直線を合わせることで推定されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-142">The parameters $b$ and $w$ are estimated by fitting a line on a set of (size, price) pairs.</span></span> <span data-ttu-id="58f13-143">モデルのパラメーターを見つけるために使用されるデータは、**トレーニング データ**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="58f13-143">The data used to find the parameters of the model is called **training data**.</span></span> <span data-ttu-id="58f13-144">機械学習モデルの入力は**特徴**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="58f13-144">The inputs of a machine learning model are called **features**.</span></span> <span data-ttu-id="58f13-145">この例では、$Size$ が唯一の特徴です。</span><span class="sxs-lookup"><span data-stu-id="58f13-145">In this example, $Size$ is the only feature.</span></span> <span data-ttu-id="58f13-146">機械学習モデルのトレーニングに使用される真値は、**ラベル**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="58f13-146">The ground-truth values used to train a machine learning model are called **labels**.</span></span> <span data-ttu-id="58f13-147">ここでは、トレーニング データ セットの $Price$ 値がラベルです。</span><span class="sxs-lookup"><span data-stu-id="58f13-147">Here, the $Price$ values in the training data set are the labels.</span></span>
+<span data-ttu-id="768db-147">このモデルは $Price = b + Size \* w$ のようにシンプルです。</span><span class="sxs-lookup"><span data-stu-id="768db-147">The model is simply: $Price = b + Size \* w$.</span></span> <span data-ttu-id="768db-148">パラメーター $b$ と $w$ は、(サイズ、価格) ペアのセットに直線を合わせることで推定されます。</span><span class="sxs-lookup"><span data-stu-id="768db-148">The parameters $b$ and $w$ are estimated by fitting a line on a set of (size, price) pairs.</span></span> <span data-ttu-id="768db-149">モデルのパラメーターを見つけるために使用されるデータは、**トレーニング データ**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="768db-149">The data used to find the parameters of the model is called **training data**.</span></span> <span data-ttu-id="768db-150">機械学習モデルの入力は**特徴**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="768db-150">The inputs of a machine learning model are called **features**.</span></span> <span data-ttu-id="768db-151">この例では、$Size$ が唯一の特徴です。</span><span class="sxs-lookup"><span data-stu-id="768db-151">In this example, $Size$ is the only feature.</span></span> <span data-ttu-id="768db-152">機械学習モデルのトレーニングに使用される真値は、**ラベル**と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="768db-152">The ground-truth values used to train a machine learning model are called **labels**.</span></span> <span data-ttu-id="768db-153">ここでは、トレーニング データ セットの $Price$ 値がラベルです。</span><span class="sxs-lookup"><span data-stu-id="768db-153">Here, the $Price$ values in the training data set are the labels.</span></span>
 
-### <a name="more-complex"></a><span data-ttu-id="58f13-148">より複雑</span><span class="sxs-lookup"><span data-stu-id="58f13-148">More complex</span></span>
+### <a name="more-complex"></a><span data-ttu-id="768db-154">より複雑</span><span class="sxs-lookup"><span data-stu-id="768db-154">More complex</span></span>
 
-<span data-ttu-id="58f13-149">より複雑なモデルでは、取引の説明文を使用して金融取引をカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="58f13-149">A more complex model classifies financial transactions into categories using the transaction text description.</span></span>
+<span data-ttu-id="768db-155">より複雑なモデルでは、取引の説明文を使用して金融取引をカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="768db-155">A more complex model classifies financial transactions into categories using the transaction text description.</span></span>
 
-<span data-ttu-id="58f13-150">各取引の説明を特徴セットに分類するには、冗長な単語と文字を削除し、単語と文字の組み合わせを数えます。</span><span class="sxs-lookup"><span data-stu-id="58f13-150">Each transaction description is broken down into a set of features by removing redundant words and characters, and counting word and character combinations.</span></span> <span data-ttu-id="58f13-151">特徴セットは、トレーニング データ内の一連のカテゴリに基づいて線形モデルをトレーニングするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-151">The feature set is used to train a linear model based on the set of categories in the training data.</span></span> <span data-ttu-id="58f13-152">新しい説明がトレーニング セット内の説明に似ているほど、同じカテゴリに割り当てられる可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="58f13-152">The more similar a new description is to the ones in the training set, the more likely it will be assigned to the same category.</span></span> 
+<span data-ttu-id="768db-156">各取引の説明を特徴セットに分類するには、冗長な単語と文字を削除し、単語と文字の組み合わせを数えます。</span><span class="sxs-lookup"><span data-stu-id="768db-156">Each transaction description is broken down into a set of features by removing redundant words and characters, and counting word and character combinations.</span></span> <span data-ttu-id="768db-157">特徴セットは、トレーニング データ内の一連のカテゴリに基づいて線形モデルをトレーニングするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="768db-157">The feature set is used to train a linear model based on the set of categories in the training data.</span></span> <span data-ttu-id="768db-158">新しい説明がトレーニング セット内の説明に似ているほど、同じカテゴリに割り当てられる可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="768db-158">The more similar a new description is to the ones in the training set, the more likely it will be assigned to the same category.</span></span>
 
 ![テキスト分類モデル](./media/text-classification-model.svg)
 
-<span data-ttu-id="58f13-154">住宅価格モデルとテキスト分類モデルはどちらも**線形**モデルです。</span><span class="sxs-lookup"><span data-stu-id="58f13-154">Both the house price model and the text classification model are **linear** models.</span></span> <span data-ttu-id="58f13-155">データの性質や解決対象の問題に応じて、**デシジョン ツリー** モデル、**一般化加法**モデルなどを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="58f13-155">Depending on the nature of your data and the problem you are solving, you can also use **decision tree** models, **generalized additive** models, and others.</span></span> <span data-ttu-id="58f13-156">モデルの詳細については、[タスク](./resources/tasks.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-156">You can find out more about the models in [Tasks](./resources/tasks.md).</span></span>
+<span data-ttu-id="768db-160">住宅価格モデルとテキスト分類モデルはどちらも**線形**モデルです。</span><span class="sxs-lookup"><span data-stu-id="768db-160">Both the house price model and the text classification model are **linear** models.</span></span> <span data-ttu-id="768db-161">データの性質や解決対象の問題に応じて、**デシジョン ツリー** モデル、**一般化加法**モデルなどを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="768db-161">Depending on the nature of your data and the problem you are solving, you can also use **decision tree** models, **generalized additive** models, and others.</span></span> <span data-ttu-id="768db-162">モデルの詳細については、[タスク](./resources/tasks.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-162">You can find out more about the models in [Tasks](./resources/tasks.md).</span></span>
 
-## <a name="data-preparation"></a><span data-ttu-id="58f13-157">データ準備</span><span class="sxs-lookup"><span data-stu-id="58f13-157">Data preparation</span></span>
+## <a name="data-preparation"></a><span data-ttu-id="768db-163">データ準備</span><span class="sxs-lookup"><span data-stu-id="768db-163">Data preparation</span></span>
 
-<span data-ttu-id="58f13-158">ほとんどの場合、利用できるデータは、機械学習モデルのトレーニングにそのまま使用するために適していません。</span><span class="sxs-lookup"><span data-stu-id="58f13-158">In most cases, the data that you have available isn't suitable to be used directly to train a machine learning model.</span></span> <span data-ttu-id="58f13-159">生データは使用前に準備するか前処理して、モデルのパラメーターを見つける必要があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-159">The raw data needs to be prepared, or pre-processed before it can be used to find the parameters of your model.</span></span> <span data-ttu-id="58f13-160">文字列値から数値表現へのデータの変換が必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-160">Your data may need to be converted from string values to a numerical representation.</span></span> <span data-ttu-id="58f13-161">入力データには冗長な情報が含まれる場合があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-161">You might have redundant information in your input data.</span></span> <span data-ttu-id="58f13-162">入力データの次元の縮小または拡大が必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-162">You may need to reduce or expand the dimensions of your input data.</span></span> <span data-ttu-id="58f13-163">データの正規化またはスケールが必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-163">Your data might need to be normalized or scaled.</span></span>
+<span data-ttu-id="768db-164">ほとんどの場合、利用できるデータは、機械学習モデルのトレーニングにそのまま使用するために適していません。</span><span class="sxs-lookup"><span data-stu-id="768db-164">In most cases, the data that you have available isn't suitable to be used directly to train a machine learning model.</span></span> <span data-ttu-id="768db-165">生データは使用前に準備するか前処理して、モデルのパラメーターを見つける必要があります。</span><span class="sxs-lookup"><span data-stu-id="768db-165">The raw data needs to be prepared, or pre-processed before it can be used to find the parameters of your model.</span></span> <span data-ttu-id="768db-166">文字列値から数値表現へのデータの変換が必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="768db-166">Your data may need to be converted from string values to a numerical representation.</span></span> <span data-ttu-id="768db-167">入力データには冗長な情報が含まれる場合があります。</span><span class="sxs-lookup"><span data-stu-id="768db-167">You might have redundant information in your input data.</span></span> <span data-ttu-id="768db-168">入力データの次元の縮小または拡大が必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="768db-168">You may need to reduce or expand the dimensions of your input data.</span></span> <span data-ttu-id="768db-169">データの正規化またはスケールが必要な場合があります。</span><span class="sxs-lookup"><span data-stu-id="768db-169">Your data might need to be normalized or scaled.</span></span>
 
-<span data-ttu-id="58f13-164">「[ML.NET のチュートリアル](./tutorials/index.md)」では、特定の機械学習タスクに使用されるテキスト、画像、数値、および時系列データ用のさまざまなデータ処理パイプラインが説明されています。</span><span class="sxs-lookup"><span data-stu-id="58f13-164">The [ML.NET tutorials](./tutorials/index.md) teach you about different data processing pipelines for text, image, numerical, and time-series data used for specific machine learning tasks.</span></span>
+<span data-ttu-id="768db-170">「[ML.NET のチュートリアル](./tutorials/index.md)」では、特定の機械学習タスクに使用されるテキスト、画像、数値、および時系列データ用のさまざまなデータ処理パイプラインが説明されています。</span><span class="sxs-lookup"><span data-stu-id="768db-170">The [ML.NET tutorials](./tutorials/index.md) teach you about different data processing pipelines for text, image, numerical, and time-series data used for specific machine learning tasks.</span></span>
 
-<span data-ttu-id="58f13-165">[データの準備方法](./how-to-guides/prepare-data-ml-net.md)に関する記事では、データ準備を適用する方法が全般的に説明されています。</span><span class="sxs-lookup"><span data-stu-id="58f13-165">[How to prepare your data](./how-to-guides/prepare-data-ml-net.md) shows you how to applied data preparation more generally.</span></span>
+<span data-ttu-id="768db-171">[データの準備方法](./how-to-guides/prepare-data-ml-net.md)に関する記事では、データ準備を適用する方法が全般的に説明されています。</span><span class="sxs-lookup"><span data-stu-id="768db-171">[How to prepare your data](./how-to-guides/prepare-data-ml-net.md) shows you how to applied data preparation more generally.</span></span>
 
-<span data-ttu-id="58f13-166">すべての[使用できる変換](./resources/transforms.md)の付録については、リソース セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-166">You can find an appendix of all of the [available transformations](./resources/transforms.md) in the resources section.</span></span>
+<span data-ttu-id="768db-172">すべての[使用できる変換](./resources/transforms.md)の付録については、リソース セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-172">You can find an appendix of all of the [available transformations](./resources/transforms.md) in the resources section.</span></span>
 
-## <a name="model-evaluation"></a><span data-ttu-id="58f13-167">モデル評価</span><span class="sxs-lookup"><span data-stu-id="58f13-167">Model evaluation</span></span>
+## <a name="model-evaluation"></a><span data-ttu-id="768db-173">モデル評価</span><span class="sxs-lookup"><span data-stu-id="768db-173">Model evaluation</span></span>
 
-<span data-ttu-id="58f13-168">トレーニングを完了したモデルが今後の予測にどのくらい役立つかは、どうすればわかるでしょうか。</span><span class="sxs-lookup"><span data-stu-id="58f13-168">Once you have trained your model, how do you know how well it will make future predictions?</span></span> <span data-ttu-id="58f13-169">ML.NET を使用すると、いくつかの新しいテスト データに対してモデルを評価できます。</span><span class="sxs-lookup"><span data-stu-id="58f13-169">With ML.NET, you can evaluate your model against some new test data.</span></span> 
+<span data-ttu-id="768db-174">トレーニングを完了したモデルが今後の予測にどのくらい役立つかは、どうすればわかるでしょうか。</span><span class="sxs-lookup"><span data-stu-id="768db-174">Once you have trained your model, how do you know how well it will make future predictions?</span></span> <span data-ttu-id="768db-175">ML.NET を使用すると、いくつかの新しいテスト データに対してモデルを評価できます。</span><span class="sxs-lookup"><span data-stu-id="768db-175">With ML.NET, you can evaluate your model against some new test data.</span></span>
 
-<span data-ttu-id="58f13-170">機械学習タスクの種類ごとに、テスト データ セットに対するモデルの正確度と精度の評価に使用されるメトリックがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-170">Each type of machine learning task has metrics used to evaluate the accuracy and precision of the model against the test data set.</span></span>
+<span data-ttu-id="768db-176">機械学習タスクの種類ごとに、テスト データ セットに対するモデルの正確度と精度の評価に使用されるメトリックがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-176">Each type of machine learning task has metrics used to evaluate the accuracy and precision of the model against the test data set.</span></span>
 
-<span data-ttu-id="58f13-171">住宅価格の例では、**回帰**タスクを使用しました。</span><span class="sxs-lookup"><span data-stu-id="58f13-171">For our house price example, we used the **Regression** task.</span></span> <span data-ttu-id="58f13-172">このモデルを評価するには、元のサンプルに次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="58f13-172">To evaluate the model, add the following code to the original sample.</span></span>
+<span data-ttu-id="768db-177">住宅価格の例では、**回帰**タスクを使用しました。</span><span class="sxs-lookup"><span data-stu-id="768db-177">For our house price example, we used the **Regression** task.</span></span> <span data-ttu-id="768db-178">このモデルを評価するには、元のサンプルに次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="768db-178">To evaluate the model, add the following code to the original sample.</span></span>
 
 ```csharp
         HouseData[] testHouseData =
@@ -148,7 +154,7 @@ ms.locfileid: "71592046"
 
         var testHouseDataView = mlContext.Data.LoadFromEnumerable(testHouseData);
         var testPriceDataView = model.Transform(testHouseDataView);
-                
+
         var metrics = mlContext.Regression.Evaluate(testPriceDataView, labelColumnName: "Price");
 
         Console.WriteLine($"R^2: {metrics.RSquared:0.##}");
@@ -158,95 +164,95 @@ ms.locfileid: "71592046"
         // RMS error: 0.19
 ```
 
-<span data-ttu-id="58f13-173">評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。</span><span class="sxs-lookup"><span data-stu-id="58f13-173">The evaluation metrics tell you that the error is low-ish, and that correlation between the predicted output and the test output is high.</span></span> <span data-ttu-id="58f13-174">簡単でしたね。</span><span class="sxs-lookup"><span data-stu-id="58f13-174">That was easy!</span></span> <span data-ttu-id="58f13-175">実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。</span><span class="sxs-lookup"><span data-stu-id="58f13-175">In real examples, it takes more tuning to achieve good model metrics.</span></span>
+<span data-ttu-id="768db-179">評価メトリックから、誤差が少ないことと、予測される出力とテスト出力の間の相関度が高いことがわかります。</span><span class="sxs-lookup"><span data-stu-id="768db-179">The evaluation metrics tell you that the error is low-ish, and that correlation between the predicted output and the test output is high.</span></span> <span data-ttu-id="768db-180">簡単でしたね。</span><span class="sxs-lookup"><span data-stu-id="768db-180">That was easy!</span></span> <span data-ttu-id="768db-181">実際の例で優れたモデル メトリックを実現するには、さらに調整が必要です。</span><span class="sxs-lookup"><span data-stu-id="768db-181">In real examples, it takes more tuning to achieve good model metrics.</span></span>
 
-## <a name="mlnet-architecture"></a><span data-ttu-id="58f13-176">ML.NET のアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="58f13-176">ML.NET architecture</span></span>
+## <a name="mlnet-architecture"></a><span data-ttu-id="768db-182">ML.NET のアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="768db-182">ML.NET architecture</span></span>
 
-<span data-ttu-id="58f13-177">このセクションでは、ML.NET のアーキテクチャ パターンについて説明します。</span><span class="sxs-lookup"><span data-stu-id="58f13-177">In this section, we go through the architectural patterns of ML.NET.</span></span> <span data-ttu-id="58f13-178">経験豊富な .NET 開発者であれば、なじみのあるパターンと、あまりなじみのないパターンがあるでしょう。</span><span class="sxs-lookup"><span data-stu-id="58f13-178">If you are an experienced .NET developer, some of these patterns will be familiar to you, and some will be less familiar.</span></span> <span data-ttu-id="58f13-179">詳しく説明しますので、ついてきてください。</span><span class="sxs-lookup"><span data-stu-id="58f13-179">Hold tight, while we dive in!</span></span>
+<span data-ttu-id="768db-183">このセクションでは、ML.NET のアーキテクチャ パターンについて説明します。</span><span class="sxs-lookup"><span data-stu-id="768db-183">In this section, we go through the architectural patterns of ML.NET.</span></span> <span data-ttu-id="768db-184">経験豊富な .NET 開発者であれば、なじみのあるパターンと、あまりなじみのないパターンがあるでしょう。</span><span class="sxs-lookup"><span data-stu-id="768db-184">If you are an experienced .NET developer, some of these patterns will be familiar to you, and some will be less familiar.</span></span> <span data-ttu-id="768db-185">詳しく説明しますので、ついてきてください。</span><span class="sxs-lookup"><span data-stu-id="768db-185">Hold tight, while we dive in!</span></span>
 
-<span data-ttu-id="58f13-180">ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェクトから始まります。</span><span class="sxs-lookup"><span data-stu-id="58f13-180">An ML.NET application starts with an <xref:Microsoft.ML.MLContext> object.</span></span> <span data-ttu-id="58f13-181">このシングルトン オブジェクトには**カタログ**が含まれます。</span><span class="sxs-lookup"><span data-stu-id="58f13-181">This singleton object contains **catalogs**.</span></span> <span data-ttu-id="58f13-182">カタログは、データの読み込みと保存、変換、トレーナー、およびモデル運用コンポーネントのためのファクトリです。</span><span class="sxs-lookup"><span data-stu-id="58f13-182">A catalog is a factory for data loading and saving, transforms, trainers, and model operation components.</span></span> <span data-ttu-id="58f13-183">各カタログ オブジェクトには、さまざまな種類のコンポーネントを作成するメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-183">Each catalog object has methods to create the different types of components:</span></span>
+<span data-ttu-id="768db-186">ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェクトから始まります。</span><span class="sxs-lookup"><span data-stu-id="768db-186">An ML.NET application starts with an <xref:Microsoft.ML.MLContext> object.</span></span> <span data-ttu-id="768db-187">このシングルトン オブジェクトには**カタログ**が含まれます。</span><span class="sxs-lookup"><span data-stu-id="768db-187">This singleton object contains **catalogs**.</span></span> <span data-ttu-id="768db-188">カタログは、データの読み込みと保存、変換、トレーナー、およびモデル運用コンポーネントのためのファクトリです。</span><span class="sxs-lookup"><span data-stu-id="768db-188">A catalog is a factory for data loading and saving, transforms, trainers, and model operation components.</span></span> <span data-ttu-id="768db-189">各カタログ オブジェクトには、さまざまな種類のコンポーネントを作成するメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-189">Each catalog object has methods to create the different types of components:</span></span>
 
 |||||
 |-|-|-|-|
-|<span data-ttu-id="58f13-184">データの読み込みと保存</span><span class="sxs-lookup"><span data-stu-id="58f13-184">Data loading and saving</span></span>||<xref:Microsoft.ML.DataOperationsCatalog>||
-|<span data-ttu-id="58f13-185">データ準備</span><span class="sxs-lookup"><span data-stu-id="58f13-185">Data preparation</span></span>||<xref:Microsoft.ML.TransformsCatalog>||
-|<span data-ttu-id="58f13-186">トレーニングのアルゴリズム</span><span class="sxs-lookup"><span data-stu-id="58f13-186">Training algorithms</span></span>|<span data-ttu-id="58f13-187">二項分類</span><span class="sxs-lookup"><span data-stu-id="58f13-187">Binary classification</span></span>|<xref:Microsoft.ML.BinaryClassificationCatalog>||
-||<span data-ttu-id="58f13-188">多クラス分類</span><span class="sxs-lookup"><span data-stu-id="58f13-188">Multiclass classification</span></span>|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
-||<span data-ttu-id="58f13-189">異常検出</span><span class="sxs-lookup"><span data-stu-id="58f13-189">Anomaly detection</span></span>|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||<span data-ttu-id="58f13-190">クラスタリング</span><span class="sxs-lookup"><span data-stu-id="58f13-190">Clustering</span></span>|<xref:Microsoft.ML.ClusteringCatalog>||
-||<span data-ttu-id="58f13-191">予測</span><span class="sxs-lookup"><span data-stu-id="58f13-191">Forecasting</span></span>|<xref:Microsoft.ML.ForecastingCatalog>||
-||<span data-ttu-id="58f13-192">ランキング</span><span class="sxs-lookup"><span data-stu-id="58f13-192">Ranking</span></span>|<xref:Microsoft.ML.RankingCatalog>||
-||<span data-ttu-id="58f13-193">回帰</span><span class="sxs-lookup"><span data-stu-id="58f13-193">Regression</span></span>|<xref:Microsoft.ML.RegressionCatalog>||
-||<span data-ttu-id="58f13-194">推奨事項</span><span class="sxs-lookup"><span data-stu-id="58f13-194">Recommendation</span></span>|<xref:Microsoft.ML.RecommendationCatalog>|<span data-ttu-id="58f13-195">`Microsoft.ML.Recommender` NuGet パッケージを取得する</span><span class="sxs-lookup"><span data-stu-id="58f13-195">add the `Microsoft.ML.Recommender` NuGet package</span></span>|
-||<span data-ttu-id="58f13-196">TimeSeries</span><span class="sxs-lookup"><span data-stu-id="58f13-196">TimeSeries</span></span>|<xref:Microsoft.ML.TimeSeriesCatalog>|<span data-ttu-id="58f13-197">`Microsoft.ML.TimeSeries` NuGet パッケージを取得する</span><span class="sxs-lookup"><span data-stu-id="58f13-197">add the `Microsoft.ML.TimeSeries` NuGet package</span></span>|
-|<span data-ttu-id="58f13-198">モデルの使用法</span><span class="sxs-lookup"><span data-stu-id="58f13-198">Model usage</span></span> ||<xref:Microsoft.ML.ModelOperationsCatalog>||
+|<span data-ttu-id="768db-190">データの読み込みと保存</span><span class="sxs-lookup"><span data-stu-id="768db-190">Data loading and saving</span></span>||<xref:Microsoft.ML.DataOperationsCatalog>||
+|<span data-ttu-id="768db-191">データ準備</span><span class="sxs-lookup"><span data-stu-id="768db-191">Data preparation</span></span>||<xref:Microsoft.ML.TransformsCatalog>||
+|<span data-ttu-id="768db-192">トレーニングのアルゴリズム</span><span class="sxs-lookup"><span data-stu-id="768db-192">Training algorithms</span></span>|<span data-ttu-id="768db-193">二項分類</span><span class="sxs-lookup"><span data-stu-id="768db-193">Binary classification</span></span>|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||<span data-ttu-id="768db-194">多クラス分類</span><span class="sxs-lookup"><span data-stu-id="768db-194">Multiclass classification</span></span>|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||<span data-ttu-id="768db-195">異常検出</span><span class="sxs-lookup"><span data-stu-id="768db-195">Anomaly detection</span></span>|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||<span data-ttu-id="768db-196">クラスタリング</span><span class="sxs-lookup"><span data-stu-id="768db-196">Clustering</span></span>|<xref:Microsoft.ML.ClusteringCatalog>||
+||<span data-ttu-id="768db-197">予測</span><span class="sxs-lookup"><span data-stu-id="768db-197">Forecasting</span></span>|<xref:Microsoft.ML.ForecastingCatalog>||
+||<span data-ttu-id="768db-198">ランキング</span><span class="sxs-lookup"><span data-stu-id="768db-198">Ranking</span></span>|<xref:Microsoft.ML.RankingCatalog>||
+||<span data-ttu-id="768db-199">回帰</span><span class="sxs-lookup"><span data-stu-id="768db-199">Regression</span></span>|<xref:Microsoft.ML.RegressionCatalog>||
+||<span data-ttu-id="768db-200">推奨事項</span><span class="sxs-lookup"><span data-stu-id="768db-200">Recommendation</span></span>|<xref:Microsoft.ML.RecommendationCatalog>|<span data-ttu-id="768db-201">`Microsoft.ML.Recommender` NuGet パッケージを取得する</span><span class="sxs-lookup"><span data-stu-id="768db-201">add the `Microsoft.ML.Recommender` NuGet package</span></span>|
+||<span data-ttu-id="768db-202">TimeSeries</span><span class="sxs-lookup"><span data-stu-id="768db-202">TimeSeries</span></span>|<xref:Microsoft.ML.TimeSeriesCatalog>|<span data-ttu-id="768db-203">`Microsoft.ML.TimeSeries` NuGet パッケージを取得する</span><span class="sxs-lookup"><span data-stu-id="768db-203">add the `Microsoft.ML.TimeSeries` NuGet package</span></span>|
+|<span data-ttu-id="768db-204">モデルの使用法</span><span class="sxs-lookup"><span data-stu-id="768db-204">Model usage</span></span> ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
-<span data-ttu-id="58f13-199">上記の各カテゴリの作成方法に移動できます。</span><span class="sxs-lookup"><span data-stu-id="58f13-199">You can navigate to the creation methods in each of the above categories.</span></span> <span data-ttu-id="58f13-200">Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-200">Using Visual Studio, the catalogs show up via IntelliSense.</span></span>
+<span data-ttu-id="768db-205">上記の各カテゴリの作成方法に移動できます。</span><span class="sxs-lookup"><span data-stu-id="768db-205">You can navigate to the creation methods in each of the above categories.</span></span> <span data-ttu-id="768db-206">Visual Studio を使用すると、IntelliSense を介してカタログが表示されます。</span><span class="sxs-lookup"><span data-stu-id="768db-206">Using Visual Studio, the catalogs show up via IntelliSense.</span></span>
 
    ![回帰トレーナー用の IntelliSense](./media/catalog-intellisense.png)
 
-### <a name="build-the-pipeline"></a><span data-ttu-id="58f13-202">パイプラインを構築する</span><span class="sxs-lookup"><span data-stu-id="58f13-202">Build the pipeline</span></span>
+### <a name="build-the-pipeline"></a><span data-ttu-id="768db-208">パイプラインを構築する</span><span class="sxs-lookup"><span data-stu-id="768db-208">Build the pipeline</span></span>
 
-<span data-ttu-id="58f13-203">各カタログ内には、一連の拡張メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-203">Inside each catalog is a set of extension methods.</span></span> <span data-ttu-id="58f13-204">トレーニング パイプラインを作成するために拡張メソッドがどのように使用されるかを見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="58f13-204">Let's look at how extension methods are used to create a training pipeline.</span></span>
+<span data-ttu-id="768db-209">各カタログ内には、一連の拡張メソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-209">Inside each catalog is a set of extension methods.</span></span> <span data-ttu-id="768db-210">トレーニング パイプラインを作成するために拡張メソッドがどのように使用されるかを見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="768db-210">Let's look at how extension methods are used to create a training pipeline.</span></span>
 
 ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100));
 ```
 
-<span data-ttu-id="58f13-205">このスニペットで、`Concatenate` と `Sdca` はどちらもカタログ内のメソッドです。</span><span class="sxs-lookup"><span data-stu-id="58f13-205">In the snippet, `Concatenate` and `Sdca` are both methods in the catalog.</span></span> <span data-ttu-id="58f13-206">それぞれ、パイプラインに追加される [IEstimator](xref:Microsoft.ML.IEstimator%601) オブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-206">They each create an [IEstimator](xref:Microsoft.ML.IEstimator%601) object that is appended to the pipeline.</span></span>
+<span data-ttu-id="768db-211">このスニペットで、`Concatenate` と `Sdca` はどちらもカタログ内のメソッドです。</span><span class="sxs-lookup"><span data-stu-id="768db-211">In the snippet, `Concatenate` and `Sdca` are both methods in the catalog.</span></span> <span data-ttu-id="768db-212">それぞれ、パイプラインに追加される [IEstimator](xref:Microsoft.ML.IEstimator%601) オブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="768db-212">They each create an [IEstimator](xref:Microsoft.ML.IEstimator%601) object that is appended to the pipeline.</span></span>
 
-<span data-ttu-id="58f13-207">この時点では、オブジェクトが作成されるだけです。</span><span class="sxs-lookup"><span data-stu-id="58f13-207">At this point, the objects are created only.</span></span> <span data-ttu-id="58f13-208">実行は行われません。</span><span class="sxs-lookup"><span data-stu-id="58f13-208">No execution has happened.</span></span>
+<span data-ttu-id="768db-213">この時点では、オブジェクトが作成されるだけです。</span><span class="sxs-lookup"><span data-stu-id="768db-213">At this point, the objects are created only.</span></span> <span data-ttu-id="768db-214">実行は行われません。</span><span class="sxs-lookup"><span data-stu-id="768db-214">No execution has happened.</span></span>
 
-### <a name="train-the-model"></a><span data-ttu-id="58f13-209">モデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="58f13-209">Train the model</span></span>
+### <a name="train-the-model"></a><span data-ttu-id="768db-215">モデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="768db-215">Train the model</span></span>
 
-<span data-ttu-id="58f13-210">パイプライン内にオブジェクトが作成されたら、データを使用してモデルをトレーニングできます。</span><span class="sxs-lookup"><span data-stu-id="58f13-210">Once the objects in the pipeline have been created, data can be used to train the model.</span></span>
+<span data-ttu-id="768db-216">パイプライン内にオブジェクトが作成されたら、データを使用してモデルをトレーニングできます。</span><span class="sxs-lookup"><span data-stu-id="768db-216">Once the objects in the pipeline have been created, data can be used to train the model.</span></span>
 
 ```csharp
     var model = pipeline.Fit(trainingData);
 ```
 
-<span data-ttu-id="58f13-211">`Fit()` を呼び出すと、入力トレーニング データを使用してモデルのパラメーターが推定されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-211">Calling `Fit()` uses the input training data to estimate the parameters of the model.</span></span> <span data-ttu-id="58f13-212">これはモデルのトレーニングと呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="58f13-212">This is known as training the model.</span></span> <span data-ttu-id="58f13-213">前述の線形回帰モデルには、**バイアス**と**重み**という 2 つのモデル パラメーターがあったことを思い出してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-213">Remember, the linear regression model above had two model parameters: **bias** and **weight**.</span></span> <span data-ttu-id="58f13-214">`Fit()` の呼び出しの後は、パラメーターの値がわかっています。</span><span class="sxs-lookup"><span data-stu-id="58f13-214">After the `Fit()` call, the values of the parameters are known.</span></span> <span data-ttu-id="58f13-215">ほとんどのモデルには、これよりもさらに多くのパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-215">Most models will have many more parameters than this.</span></span>
+<span data-ttu-id="768db-217">`Fit()` を呼び出すと、入力トレーニング データを使用してモデルのパラメーターが推定されます。</span><span class="sxs-lookup"><span data-stu-id="768db-217">Calling `Fit()` uses the input training data to estimate the parameters of the model.</span></span> <span data-ttu-id="768db-218">これはモデルのトレーニングと呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="768db-218">This is known as training the model.</span></span> <span data-ttu-id="768db-219">前述の線形回帰モデルには、**バイアス**と**重み**という 2 つのモデル パラメーターがあったことを思い出してください。</span><span class="sxs-lookup"><span data-stu-id="768db-219">Remember, the linear regression model above had two model parameters: **bias** and **weight**.</span></span> <span data-ttu-id="768db-220">`Fit()` の呼び出しの後は、パラメーターの値がわかっています。</span><span class="sxs-lookup"><span data-stu-id="768db-220">After the `Fit()` call, the values of the parameters are known.</span></span> <span data-ttu-id="768db-221">ほとんどのモデルには、これよりもさらに多くのパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-221">Most models will have many more parameters than this.</span></span>
 
-<span data-ttu-id="58f13-216">モデルのトレーニングの詳細については、[モデルのトレーニング方法](./how-to-guides/train-machine-learning-model-ml-net.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-216">You can learn more about model training in [How to train your model](./how-to-guides/train-machine-learning-model-ml-net.md)</span></span>
+<span data-ttu-id="768db-222">モデルのトレーニングの詳細については、[モデルのトレーニング方法](./how-to-guides/train-machine-learning-model-ml-net.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-222">You can learn more about model training in [How to train your model](./how-to-guides/train-machine-learning-model-ml-net.md)</span></span>
 
-<span data-ttu-id="58f13-217">結果のモデル オブジェクトには <xref:Microsoft.ML.ITransformer> インターフェイスが実装されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-217">The resulting model object implements the <xref:Microsoft.ML.ITransformer> interface.</span></span> <span data-ttu-id="58f13-218">つまり、このモデルによって入力データは予測に変換されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-218">That is, the model transforms input data into predictions.</span></span>
+<span data-ttu-id="768db-223">結果のモデル オブジェクトには <xref:Microsoft.ML.ITransformer> インターフェイスが実装されます。</span><span class="sxs-lookup"><span data-stu-id="768db-223">The resulting model object implements the <xref:Microsoft.ML.ITransformer> interface.</span></span> <span data-ttu-id="768db-224">つまり、このモデルによって入力データは予測に変換されます。</span><span class="sxs-lookup"><span data-stu-id="768db-224">That is, the model transforms input data into predictions.</span></span>
 
 ```csharp
    IDataView predictions = model.Transform(inputData);
 ```
 
-### <a name="use-the-model"></a><span data-ttu-id="58f13-219">モデルを使用する</span><span class="sxs-lookup"><span data-stu-id="58f13-219">Use the model</span></span>
+### <a name="use-the-model"></a><span data-ttu-id="768db-225">モデルを使用する</span><span class="sxs-lookup"><span data-stu-id="768db-225">Use the model</span></span>
 
-<span data-ttu-id="58f13-220">入力データを一括して予測に変換するか、入力を 1 つずつ変換することができます。</span><span class="sxs-lookup"><span data-stu-id="58f13-220">You can transform input data into predictions in bulk, or one input at a time.</span></span> <span data-ttu-id="58f13-221">住宅価格の例では、その両方を行いました。つまり、モデルの評価を目的とした一括処理と、新しい予測を行うための個別処理です。</span><span class="sxs-lookup"><span data-stu-id="58f13-221">In the house price example, we did both: in bulk for the purpose of evaluating the model, and one at a time to make a new prediction.</span></span> <span data-ttu-id="58f13-222">1 つの予測を見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="58f13-222">Let's look at making single predictions.</span></span>
+<span data-ttu-id="768db-226">入力データを一括して予測に変換するか、入力を 1 つずつ変換することができます。</span><span class="sxs-lookup"><span data-stu-id="768db-226">You can transform input data into predictions in bulk, or one input at a time.</span></span> <span data-ttu-id="768db-227">住宅価格の例では、その両方を行いました。つまり、モデルの評価を目的とした一括処理と、新しい予測を行うための個別処理です。</span><span class="sxs-lookup"><span data-stu-id="768db-227">In the house price example, we did both: in bulk for the purpose of evaluating the model, and one at a time to make a new prediction.</span></span> <span data-ttu-id="768db-228">1 つの予測を見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="768db-228">Let's look at making single predictions.</span></span>
 
 ```csharp
     var size = new HouseData() { Size = 2.5F };
     var predEngine = mlContext.CreatePredictionEngine<HouseData, Prediction>(model);
     var price = predEngine.Predict(size);
 ```
- 
-<span data-ttu-id="58f13-223">`CreatePredictionEngine()` メソッドは、入力クラスと出力クラスを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="58f13-223">The `CreatePredictionEngine()` method takes an input class and an output class.</span></span> <span data-ttu-id="58f13-224">このフィールドの名前やコード属性によって、モデルのトレーニングと予測中に使用されるデータ列の名前が決まります。</span><span class="sxs-lookup"><span data-stu-id="58f13-224">The field names and/or code attributes determine the names of the data columns used during model training and prediction.</span></span> <span data-ttu-id="58f13-225">方法のセクションで [1 つの予測方法](./how-to-guides/single-predict-model-ml-net.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-225">You can read about  [How to make a single prediction](./how-to-guides/single-predict-model-ml-net.md) in the How-to section.</span></span>
 
-### <a name="data-models-and-schema"></a><span data-ttu-id="58f13-226">データ モデルとスキーマ</span><span class="sxs-lookup"><span data-stu-id="58f13-226">Data models and schema</span></span>
+<span data-ttu-id="768db-229">`CreatePredictionEngine()` メソッドは、入力クラスと出力クラスを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="768db-229">The `CreatePredictionEngine()` method takes an input class and an output class.</span></span> <span data-ttu-id="768db-230">このフィールドの名前やコード属性によって、モデルのトレーニングと予測中に使用されるデータ列の名前が決まります。</span><span class="sxs-lookup"><span data-stu-id="768db-230">The field names and/or code attributes determine the names of the data columns used during model training and prediction.</span></span> <span data-ttu-id="768db-231">方法のセクションで [1 つの予測方法](./how-to-guides/single-predict-model-ml-net.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-231">You can read about  [How to make a single prediction](./how-to-guides/single-predict-model-ml-net.md) in the How-to section.</span></span>
 
-<span data-ttu-id="58f13-227">ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.ML.IDataView) オブジェクトがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-227">At the core of an ML.NET machine learning pipeline are [DataView](xref:Microsoft.ML.IDataView) objects.</span></span>
+### <a name="data-models-and-schema"></a><span data-ttu-id="768db-232">データ モデルとスキーマ</span><span class="sxs-lookup"><span data-stu-id="768db-232">Data models and schema</span></span>
 
-<span data-ttu-id="58f13-228">パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-228">Each transformation in the pipeline has an input schema (data names, types, and sizes that the transform expects to see on its input); and an output schema (data names, types, and sizes that the transform produces after the transformation).</span></span> <span data-ttu-id="58f13-229">次のドキュメントでは、[IDataView インターフェイスとその型システム](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)について詳しく説明しています。</span><span class="sxs-lookup"><span data-stu-id="58f13-229">The following document provides an in-depth explanation of the [IDataView interface and its type system](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).</span></span>
+<span data-ttu-id="768db-233">ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.ML.IDataView) オブジェクトがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-233">At the core of an ML.NET machine learning pipeline are [DataView](xref:Microsoft.ML.IDataView) objects.</span></span>
 
-<span data-ttu-id="58f13-230">パイプライン内の 1 つの変換からの出力スキーマが次の変換の入力スキーマと一致しない場合、ML.NET から例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="58f13-230">If the output schema from one transform in the pipeline doesn't match the input schema of the next transform, ML.NET will throw an exception.</span></span>
+<span data-ttu-id="768db-234">パイプライン内の各変換には、入力スキーマ (変換で入力にあると想定されているデータの名前、型、およびサイズ) と、出力スキーマ (変換によって変換後に生成されるデータの名前、型、およびサイズ) があります。</span><span class="sxs-lookup"><span data-stu-id="768db-234">Each transformation in the pipeline has an input schema (data names, types, and sizes that the transform expects to see on its input); and an output schema (data names, types, and sizes that the transform produces after the transformation).</span></span> <span data-ttu-id="768db-235">次のドキュメントでは、[IDataView インターフェイスとその型システム](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)について詳しく説明しています。</span><span class="sxs-lookup"><span data-stu-id="768db-235">The following document provides an in-depth explanation of the [IDataView interface and its type system](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).</span></span>
 
-<span data-ttu-id="58f13-231">データ ビュー オブジェクトには列と行があります。</span><span class="sxs-lookup"><span data-stu-id="58f13-231">A data view object has columns and rows.</span></span> <span data-ttu-id="58f13-232">各列には、名前、型、および長さがあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-232">Each column has a name and a type and a length.</span></span> <span data-ttu-id="58f13-233">例: 住宅価格例の入力列は **Size** と **Price** です。</span><span class="sxs-lookup"><span data-stu-id="58f13-233">For example: the input columns in the house price example are **Size** and **Price**.</span></span> <span data-ttu-id="58f13-234">これらはどちらも型であり、ベクターではなくスカラーの数量です。</span><span class="sxs-lookup"><span data-stu-id="58f13-234">They are both type  and they are scalar quantities rather than vector ones.</span></span>
+<span data-ttu-id="768db-236">パイプライン内の 1 つの変換からの出力スキーマが次の変換の入力スキーマと一致しない場合、ML.NET から例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="768db-236">If the output schema from one transform in the pipeline doesn't match the input schema of the next transform, ML.NET will throw an exception.</span></span>
+
+<span data-ttu-id="768db-237">データ ビュー オブジェクトには列と行があります。</span><span class="sxs-lookup"><span data-stu-id="768db-237">A data view object has columns and rows.</span></span> <span data-ttu-id="768db-238">各列には、名前、型、および長さがあります。</span><span class="sxs-lookup"><span data-stu-id="768db-238">Each column has a name and a type and a length.</span></span> <span data-ttu-id="768db-239">例: 住宅価格例の入力列は **Size** と **Price** です。</span><span class="sxs-lookup"><span data-stu-id="768db-239">For example: the input columns in the house price example are **Size** and **Price**.</span></span> <span data-ttu-id="768db-240">これらはどちらも型であり、ベクターではなくスカラーの数量です。</span><span class="sxs-lookup"><span data-stu-id="768db-240">They are both type  and they are scalar quantities rather than vector ones.</span></span>
 
    ![住宅価格の予測データを含む ML.NET データ ビューの例](./media/ml-net-dataview.png)
 
-<span data-ttu-id="58f13-236">すべての ML.NET アルゴリズムは、ベクターである入力列を探します。</span><span class="sxs-lookup"><span data-stu-id="58f13-236">All ML.NET algorithms look for an input column that is a vector.</span></span> <span data-ttu-id="58f13-237">既定では、このベクター列は **Features** という名前です。</span><span class="sxs-lookup"><span data-stu-id="58f13-237">By default this vector column is called **Features**.</span></span> <span data-ttu-id="58f13-238">住宅価格の例で、**Size** 列を **Features** という新しい列に連結したのはこのためです。</span><span class="sxs-lookup"><span data-stu-id="58f13-238">This is why we concatenated the **Size** column into a new column called **Features** in our house price example.</span></span>
+<span data-ttu-id="768db-242">すべての ML.NET アルゴリズムは、ベクターである入力列を探します。</span><span class="sxs-lookup"><span data-stu-id="768db-242">All ML.NET algorithms look for an input column that is a vector.</span></span> <span data-ttu-id="768db-243">既定では、このベクター列は **Features** という名前です。</span><span class="sxs-lookup"><span data-stu-id="768db-243">By default this vector column is called **Features**.</span></span> <span data-ttu-id="768db-244">住宅価格の例で、**Size** 列を **Features** という新しい列に連結したのはこのためです。</span><span class="sxs-lookup"><span data-stu-id="768db-244">This is why we concatenated the **Size** column into a new column called **Features** in our house price example.</span></span>
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-<span data-ttu-id="58f13-239">予測を実行した後は、いずれのアルゴリズムでも新しい列が作成されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-239">All algorithms also create new columns after they have performed a prediction.</span></span> <span data-ttu-id="58f13-240">このような新しい列の固定名は、機械学習アルゴリズムの種類によって異なります。</span><span class="sxs-lookup"><span data-stu-id="58f13-240">The fixed names of these new columns depend on the type of machine learning algorithm.</span></span> <span data-ttu-id="58f13-241">回帰タスクでは、新しい列の 1 つは **Score** という名前です。</span><span class="sxs-lookup"><span data-stu-id="58f13-241">For the regression task, one of the new columns is called **Score**.</span></span> <span data-ttu-id="58f13-242">価格データにこの名前を付けたのはこのためです。</span><span class="sxs-lookup"><span data-stu-id="58f13-242">This is why we attributed our price data with this name.</span></span>
+<span data-ttu-id="768db-245">予測を実行した後は、いずれのアルゴリズムでも新しい列が作成されます。</span><span class="sxs-lookup"><span data-stu-id="768db-245">All algorithms also create new columns after they have performed a prediction.</span></span> <span data-ttu-id="768db-246">このような新しい列の固定名は、機械学習アルゴリズムの種類によって異なります。</span><span class="sxs-lookup"><span data-stu-id="768db-246">The fixed names of these new columns depend on the type of machine learning algorithm.</span></span> <span data-ttu-id="768db-247">回帰タスクでは、新しい列の 1 つは **Score** という名前です。</span><span class="sxs-lookup"><span data-stu-id="768db-247">For the regression task, one of the new columns is called **Score**.</span></span> <span data-ttu-id="768db-248">価格データにこの名前を付けたのはこのためです。</span><span class="sxs-lookup"><span data-stu-id="768db-248">This is why we attributed our price data with this name.</span></span>
 
 ```csharp
     public class Prediction
@@ -254,30 +260,30 @@ ms.locfileid: "71592046"
         [ColumnName("Score")]
         public float Price { get; set; }
     }
-```    
+```
 
-<span data-ttu-id="58f13-243">さまざまな機械学習タスクの出力列の詳細については、[機械学習のタスク](resources/tasks.md)に関するガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-243">You can find out more about output columns of different machine learning tasks in the [Machine Learning Tasks](resources/tasks.md) guide.</span></span>
+<span data-ttu-id="768db-249">さまざまな機械学習タスクの出力列の詳細については、[機械学習のタスク](resources/tasks.md)に関するガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-249">You can find out more about output columns of different machine learning tasks in the [Machine Learning Tasks](resources/tasks.md) guide.</span></span>
 
-<span data-ttu-id="58f13-244">DataView オブジェクトの重要なプロパティは、**遅延**評価されることです。</span><span class="sxs-lookup"><span data-stu-id="58f13-244">An important property of DataView objects is that they are evaluated **lazily**.</span></span> <span data-ttu-id="58f13-245">データ ビューは、モデルのトレーニングと評価、およびデータの予測中にのみ読み込まれ、操作されます。</span><span class="sxs-lookup"><span data-stu-id="58f13-245">Data views are only loaded and operated on during model training and evaluation, and data prediction.</span></span> <span data-ttu-id="58f13-246">ML.NET アプリケーションの作成とテストを行っている間は、[Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) メソッドを呼び出すことで、Visual Studio デバッガーを使用して任意のデータ ビュー オブジェクトを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="58f13-246">While you are writing and testing your ML.NET application, you can use the Visual Studio debugger to take a peek at any data view object by calling the [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) method.</span></span>
+<span data-ttu-id="768db-250">DataView オブジェクトの重要なプロパティは、**遅延**評価されることです。</span><span class="sxs-lookup"><span data-stu-id="768db-250">An important property of DataView objects is that they are evaluated **lazily**.</span></span> <span data-ttu-id="768db-251">データ ビューは、モデルのトレーニングと評価、およびデータの予測中にのみ読み込まれ、操作されます。</span><span class="sxs-lookup"><span data-stu-id="768db-251">Data views are only loaded and operated on during model training and evaluation, and data prediction.</span></span> <span data-ttu-id="768db-252">ML.NET アプリケーションの作成とテストを行っている間は、[Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) メソッドを呼び出すことで、Visual Studio デバッガーを使用して任意のデータ ビュー オブジェクトを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="768db-252">While you are writing and testing your ML.NET application, you can use the Visual Studio debugger to take a peek at any data view object by calling the [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) method.</span></span>
 
 ```csharp
     var debug = testPriceDataView.Preview();
 ```
 
-<span data-ttu-id="58f13-247">`debug` 変数はデバッガーで監視し、その内容を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="58f13-247">You can watch the `debug` variable in the debugger and examine its contents.</span></span> <span data-ttu-id="58f13-248">運用環境のコードでは、パフォーマンスが大幅に低下するので Preview メソッドを使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="58f13-248">Do not use the Preview method in production code, as it significantly degrades performance.</span></span>
+<span data-ttu-id="768db-253">`debug` 変数はデバッガーで監視し、その内容を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="768db-253">You can watch the `debug` variable in the debugger and examine its contents.</span></span> <span data-ttu-id="768db-254">運用環境のコードでは、パフォーマンスが大幅に低下するので Preview メソッドを使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="768db-254">Do not use the Preview method in production code, as it significantly degrades performance.</span></span>
 
-### <a name="model-deployment"></a><span data-ttu-id="58f13-249">モデル デプロイ</span><span class="sxs-lookup"><span data-stu-id="58f13-249">Model Deployment</span></span>
+### <a name="model-deployment"></a><span data-ttu-id="768db-255">モデル デプロイ</span><span class="sxs-lookup"><span data-stu-id="768db-255">Model Deployment</span></span>
 
-<span data-ttu-id="58f13-250">実際のアプリケーションでは、モデル トレーニングと評価のコードは予測とは別になります。</span><span class="sxs-lookup"><span data-stu-id="58f13-250">In real-life applications, your model training and evaluation code will be separate from your prediction.</span></span> <span data-ttu-id="58f13-251">実際、これら 2 つの活動は、別のチームによって行われることがよくあります。</span><span class="sxs-lookup"><span data-stu-id="58f13-251">In fact, these two activities are often performed by separate teams.</span></span> <span data-ttu-id="58f13-252">モデル開発チームは、予測アプリケーションで使用するためにモデルを保存することができます。</span><span class="sxs-lookup"><span data-stu-id="58f13-252">Your model development team can save the model for use in the prediction application.</span></span>
+<span data-ttu-id="768db-256">実際のアプリケーションでは、モデル トレーニングと評価のコードは予測とは別になります。</span><span class="sxs-lookup"><span data-stu-id="768db-256">In real-life applications, your model training and evaluation code will be separate from your prediction.</span></span> <span data-ttu-id="768db-257">実際、これら 2 つの活動は、別のチームによって行われることがよくあります。</span><span class="sxs-lookup"><span data-stu-id="768db-257">In fact, these two activities are often performed by separate teams.</span></span> <span data-ttu-id="768db-258">モデル開発チームは、予測アプリケーションで使用するためにモデルを保存することができます。</span><span class="sxs-lookup"><span data-stu-id="768db-258">Your model development team can save the model for use in the prediction application.</span></span>
 
-```csharp   
+```csharp
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="where-to-now"></a><span data-ttu-id="58f13-253">次の学習内容</span><span class="sxs-lookup"><span data-stu-id="58f13-253">Where to now?</span></span>
+## <a name="next-steps"></a><span data-ttu-id="768db-259">次の手順</span><span class="sxs-lookup"><span data-stu-id="768db-259">Next steps</span></span>
 
-<span data-ttu-id="58f13-254">[チュートリアル](./tutorials/index.md)では、より現実的なデータ セットと共にさまざまな機械学習タスクを使用してアプリケーションを構築する方法を学習できます。</span><span class="sxs-lookup"><span data-stu-id="58f13-254">You can learn how to build applications using different machine learning tasks with more realistic data sets in the [tutorials](./tutorials/index.md).</span></span>
+* <span data-ttu-id="768db-260">[チュートリアル](./tutorials/index.md)で、より現実的なデータ セットと共にさまざまな機械学習タスクを使用してアプリケーションを構築する方法を学習します。</span><span class="sxs-lookup"><span data-stu-id="768db-260">Learn how to build applications using different machine learning tasks with more realistic data sets in the [tutorials](./tutorials/index.md).</span></span>
 
-<span data-ttu-id="58f13-255">また、[ハウツー ガイド](./how-to-guides/index.md)では、特定のトピックについてさらに詳しく学習することができます。</span><span class="sxs-lookup"><span data-stu-id="58f13-255">Or you can learn about specific topics in more depth in the [How To Guides](./how-to-guides/index.md).</span></span>
+* <span data-ttu-id="768db-261">[ハウツー ガイド](./how-to-guides/index.md)で、特定のトピックについてさらに詳しく学習します。</span><span class="sxs-lookup"><span data-stu-id="768db-261">Learn about specific topics in more depth in the [How To Guides](./how-to-guides/index.md).</span></span>
 
-<span data-ttu-id="58f13-256">さらに詳しく学習するには、[API リファレンスのドキュメント](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="58f13-256">And if you're super keen, you can dive straight into the [API Reference documentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)!</span></span>
+* <span data-ttu-id="768db-262">さらに詳しく学習するには、[API リファレンスのドキュメント](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="768db-262">If you're super keen, you can dive straight into the [API Reference documentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).</span></span>
