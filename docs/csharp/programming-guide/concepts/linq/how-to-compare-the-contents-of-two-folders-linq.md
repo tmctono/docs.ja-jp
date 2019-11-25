@@ -1,29 +1,29 @@
 ---
-title: 方法:2 つのフォルダーの内容を比較する (LINQ) (C#)
+title: 2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f64c82fcc63085c9479b0a3af91f0bdf5ee9eb95
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924221"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141396"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="58167-102">方法:2 つのフォルダーの内容を比較する (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="58167-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
-<span data-ttu-id="58167-103">この例では、2 つのファイル リストを比較する 3 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="58167-103">This example demonstrates three ways to compare two file listings:</span></span>  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="fc4bd-102">2 つのフォルダーの内容を比較する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="fc4bd-102">How to compare the contents of two folders (LINQ) (C#)</span></span>
+<span data-ttu-id="fc4bd-103">この例では、2 つのファイル リストを比較する 3 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
-- <span data-ttu-id="58167-104">2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="58167-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
+- <span data-ttu-id="fc4bd-104">2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="fc4bd-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
-- <span data-ttu-id="58167-105">両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="58167-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
+- <span data-ttu-id="fc4bd-105">両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="fc4bd-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
-- <span data-ttu-id="58167-106">1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="58167-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
+- <span data-ttu-id="fc4bd-106">1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法</span><span class="sxs-lookup"><span data-stu-id="fc4bd-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="58167-107">ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。</span><span class="sxs-lookup"><span data-stu-id="58167-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
+    > <span data-ttu-id="fc4bd-107">ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- <span data-ttu-id="58167-108">ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="58167-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="58167-109">このクラスは、実際のシナリオで使用することは想定されていません。</span><span class="sxs-lookup"><span data-stu-id="58167-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="58167-110">各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。</span><span class="sxs-lookup"><span data-stu-id="58167-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="58167-111">実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="58167-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
+ <span data-ttu-id="fc4bd-108">ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="fc4bd-109">このクラスは、実際のシナリオで使用することは想定されていません。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="fc4bd-110">各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="fc4bd-111">実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="58167-112">例</span><span class="sxs-lookup"><span data-stu-id="58167-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fc4bd-112">例</span><span class="sxs-lookup"><span data-stu-id="fc4bd-112">Example</span></span>  
   
 ```csharp  
 namespace QueryCompareTwoDirs  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="58167-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="58167-113">Compiling the Code</span></span>  
- <span data-ttu-id="58167-114">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="58167-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fc4bd-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="fc4bd-113">Compiling the Code</span></span>  
+ <span data-ttu-id="fc4bd-114">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fc4bd-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58167-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="58167-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc4bd-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc4bd-115">See also</span></span>
 
-- [<span data-ttu-id="58167-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="58167-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="58167-117">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="58167-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="fc4bd-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="fc4bd-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="fc4bd-117">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="fc4bd-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

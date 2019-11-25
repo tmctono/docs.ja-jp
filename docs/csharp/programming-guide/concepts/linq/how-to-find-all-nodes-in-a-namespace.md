@@ -1,19 +1,19 @@
 ---
-title: '方法: 名前空間内のすべてのノードを検索する (C#)'
+title: 名前空間内のすべてのノードを検索する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253784"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141189"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="706ff-102">方法: 名前空間内のすべてのノードを検索する (C#)</span><span class="sxs-lookup"><span data-stu-id="706ff-102">How to: Find All Nodes in a Namespace (C#)</span></span>
-<span data-ttu-id="706ff-103">各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。</span><span class="sxs-lookup"><span data-stu-id="706ff-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="94fe5-102">名前空間内のすべてのノードを検索する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="94fe5-102">How to find all nodes in a namespace (C#)</span></span>
+<span data-ttu-id="94fe5-103">各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。</span><span class="sxs-lookup"><span data-stu-id="94fe5-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="706ff-104">例</span><span class="sxs-lookup"><span data-stu-id="706ff-104">Example</span></span>  
- <span data-ttu-id="706ff-105">次の例では、2 つの名前空間を持つ XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="706ff-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="706ff-106">次に、このツリーを反復処理して、いずれかの名前空間内にあるすべての要素と属性の名前を出力します。</span><span class="sxs-lookup"><span data-stu-id="706ff-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="94fe5-104">例</span><span class="sxs-lookup"><span data-stu-id="94fe5-104">Example</span></span>  
+ <span data-ttu-id="94fe5-105">次の例では、2 つの名前空間を持つ XML ツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="94fe5-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="94fe5-106">次に、このツリーを反復処理して、いずれかの名前空間内にあるすべての要素と属性の名前を出力します。</span><span class="sxs-lookup"><span data-stu-id="94fe5-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="706ff-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="706ff-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="94fe5-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="94fe5-107">This code produces the following output:</span></span>  
   
 ```output  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="706ff-108">例</span><span class="sxs-lookup"><span data-stu-id="706ff-108">Example</span></span>  
- <span data-ttu-id="706ff-109">次のクエリでアクセスする XML ファイルには、2 つの異なる名前空間内にある購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="706ff-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="706ff-110">このクエリは、いずれかの名前空間内にある要素だけを含む新しいツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="706ff-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="94fe5-108">例</span><span class="sxs-lookup"><span data-stu-id="94fe5-108">Example</span></span>  
+ <span data-ttu-id="94fe5-109">次のクエリでアクセスする XML ファイルには、2 つの異なる名前空間内にある購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="94fe5-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="94fe5-110">このクエリは、いずれかの名前空間内にある要素だけを含む新しいツリーを作成します。</span><span class="sxs-lookup"><span data-stu-id="94fe5-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="706ff-111">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 統合購買発注書](./sample-xml-file-consolidated-purchase-orders.md)」。</span><span class="sxs-lookup"><span data-stu-id="706ff-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="94fe5-111">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 統合購買発注書](./sample-xml-file-consolidated-purchase-orders.md)」。</span><span class="sxs-lookup"><span data-stu-id="94fe5-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](./sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="706ff-112">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="706ff-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="94fe5-112">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="94fe5-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

@@ -1,40 +1,40 @@
 ---
-title: <para> (Visual Basic)
+title: <para>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: aa4e4c14717b69b9ca4595e20c768a2b91aac1e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8f28ecc33eea99150509bb4bade047489b4b826b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524742"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352300"
 ---
-# <a name="para-visual-basic"></a><span data-ttu-id="7d59a-102">\<para > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d59a-102">\<para> (Visual Basic)</span></span>
-<span data-ttu-id="7d59a-103">コンテンツが段落として書式設定されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="7d59a-103">Specifies that the content is formatted as a paragraph.</span></span>  
+# <a name="para-visual-basic"></a><span data-ttu-id="1cfa8-101">\<para> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1cfa8-101">\<para> (Visual Basic)</span></span>
+<span data-ttu-id="1cfa8-102">Specifies that the content is formatted as a paragraph.</span><span class="sxs-lookup"><span data-stu-id="1cfa8-102">Specifies that the content is formatted as a paragraph.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d59a-104">構文</span><span class="sxs-lookup"><span data-stu-id="7d59a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1cfa8-103">構文</span><span class="sxs-lookup"><span data-stu-id="1cfa8-103">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7d59a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7d59a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1cfa8-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1cfa8-104">Parameters</span></span>  
  `content`  
- <span data-ttu-id="7d59a-106">段落のテキストです。</span><span class="sxs-lookup"><span data-stu-id="7d59a-106">The text of the paragraph.</span></span>  
+ <span data-ttu-id="1cfa8-105">段落のテキストです。</span><span class="sxs-lookup"><span data-stu-id="1cfa8-105">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d59a-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="7d59a-107">Remarks</span></span>  
- <span data-ttu-id="7d59a-108">@No__t_0 タグは、 [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)、 [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md)、 [\<returns](../../../visual-basic/language-reference/xmldoc/returns.md)> などのタグ内で使用するためのものであり、テキストに構造を追加することができます。</span><span class="sxs-lookup"><span data-stu-id="7d59a-108">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1cfa8-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="1cfa8-106">Remarks</span></span>  
+ <span data-ttu-id="1cfa8-107">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span><span class="sxs-lookup"><span data-stu-id="1cfa8-107">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- <span data-ttu-id="7d59a-109">コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="7d59a-109">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="1cfa8-108">コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="1cfa8-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7d59a-110">例</span><span class="sxs-lookup"><span data-stu-id="7d59a-110">Example</span></span>  
- <span data-ttu-id="7d59a-111">この例では、`<para>` タグを使用して、`UpdateRecord` メソッドの解説セクションを2つの段落に分割します。</span><span class="sxs-lookup"><span data-stu-id="7d59a-111">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
+## <a name="example"></a><span data-ttu-id="1cfa8-109">例</span><span class="sxs-lookup"><span data-stu-id="1cfa8-109">Example</span></span>  
+ <span data-ttu-id="1cfa8-110">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span><span class="sxs-lookup"><span data-stu-id="1cfa8-110">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="7d59a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d59a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cfa8-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="1cfa8-111">See also</span></span>
 
-- [<span data-ttu-id="7d59a-113">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="7d59a-113">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="1cfa8-112">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="1cfa8-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -1,19 +1,19 @@
 ---
-title: 方法:文字列内の文字をクエリする (LINQ) (C#)
+title: '方法: 文字列内の文字をクエリする (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592892"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140962"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="ca88e-102">方法:文字列内の文字をクエリする (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="ca88e-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
-<span data-ttu-id="ca88e-103"><xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。</span><span class="sxs-lookup"><span data-stu-id="ca88e-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="ca88e-104">ただし、これは LINQ の一般的な使用方法ではありません。</span><span class="sxs-lookup"><span data-stu-id="ca88e-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="ca88e-105">複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。</span><span class="sxs-lookup"><span data-stu-id="ca88e-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="5abd9-102">方法: 文字列内の文字をクエリする (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="5abd9-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="5abd9-103"><xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。</span><span class="sxs-lookup"><span data-stu-id="5abd9-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="5abd9-104">ただし、これは LINQ の一般的な使用方法ではありません。</span><span class="sxs-lookup"><span data-stu-id="5abd9-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="5abd9-105">複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。</span><span class="sxs-lookup"><span data-stu-id="5abd9-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ca88e-106">例</span><span class="sxs-lookup"><span data-stu-id="ca88e-106">Example</span></span>  
- <span data-ttu-id="ca88e-107">次の例では、文字列を対象にクエリを実行して、その文字列に含まれる数字の数を特定します。</span><span class="sxs-lookup"><span data-stu-id="ca88e-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="ca88e-108">クエリは、最初に使用された後も "再利用" されます。</span><span class="sxs-lookup"><span data-stu-id="ca88e-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="ca88e-109">これができるのは、クエリ自体には実際の結果が格納されないためです。</span><span class="sxs-lookup"><span data-stu-id="ca88e-109">This is possible because the query itself does not store any actual results.</span></span>  
+## <a name="example"></a><span data-ttu-id="5abd9-106">例</span><span class="sxs-lookup"><span data-stu-id="5abd9-106">Example</span></span>  
+ <span data-ttu-id="5abd9-107">次の例では、文字列を対象にクエリを実行して、その文字列に含まれる数字の数を特定します。</span><span class="sxs-lookup"><span data-stu-id="5abd9-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="5abd9-108">クエリは、最初に使用された後も "再利用" されます。</span><span class="sxs-lookup"><span data-stu-id="5abd9-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="5abd9-109">これができるのは、クエリ自体には実際の結果が格納されないためです。</span><span class="sxs-lookup"><span data-stu-id="5abd9-109">This is possible because the query itself does not store any actual results.</span></span>  
   
 ```csharp  
 class QueryAString  
@@ -54,10 +54,10 @@ class QueryAString
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ca88e-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="ca88e-110">Compiling the Code</span></span>  
- <span data-ttu-id="ca88e-111">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ca88e-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5abd9-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="5abd9-110">Compiling the Code</span></span>  
+ <span data-ttu-id="5abd9-111">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="5abd9-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca88e-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="ca88e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5abd9-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="5abd9-112">See also</span></span>
 
-- [<span data-ttu-id="ca88e-113">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="ca88e-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="ca88e-114">方法: LINQ クエリと正規表現を組み合わせる (C#)</span><span class="sxs-lookup"><span data-stu-id="ca88e-114">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="5abd9-113">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="5abd9-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="5abd9-114">LINQ クエリと正規表現を組み合わせる方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="5abd9-114">How to combine LINQ queries with regular expressions (C#)</span></span>](./how-to-combine-linq-queries-with-regular-expressions.md)
