@@ -1,17 +1,17 @@
 ---
-title: AttributeUsage (Visual Basic)
+title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: dbfbfaa6124eacfd9e4043eab9e4769103e554ca
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524306"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353538"
 ---
-# <a name="attributeusage-visual-basic"></a><span data-ttu-id="bacb7-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bacb7-102">AttributeUsage (Visual Basic)</span></span>
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="25cfa-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25cfa-102">AttributeUsage (Visual Basic)</span></span>
 
-<span data-ttu-id="bacb7-103">カスタム属性クラスの使用方法を決定します。</span><span class="sxs-lookup"><span data-stu-id="bacb7-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="bacb7-104">`AttributeUsage` は、カスタム属性の定義に適用して新しい属性の適用方法を制御できる属性です。</span><span class="sxs-lookup"><span data-stu-id="bacb7-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="bacb7-105">明示的に適用するときの既定の設定は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="bacb7-105">The default settings look like this when applied explicitly:</span></span>
+<span data-ttu-id="25cfa-103">カスタム属性クラスの使用方法を決定します。</span><span class="sxs-lookup"><span data-stu-id="25cfa-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="25cfa-104">`AttributeUsage` は、カスタム属性の定義に適用して新しい属性の適用方法を制御できる属性です。</span><span class="sxs-lookup"><span data-stu-id="25cfa-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="25cfa-105">明示的に適用するときの既定の設定は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="25cfa-105">The default settings look like this when applied explicitly:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.All,
@@ -22,9 +22,9 @@ Class NewAttribute
 End Class
 ```
 
-<span data-ttu-id="bacb7-106">この例では、属性にできる任意のコード エンティティに `NewAttribute` クラスを適用できますが、各エンティティに適用できるのは 1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="bacb7-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="bacb7-107">基底クラスに適用すると、派生クラスによって継承されます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-107">It is inherited by derived classes when applied to a base class.</span></span>
+<span data-ttu-id="25cfa-106">この例では、属性にできる任意のコード エンティティに `NewAttribute` クラスを適用できますが、各エンティティに適用できるのは 1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="25cfa-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="25cfa-107">基底クラスに適用すると、派生クラスによって継承されます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-107">It is inherited by derived classes when applied to a base class.</span></span>
 
-<span data-ttu-id="bacb7-108">`AllowMultiple` 引数と `Inherited` 引数は省略できるので、次のコードは同じ効果を持ちます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>
+<span data-ttu-id="25cfa-108">`AllowMultiple` 引数と `Inherited` 引数は省略できるので、次のコードは同じ効果を持ちます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.All)>
@@ -33,11 +33,7 @@ Class NewAttribute
 End Class
 ```
 
-<span data-ttu-id="bacb7-109">最初の `AttributeUsage` 引数は、<xref:System.AttributeTargets> 列挙型の 1 つまたは複数の要素でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="bacb7-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="bacb7-110">次のように、複数のターゲット型を OR 演算子で 1 つにまとめることができます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-110">Multiple target types can be linked together with the OR operator, like this:</span></span>
-
-```vb
-Imports System
-```
+<span data-ttu-id="25cfa-109">最初の `AttributeUsage` 引数は、<xref:System.AttributeTargets> 列挙型の 1 つまたは複数の要素でなければなりません。</span><span class="sxs-lookup"><span data-stu-id="25cfa-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="25cfa-110">次のように、複数のターゲット型を OR 演算子で 1 つにまとめることができます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-110">Multiple target types can be linked together with the OR operator, like this:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
@@ -46,11 +42,7 @@ Class NewPropertyOrFieldAttribute
 End Class
 ```
 
-<span data-ttu-id="bacb7-111">`AllowMultiple` 引数を `true` に設定すると、次のように、結果の属性を 1 つのエンティティに複数回適用できます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>
-
-```vb
-Imports System
-```
+<span data-ttu-id="25cfa-111">`AllowMultiple` 引数を `true` に設定すると、次のように、結果の属性を 1 つのエンティティに複数回適用できます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -63,13 +55,9 @@ Class Class1
 End Class
 ```
 
-<span data-ttu-id="bacb7-112">この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="bacb7-113">示されているどちらの形式でも、複数の属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="bacb7-113">Both formats shown for applying multiple attributes are valid.</span></span>
+<span data-ttu-id="25cfa-112">この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="25cfa-113">示されているどちらの形式でも、複数の属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="25cfa-113">Both formats shown for applying multiple attributes are valid.</span></span>
 
-<span data-ttu-id="bacb7-114">`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。</span><span class="sxs-lookup"><span data-stu-id="bacb7-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="bacb7-115">(例:</span><span class="sxs-lookup"><span data-stu-id="bacb7-115">For example:</span></span>
-
-```vb
-Imports System
-```
+<span data-ttu-id="25cfa-114">`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。</span><span class="sxs-lookup"><span data-stu-id="25cfa-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="25cfa-115">(例:</span><span class="sxs-lookup"><span data-stu-id="25cfa-115">For example:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -87,21 +75,17 @@ Class DClass
 End Class
 ```
 
-<span data-ttu-id="bacb7-116">この例では、`Attr1` は継承によって `DClass` に適用されません。</span><span class="sxs-lookup"><span data-stu-id="bacb7-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>
+<span data-ttu-id="25cfa-116">この例では、`Attr1` は継承によって `DClass` に適用されません。</span><span class="sxs-lookup"><span data-stu-id="25cfa-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="bacb7-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="bacb7-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="25cfa-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="25cfa-117">Remarks</span></span>
 
-<span data-ttu-id="bacb7-118">`AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。</span><span class="sxs-lookup"><span data-stu-id="bacb7-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="bacb7-119">`AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。</span><span class="sxs-lookup"><span data-stu-id="bacb7-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>
+<span data-ttu-id="25cfa-118">`AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。</span><span class="sxs-lookup"><span data-stu-id="25cfa-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="25cfa-119">`AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。</span><span class="sxs-lookup"><span data-stu-id="25cfa-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>
 
-<span data-ttu-id="bacb7-120">詳細については、「[リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="bacb7-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>
+<span data-ttu-id="25cfa-120">詳細については、「[リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="25cfa-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="bacb7-121">例</span><span class="sxs-lookup"><span data-stu-id="bacb7-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="25cfa-121">例</span><span class="sxs-lookup"><span data-stu-id="25cfa-121">Example</span></span>
 
-<span data-ttu-id="bacb7-122">次の例を見ると、`AttributeUsage` 属性に対する `Inherited` 引数と `AllowMultiple` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。</span><span class="sxs-lookup"><span data-stu-id="bacb7-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>
-
-```vb
-Imports System
-```
+<span data-ttu-id="25cfa-122">次の例を見ると、`AttributeUsage` 属性に対する `Inherited` 引数と `AllowMultiple` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。</span><span class="sxs-lookup"><span data-stu-id="25cfa-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>
 
 ```vb
 ' Create some custom attributes:
@@ -152,7 +136,7 @@ Public Class TestAttributeUsage
 End Class
 ```
 
-## <a name="sample-output"></a><span data-ttu-id="bacb7-123">出力例</span><span class="sxs-lookup"><span data-stu-id="bacb7-123">Sample Output</span></span>
+## <a name="sample-output"></a><span data-ttu-id="25cfa-123">出力例</span><span class="sxs-lookup"><span data-stu-id="25cfa-123">Sample Output</span></span>
 
 ```console
 Attributes on Base Class:
@@ -164,13 +148,13 @@ A3
 A2
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bacb7-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="bacb7-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25cfa-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="25cfa-124">See also</span></span>
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [<span data-ttu-id="bacb7-125">Visual Basic のプログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="bacb7-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="bacb7-126">属性</span><span class="sxs-lookup"><span data-stu-id="bacb7-126">Attributes</span></span>](../../../../standard/attributes/index.md)
-- [<span data-ttu-id="bacb7-127">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bacb7-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="bacb7-128">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bacb7-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="bacb7-129">カスタム属性の作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bacb7-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [<span data-ttu-id="bacb7-130">リフレクションを使用した属性へのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bacb7-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="25cfa-125">Visual Basic のプログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="25cfa-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="25cfa-126">属性</span><span class="sxs-lookup"><span data-stu-id="25cfa-126">Attributes</span></span>](../../../../standard/attributes/index.md)
+- [<span data-ttu-id="25cfa-127">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25cfa-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="25cfa-128">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25cfa-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="25cfa-129">カスタム属性の作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25cfa-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="25cfa-130">リフレクションを使用した属性へのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25cfa-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

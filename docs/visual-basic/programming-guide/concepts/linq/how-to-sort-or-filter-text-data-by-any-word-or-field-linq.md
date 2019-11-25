@@ -1,23 +1,23 @@
 ---
-title: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (Visual Basic)'
+title: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524129"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341516"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="07148-102">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07148-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="06ea4-102">方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06ea4-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="07148-103">次の例では、コンマ区切り値などの構造化されたテキストの行を、行の任意のフィールドで並べ替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="07148-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="07148-104">フィールドは、実行時に動的に指定できます。</span><span class="sxs-lookup"><span data-stu-id="07148-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="07148-105">scores.csv 内のフィールドは、学生の ID 番号と、それに続く 4 つのテストの点を表しているものとします。</span><span class="sxs-lookup"><span data-stu-id="07148-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
+<span data-ttu-id="06ea4-103">次の例では、コンマ区切り値などの構造化されたテキストの行を、行の任意のフィールドで並べ替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="06ea4-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="06ea4-104">フィールドは、実行時に動的に指定できます。</span><span class="sxs-lookup"><span data-stu-id="06ea4-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="06ea4-105">scores.csv 内のフィールドは、学生の ID 番号と、それに続く 4 つのテストの点を表しているものとします。</span><span class="sxs-lookup"><span data-stu-id="06ea4-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
 
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="07148-106">データを含むファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="07148-106">To create a file that contains data</span></span>
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="06ea4-106">データを含むファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="06ea4-106">To create a file that contains data</span></span>
 
-<span data-ttu-id="07148-107">トピック「[方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)」の「方法: コンテンツ](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)をソリューションフォルダーに保存する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="07148-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
+<span data-ttu-id="06ea4-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span><span class="sxs-lookup"><span data-stu-id="06ea4-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
 
-## <a name="example"></a><span data-ttu-id="07148-108">例</span><span class="sxs-lookup"><span data-stu-id="07148-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="06ea4-108">例</span><span class="sxs-lookup"><span data-stu-id="06ea4-108">Example</span></span>
 
 ```vb
 Class SortLines
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-<span data-ttu-id="07148-109">また、この例では、関数からクエリ変数を返す方法も示しています。</span><span class="sxs-lookup"><span data-stu-id="07148-109">This example also demonstrates how to return a query variable from a Function.</span></span>
+<span data-ttu-id="06ea4-109">This example also demonstrates how to return a query variable from a Function.</span><span class="sxs-lookup"><span data-stu-id="06ea4-109">This example also demonstrates how to return a query variable from a Function.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="07148-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="07148-110">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="06ea4-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="06ea4-110">Compiling the Code</span></span>
 
-<span data-ttu-id="07148-111">VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="07148-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="06ea4-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="06ea4-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="07148-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="07148-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06ea4-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="06ea4-112">See also</span></span>
 
-- [<span data-ttu-id="07148-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07148-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="06ea4-113">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06ea4-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

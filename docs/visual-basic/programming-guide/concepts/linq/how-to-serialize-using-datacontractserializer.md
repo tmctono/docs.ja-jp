@@ -1,19 +1,19 @@
 ---
-title: '方法: DataContractSerializer (Visual Basic) を使用してシリアル化する'
+title: '方法 : DataContractSerializer を使用してシリアル化する'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835158"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352371"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="ffd20-102">方法: DataContractSerializer (Visual Basic) を使用してシリアル化する</span><span class="sxs-lookup"><span data-stu-id="ffd20-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
-<span data-ttu-id="ffd20-103">このトピックでは、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="ffd20-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a><span data-ttu-id="0370e-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0370e-102">How to: Serialize Using DataContractSerializer (Visual Basic)</span></span>
+<span data-ttu-id="0370e-103">このトピックでは、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="0370e-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ffd20-104">例</span><span class="sxs-lookup"><span data-stu-id="ffd20-104">Example</span></span>  
- <span data-ttu-id="ffd20-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ffd20-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="ffd20-106">次に、それらのオブジェクトをテキスト ファイルにシリアル化し、テキスト ファイルから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="ffd20-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
+## <a name="example"></a><span data-ttu-id="0370e-104">例</span><span class="sxs-lookup"><span data-stu-id="0370e-104">Example</span></span>  
+ <span data-ttu-id="0370e-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="0370e-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="0370e-106">次に、それらのオブジェクトをテキスト ファイルにシリアル化し、テキスト ファイルから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="0370e-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```vb  
 Imports System  
@@ -72,7 +72,7 @@ Public Class XElementNullContainer
 End Class  
 ```  
   
- <span data-ttu-id="ffd20-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ffd20-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="0370e-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="0370e-107">This example produces the following output:</span></span>  
   
 ```console  
 Testing for type: System.Xml.Linq.XElement  
@@ -83,6 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ffd20-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="ffd20-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0370e-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="0370e-108">See also</span></span>
 
-- [<span data-ttu-id="ffd20-109">XElement オブジェクトを含むオブジェクトグラフのシリアル化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffd20-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="0370e-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0370e-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

@@ -1,5 +1,5 @@
 ---
-title: '#Const ディレクティブ (Visual Basic)'
+title: '#Const ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,43 +15,47 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 031f35df24fd52aeeafcb7b4c0208806d7fc5fc4
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774755"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343845"
 ---
-# <a name="const-directive"></a><span data-ttu-id="20be2-102">#Const ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="20be2-102">#Const Directive</span></span>
-<span data-ttu-id="20be2-103">Visual Basic の条件付きコンパイラ定数を定義します。</span><span class="sxs-lookup"><span data-stu-id="20be2-103">Defines conditional compiler constants for Visual Basic.</span></span>  
+# <a name="const-directive"></a><span data-ttu-id="38162-102">#Const ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="38162-102">#Const Directive</span></span>
+
+<span data-ttu-id="38162-103">Defines conditional compiler constants for Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="38162-103">Defines conditional compiler constants for Visual Basic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20be2-104">構文</span><span class="sxs-lookup"><span data-stu-id="20be2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38162-104">構文</span><span class="sxs-lookup"><span data-stu-id="38162-104">Syntax</span></span>  
   
 ```vb  
 #Const constname = expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="20be2-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="20be2-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="38162-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="38162-105">Parts</span></span>  
+
  `constname`  
- <span data-ttu-id="20be2-106">必須です。</span><span class="sxs-lookup"><span data-stu-id="20be2-106">Required.</span></span> <span data-ttu-id="20be2-107">定義されている定数の名前。</span><span class="sxs-lookup"><span data-stu-id="20be2-107">Name of the constant being defined.</span></span>  
+ <span data-ttu-id="38162-106">必須です。</span><span class="sxs-lookup"><span data-stu-id="38162-106">Required.</span></span> <span data-ttu-id="38162-107">Name of the constant being defined.</span><span class="sxs-lookup"><span data-stu-id="38162-107">Name of the constant being defined.</span></span>  
   
  `expression`  
- <span data-ttu-id="20be2-108">必須です。</span><span class="sxs-lookup"><span data-stu-id="20be2-108">Required.</span></span> <span data-ttu-id="20be2-109">リテラル、その他の条件付きコンパイラ定数、または `Is` を除く任意またはすべての算術演算子または論理演算子を含む任意の組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="20be2-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
+ <span data-ttu-id="38162-108">必須です。</span><span class="sxs-lookup"><span data-stu-id="38162-108">Required.</span></span> <span data-ttu-id="38162-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span><span class="sxs-lookup"><span data-stu-id="38162-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="20be2-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="20be2-110">Remarks</span></span>  
- <span data-ttu-id="20be2-111">条件付きコンパイラ定数は、それらが表示されるファイルに対して常にプライベートです。</span><span class="sxs-lookup"><span data-stu-id="20be2-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="20be2-112">@No__t_0 ディレクティブを使用して、パブリックコンパイラ定数を作成することはできません。これらは、ユーザーインターフェイスまたは `/define` コンパイラオプションでのみ作成できます。</span><span class="sxs-lookup"><span data-stu-id="20be2-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38162-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="38162-110">Remarks</span></span>  
+
+ <span data-ttu-id="38162-111">Conditional compiler constants are always private to the file in which they appear.</span><span class="sxs-lookup"><span data-stu-id="38162-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="38162-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span><span class="sxs-lookup"><span data-stu-id="38162-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
   
- <span data-ttu-id="20be2-113">@No__t_0 では、条件付きコンパイラ定数とリテラルのみを使用できます。</span><span class="sxs-lookup"><span data-stu-id="20be2-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="20be2-114">@No__t_0 で定義された標準定数を使用すると、エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="20be2-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="20be2-115">逆に、`#Const` キーワードで定義された定数は、条件付きコンパイルに対してのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="20be2-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="20be2-116">定数を未定義にすることもできます。その場合、値は `Nothing` になります。</span><span class="sxs-lookup"><span data-stu-id="20be2-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
+ <span data-ttu-id="38162-113">You can use only conditional compiler constants and literals in `expression`.</span><span class="sxs-lookup"><span data-stu-id="38162-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="38162-114">Using a standard constant defined with `Const` causes an error.</span><span class="sxs-lookup"><span data-stu-id="38162-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="38162-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span><span class="sxs-lookup"><span data-stu-id="38162-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="38162-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="38162-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="20be2-117">例</span><span class="sxs-lookup"><span data-stu-id="20be2-117">Example</span></span>  
- <span data-ttu-id="20be2-118">`#Const` ディレクティブの使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="20be2-118">This example uses the `#Const` directive.</span></span>  
+## <a name="example"></a><span data-ttu-id="38162-117">例</span><span class="sxs-lookup"><span data-stu-id="38162-117">Example</span></span>  
+
+ <span data-ttu-id="38162-118">`#Const` ディレクティブの使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="38162-118">This example uses the `#Const` directive.</span></span>  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="20be2-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="20be2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38162-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="38162-119">See also</span></span>
 
-- [<span data-ttu-id="20be2-120">-define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20be2-120">-define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)
-- [<span data-ttu-id="20be2-121">#If...Then...#Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="20be2-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="20be2-122">Const ステートメント</span><span class="sxs-lookup"><span data-stu-id="20be2-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)
-- [<span data-ttu-id="20be2-123">条件付きコンパイル</span><span class="sxs-lookup"><span data-stu-id="20be2-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [<span data-ttu-id="20be2-124">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="20be2-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="38162-120">-define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38162-120">-define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)
+- [<span data-ttu-id="38162-121">#If...Then...#Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="38162-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="38162-122">Const ステートメント</span><span class="sxs-lookup"><span data-stu-id="38162-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)
+- [<span data-ttu-id="38162-123">条件付きコンパイル</span><span class="sxs-lookup"><span data-stu-id="38162-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [<span data-ttu-id="38162-124">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="38162-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
