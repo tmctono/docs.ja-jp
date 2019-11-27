@@ -22,25 +22,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435829"
 ---
-# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="3e79b-102">ICorProfilerCallback::ExceptionCLRCatcherFound メソッド</span><span class="sxs-lookup"><span data-stu-id="3e79b-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
-<span data-ttu-id="3e79b-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span><span class="sxs-lookup"><span data-stu-id="3e79b-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="3e79b-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="3e79b-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a><span data-ttu-id="1e0cb-102">ICorProfilerCallback::ExceptionCLRCatcherFound メソッド</span><span class="sxs-lookup"><span data-stu-id="1e0cb-102">ICorProfilerCallback::ExceptionCLRCatcherFound Method</span></span>
+<span data-ttu-id="1e0cb-103">例外の `catch` ブロックが共通言語ランタイム (CLR) 自体で見つかった場合に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1e0cb-103">Called when a `catch` block for an exception is found inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="1e0cb-104">このメソッドは .NET Framework バージョン2.0 では廃止されています。</span><span class="sxs-lookup"><span data-stu-id="1e0cb-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e79b-105">構文</span><span class="sxs-lookup"><span data-stu-id="3e79b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e0cb-105">構文</span><span class="sxs-lookup"><span data-stu-id="1e0cb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3e79b-106">［要件］</span><span class="sxs-lookup"><span data-stu-id="3e79b-106">Requirements</span></span>  
- <span data-ttu-id="3e79b-107">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3e79b-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e0cb-106">要件</span><span class="sxs-lookup"><span data-stu-id="1e0cb-106">Requirements</span></span>  
+ <span data-ttu-id="1e0cb-107">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1e0cb-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e79b-108">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3e79b-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1e0cb-108">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1e0cb-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3e79b-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e79b-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e0cb-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e0cb-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e79b-110">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="3e79b-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="1e0cb-110">**.NET Framework のバージョン:** 1.0</span><span class="sxs-lookup"><span data-stu-id="1e0cb-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e79b-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3e79b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e0cb-111">参照</span><span class="sxs-lookup"><span data-stu-id="1e0cb-111">See also</span></span>
 
-- [<span data-ttu-id="3e79b-112">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3e79b-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="3e79b-113">ExceptionCLRCatcherExecute メソッド</span><span class="sxs-lookup"><span data-stu-id="3e79b-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+- [<span data-ttu-id="1e0cb-112">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1e0cb-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="1e0cb-113">ExceptionCLRCatcherExecute メソッド</span><span class="sxs-lookup"><span data-stu-id="1e0cb-113">ExceptionCLRCatcherExecute Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)

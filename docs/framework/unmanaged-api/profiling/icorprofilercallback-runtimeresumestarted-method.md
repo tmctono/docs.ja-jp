@@ -22,25 +22,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433535"
 ---
-# <a name="icorprofilercallbackruntimeresumestarted-method"></a><span data-ttu-id="6de2b-102">ICorProfilerCallback::RuntimeResumeStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="6de2b-102">ICorProfilerCallback::RuntimeResumeStarted Method</span></span>
-<span data-ttu-id="6de2b-103">Notifies the profiler that the runtime is resuming all run-time threads.</span><span class="sxs-lookup"><span data-stu-id="6de2b-103">Notifies the profiler that the runtime is resuming all run-time threads.</span></span>  
+# <a name="icorprofilercallbackruntimeresumestarted-method"></a><span data-ttu-id="d06e6-102">ICorProfilerCallback::RuntimeResumeStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="d06e6-102">ICorProfilerCallback::RuntimeResumeStarted Method</span></span>
+<span data-ttu-id="d06e6-103">ランタイムがすべてのランタイムスレッドを再開していることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="d06e6-103">Notifies the profiler that the runtime is resuming all run-time threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6de2b-104">構文</span><span class="sxs-lookup"><span data-stu-id="6de2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d06e6-104">構文</span><span class="sxs-lookup"><span data-stu-id="d06e6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6de2b-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="6de2b-105">Requirements</span></span>  
- <span data-ttu-id="6de2b-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6de2b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d06e6-105">要件</span><span class="sxs-lookup"><span data-stu-id="d06e6-105">Requirements</span></span>  
+ <span data-ttu-id="d06e6-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d06e6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6de2b-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6de2b-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d06e6-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d06e6-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6de2b-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6de2b-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d06e6-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d06e6-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6de2b-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6de2b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d06e6-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d06e6-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6de2b-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="6de2b-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d06e6-110">参照</span><span class="sxs-lookup"><span data-stu-id="d06e6-110">See also</span></span>
 
-- [<span data-ttu-id="6de2b-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6de2b-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="6de2b-112">RuntimeResumeFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="6de2b-112">RuntimeResumeFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [<span data-ttu-id="d06e6-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d06e6-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d06e6-112">RuntimeResumeFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="d06e6-112">RuntimeResumeFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)

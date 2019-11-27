@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444246"
 ---
-# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="77b4b-102">CeeSectionAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="77b4b-102">CeeSectionAttr Enumeration</span></span>
-<span data-ttu-id="77b4b-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="77b4b-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="ceesectionattr-enumeration"></a><span data-ttu-id="230b5-102">CeeSectionAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="230b5-102">CeeSectionAttr Enumeration</span></span>
+<span data-ttu-id="230b5-103">[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイスで使用するセクションの属性を指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="230b5-103">Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77b4b-104">構文</span><span class="sxs-lookup"><span data-stu-id="77b4b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="230b5-104">構文</span><span class="sxs-lookup"><span data-stu-id="230b5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  {  
@@ -37,24 +37,24 @@ typedef enum  {
 } CeeSectionAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="77b4b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="77b4b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="230b5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="230b5-105">Members</span></span>  
   
-|<span data-ttu-id="77b4b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="77b4b-106">Member</span></span>|<span data-ttu-id="77b4b-107">説明</span><span class="sxs-lookup"><span data-stu-id="77b4b-107">Description</span></span>|  
+|<span data-ttu-id="230b5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="230b5-106">Member</span></span>|<span data-ttu-id="230b5-107">説明</span><span class="sxs-lookup"><span data-stu-id="230b5-107">Description</span></span>|  
 |------------|-----------------|  
-|`sdNone`|<span data-ttu-id="77b4b-108">Section has no attributes.</span><span class="sxs-lookup"><span data-stu-id="77b4b-108">Section has no attributes.</span></span>|  
-|`sdReadOnly`|<span data-ttu-id="77b4b-109">Section contains initialized data that can be only read, not updated.</span><span class="sxs-lookup"><span data-stu-id="77b4b-109">Section contains initialized data that can be only read, not updated.</span></span>|  
-|`sdReadWrite`|<span data-ttu-id="77b4b-110">Section contains initialized data that can be read or updated.</span><span class="sxs-lookup"><span data-stu-id="77b4b-110">Section contains initialized data that can be read or updated.</span></span>|  
-|`sdExecute`|<span data-ttu-id="77b4b-111">Section contains executable code that is allowed to be read and executed.</span><span class="sxs-lookup"><span data-stu-id="77b4b-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
+|`sdNone`|<span data-ttu-id="230b5-108">Section には属性がありません。</span><span class="sxs-lookup"><span data-stu-id="230b5-108">Section has no attributes.</span></span>|  
+|`sdReadOnly`|<span data-ttu-id="230b5-109">セクションには、読み取りのみが可能な、更新されていない初期化済みのデータが含まれています。</span><span class="sxs-lookup"><span data-stu-id="230b5-109">Section contains initialized data that can be only read, not updated.</span></span>|  
+|`sdReadWrite`|<span data-ttu-id="230b5-110">セクションには、読み取りまたは更新が可能な初期化済みのデータが含まれています。</span><span class="sxs-lookup"><span data-stu-id="230b5-110">Section contains initialized data that can be read or updated.</span></span>|  
+|`sdExecute`|<span data-ttu-id="230b5-111">セクションには、読み取りと実行が許可されている実行可能コードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="230b5-111">Section contains executable code that is allowed to be read and executed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="77b4b-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="77b4b-112">Requirements</span></span>  
- <span data-ttu-id="77b4b-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="77b4b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="230b5-112">要件</span><span class="sxs-lookup"><span data-stu-id="230b5-112">Requirements</span></span>  
+ <span data-ttu-id="230b5-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="230b5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77b4b-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="77b4b-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="230b5-114">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="230b5-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="77b4b-115">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="77b4b-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="230b5-115">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="230b5-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="77b4b-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77b4b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="230b5-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="230b5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77b4b-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="77b4b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="230b5-117">参照</span><span class="sxs-lookup"><span data-stu-id="230b5-117">See also</span></span>
 
-- [<span data-ttu-id="77b4b-118">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="77b4b-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="230b5-118">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="230b5-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -11,13 +11,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353722"
 ---
-# <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a><span data-ttu-id="7566b-102">オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7566b-102">File name or class name not found during Automation operation (Visual Basic)</span></span>
-<span data-ttu-id="7566b-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span><span class="sxs-lookup"><span data-stu-id="7566b-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span></span>  
+# <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a><span data-ttu-id="e470c-102">オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e470c-102">File name or class name not found during Automation operation (Visual Basic)</span></span>
+<span data-ttu-id="e470c-103">`GetObject` 関数の呼び出しで、ファイル名またはクラスに指定された名前が見つかりませんでした。</span><span class="sxs-lookup"><span data-stu-id="e470c-103">The name specified for file name or class in a call to the `GetObject` function could not be found.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7566b-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="7566b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e470c-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="e470c-104">To correct this error</span></span>  
   
-- <span data-ttu-id="7566b-105">Check the names and try again.</span><span class="sxs-lookup"><span data-stu-id="7566b-105">Check the names and try again.</span></span> <span data-ttu-id="7566b-106">Make sure the name used for the `class` parameter matches that registered with the system.</span><span class="sxs-lookup"><span data-stu-id="7566b-106">Make sure the name used for the `class` parameter matches that registered with the system.</span></span>  
+- <span data-ttu-id="e470c-105">名前を確認して、もう一度やり直してください。</span><span class="sxs-lookup"><span data-stu-id="e470c-105">Check the names and try again.</span></span> <span data-ttu-id="e470c-106">`class` パラメーターに使用されている名前が、システムに登録されている名前と一致していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="e470c-106">Make sure the name used for the `class` parameter matches that registered with the system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7566b-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="7566b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e470c-107">参照</span><span class="sxs-lookup"><span data-stu-id="e470c-107">See also</span></span>
 
-- [<span data-ttu-id="7566b-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="7566b-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="e470c-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="e470c-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

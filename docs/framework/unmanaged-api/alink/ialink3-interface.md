@@ -13,19 +13,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441799"
 ---
-# <a name="ialink3-interface"></a><span data-ttu-id="91d2f-102">IALink3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91d2f-102">IALink3 Interface</span></span>
-<span data-ttu-id="91d2f-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span><span class="sxs-lookup"><span data-stu-id="91d2f-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
+# <a name="ialink3-interface"></a><span data-ttu-id="4a0e6-102">IALink3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a0e6-102">IALink3 Interface</span></span>
+<span data-ttu-id="4a0e6-103">には、`SetManifestFile`という単一のメソッドが用意されています。これにより、アセンブリの作成時にリンカーが使用するマニフェストファイルを指定またはリセットできます。</span><span class="sxs-lookup"><span data-stu-id="4a0e6-103">Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="91d2f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="91d2f-104">In This Section</span></span>  
- [<span data-ttu-id="91d2f-105">SetManifestFile メソッド</span><span class="sxs-lookup"><span data-stu-id="91d2f-105">SetManifestFile Method</span></span>](setmanifestfile-method.md)  
- <span data-ttu-id="91d2f-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span><span class="sxs-lookup"><span data-stu-id="91d2f-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4a0e6-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4a0e6-104">In This Section</span></span>  
+ [<span data-ttu-id="4a0e6-105">SetManifestFile メソッド</span><span class="sxs-lookup"><span data-stu-id="4a0e6-105">SetManifestFile Method</span></span>](setmanifestfile-method.md)  
+ <span data-ttu-id="4a0e6-106">リンカーがアセンブリを作成するときに使用するマニフェストファイルを指定またはリセットできます。</span><span class="sxs-lookup"><span data-stu-id="4a0e6-106">Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="91d2f-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="91d2f-107">Related Sections</span></span>  
- [<span data-ttu-id="91d2f-108">ALink API</span><span class="sxs-lookup"><span data-stu-id="91d2f-108">ALink API</span></span>](index.md)  
- <span data-ttu-id="91d2f-109">.NET Framework アセンブリと非バインド モジュールの作成をサポートします。</span><span class="sxs-lookup"><span data-stu-id="91d2f-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="4a0e6-107">関連セクション</span><span class="sxs-lookup"><span data-stu-id="4a0e6-107">Related Sections</span></span>  
+ [<span data-ttu-id="4a0e6-108">ALink API</span><span class="sxs-lookup"><span data-stu-id="4a0e6-108">ALink API</span></span>](index.md)  
+ <span data-ttu-id="4a0e6-109">.NET Framework アセンブリと非バインド モジュールの作成をサポートします。</span><span class="sxs-lookup"><span data-stu-id="4a0e6-109">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
   
- [<span data-ttu-id="91d2f-110">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91d2f-110">IALink Interface</span></span>](ialink-interface.md)  
- <span data-ttu-id="91d2f-111">Helps in constructing .NET Framework assemblies.</span><span class="sxs-lookup"><span data-stu-id="91d2f-111">Helps in constructing .NET Framework assemblies.</span></span>  
+ [<span data-ttu-id="4a0e6-110">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a0e6-110">IALink Interface</span></span>](ialink-interface.md)  
+ <span data-ttu-id="4a0e6-111">.NET Framework アセンブリの構築に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="4a0e6-111">Helps in constructing .NET Framework assemblies.</span></span>  
   
- [<span data-ttu-id="91d2f-112">Al.exe (アセンブリ リンカー)</span><span class="sxs-lookup"><span data-stu-id="91d2f-112">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)  
- <span data-ttu-id="91d2f-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span><span class="sxs-lookup"><span data-stu-id="91d2f-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>
+ [<span data-ttu-id="4a0e6-112">Al.exe (アセンブリ リンカー)</span><span class="sxs-lookup"><span data-stu-id="4a0e6-112">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)  
+ <span data-ttu-id="4a0e6-113">モジュールまたはリソースファイルのいずれかである1つ以上のファイルから、アセンブリマニフェストを含むファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="4a0e6-113">Generates a file that has an assembly manifest from one or more files that are either modules or resource files.</span></span>

@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428349"
 ---
-# <a name="cor_prf_finalizer_flags-enumeration"></a><span data-ttu-id="f0ef1-102">COR_PRF_FINALIZER_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="f0ef1-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
-<span data-ttu-id="f0ef1-103">オブジェクトのファイナライザーを記述します。</span><span class="sxs-lookup"><span data-stu-id="f0ef1-103">Describes the finalizer for an object.</span></span>  
+# <a name="cor_prf_finalizer_flags-enumeration"></a><span data-ttu-id="6caff-102">COR_PRF_FINALIZER_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="6caff-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
+<span data-ttu-id="6caff-103">オブジェクトのファイナライザーを記述します。</span><span class="sxs-lookup"><span data-stu-id="6caff-103">Describes the finalizer for an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0ef1-104">構文</span><span class="sxs-lookup"><span data-stu-id="f0ef1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6caff-104">構文</span><span class="sxs-lookup"><span data-stu-id="6caff-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -32,24 +32,24 @@ typedef enum {
 } COR_PRF_FINALIZER_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f0ef1-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0ef1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6caff-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="6caff-105">Members</span></span>  
   
-|<span data-ttu-id="f0ef1-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f0ef1-106">Member</span></span>|<span data-ttu-id="f0ef1-107">説明</span><span class="sxs-lookup"><span data-stu-id="f0ef1-107">Description</span></span>|  
+|<span data-ttu-id="6caff-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="6caff-106">Member</span></span>|<span data-ttu-id="6caff-107">説明</span><span class="sxs-lookup"><span data-stu-id="6caff-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="f0ef1-108">The finalizer is critical.</span><span class="sxs-lookup"><span data-stu-id="f0ef1-108">The finalizer is critical.</span></span>|  
+|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="6caff-108">ファイナライザーは重要です。</span><span class="sxs-lookup"><span data-stu-id="6caff-108">The finalizer is critical.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f0ef1-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="f0ef1-109">Remarks</span></span>  
- <span data-ttu-id="f0ef1-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span><span class="sxs-lookup"><span data-stu-id="f0ef1-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6caff-109">コメント</span><span class="sxs-lookup"><span data-stu-id="6caff-109">Remarks</span></span>  
+ <span data-ttu-id="6caff-110">`COR_PRF_FINALIZER_FLAGS` 列挙体は、 [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)メソッドによって、オブジェクトのファイナライザーを記述するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="6caff-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f0ef1-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="f0ef1-111">Requirements</span></span>  
- <span data-ttu-id="f0ef1-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0ef1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6caff-111">要件</span><span class="sxs-lookup"><span data-stu-id="6caff-111">Requirements</span></span>  
+ <span data-ttu-id="6caff-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6caff-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0ef1-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f0ef1-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6caff-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6caff-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f0ef1-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0ef1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6caff-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6caff-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f0ef1-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0ef1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6caff-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6caff-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0ef1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0ef1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6caff-116">参照</span><span class="sxs-lookup"><span data-stu-id="6caff-116">See also</span></span>
 
-- [<span data-ttu-id="f0ef1-117">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="f0ef1-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="6caff-117">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="6caff-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

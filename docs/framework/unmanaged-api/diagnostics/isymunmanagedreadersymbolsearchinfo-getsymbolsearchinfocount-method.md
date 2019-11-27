@@ -22,26 +22,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446401"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="a597e-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount メソッド</span><span class="sxs-lookup"><span data-stu-id="a597e-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="a597e-103">Gets a count of symbol search information.</span><span class="sxs-lookup"><span data-stu-id="a597e-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="08abc-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount メソッド</span><span class="sxs-lookup"><span data-stu-id="08abc-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="08abc-103">シンボル検索情報の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="08abc-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a597e-104">構文</span><span class="sxs-lookup"><span data-stu-id="a597e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08abc-104">構文</span><span class="sxs-lookup"><span data-stu-id="08abc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a597e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a597e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08abc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="08abc-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="a597e-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span><span class="sxs-lookup"><span data-stu-id="a597e-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="08abc-106">] out] 検索情報を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="08abc-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a597e-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a597e-107">Return Value</span></span>  
- <span data-ttu-id="a597e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="a597e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="08abc-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="08abc-107">Return Value</span></span>  
+ <span data-ttu-id="08abc-108">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="08abc-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a597e-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="a597e-109">Requirements</span></span>  
- <span data-ttu-id="a597e-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a597e-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08abc-109">要件</span><span class="sxs-lookup"><span data-stu-id="08abc-109">Requirements</span></span>  
+ <span data-ttu-id="08abc-110">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="08abc-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a597e-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="a597e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08abc-111">参照</span><span class="sxs-lookup"><span data-stu-id="08abc-111">See also</span></span>
 
-- [<span data-ttu-id="a597e-112">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a597e-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [<span data-ttu-id="08abc-112">ISymUnmanagedReaderSymbolSearchInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="08abc-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

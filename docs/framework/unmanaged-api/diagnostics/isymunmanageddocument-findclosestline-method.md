@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449214"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="554f7-102">ISymUnmanagedDocument::FindClosestLine メソッド</span><span class="sxs-lookup"><span data-stu-id="554f7-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="554f7-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span><span class="sxs-lookup"><span data-stu-id="554f7-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="fcac1-102">ISymUnmanagedDocument::FindClosestLine メソッド</span><span class="sxs-lookup"><span data-stu-id="fcac1-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="fcac1-103">このドキュメント内の行が指定されている場合は、シーケンスポイントで最も近い行を返します。</span><span class="sxs-lookup"><span data-stu-id="fcac1-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="554f7-104">構文</span><span class="sxs-lookup"><span data-stu-id="554f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fcac1-104">構文</span><span class="sxs-lookup"><span data-stu-id="fcac1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindClosestLine(  
@@ -33,16 +33,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="554f7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="554f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fcac1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fcac1-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="554f7-106">[in] A line in this document.</span><span class="sxs-lookup"><span data-stu-id="554f7-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="fcac1-106">からこのドキュメント内の行。</span><span class="sxs-lookup"><span data-stu-id="fcac1-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="554f7-107">[out] A pointer to a variable that receives the line.</span><span class="sxs-lookup"><span data-stu-id="554f7-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="fcac1-107">入出力行を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="fcac1-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="554f7-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="554f7-108">Return Value</span></span>  
- <span data-ttu-id="554f7-109">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="554f7-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fcac1-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="fcac1-108">Return Value</span></span>  
+ <span data-ttu-id="fcac1-109">メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。</span><span class="sxs-lookup"><span data-stu-id="fcac1-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="554f7-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="554f7-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcac1-110">参照</span><span class="sxs-lookup"><span data-stu-id="fcac1-110">See also</span></span>
 
-- [<span data-ttu-id="554f7-111">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="554f7-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="fcac1-111">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fcac1-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

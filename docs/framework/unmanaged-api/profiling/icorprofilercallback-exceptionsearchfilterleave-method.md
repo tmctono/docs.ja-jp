@@ -22,25 +22,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445354"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="d8111-102">ICorProfilerCallback::ExceptionSearchFilterLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="d8111-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
-<span data-ttu-id="d8111-103">Notifies the profiler that a user filter has just finished executing.</span><span class="sxs-lookup"><span data-stu-id="d8111-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="d155d-102">ICorProfilerCallback::ExceptionSearchFilterLeave メソッド</span><span class="sxs-lookup"><span data-stu-id="d155d-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
+<span data-ttu-id="d155d-103">ユーザーフィルターの実行が完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="d155d-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8111-104">構文</span><span class="sxs-lookup"><span data-stu-id="d8111-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d155d-104">構文</span><span class="sxs-lookup"><span data-stu-id="d155d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExceptionSearchFilterLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d8111-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="d8111-105">Requirements</span></span>  
- <span data-ttu-id="d8111-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d8111-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d155d-105">要件</span><span class="sxs-lookup"><span data-stu-id="d155d-105">Requirements</span></span>  
+ <span data-ttu-id="d155d-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d155d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8111-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d8111-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d155d-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d155d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d8111-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8111-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d155d-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d155d-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d8111-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8111-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d155d-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d155d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8111-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8111-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d155d-110">参照</span><span class="sxs-lookup"><span data-stu-id="d155d-110">See also</span></span>
 
-- [<span data-ttu-id="d8111-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8111-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="d8111-112">ExceptionSearchFilterEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="d8111-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)
+- [<span data-ttu-id="d155d-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d155d-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d155d-112">ExceptionSearchFilterEnter メソッド</span><span class="sxs-lookup"><span data-stu-id="d155d-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)

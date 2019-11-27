@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448244"
 ---
-# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="9a95d-102">IMetaDataAssemblyImport::GetAssemblyFromScope メソッド</span><span class="sxs-lookup"><span data-stu-id="9a95d-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
-<span data-ttu-id="9a95d-103">Gets a pointer to the assembly in the current scope.</span><span class="sxs-lookup"><span data-stu-id="9a95d-103">Gets a pointer to the assembly in the current scope.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyfromscope-method"></a><span data-ttu-id="919c1-102">IMetaDataAssemblyImport::GetAssemblyFromScope メソッド</span><span class="sxs-lookup"><span data-stu-id="919c1-102">IMetaDataAssemblyImport::GetAssemblyFromScope Method</span></span>
+<span data-ttu-id="919c1-103">現在のスコープ内のアセンブリへのポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="919c1-103">Gets a pointer to the assembly in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a95d-104">構文</span><span class="sxs-lookup"><span data-stu-id="9a95d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="919c1-104">構文</span><span class="sxs-lookup"><span data-stu-id="919c1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyFromScope (  
@@ -33,19 +33,19 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a95d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9a95d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="919c1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="919c1-105">Parameters</span></span>  
  `ptkAssembly`  
- <span data-ttu-id="9a95d-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span><span class="sxs-lookup"><span data-stu-id="9a95d-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
+ <span data-ttu-id="919c1-106">入出力アセンブリを識別する、取得された `mdAssembly` トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="919c1-106">[out] A pointer to the retrieved `mdAssembly` token that identifies the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a95d-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="9a95d-107">Requirements</span></span>  
- <span data-ttu-id="9a95d-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9a95d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="919c1-107">要件</span><span class="sxs-lookup"><span data-stu-id="919c1-107">Requirements</span></span>  
+ <span data-ttu-id="919c1-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="919c1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a95d-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a95d-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="919c1-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="919c1-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9a95d-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9a95d-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="919c1-110">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="919c1-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9a95d-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a95d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="919c1-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="919c1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a95d-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a95d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="919c1-112">参照</span><span class="sxs-lookup"><span data-stu-id="919c1-112">See also</span></span>
 
-- [<span data-ttu-id="9a95d-113">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9a95d-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="919c1-113">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="919c1-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

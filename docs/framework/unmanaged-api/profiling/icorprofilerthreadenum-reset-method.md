@@ -22,25 +22,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447588"
 ---
-# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="e91c9-102">ICorProfilerThreadEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="e91c9-102">ICorProfilerThreadEnum::Reset Method</span></span>
-<span data-ttu-id="e91c9-103">列挙子のカーソルをシーケンスの開始位置に移動します。</span><span class="sxs-lookup"><span data-stu-id="e91c9-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerthreadenumreset-method"></a><span data-ttu-id="ab69a-102">ICorProfilerThreadEnum::Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="ab69a-102">ICorProfilerThreadEnum::Reset Method</span></span>
+<span data-ttu-id="ab69a-103">列挙子のカーソルをシーケンスの開始位置に移動します。</span><span class="sxs-lookup"><span data-stu-id="ab69a-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e91c9-104">構文</span><span class="sxs-lookup"><span data-stu-id="e91c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab69a-104">構文</span><span class="sxs-lookup"><span data-stu-id="ab69a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e91c9-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="e91c9-105">Requirements</span></span>  
- <span data-ttu-id="e91c9-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e91c9-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab69a-105">要件</span><span class="sxs-lookup"><span data-stu-id="ab69a-105">Requirements</span></span>  
+ <span data-ttu-id="ab69a-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ab69a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e91c9-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e91c9-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ab69a-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ab69a-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e91c9-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e91c9-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab69a-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab69a-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e91c9-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e91c9-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ab69a-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab69a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e91c9-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="e91c9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab69a-110">参照</span><span class="sxs-lookup"><span data-stu-id="ab69a-110">See also</span></span>
 
-- [<span data-ttu-id="e91c9-111">ICorProfilerThreadEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e91c9-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="e91c9-112">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="e91c9-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ab69a-111">ICorProfilerThreadEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab69a-111">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="ab69a-112">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab69a-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

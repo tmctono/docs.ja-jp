@@ -11,17 +11,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347855"
 ---
-# <a name="attributes-visual-basic"></a><span data-ttu-id="9a571-102">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a571-102">Attributes (Visual Basic)</span></span>
+# <a name="attributes-visual-basic"></a><span data-ttu-id="4feec-102">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4feec-102">Attributes (Visual Basic)</span></span>
 
-<span data-ttu-id="9a571-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span><span class="sxs-lookup"><span data-stu-id="9a571-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="9a571-104">The following table lists the attributes used by Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9a571-104">The following table lists the attributes used by Visual Basic.</span></span>  
+<span data-ttu-id="4feec-103">Visual Basic には、オブジェクトがアンマネージコードと相互運用できるようにするいくつかの属性と、モジュール名を使用せずにモジュールメンバーにアクセスできるようにする1つの属性が用意されています。</span><span class="sxs-lookup"><span data-stu-id="4feec-103">Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="4feec-104">次の表に、Visual Basic によって使用される属性の一覧を示します。</span><span class="sxs-lookup"><span data-stu-id="4feec-104">The following table lists the attributes used by Visual Basic.</span></span>  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|<span data-ttu-id="9a571-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span><span class="sxs-lookup"><span data-stu-id="9a571-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span></span>|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|<span data-ttu-id="9a571-106">Allows the module members to be accessed using only the qualification needed for the module.</span><span class="sxs-lookup"><span data-stu-id="9a571-106">Allows the module members to be accessed using only the qualification needed for the module.</span></span>|
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|<span data-ttu-id="9a571-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span><span class="sxs-lookup"><span data-stu-id="9a571-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span></span>|
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|<span data-ttu-id="9a571-108">Indicates that a string should be treated as if it were fixed length.</span><span class="sxs-lookup"><span data-stu-id="9a571-108">Indicates that a string should be treated as if it were fixed length.</span></span>|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|<span data-ttu-id="4feec-105">クラスを COM オブジェクトとして公開できるようにするメタデータを追加するようにコンパイラに指示します。</span><span class="sxs-lookup"><span data-stu-id="4feec-105">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span></span>|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|<span data-ttu-id="4feec-106">モジュールに必要な修飾だけを使用してモジュールメンバーにアクセスできるようにします。</span><span class="sxs-lookup"><span data-stu-id="4feec-106">Allows the module members to be accessed using only the qualification needed for the module.</span></span>|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|<span data-ttu-id="4feec-107">構造体または非ローカル変数の配列を固定長配列として扱うことを示します。</span><span class="sxs-lookup"><span data-stu-id="4feec-107">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span></span>|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|<span data-ttu-id="4feec-108">文字列を固定長であるかのように処理する必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="4feec-108">Indicates that a string should be treated as if it were fixed length.</span></span>|
   
-## <a name="see-also"></a><span data-ttu-id="9a571-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a571-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4feec-109">参照</span><span class="sxs-lookup"><span data-stu-id="4feec-109">See also</span></span>
 
-- [<span data-ttu-id="9a571-110">属性の概要</span><span class="sxs-lookup"><span data-stu-id="9a571-110">Attributes overview</span></span>](../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="4feec-110">属性の概要</span><span class="sxs-lookup"><span data-stu-id="4feec-110">Attributes overview</span></span>](../../visual-basic/programming-guide/concepts/attributes/index.md)

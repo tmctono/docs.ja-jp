@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444366"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="f7704-102">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="f7704-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="f7704-103">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f7704-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="993ca-102">CorArgType 列挙型</span><span class="sxs-lookup"><span data-stu-id="993ca-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="993ca-103">ランタイム ハンドルのネイティブな型を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="993ca-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7704-104">構文</span><span class="sxs-lookup"><span data-stu-id="f7704-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="993ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="993ca-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f7704-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="f7704-105">Requirements</span></span>  
- <span data-ttu-id="f7704-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f7704-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="993ca-105">要件</span><span class="sxs-lookup"><span data-stu-id="993ca-105">Requirements</span></span>  
+ <span data-ttu-id="993ca-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="993ca-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7704-107">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f7704-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="993ca-107">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="993ca-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f7704-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7704-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="993ca-108">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="993ca-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7704-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="f7704-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="993ca-109">参照</span><span class="sxs-lookup"><span data-stu-id="993ca-109">See also</span></span>
 
-- [<span data-ttu-id="f7704-110">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="f7704-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="993ca-110">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="993ca-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -11,18 +11,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348038"
 ---
-# <a name="into-clause-visual-basic"></a><span data-ttu-id="fbccd-102">Into 句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbccd-102">Into Clause (Visual Basic)</span></span>
-<span data-ttu-id="fbccd-103">Identifies aggregate functions or groupings to apply to a collection.</span><span class="sxs-lookup"><span data-stu-id="fbccd-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
+# <a name="into-clause-visual-basic"></a><span data-ttu-id="45b69-102">Into 句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45b69-102">Into Clause (Visual Basic)</span></span>
+<span data-ttu-id="45b69-103">コレクションに適用する集計関数またはグループ化を識別します。</span><span class="sxs-lookup"><span data-stu-id="45b69-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fbccd-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="fbccd-104">Remarks</span></span>  
- <span data-ttu-id="fbccd-105">The `Each` keyword is used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="fbccd-105">The `Each` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="45b69-104">コメント</span><span class="sxs-lookup"><span data-stu-id="45b69-104">Remarks</span></span>  
+ <span data-ttu-id="45b69-105">`Each` キーワードは、次のコンテキストで使用されます。</span><span class="sxs-lookup"><span data-stu-id="45b69-105">The `Each` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="fbccd-106">Aggregate 句</span><span class="sxs-lookup"><span data-stu-id="fbccd-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="45b69-106">Aggregate 句</span><span class="sxs-lookup"><span data-stu-id="45b69-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
- [<span data-ttu-id="fbccd-107">Group By 句</span><span class="sxs-lookup"><span data-stu-id="fbccd-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="45b69-107">Group By 句</span><span class="sxs-lookup"><span data-stu-id="45b69-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
   
- [<span data-ttu-id="fbccd-108">Group Join 句</span><span class="sxs-lookup"><span data-stu-id="fbccd-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="45b69-108">Group Join 句</span><span class="sxs-lookup"><span data-stu-id="45b69-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fbccd-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="fbccd-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45b69-109">参照</span><span class="sxs-lookup"><span data-stu-id="45b69-109">See also</span></span>
 
-- [<span data-ttu-id="fbccd-110">キーワード</span><span class="sxs-lookup"><span data-stu-id="fbccd-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="45b69-110">キーワード</span><span class="sxs-lookup"><span data-stu-id="45b69-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -22,28 +22,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439844"
 ---
-# <a name="icorprofilercallback2garbagecollectionfinished-method"></a><span data-ttu-id="55b0f-102">ICorProfilerCallback2::GarbageCollectionFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="55b0f-102">ICorProfilerCallback2::GarbageCollectionFinished Method</span></span>
-<span data-ttu-id="55b0f-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span><span class="sxs-lookup"><span data-stu-id="55b0f-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>  
+# <a name="icorprofilercallback2garbagecollectionfinished-method"></a><span data-ttu-id="17bb7-102">ICorProfilerCallback2::GarbageCollectionFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="17bb7-102">ICorProfilerCallback2::GarbageCollectionFinished Method</span></span>
+<span data-ttu-id="17bb7-103">ガベージコレクションが完了し、すべてのガベージコレクションコールバックが発行されたことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="17bb7-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55b0f-104">構文</span><span class="sxs-lookup"><span data-stu-id="55b0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17bb7-104">構文</span><span class="sxs-lookup"><span data-stu-id="17bb7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="55b0f-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="55b0f-105">Remarks</span></span>  
- <span data-ttu-id="55b0f-106">It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.</span><span class="sxs-lookup"><span data-stu-id="55b0f-106">It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="17bb7-105">コメント</span><span class="sxs-lookup"><span data-stu-id="17bb7-105">Remarks</span></span>  
+ <span data-ttu-id="17bb7-106">`GarbageCollectionFinished` メソッドが呼び出されたときに、プロファイラーが最終的な場所のオブジェクトを検査するのは安全です。</span><span class="sxs-lookup"><span data-stu-id="17bb7-106">It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55b0f-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="55b0f-107">Requirements</span></span>  
- <span data-ttu-id="55b0f-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="55b0f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17bb7-107">要件</span><span class="sxs-lookup"><span data-stu-id="17bb7-107">Requirements</span></span>  
+ <span data-ttu-id="17bb7-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="17bb7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55b0f-109">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="55b0f-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="17bb7-109">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="17bb7-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="55b0f-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55b0f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17bb7-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17bb7-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55b0f-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55b0f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="17bb7-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17bb7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55b0f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="55b0f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17bb7-112">参照</span><span class="sxs-lookup"><span data-stu-id="17bb7-112">See also</span></span>
 
-- [<span data-ttu-id="55b0f-113">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="55b0f-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="55b0f-114">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="55b0f-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="17bb7-113">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17bb7-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="17bb7-114">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="17bb7-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

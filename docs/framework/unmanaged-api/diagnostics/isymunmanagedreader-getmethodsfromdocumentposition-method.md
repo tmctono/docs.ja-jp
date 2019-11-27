@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441802"
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="98103-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition メソッド</span><span class="sxs-lookup"><span data-stu-id="98103-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="98103-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span><span class="sxs-lookup"><span data-stu-id="98103-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="802fa-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition メソッド</span><span class="sxs-lookup"><span data-stu-id="802fa-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="802fa-103">メソッドの配列を返します。各メソッドには、ドキュメント内の指定された位置にあるブレークポイントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="802fa-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98103-104">構文</span><span class="sxs-lookup"><span data-stu-id="98103-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="802fa-104">構文</span><span class="sxs-lookup"><span data-stu-id="802fa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -38,31 +38,31 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98103-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="98103-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="802fa-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="802fa-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="98103-106">[in] The specified document.</span><span class="sxs-lookup"><span data-stu-id="98103-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="802fa-106">から指定されたドキュメント。</span><span class="sxs-lookup"><span data-stu-id="802fa-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="98103-107">[in] The line of the specified document.</span><span class="sxs-lookup"><span data-stu-id="98103-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="802fa-107">から指定したドキュメントの行。</span><span class="sxs-lookup"><span data-stu-id="802fa-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="98103-108">[in] The column of the specified document.</span><span class="sxs-lookup"><span data-stu-id="98103-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="802fa-108">から指定されたドキュメントの列。</span><span class="sxs-lookup"><span data-stu-id="802fa-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="98103-109">[in] `pRetVal` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="98103-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="802fa-109">[in] `pRetVal` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="802fa-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="98103-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span><span class="sxs-lookup"><span data-stu-id="98103-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="802fa-110">入出力`pRetVal` 配列に返される要素の数を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="802fa-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="98103-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span><span class="sxs-lookup"><span data-stu-id="98103-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="802fa-111">入出力ポインターの配列。各ポインターは、ブレークポイントを含むメソッドを表す[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)オブジェクトを指します。</span><span class="sxs-lookup"><span data-stu-id="802fa-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="98103-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="98103-112">Return Value</span></span>  
- <span data-ttu-id="98103-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="98103-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="802fa-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="802fa-112">Return Value</span></span>  
+ <span data-ttu-id="802fa-113">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="802fa-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98103-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="98103-114">Requirements</span></span>  
- <span data-ttu-id="98103-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="98103-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="802fa-114">要件</span><span class="sxs-lookup"><span data-stu-id="802fa-114">Requirements</span></span>  
+ <span data-ttu-id="802fa-115">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="802fa-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98103-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="98103-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="802fa-116">参照</span><span class="sxs-lookup"><span data-stu-id="802fa-116">See also</span></span>
 
-- [<span data-ttu-id="98103-117">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="98103-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="802fa-117">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="802fa-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

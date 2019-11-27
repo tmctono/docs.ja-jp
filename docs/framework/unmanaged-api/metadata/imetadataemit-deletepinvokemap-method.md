@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434361"
 ---
-# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="105a9-102">IMetaDataEmit::DeletePinvokeMap メソッド</span><span class="sxs-lookup"><span data-stu-id="105a9-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
-<span data-ttu-id="105a9-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="105a9-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdeletepinvokemap-method"></a><span data-ttu-id="0ab2e-102">IMetaDataEmit::DeletePinvokeMap メソッド</span><span class="sxs-lookup"><span data-stu-id="0ab2e-102">IMetaDataEmit::DeletePinvokeMap Method</span></span>
+<span data-ttu-id="0ab2e-103">指定したトークンによって参照されるオブジェクトの PInvoke マッピングメタデータを破棄します。</span><span class="sxs-lookup"><span data-stu-id="0ab2e-103">Destroys the PInvoke mapping metadata for the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="105a9-104">構文</span><span class="sxs-lookup"><span data-stu-id="105a9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ab2e-104">構文</span><span class="sxs-lookup"><span data-stu-id="0ab2e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeletePinvokeMap (   
@@ -33,20 +33,20 @@ HRESULT DeletePinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="105a9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="105a9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0ab2e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0ab2e-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="105a9-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span><span class="sxs-lookup"><span data-stu-id="105a9-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
+ <span data-ttu-id="0ab2e-106">からPInvoke マッピングメタデータを削除するオブジェクトを表す `mdFieldDef` または `mdMethodDef` トークン。</span><span class="sxs-lookup"><span data-stu-id="0ab2e-106">[in] An `mdFieldDef` or `mdMethodDef` token that represents the object for which to delete the PInvoke mapping metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="105a9-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="105a9-107">Requirements</span></span>  
- <span data-ttu-id="105a9-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="105a9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ab2e-107">要件</span><span class="sxs-lookup"><span data-stu-id="0ab2e-107">Requirements</span></span>  
+ <span data-ttu-id="0ab2e-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0ab2e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="105a9-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="105a9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0ab2e-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="0ab2e-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="105a9-110">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="105a9-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0ab2e-110">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="0ab2e-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="105a9-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="105a9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0ab2e-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ab2e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="105a9-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="105a9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ab2e-112">参照</span><span class="sxs-lookup"><span data-stu-id="0ab2e-112">See also</span></span>
 
-- [<span data-ttu-id="105a9-113">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="105a9-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="105a9-114">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="105a9-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="0ab2e-113">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0ab2e-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0ab2e-114">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0ab2e-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

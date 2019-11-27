@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449126"
 ---
-# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="247b7-102">ISymUnmanagedDocument::GetURL メソッド</span><span class="sxs-lookup"><span data-stu-id="247b7-102">ISymUnmanagedDocument::GetURL Method</span></span>
-<span data-ttu-id="247b7-103">Returns the uniform resource locator (URL) for this document.</span><span class="sxs-lookup"><span data-stu-id="247b7-103">Returns the uniform resource locator (URL) for this document.</span></span>  
+# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="0d337-102">ISymUnmanagedDocument::GetURL メソッド</span><span class="sxs-lookup"><span data-stu-id="0d337-102">ISymUnmanagedDocument::GetURL Method</span></span>
+<span data-ttu-id="0d337-103">このドキュメントの URL (uniform resource locator) を返します。</span><span class="sxs-lookup"><span data-stu-id="0d337-103">Returns the uniform resource locator (URL) for this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="247b7-104">構文</span><span class="sxs-lookup"><span data-stu-id="247b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d337-104">構文</span><span class="sxs-lookup"><span data-stu-id="0d337-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetURL(  
@@ -34,19 +34,19 @@ HRESULT GetURL(
     [out, size_is(cchUrl), length_is(*pcchUrl)] WCHAR szUrl[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="247b7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="247b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d337-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0d337-105">Parameters</span></span>  
  `cchUrl`  
- <span data-ttu-id="247b7-106">[入力] `szURL` バッファーのサイズ (文字単位)。</span><span class="sxs-lookup"><span data-stu-id="247b7-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
+ <span data-ttu-id="0d337-106">[入力] `szURL` バッファーのサイズ (文字単位)。</span><span class="sxs-lookup"><span data-stu-id="0d337-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
   
  `pcchUrl`  
- <span data-ttu-id="247b7-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span><span class="sxs-lookup"><span data-stu-id="247b7-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
+ <span data-ttu-id="0d337-107">入出力Null 終了を含む、URL のサイズを受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="0d337-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
   
  `szUrl`  
- <span data-ttu-id="247b7-108">[out] The buffer containing the URL.</span><span class="sxs-lookup"><span data-stu-id="247b7-108">[out] The buffer containing the URL.</span></span>  
+ <span data-ttu-id="0d337-108">入出力URL を格納しているバッファー。</span><span class="sxs-lookup"><span data-stu-id="0d337-108">[out] The buffer containing the URL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="247b7-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="247b7-109">Return Value</span></span>  
- <span data-ttu-id="247b7-110">S_OK if the method succeeds; otherwise, an error code.</span><span class="sxs-lookup"><span data-stu-id="247b7-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d337-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="0d337-109">Return Value</span></span>  
+ <span data-ttu-id="0d337-110">メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。</span><span class="sxs-lookup"><span data-stu-id="0d337-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="247b7-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="247b7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d337-111">参照</span><span class="sxs-lookup"><span data-stu-id="0d337-111">See also</span></span>
 
-- [<span data-ttu-id="247b7-112">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="247b7-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="0d337-112">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0d337-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

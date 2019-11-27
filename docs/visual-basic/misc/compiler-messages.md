@@ -12,5 +12,5 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353312"
 ---
-# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="19f59-102">Visual Basic コンパイラ メッセージ</span><span class="sxs-lookup"><span data-stu-id="19f59-102">Visual Basic Compiler Messages</span></span>
-<span data-ttu-id="19f59-103">This section contains the Visual Basic error messages that occur at compile time.</span><span class="sxs-lookup"><span data-stu-id="19f59-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="2c8ce-102">Visual Basic コンパイラ メッセージ</span><span class="sxs-lookup"><span data-stu-id="2c8ce-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="2c8ce-103">ここでは、コンパイル時に発生する Visual Basic エラーメッセージについて説明します。</span><span class="sxs-lookup"><span data-stu-id="2c8ce-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>

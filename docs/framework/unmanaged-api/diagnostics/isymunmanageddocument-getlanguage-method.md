@@ -22,23 +22,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449178"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="a12e1-102">ISymUnmanagedDocument::GetLanguage メソッド</span><span class="sxs-lookup"><span data-stu-id="a12e1-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="a12e1-103">Gets the language identifier of this document</span><span class="sxs-lookup"><span data-stu-id="a12e1-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="5a0ea-102">ISymUnmanagedDocument::GetLanguage メソッド</span><span class="sxs-lookup"><span data-stu-id="5a0ea-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="5a0ea-103">このドキュメントの言語識別子を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a0ea-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a12e1-104">構文</span><span class="sxs-lookup"><span data-stu-id="a12e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a0ea-104">構文</span><span class="sxs-lookup"><span data-stu-id="5a0ea-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a12e1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a12e1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a0ea-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5a0ea-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a12e1-106">[out] A pointer to a variable that receives the language identifier.</span><span class="sxs-lookup"><span data-stu-id="a12e1-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="5a0ea-106">入出力言語識別子を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="5a0ea-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a12e1-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="a12e1-107">Return Value</span></span>  
- <span data-ttu-id="a12e1-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a12e1-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5a0ea-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="5a0ea-107">Return Value</span></span>  
+ <span data-ttu-id="5a0ea-108">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="5a0ea-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a12e1-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="a12e1-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a0ea-109">参照</span><span class="sxs-lookup"><span data-stu-id="5a0ea-109">See also</span></span>
 
-- [<span data-ttu-id="a12e1-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a12e1-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="5a0ea-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5a0ea-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

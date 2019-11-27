@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442817"
 ---
-# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="aa949-102">CorMethodSemanticsAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="aa949-102">CorMethodSemanticsAttr Enumeration</span></span>
-<span data-ttu-id="aa949-103">メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="aa949-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
+# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="0d1b2-102">CorMethodSemanticsAttr 列挙型</span><span class="sxs-lookup"><span data-stu-id="0d1b2-102">CorMethodSemanticsAttr Enumeration</span></span>
+<span data-ttu-id="0d1b2-103">メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa949-104">構文</span><span class="sxs-lookup"><span data-stu-id="aa949-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d1b2-104">構文</span><span class="sxs-lookup"><span data-stu-id="0d1b2-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodSemanticsAttr {  
@@ -39,24 +39,24 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aa949-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="aa949-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0d1b2-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="0d1b2-105">Members</span></span>  
   
-|<span data-ttu-id="aa949-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="aa949-106">Member</span></span>|<span data-ttu-id="aa949-107">説明</span><span class="sxs-lookup"><span data-stu-id="aa949-107">Description</span></span>|  
+|<span data-ttu-id="0d1b2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0d1b2-106">Member</span></span>|<span data-ttu-id="0d1b2-107">説明</span><span class="sxs-lookup"><span data-stu-id="0d1b2-107">Description</span></span>|  
 |------------|-----------------|  
-|`msSetter`|<span data-ttu-id="aa949-108">Specifies that the method is a `set` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="aa949-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
-|`msGetter`|<span data-ttu-id="aa949-109">Specifies that the method is a `get` accessor for a property.</span><span class="sxs-lookup"><span data-stu-id="aa949-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
-|`msOther`|<span data-ttu-id="aa949-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span><span class="sxs-lookup"><span data-stu-id="aa949-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
-|`msAddOn`|<span data-ttu-id="aa949-111">Specifies that the method adds handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="aa949-111">Specifies that the method adds handler methods for an event.</span></span>|  
-|`msRemoveOn`|<span data-ttu-id="aa949-112">Specifies that the method removes handler methods for an event.</span><span class="sxs-lookup"><span data-stu-id="aa949-112">Specifies that the method removes handler methods for an event.</span></span>|  
-|`msFire`|<span data-ttu-id="aa949-113">Specifies that the method raises an event.</span><span class="sxs-lookup"><span data-stu-id="aa949-113">Specifies that the method raises an event.</span></span>|  
+|`msSetter`|<span data-ttu-id="0d1b2-108">メソッドがプロパティの `set` アクセサーであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
+|`msGetter`|<span data-ttu-id="0d1b2-109">メソッドがプロパティの `get` アクセサーであることを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
+|`msOther`|<span data-ttu-id="0d1b2-110">メソッドが、ここで定義されたプロパティ以外のプロパティまたはイベントへのリレーションシップを持つことを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
+|`msAddOn`|<span data-ttu-id="0d1b2-111">メソッドがイベントのハンドラーメソッドを追加することを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-111">Specifies that the method adds handler methods for an event.</span></span>|  
+|`msRemoveOn`|<span data-ttu-id="0d1b2-112">メソッドがイベントのハンドラーメソッドを削除することを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-112">Specifies that the method removes handler methods for an event.</span></span>|  
+|`msFire`|<span data-ttu-id="0d1b2-113">メソッドがイベントを発生させることを指定します。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-113">Specifies that the method raises an event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aa949-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="aa949-114">Requirements</span></span>  
- <span data-ttu-id="aa949-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="aa949-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d1b2-114">要件</span><span class="sxs-lookup"><span data-stu-id="0d1b2-114">Requirements</span></span>  
+ <span data-ttu-id="0d1b2-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0d1b2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa949-116">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="aa949-116">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="0d1b2-116">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="0d1b2-116">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="aa949-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa949-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0d1b2-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d1b2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa949-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa949-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d1b2-118">参照</span><span class="sxs-lookup"><span data-stu-id="0d1b2-118">See also</span></span>
 
-- [<span data-ttu-id="aa949-119">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="aa949-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="0d1b2-119">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="0d1b2-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

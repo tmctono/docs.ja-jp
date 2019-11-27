@@ -9,11 +9,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352354"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="fe2f1-102">How to: Serialize Using XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe2f1-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
-<span data-ttu-id="fe2f1-103">このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="fe2f1-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="e2d6f-102">方法: XmlSerializer を使用してシリアル化する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2d6f-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="e2d6f-103">このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。</span><span class="sxs-lookup"><span data-stu-id="e2d6f-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe2f1-104">例</span><span class="sxs-lookup"><span data-stu-id="fe2f1-104">Example</span></span>  
- <span data-ttu-id="fe2f1-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe2f1-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="fe2f1-106">次に、それらのオブジェクトをメモリ ストリームにシリアル化し、メモリ ストリームから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="fe2f1-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="e2d6f-104">例</span><span class="sxs-lookup"><span data-stu-id="e2d6f-104">Example</span></span>  
+ <span data-ttu-id="e2d6f-105">次の例では、<xref:System.Xml.Linq.XElement> オブジェクトを含んでいる多数のオブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="e2d6f-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="e2d6f-106">次に、それらのオブジェクトをメモリ ストリームにシリアル化し、メモリ ストリームから逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="e2d6f-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- <span data-ttu-id="fe2f1-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="fe2f1-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="e2d6f-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e2d6f-107">This example produces the following output:</span></span>  
   
 ```console  
 Testing for type: XElementNullContainer  
@@ -80,6 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe2f1-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="fe2f1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2d6f-108">参照</span><span class="sxs-lookup"><span data-stu-id="e2d6f-108">See also</span></span>
 
-- [<span data-ttu-id="fe2f1-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe2f1-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [<span data-ttu-id="e2d6f-109">XElement オブジェクトを含むオブジェクトグラフのシリアル化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2d6f-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

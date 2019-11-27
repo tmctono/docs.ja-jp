@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427845"
 ---
-# <a name="isymunmanagedwritersetsymattribute-method"></a><span data-ttu-id="7dab8-102">ISymUnmanagedWriter::SetSymAttribute メソッド</span><span class="sxs-lookup"><span data-stu-id="7dab8-102">ISymUnmanagedWriter::SetSymAttribute Method</span></span>
-<span data-ttu-id="7dab8-103">Defines a custom attribute based upon its name.</span><span class="sxs-lookup"><span data-stu-id="7dab8-103">Defines a custom attribute based upon its name.</span></span> <span data-ttu-id="7dab8-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span><span class="sxs-lookup"><span data-stu-id="7dab8-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span></span>  
+# <a name="isymunmanagedwritersetsymattribute-method"></a><span data-ttu-id="c5996-102">ISymUnmanagedWriter::SetSymAttribute メソッド</span><span class="sxs-lookup"><span data-stu-id="c5996-102">ISymUnmanagedWriter::SetSymAttribute Method</span></span>
+<span data-ttu-id="c5996-103">名前に基づいてカスタム属性を定義します。</span><span class="sxs-lookup"><span data-stu-id="c5996-103">Defines a custom attribute based upon its name.</span></span> <span data-ttu-id="c5996-104">これらの属性は、メタデータのカスタム属性とは異なり、シンボルストアに保持されます。</span><span class="sxs-lookup"><span data-stu-id="c5996-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7dab8-105">構文</span><span class="sxs-lookup"><span data-stu-id="7dab8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5996-105">構文</span><span class="sxs-lookup"><span data-stu-id="c5996-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetSymAttribute(  
@@ -35,25 +35,25 @@ HRESULT SetSymAttribute(
     [in, size_is(cData)] unsigned char data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7dab8-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7dab8-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5996-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c5996-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="7dab8-107">[in] The metadata token for which the attribute is being defined.</span><span class="sxs-lookup"><span data-stu-id="7dab8-107">[in] The metadata token for which the attribute is being defined.</span></span>  
+ <span data-ttu-id="c5996-107">から属性を定義するメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="c5996-107">[in] The metadata token for which the attribute is being defined.</span></span>  
   
  `name`  
- <span data-ttu-id="7dab8-108">[in] A pointer to a `WCHAR` that contains the attribute name.</span><span class="sxs-lookup"><span data-stu-id="7dab8-108">[in] A pointer to a `WCHAR` that contains the attribute name.</span></span>  
+ <span data-ttu-id="c5996-108">から属性名を格納している `WCHAR` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="c5996-108">[in] A pointer to a `WCHAR` that contains the attribute name.</span></span>  
   
  `cData`  
- <span data-ttu-id="7dab8-109">[in] A `ULONG32` that indicates the size of the `data` array.</span><span class="sxs-lookup"><span data-stu-id="7dab8-109">[in] A `ULONG32` that indicates the size of the `data` array.</span></span>  
+ <span data-ttu-id="c5996-109">から`data` 配列のサイズを示す `ULONG32`。</span><span class="sxs-lookup"><span data-stu-id="c5996-109">[in] A `ULONG32` that indicates the size of the `data` array.</span></span>  
   
  `data`  
- <span data-ttu-id="7dab8-110">[in] The attribute value.</span><span class="sxs-lookup"><span data-stu-id="7dab8-110">[in] The attribute value.</span></span>  
+ <span data-ttu-id="c5996-110">から属性値。</span><span class="sxs-lookup"><span data-stu-id="c5996-110">[in] The attribute value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7dab8-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="7dab8-111">Return Value</span></span>  
- <span data-ttu-id="7dab8-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="7dab8-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c5996-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="c5996-111">Return Value</span></span>  
+ <span data-ttu-id="c5996-112">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="c5996-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7dab8-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="7dab8-113">Requirements</span></span>  
- <span data-ttu-id="7dab8-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7dab8-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5996-113">要件</span><span class="sxs-lookup"><span data-stu-id="c5996-113">Requirements</span></span>  
+ <span data-ttu-id="c5996-114">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="c5996-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7dab8-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="7dab8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5996-115">参照</span><span class="sxs-lookup"><span data-stu-id="c5996-115">See also</span></span>
 
-- [<span data-ttu-id="7dab8-116">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7dab8-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="c5996-116">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c5996-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

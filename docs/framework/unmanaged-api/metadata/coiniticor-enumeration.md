@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444276"
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="95ccb-102">COINITICOR 列挙型</span><span class="sxs-lookup"><span data-stu-id="95ccb-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="95ccb-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="95ccb-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="e7ddb-102">COINITICOR 列挙型</span><span class="sxs-lookup"><span data-stu-id="e7ddb-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="e7ddb-103">共通言語ランタイムを初期化するときに、 [Co初期化 Ecor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)によって使用される定数を指定します。</span><span class="sxs-lookup"><span data-stu-id="e7ddb-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95ccb-104">構文</span><span class="sxs-lookup"><span data-stu-id="95ccb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7ddb-104">構文</span><span class="sxs-lookup"><span data-stu-id="e7ddb-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -33,21 +33,21 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="95ccb-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="95ccb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e7ddb-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e7ddb-105">Members</span></span>  
   
-|<span data-ttu-id="95ccb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="95ccb-106">Member</span></span>|<span data-ttu-id="95ccb-107">説明</span><span class="sxs-lookup"><span data-stu-id="95ccb-107">Description</span></span>|  
+|<span data-ttu-id="e7ddb-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e7ddb-106">Member</span></span>|<span data-ttu-id="e7ddb-107">説明</span><span class="sxs-lookup"><span data-stu-id="e7ddb-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="95ccb-108">Indicates the default initialization mode.</span><span class="sxs-lookup"><span data-stu-id="95ccb-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="e7ddb-108">既定の初期化モードを示します。</span><span class="sxs-lookup"><span data-stu-id="e7ddb-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="95ccb-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="95ccb-109">Requirements</span></span>  
- <span data-ttu-id="95ccb-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="95ccb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7ddb-109">要件</span><span class="sxs-lookup"><span data-stu-id="e7ddb-109">Requirements</span></span>  
+ <span data-ttu-id="e7ddb-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7ddb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95ccb-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="95ccb-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e7ddb-111">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="e7ddb-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="95ccb-112">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="95ccb-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e7ddb-112">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="e7ddb-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="95ccb-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95ccb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e7ddb-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7ddb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95ccb-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="95ccb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7ddb-114">参照</span><span class="sxs-lookup"><span data-stu-id="e7ddb-114">See also</span></span>
 
-- [<span data-ttu-id="95ccb-115">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="95ccb-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e7ddb-115">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="e7ddb-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

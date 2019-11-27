@@ -22,23 +22,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449161"
 ---
-# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="c4d1d-102">ISymUnmanagedDocument::GetLanguageVendor メソッド</span><span class="sxs-lookup"><span data-stu-id="c4d1d-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
-<span data-ttu-id="c4d1d-103">Gets the language vendor of this document.</span><span class="sxs-lookup"><span data-stu-id="c4d1d-103">Gets the language vendor of this document.</span></span>  
+# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="e0e54-102">ISymUnmanagedDocument::GetLanguageVendor メソッド</span><span class="sxs-lookup"><span data-stu-id="e0e54-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
+<span data-ttu-id="e0e54-103">このドキュメントの言語販売元を取得します。</span><span class="sxs-lookup"><span data-stu-id="e0e54-103">Gets the language vendor of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4d1d-104">構文</span><span class="sxs-lookup"><span data-stu-id="c4d1d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0e54-104">構文</span><span class="sxs-lookup"><span data-stu-id="e0e54-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLanguageVendor(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c4d1d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c4d1d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0e54-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e0e54-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="c4d1d-106">[out] A pointer to a variable that receives the language vendor.</span><span class="sxs-lookup"><span data-stu-id="c4d1d-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
+ <span data-ttu-id="e0e54-106">入出力言語ベンダーを受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="e0e54-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c4d1d-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="c4d1d-107">Return Value</span></span>  
- <span data-ttu-id="c4d1d-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="c4d1d-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0e54-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="e0e54-107">Return Value</span></span>  
+ <span data-ttu-id="e0e54-108">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="e0e54-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4d1d-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="c4d1d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0e54-109">参照</span><span class="sxs-lookup"><span data-stu-id="e0e54-109">See also</span></span>
 
-- [<span data-ttu-id="c4d1d-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c4d1d-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="e0e54-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e0e54-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

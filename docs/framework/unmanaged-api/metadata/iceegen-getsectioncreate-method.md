@@ -22,12 +22,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448095"
 ---
-# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="c3ca9-102">ICeeGen::GetSectionCreate メソッド</span><span class="sxs-lookup"><span data-stu-id="c3ca9-102">ICeeGen::GetSectionCreate Method</span></span>
-<span data-ttu-id="c3ca9-103">Generates and gets a code section using the specified name and flag values.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-103">Generates and gets a code section using the specified name and flag values.</span></span>  
+# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="b38dd-102">ICeeGen::GetSectionCreate メソッド</span><span class="sxs-lookup"><span data-stu-id="b38dd-102">ICeeGen::GetSectionCreate Method</span></span>
+<span data-ttu-id="b38dd-103">指定された名前とフラグ値を使用して、コードセクションを生成して取得します。</span><span class="sxs-lookup"><span data-stu-id="b38dd-103">Generates and gets a code section using the specified name and flag values.</span></span>  
   
- <span data-ttu-id="c3ca9-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="b38dd-104">このメソッドは互換性のために残されています。使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="b38dd-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3ca9-105">構文</span><span class="sxs-lookup"><span data-stu-id="c3ca9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b38dd-105">構文</span><span class="sxs-lookup"><span data-stu-id="b38dd-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionCreate (  
@@ -37,28 +37,28 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3ca9-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c3ca9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b38dd-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b38dd-106">Parameters</span></span>  
  `name`  
- <span data-ttu-id="c3ca9-107">[in] A pointer to a string that specifies the name of the section to be created.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
+ <span data-ttu-id="b38dd-107">から作成するセクションの名前を指定する文字列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="b38dd-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
   
  `flags`  
- <span data-ttu-id="c3ca9-108">[in] Flags that specify options.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-108">[in] Flags that specify options.</span></span>  
+ <span data-ttu-id="b38dd-108">からオプションを指定するフラグ。</span><span class="sxs-lookup"><span data-stu-id="b38dd-108">[in] Flags that specify options.</span></span>  
   
  `section`  
- <span data-ttu-id="c3ca9-109">[out] A pointer to the newly created code section.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-109">[out] A pointer to the newly created code section.</span></span>  
+ <span data-ttu-id="b38dd-109">入出力新しく作成されたコードセクションへのポインター。</span><span class="sxs-lookup"><span data-stu-id="b38dd-109">[out] A pointer to the newly created code section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c3ca9-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="c3ca9-110">Remarks</span></span>  
- <span data-ttu-id="c3ca9-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="c3ca9-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b38dd-110">コメント</span><span class="sxs-lookup"><span data-stu-id="b38dd-110">Remarks</span></span>  
+ <span data-ttu-id="b38dd-111">他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionCreate` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="b38dd-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3ca9-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="c3ca9-112">Requirements</span></span>  
- <span data-ttu-id="c3ca9-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3ca9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b38dd-112">要件</span><span class="sxs-lookup"><span data-stu-id="b38dd-112">Requirements</span></span>  
+ <span data-ttu-id="b38dd-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b38dd-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3ca9-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c3ca9-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b38dd-114">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="b38dd-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c3ca9-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c3ca9-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b38dd-115">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="b38dd-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c3ca9-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3ca9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b38dd-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b38dd-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3ca9-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="c3ca9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b38dd-117">参照</span><span class="sxs-lookup"><span data-stu-id="b38dd-117">See also</span></span>
 
-- [<span data-ttu-id="c3ca9-118">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c3ca9-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="b38dd-118">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b38dd-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

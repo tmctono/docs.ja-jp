@@ -22,26 +22,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448672"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="76ac4-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount メソッド</span><span class="sxs-lookup"><span data-stu-id="76ac4-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
-<span data-ttu-id="76ac4-103">Gets the number of documents that this method has lines in.</span><span class="sxs-lookup"><span data-stu-id="76ac4-103">Gets the number of documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="61d73-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount メソッド</span><span class="sxs-lookup"><span data-stu-id="61d73-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
+<span data-ttu-id="61d73-103">このメソッドに行があるドキュメントの数を取得します。</span><span class="sxs-lookup"><span data-stu-id="61d73-103">Gets the number of documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76ac4-104">構文</span><span class="sxs-lookup"><span data-stu-id="76ac4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61d73-104">構文</span><span class="sxs-lookup"><span data-stu-id="61d73-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentsForMethodCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="76ac4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="76ac4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61d73-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="61d73-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="76ac4-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span><span class="sxs-lookup"><span data-stu-id="76ac4-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="61d73-106">入出力ドキュメントを格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="61d73-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="76ac4-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="76ac4-107">Return Value</span></span>  
- <span data-ttu-id="76ac4-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="76ac4-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="61d73-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="61d73-107">Return Value</span></span>  
+ <span data-ttu-id="61d73-108">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="61d73-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76ac4-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="76ac4-109">Requirements</span></span>  
- <span data-ttu-id="76ac4-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="76ac4-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61d73-109">要件</span><span class="sxs-lookup"><span data-stu-id="61d73-109">Requirements</span></span>  
+ <span data-ttu-id="61d73-110">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="61d73-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76ac4-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="76ac4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61d73-111">参照</span><span class="sxs-lookup"><span data-stu-id="61d73-111">See also</span></span>
 
-- [<span data-ttu-id="76ac4-112">ISymENCUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="76ac4-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [<span data-ttu-id="61d73-112">ISymENCUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="61d73-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

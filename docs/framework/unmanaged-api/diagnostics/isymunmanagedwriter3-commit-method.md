@@ -22,21 +22,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438272"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="cd95f-102">ISymUnmanagedWriter3::Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="cd95f-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="cd95f-103">Commits the changes written so far to the stream.</span><span class="sxs-lookup"><span data-stu-id="cd95f-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="2f12f-102">ISymUnmanagedWriter3::Commit メソッド</span><span class="sxs-lookup"><span data-stu-id="2f12f-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="2f12f-103">これまでに書き込まれた変更をストリームにコミットします。</span><span class="sxs-lookup"><span data-stu-id="2f12f-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd95f-104">構文</span><span class="sxs-lookup"><span data-stu-id="cd95f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f12f-104">構文</span><span class="sxs-lookup"><span data-stu-id="2f12f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="cd95f-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="cd95f-105">Return Value</span></span>  
- <span data-ttu-id="cd95f-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="cd95f-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2f12f-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="2f12f-105">Return Value</span></span>  
+ <span data-ttu-id="2f12f-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="2f12f-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd95f-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="cd95f-107">Requirements</span></span>  
- <span data-ttu-id="cd95f-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cd95f-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f12f-107">要件</span><span class="sxs-lookup"><span data-stu-id="2f12f-107">Requirements</span></span>  
+ <span data-ttu-id="2f12f-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="2f12f-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd95f-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd95f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f12f-109">参照</span><span class="sxs-lookup"><span data-stu-id="2f12f-109">See also</span></span>
 
-- [<span data-ttu-id="cd95f-110">ISymUnmanagedWriter3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cd95f-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="2f12f-110">ISymUnmanagedWriter3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2f12f-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

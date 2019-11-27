@@ -11,16 +11,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352800"
 ---
-# <a name="then-statement"></a><span data-ttu-id="78559-102">Then ステートメント</span><span class="sxs-lookup"><span data-stu-id="78559-102">Then Statement</span></span>
-<span data-ttu-id="78559-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span><span class="sxs-lookup"><span data-stu-id="78559-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
+# <a name="then-statement"></a><span data-ttu-id="db33b-102">Then ステートメント</span><span class="sxs-lookup"><span data-stu-id="db33b-102">Then Statement</span></span>
+<span data-ttu-id="db33b-103">テストされた条件が true の場合にコンパイルまたは実行されるステートメントブロックを導入します。</span><span class="sxs-lookup"><span data-stu-id="db33b-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78559-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="78559-104">Remarks</span></span>  
- <span data-ttu-id="78559-105">キーワード `Then` は次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="78559-105">The `Then` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db33b-104">コメント</span><span class="sxs-lookup"><span data-stu-id="db33b-104">Remarks</span></span>  
+ <span data-ttu-id="db33b-105">キーワード `Then` は次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="db33b-105">The `Then` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="78559-106">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="78559-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="db33b-106">#If...Then... #Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="db33b-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [<span data-ttu-id="78559-107">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="78559-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="db33b-107">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="db33b-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="78559-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="78559-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db33b-108">参照</span><span class="sxs-lookup"><span data-stu-id="db33b-108">See also</span></span>
 
-- [<span data-ttu-id="78559-109">キーワード</span><span class="sxs-lookup"><span data-stu-id="78559-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="db33b-109">キーワード</span><span class="sxs-lookup"><span data-stu-id="db33b-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

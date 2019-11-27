@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447372"
 ---
-# <a name="cor_prf_gc_reason-enumeration"></a><span data-ttu-id="15500-102">COR_PRF_GC_REASON 列挙型</span><span class="sxs-lookup"><span data-stu-id="15500-102">COR_PRF_GC_REASON Enumeration</span></span>
-<span data-ttu-id="15500-103">ガベージ コレクションが発生している理由を示します。</span><span class="sxs-lookup"><span data-stu-id="15500-103">Indicates the reason that garbage collection is occurring.</span></span>  
+# <a name="cor_prf_gc_reason-enumeration"></a><span data-ttu-id="2c4c1-102">COR_PRF_GC_REASON 列挙型</span><span class="sxs-lookup"><span data-stu-id="2c4c1-102">COR_PRF_GC_REASON Enumeration</span></span>
+<span data-ttu-id="2c4c1-103">ガベージ コレクションが発生している理由を示します。</span><span class="sxs-lookup"><span data-stu-id="2c4c1-103">Indicates the reason that garbage collection is occurring.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15500-104">構文</span><span class="sxs-lookup"><span data-stu-id="15500-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c4c1-104">構文</span><span class="sxs-lookup"><span data-stu-id="2c4c1-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,22 +33,22 @@ typedef enum {
 } COR_PRF_GC_REASON;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="15500-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="15500-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2c4c1-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="2c4c1-105">Members</span></span>  
   
-|<span data-ttu-id="15500-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="15500-106">Member</span></span>|<span data-ttu-id="15500-107">説明</span><span class="sxs-lookup"><span data-stu-id="15500-107">Description</span></span>|  
+|<span data-ttu-id="2c4c1-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="2c4c1-106">Member</span></span>|<span data-ttu-id="2c4c1-107">説明</span><span class="sxs-lookup"><span data-stu-id="2c4c1-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|<span data-ttu-id="15500-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span><span class="sxs-lookup"><span data-stu-id="15500-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span></span>|  
-|`COR_PRF_GC_OTHER`|<span data-ttu-id="15500-109">The reason is unspecified.</span><span class="sxs-lookup"><span data-stu-id="15500-109">The reason is unspecified.</span></span>|  
+|`COR_PRF_GC_INDUCED`|<span data-ttu-id="2c4c1-108">ガベージコレクションは、<xref:System.GC.Collect%2A> メソッドによって発生しました。</span><span class="sxs-lookup"><span data-stu-id="2c4c1-108">The garbage collection was induced by a <xref:System.GC.Collect%2A> method.</span></span>|  
+|`COR_PRF_GC_OTHER`|<span data-ttu-id="2c4c1-109">理由が指定されていません。</span><span class="sxs-lookup"><span data-stu-id="2c4c1-109">The reason is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="15500-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="15500-110">Requirements</span></span>  
- <span data-ttu-id="15500-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="15500-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c4c1-110">要件</span><span class="sxs-lookup"><span data-stu-id="2c4c1-110">Requirements</span></span>  
+ <span data-ttu-id="2c4c1-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2c4c1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15500-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="15500-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2c4c1-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2c4c1-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="15500-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15500-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c4c1-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c4c1-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15500-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15500-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2c4c1-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c4c1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15500-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="15500-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c4c1-115">参照</span><span class="sxs-lookup"><span data-stu-id="2c4c1-115">See also</span></span>
 
-- [<span data-ttu-id="15500-116">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="15500-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="2c4c1-116">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="2c4c1-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

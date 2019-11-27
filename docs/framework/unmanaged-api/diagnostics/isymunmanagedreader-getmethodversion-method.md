@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436013"
 ---
-# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="d8d76-102">ISymUnmanagedReader::GetMethodVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="d8d76-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
-<span data-ttu-id="d8d76-103">Gets the method version.</span><span class="sxs-lookup"><span data-stu-id="d8d76-103">Gets the method version.</span></span> <span data-ttu-id="d8d76-104">The method version starts at 1 and is incremented each time the method is recompiled.</span><span class="sxs-lookup"><span data-stu-id="d8d76-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="d8d76-105">Recompilation can happen without changes to the method.</span><span class="sxs-lookup"><span data-stu-id="d8d76-105">Recompilation can happen without changes to the method.</span></span>  
+# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="efbf1-102">ISymUnmanagedReader::GetMethodVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="efbf1-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
+<span data-ttu-id="efbf1-103">メソッドのバージョンを取得します。</span><span class="sxs-lookup"><span data-stu-id="efbf1-103">Gets the method version.</span></span> <span data-ttu-id="efbf1-104">メソッドのバージョンは1から始まり、メソッドが再コンパイルされるたびにインクリメントされます。</span><span class="sxs-lookup"><span data-stu-id="efbf1-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="efbf1-105">再コンパイルは、メソッドを変更せずに発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="efbf1-105">Recompilation can happen without changes to the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8d76-106">構文</span><span class="sxs-lookup"><span data-stu-id="d8d76-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efbf1-106">構文</span><span class="sxs-lookup"><span data-stu-id="efbf1-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodVersion (  
@@ -33,19 +33,19 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8d76-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d8d76-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="efbf1-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="efbf1-107">Parameters</span></span>  
  `pMethod`  
- <span data-ttu-id="d8d76-108">[in] The method for which to get the version.</span><span class="sxs-lookup"><span data-stu-id="d8d76-108">[in] The method for which to get the version.</span></span>  
+ <span data-ttu-id="efbf1-108">からバージョンを取得するメソッド。</span><span class="sxs-lookup"><span data-stu-id="efbf1-108">[in] The method for which to get the version.</span></span>  
   
  `version`  
- <span data-ttu-id="d8d76-109">[out] A pointer to a variable that receives the method version.</span><span class="sxs-lookup"><span data-stu-id="d8d76-109">[out] A pointer to a variable that receives the method version.</span></span>  
+ <span data-ttu-id="efbf1-109">入出力メソッドのバージョンを受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="efbf1-109">[out] A pointer to a variable that receives the method version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d8d76-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="d8d76-110">Return Value</span></span>  
- <span data-ttu-id="d8d76-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d8d76-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="efbf1-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="efbf1-110">Return Value</span></span>  
+ <span data-ttu-id="efbf1-111">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="efbf1-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8d76-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="d8d76-112">Requirements</span></span>  
- <span data-ttu-id="d8d76-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d8d76-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efbf1-112">要件</span><span class="sxs-lookup"><span data-stu-id="efbf1-112">Requirements</span></span>  
+ <span data-ttu-id="efbf1-113">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="efbf1-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8d76-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8d76-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efbf1-114">参照</span><span class="sxs-lookup"><span data-stu-id="efbf1-114">See also</span></span>
 
-- [<span data-ttu-id="d8d76-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d8d76-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="efbf1-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="efbf1-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

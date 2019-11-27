@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443912"
 ---
-# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="08a38-102">CorAssemblyFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="08a38-102">CorAssemblyFlags Enumeration</span></span>
-<span data-ttu-id="08a38-103">アセンブリ コンパイルに適用されるメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="08a38-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
+# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="f41e5-102">CorAssemblyFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="f41e5-102">CorAssemblyFlags Enumeration</span></span>
+<span data-ttu-id="f41e5-103">アセンブリ コンパイルに適用されるメタデータを記述する値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="f41e5-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08a38-104">構文</span><span class="sxs-lookup"><span data-stu-id="08a38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f41e5-104">構文</span><span class="sxs-lookup"><span data-stu-id="f41e5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorAssemblyFlags {  
@@ -53,36 +53,36 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="08a38-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="08a38-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f41e5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="f41e5-105">Members</span></span>  
   
-|<span data-ttu-id="08a38-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="08a38-106">Member</span></span>|<span data-ttu-id="08a38-107">説明</span><span class="sxs-lookup"><span data-stu-id="08a38-107">Description</span></span>|  
+|<span data-ttu-id="f41e5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="f41e5-106">Member</span></span>|<span data-ttu-id="f41e5-107">説明</span><span class="sxs-lookup"><span data-stu-id="f41e5-107">Description</span></span>|  
 |------------|-----------------|  
-|`afPublicKey`|<span data-ttu-id="08a38-108">Indicates that the assembly reference holds the full, unhashed public key.</span><span class="sxs-lookup"><span data-stu-id="08a38-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
-|`afPA_None`|<span data-ttu-id="08a38-109">Indicates that the processor architecture is unspecified.</span><span class="sxs-lookup"><span data-stu-id="08a38-109">Indicates that the processor architecture is unspecified.</span></span>|  
-|`afPA_MSIL`|<span data-ttu-id="08a38-110">Indicates that the processor architecture is neutral (PE32).</span><span class="sxs-lookup"><span data-stu-id="08a38-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
-|`afPA_x86`|<span data-ttu-id="08a38-111">Indicates that the processor architecture is x86 (PE32).</span><span class="sxs-lookup"><span data-stu-id="08a38-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
-|`afPA_IA64`|<span data-ttu-id="08a38-112">Indicates that the processor architecture is Itanium (PE32+).</span><span class="sxs-lookup"><span data-stu-id="08a38-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
-|`afPA_AMD64`|<span data-ttu-id="08a38-113">Indicates that the processor architecture is AMD X64 (PE32+).</span><span class="sxs-lookup"><span data-stu-id="08a38-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
-|`afPA_ARM`|<span data-ttu-id="08a38-114">Indicates that the processor architecture is ARM (PE32).</span><span class="sxs-lookup"><span data-stu-id="08a38-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
-|`afPA_NoPlatform`|<span data-ttu-id="08a38-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span><span class="sxs-lookup"><span data-stu-id="08a38-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="08a38-116">Thus, the flag is the same as `afPA_Mask`.</span><span class="sxs-lookup"><span data-stu-id="08a38-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
-|`afPA_Specified`|<span data-ttu-id="08a38-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span><span class="sxs-lookup"><span data-stu-id="08a38-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
-|`afPA_Mask`|<span data-ttu-id="08a38-118">A mask that describes the processor architecture.</span><span class="sxs-lookup"><span data-stu-id="08a38-118">A mask that describes the processor architecture.</span></span>|  
-|`afPA_FullMask`|<span data-ttu-id="08a38-119">Specifies that the processor architecture description is included.</span><span class="sxs-lookup"><span data-stu-id="08a38-119">Specifies that the processor architecture description is included.</span></span>|  
-|`afPA_Shift`|<span data-ttu-id="08a38-120">Indicates a shift count in the processor architecture flags to and from the index.</span><span class="sxs-lookup"><span data-stu-id="08a38-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
-|`afEnableJITcompileTracking`|<span data-ttu-id="08a38-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="08a38-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afDisableJITcompileOptimizer`|<span data-ttu-id="08a38-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="08a38-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afRetargetable`|<span data-ttu-id="08a38-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span><span class="sxs-lookup"><span data-stu-id="08a38-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
-|`afContentType_Mask`|<span data-ttu-id="08a38-124">A mask that describes the content type.</span><span class="sxs-lookup"><span data-stu-id="08a38-124">A mask that describes the content type.</span></span>|  
-|`afContentType_Default`|<span data-ttu-id="08a38-125">Indicates the default content type.</span><span class="sxs-lookup"><span data-stu-id="08a38-125">Indicates the default content type.</span></span>|  
-|`afContentType_WindowsRuntime`|<span data-ttu-id="08a38-126">Indicates the Windows Runtime content type.</span><span class="sxs-lookup"><span data-stu-id="08a38-126">Indicates the Windows Runtime content type.</span></span>|  
+|`afPublicKey`|<span data-ttu-id="f41e5-108">アセンブリ参照が完全なハッシュされていない公開キーを保持していることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
+|`afPA_None`|<span data-ttu-id="f41e5-109">プロセッサアーキテクチャが指定されていないことを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-109">Indicates that the processor architecture is unspecified.</span></span>|  
+|`afPA_MSIL`|<span data-ttu-id="f41e5-110">プロセッサアーキテクチャがニュートラル (PE32) であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
+|`afPA_x86`|<span data-ttu-id="f41e5-111">プロセッサアーキテクチャが x86 (PE32) であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
+|`afPA_IA64`|<span data-ttu-id="f41e5-112">プロセッサアーキテクチャが Itanium (PE32 +) であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
+|`afPA_AMD64`|<span data-ttu-id="f41e5-113">プロセッサアーキテクチャが AMD X64 (PE32 +) であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
+|`afPA_ARM`|<span data-ttu-id="f41e5-114">プロセッサアーキテクチャが ARM (PE32) であることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
+|`afPA_NoPlatform`|<span data-ttu-id="f41e5-115">アセンブリが参照アセンブリであることを示します。つまり、アーキテクチャには適用されますが、どのアーキテクチャでも実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="f41e5-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="f41e5-116">したがって、フラグは `afPA_Mask`と同じです。</span><span class="sxs-lookup"><span data-stu-id="f41e5-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
+|`afPA_Specified`|<span data-ttu-id="f41e5-117">プロセッサのアーキテクチャフラグを `AssemblyRef` レコードに反映する必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
+|`afPA_Mask`|<span data-ttu-id="f41e5-118">プロセッサアーキテクチャを記述するマスク。</span><span class="sxs-lookup"><span data-stu-id="f41e5-118">A mask that describes the processor architecture.</span></span>|  
+|`afPA_FullMask`|<span data-ttu-id="f41e5-119">プロセッサアーキテクチャの説明を含めることを指定します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-119">Specifies that the processor architecture description is included.</span></span>|  
+|`afPA_Shift`|<span data-ttu-id="f41e5-120">プロセッサアーキテクチャフラグのインデックスとの間のシフト数を示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
+|`afEnableJITcompileTracking`|<span data-ttu-id="f41e5-121"><xref:System.Diagnostics.DebuggableAttribute>の <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> に対応する値を示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afDisableJITcompileOptimizer`|<span data-ttu-id="f41e5-122"><xref:System.Diagnostics.DebuggableAttribute>の <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> に対応する値を示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afRetargetable`|<span data-ttu-id="f41e5-123">アセンブリを実行時に別のパブリッシャーからのアセンブリに再ターゲットできることを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
+|`afContentType_Mask`|<span data-ttu-id="f41e5-124">コンテンツの種類を説明するマスク。</span><span class="sxs-lookup"><span data-stu-id="f41e5-124">A mask that describes the content type.</span></span>|  
+|`afContentType_Default`|<span data-ttu-id="f41e5-125">既定のコンテンツタイプを示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-125">Indicates the default content type.</span></span>|  
+|`afContentType_WindowsRuntime`|<span data-ttu-id="f41e5-126">Windows ランタイムコンテンツの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="f41e5-126">Indicates the Windows Runtime content type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="08a38-127">［要件］</span><span class="sxs-lookup"><span data-stu-id="08a38-127">Requirements</span></span>  
- <span data-ttu-id="08a38-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="08a38-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f41e5-127">要件</span><span class="sxs-lookup"><span data-stu-id="f41e5-127">Requirements</span></span>  
+ <span data-ttu-id="f41e5-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f41e5-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08a38-129">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="08a38-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="f41e5-129">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="f41e5-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="08a38-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08a38-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f41e5-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f41e5-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08a38-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="08a38-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f41e5-131">参照</span><span class="sxs-lookup"><span data-stu-id="f41e5-131">See also</span></span>
 
-- [<span data-ttu-id="08a38-132">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="08a38-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="f41e5-132">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="f41e5-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

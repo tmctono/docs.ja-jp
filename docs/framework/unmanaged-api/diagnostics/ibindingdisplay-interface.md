@@ -21,25 +21,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448478"
 ---
-# <a name="ibindingdisplay-interface"></a><span data-ttu-id="770c4-102">IBindingDisplay インターフェイス</span><span class="sxs-lookup"><span data-stu-id="770c4-102">IBindingDisplay Interface</span></span>
-<span data-ttu-id="770c4-103">Provides methods that display current binding information about the running application.</span><span class="sxs-lookup"><span data-stu-id="770c4-103">Provides methods that display current binding information about the running application.</span></span>  
+# <a name="ibindingdisplay-interface"></a><span data-ttu-id="4a43a-102">IBindingDisplay インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a43a-102">IBindingDisplay Interface</span></span>
+<span data-ttu-id="4a43a-103">実行中のアプリケーションに関する現在のバインド情報を表示するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="4a43a-103">Provides methods that display current binding information about the running application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="770c4-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="770c4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4a43a-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="4a43a-104">Methods</span></span>  
   
-|<span data-ttu-id="770c4-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="770c4-105">Method</span></span>|<span data-ttu-id="770c4-106">説明</span><span class="sxs-lookup"><span data-stu-id="770c4-106">Description</span></span>|  
+|<span data-ttu-id="4a43a-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="4a43a-105">Method</span></span>|<span data-ttu-id="4a43a-106">説明</span><span class="sxs-lookup"><span data-stu-id="4a43a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="770c4-107">GetCurrentDisplay メソッド</span><span class="sxs-lookup"><span data-stu-id="770c4-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="770c4-108">Returns the current binding display information.</span><span class="sxs-lookup"><span data-stu-id="770c4-108">Returns the current binding display information.</span></span>|  
-|[<span data-ttu-id="770c4-109">InitializeForProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="770c4-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="770c4-110">`IBindingDisplay` オブジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="770c4-110">Initializes the `IBindingDisplay` object.</span></span>|  
+|[<span data-ttu-id="4a43a-107">GetCurrentDisplay メソッド</span><span class="sxs-lookup"><span data-stu-id="4a43a-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="4a43a-108">現在のバインディング表示情報を返します。</span><span class="sxs-lookup"><span data-stu-id="4a43a-108">Returns the current binding display information.</span></span>|  
+|[<span data-ttu-id="4a43a-109">InitializeForProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="4a43a-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="4a43a-110">`IBindingDisplay` オブジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="4a43a-110">Initializes the `IBindingDisplay` object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="770c4-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="770c4-111">Requirements</span></span>  
- <span data-ttu-id="770c4-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="770c4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a43a-111">要件</span><span class="sxs-lookup"><span data-stu-id="4a43a-111">Requirements</span></span>  
+ <span data-ttu-id="4a43a-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a43a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="770c4-113">**Header:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="770c4-113">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="4a43a-113">**ヘッダー:** BindingDisplay. h</span><span class="sxs-lookup"><span data-stu-id="4a43a-113">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="770c4-114">**Library:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="770c4-114">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="4a43a-114">**ライブラリ:** BindingDisplay .idl</span><span class="sxs-lookup"><span data-stu-id="4a43a-114">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="770c4-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="770c4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4a43a-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a43a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="770c4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="770c4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a43a-116">参照</span><span class="sxs-lookup"><span data-stu-id="4a43a-116">See also</span></span>
 
-- [<span data-ttu-id="770c4-117">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="770c4-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="4a43a-117">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4a43a-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

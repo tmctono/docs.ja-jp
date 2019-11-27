@@ -1,5 +1,5 @@
 ---
-title: The remote server machine does not exist or is unavailable
+title: リモートサーバーコンピューターが存在しないか、使用できません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
@@ -11,13 +11,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348182"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="0965c-102">リモート サーバー コンピューターが存在しないか、利用できません (Visual Basic)。</span><span class="sxs-lookup"><span data-stu-id="0965c-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
-<span data-ttu-id="0965c-103">使用できないか、存在しないリモート サーバーに接続しようとしています。</span><span class="sxs-lookup"><span data-stu-id="0965c-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="0965c-104">このエラーは、ネットワーク接続が失われていることが原因である場合があります。</span><span class="sxs-lookup"><span data-stu-id="0965c-104">This error may be caused by your network connection being lost.</span></span>  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a><span data-ttu-id="42449-102">リモート サーバー コンピューターが存在しないか、利用できません (Visual Basic)。</span><span class="sxs-lookup"><span data-stu-id="42449-102">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>
+<span data-ttu-id="42449-103">使用できないか、存在しないリモート サーバーに接続しようとしています。</span><span class="sxs-lookup"><span data-stu-id="42449-103">You are trying to connect to a remote server that is unavailable or does not exist.</span></span> <span data-ttu-id="42449-104">このエラーは、ネットワーク接続が失われていることが原因である場合があります。</span><span class="sxs-lookup"><span data-stu-id="42449-104">This error may be caused by your network connection being lost.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0965c-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0965c-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="42449-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="42449-105">To correct this error</span></span>  
   
-- <span data-ttu-id="0965c-106">ネットワークに再接続し、もう一度やり直してください。</span><span class="sxs-lookup"><span data-stu-id="0965c-106">Reconnect to the network and try again.</span></span>  
+- <span data-ttu-id="42449-106">ネットワークに再接続し、もう一度やり直してください。</span><span class="sxs-lookup"><span data-stu-id="42449-106">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0965c-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="0965c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42449-107">参照</span><span class="sxs-lookup"><span data-stu-id="42449-107">See also</span></span>
 
-- [<span data-ttu-id="0965c-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="0965c-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="42449-108">エラーの種類</span><span class="sxs-lookup"><span data-stu-id="42449-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

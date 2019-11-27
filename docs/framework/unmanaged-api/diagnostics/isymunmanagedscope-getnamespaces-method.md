@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446306"
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="e8e88-102">ISymUnmanagedScope::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="e8e88-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="e8e88-103">Gets the namespaces that are being used within this scope.</span><span class="sxs-lookup"><span data-stu-id="e8e88-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="3519a-102">ISymUnmanagedScope::GetNamespaces メソッド</span><span class="sxs-lookup"><span data-stu-id="3519a-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="3519a-103">このスコープ内で使用されている名前空間を取得します。</span><span class="sxs-lookup"><span data-stu-id="3519a-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8e88-104">構文</span><span class="sxs-lookup"><span data-stu-id="e8e88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3519a-104">構文</span><span class="sxs-lookup"><span data-stu-id="3519a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespaces(  
@@ -36,22 +36,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e8e88-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e8e88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3519a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3519a-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="e8e88-106">[in] `namespaces` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="e8e88-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="3519a-106">[in] `namespaces` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="3519a-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="e8e88-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span><span class="sxs-lookup"><span data-stu-id="e8e88-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="3519a-107">入出力名前空間を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3519a-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="e8e88-108">[out] The array that receives the namespaces.</span><span class="sxs-lookup"><span data-stu-id="e8e88-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="3519a-108">入出力名前空間を受け取る配列。</span><span class="sxs-lookup"><span data-stu-id="3519a-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e8e88-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="e8e88-109">Return Value</span></span>  
- <span data-ttu-id="e8e88-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="e8e88-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3519a-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="3519a-109">Return Value</span></span>  
+ <span data-ttu-id="3519a-110">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="3519a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e8e88-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="e8e88-111">Requirements</span></span>  
- <span data-ttu-id="e8e88-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e8e88-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3519a-111">要件</span><span class="sxs-lookup"><span data-stu-id="3519a-111">Requirements</span></span>  
+ <span data-ttu-id="3519a-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="3519a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8e88-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8e88-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3519a-113">参照</span><span class="sxs-lookup"><span data-stu-id="3519a-113">See also</span></span>
 
-- [<span data-ttu-id="e8e88-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e8e88-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="3519a-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3519a-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

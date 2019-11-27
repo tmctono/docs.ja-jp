@@ -22,26 +22,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446080"
 ---
-# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="689e0-102">ISymUnmanagedVariable::GetAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="689e0-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
-<span data-ttu-id="689e0-103">Gets the attribute flags for this variable.</span><span class="sxs-lookup"><span data-stu-id="689e0-103">Gets the attribute flags for this variable.</span></span>  
+# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="0ab4b-102">ISymUnmanagedVariable::GetAttributes メソッド</span><span class="sxs-lookup"><span data-stu-id="0ab4b-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
+<span data-ttu-id="0ab4b-103">この変数の属性フラグを取得します。</span><span class="sxs-lookup"><span data-stu-id="0ab4b-103">Gets the attribute flags for this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="689e0-104">構文</span><span class="sxs-lookup"><span data-stu-id="689e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ab4b-104">構文</span><span class="sxs-lookup"><span data-stu-id="0ab4b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAttributes(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="689e0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="689e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0ab4b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0ab4b-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="689e0-106">[out] A pointer to a `ULONG32` that receives the attributes.</span><span class="sxs-lookup"><span data-stu-id="689e0-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="689e0-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span><span class="sxs-lookup"><span data-stu-id="689e0-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="0ab4b-106">入出力属性を受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="0ab4b-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="0ab4b-107">返される値は、 [Corsymvarflag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)列挙で定義されている値のいずれかになります。</span><span class="sxs-lookup"><span data-stu-id="0ab4b-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="689e0-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="689e0-108">Return Value</span></span>  
- <span data-ttu-id="689e0-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="689e0-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0ab4b-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="0ab4b-108">Return Value</span></span>  
+ <span data-ttu-id="0ab4b-109">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="0ab4b-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="689e0-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="689e0-110">Requirements</span></span>  
- <span data-ttu-id="689e0-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="689e0-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ab4b-110">要件</span><span class="sxs-lookup"><span data-stu-id="0ab4b-110">Requirements</span></span>  
+ <span data-ttu-id="0ab4b-111">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="0ab4b-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="689e0-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="689e0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ab4b-112">参照</span><span class="sxs-lookup"><span data-stu-id="0ab4b-112">See also</span></span>
 
-- [<span data-ttu-id="689e0-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="689e0-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="0ab4b-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0ab4b-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

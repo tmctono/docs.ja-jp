@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450101"
 ---
-# <a name="corsavesize-enumeration"></a><span data-ttu-id="08a6b-102">CorSaveSize 列挙型</span><span class="sxs-lookup"><span data-stu-id="08a6b-102">CorSaveSize Enumeration</span></span>
-<span data-ttu-id="08a6b-103">保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="08a6b-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
+# <a name="corsavesize-enumeration"></a><span data-ttu-id="84bfa-102">CorSaveSize 列挙型</span><span class="sxs-lookup"><span data-stu-id="84bfa-102">CorSaveSize Enumeration</span></span>
+<span data-ttu-id="84bfa-103">保存操作のサイズの照会で要求される精度のレベルを示す値が格納されます。</span><span class="sxs-lookup"><span data-stu-id="84bfa-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08a6b-104">構文</span><span class="sxs-lookup"><span data-stu-id="08a6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84bfa-104">構文</span><span class="sxs-lookup"><span data-stu-id="84bfa-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSaveSize {  
@@ -34,23 +34,23 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="08a6b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="08a6b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="84bfa-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="84bfa-105">Members</span></span>  
   
-|<span data-ttu-id="08a6b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="08a6b-106">Member</span></span>|<span data-ttu-id="08a6b-107">説明</span><span class="sxs-lookup"><span data-stu-id="08a6b-107">Description</span></span>|  
+|<span data-ttu-id="84bfa-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="84bfa-106">Member</span></span>|<span data-ttu-id="84bfa-107">説明</span><span class="sxs-lookup"><span data-stu-id="84bfa-107">Description</span></span>|  
 |------------|-----------------|  
-|`cssAccurate`|<span data-ttu-id="08a6b-108">Specifies that the return value should be exact.</span><span class="sxs-lookup"><span data-stu-id="08a6b-108">Specifies that the return value should be exact.</span></span>|  
-|`cssQuick`|<span data-ttu-id="08a6b-109">Specifies that the return value should be estimated.</span><span class="sxs-lookup"><span data-stu-id="08a6b-109">Specifies that the return value should be estimated.</span></span>|  
-|`cssDiscardTransientCAs`|<span data-ttu-id="08a6b-110">Specifies that discardable types should be removed.</span><span class="sxs-lookup"><span data-stu-id="08a6b-110">Specifies that discardable types should be removed.</span></span>|  
+|`cssAccurate`|<span data-ttu-id="84bfa-108">戻り値が正確であることを指定します。</span><span class="sxs-lookup"><span data-stu-id="84bfa-108">Specifies that the return value should be exact.</span></span>|  
+|`cssQuick`|<span data-ttu-id="84bfa-109">戻り値を推定することを指定します。</span><span class="sxs-lookup"><span data-stu-id="84bfa-109">Specifies that the return value should be estimated.</span></span>|  
+|`cssDiscardTransientCAs`|<span data-ttu-id="84bfa-110">破棄可能な型を削除する必要があることを指定します。</span><span class="sxs-lookup"><span data-stu-id="84bfa-110">Specifies that discardable types should be removed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="08a6b-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="08a6b-111">Requirements</span></span>  
- <span data-ttu-id="08a6b-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="08a6b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84bfa-111">要件</span><span class="sxs-lookup"><span data-stu-id="84bfa-111">Requirements</span></span>  
+ <span data-ttu-id="84bfa-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="84bfa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08a6b-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="08a6b-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="84bfa-113">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="84bfa-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="08a6b-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="08a6b-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="84bfa-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="84bfa-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="08a6b-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08a6b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="84bfa-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84bfa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08a6b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="08a6b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84bfa-116">参照</span><span class="sxs-lookup"><span data-stu-id="84bfa-116">See also</span></span>
 
-- [<span data-ttu-id="08a6b-117">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="08a6b-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="84bfa-117">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="84bfa-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

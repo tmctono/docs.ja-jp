@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445607"
 ---
-# <a name="setassemblyfile-method"></a><span data-ttu-id="5316c-102">SetAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="5316c-102">SetAssemblyFile Method</span></span>
-<span data-ttu-id="5316c-103">Assigns the name of the assembly to be built.</span><span class="sxs-lookup"><span data-stu-id="5316c-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="5316c-104">Not for use when producing unbound modules.</span><span class="sxs-lookup"><span data-stu-id="5316c-104">Not for use when producing unbound modules.</span></span>  
+# <a name="setassemblyfile-method"></a><span data-ttu-id="598f3-102">SetAssemblyFile メソッド</span><span class="sxs-lookup"><span data-stu-id="598f3-102">SetAssemblyFile Method</span></span>
+<span data-ttu-id="598f3-103">ビルドされるアセンブリの名前を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="598f3-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="598f3-104">非バインドモジュールの生成時には使用しません。</span><span class="sxs-lookup"><span data-stu-id="598f3-104">Not for use when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5316c-105">構文</span><span class="sxs-lookup"><span data-stu-id="5316c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="598f3-105">構文</span><span class="sxs-lookup"><span data-stu-id="598f3-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyFile(  
@@ -35,27 +35,27 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5316c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5316c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="598f3-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="598f3-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="5316c-107">Fully qualified name of the manifest file.</span><span class="sxs-lookup"><span data-stu-id="5316c-107">Fully qualified name of the manifest file.</span></span>  
+ <span data-ttu-id="598f3-107">マニフェストファイルの完全修飾名。</span><span class="sxs-lookup"><span data-stu-id="598f3-107">Fully qualified name of the manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="5316c-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="5316c-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
+ <span data-ttu-id="598f3-108">[IMetaDataEmit インターフェイス](../metadata/imetadataemit-interface.md)インターフェイスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="598f3-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="5316c-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="5316c-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="598f3-109">[Assemblyflags 列挙型](../metadata/assemblyflags-enumeration.md)で定義されているフラグ。</span><span class="sxs-lookup"><span data-stu-id="598f3-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="5316c-110">Pointer to ID of resulting assembly.</span><span class="sxs-lookup"><span data-stu-id="5316c-110">Pointer to ID of resulting assembly.</span></span>  
+ <span data-ttu-id="598f3-110">結果として得られるアセンブリの ID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="598f3-110">Pointer to ID of resulting assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5316c-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="5316c-111">Return Value</span></span>  
- <span data-ttu-id="5316c-112">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="5316c-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="598f3-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="598f3-111">Return Value</span></span>  
+ <span data-ttu-id="598f3-112">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="598f3-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5316c-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="5316c-113">Requirements</span></span>  
- <span data-ttu-id="5316c-114">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="5316c-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="598f3-113">要件</span><span class="sxs-lookup"><span data-stu-id="598f3-113">Requirements</span></span>  
+ <span data-ttu-id="598f3-114">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="598f3-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5316c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5316c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="598f3-115">参照</span><span class="sxs-lookup"><span data-stu-id="598f3-115">See also</span></span>
 
-- [<span data-ttu-id="5316c-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5316c-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="5316c-117">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5316c-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="5316c-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="5316c-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="598f3-116">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="598f3-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="598f3-117">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="598f3-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="598f3-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="598f3-118">ALink API</span></span>](index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446365"
 ---
-# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="0bf1a-102">ISymUnmanagedScope::GetChildren メソッド</span><span class="sxs-lookup"><span data-stu-id="0bf1a-102">ISymUnmanagedScope::GetChildren Method</span></span>
-<span data-ttu-id="0bf1a-103">Gets the children of this scope.</span><span class="sxs-lookup"><span data-stu-id="0bf1a-103">Gets the children of this scope.</span></span>  
+# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="91fa7-102">ISymUnmanagedScope::GetChildren メソッド</span><span class="sxs-lookup"><span data-stu-id="91fa7-102">ISymUnmanagedScope::GetChildren Method</span></span>
+<span data-ttu-id="91fa7-103">このスコープの子を取得します。</span><span class="sxs-lookup"><span data-stu-id="91fa7-103">Gets the children of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bf1a-104">構文</span><span class="sxs-lookup"><span data-stu-id="0bf1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91fa7-104">構文</span><span class="sxs-lookup"><span data-stu-id="91fa7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetChildren(  
@@ -35,23 +35,23 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0bf1a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0bf1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91fa7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="91fa7-105">Parameters</span></span>  
  `cChildren`  
- <span data-ttu-id="0bf1a-106">[in] A `ULONG32` that indicates the size of the `children` array.</span><span class="sxs-lookup"><span data-stu-id="0bf1a-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
+ <span data-ttu-id="91fa7-106">から`children` 配列のサイズを示す `ULONG32`。</span><span class="sxs-lookup"><span data-stu-id="91fa7-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
   
  `pcChildren`  
- <span data-ttu-id="0bf1a-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span><span class="sxs-lookup"><span data-stu-id="0bf1a-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
+ <span data-ttu-id="91fa7-107">入出力子を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="91fa7-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
   
  `children`  
- <span data-ttu-id="0bf1a-108">[out] The returned array of children.</span><span class="sxs-lookup"><span data-stu-id="0bf1a-108">[out] The returned array of children.</span></span>  
+ <span data-ttu-id="91fa7-108">入出力返された子の配列。</span><span class="sxs-lookup"><span data-stu-id="91fa7-108">[out] The returned array of children.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0bf1a-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="0bf1a-109">Return Value</span></span>  
- <span data-ttu-id="0bf1a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="0bf1a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="91fa7-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="91fa7-109">Return Value</span></span>  
+ <span data-ttu-id="91fa7-110">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="91fa7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bf1a-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="0bf1a-111">Requirements</span></span>  
- <span data-ttu-id="0bf1a-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0bf1a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91fa7-111">要件</span><span class="sxs-lookup"><span data-stu-id="91fa7-111">Requirements</span></span>  
+ <span data-ttu-id="91fa7-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="91fa7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bf1a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0bf1a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91fa7-113">参照</span><span class="sxs-lookup"><span data-stu-id="91fa7-113">See also</span></span>
 
-- [<span data-ttu-id="0bf1a-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0bf1a-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="0bf1a-115">GetParent メソッド</span><span class="sxs-lookup"><span data-stu-id="0bf1a-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [<span data-ttu-id="91fa7-114">ISymUnmanagedScope インターフェイス</span><span class="sxs-lookup"><span data-stu-id="91fa7-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="91fa7-115">GetParent メソッド</span><span class="sxs-lookup"><span data-stu-id="91fa7-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)

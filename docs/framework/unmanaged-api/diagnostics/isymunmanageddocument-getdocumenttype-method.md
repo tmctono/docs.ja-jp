@@ -22,23 +22,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449196"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="94f2a-102">ISymUnmanagedDocument::GetDocumentType メソッド</span><span class="sxs-lookup"><span data-stu-id="94f2a-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="94f2a-103">Gets the document type of this document.</span><span class="sxs-lookup"><span data-stu-id="94f2a-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="6282e-102">ISymUnmanagedDocument::GetDocumentType メソッド</span><span class="sxs-lookup"><span data-stu-id="6282e-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="6282e-103">このドキュメントのドキュメントの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="6282e-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94f2a-104">構文</span><span class="sxs-lookup"><span data-stu-id="94f2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6282e-104">構文</span><span class="sxs-lookup"><span data-stu-id="6282e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94f2a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="94f2a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6282e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6282e-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="94f2a-106">[out] Pointer to a variable that receives the document type.</span><span class="sxs-lookup"><span data-stu-id="94f2a-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="6282e-106">入出力ドキュメント型を受け取る変数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6282e-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="94f2a-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="94f2a-107">Return Value</span></span>  
- <span data-ttu-id="94f2a-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="94f2a-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6282e-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="6282e-107">Return Value</span></span>  
+ <span data-ttu-id="6282e-108">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="6282e-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94f2a-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="94f2a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6282e-109">参照</span><span class="sxs-lookup"><span data-stu-id="6282e-109">See also</span></span>
 
-- [<span data-ttu-id="94f2a-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="94f2a-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="6282e-110">ISymUnmanagedDocument インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6282e-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426748"
 ---
-# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="49b53-102">ISymUnmanagedReader::GetMethodByVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="49b53-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
-<span data-ttu-id="49b53-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span><span class="sxs-lookup"><span data-stu-id="49b53-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="49b53-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span><span class="sxs-lookup"><span data-stu-id="49b53-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
+# <a name="isymunmanagedreadergetmethodbyversion-method"></a><span data-ttu-id="bc48b-102">ISymUnmanagedReader::GetMethodByVersion メソッド</span><span class="sxs-lookup"><span data-stu-id="bc48b-102">ISymUnmanagedReader::GetMethodByVersion Method</span></span>
+<span data-ttu-id="bc48b-103">メソッドトークンと編集およびコピーバージョン番号を指定して、シンボルリーダーメソッドを取得します。</span><span class="sxs-lookup"><span data-stu-id="bc48b-103">Gets a symbol reader method, given a method token and an edit-and-copy version number.</span></span> <span data-ttu-id="bc48b-104">バージョン番号は1から始まり、編集とコピー操作の結果としてメソッドが変更されるたびに増分されます。</span><span class="sxs-lookup"><span data-stu-id="bc48b-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49b53-105">構文</span><span class="sxs-lookup"><span data-stu-id="49b53-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc48b-105">構文</span><span class="sxs-lookup"><span data-stu-id="bc48b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodByVersion (  
@@ -34,22 +34,22 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49b53-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="49b53-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bc48b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="bc48b-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="49b53-107">[in] The method token.</span><span class="sxs-lookup"><span data-stu-id="49b53-107">[in] The method token.</span></span>  
+ <span data-ttu-id="bc48b-107">からメソッドトークン。</span><span class="sxs-lookup"><span data-stu-id="bc48b-107">[in] The method token.</span></span>  
   
  `version`  
- <span data-ttu-id="49b53-108">[in] The method version.</span><span class="sxs-lookup"><span data-stu-id="49b53-108">[in] The method version.</span></span>  
+ <span data-ttu-id="bc48b-108">からメソッドのバージョン。</span><span class="sxs-lookup"><span data-stu-id="bc48b-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="49b53-109">[out] A pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="49b53-109">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="bc48b-109">入出力返されたインターフェイスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="bc48b-109">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="49b53-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="49b53-110">Return Value</span></span>  
- <span data-ttu-id="49b53-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="49b53-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc48b-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="bc48b-110">Return Value</span></span>  
+ <span data-ttu-id="bc48b-111">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="bc48b-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49b53-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="49b53-112">Requirements</span></span>  
- <span data-ttu-id="49b53-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="49b53-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc48b-112">要件</span><span class="sxs-lookup"><span data-stu-id="bc48b-112">Requirements</span></span>  
+ <span data-ttu-id="bc48b-113">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="bc48b-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49b53-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="49b53-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc48b-114">参照</span><span class="sxs-lookup"><span data-stu-id="bc48b-114">See also</span></span>
 
-- [<span data-ttu-id="49b53-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="49b53-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="bc48b-115">ISymUnmanagedReader インターフェイス</span><span class="sxs-lookup"><span data-stu-id="bc48b-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -22,32 +22,32 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438912"
 ---
-# <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a><span data-ttu-id="af2c9-102">ICorProfilerInfo::GetInprocInspectionIThisThread メソッド</span><span class="sxs-lookup"><span data-stu-id="af2c9-102">ICorProfilerInfo::GetInprocInspectionIThisThread Method</span></span>
-<span data-ttu-id="af2c9-103">Gets an object that can be queried for the ICorDebugThread interface.</span><span class="sxs-lookup"><span data-stu-id="af2c9-103">Gets an object that can be queried for the ICorDebugThread interface.</span></span> <span data-ttu-id="af2c9-104">This method is obsolete in the .NET Framework version 2.0.</span><span class="sxs-lookup"><span data-stu-id="af2c9-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a><span data-ttu-id="de730-102">ICorProfilerInfo::GetInprocInspectionIThisThread メソッド</span><span class="sxs-lookup"><span data-stu-id="de730-102">ICorProfilerInfo::GetInprocInspectionIThisThread Method</span></span>
+<span data-ttu-id="de730-103">のオブジェクトインターフェイスに対してクエリを実行できるオブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="de730-103">Gets an object that can be queried for the ICorDebugThread interface.</span></span> <span data-ttu-id="de730-104">このメソッドは .NET Framework バージョン2.0 では廃止されています。</span><span class="sxs-lookup"><span data-stu-id="de730-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af2c9-105">構文</span><span class="sxs-lookup"><span data-stu-id="af2c9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de730-105">構文</span><span class="sxs-lookup"><span data-stu-id="de730-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetInprocInspectionIThisThread(  
     [out] IUnknown **ppicd);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af2c9-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="af2c9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de730-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="de730-106">Parameters</span></span>  
  `ppicd`  
- <span data-ttu-id="af2c9-107">[out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.</span><span class="sxs-lookup"><span data-stu-id="af2c9-107">[out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.</span></span>  
+ <span data-ttu-id="de730-107">`ICorDebugThread` インターフェイスに対してクエリを実行できる[out](/cpp/atl/iunknown)オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="de730-107">[out](/cpp/atl/iunknown) object that can be queried for the `ICorDebugThread` interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af2c9-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="af2c9-108">Remarks</span></span>  
- <span data-ttu-id="af2c9-109">The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0.</span><span class="sxs-lookup"><span data-stu-id="af2c9-109">The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="af2c9-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span><span class="sxs-lookup"><span data-stu-id="af2c9-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="af2c9-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span><span class="sxs-lookup"><span data-stu-id="af2c9-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="de730-108">コメント</span><span class="sxs-lookup"><span data-stu-id="de730-108">Remarks</span></span>  
+ <span data-ttu-id="de730-109">共通言語ランタイム (CLR) のデバッグサービスでは、.NET Framework バージョン1.0 でサポートされているプロセス内デバッグが制限されています。</span><span class="sxs-lookup"><span data-stu-id="de730-109">The common language runtime (CLR) debugging services supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="de730-110">インプロセスデバッグでは、デバッグ API の検査部分を使用するプロファイラーが有効になりました。</span><span class="sxs-lookup"><span data-stu-id="de730-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="de730-111">お客様からのフィードバックの結果として、プロセス内デバッグはバージョン2.0 の .NET Framework から削除され、プロファイル API により多くの機能を備えた一連の機能に置き換えられました。</span><span class="sxs-lookup"><span data-stu-id="de730-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af2c9-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="af2c9-112">Requirements</span></span>  
- <span data-ttu-id="af2c9-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af2c9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de730-112">要件</span><span class="sxs-lookup"><span data-stu-id="de730-112">Requirements</span></span>  
+ <span data-ttu-id="de730-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="de730-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af2c9-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="af2c9-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="de730-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="de730-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="af2c9-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af2c9-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="de730-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="de730-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="af2c9-116">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="af2c9-116">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="de730-116">**.NET Framework のバージョン:** 1.0</span><span class="sxs-lookup"><span data-stu-id="de730-116">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af2c9-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="af2c9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de730-117">参照</span><span class="sxs-lookup"><span data-stu-id="de730-117">See also</span></span>
 
-- [<span data-ttu-id="af2c9-118">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af2c9-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="de730-118">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="de730-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

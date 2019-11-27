@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428420"
 ---
-# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="dbf7a-102">IMetaDataEmit::SetFieldRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="dbf7a-102">IMetaDataEmit::SetFieldRVA Method</span></span>
-<span data-ttu-id="dbf7a-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span><span class="sxs-lookup"><span data-stu-id="dbf7a-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
+# <a name="imetadataemitsetfieldrva-method"></a><span data-ttu-id="0862b-102">IMetaDataEmit::SetFieldRVA メソッド</span><span class="sxs-lookup"><span data-stu-id="0862b-102">IMetaDataEmit::SetFieldRVA Method</span></span>
+<span data-ttu-id="0862b-103">指定したトークンによって参照されるフィールドの相対仮想アドレスのグローバル変数値を設定します。</span><span class="sxs-lookup"><span data-stu-id="0862b-103">Sets a global variable value for the relative virtual address of the field referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbf7a-104">構文</span><span class="sxs-lookup"><span data-stu-id="dbf7a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0862b-104">構文</span><span class="sxs-lookup"><span data-stu-id="0862b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFieldRVA (   
@@ -34,23 +34,23 @@ HRESULT SetFieldRVA (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dbf7a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="dbf7a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0862b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0862b-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="dbf7a-106">[in] The token for the target field.</span><span class="sxs-lookup"><span data-stu-id="dbf7a-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="0862b-106">からターゲットフィールドのトークン。</span><span class="sxs-lookup"><span data-stu-id="0862b-106">[in] The token for the target field.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="dbf7a-107">[in] The address of a code or data area.</span><span class="sxs-lookup"><span data-stu-id="dbf7a-107">[in] The address of a code or data area.</span></span>  
+ <span data-ttu-id="0862b-107">からコードまたはデータ領域のアドレス。</span><span class="sxs-lookup"><span data-stu-id="0862b-107">[in] The address of a code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbf7a-108">［要件］</span><span class="sxs-lookup"><span data-stu-id="dbf7a-108">Requirements</span></span>  
- <span data-ttu-id="dbf7a-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dbf7a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0862b-108">要件</span><span class="sxs-lookup"><span data-stu-id="0862b-108">Requirements</span></span>  
+ <span data-ttu-id="0862b-109">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0862b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbf7a-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dbf7a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0862b-110">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="0862b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dbf7a-111">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dbf7a-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0862b-111">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="0862b-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="dbf7a-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbf7a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0862b-112">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0862b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbf7a-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="dbf7a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0862b-113">参照</span><span class="sxs-lookup"><span data-stu-id="0862b-113">See also</span></span>
 
-- [<span data-ttu-id="dbf7a-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dbf7a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="dbf7a-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dbf7a-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="0862b-114">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0862b-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0862b-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0862b-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

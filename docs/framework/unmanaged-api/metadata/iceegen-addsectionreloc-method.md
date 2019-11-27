@@ -22,12 +22,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436412"
 ---
-# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="32e3b-102">ICeeGen::AddSectionReloc メソッド</span><span class="sxs-lookup"><span data-stu-id="32e3b-102">ICeeGen::AddSectionReloc Method</span></span>
-<span data-ttu-id="32e3b-103">Adds a .reloc instruction to the code base.</span><span class="sxs-lookup"><span data-stu-id="32e3b-103">Adds a .reloc instruction to the code base.</span></span>  
+# <a name="iceegenaddsectionreloc-method"></a><span data-ttu-id="a7067-102">ICeeGen::AddSectionReloc メソッド</span><span class="sxs-lookup"><span data-stu-id="a7067-102">ICeeGen::AddSectionReloc Method</span></span>
+<span data-ttu-id="a7067-103">コードベースに reloc 命令を追加します。</span><span class="sxs-lookup"><span data-stu-id="a7067-103">Adds a .reloc instruction to the code base.</span></span>  
   
- <span data-ttu-id="32e3b-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="32e3b-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="a7067-104">このメソッドは互換性のために残されています。使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="a7067-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32e3b-105">構文</span><span class="sxs-lookup"><span data-stu-id="32e3b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7067-105">構文</span><span class="sxs-lookup"><span data-stu-id="a7067-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddSectionReloc (  
@@ -38,28 +38,28 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32e3b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="32e3b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7067-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a7067-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="32e3b-107">[in] The section of in-memory code to which to add a .reloc instruction.</span><span class="sxs-lookup"><span data-stu-id="32e3b-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
+ <span data-ttu-id="a7067-107">からReloc 命令を追加するメモリ内コードのセクション。</span><span class="sxs-lookup"><span data-stu-id="a7067-107">[in] The section of in-memory code to which to add a .reloc instruction.</span></span>  
   
  `offset`  
- <span data-ttu-id="32e3b-108">[in] The offset of the section.</span><span class="sxs-lookup"><span data-stu-id="32e3b-108">[in] The offset of the section.</span></span>  
+ <span data-ttu-id="a7067-108">からセクションのオフセット。</span><span class="sxs-lookup"><span data-stu-id="a7067-108">[in] The offset of the section.</span></span>  
   
  `relativeTo`  
- <span data-ttu-id="32e3b-109">[in] The section to which `offset` refers.</span><span class="sxs-lookup"><span data-stu-id="32e3b-109">[in] The section to which `offset` refers.</span></span>  
+ <span data-ttu-id="a7067-109">から`offset` が参照するセクション。</span><span class="sxs-lookup"><span data-stu-id="a7067-109">[in] The section to which `offset` refers.</span></span>  
   
  `relocType`  
- <span data-ttu-id="32e3b-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span><span class="sxs-lookup"><span data-stu-id="32e3b-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
+ <span data-ttu-id="a7067-110">から[CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)値の1つ。追加する reloc 命令の種類を示します。</span><span class="sxs-lookup"><span data-stu-id="a7067-110">[in] One of the [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) values, indicating the kind of .reloc instruction to add.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32e3b-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="32e3b-111">Requirements</span></span>  
- <span data-ttu-id="32e3b-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="32e3b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7067-111">要件</span><span class="sxs-lookup"><span data-stu-id="a7067-111">Requirements</span></span>  
+ <span data-ttu-id="a7067-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a7067-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32e3b-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="32e3b-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a7067-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="a7067-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="32e3b-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="32e3b-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a7067-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="a7067-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="32e3b-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32e3b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a7067-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7067-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32e3b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="32e3b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7067-116">参照</span><span class="sxs-lookup"><span data-stu-id="a7067-116">See also</span></span>
 
-- [<span data-ttu-id="32e3b-117">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="32e3b-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="a7067-117">ICeeGen インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a7067-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
