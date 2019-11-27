@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440570"
 ---
-# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="af367-102">IMetaDataEmit::SetPinvokeMap メソッド</span><span class="sxs-lookup"><span data-stu-id="af367-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
-<span data-ttu-id="af367-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span><span class="sxs-lookup"><span data-stu-id="af367-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
+# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="87c2f-102">IMetaDataEmit::SetPinvokeMap メソッド</span><span class="sxs-lookup"><span data-stu-id="87c2f-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
+<span data-ttu-id="87c2f-103">[IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)の前の呼び出しで定義されているように、メソッドの PInvoke 署名の機能を設定または変更します。</span><span class="sxs-lookup"><span data-stu-id="87c2f-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af367-104">構文</span><span class="sxs-lookup"><span data-stu-id="af367-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87c2f-104">構文</span><span class="sxs-lookup"><span data-stu-id="87c2f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPinvokeMap (   
@@ -36,29 +36,29 @@ HRESULT SetPinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af367-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="af367-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87c2f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="87c2f-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="af367-106">[in] The `mdToken` to which mapping information applies.</span><span class="sxs-lookup"><span data-stu-id="af367-106">[in] The `mdToken` to which mapping information applies.</span></span>  
+ <span data-ttu-id="87c2f-106">からマッピング情報が適用される `mdToken`。</span><span class="sxs-lookup"><span data-stu-id="87c2f-106">[in] The `mdToken` to which mapping information applies.</span></span>  
   
  `dwMappingFlags`  
- <span data-ttu-id="af367-107">[in] Flags used by PInvoke to do the mapping.</span><span class="sxs-lookup"><span data-stu-id="af367-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="af367-108">This is a bitmask of `CorPinvokeMap` values.</span><span class="sxs-lookup"><span data-stu-id="af367-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
+ <span data-ttu-id="87c2f-107">からマッピングを行うために PInvoke によって使用されるフラグ。</span><span class="sxs-lookup"><span data-stu-id="87c2f-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="87c2f-108">これは `CorPinvokeMap` 値のビットマスクです。</span><span class="sxs-lookup"><span data-stu-id="87c2f-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="af367-109">[in] The name of the target export in the native DLL.</span><span class="sxs-lookup"><span data-stu-id="af367-109">[in] The name of the target export in the native DLL.</span></span>  
+ <span data-ttu-id="87c2f-109">からネイティブ DLL 内のターゲットエクスポートの名前。</span><span class="sxs-lookup"><span data-stu-id="87c2f-109">[in] The name of the target export in the native DLL.</span></span>  
   
  `mrImportDLL`  
- <span data-ttu-id="af367-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span><span class="sxs-lookup"><span data-stu-id="af367-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
+ <span data-ttu-id="87c2f-110">からターゲットのアンマネージ DLL の `mdModuleRef` トークン。</span><span class="sxs-lookup"><span data-stu-id="87c2f-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af367-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="af367-111">Requirements</span></span>  
- <span data-ttu-id="af367-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af367-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87c2f-111">要件</span><span class="sxs-lookup"><span data-stu-id="87c2f-111">Requirements</span></span>  
+ <span data-ttu-id="87c2f-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="87c2f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af367-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af367-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="87c2f-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="87c2f-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="af367-114">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="af367-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="87c2f-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="87c2f-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="af367-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af367-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="87c2f-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87c2f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af367-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="af367-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87c2f-116">参照</span><span class="sxs-lookup"><span data-stu-id="87c2f-116">See also</span></span>
 
-- [<span data-ttu-id="af367-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af367-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="af367-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af367-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="87c2f-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="87c2f-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="87c2f-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="87c2f-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

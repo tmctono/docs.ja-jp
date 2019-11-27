@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426648"
 ---
-# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="b41b9-102">IMetaDataTables::GetUserStringHeapSize メソッド</span><span class="sxs-lookup"><span data-stu-id="b41b9-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
-<span data-ttu-id="b41b9-103">Gets the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="b41b9-103">Gets the size, in bytes, of the user string heap.</span></span>  
+# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="6fbad-102">IMetaDataTables::GetUserStringHeapSize メソッド</span><span class="sxs-lookup"><span data-stu-id="6fbad-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
+<span data-ttu-id="6fbad-103">ユーザー文字列ヒープのサイズ (バイト単位) を取得します。</span><span class="sxs-lookup"><span data-stu-id="6fbad-103">Gets the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b41b9-104">構文</span><span class="sxs-lookup"><span data-stu-id="b41b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6fbad-104">構文</span><span class="sxs-lookup"><span data-stu-id="6fbad-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetUserStringHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b41b9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b41b9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6fbad-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6fbad-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="b41b9-106">[out] A pointer to the size, in bytes, of the user string heap.</span><span class="sxs-lookup"><span data-stu-id="b41b9-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
+ <span data-ttu-id="6fbad-106">入出力ユーザー文字列ヒープのサイズ (バイト単位) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6fbad-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b41b9-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="b41b9-107">Requirements</span></span>  
- <span data-ttu-id="b41b9-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b41b9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6fbad-107">要件</span><span class="sxs-lookup"><span data-stu-id="6fbad-107">Requirements</span></span>  
+ <span data-ttu-id="6fbad-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6fbad-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b41b9-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b41b9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6fbad-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="6fbad-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b41b9-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b41b9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6fbad-110">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="6fbad-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b41b9-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b41b9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6fbad-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fbad-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b41b9-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="b41b9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6fbad-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="6fbad-112">See also</span></span>
 
-- [<span data-ttu-id="b41b9-113">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b41b9-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="b41b9-114">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b41b9-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="6fbad-113">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6fbad-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="6fbad-114">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6fbad-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

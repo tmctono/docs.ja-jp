@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449461"
 ---
-# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="241f2-102">COR_PRF_GC_ROOT_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="241f2-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
-<span data-ttu-id="241f2-103">Indicates a property of a garbage collection root.</span><span class="sxs-lookup"><span data-stu-id="241f2-103">Indicates a property of a garbage collection root.</span></span>  
+# <a name="cor_prf_gc_root_flags-enumeration"></a><span data-ttu-id="583ee-102">COR_PRF_GC_ROOT_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="583ee-102">COR_PRF_GC_ROOT_FLAGS Enumeration</span></span>
+<span data-ttu-id="583ee-103">ガベージコレクションのルートのプロパティを示します。</span><span class="sxs-lookup"><span data-stu-id="583ee-103">Indicates a property of a garbage collection root.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="241f2-104">構文</span><span class="sxs-lookup"><span data-stu-id="241f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="583ee-104">構文</span><span class="sxs-lookup"><span data-stu-id="583ee-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,27 +35,27 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="241f2-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="241f2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="583ee-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="583ee-105">Members</span></span>  
   
-|<span data-ttu-id="241f2-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="241f2-106">Member</span></span>|<span data-ttu-id="241f2-107">説明</span><span class="sxs-lookup"><span data-stu-id="241f2-107">Description</span></span>|  
+|<span data-ttu-id="583ee-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="583ee-106">Member</span></span>|<span data-ttu-id="583ee-107">説明</span><span class="sxs-lookup"><span data-stu-id="583ee-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="241f2-108">The root prevents a garbage collection from moving the object.</span><span class="sxs-lookup"><span data-stu-id="241f2-108">The root prevents a garbage collection from moving the object.</span></span>|  
-|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="241f2-109">The root does not prevent garbage collection.</span><span class="sxs-lookup"><span data-stu-id="241f2-109">The root does not prevent garbage collection.</span></span>|  
-|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="241f2-110">The root refers to a field of the object rather than the object itself.</span><span class="sxs-lookup"><span data-stu-id="241f2-110">The root refers to a field of the object rather than the object itself.</span></span>|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="241f2-111">The root prevents garbage collection if the reference count of the object is a certain value.</span><span class="sxs-lookup"><span data-stu-id="241f2-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
+|`COR_PRF_GC_ROOT_PINNING`|<span data-ttu-id="583ee-108">ルートは、ガベージコレクションがオブジェクトを移動できないようにします。</span><span class="sxs-lookup"><span data-stu-id="583ee-108">The root prevents a garbage collection from moving the object.</span></span>|  
+|`COR_PRF_GC_ROOT_WEAKREF`|<span data-ttu-id="583ee-109">ルートによってガベージコレクションが妨げられることはありません。</span><span class="sxs-lookup"><span data-stu-id="583ee-109">The root does not prevent garbage collection.</span></span>|  
+|`COR_PRF_GC_ROOT_INTERIOR`|<span data-ttu-id="583ee-110">ルートは、オブジェクト自体ではなく、オブジェクトのフィールドを参照します。</span><span class="sxs-lookup"><span data-stu-id="583ee-110">The root refers to a field of the object rather than the object itself.</span></span>|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|<span data-ttu-id="583ee-111">オブジェクトの参照カウントが特定の値の場合、ルートはガベージコレクションを防止します。</span><span class="sxs-lookup"><span data-stu-id="583ee-111">The root prevents garbage collection if the reference count of the object is a certain value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="241f2-112">Remarks</span><span class="sxs-lookup"><span data-stu-id="241f2-112">Remarks</span></span>  
- <span data-ttu-id="241f2-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span><span class="sxs-lookup"><span data-stu-id="241f2-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="241f2-114">However, not all roots are special.</span><span class="sxs-lookup"><span data-stu-id="241f2-114">However, not all roots are special.</span></span> <span data-ttu-id="241f2-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span><span class="sxs-lookup"><span data-stu-id="241f2-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="241f2-116">For such roots, there are no flags to convey.</span><span class="sxs-lookup"><span data-stu-id="241f2-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="241f2-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span><span class="sxs-lookup"><span data-stu-id="241f2-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="583ee-112">コメント</span><span class="sxs-lookup"><span data-stu-id="583ee-112">Remarks</span></span>  
+ <span data-ttu-id="583ee-113">`COR_PRF_GC_ROOT_FLAGS` は、特殊なルートに関する追加情報を提供するビットマスクです。</span><span class="sxs-lookup"><span data-stu-id="583ee-113">`COR_PRF_GC_ROOT_FLAGS` is a bitmask that provides additional information about special roots.</span></span> <span data-ttu-id="583ee-114">ただし、すべてのルートが特別であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="583ee-114">However, not all roots are special.</span></span> <span data-ttu-id="583ee-115">たとえば、一部のルートは、弱い参照、内部ポインター、ピン留め、または参照カウントされていません。</span><span class="sxs-lookup"><span data-stu-id="583ee-115">For example, some roots are not weak references, interior pointers, pinned, or reference-counted.</span></span> <span data-ttu-id="583ee-116">このようなルートの場合、伝えるフラグはありません。</span><span class="sxs-lookup"><span data-stu-id="583ee-116">For such roots, there are no flags to convey.</span></span> <span data-ttu-id="583ee-117">したがって、 [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)メソッドなど、この列挙を使用するメソッドは、フラグのビットマスクとして0を送信し、すべてのフラグがオフになっていることを示します。</span><span class="sxs-lookup"><span data-stu-id="583ee-117">Therefore, methods that use this enumeration, such as the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) method, send 0 for the flags bitmask, indicating that all flags are turned off.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="241f2-118">［要件］</span><span class="sxs-lookup"><span data-stu-id="241f2-118">Requirements</span></span>  
- <span data-ttu-id="241f2-119">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="241f2-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="583ee-118">要件</span><span class="sxs-lookup"><span data-stu-id="583ee-118">Requirements</span></span>  
+ <span data-ttu-id="583ee-119">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="583ee-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="241f2-120">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="241f2-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="583ee-120">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="583ee-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="241f2-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="241f2-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="583ee-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="583ee-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="241f2-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="241f2-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="583ee-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="583ee-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="241f2-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="241f2-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="583ee-123">参照</span><span class="sxs-lookup"><span data-stu-id="583ee-123">See also</span></span>
 
-- [<span data-ttu-id="241f2-124">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="241f2-124">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="583ee-124">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="583ee-124">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

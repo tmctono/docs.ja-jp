@@ -18,11 +18,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449858"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="4d5f1-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span><span class="sxs-lookup"><span data-stu-id="4d5f1-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="2b6a4-102">ICorProfilerInfo10:: EnumerateObjectReferences メソッド</span><span class="sxs-lookup"><span data-stu-id="2b6a4-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
 
-<span data-ttu-id="4d5f1-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span><span class="sxs-lookup"><span data-stu-id="4d5f1-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
+<span data-ttu-id="2b6a4-103">ObjectID、callback、および clientData を指定すると、各オブジェクト参照 (存在する場合) が列挙されます。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4d5f1-104">構文</span><span class="sxs-lookup"><span data-stu-id="4d5f1-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2b6a4-104">構文</span><span class="sxs-lookup"><span data-stu-id="2b6a4-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
@@ -30,31 +30,31 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="4d5f1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4d5f1-105">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="2b6a4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2b6a4-105">Parameters</span></span>
 
 `objectId` \
-<span data-ttu-id="4d5f1-106">[in] The object to enumerate references on.</span><span class="sxs-lookup"><span data-stu-id="4d5f1-106">[in] The object to enumerate references on.</span></span>
+<span data-ttu-id="2b6a4-106">から参照を列挙するオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-106">[in] The object to enumerate references on.</span></span>
 
 `callback` \
-<span data-ttu-id="4d5f1-107">[in] The function that will be called with the references for the object.</span><span class="sxs-lookup"><span data-stu-id="4d5f1-107">[in] The function that will be called with the references for the object.</span></span>
+<span data-ttu-id="2b6a4-107">からオブジェクトの参照を使用して呼び出される関数。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-107">[in] The function that will be called with the references for the object.</span></span>
 
 `clientData` \
-<span data-ttu-id="4d5f1-108">[in] Profiler-provided data to pass to the `callback` function.</span><span class="sxs-lookup"><span data-stu-id="4d5f1-108">[in] Profiler-provided data to pass to the `callback` function.</span></span>
+<span data-ttu-id="2b6a4-108">から`callback` 関数に渡すプロファイラー提供のデータ。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-108">[in] Profiler-provided data to pass to the `callback` function.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="4d5f1-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="4d5f1-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2b6a4-109">コメント</span><span class="sxs-lookup"><span data-stu-id="2b6a4-109">Remarks</span></span>
 
-<span data-ttu-id="4d5f1-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span><span class="sxs-lookup"><span data-stu-id="4d5f1-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
+<span data-ttu-id="2b6a4-110">`EnumerateObjectReferences` メソッドは[ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4d5f1-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="4d5f1-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2b6a4-111">要件</span><span class="sxs-lookup"><span data-stu-id="2b6a4-111">Requirements</span></span>
 
-<span data-ttu-id="4d5f1-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="4d5f1-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="2b6a4-112">**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2b6a4-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
 
-<span data-ttu-id="4d5f1-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4d5f1-113">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="2b6a4-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2b6a4-113">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="4d5f1-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d5f1-114">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="2b6a4-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b6a4-114">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="4d5f1-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d5f1-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="2b6a4-115">**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b6a4-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4d5f1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="4d5f1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b6a4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b6a4-116">See also</span></span>
 
-- [<span data-ttu-id="4d5f1-117">ICorProfilerInfo10 Interface</span><span class="sxs-lookup"><span data-stu-id="4d5f1-117">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="2b6a4-117">ICorProfilerInfo10 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b6a4-117">ICorProfilerInfo10 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450259"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="5055b-102">CorManifestResourceFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="5055b-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="5055b-103">Indicates the visibility of resources encoded in an assembly manifest.</span><span class="sxs-lookup"><span data-stu-id="5055b-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="90540-102">CorManifestResourceFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="90540-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="90540-103">アセンブリマニフェストでエンコードされたリソースを表示するかどうかを示します。</span><span class="sxs-lookup"><span data-stu-id="90540-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5055b-104">構文</span><span class="sxs-lookup"><span data-stu-id="5055b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90540-104">構文</span><span class="sxs-lookup"><span data-stu-id="90540-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -36,21 +36,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5055b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="5055b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="90540-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="90540-105">Members</span></span>  
   
-|<span data-ttu-id="5055b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="5055b-106">Member</span></span>|<span data-ttu-id="5055b-107">説明</span><span class="sxs-lookup"><span data-stu-id="5055b-107">Description</span></span>|  
+|<span data-ttu-id="90540-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="90540-106">Member</span></span>|<span data-ttu-id="90540-107">説明</span><span class="sxs-lookup"><span data-stu-id="90540-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="5055b-108">予約済み。</span><span class="sxs-lookup"><span data-stu-id="5055b-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="5055b-109">The resources are public.</span><span class="sxs-lookup"><span data-stu-id="5055b-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="5055b-110">The resources are private.</span><span class="sxs-lookup"><span data-stu-id="5055b-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="90540-108">予約済み。</span><span class="sxs-lookup"><span data-stu-id="90540-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="90540-109">リソースはパブリックです。</span><span class="sxs-lookup"><span data-stu-id="90540-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="90540-110">リソースはプライベートです。</span><span class="sxs-lookup"><span data-stu-id="90540-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5055b-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="5055b-111">Requirements</span></span>  
- <span data-ttu-id="5055b-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5055b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90540-111">要件</span><span class="sxs-lookup"><span data-stu-id="90540-111">Requirements</span></span>  
+ <span data-ttu-id="90540-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="90540-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5055b-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5055b-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="90540-113">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="90540-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5055b-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5055b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="90540-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90540-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5055b-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="5055b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90540-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="90540-115">See also</span></span>
 
-- [<span data-ttu-id="5055b-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="5055b-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="90540-116">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="90540-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

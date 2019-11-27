@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449656"
 ---
-# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="66373-102">ICorProfilerInfo3::GetStringLayout2 メソッド</span><span class="sxs-lookup"><span data-stu-id="66373-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
-<span data-ttu-id="66373-103">文字列オブジェクトのレイアウトに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="66373-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="66373-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="66373-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
+# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="3726c-102">ICorProfilerInfo3::GetStringLayout2 メソッド</span><span class="sxs-lookup"><span data-stu-id="3726c-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
+<span data-ttu-id="3726c-103">文字列オブジェクトのレイアウトに関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="3726c-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="3726c-104">このメソッドは、 [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)メソッドよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="3726c-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="66373-105">構文</span><span class="sxs-lookup"><span data-stu-id="66373-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3726c-105">構文</span><span class="sxs-lookup"><span data-stu-id="3726c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStringLayout2(  
@@ -33,26 +33,26 @@ HRESULT GetStringLayout2(
     [out] ULONG *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="66373-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="66373-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3726c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3726c-106">Parameters</span></span>  
  `pStringLengthOffset`  
- <span data-ttu-id="66373-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span><span class="sxs-lookup"><span data-stu-id="66373-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="66373-108">The length is stored as a `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="66373-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="3726c-107">入出力文字列自体の長さを格納する、`ObjectID` ポインターを基準とした位置のオフセットを指すポインター。</span><span class="sxs-lookup"><span data-stu-id="3726c-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="3726c-108">長さは `DWORD`として格納されます。</span><span class="sxs-lookup"><span data-stu-id="3726c-108">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="66373-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span><span class="sxs-lookup"><span data-stu-id="66373-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
+ <span data-ttu-id="3726c-109">入出力ワイド文字の文字列を格納する、`ObjectID` ポインターを基準としたバッファーのオフセットへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3726c-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="66373-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="66373-110">Remarks</span></span>  
- <span data-ttu-id="66373-111">Strings may or may not be null-terminated.</span><span class="sxs-lookup"><span data-stu-id="66373-111">Strings may or may not be null-terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3726c-110">コメント</span><span class="sxs-lookup"><span data-stu-id="3726c-110">Remarks</span></span>  
+ <span data-ttu-id="3726c-111">文字列は、null で終わることができます。</span><span class="sxs-lookup"><span data-stu-id="3726c-111">Strings may or may not be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="66373-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="66373-112">Requirements</span></span>  
- <span data-ttu-id="66373-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="66373-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3726c-112">要件</span><span class="sxs-lookup"><span data-stu-id="3726c-112">Requirements</span></span>  
+ <span data-ttu-id="3726c-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3726c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="66373-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="66373-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3726c-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3726c-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="66373-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66373-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3726c-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3726c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="66373-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66373-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3726c-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3726c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66373-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="66373-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3726c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3726c-117">See also</span></span>
 
-- [<span data-ttu-id="66373-118">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="66373-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="66373-119">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="66373-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="3726c-118">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3726c-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="3726c-119">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="3726c-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

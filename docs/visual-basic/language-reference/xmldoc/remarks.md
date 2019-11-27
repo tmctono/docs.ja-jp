@@ -12,31 +12,31 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352260"
 ---
-# <a name="remarks-visual-basic"></a><span data-ttu-id="12941-101">\<remarks> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12941-101">\<remarks> (Visual Basic)</span></span>
-<span data-ttu-id="12941-102">Specifies a remarks section for the member.</span><span class="sxs-lookup"><span data-stu-id="12941-102">Specifies a remarks section for the member.</span></span>  
+# <a name="remarks-visual-basic"></a><span data-ttu-id="d5a36-101">\<解説 > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5a36-101">\<remarks> (Visual Basic)</span></span>
+<span data-ttu-id="d5a36-102">メンバーの解説セクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="d5a36-102">Specifies a remarks section for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12941-103">構文</span><span class="sxs-lookup"><span data-stu-id="12941-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5a36-103">構文</span><span class="sxs-lookup"><span data-stu-id="d5a36-103">Syntax</span></span>  
   
 ```xml  
 <remarks>description</remarks>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="12941-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="12941-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d5a36-104">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d5a36-104">Parameters</span></span>  
  `description`  
- <span data-ttu-id="12941-105">メンバーの説明。</span><span class="sxs-lookup"><span data-stu-id="12941-105">A description of the member.</span></span>  
+ <span data-ttu-id="d5a36-105">メンバーの説明。</span><span class="sxs-lookup"><span data-stu-id="d5a36-105">A description of the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="12941-106">Remarks</span><span class="sxs-lookup"><span data-stu-id="12941-106">Remarks</span></span>  
- <span data-ttu-id="12941-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span><span class="sxs-lookup"><span data-stu-id="12941-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d5a36-106">コメント</span><span class="sxs-lookup"><span data-stu-id="d5a36-106">Remarks</span></span>  
+ <span data-ttu-id="d5a36-107">`<remarks>` タグを使用して、 [\<概要 >](../../../visual-basic/language-reference/xmldoc/summary.md)で指定された情報を補足する、型に関する情報を追加します。</span><span class="sxs-lookup"><span data-stu-id="d5a36-107">Use the `<remarks>` tag to add information about a type, supplementing the information specified with [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md).</span></span>  
   
- <span data-ttu-id="12941-108">This information appears in the Object Browser.</span><span class="sxs-lookup"><span data-stu-id="12941-108">This information appears in the Object Browser.</span></span> <span data-ttu-id="12941-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="12941-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
+ <span data-ttu-id="d5a36-108">この情報はオブジェクトブラウザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="d5a36-108">This information appears in the Object Browser.</span></span> <span data-ttu-id="d5a36-109">オブジェクトブラウザーの詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5a36-109">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- <span data-ttu-id="12941-110">コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="12941-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="d5a36-110">コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。</span><span class="sxs-lookup"><span data-stu-id="d5a36-110">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="12941-111">例</span><span class="sxs-lookup"><span data-stu-id="12941-111">Example</span></span>  
- <span data-ttu-id="12941-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span><span class="sxs-lookup"><span data-stu-id="12941-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span></span>  
+## <a name="example"></a><span data-ttu-id="d5a36-111">例</span><span class="sxs-lookup"><span data-stu-id="d5a36-111">Example</span></span>  
+ <span data-ttu-id="d5a36-112">この例では、`<remarks>` タグを使用して、`UpdateRecord` メソッドの動作を説明します。</span><span class="sxs-lookup"><span data-stu-id="d5a36-112">This example uses the `<remarks>` tag to explain what the `UpdateRecord` method does.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="12941-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="12941-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5a36-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5a36-113">See also</span></span>
 
-- [<span data-ttu-id="12941-114">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="12941-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="d5a36-114">XML のコメント用タグ</span><span class="sxs-lookup"><span data-stu-id="d5a36-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

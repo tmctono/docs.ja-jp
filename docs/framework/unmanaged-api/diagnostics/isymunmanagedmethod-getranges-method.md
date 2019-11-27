@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448928"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="df63a-102">ISymUnmanagedMethod::GetRanges メソッド</span><span class="sxs-lookup"><span data-stu-id="df63a-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="df63a-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span><span class="sxs-lookup"><span data-stu-id="df63a-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="df63a-104">The array is an array of integers and has the format [start, end, start, end].</span><span class="sxs-lookup"><span data-stu-id="df63a-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="df63a-105">The number of range pairs is the length of the array divided by 2.</span><span class="sxs-lookup"><span data-stu-id="df63a-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="d772d-102">ISymUnmanagedMethod::GetRanges メソッド</span><span class="sxs-lookup"><span data-stu-id="d772d-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="d772d-103">ドキュメント内の位置が指定されている場合、は、位置がこのメソッド内でカバーする Microsoft 中間言語 (MSIL) の範囲に対応する開始オフセットと終了オフセットのペアの配列を返します。</span><span class="sxs-lookup"><span data-stu-id="d772d-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="d772d-104">配列は整数の配列であり、[開始、終了、開始、終了] の形式です。</span><span class="sxs-lookup"><span data-stu-id="d772d-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="d772d-105">範囲ペアの数は、配列の長さを2で除算した値です。</span><span class="sxs-lookup"><span data-stu-id="d772d-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df63a-106">構文</span><span class="sxs-lookup"><span data-stu-id="df63a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d772d-106">構文</span><span class="sxs-lookup"><span data-stu-id="d772d-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRanges(  
@@ -38,31 +38,31 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="df63a-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="df63a-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d772d-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d772d-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="df63a-108">[in] The document for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="df63a-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="d772d-108">からオフセットが要求されるドキュメント。</span><span class="sxs-lookup"><span data-stu-id="d772d-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="df63a-109">[in] The document line corresponding to the ranges.</span><span class="sxs-lookup"><span data-stu-id="df63a-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="d772d-109">から範囲に対応するドキュメント行。</span><span class="sxs-lookup"><span data-stu-id="d772d-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="df63a-110">[in] The document column corresponding to the ranges.</span><span class="sxs-lookup"><span data-stu-id="df63a-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="d772d-110">から範囲に対応するドキュメント列。</span><span class="sxs-lookup"><span data-stu-id="d772d-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="df63a-111">[in] `ranges` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="df63a-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="d772d-111">[in] `ranges` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="d772d-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="df63a-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span><span class="sxs-lookup"><span data-stu-id="df63a-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="d772d-112">入出力範囲を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d772d-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="df63a-113">[out] A pointer to the buffer that receives the ranges.</span><span class="sxs-lookup"><span data-stu-id="df63a-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="d772d-113">入出力範囲を受け取るバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="d772d-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df63a-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="df63a-114">Return Value</span></span>  
- <span data-ttu-id="df63a-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="df63a-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d772d-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="d772d-114">Return Value</span></span>  
+ <span data-ttu-id="d772d-115">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="d772d-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df63a-116">［要件］</span><span class="sxs-lookup"><span data-stu-id="df63a-116">Requirements</span></span>  
- <span data-ttu-id="df63a-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="df63a-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d772d-116">要件</span><span class="sxs-lookup"><span data-stu-id="d772d-116">Requirements</span></span>  
+ <span data-ttu-id="d772d-117">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="d772d-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df63a-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="df63a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d772d-118">参照</span><span class="sxs-lookup"><span data-stu-id="d772d-118">See also</span></span>
 
-- [<span data-ttu-id="df63a-119">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="df63a-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="d772d-119">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d772d-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

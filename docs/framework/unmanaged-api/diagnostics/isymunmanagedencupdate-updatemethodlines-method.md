@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448996"
 ---
-# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="109c3-102">ISymUnmanagedENCUpdate::UpdateMethodLines メソッド</span><span class="sxs-lookup"><span data-stu-id="109c3-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
-<span data-ttu-id="109c3-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span><span class="sxs-lookup"><span data-stu-id="109c3-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="109c3-104">A delta for each statement is allowed.</span><span class="sxs-lookup"><span data-stu-id="109c3-104">A delta for each statement is allowed.</span></span>  
+# <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="501f4-102">ISymUnmanagedENCUpdate::UpdateMethodLines メソッド</span><span class="sxs-lookup"><span data-stu-id="501f4-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
+<span data-ttu-id="501f4-103">再コンパイルされていないが、行が個別に移動したメソッドの行情報を更新できるようにします。</span><span class="sxs-lookup"><span data-stu-id="501f4-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="501f4-104">各ステートメントのデルタが許可されます。</span><span class="sxs-lookup"><span data-stu-id="501f4-104">A delta for each statement is allowed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="109c3-105">構文</span><span class="sxs-lookup"><span data-stu-id="109c3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="501f4-105">構文</span><span class="sxs-lookup"><span data-stu-id="501f4-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT UpdateMethodLines(  
@@ -34,22 +34,22 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="109c3-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="109c3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="501f4-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="501f4-106">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="109c3-107">[in] The metadata of the method token.</span><span class="sxs-lookup"><span data-stu-id="109c3-107">[in] The metadata of the method token.</span></span>  
+ <span data-ttu-id="501f4-107">からメソッドトークンのメタデータ。</span><span class="sxs-lookup"><span data-stu-id="501f4-107">[in] The metadata of the method token.</span></span>  
   
  `pDeltas`  
- <span data-ttu-id="109c3-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span><span class="sxs-lookup"><span data-stu-id="109c3-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
+ <span data-ttu-id="501f4-108">からメソッド内の各シーケンスポイントのデルタを示す `INT32` 値の配列。</span><span class="sxs-lookup"><span data-stu-id="501f4-108">[in] An array of `INT32` values that indicates deltas for each sequence point in the method.</span></span>  
   
  `cDeltas`  
- <span data-ttu-id="109c3-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span><span class="sxs-lookup"><span data-stu-id="109c3-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
+ <span data-ttu-id="501f4-109">から`pDeltas` パラメーターのサイズを格納している `ULONG`。</span><span class="sxs-lookup"><span data-stu-id="501f4-109">[in] A `ULONG` containing the size of the `pDeltas` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="109c3-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="109c3-110">Return Value</span></span>  
- <span data-ttu-id="109c3-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="109c3-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="501f4-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="501f4-110">Return Value</span></span>  
+ <span data-ttu-id="501f4-111">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="501f4-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="109c3-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="109c3-112">Requirements</span></span>  
- <span data-ttu-id="109c3-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="109c3-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="501f4-112">要件</span><span class="sxs-lookup"><span data-stu-id="501f4-112">Requirements</span></span>  
+ <span data-ttu-id="501f4-113">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="501f4-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="109c3-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="109c3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="501f4-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="501f4-114">See also</span></span>
 
-- [<span data-ttu-id="109c3-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="109c3-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="501f4-115">ISymUnmanagedENCUpdate インターフェイス</span><span class="sxs-lookup"><span data-stu-id="501f4-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

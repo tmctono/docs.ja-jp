@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432331"
 ---
-# <a name="imetadataemitsetpermissionsetprops-method"></a><span data-ttu-id="ab837-102">IMetaDataEmit::SetPermissionSetProps メソッド</span><span class="sxs-lookup"><span data-stu-id="ab837-102">IMetaDataEmit::SetPermissionSetProps Method</span></span>
-<span data-ttu-id="ab837-103">Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span><span class="sxs-lookup"><span data-stu-id="ab837-103">Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span></span>  
+# <a name="imetadataemitsetpermissionsetprops-method"></a><span data-ttu-id="ac1be-102">IMetaDataEmit::SetPermissionSetProps メソッド</span><span class="sxs-lookup"><span data-stu-id="ac1be-102">IMetaDataEmit::SetPermissionSetProps Method</span></span>
+<span data-ttu-id="ac1be-103">[IMetaDataEmit::D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)の前の呼び出しで定義されたアクセス許可セットのメタデータ署名の機能を設定または更新します。</span><span class="sxs-lookup"><span data-stu-id="ac1be-103">Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab837-104">構文</span><span class="sxs-lookup"><span data-stu-id="ab837-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac1be-104">構文</span><span class="sxs-lookup"><span data-stu-id="ac1be-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPermissionSetProps (   
@@ -37,32 +37,32 @@ HRESULT SetPermissionSetProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab837-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ab837-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac1be-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ac1be-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="ab837-106">[in] A metadata token that represents the object to be decorated.</span><span class="sxs-lookup"><span data-stu-id="ab837-106">[in] A metadata token that represents the object to be decorated.</span></span>  
+ <span data-ttu-id="ac1be-106">から修飾されるオブジェクトを表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="ac1be-106">[in] A metadata token that represents the object to be decorated.</span></span>  
   
  `dwAction`  
- <span data-ttu-id="ab837-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span><span class="sxs-lookup"><span data-stu-id="ab837-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
+ <span data-ttu-id="ac1be-107">から使用する宣言セキュリティの種類を指定する[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)値です。</span><span class="sxs-lookup"><span data-stu-id="ac1be-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
   
  `pvPermission`  
- <span data-ttu-id="ab837-108">[in] The permission BLOB.</span><span class="sxs-lookup"><span data-stu-id="ab837-108">[in] The permission BLOB.</span></span>  
+ <span data-ttu-id="ac1be-108">からアクセス許可 BLOB。</span><span class="sxs-lookup"><span data-stu-id="ac1be-108">[in] The permission BLOB.</span></span>  
   
  `cbPermission`  
- <span data-ttu-id="ab837-109">[in] The size, in bytes, of `pvPermission`.</span><span class="sxs-lookup"><span data-stu-id="ab837-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
+ <span data-ttu-id="ac1be-109">から`pvPermission`のサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="ac1be-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
   
  `ppm`  
- <span data-ttu-id="ab837-110">[out] An `mdPermission` metadata token that represents the updated permissions.</span><span class="sxs-lookup"><span data-stu-id="ab837-110">[out] An `mdPermission` metadata token that represents the updated permissions.</span></span>  
+ <span data-ttu-id="ac1be-110">入出力更新されたアクセス許可を表す `mdPermission` メタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="ac1be-110">[out] An `mdPermission` metadata token that represents the updated permissions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab837-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="ab837-111">Requirements</span></span>  
- <span data-ttu-id="ab837-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ab837-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac1be-111">要件</span><span class="sxs-lookup"><span data-stu-id="ac1be-111">Requirements</span></span>  
+ <span data-ttu-id="ac1be-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac1be-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab837-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ab837-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ac1be-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="ac1be-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ab837-114">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ab837-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ac1be-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="ac1be-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ab837-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab837-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ac1be-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac1be-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab837-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab837-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac1be-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac1be-116">See also</span></span>
 
-- [<span data-ttu-id="ab837-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab837-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ab837-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ab837-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="ac1be-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ac1be-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="ac1be-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ac1be-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
