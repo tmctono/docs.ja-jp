@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447657"
 ---
-# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="0eb21-102">IMetaDataImport::EnumMembers メソッド</span><span class="sxs-lookup"><span data-stu-id="0eb21-102">IMetaDataImport::EnumMembers Method</span></span>
-<span data-ttu-id="0eb21-103">指定した型のメンバーを表す MemberDef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="0eb21-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
+# <a name="imetadataimportenummembers-method"></a><span data-ttu-id="5e23c-102">IMetaDataImport::EnumMembers メソッド</span><span class="sxs-lookup"><span data-stu-id="5e23c-102">IMetaDataImport::EnumMembers Method</span></span>
+<span data-ttu-id="5e23c-103">指定した型のメンバーを表す MemberDef トークンを列挙します。</span><span class="sxs-lookup"><span data-stu-id="5e23c-103">Enumerates MemberDef tokens representing members of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0eb21-104">構文</span><span class="sxs-lookup"><span data-stu-id="0eb21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e23c-104">構文</span><span class="sxs-lookup"><span data-stu-id="5e23c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMembers (   
@@ -37,44 +37,44 @@ HRESULT EnumMembers (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0eb21-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0eb21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e23c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5e23c-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="0eb21-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="0eb21-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="5e23c-106">[入力、出力]列挙子へのポインター。</span><span class="sxs-lookup"><span data-stu-id="5e23c-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="0eb21-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="0eb21-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
+ <span data-ttu-id="5e23c-107">からメンバーを列挙する型を表す TypeDef トークン。</span><span class="sxs-lookup"><span data-stu-id="5e23c-107">[in] A TypeDef token representing the type whose members are to be enumerated.</span></span>  
   
  `rMembers`  
- <span data-ttu-id="0eb21-108">[out] The array used to hold the MemberDef tokens.</span><span class="sxs-lookup"><span data-stu-id="0eb21-108">[out] The array used to hold the MemberDef tokens.</span></span>  
+ <span data-ttu-id="5e23c-108">入出力MemberDef トークンを保持するために使用される配列。</span><span class="sxs-lookup"><span data-stu-id="5e23c-108">[out] The array used to hold the MemberDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="0eb21-109">[in] `rMembers` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="0eb21-109">[in] The maximum size of the `rMembers` array.</span></span>  
+ <span data-ttu-id="5e23c-109">[in] `rMembers` 配列の最大サイズ。</span><span class="sxs-lookup"><span data-stu-id="5e23c-109">[in] The maximum size of the `rMembers` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="0eb21-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span><span class="sxs-lookup"><span data-stu-id="0eb21-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
+ <span data-ttu-id="5e23c-110">入出力`rMembers`で返された MemberDef トークンの実際の数。</span><span class="sxs-lookup"><span data-stu-id="5e23c-110">[out] The actual number of MemberDef tokens returned in `rMembers`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0eb21-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="0eb21-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5e23c-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="5e23c-111">Return Value</span></span>  
   
-|<span data-ttu-id="0eb21-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0eb21-112">HRESULT</span></span>|<span data-ttu-id="0eb21-113">説明</span><span class="sxs-lookup"><span data-stu-id="0eb21-113">Description</span></span>|  
+|<span data-ttu-id="5e23c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5e23c-112">HRESULT</span></span>|<span data-ttu-id="5e23c-113">説明</span><span class="sxs-lookup"><span data-stu-id="5e23c-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="0eb21-114">`EnumMembers` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="0eb21-114">`EnumMembers` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="0eb21-115">There are no MemberDef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="0eb21-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="0eb21-116">In that case, `pcTokens` is zero.</span><span class="sxs-lookup"><span data-stu-id="0eb21-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="5e23c-114">`EnumMembers` が正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="5e23c-114">`EnumMembers` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="5e23c-115">列挙する MemberDef トークンがありません。</span><span class="sxs-lookup"><span data-stu-id="5e23c-115">There are no MemberDef tokens to enumerate.</span></span> <span data-ttu-id="5e23c-116">この場合、`pcTokens` は0になります。</span><span class="sxs-lookup"><span data-stu-id="5e23c-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0eb21-117">Remarks</span><span class="sxs-lookup"><span data-stu-id="0eb21-117">Remarks</span></span>  
- <span data-ttu-id="0eb21-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span><span class="sxs-lookup"><span data-stu-id="0eb21-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="0eb21-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span><span class="sxs-lookup"><span data-stu-id="0eb21-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="0eb21-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span><span class="sxs-lookup"><span data-stu-id="0eb21-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="0eb21-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span><span class="sxs-lookup"><span data-stu-id="0eb21-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
+## <a name="remarks"></a><span data-ttu-id="5e23c-117">コメント</span><span class="sxs-lookup"><span data-stu-id="5e23c-117">Remarks</span></span>  
+ <span data-ttu-id="5e23c-118">クラスのメンバーのコレクションを列挙すると、`EnumMembers` は、クラスで直接定義されたメンバー (プロパティまたはイベントでは**ない**) のみを返します。</span><span class="sxs-lookup"><span data-stu-id="5e23c-118">When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class.</span></span> <span data-ttu-id="5e23c-119">クラスが継承されたメンバーの実装を提供している場合でも、クラスが継承するメンバーは返しません。</span><span class="sxs-lookup"><span data-stu-id="5e23c-119">It does not return any members that the class inherits, even if the class provides an implementation for those inherited members.</span></span> <span data-ttu-id="5e23c-120">継承されたメンバーを列挙するには、呼び出し元が継承チェーンを明示的にウォークする必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e23c-120">To enumerate inherited members, the caller must explicitly walk the inheritance chain.</span></span> <span data-ttu-id="5e23c-121">継承チェーンの規則は、元のメタデータを出力した言語またはコンパイラによって異なる場合があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="5e23c-121">Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.</span></span>
  
- <span data-ttu-id="0eb21-122">Properties and events are not enumerated by `EnumMembers`.</span><span class="sxs-lookup"><span data-stu-id="0eb21-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="0eb21-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span><span class="sxs-lookup"><span data-stu-id="0eb21-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
+ <span data-ttu-id="5e23c-122">プロパティとイベントは、`EnumMembers`によって列挙されません。</span><span class="sxs-lookup"><span data-stu-id="5e23c-122">Properties and events are not enumerated by `EnumMembers`.</span></span> <span data-ttu-id="5e23c-123">これらを列挙するには、 [Enumproperties](imetadataimport-enumproperties-method.md)または[enumproperties](imetadataimport-enumevents-method.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="5e23c-123">To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="0eb21-124">［要件］</span><span class="sxs-lookup"><span data-stu-id="0eb21-124">Requirements</span></span>  
- <span data-ttu-id="0eb21-125">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0eb21-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e23c-124">要件</span><span class="sxs-lookup"><span data-stu-id="5e23c-124">Requirements</span></span>  
+ <span data-ttu-id="5e23c-125">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5e23c-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0eb21-126">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0eb21-126">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5e23c-126">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="5e23c-126">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0eb21-127">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0eb21-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="5e23c-127">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="5e23c-127">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0eb21-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0eb21-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5e23c-128">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e23c-128">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eb21-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="0eb21-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e23c-129">参照</span><span class="sxs-lookup"><span data-stu-id="5e23c-129">See also</span></span>
 
-- [<span data-ttu-id="0eb21-130">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0eb21-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="0eb21-131">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0eb21-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="5e23c-130">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5e23c-130">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="5e23c-131">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5e23c-131">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
