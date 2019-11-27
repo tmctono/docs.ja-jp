@@ -22,24 +22,24 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445773"
 ---
-# <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="73934-102">ICorProfilerCallback::RemotingServerInvocationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="73934-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
-<span data-ttu-id="73934-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span><span class="sxs-lookup"><span data-stu-id="73934-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  
+# <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a><span data-ttu-id="b1cee-102">ICorProfilerCallback::RemotingServerInvocationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="b1cee-102">ICorProfilerCallback::RemotingServerInvocationStarted Method</span></span>
+<span data-ttu-id="b1cee-103">プロセスがリモートメソッド呼び出し要求に応答してメソッドを呼び出していることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b1cee-103">Notifies the profiler that the process is invoking a method in response to a remote method invocation request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73934-104">構文</span><span class="sxs-lookup"><span data-stu-id="73934-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1cee-104">構文</span><span class="sxs-lookup"><span data-stu-id="b1cee-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingServerInvocationStarted();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="73934-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="73934-105">Requirements</span></span>  
- <span data-ttu-id="73934-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="73934-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1cee-105">要件</span><span class="sxs-lookup"><span data-stu-id="b1cee-105">Requirements</span></span>  
+ <span data-ttu-id="b1cee-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b1cee-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73934-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="73934-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b1cee-107">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b1cee-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="73934-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73934-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b1cee-108">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1cee-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="73934-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73934-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b1cee-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1cee-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73934-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="73934-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1cee-110">参照</span><span class="sxs-lookup"><span data-stu-id="b1cee-110">See also</span></span>
 
-- [<span data-ttu-id="73934-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="73934-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b1cee-111">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b1cee-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

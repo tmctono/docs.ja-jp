@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447892"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="1aafe-102">IMetaDataEmit2::SaveDeltaToMemory メソッド</span><span class="sxs-lookup"><span data-stu-id="1aafe-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="1aafe-103">Saves changes from the current edit-and-continue session to memory.</span><span class="sxs-lookup"><span data-stu-id="1aafe-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="43f63-102">IMetaDataEmit2::SaveDeltaToMemory メソッド</span><span class="sxs-lookup"><span data-stu-id="43f63-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="43f63-103">現在のエディットコンティニュセッションの変更をメモリに保存します。</span><span class="sxs-lookup"><span data-stu-id="43f63-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1aafe-104">構文</span><span class="sxs-lookup"><span data-stu-id="1aafe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43f63-104">構文</span><span class="sxs-lookup"><span data-stu-id="43f63-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
@@ -34,23 +34,23 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1aafe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1aafe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43f63-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="43f63-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="1aafe-106">[out] The address at which to begin writing the metadata delta.</span><span class="sxs-lookup"><span data-stu-id="1aafe-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="43f63-106">入出力メタデータデルタの書き込みを開始するアドレス。</span><span class="sxs-lookup"><span data-stu-id="43f63-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="1aafe-107">[in] The size of the changes.</span><span class="sxs-lookup"><span data-stu-id="1aafe-107">[in] The size of the changes.</span></span> <span data-ttu-id="1aafe-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span><span class="sxs-lookup"><span data-stu-id="1aafe-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="43f63-107">から変更のサイズ。</span><span class="sxs-lookup"><span data-stu-id="43f63-107">[in] The size of the changes.</span></span> <span data-ttu-id="43f63-108">サイズを確認するには、 [IMetaDataEmit2:: GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="43f63-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1aafe-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="1aafe-109">Requirements</span></span>  
- <span data-ttu-id="1aafe-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1aafe-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43f63-109">要件</span><span class="sxs-lookup"><span data-stu-id="43f63-109">Requirements</span></span>  
+ <span data-ttu-id="43f63-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="43f63-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1aafe-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1aafe-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="43f63-111">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="43f63-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1aafe-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1aafe-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="43f63-112">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="43f63-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1aafe-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1aafe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="43f63-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43f63-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1aafe-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1aafe-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43f63-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="43f63-114">See also</span></span>
 
-- [<span data-ttu-id="1aafe-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1aafe-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="1aafe-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1aafe-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="43f63-115">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="43f63-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="43f63-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="43f63-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

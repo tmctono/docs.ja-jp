@@ -21,27 +21,27 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448727"
 ---
-# <a name="iclrprofiling-interface"></a><span data-ttu-id="9e188-102">ICLRProfiling インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e188-102">ICLRProfiling Interface</span></span>
-<span data-ttu-id="9e188-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span><span class="sxs-lookup"><span data-stu-id="9e188-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
+# <a name="iclrprofiling-interface"></a><span data-ttu-id="2fbbd-102">ICLRProfiling インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2fbbd-102">ICLRProfiling Interface</span></span>
+<span data-ttu-id="2fbbd-103">[ICLRProfiling:: attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)メソッドを提供します。これにより、実行中のプロセスにプロファイラーをアタッチできます。</span><span class="sxs-lookup"><span data-stu-id="2fbbd-103">Provides the [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method, which enables a profiler to attach to a running process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9e188-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="9e188-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2fbbd-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="2fbbd-104">Methods</span></span>  
   
-|<span data-ttu-id="9e188-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9e188-105">Method</span></span>|<span data-ttu-id="9e188-106">説明</span><span class="sxs-lookup"><span data-stu-id="9e188-106">Description</span></span>|  
+|<span data-ttu-id="2fbbd-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="2fbbd-105">Method</span></span>|<span data-ttu-id="2fbbd-106">説明</span><span class="sxs-lookup"><span data-stu-id="2fbbd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9e188-107">AttachProfiler メソッド</span><span class="sxs-lookup"><span data-stu-id="9e188-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="9e188-108">指定されたプロファイラーを、指定されたプロセスにアタッチします。</span><span class="sxs-lookup"><span data-stu-id="9e188-108">Attaches the specified profiler to the specified process.</span></span>|  
+|[<span data-ttu-id="2fbbd-107">AttachProfiler メソッド</span><span class="sxs-lookup"><span data-stu-id="2fbbd-107">AttachProfiler Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|<span data-ttu-id="2fbbd-108">指定されたプロファイラーを、指定されたプロセスにアタッチします。</span><span class="sxs-lookup"><span data-stu-id="2fbbd-108">Attaches the specified profiler to the specified process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9e188-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="9e188-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2fbbd-109">コメント</span><span class="sxs-lookup"><span data-stu-id="2fbbd-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e188-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="9e188-110">Requirements</span></span>  
- <span data-ttu-id="9e188-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e188-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fbbd-110">要件</span><span class="sxs-lookup"><span data-stu-id="2fbbd-110">Requirements</span></span>  
+ <span data-ttu-id="2fbbd-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2fbbd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e188-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9e188-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2fbbd-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2fbbd-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9e188-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e188-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2fbbd-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fbbd-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e188-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e188-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2fbbd-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fbbd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e188-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="9e188-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2fbbd-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="2fbbd-115">See also</span></span>
 
-- [<span data-ttu-id="9e188-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e188-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="9e188-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e188-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="2fbbd-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="2fbbd-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="2fbbd-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2fbbd-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
