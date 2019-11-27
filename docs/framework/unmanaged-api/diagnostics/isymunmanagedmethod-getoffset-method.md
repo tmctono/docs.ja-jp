@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448939"
 ---
-# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="1ab28-102">ISymUnmanagedMethod::GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="1ab28-102">ISymUnmanagedMethod::GetOffset Method</span></span>
-<span data-ttu-id="1ab28-103">Returns the offset within this method that corresponds to a given position within a document.</span><span class="sxs-lookup"><span data-stu-id="1ab28-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
+# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="90fe5-102">ISymUnmanagedMethod::GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="90fe5-102">ISymUnmanagedMethod::GetOffset Method</span></span>
+<span data-ttu-id="90fe5-103">ドキュメント内の指定された位置に対応する、このメソッド内のオフセットを返します。</span><span class="sxs-lookup"><span data-stu-id="90fe5-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ab28-104">構文</span><span class="sxs-lookup"><span data-stu-id="1ab28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90fe5-104">構文</span><span class="sxs-lookup"><span data-stu-id="90fe5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -35,25 +35,25 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1ab28-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1ab28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="90fe5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="90fe5-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="1ab28-106">[in] A pointer to the document for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="1ab28-106">[in] A pointer to the document for which the offset is requested.</span></span>  
+ <span data-ttu-id="90fe5-106">からオフセットが要求されるドキュメントへのポインター。</span><span class="sxs-lookup"><span data-stu-id="90fe5-106">[in] A pointer to the document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="1ab28-107">[in] The document line for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="1ab28-107">[in] The document line for which the offset is requested.</span></span>  
+ <span data-ttu-id="90fe5-107">からオフセットの要求対象となるドキュメント行。</span><span class="sxs-lookup"><span data-stu-id="90fe5-107">[in] The document line for which the offset is requested.</span></span>  
   
  `column`  
- <span data-ttu-id="1ab28-108">[in] The document column for which the offset is requested.</span><span class="sxs-lookup"><span data-stu-id="1ab28-108">[in] The document column for which the offset is requested.</span></span>  
+ <span data-ttu-id="90fe5-108">からオフセットが要求されるドキュメント列。</span><span class="sxs-lookup"><span data-stu-id="90fe5-108">[in] The document column for which the offset is requested.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="1ab28-109">[out] A pointer to a `ULONG32` that receives the offsets.</span><span class="sxs-lookup"><span data-stu-id="1ab28-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
+ <span data-ttu-id="90fe5-109">入出力オフセットを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="90fe5-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1ab28-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="1ab28-110">Return Value</span></span>  
- <span data-ttu-id="1ab28-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="1ab28-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="90fe5-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="90fe5-110">Return Value</span></span>  
+ <span data-ttu-id="90fe5-111">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="90fe5-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1ab28-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="1ab28-112">Requirements</span></span>  
- <span data-ttu-id="1ab28-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1ab28-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90fe5-112">要件</span><span class="sxs-lookup"><span data-stu-id="90fe5-112">Requirements</span></span>  
+ <span data-ttu-id="90fe5-113">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="90fe5-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ab28-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="1ab28-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90fe5-114">参照</span><span class="sxs-lookup"><span data-stu-id="90fe5-114">See also</span></span>
 
-- [<span data-ttu-id="1ab28-115">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1ab28-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="90fe5-115">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90fe5-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

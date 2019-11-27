@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445526"
 ---
-# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="75989-102">IDebugAutoAttach::AutoAttach メソッド</span><span class="sxs-lookup"><span data-stu-id="75989-102">IDebugAutoAttach::AutoAttach Method</span></span>
-<span data-ttu-id="75989-103">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="75989-103">Performs server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="9389b-102">IDebugAutoAttach::AutoAttach メソッド</span><span class="sxs-lookup"><span data-stu-id="9389b-102">IDebugAutoAttach::AutoAttach Method</span></span>
+<span data-ttu-id="9389b-103">サーバーによって呼び出されたデバッガーの自動アタッチを実行します。</span><span class="sxs-lookup"><span data-stu-id="9389b-103">Performs server-invoked debugger auto attach.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75989-104">構文</span><span class="sxs-lookup"><span data-stu-id="75989-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9389b-104">構文</span><span class="sxs-lookup"><span data-stu-id="9389b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AutoAttach  
@@ -38,28 +38,28 @@ HRESULT AutoAttach
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="75989-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="75989-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9389b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9389b-105">Parameters</span></span>  
  `guidPort`  
- <span data-ttu-id="75989-106">[in] Always set to `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="75989-106">[in] Always set to `GUID_NULL`.</span></span>  
+ <span data-ttu-id="9389b-106">から常に `GUID_NULL`に設定します。</span><span class="sxs-lookup"><span data-stu-id="9389b-106">[in] Always set to `GUID_NULL`.</span></span>  
   
  `dwPid`  
- <span data-ttu-id="75989-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span><span class="sxs-lookup"><span data-stu-id="75989-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
+ <span data-ttu-id="9389b-107">からプロセス ID。通常は `GetCurrentProcessId` 関数を使用して取得されます。</span><span class="sxs-lookup"><span data-stu-id="9389b-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
   
  `dwProgramType`  
- <span data-ttu-id="75989-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="75989-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
+ <span data-ttu-id="9389b-108">からプログラムの種類: `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`、または `AUTOATTACH_PROGRAM_UNKNOWN`。</span><span class="sxs-lookup"><span data-stu-id="9389b-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
   
  `dwProgramId`  
- <span data-ttu-id="75989-109">[in] Program ID.</span><span class="sxs-lookup"><span data-stu-id="75989-109">[in] Program ID.</span></span>  
+ <span data-ttu-id="9389b-109">からプログラム ID。</span><span class="sxs-lookup"><span data-stu-id="9389b-109">[in] Program ID.</span></span>  
   
  `pszSessionId`  
- <span data-ttu-id="75989-110">[in] String passed by the debug verb.</span><span class="sxs-lookup"><span data-stu-id="75989-110">[in] String passed by the debug verb.</span></span>  
+ <span data-ttu-id="9389b-110">からデバッグ動詞によって渡された文字列。</span><span class="sxs-lookup"><span data-stu-id="9389b-110">[in] String passed by the debug verb.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="75989-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="75989-111">Return Value</span></span>  
- <span data-ttu-id="75989-112">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="75989-112">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9389b-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="9389b-111">Return Value</span></span>  
+ <span data-ttu-id="9389b-112">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="9389b-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75989-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="75989-113">Requirements</span></span>  
- <span data-ttu-id="75989-114">**Header:** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="75989-114">**Header:** DbgAutoAttach.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9389b-113">要件</span><span class="sxs-lookup"><span data-stu-id="9389b-113">Requirements</span></span>  
+ <span data-ttu-id="9389b-114">**ヘッダー:** DbgAutoAttach .h</span><span class="sxs-lookup"><span data-stu-id="9389b-114">**Header:** DbgAutoAttach.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75989-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="75989-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9389b-115">参照</span><span class="sxs-lookup"><span data-stu-id="9389b-115">See also</span></span>
 
-- [<span data-ttu-id="75989-116">IDebugAutoAttach インターフェイス</span><span class="sxs-lookup"><span data-stu-id="75989-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [<span data-ttu-id="9389b-116">IDebugAutoAttach インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9389b-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

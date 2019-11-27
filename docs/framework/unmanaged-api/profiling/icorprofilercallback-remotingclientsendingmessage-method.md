@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445794"
 ---
-# <a name="icorprofilercallbackremotingclientsendingmessage-method"></a><span data-ttu-id="18c84-102">ICorProfilerCallback::RemotingClientSendingMessage メソッド</span><span class="sxs-lookup"><span data-stu-id="18c84-102">ICorProfilerCallback::RemotingClientSendingMessage Method</span></span>
-<span data-ttu-id="18c84-103">Notifies the profiler that the client is sending a request to the server.</span><span class="sxs-lookup"><span data-stu-id="18c84-103">Notifies the profiler that the client is sending a request to the server.</span></span>  
+# <a name="icorprofilercallbackremotingclientsendingmessage-method"></a><span data-ttu-id="c793f-102">ICorProfilerCallback::RemotingClientSendingMessage メソッド</span><span class="sxs-lookup"><span data-stu-id="c793f-102">ICorProfilerCallback::RemotingClientSendingMessage Method</span></span>
+<span data-ttu-id="c793f-103">クライアントがサーバーに要求を送信していることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="c793f-103">Notifies the profiler that the client is sending a request to the server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18c84-104">構文</span><span class="sxs-lookup"><span data-stu-id="18c84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c793f-104">構文</span><span class="sxs-lookup"><span data-stu-id="c793f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingClientSendingMessage(  
@@ -33,30 +33,30 @@ HRESULT RemotingClientSendingMessage(
     [in] BOOL fIsAsync);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18c84-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="18c84-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c793f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c793f-105">Parameters</span></span>  
  `pCookie`  
- <span data-ttu-id="18c84-106">[in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:</span><span class="sxs-lookup"><span data-stu-id="18c84-106">[in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:</span></span>  
+ <span data-ttu-id="c793f-106">から次の条件下で[ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)で指定された値に対応する値。</span><span class="sxs-lookup"><span data-stu-id="c793f-106">[in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:</span></span>  
   
-- <span data-ttu-id="18c84-107">Remoting GUID cookies are active.</span><span class="sxs-lookup"><span data-stu-id="18c84-107">Remoting GUID cookies are active.</span></span>  
+- <span data-ttu-id="c793f-107">リモート処理 GUID クッキーはアクティブです。</span><span class="sxs-lookup"><span data-stu-id="c793f-107">Remoting GUID cookies are active.</span></span>  
   
-- <span data-ttu-id="18c84-108">The channel succeeds in transmitting the message.</span><span class="sxs-lookup"><span data-stu-id="18c84-108">The channel succeeds in transmitting the message.</span></span>  
+- <span data-ttu-id="c793f-108">チャネルは、メッセージの送信に成功します。</span><span class="sxs-lookup"><span data-stu-id="c793f-108">The channel succeeds in transmitting the message.</span></span>  
   
-- <span data-ttu-id="18c84-109">GUID cookies are active on the server-side process.</span><span class="sxs-lookup"><span data-stu-id="18c84-109">GUID cookies are active on the server-side process.</span></span>  
+- <span data-ttu-id="c793f-109">GUID クッキーはサーバー側のプロセスでアクティブです。</span><span class="sxs-lookup"><span data-stu-id="c793f-109">GUID cookies are active on the server-side process.</span></span>  
   
- <span data-ttu-id="18c84-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span><span class="sxs-lookup"><span data-stu-id="18c84-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
+ <span data-ttu-id="c793f-110">これにより、リモート処理呼び出しと論理呼び出し履歴の作成を簡単に組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="c793f-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
   
  `fIsAsync`  
- <span data-ttu-id="18c84-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span><span class="sxs-lookup"><span data-stu-id="18c84-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
+ <span data-ttu-id="c793f-111">から呼び出しが非同期の場合に `true` される値。それ以外の場合は、`false`ます。</span><span class="sxs-lookup"><span data-stu-id="c793f-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18c84-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="18c84-112">Requirements</span></span>  
- <span data-ttu-id="18c84-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="18c84-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c793f-112">要件</span><span class="sxs-lookup"><span data-stu-id="c793f-112">Requirements</span></span>  
+ <span data-ttu-id="c793f-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c793f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18c84-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="18c84-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c793f-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c793f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="18c84-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18c84-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c793f-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c793f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="18c84-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18c84-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c793f-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c793f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18c84-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="18c84-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c793f-117">参照</span><span class="sxs-lookup"><span data-stu-id="c793f-117">See also</span></span>
 
-- [<span data-ttu-id="18c84-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="18c84-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="c793f-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c793f-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

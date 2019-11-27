@@ -13,18 +13,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343754"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="2c324-102">Else ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c324-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="2c324-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span><span class="sxs-lookup"><span data-stu-id="2c324-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="59ff4-102">Else ステートメント (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="59ff4-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="59ff4-103">ステートメントの他の条件グループが実行またはコンパイルされていない場合に、実行またはコンパイルされるステートメントのグループを導入します。</span><span class="sxs-lookup"><span data-stu-id="59ff4-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2c324-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="2c324-104">Remarks</span></span>  
- <span data-ttu-id="2c324-105">キーワード `Else` は次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="2c324-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="59ff4-104">コメント</span><span class="sxs-lookup"><span data-stu-id="59ff4-104">Remarks</span></span>  
+ <span data-ttu-id="59ff4-105">キーワード `Else` は次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="59ff4-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="2c324-106">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="2c324-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="59ff4-106">If...Then...Else ステートメント</span><span class="sxs-lookup"><span data-stu-id="59ff4-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="2c324-107">Select...Case ステートメント</span><span class="sxs-lookup"><span data-stu-id="2c324-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="59ff4-107">Select...Case ステートメント</span><span class="sxs-lookup"><span data-stu-id="59ff4-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="2c324-108">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="2c324-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="59ff4-108">#If...Then... #Else ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="59ff4-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2c324-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c324-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59ff4-109">参照</span><span class="sxs-lookup"><span data-stu-id="59ff4-109">See also</span></span>
 
-- [<span data-ttu-id="2c324-110">キーワード</span><span class="sxs-lookup"><span data-stu-id="2c324-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="59ff4-110">キーワード</span><span class="sxs-lookup"><span data-stu-id="59ff4-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
