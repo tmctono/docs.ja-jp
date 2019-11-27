@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436024"
 ---
-# <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="867f4-102">ICorProfilerInfo2::GetBoxClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="867f4-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
-<span data-ttu-id="867f4-103">Gets information about where the specified value type is located when it is boxed.</span><span class="sxs-lookup"><span data-stu-id="867f4-103">Gets information about where the specified value type is located when it is boxed.</span></span>  
+# <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="2b60f-102">ICorProfilerInfo2::GetBoxClassLayout メソッド</span><span class="sxs-lookup"><span data-stu-id="2b60f-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
+<span data-ttu-id="2b60f-103">指定された値型がボックス化されている場合の位置に関する情報を取得します。</span><span class="sxs-lookup"><span data-stu-id="2b60f-103">Gets information about where the specified value type is located when it is boxed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="867f4-104">構文</span><span class="sxs-lookup"><span data-stu-id="867f4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b60f-104">構文</span><span class="sxs-lookup"><span data-stu-id="2b60f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBoxClassLayout(  
@@ -33,26 +33,26 @@ HRESULT GetBoxClassLayout(
     [out] ULONG32 *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="867f4-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="867f4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2b60f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2b60f-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="867f4-106">[in] The ID of the class that describes the value type that is boxed.</span><span class="sxs-lookup"><span data-stu-id="867f4-106">[in] The ID of the class that describes the value type that is boxed.</span></span>  
+ <span data-ttu-id="2b60f-106">からボックス化された値の型を記述するクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="2b60f-106">[in] The ID of the class that describes the value type that is boxed.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="867f4-107">[out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.</span><span class="sxs-lookup"><span data-stu-id="867f4-107">[out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.</span></span>  
+ <span data-ttu-id="2b60f-107">入出力値型のボックス化されたオブジェクト ID ポインターを基準とするオフセットを表す整数。</span><span class="sxs-lookup"><span data-stu-id="2b60f-107">[out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="867f4-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="867f4-108">Remarks</span></span>  
- <span data-ttu-id="867f4-109">The `pBufferOffset` value is the location of the value type within a box.</span><span class="sxs-lookup"><span data-stu-id="867f4-109">The `pBufferOffset` value is the location of the value type within a box.</span></span> <span data-ttu-id="867f4-110">After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.</span><span class="sxs-lookup"><span data-stu-id="867f4-110">After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b60f-108">コメント</span><span class="sxs-lookup"><span data-stu-id="2b60f-108">Remarks</span></span>  
+ <span data-ttu-id="2b60f-109">`pBufferOffset` 値は、ボックス内の値型の場所です。</span><span class="sxs-lookup"><span data-stu-id="2b60f-109">The `pBufferOffset` value is the location of the value type within a box.</span></span> <span data-ttu-id="2b60f-110">ボックス化されたオブジェクトに `pBufferOffset` が適用された後、値型のクラスレイアウトを使用して、オブジェクトの値を解釈できます。</span><span class="sxs-lookup"><span data-stu-id="2b60f-110">After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="867f4-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="867f4-111">Requirements</span></span>  
- <span data-ttu-id="867f4-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="867f4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b60f-111">要件</span><span class="sxs-lookup"><span data-stu-id="2b60f-111">Requirements</span></span>  
+ <span data-ttu-id="2b60f-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2b60f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="867f4-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="867f4-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2b60f-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2b60f-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="867f4-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="867f4-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b60f-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b60f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="867f4-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="867f4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2b60f-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b60f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="867f4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="867f4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b60f-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="2b60f-116">See also</span></span>
 
-- [<span data-ttu-id="867f4-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="867f4-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="867f4-118">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="867f4-118">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="2b60f-117">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b60f-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="2b60f-118">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2b60f-118">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
