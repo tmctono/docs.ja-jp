@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428045"
 ---
-# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="74ecc-102">ISymUnmanagedWriter::DefineDocument メソッド</span><span class="sxs-lookup"><span data-stu-id="74ecc-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
-<span data-ttu-id="74ecc-103">ソース ドキュメントを定義します。</span><span class="sxs-lookup"><span data-stu-id="74ecc-103">Defines a source document.</span></span> <span data-ttu-id="74ecc-104">GUIDs are provided for known languages, vendors, and document types.</span><span class="sxs-lookup"><span data-stu-id="74ecc-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
+# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="a940e-102">ISymUnmanagedWriter::DefineDocument メソッド</span><span class="sxs-lookup"><span data-stu-id="a940e-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
+<span data-ttu-id="a940e-103">ソース ドキュメントを定義します。</span><span class="sxs-lookup"><span data-stu-id="a940e-103">Defines a source document.</span></span> <span data-ttu-id="a940e-104">Guid は、既知の言語、ベンダー、およびドキュメントの種類に対して提供されます。</span><span class="sxs-lookup"><span data-stu-id="a940e-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74ecc-105">構文</span><span class="sxs-lookup"><span data-stu-id="74ecc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a940e-105">構文</span><span class="sxs-lookup"><span data-stu-id="a940e-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineDocument(  
@@ -36,28 +36,28 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74ecc-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="74ecc-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a940e-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a940e-106">Parameters</span></span>  
  `url`  
- <span data-ttu-id="74ecc-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span><span class="sxs-lookup"><span data-stu-id="74ecc-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
+ <span data-ttu-id="a940e-107">からドキュメントを識別する URL (uniform resource locator) を定義する `WCHAR` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a940e-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
   
  `language`  
- <span data-ttu-id="74ecc-108">[in] A pointer to a GUID that defines the document language.</span><span class="sxs-lookup"><span data-stu-id="74ecc-108">[in] A pointer to a GUID that defines the document language.</span></span>  
+ <span data-ttu-id="a940e-108">からドキュメントの言語を定義する GUID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a940e-108">[in] A pointer to a GUID that defines the document language.</span></span>  
   
  `languageVendor`  
- <span data-ttu-id="74ecc-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span><span class="sxs-lookup"><span data-stu-id="74ecc-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
+ <span data-ttu-id="a940e-109">からドキュメント言語のベンダの id を定義する GUID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a940e-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
   
  `documentType`  
- <span data-ttu-id="74ecc-110">[in] A pointer to a GUID that defines the type of the document.</span><span class="sxs-lookup"><span data-stu-id="74ecc-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
+ <span data-ttu-id="a940e-110">からドキュメントの種類を定義する GUID へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a940e-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="74ecc-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="74ecc-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+ <span data-ttu-id="a940e-111">入出力返された[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)インターフェイスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a940e-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="74ecc-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="74ecc-112">Return Value</span></span>  
- <span data-ttu-id="74ecc-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="74ecc-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a940e-112">戻り値</span><span class="sxs-lookup"><span data-stu-id="a940e-112">Return Value</span></span>  
+ <span data-ttu-id="a940e-113">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="a940e-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74ecc-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="74ecc-114">Requirements</span></span>  
- <span data-ttu-id="74ecc-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="74ecc-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a940e-114">要件</span><span class="sxs-lookup"><span data-stu-id="a940e-114">Requirements</span></span>  
+ <span data-ttu-id="a940e-115">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="a940e-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74ecc-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="74ecc-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a940e-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="a940e-116">See also</span></span>
 
-- [<span data-ttu-id="74ecc-117">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="74ecc-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="a940e-117">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a940e-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

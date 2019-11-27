@@ -9,13 +9,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341356"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="0536c-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0536c-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="271cb-102">方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="271cb-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="0536c-103">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="0536c-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
+<span data-ttu-id="271cb-103">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="271cb-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>
 
-### <a name="to-create-the-data-files"></a><span data-ttu-id="0536c-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="0536c-104">To create the data files</span></span>
+### <a name="to-create-the-data-files"></a><span data-ttu-id="271cb-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="271cb-104">To create the data files</span></span>
 
-1. <span data-ttu-id="0536c-105">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="0536c-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="271cb-105">以下の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="271cb-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74341356"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="0536c-106">以下の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。いくつかの名前は両方のファイルに共通して存在することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="0536c-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="271cb-106">以下の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。いくつかの名前は両方のファイルに共通して存在することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="271cb-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74341356"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="0536c-107">例</span><span class="sxs-lookup"><span data-stu-id="0536c-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="271cb-107">例</span><span class="sxs-lookup"><span data-stu-id="271cb-107">Example</span></span>
 
 ```vb
 Class SplitWithGroups
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-<span data-ttu-id="0536c-108">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="0536c-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
+<span data-ttu-id="271cb-108">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="271cb-108">The program writes a separate file for each group in the same folder as the data files.</span></span>
 
-## <a name="compiling-the-code"></a><span data-ttu-id="0536c-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="0536c-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="271cb-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="271cb-109">Compiling the Code</span></span>
 
-<span data-ttu-id="0536c-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span><span class="sxs-lookup"><span data-stu-id="0536c-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="271cb-110">VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="271cb-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0536c-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="0536c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="271cb-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="271cb-111">See also</span></span>
 
-- [<span data-ttu-id="0536c-112">LINQ and Strings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0536c-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="0536c-113">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0536c-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="271cb-112">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="271cb-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="271cb-113">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="271cb-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
