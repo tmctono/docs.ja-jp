@@ -22,29 +22,29 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446109"
 ---
-# <a name="isymunmanagedvariablegetaddressfield3-method"></a><span data-ttu-id="d22e5-102">ISymUnmanagedVariable::GetAddressField3 メソッド</span><span class="sxs-lookup"><span data-stu-id="d22e5-102">ISymUnmanagedVariable::GetAddressField3 Method</span></span>
-<span data-ttu-id="d22e5-103">Gets the third address field for this variable.</span><span class="sxs-lookup"><span data-stu-id="d22e5-103">Gets the third address field for this variable.</span></span> <span data-ttu-id="d22e5-104">Its meaning depends on the kind of address.</span><span class="sxs-lookup"><span data-stu-id="d22e5-104">Its meaning depends on the kind of address.</span></span>  
+# <a name="isymunmanagedvariablegetaddressfield3-method"></a><span data-ttu-id="7d397-102">ISymUnmanagedVariable::GetAddressField3 メソッド</span><span class="sxs-lookup"><span data-stu-id="7d397-102">ISymUnmanagedVariable::GetAddressField3 Method</span></span>
+<span data-ttu-id="7d397-103">この変数の3番目のアドレスフィールドを取得します。</span><span class="sxs-lookup"><span data-stu-id="7d397-103">Gets the third address field for this variable.</span></span> <span data-ttu-id="7d397-104">その意味は、アドレスの種類によって異なります。</span><span class="sxs-lookup"><span data-stu-id="7d397-104">Its meaning depends on the kind of address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d22e5-105">構文</span><span class="sxs-lookup"><span data-stu-id="d22e5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d397-105">構文</span><span class="sxs-lookup"><span data-stu-id="7d397-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddressField3(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d22e5-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d22e5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d397-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7d397-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="d22e5-107">[out] A pointer to a `ULONG32` that receives the third address field.</span><span class="sxs-lookup"><span data-stu-id="d22e5-107">[out] A pointer to a `ULONG32` that receives the third address field.</span></span>  
+ <span data-ttu-id="7d397-107">入出力3番目のアドレスフィールドを受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="7d397-107">[out] A pointer to a `ULONG32` that receives the third address field.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d22e5-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="d22e5-108">Return Value</span></span>  
- <span data-ttu-id="d22e5-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="d22e5-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7d397-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="7d397-108">Return Value</span></span>  
+ <span data-ttu-id="7d397-109">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="7d397-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d22e5-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="d22e5-110">Requirements</span></span>  
- <span data-ttu-id="d22e5-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d22e5-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d397-110">要件</span><span class="sxs-lookup"><span data-stu-id="7d397-110">Requirements</span></span>  
+ <span data-ttu-id="7d397-111">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="7d397-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d22e5-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d22e5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d397-112">参照</span><span class="sxs-lookup"><span data-stu-id="7d397-112">See also</span></span>
 
-- [<span data-ttu-id="d22e5-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d22e5-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [<span data-ttu-id="d22e5-114">GetAddressField1 メソッド</span><span class="sxs-lookup"><span data-stu-id="d22e5-114">GetAddressField1 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
-- [<span data-ttu-id="d22e5-115">GetAddressField2 メソッド</span><span class="sxs-lookup"><span data-stu-id="d22e5-115">GetAddressField2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
-- [<span data-ttu-id="d22e5-116">GetAddressKind メソッド</span><span class="sxs-lookup"><span data-stu-id="d22e5-116">GetAddressKind Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [<span data-ttu-id="7d397-113">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7d397-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="7d397-114">GetAddressField1 メソッド</span><span class="sxs-lookup"><span data-stu-id="7d397-114">GetAddressField1 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
+- [<span data-ttu-id="7d397-115">GetAddressField2 メソッド</span><span class="sxs-lookup"><span data-stu-id="7d397-115">GetAddressField2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
+- [<span data-ttu-id="7d397-116">GetAddressKind メソッド</span><span class="sxs-lookup"><span data-stu-id="7d397-116">GetAddressKind Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)

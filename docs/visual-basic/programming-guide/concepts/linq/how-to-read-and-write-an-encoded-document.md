@@ -9,19 +9,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347631"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="231f8-102">How to: Read and Write an Encoded Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="231f8-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="efc2a-102">方法: エンコードされたドキュメントを読み書きする (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="efc2a-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
 
-<span data-ttu-id="231f8-103">エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。</span><span class="sxs-lookup"><span data-stu-id="231f8-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>
+<span data-ttu-id="efc2a-103">エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。</span><span class="sxs-lookup"><span data-stu-id="efc2a-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>
 
-<span data-ttu-id="231f8-104"><xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。</span><span class="sxs-lookup"><span data-stu-id="231f8-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>
+<span data-ttu-id="efc2a-104"><xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。</span><span class="sxs-lookup"><span data-stu-id="efc2a-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>
 
-<span data-ttu-id="231f8-105">エンコードされたドキュメントを読み込むと、<xref:System.Xml.Linq.XDeclaration.Encoding%2A> プロパティがコード ページ名に設定されます。</span><span class="sxs-lookup"><span data-stu-id="231f8-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>
+<span data-ttu-id="efc2a-105">エンコードされたドキュメントを読み込むと、<xref:System.Xml.Linq.XDeclaration.Encoding%2A> プロパティがコード ページ名に設定されます。</span><span class="sxs-lookup"><span data-stu-id="efc2a-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>
 
-<span data-ttu-id="231f8-106"><xref:System.Xml.Linq.XDeclaration.Encoding%2A> を有効なコード ページ名に設定すると、指定したエンコーディングで [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="231f8-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>
+<span data-ttu-id="efc2a-106"><xref:System.Xml.Linq.XDeclaration.Encoding%2A> を有効なコード ページ名に設定すると、指定したエンコーディングで [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] がシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="efc2a-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.</span></span>
 
-## <a name="example"></a><span data-ttu-id="231f8-107">例</span><span class="sxs-lookup"><span data-stu-id="231f8-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="efc2a-107">例</span><span class="sxs-lookup"><span data-stu-id="efc2a-107">Example</span></span>
 
-<span data-ttu-id="231f8-108">次の例では、UTF-8 エンコーディングのドキュメントと UTF-16 エンコーディングのドキュメントを 1 つずつ作成します。</span><span class="sxs-lookup"><span data-stu-id="231f8-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="231f8-109">次に、ドキュメントを読み込み、エンコーディングをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="231f8-109">It then loads the documents and prints the encoding to the console.</span></span>
+<span data-ttu-id="efc2a-108">次の例では、UTF-8 エンコーディングのドキュメントと UTF-16 エンコーディングのドキュメントを 1 つずつ作成します。</span><span class="sxs-lookup"><span data-stu-id="efc2a-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="efc2a-109">次に、ドキュメントを読み込み、エンコーディングをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="efc2a-109">It then loads the documents and prints the encoding to the console.</span></span>
 
 ```vb
 Console.WriteLine("Creating a document with utf-8 encoding")
@@ -56,7 +56,7 @@ Console.WriteLine()
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding)
 ```
 
-<span data-ttu-id="231f8-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="231f8-110">This example produces the following output:</span></span>
+<span data-ttu-id="efc2a-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="efc2a-110">This example produces the following output:</span></span>
 
 ```console
 Creating a document with utf-8 encoding
@@ -78,7 +78,7 @@ Encoded document:
 Encoding of loaded document is:utf-16
 ```
 
-## <a name="see-also"></a><span data-ttu-id="231f8-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="231f8-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efc2a-111">参照</span><span class="sxs-lookup"><span data-stu-id="efc2a-111">See also</span></span>
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="231f8-112">Advanced LINQ to XML Programming (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="231f8-112">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="efc2a-112">高度な LINQ to XML プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="efc2a-112">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

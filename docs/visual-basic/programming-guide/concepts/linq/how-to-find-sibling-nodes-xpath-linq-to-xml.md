@@ -9,19 +9,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344641"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="ea740-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ea740-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="45af1-102">方法: 兄弟ノード (XPath LINQ to XML) を検索する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45af1-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 
-<span data-ttu-id="ea740-103">特定の名前を持つノードのすべての兄弟を検索する場合があります。</span><span class="sxs-lookup"><span data-stu-id="ea740-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="ea740-104">コンテキスト ノードも特定の名前を持つ場合は、結果のコレクションにコンテキスト ノードが含まれることがあります。</span><span class="sxs-lookup"><span data-stu-id="ea740-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
+<span data-ttu-id="45af1-103">特定の名前を持つノードのすべての兄弟を検索する場合があります。</span><span class="sxs-lookup"><span data-stu-id="45af1-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="45af1-104">コンテキスト ノードも特定の名前を持つ場合は、結果のコレクションにコンテキスト ノードが含まれることがあります。</span><span class="sxs-lookup"><span data-stu-id="45af1-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
 
-<span data-ttu-id="ea740-105">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ea740-105">The XPath expression is:</span></span>
+<span data-ttu-id="45af1-105">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="45af1-105">The XPath expression is:</span></span>
 
 `../Book`
 
-## <a name="example"></a><span data-ttu-id="ea740-106">例</span><span class="sxs-lookup"><span data-stu-id="ea740-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="45af1-106">例</span><span class="sxs-lookup"><span data-stu-id="45af1-106">Example</span></span>
 
-<span data-ttu-id="ea740-107">この例では、最初に `Book` 要素を検索し、次に `Book` という名前の兄弟要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="ea740-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="ea740-108">結果のコレクションにはコンテキスト ノードが含まれます。</span><span class="sxs-lookup"><span data-stu-id="ea740-108">The resulting collection includes the context node.</span></span>
+<span data-ttu-id="45af1-107">この例では、最初に `Book` 要素を検索し、次に `Book` という名前の兄弟要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="45af1-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="45af1-108">結果のコレクションにはコンテキスト ノードが含まれます。</span><span class="sxs-lookup"><span data-stu-id="45af1-108">The resulting collection includes the context node.</span></span>
 
-<span data-ttu-id="ea740-109">この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="ea740-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="45af1-109">この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="45af1-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="ea740-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="ea740-110">This example produces the following output:</span></span>
+<span data-ttu-id="45af1-110">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="45af1-110">This example produces the following output:</span></span>
 
 ```console
 Results are identical
@@ -69,6 +69,6 @@ Results are identical
 </Book>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ea740-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="ea740-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45af1-111">参照</span><span class="sxs-lookup"><span data-stu-id="45af1-111">See also</span></span>
 
-- [<span data-ttu-id="ea740-112">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ea740-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="45af1-112">XPath ユーザーの LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45af1-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

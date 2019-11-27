@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428025"
 ---
-# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="5f0c3-102">ISymUnmanagedWriter::DefineGlobalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="5f0c3-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
-<span data-ttu-id="5f0c3-103">Defines a single global variable.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="9fc32-102">ISymUnmanagedWriter::DefineGlobalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="9fc32-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
+<span data-ttu-id="9fc32-103">1つのグローバル変数を定義します。</span><span class="sxs-lookup"><span data-stu-id="9fc32-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f0c3-104">構文</span><span class="sxs-lookup"><span data-stu-id="5f0c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fc32-104">構文</span><span class="sxs-lookup"><span data-stu-id="9fc32-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineGlobalVariable(  
@@ -39,39 +39,39 @@ HRESULT DefineGlobalVariable(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f0c3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5f0c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9fc32-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9fc32-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="5f0c3-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
+ <span data-ttu-id="9fc32-106">からグローバル変数名を定義する `WCHAR` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="9fc32-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="5f0c3-107">[in] The global variable attributes.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="9fc32-107">からグローバル変数属性。</span><span class="sxs-lookup"><span data-stu-id="9fc32-107">[in] The global variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="5f0c3-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="9fc32-108">から`signature` バッファーのサイズを文字数で示す `ULONG32`。</span><span class="sxs-lookup"><span data-stu-id="9fc32-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="5f0c3-109">[in] The global variable signature.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-109">[in] The global variable signature.</span></span>  
+ <span data-ttu-id="9fc32-109">からグローバル変数シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="9fc32-109">[in] The global variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="5f0c3-110">[in] The address type.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-110">[in] The address type.</span></span>  
+ <span data-ttu-id="9fc32-110">からアドレスの種類。</span><span class="sxs-lookup"><span data-stu-id="9fc32-110">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="5f0c3-111">[in] The first address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-111">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="9fc32-111">からパラメーター指定の最初のアドレス。</span><span class="sxs-lookup"><span data-stu-id="9fc32-111">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="5f0c3-112">[in] The second address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-112">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="9fc32-112">からパラメーター指定の2番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="9fc32-112">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="5f0c3-113">[in] The third address for the parameter specification.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-113">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="9fc32-113">からパラメーター指定の3番目のアドレス。</span><span class="sxs-lookup"><span data-stu-id="9fc32-113">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5f0c3-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="5f0c3-114">Return Value</span></span>  
- <span data-ttu-id="5f0c3-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5f0c3-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9fc32-114">戻り値</span><span class="sxs-lookup"><span data-stu-id="9fc32-114">Return Value</span></span>  
+ <span data-ttu-id="9fc32-115">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="9fc32-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f0c3-116">［要件］</span><span class="sxs-lookup"><span data-stu-id="5f0c3-116">Requirements</span></span>  
- <span data-ttu-id="5f0c3-117">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5f0c3-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fc32-116">要件</span><span class="sxs-lookup"><span data-stu-id="9fc32-116">Requirements</span></span>  
+ <span data-ttu-id="9fc32-117">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="9fc32-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f0c3-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f0c3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9fc32-118">参照</span><span class="sxs-lookup"><span data-stu-id="9fc32-118">See also</span></span>
 
-- [<span data-ttu-id="5f0c3-119">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5f0c3-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="5f0c3-120">DefineLocalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="5f0c3-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [<span data-ttu-id="5f0c3-121">DefineGlobalVariable2 メソッド</span><span class="sxs-lookup"><span data-stu-id="5f0c3-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [<span data-ttu-id="9fc32-119">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9fc32-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="9fc32-120">DefineLocalVariable メソッド</span><span class="sxs-lookup"><span data-stu-id="9fc32-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [<span data-ttu-id="9fc32-121">DefineGlobalVariable2 メソッド</span><span class="sxs-lookup"><span data-stu-id="9fc32-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

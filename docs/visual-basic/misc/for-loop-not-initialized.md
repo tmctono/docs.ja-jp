@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: For ループが初期化されていません
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -11,14 +11,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348444"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="04377-102">For ループが初期化されていません (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04377-102">For loop not initialized (Visual Basic)</span></span>
-<span data-ttu-id="04377-103">`For...Next` ループの中央にジャンプしました。</span><span class="sxs-lookup"><span data-stu-id="04377-103">You jumped into the middle of a `For...Next` loop.</span></span>  
+# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="afda3-102">For ループが初期化されていません (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afda3-102">For loop not initialized (Visual Basic)</span></span>
+<span data-ttu-id="afda3-103">`For...Next` ループの中央にジャンプしました。</span><span class="sxs-lookup"><span data-stu-id="afda3-103">You jumped into the middle of a `For...Next` loop.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="04377-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="04377-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="afda3-104">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="afda3-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="04377-105">ループへのジャンプを削除します。</span><span class="sxs-lookup"><span data-stu-id="04377-105">Remove the jump into the loop.</span></span>  
+1. <span data-ttu-id="afda3-105">ループへのジャンプを削除します。</span><span class="sxs-lookup"><span data-stu-id="afda3-105">Remove the jump into the loop.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04377-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="04377-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afda3-106">参照</span><span class="sxs-lookup"><span data-stu-id="afda3-106">See also</span></span>
 
-- [<span data-ttu-id="04377-107">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="04377-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="04377-108">方法 : ステートメントへのラベル付け</span><span class="sxs-lookup"><span data-stu-id="04377-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [<span data-ttu-id="afda3-107">For Each...Next ステートメント</span><span class="sxs-lookup"><span data-stu-id="afda3-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="afda3-108">方法 : ステートメントへのラベル付け</span><span class="sxs-lookup"><span data-stu-id="afda3-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
