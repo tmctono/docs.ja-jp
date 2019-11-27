@@ -9,9 +9,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350145"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="f9f9b-102">Creating Custom Attributes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9f9b-102">Creating Custom Attributes (Visual Basic)</span></span>
+# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="4bdcf-102">カスタム属性の作成 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bdcf-102">Creating Custom Attributes (Visual Basic)</span></span>
 
-<span data-ttu-id="f9f9b-103">属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="f9f9b-104">型にそれを記述したプログラマーの名前でタグを付けるとします。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="f9f9b-105">`Author` というカスタム属性クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-105">You might define a custom `Author` attribute class:</span></span>
+<span data-ttu-id="4bdcf-103">属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="4bdcf-104">型にそれを記述したプログラマーの名前でタグを付けるとします。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="4bdcf-105">`Author` というカスタム属性クラスを定義します。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-105">You might define a custom `Author` attribute class:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.Class Or
@@ -27,9 +27,9 @@ Public Class Author
 End Class
 ```
 
-<span data-ttu-id="f9f9b-106">クラス名は属性の名前の `Author` です。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="f9f9b-107">このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="f9f9b-108">コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="f9f9b-109">この例では、`name` が位置指定パラメーターになります。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="f9f9b-110">パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="f9f9b-111">この場合は、`version` が唯一の名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="f9f9b-112">`AttributeUsage` 属性を使用して、クラスと `Structure` の宣言に対してのみ `Author` 属性を有効にしていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>
+<span data-ttu-id="4bdcf-106">クラス名は属性の名前の `Author` です。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="4bdcf-107">このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="4bdcf-108">コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="4bdcf-109">この例では、`name` が位置指定パラメーターになります。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="4bdcf-110">パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="4bdcf-111">この場合は、`version` が唯一の名前付きパラメーターです。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="4bdcf-112">`AttributeUsage` 属性を使用して、クラスと `Author` の宣言に対してのみ `Structure` 属性を有効にしていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>
 
-<span data-ttu-id="f9f9b-113">この新しい属性の使用方法は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-113">You could use this new attribute as follows:</span></span>
+<span data-ttu-id="4bdcf-113">この新しい属性の使用方法は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-113">You could use this new attribute as follows:</span></span>
 
 ```vb
 <Author("P. Ackerman", Version:=1.1)>
@@ -38,7 +38,7 @@ Class SampleClass
 End Class
 ```
 
-<span data-ttu-id="f9f9b-114">`AttributeUsage` には名前付きパラメーター `AllowMultiple` があります。これを使用すると、カスタム属性が 1 回しか指定できない属性か、または複数回指定できる属性かを設定できます。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="f9f9b-115">次のコード例では、複数回指定できる属性が作成されます。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-115">In the following code example, a multiuse attribute is created.</span></span>
+<span data-ttu-id="4bdcf-114">`AttributeUsage` には名前付きパラメーター `AllowMultiple` があります。これを使用すると、カスタム属性が 1 回しか指定できない属性か、または複数回指定できる属性かを設定できます。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="4bdcf-115">次のコード例では、複数回指定できる属性が作成されます。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-115">In the following code example, a multiuse attribute is created.</span></span>
 
 ```vb
 ' multiuse attribute
@@ -49,7 +49,7 @@ Public Class Author
     Inherits System.Attribute
 ```
 
-<span data-ttu-id="f9f9b-116">次のコード例では、同じ型の複数の属性が 1 つのクラスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>
+<span data-ttu-id="4bdcf-116">次のコード例では、同じ型の複数の属性が 1 つのクラスに適用されます。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>
 
 ```vb
 <Author("P. Ackerman", Version:=1.1),
@@ -61,14 +61,14 @@ End Class
 ```
 
 > [!NOTE]
-> <span data-ttu-id="f9f9b-117">属性クラスにプロパティが含まれている場合、そのプロパティは読み取り/書き込み可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="f9f9b-117">If your attribute class contains a property, that property must be read-write.</span></span>
+> <span data-ttu-id="4bdcf-117">属性クラスにプロパティが含まれている場合、そのプロパティは読み取り/書き込み可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="4bdcf-117">If your attribute class contains a property, that property must be read-write.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f9f9b-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9f9b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bdcf-118">参照</span><span class="sxs-lookup"><span data-stu-id="4bdcf-118">See also</span></span>
 
 - <xref:System.Reflection>
-- [<span data-ttu-id="f9f9b-119">Visual Basic のプログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="f9f9b-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="f9f9b-120">カスタム属性の記述</span><span class="sxs-lookup"><span data-stu-id="f9f9b-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
-- [<span data-ttu-id="f9f9b-121">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9f9b-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="f9f9b-122">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9f9b-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="f9f9b-123">リフレクションを使用した属性へのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9f9b-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [<span data-ttu-id="f9f9b-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9f9b-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="4bdcf-119">Visual Basic のプログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="4bdcf-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="4bdcf-120">カスタム属性の記述</span><span class="sxs-lookup"><span data-stu-id="4bdcf-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
+- [<span data-ttu-id="4bdcf-121">リフレクション (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bdcf-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="4bdcf-122">属性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bdcf-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="4bdcf-123">リフレクションを使用した属性へのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bdcf-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="4bdcf-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bdcf-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

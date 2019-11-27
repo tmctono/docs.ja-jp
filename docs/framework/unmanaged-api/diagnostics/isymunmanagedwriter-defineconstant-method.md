@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428064"
 ---
-# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="8e7a5-102">ISymUnmanagedWriter::DefineConstant メソッド</span><span class="sxs-lookup"><span data-stu-id="8e7a5-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
-<span data-ttu-id="8e7a5-103">Defines a name for a constant value.</span><span class="sxs-lookup"><span data-stu-id="8e7a5-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriterdefineconstant-method"></a><span data-ttu-id="a6034-102">ISymUnmanagedWriter::DefineConstant メソッド</span><span class="sxs-lookup"><span data-stu-id="a6034-102">ISymUnmanagedWriter::DefineConstant Method</span></span>
+<span data-ttu-id="a6034-103">定数値の名前を定義します。</span><span class="sxs-lookup"><span data-stu-id="a6034-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e7a5-104">構文</span><span class="sxs-lookup"><span data-stu-id="8e7a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6034-104">構文</span><span class="sxs-lookup"><span data-stu-id="a6034-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineConstant(  
@@ -35,26 +35,26 @@ HRESULT DefineConstant(
     [in, size_is(cSig)] unsigned char signature[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8e7a5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8e7a5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6034-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a6034-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="8e7a5-106">[in] A pointer to a `WCHAR` that defines the constant name.</span><span class="sxs-lookup"><span data-stu-id="8e7a5-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
+ <span data-ttu-id="a6034-106">から定数名を定義する `WCHAR` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a6034-106">[in] A pointer to a `WCHAR` that defines the constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="8e7a5-107">[in] The value of the constant.</span><span class="sxs-lookup"><span data-stu-id="8e7a5-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="a6034-107">から定数の値。</span><span class="sxs-lookup"><span data-stu-id="a6034-107">[in] The value of the constant.</span></span>  
   
  `cSig`  
- <span data-ttu-id="8e7a5-108">[in] `signature` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="8e7a5-108">[in] The size of the `signature` array.</span></span>  
+ <span data-ttu-id="a6034-108">[in] `signature` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="a6034-108">[in] The size of the `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="8e7a5-109">[in] The type signature for the constant.</span><span class="sxs-lookup"><span data-stu-id="8e7a5-109">[in] The type signature for the constant.</span></span>  
+ <span data-ttu-id="a6034-109">から定数の型シグネチャ。</span><span class="sxs-lookup"><span data-stu-id="a6034-109">[in] The type signature for the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8e7a5-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="8e7a5-110">Return Value</span></span>  
- <span data-ttu-id="8e7a5-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="8e7a5-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6034-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="a6034-110">Return Value</span></span>  
+ <span data-ttu-id="a6034-111">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="a6034-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e7a5-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="8e7a5-112">Requirements</span></span>  
- <span data-ttu-id="8e7a5-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8e7a5-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6034-112">要件</span><span class="sxs-lookup"><span data-stu-id="a6034-112">Requirements</span></span>  
+ <span data-ttu-id="a6034-113">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="a6034-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e7a5-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e7a5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6034-114">参照</span><span class="sxs-lookup"><span data-stu-id="a6034-114">See also</span></span>
 
-- [<span data-ttu-id="8e7a5-115">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8e7a5-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="8e7a5-116">DefineConstant2 メソッド</span><span class="sxs-lookup"><span data-stu-id="8e7a5-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [<span data-ttu-id="a6034-115">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a6034-115">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="a6034-116">DefineConstant2 メソッド</span><span class="sxs-lookup"><span data-stu-id="a6034-116">DefineConstant2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)

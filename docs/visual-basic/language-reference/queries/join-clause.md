@@ -17,11 +17,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353265"
 ---
-# <a name="join-clause-visual-basic"></a><span data-ttu-id="d8e52-102">Join 句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d8e52-102">Join Clause (Visual Basic)</span></span>
+# <a name="join-clause-visual-basic"></a><span data-ttu-id="1a534-102">Join 句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a534-102">Join Clause (Visual Basic)</span></span>
 
-<span data-ttu-id="d8e52-103">2 つのコレクションを単一のコレクションに結合します。</span><span class="sxs-lookup"><span data-stu-id="d8e52-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="d8e52-104">The join operation is based on matching keys and uses the `Equals` operator.</span><span class="sxs-lookup"><span data-stu-id="d8e52-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>
+<span data-ttu-id="1a534-103">2 つのコレクションを単一のコレクションに結合します。</span><span class="sxs-lookup"><span data-stu-id="1a534-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="1a534-104">結合操作は、一致するキーに基づいており、`Equals` 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="1a534-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d8e52-105">構文</span><span class="sxs-lookup"><span data-stu-id="d8e52-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1a534-105">構文</span><span class="sxs-lookup"><span data-stu-id="1a534-105">Syntax</span></span>
 
 ```vb
 Join element In collection _
@@ -30,47 +30,47 @@ Join element In collection _
 On key1 Equals key2 [ And key3 Equals key4 [... ]
 ```
 
-## <a name="parts"></a><span data-ttu-id="d8e52-106">指定項目</span><span class="sxs-lookup"><span data-stu-id="d8e52-106">Parts</span></span>
+## <a name="parts"></a><span data-ttu-id="1a534-106">指定項目</span><span class="sxs-lookup"><span data-stu-id="1a534-106">Parts</span></span>
 
-<span data-ttu-id="d8e52-107">`element` 必須。</span><span class="sxs-lookup"><span data-stu-id="d8e52-107">`element` Required.</span></span> <span data-ttu-id="d8e52-108">The control variable for the collection being joined.</span><span class="sxs-lookup"><span data-stu-id="d8e52-108">The control variable for the collection being joined.</span></span>
+<span data-ttu-id="1a534-107">`element` 必須。</span><span class="sxs-lookup"><span data-stu-id="1a534-107">`element` Required.</span></span> <span data-ttu-id="1a534-108">結合されているコレクションのコントロール変数。</span><span class="sxs-lookup"><span data-stu-id="1a534-108">The control variable for the collection being joined.</span></span>
 
 `collection`  
-<span data-ttu-id="d8e52-109">必須です。</span><span class="sxs-lookup"><span data-stu-id="d8e52-109">Required.</span></span> <span data-ttu-id="d8e52-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span><span class="sxs-lookup"><span data-stu-id="d8e52-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="d8e52-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span><span class="sxs-lookup"><span data-stu-id="d8e52-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>
+<span data-ttu-id="1a534-109">必須。</span><span class="sxs-lookup"><span data-stu-id="1a534-109">Required.</span></span> <span data-ttu-id="1a534-110">`Join` 演算子の左側で指定されているコレクションと結合するコレクション。</span><span class="sxs-lookup"><span data-stu-id="1a534-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="1a534-111">`Join` 句は、別の `Join` 句、または `Group Join` 句で入れ子にすることができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>
 
 `joinClause`  
-<span data-ttu-id="d8e52-112">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8e52-112">Optional.</span></span> <span data-ttu-id="d8e52-113">One or more additional `Join` clauses to further refine the query.</span><span class="sxs-lookup"><span data-stu-id="d8e52-113">One or more additional `Join` clauses to further refine the query.</span></span>
+<span data-ttu-id="1a534-112">省略可。</span><span class="sxs-lookup"><span data-stu-id="1a534-112">Optional.</span></span> <span data-ttu-id="1a534-113">クエリをさらに絞り込むための1つ以上の `Join` 句。</span><span class="sxs-lookup"><span data-stu-id="1a534-113">One or more additional `Join` clauses to further refine the query.</span></span>
 
 `groupJoinClause`  
-<span data-ttu-id="d8e52-114">省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d8e52-114">Optional.</span></span> <span data-ttu-id="d8e52-115">One or more additional `Group Join` clauses to further refine the query.</span><span class="sxs-lookup"><span data-stu-id="d8e52-115">One or more additional `Group Join` clauses to further refine the query.</span></span>
+<span data-ttu-id="1a534-114">省略可。</span><span class="sxs-lookup"><span data-stu-id="1a534-114">Optional.</span></span> <span data-ttu-id="1a534-115">クエリをさらに絞り込むための1つ以上の `Group Join` 句。</span><span class="sxs-lookup"><span data-stu-id="1a534-115">One or more additional `Group Join` clauses to further refine the query.</span></span>
 
-<span data-ttu-id="d8e52-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="d8e52-116">`key1` `Equals` `key2`</span></span>  
-<span data-ttu-id="d8e52-117">必須です。</span><span class="sxs-lookup"><span data-stu-id="d8e52-117">Required.</span></span> <span data-ttu-id="d8e52-118">Identifies keys for the collections being joined.</span><span class="sxs-lookup"><span data-stu-id="d8e52-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="d8e52-119">You must use the `Equals` operator to compare keys from the collections being joined.</span><span class="sxs-lookup"><span data-stu-id="d8e52-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="d8e52-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span><span class="sxs-lookup"><span data-stu-id="d8e52-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="d8e52-121">`key1` must be from the collection on the left side of the `Join` operator.</span><span class="sxs-lookup"><span data-stu-id="d8e52-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="d8e52-122">`key2` must be from the collection on the right side of the `Join` operator.</span><span class="sxs-lookup"><span data-stu-id="d8e52-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>
+<span data-ttu-id="1a534-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="1a534-116">`key1` `Equals` `key2`</span></span>  
+<span data-ttu-id="1a534-117">必須。</span><span class="sxs-lookup"><span data-stu-id="1a534-117">Required.</span></span> <span data-ttu-id="1a534-118">結合されているコレクションのキーを識別します。</span><span class="sxs-lookup"><span data-stu-id="1a534-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="1a534-119">`Equals` 演算子を使用して、結合されているコレクションのキーを比較する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1a534-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="1a534-120">結合条件を結合するには、複数のキーを識別するために、`And` 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="1a534-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="1a534-121">`key1` は、`Join` 演算子の左側にあるコレクションからのものである必要があります。</span><span class="sxs-lookup"><span data-stu-id="1a534-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="1a534-122">`key2` は、`Join` 演算子の右側にあるコレクションからのものである必要があります。</span><span class="sxs-lookup"><span data-stu-id="1a534-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>
 
-<span data-ttu-id="d8e52-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span><span class="sxs-lookup"><span data-stu-id="d8e52-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="d8e52-124">However, each key expression can contain only items from its respective collection.</span><span class="sxs-lookup"><span data-stu-id="d8e52-124">However, each key expression can contain only items from its respective collection.</span></span>
+<span data-ttu-id="1a534-123">結合条件で使用されるキーは、コレクションの複数の項目を含む式にすることができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="1a534-124">ただし、各キー式には、それぞれのコレクションの項目だけを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-124">However, each key expression can contain only items from its respective collection.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="d8e52-125">Remarks</span><span class="sxs-lookup"><span data-stu-id="d8e52-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1a534-125">コメント</span><span class="sxs-lookup"><span data-stu-id="1a534-125">Remarks</span></span>
 
-<span data-ttu-id="d8e52-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span><span class="sxs-lookup"><span data-stu-id="d8e52-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="d8e52-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span><span class="sxs-lookup"><span data-stu-id="d8e52-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="d8e52-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span><span class="sxs-lookup"><span data-stu-id="d8e52-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="d8e52-129">This is equivalent to an `INNER JOIN` in SQL.</span><span class="sxs-lookup"><span data-stu-id="d8e52-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>
+<span data-ttu-id="1a534-126">`Join` 句は、結合されているコレクションのキー値の一致に基づいて2つのコレクションを結合します。</span><span class="sxs-lookup"><span data-stu-id="1a534-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="1a534-127">結果として得られるコレクションには、`Join` 演算子の左側で指定されたコレクションと、`Join` 句で識別されたコレクションの値の任意の組み合わせを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="1a534-128">クエリから返されるのは、`Equals` 演算子によって指定された条件を満たした結果だけです。</span><span class="sxs-lookup"><span data-stu-id="1a534-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="1a534-129">これは、SQL の `INNER JOIN` に相当します。</span><span class="sxs-lookup"><span data-stu-id="1a534-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>
 
-<span data-ttu-id="d8e52-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span><span class="sxs-lookup"><span data-stu-id="d8e52-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>
+<span data-ttu-id="1a534-130">クエリで複数の `Join` 句を使用すると、複数のコレクションを1つのコレクションに結合できます。</span><span class="sxs-lookup"><span data-stu-id="1a534-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>
 
-<span data-ttu-id="d8e52-131">You can perform an implicit join to combine collections without the `Join` clause.</span><span class="sxs-lookup"><span data-stu-id="d8e52-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="d8e52-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span><span class="sxs-lookup"><span data-stu-id="d8e52-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>
+<span data-ttu-id="1a534-131">暗黙的結合を実行して、`Join` 句を使用せずにコレクションを結合することができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="1a534-132">これを行うには、`From` 句に複数の `In` 句を含め、結合に使用するキーを識別する `Where` 句を指定します。</span><span class="sxs-lookup"><span data-stu-id="1a534-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>
 
-<span data-ttu-id="d8e52-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span><span class="sxs-lookup"><span data-stu-id="d8e52-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="d8e52-134">This is like a `LEFT OUTER JOIN` in SQL.</span><span class="sxs-lookup"><span data-stu-id="d8e52-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>
+<span data-ttu-id="1a534-133">`Group Join` 句を使用して、コレクションを1つの階層コレクションにまとめることができます。</span><span class="sxs-lookup"><span data-stu-id="1a534-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="1a534-134">これは、SQL の `LEFT OUTER JOIN` に似ています。</span><span class="sxs-lookup"><span data-stu-id="1a534-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d8e52-135">例</span><span class="sxs-lookup"><span data-stu-id="d8e52-135">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1a534-135">例</span><span class="sxs-lookup"><span data-stu-id="1a534-135">Example</span></span>
 
-<span data-ttu-id="d8e52-136">The following code example performs an implicit join to combine a list of customers with their orders.</span><span class="sxs-lookup"><span data-stu-id="d8e52-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>
+<span data-ttu-id="1a534-136">次のコード例では、暗黙的な結合を実行して顧客のリストと注文を結合します。</span><span class="sxs-lookup"><span data-stu-id="1a534-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>
 
 [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]
 
-## <a name="example"></a><span data-ttu-id="d8e52-137">例</span><span class="sxs-lookup"><span data-stu-id="d8e52-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1a534-137">例</span><span class="sxs-lookup"><span data-stu-id="1a534-137">Example</span></span>
 
-<span data-ttu-id="d8e52-138">The following code example joins two collections by using the `Join` clause.</span><span class="sxs-lookup"><span data-stu-id="d8e52-138">The following code example joins two collections by using the `Join` clause.</span></span>
+<span data-ttu-id="1a534-138">次のコード例では、`Join` 句を使用して2つのコレクションを結合します。</span><span class="sxs-lookup"><span data-stu-id="1a534-138">The following code example joins two collections by using the `Join` clause.</span></span>
 
 [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]
 
-<span data-ttu-id="d8e52-139">This example will produce output similar to the following:</span><span class="sxs-lookup"><span data-stu-id="d8e52-139">This example will produce output similar to the following:</span></span>
+<span data-ttu-id="1a534-139">この例では、次のような出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1a534-139">This example will produce output similar to the following:</span></span>
 
 `winlogon (968), Windows Logon`
 
@@ -78,13 +78,13 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 `cmd (5136), Command Window`
 
-## <a name="example"></a><span data-ttu-id="d8e52-140">例</span><span class="sxs-lookup"><span data-stu-id="d8e52-140">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1a534-140">例</span><span class="sxs-lookup"><span data-stu-id="1a534-140">Example</span></span>
 
-<span data-ttu-id="d8e52-141">The following code example joins two collections by using the `Join` clause with two key columns.</span><span class="sxs-lookup"><span data-stu-id="d8e52-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>
+<span data-ttu-id="1a534-141">次のコード例では、2つのキー列を持つ `Join` 句を使用して、2つのコレクションを結合します。</span><span class="sxs-lookup"><span data-stu-id="1a534-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>
 
 [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]
 
-<span data-ttu-id="d8e52-142">The example will produce output similar to the following:</span><span class="sxs-lookup"><span data-stu-id="d8e52-142">The example will produce output similar to the following:</span></span>
+<span data-ttu-id="1a534-142">この例では、次のような出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1a534-142">The example will produce output similar to the following:</span></span>
 
 `winlogon (968), Windows Logon, Priority = 13`
 
@@ -92,11 +92,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 `explorer (2424), File Explorer, Priority = 8`
 
-## <a name="see-also"></a><span data-ttu-id="d8e52-143">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8e52-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a534-143">参照</span><span class="sxs-lookup"><span data-stu-id="1a534-143">See also</span></span>
 
-- [<span data-ttu-id="d8e52-144">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="d8e52-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="d8e52-145">クエリ</span><span class="sxs-lookup"><span data-stu-id="d8e52-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="d8e52-146">Select 句</span><span class="sxs-lookup"><span data-stu-id="d8e52-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="d8e52-147">From 句</span><span class="sxs-lookup"><span data-stu-id="d8e52-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="d8e52-148">Group Join 句</span><span class="sxs-lookup"><span data-stu-id="d8e52-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [<span data-ttu-id="d8e52-149">WHERE 句</span><span class="sxs-lookup"><span data-stu-id="d8e52-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+- [<span data-ttu-id="1a534-144">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="1a534-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="1a534-145">クエリ</span><span class="sxs-lookup"><span data-stu-id="1a534-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="1a534-146">Select 句</span><span class="sxs-lookup"><span data-stu-id="1a534-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="1a534-147">From 句</span><span class="sxs-lookup"><span data-stu-id="1a534-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="1a534-148">Group Join 句</span><span class="sxs-lookup"><span data-stu-id="1a534-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [<span data-ttu-id="1a534-149">WHERE 句</span><span class="sxs-lookup"><span data-stu-id="1a534-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

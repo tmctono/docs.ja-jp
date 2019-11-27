@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432976"
 ---
-# <a name="icorprofilerinfo2getstaticfieldinfo-method"></a><span data-ttu-id="e6c1b-102">ICorProfilerInfo2::GetStaticFieldInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="e6c1b-102">ICorProfilerInfo2::GetStaticFieldInfo Method</span></span>
-<span data-ttu-id="e6c1b-103">Gets a value that indicates the kind of static that applies to the specified field.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-103">Gets a value that indicates the kind of static that applies to the specified field.</span></span>  
+# <a name="icorprofilerinfo2getstaticfieldinfo-method"></a><span data-ttu-id="d626e-102">ICorProfilerInfo2::GetStaticFieldInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="d626e-102">ICorProfilerInfo2::GetStaticFieldInfo Method</span></span>
+<span data-ttu-id="d626e-103">指定したフィールドに適用される静的の種類を示す値を取得します。</span><span class="sxs-lookup"><span data-stu-id="d626e-103">Gets a value that indicates the kind of static that applies to the specified field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6c1b-104">構文</span><span class="sxs-lookup"><span data-stu-id="e6c1b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d626e-104">構文</span><span class="sxs-lookup"><span data-stu-id="d626e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStaticFieldInfo (  
@@ -34,31 +34,31 @@ HRESULT GetStaticFieldInfo (
     [out] COR_PRF_STATIC_TYPE  *pFieldInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e6c1b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e6c1b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d626e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d626e-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="e6c1b-106">[in] The ID of the class in which the static field is defined.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-106">[in] The ID of the class in which the static field is defined.</span></span>  
+ <span data-ttu-id="d626e-106">から静的フィールドが定義されているクラスの ID。</span><span class="sxs-lookup"><span data-stu-id="d626e-106">[in] The ID of the class in which the static field is defined.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="e6c1b-107">[in] The metadata token for the static field.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-107">[in] The metadata token for the static field.</span></span>  
+ <span data-ttu-id="d626e-107">から静的フィールドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="d626e-107">[in] The metadata token for the static field.</span></span>  
   
  `pFieldInfo`  
- <span data-ttu-id="e6c1b-108">[out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-108">[out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.</span></span>  
+ <span data-ttu-id="d626e-108">入出力指定されたフィールドが静的かどうかを示す[COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)列挙体の値へのポインター。存在する場合は、フィールドに適用される静的の種類。</span><span class="sxs-lookup"><span data-stu-id="d626e-108">[out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e6c1b-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="e6c1b-109">Remarks</span></span>  
- <span data-ttu-id="e6c1b-110">This information can be used to determine which function to call to get the address of the static field.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-110">This information can be used to determine which function to call to get the address of the static field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d626e-109">コメント</span><span class="sxs-lookup"><span data-stu-id="d626e-109">Remarks</span></span>  
+ <span data-ttu-id="d626e-110">この情報は、静的フィールドのアドレスを取得するために呼び出す関数を決定するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="d626e-110">This information can be used to determine which function to call to get the address of the static field.</span></span>  
   
- <span data-ttu-id="e6c1b-111">The profiler code should still check the metadata for a static field to ensure that it actually has an address.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-111">The profiler code should still check the metadata for a static field to ensure that it actually has an address.</span></span> <span data-ttu-id="e6c1b-112">Static literals (that is, constants) exist only in the metadata and do not have an address.</span><span class="sxs-lookup"><span data-stu-id="e6c1b-112">Static literals (that is, constants) exist only in the metadata and do not have an address.</span></span>  
+ <span data-ttu-id="d626e-111">プロファイラーコードでは、静的フィールドのメタデータを確認して、実際にアドレスがあることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d626e-111">The profiler code should still check the metadata for a static field to ensure that it actually has an address.</span></span> <span data-ttu-id="d626e-112">静的リテラル (つまり、定数) はメタデータにのみ存在し、アドレスを持ちません。</span><span class="sxs-lookup"><span data-stu-id="d626e-112">Static literals (that is, constants) exist only in the metadata and do not have an address.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e6c1b-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="e6c1b-113">Requirements</span></span>  
- <span data-ttu-id="e6c1b-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6c1b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d626e-113">要件</span><span class="sxs-lookup"><span data-stu-id="d626e-113">Requirements</span></span>  
+ <span data-ttu-id="d626e-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d626e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e6c1b-115">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e6c1b-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d626e-115">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d626e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e6c1b-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6c1b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d626e-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d626e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e6c1b-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6c1b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d626e-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d626e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6c1b-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6c1b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d626e-118">参照</span><span class="sxs-lookup"><span data-stu-id="d626e-118">See also</span></span>
 
-- [<span data-ttu-id="e6c1b-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e6c1b-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="e6c1b-120">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="e6c1b-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="d626e-119">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d626e-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d626e-120">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d626e-120">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

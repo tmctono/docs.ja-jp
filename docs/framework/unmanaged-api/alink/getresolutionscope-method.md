@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447226"
 ---
-# <a name="getresolutionscope-method"></a><span data-ttu-id="9ec94-102">GetResolutionScope メソッド</span><span class="sxs-lookup"><span data-stu-id="9ec94-102">GetResolutionScope Method</span></span>
-<span data-ttu-id="9ec94-103">Retrieves the scope of a given type.</span><span class="sxs-lookup"><span data-stu-id="9ec94-103">Retrieves the scope of a given type.</span></span>  
+# <a name="getresolutionscope-method"></a><span data-ttu-id="696a0-102">GetResolutionScope メソッド</span><span class="sxs-lookup"><span data-stu-id="696a0-102">GetResolutionScope Method</span></span>
+<span data-ttu-id="696a0-103">指定された型のスコープを取得します。</span><span class="sxs-lookup"><span data-stu-id="696a0-103">Retrieves the scope of a given type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ec94-104">構文</span><span class="sxs-lookup"><span data-stu-id="9ec94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="696a0-104">構文</span><span class="sxs-lookup"><span data-stu-id="696a0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetResolutionScope(  
@@ -35,27 +35,27 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ec94-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9ec94-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="696a0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="696a0-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="9ec94-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="9ec94-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="696a0-106">アセンブリの ID。</span><span class="sxs-lookup"><span data-stu-id="696a0-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="9ec94-107">File that is in need of a reference.</span><span class="sxs-lookup"><span data-stu-id="9ec94-107">File that is in need of a reference.</span></span>  
+ <span data-ttu-id="696a0-107">参照が必要なファイル。</span><span class="sxs-lookup"><span data-stu-id="696a0-107">File that is in need of a reference.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="9ec94-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="9ec94-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
+ <span data-ttu-id="696a0-108">型が定義されているファイルのトークン。通常は、 [Importfile メソッド](importfile-method.md)を使用して取得されます。</span><span class="sxs-lookup"><span data-stu-id="696a0-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
   
  `pScope`  
- <span data-ttu-id="9ec94-109">Receives the assembly or module reference.</span><span class="sxs-lookup"><span data-stu-id="9ec94-109">Receives the assembly or module reference.</span></span>  
+ <span data-ttu-id="696a0-109">アセンブリまたはモジュール参照を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="696a0-109">Receives the assembly or module reference.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9ec94-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="9ec94-110">Return Value</span></span>  
- <span data-ttu-id="9ec94-111">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9ec94-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="696a0-110">戻り値</span><span class="sxs-lookup"><span data-stu-id="696a0-110">Return Value</span></span>  
+ <span data-ttu-id="696a0-111">メソッドが成功した場合は S_OK を返します。</span><span class="sxs-lookup"><span data-stu-id="696a0-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ec94-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="9ec94-112">Requirements</span></span>  
- <span data-ttu-id="9ec94-113">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="9ec94-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="696a0-112">要件</span><span class="sxs-lookup"><span data-stu-id="696a0-112">Requirements</span></span>  
+ <span data-ttu-id="696a0-113">Alink. h が必要です。</span><span class="sxs-lookup"><span data-stu-id="696a0-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ec94-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ec94-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="696a0-114">参照</span><span class="sxs-lookup"><span data-stu-id="696a0-114">See also</span></span>
 
-- [<span data-ttu-id="9ec94-115">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ec94-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="9ec94-116">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ec94-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="9ec94-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="9ec94-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="696a0-115">IALink インターフェイス</span><span class="sxs-lookup"><span data-stu-id="696a0-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="696a0-116">IALink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="696a0-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="696a0-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="696a0-117">ALink API</span></span>](index.md)

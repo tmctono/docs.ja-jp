@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435914"
 ---
-# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="694af-102">ICorProfilerCallback::ClassUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="694af-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
-<span data-ttu-id="694af-103">Notifies the profiler that a class has finished unloading.</span><span class="sxs-lookup"><span data-stu-id="694af-103">Notifies the profiler that a class has finished unloading.</span></span>  
+# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="c1a60-102">ICorProfilerCallback::ClassUnloadFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="c1a60-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
+<span data-ttu-id="c1a60-103">クラスのアンロードが終了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="c1a60-103">Notifies the profiler that a class has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="694af-104">構文</span><span class="sxs-lookup"><span data-stu-id="694af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1a60-104">構文</span><span class="sxs-lookup"><span data-stu-id="c1a60-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ClassUnloadFinished(  
@@ -33,26 +33,26 @@ HRESULT ClassUnloadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="694af-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="694af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1a60-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c1a60-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="694af-106">[in] Identifies the class that was unloaded.</span><span class="sxs-lookup"><span data-stu-id="694af-106">[in] Identifies the class that was unloaded.</span></span>  
+ <span data-ttu-id="c1a60-106">からアンロードされたクラスを識別します。</span><span class="sxs-lookup"><span data-stu-id="c1a60-106">[in] Identifies the class that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="694af-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span><span class="sxs-lookup"><span data-stu-id="694af-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
+ <span data-ttu-id="c1a60-107">からクラスが正常にアンロードされたかどうかを示す HRESULT。</span><span class="sxs-lookup"><span data-stu-id="c1a60-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="694af-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="694af-108">Remarks</span></span>  
- <span data-ttu-id="694af-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="694af-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="694af-110">A failure HRESULT in `hrStatus` indicates a failure.</span><span class="sxs-lookup"><span data-stu-id="694af-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="694af-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span><span class="sxs-lookup"><span data-stu-id="694af-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1a60-108">コメント</span><span class="sxs-lookup"><span data-stu-id="c1a60-108">Remarks</span></span>  
+ <span data-ttu-id="c1a60-109">`ClassUnloadFinished` コールバックの後に、クラスのアンロードの一部が続行される場合があります。</span><span class="sxs-lookup"><span data-stu-id="c1a60-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="c1a60-110">`hrStatus` のエラー HRESULT はエラーを示します。</span><span class="sxs-lookup"><span data-stu-id="c1a60-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="c1a60-111">ただし、`hrStatus` の成功 HRESULT は、クラスのアンロードの最初の部分が成功したことのみを示します。</span><span class="sxs-lookup"><span data-stu-id="c1a60-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="694af-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="694af-112">Requirements</span></span>  
- <span data-ttu-id="694af-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="694af-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1a60-112">要件</span><span class="sxs-lookup"><span data-stu-id="c1a60-112">Requirements</span></span>  
+ <span data-ttu-id="c1a60-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c1a60-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="694af-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="694af-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c1a60-114">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c1a60-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="694af-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="694af-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c1a60-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1a60-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="694af-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="694af-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c1a60-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1a60-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="694af-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="694af-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1a60-117">参照</span><span class="sxs-lookup"><span data-stu-id="c1a60-117">See also</span></span>
 
-- [<span data-ttu-id="694af-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="694af-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="694af-119">ClassUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="694af-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)
+- [<span data-ttu-id="c1a60-118">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c1a60-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="c1a60-119">ClassUnloadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="c1a60-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)

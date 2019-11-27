@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449269"
 ---
-# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="4b016-102">ISymUnmanagedConstant::GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="4b016-102">ISymUnmanagedConstant::GetSignature Method</span></span>
-<span data-ttu-id="4b016-103">Gets the signature of the constant.</span><span class="sxs-lookup"><span data-stu-id="4b016-103">Gets the signature of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetsignature-method"></a><span data-ttu-id="d00c5-102">ISymUnmanagedConstant::GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="d00c5-102">ISymUnmanagedConstant::GetSignature Method</span></span>
+<span data-ttu-id="d00c5-103">定数の署名を取得します。</span><span class="sxs-lookup"><span data-stu-id="d00c5-103">Gets the signature of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b016-104">構文</span><span class="sxs-lookup"><span data-stu-id="4b016-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d00c5-104">構文</span><span class="sxs-lookup"><span data-stu-id="d00c5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -35,24 +35,24 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4b016-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4b016-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d00c5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d00c5-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="4b016-106">[in] The length of the buffer that the `pcSig` parameter points to.</span><span class="sxs-lookup"><span data-stu-id="4b016-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
+ <span data-ttu-id="d00c5-106">から`pcSig` パラメーターが指すバッファーの長さ。</span><span class="sxs-lookup"><span data-stu-id="d00c5-106">[in] The length of the buffer that the `pcSig` parameter points to.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="4b016-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span><span class="sxs-lookup"><span data-stu-id="4b016-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="d00c5-107">入出力署名を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d00c5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="4b016-108">[out] The buffer that stores the signature.</span><span class="sxs-lookup"><span data-stu-id="4b016-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="d00c5-108">入出力署名を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="d00c5-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4b016-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="4b016-109">Return Value</span></span>  
- <span data-ttu-id="4b016-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="4b016-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d00c5-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="d00c5-109">Return Value</span></span>  
+ <span data-ttu-id="d00c5-110">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="d00c5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4b016-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="4b016-111">Requirements</span></span>  
- <span data-ttu-id="4b016-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4b016-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d00c5-111">要件</span><span class="sxs-lookup"><span data-stu-id="d00c5-111">Requirements</span></span>  
+ <span data-ttu-id="d00c5-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="d00c5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b016-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b016-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d00c5-113">参照</span><span class="sxs-lookup"><span data-stu-id="d00c5-113">See also</span></span>
 
-- [<span data-ttu-id="4b016-114">ISymUnmanagedConstant インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4b016-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="4b016-115">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="4b016-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="4b016-116">GetValue メソッド</span><span class="sxs-lookup"><span data-stu-id="4b016-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [<span data-ttu-id="d00c5-114">ISymUnmanagedConstant インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d00c5-114">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="d00c5-115">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="d00c5-115">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="d00c5-116">GetValue メソッド</span><span class="sxs-lookup"><span data-stu-id="d00c5-116">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

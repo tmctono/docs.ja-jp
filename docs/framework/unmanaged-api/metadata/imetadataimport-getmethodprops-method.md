@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437464"
 ---
-# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="b3223-102">IMetaDataImport::GetMethodProps メソッド</span><span class="sxs-lookup"><span data-stu-id="b3223-102">IMetaDataImport::GetMethodProps Method</span></span>
-<span data-ttu-id="b3223-103">指定した MethodDef トークンによって参照されるメソッドに関連付けられているメタデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="b3223-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="fe436-102">IMetaDataImport::GetMethodProps メソッド</span><span class="sxs-lookup"><span data-stu-id="fe436-102">IMetaDataImport::GetMethodProps Method</span></span>
+<span data-ttu-id="fe436-103">指定した MethodDef トークンによって参照されるメソッドに関連付けられているメタデータを取得します。</span><span class="sxs-lookup"><span data-stu-id="fe436-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3223-104">構文</span><span class="sxs-lookup"><span data-stu-id="b3223-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe436-104">構文</span><span class="sxs-lookup"><span data-stu-id="fe436-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodProps (  
@@ -42,47 +42,47 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3223-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b3223-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fe436-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fe436-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="b3223-106">[in] The MethodDef token that represents the method to return metadata for.</span><span class="sxs-lookup"><span data-stu-id="b3223-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
+ <span data-ttu-id="fe436-106">からメタデータを返すメソッドを表す MethodDef トークン。</span><span class="sxs-lookup"><span data-stu-id="fe436-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="b3223-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span><span class="sxs-lookup"><span data-stu-id="b3223-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
+ <span data-ttu-id="fe436-107">入出力メソッドを実装する型を表す TypeDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
   
  `szMethod`  
- <span data-ttu-id="b3223-108">[out] A Pointer to a buffer that has the method's name.</span><span class="sxs-lookup"><span data-stu-id="b3223-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
+ <span data-ttu-id="fe436-108">入出力メソッドの名前を持つバッファーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
   
  `cchMethod`  
- <span data-ttu-id="b3223-109">[in] The requested size of `szMethod`.</span><span class="sxs-lookup"><span data-stu-id="b3223-109">[in] The requested size of `szMethod`.</span></span>  
+ <span data-ttu-id="fe436-109">から要求された `szMethod`のサイズ。</span><span class="sxs-lookup"><span data-stu-id="fe436-109">[in] The requested size of `szMethod`.</span></span>  
   
  `pchMethod`  
- <span data-ttu-id="b3223-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span><span class="sxs-lookup"><span data-stu-id="b3223-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
+ <span data-ttu-id="fe436-110">入出力`szMethod`のワイド文字のサイズへのポインター。または、切り捨ての場合は、メソッド名の実際のワイド文字数。</span><span class="sxs-lookup"><span data-stu-id="fe436-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="b3223-111">[out] A pointer to any flags associated with the method.</span><span class="sxs-lookup"><span data-stu-id="b3223-111">[out] A pointer to any flags associated with the method.</span></span>  
+ <span data-ttu-id="fe436-111">入出力メソッドに関連付けられているフラグへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-111">[out] A pointer to any flags associated with the method.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="b3223-112">[out] A pointer to the binary metadata signature of the method.</span><span class="sxs-lookup"><span data-stu-id="b3223-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
+ <span data-ttu-id="fe436-112">入出力メソッドのバイナリメタデータシグネチャへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="b3223-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="b3223-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="fe436-113">入出力`ppvSigBlob`のサイズ (バイト単位) へのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="b3223-114">[out] A pointer to the relative virtual address of the method.</span><span class="sxs-lookup"><span data-stu-id="b3223-114">[out] A pointer to the relative virtual address of the method.</span></span>  
+ <span data-ttu-id="fe436-114">入出力メソッドの相対仮想アドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-114">[out] A pointer to the relative virtual address of the method.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="b3223-115">[out] A pointer to any implementation flags for the method.</span><span class="sxs-lookup"><span data-stu-id="b3223-115">[out] A pointer to any implementation flags for the method.</span></span>  
+ <span data-ttu-id="fe436-115">入出力メソッドの実装フラグへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fe436-115">[out] A pointer to any implementation flags for the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3223-116">［要件］</span><span class="sxs-lookup"><span data-stu-id="b3223-116">Requirements</span></span>  
- <span data-ttu-id="b3223-117">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b3223-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe436-116">要件</span><span class="sxs-lookup"><span data-stu-id="fe436-116">Requirements</span></span>  
+ <span data-ttu-id="fe436-117">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fe436-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3223-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b3223-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fe436-118">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="fe436-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b3223-119">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b3223-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fe436-119">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="fe436-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b3223-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3223-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fe436-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe436-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3223-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3223-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe436-121">参照</span><span class="sxs-lookup"><span data-stu-id="fe436-121">See also</span></span>
 
-- [<span data-ttu-id="b3223-122">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b3223-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b3223-123">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b3223-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="fe436-122">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fe436-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fe436-123">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fe436-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

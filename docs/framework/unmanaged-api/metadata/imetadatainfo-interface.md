@@ -21,25 +21,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442101"
 ---
-# <a name="imetadatainfo-interface"></a><span data-ttu-id="0285e-102">IMetaDataInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0285e-102">IMetaDataInfo Interface</span></span>
-<span data-ttu-id="0285e-103">ディスク上のファイルからメモリへのメタデータのマッピングに関する情報を取得するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="0285e-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
+# <a name="imetadatainfo-interface"></a><span data-ttu-id="7c971-102">IMetaDataInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7c971-102">IMetaDataInfo Interface</span></span>
+<span data-ttu-id="7c971-103">ディスク上のファイルからメモリへのメタデータのマッピングに関する情報を取得するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="7c971-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0285e-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="0285e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7c971-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="7c971-104">Methods</span></span>  
   
-|<span data-ttu-id="0285e-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="0285e-105">Method</span></span>|<span data-ttu-id="0285e-106">説明</span><span class="sxs-lookup"><span data-stu-id="0285e-106">Description</span></span>|  
+|<span data-ttu-id="7c971-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="7c971-105">Method</span></span>|<span data-ttu-id="7c971-106">説明</span><span class="sxs-lookup"><span data-stu-id="7c971-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0285e-107">GetFileMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="0285e-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="0285e-108">Gets the memory region of the mapped file, and the kind of mapping.</span><span class="sxs-lookup"><span data-stu-id="0285e-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
+|[<span data-ttu-id="7c971-107">GetFileMapping メソッド</span><span class="sxs-lookup"><span data-stu-id="7c971-107">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="7c971-108">マップされたファイルのメモリ領域とマッピングの種類を取得します。</span><span class="sxs-lookup"><span data-stu-id="7c971-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0285e-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="0285e-109">Requirements</span></span>  
- <span data-ttu-id="0285e-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0285e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c971-109">要件</span><span class="sxs-lookup"><span data-stu-id="7c971-109">Requirements</span></span>  
+ <span data-ttu-id="7c971-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7c971-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0285e-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0285e-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7c971-111">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="7c971-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0285e-112">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0285e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7c971-112">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="7c971-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0285e-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0285e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7c971-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c971-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0285e-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="0285e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c971-114">参照</span><span class="sxs-lookup"><span data-stu-id="7c971-114">See also</span></span>
 
-- [<span data-ttu-id="0285e-115">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0285e-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="0285e-116">CorFileMapping 列挙型</span><span class="sxs-lookup"><span data-stu-id="0285e-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+- [<span data-ttu-id="7c971-115">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7c971-115">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="7c971-116">CorFileMapping 列挙型</span><span class="sxs-lookup"><span data-stu-id="7c971-116">CorFileMapping Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

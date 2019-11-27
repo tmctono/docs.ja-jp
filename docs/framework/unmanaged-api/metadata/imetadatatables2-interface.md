@@ -21,26 +21,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432347"
 ---
-# <a name="imetadatatables2-interface"></a><span data-ttu-id="5ffaf-102">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ffaf-102">IMetaDataTables2 Interface</span></span>
-<span data-ttu-id="5ffaf-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span><span class="sxs-lookup"><span data-stu-id="5ffaf-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  
+# <a name="imetadatatables2-interface"></a><span data-ttu-id="90497-102">IMetaDataTables2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90497-102">IMetaDataTables2 Interface</span></span>
+<span data-ttu-id="90497-103">メタデータストリームを操作するためのメソッドを含めるように[Imetadatatables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)拡張します。</span><span class="sxs-lookup"><span data-stu-id="90497-103">Extends [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) to include methods for working with metadata streams.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5ffaf-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="5ffaf-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="90497-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="90497-104">Methods</span></span>  
   
-|<span data-ttu-id="5ffaf-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="5ffaf-105">Method</span></span>|<span data-ttu-id="5ffaf-106">説明</span><span class="sxs-lookup"><span data-stu-id="5ffaf-106">Description</span></span>|  
+|<span data-ttu-id="90497-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="90497-105">Method</span></span>|<span data-ttu-id="90497-106">説明</span><span class="sxs-lookup"><span data-stu-id="90497-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5ffaf-107">GetMetaDataStorage メソッド</span><span class="sxs-lookup"><span data-stu-id="5ffaf-107">GetMetaDataStorage Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|<span data-ttu-id="5ffaf-108">Gets the size and contents of the metadata stored in the specified section.</span><span class="sxs-lookup"><span data-stu-id="5ffaf-108">Gets the size and contents of the metadata stored in the specified section.</span></span>|  
-|[<span data-ttu-id="5ffaf-109">GetMetaDataStreamInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="5ffaf-109">GetMetaDataStreamInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|<span data-ttu-id="5ffaf-110">Gets the name, size, and contents of the metadata stream at the specified index.</span><span class="sxs-lookup"><span data-stu-id="5ffaf-110">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>|  
+|[<span data-ttu-id="90497-107">GetMetaDataStorage メソッド</span><span class="sxs-lookup"><span data-stu-id="90497-107">GetMetaDataStorage Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|<span data-ttu-id="90497-108">指定したセクションに格納されているメタデータのサイズと内容を取得します。</span><span class="sxs-lookup"><span data-stu-id="90497-108">Gets the size and contents of the metadata stored in the specified section.</span></span>|  
+|[<span data-ttu-id="90497-109">GetMetaDataStreamInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="90497-109">GetMetaDataStreamInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|<span data-ttu-id="90497-110">指定したインデックス位置にあるメタデータストリームの名前、サイズ、および内容を取得します。</span><span class="sxs-lookup"><span data-stu-id="90497-110">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5ffaf-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="5ffaf-111">Requirements</span></span>  
- <span data-ttu-id="5ffaf-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5ffaf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90497-111">要件</span><span class="sxs-lookup"><span data-stu-id="90497-111">Requirements</span></span>  
+ <span data-ttu-id="90497-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="90497-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ffaf-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5ffaf-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="90497-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="90497-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5ffaf-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5ffaf-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="90497-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="90497-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5ffaf-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ffaf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="90497-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90497-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ffaf-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ffaf-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90497-116">参照</span><span class="sxs-lookup"><span data-stu-id="90497-116">See also</span></span>
 
-- [<span data-ttu-id="5ffaf-117">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ffaf-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="5ffaf-118">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5ffaf-118">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="90497-117">IMetaDataTables インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90497-117">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="90497-118">メタデータ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="90497-118">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

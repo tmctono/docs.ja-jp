@@ -21,10 +21,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448450"
 ---
-# <a name="cor_prf_static_type-enumeration"></a><span data-ttu-id="ff2dd-102">COR_PRF_STATIC_TYPE 列挙型</span><span class="sxs-lookup"><span data-stu-id="ff2dd-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
-<span data-ttu-id="ff2dd-103">フィールドが静的であるかどうかを示し、静的な場合は、フィールドに適用される静的なクオリティを示します。</span><span class="sxs-lookup"><span data-stu-id="ff2dd-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="ff2dd-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
+# <a name="cor_prf_static_type-enumeration"></a><span data-ttu-id="05818-102">COR_PRF_STATIC_TYPE 列挙型</span><span class="sxs-lookup"><span data-stu-id="05818-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
+<span data-ttu-id="05818-103">フィールドが静的であるかどうかを示し、静的な場合は、フィールドに適用される静的なクオリティを示します。</span><span class="sxs-lookup"><span data-stu-id="05818-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="05818-104">これらの値は、ビットごとの OR 演算を使用して組み合わせて、フィールドに複数の異なる静的品質があることを示すことができます。</span><span class="sxs-lookup"><span data-stu-id="05818-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff2dd-105">構文</span><span class="sxs-lookup"><span data-stu-id="ff2dd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05818-105">構文</span><span class="sxs-lookup"><span data-stu-id="05818-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -36,25 +36,25 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ff2dd-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="ff2dd-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="05818-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="05818-106">Members</span></span>  
   
-|<span data-ttu-id="ff2dd-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="ff2dd-107">Member</span></span>|<span data-ttu-id="ff2dd-108">説明</span><span class="sxs-lookup"><span data-stu-id="ff2dd-108">Description</span></span>|  
+|<span data-ttu-id="05818-107">メンバー</span><span class="sxs-lookup"><span data-stu-id="05818-107">Member</span></span>|<span data-ttu-id="05818-108">説明</span><span class="sxs-lookup"><span data-stu-id="05818-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="ff2dd-109">The field is not static.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-109">The field is not static.</span></span>|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="ff2dd-110">The field is application domain-static.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-110">The field is application domain-static.</span></span>|  
-|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="ff2dd-111">The field is thread-static.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-111">The field is thread-static.</span></span>|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="ff2dd-112">The field is context-static.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-112">The field is context-static.</span></span>|  
-|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="ff2dd-113">The field is relative virtual address (RVA)-static.</span><span class="sxs-lookup"><span data-stu-id="ff2dd-113">The field is relative virtual address (RVA)-static.</span></span>|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="05818-109">フィールドは静的ではありません。</span><span class="sxs-lookup"><span data-stu-id="05818-109">The field is not static.</span></span>|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="05818-110">フィールドは [アプリケーションドメイン-静的] です。</span><span class="sxs-lookup"><span data-stu-id="05818-110">The field is application domain-static.</span></span>|  
+|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="05818-111">フィールドはスレッド静的です。</span><span class="sxs-lookup"><span data-stu-id="05818-111">The field is thread-static.</span></span>|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="05818-112">フィールドは、コンテキスト静的です。</span><span class="sxs-lookup"><span data-stu-id="05818-112">The field is context-static.</span></span>|  
+|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="05818-113">フィールドは、相対仮想アドレス (RVA)-static です。</span><span class="sxs-lookup"><span data-stu-id="05818-113">The field is relative virtual address (RVA)-static.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ff2dd-114">［要件］</span><span class="sxs-lookup"><span data-stu-id="ff2dd-114">Requirements</span></span>  
- <span data-ttu-id="ff2dd-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ff2dd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05818-114">要件</span><span class="sxs-lookup"><span data-stu-id="05818-114">Requirements</span></span>  
+ <span data-ttu-id="05818-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="05818-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff2dd-116">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ff2dd-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="05818-116">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="05818-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ff2dd-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff2dd-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="05818-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05818-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ff2dd-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff2dd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="05818-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05818-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff2dd-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff2dd-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05818-119">参照</span><span class="sxs-lookup"><span data-stu-id="05818-119">See also</span></span>
 
-- [<span data-ttu-id="ff2dd-120">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="ff2dd-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="05818-120">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="05818-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

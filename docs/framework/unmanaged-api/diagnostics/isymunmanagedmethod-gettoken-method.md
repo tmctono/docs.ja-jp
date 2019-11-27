@@ -22,26 +22,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448849"
 ---
-# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="f879f-102">ISymUnmanagedMethod::GetToken メソッド</span><span class="sxs-lookup"><span data-stu-id="f879f-102">ISymUnmanagedMethod::GetToken Method</span></span>
-<span data-ttu-id="f879f-103">Returns the metadata token for this method.</span><span class="sxs-lookup"><span data-stu-id="f879f-103">Returns the metadata token for this method.</span></span>  
+# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="6edad-102">ISymUnmanagedMethod::GetToken メソッド</span><span class="sxs-lookup"><span data-stu-id="6edad-102">ISymUnmanagedMethod::GetToken Method</span></span>
+<span data-ttu-id="6edad-103">このメソッドのメタデータトークンを返します。</span><span class="sxs-lookup"><span data-stu-id="6edad-103">Returns the metadata token for this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f879f-104">構文</span><span class="sxs-lookup"><span data-stu-id="f879f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6edad-104">構文</span><span class="sxs-lookup"><span data-stu-id="6edad-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetToken(  
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f879f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f879f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6edad-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="6edad-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="f879f-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span><span class="sxs-lookup"><span data-stu-id="f879f-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
+ <span data-ttu-id="6edad-106">入出力メタデータを格納するために必要なバッファーのサイズ (文字数) を受け取る `mdMethodDef` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="6edad-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f879f-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="f879f-107">Return Value</span></span>  
- <span data-ttu-id="f879f-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="f879f-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6edad-107">戻り値</span><span class="sxs-lookup"><span data-stu-id="6edad-107">Return Value</span></span>  
+ <span data-ttu-id="6edad-108">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="6edad-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f879f-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="f879f-109">Requirements</span></span>  
- <span data-ttu-id="f879f-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f879f-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6edad-109">要件</span><span class="sxs-lookup"><span data-stu-id="6edad-109">Requirements</span></span>  
+ <span data-ttu-id="6edad-110">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="6edad-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f879f-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="f879f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6edad-111">参照</span><span class="sxs-lookup"><span data-stu-id="6edad-111">See also</span></span>
 
-- [<span data-ttu-id="f879f-112">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f879f-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="6edad-112">ISymUnmanagedMethod インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6edad-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -21,13 +21,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440586"
 ---
-# <a name="functionleave-function"></a><span data-ttu-id="2e9ee-102">FunctionLeave 関数</span><span class="sxs-lookup"><span data-stu-id="2e9ee-102">FunctionLeave Function</span></span>
-<span data-ttu-id="2e9ee-103">Notifies the profiler that a function is about to return to the caller.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
+# <a name="functionleave-function"></a><span data-ttu-id="734f7-102">FunctionLeave 関数</span><span class="sxs-lookup"><span data-stu-id="734f7-102">FunctionLeave Function</span></span>
+<span data-ttu-id="734f7-103">関数が呼び出し元に戻りようとしていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="734f7-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2e9ee-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="2e9ee-105">It will continue to work, but will incur a performance penalty.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="2e9ee-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
+> <span data-ttu-id="734f7-104">`FunctionLeave` 関数は、.NET Framework 2.0 では非推奨とされます。</span><span class="sxs-lookup"><span data-stu-id="734f7-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="734f7-105">これは引き続き機能しますが、パフォーマンスが低下します。</span><span class="sxs-lookup"><span data-stu-id="734f7-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="734f7-106">代わりに、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)関数を使用してください。</span><span class="sxs-lookup"><span data-stu-id="734f7-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e9ee-107">構文</span><span class="sxs-lookup"><span data-stu-id="2e9ee-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="734f7-107">構文</span><span class="sxs-lookup"><span data-stu-id="734f7-107">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionLeave (  
@@ -35,36 +35,36 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e9ee-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2e9ee-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="734f7-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="734f7-108">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="2e9ee-109">[in] The identifier of the function that is returning.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-109">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="734f7-109">からを返す関数の識別子。</span><span class="sxs-lookup"><span data-stu-id="734f7-109">[in] The identifier of the function that is returning.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2e9ee-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="2e9ee-110">Remarks</span></span>  
- <span data-ttu-id="2e9ee-111">The `FunctionLeave` function is a callback; you must implement it.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="2e9ee-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="734f7-110">コメント</span><span class="sxs-lookup"><span data-stu-id="734f7-110">Remarks</span></span>  
+ <span data-ttu-id="734f7-111">`FunctionLeave` 関数はコールバックです。実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="734f7-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="734f7-112">実装では、`__declspec`(`naked`) ストレージクラス属性を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="734f7-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="2e9ee-113">The execution engine does not save any registers before calling this function.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-113">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="734f7-113">この関数を呼び出す前に、実行エンジンはレジスタを保存しません。</span><span class="sxs-lookup"><span data-stu-id="734f7-113">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="2e9ee-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span><span class="sxs-lookup"><span data-stu-id="2e9ee-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="734f7-114">入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="734f7-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="2e9ee-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="734f7-115">終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。</span><span class="sxs-lookup"><span data-stu-id="734f7-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="2e9ee-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="2e9ee-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="2e9ee-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
+ <span data-ttu-id="734f7-116">`FunctionLeave` の実装では、ガベージコレクションが遅延するため、ブロックしないでください。</span><span class="sxs-lookup"><span data-stu-id="734f7-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="734f7-117">スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="734f7-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="734f7-118">ガベージコレクションを実行しようとすると、ランタイムは `FunctionLeave` が返されるまでブロックします。</span><span class="sxs-lookup"><span data-stu-id="734f7-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
   
- <span data-ttu-id="2e9ee-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span><span class="sxs-lookup"><span data-stu-id="2e9ee-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="734f7-119">また、`FunctionLeave` 関数は、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。</span><span class="sxs-lookup"><span data-stu-id="734f7-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e9ee-120">［要件］</span><span class="sxs-lookup"><span data-stu-id="2e9ee-120">Requirements</span></span>  
- <span data-ttu-id="2e9ee-121">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e9ee-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="734f7-120">要件</span><span class="sxs-lookup"><span data-stu-id="734f7-120">Requirements</span></span>  
+ <span data-ttu-id="734f7-121">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="734f7-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e9ee-122">**Header:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="2e9ee-122">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="734f7-122">**ヘッダー:** Corprof.idl</span><span class="sxs-lookup"><span data-stu-id="734f7-122">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="2e9ee-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e9ee-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="734f7-123">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="734f7-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e9ee-124">**.NET Framework Versions:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="2e9ee-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="734f7-124">**.NET Framework のバージョン:** 1.1、1.0</span><span class="sxs-lookup"><span data-stu-id="734f7-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e9ee-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e9ee-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="734f7-125">参照</span><span class="sxs-lookup"><span data-stu-id="734f7-125">See also</span></span>
 
-- [<span data-ttu-id="2e9ee-126">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="2e9ee-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="2e9ee-127">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="2e9ee-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="2e9ee-128">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="2e9ee-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="2e9ee-129">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="2e9ee-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="2e9ee-130">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="2e9ee-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="734f7-126">FunctionEnter2 関数</span><span class="sxs-lookup"><span data-stu-id="734f7-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="734f7-127">FunctionLeave2 関数</span><span class="sxs-lookup"><span data-stu-id="734f7-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="734f7-128">FunctionTailcall2 関数</span><span class="sxs-lookup"><span data-stu-id="734f7-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="734f7-129">SetEnterLeaveFunctionHooks2 メソッド</span><span class="sxs-lookup"><span data-stu-id="734f7-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="734f7-130">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="734f7-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

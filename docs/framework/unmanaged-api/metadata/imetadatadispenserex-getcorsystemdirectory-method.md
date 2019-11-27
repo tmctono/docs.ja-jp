@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431213"
 ---
-# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="32859-102">IMetaDataDispenserEx::GetCORSystemDirectory メソッド</span><span class="sxs-lookup"><span data-stu-id="32859-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
-<span data-ttu-id="32859-103">Gets the directory that holds the current common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="32859-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="32859-104">This method is supported only for use by out-of-process debuggers.</span><span class="sxs-lookup"><span data-stu-id="32859-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="32859-105">If called from another component, it will return E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="32859-105">If called from another component, it will return E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="0c1ec-102">IMetaDataDispenserEx::GetCORSystemDirectory メソッド</span><span class="sxs-lookup"><span data-stu-id="0c1ec-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
+<span data-ttu-id="0c1ec-103">現在の共通言語ランタイム (CLR) が格納されているディレクトリを取得します。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="0c1ec-104">このメソッドは、アウトプロセスデバッガーでの使用に対してのみサポートされています。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="0c1ec-105">別のコンポーネントから呼び出された場合は、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-105">If called from another component, it will return E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32859-106">構文</span><span class="sxs-lookup"><span data-stu-id="32859-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c1ec-106">構文</span><span class="sxs-lookup"><span data-stu-id="0c1ec-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
@@ -35,26 +35,26 @@ HRESULT GetCORSystemDirectory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32859-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="32859-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c1ec-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0c1ec-107">Parameters</span></span>  
  `szBuffer`  
- <span data-ttu-id="32859-108">[out] The buffer to receive the directory name.</span><span class="sxs-lookup"><span data-stu-id="32859-108">[out] The buffer to receive the directory name.</span></span>  
+ <span data-ttu-id="0c1ec-108">入出力ディレクトリ名を受け取るバッファー。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-108">[out] The buffer to receive the directory name.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="32859-109">[in] The size, in bytes, of `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="32859-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
+ <span data-ttu-id="0c1ec-109">から`szBuffer`のサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="32859-110">[out] The number of bytes actually returned in `szBuffer`.</span><span class="sxs-lookup"><span data-stu-id="32859-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
+ <span data-ttu-id="0c1ec-110">入出力実際に `szBuffer`に返されたバイト数。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32859-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="32859-111">Requirements</span></span>  
- <span data-ttu-id="32859-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32859-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c1ec-111">要件</span><span class="sxs-lookup"><span data-stu-id="0c1ec-111">Requirements</span></span>  
+ <span data-ttu-id="0c1ec-112">**プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32859-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="32859-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0c1ec-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="0c1ec-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="32859-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="32859-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0c1ec-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="32859-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32859-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0c1ec-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c1ec-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32859-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="32859-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c1ec-116">参照</span><span class="sxs-lookup"><span data-stu-id="0c1ec-116">See also</span></span>
 
-- [<span data-ttu-id="32859-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="32859-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="32859-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="32859-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="0c1ec-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0c1ec-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="0c1ec-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0c1ec-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
