@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434317"
 ---
-# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="d2711-102">IMetaDataEmit::GetTokenFromSig メソッド</span><span class="sxs-lookup"><span data-stu-id="d2711-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
-<span data-ttu-id="d2711-103">Gets a token for the specified metadata signature.</span><span class="sxs-lookup"><span data-stu-id="d2711-103">Gets a token for the specified metadata signature.</span></span>  
+# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="177d0-102">IMetaDataEmit::GetTokenFromSig メソッド</span><span class="sxs-lookup"><span data-stu-id="177d0-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
+<span data-ttu-id="177d0-103">指定したメタデータシグネチャのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="177d0-103">Gets a token for the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2711-104">構文</span><span class="sxs-lookup"><span data-stu-id="d2711-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="177d0-104">構文</span><span class="sxs-lookup"><span data-stu-id="177d0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTokenFromSig (   
@@ -35,26 +35,26 @@ HRESULT GetTokenFromSig (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2711-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d2711-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="177d0-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="177d0-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="d2711-106">[in] The signature to be persisted and stored.</span><span class="sxs-lookup"><span data-stu-id="d2711-106">[in] The signature to be persisted and stored.</span></span>  
+ <span data-ttu-id="177d0-106">から永続化および格納される署名。</span><span class="sxs-lookup"><span data-stu-id="177d0-106">[in] The signature to be persisted and stored.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="d2711-107">[in] The count of bytes in `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="d2711-107">[in] The count of bytes in `pvSig`.</span></span>  
+ <span data-ttu-id="177d0-107">から`pvSig`内のバイト数。</span><span class="sxs-lookup"><span data-stu-id="177d0-107">[in] The count of bytes in `pvSig`.</span></span>  
   
  `pmsig`  
- <span data-ttu-id="d2711-108">[out] The `mdSignature` token assigned.</span><span class="sxs-lookup"><span data-stu-id="d2711-108">[out] The `mdSignature` token assigned.</span></span>  
+ <span data-ttu-id="177d0-108">入出力割り当てられた `mdSignature` トークン。</span><span class="sxs-lookup"><span data-stu-id="177d0-108">[out] The `mdSignature` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2711-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="d2711-109">Requirements</span></span>  
- <span data-ttu-id="d2711-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d2711-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="177d0-109">要件</span><span class="sxs-lookup"><span data-stu-id="177d0-109">Requirements</span></span>  
+ <span data-ttu-id="177d0-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="177d0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2711-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d2711-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="177d0-111">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="177d0-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d2711-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d2711-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="177d0-112">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="177d0-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d2711-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2711-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="177d0-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="177d0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2711-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2711-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="177d0-114">参照</span><span class="sxs-lookup"><span data-stu-id="177d0-114">See also</span></span>
 
-- [<span data-ttu-id="d2711-115">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d2711-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="d2711-116">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d2711-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="177d0-115">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="177d0-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="177d0-116">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="177d0-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

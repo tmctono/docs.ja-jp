@@ -22,12 +22,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449359"
 ---
-# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="5b55a-102">ISymUnmanagedBinder::GetReaderForFile メソッド</span><span class="sxs-lookup"><span data-stu-id="5b55a-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
-<span data-ttu-id="5b55a-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span><span class="sxs-lookup"><span data-stu-id="5b55a-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="77582-102">ISymUnmanagedBinder::GetReaderForFile メソッド</span><span class="sxs-lookup"><span data-stu-id="77582-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
+<span data-ttu-id="77582-103">メタデータインターフェイスとファイル名を指定すると、モジュールに関連付けられているデバッグシンボルを読み取る正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスが返されます。</span><span class="sxs-lookup"><span data-stu-id="77582-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="5b55a-104">This method will open the program database (PDB) file only if it is next to the executable file.</span><span class="sxs-lookup"><span data-stu-id="5b55a-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="5b55a-105">This change has been made for security purposes.</span><span class="sxs-lookup"><span data-stu-id="5b55a-105">This change has been made for security purposes.</span></span> <span data-ttu-id="5b55a-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="5b55a-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
+ <span data-ttu-id="77582-104">このメソッドは、プログラムデータベース (PDB) ファイルが実行可能ファイルの横にある場合にのみ、ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="77582-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="77582-105">この変更は、セキュリティ上の目的で行われています。</span><span class="sxs-lookup"><span data-stu-id="77582-105">This change has been made for security purposes.</span></span> <span data-ttu-id="77582-106">PDB ファイルをより広範囲に検索する必要がある場合は、 [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="77582-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b55a-107">構文</span><span class="sxs-lookup"><span data-stu-id="5b55a-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77582-107">構文</span><span class="sxs-lookup"><span data-stu-id="77582-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReaderForFile(  
@@ -37,26 +37,26 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5b55a-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="5b55a-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="77582-108">パラメーター</span><span class="sxs-lookup"><span data-stu-id="77582-108">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="5b55a-109">[in] A pointer to the metadata import interface.</span><span class="sxs-lookup"><span data-stu-id="5b55a-109">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="77582-109">からメタデータインポートインターフェイスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="77582-109">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="5b55a-110">[in] A pointer to the file name.</span><span class="sxs-lookup"><span data-stu-id="5b55a-110">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="77582-110">からファイル名へのポインター。</span><span class="sxs-lookup"><span data-stu-id="77582-110">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="5b55a-111">[in] A pointer to the search path.</span><span class="sxs-lookup"><span data-stu-id="5b55a-111">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="77582-111">から検索パスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="77582-111">[in] A pointer to the search path.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5b55a-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="5b55a-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="77582-112">入出力返された[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスに設定されたポインター。</span><span class="sxs-lookup"><span data-stu-id="77582-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b55a-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="5b55a-113">Return Value</span></span>  
- <span data-ttu-id="5b55a-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="5b55a-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="77582-113">戻り値</span><span class="sxs-lookup"><span data-stu-id="77582-113">Return Value</span></span>  
+ <span data-ttu-id="77582-114">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="77582-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b55a-115">［要件］</span><span class="sxs-lookup"><span data-stu-id="5b55a-115">Requirements</span></span>  
- <span data-ttu-id="5b55a-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5b55a-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="77582-115">要件</span><span class="sxs-lookup"><span data-stu-id="77582-115">Requirements</span></span>  
+ <span data-ttu-id="77582-116">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="77582-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b55a-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b55a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77582-117">参照</span><span class="sxs-lookup"><span data-stu-id="77582-117">See also</span></span>
 
-- [<span data-ttu-id="5b55a-118">ISymUnmanagedBinder インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5b55a-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="5b55a-119">GetReaderForFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="5b55a-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+- [<span data-ttu-id="77582-118">ISymUnmanagedBinder インターフェイス</span><span class="sxs-lookup"><span data-stu-id="77582-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="77582-119">GetReaderForFile2 メソッド</span><span class="sxs-lookup"><span data-stu-id="77582-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)

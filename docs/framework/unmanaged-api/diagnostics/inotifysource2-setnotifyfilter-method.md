@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435960"
 ---
-# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="fcc62-102">INotifySource2::SetNotifyFilter メソッド</span><span class="sxs-lookup"><span data-stu-id="fcc62-102">INotifySource2::SetNotifyFilter Method</span></span>
-<span data-ttu-id="fcc62-103">Assigns a notification filter for use with this source.</span><span class="sxs-lookup"><span data-stu-id="fcc62-103">Assigns a notification filter for use with this source.</span></span>  
+# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="3547b-102">INotifySource2::SetNotifyFilter メソッド</span><span class="sxs-lookup"><span data-stu-id="3547b-102">INotifySource2::SetNotifyFilter Method</span></span>
+<span data-ttu-id="3547b-103">このソースで使用する通知フィルターを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="3547b-103">Assigns a notification filter for use with this source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcc62-104">構文</span><span class="sxs-lookup"><span data-stu-id="fcc62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3547b-104">構文</span><span class="sxs-lookup"><span data-stu-id="3547b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetNotifyFilter  
@@ -35,21 +35,21 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fcc62-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fcc62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3547b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3547b-105">Parameters</span></span>  
  `in_NotifyFilter`  
- <span data-ttu-id="fcc62-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span><span class="sxs-lookup"><span data-stu-id="fcc62-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
+ <span data-ttu-id="3547b-106">からデバッガー API のコールバックを識別する[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)列挙値のビットごとの組み合わせ。</span><span class="sxs-lookup"><span data-stu-id="3547b-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
   
  `in_pUserThreadFilter`  
- <span data-ttu-id="fcc62-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span><span class="sxs-lookup"><span data-stu-id="fcc62-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
+ <span data-ttu-id="3547b-107">からデバッガー API のスレッドを識別する[USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)構造体へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3547b-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fcc62-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="fcc62-108">Return Value</span></span>  
- <span data-ttu-id="fcc62-109">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="fcc62-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3547b-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="3547b-108">Return Value</span></span>  
+ <span data-ttu-id="3547b-109">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="3547b-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcc62-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="fcc62-110">Requirements</span></span>  
- <span data-ttu-id="fcc62-111">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="fcc62-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3547b-110">要件</span><span class="sxs-lookup"><span data-stu-id="3547b-110">Requirements</span></span>  
+ <span data-ttu-id="3547b-111">**ヘッダー:** ProtocolNotify2</span><span class="sxs-lookup"><span data-stu-id="3547b-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcc62-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="fcc62-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3547b-112">参照</span><span class="sxs-lookup"><span data-stu-id="3547b-112">See also</span></span>
 
-- [<span data-ttu-id="fcc62-113">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fcc62-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="fcc62-114">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fcc62-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="fcc62-115">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fcc62-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="3547b-113">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3547b-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="3547b-114">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3547b-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="3547b-115">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3547b-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
