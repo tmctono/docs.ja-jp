@@ -22,18 +22,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351459"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="75762-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75762-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="75762-103">Specifies that a class cannot be used as a base class.</span><span class="sxs-lookup"><span data-stu-id="75762-103">Specifies that a class cannot be used as a base class.</span></span>  
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="8decb-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8decb-102">NotInheritable (Visual Basic)</span></span>
+<span data-ttu-id="8decb-103">クラスを基底クラスとして使用できないことを指定します。</span><span class="sxs-lookup"><span data-stu-id="8decb-103">Specifies that a class cannot be used as a base class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="75762-104">Remarks</span><span class="sxs-lookup"><span data-stu-id="75762-104">Remarks</span></span>  
- <span data-ttu-id="75762-105">**Alternate Terms**.</span><span class="sxs-lookup"><span data-stu-id="75762-105">**Alternate Terms**.</span></span> <span data-ttu-id="75762-106">A class that cannot be inherited is sometimes called a *sealed* class.</span><span class="sxs-lookup"><span data-stu-id="75762-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8decb-104">コメント</span><span class="sxs-lookup"><span data-stu-id="8decb-104">Remarks</span></span>  
+ <span data-ttu-id="8decb-105">**代替語句**。</span><span class="sxs-lookup"><span data-stu-id="8decb-105">**Alternate Terms**.</span></span> <span data-ttu-id="8decb-106">継承できないクラスは、*シール*クラスと呼ばれることもあります。</span><span class="sxs-lookup"><span data-stu-id="8decb-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
   
- <span data-ttu-id="75762-107">The `NotInheritable` modifier can be used in this context:</span><span class="sxs-lookup"><span data-stu-id="75762-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+ <span data-ttu-id="8decb-107">このコンテキストでは、`NotInheritable` 修飾子を使用できます。</span><span class="sxs-lookup"><span data-stu-id="8decb-107">The `NotInheritable` modifier can be used in this context:</span></span>  
   
- [<span data-ttu-id="75762-108">Class ステートメント</span><span class="sxs-lookup"><span data-stu-id="75762-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="8decb-108">Class ステートメント</span><span class="sxs-lookup"><span data-stu-id="8decb-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="75762-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="75762-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8decb-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="8decb-109">See also</span></span>
 
-- [<span data-ttu-id="75762-110">Inherits ステートメント</span><span class="sxs-lookup"><span data-stu-id="75762-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="75762-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="75762-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="75762-112">キーワード</span><span class="sxs-lookup"><span data-stu-id="75762-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="8decb-110">Inherits ステートメント</span><span class="sxs-lookup"><span data-stu-id="8decb-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="8decb-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="8decb-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="8decb-112">キーワード</span><span class="sxs-lookup"><span data-stu-id="8decb-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431129"
 ---
-# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="7f47c-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="7f47c-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
-<span data-ttu-id="7f47c-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="7f47c-103">This method is not implemented.</span></span> <span data-ttu-id="7f47c-104">If called, it returns E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="7f47c-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a><span data-ttu-id="8ea2b-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="8ea2b-102">IMetaDataDispenserEx::OpenScopeOnITypeInfo Method</span></span>
+<span data-ttu-id="8ea2b-103">このメソッドは実装されていません。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-103">This method is not implemented.</span></span> <span data-ttu-id="8ea2b-104">呼び出された場合は E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f47c-105">構文</span><span class="sxs-lookup"><span data-stu-id="7f47c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ea2b-105">構文</span><span class="sxs-lookup"><span data-stu-id="8ea2b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenScopeOnITypeInfo (  
@@ -36,29 +36,29 @@ HRESULT OpenScopeOnITypeInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f47c-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7f47c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8ea2b-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8ea2b-106">Parameters</span></span>  
  `pITI`  
- <span data-ttu-id="7f47c-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span><span class="sxs-lookup"><span data-stu-id="7f47c-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
+ <span data-ttu-id="8ea2b-107">からスコープを開く対象の型情報を提供する[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)インターフェイスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-107">[in] Pointer to an [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface that provides the type information on which to open the scope.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="7f47c-108">[in] The open mode flags.</span><span class="sxs-lookup"><span data-stu-id="7f47c-108">[in] The open mode flags.</span></span>  
+ <span data-ttu-id="8ea2b-108">からOpen モードフラグ。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-108">[in] The open mode flags.</span></span>  
   
  `riid`  
- <span data-ttu-id="7f47c-109">[in] The desired interface.</span><span class="sxs-lookup"><span data-stu-id="7f47c-109">[in] The desired interface.</span></span>  
+ <span data-ttu-id="8ea2b-109">から目的のインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-109">[in] The desired interface.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="7f47c-110">[out] Pointer to a pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="7f47c-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="8ea2b-110">入出力返されたインターフェイスへのポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f47c-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="7f47c-111">Requirements</span></span>  
- <span data-ttu-id="7f47c-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f47c-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ea2b-111">要件</span><span class="sxs-lookup"><span data-stu-id="8ea2b-111">Requirements</span></span>  
+ <span data-ttu-id="8ea2b-112">**プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f47c-113">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7f47c-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8ea2b-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="8ea2b-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7f47c-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7f47c-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8ea2b-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="8ea2b-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7f47c-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f47c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8ea2b-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ea2b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f47c-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f47c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ea2b-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8ea2b-116">See also</span></span>
 
-- [<span data-ttu-id="7f47c-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7f47c-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="7f47c-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7f47c-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="8ea2b-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ea2b-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="8ea2b-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8ea2b-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

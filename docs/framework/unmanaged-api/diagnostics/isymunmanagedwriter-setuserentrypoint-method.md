@@ -22,26 +22,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427817"
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="1524a-102">ISymUnmanagedWriter::SetUserEntryPoint メソッド</span><span class="sxs-lookup"><span data-stu-id="1524a-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="1524a-103">Specifies the user-defined method that is the entry point for this module.</span><span class="sxs-lookup"><span data-stu-id="1524a-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="1524a-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span><span class="sxs-lookup"><span data-stu-id="1524a-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="1e901-102">ISymUnmanagedWriter::SetUserEntryPoint メソッド</span><span class="sxs-lookup"><span data-stu-id="1e901-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="1e901-103">このモジュールのエントリポイントであるユーザー定義メソッドを指定します。</span><span class="sxs-lookup"><span data-stu-id="1e901-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="1e901-104">たとえば、このエントリポイントは、main の前にコンパイラで生成されたスタブではなく、ユーザーのメインメソッドである可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1e901-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1524a-105">構文</span><span class="sxs-lookup"><span data-stu-id="1524a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e901-105">構文</span><span class="sxs-lookup"><span data-stu-id="1e901-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1524a-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1524a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1e901-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1e901-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="1524a-107">[in] The metadata token for the method that is the user entry point.</span><span class="sxs-lookup"><span data-stu-id="1524a-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="1e901-107">からユーザーエントリポイントであるメソッドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="1e901-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1524a-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="1524a-108">Return Value</span></span>  
- <span data-ttu-id="1524a-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="1524a-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1e901-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="1e901-108">Return Value</span></span>  
+ <span data-ttu-id="1e901-109">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="1e901-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1524a-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="1524a-110">Requirements</span></span>  
- <span data-ttu-id="1524a-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1524a-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e901-110">要件</span><span class="sxs-lookup"><span data-stu-id="1e901-110">Requirements</span></span>  
+ <span data-ttu-id="1e901-111">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="1e901-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1524a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="1524a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e901-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e901-112">See also</span></span>
 
-- [<span data-ttu-id="1524a-113">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1524a-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="1e901-113">ISymUnmanagedWriter インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1e901-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

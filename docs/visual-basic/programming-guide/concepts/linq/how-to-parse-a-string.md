@@ -9,16 +9,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344495"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="3b622-102">How to: Parse a String (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b622-102">How to: Parse a String (Visual Basic)</span></span>
-<span data-ttu-id="3b622-103">This topic shows how to create an XML tree in C#.</span><span class="sxs-lookup"><span data-stu-id="3b622-103">This topic shows how to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="c8702-102">方法: 文字列を解析する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8702-102">How to: Parse a String (Visual Basic)</span></span>
+<span data-ttu-id="c8702-103">このトピックでは、でC#XML ツリーを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8702-103">This topic shows how to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3b622-104">例</span><span class="sxs-lookup"><span data-stu-id="3b622-104">Example</span></span>  
- <span data-ttu-id="3b622-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span><span class="sxs-lookup"><span data-stu-id="3b622-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="3b622-106">ただし、次のコードに示すように XML リテラルを使用する方が効率的です。これは、XML リテラルでは、文字列から XML を解析する場合のようなパフォーマンスの低下がないためです。</span><span class="sxs-lookup"><span data-stu-id="3b622-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8702-104">例</span><span class="sxs-lookup"><span data-stu-id="c8702-104">Example</span></span>  
+ <span data-ttu-id="c8702-105">`XElement.Parse` メソッドを使用して Visual Basic 内の文字列を解析できます。</span><span class="sxs-lookup"><span data-stu-id="c8702-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="c8702-106">ただし、次のコードに示すように XML リテラルを使用する方が効率的です。これは、XML リテラルでは、文字列から XML を解析する場合のようなパフォーマンスの低下がないためです。</span><span class="sxs-lookup"><span data-stu-id="c8702-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
   
- <span data-ttu-id="3b622-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span><span class="sxs-lookup"><span data-stu-id="3b622-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
+ <span data-ttu-id="c8702-107">XML リテラルを使用すると、XML をコピーして Visual Basic プログラムに貼り付けることができます。</span><span class="sxs-lookup"><span data-stu-id="c8702-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="3b622-108">テキストの解析やテキスト ファイルからの XML ドキュメントの読み込みは、関数型構築より非効率です。</span><span class="sxs-lookup"><span data-stu-id="3b622-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="3b622-109">XML ツリーをコードから初期化すると、関数型構築で必要となるプロセッサ時間は、テキストの解析に比べて短くなります。</span><span class="sxs-lookup"><span data-stu-id="3b622-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
+> <span data-ttu-id="c8702-108">テキストの解析やテキスト ファイルからの XML ドキュメントの読み込みは、関数型構築より非効率です。</span><span class="sxs-lookup"><span data-stu-id="c8702-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="c8702-109">XML ツリーをコードから初期化すると、関数型構築で必要となるプロセッサ時間は、テキストの解析に比べて短くなります。</span><span class="sxs-lookup"><span data-stu-id="c8702-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3b622-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="3b622-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8702-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="c8702-110">See also</span></span>
 
-- [<span data-ttu-id="3b622-111">Parsing XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b622-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="c8702-111">XML の解析 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8702-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

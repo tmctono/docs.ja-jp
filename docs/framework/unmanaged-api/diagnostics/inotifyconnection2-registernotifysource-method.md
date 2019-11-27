@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445477"
 ---
-# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="7719c-102">INotifyConnection2::RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="7719c-102">INotifyConnection2::RegisterNotifySource Method</span></span>
-<span data-ttu-id="7719c-103">Installs a specified notification source.</span><span class="sxs-lookup"><span data-stu-id="7719c-103">Installs a specified notification source.</span></span>  
+# <a name="inotifyconnection2registernotifysource-method"></a><span data-ttu-id="c9718-102">INotifyConnection2::RegisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="c9718-102">INotifyConnection2::RegisterNotifySource Method</span></span>
+<span data-ttu-id="c9718-103">指定された通知ソースをインストールします。</span><span class="sxs-lookup"><span data-stu-id="c9718-103">Installs a specified notification source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7719c-104">構文</span><span class="sxs-lookup"><span data-stu-id="7719c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9718-104">構文</span><span class="sxs-lookup"><span data-stu-id="c9718-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RegisterNotifySource  
@@ -35,22 +35,22 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7719c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7719c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9718-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c9718-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="7719c-106">[in] Specifies the object to be used as the notification source.</span><span class="sxs-lookup"><span data-stu-id="7719c-106">[in] Specifies the object to be used as the notification source.</span></span>  
+ <span data-ttu-id="c9718-106">から通知ソースとして使用するオブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="c9718-106">[in] Specifies the object to be used as the notification source.</span></span>  
   
  `out_ppNotifySink`  
- <span data-ttu-id="7719c-107">[out] Receives the object to be used as the notification sink.</span><span class="sxs-lookup"><span data-stu-id="7719c-107">[out] Receives the object to be used as the notification sink.</span></span>  
+ <span data-ttu-id="c9718-107">入出力通知シンクとして使用されるオブジェクトを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="c9718-107">[out] Receives the object to be used as the notification sink.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7719c-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="7719c-108">Return Value</span></span>  
- <span data-ttu-id="7719c-109">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="7719c-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c9718-108">戻り値</span><span class="sxs-lookup"><span data-stu-id="c9718-108">Return Value</span></span>  
+ <span data-ttu-id="c9718-109">メソッドが成功した場合は S_OK します。</span><span class="sxs-lookup"><span data-stu-id="c9718-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7719c-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="7719c-110">Requirements</span></span>  
- <span data-ttu-id="7719c-111">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="7719c-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9718-110">要件</span><span class="sxs-lookup"><span data-stu-id="c9718-110">Requirements</span></span>  
+ <span data-ttu-id="c9718-111">**ヘッダー:** ProtocolNotify2</span><span class="sxs-lookup"><span data-stu-id="c9718-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7719c-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="7719c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9718-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9718-112">See also</span></span>
 
-- [<span data-ttu-id="7719c-113">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7719c-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="7719c-114">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7719c-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="7719c-115">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7719c-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="7719c-116">UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="7719c-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+- [<span data-ttu-id="c9718-113">INotifyConnection2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9718-113">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="c9718-114">INotifySource2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9718-114">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="c9718-115">INotifySink2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c9718-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="c9718-116">UnregisterNotifySource メソッド</span><span class="sxs-lookup"><span data-stu-id="c9718-116">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)

@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431475"
 ---
-# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="660d9-102">IMetaDataImport::ResolveTypeRef メソッド</span><span class="sxs-lookup"><span data-stu-id="660d9-102">IMetaDataImport::ResolveTypeRef Method</span></span>
-<span data-ttu-id="660d9-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span><span class="sxs-lookup"><span data-stu-id="660d9-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportresolvetyperef-method"></a><span data-ttu-id="229be-102">IMetaDataImport::ResolveTypeRef メソッド</span><span class="sxs-lookup"><span data-stu-id="229be-102">IMetaDataImport::ResolveTypeRef Method</span></span>
+<span data-ttu-id="229be-103">指定した TypeRef トークンによって表される <xref:System.Type> 参照を解決します。</span><span class="sxs-lookup"><span data-stu-id="229be-103">Resolves a <xref:System.Type> reference represented by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="660d9-104">構文</span><span class="sxs-lookup"><span data-stu-id="660d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="229be-104">構文</span><span class="sxs-lookup"><span data-stu-id="229be-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ResolveTypeRef (  
@@ -36,38 +36,38 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="660d9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="660d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="229be-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="229be-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="660d9-106">[in] The TypeRef metadata token to return the referenced type information for.</span><span class="sxs-lookup"><span data-stu-id="660d9-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
+ <span data-ttu-id="229be-106">から参照される型情報を返す TypeRef メタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="229be-106">[in] The TypeRef metadata token to return the referenced type information for.</span></span>  
   
  `riid`  
- <span data-ttu-id="660d9-107">[in] The IID of the interface to return in `ppIScope`.</span><span class="sxs-lookup"><span data-stu-id="660d9-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="660d9-108">Typically, this would be IID_IMetaDataImport.</span><span class="sxs-lookup"><span data-stu-id="660d9-108">Typically, this would be IID_IMetaDataImport.</span></span>  
+ <span data-ttu-id="229be-107">から`ppIScope`で返すインターフェイスの IID。</span><span class="sxs-lookup"><span data-stu-id="229be-107">[in] The IID of the interface to return in `ppIScope`.</span></span> <span data-ttu-id="229be-108">通常、これは IID_IMetaDataImport になります。</span><span class="sxs-lookup"><span data-stu-id="229be-108">Typically, this would be IID_IMetaDataImport.</span></span>  
   
  `ppIScope`  
- <span data-ttu-id="660d9-109">[out] An interface to the module scope in which the referenced type is defined.</span><span class="sxs-lookup"><span data-stu-id="660d9-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
+ <span data-ttu-id="229be-109">入出力参照される型が定義されているモジュールスコープへのインターフェイス。</span><span class="sxs-lookup"><span data-stu-id="229be-109">[out] An interface to the module scope in which the referenced type is defined.</span></span>  
   
  `ptd`  
- <span data-ttu-id="660d9-110">[out] A pointer to a TypeDef token that represents the referenced type.</span><span class="sxs-lookup"><span data-stu-id="660d9-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
+ <span data-ttu-id="229be-110">入出力参照された型を表す TypeDef トークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="229be-110">[out] A pointer to a TypeDef token that represents the referenced type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="660d9-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="660d9-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="229be-111">コメント</span><span class="sxs-lookup"><span data-stu-id="229be-111">Remarks</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="660d9-112">Do not use this method if multiple application domains are loaded.</span><span class="sxs-lookup"><span data-stu-id="660d9-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="660d9-113">The method does not respect application domain boundaries.</span><span class="sxs-lookup"><span data-stu-id="660d9-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="660d9-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span><span class="sxs-lookup"><span data-stu-id="660d9-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
+> <span data-ttu-id="229be-112">複数のアプリケーションドメインが読み込まれる場合は、この方法を使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="229be-112">Do not use this method if multiple application domains are loaded.</span></span> <span data-ttu-id="229be-113">メソッドは、アプリケーションドメインの境界を尊重しません。</span><span class="sxs-lookup"><span data-stu-id="229be-113">The method does not respect application domain boundaries.</span></span> <span data-ttu-id="229be-114">アセンブリの複数のバージョンが読み込まれ、同じ名前空間を持つ同じ型が含まれている場合、メソッドは最初に見つかった型のモジュールスコープを返します。</span><span class="sxs-lookup"><span data-stu-id="229be-114">If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.</span></span>  
   
- <span data-ttu-id="660d9-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span><span class="sxs-lookup"><span data-stu-id="660d9-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="660d9-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span><span class="sxs-lookup"><span data-stu-id="660d9-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
+ <span data-ttu-id="229be-115">`ResolveTypeRef` メソッドは、他のモジュールで型定義を検索します。</span><span class="sxs-lookup"><span data-stu-id="229be-115">The `ResolveTypeRef` method searches for the type definition in other modules.</span></span> <span data-ttu-id="229be-116">型定義が見つかった場合、`ResolveTypeRef` はそのモジュールスコープへのインターフェイスと、その型の TypeDef トークンを返します。</span><span class="sxs-lookup"><span data-stu-id="229be-116">If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.</span></span>  
   
- <span data-ttu-id="660d9-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="660d9-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="660d9-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span><span class="sxs-lookup"><span data-stu-id="660d9-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
+ <span data-ttu-id="229be-117">解決する型参照の解決スコープが AssemblyRef の場合、`ResolveTypeRef` メソッドは、 [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッドの呼び出しで既に開かれているメタデータスコープ内でのみ一致を検索します。</span><span class="sxs-lookup"><span data-stu-id="229be-117">If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method.</span></span> <span data-ttu-id="229be-118">これは、`ResolveTypeRef` が、ディスク上またはグローバルアセンブリキャッシュ内の、アセンブリが格納されている AssemblyRef スコープだけからは判断できないためです。</span><span class="sxs-lookup"><span data-stu-id="229be-118">This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="660d9-119">［要件］</span><span class="sxs-lookup"><span data-stu-id="660d9-119">Requirements</span></span>  
- <span data-ttu-id="660d9-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="660d9-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="229be-119">要件</span><span class="sxs-lookup"><span data-stu-id="229be-119">Requirements</span></span>  
+ <span data-ttu-id="229be-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="229be-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="660d9-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="660d9-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="229be-121">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="229be-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="660d9-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="660d9-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="229be-122">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="229be-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="660d9-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="660d9-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="229be-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="229be-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="660d9-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="660d9-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="229be-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="229be-124">See also</span></span>
 
-- [<span data-ttu-id="660d9-125">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="660d9-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="660d9-126">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="660d9-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="229be-125">IMetaDataImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="229be-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="229be-126">IMetaDataImport2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="229be-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

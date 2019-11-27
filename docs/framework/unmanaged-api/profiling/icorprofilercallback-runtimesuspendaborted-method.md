@@ -22,31 +22,31 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430613"
 ---
-# <a name="icorprofilercallbackruntimesuspendaborted-method"></a><span data-ttu-id="b62d0-102">ICorProfilerCallback::RuntimeSuspendAborted メソッド</span><span class="sxs-lookup"><span data-stu-id="b62d0-102">ICorProfilerCallback::RuntimeSuspendAborted Method</span></span>
-<span data-ttu-id="b62d0-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span><span class="sxs-lookup"><span data-stu-id="b62d0-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span></span>  
+# <a name="icorprofilercallbackruntimesuspendaborted-method"></a><span data-ttu-id="b93fb-102">ICorProfilerCallback::RuntimeSuspendAborted メソッド</span><span class="sxs-lookup"><span data-stu-id="b93fb-102">ICorProfilerCallback::RuntimeSuspendAborted Method</span></span>
+<span data-ttu-id="b93fb-103">実行中のランタイムの中断をランタイムが中止したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b93fb-103">Notifies the profiler that the runtime has aborted the runtime suspension that was occurring.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b62d0-104">構文</span><span class="sxs-lookup"><span data-stu-id="b62d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b93fb-104">構文</span><span class="sxs-lookup"><span data-stu-id="b93fb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="b62d0-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="b62d0-105">Remarks</span></span>  
- <span data-ttu-id="b62d0-106">The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.</span><span class="sxs-lookup"><span data-stu-id="b62d0-106">The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b93fb-105">コメント</span><span class="sxs-lookup"><span data-stu-id="b93fb-105">Remarks</span></span>  
+ <span data-ttu-id="b93fb-106">2つのスレッドが同時にランタイムを中断しようとすると、実行時の中断が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b93fb-106">The run-time suspension might be aborted if two threads simultaneously attempt to suspend the runtime.</span></span>  
   
- <span data-ttu-id="b62d0-107">Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span><span class="sxs-lookup"><span data-stu-id="b62d0-107">Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
+ <span data-ttu-id="b93fb-107">[ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)コールバックの後に、1つのスレッドで[ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback または `RuntimeSuspendAborted` コールバックが発生します。</span><span class="sxs-lookup"><span data-stu-id="b93fb-107">Either the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback or the `RuntimeSuspendAborted` callback will occur on a single thread following a [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback.</span></span>  
   
- <span data-ttu-id="b62d0-108">The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.</span><span class="sxs-lookup"><span data-stu-id="b62d0-108">The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.</span></span>  
+ <span data-ttu-id="b93fb-108">`RuntimeSuspendAborted` コールバックは、`RuntimeSuspendStarted` コールバックと同じスレッドで行われることが保証されています。</span><span class="sxs-lookup"><span data-stu-id="b93fb-108">The `RuntimeSuspendAborted` callback is guaranteed to occur on the same thread as the `RuntimeSuspendStarted` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b62d0-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="b62d0-109">Requirements</span></span>  
- <span data-ttu-id="b62d0-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b62d0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b93fb-109">要件</span><span class="sxs-lookup"><span data-stu-id="b93fb-109">Requirements</span></span>  
+ <span data-ttu-id="b93fb-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b93fb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b62d0-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b62d0-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b93fb-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b93fb-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b62d0-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b62d0-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b93fb-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b93fb-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b62d0-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b62d0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b93fb-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b93fb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b62d0-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b62d0-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b93fb-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b93fb-114">See also</span></span>
 
-- [<span data-ttu-id="b62d0-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b62d0-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b93fb-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b93fb-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

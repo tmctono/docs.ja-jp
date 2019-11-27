@@ -9,17 +9,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353472"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="31606-102">Finding Text in Word Documents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31606-102">Finding Text in Word Documents (Visual Basic)</span></span>
+# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="b1018-102">Word 文書内のテキストの検索 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1018-102">Finding Text in Word Documents (Visual Basic)</span></span>
 
-<span data-ttu-id="31606-103">このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="31606-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
+<span data-ttu-id="b1018-103">このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="b1018-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
 
-## <a name="example"></a><span data-ttu-id="31606-104">例</span><span class="sxs-lookup"><span data-stu-id="31606-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b1018-104">例</span><span class="sxs-lookup"><span data-stu-id="b1018-104">Example</span></span>
 
-<span data-ttu-id="31606-105">この例では、WordprocessingML ドキュメントを処理して、ドキュメント内で特定のテキストの出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="31606-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="31606-106">ここではそのために、"Hello" という文字列を検索するクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="31606-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="31606-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="31606-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="31606-108">新しいクエリについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="31606-108">The new query is called out in comments in the code below.</span></span>
+<span data-ttu-id="b1018-105">この例では、WordprocessingML ドキュメントを処理して、ドキュメント内で特定のテキストの出現箇所をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="b1018-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="b1018-106">ここではそのために、"Hello" という文字列を検索するクエリを使用します。</span><span class="sxs-lookup"><span data-stu-id="b1018-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="b1018-107">この例は、このチュートリアルのこれまでの例に基づいています。</span><span class="sxs-lookup"><span data-stu-id="b1018-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="b1018-108">新しいクエリについては、以下のコード内にあるコメントで説明が示されています。</span><span class="sxs-lookup"><span data-stu-id="b1018-108">The new query is called out in comments in the code below.</span></span>
 
-<span data-ttu-id="31606-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="31606-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>
+<span data-ttu-id="b1018-109">この例のソースドキュメントを作成する手順については、「[ソースとなる Office OPEN XML ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b1018-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>
 
-<span data-ttu-id="31606-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="31606-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="31606-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="31606-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+<span data-ttu-id="b1018-110">この例では、WindowsBase アセンブリに含まれるクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="b1018-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="b1018-111">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="b1018-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -153,14 +153,14 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="31606-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="31606-112">This example produces the following output:</span></span>
+<span data-ttu-id="b1018-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b1018-112">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
 
-<span data-ttu-id="31606-113">この検索に変更を加えて、特定のスタイルの行を検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="31606-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="31606-114">次のクエリは、Code スタイルの空白行をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="31606-114">The following query finds all blank lines that have the Code style:</span></span>
+<span data-ttu-id="b1018-113">この検索に変更を加えて、特定のスタイルの行を検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="b1018-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="b1018-114">次のクエリは、Code スタイルの空白行をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="b1018-114">The following query finds all blank lines that have the Code style:</span></span>
 
 ```vb
 Imports System.IO.Packaging
@@ -294,24 +294,24 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="31606-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="31606-115">This example produces the following output:</span></span>
+<span data-ttu-id="b1018-115">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b1018-115">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code ><
 ```
 
-<span data-ttu-id="31606-116">この例はさまざまな形で強化できます。</span><span class="sxs-lookup"><span data-stu-id="31606-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="31606-117">たとえば、正規表現を使用してテキストを検索したり、特定のディレクトリにあるすべての Word ファイルを反復処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="31606-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
+<span data-ttu-id="b1018-116">この例はさまざまな形で強化できます。</span><span class="sxs-lookup"><span data-stu-id="b1018-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="b1018-117">たとえば、正規表現を使用してテキストを検索したり、特定のディレクトリにあるすべての Word ファイルを反復処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="b1018-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
 
-<span data-ttu-id="31606-118">この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。</span><span class="sxs-lookup"><span data-stu-id="31606-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="31606-119">各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。</span><span class="sxs-lookup"><span data-stu-id="31606-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="31606-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="31606-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
+<span data-ttu-id="b1018-118">この例は、1 つのクエリとして記述された場合とほぼ同程度のパフォーマンスを発揮します。</span><span class="sxs-lookup"><span data-stu-id="b1018-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="b1018-119">各クエリはレイジー遅延方式で実装されているため、反復処理されるまで結果は生成されません。</span><span class="sxs-lookup"><span data-stu-id="b1018-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="b1018-120">実行とレイジー評価の詳細については、「 [LINQ to XML での遅延実行とレイジー評価」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b1018-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="31606-121">次のステップ</span><span class="sxs-lookup"><span data-stu-id="31606-121">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b1018-121">次の手順</span><span class="sxs-lookup"><span data-stu-id="b1018-121">Next Steps</span></span>
 
-<span data-ttu-id="31606-122">次のセクションでは、WordprocessingML ドキュメントについて詳細に説明します。</span><span class="sxs-lookup"><span data-stu-id="31606-122">The next section provides more information about WordprocessingML documents:</span></span>
+<span data-ttu-id="b1018-122">次のセクションでは、WordprocessingML ドキュメントについて詳細に説明します。</span><span class="sxs-lookup"><span data-stu-id="b1018-122">The next section provides more information about WordprocessingML documents:</span></span>
 
-- [<span data-ttu-id="31606-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31606-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="b1018-123">Office Open XML WordprocessingML ドキュメントの詳細 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1018-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a><span data-ttu-id="31606-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="31606-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1018-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="b1018-124">See also</span></span>
 
-- [<span data-ttu-id="31606-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31606-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="31606-126">純粋関数によるリファクタリング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31606-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="31606-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31606-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="b1018-125">チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1018-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="b1018-126">純粋関数によるリファクタリング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1018-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="b1018-127">LINQ to XML での遅延実行とレイジー評価 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1018-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

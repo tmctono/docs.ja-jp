@@ -22,10 +22,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450403"
 ---
-# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="cb847-102">COR_PRF_REJIT_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="cb847-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
-<span data-ttu-id="cb847-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span><span class="sxs-lookup"><span data-stu-id="cb847-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
+# <a name="cor_prf_rejit_flags-enumeration"></a><span data-ttu-id="76a6a-102">COR_PRF_REJIT_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="76a6a-102">COR_PRF_REJIT_FLAGS Enumeration</span></span>
+<span data-ttu-id="76a6a-103">[ICorProfilerInfo10:: RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値を格納します。</span><span class="sxs-lookup"><span data-stu-id="76a6a-103">Contains values that indicate how the [ICorProfilerInfo10::RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) API should behave.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb847-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb847-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76a6a-104">構文</span><span class="sxs-lookup"><span data-stu-id="76a6a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -35,22 +35,22 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cb847-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="cb847-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="76a6a-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="76a6a-105">Members</span></span>  
   
-|<span data-ttu-id="cb847-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="cb847-106">Member</span></span>|<span data-ttu-id="cb847-107">説明</span><span class="sxs-lookup"><span data-stu-id="cb847-107">Description</span></span>|  
+|<span data-ttu-id="76a6a-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="76a6a-106">Member</span></span>|<span data-ttu-id="76a6a-107">説明</span><span class="sxs-lookup"><span data-stu-id="76a6a-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="cb847-108">ReJITted methods will be blocked from being inlined in other methods.</span><span class="sxs-lookup"><span data-stu-id="cb847-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="cb847-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span><span class="sxs-lookup"><span data-stu-id="cb847-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| <span data-ttu-id="76a6a-108">ReJITted メソッドは、他のメソッドでインライン化されないようにブロックされます。</span><span class="sxs-lookup"><span data-stu-id="76a6a-108">ReJITted methods will be blocked from being inlined in other methods.</span></span> |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| <span data-ttu-id="76a6a-109">メソッドをインラインで ReJITted する必要があるメソッドのコールバックを `GetFunctionParameters` 受信します。</span><span class="sxs-lookup"><span data-stu-id="76a6a-109">Receive `GetFunctionParameters` callbacks for any methods that inline the methods requested to be ReJITted.</span></span> |  
 
-## <a name="requirements"></a><span data-ttu-id="cb847-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="cb847-110">Requirements</span></span>  
- <span data-ttu-id="cb847-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="cb847-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76a6a-110">要件</span><span class="sxs-lookup"><span data-stu-id="76a6a-110">Requirements</span></span>  
+ <span data-ttu-id="76a6a-111">**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="76a6a-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>  
   
- <span data-ttu-id="cb847-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb847-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="76a6a-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="76a6a-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb847-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb847-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="76a6a-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76a6a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb847-114">**.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb847-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
+ <span data-ttu-id="76a6a-114">**.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76a6a-114">**.NET Framework Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]</span></span> 
   
-## <a name="see-also"></a><span data-ttu-id="cb847-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb847-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76a6a-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="76a6a-115">See also</span></span>
 
-- [<span data-ttu-id="cb847-116">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="cb847-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="76a6a-116">列挙型のプロファイリング</span><span class="sxs-lookup"><span data-stu-id="76a6a-116">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

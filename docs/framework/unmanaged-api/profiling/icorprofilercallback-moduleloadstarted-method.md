@@ -22,32 +22,32 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445928"
 ---
-# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="cad8f-102">ICorProfilerCallback::ModuleLoadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="cad8f-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
-<span data-ttu-id="cad8f-103">Notifies the profiler that a module is being loaded.</span><span class="sxs-lookup"><span data-stu-id="cad8f-103">Notifies the profiler that a module is being loaded.</span></span>  
+# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="dd96b-102">ICorProfilerCallback::ModuleLoadStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="dd96b-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
+<span data-ttu-id="dd96b-103">モジュールが読み込まれていることをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="dd96b-103">Notifies the profiler that a module is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cad8f-104">構文</span><span class="sxs-lookup"><span data-stu-id="cad8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd96b-104">構文</span><span class="sxs-lookup"><span data-stu-id="dd96b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModuleLoadStarted(  
     [in] ModuleID moduleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cad8f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cad8f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd96b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="dd96b-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="cad8f-106">[in] The ID of the module that is being loaded.</span><span class="sxs-lookup"><span data-stu-id="cad8f-106">[in] The ID of the module that is being loaded.</span></span>  
+ <span data-ttu-id="dd96b-106">から読み込まれているモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="dd96b-106">[in] The ID of the module that is being loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cad8f-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="cad8f-107">Remarks</span></span>  
- <span data-ttu-id="cad8f-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span><span class="sxs-lookup"><span data-stu-id="cad8f-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd96b-107">コメント</span><span class="sxs-lookup"><span data-stu-id="dd96b-107">Remarks</span></span>  
+ <span data-ttu-id="dd96b-108">`moduleId` の値は、 [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)メソッドが呼び出されるまで、情報要求に対して無効です。</span><span class="sxs-lookup"><span data-stu-id="dd96b-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cad8f-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="cad8f-109">Requirements</span></span>  
- <span data-ttu-id="cad8f-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cad8f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd96b-109">要件</span><span class="sxs-lookup"><span data-stu-id="dd96b-109">Requirements</span></span>  
+ <span data-ttu-id="dd96b-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dd96b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cad8f-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cad8f-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="dd96b-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dd96b-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cad8f-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cad8f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dd96b-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd96b-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cad8f-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cad8f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dd96b-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd96b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cad8f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="cad8f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd96b-114">参照</span><span class="sxs-lookup"><span data-stu-id="dd96b-114">See also</span></span>
 
-- [<span data-ttu-id="cad8f-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cad8f-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="dd96b-115">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dd96b-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
