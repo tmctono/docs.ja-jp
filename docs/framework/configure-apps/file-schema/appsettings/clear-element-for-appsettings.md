@@ -16,15 +16,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74088733"
 ---
-# <a name="clear-element-for-appsettings"></a><span data-ttu-id="54d6b-102">\<appSettings > の \<クリア > 要素</span><span class="sxs-lookup"><span data-stu-id="54d6b-102">\<clear> element for \<appSettings></span></span>
+# <a name="clear-element-for-appsettings"></a><span data-ttu-id="12b35-102">\<appSettings > の \<clear> 要素</span><span class="sxs-lookup"><span data-stu-id="12b35-102">\<clear> element for \<appSettings></span></span>
 
-<span data-ttu-id="54d6b-103">カスタムアプリケーション設定をクリアします。</span><span class="sxs-lookup"><span data-stu-id="54d6b-103">Clears custom application settings.</span></span>
+<span data-ttu-id="12b35-103">カスタムアプリケーション設定をクリアします。</span><span class="sxs-lookup"><span data-stu-id="12b35-103">Clears custom application settings.</span></span>
 
-<span data-ttu-id="54d6b-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="54d6b-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="54d6b-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="54d6b-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)</span></span>\
-<span data-ttu-id="54d6b-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<クリア >**</span><span class="sxs-lookup"><span data-stu-id="54d6b-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+<span data-ttu-id="12b35-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="12b35-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="12b35-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="12b35-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)</span></span>\
+<span data-ttu-id="12b35-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**</span><span class="sxs-lookup"><span data-stu-id="12b35-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="54d6b-107">構文</span><span class="sxs-lookup"><span data-stu-id="54d6b-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="12b35-107">構文</span><span class="sxs-lookup"><span data-stu-id="12b35-107">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -32,23 +32,23 @@ ms.locfileid: "74088733"
 </appSettings>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="54d6b-108">属性</span><span class="sxs-lookup"><span data-stu-id="54d6b-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="12b35-108">属性</span><span class="sxs-lookup"><span data-stu-id="12b35-108">Attributes</span></span>
 
-<span data-ttu-id="54d6b-109">None</span><span class="sxs-lookup"><span data-stu-id="54d6b-109">None</span></span>
+<span data-ttu-id="12b35-109">None</span><span class="sxs-lookup"><span data-stu-id="12b35-109">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="54d6b-110">親要素</span><span class="sxs-lookup"><span data-stu-id="54d6b-110">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="12b35-110">親要素</span><span class="sxs-lookup"><span data-stu-id="12b35-110">Parent element</span></span>
 
-|     | <span data-ttu-id="54d6b-111">説明</span><span class="sxs-lookup"><span data-stu-id="54d6b-111">Description</span></span> |
+|     | <span data-ttu-id="12b35-111">説明</span><span class="sxs-lookup"><span data-stu-id="12b35-111">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="54d6b-112"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="54d6b-112">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="54d6b-113">ファイルパス、XML Web サービス Url、その他のカスタムアプリケーション構成情報などのカスタムアプリケーション設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="54d6b-113">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom application configuration information.</span></span> |
+| [<span data-ttu-id="12b35-112"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="12b35-112">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="12b35-113">ファイルパス、XML Web サービス Url、その他のカスタムアプリケーション構成情報などのカスタムアプリケーション設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="12b35-113">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom application configuration information.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="54d6b-114">子要素</span><span class="sxs-lookup"><span data-stu-id="54d6b-114">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="12b35-114">子要素</span><span class="sxs-lookup"><span data-stu-id="12b35-114">Child elements</span></span>
 
-<span data-ttu-id="54d6b-115">None</span><span class="sxs-lookup"><span data-stu-id="54d6b-115">None</span></span>
+<span data-ttu-id="12b35-115">None</span><span class="sxs-lookup"><span data-stu-id="12b35-115">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="54d6b-116">例</span><span class="sxs-lookup"><span data-stu-id="54d6b-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="12b35-116">例</span><span class="sxs-lookup"><span data-stu-id="12b35-116">Example</span></span>
 
-<span data-ttu-id="54d6b-117">次の例は、カスタム構成設定をクリアする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="54d6b-117">The following example shows how to clear custom configuration settings:</span></span>
+<span data-ttu-id="12b35-117">次の例は、カスタム構成設定をクリアする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="12b35-117">The following example shows how to clear custom configuration settings:</span></span>
 
 ```xml
 <appSettings>
@@ -56,6 +56,6 @@ ms.locfileid: "74088733"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="54d6b-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="54d6b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12b35-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="12b35-118">See also</span></span>
 
-- [<span data-ttu-id="54d6b-119">.NET Framework の構成ファイルスキーマ</span><span class="sxs-lookup"><span data-stu-id="54d6b-119">Configuration file schema for the .NET Framework</span></span>](../index.md)
+- [<span data-ttu-id="12b35-119">.NET Framework の構成ファイルスキーマ</span><span class="sxs-lookup"><span data-stu-id="12b35-119">Configuration file schema for the .NET Framework</span></span>](../index.md)
