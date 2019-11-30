@@ -1,5 +1,5 @@
 ---
-title: '方法: データサービスへのアクセスを有効にする (WCF Data Services)'
+title: '方法: データ サービスへのアクセスを有効にする (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,29 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: cbe25dcb62adf82921b24623cc4930c3076dd1fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ec9c9a730516b22b4eaa215e042e9393c01d752
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790663"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569107"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a><span data-ttu-id="91daa-102">方法: データサービスへのアクセスを有効にする (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="91daa-102">How to: Enable Access to the Data Service (WCF Data Services)</span></span>
-<span data-ttu-id="91daa-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスによって公開されているリソースに明示的にアクセス権を付与する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91daa-103">In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you must explicitly grant access to the resources that are exposed by a data service.</span></span> <span data-ttu-id="91daa-104">つまり、新しいデータ サービスを作成した後も、個々のリソースに対し、エンティティ セットとして明示的にアクセスを許可する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91daa-104">This means that after you create a new data service, you must still explicitly provide access to individual resources as entity sets.</span></span> <span data-ttu-id="91daa-105">このトピックでは、[クイックスタート](quickstart-wcf-data-services.md)の完了時に作成された Northwind データサービスの5つのエンティティセットに対する読み取りおよび書き込みアクセスを有効にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="91daa-105">This topic shows how to enable read and write access to five of the entity sets in the Northwind data service that is created when you complete the [quickstart](quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="91daa-106"><xref:System.Data.Services.EntitySetRights> 列挙体は <xref:System.FlagsAttribute> を使用して定義されているので、論理和演算子を使用して 1 つのエンティティ セットに複数のアクセス許可を指定できます。</span><span class="sxs-lookup"><span data-stu-id="91daa-106">Because the <xref:System.Data.Services.EntitySetRights> enumeration is defined by using the <xref:System.FlagsAttribute>, you can use a logical OR operator to specify multiple permissions for a single entity set.</span></span>  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a><span data-ttu-id="5d67d-102">方法: データ サービスへのアクセスを有効にする (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="5d67d-102">How to: Enable Access to the Data Service (WCF Data Services)</span></span>
+<span data-ttu-id="5d67d-103">WCF Data Services では、データサービスによって公開されているリソースへのアクセス権を明示的に付与する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d67d-103">In WCF Data Services, you must explicitly grant access to the resources that are exposed by a data service.</span></span> <span data-ttu-id="5d67d-104">つまり、新しいデータ サービスを作成した後も、個々のリソースに対し、エンティティ セットとして明示的にアクセスを許可する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d67d-104">This means that after you create a new data service, you must still explicitly provide access to individual resources as entity sets.</span></span> <span data-ttu-id="5d67d-105">このトピックでは、[クイックスタート](quickstart-wcf-data-services.md)の完了時に作成された Northwind データサービスの5つのエンティティセットに対する読み取りおよび書き込みアクセスを有効にする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5d67d-105">This topic shows how to enable read and write access to five of the entity sets in the Northwind data service that is created when you complete the [quickstart](quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="5d67d-106"><xref:System.Data.Services.EntitySetRights> 列挙体は <xref:System.FlagsAttribute> を使用して定義されているので、論理和演算子を使用して 1 つのエンティティ セットに複数のアクセス許可を指定できます。</span><span class="sxs-lookup"><span data-stu-id="5d67d-106">Because the <xref:System.Data.Services.EntitySetRights> enumeration is defined by using the <xref:System.FlagsAttribute>, you can use a logical OR operator to specify multiple permissions for a single entity set.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="91daa-107">ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="91daa-107">Any client that can access the ASP.NET application can also access the resources exposed by the data service.</span></span> <span data-ttu-id="91daa-108">運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91daa-108">In a production data service, to prevent unauthorized access to resources, you should also secure the application itself.</span></span> <span data-ttu-id="91daa-109">詳細については、「 [ASP.NET Web Sites のセキュリティ保護](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="91daa-109">For more information, see [Securing ASP.NET Web Sites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).</span></span>  
+> <span data-ttu-id="5d67d-107">ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="5d67d-107">Any client that can access the ASP.NET application can also access the resources exposed by the data service.</span></span> <span data-ttu-id="5d67d-108">運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d67d-108">In a production data service, to prevent unauthorized access to resources, you should also secure the application itself.</span></span> <span data-ttu-id="5d67d-109">詳細については、「 [ASP.NET Web Sites のセキュリティ保護](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d67d-109">For more information, see [Securing ASP.NET Web Sites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).</span></span>  
   
-### <a name="to-enable-access-to-the-data-service"></a><span data-ttu-id="91daa-110">データ サービスへのアクセスを有効にするには</span><span class="sxs-lookup"><span data-stu-id="91daa-110">To enable access to the data service</span></span>  
+### <a name="to-enable-access-to-the-data-service"></a><span data-ttu-id="5d67d-110">データ サービスへのアクセスを有効にするには</span><span class="sxs-lookup"><span data-stu-id="5d67d-110">To enable access to the data service</span></span>  
   
-- <span data-ttu-id="91daa-111">データ サービスのコードで、`InitializeService` 関数のプレースホルダーのコードを次の内容で置き換えます。</span><span class="sxs-lookup"><span data-stu-id="91daa-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
+- <span data-ttu-id="5d67d-111">データ サービスのコードで、`InitializeService` 関数のプレースホルダーのコードを次の内容で置き換えます。</span><span class="sxs-lookup"><span data-stu-id="5d67d-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
   
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]  
   
-     <span data-ttu-id="91daa-112">これにより、クライアントから `Orders` および `Order_Details` エンティティ セットへの読み取りおよび書き込みアクセスと、`Customers` エンティティ セットへの読み取り専用アクセスが有効になります。</span><span class="sxs-lookup"><span data-stu-id="91daa-112">This enables clients to have read and write access to the `Orders` and `Order_Details` entity sets and read-only access to the `Customers` entity sets.</span></span>  
+     <span data-ttu-id="5d67d-112">これにより、クライアントから `Orders` および `Order_Details` エンティティ セットへの読み取りおよび書き込みアクセスと、`Customers` エンティティ セットへの読み取り専用アクセスが有効になります。</span><span class="sxs-lookup"><span data-stu-id="5d67d-112">This enables clients to have read and write access to the `Orders` and `Order_Details` entity sets and read-only access to the `Customers` entity sets.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91daa-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="91daa-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d67d-113">参照</span><span class="sxs-lookup"><span data-stu-id="5d67d-113">See also</span></span>
 
-- [<span data-ttu-id="91daa-114">方法: IIS で実行されている WCF データサービスを開発する</span><span class="sxs-lookup"><span data-stu-id="91daa-114">How to: Develop a WCF Data Service Running on IIS</span></span>](how-to-develop-a-wcf-data-service-running-on-iis.md)
-- [<span data-ttu-id="91daa-115">データ サービスの構成</span><span class="sxs-lookup"><span data-stu-id="91daa-115">Configuring the Data Service</span></span>](configuring-the-data-service-wcf-data-services.md)
+- [<span data-ttu-id="5d67d-114">方法: IIS 上で実行する WCF Data Service を開発する</span><span class="sxs-lookup"><span data-stu-id="5d67d-114">How to: Develop a WCF Data Service Running on IIS</span></span>](how-to-develop-a-wcf-data-service-running-on-iis.md)
+- [<span data-ttu-id="5d67d-115">データ サービスの構成</span><span class="sxs-lookup"><span data-stu-id="5d67d-115">Configuring the Data Service</span></span>](configuring-the-data-service-wcf-data-services.md)

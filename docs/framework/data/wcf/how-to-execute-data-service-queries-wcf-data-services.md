@@ -1,5 +1,5 @@
 ---
-title: '方法: データサービスクエリの実行 (WCF Data Services)'
+title: '方法: データ サービス クエリを実行する (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b06a21a45dcf6e67c41287c4cd59cdda4aa7b447
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780066"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569076"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="af596-102">方法: データサービスクエリの実行 (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="af596-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] <span data-ttu-id="af596-103">では、生成されたクライアント データ サービス クラスを使用して .NET Framework ベースのクライアント アプリケーションからデータ サービスをクエリできます。</span><span class="sxs-lookup"><span data-stu-id="af596-103">enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="af596-104">次の方法のいずれかを使用してクエリを実行できます。</span><span class="sxs-lookup"><span data-stu-id="af596-104">You can execute queries by using one of these methods:</span></span>  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a><span data-ttu-id="dc4aa-102">方法: データ サービス クエリを実行する (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="dc4aa-102">How to: Execute Data Service Queries (WCF Data Services)</span></span>
+<span data-ttu-id="dc4aa-103">WCF Data Services を使用すると、生成されたクライアントデータサービスクラスを使用して、.NET Framework ベースのクライアントアプリケーションからデータサービスを照会できます。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-103">WCF Data Services enables you to query a data service from a .NET Framework-based client application by using the generated client data service classes.</span></span> <span data-ttu-id="dc4aa-104">次の方法のいずれかを使用してクエリを実行できます。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-104">You can execute queries by using one of these methods:</span></span>  
   
-- <span data-ttu-id="af596-105"><xref:System.Data.Services.Client.DataServiceQuery%601> ツールによって生成される <xref:System.Data.Services.Client.DataServiceContext> から取得した名前付きの `Add Data Service Reference` に対して LINQ クエリを実行する。</span><span class="sxs-lookup"><span data-stu-id="af596-105">Executing a LINQ query against the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
+- <span data-ttu-id="dc4aa-105"><xref:System.Data.Services.Client.DataServiceQuery%601> ツールによって生成される <xref:System.Data.Services.Client.DataServiceContext> から取得した名前付きの `Add Data Service Reference` に対して LINQ クエリを実行する。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-105">Executing a LINQ query against the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
-- <span data-ttu-id="af596-106">暗黙的に、<xref:System.Data.Services.Client.DataServiceQuery%601> ツールによって生成される <xref:System.Data.Services.Client.DataServiceContext> から取得した名前付きの `Add Data Service Reference` を列挙する。</span><span class="sxs-lookup"><span data-stu-id="af596-106">Implicitly, by enumerating over the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
+- <span data-ttu-id="dc4aa-106">暗黙的に、<xref:System.Data.Services.Client.DataServiceQuery%601> ツールによって生成される <xref:System.Data.Services.Client.DataServiceContext> から取得した名前付きの `Add Data Service Reference` を列挙する。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-106">Implicitly, by enumerating over the named <xref:System.Data.Services.Client.DataServiceQuery%601> that you obtain from the <xref:System.Data.Services.Client.DataServiceContext> that the `Add Data Service Reference` tool generates.</span></span>  
   
-- <span data-ttu-id="af596-107">明示的に、<xref:System.Data.Services.Client.DataServiceContext.Execute%2A> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッド (非同期実行の場合は <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッド) を呼び出す。</span><span class="sxs-lookup"><span data-stu-id="af596-107">Explicitly, by calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceQuery%601>, or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method for asynchronous execution.</span></span>  
+- <span data-ttu-id="dc4aa-107">明示的に、<xref:System.Data.Services.Client.DataServiceContext.Execute%2A> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッド (非同期実行の場合は <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> メソッド) を呼び出す。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-107">Explicitly, by calling the <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> method on the <xref:System.Data.Services.Client.DataServiceQuery%601>, or the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method for asynchronous execution.</span></span>  
   
- <span data-ttu-id="af596-108">詳細については、「[データサービスのクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af596-108">For more information, see [Querying the Data Service](querying-the-data-service-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="dc4aa-108">詳細については、「[データサービスのクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-108">For more information, see [Querying the Data Service](querying-the-data-service-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="af596-109">このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="af596-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="af596-110">このサービスとクライアントデータクラスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。</span><span class="sxs-lookup"><span data-stu-id="af596-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="dc4aa-109">このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="dc4aa-110">このサービスとクライアントデータクラスは、 [WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)を完了したときに作成されます。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af596-111">例</span><span class="sxs-lookup"><span data-stu-id="af596-111">Example</span></span>  
- <span data-ttu-id="af596-112">次の例は、すべての `Customers` を返す LINQ クエリを定義して Northwind データ サービスに対して実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="af596-112">The following example shows how to define and execute a LINQ query that returns all `Customers` against the Northwind data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="dc4aa-111">使用例</span><span class="sxs-lookup"><span data-stu-id="dc4aa-111">Example</span></span>  
+ <span data-ttu-id="dc4aa-112">次の例は、すべての `Customers` を返す LINQ クエリを定義して Northwind データ サービスに対して実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-112">The following example shows how to define and execute a LINQ query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomerslinq)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomerslinq)]  
   
-## <a name="example"></a><span data-ttu-id="af596-113">例</span><span class="sxs-lookup"><span data-stu-id="af596-113">Example</span></span>  
- <span data-ttu-id="af596-114">次の例は、`Add Data Service Reference` ツールによって生成されるコンテキストを使用して、すべての `Customers` を返すクエリを Northwind データ サービスに対して暗黙的に実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="af596-114">The following example shows how to use the context that the `Add Data Service Reference` tool generates to implicitly execute a query that returns all `Customers` against the Northwind data service.</span></span> <span data-ttu-id="af596-115">要求された `Customers` エンティティ セットの URI は、コンテキストによって自動的に決定されます。</span><span class="sxs-lookup"><span data-stu-id="af596-115">The URI of the requested `Customers` entity set is determined automatically by the context.</span></span> <span data-ttu-id="af596-116">クエリは、列挙が行われるときに暗黙的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="af596-116">The query is executed implicitly when the enumeration occurs.</span></span>  
+## <a name="example"></a><span data-ttu-id="dc4aa-113">使用例</span><span class="sxs-lookup"><span data-stu-id="dc4aa-113">Example</span></span>  
+ <span data-ttu-id="dc4aa-114">次の例は、`Add Data Service Reference` ツールによって生成されるコンテキストを使用して、すべての `Customers` を返すクエリを Northwind データ サービスに対して暗黙的に実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-114">The following example shows how to use the context that the `Add Data Service Reference` tool generates to implicitly execute a query that returns all `Customers` against the Northwind data service.</span></span> <span data-ttu-id="dc4aa-115">要求された `Customers` エンティティ セットの URI は、コンテキストによって自動的に決定されます。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-115">The URI of the requested `Customers` entity set is determined automatically by the context.</span></span> <span data-ttu-id="dc4aa-116">クエリは、列挙が行われるときに暗黙的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-116">The query is executed implicitly when the enumeration occurs.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomers)]
  [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomers)]  
   
-## <a name="example"></a><span data-ttu-id="af596-117">例</span><span class="sxs-lookup"><span data-stu-id="af596-117">Example</span></span>  
- <span data-ttu-id="af596-118">次の例は、<xref:System.Data.Services.Client.DataServiceContext> を使用して、すべての `Customers` を返すクエリを Northwind データ サービスに対して明示的に実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="af596-118">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext> to explicitly execute a query that returns all `Customers` against the Northwind data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="dc4aa-117">使用例</span><span class="sxs-lookup"><span data-stu-id="dc4aa-117">Example</span></span>  
+ <span data-ttu-id="dc4aa-118">次の例は、<xref:System.Data.Services.Client.DataServiceContext> を使用して、すべての `Customers` を返すクエリを Northwind データ サービスに対して明示的に実行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="dc4aa-118">The following example shows how to use the <xref:System.Data.Services.Client.DataServiceContext> to explicitly execute a query that returns all `Customers` against the Northwind data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
-## <a name="see-also"></a><span data-ttu-id="af596-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="af596-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc4aa-119">参照</span><span class="sxs-lookup"><span data-stu-id="dc4aa-119">See also</span></span>
 
-- [<span data-ttu-id="af596-120">方法: データサービスクエリにクエリオプションを追加する</span><span class="sxs-lookup"><span data-stu-id="af596-120">How to: Add Query Options to a Data Service Query</span></span>](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [<span data-ttu-id="dc4aa-120">方法: データ サービス クエリにクエリ オプションを追加する</span><span class="sxs-lookup"><span data-stu-id="dc4aa-120">How to: Add Query Options to a Data Service Query</span></span>](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
