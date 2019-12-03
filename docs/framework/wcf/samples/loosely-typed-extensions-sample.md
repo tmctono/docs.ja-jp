@@ -2,17 +2,17 @@
 title: 弱く型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f3beed9b9ca1dd6b1d4bb32078e6cd35a636501c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989788"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714881"
 ---
-# <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="4dc56-102">弱く型指定された拡張のサンプル</span><span class="sxs-lookup"><span data-stu-id="4dc56-102">Loosely-Typed Extensions Sample</span></span>
-<span data-ttu-id="4dc56-103">配信オブジェクト モデルでは、拡張データをさまざまな方法で処理できます。拡張データとは、配信フィードの XML 表現に含まれているが、<xref:System.ServiceModel.Syndication.SyndicationFeed> や <xref:System.ServiceModel.Syndication.SyndicationItem> などのクラスによって明示的に公開されない情報のことです。</span><span class="sxs-lookup"><span data-stu-id="4dc56-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="4dc56-104">このサンプルでは、拡張データを処理する基本的な方法を示します。</span><span class="sxs-lookup"><span data-stu-id="4dc56-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
+# <a name="loosely-typed-extensions-sample"></a><span data-ttu-id="45fe5-102">弱く型指定された拡張のサンプル</span><span class="sxs-lookup"><span data-stu-id="45fe5-102">Loosely-Typed Extensions Sample</span></span>
+<span data-ttu-id="45fe5-103">配信オブジェクト モデルでは、拡張データをさまざまな方法で処理できます。拡張データとは、配信フィードの XML 表現に含まれているが、<xref:System.ServiceModel.Syndication.SyndicationFeed> や <xref:System.ServiceModel.Syndication.SyndicationItem> などのクラスによって明示的に公開されない情報のことです。</span><span class="sxs-lookup"><span data-stu-id="45fe5-103">The Syndication object model provides rich support for working with extension data—information that is present in a syndication feed's XML representation but not explicitly exposed by classes such as <xref:System.ServiceModel.Syndication.SyndicationFeed> and <xref:System.ServiceModel.Syndication.SyndicationItem>.</span></span> <span data-ttu-id="45fe5-104">このサンプルでは、拡張データを処理する基本的な方法を示します。</span><span class="sxs-lookup"><span data-stu-id="45fe5-104">This sample illustrates the basic techniques for working with extension data.</span></span>  
   
- <span data-ttu-id="4dc56-105">このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="4dc56-105">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="4dc56-106">ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-106">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data:</span></span>  
+ <span data-ttu-id="45fe5-105">このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="45fe5-105">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="45fe5-106">ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-106">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data:</span></span>  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -24,8 +24,8 @@ ms.locfileid: "70989788"
   
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
-## <a name="sample-xml"></a><span data-ttu-id="4dc56-107">サンプル XML</span><span class="sxs-lookup"><span data-stu-id="4dc56-107">Sample XML</span></span>  
- <span data-ttu-id="4dc56-108">このサンプルで使用される XML ドキュメントは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="4dc56-108">For reference, the following XML document is used in this sample.</span></span>  
+## <a name="sample-xml"></a><span data-ttu-id="45fe5-107">サンプル XML</span><span class="sxs-lookup"><span data-stu-id="45fe5-107">Sample XML</span></span>  
+ <span data-ttu-id="45fe5-108">このサンプルで使用される XML ドキュメントは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="45fe5-108">For reference, the following XML document is used in this sample.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="IBM437"?>  
@@ -52,20 +52,20 @@ w.w3.org/2001/XMLSchema" xmlns="">
 </feed>  
 ```  
   
- <span data-ttu-id="4dc56-109">このドキュメントには、次の拡張データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="4dc56-109">This document contains the following pieces of extension data:</span></span>  
+ <span data-ttu-id="45fe5-109">このドキュメントには、次の拡張データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="45fe5-109">This document contains the following pieces of extension data:</span></span>  
   
-- <span data-ttu-id="4dc56-110">`myAttribute` 要素の `<feed>` 属性。</span><span class="sxs-lookup"><span data-stu-id="4dc56-110">The `myAttribute` attribute of the `<feed>` element.</span></span>  
+- <span data-ttu-id="45fe5-110">`myAttribute` 要素の `<feed>` 属性。</span><span class="sxs-lookup"><span data-stu-id="45fe5-110">The `myAttribute` attribute of the `<feed>` element.</span></span>  
   
-- <span data-ttu-id="4dc56-111">`<simpleString>`element.</span><span class="sxs-lookup"><span data-stu-id="4dc56-111">`<simpleString>` element.</span></span>  
+- <span data-ttu-id="45fe5-111">`<simpleString>` 要素。</span><span class="sxs-lookup"><span data-stu-id="45fe5-111">`<simpleString>` element.</span></span>  
   
-- <span data-ttu-id="4dc56-112">`<DataContractExtension>`element.</span><span class="sxs-lookup"><span data-stu-id="4dc56-112">`<DataContractExtension>` element.</span></span>  
+- <span data-ttu-id="45fe5-112">`<DataContractExtension>` 要素。</span><span class="sxs-lookup"><span data-stu-id="45fe5-112">`<DataContractExtension>` element.</span></span>  
   
-- <span data-ttu-id="4dc56-113">`<XmlSerializerExtension>`element.</span><span class="sxs-lookup"><span data-stu-id="4dc56-113">`<XmlSerializerExtension>` element.</span></span>  
+- <span data-ttu-id="45fe5-113">`<XmlSerializerExtension>` 要素。</span><span class="sxs-lookup"><span data-stu-id="45fe5-113">`<XmlSerializerExtension>` element.</span></span>  
   
-- <span data-ttu-id="4dc56-114">`<xElementExtension>`element.</span><span class="sxs-lookup"><span data-stu-id="4dc56-114">`<xElementExtension>` element.</span></span>  
+- <span data-ttu-id="45fe5-114">`<xElementExtension>` 要素。</span><span class="sxs-lookup"><span data-stu-id="45fe5-114">`<xElementExtension>` element.</span></span>  
   
-## <a name="writing-extension-data"></a><span data-ttu-id="4dc56-115">拡張データの書き込み</span><span class="sxs-lookup"><span data-stu-id="4dc56-115">Writing Extension Data</span></span>  
- <span data-ttu-id="4dc56-116">属性の拡張は、次のサンプル コードに示すように、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに追加することによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-116">Attribute extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection as shown in the following sample code.</span></span>  
+## <a name="writing-extension-data"></a><span data-ttu-id="45fe5-115">拡張データの書き込み</span><span class="sxs-lookup"><span data-stu-id="45fe5-115">Writing Extension Data</span></span>  
+ <span data-ttu-id="45fe5-116">属性の拡張は、次のサンプル コードに示すように、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに追加することによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-116">Attribute extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection as shown in the following sample code.</span></span>  
   
 ```csharp  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -73,26 +73,26 @@ w.w3.org/2001/XMLSchema" xmlns="">
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
 ```  
   
- <span data-ttu-id="4dc56-117">要素拡張は、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> コレクションに追加することによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-117">Element extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> collection.</span></span> <span data-ttu-id="4dc56-118">これらの拡張には、文字列などの基本的な値、.NET Framework オブジェクトの XML シリアル化、および手動で入力された XML ノードを指定できます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-118">These extensions can by basic values such as strings, XML serializations of .NET Framework objects, or XML nodes coded by hand.</span></span>  
+ <span data-ttu-id="45fe5-117">要素拡張は、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> コレクションに追加することによって作成されます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-117">Element extensions are created by adding entries to the <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> collection.</span></span> <span data-ttu-id="45fe5-118">これらの拡張には、文字列などの基本的な値、.NET Framework オブジェクトの XML シリアル化、および手動で入力された XML ノードを指定できます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-118">These extensions can by basic values such as strings, XML serializations of .NET Framework objects, or XML nodes coded by hand.</span></span>  
   
- <span data-ttu-id="4dc56-119">次のサンプル コードでは、`simpleString` という拡張要素が作成されます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-119">The following sample code creates an extension element named `simpleString`.</span></span>  
+ <span data-ttu-id="45fe5-119">次のサンプル コードでは、`simpleString` という拡張要素が作成されます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-119">The following sample code creates an extension element named `simpleString`.</span></span>  
   
 ```csharp  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- <span data-ttu-id="4dc56-120">この要素の XML 名前空間が空の名前空間 ("")、その値は"hello, world!"を文字列に含まれているテキスト ノード。</span><span class="sxs-lookup"><span data-stu-id="4dc56-120">The XML namespace for this element is the empty namespace ("") and its value is a text node that contains the string "hello, world!".</span></span>  
+ <span data-ttu-id="45fe5-120">この要素の XML 名前空間は空の名前空間 ("") で、その値は文字列 "hello, world!" を含むテキストノードです。</span><span class="sxs-lookup"><span data-stu-id="45fe5-120">The XML namespace for this element is the empty namespace ("") and its value is a text node that contains the string "hello, world!".</span></span>  
   
- <span data-ttu-id="4dc56-121">入れ子になった多数の要素で構成される複雑な要素拡張を作成する方法の 1 つに、次の例に示すように、.NET Framework API をシリアル化に使用する方法があります (<xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Xml.Serialization.XmlSerializer> の両方がサポートされています)。</span><span class="sxs-lookup"><span data-stu-id="4dc56-121">One way to create complex element extensions that consist of many nested elements is to use the .NET Framework APIs for serialization (both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported) as shown in the following examples.</span></span>  
+ <span data-ttu-id="45fe5-121">入れ子になった多数の要素で構成される複雑な要素拡張を作成する方法の 1 つに、次の例に示すように、.NET Framework API をシリアル化に使用する方法があります (<xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Xml.Serialization.XmlSerializer> の両方がサポートされています)。</span><span class="sxs-lookup"><span data-stu-id="45fe5-121">One way to create complex element extensions that consist of many nested elements is to use the .NET Framework APIs for serialization (both the <xref:System.Runtime.Serialization.DataContractSerializer> and the <xref:System.Xml.Serialization.XmlSerializer> are supported) as shown in the following examples.</span></span>  
   
 ```csharp  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
   
- <span data-ttu-id="4dc56-122">この例の `DataContractExtension` と `XmlSerializerExtension` は、シリアライザで使用するために記述されたカスタム型です。</span><span class="sxs-lookup"><span data-stu-id="4dc56-122">In this example, the `DataContractExtension` and `XmlSerializerExtension` are custom types written for use with a serializer.</span></span>  
+ <span data-ttu-id="45fe5-122">この例の `DataContractExtension` と `XmlSerializerExtension` は、シリアライザで使用するために記述されたカスタム型です。</span><span class="sxs-lookup"><span data-stu-id="45fe5-122">In this example, the `DataContractExtension` and `XmlSerializerExtension` are custom types written for use with a serializer.</span></span>  
   
- <span data-ttu-id="4dc56-123"><xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> クラスを使用すると、<xref:System.Xml.XmlReader> インスタンスから要素拡張を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-123">The <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> class can also be used to create element extensions from an <xref:System.Xml.XmlReader> instance.</span></span> <span data-ttu-id="4dc56-124">これによって、次のサンプル コードに示すように、<xref:System.Xml.Linq.XElement> などの XML 処理 API と簡単に統合できるようになります。</span><span class="sxs-lookup"><span data-stu-id="4dc56-124">This allows for easy integration with XML processing APIs such as <xref:System.Xml.Linq.XElement> as shown in the following sample code.</span></span>  
+ <span data-ttu-id="45fe5-123"><xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> クラスを使用すると、<xref:System.Xml.XmlReader> インスタンスから要素拡張を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-123">The <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> class can also be used to create element extensions from an <xref:System.Xml.XmlReader> instance.</span></span> <span data-ttu-id="45fe5-124">これによって、次のサンプル コードに示すように、<xref:System.Xml.Linq.XElement> などの XML 処理 API と簡単に統合できるようになります。</span><span class="sxs-lookup"><span data-stu-id="45fe5-124">This allows for easy integration with XML processing APIs such as <xref:System.Xml.Linq.XElement> as shown in the following sample code.</span></span>  
   
 ```csharp  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
@@ -101,14 +101,14 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
         "15")).CreateReader());  
 ```  
   
-## <a name="reading-extension-data"></a><span data-ttu-id="4dc56-125">拡張データの読み取り</span><span class="sxs-lookup"><span data-stu-id="4dc56-125">Reading Extension Data</span></span>  
- <span data-ttu-id="4dc56-126">属性の拡張の値は、次のサンプル コードに示すように、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> を使用して <xref:System.Xml.XmlQualifiedName> コレクションの属性を検索することによって取得できます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-126">The values for attribute extensions can be obtained by looking up the attribute in the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection by its <xref:System.Xml.XmlQualifiedName> as shown in the following sample code.</span></span>  
+## <a name="reading-extension-data"></a><span data-ttu-id="45fe5-125">拡張データの読み取り</span><span class="sxs-lookup"><span data-stu-id="45fe5-125">Reading Extension Data</span></span>  
+ <span data-ttu-id="45fe5-126">属性の拡張の値は、次のサンプル コードに示すように、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> を使用して <xref:System.Xml.XmlQualifiedName> コレクションの属性を検索することによって取得できます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-126">The values for attribute extensions can be obtained by looking up the attribute in the <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> collection by its <xref:System.Xml.XmlQualifiedName> as shown in the following sample code.</span></span>  
   
 ```csharp  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
- <span data-ttu-id="4dc56-127">要素拡張には、`ReadElementExtensions<T>` メソッドを使用してアクセスします。</span><span class="sxs-lookup"><span data-stu-id="4dc56-127">Element extensions are accessed using the `ReadElementExtensions<T>` method.</span></span>  
+ <span data-ttu-id="45fe5-127">要素拡張には、`ReadElementExtensions<T>` メソッドを使用してアクセスします。</span><span class="sxs-lookup"><span data-stu-id="45fe5-127">Element extensions are accessed using the `ReadElementExtensions<T>` method.</span></span>  
   
 ```csharp  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
@@ -128,7 +128,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 }  
 ```  
   
- <span data-ttu-id="4dc56-128">`XmlReader` メソッドを使用して、個々の要素拡張で <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> を取得することも可能です。</span><span class="sxs-lookup"><span data-stu-id="4dc56-128">It is also possible to obtain an `XmlReader` at individual element extensions by using the <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> method.</span></span>  
+ <span data-ttu-id="45fe5-128">`XmlReader` メソッドを使用して、個々の要素拡張で <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> を取得することも可能です。</span><span class="sxs-lookup"><span data-stu-id="45fe5-128">It is also possible to obtain an `XmlReader` at individual element extensions by using the <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> method.</span></span>  
   
 ```csharp  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
@@ -138,24 +138,24 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4dc56-129">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="4dc56-129">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="45fe5-129">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="45fe5-129">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="4dc56-130">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="4dc56-130">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="45fe5-130">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="45fe5-130">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="4dc56-131">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="4dc56-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="45fe5-131">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="45fe5-131">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="4dc56-132">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="4dc56-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="45fe5-132">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="45fe5-132">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="4dc56-133">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="4dc56-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4dc56-134">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="4dc56-134">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="45fe5-133">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="45fe5-133">The samples may already be installed on your machine.</span></span> <span data-ttu-id="45fe5-134">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="45fe5-134">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="4dc56-135">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="4dc56-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4dc56-136">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="4dc56-136">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="45fe5-135">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="45fe5-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="45fe5-136">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="45fe5-136">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a><span data-ttu-id="4dc56-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="4dc56-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45fe5-137">参照</span><span class="sxs-lookup"><span data-stu-id="45fe5-137">See also</span></span>
 
-- [<span data-ttu-id="4dc56-138">厳密に型指定された拡張</span><span class="sxs-lookup"><span data-stu-id="4dc56-138">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
-- [<span data-ttu-id="4dc56-139">WCF 配信</span><span class="sxs-lookup"><span data-stu-id="4dc56-139">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [<span data-ttu-id="45fe5-138">厳密に型指定された拡張</span><span class="sxs-lookup"><span data-stu-id="45fe5-138">Strongly-Typed Extensions</span></span>](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+- [<span data-ttu-id="45fe5-139">WCF 配信</span><span class="sxs-lookup"><span data-stu-id="45fe5-139">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

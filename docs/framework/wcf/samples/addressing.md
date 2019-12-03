@@ -2,20 +2,20 @@
 title: アドレス指定
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990204"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715874"
 ---
-# <a name="addressing"></a><span data-ttu-id="b6718-102">アドレス指定</span><span class="sxs-lookup"><span data-stu-id="b6718-102">Addressing</span></span>
-<span data-ttu-id="b6718-103">アドレス指定のサンプルでは、エンドポイント アドレスのさまざまな特性と機能を示します。</span><span class="sxs-lookup"><span data-stu-id="b6718-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="b6718-104">このサンプルは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="b6718-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="b6718-105">このサンプルでは、サービスは自己ホスト型です。</span><span class="sxs-lookup"><span data-stu-id="b6718-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="b6718-106">サービスとクライアントは両方ともコンソール アプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="b6718-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="b6718-107">サービスでは、エンドポイントの相対アドレスと絶対アドレスを組み合わせて複数のエンドポイントを定義します。</span><span class="sxs-lookup"><span data-stu-id="b6718-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
+# <a name="addressing"></a><span data-ttu-id="c3fe5-102">アドレス指定</span><span class="sxs-lookup"><span data-stu-id="c3fe5-102">Addressing</span></span>
+<span data-ttu-id="c3fe5-103">アドレス指定のサンプルでは、エンドポイント アドレスのさまざまな特性と機能を示します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-103">The Addressing sample demonstrates various aspects and features of endpoint addresses.</span></span> <span data-ttu-id="c3fe5-104">このサンプルは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="c3fe5-105">このサンプルでは、サービスは自己ホスト型です。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-105">In this sample the service is self-hosted.</span></span> <span data-ttu-id="c3fe5-106">サービスとクライアントは両方ともコンソール アプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-106">Both the service and the client are console applications.</span></span> <span data-ttu-id="c3fe5-107">サービスでは、エンドポイントの相対アドレスと絶対アドレスを組み合わせて複数のエンドポイントを定義します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-107">The service defines multiple endpoints using a combination of relative and absolute endpoint addresses.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b6718-108">このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6718-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="c3fe5-108">このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="b6718-109">サービス構成ファイルでは、1 つのベース アドレスと 4 つのエンドポイントを指定します。</span><span class="sxs-lookup"><span data-stu-id="b6718-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="b6718-110">ベース アドレスは、次のサンプル構成のように add 要素を使用して service/host/baseAddresses の下に指定します。</span><span class="sxs-lookup"><span data-stu-id="b6718-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
+ <span data-ttu-id="c3fe5-109">サービス構成ファイルでは、1 つのベース アドレスと 4 つのエンドポイントを指定します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-109">The service configuration file specifies a base address and four endpoints.</span></span> <span data-ttu-id="c3fe5-110">ベース アドレスは、次のサンプル構成のように add 要素を使用して service/host/baseAddresses の下に指定します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-110">The base address is specified using the add element, under service/host/baseAddresses as demonstrated in the following sample configuration.</span></span>  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -28,7 +28,7 @@ ms.locfileid: "70990204"
 </service>  
 ```  
   
- <span data-ttu-id="b6718-111">次のサンプル構成の 1 番目のエンドポイント定義では、相対アドレスを指定します。つまり、エンドポイント アドレスは、ベース アドレスと URI 構造の規則に従った相対アドレスの組み合わせということを意味します。</span><span class="sxs-lookup"><span data-stu-id="b6718-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
+ <span data-ttu-id="c3fe5-111">次のサンプル構成の 1 番目のエンドポイント定義では、相対アドレスを指定します。つまり、エンドポイント アドレスは、ベース アドレスと URI 構造の規則に従った相対アドレスの組み合わせということを意味します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-111">The first endpoint definition shown in the following sample configuration specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of URI composition.</span></span>  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -40,9 +40,9 @@ ms.locfileid: "70990204"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="b6718-112">この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。</span><span class="sxs-lookup"><span data-stu-id="b6718-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="b6718-113">実際のエンドポイントアドレス`http://localhost:8000/servicemodelsamples/service`はです。</span><span class="sxs-lookup"><span data-stu-id="b6718-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>
+ <span data-ttu-id="c3fe5-112">この場合、相対アドレスが空 ("") のため、エンドポイント アドレスはベース アドレスと同じになります。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-112">In this case, the relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="c3fe5-113">実際のエンドポイントアドレスは `http://localhost:8000/servicemodelsamples/service`です。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>
   
- <span data-ttu-id="b6718-114">2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6718-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="c3fe5-114">2 番目のエンドポイント定義でも、相対アドレスを指定します。次のサンプル構成を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-114">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -53,9 +53,9 @@ ms.locfileid: "70990204"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="b6718-115">相対アドレス "test" がベース アドレスの末尾に追加されています。</span><span class="sxs-lookup"><span data-stu-id="b6718-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="b6718-116">実際のエンドポイントアドレス`http://localhost:8000/servicemodelsamples/service/test`はです。</span><span class="sxs-lookup"><span data-stu-id="b6718-116">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>
+ <span data-ttu-id="c3fe5-115">相対アドレス "test" がベース アドレスの末尾に追加されています。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-115">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="c3fe5-116">実際のエンドポイントアドレスは `http://localhost:8000/servicemodelsamples/service/test`です。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-116">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>
   
- <span data-ttu-id="b6718-117">3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b6718-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="c3fe5-117">3 番目のエンドポイント定義では、絶対アドレスを指定します。次のサンプル構成を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-117">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -63,9 +63,9 @@ ms.locfileid: "70990204"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="b6718-118">このアドレスでは、ベース アドレスは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="b6718-118">The base address plays no role in the address.</span></span> <span data-ttu-id="b6718-119">実際のエンドポイントアドレス`http://localhost:8001/hello/servicemodelsamples`はです。</span><span class="sxs-lookup"><span data-stu-id="b6718-119">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>
+ <span data-ttu-id="c3fe5-118">このアドレスでは、ベース アドレスは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-118">The base address plays no role in the address.</span></span> <span data-ttu-id="c3fe5-119">実際のエンドポイントアドレスは `http://localhost:8001/hello/servicemodelsamples`です。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-119">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>
   
- <span data-ttu-id="b6718-120">4 番目のエンドポイント アドレスは、絶対アドレスと別のトランスポート (ここでは TCP) を指定しています。</span><span class="sxs-lookup"><span data-stu-id="b6718-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="b6718-121">このアドレスでは、ベース アドレスは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="b6718-121">The base address plays no role in the address.</span></span> <span data-ttu-id="b6718-122">実際のエンドポイントアドレス`net.tcp://localhost:9000/servicemodelsamples/service`はです。</span><span class="sxs-lookup"><span data-stu-id="b6718-122">The actual endpoint address is `net.tcp://localhost:9000/servicemodelsamples/service`.</span></span>
+ <span data-ttu-id="c3fe5-120">4 番目のエンドポイント アドレスは、絶対アドレスと別のトランスポート (ここでは TCP) を指定しています。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-120">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="c3fe5-121">このアドレスでは、ベース アドレスは使用されていません。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-121">The base address plays no role in the address.</span></span> <span data-ttu-id="c3fe5-122">実際のエンドポイントアドレスは `net.tcp://localhost:9000/servicemodelsamples/service`です。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-122">The actual endpoint address is `net.tcp://localhost:9000/servicemodelsamples/service`.</span></span>
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -79,9 +79,9 @@ ms.locfileid: "70990204"
 </service>  
 ```  
   
- <span data-ttu-id="b6718-123">クライアントがアクセスするのは、4 つのサービス エンドポイントのうちの 1 つだけですが、4 つすべてのエンドポイントがこの構成ファイルに定義されています。</span><span class="sxs-lookup"><span data-stu-id="b6718-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="b6718-124">クライアントは `CalculatorProxy` オブジェクトの作成時にエンドポイントを選択します。</span><span class="sxs-lookup"><span data-stu-id="b6718-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="b6718-125">`CalculatorEndpoint1` から `CalculatorEndpoint4` までの構成名を変更することにより、それぞれのエンドポイントを実行できます。</span><span class="sxs-lookup"><span data-stu-id="b6718-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
+ <span data-ttu-id="c3fe5-123">クライアントがアクセスするのは、4 つのサービス エンドポイントのうちの 1 つだけですが、4 つすべてのエンドポイントがこの構成ファイルに定義されています。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-123">The client accesses just one of the four service endpoints, but all four are defined in its configuration file.</span></span> <span data-ttu-id="c3fe5-124">クライアントは `CalculatorProxy` オブジェクトの作成時にエンドポイントを選択します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-124">The client selects an endpoint when it creates the `CalculatorProxy` object.</span></span> <span data-ttu-id="c3fe5-125">`CalculatorEndpoint1` から `CalculatorEndpoint4` までの構成名を変更することにより、それぞれのエンドポイントを実行できます。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-125">By changing the configuration name from `CalculatorEndpoint1` through `CalculatorEndpoint4`, you can exercise each of the endpoints.</span></span>  
   
- <span data-ttu-id="b6718-126">このサンプルを実行する際、サービスはそれぞれのエンドポイントのアドレス、バインディング名、およびコントラクト名を列挙します。</span><span class="sxs-lookup"><span data-stu-id="b6718-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="b6718-127">ServiceHost から見た場合、メタデータ交換 (MEX) エンドポイントは他と同じエンドポイントにすぎません。したがって、このエンドポイントもこの一覧に表示されます。</span><span class="sxs-lookup"><span data-stu-id="b6718-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
+ <span data-ttu-id="c3fe5-126">このサンプルを実行する際、サービスはそれぞれのエンドポイントのアドレス、バインディング名、およびコントラクト名を列挙します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-126">When you run the sample, the service enumerates the address, binding name and contract name for each of its endpoints.</span></span> <span data-ttu-id="c3fe5-127">ServiceHost から見た場合、メタデータ交換 (MEX) エンドポイントは他と同じエンドポイントにすぎません。したがって、このエンドポイントもこの一覧に表示されます。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-127">The metadata exchange (MEX) endpoint is just another endpoint from the ServiceHost's perspective so it shows up in the list.</span></span>  
   
 ```console  
 Service endpoints:  
@@ -105,7 +105,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- <span data-ttu-id="b6718-128">このクライアントを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="b6718-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="b6718-129">どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。</span><span class="sxs-lookup"><span data-stu-id="b6718-129">Press ENTER in each console window to shut down the service and client.</span></span>  
+ <span data-ttu-id="c3fe5-128">このクライアントを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-128">When you run the client, the operation requests and responses are displayed in both the service and client console windows.</span></span> <span data-ttu-id="c3fe5-129">どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-129">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -116,22 +116,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b6718-130">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="b6718-130">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c3fe5-130">サンプルをセットアップ、ビルド、および実行するには</span><span class="sxs-lookup"><span data-stu-id="c3fe5-130">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="b6718-131">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="b6718-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="c3fe5-131">[Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="b6718-132">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="b6718-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="c3fe5-132">ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="b6718-133">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="b6718-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="c3fe5-133">サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="b6718-134">Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。</span><span class="sxs-lookup"><span data-stu-id="b6718-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
+    > <span data-ttu-id="c3fe5-134">Svcutil.exe を使用してこのサンプルの構成を再生成した場合は、クライアント コードに一致するように、クライアント構成内のエンドポイント名を変更してください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-134">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="b6718-135">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="b6718-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b6718-136">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b6718-136">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="c3fe5-135">サンプルは、既にコンピューターにインストールされている場合があります。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-135">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c3fe5-136">続行する前に、次の (既定の) ディレクトリを確認してください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-136">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="b6718-137">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="b6718-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b6718-138">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="b6718-138">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="c3fe5-137">このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-137">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c3fe5-138">このサンプルは、次のディレクトリに格納されます。</span><span class="sxs-lookup"><span data-stu-id="c3fe5-138">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
