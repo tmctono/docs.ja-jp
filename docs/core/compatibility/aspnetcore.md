@@ -1,21 +1,25 @@
 ---
 title: ASP.NET Core の破壊的変更 - .NET Core
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 11/20/2019
+ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 26b1fc2d2abe2dd8421a8c527add6b9fd4f3f847
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 130a89f45c3f80975c56ea3a4845ee560921286e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282514"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568380"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="d7b50-103">ASP.NET Core の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="d7b50-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="59703-103">ASP.NET Core の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="59703-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="d7b50-104">次は、ASP.NET Core の破壊的変更を ASP.NET Core のバージョン別に一覧にしたものです。</span><span class="sxs-lookup"><span data-stu-id="d7b50-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="d7b50-105">ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能が提供されます。</span><span class="sxs-lookup"><span data-stu-id="d7b50-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="59703-104">次は、ASP.NET Core の破壊的変更を ASP.NET Core のバージョン別に一覧にしたものです。</span><span class="sxs-lookup"><span data-stu-id="59703-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="59703-105">ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能が提供されます。</span><span class="sxs-lookup"><span data-stu-id="59703-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="d7b50-106">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="d7b50-106">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-31"></a><span data-ttu-id="59703-106">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="59703-106">ASP.NET Core 3.1</span></span>
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
+
+## <a name="aspnet-core-30"></a><span data-ttu-id="59703-107">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="59703-107">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
