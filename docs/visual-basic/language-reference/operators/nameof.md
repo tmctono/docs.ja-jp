@@ -11,9 +11,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73041353"
 ---
-# <a name="nameof-operator---visual-basic"></a><span data-ttu-id="ff639-103">Visual Basic の NameOf 演算子</span><span class="sxs-lookup"><span data-stu-id="ff639-103">NameOf operator - Visual Basic</span></span>
+# <a name="nameof-operator---visual-basic"></a><span data-ttu-id="2114a-103">Visual Basic の NameOf 演算子</span><span class="sxs-lookup"><span data-stu-id="2114a-103">NameOf operator - Visual Basic</span></span>
 
-<span data-ttu-id="ff639-104">`NameOf` 演算子を使うと、変数、型、またはメンバーの名前を文字列定数として取得できます。</span><span class="sxs-lookup"><span data-stu-id="ff639-104">The `NameOf` operator obtains the name of a variable, type, or member as the string constant:</span></span>
+<span data-ttu-id="2114a-104">`NameOf` 演算子を使うと、変数、型、またはメンバーの名前を文字列定数として取得できます。</span><span class="sxs-lookup"><span data-stu-id="2114a-104">The `NameOf` operator obtains the name of a variable, type, or member as the string constant:</span></span>
 
 ```vb
 Console.WriteLine(NameOf(System.Collections.Generic))  ' output: Generic
@@ -27,11 +27,11 @@ Console.WriteLine(NameOf(numbers.Count))  ' output: Count
 Console.WriteLine(NameOf(numbers.Add))  ' output: Add
 ```
 
-<span data-ttu-id="ff639-105">前の例で示されているように、型と名前空間の場合、生成される名前は通常[完全修飾](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)ではありません。</span><span class="sxs-lookup"><span data-stu-id="ff639-105">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
+<span data-ttu-id="2114a-105">前の例で示されているように、型と名前空間の場合、生成される名前は通常[完全修飾](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)ではありません。</span><span class="sxs-lookup"><span data-stu-id="2114a-105">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
 
-<span data-ttu-id="ff639-106">`NameOf` 演算子はコンパイル時に評価され、実行時には影響を与えません。</span><span class="sxs-lookup"><span data-stu-id="ff639-106">The `NameOf` operator is evaluated at compile time, and has no effect at run time.</span></span>
+<span data-ttu-id="2114a-106">`NameOf` 演算子はコンパイル時に評価され、実行時には影響を与えません。</span><span class="sxs-lookup"><span data-stu-id="2114a-106">The `NameOf` operator is evaluated at compile time, and has no effect at run time.</span></span>
 
-<span data-ttu-id="ff639-107">`NameOf` 演算子を使って、引数をチェックするコードを保守しやすくすることができます。</span><span class="sxs-lookup"><span data-stu-id="ff639-107">You can use the `NameOf` operator to make the argument-checking code more maintainable:</span></span>
+<span data-ttu-id="2114a-107">`NameOf` 演算子を使って、引数をチェックするコードを保守しやすくすることができます。</span><span class="sxs-lookup"><span data-stu-id="2114a-107">You can use the `NameOf` operator to make the argument-checking code more maintainable:</span></span>
 
 ```vb
 Private _name As String
@@ -48,9 +48,9 @@ Public Property Name As String
 End Property
 ```
 
-<span data-ttu-id="ff639-108">`NameOf` 演算子は Visual Basic 14 以降で使用できます。</span><span class="sxs-lookup"><span data-stu-id="ff639-108">The `NameOf` operator is available in Visual Basic 14 and later.</span></span>
+<span data-ttu-id="2114a-108">`NameOf` 演算子は Visual Basic 14 以降で使用できます。</span><span class="sxs-lookup"><span data-stu-id="2114a-108">The `NameOf` operator is available in Visual Basic 14 and later.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ff639-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="ff639-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2114a-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2114a-109">See also</span></span>
 
-- [<span data-ttu-id="ff639-110">Visual Basic の言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="ff639-110">Visual Basic Language Reference</span></span>](../index.md)
-- [<span data-ttu-id="ff639-111">演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff639-111">Operators (Visual Basic)</span></span>](index.md)
+- [<span data-ttu-id="2114a-110">Visual Basic の言語リファレンス</span><span class="sxs-lookup"><span data-stu-id="2114a-110">Visual Basic Language Reference</span></span>](../index.md)
+- [<span data-ttu-id="2114a-111">演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2114a-111">Operators (Visual Basic)</span></span>](index.md)

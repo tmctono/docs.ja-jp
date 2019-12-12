@@ -15,15 +15,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74087457"
 ---
-# <a name="httpwebrequest-element-network-settings"></a><span data-ttu-id="d01de-102">\<httpWebRequest > 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="d01de-102">\<httpWebRequest> Element (Network Settings)</span></span>
-<span data-ttu-id="d01de-103">Web 要求パラメーターをカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="d01de-103">Customizes Web request parameters.</span></span>  
+# <a name="httpwebrequest-element-network-settings"></a><span data-ttu-id="ba736-102">\<httpWebRequest> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="ba736-102">\<httpWebRequest> Element (Network Settings)</span></span>
+<span data-ttu-id="ba736-103">Web 要求パラメーターをカスタマイズします。</span><span class="sxs-lookup"><span data-stu-id="ba736-103">Customizes Web request parameters.</span></span>  
 
-<span data-ttu-id="d01de-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="d01de-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="d01de-105">&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="d01de-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="d01de-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="d01de-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)</span></span>\
-<span data-ttu-id="d01de-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**httpWebRequest >**</span><span class="sxs-lookup"><span data-stu-id="d01de-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpWebRequest>**</span></span>
+<span data-ttu-id="ba736-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="ba736-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="ba736-105">&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="ba736-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
+<span data-ttu-id="ba736-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="ba736-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)</span></span>\
+<span data-ttu-id="ba736-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpWebRequest>**</span><span class="sxs-lookup"><span data-stu-id="ba736-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpWebRequest>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d01de-108">構文</span><span class="sxs-lookup"><span data-stu-id="d01de-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba736-108">構文</span><span class="sxs-lookup"><span data-stu-id="ba736-108">Syntax</span></span>  
   
 ```xml  
 <httpWebRequest  
@@ -34,35 +34,35 @@ ms.locfileid: "74087457"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d01de-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d01de-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d01de-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d01de-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ba736-109">属性および要素</span><span class="sxs-lookup"><span data-stu-id="ba736-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="ba736-110">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="ba736-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d01de-111">属性</span><span class="sxs-lookup"><span data-stu-id="d01de-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ba736-111">属性</span><span class="sxs-lookup"><span data-stu-id="ba736-111">Attributes</span></span>  
   
-|<span data-ttu-id="d01de-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="d01de-112">**Attribute**</span></span>|<span data-ttu-id="d01de-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="d01de-113">**Description**</span></span>|  
+|<span data-ttu-id="ba736-112">**属性**</span><span class="sxs-lookup"><span data-stu-id="ba736-112">**Attribute**</span></span>|<span data-ttu-id="ba736-113">**説明**</span><span class="sxs-lookup"><span data-stu-id="ba736-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|<span data-ttu-id="d01de-114">応答ヘッダーの最大長を kb 単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="d01de-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="d01de-115">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="d01de-115">The default is 64.</span></span> <span data-ttu-id="d01de-116">値が-1 の場合は、応答ヘッダーにサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="d01de-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
-|`maximumErrorResponseLength`|<span data-ttu-id="d01de-117">エラー応答の最大長を kb 単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="d01de-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="d01de-118">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="d01de-118">The default is 64.</span></span> <span data-ttu-id="d01de-119">値が-1 の場合は、エラー応答にサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="d01de-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
-|`maximumUnauthorizedUploadLength`|<span data-ttu-id="d01de-120">未承認のエラーコードへの応答としてのアップロードの最大長をバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="d01de-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="d01de-121">既定値は -1 です。</span><span class="sxs-lookup"><span data-stu-id="d01de-121">The default is -1.</span></span> <span data-ttu-id="d01de-122">値-1 は、アップロード時にサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="d01de-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
-|`useUnsafeHeaderParsing`|<span data-ttu-id="d01de-123">Unsafe ヘッダーの解析が有効かどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="d01de-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="d01de-124">既定値は `false`です。</span><span class="sxs-lookup"><span data-stu-id="d01de-124">The default value is `false`.</span></span>|  
+|`maximumResponseHeadersLength`|<span data-ttu-id="ba736-114">応答ヘッダーの最大長を kb 単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="ba736-114">Specifies the maximum length of a response header, in kilobytes.</span></span> <span data-ttu-id="ba736-115">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="ba736-115">The default is 64.</span></span> <span data-ttu-id="ba736-116">値が-1 の場合は、応答ヘッダーにサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="ba736-116">A value of -1 indicates that no size limit will be imposed on the response headers.</span></span>|  
+|`maximumErrorResponseLength`|<span data-ttu-id="ba736-117">エラー応答の最大長を kb 単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="ba736-117">Specifies the maximum length of an error response, in kilobytes.</span></span> <span data-ttu-id="ba736-118">既定値は 64 です。</span><span class="sxs-lookup"><span data-stu-id="ba736-118">The default is 64.</span></span> <span data-ttu-id="ba736-119">値が-1 の場合は、エラー応答にサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="ba736-119">A value of -1 indicates that no size limit will be imposed on the error response.</span></span>|  
+|`maximumUnauthorizedUploadLength`|<span data-ttu-id="ba736-120">未承認のエラーコードへの応答としてのアップロードの最大長をバイト単位で指定します。</span><span class="sxs-lookup"><span data-stu-id="ba736-120">Specifies the maximum length of an upload in response to an unauthorized error code, in bytes.</span></span> <span data-ttu-id="ba736-121">既定値は -1 です。</span><span class="sxs-lookup"><span data-stu-id="ba736-121">The default is -1.</span></span> <span data-ttu-id="ba736-122">値-1 は、アップロード時にサイズ制限が適用されないことを示します。</span><span class="sxs-lookup"><span data-stu-id="ba736-122">A value of -1 indicates that no size limit will be imposed on the upload.</span></span>|  
+|`useUnsafeHeaderParsing`|<span data-ttu-id="ba736-123">Unsafe ヘッダーの解析が有効かどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ba736-123">Specifies whether unsafe header parsing is enabled.</span></span> <span data-ttu-id="ba736-124">既定値は `false`です。</span><span class="sxs-lookup"><span data-stu-id="ba736-124">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d01de-125">子要素</span><span class="sxs-lookup"><span data-stu-id="d01de-125">Child Elements</span></span>  
- <span data-ttu-id="d01de-126">なし。</span><span class="sxs-lookup"><span data-stu-id="d01de-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ba736-125">子要素</span><span class="sxs-lookup"><span data-stu-id="ba736-125">Child Elements</span></span>  
+ <span data-ttu-id="ba736-126">なし。</span><span class="sxs-lookup"><span data-stu-id="ba736-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d01de-127">親要素</span><span class="sxs-lookup"><span data-stu-id="d01de-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ba736-127">親要素</span><span class="sxs-lookup"><span data-stu-id="ba736-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="d01de-128">**要素**</span><span class="sxs-lookup"><span data-stu-id="d01de-128">**Element**</span></span>|<span data-ttu-id="d01de-129">**説明**</span><span class="sxs-lookup"><span data-stu-id="d01de-129">**Description**</span></span>|  
+|<span data-ttu-id="ba736-128">**要素**</span><span class="sxs-lookup"><span data-stu-id="ba736-128">**Element**</span></span>|<span data-ttu-id="ba736-129">**説明**</span><span class="sxs-lookup"><span data-stu-id="ba736-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="d01de-130">settings</span><span class="sxs-lookup"><span data-stu-id="d01de-130">settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="d01de-131"><xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="d01de-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="ba736-130">settings</span><span class="sxs-lookup"><span data-stu-id="ba736-130">settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="ba736-131"><xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。</span><span class="sxs-lookup"><span data-stu-id="ba736-131">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d01de-132">Remarks</span><span class="sxs-lookup"><span data-stu-id="d01de-132">Remarks</span></span>  
- <span data-ttu-id="d01de-133">既定では、.NET Framework は URI 解析に RFC 2616 を厳密に適用します。</span><span class="sxs-lookup"><span data-stu-id="d01de-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="d01de-134">一部のサーバー応答には、禁止されたフィールドの制御文字が含まれる場合があります。これにより、<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> メソッドによって <xref:System.Net.WebException>がスローされます。</span><span class="sxs-lookup"><span data-stu-id="d01de-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="d01de-135">**Useunsafeheaderparsing 解析**が**true**に設定されている場合、<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> はこの場合にスローしません。ただし、アプリケーションは、いくつかの形式の URI 解析攻撃に対して脆弱になります。</span><span class="sxs-lookup"><span data-stu-id="d01de-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="d01de-136">最適な解決策は、応答に制御文字が含まれないようにサーバーを変更することです。</span><span class="sxs-lookup"><span data-stu-id="d01de-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba736-132">Remarks</span><span class="sxs-lookup"><span data-stu-id="ba736-132">Remarks</span></span>  
+ <span data-ttu-id="ba736-133">既定では、.NET Framework は URI 解析に RFC 2616 を厳密に適用します。</span><span class="sxs-lookup"><span data-stu-id="ba736-133">By default, the .NET Framework strictly enforces RFC 2616 for URI parsing.</span></span> <span data-ttu-id="ba736-134">一部のサーバー応答には、禁止されたフィールドの制御文字が含まれる場合があります。これにより、<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> メソッドによって <xref:System.Net.WebException>がスローされます。</span><span class="sxs-lookup"><span data-stu-id="ba736-134">Some server responses may include control characters in prohibited fields, which will cause the <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> method to throw a <xref:System.Net.WebException>.</span></span> <span data-ttu-id="ba736-135">**Useunsafeheaderparsing** が **true** に設定されている場合、<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> はこの場合にスローしません。ただし、アプリケーションは、いくつかの形式の URI 解析攻撃に対して脆弱になります。</span><span class="sxs-lookup"><span data-stu-id="ba736-135">If **useUnsafeHeaderParsing** is set to **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> will not throw in this case; however, your application will be vulnerable to several forms of URI parsing attacks.</span></span> <span data-ttu-id="ba736-136">最適な解決策は、応答に制御文字が含まれないようにサーバーを変更することです。</span><span class="sxs-lookup"><span data-stu-id="ba736-136">The best solution is to change the server so that the response does not include control characters.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="d01de-137">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="d01de-137">Configuration Files</span></span>  
- <span data-ttu-id="d01de-138">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="d01de-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="ba736-137">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="ba736-137">Configuration Files</span></span>  
+ <span data-ttu-id="ba736-138">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="ba736-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d01de-139">例</span><span class="sxs-lookup"><span data-stu-id="d01de-139">Example</span></span>  
- <span data-ttu-id="d01de-140">次の例は、通常の最大ヘッダー長より大きいを指定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d01de-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
+## <a name="example"></a><span data-ttu-id="ba736-139">例</span><span class="sxs-lookup"><span data-stu-id="ba736-139">Example</span></span>  
+ <span data-ttu-id="ba736-140">次の例は、通常の最大ヘッダー長より大きいを指定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ba736-140">The following example shows how to specify a larger than normal maximum header length.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "74087457"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d01de-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="d01de-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba736-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba736-141">See also</span></span>
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [<span data-ttu-id="d01de-142">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="d01de-142">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="ba736-142">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="ba736-142">Network Settings Schema</span></span>](index.md)
