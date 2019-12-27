@@ -14,13 +14,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250336"
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="2ea4c-102">型パラメーターは修飾子として使用できません。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-102">Type parameters cannot be used as qualifiers</span></span>
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="4b33b-102">型パラメーターは修飾子として使用できません。</span><span class="sxs-lookup"><span data-stu-id="4b33b-102">Type parameters cannot be used as qualifiers</span></span>
 
-<span data-ttu-id="2ea4c-103">プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>
+<span data-ttu-id="4b33b-103">プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。</span><span class="sxs-lookup"><span data-stu-id="4b33b-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>
 
-<span data-ttu-id="2ea4c-104">型パラメーターは、ジェネリック型が構築されるときに指定される型の要件を表します。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="2ea4c-105">定義されている特定の型を表していません。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="2ea4c-106">修飾文字列には、コンパイル時に定義された要素のみを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-106">A qualification string must include only elements that are defined at compile time.</span></span>
+<span data-ttu-id="4b33b-104">型パラメーターは、ジェネリック型が構築されるときに指定される型の要件を表します。</span><span class="sxs-lookup"><span data-stu-id="4b33b-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="4b33b-105">定義されている特定の型を表していません。</span><span class="sxs-lookup"><span data-stu-id="4b33b-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="4b33b-106">修飾文字列には、コンパイル時に定義された要素のみを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="4b33b-106">A qualification string must include only elements that are defined at compile time.</span></span>
 
-<span data-ttu-id="2ea4c-107">次のコードでは、このエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-107">The following code can generate this error:</span></span>
+<span data-ttu-id="4b33b-107">次のコードでは、このエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4b33b-107">The following code can generate this error:</span></span>
 
 ```vb  
 Public Function CheckText(Of c As System.Windows.Forms.Control)(
@@ -31,16 +31,16 @@ Public Function CheckText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- <span data-ttu-id="2ea4c-108">**エラー ID:** BC32098</span><span class="sxs-lookup"><span data-stu-id="2ea4c-108">**Error ID:** BC32098</span></span>  
+ <span data-ttu-id="4b33b-108">**エラー ID:** BC32098</span><span class="sxs-lookup"><span data-stu-id="4b33b-108">**Error ID:** BC32098</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2ea4c-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="2ea4c-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4b33b-109">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="4b33b-109">To correct this error</span></span>  
   
-1. <span data-ttu-id="2ea4c-110">修飾文字列から型パラメーターを削除するか、定義された型で置き換えます。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
+1. <span data-ttu-id="4b33b-110">修飾文字列から型パラメーターを削除するか、定義された型で置き換えます。</span><span class="sxs-lookup"><span data-stu-id="4b33b-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
   
-2. <span data-ttu-id="2ea4c-111">構築された型を使用して、修飾するプログラミング要素を見つける必要がある場合は、追加のプログラムロジックを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2ea4c-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
+2. <span data-ttu-id="4b33b-111">構築された型を使用して、修飾するプログラミング要素を見つける必要がある場合は、追加のプログラムロジックを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4b33b-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ea4c-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="2ea4c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b33b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4b33b-112">See also</span></span>
 
-- [<span data-ttu-id="2ea4c-113">宣言された要素の参照</span><span class="sxs-lookup"><span data-stu-id="2ea4c-113">References to Declared Elements</span></span>](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [<span data-ttu-id="2ea4c-114">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ea4c-114">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="2ea4c-115">型リスト</span><span class="sxs-lookup"><span data-stu-id="2ea4c-115">Type List</span></span>](../statements/type-list.md)
+- [<span data-ttu-id="4b33b-113">宣言された要素の参照</span><span class="sxs-lookup"><span data-stu-id="4b33b-113">References to Declared Elements</span></span>](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="4b33b-114">Visual Basic におけるジェネリック型</span><span class="sxs-lookup"><span data-stu-id="4b33b-114">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="4b33b-115">型リスト</span><span class="sxs-lookup"><span data-stu-id="4b33b-115">Type List</span></span>](../statements/type-list.md)
