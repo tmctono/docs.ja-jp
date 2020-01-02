@@ -13,21 +13,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347889"
 ---
-# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="f3f78-102">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f3f78-102">-nowin32manifest (Visual Basic)</span></span>
-<span data-ttu-id="f3f78-103">アプリケーション マニフェストを実行可能ファイルに埋め込まないようコンパイラに指定します。</span><span class="sxs-lookup"><span data-stu-id="f3f78-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
+# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="13753-102">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="13753-102">-nowin32manifest (Visual Basic)</span></span>
+<span data-ttu-id="13753-103">アプリケーション マニフェストを実行可能ファイルに埋め込まないようコンパイラに指定します。</span><span class="sxs-lookup"><span data-stu-id="13753-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3f78-104">構文</span><span class="sxs-lookup"><span data-stu-id="f3f78-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13753-104">構文</span><span class="sxs-lookup"><span data-stu-id="13753-104">Syntax</span></span>  
   
 ```console  
 -nowin32manifest  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f3f78-105">コメント</span><span class="sxs-lookup"><span data-stu-id="f3f78-105">Remarks</span></span>  
- <span data-ttu-id="f3f78-106">このオプションを使用すると、Win32 リソース ファイルに、あるいは後のビルド ステップでアプリケーション マニフェストを指定しない限り、 Windows Vista で仮想化に従います。</span><span class="sxs-lookup"><span data-stu-id="f3f78-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="f3f78-107">仮想化について詳しくは、「[Windows Vista の ClickOnce 配置](/visualstudio/deployment/clickonce-deployment-on-windows-vista)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3f78-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13753-105">コメント</span><span class="sxs-lookup"><span data-stu-id="13753-105">Remarks</span></span>  
+ <span data-ttu-id="13753-106">このオプションを使用すると、Win32 リソース ファイルに、あるいは後のビルド ステップでアプリケーション マニフェストを指定しない限り、 Windows Vista で仮想化に従います。</span><span class="sxs-lookup"><span data-stu-id="13753-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="13753-107">仮想化について詳しくは、「[Windows Vista の ClickOnce 配置](/visualstudio/deployment/clickonce-deployment-on-windows-vista)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="13753-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
   
- <span data-ttu-id="f3f78-108">マニフェスト作成について詳しくは、「[-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f3f78-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
+ <span data-ttu-id="13753-108">マニフェスト作成について詳しくは、「[-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="13753-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3f78-109">参照</span><span class="sxs-lookup"><span data-stu-id="f3f78-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13753-109">参照</span><span class="sxs-lookup"><span data-stu-id="13753-109">See also</span></span>
 
-- [<span data-ttu-id="f3f78-110">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="f3f78-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- <span data-ttu-id="f3f78-111">[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="f3f78-111">[Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)</span></span>
+- [<span data-ttu-id="13753-110">Visual Basic コマンドラインコンパイラ</span><span class="sxs-lookup"><span data-stu-id="13753-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- <span data-ttu-id="13753-111">[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)</span><span class="sxs-lookup"><span data-stu-id="13753-111">[Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)</span></span>
