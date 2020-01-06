@@ -12,19 +12,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353645"
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a><span data-ttu-id="a6c70-102">方法 : LINQ を使用して XML を変換する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6c70-102">How to: Transform XML by Using LINQ (Visual Basic)</span></span>
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a><span data-ttu-id="f2ba6-102">方法 : LINQ を使用して XML を変換する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2ba6-102">How to: Transform XML by Using LINQ (Visual Basic)</span></span>
 
-<span data-ttu-id="a6c70-103">[Xml リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を使用すると、1つのソースから xml を簡単に読み取り、新しい xml 形式に変換することができます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-103">[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format.</span></span> <span data-ttu-id="a6c70-104">LINQ クエリを利用して、変換するコンテンツを取得したり、既存のドキュメントの内容を新しい XML 形式に変更したりできます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-104">You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.</span></span>
+<span data-ttu-id="f2ba6-103">[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)を使用すると、1つのソースから xml を簡単に読み取り、新しい xml 形式に変換することができます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-103">[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format.</span></span> <span data-ttu-id="f2ba6-104">LINQ クエリを利用して、変換するコンテンツを取得したり、既存のドキュメントの内容を新しい XML 形式に変更したりできます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-104">You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.</span></span>
 
-<span data-ttu-id="a6c70-105">このトピックの例では、XML ソースドキュメントから HTML にコンテンツを変換し、ブラウザーで表示されるようにします。</span><span class="sxs-lookup"><span data-stu-id="a6c70-105">The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.</span></span>
+<span data-ttu-id="f2ba6-105">このトピックの例では、XML ソースドキュメントから HTML にコンテンツを変換し、ブラウザーで表示されるようにします。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-105">The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a><span data-ttu-id="a6c70-106">XML ドキュメントを変換するには</span><span class="sxs-lookup"><span data-stu-id="a6c70-106">To transform an XML document</span></span>
+### <a name="to-transform-an-xml-document"></a><span data-ttu-id="f2ba6-106">XML ドキュメントを変換するには</span><span class="sxs-lookup"><span data-stu-id="f2ba6-106">To transform an XML document</span></span>
 
-1. <span data-ttu-id="a6c70-107">Visual Studio で、**コンソールアプリケーション**プロジェクトテンプレートに新しい Visual Basic プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-107">In Visual Studio, create a new Visual Basic project in the **Console Application** project template.</span></span>
+1. <span data-ttu-id="f2ba6-107">Visual Studio で、**コンソールアプリケーション**プロジェクトテンプレートに新しい Visual Basic プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-107">In Visual Studio, create a new Visual Basic project in the **Console Application** project template.</span></span>
 
-2. <span data-ttu-id="a6c70-108">プロジェクトで作成された module1.vb ファイルをダブルクリックして、Visual Basic コードを変更します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-108">Double-click the Module1.vb file created in the project to modify the Visual Basic code.</span></span> <span data-ttu-id="a6c70-109">`Module1` モジュールの `Sub Main` に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-109">Add the following code to the `Sub Main` of the `Module1` module.</span></span> <span data-ttu-id="a6c70-110">このコードでは、ソース XML ドキュメントを <xref:System.Xml.Linq.XDocument> オブジェクトとして作成します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-110">This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.</span></span>
+2. <span data-ttu-id="f2ba6-108">プロジェクトで作成された module1.vb ファイルをダブルクリックして、Visual Basic コードを変更します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-108">Double-click the Module1.vb file created in the project to modify the Visual Basic code.</span></span> <span data-ttu-id="f2ba6-109">`Module1` モジュールの `Sub Main` に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-109">Add the following code to the `Sub Main` of the `Module1` module.</span></span> <span data-ttu-id="f2ba6-110">このコードでは、ソース XML ドキュメントを <xref:System.Xml.Linq.XDocument> オブジェクトとして作成します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-110">This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.</span></span>
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ ms.locfileid: "74353645"
         </Catalog>
     ```
 
-     <span data-ttu-id="a6c70-111">[方法: ファイル、文字列、またはストリームから XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)</span><span class="sxs-lookup"><span data-stu-id="a6c70-111">[How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).</span></span>
+     <span data-ttu-id="f2ba6-111">[方法: ファイル、文字列、またはストリームから XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)</span><span class="sxs-lookup"><span data-stu-id="f2ba6-111">[How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).</span></span>
 
-3. <span data-ttu-id="a6c70-112">ソース XML ドキュメントを作成するコードの後に、次のコードを追加して、オブジェクトからすべての \<Book > 要素を取得し、それらを HTML ドキュメントに変換します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-112">After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document.</span></span> <span data-ttu-id="a6c70-113">\<Book > の要素の一覧は、変換された HTML を含む <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返す LINQ クエリを使用して作成されます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-113">The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML.</span></span> <span data-ttu-id="a6c70-114">埋め込み式を使用して、ソースドキュメントの値を新しい XML 形式で格納できます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-114">You can use embedded expressions to put the values from the source document in the new XML format.</span></span>
+3. <span data-ttu-id="f2ba6-112">ソース XML ドキュメントを作成するコードの後に、次のコードを追加して、オブジェクトからすべての \<Book > 要素を取得し、それらを HTML ドキュメントに変換します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-112">After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document.</span></span> <span data-ttu-id="f2ba6-113">\<Book > の要素の一覧は、変換された HTML を含む <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返す LINQ クエリを使用して作成されます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-113">The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML.</span></span> <span data-ttu-id="f2ba6-114">埋め込み式を使用して、ソースドキュメントの値を新しい XML 形式で格納できます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-114">You can use embedded expressions to put the values from the source document in the new XML format.</span></span>
 
-     <span data-ttu-id="a6c70-115">結果として得られる HTML ドキュメントは、<xref:System.Xml.Linq.XElement.Save%2A> メソッドを使用してファイルに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-115">The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.</span></span>
+     <span data-ttu-id="f2ba6-115">結果として得られる HTML ドキュメントは、<xref:System.Xml.Linq.XElement.Save%2A> メソッドを使用してファイルに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-115">The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.</span></span>
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ ms.locfileid: "74353645"
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. <span data-ttu-id="a6c70-116">`Module1`の `Sub Main` 後に、新しいメソッド (`Sub`) を追加して、\<説明 > ノードを指定された HTML 形式に変換します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-116">After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format.</span></span> <span data-ttu-id="a6c70-117">このメソッドは、前の手順のコードによって呼び出され、\<Description > 要素の形式を維持するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-117">This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.</span></span>
+4. <span data-ttu-id="f2ba6-116">`Module1`の `Sub Main` 後に、新しいメソッド (`Sub`) を追加して、\<説明 > ノードを指定された HTML 形式に変換します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-116">After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format.</span></span> <span data-ttu-id="f2ba6-117">このメソッドは、前の手順のコードによって呼び出され、\<Description > 要素の形式を維持するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-117">This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.</span></span>
 
-     <span data-ttu-id="a6c70-118">このメソッドは、\<Description > 要素のサブ要素を HTML に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-118">This method replaces sub-elements of the \<Description> element with HTML.</span></span> <span data-ttu-id="a6c70-119">`ReplaceWith` メソッドは、サブ要素の場所を保持するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-119">The `ReplaceWith` method is used to preserve the location of the sub-elements.</span></span> <span data-ttu-id="a6c70-120">\<Description > 要素の変換された内容は、HTML 段落 (\<p >) 要素に含まれます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-120">The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element.</span></span> <span data-ttu-id="a6c70-121"><xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティは、\<Description > 要素の変換された内容を取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="a6c70-121">The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element.</span></span> <span data-ttu-id="a6c70-122">これにより、変換されたコンテンツにサブ要素が含まれるようになります。</span><span class="sxs-lookup"><span data-stu-id="a6c70-122">This ensures that sub-elements are included in the transformed content.</span></span>
+     <span data-ttu-id="f2ba6-118">このメソッドは、\<Description > 要素のサブ要素を HTML に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-118">This method replaces sub-elements of the \<Description> element with HTML.</span></span> <span data-ttu-id="f2ba6-119">`ReplaceWith` メソッドは、サブ要素の場所を保持するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-119">The `ReplaceWith` method is used to preserve the location of the sub-elements.</span></span> <span data-ttu-id="f2ba6-120">\<Description > 要素の変換された内容は、HTML 段落 (\<p >) 要素に含まれます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-120">The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element.</span></span> <span data-ttu-id="f2ba6-121"><xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティは、\<Description > 要素の変換された内容を取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-121">The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element.</span></span> <span data-ttu-id="f2ba6-122">これにより、変換されたコンテンツにサブ要素が含まれるようになります。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-122">This ensures that sub-elements are included in the transformed content.</span></span>
 
-     <span data-ttu-id="a6c70-123">`Module1`の `Sub Main` の後に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-123">Add the following code after `Sub Main` of `Module1`.</span></span>
+     <span data-ttu-id="f2ba6-123">`Module1`の `Sub Main` の後に、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-123">Add the following code after `Sub Main` of `Module1`.</span></span>
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -115,9 +115,9 @@ ms.locfileid: "74353645"
     End Function
     ```
 
-5. <span data-ttu-id="a6c70-124">変更を [保存] します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-124">Save your changes.</span></span>
+5. <span data-ttu-id="f2ba6-124">変更を [保存] します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-124">Save your changes.</span></span>
 
-6. <span data-ttu-id="a6c70-125">F5 キーを押してコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="a6c70-125">Press F5 to run the code.</span></span> <span data-ttu-id="a6c70-126">結果として保存されるドキュメントは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="a6c70-126">The resulting saved document will resemble the following:</span></span>
+6. <span data-ttu-id="f2ba6-125">F5 キーを押してコードを実行します。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-125">Press F5 to run the code.</span></span> <span data-ttu-id="f2ba6-126">結果として保存されるドキュメントは、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="f2ba6-126">The resulting saved document will resemble the following:</span></span>
 
     ```html
     <?xml version="1.0"?>
@@ -156,11 +156,11 @@ ms.locfileid: "74353645"
     </html>
     ```
 
-## <a name="see-also"></a><span data-ttu-id="a6c70-127">参照</span><span class="sxs-lookup"><span data-stu-id="a6c70-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2ba6-127">参照</span><span class="sxs-lookup"><span data-stu-id="f2ba6-127">See also</span></span>
 
-- [<span data-ttu-id="a6c70-128">XML リテラル</span><span class="sxs-lookup"><span data-stu-id="a6c70-128">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="a6c70-129">Visual Basic での XML の操作</span><span class="sxs-lookup"><span data-stu-id="a6c70-129">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [<span data-ttu-id="a6c70-130">XML</span><span class="sxs-lookup"><span data-stu-id="a6c70-130">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="a6c70-131">方法 : ファイル、文字列、またはストリームからの XML の読み込み</span><span class="sxs-lookup"><span data-stu-id="a6c70-131">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [<span data-ttu-id="a6c70-132">LINQ</span><span class="sxs-lookup"><span data-stu-id="a6c70-132">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="a6c70-133">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="a6c70-133">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="f2ba6-128">XML リテラル</span><span class="sxs-lookup"><span data-stu-id="f2ba6-128">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="f2ba6-129">Visual Basic での XML の操作</span><span class="sxs-lookup"><span data-stu-id="f2ba6-129">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [<span data-ttu-id="f2ba6-130">XML</span><span class="sxs-lookup"><span data-stu-id="f2ba6-130">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="f2ba6-131">方法 : ファイル、文字列、またはストリームからの XML の読み込み</span><span class="sxs-lookup"><span data-stu-id="f2ba6-131">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [<span data-ttu-id="f2ba6-132">LINQ</span><span class="sxs-lookup"><span data-stu-id="f2ba6-132">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [<span data-ttu-id="f2ba6-133">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="f2ba6-133">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
