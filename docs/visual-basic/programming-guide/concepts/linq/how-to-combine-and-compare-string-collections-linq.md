@@ -2,20 +2,20 @@
 title: '方法: 文字列コレクションを結合および比較する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348438"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337572"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="a48c3-102">方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a48c3-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="e8f2f-102">方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8f2f-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="a48c3-103">この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a48c3-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="a48c3-104">具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a48c3-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="e8f2f-103">この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="e8f2f-104">具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="a48c3-105">プロジェクトとテキスト ファイルを設定するには</span><span class="sxs-lookup"><span data-stu-id="a48c3-105">To set up the project and the text files</span></span>
+## <a name="set-up-the-project-and-the-text-files"></a><span data-ttu-id="e8f2f-105">プロジェクトとテキストファイルを設定する</span><span class="sxs-lookup"><span data-stu-id="e8f2f-105">Set up the project and the text files</span></span>
 
-1. <span data-ttu-id="a48c3-106">以下の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="a48c3-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="e8f2f-106">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "74348438"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="a48c3-107">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="a48c3-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="a48c3-108">2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="a48c3-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="e8f2f-107">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="e8f2f-108">2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "74348438"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="a48c3-109">例</span><span class="sxs-lookup"><span data-stu-id="a48c3-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e8f2f-109">使用例</span><span class="sxs-lookup"><span data-stu-id="e8f2f-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="a48c3-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="a48c3-110">Compiling the Code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="e8f2f-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="e8f2f-110">Compile the code</span></span>
 
-<span data-ttu-id="a48c3-111">VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="a48c3-111">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="e8f2f-111">Visual Basic コンソールアプリケーションプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-111">Create a Visual Basic console application project.</span></span> <span data-ttu-id="e8f2f-112">System. Linq 名前空間の `Imports` ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="e8f2f-112">Add an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a48c3-112">参照</span><span class="sxs-lookup"><span data-stu-id="a48c3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8f2f-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="e8f2f-113">See also</span></span>
 
-- [<span data-ttu-id="a48c3-113">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a48c3-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="a48c3-114">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a48c3-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="e8f2f-114">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8f2f-114">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="e8f2f-115">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8f2f-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
