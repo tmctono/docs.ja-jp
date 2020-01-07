@@ -2,21 +2,21 @@
 title: '方法 : 2 つのリストの差集合を見つける (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: cd33c08416cce5afb6cf7507335f753160b8c6ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344584"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347507"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="aa1ac-102">方法: 2 つのリストの差集合を検索する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa1ac-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="aa1ac-103">この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="aa1ac-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="cdfcb-102">方法: 2 つのリストの差集合を検索する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdfcb-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="cdfcb-103">この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cdfcb-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="aa1ac-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="aa1ac-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="cdfcb-104">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="cdfcb-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="aa1ac-105">[「方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューションフォルダーに names1.txt と names2.txt をコピーします。</span><span class="sxs-lookup"><span data-stu-id="aa1ac-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="cdfcb-105">[「方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)」に示されているように、ソリューションフォルダーに names1.txt と names2.txt をコピーします。</span><span class="sxs-lookup"><span data-stu-id="cdfcb-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa1ac-106">例</span><span class="sxs-lookup"><span data-stu-id="aa1ac-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cdfcb-106">使用例</span><span class="sxs-lookup"><span data-stu-id="cdfcb-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="aa1ac-107"><xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>、<xref:System.Linq.Enumerable.Concat%2A>など、Visual Basic の一部の種類のクエリ操作は、メソッドベースの構文でのみ表すことができます。</span><span class="sxs-lookup"><span data-stu-id="aa1ac-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="cdfcb-107"><xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>、<xref:System.Linq.Enumerable.Concat%2A>など、Visual Basic の一部の種類のクエリ操作は、メソッドベースの構文でのみ表すことができます。</span><span class="sxs-lookup"><span data-stu-id="cdfcb-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="aa1ac-108">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="aa1ac-108">Compiling the Code</span></span>  
-<span data-ttu-id="aa1ac-109">VB.NET コンソールアプリケーションプロジェクトを作成します。このプロジェクトには、名前空間の `Imports` ステートメントが含まれています。</span><span class="sxs-lookup"><span data-stu-id="aa1ac-109">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="cdfcb-108">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="cdfcb-108">Compile the code</span></span>  
+<span data-ttu-id="cdfcb-109">System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="cdfcb-109">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="aa1ac-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa1ac-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdfcb-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="cdfcb-110">See also</span></span>
 
-- [<span data-ttu-id="aa1ac-111">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa1ac-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="cdfcb-111">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdfcb-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
