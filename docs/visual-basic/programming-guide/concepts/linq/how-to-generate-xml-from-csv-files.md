@@ -2,18 +2,18 @@
 title: '方法 : CSV ファイルから XML を生成する'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 2e2d76fdae8473e47e397f2559f3051c47a180fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344592"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636823"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="4240c-102">方法: CSV ファイルから XML を生成する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4240c-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
-<span data-ttu-id="4240c-103">この例では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4240c-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="685b5-102">方法: CSV ファイルから XML を生成する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="685b5-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="685b5-103">この例では、統合言語クエリ (LINQ) と [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り値 (CSV) ファイルから XML ファイルを生成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="685b5-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4240c-104">例</span><span class="sxs-lookup"><span data-stu-id="4240c-104">Example</span></span>  
- <span data-ttu-id="4240c-105">次のコードは、文字列の配列に対して [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="4240c-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="685b5-104">使用例</span><span class="sxs-lookup"><span data-stu-id="685b5-104">Example</span></span>  
+ <span data-ttu-id="685b5-105">次のコードは、文字列の配列に対して LINQ クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="685b5-105">The following code performs a LINQ query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -48,7 +48,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- <span data-ttu-id="4240c-106">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="4240c-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="685b5-106">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="685b5-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4240c-107">参照</span><span class="sxs-lookup"><span data-stu-id="4240c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="685b5-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="685b5-107">See also</span></span>
 
-- [<span data-ttu-id="4240c-108">プロジェクションと変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4240c-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="685b5-108">プロジェクションと変換 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="685b5-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
