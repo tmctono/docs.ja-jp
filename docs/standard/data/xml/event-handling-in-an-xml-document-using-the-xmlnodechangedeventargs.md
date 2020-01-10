@@ -6,31 +6,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965893"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710896"
 ---
-# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="c9136-102">XmlNodeChangedEventArgs による XML ドキュメントのイベント処理</span><span class="sxs-lookup"><span data-stu-id="c9136-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
-<span data-ttu-id="c9136-103">イベント処理のために **XmlDocument** オブジェクトに登録されたイベント ハンドラーでは、渡された引数が **XmlNodeChangedEventArgs** によってカプセル化されます。</span><span class="sxs-lookup"><span data-stu-id="c9136-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="c9136-104">各イベントとその発生するタイミングを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="c9136-104">The events and a description of when they are fired is given in the following table.</span></span>  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="c5ea5-102">XmlNodeChangedEventArgs による XML ドキュメントのイベント処理</span><span class="sxs-lookup"><span data-stu-id="c5ea5-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="c5ea5-103">イベント処理のために **XmlDocument** オブジェクトに登録されたイベント ハンドラーでは、渡された引数が **XmlNodeChangedEventArgs** によってカプセル化されます。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="c5ea5-104">各イベントとその発生するタイミングを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|<span data-ttu-id="c9136-105">event</span><span class="sxs-lookup"><span data-stu-id="c9136-105">Event</span></span>|<span data-ttu-id="c9136-106">発生するタイミング</span><span class="sxs-lookup"><span data-stu-id="c9136-106">Fired</span></span>|  
+|<span data-ttu-id="c5ea5-105">Event</span><span class="sxs-lookup"><span data-stu-id="c5ea5-105">Event</span></span>|<span data-ttu-id="c5ea5-106">発生するタイミング</span><span class="sxs-lookup"><span data-stu-id="c5ea5-106">Fired</span></span>|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="c9136-107">現在のドキュメントに属するノードが別のノードに挿入されるとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="c9136-108">現在のドキュメントに属するノードが別のノードに挿入されたとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="c9136-109">このドキュメントに属するノードがドキュメントから削除されるとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="c9136-110">このドキュメントに属するノードがその親から削除されたとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-110">When a node belonging to this document has been removed from its parent.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="c9136-111">ノードの値が変更されるとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-111">When the value of a node is about to be changed.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="c9136-112">ノードの値が変更されたとき。</span><span class="sxs-lookup"><span data-stu-id="c9136-112">When the value of a node has been changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="c5ea5-107">現在のドキュメントに属するノードが別のノードに挿入されるとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="c5ea5-108">現在のドキュメントに属するノードが別のノードに挿入されたとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="c5ea5-109">このドキュメントに属するノードがドキュメントから削除されるとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="c5ea5-110">このドキュメントに属するノードがその親から削除されたとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="c5ea5-111">ノードの値が変更されるとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="c5ea5-112">ノードの値が変更されたとき。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="c9136-113">**XmlDataDocument** のメモリの用途が **DataSet** ストレージの利用に完全に最適化されている場合は、基になる **DataSet** が変更された場合でも、**XmlDataDocument** では上に示したどのイベントも発生しない場合があります。</span><span class="sxs-lookup"><span data-stu-id="c9136-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="c9136-114">これらのイベントが必要な場合は、**XmlDocument** 全体を 1 回走査して、メモリ使用の最適化が完全でない状態にします。</span><span class="sxs-lookup"><span data-stu-id="c9136-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
+> <span data-ttu-id="c5ea5-113">**XmlDataDocument** のメモリの用途が **DataSet** ストレージの利用に完全に最適化されている場合は、基になる **DataSet** が変更された場合でも、**XmlDataDocument** では上に示したどのイベントも発生しない場合があります。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="c5ea5-114">これらのイベントが必要な場合は、**XmlDocument** 全体を 1 回走査して、メモリ使用の最適化が完全でない状態にします。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- <span data-ttu-id="c9136-115">イベント ハンドラーを定義する方法、およびイベント ハンドラーをイベントに追加する方法を次のコード サンプルに示します。</span><span class="sxs-lookup"><span data-stu-id="c9136-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
+ <span data-ttu-id="c5ea5-115">イベント ハンドラーを定義する方法、およびイベント ハンドラーをイベントに追加する方法を次のコード サンプルに示します。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -73,9 +71,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- <span data-ttu-id="c9136-116">XML ドキュメント オブジェクト モデル (DOM) の操作の中には、複数のイベントが発生する複合操作があります。</span><span class="sxs-lookup"><span data-stu-id="c9136-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="c9136-117">たとえば **AppendChild** では、追加されるノードを以前の親から削除する必要が生じることがあります。</span><span class="sxs-lookup"><span data-stu-id="c9136-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="c9136-118">この場合は、最初に **NodeRemoved** イベントが発生し、次に **NodeInserted** イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="c9136-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="c9136-119">**InnerXml** を設定する操作なども、複数のイベントが発生する結果になります。</span><span class="sxs-lookup"><span data-stu-id="c9136-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
+ <span data-ttu-id="c5ea5-116">XML ドキュメント オブジェクト モデル (DOM) の操作の中には、複数のイベントが発生する複合操作があります。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="c5ea5-117">たとえば **AppendChild** では、追加されるノードを以前の親から削除する必要が生じることがあります。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="c5ea5-118">この場合は、最初に **NodeRemoved** イベントが発生し、次に **NodeInserted** イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="c5ea5-119">**InnerXml** を設定する操作なども、複数のイベントが発生する結果になります。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- <span data-ttu-id="c9136-120">イベント ハンドラーを作成する方法および **NodeInserted** イベントを処理する方法を次のコード サンプルに示します。</span><span class="sxs-lookup"><span data-stu-id="c9136-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
+ <span data-ttu-id="c5ea5-120">イベント ハンドラーを作成する方法および **NodeInserted** イベントを処理する方法を次のコード サンプルに示します。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -206,8 +204,8 @@ public class Sample
 } // End class   
 ```  
   
- <span data-ttu-id="c9136-121">詳細については、次のトピックを参照してください。 <xref:System.Xml.XmlNodeChangedEventArgs> および <xref:System.Xml.XmlNodeChangedEventHandler></span><span class="sxs-lookup"><span data-stu-id="c9136-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="c5ea5-121">詳細については、「<xref:System.Xml.XmlNodeChangedEventArgs>」および「<xref:System.Xml.XmlNodeChangedEventHandler>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c5ea5-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9136-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9136-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5ea5-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="c5ea5-122">See also</span></span>
 
-- [<span data-ttu-id="c9136-123">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="c9136-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="c5ea5-123">XML ドキュメント オブジェクト モデル (DOM)</span><span class="sxs-lookup"><span data-stu-id="c5ea5-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
