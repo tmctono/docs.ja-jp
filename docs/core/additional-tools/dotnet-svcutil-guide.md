@@ -3,44 +3,43 @@ title: WCF svcutil ツールの概要
 description: .NET Framework プロジェクトの WCF svcutil ツールと同様に、.NET Core プロジェクトと ASP.NET Core プロジェクトの機能を追加する Microsoft WCF dotnet-svcutil ツールの概要。
 author: mlacouture
 ms.date: 02/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771982"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714561"
 ---
-# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a><span data-ttu-id="81043-103">.NET Core 用 WCF dotnet-svcutil ツール</span><span class="sxs-lookup"><span data-stu-id="81043-103">WCF dotnet-svcutil tool for .NET Core</span></span>
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a><span data-ttu-id="bea49-103">.NET Core 用 WCF dotnet-svcutil ツール</span><span class="sxs-lookup"><span data-stu-id="bea49-103">WCF dotnet-svcutil tool for .NET Core</span></span>
 
-<span data-ttu-id="81043-104">Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネットワーク上の場所で Web サービスから、あるいは WSDL ファイルからメタデータを取得し、Web サービス操作にアクセスするクライアント プロキシ メソッドを格納する WCF クラスを生成する .NET Core CLI ツールです。</span><span class="sxs-lookup"><span data-stu-id="81043-104">The Windows Communication Foundation (WCF) **dotnet-svcutil** tool is a .NET Core CLI tool that retrieves metadata from a web service on a network location or from a WSDL file, and generates a WCF class containing client proxy methods that access the web service operations.</span></span>
+<span data-ttu-id="bea49-104">Windows Communication Foundation (WCF) **dotnet-svcutil** ツールは、ネットワーク上の場所で Web サービスから、あるいは WSDL ファイルからメタデータを取得し、Web サービス操作にアクセスするクライアント プロキシ メソッドを格納する WCF クラスを生成する .NET Core CLI ツールです。</span><span class="sxs-lookup"><span data-stu-id="bea49-104">The Windows Communication Foundation (WCF) **dotnet-svcutil** tool is a .NET Core CLI tool that retrieves metadata from a web service on a network location or from a WSDL file, and generates a WCF class containing client proxy methods that access the web service operations.</span></span>
 
-<span data-ttu-id="81043-105">.NET Framework プロジェクトの [**ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) と同様に、**dotnet-svcutil** は、.NET Core プロジェクトおよび .NET Standard プロジェクトと互換性のある Web サービス参照を生成するためのコマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="81043-105">Similar to the [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool for .NET Framework projects, the **dotnet-svcutil** is a command-line tool for generating a web service reference compatible with .NET Core and .NET Standard projects.</span></span>
+<span data-ttu-id="bea49-105">.NET Framework プロジェクトの [**ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)** ](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) と同様に、**dotnet-svcutil** は、.NET Core プロジェクトおよび .NET Standard プロジェクトと互換性のある Web サービス参照を生成するためのコマンドライン ツールです。</span><span class="sxs-lookup"><span data-stu-id="bea49-105">Similar to the [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool for .NET Framework projects, the **dotnet-svcutil** is a command-line tool for generating a web service reference compatible with .NET Core and .NET Standard projects.</span></span>
 
-<span data-ttu-id="81043-106">**dotnet-svcutil** ツールは、Visual Studio 2017 バージョン 15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。</span><span class="sxs-lookup"><span data-stu-id="81043-106">The **dotnet-svcutil** tool is an alternative option to the [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio connected service provider that first shipped with Visual Studio 2017 version 15.5.</span></span> <span data-ttu-id="81043-107">.NET Core CLI ツールとしての **dotnet-svcutil** ツールは、Linux、macOS、および Windows 上で利用可能なクロスプラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="81043-107">The **dotnet-svcutil** tool as a .NET Core CLI tool, is available cross-platform on Linux, macOS, and Windows.</span></span>
+<span data-ttu-id="bea49-106">**dotnet-svcutil** ツールは、Visual Studio 2017 バージョン 15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。</span><span class="sxs-lookup"><span data-stu-id="bea49-106">The **dotnet-svcutil** tool is an alternative option to the [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio connected service provider that first shipped with Visual Studio 2017 version 15.5.</span></span> <span data-ttu-id="bea49-107">.NET Core CLI ツールとしての **dotnet-svcutil** ツールは、Linux、macOS、および Windows 上で利用可能なクロスプラットフォームです。</span><span class="sxs-lookup"><span data-stu-id="bea49-107">The **dotnet-svcutil** tool as a .NET Core CLI tool, is available cross-platform on Linux, macOS, and Windows.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="81043-108">信頼できるソースのサービスのみを参照してください。</span><span class="sxs-lookup"><span data-stu-id="81043-108">You should only reference services from a trusted source.</span></span> <span data-ttu-id="81043-109">信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="81043-109">Adding references from an untrusted source may compromise security.</span></span>
+> <span data-ttu-id="bea49-108">信頼できるソースのサービスのみを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bea49-108">You should only reference services from a trusted source.</span></span> <span data-ttu-id="bea49-109">信頼できないソースの参照を追加すると、セキュリティが損なわれる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="bea49-109">Adding references from an untrusted source may compromise security.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="81043-110">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="81043-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="bea49-110">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="bea49-110">Prerequisites</span></span>
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="81043-111">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="81043-111">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="bea49-111">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="bea49-111">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
 
-- <span data-ttu-id="81043-112">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="81043-112">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later versions</span></span>
-- <span data-ttu-id="81043-113">任意のコード エディター</span><span class="sxs-lookup"><span data-stu-id="81043-113">Your favorite code editor</span></span>
+- <span data-ttu-id="bea49-112">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="bea49-112">[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) or later versions</span></span>
+- <span data-ttu-id="bea49-113">任意のコード エディター</span><span class="sxs-lookup"><span data-stu-id="bea49-113">Your favorite code editor</span></span>
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="81043-114">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="81043-114">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="bea49-114">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="bea49-114">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
 
-- <span data-ttu-id="81043-115">[.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="81043-115">[.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) or later versions</span></span>
-- <span data-ttu-id="81043-116">任意のコード エディター</span><span class="sxs-lookup"><span data-stu-id="81043-116">Your favorite code editor</span></span>
+- <span data-ttu-id="bea49-115">[.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="bea49-115">[.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) or later versions</span></span>
+- <span data-ttu-id="bea49-116">任意のコード エディター</span><span class="sxs-lookup"><span data-stu-id="bea49-116">Your favorite code editor</span></span>
 
 ---
 
-## <a name="getting-started"></a><span data-ttu-id="81043-117">作業の開始</span><span class="sxs-lookup"><span data-stu-id="81043-117">Getting started</span></span>
+## <a name="getting-started"></a><span data-ttu-id="bea49-117">作業の開始</span><span class="sxs-lookup"><span data-stu-id="bea49-117">Getting started</span></span>
 
-<span data-ttu-id="81043-118">次の例では、Web サービス参照を .NET Core Web プロジェクトに追加してサービスを呼び出すために必要な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="81043-118">The following example walks you through the steps required to add a web service reference to a .NET Core web project and invoke the service.</span></span> <span data-ttu-id="81043-119">*HelloSvcutil* という名前の .NET Core Web アプリケーションを作成し、次のコントラクトを実装する Web サービスへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="81043-119">You'll create a .NET Core web application named *HelloSvcutil* and add a reference to a web service that implements the following contract:</span></span>
+<span data-ttu-id="bea49-118">次の例では、Web サービス参照を .NET Core Web プロジェクトに追加してサービスを呼び出すために必要な手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="bea49-118">The following example walks you through the steps required to add a web service reference to a .NET Core web project and invoke the service.</span></span> <span data-ttu-id="bea49-119">*HelloSvcutil* という名前の .NET Core Web アプリケーションを作成し、次のコントラクトを実装する Web サービスへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="bea49-119">You'll create a .NET Core web application named *HelloSvcutil* and add a reference to a web service that implements the following contract:</span></span>
 
 ```csharp
 [ServiceContract]
@@ -51,32 +50,32 @@ public interface ISayHello
 }
 ```
 
-<span data-ttu-id="81043-120">この例では、Web サービスが次のアドレスでホストされると仮定します: `http://contoso.com/SayHello.svc`</span><span class="sxs-lookup"><span data-stu-id="81043-120">For this example, let's assume the web service will be hosted at the following address: `http://contoso.com/SayHello.svc`</span></span>
+<span data-ttu-id="bea49-120">この例では、Web サービスが次のアドレスでホストされると仮定します: `http://contoso.com/SayHello.svc`</span><span class="sxs-lookup"><span data-stu-id="bea49-120">For this example, let's assume the web service will be hosted at the following address: `http://contoso.com/SayHello.svc`</span></span>
 
-<span data-ttu-id="81043-121">Windows、macOS、または Linux のコマンド ウィンドウから次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="81043-121">From a Windows, macOS, or Linux command window perform the following steps:</span></span>
+<span data-ttu-id="bea49-121">Windows、macOS、または Linux のコマンド ウィンドウから次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="bea49-121">From a Windows, macOS, or Linux command window perform the following steps:</span></span>
 
-1. <span data-ttu-id="81043-122">次の例に示すように、_HelloSvcutil_ という名前のディレクトリをプロジェクト用に作成し、現在のディレクトリに指定します。</span><span class="sxs-lookup"><span data-stu-id="81043-122">Create a directory named _HelloSvcutil_ for your project and make it your current directory, as in the following example:</span></span>
+1. <span data-ttu-id="bea49-122">次の例に示すように、_HelloSvcutil_ という名前のディレクトリをプロジェクト用に作成し、現在のディレクトリに指定します。</span><span class="sxs-lookup"><span data-stu-id="bea49-122">Create a directory named _HelloSvcutil_ for your project and make it your current directory, as in the following example:</span></span>
 
     ```console
     mkdir HelloSvcutil
     cd HelloSvcutil
     ```
 
-2. <span data-ttu-id="81043-123">次に示すように、[`dotnet new`](../tools/dotnet-new.md) コマンドを使用して、このディレクトリに新しい C# Web プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="81043-123">Create a new C# web project in that directory using the [`dotnet new`](../tools/dotnet-new.md) command as follows:</span></span>
+2. <span data-ttu-id="bea49-123">次に示すように、[`dotnet new`](../tools/dotnet-new.md) コマンドを使用して、このディレクトリに新しい C# Web プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="bea49-123">Create a new C# web project in that directory using the [`dotnet new`](../tools/dotnet-new.md) command as follows:</span></span>
 
     ```dotnetcli
     dotnet new web
     ```
 
-3. <span data-ttu-id="81043-124">CLI ツールとして [`dotnet-svcutil`NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)をインストールします。 </span><span class="sxs-lookup"><span data-stu-id="81043-124">Install the [`dotnet-svcutil` NuGet package](https://nuget.org/packages/dotnet-svcutil) as a CLI tool:  </span></span><!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="81043-125">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="81043-125">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
+3. <span data-ttu-id="bea49-124">CLI ツールとして [`dotnet-svcutil`NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)をインストールします。 </span><span class="sxs-lookup"><span data-stu-id="bea49-124">Install the [`dotnet-svcutil` NuGet package](https://nuget.org/packages/dotnet-svcutil) as a CLI tool:  </span></span><!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="bea49-125">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="bea49-125">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="81043-126">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="81043-126">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
-    <span data-ttu-id="81043-127">`HelloSvcutil.csproj` プロジェクト ファイルをエディターで開いて `Project` 要素を編集し、次のコードを使用して [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)を CLI ツールの参照として追加します。</span><span class="sxs-lookup"><span data-stu-id="81043-127">Open the `HelloSvcutil.csproj` project file in your editor, edit the `Project` element, and add the [`dotnet-svcutil` NuGet package](https://nuget.org/packages/dotnet-svcutil) as a CLI tool reference, using the following code:</span></span>
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="bea49-126">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="bea49-126">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
+    <span data-ttu-id="bea49-127">`HelloSvcutil.csproj` プロジェクト ファイルをエディターで開いて `Project` 要素を編集し、次のコードを使用して [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)を CLI ツールの参照として追加します。</span><span class="sxs-lookup"><span data-stu-id="bea49-127">Open the `HelloSvcutil.csproj` project file in your editor, edit the `Project` element, and add the [`dotnet-svcutil` NuGet package](https://nuget.org/packages/dotnet-svcutil) as a CLI tool reference, using the following code:</span></span>
 
     ```xml
     <ItemGroup>
@@ -84,7 +83,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    <span data-ttu-id="81043-128">その後、次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して _dotnet-svcutil_ パッケージを復元します。</span><span class="sxs-lookup"><span data-stu-id="81043-128">Then restore the _dotnet-svcutil_ package using the [`dotnet restore`](../tools/dotnet-restore.md) command as follows:</span></span>
+    <span data-ttu-id="bea49-128">その後、次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して _dotnet-svcutil_ パッケージを復元します。</span><span class="sxs-lookup"><span data-stu-id="bea49-128">Then restore the _dotnet-svcutil_ package using the [`dotnet restore`](../tools/dotnet-restore.md) command as follows:</span></span>
 
     ```dotnetcli
     dotnet restore
@@ -92,15 +91,15 @@ public interface ISayHello
 
     ---
 
-4. <span data-ttu-id="81043-129">次に示すように、_dotnet-svcutil_ コマンドを実行して、Web サービス参照ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="81043-129">Run the _dotnet-svcutil_ command to generate the web service reference file as follows:</span></span>
+4. <span data-ttu-id="bea49-129">次に示すように、_dotnet-svcutil_ コマンドを実行して、Web サービス参照ファイルを生成します。</span><span class="sxs-lookup"><span data-stu-id="bea49-129">Run the _dotnet-svcutil_ command to generate the web service reference file as follows:</span></span>
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="81043-130">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="81043-130">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="bea49-130">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="bea49-130">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="81043-131">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="81043-131">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="bea49-131">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="bea49-131">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -108,25 +107,25 @@ public interface ISayHello
 
     ---
 
-<span data-ttu-id="81043-132">生成されたファイルは、_HelloSvcutil/ServiceReference/Reference.cs_ として保存されます。</span><span class="sxs-lookup"><span data-stu-id="81043-132">The generated file is saved as _HelloSvcutil/ServiceReference/Reference.cs_.</span></span> <span data-ttu-id="81043-133">また、_dotnet-svcutil_ ツールでは、プロキシ コードで必要な適切な WCF パッケージが、パッケージ参照としてプロジェクトに追加されます。</span><span class="sxs-lookup"><span data-stu-id="81043-133">The _dotnet-svcutil_ tool also adds to the project the appropriate WCF packages required by the proxy code as package references.</span></span>
+<span data-ttu-id="bea49-132">生成されたファイルは、_HelloSvcutil/ServiceReference/Reference.cs_ として保存されます。</span><span class="sxs-lookup"><span data-stu-id="bea49-132">The generated file is saved as _HelloSvcutil/ServiceReference/Reference.cs_.</span></span> <span data-ttu-id="bea49-133">また、_dotnet-svcutil_ ツールでは、プロキシ コードで必要な適切な WCF パッケージが、パッケージ参照としてプロジェクトに追加されます。</span><span class="sxs-lookup"><span data-stu-id="bea49-133">The _dotnet-svcutil_ tool also adds to the project the appropriate WCF packages required by the proxy code as package references.</span></span>
 
-## <a name="using-the-service-reference"></a><span data-ttu-id="81043-134">サービス参照の使用</span><span class="sxs-lookup"><span data-stu-id="81043-134">Using the Service Reference</span></span>
+## <a name="using-the-service-reference"></a><span data-ttu-id="bea49-134">サービス参照の使用</span><span class="sxs-lookup"><span data-stu-id="bea49-134">Using the Service Reference</span></span>
 
-1. <span data-ttu-id="81043-135">次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して WCF パッケージを復元します。</span><span class="sxs-lookup"><span data-stu-id="81043-135">Restore the WCF packages using the [`dotnet restore`](../tools/dotnet-restore.md) command as follows:</span></span>
+1. <span data-ttu-id="bea49-135">次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して WCF パッケージを復元します。</span><span class="sxs-lookup"><span data-stu-id="bea49-135">Restore the WCF packages using the [`dotnet restore`](../tools/dotnet-restore.md) command as follows:</span></span>
 
     ```dotnetcli
     dotnet restore
     ```
 
-2. <span data-ttu-id="81043-136">使用するクライアント クラスと操作の名前を検索します。</span><span class="sxs-lookup"><span data-stu-id="81043-136">Find the name of the client class and operation you want to use.</span></span> <span data-ttu-id="81043-137">`Reference.cs` には `System.ServiceModel.ClientBase` を継承するクラスが含まれており、そのメソッドを使用してサービスで操作を呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="81043-137">`Reference.cs` will contain a class that inherits from `System.ServiceModel.ClientBase`, with methods that can be used to call operations on the service.</span></span> <span data-ttu-id="81043-138">この例では、_SayHello_ サービスの _Hello_ 操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="81043-138">In this example, you want to call the _SayHello_ service's _Hello_ operation.</span></span> <span data-ttu-id="81043-139">`ServiceReference.SayHelloClient` はクライアント クラスの名前であり、操作の呼び出しに使用できる `HelloAsync` という名前のメソッドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="81043-139">`ServiceReference.SayHelloClient` is the name of the client class, and has a method called `HelloAsync` that can be used to call the operation.</span></span>
+2. <span data-ttu-id="bea49-136">使用するクライアント クラスと操作の名前を検索します。</span><span class="sxs-lookup"><span data-stu-id="bea49-136">Find the name of the client class and operation you want to use.</span></span> <span data-ttu-id="bea49-137">`Reference.cs` には `System.ServiceModel.ClientBase` を継承するクラスが含まれており、そのメソッドを使用してサービスで操作を呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="bea49-137">`Reference.cs` will contain a class that inherits from `System.ServiceModel.ClientBase`, with methods that can be used to call operations on the service.</span></span> <span data-ttu-id="bea49-138">この例では、_SayHello_ サービスの _Hello_ 操作を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="bea49-138">In this example, you want to call the _SayHello_ service's _Hello_ operation.</span></span> <span data-ttu-id="bea49-139">`ServiceReference.SayHelloClient` はクライアント クラスの名前であり、操作の呼び出しに使用できる `HelloAsync` という名前のメソッドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="bea49-139">`ServiceReference.SayHelloClient` is the name of the client class, and has a method called `HelloAsync` that can be used to call the operation.</span></span>
 
-3. <span data-ttu-id="81043-140">エディターで `Startup.cs` ファイルを開き、先頭にサービス参照名前空間に対する using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="81043-140">Open the `Startup.cs` file in your editor, and add a using statement for the service reference namespace at the top:</span></span>
+3. <span data-ttu-id="bea49-140">エディターで `Startup.cs` ファイルを開き、先頭にサービス参照名前空間に対する using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="bea49-140">Open the `Startup.cs` file in your editor, and add a using statement for the service reference namespace at the top:</span></span>
 
     ```csharp
     using ServiceReference;
     ```
 
-4. <span data-ttu-id="81043-141">Web サービスを呼び出すように、`Configure` メソッドを編集します。</span><span class="sxs-lookup"><span data-stu-id="81043-141">Edit the `Configure` method to invoke the web service.</span></span> <span data-ttu-id="81043-142">これを行うには、`ClientBase` を継承するクラスのインスタンスを作成し、クライアント オブジェクトでメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="81043-142">You do this by creating an instance of the class that inherits from `ClientBase` and calling the method on the client object:</span></span>
+4. <span data-ttu-id="bea49-141">Web サービスを呼び出すように、`Configure` メソッドを編集します。</span><span class="sxs-lookup"><span data-stu-id="bea49-141">Edit the `Configure` method to invoke the web service.</span></span> <span data-ttu-id="bea49-142">これを行うには、`ClientBase` を継承するクラスのインスタンスを作成し、クライアント オブジェクトでメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="bea49-142">You do this by creating an instance of the class that inherits from `ClientBase` and calling the method on the client object:</span></span>
 
     ```csharp
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -146,24 +145,24 @@ public interface ISayHello
 
     ```
 
-5. <span data-ttu-id="81043-143">次に示すように、[`dotnet run`](../tools/dotnet-run.md) コマンドを使用してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="81043-143">Run the application using the [`dotnet run`](../tools/dotnet-run.md) command as follows:</span></span>
+5. <span data-ttu-id="bea49-143">次に示すように、[`dotnet run`](../tools/dotnet-run.md) コマンドを使用してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="bea49-143">Run the application using the [`dotnet run`](../tools/dotnet-run.md) command as follows:</span></span>
 
     ```dotnetcli
     dotnet run
     ```
 
-6. <span data-ttu-id="81043-144">Web ブラウザーでコンソールに表示されている URL に移動します (たとえば、`http://localhost:5000`)。</span><span class="sxs-lookup"><span data-stu-id="81043-144">Navigate to the URL listed in the console (for example, `http://localhost:5000`) in your web browser.</span></span>
+6. <span data-ttu-id="bea49-144">Web ブラウザーでコンソールに表示されている URL に移動します (たとえば、`http://localhost:5000`)。</span><span class="sxs-lookup"><span data-stu-id="bea49-144">Navigate to the URL listed in the console (for example, `http://localhost:5000`) in your web browser.</span></span>
 
-<span data-ttu-id="81043-145">次の出力が表示されます。"Hello dotnet-svcutil!"</span><span class="sxs-lookup"><span data-stu-id="81043-145">You should see the following output: "Hello dotnet-svcutil!"</span></span>
+<span data-ttu-id="bea49-145">次の出力が表示されます。"Hello dotnet-svcutil!"</span><span class="sxs-lookup"><span data-stu-id="bea49-145">You should see the following output: "Hello dotnet-svcutil!"</span></span>
 
-<span data-ttu-id="81043-146">`dotnet-svcutil` ツールのパラメーターの詳細な説明については、次に示すように、help パラメーターを渡してツールを呼び出してください。</span><span class="sxs-lookup"><span data-stu-id="81043-146">For a detailed description of the `dotnet-svcutil` tool parameters, invoke the tool passing the help parameter as follows:</span></span>
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="81043-147">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="81043-147">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
+<span data-ttu-id="bea49-146">`dotnet-svcutil` ツールのパラメーターの詳細な説明については、次に示すように、help パラメーターを渡してツールを呼び出してください。</span><span class="sxs-lookup"><span data-stu-id="bea49-146">For a detailed description of the `dotnet-svcutil` tool parameters, invoke the tool passing the help parameter as follows:</span></span>
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[<span data-ttu-id="bea49-147">dotnet-svcutil 2.x</span><span class="sxs-lookup"><span data-stu-id="bea49-147">dotnet-svcutil 2.x</span></span>](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="81043-148">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="81043-148">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[<span data-ttu-id="bea49-148">dotnet-svcutil 1.x</span><span class="sxs-lookup"><span data-stu-id="bea49-148">dotnet-svcutil 1.x</span></span>](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help
@@ -171,14 +170,14 @@ dotnet svcutil --help
 
 ---
 
-## <a name="feedback--questions"></a><span data-ttu-id="81043-149">フィードバックと質問</span><span class="sxs-lookup"><span data-stu-id="81043-149">Feedback & questions</span></span>
+## <a name="feedback--questions"></a><span data-ttu-id="bea49-149">フィードバックと質問</span><span class="sxs-lookup"><span data-stu-id="bea49-149">Feedback & questions</span></span>
 
-<span data-ttu-id="81043-150">質問やフィードバックがありましたら、[GitHub で問題を提起してください](https://github.com/dotnet/wcf/issues/new)。</span><span class="sxs-lookup"><span data-stu-id="81043-150">If you have any questions or feedback, [open an issue on GitHub](https://github.com/dotnet/wcf/issues/new).</span></span> <span data-ttu-id="81043-151">[GitHub の WCF リポジトリ](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling)で既存の質問や問題を確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="81043-151">You can also review any existing questions or issues [at the WCF repo on GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).</span></span>
+<span data-ttu-id="bea49-150">質問やフィードバックがありましたら、[GitHub で問題を提起してください](https://github.com/dotnet/wcf/issues/new)。</span><span class="sxs-lookup"><span data-stu-id="bea49-150">If you have any questions or feedback, [open an issue on GitHub](https://github.com/dotnet/wcf/issues/new).</span></span> <span data-ttu-id="bea49-151">[GitHub の WCF リポジトリ](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling)で既存の質問や問題を確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="bea49-151">You can also review any existing questions or issues [at the WCF repo on GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).</span></span>
 
-## <a name="release-notes"></a><span data-ttu-id="81043-152">リリース ノート</span><span class="sxs-lookup"><span data-stu-id="81043-152">Release notes</span></span>
+## <a name="release-notes"></a><span data-ttu-id="bea49-152">リリース ノート</span><span class="sxs-lookup"><span data-stu-id="bea49-152">Release notes</span></span>
 
-- <span data-ttu-id="81043-153">既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="81043-153">Refer to the [Release notes](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) for updated release information, including known issues.</span></span>
+- <span data-ttu-id="bea49-153">既知の問題を含む最新のリリース情報については、[リリース ノート](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)のページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bea49-153">Refer to the [Release notes](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) for updated release information, including known issues.</span></span>
 
-## <a name="information"></a><span data-ttu-id="81043-154">情報</span><span class="sxs-lookup"><span data-stu-id="81043-154">Information</span></span>
+## <a name="information"></a><span data-ttu-id="bea49-154">情報</span><span class="sxs-lookup"><span data-stu-id="bea49-154">Information</span></span>
 
-- [<span data-ttu-id="81043-155">dotnet-svcutil NuGet パッケージ</span><span class="sxs-lookup"><span data-stu-id="81043-155">dotnet-svcutil NuGet Package</span></span>](https://nuget.org/packages/dotnet-svcutil)
+- [<span data-ttu-id="bea49-155">dotnet-svcutil NuGet パッケージ</span><span class="sxs-lookup"><span data-stu-id="bea49-155">dotnet-svcutil NuGet Package</span></span>](https://nuget.org/packages/dotnet-svcutil)
