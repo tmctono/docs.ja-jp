@@ -12,24 +12,22 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a71cefc0a6483dbbe6513a64d8111a07a2e5af42
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696741"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708863"
 ---
-# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="ebe16-102">例外を明示的にスローする方法</span><span class="sxs-lookup"><span data-stu-id="ebe16-102">How to explicitly throw exceptions</span></span>
+# <a name="how-to-explicitly-throw-exceptions"></a><span data-ttu-id="28fc7-102">例外を明示的にスローする方法</span><span class="sxs-lookup"><span data-stu-id="28fc7-102">How to explicitly throw exceptions</span></span>
 
-<span data-ttu-id="ebe16-103">明示的に例外をスローするには、C# の [`throw`](../../csharp/language-reference/keywords/throw.md) または Visual Basic の [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="ebe16-103">You can explicitly throw an exception using the C# [`throw`](../../csharp/language-reference/keywords/throw.md) or the Visual Basic [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) statement.</span></span> <span data-ttu-id="ebe16-104">`throw` ステートメントを使って、キャッチした例外をもう一度スローすることもできます。</span><span class="sxs-lookup"><span data-stu-id="ebe16-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="ebe16-105">再スローされる例外に情報を追加して、デバッグ時により多くの情報を提供するコーディング手法をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="ebe16-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
+<span data-ttu-id="28fc7-103">明示的に例外をスローするには、C# の [`throw`](../../csharp/language-reference/keywords/throw.md) または Visual Basic の [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) ステートメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="28fc7-103">You can explicitly throw an exception using the C# [`throw`](../../csharp/language-reference/keywords/throw.md) or the Visual Basic [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) statement.</span></span> <span data-ttu-id="28fc7-104">`throw` ステートメントを使って、キャッチした例外をもう一度スローすることもできます。</span><span class="sxs-lookup"><span data-stu-id="28fc7-104">You can also throw a caught exception again using the `throw` statement.</span></span> <span data-ttu-id="28fc7-105">再スローされる例外に情報を追加して、デバッグ時により多くの情報を提供するコーディング手法をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="28fc7-105">It is good coding practice to add information to an exception that is re-thrown to provide more information when debugging.</span></span>
 
-<span data-ttu-id="ebe16-106">次のコード例では、`try`/`catch` ブロックを使用して可能性のある <xref:System.IO.FileNotFoundException> をキャッチします。</span><span class="sxs-lookup"><span data-stu-id="ebe16-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="ebe16-107">次の `try` ブロックは、<xref:System.IO.FileNotFoundException> をキャッチし、データ ファイルが見つからない場合に、メッセージをコンソールに出力する `catch` ブロックです。</span><span class="sxs-lookup"><span data-stu-id="ebe16-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="ebe16-108">次のステートメントは、新しい <xref:System.IO.FileNotFoundException> をスローして、テキスト情報を例外に追加する `throw` ステートメントです。</span><span class="sxs-lookup"><span data-stu-id="ebe16-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
+<span data-ttu-id="28fc7-106">次のコード例では、`try`/`catch` ブロックを使用して可能性のある <xref:System.IO.FileNotFoundException> をキャッチします。</span><span class="sxs-lookup"><span data-stu-id="28fc7-106">The following code example uses a `try`/`catch` block to catch a possible <xref:System.IO.FileNotFoundException>.</span></span> <span data-ttu-id="28fc7-107">次の `try` ブロックは、<xref:System.IO.FileNotFoundException> をキャッチし、データ ファイルが見つからない場合に、メッセージをコンソールに出力する `catch` ブロックです。</span><span class="sxs-lookup"><span data-stu-id="28fc7-107">Following the `try` block is a `catch` block that catches the <xref:System.IO.FileNotFoundException> and writes a message to the console if the data file is not found.</span></span> <span data-ttu-id="28fc7-108">次のステートメントは、新しい <xref:System.IO.FileNotFoundException> をスローして、テキスト情報を例外に追加する `throw` ステートメントです。</span><span class="sxs-lookup"><span data-stu-id="28fc7-108">The next statement is the `throw` statement that throws a new <xref:System.IO.FileNotFoundException> and adds text information to the exception.</span></span>
 
 [!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a><span data-ttu-id="ebe16-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="ebe16-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28fc7-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="28fc7-109">See also</span></span>
 
-- [<span data-ttu-id="ebe16-110">例外</span><span class="sxs-lookup"><span data-stu-id="ebe16-110">Exceptions</span></span>](index.md)
+- [<span data-ttu-id="28fc7-110">例外</span><span class="sxs-lookup"><span data-stu-id="28fc7-110">Exceptions</span></span>](index.md)
