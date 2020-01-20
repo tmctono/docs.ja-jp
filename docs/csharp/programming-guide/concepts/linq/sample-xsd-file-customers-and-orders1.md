@@ -2,19 +2,19 @@
 title: サンプル XSD ファイル:顧客と注文
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 15c510e8c450f0952de14f9eb2272143e4ae0b2d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591147"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346487"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="933cb-102">サンプル XSD ファイル:顧客と注文</span><span class="sxs-lookup"><span data-stu-id="933cb-102">Sample XSD File: Customers and Orders</span></span>
-<span data-ttu-id="933cb-103">次の XSD ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="933cb-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="933cb-104">このファイルには、「サンプル XML ファイル[: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」のスキーマ定義が含まれています。</span><span class="sxs-lookup"><span data-stu-id="933cb-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="933cb-105">このスキーマは、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。</span><span class="sxs-lookup"><span data-stu-id="933cb-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="510f7-102">サンプル XSD ファイル:顧客と注文</span><span class="sxs-lookup"><span data-stu-id="510f7-102">Sample XSD File: Customers and Orders</span></span>
+<span data-ttu-id="510f7-103">次の XSD ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="510f7-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="510f7-104">このファイルには、「サンプル XML ファイル[: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」のスキーマ定義が含まれています。</span><span class="sxs-lookup"><span data-stu-id="510f7-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="510f7-105">このスキーマは、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。</span><span class="sxs-lookup"><span data-stu-id="510f7-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="933cb-106">`Join` 句を使用してこのリレーションシップを利用する LINQ クエリの作成例については、「[方法: 2 つのコレクションを結合する (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="933cb-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="510f7-106">`Join` 句を使用してこのリレーションシップを利用する LINQ クエリの作成例については、「[2 つのコレクションを結合する方法 (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="510f7-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to join two collections (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxsd"></a><span data-ttu-id="933cb-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="933cb-107">CustomersOrders.xsd</span></span>  
+## <a name="customersordersxsd"></a><span data-ttu-id="510f7-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="510f7-107">CustomersOrders.xsd</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

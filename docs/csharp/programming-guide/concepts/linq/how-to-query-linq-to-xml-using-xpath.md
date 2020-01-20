@@ -1,21 +1,21 @@
 ---
-title: '方法: XPath を使用して LINQ to XML にクエリを実行する (C#)'
+title: XPath を使用して LINQ to XML にクエリを実行する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 639d9ba8af9ae663bc245028cf4bf57f318d397d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485180"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344803"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="a2ac2-102">方法: XPath を使用して LINQ to XML にクエリを実行する (C#)</span><span class="sxs-lookup"><span data-stu-id="a2ac2-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
-<span data-ttu-id="a2ac2-103">このトピックでは、XPath を使用して XML ツリーに対してクエリを実行できる拡張メソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="a2ac2-104">これらの拡張メソッドの使用に関する詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="f9275-102">XPath を使用して LINQ to XML にクエリを実行する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="f9275-102">How to query LINQ to XML using XPath (C#)</span></span>
+<span data-ttu-id="f9275-103">このトピックでは、XPath を使用して XML ツリーに対してクエリを実行できる拡張メソッドについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f9275-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="f9275-104">これらの拡張メソッドの使用に関する詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f9275-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  
   
- <span data-ttu-id="a2ac2-105">古いコードの広範な利用など、XPath を使用してクエリを実行する特別な理由がない限りは、XPath を LINQ to XML と共に使用することはお勧めできません。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-105">Unless you have a very specific reason for querying using XPath, such as extensive use of legacy code, using XPath with LINQ to XML is not recommended.</span></span> <span data-ttu-id="a2ac2-106">XPath クエリは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりもパフォーマンスが低くなります。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-106">XPath queries will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
+ <span data-ttu-id="f9275-105">古いコードの広範な利用など、XPath を使用してクエリを実行する特別な理由がない限りは、XPath を LINQ to XML と共に使用することはお勧めできません。</span><span class="sxs-lookup"><span data-stu-id="f9275-105">Unless you have a very specific reason for querying using XPath, such as extensive use of legacy code, using XPath with LINQ to XML is not recommended.</span></span> <span data-ttu-id="f9275-106">XPath クエリは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりもパフォーマンスが低くなります。</span><span class="sxs-lookup"><span data-stu-id="f9275-106">XPath queries will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2ac2-107">例</span><span class="sxs-lookup"><span data-stu-id="a2ac2-107">Example</span></span>  
- <span data-ttu-id="a2ac2-108">次の例では、小さな XML ツリーを作成し、<xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> を使用して要素のセットを選択します。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-108">The following example creates a small XML tree and uses <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to select a set of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="f9275-107">例</span><span class="sxs-lookup"><span data-stu-id="f9275-107">Example</span></span>  
+ <span data-ttu-id="f9275-108">次の例では、小さな XML ツリーを作成し、<xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> を使用して要素のセットを選択します。</span><span class="sxs-lookup"><span data-stu-id="f9275-108">The following example creates a small XML tree and uses <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to select a set of elements.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -31,7 +31,7 @@ foreach (XElement el in list)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="a2ac2-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="a2ac2-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="f9275-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="f9275-109">This example produces the following output:</span></span>  
   
 ```xml  
 <Child2>4</Child2>  

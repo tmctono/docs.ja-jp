@@ -1,23 +1,23 @@
 ---
-title: '方法: 新しい型を射影する (LINQ to XML) (C#)'
+title: 新しい型を射影する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 32c3de9f4dd967cf0aafa7f4e571d8714ca41e3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a54677fa0fa2845dd635f89ddb7ed1c5c279e03
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253505"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345713"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a><span data-ttu-id="febe0-102">方法: 新しい型を射影する (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="febe0-102">How to: Project a New Type (LINQ to XML) (C#)</span></span>
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a><span data-ttu-id="36f55-102">新しい型を射影する方法 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="36f55-102">How to project a new type (LINQ to XML) (C#)</span></span>
 
-<span data-ttu-id="febe0-103">このセクションにあるその他の例では、<xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> の `string`、および <xref:System.Collections.Generic.IEnumerable%601> の `int` として結果を返すクエリを示しています。</span><span class="sxs-lookup"><span data-stu-id="febe0-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="febe0-104">これらは一般的な戻り値の型ですが、すべてのシナリオに適切であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="febe0-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="febe0-105">多くの場合、クエリを使用して、別の型の <xref:System.Collections.Generic.IEnumerable%601> を返すようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="febe0-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>
+<span data-ttu-id="36f55-103">このセクションにあるその他の例では、<xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement>、<xref:System.Collections.Generic.IEnumerable%601> の `string`、および <xref:System.Collections.Generic.IEnumerable%601> の `int` として結果を返すクエリを示しています。</span><span class="sxs-lookup"><span data-stu-id="36f55-103">Other examples in this section have shown queries that return results as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> of `string`, and <xref:System.Collections.Generic.IEnumerable%601> of `int`.</span></span> <span data-ttu-id="36f55-104">これらは一般的な戻り値の型ですが、すべてのシナリオに適切であるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="36f55-104">These are common result types, but they are not appropriate for every scenario.</span></span> <span data-ttu-id="36f55-105">多くの場合、クエリを使用して、別の型の <xref:System.Collections.Generic.IEnumerable%601> を返すようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="36f55-105">In many cases you will want your queries to return an <xref:System.Collections.Generic.IEnumerable%601> of some other type.</span></span>
 
-## <a name="example"></a><span data-ttu-id="febe0-106">例</span><span class="sxs-lookup"><span data-stu-id="febe0-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="36f55-106">例</span><span class="sxs-lookup"><span data-stu-id="36f55-106">Example</span></span>
 
-<span data-ttu-id="febe0-107">この例では、`select` 句でオブジェクトをインスタンス化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="febe0-107">This example shows how to instantiate objects in the `select` clause.</span></span> <span data-ttu-id="febe0-108">コードでは、まずコンストラクターを使用して新しいクラスを定義し、次に、式が新しいクラスの新しいインスタンスになるように `select` ステートメントを変更します。</span><span class="sxs-lookup"><span data-stu-id="febe0-108">The code first defines a new class with a constructor, and then modifies the `select` statement so that the expression is a new instance of the new class.</span></span>
+<span data-ttu-id="36f55-107">この例では、`select` 句でオブジェクトをインスタンス化する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="36f55-107">This example shows how to instantiate objects in the `select` clause.</span></span> <span data-ttu-id="36f55-108">コードでは、まずコンストラクターを使用して新しいクラスを定義し、次に、式が新しいクラスの新しいインスタンスになるように `select` ステートメントを変更します。</span><span class="sxs-lookup"><span data-stu-id="36f55-108">The code first defines a new class with a constructor, and then modifies the `select` statement so that the expression is a new instance of the new class.</span></span>
 
-<span data-ttu-id="febe0-109">この例では、XML ドキュメント、[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="febe0-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>
+<span data-ttu-id="36f55-109">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) を使用します。</span><span class="sxs-lookup"><span data-stu-id="36f55-109">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>
 
 ```csharp
 class NameQty 
@@ -49,9 +49,9 @@ class Program {
 }
 ```
 
-<span data-ttu-id="febe0-110">この例では、<xref:System.Xml.Linq.XContainer.Element%2A> メソッドを使用しています。このメソッドは「[方法: 単一の子要素を取得する (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md)」というトピックで紹介されました。</span><span class="sxs-lookup"><span data-stu-id="febe0-110">This example uses the <xref:System.Xml.Linq.XContainer.Element%2A> method that was introduced in the topic [How to: Retrieve a Single Child Element (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="febe0-111">また、キャストを使用して、<xref:System.Xml.Linq.XContainer.Element%2A> メソッドによって返された要素の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="febe0-111">It also uses casts to retrieve the values of the elements that are returned by the <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
+<span data-ttu-id="36f55-110">この例では、「[単一の子要素を取得する方法 (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md)」トピックで説明している <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを使用しています。</span><span class="sxs-lookup"><span data-stu-id="36f55-110">This example uses the <xref:System.Xml.Linq.XContainer.Element%2A> method that was introduced in the topic [How to retrieve a single child element (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md).</span></span> <span data-ttu-id="36f55-111">また、キャストを使用して、<xref:System.Xml.Linq.XContainer.Element%2A> メソッドによって返された要素の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="36f55-111">It also uses casts to retrieve the values of the elements that are returned by the <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
 
-<span data-ttu-id="febe0-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="febe0-112">This example produces the following output:</span></span>
+<span data-ttu-id="36f55-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="36f55-112">This example produces the following output:</span></span>
 
 ```output
 Lawnmower:1

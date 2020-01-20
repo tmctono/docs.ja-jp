@@ -1,19 +1,19 @@
 ---
-title: '方法: オブジェクト グラフを射影する (C#)'
+title: オブジェクト グラフを射影する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253480"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635692"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="87541-102">方法: オブジェクト グラフを射影する (C#)</span><span class="sxs-lookup"><span data-stu-id="87541-102">How to: Project an Object Graph (C#)</span></span>
-<span data-ttu-id="87541-103">このトピックでは、XML からオブジェクト グラフを射影 (作成) する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="87541-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="b84c8-102">オブジェクト グラフを射影する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="b84c8-102">How to project an object graph (C#)</span></span>
+<span data-ttu-id="b84c8-103">このトピックでは、XML からオブジェクト グラフを射影 (作成) する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b84c8-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="87541-104">例</span><span class="sxs-lookup"><span data-stu-id="87541-104">Example</span></span>  
- <span data-ttu-id="87541-105">次のコードでは`Address`、`PurchaseOrder`、および `PurchaseOrderItem` の各クラス (「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)」という XML ドキュメントから) を使用してオブジェクト グラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="87541-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="b84c8-104">例</span><span class="sxs-lookup"><span data-stu-id="b84c8-104">Example</span></span>  
+ <span data-ttu-id="b84c8-105">次のコードでは`Address`、`PurchaseOrder`、および `PurchaseOrderItem` の各クラス (「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)」という XML ドキュメントから) を使用してオブジェクト グラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="b84c8-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="87541-106">この例では、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリの結果は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` として返されます。</span><span class="sxs-lookup"><span data-stu-id="87541-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="87541-107">`PurchaseOrder` クラスの項目は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` 型です。</span><span class="sxs-lookup"><span data-stu-id="87541-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="87541-108">このコードでは、<xref:System.Linq.Enumerable.ToList%2A> 拡張メソッドを使用して、クエリの結果から <xref:System.Collections.Generic.List%601> コレクションを作成します。</span><span class="sxs-lookup"><span data-stu-id="87541-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="b84c8-106">この例では、LINQ クエリの結果は、`PurchaseOrderItem` の <xref:System.Collections.Generic.IEnumerable%601> として返されます。</span><span class="sxs-lookup"><span data-stu-id="b84c8-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="b84c8-107">`PurchaseOrder` クラスの項目は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` 型です。</span><span class="sxs-lookup"><span data-stu-id="b84c8-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="b84c8-108">このコードでは、<xref:System.Linq.Enumerable.ToList%2A> 拡張メソッドを使用して、クエリの結果から <xref:System.Collections.Generic.List%601> コレクションを作成します。</span><span class="sxs-lookup"><span data-stu-id="b84c8-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="87541-109">この例では次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="87541-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="b84c8-109">この例では次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="b84c8-109">The example produces the following output:</span></span>  
   
 ```output  
 PurchaseOrderNumber: 99503  
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="87541-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="87541-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b84c8-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b84c8-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
