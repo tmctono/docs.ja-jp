@@ -1,55 +1,75 @@
 ---
-title: Visual Studio 2017 での .NET Core Hello World アプリケーションの発行
+title: Visual Studio での .NET Core Hello World アプリケーションの発行
 description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 10/05/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.date: 12/10/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660475"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715366"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a><span data-ttu-id="4dc53-103">Visual Studio 2017 での .NET Core Hello World アプリケーションの発行</span><span class="sxs-lookup"><span data-stu-id="4dc53-103">Publish your .NET Core Hello World application with Visual Studio 2017</span></span>
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a><span data-ttu-id="3dfad-103">Visual Studio での .NET Core Hello World アプリケーションの発行</span><span class="sxs-lookup"><span data-stu-id="3dfad-103">Publish your .NET Core Hello World application with Visual Studio</span></span>
 
-<span data-ttu-id="4dc53-104">「[Visual Studio 2017 での .NET Core を使用した C# Hello World アプリケーションの構築](with-visual-studio.md)」または「[Visual Studio 2017 での .NET Core を使用した Visual Basic Hello World アプリケーションの構築](vb-with-visual-studio.md)」では、Hello World コンソール アプリケーションを構築しました。</span><span class="sxs-lookup"><span data-stu-id="4dc53-104">In [Build a C# Hello World application with .NET Core in Visual Studio 2017](with-visual-studio.md) or [Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md), you built a Hello World console application.</span></span> <span data-ttu-id="4dc53-105">「[Visual Studio 2017 での C# Hello World アプリケーションのデバッグ](debugging-with-visual-studio.md)」では、Visual Studio デバッガーを使ってアプリケーションをテストしました。</span><span class="sxs-lookup"><span data-stu-id="4dc53-105">In [Debug your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md), you tested it using the Visual Studio debugger.</span></span> <span data-ttu-id="4dc53-106">正しく動作することが確認できたので、他のユーザーが使用できるように発行することができます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-106">Now that you're sure that it works as expected, you can publish it so that other users can run it.</span></span> <span data-ttu-id="4dc53-107">発行では、アプリケーションを実行するために必要なファイルのセットが作成されます。これらのファイルは、対象コンピューターにコピーすることで配置できます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-107">Publishing creates the set of files that are needed to run your application, and you can deploy the files by copying them to a target machine.</span></span>
+<span data-ttu-id="3dfad-104">「[Visual Studio での .NET Core を使用した Hello World アプリケーションの作成](with-visual-studio.md)」では、Hello World コンソール アプリケーションを作成しました。</span><span class="sxs-lookup"><span data-stu-id="3dfad-104">In [Create a Hello World application with .NET Core in Visual Studio](with-visual-studio.md), you built a Hello World console application.</span></span> <span data-ttu-id="3dfad-105">「[Visual Studio での Hello World アプリケーションのデバッグ](debugging-with-visual-studio.md)」では、Visual Studio デバッガーを使ってそれをテストしました。</span><span class="sxs-lookup"><span data-stu-id="3dfad-105">In [Debug your Hello World application with Visual Studio](debugging-with-visual-studio.md), you tested it using the Visual Studio debugger.</span></span> <span data-ttu-id="3dfad-106">正しく動作することが確認できたので、他のユーザーが使用できるように発行することができます。</span><span class="sxs-lookup"><span data-stu-id="3dfad-106">Now that you're sure that it works as expected, you can publish it so that other users can run it.</span></span> <span data-ttu-id="3dfad-107">発行では、アプリケーションを実行するために必要なファイルのセットを作成します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-107">Publishing creates the set of files that are needed to run your application.</span></span> <span data-ttu-id="3dfad-108">ファイルを配置するには、それをターゲット マシンにコピーします。</span><span class="sxs-lookup"><span data-stu-id="3dfad-108">To deploy the files, copy them to the target machine.</span></span>
 
-<span data-ttu-id="4dc53-108">アプリケーションを発行および実行するには</span><span class="sxs-lookup"><span data-stu-id="4dc53-108">To publish and run your application:</span></span> 
+## <a name="publish-the-app"></a><span data-ttu-id="3dfad-109">アプリの発行</span><span class="sxs-lookup"><span data-stu-id="3dfad-109">Publish the app</span></span>
 
-1. <span data-ttu-id="4dc53-109">Visual Studio がアプリケーションのリリース バージョンをビルドしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4dc53-109">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="4dc53-110">必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="4dc53-110">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
+1. <span data-ttu-id="3dfad-110">Visual Studio がアプリケーションのリリース バージョンをビルドしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-110">Make sure that Visual Studio is building the Release version of your application.</span></span> <span data-ttu-id="3dfad-111">必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-111">If necessary, change the build configuration setting on the toolbar from **Debug** to **Release**.</span></span>
 
    ![リリース ビルドが選択された Visual Studio のツールバー](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. <span data-ttu-id="4dc53-112">**HelloWorld** プロジェクト (HelloWorld ソリューションではなく) を右クリックし、メニューから **[発行]** を選びます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-112">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span> <span data-ttu-id="4dc53-113">Visual Studio のメイン メニューの **[ビルド]** から **[HelloWorld を発行]** を選択することもできます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-113">You can also select **Publish HelloWorld** from the main Visual Studio **Build** menu.</span></span>
+1. <span data-ttu-id="3dfad-113">**HelloWorld** プロジェクト (HelloWorld ソリューションではなく) を右クリックし、メニューから **[発行]** を選びます。</span><span class="sxs-lookup"><span data-stu-id="3dfad-113">Right-click on the **HelloWorld** project (not the HelloWorld solution) and select **Publish** from the menu.</span></span> <span data-ttu-id="3dfad-114">(メイン メニューの **[ビルド]** から **[HelloWorld を発行]** を選択することもできます。)</span><span class="sxs-lookup"><span data-stu-id="3dfad-114">(You can also select **Publish HelloWorld** from the main **Build** menu.)</span></span>
 
    ![Visual Studio の [発行] コンテキスト メニュー](media/publishing-with-visual-studio/publish-context-menu.png)
+   
+1. <span data-ttu-id="3dfad-116">**[発行先を選択]** ページで、 **[フォルダー]** を選択し、次に **[プロファイルの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-116">On the **Pick a publish target** page, select **Folder**, and then select **Create Profile**.</span></span>
 
-   ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![Visual Studio で発行先を選択します](media/publishing-with-visual-studio/pick-publish-target.png)
+   
+1. <span data-ttu-id="3dfad-118">**[発行]** ページで、 **[発行]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-118">On the **Publish** page, select **Publish**.</span></span>
 
-1. <span data-ttu-id="4dc53-116">コンソール ウィンドウが開きます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-116">Open a console window.</span></span> <span data-ttu-id="4dc53-117">たとえば、Windows タスク バーの **[検索するテキストをここに入力]** テキスト ボックスに「`Command Prompt`」 (または省略して「`cmd`」) と入力し、**コマンド プロンプト** デスクトップ アプリを選ぶか、コマンド プロンプトが検索結果で選択されている場合は Enter キーを押して、コンソール ウィンドウを開きます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-117">For example in the **Type here to search** text box in the Windows taskbar, enter `Command Prompt` (or `cmd` for short), and open a console window by either selecting the **Command Prompt** desktop app or pressing Enter if it's selected in the search results.</span></span>
+   ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-page.png)
+   
+## <a name="inspect-the-files"></a><span data-ttu-id="3dfad-120">ファイルを検査する</span><span class="sxs-lookup"><span data-stu-id="3dfad-120">Inspect the files</span></span>
 
-1. <span data-ttu-id="4dc53-118">アプリケーションのプロジェクト ディレクトリの `bin\release\PublishOutput` サブディレクトリで、発行されたアプリケーションに移動します。</span><span class="sxs-lookup"><span data-stu-id="4dc53-118">Navigate to the published application in the `bin\release\PublishOutput` subdirectory of your application's project directory.</span></span> <span data-ttu-id="4dc53-119">次の図に示すように、発行された出力には次の 4 つのファイルが含まれます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-119">As the following figure shows, the published output includes the following four files:</span></span>
+<span data-ttu-id="3dfad-121">発行プロセスでは、フレームワークに依存する配置が作成されます。これは、.NET Core がシステムにインストールされていれば、.NET Core によってサポートされる任意のプラットフォームで、発行されたアプリケーションが実行される配置の種類です。</span><span class="sxs-lookup"><span data-stu-id="3dfad-121">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application runs on any platform supported by .NET Core with .NET Core installed on the system.</span></span> <span data-ttu-id="3dfad-122">ユーザーは、実行可能ファイルをダブルクリックするか、コマンドプロンプトから `dotnet HelloWorld.dll` コマンドを実行することで、発行されたアプリを実行できます。</span><span class="sxs-lookup"><span data-stu-id="3dfad-122">Users can run the published app by double-clicking the executable or issuing the `dotnet HelloWorld.dll` command from a command prompt.</span></span>
 
-      * <span data-ttu-id="4dc53-120">*HelloWorld.deps.json*</span><span class="sxs-lookup"><span data-stu-id="4dc53-120">*HelloWorld.deps.json*</span></span>
+<span data-ttu-id="3dfad-123">次の手順で、発行プロセスによって作成されるファイルを確認します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-123">In the following steps, you'll look at the files created by the publish process.</span></span>
 
-         <span data-ttu-id="4dc53-121">アプリケーションのランタイム依存関係ファイル。</span><span class="sxs-lookup"><span data-stu-id="4dc53-121">The application's runtime dependencies file.</span></span> <span data-ttu-id="4dc53-122">アプリケーションの実行に必要な .NET Core コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。</span><span class="sxs-lookup"><span data-stu-id="4dc53-122">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run your application.</span></span> <span data-ttu-id="4dc53-123">詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4dc53-123">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
- 
-      * <span data-ttu-id="4dc53-124">*HelloWorld.dll*</span><span class="sxs-lookup"><span data-stu-id="4dc53-124">*HelloWorld.dll*</span></span>
+1. <span data-ttu-id="3dfad-124">コマンド プロンプトを開きます。</span><span class="sxs-lookup"><span data-stu-id="3dfad-124">Open a command prompt.</span></span>
 
-         <span data-ttu-id="4dc53-125">アプリケーションが含まれるファイル。</span><span class="sxs-lookup"><span data-stu-id="4dc53-125">The file that contains your application.</span></span> <span data-ttu-id="4dc53-126">動的リンク ライブラリであり、コンソール ウィンドウに `dotnet HelloWorld.dll` コマンドを入力することで実行できます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-126">It is a dynamic link library that can be executed by entering the `dotnet HelloWorld.dll` command in a console window.</span></span> 
+   <span data-ttu-id="3dfad-125">コマンド プロンプトを開く方法の 1 つとして、Windows タスク バーの検索ボックスに**コマンド プロンプト** (または短縮形の**cmd**) を入力する方法があります。</span><span class="sxs-lookup"><span data-stu-id="3dfad-125">One way to open a command prompt is to enter **Command Prompt** (or **cmd** for short) in the search box on the Windows taskbar.</span></span> <span data-ttu-id="3dfad-126">**[コマンド プロンプト]** デスクトップ アプリを選択するか、検索結果で既に選択されている場合は、**Enter** キーを押します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-126">Select the **Command Prompt** desktop app, or press **Enter** if it's already selected in the search results.</span></span>
 
-      * <span data-ttu-id="4dc53-127">*HelloWorld.pdb* (配置は省略可能)</span><span class="sxs-lookup"><span data-stu-id="4dc53-127">*HelloWorld.pdb* (optional for deployment)</span></span>
-
-         <span data-ttu-id="4dc53-128">デバッグ シンボルが含まれるファイル。</span><span class="sxs-lookup"><span data-stu-id="4dc53-128">A file that contains debug symbols.</span></span> <span data-ttu-id="4dc53-129">このファイルはアプリケーションと一緒に配置する必要はありませんが、発行されるバージョンのアプリケーションをデバッグする必要がある場合に保存しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="4dc53-129">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
-
-      * <span data-ttu-id="4dc53-130">*HelloWorld.runtimeconfig.json*</span><span class="sxs-lookup"><span data-stu-id="4dc53-130">*HelloWorld.runtimeconfig.json*</span></span>
-
-         <span data-ttu-id="4dc53-131">アプリケーションのランタイム構成ファイル。</span><span class="sxs-lookup"><span data-stu-id="4dc53-131">The application's runtime configuration file.</span></span> <span data-ttu-id="4dc53-132">ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。</span><span class="sxs-lookup"><span data-stu-id="4dc53-132">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="4dc53-133">詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4dc53-133">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>  
+1. <span data-ttu-id="3dfad-127">アプリケーションのプロジェクト ディレクトリの *bin\Release\netcoreapp3.1\publish* サブディレクトリで、発行されたアプリケーションに移動します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-127">Navigate to the published application in the *bin\Release\netcoreapp3.1\publish* subdirectory of the application's project directory.</span></span>
 
    ![発行されたファイルが表示されているコンソール ウィンドウ](media/publishing-with-visual-studio/published-files-output.png)
 
-<span data-ttu-id="4dc53-135">発行プロセスでは、フレームワークに依存する配置が作成されます。これは、.NET Core がシステムにインストールされていれば、.NET Core によってサポートされる任意のプラットフォームで発行されたアプリケーションが動作する配置の種類です。</span><span class="sxs-lookup"><span data-stu-id="4dc53-135">The publishing process creates a framework-dependent deployment, which is a type of deployment where the published application will run on any platform supported by .NET Core with .NET Core installed on the system.</span></span> <span data-ttu-id="4dc53-136">ユーザーはコンソール ウィンドウから `dotnet HelloWorld.dll` コマンドを発行することによって、アプリケーションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="4dc53-136">Users can run your application by issuing the `dotnet HelloWorld.dll` command from a console window.</span></span>
+   <span data-ttu-id="3dfad-129">この図に示すように、発行された出力には次のファイルが含まれます。</span><span class="sxs-lookup"><span data-stu-id="3dfad-129">As the image shows, the published output includes the following files:</span></span>
 
-<span data-ttu-id="4dc53-137">.NET Core アプリケーションの発行と展開の詳細については、「[.NET Core アプリケーション展開](../deploying/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4dc53-137">For more information on publishing and deploying .NET Core applications, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
+      * <span data-ttu-id="3dfad-130">*HelloWorld.deps.json*</span><span class="sxs-lookup"><span data-stu-id="3dfad-130">*HelloWorld.deps.json*</span></span>
+
+         <span data-ttu-id="3dfad-131">このファイルは、アプリケーションのランタイム依存関係ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3dfad-131">This is the application's runtime dependencies file.</span></span> <span data-ttu-id="3dfad-132">これは、アプリの実行に必要な .NET Core コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-132">It defines the .NET Core components and the libraries (including the dynamic link library that contains your application) needed to run the app.</span></span> <span data-ttu-id="3dfad-133">詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3dfad-133">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
+
+      * <span data-ttu-id="3dfad-134">*HelloWorld.dll*</span><span class="sxs-lookup"><span data-stu-id="3dfad-134">*HelloWorld.dll*</span></span>
+
+         <span data-ttu-id="3dfad-135">これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="3dfad-135">This is the [framework-dependent deployment](../deploying/deploy-with-cli.md#framework-dependent-deployment) version of the application.</span></span> <span data-ttu-id="3dfad-136">このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-136">To execute this dynamic link library, enter `dotnet HelloWorld.dll` at a command prompt.</span></span>
+
+      * <span data-ttu-id="3dfad-137">*HelloWorld.exe*</span><span class="sxs-lookup"><span data-stu-id="3dfad-137">*HelloWorld.exe*</span></span>
+      
+         <span data-ttu-id="3dfad-138">これは、[フレームワークに依存する実行可能ファイル](../deploying/deploy-with-cli.md#framework-dependent-executable) バージョンのアプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="3dfad-138">This is the [framework-dependent executable](../deploying/deploy-with-cli.md#framework-dependent-executable) version of the application.</span></span> <span data-ttu-id="3dfad-139">これを実行するには、コマンド プロンプトで `HelloWorld.exe` を入力します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-139">To run it, enter `HelloWorld.exe` at a command prompt.</span></span>
+
+      * <span data-ttu-id="3dfad-140">*HelloWorld.pdb* (配置は省略可能)</span><span class="sxs-lookup"><span data-stu-id="3dfad-140">*HelloWorld.pdb* (optional for deployment)</span></span>
+
+         <span data-ttu-id="3dfad-141">これは、デバッグ シンボル ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3dfad-141">This is the debug symbols file.</span></span> <span data-ttu-id="3dfad-142">このファイルはアプリケーションと一緒に配置する必要はありませんが、発行されるバージョンのアプリケーションをデバッグする必要がある場合に保存しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="3dfad-142">You aren't required to deploy this file along with your application, although you should save it in the event that you need to debug the published version of your application.</span></span>
+
+      * <span data-ttu-id="3dfad-143">*HelloWorld.runtimeconfig.json*</span><span class="sxs-lookup"><span data-stu-id="3dfad-143">*HelloWorld.runtimeconfig.json*</span></span>
+
+         <span data-ttu-id="3dfad-144">これは、アプリケーションのランタイム構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="3dfad-144">This is the application's runtime configuration file.</span></span> <span data-ttu-id="3dfad-145">ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。</span><span class="sxs-lookup"><span data-stu-id="3dfad-145">It identifies the version of .NET Core that your application was built to run on.</span></span> <span data-ttu-id="3dfad-146">詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3dfad-146">For more information, see [Runtime configuration files](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="3dfad-147">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="3dfad-147">Additional resources</span></span>
+
+- [<span data-ttu-id="3dfad-148">.NET Core アプリケーションの展開</span><span class="sxs-lookup"><span data-stu-id="3dfad-148">.NET Core application deployment</span></span>](../deploying/index.md)

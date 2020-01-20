@@ -1,69 +1,57 @@
 ---
 title: Docker を使用してアプリをコンテナー化するチュートリアル
 description: このチュートリアルでは、Docker を使って .NET Core アプリケーションをコンテナー化する方法を学習します。
-ms.date: 06/26/2019
+ms.date: 01/09/2020
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521890"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900106"
 ---
-# <a name="tutorial-containerize-a-net-core-app"></a><span data-ttu-id="c277d-103">チュートリアル: NET Core アプリのコンテナー化</span><span class="sxs-lookup"><span data-stu-id="c277d-103">Tutorial: Containerize a .NET Core app</span></span>
+# <a name="tutorial-containerize-a-net-core-app"></a><span data-ttu-id="f4871-103">チュートリアル: NET Core アプリのコンテナー化</span><span class="sxs-lookup"><span data-stu-id="f4871-103">Tutorial: Containerize a .NET Core app</span></span>
 
-<span data-ttu-id="c277d-104">このチュートリアルでは、.NET Core アプリケーションを含む Docker イメージをビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c277d-104">This tutorial teaches you how to build a Docker image that contains your .NET Core application.</span></span> <span data-ttu-id="c277d-105">そのイメージを使って、ローカル開発環境、プライベート クラウド、またはパブリック クラウド用にコンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="c277d-105">The image can be used to create containers for your local development environment, private cloud, or public cloud.</span></span>
+<span data-ttu-id="f4871-104">このチュートリアルでは、.NET Core アプリケーションを含む Docker イメージをビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f4871-104">This tutorial teaches you how to build a Docker image that contains your .NET Core application.</span></span> <span data-ttu-id="f4871-105">そのイメージを使って、ローカル開発環境、プライベート クラウド、またはパブリック クラウド用にコンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="f4871-105">The image can be used to create containers for your local development environment, private cloud, or public cloud.</span></span>
 
-<span data-ttu-id="c277d-106">以下のことを学習します。</span><span class="sxs-lookup"><span data-stu-id="c277d-106">You'll learn to:</span></span>
+<span data-ttu-id="f4871-106">以下のことを学習します。</span><span class="sxs-lookup"><span data-stu-id="f4871-106">You'll learn to:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="c277d-107">簡単な .NET Core アプリを作成して発行する</span><span class="sxs-lookup"><span data-stu-id="c277d-107">Create and publish a simple .NET Core app</span></span>
-> - <span data-ttu-id="c277d-108">.NET Core 用の Dockerfile を作成して構成する</span><span class="sxs-lookup"><span data-stu-id="c277d-108">Create and configure a Dockerfile for .NET Core</span></span>
-> - <span data-ttu-id="c277d-109">Docker イメージの構築</span><span class="sxs-lookup"><span data-stu-id="c277d-109">Build a Docker image</span></span>
-> - <span data-ttu-id="c277d-110">Docker コンテナーを作成して実行する</span><span class="sxs-lookup"><span data-stu-id="c277d-110">Create and run a Docker container</span></span>
+> - <span data-ttu-id="f4871-107">簡単な .NET Core アプリを作成して発行する</span><span class="sxs-lookup"><span data-stu-id="f4871-107">Create and publish a simple .NET Core app</span></span>
+> - <span data-ttu-id="f4871-108">.NET Core 用の Dockerfile を作成して構成する</span><span class="sxs-lookup"><span data-stu-id="f4871-108">Create and configure a Dockerfile for .NET Core</span></span>
+> - <span data-ttu-id="f4871-109">Docker イメージの構築</span><span class="sxs-lookup"><span data-stu-id="f4871-109">Build a Docker image</span></span>
+> - <span data-ttu-id="f4871-110">Docker コンテナーを作成して実行する</span><span class="sxs-lookup"><span data-stu-id="f4871-110">Create and run a Docker container</span></span>
 
-<span data-ttu-id="c277d-111">.NET Core アプリケーション用に Docker コンテナーを構築してデプロイするタスクを理解できます。</span><span class="sxs-lookup"><span data-stu-id="c277d-111">You'll understand the Docker container build and deploy tasks for a .NET Core application.</span></span> <span data-ttu-id="c277d-112">"*Docker プラットフォーム*" では、"*Docker エンジン*" を使用して、すばやくアプリがビルドされ、"*Docker イメージ*" としてパッケージ化されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-112">The *Docker platform* uses the *Docker engine* to quickly build and package apps as *Docker images*.</span></span> <span data-ttu-id="c277d-113">これらのイメージは、階層型コンテナーに展開されて実行される *Dockerfile* 形式で記述されています。</span><span class="sxs-lookup"><span data-stu-id="c277d-113">These images are written in the *Dockerfile* format to be deployed and run in a layered container.</span></span>
+<span data-ttu-id="f4871-111">.NET Core アプリケーション用に Docker コンテナーを構築してデプロイするタスクを理解できます。</span><span class="sxs-lookup"><span data-stu-id="f4871-111">You'll understand the Docker container build and deploy tasks for a .NET Core application.</span></span> <span data-ttu-id="f4871-112">"*Docker プラットフォーム*" では、"*Docker エンジン*" を使用して、すばやくアプリがビルドされ、"*Docker イメージ*" としてパッケージ化されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-112">The *Docker platform* uses the *Docker engine* to quickly build and package apps as *Docker images*.</span></span> <span data-ttu-id="f4871-113">これらのイメージは、階層型コンテナーに展開されて実行される *Dockerfile* 形式で記述されています。</span><span class="sxs-lookup"><span data-stu-id="f4871-113">These images are written in the *Dockerfile* format to be deployed and run in a layered container.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="c277d-114">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="c277d-114">Prerequisites</span></span>
+> [!TIP]
+> <span data-ttu-id="f4871-114">既存の ASP.NET Core アプリケーションを使用している場合は、[ASP.NET Core アプリケーションをコンテナー化する方法](/aspnet/core/host-and-deploy/docker/building-net-docker-images)に関するチュートリアルを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4871-114">If you're working with an existing ASP.NET Core application, see the [Learn how to containerize an ASP.NET Core application](/aspnet/core/host-and-deploy/docker/building-net-docker-images) tutorial.</span></span>
 
-<span data-ttu-id="c277d-115">次の前提条件をインストールします。</span><span class="sxs-lookup"><span data-stu-id="c277d-115">Install the following prerequisites:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f4871-115">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="f4871-115">Prerequisites</span></span>
 
-- <span data-ttu-id="c277d-116">[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="c277d-116">[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)</span></span>\
-<span data-ttu-id="c277d-117">.NET Core をインストールしてある場合、どの SDK を使っているか確認するには、`dotnet --info` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="c277d-117">If you have .NET Core installed, use the `dotnet --info` command to determine which SDK you're using.</span></span>
+<span data-ttu-id="f4871-116">次の前提条件をインストールします。</span><span class="sxs-lookup"><span data-stu-id="f4871-116">Install the following prerequisites:</span></span>
 
-- [<span data-ttu-id="c277d-118">Docker Community Edition</span><span class="sxs-lookup"><span data-stu-id="c277d-118">Docker Community Edition</span></span>](https://www.docker.com/products/docker-desktop)
+- <span data-ttu-id="f4871-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="f4871-117">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)</span></span>\
+<span data-ttu-id="f4871-118">.NET Core をインストールしてある場合、どの SDK を使っているか確認するには、`dotnet --info` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="f4871-118">If you have .NET Core installed, use the `dotnet --info` command to determine which SDK you're using.</span></span>
 
-- <span data-ttu-id="c277d-119">*Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。</span><span class="sxs-lookup"><span data-stu-id="c277d-119">A temporary working folder for the *Dockerfile* and .NET Core example app.</span></span> <span data-ttu-id="c277d-120">このチュートリアルでは、作業フォルダーに `docker-working` の名前が使用されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-120">In this tutorial, the name `docker-working` is used as the working folder.</span></span>
+- [<span data-ttu-id="f4871-119">Docker Community Edition</span><span class="sxs-lookup"><span data-stu-id="f4871-119">Docker Community Edition</span></span>](https://www.docker.com/products/docker-desktop)
 
-### <a name="use-sdk-version-22"></a><span data-ttu-id="c277d-121">SDK バージョン 2.2 を使用する</span><span class="sxs-lookup"><span data-stu-id="c277d-121">Use SDK version 2.2</span></span>
+- <span data-ttu-id="f4871-120">*Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。</span><span class="sxs-lookup"><span data-stu-id="f4871-120">A temporary working folder for the *Dockerfile* and .NET Core example app.</span></span> <span data-ttu-id="f4871-121">このチュートリアルでは、作業フォルダーに *docker-working* の名前が使用されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-121">In this tutorial, the name *docker-working* is used as the working folder.</span></span>
 
-<span data-ttu-id="c277d-122">3\.0 のようなさらに新しい SDK を使用している場合は、アプリが 2.2 SDK を使用するよう強制されることを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-122">If you're using an SDK that is newer, like 3.0, make sure that your app is forced to use the 2.2 SDK.</span></span> <span data-ttu-id="c277d-123">作業フォルダーに *global.json* という名前のファイルを作成し、次の JSON コードを貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="c277d-123">Create a file named *global.json* in your working folder and paste in the following JSON code:</span></span>
+## <a name="create-net-core-app"></a><span data-ttu-id="f4871-122">.NET Core アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="f4871-122">Create .NET Core app</span></span>
 
-```json
-{
-  "sdk": {
-    "version": "2.2.100"
-  }
-}
-```
-
-<span data-ttu-id="c277d-124">このファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="c277d-124">Save this file.</span></span> <span data-ttu-id="c277d-125">このファイルが存在すると、このフォルダーおよびその下位から呼び出されるすべての `dotnet` コマンドに対し、.NET Core では強制的にバージョン 2.2 が使用されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-125">The presence of file will force .NET Core to use version 2.2 for any `dotnet` command called from this folder and below.</span></span>
-
-## <a name="create-net-core-app"></a><span data-ttu-id="c277d-126">.NET Core アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="c277d-126">Create .NET Core app</span></span>
-
-<span data-ttu-id="c277d-127">Docker コンテナーで実行される .NET Core アプリが必要です。</span><span class="sxs-lookup"><span data-stu-id="c277d-127">You need a .NET Core app that the Docker container will run.</span></span> <span data-ttu-id="c277d-128">ターミナルを開き、作業フォルダーがまだない場合は作成して、移動します。</span><span class="sxs-lookup"><span data-stu-id="c277d-128">Open your terminal, create a working folder if you haven't already, and enter it.</span></span> <span data-ttu-id="c277d-129">作業フォルダーで次のコマンドを実行し、*app* という名前のサブディレクトリに新しいプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c277d-129">In the working folder, run the following command to create a new project in a subdirectory named *app*:</span></span>
+<span data-ttu-id="f4871-123">Docker コンテナーで実行される .NET Core アプリが必要です。</span><span class="sxs-lookup"><span data-stu-id="f4871-123">You need a .NET Core app that the Docker container will run.</span></span> <span data-ttu-id="f4871-124">ターミナルを開き、作業フォルダーがまだない場合は作成して、移動します。</span><span class="sxs-lookup"><span data-stu-id="f4871-124">Open your terminal, create a working folder if you haven't already, and enter it.</span></span> <span data-ttu-id="f4871-125">作業フォルダーで次のコマンドを実行し、*app* という名前のサブディレクトリに新しいプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4871-125">In the working folder, run the following command to create a new project in a subdirectory named *app*:</span></span>
 
 ```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
-<span data-ttu-id="c277d-130">フォルダー ツリーは次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-130">Your folder tree will look like the following:</span></span>
+<span data-ttu-id="f4871-126">フォルダー ツリーは次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-126">Your folder tree will look like the following:</span></span>
 
 ```
 docker-working
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -71,19 +59,20 @@ docker-working
     │
     └───obj
             myapp.csproj.nuget.cache
+            myapp.csproj.nuget.dgspec.json
             myapp.csproj.nuget.g.props
             myapp.csproj.nuget.g.targets
             project.assets.json
 ```
 
-<span data-ttu-id="c277d-131">`dotnet new` コマンドでは、*app* という名前の新しいフォルダーが作成され、"Hello World" アプリが生成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-131">The `dotnet new` command creates a new folder named *app* and generates a "Hello World" app.</span></span> <span data-ttu-id="c277d-132">*app* フォルダーに移動し、コマンド `dotnet run` を実行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-132">Enter the *app* folder and run the command `dotnet run`.</span></span> <span data-ttu-id="c277d-133">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-133">You'll see the following output:</span></span>
+<span data-ttu-id="f4871-127">`dotnet new` コマンドでは、*app* という名前の新しいフォルダーが作成され、"Hello World" アプリが生成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-127">The `dotnet new` command creates a new folder named *app* and generates a "Hello World" app.</span></span> <span data-ttu-id="f4871-128">*app* フォルダーに移動し、コマンド `dotnet run` を実行します。</span><span class="sxs-lookup"><span data-stu-id="f4871-128">Enter the *app* folder and run the command `dotnet run`.</span></span> <span data-ttu-id="f4871-129">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-129">You'll see the following output:</span></span>
 
 ```console
 > dotnet run
 Hello World!
 ```
 
-<span data-ttu-id="c277d-134">既定のテンプレートでは、端末に出力して終了するアプリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-134">The default template creates an app that prints to the terminal and then exits.</span></span> <span data-ttu-id="c277d-135">このチュートリアルでは、無限にループするアプリを使います。</span><span class="sxs-lookup"><span data-stu-id="c277d-135">For this tutorial, you'll use an app that loops indefinitely.</span></span> <span data-ttu-id="c277d-136">テキスト エディターで *Program.cs* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="c277d-136">Open the *Program.cs* file in a text editor.</span></span> <span data-ttu-id="c277d-137">現在は次のようなコードになっているはずです。</span><span class="sxs-lookup"><span data-stu-id="c277d-137">It should currently look like the following code:</span></span>
+<span data-ttu-id="f4871-130">既定のテンプレートでは、端末に出力して終了するアプリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-130">The default template creates an app that prints to the terminal and then exits.</span></span> <span data-ttu-id="f4871-131">このチュートリアルでは、無限にループするアプリを使います。</span><span class="sxs-lookup"><span data-stu-id="f4871-131">For this tutorial, you'll use an app that loops indefinitely.</span></span> <span data-ttu-id="f4871-132">テキスト エディターで *Program.cs* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="f4871-132">Open the *Program.cs* file in a text editor.</span></span> <span data-ttu-id="f4871-133">現在は次のようなコードになっているはずです。</span><span class="sxs-lookup"><span data-stu-id="f4871-133">It should currently look like the following code:</span></span>
 
 ```csharp
 using System;
@@ -100,7 +89,7 @@ namespace myapp
 }
 ```
 
-<span data-ttu-id="c277d-138">1 秒ごとに数をカウントする次のコードにファイルを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c277d-138">Replace the file with the following code that counts numbers every second:</span></span>
+<span data-ttu-id="f4871-134">1 秒ごとに数をカウントする次のコードにファイルを置き換えます。</span><span class="sxs-lookup"><span data-stu-id="f4871-134">Replace the file with the following code that counts numbers every second:</span></span>
 
 ```csharp
 using System;
@@ -124,7 +113,7 @@ namespace myapp
 }
 ```
 
-<span data-ttu-id="c277d-139">ファイルを保存し、`dotnet run` で再びプログラムをテストします。</span><span class="sxs-lookup"><span data-stu-id="c277d-139">Save the file and test the program again with `dotnet run`.</span></span> <span data-ttu-id="c277d-140">このアプリは無限に実行されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="c277d-140">Remember that this app runs indefinitely.</span></span> <span data-ttu-id="c277d-141">停止するにはキャンセル コマンド <kbd>Ctrl</kbd>+<kbd>C</kbd> を使用します。</span><span class="sxs-lookup"><span data-stu-id="c277d-141">Use the cancel command <kbd>CTRL</kbd>+<kbd>C</kbd> to stop it.</span></span> <span data-ttu-id="c277d-142">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-142">You'll see the following output:</span></span>
+<span data-ttu-id="f4871-135">ファイルを保存し、`dotnet run` で再びプログラムをテストします。</span><span class="sxs-lookup"><span data-stu-id="f4871-135">Save the file and test the program again with `dotnet run`.</span></span> <span data-ttu-id="f4871-136">このアプリは無限に実行されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="f4871-136">Remember that this app runs indefinitely.</span></span> <span data-ttu-id="f4871-137">停止するにはキャンセル コマンド <kbd>Ctrl</kbd>+<kbd>C</kbd> を使用します。</span><span class="sxs-lookup"><span data-stu-id="f4871-137">Use the cancel command <kbd>CTRL</kbd>+<kbd>C</kbd> to stop it.</span></span> <span data-ttu-id="f4871-138">次のような出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-138">You'll see the following output:</span></span>
 
 ```console
 > dotnet run
@@ -135,60 +124,71 @@ Counter: 4
 ^C
 ```
 
-<span data-ttu-id="c277d-143">コマンド ラインでアプリに数値を渡すと、アプリはその値までカウント アップしただけで終了します。</span><span class="sxs-lookup"><span data-stu-id="c277d-143">If you pass a number on the command line to the app, it will only count up to that amount and then exit.</span></span> <span data-ttu-id="c277d-144">`dotnet run -- 5` で 5 までカウントしてみてください。</span><span class="sxs-lookup"><span data-stu-id="c277d-144">Try it with `dotnet run -- 5` to count to five.</span></span>
+<span data-ttu-id="f4871-139">コマンド ラインでアプリに数値を渡すと、アプリはその値までカウント アップしただけで終了します。</span><span class="sxs-lookup"><span data-stu-id="f4871-139">If you pass a number on the command line to the app, it will only count up to that amount and then exit.</span></span> <span data-ttu-id="f4871-140">`dotnet run -- 5` で 5 までカウントしてみてください。</span><span class="sxs-lookup"><span data-stu-id="f4871-140">Try it with `dotnet run -- 5` to count to five.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c277d-145">`--` より後のパラメーターは `dotnet run` コマンドに渡されず、代わりにアプリケーションに渡されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-145">Any parameters after `--` are not passed to the `dotnet run` command and instead are passed to your application.</span></span>
+> <span data-ttu-id="f4871-141">`--` より後のパラメーターは `dotnet run` コマンドに渡されず、代わりにアプリケーションに渡されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-141">Any parameters after `--` are not passed to the `dotnet run` command and instead are passed to your application.</span></span>
 
-## <a name="publish-net-core-app"></a><span data-ttu-id="c277d-146">.NET Core アプリを発行する</span><span class="sxs-lookup"><span data-stu-id="c277d-146">Publish .NET Core app</span></span>
+## <a name="publish-net-core-app"></a><span data-ttu-id="f4871-142">.NET Core アプリを発行する</span><span class="sxs-lookup"><span data-stu-id="f4871-142">Publish .NET Core app</span></span>
 
-<span data-ttu-id="c277d-147">.NET Core アプリを Docker イメージに追加する前に、アプリを発行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-147">Before you add your .NET Core app to the Docker image, publish it.</span></span> <span data-ttu-id="c277d-148">コンテナーの開始時に、発行されたバージョンのアプリが実行されることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c277d-148">You want to make sure that the container runs the published version of the app when it's started.</span></span>
+<span data-ttu-id="f4871-143">.NET Core アプリを Docker イメージに追加する前に、アプリを発行します。</span><span class="sxs-lookup"><span data-stu-id="f4871-143">Before you add your .NET Core app to the Docker image, publish it.</span></span> <span data-ttu-id="f4871-144">コンテナーの開始時に、発行されたバージョンのアプリが実行されることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f4871-144">You want to make sure that the container runs the published version of the app when it's started.</span></span>
 
-<span data-ttu-id="c277d-149">作業フォルダーから、サンプルのソース コードがある *app* フォルダーに移動し、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-149">From the working folder, enter the *app* folder with the example source code and run the following command:</span></span>
+<span data-ttu-id="f4871-145">作業フォルダーから、サンプルのソース コードがある *app* フォルダーに移動し、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="f4871-145">From the working folder, enter the *app* folder with the example source code and run the following command:</span></span>
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-<span data-ttu-id="c277d-150">このコマンドでは、*publish* フォルダーにアプリがコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="c277d-150">This command compiles your app to the *publish* folder.</span></span> <span data-ttu-id="c277d-151">作業フォルダーから *publish* フォルダーへのパスは `.\app\bin\Release\netcoreapp2.2\publish\` です</span><span class="sxs-lookup"><span data-stu-id="c277d-151">The path to the *publish* folder from the working folder should be `.\app\bin\Release\netcoreapp2.2\publish\`</span></span>
+<span data-ttu-id="f4871-146">このコマンドでは、*publish* フォルダーにアプリがコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="f4871-146">This command compiles your app to the *publish* folder.</span></span> <span data-ttu-id="f4871-147">作業フォルダーから *publish* フォルダーへのパスは `.\app\bin\Release\netcoreapp3.1\publish\` です</span><span class="sxs-lookup"><span data-stu-id="f4871-147">The path to the *publish* folder from the working folder should be `.\app\bin\Release\netcoreapp3.1\publish\`</span></span>
 
-<span data-ttu-id="c277d-152">publish フォルダーのディレクトリ一覧を表示し、*myapp.dll* が作成されたことを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-152">Get a directory listing of the publish folder to verify that the *myapp.dll* was created.</span></span> <span data-ttu-id="c277d-153">*app* フォルダーから、次のいずれかのコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-153">From the *app* folder, run one of the following commands:</span></span>
+<span data-ttu-id="f4871-148">*app* フォルダーから、publish フォルダーのディレクトリ一覧を表示し、*myapp.dll* ファイルが作成されたことを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-148">From the *app* folder, get a directory listing of the publish folder to verify that the *myapp.dll* file was created.</span></span> 
 
 ```console
-> dir bin\Release\netcoreapp2.2\publish
- Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
+> dir bin\Release\netcoreapp3.1\publish
 
-04/05/2019  11:00 AM    <DIR>          .
-04/05/2019  11:00 AM    <DIR>          ..
-04/05/2019  11:00 AM               447 myapp.deps.json
-04/05/2019  11:00 AM             4,608 myapp.dll
-04/05/2019  11:00 AM               448 myapp.pdb
-04/05/2019  11:00 AM               154 myapp.runtimeconfig.json
+    Directory:  C:\docker-working\app\bin\Release\netcoreapp3.1\publish
+
+01/09/2020  11:41 AM    <DIR>          .
+01/09/2020  11:41 AM    <DIR>          ..
+01/09/2020  11:41 AM               407 myapp.deps.json
+01/09/2020  12:15 PM             4,608 myapp.dll
+01/09/2020  12:15 PM           169,984 myapp.exe
+01/09/2020  12:15 PM               736 myapp.pdb
+01/09/2020  11:41 AM               154 myapp.runtimeconfig.json
 ```
 
+<span data-ttu-id="f4871-149">Linux または macOS を使用している場合は、`ls` コマンドを使用してディレクトリ一覧を表示し、*myapp.dll* ファイルが作成されたことを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-149">If you're using Linux or macOS, use the `ls` command to get a directory listing and verify that the *myapp.dll* file was created.</span></span>
+
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-## <a name="create-the-dockerfile"></a><span data-ttu-id="c277d-154">Dockerfile を作成する</span><span class="sxs-lookup"><span data-stu-id="c277d-154">Create the Dockerfile</span></span>
+## <a name="create-the-dockerfile"></a><span data-ttu-id="f4871-150">Dockerfile を作成する</span><span class="sxs-lookup"><span data-stu-id="f4871-150">Create the Dockerfile</span></span>
 
-<span data-ttu-id="c277d-155">*Dockerfile* ファイルは、コンテナー イメージを作成するために `docker build` コマンドによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-155">The *Dockerfile* file is used by the `docker build` command to create a container image.</span></span> <span data-ttu-id="c277d-156">このファイルは *Dockerfile* という名前のプレーンテキスト ファイルで、拡張子はありません。</span><span class="sxs-lookup"><span data-stu-id="c277d-156">This file is a plaintext file named *Dockerfile* that does not have an extension.</span></span>
+<span data-ttu-id="f4871-151">*Dockerfile* ファイルは、コンテナー イメージを作成するために `docker build` コマンドによって使用されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-151">The *Dockerfile* file is used by the `docker build` command to create a container image.</span></span> <span data-ttu-id="f4871-152">このファイルは *Dockerfile* という名前のテキスト ファイルで、拡張子はありません。</span><span class="sxs-lookup"><span data-stu-id="f4871-152">This file is a text file named *Dockerfile* that doesn't have an extension.</span></span>
 
-<span data-ttu-id="c277d-157">ターミナルで、開始時に作成した作業フォルダーまでディレクトリを移動します。</span><span class="sxs-lookup"><span data-stu-id="c277d-157">In your terminal, navigate up a directory to the working folder you created at the start.</span></span> <span data-ttu-id="c277d-158">*Dockerfile* という名前のファイルを作業フォルダーに作成し、テキスト エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="c277d-158">Create a file named *Dockerfile* in your working folder and open it in a text editor.</span></span> <span data-ttu-id="c277d-159">ファイルの最初の行として、次のコマンドを追加します。</span><span class="sxs-lookup"><span data-stu-id="c277d-159">Add the following command as the first line of the file:</span></span>
+<span data-ttu-id="f4871-153">ターミナルで、開始時に作成した作業フォルダーまでディレクトリを移動します。</span><span class="sxs-lookup"><span data-stu-id="f4871-153">In your terminal, navigate up a directory to the working folder you created at the start.</span></span> <span data-ttu-id="f4871-154">*Dockerfile* という名前のファイルを作業フォルダーに作成し、テキスト エディターで開きます。</span><span class="sxs-lookup"><span data-stu-id="f4871-154">Create a file named *Dockerfile* in your working folder and open it in a text editor.</span></span> <span data-ttu-id="f4871-155">コンテナー化するアプリケーションの種類に応じて、ASP.NET Core ランタイムまたは .NET Core ランタイムのいずれかを選択します。</span><span class="sxs-lookup"><span data-stu-id="f4871-155">Depending on the type of application you're going to containerize, you'll choose either the ASP.NET Core runtime or the .NET Core runtime.</span></span> <span data-ttu-id="f4871-156">不明な場合は、ASP.NET Core ランタイム (.NET Core ランタイムが含まれています) を選択します。</span><span class="sxs-lookup"><span data-stu-id="f4871-156">When in doubt, choose the ASP.NET Core runtime, which includes the .NET Core runtime.</span></span> <span data-ttu-id="f4871-157">このチュートリアルでは ASP.NET Core ランタイム イメージを使用しますが、前のセクションで作成したアプリケーションは .NET Core アプリケーションです。</span><span class="sxs-lookup"><span data-stu-id="f4871-157">This tutorial will use the ASP.NET Core runtime image, but the application created in the previous sections is an .NET Core application.</span></span>
 
-```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
-```
+- <span data-ttu-id="f4871-158">ASP.NET Core ランタイム</span><span class="sxs-lookup"><span data-stu-id="f4871-158">ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="c277d-160">`FROM` コマンドは、**mcr.microsoft.com/dotnet/core/runtime** リポジトリから **2.2** というタグの付いたイメージをプルするよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-160">The `FROM` command tells Docker to pull down the image tagged **2.2** from the **mcr.microsoft.com/dotnet/core/runtime** repository.</span></span> <span data-ttu-id="c277d-161">SDK のターゲットのランタイムと一致する .NET Core ランタイムをプルすることを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-161">Make sure that you pull the .NET Core runtime that matches the runtime targeted by your SDK.</span></span> <span data-ttu-id="c277d-162">たとえば、前のセクションで作成したアプリ は .NET Core 2.2 SDK を使用しており、.NET Core 2.2 をターゲットにするアプリを作成しました。</span><span class="sxs-lookup"><span data-stu-id="c277d-162">For example, the app created in the previous section used the .NET Core 2.2 SDK and created an app that targeted .NET Core 2.2.</span></span> <span data-ttu-id="c277d-163">したがって、*Dockerfile* で参照されている基本イメージは、**2.2** でタグ付けされます。</span><span class="sxs-lookup"><span data-stu-id="c277d-163">So the base image referred to in the *Dockerfile* is tagged with **2.2**.</span></span>
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+  ```
 
-<span data-ttu-id="c277d-164">*Dockerfile* ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="c277d-164">Save the *Dockerfile* file.</span></span> <span data-ttu-id="c277d-165">作業フォルダーのディレクトリ構造は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="c277d-165">The directory structure of the working folder should look like the following.</span></span> <span data-ttu-id="c277d-166">一部のより深いレベルのファイルとフォルダーは、スペース削減のためこの記事では省略されています。</span><span class="sxs-lookup"><span data-stu-id="c277d-166">Some of the deeper-level files and folders have been cut to save space in the article:</span></span>
+- <span data-ttu-id="f4871-159">.NET Core ランタイム</span><span class="sxs-lookup"><span data-stu-id="f4871-159">.NET Core runtime</span></span>
+
+  ```dockerfile
+  FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+  ```
+
+<span data-ttu-id="f4871-160">`FROM` コマンドは、指定したリポジトリから **3.1** というタグの付いたイメージをプルするよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-160">The `FROM` command tells Docker to pull down the image tagged **3.1** from the specified repository.</span></span> <span data-ttu-id="f4871-161">必ず、SDK のターゲットのランタイムと一致するランタイム バージョンをプルしてください。</span><span class="sxs-lookup"><span data-stu-id="f4871-161">Make sure that you pull the runtime version that matches the runtime targeted by your SDK.</span></span> <span data-ttu-id="f4871-162">たとえば、前のセクションで作成したアプリは .NET Core 3.1 SDK を使用しているため、*Dockerfile* で参照される基本イメージは **3.1** でタグ付けされます。</span><span class="sxs-lookup"><span data-stu-id="f4871-162">For example, the app created in the previous section used the .NET Core 3.1 SDK and the base image referred to in the *Dockerfile* is tagged with **3.1**.</span></span>
+
+<span data-ttu-id="f4871-163">*Dockerfile* ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="f4871-163">Save the *Dockerfile* file.</span></span> <span data-ttu-id="f4871-164">作業フォルダーのディレクトリ構造は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="f4871-164">The directory structure of the working folder should look like the following.</span></span> <span data-ttu-id="f4871-165">一部のより深いレベルのファイルとフォルダーは、スペース削減のためこの記事では省略されています。</span><span class="sxs-lookup"><span data-stu-id="f4871-165">Some of the deeper-level files and folders have been cut to save space in the article:</span></span>
 
 ```
 docker-working
 │   Dockerfile
-│   global.json
 │
 └───app
     │   myapp.csproj
@@ -196,9 +196,10 @@ docker-working
     │
     ├───bin
     │   └───Release
-    │       └───netcoreapp2.2
+    │       └───netcoreapp3.1
     │           └───publish
     │                   myapp.deps.json
+    │                   myapp.exe
     │                   myapp.dll
     │                   myapp.pdb
     │                   myapp.runtimeconfig.json
@@ -206,147 +207,147 @@ docker-working
     └───obj
 ```
 
-<span data-ttu-id="c277d-167">ターミナルから、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-167">From your terminal, run the following command:</span></span>
+<span data-ttu-id="f4871-166">ターミナルから、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="f4871-166">From your terminal, run the following command:</span></span>
 
 ```console
 docker build -t myimage -f Dockerfile .
 ```
 
-<span data-ttu-id="c277d-168">Docker により *Dockerfile* 内の各行が処理されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-168">Docker will process each line in the *Dockerfile*.</span></span> <span data-ttu-id="c277d-169">`docker build` コマンドの `.` は、現在のフォルダーで *Dockerfile* を検索するよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-169">The `.` in the `docker build` command tells Docker to use the current folder to find a *Dockerfile*.</span></span> <span data-ttu-id="c277d-170">このコマンドでは、イメージがビルドされて、そのイメージを指す **myimage** という名前のローカル リポジトリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-170">This command builds the image and creates a local repository named **myimage** that points to that image.</span></span> <span data-ttu-id="c277d-171">このコマンドが終了したら、`docker images` を実行し、インストールされているイメージの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-171">After this command finishes, run `docker images` to see a list of images installed:</span></span>
+<span data-ttu-id="f4871-167">Docker により *Dockerfile* 内の各行が処理されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-167">Docker will process each line in the *Dockerfile*.</span></span> <span data-ttu-id="f4871-168">`docker build` コマンドの `.` は、現在のフォルダーで *Dockerfile* を検索するよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-168">The `.` in the `docker build` command tells Docker to use the current folder to find a *Dockerfile*.</span></span> <span data-ttu-id="f4871-169">このコマンドでは、イメージがビルドされて、そのイメージを指す **myimage** という名前のローカル リポジトリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-169">This command builds the image and creates a local repository named **myimage** that points to that image.</span></span> <span data-ttu-id="f4871-170">このコマンドが終了したら、`docker images` を実行し、インストールされているイメージの一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-170">After this command finishes, run `docker images` to see a list of images installed:</span></span>
 
 ```console
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
-myimage                                 latest              d51bb4452469        2 days ago          314MB
+myimage                                 latest              38db0eb8f648        4 weeks ago         346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
-<span data-ttu-id="c277d-172">2 つのイメージで同じ **IMAGE ID** 値が共有されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="c277d-172">Notice that the two images share the same **IMAGE ID** value.</span></span> <span data-ttu-id="c277d-173">*Dockerfile* での唯一のコマンドが既存のイメージを新しいイメージの基にするものであったため、両方のイメージで値が同じになっています。</span><span class="sxs-lookup"><span data-stu-id="c277d-173">The value is the same between both images because the only command in the *Dockerfile* was to base the new image on an existing image.</span></span> <span data-ttu-id="c277d-174">2 つのコマンドを *Dockerfile* に追加してみましょう。</span><span class="sxs-lookup"><span data-stu-id="c277d-174">Let's add two commands to the *Dockerfile*.</span></span> <span data-ttu-id="c277d-175">各コマンドでは、**myimage** リポジトリが指し示すイメージを表す最後のコマンドで、新しいイメージ レイヤーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-175">Each command creates a new image layer with the final command representing the image the **myimage** repository will point to.</span></span>
+<span data-ttu-id="f4871-171">2 つのイメージで同じ **IMAGE ID** 値が共有されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="f4871-171">Notice that the two images share the same **IMAGE ID** value.</span></span> <span data-ttu-id="f4871-172">*Dockerfile* での唯一のコマンドが既存のイメージを新しいイメージの基にするものであったため、両方のイメージで値が同じになっています。</span><span class="sxs-lookup"><span data-stu-id="f4871-172">The value is the same between both images because the only command in the *Dockerfile* was to base the new image on an existing image.</span></span> <span data-ttu-id="f4871-173">2 つのコマンドを *Dockerfile* に追加してみましょう。</span><span class="sxs-lookup"><span data-stu-id="f4871-173">Let's add two commands to the *Dockerfile*.</span></span> <span data-ttu-id="f4871-174">各コマンドでは、**myimage** リポジトリ エントリが指し示すイメージを表す最後のコマンドで新しいイメージ レイヤーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-174">Each command creates a new image layer with the final command representing the image the **myimage** repository entry points to.</span></span>
 
 ```dockerfile
-COPY app/bin/Release/netcoreapp2.2/publish/ app/
+COPY app/bin/Release/netcoreapp3.1/publish/ app/
 
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-<span data-ttu-id="c277d-176">`COPY` コマンドは、自分のコンピューターの指定したフォルダーをコンテナー内のフォルダーにコピーするよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-176">The `COPY` command tells Docker to copy the specified folder on your computer to a folder in the container.</span></span> <span data-ttu-id="c277d-177">この例では、*publish* フォルダーが、コンテナーの *app* という名前のフォルダーにコピーされます。</span><span class="sxs-lookup"><span data-stu-id="c277d-177">In this example, the *publish* folder is copied to a folder named *app* in the container.</span></span>
+<span data-ttu-id="f4871-175">`COPY` コマンドは、自分のコンピューターの指定したフォルダーをコンテナー内のフォルダーにコピーするよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-175">The `COPY` command tells Docker to copy the specified folder on your computer to a folder in the container.</span></span> <span data-ttu-id="f4871-176">この例では、*publish* フォルダーが、コンテナーの *app* という名前のフォルダーにコピーされます。</span><span class="sxs-lookup"><span data-stu-id="f4871-176">In this example, the *publish* folder is copied to a folder named *app* in the container.</span></span>
 
-<span data-ttu-id="c277d-178">次のコマンド `ENTRYPOINT` は、実行可能ファイルとして実行するためにコンテナーを構成するよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-178">The next command, `ENTRYPOINT`, tells Docker to configure the container to run as an executable.</span></span> <span data-ttu-id="c277d-179">コンテナーの起動時に、`ENTRYPOINT` コマンドが実行されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-179">When the container starts, the `ENTRYPOINT` command runs.</span></span> <span data-ttu-id="c277d-180">このコマンドが終了すると、コンテナーは自動的に停止します。</span><span class="sxs-lookup"><span data-stu-id="c277d-180">When this command ends, the container will automatically stop.</span></span>
+<span data-ttu-id="f4871-177">次のコマンド `ENTRYPOINT` は、実行可能ファイルとして実行するためにコンテナーを構成するよう Docker に指示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-177">The next command, `ENTRYPOINT`, tells Docker to configure the container to run as an executable.</span></span> <span data-ttu-id="f4871-178">コンテナーの起動時に、`ENTRYPOINT` コマンドが実行されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-178">When the container starts, the `ENTRYPOINT` command runs.</span></span> <span data-ttu-id="f4871-179">このコマンドが終了すると、コンテナーは自動的に停止します。</span><span class="sxs-lookup"><span data-stu-id="f4871-179">When this command ends, the container will automatically stop.</span></span>
 
-<span data-ttu-id="c277d-181">端末から `docker build -t myimage -f Dockerfile .` を実行し、そのコマンドが終了したら `docker images` を実行します。</span><span class="sxs-lookup"><span data-stu-id="c277d-181">From your terminal, run `docker build -t myimage -f Dockerfile .` and when that command finishes, run `docker images`.</span></span>
+<span data-ttu-id="f4871-180">端末から `docker build -t myimage -f Dockerfile .` を実行し、そのコマンドが終了したら `docker images` を実行します。</span><span class="sxs-lookup"><span data-stu-id="f4871-180">From your terminal, run `docker build -t myimage -f Dockerfile .` and when that command finishes, run `docker images`.</span></span>
 
 ```console
 > docker build -t myimage -f Dockerfile .
-Sending build context to Docker daemon  819.7kB
-Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
- ---> d51bb4452469
-Step 2/3 : COPY app/bin/Release/netcoreapp2.2/publish/ app/
- ---> a1e98ac62017
+Sending build context to Docker daemon  1.624MB
+Step 1/3 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+ ---> 38db0eb8f648
+Step 2/3 : COPY app/bin/Release/netcoreapp3.1/publish/ app/
+ ---> 37873673e468
 Step 3/3 : ENTRYPOINT ["dotnet", "app/myapp.dll"]
- ---> Running in f34da5c18e7c
-Removing intermediate container f34da5c18e7c
- ---> ddcc6646461b
-Successfully built ddcc6646461b
+ ---> Running in d8deb7b3aa9e
+Removing intermediate container d8deb7b3aa9e
+ ---> 0d602ca35c1d
+Successfully built 0d602ca35c1d
 Successfully tagged myimage:latest
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              ddcc6646461b        10 seconds ago      314MB
-mcr.microsoft.com/dotnet/core/runtime   2.2                 d51bb4452469        2 days ago          314MB
+myimage                                 latest              0d602ca35c1d        4 seconds ago       346MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 38db0eb8f648        4 weeks ago         346MB
 ```
 
-<span data-ttu-id="c277d-182">*Dockerfile* 内の各コマンドによってレイヤーが生成され、**IMAGE ID** が作成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-182">Each command in the *Dockerfile* generated a layer and created an **IMAGE ID**.</span></span> <span data-ttu-id="c277d-183">最後の **IMAGE ID** は **ddcc6646461b** であり (個々に異なります)、次にこのイメージを基にしてコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="c277d-183">The final **IMAGE ID** (yours will be different) is **ddcc6646461b** and next you'll create a container based on this image.</span></span>
+<span data-ttu-id="f4871-181">*Dockerfile* 内の各コマンドによってレイヤーが生成され、**IMAGE ID** が作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-181">Each command in the *Dockerfile* generated a layer and created an **IMAGE ID**.</span></span> <span data-ttu-id="f4871-182">最後の **IMAGE ID** は **ddcc6646461b** であり (個々に異なります)、次にこのイメージを基にしてコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4871-182">The final **IMAGE ID** (yours will be different) is **ddcc6646461b** and next you'll create a container based on this image.</span></span>
 
-## <a name="create-a-container"></a><span data-ttu-id="c277d-184">コンテナーの作成</span><span class="sxs-lookup"><span data-stu-id="c277d-184">Create a container</span></span>
+## <a name="create-a-container"></a><span data-ttu-id="f4871-183">コンテナーの作成</span><span class="sxs-lookup"><span data-stu-id="f4871-183">Create a container</span></span>
 
-<span data-ttu-id="c277d-185">アプリを含むイメージができたので、コンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="c277d-185">Now that you have an image that contains your app, you can create a container.</span></span> <span data-ttu-id="c277d-186">2 つの方法でコンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="c277d-186">You can create a container in two ways.</span></span> <span data-ttu-id="c277d-187">最初に、停止している新しいコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="c277d-187">First, create a new container that is stopped.</span></span>
+<span data-ttu-id="f4871-184">アプリを含むイメージができたので、コンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="f4871-184">Now that you have an image that contains your app, you can create a container.</span></span> <span data-ttu-id="f4871-185">2 つの方法でコンテナーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="f4871-185">You can create a container in two ways.</span></span> <span data-ttu-id="f4871-186">最初に、停止している新しいコンテナーを作成します。</span><span class="sxs-lookup"><span data-stu-id="f4871-186">First, create a new container that is stopped.</span></span>
 
 ```console
 > docker create myimage
-0e8f3c2ca32ce773712a5cca38750f41259a4e54e04bdf0946087e230ad7066c
+ceda87b219a4e55e9ad5d833ee1a7ea4da21b5ea7ce5a7d08f3051152e784944
 ```
 
-<span data-ttu-id="c277d-188">上の `docker create` コマンドでは、**myimage** イメージに基づくコンテナーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-188">The `docker create` command from above will create a container based on the **myimage** image.</span></span> <span data-ttu-id="c277d-189">そのコマンドの出力では、作成されたコンテナーの **CONTAINER ID** (個々に異なります) が示されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-189">The output of that command shows you the **CONTAINER ID** (yours will be different) of the created container.</span></span> <span data-ttu-id="c277d-190">"*すべて*" のコンテナーの一覧を表示するには、`docker ps -a` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="c277d-190">To see a list of *all* containers, use the `docker ps -a` command:</span></span>
+<span data-ttu-id="f4871-187">上の `docker create` コマンドでは、**myimage** イメージに基づくコンテナーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-187">The `docker create` command from above will create a container based on the **myimage** image.</span></span> <span data-ttu-id="f4871-188">そのコマンドの出力では、作成されたコンテナーの **CONTAINER ID** (個々に異なります) が示されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-188">The output of that command shows you the **CONTAINER ID** (yours will be different) of the created container.</span></span> <span data-ttu-id="f4871-189">"*すべて*" のコンテナーの一覧を表示するには、`docker ps -a` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="f4871-189">To see a list of *all* containers, use the `docker ps -a` command:</span></span>
 
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS        PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   4 seconds ago       Created               gallant_lehmann
 ```
 
-### <a name="manage-the-container"></a><span data-ttu-id="c277d-191">コンテナーを管理する</span><span class="sxs-lookup"><span data-stu-id="c277d-191">Manage the container</span></span>
+### <a name="manage-the-container"></a><span data-ttu-id="f4871-190">コンテナーを管理する</span><span class="sxs-lookup"><span data-stu-id="f4871-190">Manage the container</span></span>
 
-<span data-ttu-id="c277d-192">各コンテナーにはランダムな名前が割り当てられており、それを使ってそのコンテナー インスタンスを参照できます。</span><span class="sxs-lookup"><span data-stu-id="c277d-192">Each container is assigned a random name that you can use to refer to that container instance.</span></span> <span data-ttu-id="c277d-193">たとえば、自動的に作成されたコンテナーでは **boring_matsumoto** という名前が選択されており (個々に異なります)、その名前を使ってコンテナーを起動できます。</span><span class="sxs-lookup"><span data-stu-id="c277d-193">For example, the container that was created automatically chose the name **boring_matsumoto** (yours will be different) and that name can be used to start the container.</span></span> <span data-ttu-id="c277d-194">`docker create --name` パラメーターを使って、自動的な名前を特定の名前でオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="c277d-194">You override the automatic name with a specific one by using the `docker create --name` parameter.</span></span>
+<span data-ttu-id="f4871-191">各コンテナーにはランダムな名前が割り当てられており、それを使ってそのコンテナー インスタンスを参照できます。</span><span class="sxs-lookup"><span data-stu-id="f4871-191">Each container is assigned a random name that you can use to refer to that container instance.</span></span> <span data-ttu-id="f4871-192">たとえば、自動的に作成されたコンテナーでは **gallant_lehmann** という名前が選択されており (個々に異なります)、その名前を使ってコンテナーを起動できます。</span><span class="sxs-lookup"><span data-stu-id="f4871-192">For example, the container that was created automatically chose the name **gallant_lehmann** (yours will be different) and that name can be used to start the container.</span></span> <span data-ttu-id="f4871-193">`docker create --name` パラメーターを使って、自動的な名前を特定の名前でオーバーライドできます。</span><span class="sxs-lookup"><span data-stu-id="f4871-193">You override the automatic name with a specific one by using the `docker create --name` parameter.</span></span>
 
-<span data-ttu-id="c277d-195">次の例では、`docker start` コマンドを使ってコンテナーを起動した後、`docker ps` コマンドを使って、実行されているコンテナーのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-195">The following example uses the `docker start` command to start the container, and then uses the `docker ps` command to only show containers that are running:</span></span>
+<span data-ttu-id="f4871-194">次の例では、`docker start` コマンドを使ってコンテナーを起動した後、`docker ps` コマンドを使って、実行されているコンテナーのみを表示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-194">The following example uses the `docker start` command to start the container, and then uses the `docker ps` command to only show containers that are running:</span></span>
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS         PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           gallant_lehmann
 ```
 
-<span data-ttu-id="c277d-196">同様に、`docker stop` コマンドではコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-196">Similarly, the `docker stop` command will stop the container.</span></span> <span data-ttu-id="c277d-197">次の例では、`docker stop` コマンドを使ってコンテナーを停止した後、`docker ps` コマンドを使って、実行されているコンテナーがないことを示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-197">The following example uses the `docker stop` command to stop the container, and then uses the `docker ps` command to show that no containers are running:</span></span>
+<span data-ttu-id="f4871-195">同様に、`docker stop` コマンドではコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-195">Similarly, the `docker stop` command will stop the container.</span></span> <span data-ttu-id="f4871-196">次の例では、`docker stop` コマンドを使ってコンテナーを停止した後、`docker ps` コマンドを使って、実行されているコンテナーがないことを示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-196">The following example uses the `docker stop` command to stop the container, and then uses the `docker ps` command to show that no containers are running:</span></span>
 
 ```console
-> docker stop boring_matsumoto
-boring_matsumoto
+> docker stop gallant_lehmann
+gallant_lehmann
 
 > docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS   NAMES
 ```
 
-### <a name="connect-to-a-container"></a><span data-ttu-id="c277d-198">コンテナーへの接続</span><span class="sxs-lookup"><span data-stu-id="c277d-198">Connect to a container</span></span>
+### <a name="connect-to-a-container"></a><span data-ttu-id="f4871-197">コンテナーへの接続</span><span class="sxs-lookup"><span data-stu-id="f4871-197">Connect to a container</span></span>
 
-<span data-ttu-id="c277d-199">コンテナーが実行状態になった後、それに接続して出力を確認できます。</span><span class="sxs-lookup"><span data-stu-id="c277d-199">After a container is running, you can connect to it to see the output.</span></span> <span data-ttu-id="c277d-200">`docker start` コマンドを使ってコンテナーを起動し、`docker attach` コマンドを使って出力ストリームを表示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-200">Use the `docker start` and `docker attach` commands to start the container and peek at the output stream.</span></span> <span data-ttu-id="c277d-201">この例では、<kbd>Ctrl + C</kbd> キーを押して、実行中のコンテナーからデタッチします。</span><span class="sxs-lookup"><span data-stu-id="c277d-201">In this example, the <kbd>CTRL + C</kbd> command is used to detach from the running container.</span></span> <span data-ttu-id="c277d-202">これによりコンテナー内のプロセスが実際に終了する場合があり、コンテナーが停止します。</span><span class="sxs-lookup"><span data-stu-id="c277d-202">This may actually end the process in the container, which will stop the container.</span></span> <span data-ttu-id="c277d-203">`--sig-proxy=false` パラメーターを指定すると、<kbd>Ctrl + C</kbd> キーを押してもコンテナー内のプロセスが停止しないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-203">The `--sig-proxy=false` parameter ensures that <kbd>CTRL + C</kbd> won't stop the process in the container.</span></span>
+<span data-ttu-id="f4871-198">コンテナーが実行状態になった後、それに接続して出力を確認できます。</span><span class="sxs-lookup"><span data-stu-id="f4871-198">After a container is running, you can connect to it to see the output.</span></span> <span data-ttu-id="f4871-199">`docker start` コマンドを使ってコンテナーを起動し、`docker attach` コマンドを使って出力ストリームを表示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-199">Use the `docker start` and `docker attach` commands to start the container and peek at the output stream.</span></span> <span data-ttu-id="f4871-200">この例では、<kbd>Ctrl + C</kbd> キー入力を使用して、実行中のコンテナーからデタッチします。</span><span class="sxs-lookup"><span data-stu-id="f4871-200">In this example, the <kbd>CTRL + C</kbd> keystroke is used to detach from the running container.</span></span> <span data-ttu-id="f4871-201">このキー入力によりコンテナー内のプロセスが実際に終了する場合があり、コンテナーが停止します。</span><span class="sxs-lookup"><span data-stu-id="f4871-201">This keystroke may actually end the process in the container, which will stop the container.</span></span> <span data-ttu-id="f4871-202">`--sig-proxy=false` パラメーターを指定すると、<kbd>Ctrl + C</kbd> キーを押してもコンテナー内のプロセスが停止しないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-202">The `--sig-proxy=false` parameter ensures that <kbd>CTRL + C</kbd> won't stop the process in the container.</span></span>
 
-<span data-ttu-id="c277d-204">コンテナーからデタッチした後、再アタッチして、まだ実行されていてカウントが行われていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-204">After you detach from the container, reattach to verify that it's still running and counting.</span></span>
+<span data-ttu-id="f4871-203">コンテナーからデタッチした後、再アタッチして、まだ実行されていてカウントが行われていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-203">After you detach from the container, reattach to verify that it's still running and counting.</span></span>
 
 ```console
-> docker start boring_matsumoto
-boring_matsumoto
+> docker start gallant_lehmann
+gallant_lehmann
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 7
 Counter: 8
 Counter: 9
 ^C
 
-> docker attach --sig-proxy=false boring_matsumoto
+> docker attach --sig-proxy=false gallant_lehmann
 Counter: 17
 Counter: 18
 Counter: 19
 ^C
 ```
 
-### <a name="delete-a-container"></a><span data-ttu-id="c277d-205">コンテナーを削除する</span><span class="sxs-lookup"><span data-stu-id="c277d-205">Delete a container</span></span>
+### <a name="delete-a-container"></a><span data-ttu-id="f4871-204">コンテナーを削除する</span><span class="sxs-lookup"><span data-stu-id="f4871-204">Delete a container</span></span>
 
-<span data-ttu-id="c277d-206">この記事の目的では、何も行っていないコンテナーをそのままにするのは望ましくありません。</span><span class="sxs-lookup"><span data-stu-id="c277d-206">For the purposes of this article you don't want containers just hanging around doing nothing.</span></span> <span data-ttu-id="c277d-207">前に作成したコンテナーを削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-207">Delete the container you previously created.</span></span> <span data-ttu-id="c277d-208">コンテナーが実行されている場合は、それを停止します。</span><span class="sxs-lookup"><span data-stu-id="c277d-208">If the container is running, stop it.</span></span>
+<span data-ttu-id="f4871-205">この記事の目的では、何も行っていないコンテナーをそのままにするのは望ましくありません。</span><span class="sxs-lookup"><span data-stu-id="f4871-205">For the purposes of this article you don't want containers just hanging around doing nothing.</span></span> <span data-ttu-id="f4871-206">前に作成したコンテナーを削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-206">Delete the container you previously created.</span></span> <span data-ttu-id="f4871-207">コンテナーが実行されている場合は、それを停止します。</span><span class="sxs-lookup"><span data-stu-id="f4871-207">If the container is running, stop it.</span></span>
 
 ```console
-> docker stop boring_matsumoto
+> docker stop gallant_lehmann
 ```
 
-<span data-ttu-id="c277d-209">次の例では、すべてのコンテナーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="c277d-209">The following example lists all containers.</span></span> <span data-ttu-id="c277d-210">次に、`docker rm` コマンドを使ってコンテナーを削除した後、もう一度実行中のコンテナーを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-210">It then uses the `docker rm` command to delete the container, and then checks a second time for any running containers.</span></span>
+<span data-ttu-id="f4871-208">次の例では、すべてのコンテナーを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="f4871-208">The following example lists all containers.</span></span> <span data-ttu-id="f4871-209">次に、`docker rm` コマンドを使ってコンテナーを削除した後、もう一度実行中のコンテナーを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-209">It then uses the `docker rm` command to delete the container, and then checks a second time for any running containers.</span></span>
 
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS     PORTS   NAMES
-0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             boring_matsumoto
+ceda87b219a4        myimage             "dotnet app/myapp.dll"   19 minutes ago      Exited             gallant_lehmann
 
-> docker rm boring_matsumoto
-boring_matsumoto
+> docker rm gallant_lehmann
+gallant_lehmann
 
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS    NAMES
 ```
 
-### <a name="single-run"></a><span data-ttu-id="c277d-211">単一実行</span><span class="sxs-lookup"><span data-stu-id="c277d-211">Single run</span></span>
+### <a name="single-run"></a><span data-ttu-id="f4871-210">単一実行</span><span class="sxs-lookup"><span data-stu-id="f4871-210">Single run</span></span>
 
-<span data-ttu-id="c277d-212">Docker では、1 つのコマンドとしてコンテナーを作成して実行するための `docker run` コマンドが提供されています。</span><span class="sxs-lookup"><span data-stu-id="c277d-212">Docker provides the `docker run` command to create and run the container as a single command.</span></span> <span data-ttu-id="c277d-213">このコマンドでは、`docker create` を実行してから `docker start` を実行する必要がありません。</span><span class="sxs-lookup"><span data-stu-id="c277d-213">This command eliminates the need to run `docker create` and then `docker start`.</span></span> <span data-ttu-id="c277d-214">コンテナーが停止したら自動的にコンテナーを削除するように、このコマンドを設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="c277d-214">You can also set this command to automatically delete the container when the container stops.</span></span> <span data-ttu-id="c277d-215">たとえば、`docker run -it --rm` を使うと 2 つのことが行われます。つまり、最初に現在の端末を使ってコンテナーに自動的に接続し、次にコンテナーが終了したらそれを削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-215">For example, use `docker run -it --rm` to do two things, first, automatically use the current terminal to connect to the container, and then when the container finishes, remove it:</span></span>
+<span data-ttu-id="f4871-211">Docker では、1 つのコマンドとしてコンテナーを作成して実行するための `docker run` コマンドが提供されています。</span><span class="sxs-lookup"><span data-stu-id="f4871-211">Docker provides the `docker run` command to create and run the container as a single command.</span></span> <span data-ttu-id="f4871-212">このコマンドでは、`docker create` を実行してから `docker start` を実行する必要がありません。</span><span class="sxs-lookup"><span data-stu-id="f4871-212">This command eliminates the need to run `docker create` and then `docker start`.</span></span> <span data-ttu-id="f4871-213">コンテナーが停止したら自動的にコンテナーを削除するように、このコマンドを設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="f4871-213">You can also set this command to automatically delete the container when the container stops.</span></span> <span data-ttu-id="f4871-214">たとえば、`docker run -it --rm` を使うと 2 つのことが行われます。つまり、最初に現在の端末を使ってコンテナーに自動的に接続し、次にコンテナーが終了したらそれを削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-214">For example, use `docker run -it --rm` to do two things, first, automatically use the current terminal to connect to the container, and then when the container finishes, remove it:</span></span>
 
 ```console
 > docker run -it --rm myimage
@@ -358,20 +359,20 @@ Counter: 5
 ^C
 ```
 
-<span data-ttu-id="c277d-216">`docker run -it` では、<kbd>Ctrl + C</kbd> キーを押すと、コンテナーで実行されているプロセスが停止し、さらにコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-216">With `docker run -it`, the <kbd>CTRL + C</kbd> command will stop process that is running in the container, which in turn, stops the container.</span></span> <span data-ttu-id="c277d-217">`--rm` パラメーターを指定したので、プロセスが停止するとコンテナーは自動的に削除されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-217">Since the `--rm` parameter was provided, the container is automatically deleted when the process is stopped.</span></span> <span data-ttu-id="c277d-218">それが存在しないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-218">Verify that it does not exist:</span></span>
+<span data-ttu-id="f4871-215">`docker run -it` では、<kbd>Ctrl + C</kbd> キーを押すと、コンテナーで実行されているプロセスが停止し、さらにコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-215">With `docker run -it`, the <kbd>CTRL + C</kbd> command will stop process that is running in the container, which in turn, stops the container.</span></span> <span data-ttu-id="f4871-216">`--rm` パラメーターを指定したので、プロセスが停止するとコンテナーは自動的に削除されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-216">Since the `--rm` parameter was provided, the container is automatically deleted when the process is stopped.</span></span> <span data-ttu-id="f4871-217">それが存在しないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-217">Verify that it doesn't exist:</span></span>
 
 ```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```
 
-### <a name="change-the-entrypoint"></a><span data-ttu-id="c277d-219">ENTRYPOINT を変更する</span><span class="sxs-lookup"><span data-stu-id="c277d-219">Change the ENTRYPOINT</span></span>
+### <a name="change-the-entrypoint"></a><span data-ttu-id="f4871-218">ENTRYPOINT を変更する</span><span class="sxs-lookup"><span data-stu-id="f4871-218">Change the ENTRYPOINT</span></span>
 
-<span data-ttu-id="c277d-220">`docker run` コマンドでは、*Dockerfile* から `ENTRYPOINT` コマンドを変更し、そのコンテナーに対してのみ何か他のことを実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="c277d-220">The `docker run` command also lets you modify the `ENTRYPOINT` command from the *Dockerfile* and run something else, but only for that container.</span></span> <span data-ttu-id="c277d-221">たとえば、次のコマンドを使うと `bash` または `cmd.exe` を実行できます。</span><span class="sxs-lookup"><span data-stu-id="c277d-221">For example, use the following command to run `bash` or `cmd.exe`.</span></span> <span data-ttu-id="c277d-222">必要に応じて、コマンドを編集します。</span><span class="sxs-lookup"><span data-stu-id="c277d-222">Edit the command as necessary.</span></span>
+<span data-ttu-id="f4871-219">`docker run` コマンドでは、*Dockerfile* から `ENTRYPOINT` コマンドを変更し、そのコンテナーに対してのみ何か他のことを実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="f4871-219">The `docker run` command also lets you modify the `ENTRYPOINT` command from the *Dockerfile* and run something else, but only for that container.</span></span> <span data-ttu-id="f4871-220">たとえば、次のコマンドを使うと `bash` または `cmd.exe` を実行できます。</span><span class="sxs-lookup"><span data-stu-id="f4871-220">For example, use the following command to run `bash` or `cmd.exe`.</span></span> <span data-ttu-id="f4871-221">必要に応じて、コマンドを編集します。</span><span class="sxs-lookup"><span data-stu-id="f4871-221">Edit the command as necessary.</span></span>
 
-#### <a name="windows"></a><span data-ttu-id="c277d-223">Windows</span><span class="sxs-lookup"><span data-stu-id="c277d-223">Windows</span></span>
+#### <a name="windows"></a><span data-ttu-id="f4871-222">Windows</span><span class="sxs-lookup"><span data-stu-id="f4871-222">Windows</span></span>
 
-<span data-ttu-id="c277d-224">この例では、`ENTRYPOINT` が `cmd.exe` に変更されています。</span><span class="sxs-lookup"><span data-stu-id="c277d-224">In this example, `ENTRYPOINT` is changed to `cmd.exe`.</span></span> <span data-ttu-id="c277d-225">プロセスを終了してコンテナーを停止するには、<kbd>Ctrl</kbd>+<kbd>C</kbd> を押します。</span><span class="sxs-lookup"><span data-stu-id="c277d-225"><kbd>CTRL</kbd>+<kbd>C</kbd> is pressed to end the process and stop the container.</span></span>
+<span data-ttu-id="f4871-223">この例では、`ENTRYPOINT` が `cmd.exe` に変更されています。</span><span class="sxs-lookup"><span data-stu-id="f4871-223">In this example, `ENTRYPOINT` is changed to `cmd.exe`.</span></span> <span data-ttu-id="f4871-224">プロセスを終了してコンテナーを停止するには、<kbd>Ctrl</kbd>+<kbd>C</kbd> を押します。</span><span class="sxs-lookup"><span data-stu-id="f4871-224"><kbd>CTRL</kbd>+<kbd>C</kbd> is pressed to end the process and stop the container.</span></span>
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -396,9 +397,9 @@ C:\>dir
 C:\>^C
 ```
 
-#### <a name="linux"></a><span data-ttu-id="c277d-226">Linux</span><span class="sxs-lookup"><span data-stu-id="c277d-226">Linux</span></span>
+#### <a name="linux"></a><span data-ttu-id="f4871-225">Linux</span><span class="sxs-lookup"><span data-stu-id="f4871-225">Linux</span></span>
 
-<span data-ttu-id="c277d-227">この例では、`ENTRYPOINT` が `bash` に変更されています。</span><span class="sxs-lookup"><span data-stu-id="c277d-227">In this example, `ENTRYPOINT` is changed to `bash`.</span></span> <span data-ttu-id="c277d-228">`quit` コマンドが実行されると、プロセスが終了してコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="c277d-228">The `quit` command is run which ends the process and stop the container.</span></span>
+<span data-ttu-id="f4871-226">この例では、`ENTRYPOINT` が `bash` に変更されています。</span><span class="sxs-lookup"><span data-stu-id="f4871-226">In this example, `ENTRYPOINT` is changed to `bash`.</span></span> <span data-ttu-id="f4871-227">`quit` コマンドが実行されると、プロセスが終了してコンテナーが停止されます。</span><span class="sxs-lookup"><span data-stu-id="f4871-227">The `quit` command is run which ends the process and stop the container.</span></span>
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage
@@ -408,55 +409,56 @@ root@8515e897c893:/# exit
 exit
 ```
 
-## <a name="essential-commands"></a><span data-ttu-id="c277d-229">重要なコマンド</span><span class="sxs-lookup"><span data-stu-id="c277d-229">Essential commands</span></span>
+## <a name="essential-commands"></a><span data-ttu-id="f4871-228">重要なコマンド</span><span class="sxs-lookup"><span data-stu-id="f4871-228">Essential commands</span></span>
 
-<span data-ttu-id="c277d-230">Docker には多種多様なコマンドがあり、コンテナーとイメージに対する操作がカバーされています。</span><span class="sxs-lookup"><span data-stu-id="c277d-230">Docker has many different commands that cover what you want to do with your container and images.</span></span> <span data-ttu-id="c277d-231">コンテナーの管理に不可欠な Docker コマンドは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="c277d-231">These Docker commands are essential to managing your containers:</span></span>
+<span data-ttu-id="f4871-229">Docker には多種多様なコマンドがあり、コンテナーとイメージに対する操作がカバーされています。</span><span class="sxs-lookup"><span data-stu-id="f4871-229">Docker has many different commands that cover what you want to do with your container and images.</span></span> <span data-ttu-id="f4871-230">コンテナーの管理に不可欠な Docker コマンドは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f4871-230">These Docker commands are essential to managing your containers:</span></span>
 
-- [<span data-ttu-id="c277d-232">docker build</span><span class="sxs-lookup"><span data-stu-id="c277d-232">docker build</span></span>](https://docs.docker.com/engine/reference/commandline/build/)
-- [<span data-ttu-id="c277d-233">docker run</span><span class="sxs-lookup"><span data-stu-id="c277d-233">docker run</span></span>](https://docs.docker.com/engine/reference/commandline/run/)
-- [<span data-ttu-id="c277d-234">docker ps</span><span class="sxs-lookup"><span data-stu-id="c277d-234">docker ps</span></span>](https://docs.docker.com/engine/reference/commandline/ps/)
-- [<span data-ttu-id="c277d-235">docker stop</span><span class="sxs-lookup"><span data-stu-id="c277d-235">docker stop</span></span>](https://docs.docker.com/engine/reference/commandline/stop/)
-- [<span data-ttu-id="c277d-236">docker rm</span><span class="sxs-lookup"><span data-stu-id="c277d-236">docker rm</span></span>](https://docs.docker.com/engine/reference/commandline/rm/)
-- [<span data-ttu-id="c277d-237">docker rmi</span><span class="sxs-lookup"><span data-stu-id="c277d-237">docker rmi</span></span>](https://docs.docker.com/engine/reference/commandline/rmi/)
-- [<span data-ttu-id="c277d-238">docker image</span><span class="sxs-lookup"><span data-stu-id="c277d-238">docker image</span></span>](https://docs.docker.com/engine/reference/commandline/image/)
+- [<span data-ttu-id="f4871-231">docker build</span><span class="sxs-lookup"><span data-stu-id="f4871-231">docker build</span></span>](https://docs.docker.com/engine/reference/commandline/build/)
+- [<span data-ttu-id="f4871-232">docker run</span><span class="sxs-lookup"><span data-stu-id="f4871-232">docker run</span></span>](https://docs.docker.com/engine/reference/commandline/run/)
+- [<span data-ttu-id="f4871-233">docker ps</span><span class="sxs-lookup"><span data-stu-id="f4871-233">docker ps</span></span>](https://docs.docker.com/engine/reference/commandline/ps/)
+- [<span data-ttu-id="f4871-234">docker stop</span><span class="sxs-lookup"><span data-stu-id="f4871-234">docker stop</span></span>](https://docs.docker.com/engine/reference/commandline/stop/)
+- [<span data-ttu-id="f4871-235">docker rm</span><span class="sxs-lookup"><span data-stu-id="f4871-235">docker rm</span></span>](https://docs.docker.com/engine/reference/commandline/rm/)
+- [<span data-ttu-id="f4871-236">docker rmi</span><span class="sxs-lookup"><span data-stu-id="f4871-236">docker rmi</span></span>](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [<span data-ttu-id="f4871-237">docker image</span><span class="sxs-lookup"><span data-stu-id="f4871-237">docker image</span></span>](https://docs.docker.com/engine/reference/commandline/image/)
 
-## <a name="clean-up-resources"></a><span data-ttu-id="c277d-239">リソースをクリーンアップする</span><span class="sxs-lookup"><span data-stu-id="c277d-239">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="f4871-238">リソースをクリーンアップする</span><span class="sxs-lookup"><span data-stu-id="f4871-238">Clean up resources</span></span>
 
-<span data-ttu-id="c277d-240">このチュートリアルでは、コンテナーとイメージを作成しました。</span><span class="sxs-lookup"><span data-stu-id="c277d-240">During this tutorial you created containers and images.</span></span> <span data-ttu-id="c277d-241">必要な場合は、これらのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-241">If you want, delete these resources.</span></span> <span data-ttu-id="c277d-242">次のコマンドを使います</span><span class="sxs-lookup"><span data-stu-id="c277d-242">Use the following commands to</span></span>
+<span data-ttu-id="f4871-239">このチュートリアルでは、コンテナーとイメージを作成しました。</span><span class="sxs-lookup"><span data-stu-id="f4871-239">During this tutorial, you created containers and images.</span></span> <span data-ttu-id="f4871-240">必要な場合は、これらのリソースを削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-240">If you want, delete these resources.</span></span> <span data-ttu-id="f4871-241">次のコマンドを使います</span><span class="sxs-lookup"><span data-stu-id="f4871-241">Use the following commands to</span></span>
 
-01. <span data-ttu-id="c277d-243">すべてのコンテナーを一覧表示します</span><span class="sxs-lookup"><span data-stu-id="c277d-243">List all containers</span></span>
+01. <span data-ttu-id="f4871-242">すべてのコンテナーを一覧表示します</span><span class="sxs-lookup"><span data-stu-id="f4871-242">List all containers</span></span>
 
     ```console
     > docker ps -a
     ```
 
-02. <span data-ttu-id="c277d-244">実行しているコンテナーを停止します。</span><span class="sxs-lookup"><span data-stu-id="c277d-244">Stop containers that are running.</span></span> <span data-ttu-id="c277d-245">`CONTAINER_NAME` は、コンテナーに自動的に割り当てられた名前を表します。</span><span class="sxs-lookup"><span data-stu-id="c277d-245">The `CONTAINER_NAME` represents the name automatically assigned to the container.</span></span>
+02. <span data-ttu-id="f4871-243">実行しているコンテナーを停止します。</span><span class="sxs-lookup"><span data-stu-id="f4871-243">Stop containers that are running.</span></span> <span data-ttu-id="f4871-244">`CONTAINER_NAME` は、コンテナーに自動的に割り当てられた名前を表します。</span><span class="sxs-lookup"><span data-stu-id="f4871-244">The `CONTAINER_NAME` represents the name automatically assigned to the container.</span></span>
 
     ```console
     > docker stop CONTAINER_NAME
     ```
 
-03. <span data-ttu-id="c277d-246">コンテナーを削除します</span><span class="sxs-lookup"><span data-stu-id="c277d-246">Delete the container</span></span>
+03. <span data-ttu-id="f4871-245">コンテナーを削除します</span><span class="sxs-lookup"><span data-stu-id="f4871-245">Delete the container</span></span>
 
     ```console
     > docker rm CONTAINER_NAME
     ```
 
-<span data-ttu-id="c277d-247">次に、コンピューターに残しておきたくないイメージを削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-247">Next, delete any images that you no longer want on your machine.</span></span> <span data-ttu-id="c277d-248">*Dockerfile* によって作成されたイメージを削除した後、*Dockerfile* が基にした .NET Core イメージを削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-248">Delete the image created by your *Dockerfile* and then delete the .NET Core image the *Dockerfile* was based on.</span></span> <span data-ttu-id="c277d-249">**IMAGE ID** または **REPOSITORY:TAG** の書式に設定された文字列を使うことができます。</span><span class="sxs-lookup"><span data-stu-id="c277d-249">You can use the **IMAGE ID** or the **REPOSITORY:TAG** formatted string.</span></span>
+<span data-ttu-id="f4871-246">次に、コンピューターに残しておきたくないイメージを削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-246">Next, delete any images that you no longer want on your machine.</span></span> <span data-ttu-id="f4871-247">*Dockerfile* によって作成されたイメージを削除した後、*Dockerfile* が基にした .NET Core イメージを削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-247">Delete the image created by your *Dockerfile* and then delete the .NET Core image the *Dockerfile* was based on.</span></span> <span data-ttu-id="f4871-248">**IMAGE ID** または **REPOSITORY:TAG** の書式に設定された文字列を使うことができます。</span><span class="sxs-lookup"><span data-stu-id="f4871-248">You can use the **IMAGE ID** or the **REPOSITORY:TAG** formatted string.</span></span>
 
 ```console
 docker rmi myimage:latest
-docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
+docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
-<span data-ttu-id="c277d-250">インストールされているイメージの一覧を表示するには、`docker images` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="c277d-250">Use the `docker images` command to see a list of images installed.</span></span>
+<span data-ttu-id="f4871-249">インストールされているイメージの一覧を表示するには、`docker images` コマンドを使います。</span><span class="sxs-lookup"><span data-stu-id="f4871-249">Use the `docker images` command to see a list of images installed.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c277d-251">イメージ ファイルは大きくなることがあります。</span><span class="sxs-lookup"><span data-stu-id="c277d-251">Image files can be large.</span></span> <span data-ttu-id="c277d-252">普通、アプリのテスト中および開発中に作成した一時的なコンテナーは削除します。</span><span class="sxs-lookup"><span data-stu-id="c277d-252">Typically, you would remove temporary containers you created while testing and developing your app.</span></span> <span data-ttu-id="c277d-253">通常、ランタイムがインストールされた基本イメージは、そのランタイムを基にして他のイメージをビルドする予定がある場合は、残しておきます。</span><span class="sxs-lookup"><span data-stu-id="c277d-253">You usually keep the base images with the runtime installed if you plan on building other images based on that runtime.</span></span>
+> <span data-ttu-id="f4871-250">イメージ ファイルは大きくなることがあります。</span><span class="sxs-lookup"><span data-stu-id="f4871-250">Image files can be large.</span></span> <span data-ttu-id="f4871-251">普通、アプリのテスト中および開発中に作成した一時的なコンテナーは削除します。</span><span class="sxs-lookup"><span data-stu-id="f4871-251">Typically, you would remove temporary containers you created while testing and developing your app.</span></span> <span data-ttu-id="f4871-252">通常、ランタイムがインストールされた基本イメージは、そのランタイムを基にして他のイメージをビルドする予定がある場合は、残しておきます。</span><span class="sxs-lookup"><span data-stu-id="f4871-252">You usually keep the base images with the runtime installed if you plan on building other images based on that runtime.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="c277d-254">次の手順</span><span class="sxs-lookup"><span data-stu-id="c277d-254">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="f4871-253">次の手順</span><span class="sxs-lookup"><span data-stu-id="f4871-253">Next steps</span></span>
 
-- [<span data-ttu-id="c277d-255">ASP.NET Core マイクロサービスのチュートリアルを試します。</span><span class="sxs-lookup"><span data-stu-id="c277d-255">Try the ASP.NET Core Microservice Tutorial.</span></span>](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-- [<span data-ttu-id="c277d-256">コンテナーをサポートする Azure サービスを確認します。</span><span class="sxs-lookup"><span data-stu-id="c277d-256">Review the Azure services that support containers.</span></span>](https://azure.microsoft.com/overview/containers/)
-- [<span data-ttu-id="c277d-257">Dockerfile のコマンドについて読みます。</span><span class="sxs-lookup"><span data-stu-id="c277d-257">Read about Dockerfile commands.</span></span>](https://docs.docker.com/engine/reference/builder/)
-- [<span data-ttu-id="c277d-258">Visual Studio 向けのコンテナー ツールを調べます</span><span class="sxs-lookup"><span data-stu-id="c277d-258">Explore the Container Tools for Visual Studio</span></span>](/visualstudio/containers/overview)
+- [<span data-ttu-id="f4871-254">ASP.NET Core アプリケーションをコンテナー化する方法を学習します。</span><span class="sxs-lookup"><span data-stu-id="f4871-254">Learn how to containerize an ASP.NET Core application.</span></span>](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [<span data-ttu-id="f4871-255">ASP.NET Core マイクロサービスのチュートリアルを試します。</span><span class="sxs-lookup"><span data-stu-id="f4871-255">Try the ASP.NET Core Microservice Tutorial.</span></span>](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [<span data-ttu-id="f4871-256">コンテナーをサポートする Azure サービスを確認します。</span><span class="sxs-lookup"><span data-stu-id="f4871-256">Review the Azure services that support containers.</span></span>](https://azure.microsoft.com/overview/containers/)
+- [<span data-ttu-id="f4871-257">Dockerfile のコマンドについて読みます。</span><span class="sxs-lookup"><span data-stu-id="f4871-257">Read about Dockerfile commands.</span></span>](https://docs.docker.com/engine/reference/builder/)
+- [<span data-ttu-id="f4871-258">Visual Studio 向けのコンテナー ツールを調べます</span><span class="sxs-lookup"><span data-stu-id="f4871-258">Explore the Container Tools for Visual Studio</span></span>](/visualstudio/containers/overview)

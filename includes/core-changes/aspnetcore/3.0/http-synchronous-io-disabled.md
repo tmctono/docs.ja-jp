@@ -1,35 +1,35 @@
 ---
-ms.openlocfilehash: c861d61cbbe8075db4b17a702e863336ea621f2b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198483"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901886"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a><span data-ttu-id="09790-101">HTTP:すべてのサーバーで同期 IO が無効になっています</span><span class="sxs-lookup"><span data-stu-id="09790-101">HTTP: Synchronous IO disabled in all servers</span></span>
+### <a name="http-synchronous-io-disabled-in-all-servers"></a><span data-ttu-id="be57c-101">HTTP:すべてのサーバーで同期 IO が無効になっています</span><span class="sxs-lookup"><span data-stu-id="be57c-101">HTTP: Synchronous IO disabled in all servers</span></span>
 
-<span data-ttu-id="09790-102">ASP.NET Core 3.0 以降では、同期サーバー操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="09790-102">Starting with ASP.NET Core 3.0, synchronous server operations are disabled by default.</span></span>
+<span data-ttu-id="be57c-102">ASP.NET Core 3.0 以降では、同期サーバー操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="be57c-102">Starting with ASP.NET Core 3.0, synchronous server operations are disabled by default.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="09790-103">変更の説明</span><span class="sxs-lookup"><span data-stu-id="09790-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="be57c-103">変更の説明</span><span class="sxs-lookup"><span data-stu-id="be57c-103">Change description</span></span>
 
-<span data-ttu-id="09790-104">`AllowSynchronousIO` は、`HttpRequest.Body.Read`、`HttpResponse.Body.Write`、`Stream.Flush` などの同期 IO API を有効または無効にする各サーバーのオプションです。</span><span class="sxs-lookup"><span data-stu-id="09790-104">`AllowSynchronousIO` is an option in each server that enables or disables synchronous IO APIs like `HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush`.</span></span> <span data-ttu-id="09790-105">これらの API は長い間、スレッドの枯渇とアプリのハングの原因になっていました。</span><span class="sxs-lookup"><span data-stu-id="09790-105">These APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="09790-106">ASP.NET Core 3.0 Preview 3 以降では、これらの同期操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="09790-106">Starting in ASP.NET Core 3.0 Preview 3, these synchronous operations are disabled by default.</span></span>
+<span data-ttu-id="be57c-104">`AllowSynchronousIO` は、`HttpRequest.Body.Read`、`HttpResponse.Body.Write`、`Stream.Flush` などの同期 IO API を有効または無効にする各サーバーのオプションです。</span><span class="sxs-lookup"><span data-stu-id="be57c-104">`AllowSynchronousIO` is an option in each server that enables or disables synchronous IO APIs like `HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush`.</span></span> <span data-ttu-id="be57c-105">これらの API は長い間、スレッドの枯渇とアプリのハングの原因になっていました。</span><span class="sxs-lookup"><span data-stu-id="be57c-105">These APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="be57c-106">ASP.NET Core 3.0 Preview 3 以降では、これらの同期操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="be57c-106">Starting in ASP.NET Core 3.0 Preview 3, these synchronous operations are disabled by default.</span></span>
 
-<span data-ttu-id="09790-107">影響を受けるサーバー:</span><span class="sxs-lookup"><span data-stu-id="09790-107">Affected servers:</span></span>
+<span data-ttu-id="be57c-107">影響を受けるサーバー:</span><span class="sxs-lookup"><span data-stu-id="be57c-107">Affected servers:</span></span>
 
-- <span data-ttu-id="09790-108">Kestrel</span><span class="sxs-lookup"><span data-stu-id="09790-108">Kestrel</span></span>
-- <span data-ttu-id="09790-109">HttpSys</span><span class="sxs-lookup"><span data-stu-id="09790-109">HttpSys</span></span>
-- <span data-ttu-id="09790-110">IIS インプロセス</span><span class="sxs-lookup"><span data-stu-id="09790-110">IIS in-process</span></span>
-- <span data-ttu-id="09790-111">TestServer</span><span class="sxs-lookup"><span data-stu-id="09790-111">TestServer</span></span>
+- <span data-ttu-id="be57c-108">Kestrel</span><span class="sxs-lookup"><span data-stu-id="be57c-108">Kestrel</span></span>
+- <span data-ttu-id="be57c-109">HttpSys</span><span class="sxs-lookup"><span data-stu-id="be57c-109">HttpSys</span></span>
+- <span data-ttu-id="be57c-110">IIS インプロセス</span><span class="sxs-lookup"><span data-stu-id="be57c-110">IIS in-process</span></span>
+- <span data-ttu-id="be57c-111">TestServer</span><span class="sxs-lookup"><span data-stu-id="be57c-111">TestServer</span></span>
 
-<span data-ttu-id="09790-112">次のようなエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="09790-112">Expect errors similar to:</span></span>
+<span data-ttu-id="be57c-112">次のようなエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="be57c-112">Expect errors similar to:</span></span>
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-<span data-ttu-id="09790-113">各サーバーには、この動作を制御する `AllowSynchronousIO` オプションがあり、そのすべての既定値は現在、`false` です。</span><span class="sxs-lookup"><span data-stu-id="09790-113">Each server has an `AllowSynchronousIO` option that controls this behavior and the default for all of them is now `false`.</span></span>
+<span data-ttu-id="be57c-113">各サーバーには、この動作を制御する `AllowSynchronousIO` オプションがあり、そのすべての既定値は現在、`false` です。</span><span class="sxs-lookup"><span data-stu-id="be57c-113">Each server has an `AllowSynchronousIO` option that controls this behavior and the default for all of them is now `false`.</span></span>
 
-<span data-ttu-id="09790-114">この動作は、一時的な軽減策として、要求ごとにオーバーライドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="09790-114">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span> <span data-ttu-id="09790-115">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="09790-115">For example:</span></span>
+<span data-ttu-id="be57c-114">この動作は、一時的な軽減策として、要求ごとにオーバーライドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="be57c-114">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span> <span data-ttu-id="be57c-115">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="be57c-115">For example:</span></span>
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,35 +39,35 @@ if (syncIOFeature != null)
 }
 ```
 
-<span data-ttu-id="09790-116">`TextWriter`、または `Dispose` で同期 API を呼び出す別のストリームで問題が発生した場合は、代わりに新しい `DisposeAsync` API を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="09790-116">If you have trouble with a `TextWriter` or another stream calling a synchronous API in `Dispose`, call the new `DisposeAsync` API instead.</span></span>
+<span data-ttu-id="be57c-116">`TextWriter`、または `Dispose` で同期 API を呼び出す別のストリームで問題が発生した場合は、代わりに新しい `DisposeAsync` API を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="be57c-116">If you have trouble with a `TextWriter` or another stream calling a synchronous API in `Dispose`, call the new `DisposeAsync` API instead.</span></span>
 
-<span data-ttu-id="09790-117">詳細については、[aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="09790-117">For discussion, see [aspnet/AspNetCore#7644](https://github.com/aspnet/AspNetCore/issues/7644).</span></span>
+<span data-ttu-id="be57c-117">ディスカッションについては、[dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="be57c-117">For discussion, see [dotnet/aspnetcore#7644](https://github.com/dotnet/aspnetcore/issues/7644).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="09790-118">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="09790-118">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="be57c-118">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="be57c-118">Version introduced</span></span>
 
-<span data-ttu-id="09790-119">3.0</span><span class="sxs-lookup"><span data-stu-id="09790-119">3.0</span></span>
+<span data-ttu-id="be57c-119">3.0</span><span class="sxs-lookup"><span data-stu-id="be57c-119">3.0</span></span>
 
-#### <a name="old-behavior"></a><span data-ttu-id="09790-120">以前の動作</span><span class="sxs-lookup"><span data-stu-id="09790-120">Old behavior</span></span>
+#### <a name="old-behavior"></a><span data-ttu-id="be57c-120">以前の動作</span><span class="sxs-lookup"><span data-stu-id="be57c-120">Old behavior</span></span>
 
-<span data-ttu-id="09790-121">`HttpRequest.Body.Read`、`HttpResponse.Body.Write`、および `Stream.Flush` が既定で許可されていました。</span><span class="sxs-lookup"><span data-stu-id="09790-121">`HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush` were allowed by default.</span></span>
+<span data-ttu-id="be57c-121">`HttpRequest.Body.Read`、`HttpResponse.Body.Write`、および `Stream.Flush` が既定で許可されていました。</span><span class="sxs-lookup"><span data-stu-id="be57c-121">`HttpRequest.Body.Read`, `HttpResponse.Body.Write`, and `Stream.Flush` were allowed by default.</span></span>
 
-#### <a name="new-behavior"></a><span data-ttu-id="09790-122">新しい動作</span><span class="sxs-lookup"><span data-stu-id="09790-122">New behavior</span></span>
+#### <a name="new-behavior"></a><span data-ttu-id="be57c-122">新しい動作</span><span class="sxs-lookup"><span data-stu-id="be57c-122">New behavior</span></span>
 
-<span data-ttu-id="09790-123">これらの同期 API は、既定では許可されません。</span><span class="sxs-lookup"><span data-stu-id="09790-123">These synchronous APIs are disallowed by default:</span></span>
+<span data-ttu-id="be57c-123">これらの同期 API は、既定では許可されません。</span><span class="sxs-lookup"><span data-stu-id="be57c-123">These synchronous APIs are disallowed by default:</span></span>
 
-<span data-ttu-id="09790-124">次のようなエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="09790-124">Expect errors similar to:</span></span>
+<span data-ttu-id="be57c-124">次のようなエラーが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="be57c-124">Expect errors similar to:</span></span>
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-#### <a name="reason-for-change"></a><span data-ttu-id="09790-125">変更理由</span><span class="sxs-lookup"><span data-stu-id="09790-125">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="be57c-125">変更理由</span><span class="sxs-lookup"><span data-stu-id="be57c-125">Reason for change</span></span>
 
-<span data-ttu-id="09790-126">これらの同期 API は長い間、スレッドの枯渇とアプリのハングの原因になっていました。</span><span class="sxs-lookup"><span data-stu-id="09790-126">These synchronous APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="09790-127">ASP.NET Core 3.0 Preview 3 以降では、同期操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="09790-127">Starting in ASP.NET Core 3.0 Preview 3, the synchronous operations are disabled by default.</span></span>
+<span data-ttu-id="be57c-126">これらの同期 API は長い間、スレッドの枯渇とアプリのハングの原因になっていました。</span><span class="sxs-lookup"><span data-stu-id="be57c-126">These synchronous APIs have long been a source of thread starvation and app hangs.</span></span> <span data-ttu-id="be57c-127">ASP.NET Core 3.0 Preview 3 以降では、同期操作は既定で無効になっています。</span><span class="sxs-lookup"><span data-stu-id="be57c-127">Starting in ASP.NET Core 3.0 Preview 3, the synchronous operations are disabled by default.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="09790-128">推奨される操作</span><span class="sxs-lookup"><span data-stu-id="09790-128">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="be57c-128">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="be57c-128">Recommended action</span></span>
 
-<span data-ttu-id="09790-129">非同期バージョンのメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="09790-129">Use the asynchronous versions of the methods.</span></span> <span data-ttu-id="09790-130">この動作は、一時的な軽減策として、要求ごとにオーバーライドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="09790-130">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span>
+<span data-ttu-id="be57c-129">非同期バージョンのメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="be57c-129">Use the asynchronous versions of the methods.</span></span> <span data-ttu-id="be57c-130">この動作は、一時的な軽減策として、要求ごとにオーバーライドすることもできます。</span><span class="sxs-lookup"><span data-stu-id="be57c-130">The behavior can also be overridden on a per-request basis as a temporary mitigation.</span></span>
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -77,11 +77,11 @@ if (syncIOFeature != null)
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="09790-131">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="09790-131">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="be57c-131">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="be57c-131">Category</span></span>
 
-<span data-ttu-id="09790-132">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="09790-132">ASP.NET Core</span></span>
+<span data-ttu-id="be57c-132">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="be57c-132">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="09790-133">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="09790-133">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="be57c-133">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="be57c-133">Affected APIs</span></span>
 
 - <xref:System.IO.Stream.Flush%2A?displayProperty=nameWithType>
 - <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType>
