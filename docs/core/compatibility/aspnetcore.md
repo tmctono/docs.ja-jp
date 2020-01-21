@@ -1,27 +1,83 @@
 ---
 title: ASP.NET Core の破壊的変更 - .NET Core
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 12/20/2019
+ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 3eff2e1d292daf9f709b28da0db9d089aeebd464
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 261788722e09a6fa5b9427b5a220b69a2367b751
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344269"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116588"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="557fa-103">ASP.NET Core の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="557fa-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="b5d94-103">ASP.NET Core の破壊的変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="557fa-104">次は、ASP.NET Core の破壊的変更を ASP.NET Core のバージョン別に一覧にしたものです。</span><span class="sxs-lookup"><span data-stu-id="557fa-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="557fa-105">ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能が提供されます。</span><span class="sxs-lookup"><span data-stu-id="557fa-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="b5d94-104">ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能が提供されます。</span><span class="sxs-lookup"><span data-stu-id="b5d94-104">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-31"></a><span data-ttu-id="557fa-106">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="557fa-106">ASP.NET Core 3.1</span></span>
+<span data-ttu-id="b5d94-105">このページでは、次の破壊的変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="b5d94-105">The following breaking changes are documented on this page:</span></span>
+
+- [<span data-ttu-id="b5d94-106">HTTP:ブラウザー SameSite の変更による認証への影響</span><span class="sxs-lookup"><span data-stu-id="b5d94-106">HTTP: Browser SameSite changes impact authentication</span></span>](#http-browser-samesite-changes-impact-authentication)
+- [<span data-ttu-id="b5d94-107">Antiforgery、CORS、Diagnostics、MVC、Routing の古い API の削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-107">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [<span data-ttu-id="b5d94-108">認証:Google+ の非推奨</span><span class="sxs-lookup"><span data-stu-id="b5d94-108">Authentication: Google+ deprecation</span></span>](#authentication-google-deprecated-and-replaced)
+- [<span data-ttu-id="b5d94-109">認証:HttpContext.Authentication プロパティの削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-109">Authentication: HttpContext.Authentication property removed</span></span>](#authentication-httpcontextauthentication-property-removed)
+- [<span data-ttu-id="b5d94-110">認証:Newtonsoft.Json 型の置き換え</span><span class="sxs-lookup"><span data-stu-id="b5d94-110">Authentication: Newtonsoft.Json types replaced</span></span>](#authentication-newtonsoftjson-types-replaced)
+- [<span data-ttu-id="b5d94-111">認証:OAuthHandler ExchangeCodeAsync 署名の変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-111">Authentication: OAuthHandler ExchangeCodeAsync signature changed</span></span>](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [<span data-ttu-id="b5d94-112">承認:AddAuthorization のオーバーロードを別のアセンブリに移動</span><span class="sxs-lookup"><span data-stu-id="b5d94-112">Authorization: AddAuthorization overload moved to different assembly</span></span>](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [<span data-ttu-id="b5d94-113">承認:AuthorizationFilterContext.Filters から IAllowAnonymous を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-113">Authorization: IAllowAnonymous removed from AuthorizationFilterContext.Filters</span></span>](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [<span data-ttu-id="b5d94-114">承認:IAuthorizationPolicyProvider の実装に新しいメソッドが必要</span><span class="sxs-lookup"><span data-stu-id="b5d94-114">Authorization: IAuthorizationPolicyProvider implementations require new method</span></span>](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [<span data-ttu-id="b5d94-115">キャッシュ:CompactOnMemoryPressure プロパティの削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-115">Caching: CompactOnMemoryPressure property removed</span></span>](#caching-compactonmemorypressure-property-removed)
+- [<span data-ttu-id="b5d94-116">キャッシュ:Microsoft.Extensions.Caching.SqlServer で新しい SqlClient パッケージを使用</span><span class="sxs-lookup"><span data-stu-id="b5d94-116">Caching: Microsoft.Extensions.Caching.SqlServer uses new SqlClient package</span></span>](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [<span data-ttu-id="b5d94-117">キャッシュ:ResponseCaching の "pubternal" 型を internal に変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-117">Caching: ResponseCaching "pubternal" types changed to internal</span></span>](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="b5d94-118">データ保護:DataProtection.AzureStorage で新しい Azure Storage API を使用</span><span class="sxs-lookup"><span data-stu-id="b5d94-118">Data Protection: DataProtection.AzureStorage uses new Azure Storage APIs</span></span>](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [<span data-ttu-id="b5d94-119">ホスティング:Windows ホスティング バンドルから AspNetCoreModule V1 を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-119">Hosting: AspNetCoreModule V1 removed from Windows Hosting Bundle</span></span>](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [<span data-ttu-id="b5d94-120">ホスティング:汎用ホストによる Startup コンストラクター挿入の制限</span><span class="sxs-lookup"><span data-stu-id="b5d94-120">Hosting: Generic host restricts Startup constructor injection</span></span>](#hosting-generic-host-restricts-startup-constructor-injection)
+- [<span data-ttu-id="b5d94-121">ホスティング:IIS アウトプロセス アプリ用に HTTPS リダイレクトを有効化</span><span class="sxs-lookup"><span data-stu-id="b5d94-121">Hosting: HTTPS redirection enabled for IIS out-of-process apps</span></span>](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [<span data-ttu-id="b5d94-122">ホスティング:IHostingEnvironment と IApplicationLifetime の型を置き換え</span><span class="sxs-lookup"><span data-stu-id="b5d94-122">Hosting: IHostingEnvironment and IApplicationLifetime types replaced</span></span>](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [<span data-ttu-id="b5d94-123">ホスティング:WebHostBuilder 依存関係から ObjectPoolProvider を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-123">Hosting: ObjectPoolProvider removed from WebHostBuilder dependencies</span></span>](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [<span data-ttu-id="b5d94-124">HTTP:DefaultHttpContext の機能拡張の削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-124">HTTP: DefaultHttpContext extensibility removed</span></span>](#http-defaulthttpcontext-extensibility-removed)
+- [<span data-ttu-id="b5d94-125">HTTP:HeaderNames フィールドを静的読み取り専用に変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-125">HTTP: HeaderNames fields changed to static readonly</span></span>](#http-headernames-constants-changed-to-static-readonly)
+- [<span data-ttu-id="b5d94-126">HTTP:応答本文のインフラストラクチャの変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-126">HTTP: Response body infrastructure changes</span></span>](#http-response-body-infrastructure-changes)
+- [<span data-ttu-id="b5d94-127">HTTP:一部の cookie SameSite の既定値の変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-127">HTTP: Some cookie SameSite default values changed</span></span>](#http-some-cookie-samesite-defaults-changed-to-none)
+- [<span data-ttu-id="b5d94-128">HTTP:同期 IO を既定で無効化</span><span class="sxs-lookup"><span data-stu-id="b5d94-128">HTTP: Synchronous IO disabled by default</span></span>](#http-synchronous-io-disabled-in-all-servers)
+- [<span data-ttu-id="b5d94-129">ID:AddDefaultUI メソッド オーバーロードの削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-129">Identity: AddDefaultUI method overload removed</span></span>](#identity-adddefaultui-method-overload-removed)
+- [<span data-ttu-id="b5d94-130">ID:UI ブートストラップ バージョンの変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-130">Identity: UI Bootstrap version change</span></span>](#identity-default-bootstrap-version-of-ui-changed)
+- [<span data-ttu-id="b5d94-131">ID:SignInAsync が認証されていない ID に対して例外をスロー</span><span class="sxs-lookup"><span data-stu-id="b5d94-131">Identity: SignInAsync throws exception for unauthenticated identity</span></span>](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [<span data-ttu-id="b5d94-132">ID:SignInManager コンストラクターで新しいパラメーターの受け入れ</span><span class="sxs-lookup"><span data-stu-id="b5d94-132">Identity: SignInManager constructor accepts new parameter</span></span>](#identity-signinmanager-constructor-accepts-new-parameter)
+- [<span data-ttu-id="b5d94-133">ID:UI で静的な Web 資産機能を使用</span><span class="sxs-lookup"><span data-stu-id="b5d94-133">Identity: UI uses static web assets feature</span></span>](#identity-ui-uses-static-web-assets-feature)
+- [<span data-ttu-id="b5d94-134">Kestrel:接続アダプターを削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-134">Kestrel: Connection adapters removed</span></span>](#kestrel-connection-adapters-removed)
+- [<span data-ttu-id="b5d94-135">Kestrel:空の HTTPS アセンブリを削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-135">Kestrel: Empty HTTPS assembly removed</span></span>](#kestrel-empty-https-assembly-removed)
+- [<span data-ttu-id="b5d94-136">Kestrel:要求トレーラー ヘッダーを新しいコレクションに移動</span><span class="sxs-lookup"><span data-stu-id="b5d94-136">Kestrel: Request trailer headers moved to new collection</span></span>](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [<span data-ttu-id="b5d94-137">Kestrel:トランスポート抽象化レイヤーの変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-137">Kestrel: Transport abstraction layer changes</span></span>](#kestrel-transport-abstractions-removed-and-made-public)
+- [<span data-ttu-id="b5d94-138">ローカリゼーション:API を古いとしてマーク</span><span class="sxs-lookup"><span data-stu-id="b5d94-138">Localization: APIs marked obsolete</span></span>](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [<span data-ttu-id="b5d94-139">ログ:internal になった DebugLogger クラス</span><span class="sxs-lookup"><span data-stu-id="b5d94-139">Logging: DebugLogger class made internal</span></span>](#logging-debuglogger-class-made-internal)
+- [<span data-ttu-id="b5d94-140">MVC:コントローラー アクション Async サフィックスを削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-140">MVC: Controller action Async suffix removed</span></span>](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [<span data-ttu-id="b5d94-141">MVC:JsonResult を Microsoft.AspNetCore.Mvc.Core に移動</span><span class="sxs-lookup"><span data-stu-id="b5d94-141">MVC: JsonResult moved to Microsoft.AspNetCore.Mvc.Core</span></span>](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [<span data-ttu-id="b5d94-142">MVC:プリコンパイル ツールを非推奨</span><span class="sxs-lookup"><span data-stu-id="b5d94-142">MVC: Precompilation tool deprecated</span></span>](#mvc-precompilation-tool-deprecated)
+- [<span data-ttu-id="b5d94-143">MVC:型を internal に変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-143">MVC: Types changed to internal</span></span>](#mvc-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="b5d94-144">MVC:Web API 互換性 shim を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-144">MVC: Web API compatibility shim removed</span></span>](#mvc-web-api-compatibility-shim-removed)
+- [<span data-ttu-id="b5d94-145">Razor:実行時コンパイルをパッケージに移動</span><span class="sxs-lookup"><span data-stu-id="b5d94-145">Razor: Runtime compilation moved to a package</span></span>](#razor-runtime-compilation-moved-to-a-package)
+- [<span data-ttu-id="b5d94-146">セッション状態:古い API を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-146">Session state: Obsolete APIs removed</span></span>](#session-state-obsolete-apis-removed)
+- [<span data-ttu-id="b5d94-147">共有フレームワーク:Microsoft.AspNetCore.App からアセンブリの削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-147">Shared framework: Assembly removal from Microsoft.AspNetCore.App</span></span>](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [<span data-ttu-id="b5d94-148">共有フレームワーク:Microsoft.AspNetCore.All を削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-148">Shared framework: Microsoft.AspNetCore.All removed</span></span>](#shared-framework-removed-microsoftaspnetcoreall)
+- [<span data-ttu-id="b5d94-149">SignalR:HandshakeProtocol.SuccessHandshakeData を置き換え</span><span class="sxs-lookup"><span data-stu-id="b5d94-149">SignalR: HandshakeProtocol.SuccessHandshakeData replaced</span></span>](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [<span data-ttu-id="b5d94-150">SignalR:HubConnection メソッドを削除</span><span class="sxs-lookup"><span data-stu-id="b5d94-150">SignalR: HubConnection methods removed</span></span>](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
+- [<span data-ttu-id="b5d94-151">SignalR:HubConnectionContext コンストラクターを変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-151">SignalR: HubConnectionContext constructors changed</span></span>](#signalr-hubconnectioncontext-constructors-changed)
+- [<span data-ttu-id="b5d94-152">SignalR:JavaScript クライアント パッケージ名を変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-152">SignalR: JavaScript client package name change</span></span>](#signalr-javascript-client-package-name-changed)
+- [<span data-ttu-id="b5d94-153">SignalR:古い API</span><span class="sxs-lookup"><span data-stu-id="b5d94-153">SignalR: Obsolete APIs</span></span>](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [<span data-ttu-id="b5d94-154">SPA:SpaServices および NodeServices を古いとしてマーク</span><span class="sxs-lookup"><span data-stu-id="b5d94-154">SPAs: SpaServices and NodeServices marked obsolete</span></span>](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [<span data-ttu-id="b5d94-155">SPA:SpaServices および NodeServices コンソール ロガー フォールバックの既定値を変更</span><span class="sxs-lookup"><span data-stu-id="b5d94-155">SPAs: SpaServices and NodeServices console logger fallback default change</span></span>](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [<span data-ttu-id="b5d94-156">ターゲット フレームワーク: .NET Framework がサポートされない</span><span class="sxs-lookup"><span data-stu-id="b5d94-156">Target framework: .NET Framework not supported</span></span>](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-31"></a><span data-ttu-id="b5d94-157">ASP.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="b5d94-157">ASP.NET Core 3.1</span></span>
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="557fa-107">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="557fa-107">ASP.NET Core 3.0</span></span>
+***
 
-[!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
+## <a name="aspnet-core-30"></a><span data-ttu-id="b5d94-158">ASP.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="b5d94-158">ASP.NET Core 3.0</span></span>
+
+[!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
 ***
 
@@ -33,7 +89,7 @@ ms.locfileid: "75344269"
 
 ***
 
-[!INCLUDE[Authentication: Json.NET types replaced](~/includes/core-changes/aspnetcore/3.0/authn-apis-json-types.md)]
+[!INCLUDE[Authentication: Newtonsoft.Json types replaced](~/includes/core-changes/aspnetcore/3.0/authn-apis-json-types.md)]
 
 ***
 
@@ -74,6 +130,10 @@ ms.locfileid: "75344269"
 ***
 
 [!INCLUDE[Hosting: Generic host restriction on Startup constructor injection](~/includes/core-changes/aspnetcore/3.0/hosting-generic-host-startup-ctor-restriction.md)]
+
+***
+
+[!INCLUDE[Hosting: HTTPS redirection enabled for IIS OutOfProcess](~/includes/core-changes/aspnetcore/3.0/hosting-https-redirection-iis-outofprocess.md)]
 
 ***
 
@@ -214,3 +274,5 @@ ms.locfileid: "75344269"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
+
+***
