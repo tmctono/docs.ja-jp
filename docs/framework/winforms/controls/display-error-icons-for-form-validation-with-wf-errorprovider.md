@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する'
+title: ErrorProvider コンポーネントを使用したフォーム検証のエラーアイコンの表示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a1e346e332db489351f59c9a0c03ae731baf3dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053712"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745914"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="e75c4-102">方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する</span><span class="sxs-lookup"><span data-stu-id="e75c4-102">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>
-<span data-ttu-id="e75c4-103">Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無効なデータが入力されたときにエラー アイコンを表示するコンポーネント。</span><span class="sxs-lookup"><span data-stu-id="e75c4-103">You can use a Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to display an error icon when the user enters invalid data.</span></span> <span data-ttu-id="e75c4-104">それらの間のタブし、検証コードを呼び出すためにフォーム上の少なくとも 2 つのコントロールが必要です。</span><span class="sxs-lookup"><span data-stu-id="e75c4-104">You must have at least two controls on the form in order to tab between them and thereby invoke the validation code.</span></span>  
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="4f7d6-102">方法 : Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する</span><span class="sxs-lookup"><span data-stu-id="4f7d6-102">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>
+<span data-ttu-id="4f7d6-103">Windows フォーム <xref:System.Windows.Forms.ErrorProvider> コンポーネントを使用して、ユーザーが無効なデータを入力したときにエラーアイコンが表示されるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-103">You can use a Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to display an error icon when the user enters invalid data.</span></span> <span data-ttu-id="4f7d6-104">フォームの間にタブを表示するには、フォーム上に少なくとも2つのコントロールが必要であるため、検証コードを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-104">You must have at least two controls on the form in order to tab between them and thereby invoke the validation code.</span></span>  
   
-### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a><span data-ttu-id="e75c4-105">コントロールの値が有効でないときに、エラー アイコンを表示するには</span><span class="sxs-lookup"><span data-stu-id="e75c4-105">To display an error icon when a control's value is invalid</span></span>  
+### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a><span data-ttu-id="4f7d6-105">コントロールの値が無効なときにエラーアイコンを表示するには</span><span class="sxs-lookup"><span data-stu-id="4f7d6-105">To display an error icon when a control's value is invalid</span></span>  
   
-1. <span data-ttu-id="e75c4-106">2 つのコントロールを追加-たとえば、テキスト ボックス: Windows フォームに。</span><span class="sxs-lookup"><span data-stu-id="e75c4-106">Add two controls — for example, text boxes — to a Windows Form.</span></span>  
+1. <span data-ttu-id="4f7d6-106">2つのコントロール (たとえば、テキストボックス) を Windows フォームに追加します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-106">Add two controls — for example, text boxes — to a Windows Form.</span></span>  
   
-2. <span data-ttu-id="e75c4-107">追加、<xref:System.Windows.Forms.ErrorProvider>コンポーネントをフォームにします。</span><span class="sxs-lookup"><span data-stu-id="e75c4-107">Add an <xref:System.Windows.Forms.ErrorProvider> component to the form.</span></span>  
+2. <span data-ttu-id="4f7d6-107">フォームに <xref:System.Windows.Forms.ErrorProvider> コンポーネントを追加します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-107">Add an <xref:System.Windows.Forms.ErrorProvider> component to the form.</span></span>  
   
-3. <span data-ttu-id="e75c4-108">最初のコントロールを選択し、コードを追加してその<xref:System.Windows.Forms.Control.Validating>イベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="e75c4-108">Select the first control and add code to its <xref:System.Windows.Forms.Control.Validating> event handler.</span></span> <span data-ttu-id="e75c4-109">このコードを正常に実行するためには、プロシージャは、イベントに接続する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e75c4-109">In order for this code to run properly, the procedure must be connected to the event.</span></span> <span data-ttu-id="e75c4-110">詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。</span><span class="sxs-lookup"><span data-stu-id="e75c4-110">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
+3. <span data-ttu-id="4f7d6-108">最初のコントロールを選択し、その <xref:System.Windows.Forms.Control.Validating> イベントハンドラーにコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-108">Select the first control and add code to its <xref:System.Windows.Forms.Control.Validating> event handler.</span></span> <span data-ttu-id="4f7d6-109">このコードが正常に実行されるためには、プロシージャがイベントに接続されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-109">In order for this code to run properly, the procedure must be connected to the event.</span></span> <span data-ttu-id="4f7d6-110">詳細については、「[方法: Windows フォームの実行時にイベントハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-110">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
-     <span data-ttu-id="e75c4-111">次のコードは、ユーザーが入力したデータの有効性をテストします。データが有効でない場合、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="e75c4-111">The following code tests the validity of the data the user has entered; if the data is invalid, the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method is called.</span></span> <span data-ttu-id="e75c4-112">最初の引数、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドでは、横にアイコンを表示するコントロールを指定します。</span><span class="sxs-lookup"><span data-stu-id="e75c4-112">The first argument of the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method specifies which control to display the icon next to.</span></span> <span data-ttu-id="e75c4-113">2 番目の引数は、表示するエラー テキストです。</span><span class="sxs-lookup"><span data-stu-id="e75c4-113">The second argument is the error text to display.</span></span>  
+     <span data-ttu-id="4f7d6-111">次のコードは、ユーザーが入力したデータの有効性をテストします。データが無効な場合は、<xref:System.Windows.Forms.ErrorProvider.SetError%2A> メソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-111">The following code tests the validity of the data the user has entered; if the data is invalid, the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method is called.</span></span> <span data-ttu-id="4f7d6-112"><xref:System.Windows.Forms.ErrorProvider.SetError%2A> メソッドの最初の引数は、アイコンを表示するコントロールを指定します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-112">The first argument of the <xref:System.Windows.Forms.ErrorProvider.SetError%2A> method specifies which control to display the icon next to.</span></span> <span data-ttu-id="4f7d6-113">2番目の引数は、表示するエラーテキストです。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-113">The second argument is the error text to display.</span></span>  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -77,7 +77,7 @@ ms.locfileid: "66053712"
        }  
     ```  
   
-     <span data-ttu-id="e75c4-114">(Visual C#、Visual C)イベント ハンドラーを登録するフォームのコンス トラクターでは、次のコードを配置します。</span><span class="sxs-lookup"><span data-stu-id="e75c4-114">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="4f7d6-114">(ビジュアルC#、ビジュアルC++)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-114">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.textBox1.Validating += new  
@@ -90,10 +90,10 @@ ms.locfileid: "66053712"
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4. <span data-ttu-id="e75c4-115">プロジェクトを実行します。</span><span class="sxs-lookup"><span data-stu-id="e75c4-115">Run the project.</span></span> <span data-ttu-id="e75c4-116">最初のコントロールとし、2 番目のタブには、(この例では、数値以外) では無効なデータを入力します。</span><span class="sxs-lookup"><span data-stu-id="e75c4-116">Type invalid (in this example, non-numeric) data into the first control, and then tab to the second.</span></span> <span data-ttu-id="e75c4-117">エラー アイコンが表示されたら、エラー テキストを表示するマウス ポインターでポイントします。</span><span class="sxs-lookup"><span data-stu-id="e75c4-117">When the error icon is displayed, point at it with the mouse pointer to see the error text.</span></span>  
+4. <span data-ttu-id="4f7d6-115">プロジェクトを実行します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-115">Run the project.</span></span> <span data-ttu-id="4f7d6-116">1つ目のコントロールに無効な (この例では数値以外の) データを入力し、tab キーを押します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-116">Type invalid (in this example, non-numeric) data into the first control, and then tab to the second.</span></span> <span data-ttu-id="4f7d6-117">エラーアイコンが表示されたら、マウスポインターをポイントしてエラーテキストを確認します。</span><span class="sxs-lookup"><span data-stu-id="4f7d6-117">When the error icon is displayed, point at it with the mouse pointer to see the error text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e75c4-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="e75c4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f7d6-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="4f7d6-118">See also</span></span>
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [<span data-ttu-id="e75c4-119">ErrorProvider コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="e75c4-119">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
-- [<span data-ttu-id="e75c4-120">方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内のエラーの表示</span><span class="sxs-lookup"><span data-stu-id="e75c4-120">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [<span data-ttu-id="4f7d6-119">ErrorProvider コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="4f7d6-119">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
+- [<span data-ttu-id="4f7d6-120">方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する</span><span class="sxs-lookup"><span data-stu-id="4f7d6-120">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

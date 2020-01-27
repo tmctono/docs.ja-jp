@@ -16,21 +16,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005283"
 ---
-# <a name="-quiet"></a><span data-ttu-id="48662-102">-quiet</span><span class="sxs-lookup"><span data-stu-id="48662-102">-quiet</span></span>
+# <a name="-quiet"></a><span data-ttu-id="886ca-102">-quiet</span><span class="sxs-lookup"><span data-stu-id="886ca-102">-quiet</span></span>
 
-<span data-ttu-id="48662-103">コンパイラで構文関連のエラーと警告のコードが表示されないようにします。</span><span class="sxs-lookup"><span data-stu-id="48662-103">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>
+<span data-ttu-id="886ca-103">コンパイラで構文関連のエラーと警告のコードが表示されないようにします。</span><span class="sxs-lookup"><span data-stu-id="886ca-103">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="48662-104">構文</span><span class="sxs-lookup"><span data-stu-id="48662-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="886ca-104">構文</span><span class="sxs-lookup"><span data-stu-id="886ca-104">Syntax</span></span>
 
 ```console
 -quiet
 ```
 
-## <a name="remarks"></a><span data-ttu-id="48662-105">コメント</span><span class="sxs-lookup"><span data-stu-id="48662-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="886ca-105">コメント</span><span class="sxs-lookup"><span data-stu-id="886ca-105">Remarks</span></span>
 
-<span data-ttu-id="48662-106">既定では、`-quiet` は無効です。</span><span class="sxs-lookup"><span data-stu-id="48662-106">By default, `-quiet` is not in effect.</span></span> <span data-ttu-id="48662-107">コンパイラは、構文に関連するエラーまたは警告を報告するときに、ソースコードから行を出力します。</span><span class="sxs-lookup"><span data-stu-id="48662-107">When the compiler reports a syntax-related error or warning, it also outputs the line from source code.</span></span> <span data-ttu-id="48662-108">コンパイラの出力を解析するアプリケーションでは、コンパイラが診断のテキストのみを出力する方が便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="48662-108">For applications that parse compiler output, it may be more convenient for the compiler to output only the text of the diagnostic.</span></span>
+<span data-ttu-id="886ca-106">既定では、`-quiet` は無効です。</span><span class="sxs-lookup"><span data-stu-id="886ca-106">By default, `-quiet` is not in effect.</span></span> <span data-ttu-id="886ca-107">コンパイラは、構文に関連するエラーまたは警告を報告するときに、ソースコードから行を出力します。</span><span class="sxs-lookup"><span data-stu-id="886ca-107">When the compiler reports a syntax-related error or warning, it also outputs the line from source code.</span></span> <span data-ttu-id="886ca-108">コンパイラの出力を解析するアプリケーションでは、コンパイラが診断のテキストのみを出力する方が便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="886ca-108">For applications that parse compiler output, it may be more convenient for the compiler to output only the text of the diagnostic.</span></span>
 
-<span data-ttu-id="48662-109">次の例では、`Module1` は、`-quiet` を指定せずにコンパイルされた場合にソースコードを含むエラーを出力します。</span><span class="sxs-lookup"><span data-stu-id="48662-109">In the following example, `Module1` outputs an error that includes source code when compiled without `-quiet`.</span></span>
+<span data-ttu-id="886ca-109">次の例では、`Module1` は、`-quiet` を指定せずにコンパイルされた場合にソースコードを含むエラーを出力します。</span><span class="sxs-lookup"><span data-stu-id="886ca-109">In the following example, `Module1` outputs an error that includes source code when compiled without `-quiet`.</span></span>
 
 ```vb
 Module Module1
@@ -40,7 +40,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="48662-110">Output:</span><span class="sxs-lookup"><span data-stu-id="48662-110">Output:</span></span>
+<span data-ttu-id="886ca-110">Output:</span><span class="sxs-lookup"><span data-stu-id="886ca-110">Output:</span></span>
 
 ```console
 C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessible due to its protection level.
@@ -49,24 +49,24 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-<span data-ttu-id="48662-111">@No__t-0 を使用してコンパイルされた場合、コンパイラは次のものだけを出力します。</span><span class="sxs-lookup"><span data-stu-id="48662-111">Compiled with `-quiet`, the compiler outputs only the following:</span></span>
+<span data-ttu-id="886ca-111">`-quiet` を使用してコンパイルされた場合、コンパイラは次のものだけを出力します。</span><span class="sxs-lookup"><span data-stu-id="886ca-111">Compiled with `-quiet`, the compiler outputs only the following:</span></span>
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> <span data-ttu-id="48662-112">@No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="48662-112">The `-quiet` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>
+> <span data-ttu-id="886ca-112">`-quiet` オプションは Visual Studio の開発環境内からは利用できません。このオプションを利用できるのは、コマンド ラインからコンパイルするときだけです。</span><span class="sxs-lookup"><span data-stu-id="886ca-112">The `-quiet` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>
 
-## <a name="example"></a><span data-ttu-id="48662-113">例</span><span class="sxs-lookup"><span data-stu-id="48662-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="886ca-113">例</span><span class="sxs-lookup"><span data-stu-id="886ca-113">Example</span></span>
 
-<span data-ttu-id="48662-114">次に示すのは `T2.vb` をコンパイルし、構文関連のコンパイラ診断に対してコードを表示しない場合のコード例です。</span><span class="sxs-lookup"><span data-stu-id="48662-114">The following code compiles `T2.vb` and does not display code for syntax-related compiler diagnostics:</span></span>
+<span data-ttu-id="886ca-114">次に示すのは `T2.vb` をコンパイルし、構文関連のコンパイラ診断に対してコードを表示しない場合のコード例です。</span><span class="sxs-lookup"><span data-stu-id="886ca-114">The following code compiles `T2.vb` and does not display code for syntax-related compiler diagnostics:</span></span>
 
 ```console
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a><span data-ttu-id="48662-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="48662-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="886ca-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="886ca-115">See also</span></span>
 
-- [<span data-ttu-id="48662-116">Visual Basic コマンドラインコンパイラ</span><span class="sxs-lookup"><span data-stu-id="48662-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="48662-117">コンパイルコマンドラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="48662-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="886ca-116">Visual Basic コマンドラインコンパイラ</span><span class="sxs-lookup"><span data-stu-id="886ca-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="886ca-117">コンパイルコマンドラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="886ca-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

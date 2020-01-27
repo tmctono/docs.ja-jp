@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する'
+title: RichTextBox コントロールでの書式設定属性の変更を確認する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972290"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746038"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="5e9d0-102">方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する</span><span class="sxs-lookup"><span data-stu-id="5e9d0-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="5e9d0-103">Windows フォームの一般的な用途<xref:System.Windows.Forms.RichTextBox>コントロールがフォントのオプションや段落スタイルなどの属性を持つテキストを書式設定します。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="5e9d0-104">アプリケーションは、多くのワード プロセッシング アプリケーションと同様に、ツールバーを表示できるように書式設定文字列のすべての変更を追跡する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="822a2-102">方法 : Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する</span><span class="sxs-lookup"><span data-stu-id="822a2-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="822a2-103">Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロールの一般的な使用方法としては、フォントオプションや段落スタイルなどの属性を使用したテキストの書式設定があります。</span><span class="sxs-lookup"><span data-stu-id="822a2-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="822a2-104">多くのワードプロセッシングアプリケーションのように、アプリケーションでは、ツールバーを表示するためにテキストの書式設定の変更を追跡する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="822a2-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="5e9d0-105">属性の書式設定の変更に応答するには</span><span class="sxs-lookup"><span data-stu-id="5e9d0-105">To respond to changes in formatting attributes</span></span>  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="822a2-105">属性の書式設定の変更に応答するには</span><span class="sxs-lookup"><span data-stu-id="822a2-105">To respond to changes in formatting attributes</span></span>  
   
-1. <span data-ttu-id="5e9d0-106">コードを記述、<xref:System.Windows.Forms.RichTextBox.SelectionChanged>属性の値に応じて適切なアクションを実行するイベント ハンドラー。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="5e9d0-107">次の例の値に応じて、ツール バー ボタンの外観を変更する、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="5e9d0-108">ツール バー ボタンは、コントロールのカーソルが移動したときにのみ更新されます。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
+1. <span data-ttu-id="822a2-106">属性の値に応じて適切なアクションを実行するには、<xref:System.Windows.Forms.RichTextBox.SelectionChanged> イベントハンドラーにコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="822a2-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="822a2-107">次の例では、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> プロパティの値に応じて、ツールバーボタンの外観を変更します。</span><span class="sxs-lookup"><span data-stu-id="822a2-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="822a2-108">ツールバーボタンは、カーソルがコントロール内で移動したときにのみ更新されます。</span><span class="sxs-lookup"><span data-stu-id="822a2-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
   
-     <span data-ttu-id="5e9d0-109">次の例でフォームを前提としています、<xref:System.Windows.Forms.RichTextBox>コントロールと<xref:System.Windows.Forms.ToolBar>ツール バー ボタンを格納しているコントロール。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="5e9d0-110">ツールバーとツールバー ボタンの詳細については、次を参照してください。[方法。ツール バー コントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control.md)します。</span><span class="sxs-lookup"><span data-stu-id="5e9d0-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
+     <span data-ttu-id="822a2-109">次の例では、フォームに <xref:System.Windows.Forms.RichTextBox> コントロールと、ツールバーボタンを含む <xref:System.Windows.Forms.ToolBar> コントロールがあることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="822a2-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="822a2-110">ツールバーとツールバーボタンの詳細については、「[方法: ツールバーコントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control.md)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="822a2-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,9 +80,9 @@ ms.locfileid: "61972290"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="5e9d0-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e9d0-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="822a2-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="822a2-111">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="5e9d0-112">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="5e9d0-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="5e9d0-113">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="5e9d0-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="822a2-112">RichTextBox コントロール</span><span class="sxs-lookup"><span data-stu-id="822a2-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="822a2-113">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="822a2-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

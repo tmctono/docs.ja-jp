@@ -1,5 +1,5 @@
 ---
-title: 各 Windows フォーム コントロールのラベル設定とショートカットの作成
+title: コントロールにラベルを付け、ショートカットを指定する
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: e06fe547e867ec368369fbe4f320be903ed11bc6
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b3e2bd691ed9652ef484dd67da994f474ce4420b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373667"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745261"
 ---
-# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a><span data-ttu-id="6c3a4-102">個々の Windows フォームコントロールにラベルを付け、ショートカットを提供する</span><span class="sxs-lookup"><span data-stu-id="6c3a4-102">Label individual Windows Forms controls and provide shortcuts</span></span>
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a><span data-ttu-id="cd129-102">個々の Windows フォームコントロールにラベルを付け、ショートカットを提供する</span><span class="sxs-lookup"><span data-stu-id="cd129-102">Label individual Windows Forms controls and provide shortcuts</span></span>
 
-<span data-ttu-id="6c3a4-103">Windows フォームに追加されたコントロールには、ユーザー操作をさらに特殊化するために使用されるプロパティとメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="6c3a4-104">ユーザーのニーズに合わせてユーザー インターフェイスをカスタマイズすることは、適切に設計された Windows アプリケーションにおいて非常に重要です。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>
+<span data-ttu-id="cd129-103">Windows フォームに追加されたコントロールには、ユーザー操作をさらに特殊化するために使用されるプロパティとメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="cd129-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="cd129-104">ユーザーのニーズに合わせてユーザー インターフェイスをカスタマイズすることは、適切に設計された Windows アプリケーションにおいて非常に重要です。</span><span class="sxs-lookup"><span data-stu-id="cd129-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="6c3a4-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="6c3a4-105">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="cd129-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cd129-105">In this section</span></span>
 
-<span data-ttu-id="6c3a4-106">[方法: Windows フォームコントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="6c3a4-106">[How to: Set the Text Displayed by a Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span></span>\
-<span data-ttu-id="6c3a4-107">コントロールにテキスト ラベルを割り当てる方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-107">Describes how to assign a text label to a control.</span></span>
+<span data-ttu-id="cd129-106">[方法: Windows フォームコントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="cd129-106">[How to: Set the Text Displayed by a Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="cd129-107">コントロールにテキスト ラベルを割り当てる方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd129-107">Describes how to assign a text label to a control.</span></span>
 
-<span data-ttu-id="6c3a4-108">[方法: Windows フォームコントロールによって表示されるイメージを設定する](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="6c3a4-108">[How to: Set the Image Displayed by a Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span></span>\
-<span data-ttu-id="6c3a4-109">イメージを表示するためのコントロールを構成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-109">Explains how to configure a control to display images.</span></span>
+<span data-ttu-id="cd129-108">[方法: Windows フォームコントロールによって表示されるイメージを設定する](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="cd129-108">[How to: Set the Image Displayed by a Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="cd129-109">イメージを表示するためのコントロールを構成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd129-109">Explains how to configure a control to display images.</span></span>
 
-<span data-ttu-id="6c3a4-110">[方法: Windows フォームコントロールのアクセスキーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)</span><span class="sxs-lookup"><span data-stu-id="6c3a4-110">[How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md)</span></span>\
-<span data-ttu-id="6c3a4-111">定義済みのキーボード ショートカットを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-111">Gives information about creating predefined keyboard shortcuts.</span></span>
+<span data-ttu-id="cd129-110">[方法: Windows フォームコントロールのアクセスキーを作成](how-to-create-access-keys-for-windows-forms-controls.md)する</span><span class="sxs-lookup"><span data-stu-id="cd129-110">[How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md)</span></span>\
+<span data-ttu-id="cd129-111">定義済みのキーボード ショートカットを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd129-111">Gives information about creating predefined keyboard shortcuts.</span></span>
 
-<span data-ttu-id="6c3a4-112">[Windows フォーム上のコントロールのユーザー補助情報の提供](providing-accessibility-information-for-controls-on-a-windows-form.md)</span><span class="sxs-lookup"><span data-stu-id="6c3a4-112">[Providing Accessibility Information for Controls on a Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)</span></span>\
-<span data-ttu-id="6c3a4-113">コントロールでユーザー補助機能を使用できるようにする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-113">Gives information about enabling your controls to work with accessibility aids.</span></span>
+<span data-ttu-id="cd129-112">[Windows フォーム上のコントロールのユーザー補助情報の提供](providing-accessibility-information-for-controls-on-a-windows-form.md)</span><span class="sxs-lookup"><span data-stu-id="cd129-112">[Providing Accessibility Information for Controls on a Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)</span></span>\
+<span data-ttu-id="cd129-113">コントロールでユーザー補助機能を使用できるようにする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd129-113">Gives information about enabling your controls to work with accessibility aids.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="6c3a4-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6c3a4-114">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="cd129-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd129-114">Related sections</span></span>
 
-<span data-ttu-id="6c3a4-115">[Windows フォームコントロール](index.md)</span><span class="sxs-lookup"><span data-stu-id="6c3a4-115">[Windows Forms Controls](index.md)</span></span>\
-<span data-ttu-id="6c3a4-116">コントロールを使用して実行できる、その他の基本的な項目へのリンク。</span><span class="sxs-lookup"><span data-stu-id="6c3a4-116">Links to other basic things you can do with controls.</span></span>
+<span data-ttu-id="cd129-115">[Windows フォームコントロール](index.md)</span><span class="sxs-lookup"><span data-stu-id="cd129-115">[Windows Forms Controls](index.md)</span></span>\
+<span data-ttu-id="cd129-116">コントロールを使用して実行できる、その他の基本的な項目へのリンク。</span><span class="sxs-lookup"><span data-stu-id="cd129-116">Links to other basic things you can do with controls.</span></span>
