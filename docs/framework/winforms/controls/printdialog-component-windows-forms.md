@@ -1,5 +1,5 @@
 ---
-title: PrintDialog コンポーネント (Windows フォーム)
+title: PrintDialog コンポーネント
 ms.date: 03/30/2017
 helpviewer_keywords:
 - print options [Windows Forms], PrintDialog component (using designer)
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDialog component (using designer)
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
-ms.openlocfilehash: 35bc465b70d9e92f427a70590af45613555380cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 544cdcd7c07e12a7da9812432c0761fe3d3b21bf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795487"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728647"
 ---
-# <a name="printdialog-component-windows-forms"></a><span data-ttu-id="9d3dc-102">PrintDialog コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="9d3dc-102">PrintDialog Component (Windows Forms)</span></span>
-<span data-ttu-id="9d3dc-103">Windows フォーム `PrintDialog` コンポーネントは、構成済みのダイアログ ボックスであり、Windows ベースのアプリケーションのプリンターの選択、印刷するページの選択、およびその他の印刷関連の設定の確認に使用します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-103">The Windows Forms `PrintDialog` component is a pre-configured dialog box used to select a printer, choose the pages to print, and determine other print-related settings in Windows-based applications.</span></span> <span data-ttu-id="9d3dc-104">独自のダイアログ ボックスを構成する代わりに、プリンターと印刷関連の設定の選択のための簡単なソリューションとして使用します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-104">Use it as a simple solution for printer and print-related settings selection in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="9d3dc-105">ユーザーが自分のドキュメントのさまざまな部分 (すべての印刷、指定したページ範囲の印刷、または、選択部分の印刷) を印刷できるようにすることが可能です。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-105">You can enable users to print many parts of their documents: print all, print a specified page range, or print a selection.</span></span> <span data-ttu-id="9d3dc-106">Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-106">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span>  
+# <a name="printdialog-component-windows-forms"></a><span data-ttu-id="f7f90-102">PrintDialog コンポーネント (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="f7f90-102">PrintDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="f7f90-103">Windows フォーム `PrintDialog` コンポーネントは、構成済みのダイアログ ボックスであり、Windows ベースのアプリケーションのプリンターの選択、印刷するページの選択、およびその他の印刷関連の設定の確認に使用します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-103">The Windows Forms `PrintDialog` component is a pre-configured dialog box used to select a printer, choose the pages to print, and determine other print-related settings in Windows-based applications.</span></span> <span data-ttu-id="f7f90-104">独自のダイアログ ボックスを構成する代わりに、プリンターと印刷関連の設定の選択のための簡単なソリューションとして使用します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-104">Use it as a simple solution for printer and print-related settings selection in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="f7f90-105">ユーザーが自分のドキュメントのさまざまな部分 (すべての印刷、指定したページ範囲の印刷、または、選択部分の印刷) を印刷できるようにすることが可能です。</span><span class="sxs-lookup"><span data-stu-id="f7f90-105">You can enable users to print many parts of their documents: print all, print a specified page range, or print a selection.</span></span> <span data-ttu-id="f7f90-106">Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-106">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d3dc-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9d3dc-107">In This Section</span></span>  
- [<span data-ttu-id="9d3dc-108">PrintDialog コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="9d3dc-108">PrintDialog Component Overview</span></span>](printdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="9d3dc-109">ユーザーがプリンターの選択、印刷するページの選択、および印刷関連の設定を決定するために使用できる構成済みのダイアログ ボックスを表示できる、`PrintDialog` コンポーネントの全般的な概要を紹介します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-109">Introduces the general concepts of the `PrintDialog` component, which allows you to display a pre-configured dialog box that users can use to select a printer, choose pages to print, and determine print-related settings.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f7f90-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f7f90-107">In This Section</span></span>  
+ [<span data-ttu-id="f7f90-108">PrintDialog コンポーネントの概要</span><span class="sxs-lookup"><span data-stu-id="f7f90-108">PrintDialog Component Overview</span></span>](printdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="f7f90-109">ユーザーがプリンターの選択、印刷するページの選択、および印刷関連の設定を決定するために使用できる構成済みのダイアログ ボックスを表示できる、`PrintDialog` コンポーネントの全般的な概要を紹介します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-109">Introduces the general concepts of the `PrintDialog` component, which allows you to display a pre-configured dialog box that users can use to select a printer, choose pages to print, and determine print-related settings.</span></span>  
   
- [<span data-ttu-id="9d3dc-110">方法: PrintDialog コンポーネントを表示します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-110">How to: Display the PrintDialog Component</span></span>](how-to-display-the-printdialog-component.md)  
- <span data-ttu-id="9d3dc-111">ダイアログを表示する方法とプロパティが保存される場所について説明します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-111">Explains how to display the dialog and where it saves properties.</span></span>  
+ [<span data-ttu-id="f7f90-110">方法: PrintDialog コンポーネントを表示する</span><span class="sxs-lookup"><span data-stu-id="f7f90-110">How to: Display the PrintDialog Component</span></span>](how-to-display-the-printdialog-component.md)  
+ <span data-ttu-id="f7f90-111">ダイアログを表示する方法とプロパティが保存される場所について説明します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-111">Explains how to display the dialog and where it saves properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="9d3dc-112">参照</span><span class="sxs-lookup"><span data-stu-id="9d3dc-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f7f90-112">参照先</span><span class="sxs-lookup"><span data-stu-id="f7f90-112">Reference</span></span>  
  <xref:System.Windows.Forms.PrintDialog>  
- <span data-ttu-id="9d3dc-113">クラスとそのメンバーに関するリファレンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-113">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="f7f90-113">クラスとそのメンバーに関するリファレンス情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-113">Provides reference information on the class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="9d3dc-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d3dc-114">Related Sections</span></span>  
- [<span data-ttu-id="9d3dc-115">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="9d3dc-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="9d3dc-116">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="9d3dc-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f7f90-114">関連セクション</span><span class="sxs-lookup"><span data-stu-id="f7f90-114">Related Sections</span></span>  
+ [<span data-ttu-id="f7f90-115">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="f7f90-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="f7f90-116">Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。</span><span class="sxs-lookup"><span data-stu-id="f7f90-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

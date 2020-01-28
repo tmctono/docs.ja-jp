@@ -1,5 +1,5 @@
 ---
-title: '方法: ピクセルをコピーして Windows フォームのちらつきを低減する'
+title: '方法: ピクセルをコピーしてちらつきを軽減する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299041e7038d5bd5b9824d668b3f47d842030ac7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950147"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746487"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a><span data-ttu-id="02bf5-102">方法: ピクセルをコピーして Windows フォームのちらつきを低減する</span><span class="sxs-lookup"><span data-stu-id="02bf5-102">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>
-<span data-ttu-id="02bf5-103">単純なグラフィックをアニメーション化すると、ユーザーがちらつきやその他の望ましくない視覚効果を発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="02bf5-103">When you animate a simple graphic, users can sometimes encounter flicker or other undesirable visual effects.</span></span> <span data-ttu-id="02bf5-104">この問題を制限する1つの方法は、グラフィックで "bitblt" プロセスを使用することです。</span><span class="sxs-lookup"><span data-stu-id="02bf5-104">One way to limit this problem is to use a "bitblt" process on the graphic.</span></span> <span data-ttu-id="02bf5-105">Bitblt は、原点の四角形からピクセルの移動先の四角形までのカラーデータの "ビットブロック転送" です。</span><span class="sxs-lookup"><span data-stu-id="02bf5-105">Bitblt is the "bit-block transfer" of the color data from an origin rectangle of pixels to a destination rectangle of pixels.</span></span>  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a><span data-ttu-id="0f279-102">方法 :ピクセルをコピーして Windows フォームのちらつきを低減する</span><span class="sxs-lookup"><span data-stu-id="0f279-102">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>
+<span data-ttu-id="0f279-103">単純なグラフィックをアニメーション化すると、ユーザーがちらつきやその他の望ましくない視覚効果を発生することがあります。</span><span class="sxs-lookup"><span data-stu-id="0f279-103">When you animate a simple graphic, users can sometimes encounter flicker or other undesirable visual effects.</span></span> <span data-ttu-id="0f279-104">この問題を制限する1つの方法は、グラフィックで "bitblt" プロセスを使用することです。</span><span class="sxs-lookup"><span data-stu-id="0f279-104">One way to limit this problem is to use a "bitblt" process on the graphic.</span></span> <span data-ttu-id="0f279-105">Bitblt は、原点の四角形からピクセルの移動先の四角形までのカラーデータの "ビットブロック転送" です。</span><span class="sxs-lookup"><span data-stu-id="0f279-105">Bitblt is the "bit-block transfer" of the color data from an origin rectangle of pixels to a destination rectangle of pixels.</span></span>  
   
- <span data-ttu-id="02bf5-106">Windows フォームでは、bitblt は<xref:System.Drawing.Graphics.CopyFromScreen%2A> <xref:System.Drawing.Graphics>クラスのメソッドを使用して実行されます。</span><span class="sxs-lookup"><span data-stu-id="02bf5-106">With Windows Forms, bitblt is accomplished using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="02bf5-107">メソッドのパラメーターでは、ソースとターゲット (ポイント)、コピーする領域のサイズ、および新しい図形の描画に使用するグラフィックスオブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="02bf5-107">In the parameters of the method, you specify the source and destination (as points), the size of the area to be copied, and the graphics object used to draw the new shape.</span></span>  
+ <span data-ttu-id="0f279-106">Windows フォームでは、bitblt は <xref:System.Drawing.Graphics> クラスの <xref:System.Drawing.Graphics.CopyFromScreen%2A> メソッドを使用して実行されます。</span><span class="sxs-lookup"><span data-stu-id="0f279-106">With Windows Forms, bitblt is accomplished using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="0f279-107">メソッドのパラメーターでは、ソースとターゲット (ポイント)、コピーする領域のサイズ、および新しい図形の描画に使用するグラフィックスオブジェクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="0f279-107">In the parameters of the method, you specify the source and destination (as points), the size of the area to be copied, and the graphics object used to draw the new shape.</span></span>  
   
- <span data-ttu-id="02bf5-108">次の例では、 <xref:System.Windows.Forms.Control.Paint>イベントハンドラーのフォームに図形が描画されます。</span><span class="sxs-lookup"><span data-stu-id="02bf5-108">In the example below, a shape is drawn on the form in its <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="02bf5-109">次に、メソッドを使用して図形を複製します。 <xref:System.Drawing.Graphics.CopyFromScreen%2A></span><span class="sxs-lookup"><span data-stu-id="02bf5-109">Then, the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method is used to duplicate the shape.</span></span>  
+ <span data-ttu-id="0f279-108">次の例では、図形が <xref:System.Windows.Forms.Control.Paint> イベントハンドラーのフォームに描画されます。</span><span class="sxs-lookup"><span data-stu-id="0f279-108">In the example below, a shape is drawn on the form in its <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="0f279-109">次に、<xref:System.Drawing.Graphics.CopyFromScreen%2A> メソッドを使用して図形を複製します。</span><span class="sxs-lookup"><span data-stu-id="0f279-109">Then, the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method is used to duplicate the shape.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="02bf5-110">フォームの<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティをに設定`true`すると、 <xref:System.Windows.Forms.Control.Paint>イベント内のグラフィックスベースのコードがダブルバッファーされるようになります。</span><span class="sxs-lookup"><span data-stu-id="02bf5-110">Setting the form's <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true` will make graphics-based code in the <xref:System.Windows.Forms.Control.Paint> event be double-buffered.</span></span> <span data-ttu-id="02bf5-111">以下のコードを使用すると、これによって認識できないパフォーマンスが向上することはありませんが、より複雑なグラフィックス操作コードを使用する場合は注意が必要です。</span><span class="sxs-lookup"><span data-stu-id="02bf5-111">While this will not have any discernible performance gains when using the code below, it is something to keep in mind when working with more complex graphics-manipulation code.</span></span>  
+> <span data-ttu-id="0f279-110">フォームの <xref:System.Windows.Forms.Control.DoubleBuffered%2A> プロパティを `true` に設定すると、<xref:System.Windows.Forms.Control.Paint> イベント内のグラフィックスベースのコードがダブルバッファリングされます。</span><span class="sxs-lookup"><span data-stu-id="0f279-110">Setting the form's <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true` will make graphics-based code in the <xref:System.Windows.Forms.Control.Paint> event be double-buffered.</span></span> <span data-ttu-id="0f279-111">以下のコードを使用すると、これによって認識できないパフォーマンスが向上することはありませんが、より複雑なグラフィックス操作コードを使用する場合は注意が必要です。</span><span class="sxs-lookup"><span data-stu-id="0f279-111">While this will not have any discernible performance gains when using the code below, it is something to keep in mind when working with more complex graphics-manipulation code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02bf5-112">例</span><span class="sxs-lookup"><span data-stu-id="02bf5-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0f279-112">使用例</span><span class="sxs-lookup"><span data-stu-id="0f279-112">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
@@ -59,13 +59,13 @@ private void Form1_Paint(System.Object sender,
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="02bf5-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="02bf5-113">Compiling the Code</span></span>  
- <span data-ttu-id="02bf5-114">上記のコードはフォームの<xref:System.Windows.Forms.Control.Paint>イベントハンドラーで実行されるため、フォームが再描画されたときにグラフィックスが保持されます。</span><span class="sxs-lookup"><span data-stu-id="02bf5-114">The code above is run in the form's <xref:System.Windows.Forms.Control.Paint> event handler so that the graphics persist when the form is redrawn.</span></span> <span data-ttu-id="02bf5-115">そのため、 <xref:System.Windows.Forms.Form.Load>イベントハンドラーでグラフィックス関連のメソッドを呼び出さないでください。フォームのサイズが変更されたり、別の形式によって隠されたりした場合、描画コンテンツは再描画されません。</span><span class="sxs-lookup"><span data-stu-id="02bf5-115">As such, do not call graphics-related methods in the <xref:System.Windows.Forms.Form.Load> event handler, because the drawn content will not be redrawn if the form is resized or obscured by another form.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0f279-113">コードのコンパイル方法</span><span class="sxs-lookup"><span data-stu-id="0f279-113">Compiling the Code</span></span>  
+ <span data-ttu-id="0f279-114">上記のコードはフォームの <xref:System.Windows.Forms.Control.Paint> イベントハンドラーで実行されるので、フォームが再描画されるときにグラフィックスが保持されます。</span><span class="sxs-lookup"><span data-stu-id="0f279-114">The code above is run in the form's <xref:System.Windows.Forms.Control.Paint> event handler so that the graphics persist when the form is redrawn.</span></span> <span data-ttu-id="0f279-115">そのため、<xref:System.Windows.Forms.Form.Load> イベントハンドラーでは、フォームのサイズが変更されたり、別の形式によって隠されたりした場合に描画コンテンツが再描画されないため、グラフィックス関連のメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="0f279-115">As such, do not call graphics-related methods in the <xref:System.Windows.Forms.Form.Load> event handler, because the drawn content will not be redrawn if the form is resized or obscured by another form.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02bf5-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="02bf5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f279-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="0f279-116">See also</span></span>
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="02bf5-117">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="02bf5-117">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="02bf5-118">ペンを使用した直線と図形の描画</span><span class="sxs-lookup"><span data-stu-id="02bf5-118">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="0f279-117">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="0f279-117">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="0f279-118">ペンを使用した直線と図形の描画</span><span class="sxs-lookup"><span data-stu-id="0f279-118">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
