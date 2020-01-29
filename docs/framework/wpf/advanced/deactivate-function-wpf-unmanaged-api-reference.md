@@ -1,5 +1,6 @@
 ---
-title: 関数を非アクティブ化 (WPF のアンマネージ API リファレンス)
+title: 関数の非アクティブ化-WPF アンマネージ API リファレンス
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,35 +9,35 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc1f347526f161fe2d0b7d7c8e08a1c1829ec08e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928766"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737976"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="d94c5-102">関数を非アクティブ化 (WPF のアンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="d94c5-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="d94c5-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。</span><span class="sxs-lookup"><span data-stu-id="d94c5-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="eb6b7-102">Deactivate 関数 (WPF アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="eb6b7-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="eb6b7-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="d94c5-104">Windows Presentation Foundation (WPF) インフラストラクチャによって windows の管理に使用します。</span><span class="sxs-lookup"><span data-stu-id="d94c5-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="eb6b7-104">Windows management の Windows Presentation Foundation (WPF) インフラストラクチャで使用されます。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d94c5-105">構文</span><span class="sxs-lookup"><span data-stu-id="d94c5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb6b7-105">構文</span><span class="sxs-lookup"><span data-stu-id="eb6b7-105">Syntax</span></span>  
   
 ```cpp  
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d94c5-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="d94c5-106">Requirements</span></span>  
- <span data-ttu-id="d94c5-107">**プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。</span><span class="sxs-lookup"><span data-stu-id="d94c5-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb6b7-106">要件</span><span class="sxs-lookup"><span data-stu-id="eb6b7-106">Requirements</span></span>  
+ <span data-ttu-id="eb6b7-107">**プラットフォーム:** 「 [.NET Framework のシステム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d94c5-108">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="d94c5-108">**DLL:**</span></span>  
+ <span data-ttu-id="eb6b7-108">**DLL**</span><span class="sxs-lookup"><span data-stu-id="eb6b7-108">**DLL:**</span></span>  
   
- <span data-ttu-id="d94c5-109">.NET framework 3.0 および 3.5。PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="d94c5-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="eb6b7-109">.NET Framework 3.0 と 3.5: プレゼンテーション Hostdll .dll</span><span class="sxs-lookup"><span data-stu-id="eb6b7-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="d94c5-110">.NET framework 4 以降では。PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="d94c5-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="eb6b7-110">.NET Framework 4 以降: PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="eb6b7-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="d94c5-111">**.NET framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d94c5-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="eb6b7-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb6b7-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d94c5-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d94c5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb6b7-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="eb6b7-112">See also</span></span>
 
-- [<span data-ttu-id="d94c5-113">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="d94c5-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="eb6b7-113">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="eb6b7-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

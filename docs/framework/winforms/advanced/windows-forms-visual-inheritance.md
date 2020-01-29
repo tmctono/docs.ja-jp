@@ -1,5 +1,5 @@
 ---
-title: Windows フォームのビジュアルの継承
+title: ビジュアルの継承
 ms.date: 03/30/2017
 helpviewer_keywords:
 - base forms
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-ms.openlocfilehash: 11a90615938da9e7dda5e05c55546918ccde137d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6aa104a1c9ebe6f59c11ce70e3352169132e714
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957103"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732483"
 ---
-# <a name="windows-forms-visual-inheritance"></a><span data-ttu-id="41ecf-102">Windows フォームのビジュアルの継承</span><span class="sxs-lookup"><span data-stu-id="41ecf-102">Windows Forms Visual Inheritance</span></span>
-<span data-ttu-id="41ecf-103">プロジェクトで、以前のプロジェクトで作成したフォームと類似するフォームが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="41ecf-103">Occasionally, you may decide that a project calls for a form similar to one that you have created in a previous project.</span></span> <span data-ttu-id="41ecf-104">また、プロジェクトで再利用する透かしやコントロールの特定のレイアウトなどが設定された基本フォームを作成し、元のフォーム テンプレートに変更を加えながら繰り返し使用することが必要になる場合もあります。</span><span class="sxs-lookup"><span data-stu-id="41ecf-104">Or, you may want to create a basic form with settings such as a watermark or certain control layout that you will then use again within a project, with each iteration containing modifications to the original form template.</span></span> <span data-ttu-id="41ecf-105">フォームの継承を使用すると、基本フォームを作成してそのフォームを継承し、必要な元の設定を保持しながら変更を加えることができます。</span><span class="sxs-lookup"><span data-stu-id="41ecf-105">Form inheritance enables you to create a base form and then inherit from it and make modifications while preserving whatever original settings you need.</span></span>  
+# <a name="windows-forms-visual-inheritance"></a><span data-ttu-id="5543f-102">Windows フォームのビジュアルの継承</span><span class="sxs-lookup"><span data-stu-id="5543f-102">Windows Forms Visual Inheritance</span></span>
+<span data-ttu-id="5543f-103">プロジェクトで、以前のプロジェクトで作成したフォームと類似するフォームが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="5543f-103">Occasionally, you may decide that a project calls for a form similar to one that you have created in a previous project.</span></span> <span data-ttu-id="5543f-104">また、プロジェクトで再利用する透かしやコントロールの特定のレイアウトなどが設定された基本フォームを作成し、元のフォーム テンプレートに変更を加えながら繰り返し使用することが必要になる場合もあります。</span><span class="sxs-lookup"><span data-stu-id="5543f-104">Or, you may want to create a basic form with settings such as a watermark or certain control layout that you will then use again within a project, with each iteration containing modifications to the original form template.</span></span> <span data-ttu-id="5543f-105">フォームの継承を使用すると、基本フォームを作成してそのフォームを継承し、必要な元の設定を保持しながら変更を加えることができます。</span><span class="sxs-lookup"><span data-stu-id="5543f-105">Form inheritance enables you to create a base form and then inherit from it and make modifications while preserving whatever original settings you need.</span></span>  
   
- <span data-ttu-id="41ecf-106">派生クラスのフォームは、プログラムで作成することも、ビジュアル継承ピッカーを使用して作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="41ecf-106">You can create derived-class forms programmatically or by using the Visual Inheritance picker.</span></span>  
+ <span data-ttu-id="5543f-106">派生クラスのフォームは、プログラムで作成することも、ビジュアル継承ピッカーを使用して作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="5543f-106">You can create derived-class forms programmatically or by using the Visual Inheritance picker.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="41ecf-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="41ecf-107">In This Section</span></span>  
- [<span data-ttu-id="41ecf-108">方法: Windows フォームを継承する</span><span class="sxs-lookup"><span data-stu-id="41ecf-108">How to: Inherit Windows Forms</span></span>](how-to-inherit-windows-forms.md)  
- <span data-ttu-id="41ecf-109">継承されたフォームをコードで作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-109">Gives directions for creating inherited forms in code.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5543f-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5543f-107">In This Section</span></span>  
+ [<span data-ttu-id="5543f-108">方法 : Windows フォームを継承する</span><span class="sxs-lookup"><span data-stu-id="5543f-108">How to: Inherit Windows Forms</span></span>](how-to-inherit-windows-forms.md)  
+ <span data-ttu-id="5543f-109">継承されたフォームをコードで作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-109">Gives directions for creating inherited forms in code.</span></span>  
   
- <span data-ttu-id="41ecf-110">[方法: [継承ピッカー] ダイアログボックスを使用してフォームを継承する](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)</span><span class="sxs-lookup"><span data-stu-id="41ecf-110">[How to: Inherit Forms Using the Inheritance Picker Dialog Box](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)</span></span>  
- <span data-ttu-id="41ecf-111">継承ピッカーを使用して継承されたフォームを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-111">Gives directions for creating inherited forms with the Inheritance Picker.</span></span>  
+ <span data-ttu-id="5543f-110">[方法 : [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)</span><span class="sxs-lookup"><span data-stu-id="5543f-110">[How to: Inherit Forms Using the Inheritance Picker Dialog Box](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)</span></span>  
+ <span data-ttu-id="5543f-111">継承ピッカーを使用して継承されたフォームを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-111">Gives directions for creating inherited forms with the Inheritance Picker.</span></span>  
   
- [<span data-ttu-id="41ecf-112">基本フォームの外観を変更した場合の影響</span><span class="sxs-lookup"><span data-stu-id="41ecf-112">Effects of Modifying a Base Form's Appearance</span></span>](effects-of-modifying-base-form-appearance.md)  
- <span data-ttu-id="41ecf-113">基本フォームのコントロールとそのプロパティを変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-113">Gives directions for changing a base form's controls and their properties.</span></span>  
+ [<span data-ttu-id="5543f-112">基本フォームの外観を変更した場合の影響</span><span class="sxs-lookup"><span data-stu-id="5543f-112">Effects of Modifying a Base Form's Appearance</span></span>](effects-of-modifying-base-form-appearance.md)  
+ <span data-ttu-id="5543f-113">基本フォームのコントロールとそのプロパティを変更する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-113">Gives directions for changing a base form's controls and their properties.</span></span>  
   
- [<span data-ttu-id="41ecf-114">チュートリアル: ビジュアル継承のデモンストレーション</span><span class="sxs-lookup"><span data-stu-id="41ecf-114">Walkthrough: Demonstrating Visual Inheritance</span></span>](walkthrough-demonstrating-visual-inheritance.md)  
- <span data-ttu-id="41ecf-115">基本的な Windows フォームを作成し、クラス ライブラリにコンパイルする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-115">Describes how to create a base Windows Form and compile it into a class library.</span></span> <span data-ttu-id="41ecf-116">このクラス ライブラリを別のプロジェクトにインポートし、基本フォームから継承した新しいフォームを作成します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-116">You will import this class library into another project, and create a new form that inherits from the base form.</span></span>  
+ [<span data-ttu-id="5543f-114">チュートリアル : ビジュアル継承のデモンストレーション</span><span class="sxs-lookup"><span data-stu-id="5543f-114">Walkthrough: Demonstrating Visual Inheritance</span></span>](walkthrough-demonstrating-visual-inheritance.md)  
+ <span data-ttu-id="5543f-115">基本的な Windows フォームを作成し、クラス ライブラリにコンパイルする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-115">Describes how to create a base Windows Form and compile it into a class library.</span></span> <span data-ttu-id="5543f-116">このクラス ライブラリを別のプロジェクトにインポートし、基本フォームから継承した新しいフォームを作成します。</span><span class="sxs-lookup"><span data-stu-id="5543f-116">You will import this class library into another project, and create a new form that inherits from the base form.</span></span>  
   
- [<span data-ttu-id="41ecf-117">方法: Modifiers プロパティと GenerateMember プロパティを使用する</span><span class="sxs-lookup"><span data-stu-id="41ecf-117">How to: Use the Modifiers and GenerateMember Properties</span></span>](how-to-use-the-modifiers-and-generatemember-properties.md)  
- <span data-ttu-id="41ecf-118">`GenerateMember` プロパティと `Modifiers` プロパティの使用方法について説明します。これらのプロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときに使用されます。</span><span class="sxs-lookup"><span data-stu-id="41ecf-118">Gives directions for using the `GenerateMember` and `Modifiers` properties, which are relevant when the Windows Forms Designer generates a member variable for a component.</span></span>  
+ [<span data-ttu-id="5543f-117">方法 : Modifiers プロパティおよび GenerateMember プロパティを使用する</span><span class="sxs-lookup"><span data-stu-id="5543f-117">How to: Use the Modifiers and GenerateMember Properties</span></span>](how-to-use-the-modifiers-and-generatemember-properties.md)  
+ <span data-ttu-id="5543f-118">`GenerateMember` プロパティと `Modifiers` プロパティの使用方法について説明します。これらのプロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときに使用されます。</span><span class="sxs-lookup"><span data-stu-id="5543f-118">Gives directions for using the `GenerateMember` and `Modifiers` properties, which are relevant when the Windows Forms Designer generates a member variable for a component.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="41ecf-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="41ecf-119">Related Sections</span></span>  
- [<span data-ttu-id="41ecf-120">継承の基本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41ecf-120">Inheritance basics (Visual Basic)</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- <span data-ttu-id="41ecf-121">他のクラスの基本クラスとして機能する Visual Basic クラスを定義する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-121">Describes how to define Visual Basic classes that serve as the basis for other classes.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5543f-119">関連セクション</span><span class="sxs-lookup"><span data-stu-id="5543f-119">Related Sections</span></span>  
+ [<span data-ttu-id="5543f-120">継承の基本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5543f-120">Inheritance basics (Visual Basic)</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ <span data-ttu-id="5543f-121">他のクラスの基本クラスとして機能する Visual Basic クラスを定義する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-121">Describes how to define Visual Basic classes that serve as the basis for other classes.</span></span>  
   
- [<span data-ttu-id="41ecf-122">class</span><span class="sxs-lookup"><span data-stu-id="41ecf-122">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
- <span data-ttu-id="41ecf-123">C# で許可されるクラスの単一継承について説明します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-123">Describes the C# approach of classes, in which single inheritance is allowed.</span></span>  
+ [<span data-ttu-id="5543f-122">クラス</span><span class="sxs-lookup"><span data-stu-id="5543f-122">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+ <span data-ttu-id="5543f-123">C# で許可されるクラスの単一継承について説明します。</span><span class="sxs-lookup"><span data-stu-id="5543f-123">Describes the C# approach of classes, in which single inheritance is allowed.</span></span>  
   
- [<span data-ttu-id="41ecf-124">Visual Basic での継承されたイベント ハンドラーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="41ecf-124">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- <span data-ttu-id="41ecf-125">継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を示します。</span><span class="sxs-lookup"><span data-stu-id="41ecf-125">Lists common issues that arise with event handlers in inherited components</span></span>
+ [<span data-ttu-id="5543f-124">Visual Basic での継承されたイベント ハンドラーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="5543f-124">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ <span data-ttu-id="5543f-125">継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を示します。</span><span class="sxs-lookup"><span data-stu-id="5543f-125">Lists common issues that arise with event handlers in inherited components</span></span>

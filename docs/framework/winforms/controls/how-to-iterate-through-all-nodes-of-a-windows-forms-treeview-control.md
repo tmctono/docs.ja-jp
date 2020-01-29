@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する'
+title: TreeView コントロールのすべてのノードを反復処理する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 010932fa3fdfaa907325b9934682dcbf889265c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966557"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736369"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="d56e0-102">方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する</span><span class="sxs-lookup"><span data-stu-id="d56e0-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
-<span data-ttu-id="d56e0-103">ノード値に対して計算を実行するために<xref:System.Windows.Forms.TreeView> 、Windows フォームコントロール内のすべてのノードを調べると便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="d56e0-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="d56e0-104">この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="d56e0-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="19685-102">方法 : Windows フォーム TreeView コントロールのすべてのノードを反復処理する</span><span class="sxs-lookup"><span data-stu-id="19685-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
+<span data-ttu-id="19685-103">ノード値に対して計算を実行するために、Windows フォーム <xref:System.Windows.Forms.TreeView> コントロール内のすべてのノードを調べると便利な場合があります。</span><span class="sxs-lookup"><span data-stu-id="19685-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="19685-104">この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="19685-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
   
- <span data-ttu-id="d56e0-105">ツリー <xref:System.Windows.Forms.TreeNode>ビュー内の各オブジェクトには、ツリービュー内を移動するために使用できるプロパティが<xref:System.Windows.Forms.TreeNode.PrevNode%2A>あります<xref:System.Windows.Forms.TreeNode.Parent%2A>。 <xref:System.Windows.Forms.TreeNode.FirstNode%2A>、 <xref:System.Windows.Forms.TreeNode.LastNode%2A> <xref:System.Windows.Forms.TreeNode.NextNode%2A>、、、およびです。</span><span class="sxs-lookup"><span data-stu-id="d56e0-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="d56e0-106"><xref:System.Windows.Forms.TreeNode.Parent%2A>プロパティの値は、現在のノードの親ノードです。</span><span class="sxs-lookup"><span data-stu-id="d56e0-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="d56e0-107">現在のノードの子ノード (存在する場合) は、その<xref:System.Windows.Forms.TreeNode.Nodes%2A>プロパティに一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="d56e0-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="d56e0-108">コントロール自体には、 <xref:System.Windows.Forms.TreeView.TopNode%2A>ツリービュー全体のルートノードであるプロパティがあります。 <xref:System.Windows.Forms.TreeView></span><span class="sxs-lookup"><span data-stu-id="d56e0-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
+ <span data-ttu-id="19685-105">ツリービュー内の各 <xref:System.Windows.Forms.TreeNode> オブジェクトには、ツリービュー内を移動するために使用できるプロパティがあります。 <xref:System.Windows.Forms.TreeNode.FirstNode%2A>、<xref:System.Windows.Forms.TreeNode.LastNode%2A>、<xref:System.Windows.Forms.TreeNode.NextNode%2A>、<xref:System.Windows.Forms.TreeNode.PrevNode%2A>、および <xref:System.Windows.Forms.TreeNode.Parent%2A>です。</span><span class="sxs-lookup"><span data-stu-id="19685-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="19685-106"><xref:System.Windows.Forms.TreeNode.Parent%2A> プロパティの値は、現在のノードの親ノードです。</span><span class="sxs-lookup"><span data-stu-id="19685-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="19685-107">現在のノードの子ノード (存在する場合) は、[<xref:System.Windows.Forms.TreeNode.Nodes%2A>] プロパティに一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="19685-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="19685-108"><xref:System.Windows.Forms.TreeView> コントロール自体には、ツリービュー全体のルートノードである "<xref:System.Windows.Forms.TreeView.TopNode%2A>" プロパティがあります。</span><span class="sxs-lookup"><span data-stu-id="19685-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
   
-### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="d56e0-109">TreeView コントロールのすべてのノードを反復処理するには</span><span class="sxs-lookup"><span data-stu-id="d56e0-109">To iterate through all nodes of the TreeView control</span></span>  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="19685-109">TreeView コントロールのすべてのノードを反復処理するには</span><span class="sxs-lookup"><span data-stu-id="19685-109">To iterate through all nodes of the TreeView control</span></span>  
   
-1. <span data-ttu-id="d56e0-110">各ノードをテストする再帰プロシージャ (C# および C++ における再帰メソッド) を作成します。</span><span class="sxs-lookup"><span data-stu-id="d56e0-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
+1. <span data-ttu-id="19685-110">各ノードをテストする再帰プロシージャ (C# および C++ における再帰メソッド) を作成します。</span><span class="sxs-lookup"><span data-stu-id="19685-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
   
-2. <span data-ttu-id="d56e0-111">プロシージャを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d56e0-111">Call the procedure.</span></span>  
+2. <span data-ttu-id="19685-111">プロシージャを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="19685-111">Call the procedure.</span></span>  
   
-     <span data-ttu-id="d56e0-112">次の例は、各<xref:System.Windows.Forms.TreeNode>オブジェクトの<xref:System.Windows.Forms.TreeNode.Text%2A>プロパティを印刷する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d56e0-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
+     <span data-ttu-id="19685-112">次の例は、各 <xref:System.Windows.Forms.TreeNode> オブジェクトの <xref:System.Windows.Forms.TreeNode.Text%2A> プロパティを印刷する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="19685-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -123,7 +123,7 @@ ms.locfileid: "69966557"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d56e0-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="d56e0-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19685-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="19685-113">See also</span></span>
 
-- [<span data-ttu-id="d56e0-114">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="d56e0-114">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="d56e0-115">再帰プロシージャ</span><span class="sxs-lookup"><span data-stu-id="d56e0-115">Recursive Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [<span data-ttu-id="19685-114">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="19685-114">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="19685-115">再帰プロシージャ</span><span class="sxs-lookup"><span data-stu-id="19685-115">Recursive Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
