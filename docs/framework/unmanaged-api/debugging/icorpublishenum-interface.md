@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: 7d083655326333f18ee98f8e84fff2ed182dde6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f54bb99df60d7b3fb7bb98de75fbae210597e45c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103463"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790624"
 ---
-# <a name="icorpublishenum-interface"></a><span data-ttu-id="20d54-102">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="20d54-102">ICorPublishEnum Interface</span></span>
-<span data-ttu-id="20d54-103">プロセスおよびアプリケーションドメインに関する情報の公開に使用される列挙子の抽象基本インターフェイスとして機能します。</span><span class="sxs-lookup"><span data-stu-id="20d54-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
+# <a name="icorpublishenum-interface"></a><span data-ttu-id="9ebd6-102">ICorPublishEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebd6-102">ICorPublishEnum Interface</span></span>
+<span data-ttu-id="9ebd6-103">プロセスおよびアプリケーションドメインに関する情報の公開に使用される列挙子の抽象基本インターフェイスとして機能します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="20d54-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9ebd6-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-104">Methods</span></span>  
   
-|<span data-ttu-id="20d54-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-105">Method</span></span>|<span data-ttu-id="20d54-106">説明</span><span class="sxs-lookup"><span data-stu-id="20d54-106">Description</span></span>|  
+|<span data-ttu-id="9ebd6-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-105">Method</span></span>|<span data-ttu-id="9ebd6-106">説明</span><span class="sxs-lookup"><span data-stu-id="9ebd6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="20d54-107">Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|<span data-ttu-id="20d54-108">この `ICorPublishEnum` オブジェクトのコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="20d54-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
-|[<span data-ttu-id="20d54-109">GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|<span data-ttu-id="20d54-110">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="20d54-110">Gets the number of items in the enumeration.</span></span>|  
-|[<span data-ttu-id="20d54-111">Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|<span data-ttu-id="20d54-112">のカーソルを列挙体の先頭に移動します。</span><span class="sxs-lookup"><span data-stu-id="20d54-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
-|[<span data-ttu-id="20d54-113">Skip メソッド</span><span class="sxs-lookup"><span data-stu-id="20d54-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|<span data-ttu-id="20d54-114">指定した数の項目だけ、列挙内でカーソルを前方に移動します。</span><span class="sxs-lookup"><span data-stu-id="20d54-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
+|[<span data-ttu-id="9ebd6-107">Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-107">Clone Method</span></span>](icorpublishenum-clone-method.md)|<span data-ttu-id="9ebd6-108">この `ICorPublishEnum` オブジェクトのコピーを作成します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
+|[<span data-ttu-id="9ebd6-109">GetCount メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-109">GetCount Method</span></span>](icorpublishenum-getcount-method.md)|<span data-ttu-id="9ebd6-110">列挙に含まれる項目の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-110">Gets the number of items in the enumeration.</span></span>|  
+|[<span data-ttu-id="9ebd6-111">Reset メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-111">Reset Method</span></span>](icorpublishenum-reset-method.md)|<span data-ttu-id="9ebd6-112">のカーソルを列挙体の先頭に移動します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
+|[<span data-ttu-id="9ebd6-113">Skip メソッド</span><span class="sxs-lookup"><span data-stu-id="9ebd6-113">Skip Method</span></span>](icorpublishenum-skip-method.md)|<span data-ttu-id="9ebd6-114">指定した数の項目だけ、列挙内でカーソルを前方に移動します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="20d54-115">Remarks</span><span class="sxs-lookup"><span data-stu-id="20d54-115">Remarks</span></span>  
- <span data-ttu-id="20d54-116">次の列挙子は `ICorPublishEnum`から派生します。</span><span class="sxs-lookup"><span data-stu-id="20d54-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ebd6-115">コメント</span><span class="sxs-lookup"><span data-stu-id="9ebd6-115">Remarks</span></span>  
+ <span data-ttu-id="9ebd6-116">次の列挙子は `ICorPublishEnum`から派生します。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
   
-- [<span data-ttu-id="20d54-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="20d54-117">ICorPublishAppDomainEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [<span data-ttu-id="9ebd6-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="9ebd6-117">ICorPublishAppDomainEnum</span></span>](icorpublishappdomainenum-interface.md)  
   
-- [<span data-ttu-id="20d54-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="20d54-118">ICorPublishProcessEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [<span data-ttu-id="9ebd6-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="9ebd6-118">ICorPublishProcessEnum</span></span>](icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a><span data-ttu-id="20d54-119">［要件］</span><span class="sxs-lookup"><span data-stu-id="20d54-119">Requirements</span></span>  
- <span data-ttu-id="20d54-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="20d54-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ebd6-119">要件</span><span class="sxs-lookup"><span data-stu-id="9ebd6-119">Requirements</span></span>  
+ <span data-ttu-id="9ebd6-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9ebd6-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20d54-121">**ヘッダー:** CorPub .idl、CorPub .h</span><span class="sxs-lookup"><span data-stu-id="20d54-121">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="9ebd6-121">**ヘッダー:** CorPub .idl、CorPub .h</span><span class="sxs-lookup"><span data-stu-id="9ebd6-121">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="20d54-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20d54-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9ebd6-122">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ebd6-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20d54-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20d54-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9ebd6-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ebd6-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20d54-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="20d54-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ebd6-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9ebd6-124">See also</span></span>
 
-- [<span data-ttu-id="20d54-125">CorpubPublish コクラス</span><span class="sxs-lookup"><span data-stu-id="20d54-125">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
-- [<span data-ttu-id="20d54-126">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="20d54-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9ebd6-125">CorpubPublish コクラス</span><span class="sxs-lookup"><span data-stu-id="9ebd6-125">CorpubPublish Coclass</span></span>](corpubpublish-coclass.md)
+- [<span data-ttu-id="9ebd6-126">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9ebd6-126">Debugging Interfaces</span></span>](debugging-interfaces.md)

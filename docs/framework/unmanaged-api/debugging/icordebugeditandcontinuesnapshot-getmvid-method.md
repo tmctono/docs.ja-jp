@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d7e916a6-1c39-4676-972d-da3d8546044b
 topic_type:
 - apiref
-ms.openlocfilehash: 217c0ea3eea6ce7413028b9638dbaae66bd99452
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ebe07fc7cd963cbe9cae3cd8c3f7c0580dad5fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137410"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788810"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="23b76-102">ICorDebugEditAndContinueSnapshot::GetMvid メソッド</span><span class="sxs-lookup"><span data-stu-id="23b76-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="23b76-103">`GetMvid` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="23b76-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="23b76-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="23b76-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="b0b55-102">ICorDebugEditAndContinueSnapshot::GetMvid メソッド</span><span class="sxs-lookup"><span data-stu-id="b0b55-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="b0b55-103">`GetMvid` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="b0b55-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="b0b55-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="b0b55-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23b76-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="23b76-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0b55-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0b55-105">See also</span></span>
 
-- [<span data-ttu-id="23b76-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="23b76-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b0b55-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0b55-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

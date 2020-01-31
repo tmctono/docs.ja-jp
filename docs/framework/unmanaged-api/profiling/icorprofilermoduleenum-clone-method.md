@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 7dec7e36-8d88-416d-b437-abf98b76c1df
 topic_type:
 - apiref
-ms.openlocfilehash: 395340d497294c89c59216ab5f294070690b74a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a6b36883ec0914426b4f4c937390c1622faead25
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444670"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868292"
 ---
-# <a name="icorprofilermoduleenumclone-method"></a><span data-ttu-id="f0d46-102">ICorProfilerModuleEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="f0d46-102">ICorProfilerModuleEnum::Clone Method</span></span>
-<span data-ttu-id="f0d46-103">この[ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)インターフェイスのコピーへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="f0d46-103">Gets an interface pointer to a copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
+# <a name="icorprofilermoduleenumclone-method"></a><span data-ttu-id="62f2f-102">ICorProfilerModuleEnum::Clone メソッド</span><span class="sxs-lookup"><span data-stu-id="62f2f-102">ICorProfilerModuleEnum::Clone Method</span></span>
+<span data-ttu-id="62f2f-103">この[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)インターフェイスのコピーへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="62f2f-103">Gets an interface pointer to a copy of this [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0d46-104">構文</span><span class="sxs-lookup"><span data-stu-id="f0d46-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62f2f-104">構文</span><span class="sxs-lookup"><span data-stu-id="62f2f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f0d46-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f0d46-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="62f2f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="62f2f-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="f0d46-106">入出力次に、この[ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)インターフェイスのコピーを指すインターフェイスポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f0d46-106">[out] A pointer to the interface pointer that in turn points to the copy of this [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span> <span data-ttu-id="f0d46-107">列挙子のコピーは、この列挙子とは別に独自の列挙状態を保持します。</span><span class="sxs-lookup"><span data-stu-id="f0d46-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="f0d46-108">ただし、コピーの初期カーソル位置は、この列挙子の現在のカーソル位置と同じです。</span><span class="sxs-lookup"><span data-stu-id="f0d46-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
+ <span data-ttu-id="62f2f-106">入出力次に、この[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)インターフェイスのコピーを指すインターフェイスポインターへのポインター。</span><span class="sxs-lookup"><span data-stu-id="62f2f-106">[out] A pointer to the interface pointer that in turn points to the copy of this [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) interface.</span></span> <span data-ttu-id="62f2f-107">列挙子のコピーは、この列挙子とは別に独自の列挙状態を保持します。</span><span class="sxs-lookup"><span data-stu-id="62f2f-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="62f2f-108">ただし、コピーの初期カーソル位置は、この列挙子の現在のカーソル位置と同じです。</span><span class="sxs-lookup"><span data-stu-id="62f2f-108">However, the copy's initial cursor position is the same as this enumerator's current cursor position.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f0d46-109">要件</span><span class="sxs-lookup"><span data-stu-id="f0d46-109">Requirements</span></span>  
- <span data-ttu-id="f0d46-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f0d46-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62f2f-109">要件</span><span class="sxs-lookup"><span data-stu-id="62f2f-109">Requirements</span></span>  
+ <span data-ttu-id="62f2f-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="62f2f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0d46-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f0d46-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="62f2f-111">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="62f2f-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f0d46-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0d46-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="62f2f-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="62f2f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f0d46-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0d46-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="62f2f-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62f2f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0d46-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="f0d46-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62f2f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="62f2f-114">See also</span></span>
 
-- [<span data-ttu-id="f0d46-115">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f0d46-115">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="f0d46-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f0d46-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="62f2f-115">ICorProfilerModuleEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="62f2f-115">ICorProfilerModuleEnum Interface</span></span>](icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="62f2f-116">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="62f2f-116">Profiling Interfaces</span></span>](profiling-interfaces.md)

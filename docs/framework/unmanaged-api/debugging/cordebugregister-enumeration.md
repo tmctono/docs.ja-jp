@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9af265144c9e38ffe132c16a318c374b08a920e3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132768"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778247"
 ---
-# <a name="cordebugregister-enumeration"></a><span data-ttu-id="98fe5-102">CorDebugRegister 列挙型</span><span class="sxs-lookup"><span data-stu-id="98fe5-102">CorDebugRegister Enumeration</span></span>
-<span data-ttu-id="98fe5-103">指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。</span><span class="sxs-lookup"><span data-stu-id="98fe5-103">Specifies the registers associated with a given processor architecture.</span></span>  
+# <a name="cordebugregister-enumeration"></a><span data-ttu-id="65f4f-102">CorDebugRegister 列挙型</span><span class="sxs-lookup"><span data-stu-id="65f4f-102">CorDebugRegister Enumeration</span></span>
+<span data-ttu-id="65f4f-103">指定されたプロセッサ アーキテクチャに関連付けられたレジスタを指定します。</span><span class="sxs-lookup"><span data-stu-id="65f4f-103">Specifies the registers associated with a given processor architecture.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98fe5-104">構文</span><span class="sxs-lookup"><span data-stu-id="98fe5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65f4f-104">構文</span><span class="sxs-lookup"><span data-stu-id="65f4f-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugRegister {  
@@ -112,101 +112,101 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="98fe5-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="98fe5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="65f4f-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="65f4f-105">Members</span></span>  
   
-|<span data-ttu-id="98fe5-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="98fe5-106">Member</span></span>|<span data-ttu-id="98fe5-107">説明</span><span class="sxs-lookup"><span data-stu-id="98fe5-107">Description</span></span>|  
+|<span data-ttu-id="65f4f-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="65f4f-106">Member</span></span>|<span data-ttu-id="65f4f-107">説明</span><span class="sxs-lookup"><span data-stu-id="65f4f-107">Description</span></span>|  
 |------------|-----------------|  
-|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="98fe5-108">すべてのプロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-108">An instruction pointer register on any processor.</span></span>|  
-|`REGISTER_STACK_POINTER`|<span data-ttu-id="98fe5-109">すべてのプロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-109">A stack pointer register on any processor.</span></span>|  
-|`REGISTER_FRAME_POINTER`|<span data-ttu-id="98fe5-110">すべてのプロセッサ上のフレーム ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-110">A frame pointer register on any processor.</span></span>|  
-|`REGISTER_X86_EIP`|<span data-ttu-id="98fe5-111">x86 プロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-111">The instruction pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESP`|<span data-ttu-id="98fe5-112">x86 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-112">The stack pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBP`|<span data-ttu-id="98fe5-113">x86 プロセッサ上の基本ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-113">The base pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EAX`|<span data-ttu-id="98fe5-114">x86 プロセッサ上の A データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-114">The A data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ECX`|<span data-ttu-id="98fe5-115">x86 プロセッサ上の C データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-115">The C data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDX`|<span data-ttu-id="98fe5-116">x86 プロセッサ上の D データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-116">The D data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBX`|<span data-ttu-id="98fe5-117">x86 プロセッサ上の B データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-117">The B data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESI`|<span data-ttu-id="98fe5-118">x86 プロセッサ上のソース インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-118">The source index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDI`|<span data-ttu-id="98fe5-119">x86 プロセッサ上のターゲット インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-119">The destination index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="98fe5-120">x86 浮動小数点 (FP) プロセッサ上のスタック レジスタ 0。</span><span class="sxs-lookup"><span data-stu-id="98fe5-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="98fe5-121">x86 FP プロセッサ上の #1 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-121">The #1 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="98fe5-122">x86 FP プロセッサ上の #2 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-122">The #2 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="98fe5-123">x86 FP プロセッサ上の #3 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-123">The #3 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="98fe5-124">x86 FP プロセッサ上の #4 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-124">The #4 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="98fe5-125">x86 FP プロセッサ上の #5 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-125">The #5 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="98fe5-126">x86 FP プロセッサ上の #6 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-126">The #6 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="98fe5-127">x86 FP プロセッサ上の #7 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-127">The #7 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_AMD64_RIP`|<span data-ttu-id="98fe5-128">AMD64 プロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-128">The instruction pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSP`|<span data-ttu-id="98fe5-129">AMD64 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-129">The stack pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBP`|<span data-ttu-id="98fe5-130">AMD64 プロセッサ上の基本ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-130">The base pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RAX`|<span data-ttu-id="98fe5-131">AMD64 プロセッサ上の A データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-131">The A data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RCX`|<span data-ttu-id="98fe5-132">AMD64 プロセッサ上の C データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-132">The C data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDX`|<span data-ttu-id="98fe5-133">AMD64 プロセッサ上の D データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-133">The D data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBX`|<span data-ttu-id="98fe5-134">AMD64 プロセッサ上の B データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-134">The B data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSI`|<span data-ttu-id="98fe5-135">AMD64 プロセッサ上のソース インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-135">The source index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDI`|<span data-ttu-id="98fe5-136">AMD64 プロセッサ上のターゲット インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-136">The destination index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R8`|<span data-ttu-id="98fe5-137">AMD64 プロセッサ上の #8 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-137">The #8 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R9`|<span data-ttu-id="98fe5-138">AMD64 プロセッサ上の #9 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-138">The #9 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R10`|<span data-ttu-id="98fe5-139">AMD64 プロセッサ上の #10 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-139">The #10 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R11`|<span data-ttu-id="98fe5-140">AMD64 プロセッサ上の #11 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-140">The #11 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R12`|<span data-ttu-id="98fe5-141">AMD64 プロセッサ上の #12 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-141">The #12 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R13`|<span data-ttu-id="98fe5-142">AMD64 プロセッサ上の #13 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-142">The #13 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R14`|<span data-ttu-id="98fe5-143">AMD64 プロセッサ上の #14 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-143">The #14 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R15`|<span data-ttu-id="98fe5-144">AMD64 プロセッサ上の #15 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-144">The #15 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM0`|<span data-ttu-id="98fe5-145">AMD64 プロセッサ上の #0 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM1`|<span data-ttu-id="98fe5-146">AMD64 プロセッサ上の #1 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM2`|<span data-ttu-id="98fe5-147">AMD64 プロセッサ上の #2 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM3`|<span data-ttu-id="98fe5-148">AMD64 プロセッサ上の #3 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM4`|<span data-ttu-id="98fe5-149">AMD64 プロセッサ上の #4 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM5`|<span data-ttu-id="98fe5-150">AMD64 プロセッサ上の #5 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM6`|<span data-ttu-id="98fe5-151">AMD64 プロセッサ上の #6 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM7`|<span data-ttu-id="98fe5-152">AMD64 プロセッサ上の #7 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM8`|<span data-ttu-id="98fe5-153">AMD64 プロセッサ上の #8 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM9`|<span data-ttu-id="98fe5-154">AMD64 プロセッサ上の #9 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM10`|<span data-ttu-id="98fe5-155">AMD64 プロセッサ上の #10 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM11`|<span data-ttu-id="98fe5-156">AMD64 プロセッサ上の #11 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM12`|<span data-ttu-id="98fe5-157">AMD64 プロセッサ上の #12 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM13`|<span data-ttu-id="98fe5-158">AMD64 プロセッサ上の #13 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM14`|<span data-ttu-id="98fe5-159">AMD64 プロセッサ上の #14 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM15`|<span data-ttu-id="98fe5-160">AMD64 プロセッサ上の #15 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_IA64_BSP`|<span data-ttu-id="98fe5-161">IA-64 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-161">The stack pointer register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_R0`|<span data-ttu-id="98fe5-162">IA-64 プロセッサ上の #0 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-162">The #0 data register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_F0`|<span data-ttu-id="98fe5-163">IA-64 プロセッサ上の #0 FP データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="98fe5-163">The #0 FP data register on the IA-64 processor.</span></span>|  
-|`REGISTER_ARM_PC`|<span data-ttu-id="98fe5-164">ARM プロセッサ上のプログラム カウンター レジスタ (R15)。</span><span class="sxs-lookup"><span data-stu-id="98fe5-164">The program counter register (R15) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_SP`|<span data-ttu-id="98fe5-165">ARM プロセッサ上のスタック ポインター レジスタ (R13)。</span><span class="sxs-lookup"><span data-stu-id="98fe5-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R0`|<span data-ttu-id="98fe5-166">ARM プロセッサ上のデータ レジスタ R0。</span><span class="sxs-lookup"><span data-stu-id="98fe5-166">Data register R0 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R1`|<span data-ttu-id="98fe5-167">ARM プロセッサ上のデータ レジスタ R1。</span><span class="sxs-lookup"><span data-stu-id="98fe5-167">Data register R1 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R2`|<span data-ttu-id="98fe5-168">ARM プロセッサ上のデータ レジスタ R2。</span><span class="sxs-lookup"><span data-stu-id="98fe5-168">Data register R2 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R3`|<span data-ttu-id="98fe5-169">ARM プロセッサ上のデータ レジスタ R3。</span><span class="sxs-lookup"><span data-stu-id="98fe5-169">Data register R3 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R4`|<span data-ttu-id="98fe5-170">ARM プロセッサ上のレジスタ R4。</span><span class="sxs-lookup"><span data-stu-id="98fe5-170">Register R4 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R5`|<span data-ttu-id="98fe5-171">ARM プロセッサ上のレジスタ R5。</span><span class="sxs-lookup"><span data-stu-id="98fe5-171">Register R5 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R6`|<span data-ttu-id="98fe5-172">ARM プロセッサ上のレジスタ R6。</span><span class="sxs-lookup"><span data-stu-id="98fe5-172">Register R6 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R7`|<span data-ttu-id="98fe5-173">ARM プロセッサ上のレジスタ R7 (THUMB フレーム ポインター)。</span><span class="sxs-lookup"><span data-stu-id="98fe5-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R8`|<span data-ttu-id="98fe5-174">ARM プロセッサ上のレジスタ R8。</span><span class="sxs-lookup"><span data-stu-id="98fe5-174">Register R8 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R9`|<span data-ttu-id="98fe5-175">ARM プロセッサ上のレジスタ R9。</span><span class="sxs-lookup"><span data-stu-id="98fe5-175">Register R9 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R10`|<span data-ttu-id="98fe5-176">ARM プロセッサ上のレジスタ R10。</span><span class="sxs-lookup"><span data-stu-id="98fe5-176">Register R10 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R11`|<span data-ttu-id="98fe5-177">ARM プロセッサ上のフレーム ポインター。</span><span class="sxs-lookup"><span data-stu-id="98fe5-177">The frame pointer on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R12`|<span data-ttu-id="98fe5-178">ARM プロセッサ上のレジスタ R12。</span><span class="sxs-lookup"><span data-stu-id="98fe5-178">Register R12 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_LR`|<span data-ttu-id="98fe5-179">ARM プロセッサ上のリンク レジスタ (R14)。</span><span class="sxs-lookup"><span data-stu-id="98fe5-179">The link register (R14) on the ARM processor.</span></span>|  
+|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="65f4f-108">すべてのプロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-108">An instruction pointer register on any processor.</span></span>|  
+|`REGISTER_STACK_POINTER`|<span data-ttu-id="65f4f-109">すべてのプロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-109">A stack pointer register on any processor.</span></span>|  
+|`REGISTER_FRAME_POINTER`|<span data-ttu-id="65f4f-110">すべてのプロセッサ上のフレーム ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-110">A frame pointer register on any processor.</span></span>|  
+|`REGISTER_X86_EIP`|<span data-ttu-id="65f4f-111">x86 プロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-111">The instruction pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESP`|<span data-ttu-id="65f4f-112">x86 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-112">The stack pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBP`|<span data-ttu-id="65f4f-113">x86 プロセッサ上の基本ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-113">The base pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EAX`|<span data-ttu-id="65f4f-114">x86 プロセッサ上の A データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-114">The A data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ECX`|<span data-ttu-id="65f4f-115">x86 プロセッサ上の C データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-115">The C data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDX`|<span data-ttu-id="65f4f-116">x86 プロセッサ上の D データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-116">The D data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBX`|<span data-ttu-id="65f4f-117">x86 プロセッサ上の B データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-117">The B data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESI`|<span data-ttu-id="65f4f-118">x86 プロセッサ上のソース インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-118">The source index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDI`|<span data-ttu-id="65f4f-119">x86 プロセッサ上のターゲット インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-119">The destination index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="65f4f-120">x86 浮動小数点 (FP) プロセッサ上のスタック レジスタ 0。</span><span class="sxs-lookup"><span data-stu-id="65f4f-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="65f4f-121">x86 FP プロセッサ上の #1 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-121">The #1 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="65f4f-122">x86 FP プロセッサ上の #2 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-122">The #2 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="65f4f-123">x86 FP プロセッサ上の #3 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-123">The #3 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="65f4f-124">x86 FP プロセッサ上の #4 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-124">The #4 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="65f4f-125">x86 FP プロセッサ上の #5 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-125">The #5 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="65f4f-126">x86 FP プロセッサ上の #6 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-126">The #6 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="65f4f-127">x86 FP プロセッサ上の #7 スタック レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-127">The #7 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_AMD64_RIP`|<span data-ttu-id="65f4f-128">AMD64 プロセッサ上の命令ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-128">The instruction pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSP`|<span data-ttu-id="65f4f-129">AMD64 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-129">The stack pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBP`|<span data-ttu-id="65f4f-130">AMD64 プロセッサ上の基本ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-130">The base pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RAX`|<span data-ttu-id="65f4f-131">AMD64 プロセッサ上の A データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-131">The A data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RCX`|<span data-ttu-id="65f4f-132">AMD64 プロセッサ上の C データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-132">The C data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDX`|<span data-ttu-id="65f4f-133">AMD64 プロセッサ上の D データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-133">The D data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBX`|<span data-ttu-id="65f4f-134">AMD64 プロセッサ上の B データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-134">The B data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSI`|<span data-ttu-id="65f4f-135">AMD64 プロセッサ上のソース インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-135">The source index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDI`|<span data-ttu-id="65f4f-136">AMD64 プロセッサ上のターゲット インデックス レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-136">The destination index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R8`|<span data-ttu-id="65f4f-137">AMD64 プロセッサ上の #8 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-137">The #8 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R9`|<span data-ttu-id="65f4f-138">AMD64 プロセッサ上の #9 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-138">The #9 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R10`|<span data-ttu-id="65f4f-139">AMD64 プロセッサ上の #10 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-139">The #10 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R11`|<span data-ttu-id="65f4f-140">AMD64 プロセッサ上の #11 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-140">The #11 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R12`|<span data-ttu-id="65f4f-141">AMD64 プロセッサ上の #12 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-141">The #12 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R13`|<span data-ttu-id="65f4f-142">AMD64 プロセッサ上の #13 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-142">The #13 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R14`|<span data-ttu-id="65f4f-143">AMD64 プロセッサ上の #14 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-143">The #14 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R15`|<span data-ttu-id="65f4f-144">AMD64 プロセッサ上の #15 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-144">The #15 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM0`|<span data-ttu-id="65f4f-145">AMD64 プロセッサ上の #0 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM1`|<span data-ttu-id="65f4f-146">AMD64 プロセッサ上の #1 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM2`|<span data-ttu-id="65f4f-147">AMD64 プロセッサ上の #2 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM3`|<span data-ttu-id="65f4f-148">AMD64 プロセッサ上の #3 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM4`|<span data-ttu-id="65f4f-149">AMD64 プロセッサ上の #4 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM5`|<span data-ttu-id="65f4f-150">AMD64 プロセッサ上の #5 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM6`|<span data-ttu-id="65f4f-151">AMD64 プロセッサ上の #6 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM7`|<span data-ttu-id="65f4f-152">AMD64 プロセッサ上の #7 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM8`|<span data-ttu-id="65f4f-153">AMD64 プロセッサ上の #8 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM9`|<span data-ttu-id="65f4f-154">AMD64 プロセッサ上の #9 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM10`|<span data-ttu-id="65f4f-155">AMD64 プロセッサ上の #10 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM11`|<span data-ttu-id="65f4f-156">AMD64 プロセッサ上の #11 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM12`|<span data-ttu-id="65f4f-157">AMD64 プロセッサ上の #12 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM13`|<span data-ttu-id="65f4f-158">AMD64 プロセッサ上の #13 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM14`|<span data-ttu-id="65f4f-159">AMD64 プロセッサ上の #14 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM15`|<span data-ttu-id="65f4f-160">AMD64 プロセッサ上の #15 マルチメディア レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_IA64_BSP`|<span data-ttu-id="65f4f-161">IA-64 プロセッサ上のスタック ポインター レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-161">The stack pointer register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_R0`|<span data-ttu-id="65f4f-162">IA-64 プロセッサ上の #0 データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-162">The #0 data register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_F0`|<span data-ttu-id="65f4f-163">IA-64 プロセッサ上の #0 FP データ レジスタ。</span><span class="sxs-lookup"><span data-stu-id="65f4f-163">The #0 FP data register on the IA-64 processor.</span></span>|  
+|`REGISTER_ARM_PC`|<span data-ttu-id="65f4f-164">ARM プロセッサ上のプログラム カウンター レジスタ (R15)。</span><span class="sxs-lookup"><span data-stu-id="65f4f-164">The program counter register (R15) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_SP`|<span data-ttu-id="65f4f-165">ARM プロセッサ上のスタック ポインター レジスタ (R13)。</span><span class="sxs-lookup"><span data-stu-id="65f4f-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R0`|<span data-ttu-id="65f4f-166">ARM プロセッサ上のデータ レジスタ R0。</span><span class="sxs-lookup"><span data-stu-id="65f4f-166">Data register R0 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R1`|<span data-ttu-id="65f4f-167">ARM プロセッサ上のデータ レジスタ R1。</span><span class="sxs-lookup"><span data-stu-id="65f4f-167">Data register R1 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R2`|<span data-ttu-id="65f4f-168">ARM プロセッサ上のデータ レジスタ R2。</span><span class="sxs-lookup"><span data-stu-id="65f4f-168">Data register R2 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R3`|<span data-ttu-id="65f4f-169">ARM プロセッサ上のデータ レジスタ R3。</span><span class="sxs-lookup"><span data-stu-id="65f4f-169">Data register R3 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R4`|<span data-ttu-id="65f4f-170">ARM プロセッサ上のレジスタ R4。</span><span class="sxs-lookup"><span data-stu-id="65f4f-170">Register R4 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R5`|<span data-ttu-id="65f4f-171">ARM プロセッサ上のレジスタ R5。</span><span class="sxs-lookup"><span data-stu-id="65f4f-171">Register R5 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R6`|<span data-ttu-id="65f4f-172">ARM プロセッサ上のレジスタ R6。</span><span class="sxs-lookup"><span data-stu-id="65f4f-172">Register R6 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R7`|<span data-ttu-id="65f4f-173">ARM プロセッサ上のレジスタ R7 (THUMB フレーム ポインター)。</span><span class="sxs-lookup"><span data-stu-id="65f4f-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R8`|<span data-ttu-id="65f4f-174">ARM プロセッサ上のレジスタ R8。</span><span class="sxs-lookup"><span data-stu-id="65f4f-174">Register R8 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R9`|<span data-ttu-id="65f4f-175">ARM プロセッサ上のレジスタ R9。</span><span class="sxs-lookup"><span data-stu-id="65f4f-175">Register R9 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R10`|<span data-ttu-id="65f4f-176">ARM プロセッサ上のレジスタ R10。</span><span class="sxs-lookup"><span data-stu-id="65f4f-176">Register R10 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R11`|<span data-ttu-id="65f4f-177">ARM プロセッサ上のフレーム ポインター。</span><span class="sxs-lookup"><span data-stu-id="65f4f-177">The frame pointer on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R12`|<span data-ttu-id="65f4f-178">ARM プロセッサ上のレジスタ R12。</span><span class="sxs-lookup"><span data-stu-id="65f4f-178">Register R12 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_LR`|<span data-ttu-id="65f4f-179">ARM プロセッサ上のリンク レジスタ (R14)。</span><span class="sxs-lookup"><span data-stu-id="65f4f-179">The link register (R14) on the ARM processor.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="98fe5-180">Remarks</span><span class="sxs-lookup"><span data-stu-id="98fe5-180">Remarks</span></span>  
- <span data-ttu-id="98fe5-181">IA-64 プロセッサには、128 個の汎用データ レジスタおよび 128 個の浮動小数点データ レジスタがありますが、提供されているのは `REGISTER_IA64_R0` および `REGISTER_IA64_F0` の値のみです。</span><span class="sxs-lookup"><span data-stu-id="98fe5-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="98fe5-182">その他の値は、次のように判断されます。</span><span class="sxs-lookup"><span data-stu-id="98fe5-182">The other values can be determined as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65f4f-180">コメント</span><span class="sxs-lookup"><span data-stu-id="65f4f-180">Remarks</span></span>  
+ <span data-ttu-id="65f4f-181">IA-64 プロセッサには、128 個の汎用データ レジスタおよび 128 個の浮動小数点データ レジスタがありますが、提供されているのは `REGISTER_IA64_R0` および `REGISTER_IA64_F0` の値のみです。</span><span class="sxs-lookup"><span data-stu-id="65f4f-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="65f4f-182">その他の値は、次のように判断されます。</span><span class="sxs-lookup"><span data-stu-id="65f4f-182">The other values can be determined as follows:</span></span>  
   
-- <span data-ttu-id="98fe5-183">IA-64 プロセッサ上の #1 データ レジスタから #127 データ レジスタに対応する、`REGISTER_IA64_R0` から `REGISTER_IA64_R1` までの値の `REGISTER_IA64_R127` にレジスタ番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="98fe5-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
+- <span data-ttu-id="65f4f-183">IA-64 プロセッサ上の #1 データ レジスタから #127 データ レジスタに対応する、`REGISTER_IA64_R0` から `REGISTER_IA64_R1` までの値の `REGISTER_IA64_R127` にレジスタ番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="65f4f-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
   
-- <span data-ttu-id="98fe5-184">IA-64 プロセッサ上の #1 FP データ レジスタから #127 FP データ レジスタに対応する、`REGISTER_IA64_F0` から `REGISTER_IA64_F1` までの値の `REGISTER_IA64_F127` にレジスタ番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="98fe5-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
+- <span data-ttu-id="65f4f-184">IA-64 プロセッサ上の #1 FP データ レジスタから #127 FP データ レジスタに対応する、`REGISTER_IA64_F0` から `REGISTER_IA64_F1` までの値の `REGISTER_IA64_F127` にレジスタ番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="65f4f-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
   
- <span data-ttu-id="98fe5-185">たとえば、IA-64 プロセッサ上で #83 データ レジスタを指定する必要がある場合、`REGISTER_IA64_R0` + 83 を使用します。</span><span class="sxs-lookup"><span data-stu-id="98fe5-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
+ <span data-ttu-id="65f4f-185">たとえば、IA-64 プロセッサ上で #83 データ レジスタを指定する必要がある場合、`REGISTER_IA64_R0` + 83 を使用します。</span><span class="sxs-lookup"><span data-stu-id="65f4f-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98fe5-186">［要件］</span><span class="sxs-lookup"><span data-stu-id="98fe5-186">Requirements</span></span>  
- <span data-ttu-id="98fe5-187">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="98fe5-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65f4f-186">要件</span><span class="sxs-lookup"><span data-stu-id="65f4f-186">Requirements</span></span>  
+ <span data-ttu-id="65f4f-187">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="65f4f-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98fe5-188">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98fe5-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="65f4f-188">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65f4f-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98fe5-189">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98fe5-189">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="65f4f-189">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65f4f-189">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98fe5-190">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98fe5-190">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="65f4f-190">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65f4f-190">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98fe5-191">関連項目</span><span class="sxs-lookup"><span data-stu-id="98fe5-191">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65f4f-191">関連項目</span><span class="sxs-lookup"><span data-stu-id="65f4f-191">See also</span></span>
 
-- [<span data-ttu-id="98fe5-192">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="98fe5-192">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="65f4f-192">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="65f4f-192">Debugging Enumerations</span></span>](debugging-enumerations.md)

@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 4134062be93a2fc5e76949d465a7b5822556b408
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b1ccffa4f24122e643a64270f44945afdbc8fff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128901"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792648"
 ---
-# <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="40592-102">ICorDebugProcess::EnableLogMessages メソッド</span><span class="sxs-lookup"><span data-stu-id="40592-102">ICorDebugProcess::EnableLogMessages Method</span></span>
-<span data-ttu-id="40592-103">デバッガーへのログメッセージの転送を有効または無効にします。</span><span class="sxs-lookup"><span data-stu-id="40592-103">Enables and disables the transmission of log messages to the debugger.</span></span>  
+# <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="34292-102">ICorDebugProcess::EnableLogMessages メソッド</span><span class="sxs-lookup"><span data-stu-id="34292-102">ICorDebugProcess::EnableLogMessages Method</span></span>
+<span data-ttu-id="34292-103">デバッガーへのログメッセージの転送を有効または無効にします。</span><span class="sxs-lookup"><span data-stu-id="34292-103">Enables and disables the transmission of log messages to the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40592-104">構文</span><span class="sxs-lookup"><span data-stu-id="40592-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34292-104">構文</span><span class="sxs-lookup"><span data-stu-id="34292-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnableLogMessages([in]BOOL fOnOff);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40592-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="40592-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34292-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="34292-105">Parameters</span></span>  
  `fOnOff`  
- <span data-ttu-id="40592-106">[in] `true` では、ログメッセージを転送できます。`false` は、転送を無効にします。</span><span class="sxs-lookup"><span data-stu-id="40592-106">[in] `true` enables the transmission of log messages; `false` disables the transmission.</span></span>  
+ <span data-ttu-id="34292-106">[in] `true` では、ログメッセージを転送できます。`false` は、転送を無効にします。</span><span class="sxs-lookup"><span data-stu-id="34292-106">[in] `true` enables the transmission of log messages; `false` disables the transmission.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="40592-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="40592-107">Remarks</span></span>  
- <span data-ttu-id="40592-108">このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)コールバックが発生します。</span><span class="sxs-lookup"><span data-stu-id="40592-108">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback occurs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34292-107">コメント</span><span class="sxs-lookup"><span data-stu-id="34292-107">Remarks</span></span>  
+ <span data-ttu-id="34292-108">このメソッドは、によって実行される場合にのみ有効です: [: CreateProcess managedcallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md)コールバックが発生します。</span><span class="sxs-lookup"><span data-stu-id="34292-108">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](icordebugmanagedcallback-createprocess-method.md) callback occurs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40592-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="40592-109">Requirements</span></span>  
- <span data-ttu-id="40592-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="40592-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34292-109">要件</span><span class="sxs-lookup"><span data-stu-id="34292-109">Requirements</span></span>  
+ <span data-ttu-id="34292-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="34292-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40592-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40592-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="34292-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34292-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="40592-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40592-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34292-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34292-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="40592-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40592-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="34292-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34292-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
