@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090537"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794536"
 ---
-# <a name="icordebugframeenum-interface"></a><span data-ttu-id="6aca0-102">ICorDebugFrameEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6aca0-102">ICorDebugFrameEnum Interface</span></span>
+# <a name="icordebugframeenum-interface"></a><span data-ttu-id="8d7d1-102">ICorDebugFrameEnum インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d7d1-102">ICorDebugFrameEnum Interface</span></span>
 
-<span data-ttu-id="6aca0-103">ICorDebugEnum メソッドを実装し、テキストボックスの配列を列挙します。</span><span class="sxs-lookup"><span data-stu-id="6aca0-103">Implements ICorDebugEnum methods, and enumerates ICorDebugFrame arrays.</span></span>  
+<span data-ttu-id="8d7d1-103">ICorDebugEnum メソッドを実装し、テキストボックスの配列を列挙します。</span><span class="sxs-lookup"><span data-stu-id="8d7d1-103">Implements ICorDebugEnum methods, and enumerates ICorDebugFrame arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6aca0-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6aca0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8d7d1-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="8d7d1-104">Methods</span></span>  
   
-|<span data-ttu-id="6aca0-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6aca0-105">Method</span></span>|<span data-ttu-id="6aca0-106">説明</span><span class="sxs-lookup"><span data-stu-id="6aca0-106">Description</span></span>|  
+|<span data-ttu-id="8d7d1-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="8d7d1-105">Method</span></span>|<span data-ttu-id="8d7d1-106">説明</span><span class="sxs-lookup"><span data-stu-id="8d7d1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6aca0-107">Next メソッド</span><span class="sxs-lookup"><span data-stu-id="6aca0-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|<span data-ttu-id="6aca0-108">現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。</span><span class="sxs-lookup"><span data-stu-id="6aca0-108">Gets the specified number of `ICorDebugFrame` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="8d7d1-107">Next メソッド</span><span class="sxs-lookup"><span data-stu-id="8d7d1-107">Next Method</span></span>](icordebugframeenum-next-method.md)|<span data-ttu-id="8d7d1-108">現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。</span><span class="sxs-lookup"><span data-stu-id="8d7d1-108">Gets the specified number of `ICorDebugFrame` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6aca0-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="6aca0-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d7d1-109">コメント</span><span class="sxs-lookup"><span data-stu-id="8d7d1-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6aca0-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="6aca0-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="8d7d1-110">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="8d7d1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6aca0-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="6aca0-111">Requirements</span></span>  
- <span data-ttu-id="6aca0-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6aca0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d7d1-111">要件</span><span class="sxs-lookup"><span data-stu-id="8d7d1-111">Requirements</span></span>  
+ <span data-ttu-id="8d7d1-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8d7d1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6aca0-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6aca0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8d7d1-113">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d7d1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6aca0-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6aca0-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d7d1-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d7d1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6aca0-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6aca0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8d7d1-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d7d1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6aca0-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="6aca0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d7d1-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8d7d1-116">See also</span></span>
 
-- [<span data-ttu-id="6aca0-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6aca0-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8d7d1-117">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8d7d1-117">Debugging Interfaces</span></span>](debugging-interfaces.md)

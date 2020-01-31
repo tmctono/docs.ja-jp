@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: b17ab9382e5195881e5629d482e4327fc67562f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4fe18b4f07e6f282571b13faff5ce51b66ce416b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449588"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868487"
 ---
-# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="f4915-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="f4915-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
-<span data-ttu-id="f4915-103">マネージ関数の[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)フックで呼び出されるプロファイラー実装関数を指定します。</span><span class="sxs-lookup"><span data-stu-id="f4915-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="f66e1-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo メソッド</span><span class="sxs-lookup"><span data-stu-id="f66e1-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
+<span data-ttu-id="f66e1-103">マネージ関数の[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)フックで呼び出されるプロファイラー実装関数を指定します。</span><span class="sxs-lookup"><span data-stu-id="f66e1-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4915-104">構文</span><span class="sxs-lookup"><span data-stu-id="f4915-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f66e1-104">構文</span><span class="sxs-lookup"><span data-stu-id="f66e1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEnterLeaveFunctionHooks3WithInfo(  
@@ -34,42 +34,42 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f4915-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f4915-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f66e1-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f66e1-105">Parameters</span></span>  
  `pFuncEnter3`  
- <span data-ttu-id="f4915-106">から`FunctionEnter3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f4915-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
+ <span data-ttu-id="f66e1-106">から`FunctionEnter3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f66e1-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
   
  `pFuncLeave3`  
- <span data-ttu-id="f4915-107">から`FunctionLeave3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f4915-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
+ <span data-ttu-id="f66e1-107">から`FunctionLeave3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f66e1-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
   
  `pFuncTailcall3`  
- <span data-ttu-id="f4915-108">から`FunctionTailcall3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f4915-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
+ <span data-ttu-id="f66e1-108">から`FunctionTailcall3WithInfo` のコールバックとして使用される実装へのポインター。</span><span class="sxs-lookup"><span data-stu-id="f66e1-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f4915-109">コメント</span><span class="sxs-lookup"><span data-stu-id="f4915-109">Remarks</span></span>  
- <span data-ttu-id="f4915-110">[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)の各フックは、スタックフレームと引数の検査を提供します。</span><span class="sxs-lookup"><span data-stu-id="f4915-110">The [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="f4915-111">この情報にアクセスするには、`COR_PRF_ENABLE_FUNCTION_ARGS`、`COR_PRF_ENABLE_FUNCTION_RETVAL`、`COR_PRF_ENABLE_FRAME_INFO` フラグを設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f4915-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="f4915-112">プロファイラーは、 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定し、`SetEnterLeaveFunctionHooks3WithInfo` メソッドを使用して、この関数の実装を登録できます。</span><span class="sxs-lookup"><span data-stu-id="f4915-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f66e1-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="f66e1-109">Remarks</span></span>  
+ <span data-ttu-id="f66e1-110">[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)、および[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)の各フックは、スタックフレームと引数の検査を提供します。</span><span class="sxs-lookup"><span data-stu-id="f66e1-110">The [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="f66e1-111">この情報にアクセスするには、`COR_PRF_ENABLE_FUNCTION_ARGS`、`COR_PRF_ENABLE_FUNCTION_RETVAL`、`COR_PRF_ENABLE_FRAME_INFO` フラグを設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f66e1-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="f66e1-112">プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定し、`SetEnterLeaveFunctionHooks3WithInfo` メソッドを使用して、この関数の実装を登録できます。</span><span class="sxs-lookup"><span data-stu-id="f66e1-112">The profiler can use the [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="f4915-113">コールバックのセットは一度に1つしかアクティブにできません。また、最新バージョンが優先されます。</span><span class="sxs-lookup"><span data-stu-id="f4915-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="f4915-114">そのため、プロファイラーが[SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)と `SetEnterLeaveFunctionHooks3WithInfo`の両方を呼び出す場合、`SetEnterLeaveFunctionHooks3WithInfo` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="f4915-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
+ <span data-ttu-id="f66e1-113">コールバックのセットは一度に1つしかアクティブにできません。また、最新バージョンが優先されます。</span><span class="sxs-lookup"><span data-stu-id="f66e1-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="f66e1-114">そのため、プロファイラーが[SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)と `SetEnterLeaveFunctionHooks3WithInfo`の両方を呼び出す場合、`SetEnterLeaveFunctionHooks3WithInfo` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="f66e1-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
   
- <span data-ttu-id="f4915-115">`SetEnterLeaveFunctionHooks3WithInfo` メソッドは、プロファイラーの[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)コールバックからのみ呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="f4915-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="f66e1-115">`SetEnterLeaveFunctionHooks3WithInfo` メソッドは、プロファイラーの[ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)コールバックからのみ呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="f66e1-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4915-116">要件</span><span class="sxs-lookup"><span data-stu-id="f4915-116">Requirements</span></span>  
- <span data-ttu-id="f4915-117">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4915-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f66e1-116">要件</span><span class="sxs-lookup"><span data-stu-id="f66e1-116">Requirements</span></span>  
+ <span data-ttu-id="f66e1-117">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f66e1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4915-118">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f4915-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f66e1-118">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f66e1-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f4915-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4915-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f66e1-119">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f66e1-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4915-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4915-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f66e1-120">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f66e1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4915-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4915-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f66e1-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="f66e1-121">See also</span></span>
 
-- [<span data-ttu-id="f4915-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="f4915-122">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [<span data-ttu-id="f4915-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="f4915-123">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="f4915-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="f4915-124">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="f4915-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="f4915-125">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="f4915-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f4915-126">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="f4915-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f4915-127">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="f4915-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f4915-128">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="f4915-129">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="f4915-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
-- [<span data-ttu-id="f4915-130">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4915-130">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="f4915-131">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f4915-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="f4915-132">プロファイル</span><span class="sxs-lookup"><span data-stu-id="f4915-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="f66e1-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="f66e1-122">SetEnterLeaveFunctionHooks3</span></span>](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [<span data-ttu-id="f66e1-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="f66e1-123">FunctionEnter3</span></span>](functionenter3-function.md)
+- [<span data-ttu-id="f66e1-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="f66e1-124">FunctionLeave3</span></span>](functionleave3-function.md)
+- [<span data-ttu-id="f66e1-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="f66e1-125">FunctionTailcall3</span></span>](functiontailcall3-function.md)
+- [<span data-ttu-id="f66e1-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f66e1-126">FunctionEnter3WithInfo</span></span>](functionenter3withinfo-function.md)
+- [<span data-ttu-id="f66e1-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f66e1-127">FunctionLeave3WithInfo</span></span>](functionleave3withinfo-function.md)
+- [<span data-ttu-id="f66e1-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="f66e1-128">FunctionTailcall3WithInfo</span></span>](functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="f66e1-129">グローバル静的関数のプロファイル</span><span class="sxs-lookup"><span data-stu-id="f66e1-129">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)
+- [<span data-ttu-id="f66e1-130">ICorProfilerInfo3 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f66e1-130">ICorProfilerInfo3 Interface</span></span>](icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="f66e1-131">プロファイリングのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="f66e1-131">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="f66e1-132">プロファイル</span><span class="sxs-lookup"><span data-stu-id="f66e1-132">Profiling</span></span>](index.md)

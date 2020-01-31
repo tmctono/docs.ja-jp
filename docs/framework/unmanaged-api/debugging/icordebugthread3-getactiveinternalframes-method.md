@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124347"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791396"
 ---
-# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="020eb-102">ICorDebugThread3::GetActiveInternalFrames メソッド</span><span class="sxs-lookup"><span data-stu-id="020eb-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
-<span data-ttu-id="020eb-103">スタック上の内部フレーム ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="020eb-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
+# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="cb758-102">ICorDebugThread3::GetActiveInternalFrames メソッド</span><span class="sxs-lookup"><span data-stu-id="cb758-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
+<span data-ttu-id="cb758-103">スタック上の内部フレーム ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="cb758-103">Returns an array of internal frames ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="020eb-104">構文</span><span class="sxs-lookup"><span data-stu-id="020eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb758-104">構文</span><span class="sxs-lookup"><span data-stu-id="cb758-104">Syntax</span></span>  
   
 ```cpp 
 HRESULT GetActiveInternalFrames  
@@ -37,46 +37,46 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="020eb-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="020eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb758-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cb758-105">Parameters</span></span>  
  `cInternalFrames`  
- <span data-ttu-id="020eb-106">から`ppInternalFrames`に必要な内部フレームの数。</span><span class="sxs-lookup"><span data-stu-id="020eb-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="cb758-106">から`ppInternalFrames`に必要な内部フレームの数。</span><span class="sxs-lookup"><span data-stu-id="cb758-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
   
  `pcInternalFrames`  
- <span data-ttu-id="020eb-107">入出力スタック上の内部フレームの数を格納している `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="020eb-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
+ <span data-ttu-id="cb758-107">入出力スタック上の内部フレームの数を格納している `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="cb758-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
   
  `ppInternalFrames`  
- <span data-ttu-id="020eb-108">[入力、出力]スタック上の内部フレームの配列のアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="020eb-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
+ <span data-ttu-id="cb758-108">[入力、出力]スタック上の内部フレームの配列のアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cb758-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="020eb-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="020eb-109">Return Value</span></span>  
- <span data-ttu-id="020eb-110">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="020eb-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cb758-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="cb758-109">Return Value</span></span>  
+ <span data-ttu-id="cb758-110">このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。</span><span class="sxs-lookup"><span data-stu-id="cb758-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="020eb-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="020eb-111">HRESULT</span></span>|<span data-ttu-id="020eb-112">説明</span><span class="sxs-lookup"><span data-stu-id="020eb-112">Description</span></span>|  
+|<span data-ttu-id="cb758-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cb758-111">HRESULT</span></span>|<span data-ttu-id="cb758-112">説明</span><span class="sxs-lookup"><span data-stu-id="cb758-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="020eb-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="020eb-113">S_OK</span></span>|<span data-ttu-id="020eb-114">[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)オブジェクトが正常に作成されました。</span><span class="sxs-lookup"><span data-stu-id="020eb-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
-|<span data-ttu-id="020eb-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="020eb-115">E_INVALIDARG</span></span>|<span data-ttu-id="020eb-116">`cInternalFrames` が0ではなく、`ppInternalFrames` が `null`か、または `pcInternalFrames` が `null`。</span><span class="sxs-lookup"><span data-stu-id="020eb-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
-|<span data-ttu-id="020eb-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="020eb-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="020eb-118">`ppInternalFrames` が内部フレームの数よりも小さくなっています。</span><span class="sxs-lookup"><span data-stu-id="020eb-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
+|<span data-ttu-id="cb758-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="cb758-113">S_OK</span></span>|<span data-ttu-id="cb758-114">[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)オブジェクトが正常に作成されました。</span><span class="sxs-lookup"><span data-stu-id="cb758-114">The [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
+|<span data-ttu-id="cb758-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="cb758-115">E_INVALIDARG</span></span>|<span data-ttu-id="cb758-116">`cInternalFrames` が0ではなく、`ppInternalFrames` が `null`か、または `pcInternalFrames` が `null`。</span><span class="sxs-lookup"><span data-stu-id="cb758-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
+|<span data-ttu-id="cb758-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="cb758-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="cb758-118">`ppInternalFrames` が内部フレームの数よりも小さくなっています。</span><span class="sxs-lookup"><span data-stu-id="cb758-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="020eb-119">例外</span><span class="sxs-lookup"><span data-stu-id="020eb-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="cb758-119">例外</span><span class="sxs-lookup"><span data-stu-id="cb758-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="020eb-120">Remarks</span><span class="sxs-lookup"><span data-stu-id="020eb-120">Remarks</span></span>  
- <span data-ttu-id="020eb-121">内部フレームは、一時データを格納するためにランタイムによってスタックにプッシュされるデータ構造です。</span><span class="sxs-lookup"><span data-stu-id="020eb-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb758-120">コメント</span><span class="sxs-lookup"><span data-stu-id="cb758-120">Remarks</span></span>  
+ <span data-ttu-id="cb758-121">内部フレームは、一時データを格納するためにランタイムによってスタックにプッシュされるデータ構造です。</span><span class="sxs-lookup"><span data-stu-id="cb758-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
   
- <span data-ttu-id="020eb-122">最初に `GetActiveInternalFrames`を呼び出すときは、`cInternalFrames` パラメーターを 0 (ゼロ) に設定し、`ppInternalFrames` パラメーターを null に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="020eb-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="020eb-123">`GetActiveInternalFrames` 最初にを返すと、`pcInternalFrames` にはスタック上の内部フレームの数が含まれます。</span><span class="sxs-lookup"><span data-stu-id="020eb-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
+ <span data-ttu-id="cb758-122">最初に `GetActiveInternalFrames`を呼び出すときは、`cInternalFrames` パラメーターを 0 (ゼロ) に設定し、`ppInternalFrames` パラメーターを null に設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cb758-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="cb758-123">`GetActiveInternalFrames` 最初にを返すと、`pcInternalFrames` にはスタック上の内部フレームの数が含まれます。</span><span class="sxs-lookup"><span data-stu-id="cb758-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
   
- <span data-ttu-id="020eb-124">`GetActiveInternalFrames` は、2回目に呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="020eb-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="020eb-125">`cInternalFrames` パラメーターに適切なカウント (`pcInternalFrames`) を渡し、`ppInternalFrames`で適切にサイズ設定された配列へのポインターを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="020eb-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="cb758-124">`GetActiveInternalFrames` は、2回目に呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="cb758-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="cb758-125">`cInternalFrames` パラメーターに適切なカウント (`pcInternalFrames`) を渡し、`ppInternalFrames`で適切にサイズ設定された配列へのポインターを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cb758-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
   
- <span data-ttu-id="020eb-126">実際のスタックフレームを返すには、の[テキスト](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="020eb-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
+ <span data-ttu-id="cb758-126">実際のスタックフレームを返すには、の[テキスト](icordebugthread3-getactiveinternalframes-method.md)を使用します。</span><span class="sxs-lookup"><span data-stu-id="cb758-126">Use the [ICorDebugStackWalk::GetFrame](icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="020eb-127">［要件］</span><span class="sxs-lookup"><span data-stu-id="020eb-127">Requirements</span></span>  
- <span data-ttu-id="020eb-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="020eb-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb758-127">要件</span><span class="sxs-lookup"><span data-stu-id="cb758-127">Requirements</span></span>  
+ <span data-ttu-id="cb758-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cb758-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="020eb-129">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="020eb-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cb758-129">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb758-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="020eb-130">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="020eb-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cb758-130">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb758-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="020eb-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="020eb-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="cb758-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb758-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="020eb-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="020eb-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb758-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb758-132">See also</span></span>
 
-- [<span data-ttu-id="020eb-133">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="020eb-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="020eb-134">デバッグ</span><span class="sxs-lookup"><span data-stu-id="020eb-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="cb758-133">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="cb758-133">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="cb758-134">デバッグ</span><span class="sxs-lookup"><span data-stu-id="cb758-134">Debugging</span></span>](index.md)
