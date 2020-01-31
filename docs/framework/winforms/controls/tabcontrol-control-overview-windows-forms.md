@@ -1,5 +1,5 @@
 ---
-title: TabControl コントロールの概要 (Windows フォーム)
+title: TabControl コントロールの概要
 ms.date: 03/30/2017
 f1_keywords:
 - TabControl
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2668169488b4087673fbf2552650c23cda780642
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971939"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742832"
 ---
-# <a name="tabcontrol-control-overview-windows-forms"></a><span data-ttu-id="5a0f5-102">TabControl コントロールの概要 (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="5a0f5-102">TabControl Control Overview (Windows Forms)</span></span>
-<span data-ttu-id="5a0f5-103">Windows フォーム <xref:System.Windows.Forms.TabControl> は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-103">The Windows Forms <xref:System.Windows.Forms.TabControl> displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="5a0f5-104">タブには画像やその他のコントロールを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="5a0f5-105">タブ コントロールは、Windows オペレーティング システムのコントロール パネルの表示プロパティなど、多くの場所に表示される複数のページ ダイアログ ボックスの種類を生成するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-105">You can use the tab control to produce the kind of multiple-page dialog box that appears many places in the Windows operating system, such as the Control Panel Display Properties.</span></span> <span data-ttu-id="5a0f5-106">さらに、<xref:System.Windows.Forms.TabControl>関連のプロパティのグループの設定に使用されるプロパティ ページを作成するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-106">Additionally, the <xref:System.Windows.Forms.TabControl> can be used to create property pages, which are used to set a group of related properties.</span></span>  
+# <a name="tabcontrol-control-overview-windows-forms"></a><span data-ttu-id="faaba-102">TabControl コントロールの概要 (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="faaba-102">TabControl Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="faaba-103">Windows フォーム <xref:System.Windows.Forms.TabControl> は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。</span><span class="sxs-lookup"><span data-stu-id="faaba-103">The Windows Forms <xref:System.Windows.Forms.TabControl> displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="faaba-104">タブには画像やその他のコントロールを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="faaba-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="faaba-105">タブコントロールを使用すると、コントロールパネルの表示プロパティなど、Windows オペレーティングシステムのさまざまな場所に表示される複数ページのダイアログボックスの種類を生成できます。</span><span class="sxs-lookup"><span data-stu-id="faaba-105">You can use the tab control to produce the kind of multiple-page dialog box that appears many places in the Windows operating system, such as the Control Panel Display Properties.</span></span> <span data-ttu-id="faaba-106">また、<xref:System.Windows.Forms.TabControl> を使用して、関連するプロパティのグループを設定するために使用されるプロパティページを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="faaba-106">Additionally, the <xref:System.Windows.Forms.TabControl> can be used to create property pages, which are used to set a group of related properties.</span></span>  
   
-## <a name="working-with-tabcontrol"></a><span data-ttu-id="5a0f5-107">TabControl の操作</span><span class="sxs-lookup"><span data-stu-id="5a0f5-107">Working with TabControl</span></span>  
- <span data-ttu-id="5a0f5-108">最も重要なプロパティ、<xref:System.Windows.Forms.TabControl>は<xref:System.Windows.Forms.TabControl.TabPages%2A>、個々 のタブが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-108">The most important property of the <xref:System.Windows.Forms.TabControl> is <xref:System.Windows.Forms.TabControl.TabPages%2A>, which contains the individual tabs.</span></span> <span data-ttu-id="5a0f5-109">各タブは、<xref:System.Windows.Forms.TabPage>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-109">Each individual tab is a <xref:System.Windows.Forms.TabPage> object.</span></span> <span data-ttu-id="5a0f5-110">タブをクリックすると生成、<xref:System.Windows.Forms.Control.Click>をイベント<xref:System.Windows.Forms.TabPage>オブジェクト。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-110">When a tab is clicked, it raises the <xref:System.Windows.Forms.Control.Click> event for that <xref:System.Windows.Forms.TabPage> object.</span></span>  
+## <a name="working-with-tabcontrol"></a><span data-ttu-id="faaba-107">TabControl の操作</span><span class="sxs-lookup"><span data-stu-id="faaba-107">Working with TabControl</span></span>  
+ <span data-ttu-id="faaba-108"><xref:System.Windows.Forms.TabControl> の最も重要なプロパティは <xref:System.Windows.Forms.TabControl.TabPages%2A>であり、個々のタブが含まれています。</span><span class="sxs-lookup"><span data-stu-id="faaba-108">The most important property of the <xref:System.Windows.Forms.TabControl> is <xref:System.Windows.Forms.TabControl.TabPages%2A>, which contains the individual tabs.</span></span> <span data-ttu-id="faaba-109">個々のタブは <xref:System.Windows.Forms.TabPage> オブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="faaba-109">Each individual tab is a <xref:System.Windows.Forms.TabPage> object.</span></span> <span data-ttu-id="faaba-110">タブをクリックすると、その <xref:System.Windows.Forms.TabPage> オブジェクトの <xref:System.Windows.Forms.Control.Click> イベントが発生します。</span><span class="sxs-lookup"><span data-stu-id="faaba-110">When a tab is clicked, it raises the <xref:System.Windows.Forms.Control.Click> event for that <xref:System.Windows.Forms.TabPage> object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a0f5-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="5a0f5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="faaba-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="faaba-111">See also</span></span>
 
 - <xref:System.Windows.Forms.TabControl>
-- [<span data-ttu-id="5a0f5-112">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="5a0f5-112">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="5a0f5-113">方法: Windows フォーム TabControl の外観を変更します。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-113">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [<span data-ttu-id="5a0f5-114">方法: タブ ページにコントロールを追加します。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-114">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="5a0f5-115">方法: Windows フォーム tabcontrol のタブ追加および削除</span><span class="sxs-lookup"><span data-stu-id="5a0f5-115">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [<span data-ttu-id="5a0f5-116">方法: タブ ページを無効にします。</span><span class="sxs-lookup"><span data-stu-id="5a0f5-116">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="5a0f5-117">Windows フォームのダイアログ ボックス</span><span class="sxs-lookup"><span data-stu-id="5a0f5-117">Dialog Boxes in Windows Forms</span></span>](../dialog-boxes-in-windows-forms.md)
+- [<span data-ttu-id="faaba-112">TabControl コントロール</span><span class="sxs-lookup"><span data-stu-id="faaba-112">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="faaba-113">方法: Windows フォーム TabControl の表示形式を変更する</span><span class="sxs-lookup"><span data-stu-id="faaba-113">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="faaba-114">方法: タブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="faaba-114">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="faaba-115">方法: Windows フォーム TabControl のタブを追加および削除する</span><span class="sxs-lookup"><span data-stu-id="faaba-115">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="faaba-116">方法: タブ ページを無効化する</span><span class="sxs-lookup"><span data-stu-id="faaba-116">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="faaba-117">Windows フォームのダイアログ ボックス</span><span class="sxs-lookup"><span data-stu-id="faaba-117">Dialog Boxes in Windows Forms</span></span>](../dialog-boxes-in-windows-forms.md)

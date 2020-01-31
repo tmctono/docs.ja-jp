@@ -3,58 +3,56 @@ title: Windows 互換機能パックを使用してコードを .NET Core に移
 description: Windows 互換機能パックとそれを使用して既存の .NET Framework コードを .NET Core に移植する方法について紹介します。
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715466"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733611"
 ---
-# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="086af-103">Windows 互換機能パックを使用してコードを .NET Core に移植する</span><span class="sxs-lookup"><span data-stu-id="086af-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a><span data-ttu-id="6ad11-103">Windows 互換機能パックを使用してコードを .NET Core に移植する</span><span class="sxs-lookup"><span data-stu-id="6ad11-103">Use the Windows Compatibility Pack to port code to .NET Core</span></span>
 
-<span data-ttu-id="086af-104">既存のコードを .NET Core に移植する際に発生する最も一般的な問題の一部として、.NET Framework のみに存在する API およびテクノロジへの依存があります。</span><span class="sxs-lookup"><span data-stu-id="086af-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in .NET Framework.</span></span> <span data-ttu-id="086af-105">*Windows 互換機能パック*には、このようなテクノロジの多くが用意されているので、.NET Core アプリケーションと .NET Standard ライブラリをはるかに簡単に構築できます。</span><span class="sxs-lookup"><span data-stu-id="086af-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
+<span data-ttu-id="6ad11-104">既存のコードを .NET Core に移植する際に発生する最も一般的な問題の一部として、.NET Framework のみに存在する API およびテクノロジへの依存があります。</span><span class="sxs-lookup"><span data-stu-id="6ad11-104">Some of the most common issues found when porting existing code to .NET Core are dependencies on APIs and technologies that are only found in .NET Framework.</span></span> <span data-ttu-id="6ad11-105">*Windows 互換機能パック*には、このようなテクノロジの多くが用意されているので、.NET Core アプリケーションと .NET Standard ライブラリをはるかに簡単に構築できます。</span><span class="sxs-lookup"><span data-stu-id="6ad11-105">The *Windows Compatibility Pack* provides many of these technologies, so it's much easier to build .NET Core applications and .NET Standard libraries.</span></span>
 
-<span data-ttu-id="086af-106">このパッケージは論理 [.NET Standard 2.0 の拡張](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)であり、API セットを大幅に増やします。ほとんど変更なしで既存コードがコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="086af-106">This package is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases API set and existing code compiles with almost no modifications.</span></span> <span data-ttu-id="086af-107">.NET Standard の約束 ("これはあらゆる .NET 実装の API を集めたものである") を守る目的で、レジストリ、Windows Management Instrumentation (WMI)、リフレクション出力 API など、すべてのプラットフォームで動作しないテクノロジはこのパックには含まれていません。</span><span class="sxs-lookup"><span data-stu-id="086af-107">In order to keep the promise of .NET Standard ("it is the set of APIs that all .NET implementations provide"), the pack doesn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span>
+<span data-ttu-id="6ad11-106">互換性パックは論理的な [.NET Standard 2.0 の拡張機能](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)であり、API セットが大幅に増加します。</span><span class="sxs-lookup"><span data-stu-id="6ad11-106">The compatibility pack is a logical [extension of .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) that significantly increases the API set.</span></span> <span data-ttu-id="6ad11-107">既存のコードは、ほとんど変更されずにコンパイルされます。</span><span class="sxs-lookup"><span data-stu-id="6ad11-107">Existing code compiles with almost no modifications.</span></span> <span data-ttu-id="6ad11-108">"あらゆる .NET 実装で提供される API のセット" でその約束を守るために、レジストリ、Windows Management Instrumentation (WMI)、リフレクション出力 API など、すべてのプラットフォームで動作しないテクノロジは .NET Standard には含まれていません。</span><span class="sxs-lookup"><span data-stu-id="6ad11-108">To keep its promise of "the set of APIs that all .NET implementations provide", .NET Standard doesn't include technologies that can't work across all platforms, such as registry, Windows Management Instrumentation (WMI), or reflection emit APIs.</span></span> <span data-ttu-id="6ad11-109">Windows 互換機能パックは .NET Standard を基盤とし、これらの Windows 専用のテクノロジにアクセスできるようにします。</span><span class="sxs-lookup"><span data-stu-id="6ad11-109">The Windows Compatibility Pack sits on top of .NET Standard and provides access to these Windows-only technologies.</span></span> <span data-ttu-id="6ad11-110">.NET Core に移行したいが、少なくとも最初の手順で Windows に留まることを計画している顧客にとって特に便利です。</span><span class="sxs-lookup"><span data-stu-id="6ad11-110">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows, at least as a first step.</span></span> <span data-ttu-id="6ad11-111">このシナリオでは、Windows 専用のテクノロジを使用できるようにすることで、移行の障害を取り除きます。</span><span class="sxs-lookup"><span data-stu-id="6ad11-111">In that scenario, being able to use Windows-only technologies removes the migration hurdle.</span></span>
 
-<span data-ttu-id="086af-108">Windows 互換機能パックは .NET Standard を基盤とし、Windows 専用のテクノロジを利用できます。</span><span class="sxs-lookup"><span data-stu-id="086af-108">The Windows Compatibility Pack sits on top of .NET Standard and provides access to technologies that are Windows only.</span></span> <span data-ttu-id="086af-109">.NET Core に移行したいが、最初の手順が Windows に留まることである顧客にとって特に便利です。</span><span class="sxs-lookup"><span data-stu-id="086af-109">It's especially useful for customers that want to move to .NET Core but plan to stay on Windows as a first step.</span></span> <span data-ttu-id="086af-110">そのようなシナリオでは、Windows 専用テクノロジを利用できないことが移行における唯一のハードルとなります。アーキテクチャ上の利点がありません。</span><span class="sxs-lookup"><span data-stu-id="086af-110">In that scenario, not being able to use Windows-only technologies is only a migration hurdle with no architectural benefits.</span></span>
+## <a name="package-contents"></a><span data-ttu-id="6ad11-112">パッケージの内容</span><span class="sxs-lookup"><span data-stu-id="6ad11-112">Package contents</span></span>
 
-## <a name="package-contents"></a><span data-ttu-id="086af-111">パッケージの内容</span><span class="sxs-lookup"><span data-stu-id="086af-111">Package contents</span></span>
+<span data-ttu-id="6ad11-113">Windows 互換機能パックは、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)経由で提供され、.NET Core または .NET Standard を対象とするプロジェクトから参照できます。</span><span class="sxs-lookup"><span data-stu-id="6ad11-113">The Windows Compatibility Pack is provided via the [Microsoft.Windows.Compatibility NuGet package](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects that target .NET Core or .NET Standard.</span></span>
 
-<span data-ttu-id="086af-112">Windows 互換機能パックは、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)経由で提供され、.NET Core または .NET Standard を対象とするプロジェクトから参照できます。</span><span class="sxs-lookup"><span data-stu-id="086af-112">The Windows Compatibility Pack is provided via the [Microsoft.Windows.Compatibility NuGet package](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) and can be referenced from projects that target .NET Core or .NET Standard.</span></span>
+<span data-ttu-id="6ad11-114">Windows 専用 API やプラットフォーム非依存 API など、約 20,000 の API を提供します。テクノロジ領域には次のものがあります。</span><span class="sxs-lookup"><span data-stu-id="6ad11-114">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
 
-<span data-ttu-id="086af-113">Windows 専用 API やプラットフォーム非依存 API など、約 20,000 の API を提供します。テクノロジ領域には次のものがあります。</span><span class="sxs-lookup"><span data-stu-id="086af-113">It provides about 20,000 APIs, including Windows-only as well as cross-platform APIs from the following technology areas:</span></span>
+- <span data-ttu-id="6ad11-115">コード ページ</span><span class="sxs-lookup"><span data-stu-id="6ad11-115">Code Pages</span></span>
+- <span data-ttu-id="6ad11-116">CodeDom</span><span class="sxs-lookup"><span data-stu-id="6ad11-116">CodeDom</span></span>
+- <span data-ttu-id="6ad11-117">構成</span><span class="sxs-lookup"><span data-stu-id="6ad11-117">Configuration</span></span>
+- <span data-ttu-id="6ad11-118">ディレクトリ サービス</span><span class="sxs-lookup"><span data-stu-id="6ad11-118">Directory Services</span></span>
+- <span data-ttu-id="6ad11-119">描画</span><span class="sxs-lookup"><span data-stu-id="6ad11-119">Drawing</span></span>
+- <span data-ttu-id="6ad11-120">ODBC</span><span class="sxs-lookup"><span data-stu-id="6ad11-120">ODBC</span></span>
+- <span data-ttu-id="6ad11-121">アクセス許可</span><span class="sxs-lookup"><span data-stu-id="6ad11-121">Permissions</span></span>
+- <span data-ttu-id="6ad11-122">ポート</span><span class="sxs-lookup"><span data-stu-id="6ad11-122">Ports</span></span>
+- <span data-ttu-id="6ad11-123">Windows アクセス制御リスト (ACL)</span><span class="sxs-lookup"><span data-stu-id="6ad11-123">Windows Access Control Lists (ACL)</span></span>
+- <span data-ttu-id="6ad11-124">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="6ad11-124">Windows Communication Foundation (WCF)</span></span>
+- <span data-ttu-id="6ad11-125">Windows 暗号化</span><span class="sxs-lookup"><span data-stu-id="6ad11-125">Windows Cryptography</span></span>
+- <span data-ttu-id="6ad11-126">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="6ad11-126">Windows EventLog</span></span>
+- <span data-ttu-id="6ad11-127">WMI (Windows Management Instrumentation)</span><span class="sxs-lookup"><span data-stu-id="6ad11-127">Windows Management Instrumentation (WMI)</span></span>
+- <span data-ttu-id="6ad11-128">Windows パフォーマンス カウンター</span><span class="sxs-lookup"><span data-stu-id="6ad11-128">Windows Performance Counters</span></span>
+- <span data-ttu-id="6ad11-129">Windows レジストリ</span><span class="sxs-lookup"><span data-stu-id="6ad11-129">Windows Registry</span></span>
+- <span data-ttu-id="6ad11-130">Windows ランタイム キャッシュ</span><span class="sxs-lookup"><span data-stu-id="6ad11-130">Windows Runtime Caching</span></span>
+- <span data-ttu-id="6ad11-131">Windows サービス</span><span class="sxs-lookup"><span data-stu-id="6ad11-131">Windows Services</span></span>
 
-- <span data-ttu-id="086af-114">コード ページ</span><span class="sxs-lookup"><span data-stu-id="086af-114">Code Pages</span></span>
-- <span data-ttu-id="086af-115">CodeDom</span><span class="sxs-lookup"><span data-stu-id="086af-115">CodeDom</span></span>
-- <span data-ttu-id="086af-116">構成</span><span class="sxs-lookup"><span data-stu-id="086af-116">Configuration</span></span>
-- <span data-ttu-id="086af-117">ディレクトリ サービス</span><span class="sxs-lookup"><span data-stu-id="086af-117">Directory Services</span></span>
-- <span data-ttu-id="086af-118">描画</span><span class="sxs-lookup"><span data-stu-id="086af-118">Drawing</span></span>
-- <span data-ttu-id="086af-119">ODBC</span><span class="sxs-lookup"><span data-stu-id="086af-119">ODBC</span></span>
-- <span data-ttu-id="086af-120">アクセス許可</span><span class="sxs-lookup"><span data-stu-id="086af-120">Permissions</span></span>
-- <span data-ttu-id="086af-121">ポート</span><span class="sxs-lookup"><span data-stu-id="086af-121">Ports</span></span>
-- <span data-ttu-id="086af-122">Windows アクセス制御リスト (ACL)</span><span class="sxs-lookup"><span data-stu-id="086af-122">Windows Access Control Lists (ACL)</span></span>
-- <span data-ttu-id="086af-123">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="086af-123">Windows Communication Foundation (WCF)</span></span>
-- <span data-ttu-id="086af-124">Windows 暗号化</span><span class="sxs-lookup"><span data-stu-id="086af-124">Windows Cryptography</span></span>
-- <span data-ttu-id="086af-125">Windows EventLog</span><span class="sxs-lookup"><span data-stu-id="086af-125">Windows EventLog</span></span>
-- <span data-ttu-id="086af-126">WMI (Windows Management Instrumentation)</span><span class="sxs-lookup"><span data-stu-id="086af-126">Windows Management Instrumentation (WMI)</span></span>
-- <span data-ttu-id="086af-127">Windows パフォーマンス カウンター</span><span class="sxs-lookup"><span data-stu-id="086af-127">Windows Performance Counters</span></span>
-- <span data-ttu-id="086af-128">Windows レジストリ</span><span class="sxs-lookup"><span data-stu-id="086af-128">Windows Registry</span></span>
-- <span data-ttu-id="086af-129">Windows ランタイム キャッシュ</span><span class="sxs-lookup"><span data-stu-id="086af-129">Windows Runtime Caching</span></span>
-- <span data-ttu-id="086af-130">Windows サービス</span><span class="sxs-lookup"><span data-stu-id="086af-130">Windows Services</span></span>
+<span data-ttu-id="6ad11-132">詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6ad11-132">For more information, see the [specification of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
 
-<span data-ttu-id="086af-131">詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="086af-131">For more information, see the [specification of the compatibility pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).</span></span>
+## <a name="get-started"></a><span data-ttu-id="6ad11-133">作業開始</span><span class="sxs-lookup"><span data-stu-id="6ad11-133">Get started</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="086af-132">作業開始</span><span class="sxs-lookup"><span data-stu-id="086af-132">Get started</span></span>
+1. <span data-ttu-id="6ad11-134">移植の前に、[移植プロセス](index.md)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="6ad11-134">Before porting, make sure to take a look at the [Porting process](index.md).</span></span>
 
-1. <span data-ttu-id="086af-133">移植の前に、[移植プロセス](index.md)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="086af-133">Before porting, make sure to take a look at the [Porting process](index.md).</span></span>
+2. <span data-ttu-id="6ad11-135">.NET Core または .NET Standard に既存のコードを移植するとき、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="6ad11-135">When porting existing code to .NET Core or .NET Standard, install the [Microsoft.Windows.Compatibility NuGet package](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
 
-2. <span data-ttu-id="086af-134">.NET Core または .NET Standard に既存のコードを移植するとき、[Microsoft.Windows.Compatibility NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="086af-134">When porting existing code to .NET Core or .NET Standard, install the [Microsoft.Windows.Compatibility NuGet package](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).</span></span>
+   <span data-ttu-id="6ad11-136">Windows に留まる場合、すでに用意はできています。</span><span class="sxs-lookup"><span data-stu-id="6ad11-136">If you want to stay on Windows, you're all set.</span></span>
 
-   <span data-ttu-id="086af-135">Windows に留まる場合、すでに用意はできています。</span><span class="sxs-lookup"><span data-stu-id="086af-135">If you want to stay on Windows, you're all set.</span></span>
+3. <span data-ttu-id="6ad11-137">.NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](../../standard/analyzers/api-analyzer.md) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。</span><span class="sxs-lookup"><span data-stu-id="6ad11-137">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](../../standard/analyzers/api-analyzer.md) to find usage of APIs that won't work cross-platform.</span></span>
 
-3. <span data-ttu-id="086af-136">.NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](../../standard/analyzers/api-analyzer.md) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。</span><span class="sxs-lookup"><span data-stu-id="086af-136">If you want to run the .NET Core application or .NET Standard library on Linux or macOS, use the [API Analyzer](../../standard/analyzers/api-analyzer.md) to find usage of APIs that won't work cross-platform.</span></span>
-
-4. <span data-ttu-id="086af-137">そのような API の使用を取り除くか、プラットフォーム非依存の代替で置換するか、プラットフォーム チェックで保護します (以下参照)。</span><span class="sxs-lookup"><span data-stu-id="086af-137">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
+4. <span data-ttu-id="6ad11-138">そのような API の使用を取り除くか、プラットフォーム非依存の代替で置換するか、プラットフォーム チェックで保護します (以下参照)。</span><span class="sxs-lookup"><span data-stu-id="6ad11-138">Either remove the usages of those APIs, replace them with cross-platform alternatives, or guard them using a platform check, like:</span></span>
 
     ```csharp
     private static string GetLoggingPath()
@@ -76,4 +74,4 @@ ms.locfileid: "75715466"
     }
     ```
 
-<span data-ttu-id="086af-138">デモについては、[Windows 互換機能パックの Channel 9 動画](https://channel9.msdn.com/Events/Connect/2017/T123)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="086af-138">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>
+<span data-ttu-id="6ad11-139">デモについては、[Windows 互換機能パックの Channel 9 動画](https://channel9.msdn.com/Events/Connect/2017/T123)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="6ad11-139">For a demo, check out the [Channel 9 video of the Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).</span></span>

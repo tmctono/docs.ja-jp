@@ -1,39 +1,39 @@
 ---
-title: クラス ライブラリ (WPF)
+title: クラス ライブラリ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859704"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742296"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="d22a8-102">クラス ライブラリ (WPF)</span><span class="sxs-lookup"><span data-stu-id="d22a8-102">Class Library (WPF)</span></span>
-<span data-ttu-id="d22a8-103">次のリンクを含む名前空間を参照してください[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Api。</span><span class="sxs-lookup"><span data-stu-id="d22a8-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="071a2-102">クラス ライブラリ (WPF)</span><span class="sxs-lookup"><span data-stu-id="071a2-102">Class Library (WPF)</span></span>
+<span data-ttu-id="071a2-103">次のリンクは、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api を含む名前空間を参照します。</span><span class="sxs-lookup"><span data-stu-id="071a2-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d22a8-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d22a8-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="071a2-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="071a2-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d22a8-105">参照</span><span class="sxs-lookup"><span data-stu-id="d22a8-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="071a2-105">参照先</span><span class="sxs-lookup"><span data-stu-id="071a2-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="d22a8-106"><xref:Microsoft.Win32> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="071a2-106"><xref:Microsoft.Win32> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="d22a8-107"><xref:System.Collections.ObjectModel> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="071a2-107"><xref:System.Collections.ObjectModel> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="d22a8-108"><xref:System.Collections.Specialized> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="071a2-108"><xref:System.Collections.Specialized> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="d22a8-109"><xref:System.ComponentModel> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="071a2-109"><xref:System.ComponentModel> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="d22a8-110"><xref:System.Diagnostics> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="071a2-110"><xref:System.Diagnostics> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="d22a8-111"><xref:System.IO> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="071a2-111"><xref:System.IO> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67859704"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="d22a8-112"><xref:System.Security.Permissions> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="071a2-112"><xref:System.Security.Permissions> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67859704"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="d22a8-113"><xref:System.Windows.Markup> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="071a2-113"><xref:System.Windows.Markup> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "67859704"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="d22a8-114">.NET 4 での XAML のサポート</span><span class="sxs-lookup"><span data-stu-id="d22a8-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="d22a8-115">次の名前空間には、System.Xaml アセンブリから型が含まれます。</span><span class="sxs-lookup"><span data-stu-id="d22a8-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="d22a8-116">System.Xaml では、.NET Framework 4 で組み込まれている WPF などのフレームワークの共通の XAML 言語のサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="d22a8-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="071a2-114">.NET 4 での XAML のサポート</span><span class="sxs-lookup"><span data-stu-id="071a2-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="071a2-115">次の名前空間には、システム .Xaml アセンブリの型が含まれています。</span><span class="sxs-lookup"><span data-stu-id="071a2-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="071a2-116">System .Xaml は、.NET Framework 4 上に構築された WPF などのフレームワークに共通の XAML 言語サポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="071a2-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="d22a8-117"><xref:System.Windows.Markup> (共有)</span><span class="sxs-lookup"><span data-stu-id="d22a8-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="071a2-117"><xref:System.Windows.Markup> (共有)</span><span class="sxs-lookup"><span data-stu-id="071a2-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   

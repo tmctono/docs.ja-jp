@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ListView コントロールで項目を追加および削除する'
+title: ListView コントロールを使用して項目を追加および削除する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: 8a97d73b9b2c46d02ae0794ad66b20a04db58af6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbfe99db857ebe3a80bf99926f3ce0bec38a1f3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011126"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743136"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a><span data-ttu-id="09320-102">方法: Windows フォーム ListView コントロールで項目を追加および削除する</span><span class="sxs-lookup"><span data-stu-id="09320-102">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>
-<span data-ttu-id="09320-103">Windows フォームに項目を追加するプロセス<xref:System.Windows.Forms.ListView>コントロールは、主にアイテムを指定して、プロパティを割り当てます。</span><span class="sxs-lookup"><span data-stu-id="09320-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="09320-104">追加またはリスト項目の削除は、いつでも実行できます。</span><span class="sxs-lookup"><span data-stu-id="09320-104">Adding or removing list items can be done at any time.</span></span>  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a><span data-ttu-id="b1208-102">方法 : Windows フォーム ListView コントロールで項目を追加および削除する</span><span class="sxs-lookup"><span data-stu-id="b1208-102">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>
+<span data-ttu-id="b1208-103">項目を Windows フォーム <xref:System.Windows.Forms.ListView> コントロールに追加するプロセスは、主に項目を指定し、プロパティを割り当てることによって構成されます。</span><span class="sxs-lookup"><span data-stu-id="b1208-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="b1208-104">リスト項目の追加または削除は、いつでも行うことができます。</span><span class="sxs-lookup"><span data-stu-id="b1208-104">Adding or removing list items can be done at any time.</span></span>  
   
-### <a name="to-add-items-programmatically"></a><span data-ttu-id="09320-105">プログラムで項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="09320-105">To add items programmatically</span></span>  
+### <a name="to-add-items-programmatically"></a><span data-ttu-id="b1208-105">プログラムによって項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="b1208-105">To add items programmatically</span></span>  
   
-1. <span data-ttu-id="09320-106">使用して、<xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A>のメソッド、<xref:System.Windows.Forms.ListView.Items%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="09320-106">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
+1. <span data-ttu-id="b1208-106"><xref:System.Windows.Forms.ListView.Items%2A> プロパティの <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="b1208-106">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
-### <a name="to-remove-items-programmatically"></a><span data-ttu-id="09320-107">プログラムで項目を削除するには</span><span class="sxs-lookup"><span data-stu-id="09320-107">To remove items programmatically</span></span>  
+### <a name="to-remove-items-programmatically"></a><span data-ttu-id="b1208-107">プログラムによって項目を削除するには</span><span class="sxs-lookup"><span data-stu-id="b1208-107">To remove items programmatically</span></span>  
   
-1. <span data-ttu-id="09320-108">使用して、<xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A>または<xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A>のメソッド、<xref:System.Windows.Forms.ListView.Items%2A>プロパティ。</span><span class="sxs-lookup"><span data-stu-id="09320-108">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> or <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span> <span data-ttu-id="09320-109"><xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A>メソッドは 1 つの項目を削除、<xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A>メソッドは、一覧からすべての項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="09320-109">The <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> method removes a single item; the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method removes all items from the list.</span></span>  
+1. <span data-ttu-id="b1208-108"><xref:System.Windows.Forms.ListView.Items%2A> プロパティの <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> または <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="b1208-108">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> or <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span> <span data-ttu-id="b1208-109"><xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> メソッドは、1つの項目を削除します。<xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> メソッドは、リストからすべての項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="b1208-109">The <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> method removes a single item; the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method removes all items from the list.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
-## <a name="see-also"></a><span data-ttu-id="09320-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="09320-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1208-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="b1208-110">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
-- [<span data-ttu-id="09320-111">ListView コントロール</span><span class="sxs-lookup"><span data-stu-id="09320-111">ListView Control</span></span>](listview-control-windows-forms.md)
-- [<span data-ttu-id="09320-112">ListView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="09320-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
+- [<span data-ttu-id="b1208-111">ListView コントロール</span><span class="sxs-lookup"><span data-stu-id="b1208-111">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="b1208-112">ListView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="b1208-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)

@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 7ff8345fd0a3ca30375cf93d22625f89d5d9a053
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567342"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76508555"
 ---
-### <a name="removed-controls"></a><span data-ttu-id="5d4e5-101">削除されたコントロール</span><span class="sxs-lookup"><span data-stu-id="5d4e5-101">Removed controls</span></span>
+### <a name="removed-controls"></a><span data-ttu-id="ecc39-101">削除されたコントロール</span><span class="sxs-lookup"><span data-stu-id="ecc39-101">Removed controls</span></span>
 
-<span data-ttu-id="5d4e5-102">.NET Core 3.1 より、一部の Windows フォーム コントロールが利用できません。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
+<span data-ttu-id="ecc39-102">.NET Core 3.1 より、一部の Windows フォーム コントロールが利用できません。</span><span class="sxs-lookup"><span data-stu-id="ecc39-102">Starting in .NET Core 3.1, some Windows Forms controls are no longer available.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="5d4e5-103">変更の説明</span><span class="sxs-lookup"><span data-stu-id="5d4e5-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="ecc39-103">変更の説明</span><span class="sxs-lookup"><span data-stu-id="ecc39-103">Change description</span></span>
 
-<span data-ttu-id="5d4e5-104">.NET Core 3.1 より、さまざまな Windows フォーム コントロールが利用できなくなっています。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="5d4e5-105">デザインとサポートが改善された代替コントロールは .NET Framework 2.0 で導入されました。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="5d4e5-106">非推奨コントロールは前にデザイナー ツールボックスから削除されましたが、引き続き利用できました。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
+<span data-ttu-id="ecc39-104">.NET Core 3.1 より、さまざまな Windows フォーム コントロールが利用できなくなっています。</span><span class="sxs-lookup"><span data-stu-id="ecc39-104">Starting with .NET Core 3.1, various Windows Forms controls are no longer available.</span></span> <span data-ttu-id="ecc39-105">デザインとサポートが改善された代替コントロールは .NET Framework 2.0 で導入されました。</span><span class="sxs-lookup"><span data-stu-id="ecc39-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="ecc39-106">非推奨コントロールは前にデザイナー ツールボックスから削除されましたが、引き続き利用できました。</span><span class="sxs-lookup"><span data-stu-id="ecc39-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span>
 
-<span data-ttu-id="5d4e5-107">次の型は現在なくなっています。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-107">The following types are no longer available:</span></span>
+<span data-ttu-id="ecc39-107">次の型は現在なくなっています。</span><span class="sxs-lookup"><span data-stu-id="ecc39-107">The following types are no longer available:</span></span>
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,29 +45,29 @@ ms.locfileid: "74567342"
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a><span data-ttu-id="5d4e5-108">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="5d4e5-108">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="ecc39-108">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="ecc39-108">Version introduced</span></span>
 
-<span data-ttu-id="5d4e5-109">3.1</span><span class="sxs-lookup"><span data-stu-id="5d4e5-109">3.1</span></span>
+<span data-ttu-id="ecc39-109">3.1</span><span class="sxs-lookup"><span data-stu-id="ecc39-109">3.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="5d4e5-110">推奨される操作</span><span class="sxs-lookup"><span data-stu-id="5d4e5-110">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="ecc39-110">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="ecc39-110">Recommended action</span></span>
 
-<span data-ttu-id="5d4e5-111">削除されたコントロールにはいずれも、推奨の代替コントロールが与えられています。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="5d4e5-112">次の表を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5d4e5-112">Refer to the following table:</span></span>
+<span data-ttu-id="ecc39-111">削除されたコントロールにはいずれも、推奨の代替コントロールが与えられています。</span><span class="sxs-lookup"><span data-stu-id="ecc39-111">Each removed control has a recommended replacement control.</span></span> <span data-ttu-id="ecc39-112">次の表を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ecc39-112">Refer to the following table:</span></span>
 
-| <span data-ttu-id="5d4e5-113">削除されたコントロール (API)</span><span class="sxs-lookup"><span data-stu-id="5d4e5-113">Removed control (API)</span></span> | <span data-ttu-id="5d4e5-114">推奨代替</span><span class="sxs-lookup"><span data-stu-id="5d4e5-114">Recommended replacement</span></span> | <span data-ttu-id="5d4e5-115">削除されている関連 API</span><span class="sxs-lookup"><span data-stu-id="5d4e5-115">Associated APIs that are removed</span></span> |
+| <span data-ttu-id="ecc39-113">削除されたコントロール (API)</span><span class="sxs-lookup"><span data-stu-id="ecc39-113">Removed control (API)</span></span> | <span data-ttu-id="ecc39-114">推奨代替</span><span class="sxs-lookup"><span data-stu-id="ecc39-114">Recommended replacement</span></span> | <span data-ttu-id="ecc39-115">削除されている関連 API</span><span class="sxs-lookup"><span data-stu-id="ecc39-115">Associated APIs that are removed</span></span> |
 |-|-|-|
-| <span data-ttu-id="5d4e5-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="5d4e5-116">DataGrid</span></span> | <span data-ttu-id="5d4e5-117">DataGridView</span><span class="sxs-lookup"><span data-stu-id="5d4e5-117">DataGridView</span></span> | <span data-ttu-id="5d4e5-118">DataGridCell、DataGridRow、DataGridTableCollection、DataGridColumnCollection、DataGridTableStyle、DataGridColumnStyle、DataGridLineStyle、DataGridParentRowsLabel、DataGridParentRowsLabelStyle、DataGridBoolColumn、DataGridTextBox、GridColumnStylesCollection、GridTableStylesCollection、HitTestType</span><span class="sxs-lookup"><span data-stu-id="5d4e5-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
-| <span data-ttu-id="5d4e5-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="5d4e5-119">ToolBar</span></span> | <span data-ttu-id="5d4e5-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="5d4e5-120">ToolStrip</span></span> | <span data-ttu-id="5d4e5-121">ToolBarAppearance</span><span class="sxs-lookup"><span data-stu-id="5d4e5-121">ToolBarAppearance</span></span> |
-| <span data-ttu-id="5d4e5-122">ToolBarButton</span><span class="sxs-lookup"><span data-stu-id="5d4e5-122">ToolBarButton</span></span> | <span data-ttu-id="5d4e5-123">ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="5d4e5-123">ToolStripButton</span></span> | <span data-ttu-id="5d4e5-124">ToolBarButtonClickEventArgs、ToolBarButtonClickEventHandler、ToolBarButtonStyle、ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="5d4e5-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
-| <span data-ttu-id="5d4e5-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="5d4e5-125">ContextMenu</span></span> | <span data-ttu-id="5d4e5-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="5d4e5-126">ContextMenuStrip</span></span> | |
-| <span data-ttu-id="5d4e5-127">メニュー</span><span class="sxs-lookup"><span data-stu-id="5d4e5-127">Menu</span></span> | <span data-ttu-id="5d4e5-128">ToolStripDropDown、ToolstripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="5d4e5-128">ToolStripDropDown, ToolstripDropDownMenu</span></span> | <span data-ttu-id="5d4e5-129">MenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="5d4e5-129">MenuItemCollection</span></span> |
-| <span data-ttu-id="5d4e5-130">MainMenu</span><span class="sxs-lookup"><span data-stu-id="5d4e5-130">MainMenu</span></span> | <span data-ttu-id="5d4e5-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="5d4e5-131">MenuStrip</span></span> | |
-| <span data-ttu-id="5d4e5-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="5d4e5-132">MenuItem</span></span> | <span data-ttu-id="5d4e5-133">ToolstripMenuItem</span><span class="sxs-lookup"><span data-stu-id="5d4e5-133">ToolstripMenuItem</span></span> | |
+| <span data-ttu-id="ecc39-116">DataGrid</span><span class="sxs-lookup"><span data-stu-id="ecc39-116">DataGrid</span></span> | <span data-ttu-id="ecc39-117">DataGridView</span><span class="sxs-lookup"><span data-stu-id="ecc39-117">DataGridView</span></span> | <span data-ttu-id="ecc39-118">DataGridCell、DataGridRow、DataGridTableCollection、DataGridColumnCollection、DataGridTableStyle、DataGridColumnStyle、DataGridLineStyle、DataGridParentRowsLabel、DataGridParentRowsLabelStyle、DataGridBoolColumn、DataGridTextBox、GridColumnStylesCollection、GridTableStylesCollection、HitTestType</span><span class="sxs-lookup"><span data-stu-id="ecc39-118">DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType</span></span> |
+| <span data-ttu-id="ecc39-119">ToolBar</span><span class="sxs-lookup"><span data-stu-id="ecc39-119">ToolBar</span></span> | <span data-ttu-id="ecc39-120">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="ecc39-120">ToolStrip</span></span> | <span data-ttu-id="ecc39-121">ToolBarAppearance</span><span class="sxs-lookup"><span data-stu-id="ecc39-121">ToolBarAppearance</span></span> |
+| <span data-ttu-id="ecc39-122">ToolBarButton</span><span class="sxs-lookup"><span data-stu-id="ecc39-122">ToolBarButton</span></span> | <span data-ttu-id="ecc39-123">ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="ecc39-123">ToolStripButton</span></span> | <span data-ttu-id="ecc39-124">ToolBarButtonClickEventArgs、ToolBarButtonClickEventHandler、ToolBarButtonStyle、ToolBarTextAlign</span><span class="sxs-lookup"><span data-stu-id="ecc39-124">ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign</span></span>|
+| <span data-ttu-id="ecc39-125">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="ecc39-125">ContextMenu</span></span> | <span data-ttu-id="ecc39-126">ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="ecc39-126">ContextMenuStrip</span></span> | |
+| <span data-ttu-id="ecc39-127">メニュー</span><span class="sxs-lookup"><span data-stu-id="ecc39-127">Menu</span></span> | <span data-ttu-id="ecc39-128">ToolStripDropDown、ToolStripDropDownMenu</span><span class="sxs-lookup"><span data-stu-id="ecc39-128">ToolStripDropDown, ToolStripDropDownMenu</span></span> | <span data-ttu-id="ecc39-129">MenuItemCollection</span><span class="sxs-lookup"><span data-stu-id="ecc39-129">MenuItemCollection</span></span> |
+| <span data-ttu-id="ecc39-130">MainMenu</span><span class="sxs-lookup"><span data-stu-id="ecc39-130">MainMenu</span></span> | <span data-ttu-id="ecc39-131">MenuStrip</span><span class="sxs-lookup"><span data-stu-id="ecc39-131">MenuStrip</span></span> | |
+| <span data-ttu-id="ecc39-132">MenuItem</span><span class="sxs-lookup"><span data-stu-id="ecc39-132">MenuItem</span></span> | <span data-ttu-id="ecc39-133">ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="ecc39-133">ToolStripMenuItem</span></span> | |
 
-#### <a name="category"></a><span data-ttu-id="5d4e5-134">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="5d4e5-134">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="ecc39-134">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="ecc39-134">Category</span></span>
 
-<span data-ttu-id="5d4e5-135">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="5d4e5-135">Windows Forms</span></span>
+<span data-ttu-id="ecc39-135">Windows フォーム</span><span class="sxs-lookup"><span data-stu-id="ecc39-135">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="5d4e5-136">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="5d4e5-136">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="ecc39-136">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="ecc39-136">Affected APIs</span></span>
 
 - <xref:System.Windows.Forms.Menu?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection?displayProperty=nameWithType>
