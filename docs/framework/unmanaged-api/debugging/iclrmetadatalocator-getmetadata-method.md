@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111243"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793624"
 ---
-# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="be2ef-102">ICLRMetadataLocator::GetMetadata メソッド</span><span class="sxs-lookup"><span data-stu-id="be2ef-102">ICLRMetadataLocator::GetMetadata Method</span></span>
-<span data-ttu-id="be2ef-103">イメージのメタデータを取得するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="be2ef-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
+# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="34d83-102">ICLRMetadataLocator::GetMetadata メソッド</span><span class="sxs-lookup"><span data-stu-id="34d83-102">ICLRMetadataLocator::GetMetadata Method</span></span>
+<span data-ttu-id="34d83-103">イメージのメタデータを取得するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="34d83-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be2ef-104">構文</span><span class="sxs-lookup"><span data-stu-id="be2ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34d83-104">構文</span><span class="sxs-lookup"><span data-stu-id="34d83-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetadata(  
@@ -42,46 +42,46 @@ HRESULT GetMetadata(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be2ef-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="be2ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34d83-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="34d83-105">Parameters</span></span>  
  `imagePath`  
- <span data-ttu-id="be2ef-106">からイメージファイルのパスを指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="be2ef-106">[in] A string that specifies the path of the image file.</span></span>  
+ <span data-ttu-id="34d83-106">からイメージファイルのパスを指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="34d83-106">[in] A string that specifies the path of the image file.</span></span>  
   
  `imageTimestamp`  
- <span data-ttu-id="be2ef-107">からイメージファイルのタイムスタンプ。</span><span class="sxs-lookup"><span data-stu-id="be2ef-107">[in] The time stamp of the image file.</span></span>  
+ <span data-ttu-id="34d83-107">からイメージファイルのタイムスタンプ。</span><span class="sxs-lookup"><span data-stu-id="34d83-107">[in] The time stamp of the image file.</span></span>  
   
  `imageSize`  
- <span data-ttu-id="be2ef-108">からイメージファイルのサイズ。</span><span class="sxs-lookup"><span data-stu-id="be2ef-108">[in] The size of the image file.</span></span>  
+ <span data-ttu-id="34d83-108">からイメージファイルのサイズ。</span><span class="sxs-lookup"><span data-stu-id="34d83-108">[in] The size of the image file.</span></span>  
   
  `mvid`  
- <span data-ttu-id="be2ef-109">からイメージのグローバル一意識別子。</span><span class="sxs-lookup"><span data-stu-id="be2ef-109">[in] The globally unique identifier of the image.</span></span>  
+ <span data-ttu-id="34d83-109">からイメージのグローバル一意識別子。</span><span class="sxs-lookup"><span data-stu-id="34d83-109">[in] The globally unique identifier of the image.</span></span>  
   
  `mdRva`  
- <span data-ttu-id="be2ef-110">からメタデータの相対仮想アドレス (RVA)。</span><span class="sxs-lookup"><span data-stu-id="be2ef-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="be2ef-111">アドレスは、イメージのベースアドレスを基準としています。</span><span class="sxs-lookup"><span data-stu-id="be2ef-111">The address is relative to the image base address.</span></span>  
+ <span data-ttu-id="34d83-110">からメタデータの相対仮想アドレス (RVA)。</span><span class="sxs-lookup"><span data-stu-id="34d83-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="34d83-111">アドレスは、イメージのベースアドレスを基準としています。</span><span class="sxs-lookup"><span data-stu-id="34d83-111">The address is relative to the image base address.</span></span>  
   
  `flags`  
- <span data-ttu-id="be2ef-112">から将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="be2ef-112">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="34d83-112">から将来使用するために予約されています。</span><span class="sxs-lookup"><span data-stu-id="34d83-112">[in] Reserved for future use.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="be2ef-113">からメタデータを格納するバッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="be2ef-113">[in] The size of the buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="34d83-113">からメタデータを格納するバッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="34d83-113">[in] The size of the buffer in which to place the metadata.</span></span>  
   
  `buffer`  
- <span data-ttu-id="be2ef-114">入出力メタデータを格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="be2ef-114">[out] The buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="34d83-114">入出力メタデータを格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="34d83-114">[out] The buffer in which to place the metadata.</span></span>  
   
  `dataSize`  
- <span data-ttu-id="be2ef-115">入出力返されるメタデータのサイズ。</span><span class="sxs-lookup"><span data-stu-id="be2ef-115">[out] The size of the metadata that is returned.</span></span>  
+ <span data-ttu-id="34d83-115">入出力返されるメタデータのサイズ。</span><span class="sxs-lookup"><span data-stu-id="34d83-115">[out] The size of the metadata that is returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="be2ef-116">Remarks</span><span class="sxs-lookup"><span data-stu-id="be2ef-116">Remarks</span></span>  
- <span data-ttu-id="be2ef-117">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="be2ef-117">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34d83-116">コメント</span><span class="sxs-lookup"><span data-stu-id="34d83-116">Remarks</span></span>  
+ <span data-ttu-id="34d83-117">このメソッドは、デバッグ アプリケーションの作成者によって実装されます。</span><span class="sxs-lookup"><span data-stu-id="34d83-117">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be2ef-118">［要件］</span><span class="sxs-lookup"><span data-stu-id="be2ef-118">Requirements</span></span>  
- <span data-ttu-id="be2ef-119">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="be2ef-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34d83-118">要件</span><span class="sxs-lookup"><span data-stu-id="34d83-118">Requirements</span></span>  
+ <span data-ttu-id="34d83-119">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="34d83-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be2ef-120">**ヘッダー:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="be2ef-120">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="34d83-120">**ヘッダー:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="34d83-120">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="be2ef-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be2ef-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34d83-121">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34d83-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="be2ef-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be2ef-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="34d83-122">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34d83-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be2ef-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="be2ef-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34d83-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="34d83-123">See also</span></span>
 
-- [<span data-ttu-id="be2ef-124">ICLRMetadataLocator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="be2ef-124">ICLRMetadataLocator Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+- [<span data-ttu-id="34d83-124">ICLRMetadataLocator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="34d83-124">ICLRMetadataLocator Interface</span></span>](iclrmetadatalocator-interface.md)

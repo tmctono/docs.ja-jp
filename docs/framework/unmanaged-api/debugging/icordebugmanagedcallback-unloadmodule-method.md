@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88ef9fd5a0aac19954a247d0215fe698ebe30d40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130634"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788331"
 ---
-# <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="fada8-102">ICorDebugManagedCallback::UnloadModule メソッド</span><span class="sxs-lookup"><span data-stu-id="fada8-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
-<span data-ttu-id="fada8-103">共通言語ランタイムモジュール (DLL) がアンロードされたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="fada8-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="3717c-102">ICorDebugManagedCallback::UnloadModule メソッド</span><span class="sxs-lookup"><span data-stu-id="3717c-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
+<span data-ttu-id="3717c-103">共通言語ランタイムモジュール (DLL) がアンロードされたことをデバッガーに通知します。</span><span class="sxs-lookup"><span data-stu-id="3717c-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fada8-104">構文</span><span class="sxs-lookup"><span data-stu-id="fada8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3717c-104">構文</span><span class="sxs-lookup"><span data-stu-id="3717c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnloadModule (  
@@ -34,26 +34,26 @@ HRESULT UnloadModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fada8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fada8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3717c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3717c-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="fada8-106">からモジュールを含んでいるアプリケーションドメインを表す、のオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fada8-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the module.</span></span>  
+ <span data-ttu-id="3717c-106">からモジュールを含んでいるアプリケーションドメインを表す、のオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3717c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the module.</span></span>  
   
  `pModule`  
- <span data-ttu-id="fada8-107">からモジュールを表す、のモジュールオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="fada8-107">[in] A pointer to an ICorDebugModule object that represents the module.</span></span>  
+ <span data-ttu-id="3717c-107">からモジュールを表す、のモジュールオブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3717c-107">[in] A pointer to an ICorDebugModule object that represents the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fada8-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="fada8-108">Remarks</span></span>  
- <span data-ttu-id="fada8-109">この呼び出しの後にモジュールを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="fada8-109">The module should not be used after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3717c-108">コメント</span><span class="sxs-lookup"><span data-stu-id="3717c-108">Remarks</span></span>  
+ <span data-ttu-id="3717c-109">この呼び出しの後にモジュールを使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="3717c-109">The module should not be used after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fada8-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="fada8-110">Requirements</span></span>  
- <span data-ttu-id="fada8-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fada8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3717c-110">要件</span><span class="sxs-lookup"><span data-stu-id="3717c-110">Requirements</span></span>  
+ <span data-ttu-id="3717c-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3717c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fada8-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fada8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3717c-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3717c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fada8-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fada8-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3717c-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3717c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fada8-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fada8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3717c-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3717c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fada8-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="fada8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3717c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3717c-115">See also</span></span>
 
-- [<span data-ttu-id="fada8-116">LoadModule メソッド</span><span class="sxs-lookup"><span data-stu-id="fada8-116">LoadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)
-- [<span data-ttu-id="fada8-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fada8-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="3717c-116">LoadModule メソッド</span><span class="sxs-lookup"><span data-stu-id="3717c-116">LoadModule Method</span></span>](icordebugmanagedcallback-loadmodule-method.md)
+- [<span data-ttu-id="3717c-117">ICorDebugManagedCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3717c-117">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
