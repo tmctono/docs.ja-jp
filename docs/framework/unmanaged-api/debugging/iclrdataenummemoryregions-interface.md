@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122926"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789099"
 ---
-# <a name="iclrdataenummemoryregions-interface"></a><span data-ttu-id="6ac29-102">ICLRDataEnumMemoryRegions インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6ac29-102">ICLRDataEnumMemoryRegions Interface</span></span>
-<span data-ttu-id="6ac29-103">呼び出し元が指定したメモリ範囲を列挙するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="6ac29-103">Provides a method to enumerate regions of memory that are specified by callers.</span></span>  
+# <a name="iclrdataenummemoryregions-interface"></a><span data-ttu-id="57a33-102">ICLRDataEnumMemoryRegions インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57a33-102">ICLRDataEnumMemoryRegions Interface</span></span>
+<span data-ttu-id="57a33-103">呼び出し元が指定したメモリ範囲を列挙するメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="57a33-103">Provides a method to enumerate regions of memory that are specified by callers.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6ac29-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6ac29-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="57a33-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="57a33-104">Methods</span></span>  
   
-|<span data-ttu-id="6ac29-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6ac29-105">Method</span></span>|<span data-ttu-id="6ac29-106">説明</span><span class="sxs-lookup"><span data-stu-id="6ac29-106">Description</span></span>|  
+|<span data-ttu-id="57a33-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="57a33-105">Method</span></span>|<span data-ttu-id="57a33-106">説明</span><span class="sxs-lookup"><span data-stu-id="57a33-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6ac29-107">EnumMemoryRegions メソッド</span><span class="sxs-lookup"><span data-stu-id="6ac29-107">EnumMemoryRegions Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|<span data-ttu-id="6ac29-108">指定されたメモリ領域を列挙します。</span><span class="sxs-lookup"><span data-stu-id="6ac29-108">Enumerates specified areas of memory.</span></span>|  
+|[<span data-ttu-id="57a33-107">EnumMemoryRegions メソッド</span><span class="sxs-lookup"><span data-stu-id="57a33-107">EnumMemoryRegions Method</span></span>](iclrdataenummemoryregions-enummemoryregions-method.md)|<span data-ttu-id="57a33-108">指定されたメモリ領域を列挙します。</span><span class="sxs-lookup"><span data-stu-id="57a33-108">Enumerates specified areas of memory.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6ac29-109">［要件］</span><span class="sxs-lookup"><span data-stu-id="6ac29-109">Requirements</span></span>  
- <span data-ttu-id="6ac29-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6ac29-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57a33-109">要件</span><span class="sxs-lookup"><span data-stu-id="57a33-109">Requirements</span></span>  
+ <span data-ttu-id="57a33-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="57a33-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ac29-111">**ヘッダー:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="6ac29-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="57a33-111">**ヘッダー:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="57a33-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6ac29-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ac29-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="57a33-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57a33-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ac29-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ac29-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="57a33-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57a33-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ac29-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="6ac29-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57a33-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="57a33-114">See also</span></span>
 
-- [<span data-ttu-id="6ac29-115">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6ac29-115">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="57a33-115">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="57a33-115">Debugging Interfaces</span></span>](debugging-interfaces.md)
