@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6c7d6075a114cc6e621108ce217dfdb0d75dc8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542b33c82834ccd30c79c78bdcc759cf0c34d36c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137066"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783336"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="64950-102">ICorDebugEditAndContinueErrorInfo::GetString メソッド</span><span class="sxs-lookup"><span data-stu-id="64950-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="64950-103">`GetString` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="64950-103">`GetString` is obsolete.</span></span> <span data-ttu-id="64950-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="64950-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="83905-102">ICorDebugEditAndContinueErrorInfo::GetString メソッド</span><span class="sxs-lookup"><span data-stu-id="83905-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="83905-103">`GetString` は互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="83905-103">`GetString` is obsolete.</span></span> <span data-ttu-id="83905-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="83905-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64950-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="64950-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83905-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="83905-105">See also</span></span>
 
-- [<span data-ttu-id="64950-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="64950-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="83905-106">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="83905-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

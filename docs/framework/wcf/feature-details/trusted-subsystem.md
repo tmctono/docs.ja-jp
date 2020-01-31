@@ -5,51 +5,51 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918706"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742637"
 ---
-# <a name="trusted-subsystem"></a><span data-ttu-id="6f19c-102">信頼できるサブシステム</span><span class="sxs-lookup"><span data-stu-id="6f19c-102">Trusted Subsystem</span></span>
-<span data-ttu-id="6f19c-103">クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="6f19c-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="6f19c-104">Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。</span><span class="sxs-lookup"><span data-stu-id="6f19c-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="6f19c-105">これらのリソースは、非承認のアクセスに対して保護する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6f19c-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="6f19c-106">信頼できるサブシステムの処理を次の図に示します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-106">The following illustration depicts a trusted subsystem process.</span></span>  
+# <a name="trusted-subsystem"></a><span data-ttu-id="3cbab-102">信頼できるサブシステム</span><span class="sxs-lookup"><span data-stu-id="3cbab-102">Trusted Subsystem</span></span>
+<span data-ttu-id="3cbab-103">クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="3cbab-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="3cbab-104">Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。</span><span class="sxs-lookup"><span data-stu-id="3cbab-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="3cbab-105">これらのリソースは、非承認のアクセスに対して保護する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3cbab-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="3cbab-106">信頼できるサブシステムの処理を次の図に示します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- <span data-ttu-id="6f19c-107">![サブシステムを信頼された](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="6f19c-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
+ <span data-ttu-id="3cbab-107">![信頼されたサブシステム](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="3cbab-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- <span data-ttu-id="6f19c-108">上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
+ <span data-ttu-id="3cbab-108">上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1. <span data-ttu-id="6f19c-109">クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
+1. <span data-ttu-id="3cbab-109">クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2. <span data-ttu-id="6f19c-110">信頼できるサブシステムが、ユーザーの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="6f19c-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
+2. <span data-ttu-id="3cbab-110">信頼できるサブシステムが、ユーザーの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="3cbab-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3. <span data-ttu-id="6f19c-111">信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="6f19c-112">この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。</span><span class="sxs-lookup"><span data-stu-id="6f19c-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
+3. <span data-ttu-id="3cbab-111">信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="3cbab-112">この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。</span><span class="sxs-lookup"><span data-stu-id="3cbab-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4. <span data-ttu-id="6f19c-113">バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="6f19c-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="6f19c-114">次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
+4. <span data-ttu-id="3cbab-113">バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="3cbab-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="3cbab-114">次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5. <span data-ttu-id="6f19c-115">信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
+5. <span data-ttu-id="3cbab-115">信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|<span data-ttu-id="6f19c-116">特徴</span><span class="sxs-lookup"><span data-stu-id="6f19c-116">Characteristic</span></span>|<span data-ttu-id="6f19c-117">説明</span><span class="sxs-lookup"><span data-stu-id="6f19c-117">Description</span></span>|  
+|<span data-ttu-id="3cbab-116">特徴</span><span class="sxs-lookup"><span data-stu-id="3cbab-116">Characteristic</span></span>|<span data-ttu-id="3cbab-117">説明</span><span class="sxs-lookup"><span data-stu-id="3cbab-117">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="6f19c-118">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="6f19c-118">Security Mode</span></span>|<span data-ttu-id="6f19c-119">メッセージ</span><span class="sxs-lookup"><span data-stu-id="6f19c-119">Message</span></span>|  
-|<span data-ttu-id="6f19c-120">相互運用性</span><span class="sxs-lookup"><span data-stu-id="6f19c-120">Interoperability</span></span>|<span data-ttu-id="6f19c-121">Windows Communication Foundation (WCF) のみです。</span><span class="sxs-lookup"><span data-stu-id="6f19c-121">Windows Communication Foundation (WCF) only.</span></span>|  
-|<span data-ttu-id="6f19c-122">認証 (サービス)</span><span class="sxs-lookup"><span data-stu-id="6f19c-122">Authentication (service)</span></span>|<span data-ttu-id="6f19c-123">セキュリティ トークン サービスはクライアントの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="6f19c-123">Security token service authenticates and authorizes clients.</span></span>|  
-|<span data-ttu-id="6f19c-124">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="6f19c-124">Authentication (client)</span></span>|<span data-ttu-id="6f19c-125">信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
-|<span data-ttu-id="6f19c-126">整合性</span><span class="sxs-lookup"><span data-stu-id="6f19c-126">Integrity</span></span>|<span data-ttu-id="6f19c-127">はい</span><span class="sxs-lookup"><span data-stu-id="6f19c-127">Yes</span></span>|  
-|<span data-ttu-id="6f19c-128">機密性</span><span class="sxs-lookup"><span data-stu-id="6f19c-128">Confidentiality</span></span>|<span data-ttu-id="6f19c-129">はい</span><span class="sxs-lookup"><span data-stu-id="6f19c-129">Yes</span></span>|  
-|<span data-ttu-id="6f19c-130">Transport</span><span class="sxs-lookup"><span data-stu-id="6f19c-130">Transport</span></span>|<span data-ttu-id="6f19c-131">クライアントと信頼できるサブシステム サービス間にある HTTP</span><span class="sxs-lookup"><span data-stu-id="6f19c-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="6f19c-132">信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP</span><span class="sxs-lookup"><span data-stu-id="6f19c-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
-|<span data-ttu-id="6f19c-133">バインディング</span><span class="sxs-lookup"><span data-stu-id="6f19c-133">Binding</span></span>|<span data-ttu-id="6f19c-134"><xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="6f19c-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
+|<span data-ttu-id="3cbab-118">セキュリティ モード</span><span class="sxs-lookup"><span data-stu-id="3cbab-118">Security Mode</span></span>|<span data-ttu-id="3cbab-119">[メッセージ]</span><span class="sxs-lookup"><span data-stu-id="3cbab-119">Message</span></span>|  
+|<span data-ttu-id="3cbab-120">相互運用性</span><span class="sxs-lookup"><span data-stu-id="3cbab-120">Interoperability</span></span>|<span data-ttu-id="3cbab-121">Windows Communication Foundation (WCF) のみ。</span><span class="sxs-lookup"><span data-stu-id="3cbab-121">Windows Communication Foundation (WCF) only.</span></span>|  
+|<span data-ttu-id="3cbab-122">認証 (サービス)</span><span class="sxs-lookup"><span data-stu-id="3cbab-122">Authentication (service)</span></span>|<span data-ttu-id="3cbab-123">セキュリティ トークン サービスはクライアントの認証と承認を行います。</span><span class="sxs-lookup"><span data-stu-id="3cbab-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="3cbab-124">認証 (クライアント)</span><span class="sxs-lookup"><span data-stu-id="3cbab-124">Authentication (client)</span></span>|<span data-ttu-id="3cbab-125">信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="3cbab-126">整合性</span><span class="sxs-lookup"><span data-stu-id="3cbab-126">Integrity</span></span>|<span data-ttu-id="3cbab-127">○</span><span class="sxs-lookup"><span data-stu-id="3cbab-127">Yes</span></span>|  
+|<span data-ttu-id="3cbab-128">機密性</span><span class="sxs-lookup"><span data-stu-id="3cbab-128">Confidentiality</span></span>|<span data-ttu-id="3cbab-129">○</span><span class="sxs-lookup"><span data-stu-id="3cbab-129">Yes</span></span>|  
+|<span data-ttu-id="3cbab-130">Transport</span><span class="sxs-lookup"><span data-stu-id="3cbab-130">Transport</span></span>|<span data-ttu-id="3cbab-131">クライアントと信頼できるサブシステム サービス間にある HTTP</span><span class="sxs-lookup"><span data-stu-id="3cbab-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="3cbab-132">信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP</span><span class="sxs-lookup"><span data-stu-id="3cbab-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="3cbab-133">バインディング</span><span class="sxs-lookup"><span data-stu-id="3cbab-133">Binding</span></span>|<span data-ttu-id="3cbab-134"><xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="3cbab-134"><xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## <a name="resource-back-end-service"></a><span data-ttu-id="6f19c-135">リソース (バックエンド サービス)</span><span class="sxs-lookup"><span data-stu-id="6f19c-135">Resource (Back-End Service)</span></span>  
+## <a name="resource-back-end-service"></a><span data-ttu-id="3cbab-135">リソース (バックエンド サービス)</span><span class="sxs-lookup"><span data-stu-id="3cbab-135">Resource (Back-End Service)</span></span>  
   
-### <a name="code"></a><span data-ttu-id="6f19c-136">コード</span><span class="sxs-lookup"><span data-stu-id="6f19c-136">Code</span></span>  
- <span data-ttu-id="6f19c-137">次のコードでは、TCP トランスポート プロトコル上でトランスポート セキュリティを使用するリソースのサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="3cbab-136">コード</span><span class="sxs-lookup"><span data-stu-id="3cbab-136">Code</span></span>  
+ <span data-ttu-id="3cbab-137">次のコードでは、TCP トランスポート プロトコル上でトランスポート セキュリティを使用するリソースのサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="6f19c-138">構成</span><span class="sxs-lookup"><span data-stu-id="6f19c-138">Configuration</span></span>  
- <span data-ttu-id="6f19c-139">次の構成では、構成を使用して同一のエンドポイントをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="6f19c-139">The following configuration sets up the same endpoint using configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="3cbab-138">の構成</span><span class="sxs-lookup"><span data-stu-id="3cbab-138">Configuration</span></span>  
+ <span data-ttu-id="3cbab-139">次の構成では、構成を使用して同一のエンドポイントをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="3cbab-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -87,21 +87,21 @@ ms.locfileid: "61918706"
 </configuration>  
 ```  
   
-## <a name="trusted-subsystem"></a><span data-ttu-id="6f19c-140">信頼できるサブシステム</span><span class="sxs-lookup"><span data-stu-id="6f19c-140">Trusted Subsystem</span></span>  
+## <a name="trusted-subsystem"></a><span data-ttu-id="3cbab-140">信頼できるサブシステム</span><span class="sxs-lookup"><span data-stu-id="3cbab-140">Trusted Subsystem</span></span>  
   
-### <a name="code"></a><span data-ttu-id="6f19c-141">コード</span><span class="sxs-lookup"><span data-stu-id="6f19c-141">Code</span></span>  
- <span data-ttu-id="6f19c-142">次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用する、信頼できるサブシステムのサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="3cbab-141">コード</span><span class="sxs-lookup"><span data-stu-id="3cbab-141">Code</span></span>  
+ <span data-ttu-id="3cbab-142">次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用する、信頼できるサブシステムのサービス エンドポイントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- <span data-ttu-id="6f19c-143">次のコードでは、TCP トランスポート プロトコル上でトランスポート セキュリティを使用してバックエンド サービスと通信を行う、信頼できるサブシステムのサービスを示します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
+ <span data-ttu-id="3cbab-143">次のコードでは、TCP トランスポート プロトコル上でトランスポート セキュリティを使用してバックエンド サービスと通信を行う、信頼できるサブシステムのサービスを示します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="6f19c-144">構成</span><span class="sxs-lookup"><span data-stu-id="6f19c-144">Configuration</span></span>  
- <span data-ttu-id="6f19c-145">次の構成では、構成を使用して同一のエンドポイントをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="6f19c-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="6f19c-146">2 つのバインディングに注意してください。1 つに、信頼できるサブシステムでホストされるサービスがセキュリティで保護し、信頼できるサブシステムとバックエンド サービス間通信、他の。</span><span class="sxs-lookup"><span data-stu-id="6f19c-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="3cbab-144">の構成</span><span class="sxs-lookup"><span data-stu-id="3cbab-144">Configuration</span></span>  
+ <span data-ttu-id="3cbab-145">次の構成では、構成を使用して同一のエンドポイントをセットアップします。</span><span class="sxs-lookup"><span data-stu-id="3cbab-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="3cbab-146">2 つのバインディングがあることに注意してください。1 つは、信頼できるサブシステムでホストされるサービスをセキュリティで保護するバインディングで、もう 1 つは、信頼できるサブシステムとバックエンド サービスの間の通信のためのバインディングです。</span><span class="sxs-lookup"><span data-stu-id="3cbab-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -163,16 +163,16 @@ ms.locfileid: "61918706"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="6f19c-147">クライアント</span><span class="sxs-lookup"><span data-stu-id="6f19c-147">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="3cbab-147">クライアント</span><span class="sxs-lookup"><span data-stu-id="3cbab-147">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="6f19c-148">コード</span><span class="sxs-lookup"><span data-stu-id="6f19c-148">Code</span></span>  
- <span data-ttu-id="6f19c-149">次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用することで、信頼できるサブシステムと通信を行うクライアントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="3cbab-148">コード</span><span class="sxs-lookup"><span data-stu-id="3cbab-148">Code</span></span>  
+ <span data-ttu-id="3cbab-149">次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用することで、信頼できるサブシステムと通信を行うクライアントを作成する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="6f19c-150">構成</span><span class="sxs-lookup"><span data-stu-id="6f19c-150">Configuration</span></span>  
- <span data-ttu-id="6f19c-151">次のコードでは、HTTP プロトコル上のメッセージ セキュリティ、および認証用のユーザー名とパスワードを使用するようにクライアントを構成します。</span><span class="sxs-lookup"><span data-stu-id="6f19c-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="6f19c-152">ユーザー名とパスワードの指定はコードを使用する場合に限られます (構成可能ではありません)。</span><span class="sxs-lookup"><span data-stu-id="6f19c-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="3cbab-150">の構成</span><span class="sxs-lookup"><span data-stu-id="3cbab-150">Configuration</span></span>  
+ <span data-ttu-id="3cbab-151">次のコードでは、HTTP プロトコル上のメッセージ セキュリティ、および認証用のユーザー名とパスワードを使用するようにクライアントを構成します。</span><span class="sxs-lookup"><span data-stu-id="3cbab-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="3cbab-152">ユーザー名とパスワードの指定はコードを使用する場合に限られます (構成可能ではありません)。</span><span class="sxs-lookup"><span data-stu-id="3cbab-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,7 +210,7 @@ ms.locfileid: "61918706"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6f19c-153">関連項目</span><span class="sxs-lookup"><span data-stu-id="6f19c-153">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cbab-153">関連項目</span><span class="sxs-lookup"><span data-stu-id="3cbab-153">See also</span></span>
 
-- [<span data-ttu-id="6f19c-154">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="6f19c-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="6f19c-155">Windows Server App Fabric のセキュリティ モデル</span><span class="sxs-lookup"><span data-stu-id="6f19c-155">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="3cbab-154">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="3cbab-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- <span data-ttu-id="3cbab-155">[Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span><span class="sxs-lookup"><span data-stu-id="3cbab-155">[Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>

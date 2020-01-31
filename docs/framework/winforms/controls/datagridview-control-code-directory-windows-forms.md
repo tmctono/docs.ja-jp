@@ -1,5 +1,5 @@
 ---
-title: DataGridView コントロールのコード ディレクトリ (Windows フォーム)
+title: DataGridView コントロールのコード ディレクトリ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], examples
@@ -7,152 +7,152 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], examples
 - DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-ms.openlocfilehash: e77a5e6efa769503e45aaf68380acdca79a7bfd5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: abc4dad66ef2c89fe7937cbfffd047bc1f6a9811
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969172"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742498"
 ---
-# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="a3f14-102">DataGridView コントロールのコード ディレクトリ (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="a3f14-102">DataGridView Control Code Directory (Windows Forms)</span></span>
-<span data-ttu-id="a3f14-103">このトピックでは、 <xref:System.Windows.Forms.DataGridView>ドキュメントで使用できる関連のコード例へのリンクを示します。</span><span class="sxs-lookup"><span data-stu-id="a3f14-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
+# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="04408-102">DataGridView コントロールのコード ディレクトリ (Windows フォーム)</span><span class="sxs-lookup"><span data-stu-id="04408-102">DataGridView Control Code Directory (Windows Forms)</span></span>
+<span data-ttu-id="04408-103">このトピックでは、ドキュメントで利用できる <xref:System.Windows.Forms.DataGridView>関連のコード例へのリンクを示します。</span><span class="sxs-lookup"><span data-stu-id="04408-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a3f14-104">リンクは、コード例が見つかるトピックの先頭に常にジャンプします。</span><span class="sxs-lookup"><span data-stu-id="a3f14-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
+> <span data-ttu-id="04408-104">リンクは、コード例が見つかるトピックの先頭に常にジャンプします。</span><span class="sxs-lookup"><span data-stu-id="04408-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
   
- <span data-ttu-id="a3f14-105">その他のコード例については、クラスライブラリのリファレンスドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3f14-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="a3f14-106"><xref:System.Windows.Forms.DataGridView>コントロールに関連付けられているプリンシパルクラスとインターフェイスの一覧については、「 [DataGridView コントロールテクノロジの概要](datagridview-control-technology-summary-windows-forms.md)」の表を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a3f14-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md).</span></span>  
+ <span data-ttu-id="04408-105">その他のコード例については、クラスライブラリのリファレンスドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="04408-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="04408-106"><xref:System.Windows.Forms.DataGridView> コントロールに関連付けられているプリンシパルクラスとインターフェイスの一覧については、「 [DataGridView コントロールテクノロジの概要](datagridview-control-technology-summary-windows-forms.md)」の表を参照してください。</span><span class="sxs-lookup"><span data-stu-id="04408-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md).</span></span>  
   
-## <a name="codelist"></a><span data-ttu-id="a3f14-107">コードリスト</span><span class="sxs-lookup"><span data-stu-id="a3f14-107">CodeList</span></span>  
+## <a name="codelist"></a><span data-ttu-id="04408-107">CodeList</span><span class="sxs-lookup"><span data-stu-id="04408-107">CodeList</span></span>  
   
-## <a name="unbound-data-examples"></a><span data-ttu-id="a3f14-108">バインド解除データの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-108">Unbound Data Examples</span></span>  
+## <a name="unbound-data-examples"></a><span data-ttu-id="04408-108">バインド解除データの例</span><span class="sxs-lookup"><span data-stu-id="04408-108">Unbound Data Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-109">方法: データバインド Windows フォーム DataGridView コントロールに非バインド列を追加する</span><span class="sxs-lookup"><span data-stu-id="a3f14-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](unbound-column-to-a-data-bound-datagridview.md)  
+- [<span data-ttu-id="04408-109">方法: データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する</span><span class="sxs-lookup"><span data-stu-id="04408-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](unbound-column-to-a-data-bound-datagridview.md)  
   
-- [<span data-ttu-id="a3f14-110">方法: バインドしていない Windows フォーム DataGridView コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="a3f14-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-110">方法: 連結されていない Windows フォーム DataGridView コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="04408-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](how-to-create-an-unbound-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-111">チュートリアル: 非バインド Windows フォーム DataGridView コントロールの作成</span><span class="sxs-lookup"><span data-stu-id="a3f14-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-111">チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成</span><span class="sxs-lookup"><span data-stu-id="04408-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## <a name="data-binding-examples"></a><span data-ttu-id="a3f14-112">データバインディングの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-112">Data Binding Examples</span></span>  
+## <a name="data-binding-examples"></a><span data-ttu-id="04408-112">データバインディングの例</span><span class="sxs-lookup"><span data-stu-id="04408-112">Data Binding Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-113">方法: Windows フォーム DataGridView コントロールにデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="a3f14-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-113">方法: データを Windows フォーム DataGridView コントロールにバインドする</span><span class="sxs-lookup"><span data-stu-id="04408-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-114">方法: データバインド Windows フォーム DataGridView コントロールの列を自動生成する</span><span class="sxs-lookup"><span data-stu-id="a3f14-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-114">方法: データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する</span><span class="sxs-lookup"><span data-stu-id="04408-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-115">方法: Windows フォーム DataGridView コントロールから自動生成した列を削除する</span><span class="sxs-lookup"><span data-stu-id="a3f14-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-115">方法: Windows フォーム DataGridView コントロールから自動生成された列を削除する</span><span class="sxs-lookup"><span data-stu-id="04408-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-116">方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする</span><span class="sxs-lookup"><span data-stu-id="a3f14-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+- [<span data-ttu-id="04408-116">方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする</span><span class="sxs-lookup"><span data-stu-id="04408-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
   
-- [<span data-ttu-id="a3f14-117">方法: Windows フォーム DataGridView 行にバインドされているオブジェクトにアクセスする</span><span class="sxs-lookup"><span data-stu-id="a3f14-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+- [<span data-ttu-id="04408-117">方法 : Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする</span><span class="sxs-lookup"><span data-stu-id="04408-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
-- [<span data-ttu-id="a3f14-118">方法: 2つの Windows フォーム DataGridView コントロールを使用してマスター/詳細フォームを作成する</span><span class="sxs-lookup"><span data-stu-id="a3f14-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](create-a-master-detail-form-using-two-datagridviews.md)  
+- [<span data-ttu-id="04408-118">方法: Windows フォームの 2 つの DataGridView コントロールを使用してマスター/詳細形式のフォームを作成する</span><span class="sxs-lookup"><span data-stu-id="04408-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](create-a-master-detail-form-using-two-datagridviews.md)  
   
-- [<span data-ttu-id="a3f14-119">チュートリアル: 2つの Windows フォーム DataGridView コントロールを使用してマスター/詳細フォームを作成する</span><span class="sxs-lookup"><span data-stu-id="a3f14-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](creating-a-master-detail-form-using-two-datagridviews.md)  
+- [<span data-ttu-id="04408-119">チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームの作成</span><span class="sxs-lookup"><span data-stu-id="04408-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## <a name="data-formatting-examples"></a><span data-ttu-id="a3f14-120">データの書式設定の例</span><span class="sxs-lookup"><span data-stu-id="a3f14-120">Data Formatting Examples</span></span>  
+## <a name="data-formatting-examples"></a><span data-ttu-id="04408-120">データの書式設定の例</span><span class="sxs-lookup"><span data-stu-id="04408-120">Data Formatting Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-121">方法: Windows フォーム DataGridView コントロールでのデータの書式設定</span><span class="sxs-lookup"><span data-stu-id="a3f14-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-121">方法: Windows フォーム DataGridView コントロールのデータの書式を設定する</span><span class="sxs-lookup"><span data-stu-id="04408-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-122">方法: Windows フォーム DataGridView コントロールでのデータ書式設定のカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="a3f14-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-122">方法: Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="data-validation-examples"></a><span data-ttu-id="a3f14-123">データ検証の例</span><span class="sxs-lookup"><span data-stu-id="a3f14-123">Data Validation Examples</span></span>  
+## <a name="data-validation-examples"></a><span data-ttu-id="04408-123">データ検証の例</span><span class="sxs-lookup"><span data-stu-id="04408-123">Data Validation Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-124">方法: Windows フォーム DataGridView コントロールでデータを検証する</span><span class="sxs-lookup"><span data-stu-id="a3f14-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-124">方法: Windows フォーム DataGridView コントロールのデータを検証する</span><span class="sxs-lookup"><span data-stu-id="04408-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-125">チュートリアル: Windows フォーム DataGridView コントロールでのデータの検証</span><span class="sxs-lookup"><span data-stu-id="a3f14-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-125">チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査</span><span class="sxs-lookup"><span data-stu-id="04408-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-126">方法: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーを処理します</span><span class="sxs-lookup"><span data-stu-id="a3f14-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-126">方法: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーを処理する</span><span class="sxs-lookup"><span data-stu-id="04408-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-127">チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理</span><span class="sxs-lookup"><span data-stu-id="a3f14-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-127">チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理</span><span class="sxs-lookup"><span data-stu-id="04408-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## <a name="appearance-customization-examples"></a><span data-ttu-id="a3f14-128">外観のカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-128">Appearance Customization Examples</span></span>  
+## <a name="appearance-customization-examples"></a><span data-ttu-id="04408-128">外観のカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="04408-128">Appearance Customization Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-129">方法: Windows フォーム DataGridView コントロールで罫線とグリッド線のスタイルを変更する</span><span class="sxs-lookup"><span data-stu-id="a3f14-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-129">方法: Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する</span><span class="sxs-lookup"><span data-stu-id="04408-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-130">方法: Windows フォーム DataGridView コントロールでのフォントと色のスタイルの設定</span><span class="sxs-lookup"><span data-stu-id="a3f14-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-130">方法: Windows フォーム DataGridView コントロールのフォントと色のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-131">方法: Windows フォーム DataGridView コントロールの既定のセルスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-131">方法: Windows フォーム DataGridView コントロールの既定のセル スタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-132">方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールで行をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="a3f14-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-132">方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-133">方法: Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-133">方法: Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## <a name="behavior-customization-examples"></a><span data-ttu-id="a3f14-134">動作のカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-134">Behavior Customization Examples</span></span>  
+## <a name="behavior-customization-examples"></a><span data-ttu-id="04408-134">動作のカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="04408-134">Behavior Customization Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-135">方法: Windows フォーム DataGridView コントロールの編集モードを指定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-135">方法: Windows フォーム DataGridView コントロールの編集モードを指定する</span><span class="sxs-lookup"><span data-stu-id="04408-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-136">方法: Windows フォーム DataGridView コントロールで新しい行の既定値を指定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-136">方法: Windows フォーム DataGridView コントロールの新しい行に既定値を指定する</span><span class="sxs-lookup"><span data-stu-id="04408-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-137">方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする</span><span class="sxs-lookup"><span data-stu-id="a3f14-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](prevent-row-addition-and-deletion-datagridview.md)  
+- [<span data-ttu-id="04408-137">方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする</span><span class="sxs-lookup"><span data-stu-id="04408-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](prevent-row-addition-and-deletion-datagridview.md)  
   
-- [<span data-ttu-id="a3f14-138">方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する</span><span class="sxs-lookup"><span data-stu-id="a3f14-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+- [<span data-ttu-id="04408-138">方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する</span><span class="sxs-lookup"><span data-stu-id="04408-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-139">方法: ユーザーが Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする</span><span class="sxs-lookup"><span data-stu-id="a3f14-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+- [<span data-ttu-id="04408-139">方法: ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする</span><span class="sxs-lookup"><span data-stu-id="04408-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
   
-- [<span data-ttu-id="a3f14-140">方法: Windows フォーム DataGridView コントロール内の個々のセルにツールヒントを追加する</span><span class="sxs-lookup"><span data-stu-id="a3f14-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-140">方法: Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する</span><span class="sxs-lookup"><span data-stu-id="04408-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-141">方法: Windows フォーム DataGridView コントロールのセルに画像を表示する</span><span class="sxs-lookup"><span data-stu-id="a3f14-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-141">方法 : Windows フォーム DataGridView コントロールのセルにイメージを表示する</span><span class="sxs-lookup"><span data-stu-id="04408-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-142">方法: Windows フォーム DataGridView コントロールでの並べ替えのカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="a3f14-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-142">方法: Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="column-manipulation-examples"></a><span data-ttu-id="a3f14-143">列の操作の例</span><span class="sxs-lookup"><span data-stu-id="a3f14-143">Column Manipulation Examples</span></span>  
+## <a name="column-manipulation-examples"></a><span data-ttu-id="04408-143">列の操作の例</span><span class="sxs-lookup"><span data-stu-id="04408-143">Column Manipulation Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-144">方法: Windows フォーム DataGridView コントロールでの列の固定</span><span class="sxs-lookup"><span data-stu-id="a3f14-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-144">方法: Windows フォーム DataGridView コントロールの列を固定する</span><span class="sxs-lookup"><span data-stu-id="04408-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-145">方法: Windows フォーム DataGridView コントロールで列の並べ替えを有効にする</span><span class="sxs-lookup"><span data-stu-id="a3f14-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-145">方法: Windows フォーム DataGridView コントロールの列の並べ替えを有効にする</span><span class="sxs-lookup"><span data-stu-id="04408-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-146">方法: Windows フォーム DataGridView コントロールでの列の順序の変更</span><span class="sxs-lookup"><span data-stu-id="a3f14-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-146">方法: Windows フォーム DataGridView コントロールの列の順序を変更する</span><span class="sxs-lookup"><span data-stu-id="04408-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-147">方法: Windows フォーム DataGridView コントロールの列を非表示にする</span><span class="sxs-lookup"><span data-stu-id="a3f14-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-147">方法: Windows フォームの DataGridView コントロールの列を非表示にする</span><span class="sxs-lookup"><span data-stu-id="04408-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-148">方法: Windows フォーム DataGridView コントロールの列ヘッダーを非表示にする</span><span class="sxs-lookup"><span data-stu-id="a3f14-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-148">方法: Windows フォーム DataGridView コントロールの列ヘッダーを非表示にする</span><span class="sxs-lookup"><span data-stu-id="04408-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-149">方法: Windows フォーム DataGridView コントロールで列を読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="a3f14-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-149">方法: Windows フォームの DataGridView コントロールで列を読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="04408-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-150">方法: Windows フォーム DataGridView コントロールの列の並べ替えモードを設定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-150">方法: Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-151">方法: Windows フォーム DataGridView コントロールでイメージ列を操作する</span><span class="sxs-lookup"><span data-stu-id="a3f14-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-151">方法: Windows フォーム DataGridView コントロールのイメージ列を操作する</span><span class="sxs-lookup"><span data-stu-id="04408-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-152">方法: Windows フォーム DataGridView コントロール内の列の操作</span><span class="sxs-lookup"><span data-stu-id="a3f14-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-152">方法: Windows フォーム DataGridView コントロールの列を操作する</span><span class="sxs-lookup"><span data-stu-id="04408-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="a3f14-153">行と列のサイズ変更の例</span><span class="sxs-lookup"><span data-stu-id="a3f14-153">Row and Column Sizing Examples</span></span>  
+## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="04408-153">行と列のサイズ変更の例</span><span class="sxs-lookup"><span data-stu-id="04408-153">Row and Column Sizing Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-154">Windows フォーム DataGridView コントロールの列フィル モード</span><span class="sxs-lookup"><span data-stu-id="a3f14-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-154">Windows フォーム DataGridView コントロールの列フィル モード</span><span class="sxs-lookup"><span data-stu-id="04408-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-155">方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-155">方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-156">方法: Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する</span><span class="sxs-lookup"><span data-stu-id="a3f14-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-156">方法: Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する</span><span class="sxs-lookup"><span data-stu-id="04408-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-157">方法: Windows フォーム DataGridView コントロールでコンテンツが変更されたときにセルのサイズを自動的に変更する</span><span class="sxs-lookup"><span data-stu-id="a3f14-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-157">方法: Windows フォームの DataGridView コントロールの内容変更時にセルのサイズを自動的に変更する</span><span class="sxs-lookup"><span data-stu-id="04408-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## <a name="selection-examples"></a><span data-ttu-id="a3f14-158">選択範囲の例</span><span class="sxs-lookup"><span data-stu-id="a3f14-158">Selection Examples</span></span>  
+## <a name="selection-examples"></a><span data-ttu-id="04408-158">選択範囲の例</span><span class="sxs-lookup"><span data-stu-id="04408-158">Selection Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-159">方法: Windows フォーム DataGridView コントロールの選択モードを設定する</span><span class="sxs-lookup"><span data-stu-id="a3f14-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-159">方法: Windows フォーム DataGridView コントロールの選択モードを設定する</span><span class="sxs-lookup"><span data-stu-id="04408-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-160">方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。</span><span class="sxs-lookup"><span data-stu-id="a3f14-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
+- [<span data-ttu-id="04408-160">方法: Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する</span><span class="sxs-lookup"><span data-stu-id="04408-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
   
-- [<span data-ttu-id="a3f14-161">方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定します。</span><span class="sxs-lookup"><span data-stu-id="a3f14-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](get-and-set-the-current-cell-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-161">方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定する</span><span class="sxs-lookup"><span data-stu-id="04408-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## <a name="advanced-customization-examples"></a><span data-ttu-id="a3f14-162">高度なカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-162">Advanced Customization Examples</span></span>  
+## <a name="advanced-customization-examples"></a><span data-ttu-id="04408-162">高度なカスタマイズの例</span><span class="sxs-lookup"><span data-stu-id="04408-162">Advanced Customization Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-163">方法: Windows フォーム DataGridView コントロールでのセルの外観のカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="a3f14-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-163">方法: Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-164">方法: Windows フォーム DataGridView コントロールでの行の外観のカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="a3f14-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-164">方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-165">方法: 動作と外観を拡張して Windows フォーム DataGridView コントロールのセルと列をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="a3f14-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+- [<span data-ttu-id="04408-165">方法: Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="04408-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
   
-- [<span data-ttu-id="a3f14-166">方法: Windows フォーム DataGridView コントロールのボタン列にあるボタンを無効にする</span><span class="sxs-lookup"><span data-stu-id="a3f14-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-166">方法: Windows フォーム DataGridView コントロールのボタン列にあるボタンを無効にする</span><span class="sxs-lookup"><span data-stu-id="04408-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](disable-buttons-in-a-button-column-in-the-datagrid.md)  
   
-- [<span data-ttu-id="a3f14-167">方法: DataGridView セル Windows フォームのコントロールのホスト</span><span class="sxs-lookup"><span data-stu-id="a3f14-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+- [<span data-ttu-id="04408-167">方法: Windows フォーム DataGridView Cells でコントロールをホストする</span><span class="sxs-lookup"><span data-stu-id="04408-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## <a name="advanced-data-examples"></a><span data-ttu-id="a3f14-168">高度なデータの例</span><span class="sxs-lookup"><span data-stu-id="a3f14-168">Advanced Data Examples</span></span>  
+## <a name="advanced-data-examples"></a><span data-ttu-id="04408-168">高度なデータの例</span><span class="sxs-lookup"><span data-stu-id="04408-168">Advanced Data Examples</span></span>  
   
-- [<span data-ttu-id="a3f14-169">方法: Windows フォーム DataGridView コントロールでの仮想モードの実装</span><span class="sxs-lookup"><span data-stu-id="a3f14-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="04408-169">方法: Windows フォーム DataGridView コントロールで仮想モードを実装する</span><span class="sxs-lookup"><span data-stu-id="04408-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-170">チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードの実装</span><span class="sxs-lookup"><span data-stu-id="a3f14-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)  
+- [<span data-ttu-id="04408-170">チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードの実装</span><span class="sxs-lookup"><span data-stu-id="04408-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="a3f14-171">Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装</span><span class="sxs-lookup"><span data-stu-id="a3f14-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+- [<span data-ttu-id="04408-171">Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装</span><span class="sxs-lookup"><span data-stu-id="04408-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a3f14-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="a3f14-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04408-172">関連項目</span><span class="sxs-lookup"><span data-stu-id="04408-172">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="a3f14-173">DataGridView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="a3f14-173">DataGridView Control Overview</span></span>](datagridview-control-overview-windows-forms.md)
+- [<span data-ttu-id="04408-173">DataGridView コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="04408-173">DataGridView Control Overview</span></span>](datagridview-control-overview-windows-forms.md)
