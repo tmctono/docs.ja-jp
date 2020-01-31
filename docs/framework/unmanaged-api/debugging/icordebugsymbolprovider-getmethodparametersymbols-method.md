@@ -1,18 +1,18 @@
 ---
-title: 'いいね Provider:: GetMethodParameterSymbols メソッド'
+title: ICorDebugSymbolProvider::GetMethodParameterSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: 1f7da156e5a164dc753e2283bc7ab24d18983173
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a940077e50ff251111ca6eedaee49401775644d3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138843"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791597"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a><span data-ttu-id="a5863-102">いいね Provider:: GetMethodParameterSymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="a5863-102">ICorDebugSymbolProvider::GetMethodParameterSymbols Method</span></span>
-<span data-ttu-id="a5863-103">メソッドの指定の相対仮想アドレス (RVA: relative virtual address ) で、そのメソッドのパラメーター シンボルを取得します。</span><span class="sxs-lookup"><span data-stu-id="a5863-103">Gets a method's parameter symbols given the relative virtual address (RVA) of that method.</span></span>  
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a><span data-ttu-id="3001f-102">ICorDebugSymbolProvider::GetMethodParameterSymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="3001f-102">ICorDebugSymbolProvider::GetMethodParameterSymbols Method</span></span>
+<span data-ttu-id="3001f-103">メソッドの指定の相対仮想アドレス (RVA: relative virtual address ) で、そのメソッドのパラメーター シンボルを取得します。</span><span class="sxs-lookup"><span data-stu-id="3001f-103">Gets a method's parameter symbols given the relative virtual address (RVA) of that method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5863-104">構文</span><span class="sxs-lookup"><span data-stu-id="a5863-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3001f-104">構文</span><span class="sxs-lookup"><span data-stu-id="3001f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodParameterSymbols(  
@@ -23,35 +23,35 @@ HRESULT GetMethodParameterSymbols(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5863-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a5863-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3001f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3001f-105">Parameters</span></span>  
  `nativeRVA`  
- <span data-ttu-id="a5863-106">[in] メソッドのネイティブ相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="a5863-106">[in] The native relative virtual address of the method.</span></span>  
+ <span data-ttu-id="3001f-106">[in] メソッドのネイティブ相対仮想アドレス。</span><span class="sxs-lookup"><span data-stu-id="3001f-106">[in] The native relative virtual address of the method.</span></span>  
   
  `cRequestedSymbols`  
- <span data-ttu-id="a5863-107">[in] ローカル シンボルの要求数。</span><span class="sxs-lookup"><span data-stu-id="a5863-107">[in] The number of local symbols requested.</span></span>  
+ <span data-ttu-id="3001f-107">[in] ローカル シンボルの要求数。</span><span class="sxs-lookup"><span data-stu-id="3001f-107">[in] The number of local symbols requested.</span></span>  
   
  `pcFetchedSymbols`  
- <span data-ttu-id="a5863-108">[out] メソッドによって取得されたシンボル数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a5863-108">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
+ <span data-ttu-id="3001f-108">[out] メソッドによって取得されたシンボル数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3001f-108">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
   
  `pcFetchedSymbols`  
- <span data-ttu-id="a5863-109">入出力メソッドのローカルシンボルを格納している[ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)配列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a5863-109">[out] A pointer to an [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) array that contains the method's local symbols.</span></span>  
+ <span data-ttu-id="3001f-109">入出力メソッドのローカルシンボルを格納している[ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)配列へのポインター。</span><span class="sxs-lookup"><span data-stu-id="3001f-109">[out] A pointer to an [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) array that contains the method's local symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a5863-110">Remarks</span><span class="sxs-lookup"><span data-stu-id="a5863-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3001f-110">コメント</span><span class="sxs-lookup"><span data-stu-id="3001f-110">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="a5863-111">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="a5863-111">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="3001f-111">このメソッドは .NET ネイティブでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="3001f-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5863-112">［要件］</span><span class="sxs-lookup"><span data-stu-id="a5863-112">Requirements</span></span>  
- <span data-ttu-id="a5863-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a5863-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3001f-112">要件</span><span class="sxs-lookup"><span data-stu-id="3001f-112">Requirements</span></span>  
+ <span data-ttu-id="3001f-113">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3001f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5863-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5863-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3001f-114">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3001f-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5863-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5863-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3001f-115">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3001f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5863-116">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5863-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="3001f-116">**.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3001f-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5863-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="a5863-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3001f-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3001f-117">See also</span></span>
 
-- [<span data-ttu-id="a5863-118">GetMethodLocalSymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="a5863-118">GetMethodLocalSymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodlocalsymbols-method.md)
-- [<span data-ttu-id="a5863-119">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5863-119">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="a5863-120">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a5863-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3001f-118">GetMethodLocalSymbols メソッド</span><span class="sxs-lookup"><span data-stu-id="3001f-118">GetMethodLocalSymbols Method</span></span>](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
+- [<span data-ttu-id="3001f-119">ICorDebugSymbolProvider インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3001f-119">ICorDebugSymbolProvider Interface</span></span>](icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="3001f-120">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3001f-120">Debugging Interfaces</span></span>](debugging-interfaces.md)

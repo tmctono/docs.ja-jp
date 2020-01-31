@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8160bb5b9ca5e0a4e22a1a831e978eaf125e7605
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450360"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870493"
 ---
-# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="272e3-102">ICorProfilerInfo::GetILFunctionBody メソッド</span><span class="sxs-lookup"><span data-stu-id="272e3-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
-<span data-ttu-id="272e3-103">Microsoft 中間言語 (MSIL) コード内のメソッドの本文へのポインターを、ヘッダーを開始位置として取得します。</span><span class="sxs-lookup"><span data-stu-id="272e3-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
+# <a name="icorprofilerinfogetilfunctionbody-method"></a><span data-ttu-id="13e27-102">ICorProfilerInfo::GetILFunctionBody メソッド</span><span class="sxs-lookup"><span data-stu-id="13e27-102">ICorProfilerInfo::GetILFunctionBody Method</span></span>
+<span data-ttu-id="13e27-103">Microsoft 中間言語 (MSIL) コード内のメソッドの本文へのポインターを、ヘッダーを開始位置として取得します。</span><span class="sxs-lookup"><span data-stu-id="13e27-103">Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="272e3-104">構文</span><span class="sxs-lookup"><span data-stu-id="272e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13e27-104">構文</span><span class="sxs-lookup"><span data-stu-id="13e27-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetILFunctionBody(  
@@ -35,33 +35,33 @@ HRESULT GetILFunctionBody(
     [out] ULONG       *pcbMethodSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="272e3-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="272e3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13e27-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="13e27-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="272e3-106">から関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="272e3-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="13e27-106">から関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="13e27-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `methodId`  
- <span data-ttu-id="272e3-107">からメソッドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="272e3-107">[in] The metadata token for the method.</span></span>  
+ <span data-ttu-id="13e27-107">からメソッドのメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="13e27-107">[in] The metadata token for the method.</span></span>  
   
  `ppMethodHeader`  
- <span data-ttu-id="272e3-108">入出力メソッドのヘッダーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="272e3-108">[out] A pointer to the method's header.</span></span>  
+ <span data-ttu-id="13e27-108">入出力メソッドのヘッダーへのポインター。</span><span class="sxs-lookup"><span data-stu-id="13e27-108">[out] A pointer to the method's header.</span></span>  
   
  `pcbMethodSize`  
- <span data-ttu-id="272e3-109">入出力メソッドのサイズを指定する整数。</span><span class="sxs-lookup"><span data-stu-id="272e3-109">[out] An integer that specifies the size of the method.</span></span>  
+ <span data-ttu-id="13e27-109">入出力メソッドのサイズを指定する整数。</span><span class="sxs-lookup"><span data-stu-id="13e27-109">[out] An integer that specifies the size of the method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="272e3-110">コメント</span><span class="sxs-lookup"><span data-stu-id="272e3-110">Remarks</span></span>  
- <span data-ttu-id="272e3-111">メソッドは、それが存在するモジュールによってスコープが設定されます。</span><span class="sxs-lookup"><span data-stu-id="272e3-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="272e3-112">`GetILFunctionBody` メソッドは、MSIL コードが共通言語ランタイム (CLR) によって読み込まれる前に、ツールにアクセスできるように設計されているため、メソッドのメタデータトークンを使用して目的のインスタンスを検索します。</span><span class="sxs-lookup"><span data-stu-id="272e3-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13e27-110">コメント</span><span class="sxs-lookup"><span data-stu-id="13e27-110">Remarks</span></span>  
+ <span data-ttu-id="13e27-111">メソッドは、それが存在するモジュールによってスコープが設定されます。</span><span class="sxs-lookup"><span data-stu-id="13e27-111">A method is scoped by the module in which it lives.</span></span> <span data-ttu-id="13e27-112">`GetILFunctionBody` メソッドは、MSIL コードが共通言語ランタイム (CLR) によって読み込まれる前に、ツールにアクセスできるように設計されているため、メソッドのメタデータトークンを使用して目的のインスタンスを検索します。</span><span class="sxs-lookup"><span data-stu-id="13e27-112">Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.</span></span>  
   
- <span data-ttu-id="272e3-113">`methodId` が MSIL コード (抽象メソッドや platform invoke (PInvoke) メソッドなど) を含まないメソッドを指している場合、`GetILFunctionBody` は CORPROF_E_FUNCTION_NOT_IL HRESULT を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="272e3-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
+ <span data-ttu-id="13e27-113">`methodId` が MSIL コード (抽象メソッドや platform invoke (PInvoke) メソッドなど) を含まないメソッドを指している場合、`GetILFunctionBody` は CORPROF_E_FUNCTION_NOT_IL HRESULT を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="13e27-113">`GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="272e3-114">要件</span><span class="sxs-lookup"><span data-stu-id="272e3-114">Requirements</span></span>  
- <span data-ttu-id="272e3-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="272e3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13e27-114">要件</span><span class="sxs-lookup"><span data-stu-id="13e27-114">Requirements</span></span>  
+ <span data-ttu-id="13e27-115">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="13e27-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="272e3-116">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="272e3-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="13e27-116">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="13e27-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="272e3-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="272e3-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13e27-117">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13e27-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="272e3-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="272e3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="13e27-118">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13e27-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="272e3-119">参照</span><span class="sxs-lookup"><span data-stu-id="272e3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13e27-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="13e27-119">See also</span></span>
 
-- [<span data-ttu-id="272e3-120">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="272e3-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="13e27-120">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="13e27-120">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

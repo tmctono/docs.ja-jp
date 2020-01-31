@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e010a49dabd3b44602136e70b4c5524a68bdd9e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439311"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865208"
 ---
-# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="30f61-102">ICorProfilerCallback4::ReJITCompilationFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="30f61-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
-<span data-ttu-id="30f61-103">Just-in-time (JIT) コンパイラが関数の再コンパイルを完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="30f61-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
+# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="b0e41-102">ICorProfilerCallback4::ReJITCompilationFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="b0e41-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
+<span data-ttu-id="b0e41-103">Just-in-time (JIT) コンパイラが関数の再コンパイルを完了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="b0e41-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30f61-104">構文</span><span class="sxs-lookup"><span data-stu-id="30f61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0e41-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0e41-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ReJITCompilationFinished(  
@@ -34,33 +34,33 @@ HRESULT ReJITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30f61-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="30f61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b0e41-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="b0e41-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="30f61-106">から再コンパイルされた関数の ID。</span><span class="sxs-lookup"><span data-stu-id="30f61-106">[in] The ID of the function that was recompiled.</span></span>  
+ <span data-ttu-id="b0e41-106">から再コンパイルされた関数の ID。</span><span class="sxs-lookup"><span data-stu-id="b0e41-106">[in] The ID of the function that was recompiled.</span></span>  
   
  `rejitId`  
- <span data-ttu-id="30f61-107">[in] JIT 再コンパイルされた関数のID。</span><span class="sxs-lookup"><span data-stu-id="30f61-107">[in] The identity of the JIT-recompiled function.</span></span>  
+ <span data-ttu-id="b0e41-107">[in] JIT 再コンパイルされた関数のID。</span><span class="sxs-lookup"><span data-stu-id="b0e41-107">[in] The identity of the JIT-recompiled function.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="30f61-108">からJIT 再コンパイルが成功したかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="30f61-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
+ <span data-ttu-id="b0e41-108">からJIT 再コンパイルが成功したかどうかを示す値。</span><span class="sxs-lookup"><span data-stu-id="b0e41-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="30f61-109">[in] ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する可能性があることを示す `true` ます。`false` は、ブロックがランタイムの操作に影響を与えないことを示します。</span><span class="sxs-lookup"><span data-stu-id="30f61-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
+ <span data-ttu-id="b0e41-109">[in] ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する可能性があることを示す `true` ます。`false` は、ブロックがランタイムの操作に影響を与えないことを示します。</span><span class="sxs-lookup"><span data-stu-id="b0e41-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
   
- <span data-ttu-id="30f61-110">`true` の値はランタイムに害を与えませんが、プロファイルの結果に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="30f61-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
+ <span data-ttu-id="b0e41-110">`true` の値はランタイムに害を与えませんが、プロファイルの結果に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b0e41-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30f61-111">要件</span><span class="sxs-lookup"><span data-stu-id="30f61-111">Requirements</span></span>  
- <span data-ttu-id="30f61-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="30f61-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0e41-111">要件</span><span class="sxs-lookup"><span data-stu-id="b0e41-111">Requirements</span></span>  
+ <span data-ttu-id="b0e41-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0e41-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30f61-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="30f61-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b0e41-113">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b0e41-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="30f61-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30f61-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b0e41-114">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0e41-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="30f61-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30f61-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b0e41-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0e41-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30f61-116">参照</span><span class="sxs-lookup"><span data-stu-id="30f61-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0e41-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0e41-116">See also</span></span>
 
-- [<span data-ttu-id="30f61-117">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="30f61-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="30f61-118">ICorProfilerCallback4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="30f61-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="30f61-119">JITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="30f61-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="30f61-120">ReJITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="30f61-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [<span data-ttu-id="b0e41-117">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0e41-117">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="b0e41-118">ICorProfilerCallback4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b0e41-118">ICorProfilerCallback4 Interface</span></span>](icorprofilercallback4-interface.md)
+- [<span data-ttu-id="b0e41-119">JITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="b0e41-119">JITCompilationStarted Method</span></span>](icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="b0e41-120">ReJITCompilationStarted メソッド</span><span class="sxs-lookup"><span data-stu-id="b0e41-120">ReJITCompilationStarted Method</span></span>](icorprofilercallback4-rejitcompilationstarted-method.md)

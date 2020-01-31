@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: bea857f65081432eb3f5501c75af6d13805c76d7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ad155c4efb9f11565eeed8bc0a3540311aca4eb7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426238"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866274"
 ---
-# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="206fe-102">ICorProfilerCallback::JITCachedFunctionSearchFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="206fe-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
-<span data-ttu-id="206fe-103">以前にネイティブイメージジェネレーター (Ngen.exe) を使用してコンパイルされた関数の検索が終了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="206fe-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
+# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="ce708-102">ICorProfilerCallback::JITCachedFunctionSearchFinished メソッド</span><span class="sxs-lookup"><span data-stu-id="ce708-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
+<span data-ttu-id="ce708-103">以前にネイティブイメージジェネレーター (Ngen.exe) を使用してコンパイルされた関数の検索が終了したことをプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="ce708-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="206fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="206fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce708-104">構文</span><span class="sxs-lookup"><span data-stu-id="ce708-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT JITCachedFunctionSearchFinished(  
@@ -33,25 +33,28 @@ HRESULT JITCachedFunctionSearchFinished(
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="206fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="206fe-105">Parameters</span></span>  
- `functionId`  
- <span data-ttu-id="206fe-106">から検索が実行された関数の ID。</span><span class="sxs-lookup"><span data-stu-id="206fe-106">[in] The ID of the function for which the search was performed.</span></span>  
-  
- `result`  
- <span data-ttu-id="206fe-107">から検索結果を示す[COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)列挙体の値。</span><span class="sxs-lookup"><span data-stu-id="206fe-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="206fe-108">コメント</span><span class="sxs-lookup"><span data-stu-id="206fe-108">Remarks</span></span>  
- <span data-ttu-id="206fe-109">.NET Framework バージョン2.0 では、通常の NGen イメージのすべての関数に対して[ICorProfilerCallback:: JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)および `JITCachedFunctionSearchFinished` コールバックは行われません。</span><span class="sxs-lookup"><span data-stu-id="206fe-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="206fe-110">プロファイラー用に最適化された NGen イメージのみが、イメージ内のすべての関数のコールバックを生成します。</span><span class="sxs-lookup"><span data-stu-id="206fe-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="206fe-111">ただし、オーバーヘッドが増加するため、プロファイラーは、これらのコールバックを使用して just-in-time (JIT) コンパイルを強制的に実行する場合にのみ、プロファイラーで最適化された NGen イメージを要求する必要があります。</span><span class="sxs-lookup"><span data-stu-id="206fe-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="206fe-112">それ以外の場合、プロファイラーは関数情報を収集するためにレイジー戦略を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="206fe-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="206fe-113">要件</span><span class="sxs-lookup"><span data-stu-id="206fe-113">Requirements</span></span>  
- <span data-ttu-id="206fe-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="206fe-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="206fe-115">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="206fe-115">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="206fe-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="206fe-116">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="206fe-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="206fe-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="206fe-118">参照</span><span class="sxs-lookup"><span data-stu-id="206fe-118">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="ce708-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ce708-105">Parameters</span></span>
 
-- [<span data-ttu-id="206fe-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="206fe-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- `functionId`
+
+  <span data-ttu-id="ce708-106">\[] 検索が実行された関数の ID。</span><span class="sxs-lookup"><span data-stu-id="ce708-106">\[in] The ID of the function for which the search was performed.</span></span>
+
+- `result`
+
+  <span data-ttu-id="ce708-107">\[] 検索の結果を示す[COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md)列挙体の値。</span><span class="sxs-lookup"><span data-stu-id="ce708-107">\[in] A value of the [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="ce708-108">コメント</span><span class="sxs-lookup"><span data-stu-id="ce708-108">Remarks</span></span>  
+ <span data-ttu-id="ce708-109">.NET Framework バージョン2.0 では、通常の NGen イメージのすべての関数に対して[ICorProfilerCallback:: JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)および `JITCachedFunctionSearchFinished` コールバックは行われません。</span><span class="sxs-lookup"><span data-stu-id="ce708-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="ce708-110">プロファイラー用に最適化された NGen イメージのみが、イメージ内のすべての関数のコールバックを生成します。</span><span class="sxs-lookup"><span data-stu-id="ce708-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="ce708-111">ただし、オーバーヘッドが増加するため、プロファイラーは、これらのコールバックを使用して just-in-time (JIT) コンパイルを強制的に実行する場合にのみ、プロファイラーで最適化された NGen イメージを要求する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ce708-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="ce708-112">それ以外の場合、プロファイラーは関数情報を収集するためにレイジー戦略を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ce708-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="ce708-113">要件</span><span class="sxs-lookup"><span data-stu-id="ce708-113">Requirements</span></span>  
+ <span data-ttu-id="ce708-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ce708-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ce708-115">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ce708-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="ce708-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce708-116">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="ce708-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce708-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ce708-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce708-118">See also</span></span>
+
+- [<span data-ttu-id="ce708-119">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="ce708-119">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)

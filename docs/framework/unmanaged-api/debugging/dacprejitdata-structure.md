@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46031f29da6916eeaeea863ebef6924a720d7155
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739112"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793814"
 ---
-# <a name="dacprejitdata-structure"></a><span data-ttu-id="d0c93-102">DacpReJitData 構造体</span><span class="sxs-lookup"><span data-stu-id="d0c93-102">DacpReJitData Structure</span></span>
+# <a name="dacprejitdata-structure"></a><span data-ttu-id="0e727-102">DacpReJitData 構造体</span><span class="sxs-lookup"><span data-stu-id="0e727-102">DacpReJitData Structure</span></span>
 
-<span data-ttu-id="d0c93-103">指定されたプロファイラー インストルメント メソッドに関する基本情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="d0c93-103">Defines the basic information about a given profiler-instrumented method.</span></span>
+<span data-ttu-id="0e727-103">プロファイラーによってインストルメント化された特定のメソッドに関する基本情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="0e727-103">Defines the basic information about a given profiler-instrumented method.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="d0c93-104">構文</span><span class="sxs-lookup"><span data-stu-id="d0c93-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0e727-104">構文</span><span class="sxs-lookup"><span data-stu-id="0e727-104">Syntax</span></span>
 
 ```cpp
 struct MSLAYOUT DacpReJitData
@@ -47,25 +47,25 @@ struct MSLAYOUT DacpReJitData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="d0c93-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="d0c93-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="0e727-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="0e727-105">Members</span></span>
 
-| <span data-ttu-id="d0c93-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="d0c93-106">Member</span></span>           | <span data-ttu-id="d0c93-107">説明</span><span class="sxs-lookup"><span data-stu-id="d0c93-107">Description</span></span>                                                                                      |
+| <span data-ttu-id="0e727-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="0e727-106">Member</span></span>           | <span data-ttu-id="0e727-107">説明</span><span class="sxs-lookup"><span data-stu-id="0e727-107">Description</span></span>                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
-| `rejitID`        | <span data-ttu-id="d0c93-108">メソッドの ReJit リビジョン番号。</span><span class="sxs-lookup"><span data-stu-id="d0c93-108">The ReJit revision number for a method.</span></span>                                                          |
-| `flags`          | <span data-ttu-id="d0c93-109">特定のバージョンのメソッドの ReJit インストルメンテーションの現在の状態を示すフラグ。</span><span class="sxs-lookup"><span data-stu-id="d0c93-109">A flag indicating the current state of the method's ReJit instrumentation for the given version.</span></span> |
-| `NativeCodeAddr` | <span data-ttu-id="d0c93-110">メソッドの rejitted 実装のベース アドレス。</span><span class="sxs-lookup"><span data-stu-id="d0c93-110">The base address of the method's rejitted implementation.</span></span>                                         |
+| `rejitID`        | <span data-ttu-id="0e727-108">メソッドの ReJit リビジョン番号。</span><span class="sxs-lookup"><span data-stu-id="0e727-108">The ReJit revision number for a method.</span></span>                                                          |
+| `flags`          | <span data-ttu-id="0e727-109">指定されたバージョンのメソッドの ReJit インストルメンテーションの現在の状態を示すフラグ。</span><span class="sxs-lookup"><span data-stu-id="0e727-109">A flag indicating the current state of the method's ReJit instrumentation for the given version.</span></span> |
+| `NativeCodeAddr` | <span data-ttu-id="0e727-110">メソッドの rejitted 実装のベースアドレス。</span><span class="sxs-lookup"><span data-stu-id="0e727-110">The base address of the method's rejitted implementation.</span></span>                                         |
 
-## <a name="remarks"></a><span data-ttu-id="d0c93-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="d0c93-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0e727-111">コメント</span><span class="sxs-lookup"><span data-stu-id="0e727-111">Remarks</span></span>
 
-<span data-ttu-id="d0c93-112">この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。</span><span class="sxs-lookup"><span data-stu-id="d0c93-112">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="d0c93-113">これを使用するには、上で指定した構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="d0c93-113">To use it, define the structure as specified above.</span></span> <span data-ttu-id="d0c93-114">使用して、構造体を定義する必要がありますも`ms_struct`Microsoft コンパイラを使用していない場合にパックします。</span><span class="sxs-lookup"><span data-stu-id="d0c93-114">The structure must also be defined using `ms_struct` packing if not using the Microsoft compilers.</span></span>
+<span data-ttu-id="0e727-112">この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。</span><span class="sxs-lookup"><span data-stu-id="0e727-112">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="0e727-113">これを使用するには、前に示したように構造体を定義します。</span><span class="sxs-lookup"><span data-stu-id="0e727-113">To use it, define the structure as specified above.</span></span> <span data-ttu-id="0e727-114">Microsoft コンパイラを使用していない場合は、`ms_struct` パッキングを使用して構造体を定義する必要もあります。</span><span class="sxs-lookup"><span data-stu-id="0e727-114">The structure must also be defined using `ms_struct` packing if not using the Microsoft compilers.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d0c93-115">必要条件</span><span class="sxs-lookup"><span data-stu-id="d0c93-115">Requirements</span></span>
-<span data-ttu-id="d0c93-116">**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d0c93-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="d0c93-117">**ヘッダー:** なし</span><span class="sxs-lookup"><span data-stu-id="d0c93-117">**Header:** None</span></span>  
-<span data-ttu-id="d0c93-118">**ライブラリ:** なし</span><span class="sxs-lookup"><span data-stu-id="d0c93-118">**Library:** None</span></span>  
-<span data-ttu-id="d0c93-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d0c93-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e727-115">要件</span><span class="sxs-lookup"><span data-stu-id="0e727-115">Requirements</span></span>
+<span data-ttu-id="0e727-116">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0e727-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="0e727-117">**ヘッダー:** 存在</span><span class="sxs-lookup"><span data-stu-id="0e727-117">**Header:** None</span></span>  
+<span data-ttu-id="0e727-118">**ライブラリ:** 存在</span><span class="sxs-lookup"><span data-stu-id="0e727-118">**Library:** None</span></span>  
+<span data-ttu-id="0e727-119">**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0e727-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="d0c93-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0c93-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e727-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e727-120">See also</span></span>
 
-- [<span data-ttu-id="d0c93-121">デバッグ</span><span class="sxs-lookup"><span data-stu-id="d0c93-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="d0c93-122">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="d0c93-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="0e727-121">デバッグ</span><span class="sxs-lookup"><span data-stu-id="0e727-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="0e727-122">デバッグ構造体</span><span class="sxs-lookup"><span data-stu-id="0e727-122">Debugging Structures</span></span>](debugging-structures.md)
