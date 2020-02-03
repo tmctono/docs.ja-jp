@@ -17,23 +17,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736049"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="9d7c9-102">方法 : Windows フォームの DataGridView コントロールの行を操作する</span><span class="sxs-lookup"><span data-stu-id="9d7c9-102">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="9d7c9-103"><xref:System.Windows.Forms.DataGridViewRow> クラスのプロパティを使用して <xref:System.Windows.Forms.DataGridView> の行を操作するさまざまな方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="9d7c9-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> rows using properties of the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="8ac53-102">方法 : Windows フォームの DataGridView コントロールの行を操作する</span><span class="sxs-lookup"><span data-stu-id="8ac53-102">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="8ac53-103"><xref:System.Windows.Forms.DataGridView> クラスのプロパティを使用して <xref:System.Windows.Forms.DataGridViewRow> の行を操作するさまざまな方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="8ac53-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> rows using properties of the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9d7c9-104">使用例</span><span class="sxs-lookup"><span data-stu-id="9d7c9-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8ac53-104">例</span><span class="sxs-lookup"><span data-stu-id="8ac53-104">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#200](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewRowDemo.cpp#200)]
  [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewRowDemo.cs#200)]
  [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewrowdemo.vb#200)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9d7c9-105">コードのコンパイル方法</span><span class="sxs-lookup"><span data-stu-id="9d7c9-105">Compiling the Code</span></span>  
- <span data-ttu-id="9d7c9-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="9d7c9-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8ac53-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="8ac53-105">Compiling the Code</span></span>  
+ <span data-ttu-id="8ac53-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="8ac53-106">This example requires:</span></span>  
   
-- <span data-ttu-id="9d7c9-107">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="9d7c9-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="8ac53-107">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="8ac53-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d7c9-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d7c9-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ac53-108">参照</span><span class="sxs-lookup"><span data-stu-id="8ac53-108">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [<span data-ttu-id="9d7c9-109">Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング</span><span class="sxs-lookup"><span data-stu-id="9d7c9-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="8ac53-109">Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング</span><span class="sxs-lookup"><span data-stu-id="8ac53-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)

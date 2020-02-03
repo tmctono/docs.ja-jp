@@ -16,23 +16,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76730996"
 ---
-# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="f5cb3-102">方法 : 連結されていない Windows フォーム DataGridView コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="f5cb3-102">How to: Create an Unbound Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="f5cb3-103"><xref:System.Windows.Forms.DataGridView> コントロールをデータ ソースにバインドせずに、プログラムでデータを設定する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="f5cb3-103">The following code example demonstrates how to populate a <xref:System.Windows.Forms.DataGridView> control programmatically without binding it to a data source.</span></span> <span data-ttu-id="f5cb3-104">これは、少量のデータを表形式で表示する必要がある場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="f5cb3-104">This is useful when you have a small amount of data that you want to display in a table format.</span></span>  
+# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="c849d-102">方法 : 連結されていない Windows フォーム DataGridView コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="c849d-102">How to: Create an Unbound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="c849d-103"><xref:System.Windows.Forms.DataGridView> コントロールをデータ ソースにバインドせずに、プログラムでデータを設定する方法を次のコード例に示します。</span><span class="sxs-lookup"><span data-stu-id="c849d-103">The following code example demonstrates how to populate a <xref:System.Windows.Forms.DataGridView> control programmatically without binding it to a data source.</span></span> <span data-ttu-id="c849d-104">これは、少量のデータを表形式で表示する必要がある場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="c849d-104">This is useful when you have a small amount of data that you want to display in a table format.</span></span>  
   
- <span data-ttu-id="f5cb3-105">このコード例の詳細については、「[チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f5cb3-105">For a complete explanation of this code example, see [Walkthrough: Creating an Unbound Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="c849d-105">このコード例の詳細については、「[チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c849d-105">For a complete explanation of this code example, see [Walkthrough: Creating an Unbound Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5cb3-106">使用例</span><span class="sxs-lookup"><span data-stu-id="f5cb3-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c849d-106">例</span><span class="sxs-lookup"><span data-stu-id="c849d-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#00)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f5cb3-107">コードのコンパイル方法</span><span class="sxs-lookup"><span data-stu-id="f5cb3-107">Compiling the Code</span></span>  
- <span data-ttu-id="f5cb3-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="f5cb3-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c849d-107">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c849d-107">Compiling the Code</span></span>  
+ <span data-ttu-id="c849d-108">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="c849d-108">This example requires:</span></span>  
   
-- <span data-ttu-id="f5cb3-109">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="f5cb3-109">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="c849d-109">System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="c849d-109">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5cb3-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5cb3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c849d-110">参照</span><span class="sxs-lookup"><span data-stu-id="c849d-110">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="f5cb3-111">チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成</span><span class="sxs-lookup"><span data-stu-id="f5cb3-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="f5cb3-112">Windows フォーム DataGridView コントロールでのデータの表示</span><span class="sxs-lookup"><span data-stu-id="f5cb3-112">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="f5cb3-113">Windows フォーム DataGridView コントロールでのデータ表示モード</span><span class="sxs-lookup"><span data-stu-id="f5cb3-113">Data Display Modes in the Windows Forms DataGridView Control</span></span>](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="c849d-111">チュートリアル: バインドされていない Windows フォーム DataGridView コントロールの作成</span><span class="sxs-lookup"><span data-stu-id="c849d-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="c849d-112">Windows フォーム DataGridView コントロールでのデータの表示</span><span class="sxs-lookup"><span data-stu-id="c849d-112">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="c849d-113">Windows フォーム DataGridView コントロールでのデータ表示モード</span><span class="sxs-lookup"><span data-stu-id="c849d-113">Data Display Modes in the Windows Forms DataGridView Control</span></span>](data-display-modes-in-the-windows-forms-datagridview-control.md)

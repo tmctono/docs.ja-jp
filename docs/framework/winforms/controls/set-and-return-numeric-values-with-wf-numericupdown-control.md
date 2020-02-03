@@ -18,12 +18,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743019"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="97bd5-102">方法 : Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する</span><span class="sxs-lookup"><span data-stu-id="97bd5-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
-<span data-ttu-id="97bd5-103"><xref:System.Windows.Forms.NumericUpDown> コントロール Windows フォームの数値は <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティによって決定されます。</span><span class="sxs-lookup"><span data-stu-id="97bd5-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="97bd5-104">他のプロパティと同様に、コントロールの値の条件付きテストを記述できます。</span><span class="sxs-lookup"><span data-stu-id="97bd5-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="97bd5-105"><xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティが設定されたら、それに対して操作を実行するコードを記述して直接調整できます。または、<xref:System.Windows.Forms.NumericUpDown.UpButton%2A> メソッドと <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> メソッドを呼び出すこともできます。</span><span class="sxs-lookup"><span data-stu-id="97bd5-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="96fce-102">方法 : Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する</span><span class="sxs-lookup"><span data-stu-id="96fce-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
+<span data-ttu-id="96fce-103"><xref:System.Windows.Forms.NumericUpDown> コントロール Windows フォームの数値は <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティによって決定されます。</span><span class="sxs-lookup"><span data-stu-id="96fce-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="96fce-104">他のプロパティと同様に、コントロールの値の条件付きテストを記述できます。</span><span class="sxs-lookup"><span data-stu-id="96fce-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="96fce-105"><xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティが設定されたら、それに対して操作を実行するコードを記述して直接調整できます。または、<xref:System.Windows.Forms.NumericUpDown.UpButton%2A> メソッドと <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> メソッドを呼び出すこともできます。</span><span class="sxs-lookup"><span data-stu-id="96fce-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
   
-### <a name="to-set-the-numeric-value"></a><span data-ttu-id="97bd5-106">数値を設定するには</span><span class="sxs-lookup"><span data-stu-id="97bd5-106">To set the numeric value</span></span>  
+### <a name="to-set-the-numeric-value"></a><span data-ttu-id="96fce-106">数値を設定するには</span><span class="sxs-lookup"><span data-stu-id="96fce-106">To set the numeric value</span></span>  
   
-1. <span data-ttu-id="97bd5-107">コードまたはプロパティウィンドウの <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティに値を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="97bd5-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
+1. <span data-ttu-id="96fce-107">コードまたはプロパティウィンドウの <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティに値を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="96fce-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -37,9 +37,9 @@ ms.locfileid: "76743019"
     numericUpDown1->Value = 55;  
     ```  
   
-     <span data-ttu-id="97bd5-108">-または-</span><span class="sxs-lookup"><span data-stu-id="97bd5-108">-or-</span></span>  
+     <span data-ttu-id="96fce-108">または</span><span class="sxs-lookup"><span data-stu-id="96fce-108">-or-</span></span>  
   
-2. <span data-ttu-id="97bd5-109"><xref:System.Windows.Forms.NumericUpDown.UpButton%2A> または <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> メソッドを呼び出して、<xref:System.Windows.Forms.NumericUpDown.Increment%2A> プロパティで指定した量だけ値を増減させます。</span><span class="sxs-lookup"><span data-stu-id="97bd5-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
+2. <span data-ttu-id="96fce-109"><xref:System.Windows.Forms.NumericUpDown.UpButton%2A> または <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> メソッドを呼び出して、<xref:System.Windows.Forms.NumericUpDown.Increment%2A> プロパティで指定した量だけ値を増減させます。</span><span class="sxs-lookup"><span data-stu-id="96fce-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -53,9 +53,9 @@ ms.locfileid: "76743019"
     numericUpDown1->UpButton();  
     ```  
   
-### <a name="to-return-the-numeric-value"></a><span data-ttu-id="97bd5-110">数値を取得するには</span><span class="sxs-lookup"><span data-stu-id="97bd5-110">To return the numeric value</span></span>  
+### <a name="to-return-the-numeric-value"></a><span data-ttu-id="96fce-110">数値を取得するには</span><span class="sxs-lookup"><span data-stu-id="96fce-110">To return the numeric value</span></span>  
   
-- <span data-ttu-id="97bd5-111">コード内の <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="97bd5-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
+- <span data-ttu-id="96fce-111">コード内の <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="96fce-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -89,12 +89,12 @@ ms.locfileid: "76743019"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="97bd5-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="97bd5-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96fce-112">参照</span><span class="sxs-lookup"><span data-stu-id="96fce-112">See also</span></span>
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="97bd5-113">NumericUpDown コントロール</span><span class="sxs-lookup"><span data-stu-id="97bd5-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
-- [<span data-ttu-id="97bd5-114">NumericUpDown コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="97bd5-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)
+- [<span data-ttu-id="96fce-113">NumericUpDown コントロール</span><span class="sxs-lookup"><span data-stu-id="96fce-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
+- [<span data-ttu-id="96fce-114">NumericUpDown コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="96fce-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)

@@ -16,28 +16,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737976"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="eb6b7-102">Deactivate 関数 (WPF アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="eb6b7-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="eb6b7-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="04cb8-102">Deactivate 関数 (WPF アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="04cb8-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="04cb8-103">この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="04cb8-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="eb6b7-104">Windows management の Windows Presentation Foundation (WPF) インフラストラクチャで使用されます。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="04cb8-104">Windows management の Windows Presentation Foundation (WPF) インフラストラクチャで使用されます。</span><span class="sxs-lookup"><span data-stu-id="04cb8-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb6b7-105">構文</span><span class="sxs-lookup"><span data-stu-id="eb6b7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04cb8-105">構文</span><span class="sxs-lookup"><span data-stu-id="04cb8-105">Syntax</span></span>  
   
 ```cpp  
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="eb6b7-106">要件</span><span class="sxs-lookup"><span data-stu-id="eb6b7-106">Requirements</span></span>  
- <span data-ttu-id="eb6b7-107">**プラットフォーム:** 「 [.NET Framework のシステム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="eb6b7-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04cb8-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="04cb8-106">Requirements</span></span>  
+ <span data-ttu-id="04cb8-107">**プラットフォーム:** 「 [.NET Framework のシステム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="04cb8-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb6b7-108">**DLL**</span><span class="sxs-lookup"><span data-stu-id="eb6b7-108">**DLL:**</span></span>  
+ <span data-ttu-id="04cb8-108">**DLL**</span><span class="sxs-lookup"><span data-stu-id="04cb8-108">**DLL:**</span></span>  
   
- <span data-ttu-id="eb6b7-109">.NET Framework 3.0 と 3.5: プレゼンテーション Hostdll .dll</span><span class="sxs-lookup"><span data-stu-id="eb6b7-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="04cb8-109">.NET Framework 3.0 と 3.5: プレゼンテーション Hostdll .dll</span><span class="sxs-lookup"><span data-stu-id="04cb8-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="eb6b7-110">.NET Framework 4 以降: PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="eb6b7-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="04cb8-110">.NET Framework 4 以降: PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="04cb8-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="eb6b7-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb6b7-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="04cb8-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04cb8-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb6b7-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="eb6b7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04cb8-112">参照</span><span class="sxs-lookup"><span data-stu-id="04cb8-112">See also</span></span>
 
-- [<span data-ttu-id="eb6b7-113">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="eb6b7-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="04cb8-113">WPF のアンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="04cb8-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

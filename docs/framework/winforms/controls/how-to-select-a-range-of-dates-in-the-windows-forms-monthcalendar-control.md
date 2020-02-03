@@ -18,12 +18,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732900"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="65b58-102">方法 : Windows フォームの MonthCalendar コントロールで日付の範囲を選択する</span><span class="sxs-lookup"><span data-stu-id="65b58-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="65b58-103">Windows フォーム <xref:System.Windows.Forms.MonthCalendar> 制御の重要な機能は、ユーザーが日付の範囲を選択できることです。</span><span class="sxs-lookup"><span data-stu-id="65b58-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="65b58-104">この機能は、ユーザーが単一の日付/時刻値を選択できるようにする、<xref:System.Windows.Forms.DateTimePicker> コントロールの日付選択機能を改善したものです。</span><span class="sxs-lookup"><span data-stu-id="65b58-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="65b58-105"><xref:System.Windows.Forms.MonthCalendar> コントロールのプロパティを使用して、日付の範囲を設定したり、ユーザーが設定した範囲を取得したりできます。</span><span class="sxs-lookup"><span data-stu-id="65b58-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="65b58-106">次のコード例は、選択範囲を設定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="65b58-106">The following code example demonstrates how to set a selection range.</span></span>  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="c2c5a-102">方法 : Windows フォームの MonthCalendar コントロールで日付の範囲を選択する</span><span class="sxs-lookup"><span data-stu-id="c2c5a-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="c2c5a-103">Windows フォーム <xref:System.Windows.Forms.MonthCalendar> 制御の重要な機能は、ユーザーが日付の範囲を選択できることです。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="c2c5a-104">この機能は、ユーザーが単一の日付/時刻値を選択できるようにする、<xref:System.Windows.Forms.DateTimePicker> コントロールの日付選択機能を改善したものです。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="c2c5a-105"><xref:System.Windows.Forms.MonthCalendar> コントロールのプロパティを使用して、日付の範囲を設定したり、ユーザーが設定した範囲を取得したりできます。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="c2c5a-106">次のコード例は、選択範囲を設定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-106">The following code example demonstrates how to set a selection range.</span></span>  
   
-### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="65b58-107">日付の範囲を選択するには</span><span class="sxs-lookup"><span data-stu-id="65b58-107">To select a range of dates</span></span>  
+### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="c2c5a-107">日付の範囲を選択するには</span><span class="sxs-lookup"><span data-stu-id="c2c5a-107">To select a range of dates</span></span>  
   
-1. <span data-ttu-id="65b58-108">範囲内の最初と最後の日付を表す <xref:System.DateTime> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="65b58-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
+1. <span data-ttu-id="c2c5a-108">範囲内の最初と最後の日付を表す <xref:System.DateTime> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ ms.locfileid: "76732900"
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2. <span data-ttu-id="65b58-109"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="65b58-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
+2. <span data-ttu-id="c2c5a-109"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -55,9 +55,9 @@ ms.locfileid: "76732900"
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     <span data-ttu-id="65b58-110">または</span><span class="sxs-lookup"><span data-stu-id="65b58-110">–or–</span></span>  
+     <span data-ttu-id="c2c5a-110">または</span><span class="sxs-lookup"><span data-stu-id="c2c5a-110">–or–</span></span>  
   
-     <span data-ttu-id="65b58-111"><xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> プロパティと <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="65b58-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
+     <span data-ttu-id="c2c5a-111"><xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> と <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="c2c5a-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,9 +74,9 @@ ms.locfileid: "76732900"
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="65b58-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="65b58-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2c5a-112">参照</span><span class="sxs-lookup"><span data-stu-id="c2c5a-112">See also</span></span>
 
-- [<span data-ttu-id="65b58-113">MonthCalendar コントロール</span><span class="sxs-lookup"><span data-stu-id="65b58-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="65b58-114">方法: Windows フォームの MonthCalendar コントロールの外観を変更する</span><span class="sxs-lookup"><span data-stu-id="65b58-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
-- [<span data-ttu-id="65b58-115">方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する</span><span class="sxs-lookup"><span data-stu-id="65b58-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [<span data-ttu-id="65b58-116">方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示する</span><span class="sxs-lookup"><span data-stu-id="65b58-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)
+- [<span data-ttu-id="c2c5a-113">MonthCalendar コントロール</span><span class="sxs-lookup"><span data-stu-id="c2c5a-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="c2c5a-114">方法: Windows フォームの MonthCalendar コントロールの外観を変更する</span><span class="sxs-lookup"><span data-stu-id="c2c5a-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="c2c5a-115">方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する</span><span class="sxs-lookup"><span data-stu-id="c2c5a-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [<span data-ttu-id="c2c5a-116">方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示する</span><span class="sxs-lookup"><span data-stu-id="c2c5a-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)

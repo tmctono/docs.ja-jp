@@ -19,15 +19,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745507"
 ---
-# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a><span data-ttu-id="51788-102">方法 : Windows フォームで ToolStrip コントロールの AutoComplete を有効にする</span><span class="sxs-lookup"><span data-stu-id="51788-102">How to: Enable AutoComplete in ToolStrip Controls in Windows Forms</span></span>
-<span data-ttu-id="51788-103">次の手順では、<xref:System.Windows.Forms.ToolStripLabel> と <xref:System.Windows.Forms.ToolStripComboBox> を結合して、最近アクセスした Web サイトなどの項目の一覧を表示することができます。</span><span class="sxs-lookup"><span data-stu-id="51788-103">The following procedure combines a <xref:System.Windows.Forms.ToolStripLabel> with a <xref:System.Windows.Forms.ToolStripComboBox> that can be dropped down to show a list of items, such as recently visited Web sites.</span></span> <span data-ttu-id="51788-104">ユーザーがリスト内のいずれかの項目の最初の文字と一致する文字を入力すると、その項目がすぐに表示されます。</span><span class="sxs-lookup"><span data-stu-id="51788-104">If the user types a character that matches the first character of one of the items in the list, the item is immediately displayed.</span></span>  
+# <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a><span data-ttu-id="52671-102">方法 : Windows フォームで ToolStrip コントロールの AutoComplete を有効にする</span><span class="sxs-lookup"><span data-stu-id="52671-102">How to: Enable AutoComplete in ToolStrip Controls in Windows Forms</span></span>
+<span data-ttu-id="52671-103">次の手順では、<xref:System.Windows.Forms.ToolStripLabel> と <xref:System.Windows.Forms.ToolStripComboBox> を結合して、最近アクセスした Web サイトなどの項目の一覧を表示することができます。</span><span class="sxs-lookup"><span data-stu-id="52671-103">The following procedure combines a <xref:System.Windows.Forms.ToolStripLabel> with a <xref:System.Windows.Forms.ToolStripComboBox> that can be dropped down to show a list of items, such as recently visited Web sites.</span></span> <span data-ttu-id="52671-104">ユーザーがリスト内のいずれかの項目の最初の文字と一致する文字を入力すると、その項目がすぐに表示されます。</span><span class="sxs-lookup"><span data-stu-id="52671-104">If the user types a character that matches the first character of one of the items in the list, the item is immediately displayed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="51788-105">オートコンプリートは、<xref:System.Windows.Forms.ComboBox> や <xref:System.Windows.Forms.TextBox>などの従来のコントロールと同じように、`ToolStrip` コントロールと連動します。</span><span class="sxs-lookup"><span data-stu-id="51788-105">Automatic completion works with `ToolStrip` controls in the same way that it works with traditional controls such as <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.TextBox>.</span></span>  
+> <span data-ttu-id="52671-105">オートコンプリートは、<xref:System.Windows.Forms.ComboBox> や <xref:System.Windows.Forms.TextBox>などの従来のコントロールと同じように、`ToolStrip` コントロールと連動します。</span><span class="sxs-lookup"><span data-stu-id="52671-105">Automatic completion works with `ToolStrip` controls in the same way that it works with traditional controls such as <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a><span data-ttu-id="51788-106">ToolStrip コントロールでオートコンプリートを有効にするには</span><span class="sxs-lookup"><span data-stu-id="51788-106">To enable AutoComplete in a ToolStrip control</span></span>  
+### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a><span data-ttu-id="52671-106">ToolStrip コントロールでオートコンプリートを有効にするには</span><span class="sxs-lookup"><span data-stu-id="52671-106">To enable AutoComplete in a ToolStrip control</span></span>  
   
-1. <span data-ttu-id="51788-107"><xref:System.Windows.Forms.ToolStrip> コントロールを作成し、そのコントロールに項目を追加します。</span><span class="sxs-lookup"><span data-stu-id="51788-107">Create a <xref:System.Windows.Forms.ToolStrip> control and add items to it.</span></span>  
+1. <span data-ttu-id="52671-107"><xref:System.Windows.Forms.ToolStrip> コントロールを作成し、そのコントロールに項目を追加します。</span><span class="sxs-lookup"><span data-stu-id="52671-107">Create a <xref:System.Windows.Forms.ToolStrip> control and add items to it.</span></span>  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ ms.locfileid: "76745507"
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2. <span data-ttu-id="51788-108">フォームのサイズに関係なく常に使用できるように、ラベルの [<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>] プロパティとコンボボックスを [<xref:System.Windows.Forms.ToolStripItemOverflow.Never>] に設定します。</span><span class="sxs-lookup"><span data-stu-id="51788-108">Set the <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> property of the label and the combo box to <xref:System.Windows.Forms.ToolStripItemOverflow.Never> so that the list is always available regardless of the form's size.</span></span>  
+2. <span data-ttu-id="52671-108">フォームのサイズに関係なく常に使用できるように、ラベルの [<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>] プロパティとコンボボックスを [<xref:System.Windows.Forms.ToolStripItemOverflow.Never>] に設定します。</span><span class="sxs-lookup"><span data-stu-id="52671-108">Set the <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> property of the label and the combo box to <xref:System.Windows.Forms.ToolStripItemOverflow.Never> so that the list is always available regardless of the form's size.</span></span>  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "76745507"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3. <span data-ttu-id="51788-109"><xref:System.Windows.Forms.ToolStripComboBox> コントロールの Items コレクションに単語を追加します。</span><span class="sxs-lookup"><span data-stu-id="51788-109">Add words to the Items collection of the <xref:System.Windows.Forms.ToolStripComboBox> control.</span></span>  
+3. <span data-ttu-id="52671-109"><xref:System.Windows.Forms.ToolStripComboBox> コントロールの Items コレクションに単語を追加します。</span><span class="sxs-lookup"><span data-stu-id="52671-109">Add words to the Items collection of the <xref:System.Windows.Forms.ToolStripComboBox> control.</span></span>  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "76745507"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4. <span data-ttu-id="51788-110">コンボボックスの [<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>] プロパティを <xref:System.Windows.Forms.AutoCompleteMode.Append>に設定します。</span><span class="sxs-lookup"><span data-stu-id="51788-110">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteMode.Append>.</span></span>  
+4. <span data-ttu-id="52671-110">コンボボックスの [<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>] プロパティを <xref:System.Windows.Forms.AutoCompleteMode.Append>に設定します。</span><span class="sxs-lookup"><span data-stu-id="52671-110">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteMode.Append>.</span></span>  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "76745507"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5. <span data-ttu-id="51788-111">コンボボックスの [<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>] プロパティを <xref:System.Windows.Forms.AutoCompleteSource.ListItems>に設定します。</span><span class="sxs-lookup"><span data-stu-id="51788-111">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.</span></span>  
+5. <span data-ttu-id="52671-111">コンボボックスの [<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>] プロパティを <xref:System.Windows.Forms.AutoCompleteSource.ListItems>に設定します。</span><span class="sxs-lookup"><span data-stu-id="52671-111">Set the <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> property of the combo box to <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.</span></span>  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  
@@ -89,13 +89,13 @@ ms.locfileid: "76745507"
     toolStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="51788-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="51788-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52671-112">参照</span><span class="sxs-lookup"><span data-stu-id="52671-112">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripLabel>
 - <xref:System.Windows.Forms.ToolStripComboBox>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>
-- [<span data-ttu-id="51788-113">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="51788-113">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="51788-114">ToolStrip コントロールのアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="51788-114">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="51788-115">ToolStrip テクノロジの概要</span><span class="sxs-lookup"><span data-stu-id="51788-115">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="52671-113">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="52671-113">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="52671-114">ToolStrip コントロールのアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="52671-114">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="52671-115">ToolStrip テクノロジの概要</span><span class="sxs-lookup"><span data-stu-id="52671-115">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

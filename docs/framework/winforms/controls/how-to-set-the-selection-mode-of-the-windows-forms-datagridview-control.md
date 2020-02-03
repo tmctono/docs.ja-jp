@@ -16,25 +16,25 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743503"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="c4810-102">方法 : Windows フォーム DataGridView コントロールの選択モードを設定する</span><span class="sxs-lookup"><span data-stu-id="c4810-102">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="c4810-103">次のコード例では、行内の任意の場所をクリックすると行全体が自動的に選択されるように <xref:System.Windows.Forms.DataGridView> コントロールを構成し、一度に1行だけを選択できるようにする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c4810-103">The following code example demonstrates how to configure a <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row automatically selects the entire row, and so that only one row at a time can be selected.</span></span>  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a><span data-ttu-id="b5e0c-102">方法 : Windows フォーム DataGridView コントロールの選択モードを設定する</span><span class="sxs-lookup"><span data-stu-id="b5e0c-102">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="b5e0c-103">次のコード例では、行内の任意の場所をクリックすると行全体が自動的に選択されるように <xref:System.Windows.Forms.DataGridView> コントロールを構成し、一度に1行だけを選択できるようにする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b5e0c-103">The following code example demonstrates how to configure a <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row automatically selects the entire row, and so that only one row at a time can be selected.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c4810-104">使用例</span><span class="sxs-lookup"><span data-stu-id="c4810-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b5e0c-104">例</span><span class="sxs-lookup"><span data-stu-id="b5e0c-104">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#065)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c4810-105">コードのコンパイル方法</span><span class="sxs-lookup"><span data-stu-id="c4810-105">Compiling the Code</span></span>  
- <span data-ttu-id="c4810-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="c4810-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b5e0c-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="b5e0c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="b5e0c-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b5e0c-106">This example requires:</span></span>  
   
-- <span data-ttu-id="c4810-107">`dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。</span><span class="sxs-lookup"><span data-stu-id="c4810-107">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="b5e0c-107"><xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。</span><span class="sxs-lookup"><span data-stu-id="b5e0c-107">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
-- <span data-ttu-id="c4810-108"><xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="c4810-108">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="b5e0c-108"><xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。</span><span class="sxs-lookup"><span data-stu-id="b5e0c-108">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4810-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="c4810-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5e0c-109">参照</span><span class="sxs-lookup"><span data-stu-id="b5e0c-109">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [<span data-ttu-id="c4810-110">Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用</span><span class="sxs-lookup"><span data-stu-id="c4810-110">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="c4810-111">Windows フォーム DataGridView コントロールの選択モード</span><span class="sxs-lookup"><span data-stu-id="c4810-111">Selection Modes in the Windows Forms DataGridView Control</span></span>](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="b5e0c-110">Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用</span><span class="sxs-lookup"><span data-stu-id="b5e0c-110">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="b5e0c-111">Windows フォーム DataGridView コントロールの選択モード</span><span class="sxs-lookup"><span data-stu-id="b5e0c-111">Selection Modes in the Windows Forms DataGridView Control</span></span>](selection-modes-in-the-windows-forms-datagridview-control.md)

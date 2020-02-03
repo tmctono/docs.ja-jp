@@ -16,146 +16,146 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76728060"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="ca0ed-102">チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="ca0ed-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
-<span data-ttu-id="ca0ed-103">キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="ca0ed-104">アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="ca0ed-105">そのため、パフォーマンスとスケーラビリティが向上します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-105">This can improve performance and scalability.</span></span> <span data-ttu-id="ca0ed-106">また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="05246-102">チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="05246-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
+<span data-ttu-id="05246-103">キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="05246-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="05246-104">アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="05246-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="05246-105">そのため、パフォーマンスとスケーラビリティが向上します。</span><span class="sxs-lookup"><span data-stu-id="05246-105">This can improve performance and scalability.</span></span> <span data-ttu-id="05246-106">また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。</span><span class="sxs-lookup"><span data-stu-id="05246-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>
 
- <span data-ttu-id="ca0ed-107">.NET Framework には、.NET Framework アプリケーションでキャッシュを使用できるようにするクラスが用意されています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="ca0ed-108">これらのクラスは <xref:System.Runtime.Caching> 名前空間にあります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="05246-107">.NET Framework には、.NET Framework アプリケーションでキャッシュを使用できるようにするクラスが用意されています。</span><span class="sxs-lookup"><span data-stu-id="05246-107">The .NET Framework provides classes that enable you to use caching in .NET Framework applications.</span></span> <span data-ttu-id="05246-108">これらのクラスは <xref:System.Runtime.Caching> 名前空間にあります。</span><span class="sxs-lookup"><span data-stu-id="05246-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ca0ed-109"><xref:System.Runtime.Caching> 名前空間は、.NET Framework 4 で新たに追加されています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-109">The <xref:System.Runtime.Caching> namespace is new in the .NET Framework 4.</span></span> <span data-ttu-id="ca0ed-110">この名前空間により、すべての .NET Framework アプリケーションでキャッシュを使用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="ca0ed-111">以前のバージョンの .NET Framework では、キャッシュは <xref:System.Web> 名前空間でのみ使用できるため、ASP.NET クラスに依存する必要がありました。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
+> <span data-ttu-id="05246-109"><xref:System.Runtime.Caching> 名前空間は、.NET Framework 4 で新たに追加されています。</span><span class="sxs-lookup"><span data-stu-id="05246-109">The <xref:System.Runtime.Caching> namespace is new in the .NET Framework 4.</span></span> <span data-ttu-id="05246-110">この名前空間により、すべての .NET Framework アプリケーションでキャッシュを使用できるようになります。</span><span class="sxs-lookup"><span data-stu-id="05246-110">This namespace makes caching is available to all .NET Framework applications.</span></span> <span data-ttu-id="05246-111">以前のバージョンの .NET Framework では、キャッシュは <xref:System.Web> 名前空間でのみ使用できるため、ASP.NET クラスに依存する必要がありました。</span><span class="sxs-lookup"><span data-stu-id="05246-111">In previous versions of the .NET Framework, caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>
 
- <span data-ttu-id="ca0ed-112">このチュートリアルでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの一部として .NET Framework で使用できるキャッシュ機能を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="ca0ed-113">このチュートリアルでは、テキストファイルの内容をキャッシュします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-113">In the walkthrough, you cache the contents of a text file.</span></span>
+ <span data-ttu-id="05246-112">このチュートリアルでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの一部として .NET Framework で使用できるキャッシュ機能を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="05246-112">This walkthrough shows you how to use the caching functionality that is available in the .NET Framework as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="05246-113">このチュートリアルでは、テキストファイルの内容をキャッシュします。</span><span class="sxs-lookup"><span data-stu-id="05246-113">In the walkthrough, you cache the contents of a text file.</span></span>
 
- <span data-ttu-id="ca0ed-114">このチュートリアルでは、以下のタスクを行います。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-114">Tasks illustrated in this walkthrough include the following:</span></span>
+ <span data-ttu-id="05246-114">このチュートリアルでは、以下のタスクを行います。</span><span class="sxs-lookup"><span data-stu-id="05246-114">Tasks illustrated in this walkthrough include the following:</span></span>
 
-- <span data-ttu-id="ca0ed-115">WPF アプリケーションプロジェクトを作成しています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-115">Creating a WPF application project.</span></span>
+- <span data-ttu-id="05246-115">WPF アプリケーションプロジェクトを作成しています。</span><span class="sxs-lookup"><span data-stu-id="05246-115">Creating a WPF application project.</span></span>
 
-- <span data-ttu-id="ca0ed-116">.NET Framework 4 への参照を追加しています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-116">Adding a reference to the .NET Framework 4.</span></span>
+- <span data-ttu-id="05246-116">.NET Framework 4 への参照を追加しています。</span><span class="sxs-lookup"><span data-stu-id="05246-116">Adding a reference to the .NET Framework 4.</span></span>
 
-- <span data-ttu-id="ca0ed-117">キャッシュを初期化しています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-117">Initializing a cache.</span></span>
+- <span data-ttu-id="05246-117">キャッシュを初期化しています。</span><span class="sxs-lookup"><span data-stu-id="05246-117">Initializing a cache.</span></span>
 
-- <span data-ttu-id="ca0ed-118">テキストファイルの内容を含むキャッシュエントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-118">Adding a cache entry that contains the contents of a text file.</span></span>
+- <span data-ttu-id="05246-118">テキストファイルの内容を含むキャッシュエントリを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-118">Adding a cache entry that contains the contents of a text file.</span></span>
 
-- <span data-ttu-id="ca0ed-119">キャッシュエントリの削除ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-119">Providing an eviction policy for the cache entry.</span></span>
+- <span data-ttu-id="05246-119">キャッシュエントリの削除ポリシーを指定します。</span><span class="sxs-lookup"><span data-stu-id="05246-119">Providing an eviction policy for the cache entry.</span></span>
 
-- <span data-ttu-id="ca0ed-120">キャッシュされたファイルのパスを監視し、監視対象の項目に対する変更についてキャッシュインスタンスに通知します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
+- <span data-ttu-id="05246-120">キャッシュされたファイルのパスを監視し、監視対象の項目に対する変更についてキャッシュインスタンスに通知します。</span><span class="sxs-lookup"><span data-stu-id="05246-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="ca0ed-121">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="ca0ed-121">Prerequisites</span></span>
- <span data-ttu-id="ca0ed-122">このチュートリアルを完了するための要件は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-122">In order to complete this walkthrough, you will need:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="05246-121">前提条件</span><span class="sxs-lookup"><span data-stu-id="05246-121">Prerequisites</span></span>
+ <span data-ttu-id="05246-122">このチュートリアルを完了するには、以下が必要です。</span><span class="sxs-lookup"><span data-stu-id="05246-122">In order to complete this walkthrough, you will need:</span></span>
 
-- <span data-ttu-id="ca0ed-123">Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-123">Visual Studio 2010.</span></span>
+- <span data-ttu-id="05246-123">Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="05246-123">Visual Studio 2010.</span></span>
 
-- <span data-ttu-id="ca0ed-124">少量のテキストを含むテキストファイル。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="ca0ed-125">(テキストファイルの内容はメッセージボックスに表示されます)。このチュートリアルで示すコードは、次のファイルを操作していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
+- <span data-ttu-id="05246-124">少量のテキストを含むテキストファイル。</span><span class="sxs-lookup"><span data-stu-id="05246-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="05246-125">(テキストファイルの内容はメッセージボックスに表示されます)。このチュートリアルで示すコードは、次のファイルを操作していることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="05246-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>
 
      `c:\cache\cacheText.txt`
 
-     <span data-ttu-id="ca0ed-126">ただし、このチュートリアルでは、任意のテキストファイルを使用し、コードに小さな変更を加えることができます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
+     <span data-ttu-id="05246-126">ただし、このチュートリアルでは、任意のテキストファイルを使用し、コードに小さな変更を加えることができます。</span><span class="sxs-lookup"><span data-stu-id="05246-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>
 
-## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="ca0ed-127">WPF アプリケーションプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="ca0ed-127">Creating a WPF Application Project</span></span>
- <span data-ttu-id="ca0ed-128">まず、WPF アプリケーションプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-128">You will start by creating a WPF application project.</span></span>
+## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="05246-127">WPF アプリケーションプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="05246-127">Creating a WPF Application Project</span></span>
+ <span data-ttu-id="05246-128">まず、WPF アプリケーションプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="05246-128">You will start by creating a WPF application project.</span></span>
 
-#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="ca0ed-129">WPF アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-129">To create a WPF application</span></span>
+#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="05246-129">WPF アプリケーションを作成するには</span><span class="sxs-lookup"><span data-stu-id="05246-129">To create a WPF application</span></span>
 
-1. <span data-ttu-id="ca0ed-130">Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-130">Start Visual Studio.</span></span>
+1. <span data-ttu-id="05246-130">Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="05246-130">Start Visual Studio.</span></span>
 
-2. <span data-ttu-id="ca0ed-131">**[ファイル]** メニューの **[新規作成]** をクリックし、 **[新しいプロジェクト]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
+2. <span data-ttu-id="05246-131">**[ファイル]** メニューの **[新規作成]** をクリックし、 **[新しいプロジェクト]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>
 
-     <span data-ttu-id="ca0ed-132">**[新しいプロジェクト]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-132">The **New Project** dialog box is displayed.</span></span>
+     <span data-ttu-id="05246-132">**[新しいプロジェクト]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-132">The **New Project** dialog box is displayed.</span></span>
 
-3. <span data-ttu-id="ca0ed-133">**[インストールされたテンプレート]** で、使用するプログラミング言語 (**Visual Basic**または**ビジュアルC#** ) を選択します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
+3. <span data-ttu-id="05246-133">**[インストールされたテンプレート]** で、使用するプログラミング言語 (**Visual Basic**または**ビジュアルC#** ) を選択します。</span><span class="sxs-lookup"><span data-stu-id="05246-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>
 
-4. <span data-ttu-id="ca0ed-134">**[新しいプロジェクト]** ダイアログボックスで、 **[WPF アプリケーション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
+4. <span data-ttu-id="05246-134">**[新しいプロジェクト]** ダイアログボックスで、 **[WPF アプリケーション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="05246-134">In the **New Project** dialog box, select **WPF Application**.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="ca0ed-135">**Wpf アプリケーション**テンプレートが表示されない場合は、wpf をサポートする .NET Framework のバージョンをターゲットにしていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="ca0ed-136">**新しいプロジェクト** ダイアログボックスで、一覧から .NET Framework 4 を選択します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-136">In the **New Project** dialog box, select .NET Framework 4 from the list.</span></span>
+    > <span data-ttu-id="05246-135">**Wpf アプリケーション**テンプレートが表示されない場合は、wpf をサポートする .NET Framework のバージョンをターゲットにしていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="05246-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the .NET Framework that supports WPF.</span></span> <span data-ttu-id="05246-136">**新しいプロジェクト** ダイアログボックスで、一覧から .NET Framework 4 を選択します。</span><span class="sxs-lookup"><span data-stu-id="05246-136">In the **New Project** dialog box, select .NET Framework 4 from the list.</span></span>
 
-5. <span data-ttu-id="ca0ed-137">**[名前]** テキストボックスに、プロジェクトの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="ca0ed-138">たとえば、「 **WPFCaching**」と入力できます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-138">For example, you can enter **WPFCaching**.</span></span>
+5. <span data-ttu-id="05246-137">**[名前]** テキストボックスに、プロジェクトの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="05246-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="05246-138">たとえば、「 **WPFCaching**」と入力できます。</span><span class="sxs-lookup"><span data-stu-id="05246-138">For example, you can enter **WPFCaching**.</span></span>
 
-6. <span data-ttu-id="ca0ed-139">**[ソリューションのディレクトリを作成]** チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-139">Select the **Create directory for solution** check box.</span></span>
+6. <span data-ttu-id="05246-139">**[ソリューションのディレクトリを作成]** チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="05246-139">Select the **Create directory for solution** check box.</span></span>
 
-7. <span data-ttu-id="ca0ed-140">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-140">Click **OK**.</span></span>
+7. <span data-ttu-id="05246-140">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-140">Click **OK**.</span></span>
 
-     <span data-ttu-id="ca0ed-141">WPF デザイナーが**デザイン**ビューで開き、mainwindow.xaml ファイルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="ca0ed-142">Visual Studio によって、 **My プロジェクト**フォルダー、app.xaml ファイル、および mainwindow.xaml ファイルが作成されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
+     <span data-ttu-id="05246-141">WPF デザイナーが**デザイン**ビューで開き、mainwindow.xaml ファイルが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> <span data-ttu-id="05246-142">Visual Studio によって、 **My プロジェクト**フォルダー、app.xaml ファイル、および mainwindow.xaml ファイルが作成されます。</span><span class="sxs-lookup"><span data-stu-id="05246-142">Visual Studio creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>
 
-## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="ca0ed-143">.NET Framework をターゲットにして、キャッシュアセンブリへの参照を追加する</span><span class="sxs-lookup"><span data-stu-id="ca0ed-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
- <span data-ttu-id="ca0ed-144">既定では、WPF アプリケーションは .NET Framework 4 クライアントプロファイルを対象とします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-144">By default, WPF applications target the .NET Framework 4 Client Profile.</span></span> <span data-ttu-id="ca0ed-145">WPF アプリケーションで <xref:System.Runtime.Caching> 名前空間を使用するには、アプリケーションが .NET Framework 4 (.NET Framework 4 クライアントプロファイルではない) を対象とし、名前空間への参照を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the .NET Framework 4 (not the .NET Framework 4 Client Profile) and must include a reference to the namespace.</span></span>
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="05246-143">.NET Framework をターゲットにして、キャッシュアセンブリへの参照を追加する</span><span class="sxs-lookup"><span data-stu-id="05246-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>
+ <span data-ttu-id="05246-144">既定では、WPF アプリケーションは .NET Framework 4 クライアントプロファイルを対象とします。</span><span class="sxs-lookup"><span data-stu-id="05246-144">By default, WPF applications target the .NET Framework 4 Client Profile.</span></span> <span data-ttu-id="05246-145">WPF アプリケーションで <xref:System.Runtime.Caching> 名前空間を使用するには、アプリケーションが .NET Framework 4 (.NET Framework 4 クライアントプロファイルではない) を対象とし、名前空間への参照を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="05246-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the .NET Framework 4 (not the .NET Framework 4 Client Profile) and must include a reference to the namespace.</span></span>
 
- <span data-ttu-id="ca0ed-146">したがって、次の手順では、.NET Framework ターゲットを変更し、<xref:System.Runtime.Caching> 名前空間への参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
+ <span data-ttu-id="05246-146">したがって、次の手順では、.NET Framework ターゲットを変更し、<xref:System.Runtime.Caching> 名前空間への参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ca0ed-147">.NET Framework ターゲットを変更する手順は、Visual Basic プロジェクトとビジュアルC#プロジェクトで異なります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
+> <span data-ttu-id="05246-147">.NET Framework ターゲットを変更する手順は、Visual Basic プロジェクトとビジュアルC#プロジェクトで異なります。</span><span class="sxs-lookup"><span data-stu-id="05246-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="ca0ed-148">Visual Basic でターゲット .NET Framework を変更するには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-148">To change the target .NET Framework in Visual Basic</span></span>
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="05246-148">Visual Basic でターゲット .NET Framework を変更するには</span><span class="sxs-lookup"><span data-stu-id="05246-148">To change the target .NET Framework in Visual Basic</span></span>
 
-1. <span data-ttu-id="ca0ed-149">**ソリューションエクスプローラー**で、プロジェクト名を右クリックし、 **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
+1. <span data-ttu-id="05246-149">**ソリューションエクスプローラー**で、プロジェクト名を右クリックし、 **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>
 
-     <span data-ttu-id="ca0ed-150">アプリケーションの [プロパティ] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-150">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="05246-150">アプリケーションの [プロパティ] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-150">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="ca0ed-151">**[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-151">Click the **Compile** tab.</span></span>
+2. <span data-ttu-id="05246-151">**[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-151">Click the **Compile** tab.</span></span>
 
-3. <span data-ttu-id="ca0ed-152">ウィンドウの下部には、をクリックして**詳細コンパイル オプション**.</span><span class="sxs-lookup"><span data-stu-id="ca0ed-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
+3. <span data-ttu-id="05246-152">ウィンドウの下部にある **[詳細コンパイルオプション]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>
 
-     <span data-ttu-id="ca0ed-153">**[コンパイラの詳細設定**] ダイアログボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
+     <span data-ttu-id="05246-153">**[コンパイラの詳細設定**] ダイアログボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>
 
-4. <span data-ttu-id="ca0ed-154">**[ターゲットフレームワーク (すべての構成)]** ボックスの一覧の [.NET Framework 4] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-154">In the **Target framework (all configurations)** list, select .NET Framework 4.</span></span> <span data-ttu-id="ca0ed-155">(.NET Framework 4 クライアントプロファイルを選択しないでください)。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-155">(Do not select .NET Framework 4 Client Profile.)</span></span>
+4. <span data-ttu-id="05246-154">**[ターゲットフレームワーク (すべての構成)]** ボックスの一覧の [.NET Framework 4] を選択します。</span><span class="sxs-lookup"><span data-stu-id="05246-154">In the **Target framework (all configurations)** list, select .NET Framework 4.</span></span> <span data-ttu-id="05246-155">(.NET Framework 4 クライアントプロファイルを選択しないでください)。</span><span class="sxs-lookup"><span data-stu-id="05246-155">(Do not select .NET Framework 4 Client Profile.)</span></span>
 
-5. <span data-ttu-id="ca0ed-156">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-156">Click **OK**.</span></span>
+5. <span data-ttu-id="05246-156">**[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-156">Click **OK**.</span></span>
 
-     <span data-ttu-id="ca0ed-157">**[ターゲット フレームワークの変更]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-157">The **Target Framework Change** dialog box is displayed.</span></span>
+     <span data-ttu-id="05246-157">**[ターゲット フレームワークの変更]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-157">The **Target Framework Change** dialog box is displayed.</span></span>
 
-6. <span data-ttu-id="ca0ed-158">**[ターゲットフレームワークの変更]** ダイアログボックスで、 **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
+6. <span data-ttu-id="05246-158">**[ターゲットフレームワークの変更]** ダイアログボックスで、 **[はい]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>
 
-     <span data-ttu-id="ca0ed-159">プロジェクトが閉じられ、再び開きます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-159">The project is closed and is then reopened.</span></span>
+     <span data-ttu-id="05246-159">プロジェクトが閉じられ、再び開きます。</span><span class="sxs-lookup"><span data-stu-id="05246-159">The project is closed and is then reopened.</span></span>
 
-7. <span data-ttu-id="ca0ed-160">次の手順に従って、キャッシュアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-160">Add a reference to the caching assembly by following these steps:</span></span>
+7. <span data-ttu-id="05246-160">次の手順に従って、キャッシュアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-160">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="ca0ed-161">**ソリューションエクスプローラー**で、プロジェクトの名前を右クリックし、[参照の**追加**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="05246-161">**ソリューションエクスプローラー**で、プロジェクトの名前を右クリックし、[参照の**追加**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="ca0ed-162">**[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="05246-162">**[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="ca0ed-163">ビジュアルC#プロジェクトのターゲット .NET Framework を変更するには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-163">To change the target .NET Framework in a Visual C# project</span></span>
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="05246-163">ビジュアルC#プロジェクトのターゲット .NET Framework を変更するには</span><span class="sxs-lookup"><span data-stu-id="05246-163">To change the target .NET Framework in a Visual C# project</span></span>
 
-1. <span data-ttu-id="ca0ed-164">**ソリューションエクスプローラー**で、プロジェクト名を右クリックし、 **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
+1. <span data-ttu-id="05246-164">**ソリューションエクスプローラー**で、プロジェクト名を右クリックし、 **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>
 
-     <span data-ttu-id="ca0ed-165">アプリケーションの [プロパティ] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-165">The properties window for the application is displayed.</span></span>
+     <span data-ttu-id="05246-165">アプリケーションの [プロパティ] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-165">The properties window for the application is displayed.</span></span>
 
-2. <span data-ttu-id="ca0ed-166">**[アプリケーション]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-166">Click the **Application** tab.</span></span>
+2. <span data-ttu-id="05246-166">**[アプリケーション]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-166">Click the **Application** tab.</span></span>
 
-3. <span data-ttu-id="ca0ed-167">**ターゲットフレームワーク** ボックスの一覧で .NET Framework 4 を選択します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-167">In the **Target framework** list, select .NET Framework 4.</span></span> <span data-ttu-id="ca0ed-168">( **.NET Framework 4 クライアントプロファイル**を選択しないでください)。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
+3. <span data-ttu-id="05246-167">**ターゲットフレームワーク** ボックスの一覧で .NET Framework 4 を選択します。</span><span class="sxs-lookup"><span data-stu-id="05246-167">In the **Target framework** list, select .NET Framework 4.</span></span> <span data-ttu-id="05246-168">( **.NET Framework 4 クライアントプロファイル**を選択しないでください)。</span><span class="sxs-lookup"><span data-stu-id="05246-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>
 
-4. <span data-ttu-id="ca0ed-169">次の手順に従って、キャッシュアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-169">Add a reference to the caching assembly by following these steps:</span></span>
+4. <span data-ttu-id="05246-169">次の手順に従って、キャッシュアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-169">Add a reference to the caching assembly by following these steps:</span></span>
 
-    1. <span data-ttu-id="ca0ed-170">**[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
+    1. <span data-ttu-id="05246-170">**[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-170">Right-click the **References** folder and then click **Add Reference**.</span></span>
 
-    2. <span data-ttu-id="ca0ed-171">**[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
+    2. <span data-ttu-id="05246-171">**[.Net]** タブを選択し、[`System.Runtime.Caching`] を選択して、 **[OK]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>
 
-## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="ca0ed-172">WPF ウィンドウへのボタンの追加</span><span class="sxs-lookup"><span data-stu-id="ca0ed-172">Adding a Button to the WPF Window</span></span>
- <span data-ttu-id="ca0ed-173">次に、ボタンコントロールを追加し、ボタンの `Click` イベントのイベントハンドラーを作成します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="ca0ed-174">その後、ボタンをクリックすると、テキストファイルの内容がキャッシュされて表示されるように、後でコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
+## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="05246-172">WPF ウィンドウへのボタンの追加</span><span class="sxs-lookup"><span data-stu-id="05246-172">Adding a Button to the WPF Window</span></span>
+ <span data-ttu-id="05246-173">次に、ボタンコントロールを追加し、ボタンの `Click` イベントのイベントハンドラーを作成します。</span><span class="sxs-lookup"><span data-stu-id="05246-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="05246-174">その後、ボタンをクリックすると、テキストファイルの内容がキャッシュされて表示されるように、後でコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>
 
-#### <a name="to-add-a-button-control"></a><span data-ttu-id="ca0ed-175">ボタンコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-175">To add a button control</span></span>
+#### <a name="to-add-a-button-control"></a><span data-ttu-id="05246-175">ボタンコントロールを追加するには</span><span class="sxs-lookup"><span data-stu-id="05246-175">To add a button control</span></span>
 
-1. <span data-ttu-id="ca0ed-176">**ソリューションエクスプローラー**で、mainwindow.xaml ファイルをダブルクリックして開きます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
+1. <span data-ttu-id="05246-176">**ソリューションエクスプローラー**で、mainwindow.xaml ファイルをダブルクリックして開きます。</span><span class="sxs-lookup"><span data-stu-id="05246-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>
 
-2. <span data-ttu-id="ca0ed-177">**ツールボックス** **コモン WPF コントロール** 、ドラッグ、 `Button` への制御、 `MainWindow` ウィンドウ。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
+2. <span data-ttu-id="05246-177">**[ツールボックス]** の **[共通の WPF コントロール]** で、`Button` コントロールを `MainWindow` ウィンドウにドラッグします。</span><span class="sxs-lookup"><span data-stu-id="05246-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>
 
-3. <span data-ttu-id="ca0ed-178">**[プロパティ]** ウィンドウで、`Button` コントロールの `Content` プロパティを **[キャッシュを取得]** する に設定します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
+3. <span data-ttu-id="05246-178">**[プロパティ]** ウィンドウで、`Button` コントロールの `Content` プロパティを **[キャッシュを取得]** する に設定します。</span><span class="sxs-lookup"><span data-stu-id="05246-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>
 
-## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="ca0ed-179">キャッシュを初期化してエントリをキャッシュする</span><span class="sxs-lookup"><span data-stu-id="ca0ed-179">Initializing the Cache and Caching an Entry</span></span>
- <span data-ttu-id="ca0ed-180">次に、次のタスクを実行するためのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-180">Next, you will add the code to perform the following tasks:</span></span>
+## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="05246-179">キャッシュを初期化してエントリをキャッシュする</span><span class="sxs-lookup"><span data-stu-id="05246-179">Initializing the Cache and Caching an Entry</span></span>
+ <span data-ttu-id="05246-180">次に、次のタスクを実行するためのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-180">Next, you will add the code to perform the following tasks:</span></span>
 
-- <span data-ttu-id="ca0ed-181">キャッシュクラスのインスタンスを作成します。つまり、新しい <xref:System.Runtime.Caching.MemoryCache> オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
+- <span data-ttu-id="05246-181">キャッシュクラスのインスタンスを作成します。つまり、新しい <xref:System.Runtime.Caching.MemoryCache> オブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="05246-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>
 
-- <span data-ttu-id="ca0ed-182">キャッシュが <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを使用してテキストファイルの変更を監視するように指定します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
+- <span data-ttu-id="05246-182">キャッシュが <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを使用してテキストファイルの変更を監視するように指定します。</span><span class="sxs-lookup"><span data-stu-id="05246-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>
 
-- <span data-ttu-id="ca0ed-183">テキストファイルを読み取り、キャッシュエントリとしてその内容をキャッシュします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-183">Read the text file and cache its contents as a cache entry.</span></span>
+- <span data-ttu-id="05246-183">テキストファイルを読み取り、キャッシュエントリとしてその内容をキャッシュします。</span><span class="sxs-lookup"><span data-stu-id="05246-183">Read the text file and cache its contents as a cache entry.</span></span>
 
-- <span data-ttu-id="ca0ed-184">キャッシュされたテキストファイルの内容を表示します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-184">Display the contents of the cached text file.</span></span>
+- <span data-ttu-id="05246-184">キャッシュされたテキストファイルの内容を表示します。</span><span class="sxs-lookup"><span data-stu-id="05246-184">Display the contents of the cached text file.</span></span>
 
-#### <a name="to-create-the-cache-object"></a><span data-ttu-id="ca0ed-185">キャッシュオブジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-185">To create the cache object</span></span>
+#### <a name="to-create-the-cache-object"></a><span data-ttu-id="05246-185">キャッシュオブジェクトを作成するには</span><span class="sxs-lookup"><span data-stu-id="05246-185">To create the cache object</span></span>
 
-1. <span data-ttu-id="ca0ed-186">MainWindow.xaml.cs または Mainwindow.xaml ファイルでイベントハンドラーを作成するために、追加したボタンをダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
+1. <span data-ttu-id="05246-186">MainWindow.xaml.cs または Mainwindow.xaml ファイルでイベントハンドラーを作成するために、追加したボタンをダブルクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>
 
-2. <span data-ttu-id="ca0ed-187">(クラス宣言の前に) ファイルの先頭に、次の `Imports` (Visual Basic) または `using` (C#) ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
+2. <span data-ttu-id="05246-187">(クラス宣言の前に) ファイルの先頭に、次の `Imports` (Visual Basic) または `using` (C#) ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "76728060"
     Imports System.IO
     ```
 
-3. <span data-ttu-id="ca0ed-188">イベントハンドラーで、次のコードを追加して、キャッシュオブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-188">In the event handler, add the following code to instantiate the cache object:</span></span>
+3. <span data-ttu-id="05246-188">イベントハンドラーで、次のコードを追加して、キャッシュオブジェクトをインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="05246-188">In the event handler, add the following code to instantiate the cache object:</span></span>
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -177,9 +177,9 @@ ms.locfileid: "76728060"
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     <span data-ttu-id="ca0ed-189"><xref:System.Runtime.Caching.ObjectCache> クラスは、メモリ内オブジェクトキャッシュを提供する組み込みのクラスです。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
+     <span data-ttu-id="05246-189"><xref:System.Runtime.Caching.ObjectCache> クラスは、メモリ内オブジェクトキャッシュを提供する組み込みのクラスです。</span><span class="sxs-lookup"><span data-stu-id="05246-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>
 
-4. <span data-ttu-id="ca0ed-190">次のコードを追加して、`filecontents`という名前のキャッシュエントリの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
+4. <span data-ttu-id="05246-190">次のコードを追加して、`filecontents`という名前のキャッシュエントリの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="05246-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "76728060"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5. <span data-ttu-id="ca0ed-191">次のコードを追加して、`filecontents` という名前のキャッシュエントリが存在するかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
+5. <span data-ttu-id="05246-191">次のコードを追加して、`filecontents` という名前のキャッシュエントリが存在するかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="05246-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>
 
     ```vb
     If fileContents Is Nothing Then
@@ -204,9 +204,9 @@ ms.locfileid: "76728060"
     }
     ```
 
-     <span data-ttu-id="ca0ed-192">指定したキャッシュエントリが存在しない場合は、テキストファイルを読み取り、キャッシュエントリとしてキャッシュに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
+     <span data-ttu-id="05246-192">指定したキャッシュエントリが存在しない場合は、テキストファイルを読み取り、キャッシュエントリとしてキャッシュに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="05246-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>
 
-6. <span data-ttu-id="ca0ed-193">`if/then` ブロックに次のコードを追加して、10秒後にキャッシュエントリの有効期限が切れることを指定する新しい <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
+6. <span data-ttu-id="05246-193">`if/then` ブロックに次のコードを追加して、10秒後にキャッシュエントリの有効期限が切れることを指定する新しい <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="05246-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,9 +218,9 @@ ms.locfileid: "76728060"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     <span data-ttu-id="ca0ed-194">削除または有効期限の情報が指定されていない場合、既定値は <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>です。これは、キャッシュエントリの有効期限が絶対時刻に限定されないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="ca0ed-195">代わりに、メモリが不足している場合にのみ、キャッシュエントリの有効期限が切れます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="ca0ed-196">ベストプラクティスとして、絶対有効期限またはスライド式有効期限を常に明示的に指定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
+     <span data-ttu-id="05246-194">削除または有効期限の情報が指定されていない場合、既定値は <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>です。これは、キャッシュエントリの有効期限が絶対時刻に限定されないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="05246-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="05246-195">代わりに、メモリが不足している場合にのみ、キャッシュエントリの有効期限が切れます。</span><span class="sxs-lookup"><span data-stu-id="05246-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="05246-196">ベストプラクティスとして、絶対有効期限またはスライド式有効期限を常に明示的に指定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="05246-196">As a best practice, you should always explicitly provide either an absolute or a sliding expiration.</span></span>
 
-7. <span data-ttu-id="ca0ed-197">`if/then` ブロック内で、前の手順で追加したコードの後に次のコードを追加して、監視するファイルパスのコレクションを作成し、テキストファイルのパスをコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
+7. <span data-ttu-id="05246-197">`if/then` ブロック内で、前の手順で追加したコードの後に次のコードを追加して、監視するファイルパスのコレクションを作成し、テキストファイルのパスをコレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -233,9 +233,9 @@ ms.locfileid: "76728060"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="ca0ed-198">使用するテキストファイルが `c:\cache\cacheText.txt`ない場合は、使用するテキストファイルのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
+    > <span data-ttu-id="05246-198">使用するテキストファイルが `c:\cache\cacheText.txt`ない場合は、使用するテキストファイルのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="05246-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>
 
-8. <span data-ttu-id="ca0ed-199">前の手順で追加したコードの後に、次のコードを追加して、キャッシュエントリの変更モニターのコレクションに新しい <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
+8. <span data-ttu-id="05246-199">前の手順で追加したコードの後に、次のコードを追加して、キャッシュエントリの変更モニターのコレクションに新しい <xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,9 +245,9 @@ ms.locfileid: "76728060"
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     <span data-ttu-id="ca0ed-200"><xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトは、テキストファイルのパスを監視し、変更が発生した場合はキャッシュに通知します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="ca0ed-201">この例では、ファイルの内容が変更されると、キャッシュエントリの有効期限が切れます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
+     <span data-ttu-id="05246-200"><xref:System.Runtime.Caching.HostFileChangeMonitor> オブジェクトは、テキストファイルのパスを監視し、変更が発生した場合はキャッシュに通知します。</span><span class="sxs-lookup"><span data-stu-id="05246-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="05246-201">この例では、ファイルの内容が変更されると、キャッシュエントリの有効期限が切れます。</span><span class="sxs-lookup"><span data-stu-id="05246-201">In this example, the cache entry will expire if the content of the file changes.</span></span>
 
-9. <span data-ttu-id="ca0ed-202">前の手順で追加したコードの後に、テキストファイルの内容を読み取る次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
+9. <span data-ttu-id="05246-202">前の手順で追加したコードの後に、テキストファイルの内容を読み取る次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>
 
     ```vb
     fileContents = File.ReadAllText("c:\cache\cacheText.txt") & vbCrLf & DateTime.Now.ToString()
@@ -257,9 +257,9 @@ ms.locfileid: "76728060"
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
-     <span data-ttu-id="ca0ed-203">日付と時刻のタイムスタンプが追加されるので、キャッシュエントリの有効期限が切れるタイミングを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
+     <span data-ttu-id="05246-203">日付と時刻のタイムスタンプが追加されるので、キャッシュエントリの有効期限が切れるタイミングを確認することができます。</span><span class="sxs-lookup"><span data-stu-id="05246-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>
 
-10. <span data-ttu-id="ca0ed-204">前の手順で追加したコードの後に、次のコードを追加して、ファイルの内容を <xref:System.Runtime.Caching.CacheItem> インスタンスとしてキャッシュオブジェクトに挿入します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
+10. <span data-ttu-id="05246-204">前の手順で追加したコードの後に、次のコードを追加して、ファイルの内容を <xref:System.Runtime.Caching.CacheItem> インスタンスとしてキャッシュオブジェクトに挿入します。</span><span class="sxs-lookup"><span data-stu-id="05246-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,9 +269,9 @@ ms.locfileid: "76728060"
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     <span data-ttu-id="ca0ed-205">前の手順で作成した <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトをパラメーターとして渡すことによって、キャッシュエントリを削除する方法に関する情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
+     <span data-ttu-id="05246-205">前の手順で作成した <xref:System.Runtime.Caching.CacheItemPolicy> オブジェクトをパラメーターとして渡すことによって、キャッシュエントリを削除する方法に関する情報を指定します。</span><span class="sxs-lookup"><span data-stu-id="05246-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>
 
-11. <span data-ttu-id="ca0ed-206">`if/then` ブロックの後に、キャッシュされたファイルの内容をメッセージボックスに表示する次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
+11. <span data-ttu-id="05246-206">`if/then` ブロックの後に、キャッシュされたファイルの内容をメッセージボックスに表示する次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="05246-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>
 
     ```vb
     MessageBox.Show(fileContents)
@@ -281,53 +281,53 @@ ms.locfileid: "76728060"
     MessageBox.Show(fileContents);
     ```
 
-12. <span data-ttu-id="ca0ed-207">**[ビルド]** メニューの **[WPFCaching のビルド]** をクリックして、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
+12. <span data-ttu-id="05246-207">**[ビルド]** メニューの **[WPFCaching のビルド]** をクリックして、プロジェクトをビルドします。</span><span class="sxs-lookup"><span data-stu-id="05246-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>
 
-## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="ca0ed-208">WPF アプリケーションでのキャッシュのテスト</span><span class="sxs-lookup"><span data-stu-id="ca0ed-208">Testing Caching in the WPF Application</span></span>
- <span data-ttu-id="ca0ed-209">これで、アプリケーションをテストすることができます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-209">You can now test the application.</span></span>
+## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="05246-208">WPF アプリケーションでのキャッシュのテスト</span><span class="sxs-lookup"><span data-stu-id="05246-208">Testing Caching in the WPF Application</span></span>
+ <span data-ttu-id="05246-209">これで、アプリケーションをテストすることができます。</span><span class="sxs-lookup"><span data-stu-id="05246-209">You can now test the application.</span></span>
 
-#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="ca0ed-210">WPF アプリケーションでキャッシュをテストするには</span><span class="sxs-lookup"><span data-stu-id="ca0ed-210">To test caching in the WPF application</span></span>
+#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="05246-210">WPF アプリケーションでキャッシュをテストするには</span><span class="sxs-lookup"><span data-stu-id="05246-210">To test caching in the WPF application</span></span>
 
-1. <span data-ttu-id="ca0ed-211">Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-211">Press CTRL+F5 to run the application.</span></span>
+1. <span data-ttu-id="05246-211">Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="05246-211">Press CTRL+F5 to run the application.</span></span>
 
-     <span data-ttu-id="ca0ed-212">[`MainWindow`] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-212">The `MainWindow` window is displayed.</span></span>
+     <span data-ttu-id="05246-212">[`MainWindow`] ウィンドウが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-212">The `MainWindow` window is displayed.</span></span>
 
-2. <span data-ttu-id="ca0ed-213">**[キャッシュの取得]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-213">Click **Get Cache**.</span></span>
+2. <span data-ttu-id="05246-213">**[キャッシュの取得]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-213">Click **Get Cache**.</span></span>
 
-     <span data-ttu-id="ca0ed-214">テキストファイルからキャッシュされたコンテンツがメッセージボックスに表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="ca0ed-215">ファイルのタイムスタンプに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-215">Notice the timestamp on the file.</span></span>
+     <span data-ttu-id="05246-214">テキストファイルからキャッシュされたコンテンツがメッセージボックスに表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="05246-215">ファイルのタイムスタンプに注意してください。</span><span class="sxs-lookup"><span data-stu-id="05246-215">Notice the timestamp on the file.</span></span>
 
-3. <span data-ttu-id="ca0ed-216">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-216">Close the message box and then click **Get Cache** again.</span></span>
+3. <span data-ttu-id="05246-216">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-216">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="ca0ed-217">タイムスタンプは変更されません。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-217">The timestamp is unchanged.</span></span> <span data-ttu-id="ca0ed-218">これは、キャッシュされたコンテンツが表示されることを示します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-218">This indicates the cached content is displayed.</span></span>
+     <span data-ttu-id="05246-217">タイムスタンプは変更されません。</span><span class="sxs-lookup"><span data-stu-id="05246-217">The timestamp is unchanged.</span></span> <span data-ttu-id="05246-218">これは、キャッシュされたコンテンツが表示されることを示します。</span><span class="sxs-lookup"><span data-stu-id="05246-218">This indicates the cached content is displayed.</span></span>
 
-4. <span data-ttu-id="ca0ed-219">10秒以上待ってから、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
+4. <span data-ttu-id="05246-219">10秒以上待ってから、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="ca0ed-220">今回は、新しいタイムスタンプが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="ca0ed-221">これは、ポリシーによってキャッシュエントリの有効期限が切れ、キャッシュされた新しいコンテンツが表示されることを示します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
+     <span data-ttu-id="05246-220">今回は、新しいタイムスタンプが表示されます。</span><span class="sxs-lookup"><span data-stu-id="05246-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="05246-221">これは、ポリシーによってキャッシュエントリの有効期限が切れ、キャッシュされた新しいコンテンツが表示されることを示します。</span><span class="sxs-lookup"><span data-stu-id="05246-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>
 
-5. <span data-ttu-id="ca0ed-222">テキストエディターで、作成したテキストファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="ca0ed-223">まだ変更を加えないでください。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-223">Do not make any changes yet.</span></span>
+5. <span data-ttu-id="05246-222">テキストエディターで、作成したテキストファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="05246-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="05246-223">まだ変更を加えないでください。</span><span class="sxs-lookup"><span data-stu-id="05246-223">Do not make any changes yet.</span></span>
 
-6. <span data-ttu-id="ca0ed-224">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-224">Close the message box and then click **Get Cache** again.</span></span>
+6. <span data-ttu-id="05246-224">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-224">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="ca0ed-225">タイムスタンプに再び注目します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-225">Notice the timestamp again.</span></span>
+     <span data-ttu-id="05246-225">タイムスタンプに再び注目します。</span><span class="sxs-lookup"><span data-stu-id="05246-225">Notice the timestamp again.</span></span>
 
-7. <span data-ttu-id="ca0ed-226">テキストファイルに変更を加え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-226">Make a change to the text file and then save the file.</span></span>
+7. <span data-ttu-id="05246-226">テキストファイルに変更を加え、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="05246-226">Make a change to the text file and then save the file.</span></span>
 
-8. <span data-ttu-id="ca0ed-227">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-227">Close the message box and then click **Get Cache** again.</span></span>
+8. <span data-ttu-id="05246-227">メッセージボックスを閉じ、 **[キャッシュの取得]** をもう一度クリックします。</span><span class="sxs-lookup"><span data-stu-id="05246-227">Close the message box and then click **Get Cache** again.</span></span>
 
-     <span data-ttu-id="ca0ed-228">このメッセージボックスには、テキストファイルから更新されたコンテンツと新しいタイムスタンプが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="ca0ed-229">これは、絶対タイムアウト期間が経過していないにもかかわらず、ファイルを変更した直後にホストファイルの変更モニターによってキャッシュエントリが削除されたことを示します。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
+     <span data-ttu-id="05246-228">このメッセージボックスには、テキストファイルから更新されたコンテンツと新しいタイムスタンプが含まれています。</span><span class="sxs-lookup"><span data-stu-id="05246-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="05246-229">これは、絶対タイムアウト期間が経過していないにもかかわらず、ファイルを変更した直後にホストファイルの変更モニターによってキャッシュエントリが削除されたことを示します。</span><span class="sxs-lookup"><span data-stu-id="05246-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="ca0ed-230">ファイルに変更を加える時間を増やすために、削除時間を20秒以上に増やすことができます。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
+    > <span data-ttu-id="05246-230">ファイルに変更を加える時間を増やすために、削除時間を20秒以上に増やすことができます。</span><span class="sxs-lookup"><span data-stu-id="05246-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>
 
-## <a name="code-example"></a><span data-ttu-id="ca0ed-231">コード例</span><span class="sxs-lookup"><span data-stu-id="ca0ed-231">Code Example</span></span>
- <span data-ttu-id="ca0ed-232">このチュートリアルを完了すると、作成したプロジェクトのコードは次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="ca0ed-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
+## <a name="code-example"></a><span data-ttu-id="05246-231">コード例</span><span class="sxs-lookup"><span data-stu-id="05246-231">Code Example</span></span>
+ <span data-ttu-id="05246-232">このチュートリアルを完了すると、作成したプロジェクトのコードは次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="05246-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="ca0ed-233">関連項目</span><span class="sxs-lookup"><span data-stu-id="ca0ed-233">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05246-233">参照</span><span class="sxs-lookup"><span data-stu-id="05246-233">See also</span></span>
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [<span data-ttu-id="ca0ed-234">.NET Framework アプリケーションでのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="ca0ed-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)
+- [<span data-ttu-id="05246-234">.NET Framework アプリケーションでのキャッシュ</span><span class="sxs-lookup"><span data-stu-id="05246-234">Caching in .NET Framework Applications</span></span>](../../performance/caching-in-net-framework-applications.md)
