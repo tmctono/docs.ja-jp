@@ -14,21 +14,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737380"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a><span data-ttu-id="c1b38-102">方法 : デザイナーを使用して標準アイテムで基本的な Windows フォーム ToolStrip を作成する</span><span class="sxs-lookup"><span data-stu-id="c1b38-102">How to: Create a Basic Windows Forms ToolStrip with Standard Items Using the Designer</span></span>
-<span data-ttu-id="c1b38-103">次の手順では、<xref:System.Windows.Forms.ToolStrip> を作成し、一般的なタスクを表す7つの <xref:System.Windows.Forms.ToolStripButton> コントロールを追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c1b38-103">The following procedure demonstrates how to create a <xref:System.Windows.Forms.ToolStrip> and add seven <xref:System.Windows.Forms.ToolStripButton> controls that represent typical tasks.</span></span>
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a><span data-ttu-id="c36c6-102">方法 : デザイナーを使用して標準アイテムで基本的な Windows フォーム ToolStrip を作成する</span><span class="sxs-lookup"><span data-stu-id="c36c6-102">How to: Create a Basic Windows Forms ToolStrip with Standard Items Using the Designer</span></span>
+<span data-ttu-id="c36c6-103">次の手順では、<xref:System.Windows.Forms.ToolStrip> を作成し、一般的なタスクを表す7つの <xref:System.Windows.Forms.ToolStripButton> コントロールを追加する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c36c6-103">The following procedure demonstrates how to create a <xref:System.Windows.Forms.ToolStrip> and add seven <xref:System.Windows.Forms.ToolStripButton> controls that represent typical tasks.</span></span>
 
-## <a name="to-add-standard-items-in-the-designer"></a><span data-ttu-id="c1b38-104">デザイナーで標準項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="c1b38-104">To add standard items in the designer</span></span>
+## <a name="to-add-standard-items-in-the-designer"></a><span data-ttu-id="c36c6-104">デザイナーで標準項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="c36c6-104">To add standard items in the designer</span></span>
 
-1. <span data-ttu-id="c1b38-105"><xref:System.Windows.Forms.ToolStrip> コントロールを作成します。</span><span class="sxs-lookup"><span data-stu-id="c1b38-105">Create a <xref:System.Windows.Forms.ToolStrip> control.</span></span>
+1. <span data-ttu-id="c36c6-105"><xref:System.Windows.Forms.ToolStrip> コントロールを作成します。</span><span class="sxs-lookup"><span data-stu-id="c36c6-105">Create a <xref:System.Windows.Forms.ToolStrip> control.</span></span>
 
-2. <span data-ttu-id="c1b38-106"><xref:System.Windows.Forms.ToolStrip>の右上隅にある スマートタスク 矢印をクリックして、 **ToolStrip タスク** ウィンドウを表示します。</span><span class="sxs-lookup"><span data-stu-id="c1b38-106">In the upper right corner of the <xref:System.Windows.Forms.ToolStrip>, click the smart task arrow to display the **ToolStrip Tasks** pane.</span></span>
+2. <span data-ttu-id="c36c6-106"><xref:System.Windows.Forms.ToolStrip>の右上隅にある スマートタスク 矢印をクリックして、 **ToolStrip タスク** ウィンドウを表示します。</span><span class="sxs-lookup"><span data-stu-id="c36c6-106">In the upper right corner of the <xref:System.Windows.Forms.ToolStrip>, click the smart task arrow to display the **ToolStrip Tasks** pane.</span></span>
 
-3. <span data-ttu-id="c1b38-107">**[ToolStrip タスク]** ウィンドウで、 **[標準アイテムの挿入]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c1b38-107">In the **ToolStrip Tasks** pane, choose **Insert Standard Items**.</span></span>
+3. <span data-ttu-id="c36c6-107">**[ToolStrip タスク]** ウィンドウで、 **[標準アイテムの挿入]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c36c6-107">In the **ToolStrip Tasks** pane, choose **Insert Standard Items**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c1b38-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="c1b38-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c36c6-108">参照</span><span class="sxs-lookup"><span data-stu-id="c36c6-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="c1b38-109">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="c1b38-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="c1b38-110">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="c1b38-110">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="c1b38-111">ToolStrip コントロールのアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="c1b38-111">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="c1b38-112">ToolStrip テクノロジの概要</span><span class="sxs-lookup"><span data-stu-id="c1b38-112">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="c36c6-109">ToolStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="c36c6-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="c36c6-110">ToolStrip コントロール</span><span class="sxs-lookup"><span data-stu-id="c36c6-110">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="c36c6-111">ToolStrip コントロールのアーキテクチャ</span><span class="sxs-lookup"><span data-stu-id="c36c6-111">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="c36c6-112">ToolStrip テクノロジの概要</span><span class="sxs-lookup"><span data-stu-id="c36c6-112">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

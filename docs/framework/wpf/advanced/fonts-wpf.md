@@ -13,18 +13,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737912"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="cee65-102">フォント (WPF)</span><span class="sxs-lookup"><span data-stu-id="cee65-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="cee65-103">には、OpenType フォントを使用したテキストのリッチ表示のサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cee65-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="cee65-104">OpenType フォントのサンプルパックは、Windows SDK に含まれています。</span><span class="sxs-lookup"><span data-stu-id="cee65-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="eaf43-102">フォント (WPF)</span><span class="sxs-lookup"><span data-stu-id="eaf43-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="eaf43-103">には、OpenType フォントを使用したテキストのリッチ表示のサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="eaf43-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="eaf43-104">OpenType フォントのサンプルパックは、Windows SDK に含まれています。</span><span class="sxs-lookup"><span data-stu-id="eaf43-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cee65-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cee65-105">In This Section</span></span>  
- [<span data-ttu-id="cee65-106">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="cee65-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="cee65-107">アプリケーションでのフォントのパッケージング</span><span class="sxs-lookup"><span data-stu-id="cee65-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="cee65-108">OpenType フォント パックのサンプル</span><span class="sxs-lookup"><span data-stu-id="cee65-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="cee65-109">方法のトピック</span><span class="sxs-lookup"><span data-stu-id="cee65-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eaf43-105">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="eaf43-105">In This Section</span></span>  
+ [<span data-ttu-id="eaf43-106">OpenType フォントの機能</span><span class="sxs-lookup"><span data-stu-id="eaf43-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="eaf43-107">アプリケーションでのフォントのパッケージング</span><span class="sxs-lookup"><span data-stu-id="eaf43-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="eaf43-108">OpenType フォント パックのサンプル</span><span class="sxs-lookup"><span data-stu-id="eaf43-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="eaf43-109">データ バインドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="eaf43-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cee65-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="cee65-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eaf43-110">参照</span><span class="sxs-lookup"><span data-stu-id="eaf43-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="cee65-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="cee65-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="cee65-112">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="cee65-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="eaf43-111">WPF のドキュメント</span><span class="sxs-lookup"><span data-stu-id="eaf43-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="eaf43-112">WPF のタイポグラフィ</span><span class="sxs-lookup"><span data-stu-id="eaf43-112">Typography in WPF</span></span>](typography-in-wpf.md)

@@ -19,10 +19,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745920"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="a99b5-102">方法 : Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a99b5-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="a99b5-103">この例では、ユーザーが Windows フォーム <xref:System.Windows.Forms.LinkLabel> コントロールをクリックしたときに、既定のブラウザーに Web ページを表示します。</span><span class="sxs-lookup"><span data-stu-id="a99b5-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="fb664-102">方法 : Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb664-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="fb664-103">この例では、ユーザーが Windows フォーム <xref:System.Windows.Forms.LinkLabel> コントロールをクリックしたときに、既定のブラウザーに Web ページを表示します。</span><span class="sxs-lookup"><span data-stu-id="fb664-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a99b5-104">使用例</span><span class="sxs-lookup"><span data-stu-id="a99b5-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fb664-104">例</span><span class="sxs-lookup"><span data-stu-id="fb664-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a99b5-105">コードのコンパイル方法</span><span class="sxs-lookup"><span data-stu-id="a99b5-105">Compiling the Code</span></span>  
- <span data-ttu-id="a99b5-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="a99b5-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fb664-105">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="fb664-105">Compiling the Code</span></span>  
+ <span data-ttu-id="fb664-106">この例で必要な要素は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="fb664-106">This example requires:</span></span>  
   
-- <span data-ttu-id="a99b5-107">`Form1`という名前の Windows フォーム。</span><span class="sxs-lookup"><span data-stu-id="a99b5-107">A Windows Form named `Form1`.</span></span>  
+- <span data-ttu-id="fb664-107">`Form1`という名前の Windows フォーム。</span><span class="sxs-lookup"><span data-stu-id="fb664-107">A Windows Form named `Form1`.</span></span>  
   
-- <span data-ttu-id="a99b5-108">`LinkLabel1` という名前の <xref:System.Windows.Forms.LinkLabel> コントロール。</span><span class="sxs-lookup"><span data-stu-id="a99b5-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+- <span data-ttu-id="fb664-108"><xref:System.Windows.Forms.LinkLabel> という名前の `LinkLabel1` コントロール。</span><span class="sxs-lookup"><span data-stu-id="fb664-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
-- <span data-ttu-id="a99b5-109">アクティブなインターネット接続。</span><span class="sxs-lookup"><span data-stu-id="a99b5-109">An active Internet connection.</span></span>  
+- <span data-ttu-id="fb664-109">アクティブなインターネット接続。</span><span class="sxs-lookup"><span data-stu-id="fb664-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="a99b5-110">.NET Framework セキュリティ</span><span class="sxs-lookup"><span data-stu-id="a99b5-110">.NET Framework Security</span></span>  
- <span data-ttu-id="a99b5-111"><xref:System.Diagnostics.Process.Start%2A> メソッドを呼び出すには、完全信頼が必要です。</span><span class="sxs-lookup"><span data-stu-id="a99b5-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="a99b5-112">詳細については、「 <xref:System.Security.SecurityException>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a99b5-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="fb664-110">.NET Framework のセキュリティ</span><span class="sxs-lookup"><span data-stu-id="fb664-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="fb664-111"><xref:System.Diagnostics.Process.Start%2A> メソッドを呼び出すには、完全信頼が必要です。</span><span class="sxs-lookup"><span data-stu-id="fb664-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="fb664-112">詳細については、<xref:System.Security.SecurityException> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fb664-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a99b5-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="a99b5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb664-113">参照</span><span class="sxs-lookup"><span data-stu-id="fb664-113">See also</span></span>
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="a99b5-114">LinkLabel コントロール</span><span class="sxs-lookup"><span data-stu-id="a99b5-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="fb664-114">LinkLabel コントロール</span><span class="sxs-lookup"><span data-stu-id="fb664-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)

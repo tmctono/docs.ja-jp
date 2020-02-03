@@ -16,16 +16,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76740648"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="bdb92-102">方法 : Windows フォームでグラフィックスを印刷する</span><span class="sxs-lookup"><span data-stu-id="bdb92-102">How to: Print Graphics in Windows Forms</span></span>
-<span data-ttu-id="bdb92-103">多くの場合、Windows ベースのアプリケーションでグラフィックスを印刷する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bdb92-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="bdb92-104"><xref:System.Drawing.Graphics> クラスには、画面やプリンターなどのデバイスにオブジェクトを描画するためのメソッドが用意されています。</span><span class="sxs-lookup"><span data-stu-id="bdb92-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
+# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="9bd34-102">方法 : Windows フォームでグラフィックスを印刷する</span><span class="sxs-lookup"><span data-stu-id="9bd34-102">How to: Print Graphics in Windows Forms</span></span>
+<span data-ttu-id="9bd34-103">多くの場合、Windows ベースのアプリケーションでグラフィックスを印刷する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9bd34-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="9bd34-104"><xref:System.Drawing.Graphics> クラスには、画面やプリンターなどのデバイスにオブジェクトを描画するためのメソッドが用意されています。</span><span class="sxs-lookup"><span data-stu-id="9bd34-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
   
-### <a name="to-print-graphics"></a><span data-ttu-id="bdb92-105">グラフィックスを印刷するには</span><span class="sxs-lookup"><span data-stu-id="bdb92-105">To print graphics</span></span>  
+### <a name="to-print-graphics"></a><span data-ttu-id="9bd34-105">グラフィックスを印刷するには</span><span class="sxs-lookup"><span data-stu-id="9bd34-105">To print graphics</span></span>  
   
-1. <span data-ttu-id="bdb92-106">フォームに <xref:System.Drawing.Printing.PrintDocument> コンポーネントを追加します。</span><span class="sxs-lookup"><span data-stu-id="bdb92-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1. <span data-ttu-id="9bd34-106">フォームに <xref:System.Drawing.Printing.PrintDocument> コンポーネントを追加します。</span><span class="sxs-lookup"><span data-stu-id="9bd34-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2. <span data-ttu-id="bdb92-107"><xref:System.Drawing.Printing.PrintDocument.PrintPage> イベントハンドラーで、<xref:System.Drawing.Printing.PrintPageEventArgs> クラスの <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> プロパティを使用して、印刷するグラフィックスの種類をプリンターに指示します。</span><span class="sxs-lookup"><span data-stu-id="bdb92-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
+2. <span data-ttu-id="9bd34-107"><xref:System.Drawing.Printing.PrintDocument.PrintPage> イベントハンドラーで、<xref:System.Drawing.Printing.PrintPageEventArgs> クラスの <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> プロパティを使用して、印刷するグラフィックスの種類をプリンターに指示します。</span><span class="sxs-lookup"><span data-stu-id="9bd34-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
   
-     <span data-ttu-id="bdb92-108">次のコード例は、外接する四角形内に青い楕円を作成するために使用されるイベントハンドラーを示しています。</span><span class="sxs-lookup"><span data-stu-id="bdb92-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="bdb92-109">四角形の位置と次元は次のとおりです: 100, 150 から、幅250と高さ250。</span><span class="sxs-lookup"><span data-stu-id="bdb92-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
+     <span data-ttu-id="9bd34-108">次のコード例は、外接する四角形内に青い楕円を作成するために使用されるイベントハンドラーを示しています。</span><span class="sxs-lookup"><span data-stu-id="9bd34-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="9bd34-109">四角形の位置と次元は次のとおりです: 100, 150 から、幅250と高さ250。</span><span class="sxs-lookup"><span data-stu-id="9bd34-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -52,7 +52,7 @@ ms.locfileid: "76740648"
        }  
     ```  
   
-     <span data-ttu-id="bdb92-110">(ビジュアルC#とビジュアルC++)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="bdb92-110">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="9bd34-110">(ビジュアルC#とビジュアルC++)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。</span><span class="sxs-lookup"><span data-stu-id="9bd34-110">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -66,8 +66,8 @@ ms.locfileid: "76740648"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="bdb92-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="bdb92-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bd34-111">参照</span><span class="sxs-lookup"><span data-stu-id="9bd34-111">See also</span></span>
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [<span data-ttu-id="bdb92-112">Windows フォームにおける印刷のサポート</span><span class="sxs-lookup"><span data-stu-id="bdb92-112">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="9bd34-112">Windows フォームにおける印刷のサポート</span><span class="sxs-lookup"><span data-stu-id="9bd34-112">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
