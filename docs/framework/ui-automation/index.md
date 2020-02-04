@@ -6,33 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7dff42d612d740fa9d05f303721cef45e1a03c32
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901015"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965868"
 ---
-# <a name="microsoft-ui-automation"></a><span data-ttu-id="504ae-102">Microsoft UI オートメーション</span><span class="sxs-lookup"><span data-stu-id="504ae-102">Microsoft UI Automation</span></span>
+# <a name="microsoft-ui-automation"></a><span data-ttu-id="38508-102">Microsoft UI オートメーション</span><span class="sxs-lookup"><span data-stu-id="38508-102">Microsoft UI Automation</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="504ae-103">このドキュメントは、<xref:System.Windows.Automation> 名前空間で定義されているマネージ UI オートメーションクラスを使用する .NET 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="504ae-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="504ae-104">UI オートメーションの最新情報については、「 [Windows AUTOMATION API: Ui オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="504ae-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
+> <span data-ttu-id="38508-103">このドキュメントは、<xref:System.Windows.Automation> 名前空間で定義されているマネージ UI オートメーションクラスを使用する .NET 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="38508-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="38508-104">UI オートメーションの最新情報については、「 [Windows AUTOMATION API: Ui オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="38508-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
 
- <span data-ttu-id="504ae-105">Microsoft UI オートメーションは、Microsoft Windows のアクセシビリティフレームワークです。</span><span class="sxs-lookup"><span data-stu-id="504ae-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="504ae-106">ユーザーインターフェイス (UI) に関する情報へのプログラムによるアクセスを提供することで、支援技術製品および自動テストフレームワークのニーズに対応します。</span><span class="sxs-lookup"><span data-stu-id="504ae-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="504ae-107">さらに、UI オートメーションを使用すると、コントロールおよびアプリケーション開発者は製品をアクセス可能にすることができます。</span><span class="sxs-lookup"><span data-stu-id="504ae-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
+ <span data-ttu-id="38508-105">Microsoft UI オートメーションは、Microsoft Windows のアクセシビリティフレームワークです。</span><span class="sxs-lookup"><span data-stu-id="38508-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="38508-106">ユーザーインターフェイス (UI) に関する情報へのプログラムによるアクセスを提供することで、支援技術製品および自動テストフレームワークのニーズに対応します。</span><span class="sxs-lookup"><span data-stu-id="38508-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="38508-107">さらに、UI オートメーションを使用すると、コントロールおよびアプリケーション開発者は製品をアクセス可能にすることができます。</span><span class="sxs-lookup"><span data-stu-id="38508-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
 
- <span data-ttu-id="504ae-108">このドキュメントでは、マネージコード用の UI オートメーション API について説明します。</span><span class="sxs-lookup"><span data-stu-id="504ae-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="504ae-109">でC++の ui オートメーションのプログラミングの詳細については、「 [Win32 アプリケーションの ui オートメーション](/windows/desktop/winauto/windows-automation-api-portal)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="504ae-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
+ <span data-ttu-id="38508-108">このドキュメントでは、マネージコード用の UI オートメーション API について説明します。</span><span class="sxs-lookup"><span data-stu-id="38508-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="38508-109">でC++の ui オートメーションのプログラミングの詳細については、「 [Win32 アプリケーションの ui オートメーション](/windows/desktop/winauto/windows-automation-api-portal)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="38508-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="504ae-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="504ae-110">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="38508-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="38508-110">In this section</span></span>
 
-- [<span data-ttu-id="504ae-111">ユーザー補助のベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="504ae-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
-- [<span data-ttu-id="504ae-112">UI オートメーションの基礎</span><span class="sxs-lookup"><span data-stu-id="504ae-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
-- [<span data-ttu-id="504ae-113">マネージド コードの UI オートメーション プロバイダー</span><span class="sxs-lookup"><span data-stu-id="504ae-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
-- [<span data-ttu-id="504ae-114">マネージド コードの UI オートメーション クライアント</span><span class="sxs-lookup"><span data-stu-id="504ae-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
-- [<span data-ttu-id="504ae-115">UI オートメーション コントロール パターン</span><span class="sxs-lookup"><span data-stu-id="504ae-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
-- [<span data-ttu-id="504ae-116">UI オートメーション テキスト パターン</span><span class="sxs-lookup"><span data-stu-id="504ae-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
-- [<span data-ttu-id="504ae-117">UI Automation Control Types</span><span class="sxs-lookup"><span data-stu-id="504ae-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
-- [<span data-ttu-id="504ae-118">UI Automation Specification および UI Automation Community Promise</span><span class="sxs-lookup"><span data-stu-id="504ae-118">UI Automation Specification and Community Promise</span></span>](ui-automation-specification-and-community-promise.md)
+- [<span data-ttu-id="38508-111">ユーザー補助のベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="38508-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
+- [<span data-ttu-id="38508-112">UI オートメーションの基礎</span><span class="sxs-lookup"><span data-stu-id="38508-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
+- [<span data-ttu-id="38508-113">マネージド コードの UI オートメーション プロバイダー</span><span class="sxs-lookup"><span data-stu-id="38508-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
+- [<span data-ttu-id="38508-114">マネージド コードの UI オートメーション クライアント</span><span class="sxs-lookup"><span data-stu-id="38508-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
+- [<span data-ttu-id="38508-115">UI オートメーション コントロール パターン</span><span class="sxs-lookup"><span data-stu-id="38508-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
+- [<span data-ttu-id="38508-116">UI オートメーション テキスト パターン</span><span class="sxs-lookup"><span data-stu-id="38508-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
+- [<span data-ttu-id="38508-117">UI Automation Control Types</span><span class="sxs-lookup"><span data-stu-id="38508-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
 
-## <a name="related-sections"></a><span data-ttu-id="504ae-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="504ae-119">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="38508-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="38508-118">Related sections</span></span>
 
-- [<span data-ttu-id="504ae-120">ユーザー補助のサンプル</span><span class="sxs-lookup"><span data-stu-id="504ae-120">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [<span data-ttu-id="38508-119">ユーザー補助のサンプル</span><span class="sxs-lookup"><span data-stu-id="38508-119">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
