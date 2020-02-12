@@ -1,27 +1,27 @@
 ---
-title: '方法: .NET Framework 3.0 がインストールされているかどうかの確認'
+title: '方法: .NET Framework 3.0 がインストールされているかどうかを確認する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053446"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124456"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="62288-102">方法: .NET Framework 3.0 がインストールされているかどうかの確認</span><span class="sxs-lookup"><span data-stu-id="62288-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="62288-103">管理者が Microsoft .NET Framework アプリケーションをシステムに配置するには、まず、.NET Framework ランタイムが存在することを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="62288-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="62288-104">このトピックでは、.NET Framework がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトについて説明します。</span><span class="sxs-lookup"><span data-stu-id="62288-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="21120-102">方法: .NET Framework 3.0 がインストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="21120-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="21120-103">管理者が Microsoft .NET Framework アプリケーションをシステムに配置するには、まず、.NET Framework ランタイムが存在することを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="21120-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="21120-104">このトピックでは、.NET Framework がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトについて説明します。</span><span class="sxs-lookup"><span data-stu-id="21120-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="62288-105">Microsoft .NET Framework のインストール、配置、および検出の詳細については、 [Microsoft .NET Framework バージョン3.0 の展開](https://go.microsoft.com/fwlink/?LinkId=96739)に関するトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="62288-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+> <span data-ttu-id="21120-105">Microsoft .NET Framework のインストール、配置、および検出の詳細については、 [Microsoft .NET Framework バージョン3.0 の展開](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))に関するトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="21120-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="62288-106">".NET CLR" ユーザーエージェント文字列の検出</span><span class="sxs-lookup"><span data-stu-id="62288-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="62288-107">.NET Framework がインストールされている場合、MSI は UserAgent 文字列に ".NET CLR" とバージョン番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="62288-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="62288-108">次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。</span><span class="sxs-lookup"><span data-stu-id="62288-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="62288-109">このスクリプトは、UserAgent 文字列を検索して .NET Framework がインストールされているかどうかを確認し、検索結果にステータスメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="62288-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="21120-106">".NET CLR" ユーザーエージェント文字列の検出</span><span class="sxs-lookup"><span data-stu-id="21120-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="21120-107">.NET Framework がインストールされている場合、MSI は UserAgent 文字列に ".NET CLR" とバージョン番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="21120-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="21120-108">次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。</span><span class="sxs-lookup"><span data-stu-id="21120-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="21120-109">このスクリプトは、UserAgent 文字列を検索して .NET Framework がインストールされているかどうかを確認し、検索結果にステータスメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="21120-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```html  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "71053446"
 </HTML>  
 ```  
   
- <span data-ttu-id="62288-110">".NET CLR" バージョンの検索に成功すると、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="62288-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="21120-110">".NET CLR" バージョンの検索に成功すると、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="21120-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="62288-111">それ以外の場合は、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="62288-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="21120-111">それ以外の場合は、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="21120-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   
