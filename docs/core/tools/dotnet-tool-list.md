@@ -1,62 +1,73 @@
 ---
 title: dotnet tool list コマンド
-description: dotnet tool list コマンドは、マシン上の指定された .NET Core グローバル ツールを一覧表示します。
-ms.date: 05/29/2018
-ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: dotnet tool list コマンドでは、お使いのコンピューターにインストールされている .NET Core ツールの一覧を表示します。
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117565"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543457"
 ---
-# <a name="dotnet-tool-list"></a><span data-ttu-id="2f943-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="2f943-103">dotnet tool list</span></span>
+# <a name="dotnet-tool-list"></a><span data-ttu-id="ab89b-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="ab89b-103">dotnet tool list</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="ab89b-104">**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="ab89b-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="2f943-104">name</span><span class="sxs-lookup"><span data-stu-id="2f943-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ab89b-105">名前</span><span class="sxs-lookup"><span data-stu-id="ab89b-105">Name</span></span>
 
-<span data-ttu-id="2f943-105">`dotnet tool list` - マシン上の既定のディレクトリまたは指定したパスに現在インストールされているすべての [.NET Core グローバル ツール](global-tools.md)を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-105">`dotnet tool list` - Lists all [.NET Core Global Tools](global-tools.md) currently installed in the default directory on your machine or in the specified path.</span></span>
+<span data-ttu-id="ab89b-106">`dotnet tool list` - お使いのコンピューター上に現在インストールされている指定した種類のすべての [.NET Core ツール](global-tools.md)を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-106">`dotnet tool list` - Lists all [.NET Core tools](global-tools.md) of the specified type currently installed on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="2f943-106">構文</span><span class="sxs-lookup"><span data-stu-id="2f943-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="ab89b-107">構文</span><span class="sxs-lookup"><span data-stu-id="ab89b-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
+dotnet tool list
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a><span data-ttu-id="2f943-107">説明</span><span class="sxs-lookup"><span data-stu-id="2f943-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="ab89b-108">説明</span><span class="sxs-lookup"><span data-stu-id="ab89b-108">Description</span></span>
 
-<span data-ttu-id="2f943-108">`dotnet tool list` コマンドは、マシン上 (現在のユーザー プロファイル) または指定したパスにインストールされたユーザー全体のすべての .NET Core グローバル ツールを一覧表示する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="2f943-108">The `dotnet tool list` command provides a way for you to list all .NET Core Global Tools installed user-wide on your machine (current user profile) or in the specified path.</span></span> <span data-ttu-id="2f943-109">このコマンドは、パッケージ名、インストールされているバージョン、およびグローバル ツールのコマンドを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-109">The command lists the package name, version installed, and the Global Tool command.</span></span> <span data-ttu-id="2f943-110">list コマンドを使用するには、`--global` オプションを使用してユーザー全体のツールをすべて表示することを指定するか、`--tool-path` オプションを使用してカスタム パスを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2f943-110">To use the list command, you either have to specify that you want to see all user-wide tools using the `--global` option or specify a custom path using the `--tool-path` option.</span></span>
+<span data-ttu-id="ab89b-109">`dotnet tool list` コマンドでは、お使いのコンピューター上にインストールされている .NET Core グローバル、ツールパス、またはローカルのすべてのツールを一覧表示する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-109">The `dotnet tool list` command provides a way for you to list all .NET Core global, tool-path, or local Tools installed on your machine.</span></span> <span data-ttu-id="ab89b-110">コマンドでは、パッケージ名、インストールされているバージョン、およびツール コマンドを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-110">The command lists the package name, version installed, and the tool command.</span></span>  <span data-ttu-id="ab89b-111">コマンドを使用するには、次のいずれかを指定します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-111">To use the command, you specify one of the following:</span></span>
 
-## <a name="options"></a><span data-ttu-id="2f943-111">オプション</span><span class="sxs-lookup"><span data-stu-id="2f943-111">Options</span></span>
+* <span data-ttu-id="ab89b-112">既定の場所にインストールされているグローバル ツール。</span><span class="sxs-lookup"><span data-stu-id="ab89b-112">A global tool installed in the default location.</span></span> <span data-ttu-id="ab89b-113">`--global` オプションを使用します</span><span class="sxs-lookup"><span data-stu-id="ab89b-113">Use the `--global` option</span></span>
+* <span data-ttu-id="ab89b-114">カスタムの場所にインストールされているグローバル ツール。</span><span class="sxs-lookup"><span data-stu-id="ab89b-114">A global tool installed in a custom location.</span></span> <span data-ttu-id="ab89b-115">`--tool-path` オプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-115">Use the `--tool-path` option.</span></span>
+* <span data-ttu-id="ab89b-116">ローカル ツール。</span><span class="sxs-lookup"><span data-stu-id="ab89b-116">A local tool.</span></span> <span data-ttu-id="ab89b-117">`--global` および `--tool-path` オプションを省略します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-117">Omit the `--global` and `--tool-path` options.</span></span>
 
-`-g|--global`
+<span data-ttu-id="ab89b-118">**ローカル ツールは .NET Core SDK 3.0 以降で使用できます。**</span><span class="sxs-lookup"><span data-stu-id="ab89b-118">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-<span data-ttu-id="2f943-112">ユーザー全体のグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-112">Lists user-wide Global Tools.</span></span> <span data-ttu-id="2f943-113">`--tool-path` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="2f943-113">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="2f943-114">このオプションを指定しない場合は、`--tool-path` オプションを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2f943-114">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
+## <a name="options"></a><span data-ttu-id="ab89b-119">オプション</span><span class="sxs-lookup"><span data-stu-id="ab89b-119">Options</span></span>
 
-`-h|--help`
+- **`-g|--global`**
 
-<span data-ttu-id="2f943-115">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="2f943-115">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="ab89b-120">ユーザー全体のグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-120">Lists user-wide global tools.</span></span> <span data-ttu-id="ab89b-121">`--tool-path` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="ab89b-121">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="ab89b-122">`--global` と `--tool-path` の両方を省略すると、ローカル ツールが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="ab89b-122">Omitting both `--global` and `--tool-path` lists local tools.</span></span> 
 
-`--tool-path <PATH>`
+- **`-h|--help`**
 
-<span data-ttu-id="2f943-116">グローバル ツールを検索するカスタムの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="2f943-116">Specifies a custom location where to find Global Tools.</span></span> <span data-ttu-id="2f943-117">パスは絶対パスでも相対パスでもかまいません。</span><span class="sxs-lookup"><span data-stu-id="2f943-117">PATH can be absolute or relative.</span></span> <span data-ttu-id="2f943-118">`--global` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="2f943-118">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="2f943-119">このオプションを指定しない場合は、`--global` オプションを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2f943-119">If you don't specify this option, you must specify the `--global` option.</span></span>
+  <span data-ttu-id="ab89b-123">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-123">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="2f943-120">使用例</span><span class="sxs-lookup"><span data-stu-id="2f943-120">Examples</span></span>
+- **`--tool-path <PATH>`**
 
-<span data-ttu-id="2f943-121">マシン (現在のユーザー プロファイル) 上にユーザー全体でインストールされているすべてのグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-121">Lists all Global Tools installed user-wide on your machine (current user profile):</span></span>
+  <span data-ttu-id="ab89b-124">グローバル ツールを検索するカスタムの場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-124">Specifies a custom location where to find global tools.</span></span> <span data-ttu-id="ab89b-125">PATH は絶対パスでも相対パスでもかまいません。</span><span class="sxs-lookup"><span data-stu-id="ab89b-125">PATH can be absolute or relative.</span></span> <span data-ttu-id="ab89b-126">`--global` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="ab89b-126">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="ab89b-127">`--global` と `--tool-path` の両方を省略すると、ローカル ツールが一覧表示されます。</span><span class="sxs-lookup"><span data-stu-id="ab89b-127">Omitting both `--global` and `--tool-path` lists local tools.</span></span> 
 
-`dotnet tool list -g`
+## <a name="examples"></a><span data-ttu-id="ab89b-128">使用例</span><span class="sxs-lookup"><span data-stu-id="ab89b-128">Examples</span></span>
 
-<span data-ttu-id="2f943-122">特定の Windows フォルダーからグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-122">Lists the Global Tools from a specific Windows folder:</span></span>
+- **`dotnet tool list -g`**
 
-`dotnet tool list --tool-path c:\global-tools`
+  <span data-ttu-id="ab89b-129">お使いのコンピューター (現在のユーザー プロファイル) 上でユーザー全体にインストールされているすべてのグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-129">Lists all global tools installed user-wide on your machine (current user profile).</span></span>
 
-<span data-ttu-id="2f943-123">特定の Linux/macOS フォルダーからグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="2f943-123">Lists the Global Tools from a specific Linux/macOS folder:</span></span>
+- **`dotnet tool list --tool-path c:\global-tools`**
 
-`dotnet tool list --tool-path ~/bin`
+  <span data-ttu-id="ab89b-130">特定の Windows ディレクトリからグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-130">Lists the global tools from a specific Windows directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2f943-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="2f943-124">See also</span></span>
+- **`dotnet tool list --tool-path ~/bin`**
 
-- [<span data-ttu-id="2f943-125">.NET Core グローバル ツール</span><span class="sxs-lookup"><span data-stu-id="2f943-125">.NET Core Global Tools</span></span>](global-tools.md)
+  <span data-ttu-id="ab89b-131">特定の Linux/macOS ディレクトリからグローバル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-131">Lists the global tools from a specific Linux/macOS directory.</span></span>
+
+- **`dotnet tool list`**
+
+  <span data-ttu-id="ab89b-132">現在のディレクトリで使用可能なすべてのローカル ツールを一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="ab89b-132">Lists all local tools available in the current directory.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ab89b-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab89b-133">See also</span></span>
+
+- [<span data-ttu-id="ab89b-134">.NET Core ツール</span><span class="sxs-lookup"><span data-stu-id="ab89b-134">.NET Core tools</span></span>](global-tools.md)

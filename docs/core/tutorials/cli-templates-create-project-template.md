@@ -5,37 +5,37 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340366"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503533"
 ---
-# <a name="tutorial-create-a-project-template"></a><span data-ttu-id="6bae1-103">チュートリアル: プロジェクト テンプレートを作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-103">Tutorial: Create a project template</span></span>
+# <a name="tutorial-create-a-project-template"></a><span data-ttu-id="76474-103">チュートリアル: プロジェクト テンプレートを作成する</span><span class="sxs-lookup"><span data-stu-id="76474-103">Tutorial: Create a project template</span></span>
 
-<span data-ttu-id="6bae1-104">.NET Core では、プロジェクト、ファイル、さらにはリソースを生成するテンプレートを作成して配置することができます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-104">With .NET Core, you can create and deploy templates that generate projects, files, even resources.</span></span> <span data-ttu-id="6bae1-105">このチュートリアルは、`dotnet new` コマンドで使用するテンプレートの作成、インストール、アンインストール方法を説明するシリーズのパート 2 です。</span><span class="sxs-lookup"><span data-stu-id="6bae1-105">This tutorial is part two of a series that teaches you how to create, install, and uninstall, templates for use with the `dotnet new` command.</span></span>
+<span data-ttu-id="76474-104">.NET Core では、プロジェクト、ファイル、さらにはリソースを生成するテンプレートを作成して配置することができます。</span><span class="sxs-lookup"><span data-stu-id="76474-104">With .NET Core, you can create and deploy templates that generate projects, files, even resources.</span></span> <span data-ttu-id="76474-105">このチュートリアルは、`dotnet new` コマンドで使用するテンプレートの作成、インストール、アンインストール方法を説明するシリーズのパート 2 です。</span><span class="sxs-lookup"><span data-stu-id="76474-105">This tutorial is part two of a series that teaches you how to create, install, and uninstall, templates for use with the `dotnet new` command.</span></span>
 
-<span data-ttu-id="6bae1-106">シリーズのこのパートで学習する内容は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="6bae1-106">In this part of the series you'll learn how to:</span></span>
+<span data-ttu-id="76474-106">シリーズのこのパートで学習する内容は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="76474-106">In this part of the series you'll learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="6bae1-107">プロジェクト テンプレートのリソースを作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-107">Create the resources of a project template</span></span>
-> * <span data-ttu-id="6bae1-108">テンプレートの構成フォルダーとファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-108">Create the template config folder and file</span></span>
-> * <span data-ttu-id="6bae1-109">ファイル パスからテンプレートをインストールする</span><span class="sxs-lookup"><span data-stu-id="6bae1-109">Install a template from a file path</span></span>
-> * <span data-ttu-id="6bae1-110">項目テンプレートをテストする</span><span class="sxs-lookup"><span data-stu-id="6bae1-110">Test an item template</span></span>
-> * <span data-ttu-id="6bae1-111">項目テンプレートをアンインストールする</span><span class="sxs-lookup"><span data-stu-id="6bae1-111">Uninstall an item template</span></span>
+> * <span data-ttu-id="76474-107">プロジェクト テンプレートのリソースを作成する</span><span class="sxs-lookup"><span data-stu-id="76474-107">Create the resources of a project template</span></span>
+> * <span data-ttu-id="76474-108">テンプレートの構成フォルダーとファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="76474-108">Create the template config folder and file</span></span>
+> * <span data-ttu-id="76474-109">ファイル パスからテンプレートをインストールする</span><span class="sxs-lookup"><span data-stu-id="76474-109">Install a template from a file path</span></span>
+> * <span data-ttu-id="76474-110">項目テンプレートをテストする</span><span class="sxs-lookup"><span data-stu-id="76474-110">Test an item template</span></span>
+> * <span data-ttu-id="76474-111">項目テンプレートをアンインストールする</span><span class="sxs-lookup"><span data-stu-id="76474-111">Uninstall an item template</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="6bae1-112">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="6bae1-112">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="76474-112">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="76474-112">Prerequisites</span></span>
 
-* <span data-ttu-id="6bae1-113">このチュートリアル シリーズの[パート 1](cli-templates-create-item-template.md) を完了します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-113">Complete [part 1](cli-templates-create-item-template.md) of this tutorial series.</span></span>
-* <span data-ttu-id="6bae1-114">ターミナルを開いて _working\templates_ フォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-114">Open a terminal and navigate to the _working\templates_ folder.</span></span>
+* <span data-ttu-id="76474-113">このチュートリアル シリーズの[パート 1](cli-templates-create-item-template.md) を完了します。</span><span class="sxs-lookup"><span data-stu-id="76474-113">Complete [part 1](cli-templates-create-item-template.md) of this tutorial series.</span></span>
+* <span data-ttu-id="76474-114">ターミナルを開いて _working\templates_ フォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="76474-114">Open a terminal and navigate to the _working\templates_ folder.</span></span>
 
-## <a name="create-a-project-template"></a><span data-ttu-id="6bae1-115">プロジェクト テンプレートを作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-115">Create a project template</span></span>
+## <a name="create-a-project-template"></a><span data-ttu-id="76474-115">プロジェクト テンプレートを作成する</span><span class="sxs-lookup"><span data-stu-id="76474-115">Create a project template</span></span>
 
-<span data-ttu-id="6bae1-116">プロジェクト テンプレートを使用すると、ユーザーがコードのワーキング セットを使用して簡単に作業を開始できる、すぐに実行できるプロジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-116">Project templates produce ready-to-run projects that make it easy for users to start with a working set of code.</span></span> <span data-ttu-id="6bae1-117">.NET Core には、コンソール アプリケーションやクラス ライブラリなど、いくつかのプロジェクト テンプレートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6bae1-117">.NET Core includes a few project templates such as a console application or a class library.</span></span> <span data-ttu-id="6bae1-118">この例では、C# 8.0 を有効にし、`async main` エントリ ポイントを生成する、新しいコンソール プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-118">In this example, you'll create a new console project that enables C# 8.0 and produces an `async main` entry point.</span></span>
+<span data-ttu-id="76474-116">プロジェクト テンプレートを使用すると、ユーザーがコードのワーキング セットを使用して簡単に作業を開始できる、すぐに実行できるプロジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="76474-116">Project templates produce ready-to-run projects that make it easy for users to start with a working set of code.</span></span> <span data-ttu-id="76474-117">.NET Core には、コンソール アプリケーションやクラス ライブラリなど、いくつかのプロジェクト テンプレートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="76474-117">.NET Core includes a few project templates such as a console application or a class library.</span></span> <span data-ttu-id="76474-118">この例では、C# 8.0 を有効にし、`async main` エントリ ポイントを生成する、新しいコンソール プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="76474-118">In this example, you'll create a new console project that enables C# 8.0 and produces an `async main` entry point.</span></span>
 
-<span data-ttu-id="6bae1-119">ターミナルで _working\templates_ フォルダーに移動し、_consoleasync_ という名前の新しいサブフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-119">In your terminal, navigate to the _working\templates_ folder and create a new subfolder named _consoleasync_.</span></span> <span data-ttu-id="6bae1-120">このサブフォルダーに入り、`dotnet new console` を実行して標準コンソール アプリケーションを生成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-120">Enter the subfolder and run `dotnet new console` to generate the standard console application.</span></span> <span data-ttu-id="6bae1-121">このテンプレートによって生成されたファイルを編集して、新しいテンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-121">You'll be editing the files produced by this template to create a new template.</span></span>
+<span data-ttu-id="76474-119">ターミナルで _working\templates_ フォルダーに移動し、_consoleasync_ という名前の新しいサブフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="76474-119">In your terminal, navigate to the _working\templates_ folder and create a new subfolder named _consoleasync_.</span></span> <span data-ttu-id="76474-120">このサブフォルダーに入り、`dotnet new console` を実行して標準コンソール アプリケーションを生成します。</span><span class="sxs-lookup"><span data-stu-id="76474-120">Enter the subfolder and run `dotnet new console` to generate the standard console application.</span></span> <span data-ttu-id="76474-121">このテンプレートによって生成されたファイルを編集して、新しいテンプレートを作成します。</span><span class="sxs-lookup"><span data-stu-id="76474-121">You'll be editing the files produced by this template to create a new template.</span></span>
 
 ```console
 working
@@ -45,9 +45,9 @@ working
             Program.cs
 ```
 
-## <a name="modify-programcs"></a><span data-ttu-id="6bae1-122">Program.cs を変更する</span><span class="sxs-lookup"><span data-stu-id="6bae1-122">Modify Program.cs</span></span>
+## <a name="modify-programcs"></a><span data-ttu-id="76474-122">Program.cs を変更する</span><span class="sxs-lookup"><span data-stu-id="76474-122">Modify Program.cs</span></span>
 
-<span data-ttu-id="6bae1-123">_program.cs_ ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-123">Open up the _program.cs_ file.</span></span> <span data-ttu-id="6bae1-124">コンソール プロジェクトでは非同期エントリ ポイントを使用しないので、それを追加しましょう。</span><span class="sxs-lookup"><span data-stu-id="6bae1-124">The console project doesn't use an asynchronous entry point, so let's add that.</span></span> <span data-ttu-id="6bae1-125">コードを次のように変更し、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-125">Change your code to the following and save the file:</span></span>
+<span data-ttu-id="76474-123">_program.cs_ ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="76474-123">Open up the _program.cs_ file.</span></span> <span data-ttu-id="76474-124">コンソール プロジェクトでは非同期エントリ ポイントを使用しないので、それを追加しましょう。</span><span class="sxs-lookup"><span data-stu-id="76474-124">The console project doesn't use an asynchronous entry point, so let's add that.</span></span> <span data-ttu-id="76474-125">コードを次のように変更し、ファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="76474-125">Change your code to the following and save the file.</span></span>
 
 ```csharp
 using System;
@@ -65,9 +65,9 @@ namespace consoleasync
 }
 ```
 
-## <a name="modify-consoleasynccsproj"></a><span data-ttu-id="6bae1-126">consoleasync.csproj を変更する</span><span class="sxs-lookup"><span data-stu-id="6bae1-126">Modify consoleasync.csproj</span></span>
+## <a name="modify-consoleasynccsproj"></a><span data-ttu-id="76474-126">consoleasync.csproj を変更する</span><span class="sxs-lookup"><span data-stu-id="76474-126">Modify consoleasync.csproj</span></span>
 
-<span data-ttu-id="6bae1-127">プロジェクトで使用される C# 言語のバージョンをバージョン 8.0 に更新しましょう。</span><span class="sxs-lookup"><span data-stu-id="6bae1-127">Let's update the C# language version the project uses to version 8.0.</span></span> <span data-ttu-id="6bae1-128">_consoleasync.csproj_ ファイルを編集し、`<LangVersion>` 設定を `<PropertyGroup>` ノードに追加します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-128">Edit the _consoleasync.csproj_ file and add the `<LangVersion>` setting to a `<PropertyGroup>` node.</span></span>
+<span data-ttu-id="76474-127">プロジェクトで使用される C# 言語のバージョンをバージョン 8.0 に更新しましょう。</span><span class="sxs-lookup"><span data-stu-id="76474-127">Let's update the C# language version the project uses to version 8.0.</span></span> <span data-ttu-id="76474-128">_consoleasync.csproj_ ファイルを編集し、`<LangVersion>` 設定を `<PropertyGroup>` ノードに追加します。</span><span class="sxs-lookup"><span data-stu-id="76474-128">Edit the _consoleasync.csproj_ file and add the `<LangVersion>` setting to a `<PropertyGroup>` node.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -83,26 +83,33 @@ namespace consoleasync
 </Project>
 ```
 
-## <a name="build-the-project"></a><span data-ttu-id="6bae1-129">プロジェクトをビルドする</span><span class="sxs-lookup"><span data-stu-id="6bae1-129">Build the project</span></span>
+## <a name="build-the-project"></a><span data-ttu-id="76474-129">プロジェクトをビルドする</span><span class="sxs-lookup"><span data-stu-id="76474-129">Build the project</span></span>
 
-<span data-ttu-id="6bae1-130">プロジェクト テンプレートを完成させる前にテストして、正しくコンパイルされ実行されることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-130">Before you complete a project template, you should test it to make sure it compiles and runs correctly.</span></span> <span data-ttu-id="6bae1-131">ターミナルで `dotnet run` コマンドを実行すると、次の出力が表示されるはずです。</span><span class="sxs-lookup"><span data-stu-id="6bae1-131">In your terminal, run the `dotnet run` command and you should see the following output:</span></span>
+<span data-ttu-id="76474-130">プロジェクト テンプレートを完成させる前にテストして、正しくコンパイルされ実行されることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76474-130">Before you complete a project template, you should test it to make sure it compiles and runs correctly.</span></span>
+
+<span data-ttu-id="76474-131">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="76474-131">In your terminal, run the following command.</span></span>
+
+```dotnetcli
+dotnet run
+```
+
+<span data-ttu-id="76474-132">次の出力が得られます。</span><span class="sxs-lookup"><span data-stu-id="76474-132">You get the following output.</span></span>
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
-<span data-ttu-id="6bae1-132">`dotnet run` の使用によって作成された _obj_ および _bin_ フォルダーは削除できます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-132">You can delete the _obj_ and _bin_ folders created by using `dotnet run`.</span></span> <span data-ttu-id="6bae1-133">これらのファイルを削除すると、テンプレートに関連するファイルのみがテンプレートに含まれ、ビルド アクションの結果として生じたファイルが含まれなくなります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-133">Deleting these files ensures your template only includes the files related to your template and not any files that result of a build action.</span></span>
+<span data-ttu-id="76474-133">`dotnet run` の使用によって作成された _obj_ および _bin_ フォルダーは削除できます。</span><span class="sxs-lookup"><span data-stu-id="76474-133">You can delete the _obj_ and _bin_ folders created by using `dotnet run`.</span></span> <span data-ttu-id="76474-134">これらのファイルを削除すると、テンプレートに関連するファイルのみがテンプレートに含まれ、ビルド アクションの結果として生じたファイルが含まれなくなります。</span><span class="sxs-lookup"><span data-stu-id="76474-134">Deleting these files ensures your template only includes the files related to your template and not any files that result of a build action.</span></span>
 
-<span data-ttu-id="6bae1-134">テンプレートのコンテンツを作成したので、テンプレートのルート フォルダーでテンプレートの構成を作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-134">Now that you have the content of the template created, you need to create the template config at the root folder of the template.</span></span>
+<span data-ttu-id="76474-135">テンプレートのコンテンツを作成したので、テンプレートのルート フォルダーでテンプレートの構成を作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="76474-135">Now that you have the content of the template created, you need to create the template config at the root folder of the template.</span></span>
 
-## <a name="create-the-template-config"></a><span data-ttu-id="6bae1-135">テンプレートの構成を作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-135">Create the template config</span></span>
+## <a name="create-the-template-config"></a><span data-ttu-id="76474-136">テンプレートの構成を作成する</span><span class="sxs-lookup"><span data-stu-id="76474-136">Create the template config</span></span>
 
-<span data-ttu-id="6bae1-136">.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-136">Templates are recognized in .NET Core by a special folder and config file that exist at the root of your template.</span></span> <span data-ttu-id="6bae1-137">このチュートリアルでは、テンプレート フォルダーは _working\templates\consoleasync_ にあります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-137">In this tutorial, your template folder is located at _working\templates\consoleasync_.</span></span>
+<span data-ttu-id="76474-137">.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。</span><span class="sxs-lookup"><span data-stu-id="76474-137">Templates are recognized in .NET Core by a special folder and config file that exist at the root of your template.</span></span> <span data-ttu-id="76474-138">このチュートリアルでは、テンプレート フォルダーは _working\templates\consoleasync_ にあります。</span><span class="sxs-lookup"><span data-stu-id="76474-138">In this tutorial, your template folder is located at _working\templates\consoleasync_.</span></span>
 
-<span data-ttu-id="6bae1-138">テンプレートを作成すると、特別な構成フォルダーを除く、テンプレート フォルダー内のすべてのファイルとフォルダーがテンプレートの一部として含まれます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-138">When you create a template, all files and folders in the template folder are included as part of the template except for the special config folder.</span></span> <span data-ttu-id="6bae1-139">この構成フォルダーの名前は _.template.config_ です。</span><span class="sxs-lookup"><span data-stu-id="6bae1-139">This config folder is named _.template.config_.</span></span>
+<span data-ttu-id="76474-139">テンプレートを作成すると、特別な構成フォルダーを除く、テンプレート フォルダー内のすべてのファイルとフォルダーがテンプレートの一部として含まれます。</span><span class="sxs-lookup"><span data-stu-id="76474-139">When you create a template, all files and folders in the template folder are included as part of the template except for the special config folder.</span></span> <span data-ttu-id="76474-140">この構成フォルダーの名前は _.template.config_ です。</span><span class="sxs-lookup"><span data-stu-id="76474-140">This config folder is named _.template.config_.</span></span>
 
-<span data-ttu-id="6bae1-140">まず、 _.template.config_ という名前の新しいサブフォルダーを作成し、このフォルダーに入ります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-140">First, create a new subfolder named _.template.config_, enter it.</span></span> <span data-ttu-id="6bae1-141">次に、_template.json_ という名前の新しいファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-141">Then, create a new file named _template.json_.</span></span> <span data-ttu-id="6bae1-142">フォルダー構造は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-142">Your folder structure should look like this:</span></span>
+<span data-ttu-id="76474-141">まず、 _.template.config_ という名前の新しいサブフォルダーを作成し、このフォルダーに入ります。</span><span class="sxs-lookup"><span data-stu-id="76474-141">First, create a new subfolder named _.template.config_, enter it.</span></span> <span data-ttu-id="76474-142">次に、_template.json_ という名前の新しいファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="76474-142">Then, create a new file named _template.json_.</span></span> <span data-ttu-id="76474-143">フォルダー構造は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="76474-143">Your folder structure should look like this.</span></span>
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-<span data-ttu-id="6bae1-143">お好みのテキスト エディターで _template.json_ を開き、次の json コードを貼り付けて保存します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-143">Open the _template.json_ with your favorite text editor and paste in the following json code and save it:</span></span>
+<span data-ttu-id="76474-144">お好みのテキスト エディターで _template.json_ を開き、次の json コードを貼り付けて保存します。</span><span class="sxs-lookup"><span data-stu-id="76474-144">Open the _template.json_ with your favorite text editor and paste in the following json code and save it.</span></span>
 
 ```json
 {
@@ -129,16 +136,21 @@ working
 }
 ```
 
-<span data-ttu-id="6bae1-144">この構成ファイルには、テンプレートのすべての設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-144">This config file contains all of the settings for your template.</span></span> <span data-ttu-id="6bae1-145">`name` や `shortName` などの基本設定を確認できますが、`project` に設定された `tags/type` 値もあります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-145">You can see the basic settings such as `name` and `shortName` but also there's a `tags/type` value that's set to `project`.</span></span> <span data-ttu-id="6bae1-146">これにより、テンプレートがプロジェクト テンプレートとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-146">This designates your template as a project template.</span></span> <span data-ttu-id="6bae1-147">作成するテンプレートの種類に制限はありません。</span><span class="sxs-lookup"><span data-stu-id="6bae1-147">There's no restriction on the type of template you create.</span></span> <span data-ttu-id="6bae1-148">`item` および `project` 値は、ユーザーが検索しているテンプレートの種類を簡単にフィルター処理できるように .NET Core で推奨されている一般的な名前です。</span><span class="sxs-lookup"><span data-stu-id="6bae1-148">The `item` and `project` values are common names that .NET Core recommends so that users can easily filter the type of template they're searching for.</span></span>
+<span data-ttu-id="76474-145">この構成ファイルには、テンプレートのすべての設定が含まれます。</span><span class="sxs-lookup"><span data-stu-id="76474-145">This config file contains all of the settings for your template.</span></span> <span data-ttu-id="76474-146">`name` や `shortName` などの基本設定を確認できますが、`project` に設定された `tags/type` 値もあります。</span><span class="sxs-lookup"><span data-stu-id="76474-146">You can see the basic settings such as `name` and `shortName` but also there's a `tags/type` value that's set to `project`.</span></span> <span data-ttu-id="76474-147">これにより、テンプレートがプロジェクト テンプレートとして指定されます。</span><span class="sxs-lookup"><span data-stu-id="76474-147">This designates your template as a project template.</span></span> <span data-ttu-id="76474-148">作成するテンプレートの種類に制限はありません。</span><span class="sxs-lookup"><span data-stu-id="76474-148">There's no restriction on the type of template you create.</span></span> <span data-ttu-id="76474-149">`item` および `project` 値は、ユーザーが検索しているテンプレートの種類を簡単にフィルター処理できるように .NET Core で推奨されている一般的な名前です。</span><span class="sxs-lookup"><span data-stu-id="76474-149">The `item` and `project` values are common names that .NET Core recommends so that users can easily filter the type of template they're searching for.</span></span>
 
-<span data-ttu-id="6bae1-149">`classifications` 項目は、`dotnet new` を実行してテンプレートの一覧を取得したときに表示される **tags** 列を表します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-149">The `classifications` item represents the **tags** column you see when you run `dotnet new` and get a list of templates.</span></span> <span data-ttu-id="6bae1-150">ユーザーは分類タグに基づいて検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-150">Users can also search based on classification tags.</span></span> <span data-ttu-id="6bae1-151">json ファイル内の `tags` プロパティと、`classifications` の tags 一覧を混同しないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="6bae1-151">Don't confuse the `tags` property in the json file with the `classifications` tags list.</span></span> <span data-ttu-id="6bae1-152">これらは残念ながら同じ名前を付けられてしまった 2 つの異なるものです。</span><span class="sxs-lookup"><span data-stu-id="6bae1-152">They're two different things unfortunately named similarly.</span></span> <span data-ttu-id="6bae1-153">*template.json* ファイルの完全スキーマは [JSON Schema Store](http://json.schemastore.org/template) にあります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-153">The full schema for the *template.json* file is found at the [JSON Schema Store](http://json.schemastore.org/template).</span></span> <span data-ttu-id="6bae1-154">*template.json* ファイルについて詳しくは、[dotnet テンプレート wiki](https://github.com/dotnet/templating/wiki) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="6bae1-154">For more information about the *template.json* file, see the [dotnet templating wiki](https://github.com/dotnet/templating/wiki).</span></span>
+<span data-ttu-id="76474-150">`classifications` 項目は、`dotnet new` を実行してテンプレートの一覧を取得したときに表示される **tags** 列を表します。</span><span class="sxs-lookup"><span data-stu-id="76474-150">The `classifications` item represents the **tags** column you see when you run `dotnet new` and get a list of templates.</span></span> <span data-ttu-id="76474-151">ユーザーは分類タグに基づいて検索することもできます。</span><span class="sxs-lookup"><span data-stu-id="76474-151">Users can also search based on classification tags.</span></span> <span data-ttu-id="76474-152">json ファイル内の `tags` プロパティと、`classifications` の tags 一覧を混同しないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="76474-152">Don't confuse the `tags` property in the json file with the `classifications` tags list.</span></span> <span data-ttu-id="76474-153">これらは残念ながら同じ名前を付けられてしまった 2 つの異なるものです。</span><span class="sxs-lookup"><span data-stu-id="76474-153">They're two different things unfortunately named similarly.</span></span> <span data-ttu-id="76474-154">*template.json* ファイルの完全スキーマは [JSON Schema Store](http://json.schemastore.org/template) にあります。</span><span class="sxs-lookup"><span data-stu-id="76474-154">The full schema for the *template.json* file is found at the [JSON Schema Store](http://json.schemastore.org/template).</span></span> <span data-ttu-id="76474-155">*template.json* ファイルについて詳しくは、[dotnet テンプレート wiki](https://github.com/dotnet/templating/wiki) をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="76474-155">For more information about the *template.json* file, see the [dotnet templating wiki](https://github.com/dotnet/templating/wiki).</span></span>
 
-<span data-ttu-id="6bae1-155">有効な _.template.config/template.json_ ファイルを用意したので、テンプレートをインストールする準備ができました。</span><span class="sxs-lookup"><span data-stu-id="6bae1-155">Now that you have a valid _.template.config/template.json_ file, your template is ready to be installed.</span></span> <span data-ttu-id="6bae1-156">テンプレートをインストールする前に、テンプレートに含めたくない余分なファイルとフォルダー (_bin_ フォルダーや _obj_ フォルダーなど) を必ず削除してください。</span><span class="sxs-lookup"><span data-stu-id="6bae1-156">Before you install the template, make sure that you delete any extra files folders and files you don't want included in your template, like the _bin_ or _obj_ folders.</span></span> <span data-ttu-id="6bae1-157">ターミナルで _consoleasync_ フォルダーに移動し、`dotnet new -i .\` を実行して現在のフォルダーにあるテンプレートをインストールします。</span><span class="sxs-lookup"><span data-stu-id="6bae1-157">In your terminal, navigate to the _consoleasync_ folder and run `dotnet new -i .\` to install the template located at the current folder.</span></span> <span data-ttu-id="6bae1-158">Linux または MacOS オペレーティング システムを使用している場合は、`dotnet new -i ./` のようにスラッシュを使用します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-158">If you're using a Linux or MacOS operating system, use a forward slash: `dotnet new -i ./`.</span></span>
+<span data-ttu-id="76474-156">有効な _.template.config/template.json_ ファイルを用意したので、テンプレートをインストールする準備ができました。</span><span class="sxs-lookup"><span data-stu-id="76474-156">Now that you have a valid _.template.config/template.json_ file, your template is ready to be installed.</span></span> <span data-ttu-id="76474-157">テンプレートをインストールする前に、テンプレートに含めたくない余分なファイルとフォルダー (_bin_ フォルダーや _obj_ フォルダーなど) を必ず削除してください。</span><span class="sxs-lookup"><span data-stu-id="76474-157">Before you install the template, make sure that you delete any extra files folders and files you don't want included in your template, like the _bin_ or _obj_ folders.</span></span> <span data-ttu-id="76474-158">ターミナルで _consoleasync_ フォルダーに移動し、`dotnet new -i .\` を実行して現在のフォルダーにあるテンプレートをインストールします。</span><span class="sxs-lookup"><span data-stu-id="76474-158">In your terminal, navigate to the _consoleasync_ folder and run `dotnet new -i .\` to install the template located at the current folder.</span></span> <span data-ttu-id="76474-159">Linux または macOS オペレーティング システムを使用している場合は、`dotnet new -i ./` のようにスラッシュを使用します。</span><span class="sxs-lookup"><span data-stu-id="76474-159">If you're using a Linux or macOS operating system, use a forward slash: `dotnet new -i ./`.</span></span>
 
-<span data-ttu-id="6bae1-159">このコマンドにより、インストールされているテンプレートの一覧が出力されます。作成したテンプレートも含まれているはずです。</span><span class="sxs-lookup"><span data-stu-id="6bae1-159">This command outputs the list of templates installed, which should include yours.</span></span>
+<span data-ttu-id="76474-160">このコマンドにより、インストールされているテンプレートの一覧が出力されます。作成したテンプレートも含まれているはずです。</span><span class="sxs-lookup"><span data-stu-id="76474-160">This command outputs the list of templates installed, which should include yours.</span></span>
+
+```dotnetcli
+dotnet new -i .\
+```
+
+<span data-ttu-id="76474-161">次のような出力が得られます。</span><span class="sxs-lookup"><span data-stu-id="76474-161">You get output similar to the following.</span></span>
 
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -157,28 +169,49 @@ Windows Forms (WinForms) Application              winforms              [C#], VB
 Worker Service                                    worker                [C#]              Common/Worker/Web
 ```
 
-### <a name="test-the-project-template"></a><span data-ttu-id="6bae1-160">プロジェクト テンプレートをテストする</span><span class="sxs-lookup"><span data-stu-id="6bae1-160">Test the project template</span></span>
+### <a name="test-the-project-template"></a><span data-ttu-id="76474-162">プロジェクト テンプレートをテストする</span><span class="sxs-lookup"><span data-stu-id="76474-162">Test the project template</span></span>
 
-<span data-ttu-id="6bae1-161">項目テンプレートをインストールしたので、テストします。</span><span class="sxs-lookup"><span data-stu-id="6bae1-161">Now that you have an item template installed, test it.</span></span> <span data-ttu-id="6bae1-162">_test_ フォルダーに移動し、`dotnet new consoleasync` を使用して新しいコンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="6bae1-162">Navigate to the _test_ folder and create a new console application with `dotnet new consoleasync`.</span></span> <span data-ttu-id="6bae1-163">これにより、`dotnet run` コマンドを使用して簡単にテストできる作業プロジェクトが生成されます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-163">This generates a working project you can easily test with the `dotnet run` command.</span></span>
+<span data-ttu-id="76474-163">項目テンプレートをインストールしたので、テストします。</span><span class="sxs-lookup"><span data-stu-id="76474-163">Now that you have an item template installed, test it.</span></span>
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
+1. <span data-ttu-id="76474-164">_test_ フォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="76474-164">Navigate to the _test_ folder</span></span>
+
+1. <span data-ttu-id="76474-165">次のコマンドを使用して、新しいコンソール アプリケーションを作成します。これにより、`dotnet run` コマンドを使用して簡単にテストできる作業プロジェクトが生成されます。</span><span class="sxs-lookup"><span data-stu-id="76474-165">Create a new console application with the following command which generates a working project you can easily test with the `dotnet run` command.</span></span>
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    <span data-ttu-id="76474-166">次の出力が得られます。</span><span class="sxs-lookup"><span data-stu-id="76474-166">You get the following output.</span></span>
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. <span data-ttu-id="76474-167">次のコマンドを使用して、プロジェクトを実行します。</span><span class="sxs-lookup"><span data-stu-id="76474-167">Run the project using the following command.</span></span>
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    <span data-ttu-id="76474-168">次の出力が得られます。</span><span class="sxs-lookup"><span data-stu-id="76474-168">You get the following output.</span></span>
+
+    ```console
+    Hello World with C# 8.0!
+    ```
+
+<span data-ttu-id="76474-169">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="76474-169">Congratulations!</span></span> <span data-ttu-id="76474-170">.NET Core でプロジェクト テンプレートを作成し、配置しました。</span><span class="sxs-lookup"><span data-stu-id="76474-170">You created and deployed a project template with .NET Core.</span></span> <span data-ttu-id="76474-171">このチュートリアル シリーズの次のパートの準備として、作成したテンプレートをアンインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="76474-171">In preparation for the next part of this tutorial series, you must uninstall the template you created.</span></span> <span data-ttu-id="76474-172">また、必ず _test_ フォルダーからすべてのファイルを削除してください。</span><span class="sxs-lookup"><span data-stu-id="76474-172">Make sure to delete all files from the _test_ folder too.</span></span> <span data-ttu-id="76474-173">これにより、このチュートリアルの次の主要なセクションの準備が整った状態に戻ります。</span><span class="sxs-lookup"><span data-stu-id="76474-173">This will get you back to a clean state ready for the next major section of this tutorial.</span></span>
+
+### <a name="uninstall-the-template"></a><span data-ttu-id="76474-174">テンプレートをアンインストールする</span><span class="sxs-lookup"><span data-stu-id="76474-174">Uninstall the template</span></span>
+
+<span data-ttu-id="76474-175">ファイル パスを使用してテンプレートをインストールしたので、**絶対**ファイル パスを使用してアンインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="76474-175">Because you installed the template by using a file path, you must uninstall it with the **absolute** file path.</span></span> <span data-ttu-id="76474-176">`dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を表示できます。</span><span class="sxs-lookup"><span data-stu-id="76474-176">You can see a list of templates installed by running the `dotnet new -u` command.</span></span> <span data-ttu-id="76474-177">作成したテンプレートは最後に表示されているはずです。</span><span class="sxs-lookup"><span data-stu-id="76474-177">Your template should be listed last.</span></span> <span data-ttu-id="76474-178">一覧にあるパスを使用して、`dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` コマンドでテンプレートをアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="76474-178">Use the path listed to uninstall your template with the `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` command.</span></span>
+
+```dotnetcli
+dotnet new -u
 ```
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
-
-<span data-ttu-id="6bae1-164">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="6bae1-164">Congratulations!</span></span> <span data-ttu-id="6bae1-165">.NET Core でプロジェクト テンプレートを作成し、配置しました。</span><span class="sxs-lookup"><span data-stu-id="6bae1-165">You created and deployed a project template with .NET Core.</span></span> <span data-ttu-id="6bae1-166">このチュートリアル シリーズの次のパートの準備として、作成したテンプレートをアンインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-166">In preparation for the next part of this tutorial series, you must uninstall the template you created.</span></span> <span data-ttu-id="6bae1-167">また、必ず _test_ フォルダーからすべてのファイルを削除してください。</span><span class="sxs-lookup"><span data-stu-id="6bae1-167">Make sure to delete all files from the _test_ folder too.</span></span> <span data-ttu-id="6bae1-168">これにより、このチュートリアルの次の主要なセクションの準備が整った状態に戻ります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-168">This will get you back to a clean state ready for the next major section of this tutorial.</span></span>
-
-### <a name="uninstall-the-template"></a><span data-ttu-id="6bae1-169">テンプレートをアンインストールする</span><span class="sxs-lookup"><span data-stu-id="6bae1-169">Uninstall the template</span></span>
-
-<span data-ttu-id="6bae1-170">ファイル パスを使用してテンプレートをインストールしたので、**絶対**ファイル パスを使用してアンインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="6bae1-170">Because you installed the template by using a file path, you must uninstall it with the **absolute** file path.</span></span> <span data-ttu-id="6bae1-171">`dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を表示できます。</span><span class="sxs-lookup"><span data-stu-id="6bae1-171">You can see a list of templates installed by running the `dotnet new -u` command.</span></span> <span data-ttu-id="6bae1-172">作成したテンプレートは最後に表示されているはずです。</span><span class="sxs-lookup"><span data-stu-id="6bae1-172">Your template should be listed last.</span></span> <span data-ttu-id="6bae1-173">一覧にあるパスを使用して、`dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` コマンドでテンプレートをアンインストールします。</span><span class="sxs-lookup"><span data-stu-id="6bae1-173">Use the path listed to uninstall your template with the `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` command.</span></span>
+<span data-ttu-id="76474-179">次のような出力が得られます。</span><span class="sxs-lookup"><span data-stu-id="76474-179">You get output similar to the following.</span></span>
 
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,13 +239,15 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+<span data-ttu-id="76474-180">テンプレートをアンインストールするには、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="76474-180">To uninstall a template, run the following command.</span></span>
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="6bae1-174">次の手順</span><span class="sxs-lookup"><span data-stu-id="6bae1-174">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="76474-181">次の手順</span><span class="sxs-lookup"><span data-stu-id="76474-181">Next steps</span></span>
 
-<span data-ttu-id="6bae1-175">このチュートリアルでは、プロジェクト テンプレートを作成しました。</span><span class="sxs-lookup"><span data-stu-id="6bae1-175">In this tutorial, you created a project template.</span></span> <span data-ttu-id="6bae1-176">項目テンプレートとプロジェクト テンプレートの両方を使いやすいファイルにパッケージ化する方法については、このチュートリアル シリーズの続きを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6bae1-176">To learn how to package both the item and project templates into an easy-to-use file, continue this tutorial series.</span></span>
+<span data-ttu-id="76474-182">このチュートリアルでは、プロジェクト テンプレートを作成しました。</span><span class="sxs-lookup"><span data-stu-id="76474-182">In this tutorial, you created a project template.</span></span> <span data-ttu-id="76474-183">項目テンプレートとプロジェクト テンプレートの両方を使いやすいファイルにパッケージ化する方法については、このチュートリアル シリーズの続きを参照してください。</span><span class="sxs-lookup"><span data-stu-id="76474-183">To learn how to package both the item and project templates into an easy-to-use file, continue this tutorial series.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="6bae1-177">テンプレート パックを作成する</span><span class="sxs-lookup"><span data-stu-id="6bae1-177">Create a template pack</span></span>](cli-templates-create-template-pack.md)
+> [<span data-ttu-id="76474-184">テンプレート パックを作成する</span><span class="sxs-lookup"><span data-stu-id="76474-184">Create a template pack</span></span>](cli-templates-create-template-pack.md)
