@@ -6,31 +6,31 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794613"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160184"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="488a2-103">ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する方法</span><span class="sxs-lookup"><span data-stu-id="488a2-103">How to create user-defined exceptions with localized exception messages</span></span>
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="c354e-103">ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する方法</span><span class="sxs-lookup"><span data-stu-id="c354e-103">How to create user-defined exceptions with localized exception messages</span></span>
 
-<span data-ttu-id="488a2-104">この記事では、サテライト アセンブリを使用してローカライズされた例外メッセージ使用する、基底の <xref:System.Exception> クラスから継承されるユーザー定義の例外を作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="488a2-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
+<span data-ttu-id="c354e-104">この記事では、サテライト アセンブリを使用してローカライズされた例外メッセージ使用する、基底の <xref:System.Exception> クラスから継承されるユーザー定義の例外を作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c354e-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
 
-## <a name="create-custom-exceptions"></a><span data-ttu-id="488a2-105">カスタムの例外を作成する</span><span class="sxs-lookup"><span data-stu-id="488a2-105">Create custom exceptions</span></span>
+## <a name="create-custom-exceptions"></a><span data-ttu-id="c354e-105">カスタムの例外を作成する</span><span class="sxs-lookup"><span data-stu-id="c354e-105">Create custom exceptions</span></span>
 
-<span data-ttu-id="488a2-106">.NET には、使用できるさまざまな例外があります。</span><span class="sxs-lookup"><span data-stu-id="488a2-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="488a2-107">ただし、いずれもニーズに合わない場合は、独自のカスタムの例外を作成できます。</span><span class="sxs-lookup"><span data-stu-id="488a2-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
+<span data-ttu-id="c354e-106">.NET には、使用できるさまざまな例外があります。</span><span class="sxs-lookup"><span data-stu-id="c354e-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="c354e-107">ただし、いずれもニーズに合わない場合は、独自のカスタムの例外を作成できます。</span><span class="sxs-lookup"><span data-stu-id="c354e-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
 
-<span data-ttu-id="488a2-108">たとえば、`StudentName` プロパティを含む `StudentNotFoundException` を作成するとします。</span><span class="sxs-lookup"><span data-stu-id="488a2-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
-<span data-ttu-id="488a2-109">カスタムの例外を作成するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="488a2-109">To create a custom exception, follow these steps:</span></span>
+<span data-ttu-id="c354e-108">たとえば、`StudentName` プロパティを含む `StudentNotFoundException` を作成するとします。</span><span class="sxs-lookup"><span data-stu-id="c354e-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
+<span data-ttu-id="c354e-109">カスタムの例外を作成するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="c354e-109">To create a custom exception, follow these steps:</span></span>
 
-1. <span data-ttu-id="488a2-110"><xref:System.Exception> から継承されるシリアル化可能なクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="488a2-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="488a2-111">クラス名の末尾は "Exception" にするようにします。</span><span class="sxs-lookup"><span data-stu-id="488a2-111">The class name should end in "Exception":</span></span>
+1. <span data-ttu-id="c354e-110"><xref:System.Exception> から継承されるシリアル化可能なクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="c354e-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="c354e-111">クラス名の末尾は "Exception" にするようにします。</span><span class="sxs-lookup"><span data-stu-id="c354e-111">The class name should end in "Exception":</span></span>
 
     ```csharp
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -38,7 +38,7 @@ ms.locfileid: "76794613"
     End Class
     ```
 
-1. <span data-ttu-id="488a2-112">既定のコンストラクターを追加します。</span><span class="sxs-lookup"><span data-stu-id="488a2-112">Add the default constructors:</span></span>
+1. <span data-ttu-id="c354e-112">既定のコンストラクターを追加します。</span><span class="sxs-lookup"><span data-stu-id="c354e-112">Add the default constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -53,7 +53,7 @@ ms.locfileid: "76794613"
             : base(message, inner) { }
     }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -72,7 +72,7 @@ ms.locfileid: "76794613"
     End Class
     ```
 
-1. <span data-ttu-id="488a2-113">追加のプロパティとコンストラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="488a2-113">Define any additional properties and constructors:</span></span>
+1. <span data-ttu-id="c354e-113">追加のプロパティとコンストラクターを定義します。</span><span class="sxs-lookup"><span data-stu-id="c354e-113">Define any additional properties and constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -121,9 +121,9 @@ ms.locfileid: "76794613"
     End Class
     ```
 
-## <a name="create-localized-exception-messages"></a><span data-ttu-id="488a2-114">ローカライズされた例外メッセージを作成する</span><span class="sxs-lookup"><span data-stu-id="488a2-114">Create localized exception messages</span></span>
+## <a name="create-localized-exception-messages"></a><span data-ttu-id="c354e-114">ローカライズされた例外メッセージを作成する</span><span class="sxs-lookup"><span data-stu-id="c354e-114">Create localized exception messages</span></span>
 
-<span data-ttu-id="488a2-115">カスタムの例外を作成すると、次のようなコードを使用して任意の場所に例外をスローすることができます。</span><span class="sxs-lookup"><span data-stu-id="488a2-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
+<span data-ttu-id="c354e-115">カスタムの例外を作成すると、次のようなコードを使用して任意の場所に例外をスローすることができます。</span><span class="sxs-lookup"><span data-stu-id="c354e-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,24 +133,24 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-<span data-ttu-id="488a2-116">前の行の問題は、`"The student cannot be found."` が定数文字列であることです。</span><span class="sxs-lookup"><span data-stu-id="488a2-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="488a2-117">ローカライズされるアプリケーションでは、ユーザーのカルチャに応じて異なるメッセージを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="488a2-117">In a localized application, you want to have different messages depending on user culture.</span></span>
-<span data-ttu-id="488a2-118">[サテライト アセンブリ](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)はこの処理に適しています。</span><span class="sxs-lookup"><span data-stu-id="488a2-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="488a2-119">サテライト アセンブリは、特定の言語のリソースを含む .dll です。</span><span class="sxs-lookup"><span data-stu-id="488a2-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="488a2-120">実行時に特定のリソースを要求すると、ユーザーのカルチャに応じて CLR によってそのリソースが検索されます。</span><span class="sxs-lookup"><span data-stu-id="488a2-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="488a2-121">そのカルチャのサテライト アセンブリが見つからない場合は、既定のカルチャのリソースが使用されます。</span><span class="sxs-lookup"><span data-stu-id="488a2-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
+<span data-ttu-id="c354e-116">前の行の問題は、`"The student cannot be found."` が定数文字列であることです。</span><span class="sxs-lookup"><span data-stu-id="c354e-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="c354e-117">ローカライズされるアプリケーションでは、ユーザーのカルチャに応じて異なるメッセージを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c354e-117">In a localized application, you want to have different messages depending on user culture.</span></span>
+<span data-ttu-id="c354e-118">[サテライト アセンブリ](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)はこの処理に適しています。</span><span class="sxs-lookup"><span data-stu-id="c354e-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="c354e-119">サテライト アセンブリは、特定の言語のリソースを含む .dll です。</span><span class="sxs-lookup"><span data-stu-id="c354e-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="c354e-120">実行時に特定のリソースを要求すると、ユーザーのカルチャに応じて CLR によってそのリソースが検索されます。</span><span class="sxs-lookup"><span data-stu-id="c354e-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="c354e-121">そのカルチャのサテライト アセンブリが見つからない場合は、既定のカルチャのリソースが使用されます。</span><span class="sxs-lookup"><span data-stu-id="c354e-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
 
-<span data-ttu-id="488a2-122">ローカライズされた例外メッセージを作成するには:</span><span class="sxs-lookup"><span data-stu-id="488a2-122">To create the localized exception messages:</span></span>
+<span data-ttu-id="c354e-122">ローカライズされた例外メッセージを作成するには:</span><span class="sxs-lookup"><span data-stu-id="c354e-122">To create the localized exception messages:</span></span>
 
-1. <span data-ttu-id="488a2-123">リソース ファイルを保持するために、*Resources* という名前の新しいフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="488a2-123">Create a new folder named *Resources* to hold the resource files.</span></span>
-1. <span data-ttu-id="488a2-124">そこに新しいリソース ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="488a2-124">Add a new resource file to it.</span></span> <span data-ttu-id="488a2-125">Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、**[追加]** > **[新しい項目]** > **[リソース ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="488a2-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="488a2-126">ファイルに *ExceptionMessages.resx* という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="488a2-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="488a2-127">これは既定のリソース ファイルです。</span><span class="sxs-lookup"><span data-stu-id="488a2-127">This is the default resources file.</span></span>
-1. <span data-ttu-id="488a2-128">次の図に示すように、例外メッセージの名前と値のペアを追加します。</span><span class="sxs-lookup"><span data-stu-id="488a2-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
+1. <span data-ttu-id="c354e-123">リソース ファイルを保持するために、*Resources* という名前の新しいフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="c354e-123">Create a new folder named *Resources* to hold the resource files.</span></span>
+1. <span data-ttu-id="c354e-124">そこに新しいリソース ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="c354e-124">Add a new resource file to it.</span></span> <span data-ttu-id="c354e-125">Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、 **[追加]**  >  **[新しい項目]**  >  **[リソース ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c354e-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="c354e-126">ファイルに *ExceptionMessages.resx* という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="c354e-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="c354e-127">これは既定のリソース ファイルです。</span><span class="sxs-lookup"><span data-stu-id="c354e-127">This is the default resources file.</span></span>
+1. <span data-ttu-id="c354e-128">次の図に示すように、例外メッセージの名前と値のペアを追加します。</span><span class="sxs-lookup"><span data-stu-id="c354e-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
 
    ![既定のカルチャにリソースを追加する](media/add-resources-to-default-culture.jpg)
 
-1. <span data-ttu-id="488a2-130">フランス語用の新しいリソース ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="488a2-130">Add a new resource file for French.</span></span> <span data-ttu-id="488a2-131">*ExceptionMessages.fr-FR.resx* という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="488a2-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
-1. <span data-ttu-id="488a2-132">例外メッセージの名前と値のペアを再び追加します。今回はフランス語の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="488a2-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
+1. <span data-ttu-id="c354e-130">フランス語用の新しいリソース ファイルを追加します。</span><span class="sxs-lookup"><span data-stu-id="c354e-130">Add a new resource file for French.</span></span> <span data-ttu-id="c354e-131">*ExceptionMessages.fr-FR.resx* という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="c354e-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
+1. <span data-ttu-id="c354e-132">例外メッセージの名前と値のペアを再び追加します。今回はフランス語の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="c354e-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
 
    ![fr-FR カルチャにリソースを追加する](media/add-resources-to-fr-culture.jpg)
 
-1. <span data-ttu-id="488a2-134">プロジェクトをビルドすると、ビルド出力フォルダーには、サテライト アセンブリである *.dll* ファイルを含む *fr-FR* フォルダーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="488a2-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
-1. <span data-ttu-id="488a2-135">次のようなコードを使用して例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="488a2-135">You throw the exception with code like the following:</span></span>
+1. <span data-ttu-id="c354e-134">プロジェクトをビルドすると、ビルド出力フォルダーには、サテライト アセンブリである *.dll* ファイルを含む *fr-FR* フォルダーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="c354e-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
+1. <span data-ttu-id="c354e-135">次のようなコードを使用して例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="c354e-135">You throw the exception with code like the following:</span></span>
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
@@ -163,11 +163,11 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="488a2-136">プロジェクト名が `TestProject` で、リソース ファイル *ExceptionMessages.resx* がプロジェクトの *Resources* フォルダー内にある場合、リソース ファイルの完全修飾名は `TestProject.Resources.ExceptionMessages` です。</span><span class="sxs-lookup"><span data-stu-id="488a2-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
+    > <span data-ttu-id="c354e-136">プロジェクト名が `TestProject` で、リソース ファイル *ExceptionMessages.resx* がプロジェクトの *Resources* フォルダー内にある場合、リソース ファイルの完全修飾名は `TestProject.Resources.ExceptionMessages` です。</span><span class="sxs-lookup"><span data-stu-id="c354e-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="488a2-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="488a2-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c354e-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="c354e-137">See also</span></span>
 
-- [<span data-ttu-id="488a2-138">ユーザー定義の例外を作成する方法</span><span class="sxs-lookup"><span data-stu-id="488a2-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
-- [<span data-ttu-id="488a2-139">デスクトップ アプリケーションに対するサテライト アセンブリの作成</span><span class="sxs-lookup"><span data-stu-id="488a2-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [<span data-ttu-id="488a2-140">base (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="488a2-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
-- [<span data-ttu-id="488a2-141">this (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="488a2-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="c354e-138">ユーザー定義の例外を作成する方法</span><span class="sxs-lookup"><span data-stu-id="c354e-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
+- [<span data-ttu-id="c354e-139">デスクトップ アプリケーションに対するサテライト アセンブリの作成</span><span class="sxs-lookup"><span data-stu-id="c354e-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [<span data-ttu-id="c354e-140">base (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c354e-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
+- [<span data-ttu-id="c354e-141">this (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c354e-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
