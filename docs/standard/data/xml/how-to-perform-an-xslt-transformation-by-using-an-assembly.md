@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710831"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155976"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="36060-102">方法 : アセンブリを使用して XSLT 変換を実行する</span><span class="sxs-lookup"><span data-stu-id="36060-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
-<span data-ttu-id="36060-103">XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。</span><span class="sxs-lookup"><span data-stu-id="36060-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="36060-104">このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="36060-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="5647a-102">方法 : アセンブリを使用して XSLT 変換を実行する</span><span class="sxs-lookup"><span data-stu-id="5647a-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
+<span data-ttu-id="5647a-103">XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。</span><span class="sxs-lookup"><span data-stu-id="5647a-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="5647a-104">このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="5647a-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="36060-105">XML ファイルと XSLT ファイルをローカル コンピューターにコピーするには</span><span class="sxs-lookup"><span data-stu-id="36060-105">To copy the XML and XSLT files to your local computer</span></span>  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="5647a-105">XML ファイルと XSLT ファイルをローカル コンピューターにコピーするには</span><span class="sxs-lookup"><span data-stu-id="5647a-105">To copy the XML and XSLT files to your local computer</span></span>  
   
-- <span data-ttu-id="36060-106">XSLT ファイルをローカル コンピューターにコピーし、Transform.xsl という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="36060-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
+- <span data-ttu-id="5647a-106">XSLT ファイルをローカル コンピューターにコピーし、Transform.xsl という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="5647a-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -85,7 +85,7 @@ ms.locfileid: "75710831"
     </xsl:stylesheet>  
     ```  
   
-- <span data-ttu-id="36060-107">XML ファイルをローカル コンピューターにコピーし、`books.xml` という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="36060-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
+- <span data-ttu-id="5647a-107">XML ファイルをローカル コンピューターにコピーし、`books.xml` という名前を付けます。</span><span class="sxs-lookup"><span data-stu-id="5647a-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -128,60 +128,60 @@ ms.locfileid: "75710831"
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="36060-108">スクリプトを有効にしてスタイル シートをコンパイルするには</span><span class="sxs-lookup"><span data-stu-id="36060-108">To compile the style sheet with the script enabled.</span></span>  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="5647a-108">スクリプトを有効にしてスタイル シートをコンパイルするには</span><span class="sxs-lookup"><span data-stu-id="5647a-108">To compile the style sheet with the script enabled.</span></span>  
   
-1. <span data-ttu-id="36060-109">コマンド ラインで次のコマンドを実行すると、`Transform.dll` および `Transform_Script1.dll` という名前で 2 つのアセンブリが作成されます (これが既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="36060-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="36060-110">他に指定しなければ、既定のクラス名とアセンブリ名はメインのスタイル シートの名前になります)。</span><span class="sxs-lookup"><span data-stu-id="36060-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
+1. <span data-ttu-id="5647a-109">コマンド ラインで次のコマンドを実行すると、`Transform.dll` および `Transform_Script1.dll` という名前で 2 つのアセンブリが作成されます (これが既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="5647a-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="5647a-110">他に指定しなければ、既定のクラス名とアセンブリ名はメインのスタイル シートの名前になります)。</span><span class="sxs-lookup"><span data-stu-id="5647a-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
   
     ```console  
     xsltc /settings:script+ Transform.xsl  
     ```
   
-    <span data-ttu-id="36060-111">次のコマンドを実行すると、クラス名が明示的に Transform に設定されます。</span><span class="sxs-lookup"><span data-stu-id="36060-111">The following command explicitly sets the class name to Transform:</span></span>  
+    <span data-ttu-id="5647a-111">次のコマンドを実行すると、クラス名が明示的に Transform に設定されます。</span><span class="sxs-lookup"><span data-stu-id="5647a-111">The following command explicitly sets the class name to Transform:</span></span>  
   
     ```console  
     xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="36060-112">コードをコンパイルするときにコンパイル済みアセンブリを参照として含めるには</span><span class="sxs-lookup"><span data-stu-id="36060-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="5647a-112">コードをコンパイルするときにコンパイル済みアセンブリを参照として含めるには</span><span class="sxs-lookup"><span data-stu-id="5647a-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
   
-1. <span data-ttu-id="36060-113">ソリューション エクスプローラーまたはコマンド ラインで参照を追加することで、Visual Studio にアセンブリを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="36060-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
+1. <span data-ttu-id="5647a-113">ソリューション エクスプローラーまたはコマンド ラインで参照を追加することで、Visual Studio にアセンブリを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="5647a-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
   
-2. <span data-ttu-id="36060-114">コマンド ラインで C# を使用する場合、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="36060-114">For the command line with C#, use the following:</span></span>  
+2. <span data-ttu-id="5647a-114">コマンド ラインで C# を使用する場合、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="5647a-114">For the command line with C#, use the following:</span></span>  
   
     ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3. <span data-ttu-id="36060-115">コマンド ラインで Visual Basic を使用する場合、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="36060-115">For the command line with Visual Basic, use the following</span></span>  
+3. <span data-ttu-id="5647a-115">コマンド ラインで Visual Basic を使用する場合、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="5647a-115">For the command line with Visual Basic, use the following</span></span>  
   
     ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="36060-116">コンパイル済みアセンブリをコードで使用するには</span><span class="sxs-lookup"><span data-stu-id="36060-116">To use the compiled assembly in your code.</span></span>  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="5647a-116">コンパイル済みアセンブリをコードで使用するには</span><span class="sxs-lookup"><span data-stu-id="5647a-116">To use the compiled assembly in your code.</span></span>  
   
-<span data-ttu-id="36060-117">コンパイルしたスタイル シートを使用して XSLT 変換を実行する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="36060-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
+<span data-ttu-id="5647a-117">コンパイルしたスタイル シートを使用して XSLT 変換を実行する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="5647a-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
   
 [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
 [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
-<span data-ttu-id="36060-118">上記の例で、コンパイル済みアセンブリへのダイナミック リンクを作成するには、</span><span class="sxs-lookup"><span data-stu-id="36060-118">To dynamically link to the compiled assembly, replace</span></span>
+<span data-ttu-id="5647a-118">上記の例で、コンパイル済みアセンブリへのダイナミック リンクを作成するには、</span><span class="sxs-lookup"><span data-stu-id="5647a-118">To dynamically link to the compiled assembly, replace</span></span>
   
 ```csharp  
 xslt.Load(typeof(Transform));  
 ```  
   
-<span data-ttu-id="36060-119">を使用する場合</span><span class="sxs-lookup"><span data-stu-id="36060-119">with</span></span>  
+<span data-ttu-id="5647a-119">with</span><span class="sxs-lookup"><span data-stu-id="5647a-119">with</span></span>  
   
-```csharp 
+```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
-``` 
+```
   
-<span data-ttu-id="36060-120">に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="36060-120">in the example above.</span></span> <span data-ttu-id="36060-121">アセンブリの読み込み方法の詳細については、「<xref:System.Reflection.Assembly.Load%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="36060-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A>.</span></span>  
+<span data-ttu-id="5647a-120">に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="5647a-120">in the example above.</span></span> <span data-ttu-id="5647a-121">アセンブリの読み込み方法の詳細については、「<xref:System.Reflection.Assembly.Load%2A>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5647a-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36060-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="36060-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5647a-122">参照</span><span class="sxs-lookup"><span data-stu-id="5647a-122">See also</span></span>
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [<span data-ttu-id="36060-123">XSLT コンパイラ (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="36060-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [<span data-ttu-id="36060-124">XSLT 変換</span><span class="sxs-lookup"><span data-stu-id="36060-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [<span data-ttu-id="36060-125">csc.exe を使用したコマンド ラインからのビルド</span><span class="sxs-lookup"><span data-stu-id="36060-125">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [<span data-ttu-id="5647a-123">XSLT コンパイラ (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="5647a-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+- [<span data-ttu-id="5647a-124">XSLT 変換</span><span class="sxs-lookup"><span data-stu-id="5647a-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [<span data-ttu-id="5647a-125">csc.exe を使用したコマンド ラインからのビルド</span><span class="sxs-lookup"><span data-stu-id="5647a-125">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
