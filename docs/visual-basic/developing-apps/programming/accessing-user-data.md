@@ -12,26 +12,26 @@ helpviewer_keywords:
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
 ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349218"
 ---
-# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="c7e58-102">ユーザー データへのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7e58-102">Accessing User Data (Visual Basic)</span></span>
+# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="2e797-102">ユーザー データへのアクセス (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e797-102">Accessing User Data (Visual Basic)</span></span>
 
-<span data-ttu-id="c7e58-103">このセクションには、`My.User` オブジェクトとそれで実行できるタスクに関するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="c7e58-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
+<span data-ttu-id="2e797-103">このセクションには、`My.User` オブジェクトとそれで実行できるタスクに関するトピックが含まれています。</span><span class="sxs-lookup"><span data-stu-id="2e797-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
   
- <span data-ttu-id="c7e58-104">`My.User` オブジェクトを利用すれば、<xref:System.Security.Principal.IPrincipal> インターフェイスを実装するオブジェクトを返すことで、ログオン ユーザーに関する情報にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="c7e58-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
+ <span data-ttu-id="2e797-104">`My.User` オブジェクトを利用すれば、<xref:System.Security.Principal.IPrincipal> インターフェイスを実装するオブジェクトを返すことで、ログオン ユーザーに関する情報にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="2e797-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="c7e58-105">タスク</span><span class="sxs-lookup"><span data-stu-id="c7e58-105">Tasks</span></span>  
+## <a name="tasks"></a><span data-ttu-id="2e797-105">処理手順</span><span class="sxs-lookup"><span data-stu-id="2e797-105">Tasks</span></span>  
   
-|<span data-ttu-id="c7e58-106">終了</span><span class="sxs-lookup"><span data-stu-id="c7e58-106">To</span></span>|<span data-ttu-id="c7e58-107">解決方法については、</span><span class="sxs-lookup"><span data-stu-id="c7e58-107">See</span></span>|  
+|<span data-ttu-id="2e797-106">ターゲット</span><span class="sxs-lookup"><span data-stu-id="2e797-106">To</span></span>|<span data-ttu-id="2e797-107">参照先</span><span class="sxs-lookup"><span data-stu-id="2e797-107">See</span></span>|  
 |--------|---------|  
-|<span data-ttu-id="c7e58-108">ユーザーのログイン名を取得する</span><span class="sxs-lookup"><span data-stu-id="c7e58-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|<span data-ttu-id="c7e58-109">アプリケーションで Windows 認証が使用される場合、ユーザーのドメイン名を取得する</span><span class="sxs-lookup"><span data-stu-id="c7e58-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|<span data-ttu-id="c7e58-110">ユーザーの役割を判断する</span><span class="sxs-lookup"><span data-stu-id="c7e58-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|<span data-ttu-id="2e797-108">ユーザーのログイン名を取得する</span><span class="sxs-lookup"><span data-stu-id="2e797-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|<span data-ttu-id="2e797-109">アプリケーションで Windows 認証が使用される場合、ユーザーのドメイン名を取得する</span><span class="sxs-lookup"><span data-stu-id="2e797-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|<span data-ttu-id="2e797-110">ユーザーの役割を判断する</span><span class="sxs-lookup"><span data-stu-id="2e797-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="c7e58-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="c7e58-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e797-111">参照</span><span class="sxs-lookup"><span data-stu-id="2e797-111">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

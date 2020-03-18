@@ -3,33 +3,33 @@ title: リフレクションを使用した属性へのアクセス (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
 ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595497"
 ---
-# <a name="accessing-attributes-by-using-reflection-c"></a><span data-ttu-id="53341-102">リフレクションを使用した属性へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="53341-102">Accessing Attributes by Using Reflection (C#)</span></span>
-<span data-ttu-id="53341-103">カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。</span><span class="sxs-lookup"><span data-stu-id="53341-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="53341-104">リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。</span><span class="sxs-lookup"><span data-stu-id="53341-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="53341-105">鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。</span><span class="sxs-lookup"><span data-stu-id="53341-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="53341-106">このメソッドには、いくつかのオーバー ロード バージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="53341-106">This method has several overloaded versions.</span></span> <span data-ttu-id="53341-107">詳細については、<xref:System.Attribute> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="53341-107">For more information, see <xref:System.Attribute>.</span></span>  
+# <a name="accessing-attributes-by-using-reflection-c"></a><span data-ttu-id="0146f-102">リフレクションを使用した属性へのアクセス (C#)</span><span class="sxs-lookup"><span data-stu-id="0146f-102">Accessing Attributes by Using Reflection (C#)</span></span>
+<span data-ttu-id="0146f-103">カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。</span><span class="sxs-lookup"><span data-stu-id="0146f-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="0146f-104">リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。</span><span class="sxs-lookup"><span data-stu-id="0146f-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="0146f-105">鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。</span><span class="sxs-lookup"><span data-stu-id="0146f-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="0146f-106">このメソッドには、いくつかのオーバー ロード バージョンがあります。</span><span class="sxs-lookup"><span data-stu-id="0146f-106">This method has several overloaded versions.</span></span> <span data-ttu-id="0146f-107">詳細については、<xref:System.Attribute> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0146f-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- <span data-ttu-id="53341-108">次のような属性指定は、</span><span class="sxs-lookup"><span data-stu-id="53341-108">An attribute specification such as:</span></span>  
+ <span data-ttu-id="0146f-108">次のような属性指定は、</span><span class="sxs-lookup"><span data-stu-id="0146f-108">An attribute specification such as:</span></span>  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
 class SampleClass  
 ```  
   
- <span data-ttu-id="53341-109">概念的には次の記述と同じです。</span><span class="sxs-lookup"><span data-stu-id="53341-109">is conceptually equivalent to this:</span></span>  
+ <span data-ttu-id="0146f-109">概念的には次の記述と同じです。</span><span class="sxs-lookup"><span data-stu-id="0146f-109">is conceptually equivalent to this:</span></span>  
   
 ```csharp  
 Author anonymousAuthorObject = new Author("P. Ackerman");  
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- <span data-ttu-id="53341-110">ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="53341-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="53341-111">`SampleClass` について `GetCustomAttributes` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。</span><span class="sxs-lookup"><span data-stu-id="53341-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="53341-112">クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。</span><span class="sxs-lookup"><span data-stu-id="53341-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="53341-113">`GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="53341-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="53341-114">その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。</span><span class="sxs-lookup"><span data-stu-id="53341-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
+ <span data-ttu-id="0146f-110">ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。</span><span class="sxs-lookup"><span data-stu-id="0146f-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="0146f-111">`GetCustomAttributes` について `SampleClass` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。</span><span class="sxs-lookup"><span data-stu-id="0146f-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="0146f-112">クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。</span><span class="sxs-lookup"><span data-stu-id="0146f-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="0146f-113">`GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="0146f-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="0146f-114">その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。</span><span class="sxs-lookup"><span data-stu-id="0146f-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="53341-115">例</span><span class="sxs-lookup"><span data-stu-id="53341-115">Example</span></span>  
- <span data-ttu-id="53341-116">完全な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="53341-116">Here is a complete example.</span></span> <span data-ttu-id="53341-117">カスタム属性が定義され、複数のエンティティに適用された後、リフレクションを使用して取得されています。</span><span class="sxs-lookup"><span data-stu-id="53341-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="0146f-115">例</span><span class="sxs-lookup"><span data-stu-id="0146f-115">Example</span></span>  
+ <span data-ttu-id="0146f-116">完全な例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="0146f-116">Here is a complete example.</span></span> <span data-ttu-id="0146f-117">カスタム属性が定義され、複数のエンティティに適用された後、リフレクションを使用して取得されています。</span><span class="sxs-lookup"><span data-stu-id="0146f-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```csharp  
 // Multiuse attribute.  
@@ -113,12 +113,12 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="53341-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="53341-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0146f-118">参照</span><span class="sxs-lookup"><span data-stu-id="0146f-118">See also</span></span>
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [<span data-ttu-id="53341-119">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="53341-119">C# Programming Guide</span></span>](../../index.md)
-- [<span data-ttu-id="53341-120">属性に格納されている情報の取得</span><span class="sxs-lookup"><span data-stu-id="53341-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [<span data-ttu-id="53341-121">リフレクション (C#)</span><span class="sxs-lookup"><span data-stu-id="53341-121">Reflection (C#)</span></span>](../reflection.md)
-- [<span data-ttu-id="53341-122">属性 (C#)</span><span class="sxs-lookup"><span data-stu-id="53341-122">Attributes (C#)</span></span>](./index.md)
-- [<span data-ttu-id="53341-123">カスタム属性の作成 (C#)</span><span class="sxs-lookup"><span data-stu-id="53341-123">Creating Custom Attributes (C#)</span></span>](./creating-custom-attributes.md)
+- [<span data-ttu-id="0146f-119">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="0146f-119">C# Programming Guide</span></span>](../../index.md)
+- [<span data-ttu-id="0146f-120">属性に格納されている情報の取得</span><span class="sxs-lookup"><span data-stu-id="0146f-120">Retrieving Information Stored in Attributes</span></span>](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
+- [<span data-ttu-id="0146f-121">リフレクション (C#)</span><span class="sxs-lookup"><span data-stu-id="0146f-121">Reflection (C#)</span></span>](../reflection.md)
+- [<span data-ttu-id="0146f-122">属性 (C#)</span><span class="sxs-lookup"><span data-stu-id="0146f-122">Attributes (C#)</span></span>](./index.md)
+- [<span data-ttu-id="0146f-123">カスタム属性の作成 (C#)</span><span class="sxs-lookup"><span data-stu-id="0146f-123">Creating Custom Attributes (C#)</span></span>](./creating-custom-attributes.md)

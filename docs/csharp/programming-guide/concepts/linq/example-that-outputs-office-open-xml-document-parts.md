@@ -3,19 +3,19 @@ title: Office Open XML ドキュメント パーツを出力する例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66486004"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="b7bdc-102">Office Open XML ドキュメント パーツを出力する例 (C#)</span><span class="sxs-lookup"><span data-stu-id="b7bdc-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
-<span data-ttu-id="b7bdc-103">このトピックでは、Office Open XML ドキュメントを開き、ドキュメント内のパーツにアクセスする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="b7bdc-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="42e59-102">Office Open XML ドキュメント パーツを出力する例 (C#)</span><span class="sxs-lookup"><span data-stu-id="42e59-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="42e59-103">このトピックでは、Office Open XML ドキュメントを開き、ドキュメント内のパーツにアクセスする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="42e59-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b7bdc-104">例</span><span class="sxs-lookup"><span data-stu-id="b7bdc-104">Example</span></span>  
- <span data-ttu-id="b7bdc-105">次の例では、Office Open XML ドキュメントを開き、ドキュメント パーツとスタイル パーツをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="b7bdc-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="42e59-104">例</span><span class="sxs-lookup"><span data-stu-id="42e59-104">Example</span></span>  
+ <span data-ttu-id="42e59-105">次の例では、Office Open XML ドキュメントを開き、ドキュメント パーツとスタイル パーツをコンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="42e59-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="b7bdc-106">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="b7bdc-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="b7bdc-107">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="b7bdc-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="42e59-106">この例では、WindowsBase アセンブリのクラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="42e59-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="42e59-107">また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。</span><span class="sxs-lookup"><span data-stu-id="42e59-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  

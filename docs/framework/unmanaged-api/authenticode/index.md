@@ -3,43 +3,43 @@ title: Authenticode (アンマネージ API リファレンス)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132465"
 ---
-# <a name="authenticode-unmanaged-api-reference"></a><span data-ttu-id="5b003-102">Authenticode (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="5b003-102">Authenticode (Unmanaged API Reference)</span></span>
-<span data-ttu-id="5b003-103">Authenticode XrML ライセンスの作成および検証モジュールをサポートします。</span><span class="sxs-lookup"><span data-stu-id="5b003-103">Supports the Authenticode XrML license creation and verification module.</span></span>  
+# <a name="authenticode-unmanaged-api-reference"></a><span data-ttu-id="e58e3-102">Authenticode (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="e58e3-102">Authenticode (Unmanaged API Reference)</span></span>
+<span data-ttu-id="e58e3-103">Authenticode XrML ライセンスの作成および検証モジュールをサポートします。</span><span class="sxs-lookup"><span data-stu-id="e58e3-103">Supports the Authenticode XrML license creation and verification module.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5b003-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5b003-104">In This Section</span></span>  
- [<span data-ttu-id="5b003-105">_AxlGetIssuerPublicKeyHash 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-105">_AxlGetIssuerPublicKeyHash Function</span></span>](axlgetissuerpublickeyhash-function.md)  
- <span data-ttu-id="5b003-106">指定された証明書の署名に使用する秘密キーに関連付けられている公開キーの SHA-1 ハッシュを取得します。</span><span class="sxs-lookup"><span data-stu-id="5b003-106">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e58e3-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e58e3-104">In This Section</span></span>  
+ [<span data-ttu-id="e58e3-105">_AxlGetIssuerPublicKeyHash 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-105">_AxlGetIssuerPublicKeyHash Function</span></span>](axlgetissuerpublickeyhash-function.md)  
+ <span data-ttu-id="e58e3-106">指定された証明書の署名に使用する秘密キーに関連付けられている公開キーの SHA-1 ハッシュを取得します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-106">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
- [<span data-ttu-id="5b003-107">_AxlPublicKeyBlobToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-107">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>](axlpublickeyblobtopublickeytoken-function.md)  
- <span data-ttu-id="5b003-108">CSP PUBLICKEYBLOB 形式から厳密な名前の公開キー トークンを算出します。</span><span class="sxs-lookup"><span data-stu-id="5b003-108">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
+ [<span data-ttu-id="e58e3-107">_AxlPublicKeyBlobToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-107">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>](axlpublickeyblobtopublickeytoken-function.md)  
+ <span data-ttu-id="e58e3-108">CSP PUBLICKEYBLOB 形式から厳密な名前の公開キー トークンを算出します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-108">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
   
- [<span data-ttu-id="5b003-109">_AxlRSAKeyValueToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-109">_AxlRSAKeyValueToPublicKeyToken Function</span></span>](axlrsakeyvaluetopublickeytoken-function.md)  
- <span data-ttu-id="5b003-110">Modulus および Exponent を、厳密な名前の公開キー トークンに変換します。</span><span class="sxs-lookup"><span data-stu-id="5b003-110">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+ [<span data-ttu-id="e58e3-109">_AxlRSAKeyValueToPublicKeyToken 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-109">_AxlRSAKeyValueToPublicKeyToken Function</span></span>](axlrsakeyvaluetopublickeytoken-function.md)  
+ <span data-ttu-id="e58e3-110">Modulus および Exponent を、厳密な名前の公開キー トークンに変換します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-110">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
- [<span data-ttu-id="5b003-111">CertFreeAuthenticodeSignerInfo 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-111">CertFreeAuthenticodeSignerInfo Function</span></span>](certfreeauthenticodesignerinfo-function.md)  
- <span data-ttu-id="5b003-112">AXL_AUTHENTICODE_SIGNER_INFO 構造に割り当てられているリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="5b003-112">Frees resources allocated for the AXL_AUTHENTICODE_SIGNER_INFO structure.</span></span>  
+ [<span data-ttu-id="e58e3-111">CertFreeAuthenticodeSignerInfo 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-111">CertFreeAuthenticodeSignerInfo Function</span></span>](certfreeauthenticodesignerinfo-function.md)  
+ <span data-ttu-id="e58e3-112">AXL_AUTHENTICODE_SIGNER_INFO 構造に割り当てられているリソースを解放します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-112">Frees resources allocated for the AXL_AUTHENTICODE_SIGNER_INFO structure.</span></span>  
   
- [<span data-ttu-id="5b003-113">CertFreeAuthenticodeTimestamperInfo 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-113">CertFreeAuthenticodeTimestamperInfo Function</span></span>](certfreeauthenticodetimestamperinfo-function.md)  
- <span data-ttu-id="5b003-114">AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造に割り当てられているリソースを開放します。</span><span class="sxs-lookup"><span data-stu-id="5b003-114">Frees resources allocated for the AXL_AUTHENTICODE_TIMESTAMPER_INFO structure.</span></span>  
+ [<span data-ttu-id="e58e3-113">CertFreeAuthenticodeTimestamperInfo 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-113">CertFreeAuthenticodeTimestamperInfo Function</span></span>](certfreeauthenticodetimestamperinfo-function.md)  
+ <span data-ttu-id="e58e3-114">AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造に割り当てられているリソースを開放します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-114">Frees resources allocated for the AXL_AUTHENTICODE_TIMESTAMPER_INFO structure.</span></span>  
   
- [<span data-ttu-id="5b003-115">CertTimestampAuthenticodeLicense 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-115">CertTimestampAuthenticodeLicense Function</span></span>](certtimestampauthenticodelicense-function.md)  
- <span data-ttu-id="5b003-116">CertCreateAuthenticodeLicense で作成された Authenticode XrML ライセンスにタイム スタンプを付けます。</span><span class="sxs-lookup"><span data-stu-id="5b003-116">Time stamps an Authenticode XrML license created by CertCreateAuthenticodeLicense.</span></span>  
+ [<span data-ttu-id="e58e3-115">CertTimestampAuthenticodeLicense 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-115">CertTimestampAuthenticodeLicense Function</span></span>](certtimestampauthenticodelicense-function.md)  
+ <span data-ttu-id="e58e3-116">CertCreateAuthenticodeLicense で作成された Authenticode XrML ライセンスにタイム スタンプを付けます。</span><span class="sxs-lookup"><span data-stu-id="e58e3-116">Time stamps an Authenticode XrML license created by CertCreateAuthenticodeLicense.</span></span>  
   
- [<span data-ttu-id="5b003-117">CertVerifyAuthenticodeLicense 関数</span><span class="sxs-lookup"><span data-stu-id="5b003-117">CertVerifyAuthenticodeLicense Function</span></span>](certverifyauthenticodelicense-function.md)  
- <span data-ttu-id="5b003-118">Authenticode XrML ライセンスの有効性を検証します。</span><span class="sxs-lookup"><span data-stu-id="5b003-118">Verifies the validity of an Authenticode XrML license.</span></span>  
+ [<span data-ttu-id="e58e3-117">CertVerifyAuthenticodeLicense 関数</span><span class="sxs-lookup"><span data-stu-id="e58e3-117">CertVerifyAuthenticodeLicense Function</span></span>](certverifyauthenticodelicense-function.md)  
+ <span data-ttu-id="e58e3-118">Authenticode XrML ライセンスの有効性を検証します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-118">Verifies the validity of an Authenticode XrML license.</span></span>  
   
- [<span data-ttu-id="5b003-119">AXL_AUTHENTICODE_SIGNER_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="5b003-119">AXL_AUTHENTICODE_SIGNER_INFO Structure</span></span>](axl-authenticode-signer-info-structure.md)  
- <span data-ttu-id="5b003-120">Authenticode の署名者情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="5b003-120">Defines the Authenticode signer information.</span></span>  
+ [<span data-ttu-id="e58e3-119">AXL_AUTHENTICODE_SIGNER_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="e58e3-119">AXL_AUTHENTICODE_SIGNER_INFO Structure</span></span>](axl-authenticode-signer-info-structure.md)  
+ <span data-ttu-id="e58e3-120">Authenticode の署名者情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-120">Defines the Authenticode signer information.</span></span>  
   
- [<span data-ttu-id="5b003-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="5b003-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>](axl-authenticode-timestamper-info-structure.md)  
- <span data-ttu-id="5b003-122">Authenticode のタイム スタンパー情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="5b003-122">Defines the Authenticode time stamper information.</span></span>  
+ [<span data-ttu-id="e58e3-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体</span><span class="sxs-lookup"><span data-stu-id="e58e3-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>](axl-authenticode-timestamper-info-structure.md)  
+ <span data-ttu-id="e58e3-122">Authenticode のタイム スタンパー情報を定義します。</span><span class="sxs-lookup"><span data-stu-id="e58e3-122">Defines the Authenticode time stamper information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b003-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b003-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e58e3-123">参照</span><span class="sxs-lookup"><span data-stu-id="e58e3-123">See also</span></span>
 
-- [<span data-ttu-id="5b003-124">アンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="5b003-124">Unmanaged API Reference</span></span>](../index.md)
+- [<span data-ttu-id="e58e3-124">アンマネージ API リファレンス</span><span class="sxs-lookup"><span data-stu-id="e58e3-124">Unmanaged API Reference</span></span>](../index.md)
