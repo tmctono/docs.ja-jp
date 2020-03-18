@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197315"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642621"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="bb778-103">方法: FTP でディレクトリの内容を一覧表示する</span><span class="sxs-lookup"><span data-stu-id="bb778-103">How to: List directory contents with FTP</span></span>
+# <a name="how-to-list-directory-contents-with-ftp"></a><span data-ttu-id="8397e-103">方法: FTP でディレクトリの内容を一覧表示する</span><span class="sxs-lookup"><span data-stu-id="8397e-103">How to: List directory contents with FTP</span></span>
 
-<span data-ttu-id="bb778-104">このサンプルでは、FTP サーバーのディレクトリの内容を一覧表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="bb778-104">This sample shows how to list the directory contents of an FTP server.</span></span>
+<span data-ttu-id="8397e-104">このサンプルでは、FTP サーバーのディレクトリの内容を一覧表示する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8397e-104">This sample shows how to list the directory contents of an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bb778-105">例</span><span class="sxs-lookup"><span data-stu-id="bb778-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8397e-105">例</span><span class="sxs-lookup"><span data-stu-id="8397e-105">Example</span></span>
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ Namespace Examples.System.Net
 End Namespace
 ```
 
-<span data-ttu-id="bb778-106">特定のディレクトリを一覧表示する必要がある場合、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> メソッドで使用している URI の終わりにそのディレクトリを追加します。</span><span class="sxs-lookup"><span data-stu-id="bb778-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
+<span data-ttu-id="8397e-106">特定のディレクトリを一覧表示する必要がある場合、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> メソッドで使用している URI の終わりにそのディレクトリを追加します。</span><span class="sxs-lookup"><span data-stu-id="8397e-106">If you need to list a specific directory, just add the directory to the end of the URI you're using in the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method:</span></span>
 
 ```csharp
 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");
