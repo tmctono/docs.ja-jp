@@ -3,21 +3,21 @@ title: 特定の属性を持つ要素を検索する方法 (XPath-LINQ to XML) (
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
 ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141044"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="303a3-102">特定の属性を持つ要素を検索する方法 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="303a3-102">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="303a3-103">特定の属性を持つすべての要素を検索しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="303a3-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="303a3-104">属性の内容は問わず、</span><span class="sxs-lookup"><span data-stu-id="303a3-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="303a3-105">属性の存在に基づいて選択を行うような場合です。</span><span class="sxs-lookup"><span data-stu-id="303a3-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="d3c82-102">特定の属性を持つ要素を検索する方法 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d3c82-102">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="d3c82-103">特定の属性を持つすべての要素を検索しなければならない場合があります。</span><span class="sxs-lookup"><span data-stu-id="d3c82-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="d3c82-104">属性の内容は問わず、</span><span class="sxs-lookup"><span data-stu-id="d3c82-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="d3c82-105">属性の存在に基づいて選択を行うような場合です。</span><span class="sxs-lookup"><span data-stu-id="d3c82-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="303a3-106">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="303a3-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="d3c82-106">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d3c82-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="303a3-107">例</span><span class="sxs-lookup"><span data-stu-id="303a3-107">Example</span></span>  
- <span data-ttu-id="303a3-108">次のコードは、`Select` 属性を持つ要素のみを選択します。</span><span class="sxs-lookup"><span data-stu-id="303a3-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="d3c82-107">例</span><span class="sxs-lookup"><span data-stu-id="d3c82-107">Example</span></span>  
+ <span data-ttu-id="d3c82-108">次のコードは、`Select` 属性を持つ要素のみを選択します。</span><span class="sxs-lookup"><span data-stu-id="d3c82-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="303a3-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="303a3-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="d3c82-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="d3c82-109">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
