@@ -2,17 +2,17 @@
 title: 指定された属性または名前のファイルを照会する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346717"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168870"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="d89fb-102">指定された属性または名前のファイルを照会する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="d89fb-102">How to query for files with a specified attribute or name (C#)</span></span>
-<span data-ttu-id="d89fb-103">この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d89fb-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="d89fb-104">また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。</span><span class="sxs-lookup"><span data-stu-id="d89fb-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a><span data-ttu-id="31513-102">指定された属性または名前のファイルを照会する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="31513-102">How to query for files with a specified attribute or name (C#)</span></span>
+<span data-ttu-id="31513-103">この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="31513-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="31513-104">また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。</span><span class="sxs-lookup"><span data-stu-id="31513-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d89fb-105">例</span><span class="sxs-lookup"><span data-stu-id="d89fb-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="31513-105">例</span><span class="sxs-lookup"><span data-stu-id="31513-105">Example</span></span>  
   
 ```csharp  
 class FindFileByExtension  
@@ -44,8 +44,8 @@ class FindFileByExtension
             Console.WriteLine(fi.FullName);  
         }  
   
-        // Create and execute a new query by using the previous   
-        // query as a starting point. fileQuery is not   
+        // Create and execute a new query by using the previous
+        // query as a starting point. fileQuery is not
         // executed again until the call to Last()  
         var newestFile =  
             (from file in fileQuery  
@@ -63,10 +63,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d89fb-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="d89fb-106">Compiling the Code</span></span>  
-  <span data-ttu-id="d89fb-107">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="d89fb-107">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="31513-106">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="31513-106">Compiling the Code</span></span>  
+  <span data-ttu-id="31513-107">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="31513-107">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="d89fb-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="d89fb-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31513-108">参照</span><span class="sxs-lookup"><span data-stu-id="31513-108">See also</span></span>
 
-- [<span data-ttu-id="d89fb-109">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="d89fb-109">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="d89fb-110">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="d89fb-110">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="31513-109">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="31513-109">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="31513-110">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="31513-110">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

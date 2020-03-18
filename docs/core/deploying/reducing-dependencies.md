@@ -4,43 +4,43 @@ description: project.json ベースのライブラリ作成時にパッケージ
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740827"
 ---
-# <a name="reducing-package-dependencies-with-projectjson"></a><span data-ttu-id="5e6aa-103">project.json によるパッケージ依存関係の縮小</span><span class="sxs-lookup"><span data-stu-id="5e6aa-103">Reducing Package Dependencies with project.json</span></span>
+# <a name="reducing-package-dependencies-with-projectjson"></a><span data-ttu-id="8caac-103">project.json によるパッケージ依存関係の縮小</span><span class="sxs-lookup"><span data-stu-id="8caac-103">Reducing Package Dependencies with project.json</span></span>
 
-<span data-ttu-id="5e6aa-104">この記事では、`project.json` ライブラリの作成時にパッケージ依存関係を減らすために知っておくべきことについて紹介します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-104">This article covers what you need to know about reducing your package dependencies when authoring `project.json` libraries.</span></span> <span data-ttu-id="5e6aa-105">この記事を最後までお読みいただくと、必要な依存関係だけが使用されるようにライブラリを構築する方法を理解できます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-105">By the end of this article, you will learn how to compose your library such that it only uses the dependencies it needs.</span></span>
+<span data-ttu-id="8caac-104">この記事では、`project.json` ライブラリの作成時にパッケージ依存関係を減らすために知っておくべきことについて紹介します。</span><span class="sxs-lookup"><span data-stu-id="8caac-104">This article covers what you need to know about reducing your package dependencies when authoring `project.json` libraries.</span></span> <span data-ttu-id="8caac-105">この記事を最後までお読みいただくと、必要な依存関係だけが使用されるようにライブラリを構築する方法を理解できます。</span><span class="sxs-lookup"><span data-stu-id="8caac-105">By the end of this article, you will learn how to compose your library such that it only uses the dependencies it needs.</span></span>
 
-## <a name="why-its-important"></a><span data-ttu-id="5e6aa-106">これが重要な理由</span><span class="sxs-lookup"><span data-stu-id="5e6aa-106">Why it's Important</span></span>
+## <a name="why-its-important"></a><span data-ttu-id="8caac-106">これが重要な理由</span><span class="sxs-lookup"><span data-stu-id="8caac-106">Why it's Important</span></span>
 
-<span data-ttu-id="5e6aa-107">.NET Core は NuGet パッケージで構成される製品です。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-107">.NET Core is a product made up of NuGet packages.</span></span>  <span data-ttu-id="5e6aa-108">必要不可欠なパッケージが [.NETStandard.Library メタパッケージ](https://www.nuget.org/packages/NETStandard.Library)です。これは他のパッケージから構成される NuGet パッケージです。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-108">An essential package is the [.NETStandard.Library metapackage](https://www.nuget.org/packages/NETStandard.Library), which is a NuGet package composed of other packages.</span></span> <span data-ttu-id="5e6aa-109">一連のパッケージが提供されますが、それらは .NET Framework、.NET Core、Xamarin/Mono など、複数の .NET 実装で動作することが確認されています。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-109">It provides you with the set of packages that are guaranteed to work on multiple .NET implementations, such as .NET Framework, .NET Core, and Xamarin/Mono.</span></span>
+<span data-ttu-id="8caac-107">.NET Core は NuGet パッケージで構成される製品です。</span><span class="sxs-lookup"><span data-stu-id="8caac-107">.NET Core is a product made up of NuGet packages.</span></span>  <span data-ttu-id="8caac-108">必要不可欠なパッケージが [.NETStandard.Library メタパッケージ](https://www.nuget.org/packages/NETStandard.Library)です。これは他のパッケージから構成される NuGet パッケージです。</span><span class="sxs-lookup"><span data-stu-id="8caac-108">An essential package is the [.NETStandard.Library metapackage](https://www.nuget.org/packages/NETStandard.Library), which is a NuGet package composed of other packages.</span></span> <span data-ttu-id="8caac-109">一連のパッケージが提供されますが、それらは .NET Framework、.NET Core、Xamarin/Mono など、複数の .NET 実装で動作することが確認されています。</span><span class="sxs-lookup"><span data-stu-id="8caac-109">It provides you with the set of packages that are guaranteed to work on multiple .NET implementations, such as .NET Framework, .NET Core, and Xamarin/Mono.</span></span>
 
-<span data-ttu-id="5e6aa-110">しかしながら、お使いのライブラリではすべてのパッケージが使用されるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-110">However, there's a good chance that your library won't use every single package it contains.</span></span>  <span data-ttu-id="5e6aa-111">ライブラリを作成し、NuGet 経由で配信するときは、実際に使用するパッケージにのみ依存関係を "減らす" ことが推奨されます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-111">When authoring a library and distributing it over NuGet, it's a best practice to "trim" your dependencies down to only the packages you actually use.</span></span>  <span data-ttu-id="5e6aa-112">結果的に、NuGet パッケージの全体的フットプリントが少なくなります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-112">This results in a smaller overall footprint for NuGet packages.</span></span>
+<span data-ttu-id="8caac-110">しかしながら、お使いのライブラリではすべてのパッケージが使用されるとは限りません。</span><span class="sxs-lookup"><span data-stu-id="8caac-110">However, there's a good chance that your library won't use every single package it contains.</span></span>  <span data-ttu-id="8caac-111">ライブラリを作成し、NuGet 経由で配信するときは、実際に使用するパッケージにのみ依存関係を "減らす" ことが推奨されます。</span><span class="sxs-lookup"><span data-stu-id="8caac-111">When authoring a library and distributing it over NuGet, it's a best practice to "trim" your dependencies down to only the packages you actually use.</span></span>  <span data-ttu-id="8caac-112">結果的に、NuGet パッケージの全体的フットプリントが少なくなります。</span><span class="sxs-lookup"><span data-stu-id="8caac-112">This results in a smaller overall footprint for NuGet packages.</span></span>
 
-## <a name="how-to-do-it"></a><span data-ttu-id="5e6aa-113">その方法</span><span class="sxs-lookup"><span data-stu-id="5e6aa-113">How to do it</span></span>
+## <a name="how-to-do-it"></a><span data-ttu-id="8caac-113">方法</span><span class="sxs-lookup"><span data-stu-id="8caac-113">How to do it</span></span>
 
-<span data-ttu-id="5e6aa-114">現在のところ、パッケージ参照を減らす正式な `dotnet` コマンドはありません。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-114">Currently, there is no official `dotnet` command that trims package references.</span></span>  <span data-ttu-id="5e6aa-115">代わりに、手動で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-115">Instead, you'll have to do it manually.</span></span>  <span data-ttu-id="5e6aa-116">一般的なプロセスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-116">The general process looks like the following:</span></span>
+<span data-ttu-id="8caac-114">現在のところ、パッケージ参照を減らす正式な `dotnet` コマンドはありません。</span><span class="sxs-lookup"><span data-stu-id="8caac-114">Currently, there is no official `dotnet` command that trims package references.</span></span>  <span data-ttu-id="8caac-115">代わりに、手動で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="8caac-115">Instead, you'll have to do it manually.</span></span>  <span data-ttu-id="8caac-116">一般的なプロセスは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="8caac-116">The general process looks like the following:</span></span>
 
-1. <span data-ttu-id="5e6aa-117">お使いの `project.json` の `dependencies` セクションにある `NETStandard.Library` バージョン `1.6.0` を参照します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-117">Reference `NETStandard.Library` version `1.6.0` in a `dependencies` section of your `project.json`.</span></span>
-2. <span data-ttu-id="5e6aa-118">コマンド ラインから `dotnet restore` でパッケージを復元します ([注記参照](#dotnet-restore-note))。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-118">Restore packages with `dotnet restore` ([see note](#dotnet-restore-note)) from the command line.</span></span>
-3. <span data-ttu-id="5e6aa-119">`project.lock.json` ファイルを調べ、`NETStandard.Library` というセクションを探します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-119">Inspect the `project.lock.json` file and find the `NETStandard.Library` section.</span></span>  <span data-ttu-id="5e6aa-120">ファイルの始まりの近くにあります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-120">It's near the beginning of the file.</span></span>
-4. <span data-ttu-id="5e6aa-121">`dependencies` の下にあるパッケージをすべてコピーします。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-121">Copy all of the listed packages under `dependencies`.</span></span>
-5. <span data-ttu-id="5e6aa-122">`.NETStandard.Library` 参照を削除し、コピーしたパッケージで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-122">Remove the `.NETStandard.Library` reference and replace it with the copied packages.</span></span>
-6. <span data-ttu-id="5e6aa-123">不要なパッケージ参照を削除します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-123">Remove references to packages you don't need.</span></span>
+1. <span data-ttu-id="8caac-117">お使いの `NETStandard.Library` の `1.6.0` セクションにある `dependencies` バージョン `project.json` を参照します。</span><span class="sxs-lookup"><span data-stu-id="8caac-117">Reference `NETStandard.Library` version `1.6.0` in a `dependencies` section of your `project.json`.</span></span>
+2. <span data-ttu-id="8caac-118">コマンド ラインから `dotnet restore` でパッケージを復元します ([注記参照](#dotnet-restore-note))。</span><span class="sxs-lookup"><span data-stu-id="8caac-118">Restore packages with `dotnet restore` ([see note](#dotnet-restore-note)) from the command line.</span></span>
+3. <span data-ttu-id="8caac-119">`project.lock.json` ファイルを調べ、`NETStandard.Library` というセクションを探します。</span><span class="sxs-lookup"><span data-stu-id="8caac-119">Inspect the `project.lock.json` file and find the `NETStandard.Library` section.</span></span>  <span data-ttu-id="8caac-120">ファイルの始まりの近くにあります。</span><span class="sxs-lookup"><span data-stu-id="8caac-120">It's near the beginning of the file.</span></span>
+4. <span data-ttu-id="8caac-121">`dependencies` の下にあるパッケージをすべてコピーします。</span><span class="sxs-lookup"><span data-stu-id="8caac-121">Copy all of the listed packages under `dependencies`.</span></span>
+5. <span data-ttu-id="8caac-122">`.NETStandard.Library` 参照を削除し、コピーしたパッケージで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="8caac-122">Remove the `.NETStandard.Library` reference and replace it with the copied packages.</span></span>
+6. <span data-ttu-id="8caac-123">不要なパッケージ参照を削除します。</span><span class="sxs-lookup"><span data-stu-id="8caac-123">Remove references to packages you don't need.</span></span>
 
-<span data-ttu-id="5e6aa-124">不要なパッケージは次の方法で確認できます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-124">You can find out which packages you don't need by one of the following ways:</span></span>
+<span data-ttu-id="8caac-124">不要なパッケージは次の方法で確認できます。</span><span class="sxs-lookup"><span data-stu-id="8caac-124">You can find out which packages you don't need by one of the following ways:</span></span>
 
-1. <span data-ttu-id="5e6aa-125">試用とエラー。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-125">Trial and error.</span></span> <span data-ttu-id="5e6aa-126">パッケージを削除したり、復元したり、ライブラリがまだコンパイルするか確認したり、このプロセスを繰り返したりなどの操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-126">This involves removing a package, restoring, seeing if your library still compiles, and repeating this process.</span></span>
-2. <span data-ttu-id="5e6aa-127">[ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) などのツールを利用し、コードで実際に利用されている参照を確認します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-127">Using a tool such as [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) or [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) to peek at references to see what your code is actually using.</span></span> <span data-ttu-id="5e6aa-128">その後、利用している種類に該当しないパッケージを削除できます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-128">You can then remove packages that don't correspond to types you're using.</span></span>
+1. <span data-ttu-id="8caac-125">試用とエラー。</span><span class="sxs-lookup"><span data-stu-id="8caac-125">Trial and error.</span></span> <span data-ttu-id="8caac-126">パッケージを削除したり、復元したり、ライブラリがまだコンパイルするか確認したり、このプロセスを繰り返したりなどの操作が含まれます。</span><span class="sxs-lookup"><span data-stu-id="8caac-126">This involves removing a package, restoring, seeing if your library still compiles, and repeating this process.</span></span>
+2. <span data-ttu-id="8caac-127">[ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) などのツールを利用し、コードで実際に利用されている参照を確認します。</span><span class="sxs-lookup"><span data-stu-id="8caac-127">Using a tool such as [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) or [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) to peek at references to see what your code is actually using.</span></span> <span data-ttu-id="8caac-128">その後、利用している種類に該当しないパッケージを削除できます。</span><span class="sxs-lookup"><span data-stu-id="8caac-128">You can then remove packages that don't correspond to types you're using.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5e6aa-129">例</span><span class="sxs-lookup"><span data-stu-id="5e6aa-129">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8caac-129">例</span><span class="sxs-lookup"><span data-stu-id="8caac-129">Example</span></span>
 
-<span data-ttu-id="5e6aa-130">追加機能を汎用コレクション タイプに提供するライブラリを記述したとします。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-130">Imagine that you wrote a library that provided additional functionality to generic collection types.</span></span> <span data-ttu-id="5e6aa-131">そのようなライブラリは `System.Collections` のようなパッケージに依存しなければなりませんが、`System.Net.Http` のようなパッケージにはまったく依存しないことがあります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-131">Such a library would need to depend on packages such as `System.Collections`, but may not at all depend on packages such as `System.Net.Http`.</span></span> <span data-ttu-id="5e6aa-132">そのため、このライブラリが必要とするものだけにパッケージ依存関係を減らすと効果的です。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-132">As such, it would be good to trim package dependencies down to only what this library required!</span></span>
+<span data-ttu-id="8caac-130">追加機能を汎用コレクション タイプに提供するライブラリを記述したとします。</span><span class="sxs-lookup"><span data-stu-id="8caac-130">Imagine that you wrote a library that provided additional functionality to generic collection types.</span></span> <span data-ttu-id="8caac-131">そのようなライブラリは `System.Collections` のようなパッケージに依存しなければなりませんが、`System.Net.Http` のようなパッケージにはまったく依存しないことがあります。</span><span class="sxs-lookup"><span data-stu-id="8caac-131">Such a library would need to depend on packages such as `System.Collections`, but may not at all depend on packages such as `System.Net.Http`.</span></span> <span data-ttu-id="8caac-132">そのため、このライブラリが必要とするものだけにパッケージ依存関係を減らすと効果的です。</span><span class="sxs-lookup"><span data-stu-id="8caac-132">As such, it would be good to trim package dependencies down to only what this library required!</span></span>
 
-<span data-ttu-id="5e6aa-133">このライブラリから余計なものを減らすには、最初に `project.json` ファイルから始め、`NETStandard.Library` バージョン `1.6.0` の参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-133">To trim this library, you start with the `project.json` file and add a reference to `NETStandard.Library` version `1.6.0`.</span></span>
+<span data-ttu-id="8caac-133">このライブラリから余計なものを減らすには、最初に `project.json` ファイルから始め、`NETStandard.Library` バージョン `1.6.0` の参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="8caac-133">To trim this library, you start with the `project.json` file and add a reference to `NETStandard.Library` version `1.6.0`.</span></span>
 
 ```json
 {
@@ -54,9 +54,9 @@ ms.locfileid: "75740827"
 }
 ```
 
-<span data-ttu-id="5e6aa-134">次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETStandard.Library` に対して復元されたすべてのパッケージを探します。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-134">Next, you restore packages with `dotnet restore` ([see note](#dotnet-restore-note)), inspect the `project.lock.json` file, and find all the packages restored for `NETStandard.Library`.</span></span>
+<span data-ttu-id="8caac-134">次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETStandard.Library` に対して復元されたすべてのパッケージを探します。</span><span class="sxs-lookup"><span data-stu-id="8caac-134">Next, you restore packages with `dotnet restore` ([see note](#dotnet-restore-note)), inspect the `project.lock.json` file, and find all the packages restored for `NETStandard.Library`.</span></span>
 
-<span data-ttu-id="5e6aa-135">`netstandard1.0` をターゲットにするとき、`project.lock.json` ファイルの関連セクションは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-135">Here's what the relevant section in the `project.lock.json` file looks like when targeting `netstandard1.0`:</span></span>
+<span data-ttu-id="8caac-135">`project.lock.json` をターゲットにするとき、`netstandard1.0` ファイルの関連セクションは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="8caac-135">Here's what the relevant section in the `project.lock.json` file looks like when targeting `netstandard1.0`:</span></span>
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -89,7 +89,7 @@ ms.locfileid: "75740827"
 }
 ```
 
-<span data-ttu-id="5e6aa-136">次に、ライブラリの `project.json` ファイルの `dependencies` セクションにパッケージ参照をコピーします。`NETStandard.Library` 参照を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-136">Next, copy over the package references into the `dependencies` section of the library's `project.json` file, replacing the `NETStandard.Library` reference:</span></span>
+<span data-ttu-id="8caac-136">次に、ライブラリの `dependencies` ファイルの `project.json` セクションにパッケージ参照をコピーします。`NETStandard.Library` 参照を置き換えます。</span><span class="sxs-lookup"><span data-stu-id="8caac-136">Next, copy over the package references into the `dependencies` section of the library's `project.json` file, replacing the `NETStandard.Library` reference:</span></span>
 
 ```json
 {
@@ -125,9 +125,9 @@ ms.locfileid: "75740827"
 }
 ```
 
-<span data-ttu-id="5e6aa-137">パッケージがたくさんあります。コレクション タイプを拡張するとき、この多くが実際には必要ありません。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-137">That's quite a lot of packages, many of which certainly aren't necessary for extending collection types.</span></span>  <span data-ttu-id="5e6aa-138">手動でパッケージを削除するか、[ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) のようなツールを利用し、コードで実際に使用されるパッケージを特定できます。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-138">You can either remove packages manually or use a tool such as [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) or [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) to identify which packages your code actually uses.</span></span>
+<span data-ttu-id="8caac-137">パッケージがたくさんあります。コレクション タイプを拡張するとき、この多くが実際には必要ありません。</span><span class="sxs-lookup"><span data-stu-id="8caac-137">That's quite a lot of packages, many of which certainly aren't necessary for extending collection types.</span></span>  <span data-ttu-id="8caac-138">手動でパッケージを削除するか、[ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) のようなツールを利用し、コードで実際に使用されるパッケージを特定できます。</span><span class="sxs-lookup"><span data-stu-id="8caac-138">You can either remove packages manually or use a tool such as [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) or [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) to identify which packages your code actually uses.</span></span>
 
-<span data-ttu-id="5e6aa-139">余計なものを減らしたパッケージは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-139">Here's what a trimmed package could look like:</span></span>
+<span data-ttu-id="8caac-139">余計なものを減らしたパッケージは次のようになります。</span><span class="sxs-lookup"><span data-stu-id="8caac-139">Here's what a trimmed package could look like:</span></span>
 
 ```json
 {
@@ -149,7 +149,7 @@ ms.locfileid: "75740827"
 }
 ```
 
-<span data-ttu-id="5e6aa-140">これで、`NETStandard.Library` メタパッケージに依存する場合より、フットプリントが少なくなります。</span><span class="sxs-lookup"><span data-stu-id="5e6aa-140">Now, it has a smaller footprint than if it had depended on the `NETStandard.Library` metapackage.</span></span>
+<span data-ttu-id="8caac-140">これで、`NETStandard.Library` メタパッケージに依存する場合より、フットプリントが少なくなります。</span><span class="sxs-lookup"><span data-stu-id="8caac-140">Now, it has a smaller footprint than if it had depended on the `NETStandard.Library` metapackage.</span></span>
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

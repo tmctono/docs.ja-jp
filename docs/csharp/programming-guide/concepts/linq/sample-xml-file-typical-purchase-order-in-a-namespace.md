@@ -1,18 +1,18 @@
 ---
-title: サンプル XML ファイル:名前空間内の一般的な購買発注書
+title: 'サンプル XML ファイル : 名前空間内の一般的な購買発注書'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 59ef22c73345fa13278795a6363871b3657e5b8f
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 001a12210c2252d9718425d0d4013bdbdf25b996
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868682"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167965"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="b5faa-102">サンプル XML ファイル:名前空間内の一般的な購買発注書</span><span class="sxs-lookup"><span data-stu-id="b5faa-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="b5faa-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b5faa-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b5faa-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="b5faa-104">This file is a typical purchase order.</span></span> <span data-ttu-id="b5faa-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="b5faa-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="5cc4c-102">サンプル XML ファイル : 名前空間内の一般的な購買発注書</span><span class="sxs-lookup"><span data-stu-id="5cc4c-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="5cc4c-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="5cc4c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="5cc4c-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="5cc4c-104">This file is a typical purchase order.</span></span> <span data-ttu-id="5cc4c-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="5cc4c-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="b5faa-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="b5faa-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="5cc4c-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="5cc4c-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -53,4 +53,3 @@ ms.locfileid: "68868682"
   </aw:Items>  
 </aw:PurchaseOrder>  
 ```  
- 
