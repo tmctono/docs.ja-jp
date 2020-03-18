@@ -7,32 +7,32 @@ helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712469"
 ---
-# <a name="pragma-warning-c-reference"></a><span data-ttu-id="302dc-102">#pragma warning (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="302dc-102">#pragma warning (C# Reference)</span></span>
-<span data-ttu-id="302dc-103">`#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="302dc-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="f9bd8-102">#pragma warning (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="f9bd8-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="f9bd8-103">`#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="f9bd8-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="302dc-104">構文</span><span class="sxs-lookup"><span data-stu-id="302dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9bd8-104">構文</span><span class="sxs-lookup"><span data-stu-id="f9bd8-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="302dc-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="302dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9bd8-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f9bd8-105">Parameters</span></span>  
  `warning-list`  
- <span data-ttu-id="302dc-106">警告番号のコンマ区切りのリスト。</span><span class="sxs-lookup"><span data-stu-id="302dc-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="302dc-107">"CS" というプレフィックスは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="302dc-107">The "CS" prefix is optional.</span></span>  
+ <span data-ttu-id="f9bd8-106">警告番号のコンマ区切りのリスト。</span><span class="sxs-lookup"><span data-stu-id="f9bd8-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="f9bd8-107">"CS" というプレフィックスは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="f9bd8-107">The "CS" prefix is optional.</span></span>  
   
- <span data-ttu-id="302dc-108">警告番号が指定されていないと、`disable` はすべての警告を無効にし、`restore` はすべての警告を有効にします。</span><span class="sxs-lookup"><span data-stu-id="302dc-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
+ <span data-ttu-id="f9bd8-108">警告番号が指定されていないと、`disable` はすべての警告を無効にし、`restore` はすべての警告を有効にします。</span><span class="sxs-lookup"><span data-stu-id="f9bd8-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="302dc-109">Visual Studio で警告番号を調べるには、プロジェクトをビルドし、 **[出力]** ウィンドウで警告番号を探してください。</span><span class="sxs-lookup"><span data-stu-id="302dc-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
+> <span data-ttu-id="f9bd8-109">Visual Studio で警告番号を調べるには、プロジェクトをビルドし、 **[出力]** ウィンドウで警告番号を探してください。</span><span class="sxs-lookup"><span data-stu-id="f9bd8-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="302dc-110">例</span><span class="sxs-lookup"><span data-stu-id="302dc-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f9bd8-110">例</span><span class="sxs-lookup"><span data-stu-id="f9bd8-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -58,9 +58,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="302dc-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="302dc-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9bd8-111">参照</span><span class="sxs-lookup"><span data-stu-id="f9bd8-111">See also</span></span>
 
-- [<span data-ttu-id="302dc-112">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="302dc-112">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="302dc-113">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="302dc-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="302dc-114">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="302dc-114">C# Preprocessor Directives</span></span>](./index.md)
-- [<span data-ttu-id="302dc-115">C# コンパイラ エラー</span><span class="sxs-lookup"><span data-stu-id="302dc-115">C# Compiler Errors</span></span>](../compiler-messages/index.md)
+- [<span data-ttu-id="f9bd8-112">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="f9bd8-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="f9bd8-113">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="f9bd8-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f9bd8-114">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="f9bd8-114">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="f9bd8-115">C# コンパイラ エラー</span><span class="sxs-lookup"><span data-stu-id="f9bd8-115">C# Compiler Errors</span></span>](../compiler-messages/index.md)

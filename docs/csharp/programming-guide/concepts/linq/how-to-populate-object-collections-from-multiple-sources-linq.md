@@ -3,26 +3,26 @@ title: 複数のソースからオブジェクト コレクションにデータ
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
 ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345755"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="f9444-102">複数のソースからオブジェクト コレクションにデータを設定する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="f9444-102">How to populate object collections from multiple sources (LINQ) (C#)</span></span>
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="6af57-102">複数のソースからオブジェクト コレクションにデータを設定する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="6af57-102">How to populate object collections from multiple sources (LINQ) (C#)</span></span>
 
-<span data-ttu-id="f9444-103">この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f9444-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
+<span data-ttu-id="6af57-103">この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。</span><span class="sxs-lookup"><span data-stu-id="6af57-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f9444-104">メモリ内データやファイル システム内のデータを、データベース内にあるデータに結合しようとしないでください。</span><span class="sxs-lookup"><span data-stu-id="f9444-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="f9444-105">このようなドメイン間結合を行うと、データベース クエリと他の種類のソースとで結合操作の定義方法に違いがあることが原因で、結果が未定義になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="f9444-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="f9444-106">また、データベース内に大量のデータが存在すると、こうした操作によってメモリ不足例外が発生するおそれがあります。</span><span class="sxs-lookup"><span data-stu-id="f9444-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="f9444-107">データベースのデータをメモリ内データに結合するには、まずデータベース クエリで `ToList` または `ToArray` を呼び出してから、返されたコレクションで結合を実行します。</span><span class="sxs-lookup"><span data-stu-id="f9444-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
+> <span data-ttu-id="6af57-104">メモリ内データやファイル システム内のデータを、データベース内にあるデータに結合しようとしないでください。</span><span class="sxs-lookup"><span data-stu-id="6af57-104">Don't try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="6af57-105">このようなドメイン間結合を行うと、データベース クエリと他の種類のソースとで結合操作の定義方法に違いがあることが原因で、結果が未定義になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="6af57-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="6af57-106">また、データベース内に大量のデータが存在すると、こうした操作によってメモリ不足例外が発生するおそれがあります。</span><span class="sxs-lookup"><span data-stu-id="6af57-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="6af57-107">データベースのデータをメモリ内データに結合するには、まずデータベース クエリで `ToList` または `ToArray` を呼び出してから、返されたコレクションで結合を実行します。</span><span class="sxs-lookup"><span data-stu-id="6af57-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>
 
-## <a name="to-create-the-data-file"></a><span data-ttu-id="f9444-108">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="f9444-108">To create the data file</span></span>
+## <a name="to-create-the-data-file"></a><span data-ttu-id="6af57-108">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="6af57-108">To create the data file</span></span>
 
-<span data-ttu-id="f9444-109">「[異種ファイルのコンテンツを結合する方法 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)」の説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。</span><span class="sxs-lookup"><span data-stu-id="f9444-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
+<span data-ttu-id="6af57-109">「[異種ファイルのコンテンツを結合する方法 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)」の説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。</span><span class="sxs-lookup"><span data-stu-id="6af57-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to join content from dissimilar files (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="f9444-110">例</span><span class="sxs-lookup"><span data-stu-id="f9444-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6af57-110">例</span><span class="sxs-lookup"><span data-stu-id="6af57-110">Example</span></span>
 
-<span data-ttu-id="f9444-111">次の例は、2 つのメモリ内文字列コレクションからマージされたデータを、名前付きの型 `Student` を使用して格納する方法を示しています。各コレクションは、.csv 形式のスプレッドシート データをシミュレートしています。</span><span class="sxs-lookup"><span data-stu-id="f9444-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="f9444-112">1 つ目の文字列コレクションは学生の名前と ID を表し、2 つ目のコレクションは学生 ID (最初の列) と 4 つの試験の点数を表しています。</span><span class="sxs-lookup"><span data-stu-id="f9444-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="f9444-113">外部キーとして ID が使用されます。</span><span class="sxs-lookup"><span data-stu-id="f9444-113">The ID is used as the foreign key.</span></span>
+<span data-ttu-id="6af57-111">次の例は、2 つのメモリ内文字列コレクションからマージされたデータを、名前付きの型 `Student` を使用して格納する方法を示しています。各コレクションは、.csv 形式のスプレッドシート データをシミュレートしています。</span><span class="sxs-lookup"><span data-stu-id="6af57-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="6af57-112">1 つ目の文字列コレクションは学生の名前と ID を表し、2 つ目のコレクションは学生 ID (最初の列) と 4 つの試験の点数を表しています。</span><span class="sxs-lookup"><span data-stu-id="6af57-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="6af57-113">外部キーとして ID が使用されます。</span><span class="sxs-lookup"><span data-stu-id="6af57-113">The ID is used as the foreign key.</span></span>
 
 ```csharp
 using System;
@@ -107,9 +107,9 @@ class PopulateCollection
  */
 ```
 
-<span data-ttu-id="f9444-114">[select](../../../language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。</span><span class="sxs-lookup"><span data-stu-id="f9444-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
+<span data-ttu-id="6af57-114">[select](../../../language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。</span><span class="sxs-lookup"><span data-stu-id="6af57-114">In the [select](../../../language-reference/keywords/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>
 
-<span data-ttu-id="f9444-115">クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。</span><span class="sxs-lookup"><span data-stu-id="f9444-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="f9444-116">クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。</span><span class="sxs-lookup"><span data-stu-id="f9444-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="f9444-117">次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。</span><span class="sxs-lookup"><span data-stu-id="f9444-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
+<span data-ttu-id="6af57-115">クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。</span><span class="sxs-lookup"><span data-stu-id="6af57-115">If you don't have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="6af57-116">クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。</span><span class="sxs-lookup"><span data-stu-id="6af57-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="6af57-117">次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。</span><span class="sxs-lookup"><span data-stu-id="6af57-117">The following example executes the same task as the previous example, but uses anonymous types instead of named types:</span></span>
 
 ```csharp
 // Merge the data sources by using an anonymous type.
@@ -139,8 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f9444-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9444-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6af57-118">参照</span><span class="sxs-lookup"><span data-stu-id="6af57-118">See also</span></span>
 
-- [<span data-ttu-id="f9444-119">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="f9444-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="f9444-120">オブジェクト初期化子とコレクション初期化子</span><span class="sxs-lookup"><span data-stu-id="f9444-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="f9444-121">匿名型</span><span class="sxs-lookup"><span data-stu-id="f9444-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)
+- [<span data-ttu-id="6af57-119">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="6af57-119">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="6af57-120">オブジェクト初期化子とコレクション初期化子</span><span class="sxs-lookup"><span data-stu-id="6af57-120">Object and Collection Initializers</span></span>](../../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="6af57-121">匿名型</span><span class="sxs-lookup"><span data-stu-id="6af57-121">Anonymous Types</span></span>](../../classes-and-structs/anonymous-types.md)

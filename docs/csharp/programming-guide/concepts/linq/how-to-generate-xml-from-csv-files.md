@@ -3,19 +3,19 @@ title: CSV ファイルから XML を生成する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635809"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="cc2fb-102">CSV ファイルから XML を生成する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="cc2fb-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="cc2fb-103">この例では、統合言語クエリ (LINQ) および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cc2fb-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="bd73b-102">CSV ファイルから XML を生成する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="bd73b-102">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="bd73b-103">この例では、統合言語クエリ (LINQ) および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="bd73b-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cc2fb-104">例</span><span class="sxs-lookup"><span data-stu-id="cc2fb-104">Example</span></span>  
- <span data-ttu-id="cc2fb-105">次のコードは、文字列の配列に対して LINQ クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="cc2fb-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd73b-104">例</span><span class="sxs-lookup"><span data-stu-id="bd73b-104">Example</span></span>  
+ <span data-ttu-id="bd73b-105">次のコードは、文字列の配列に対して LINQ クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="bd73b-105">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="cc2fb-106">クエリでは、`let` 句を使用して各文字列をフィールドの配列に分割します。</span><span class="sxs-lookup"><span data-stu-id="cc2fb-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="bd73b-106">クエリでは、`let` 句を使用して各文字列をフィールドの配列に分割します。</span><span class="sxs-lookup"><span data-stu-id="bd73b-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="cc2fb-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="cc2fb-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="bd73b-107">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="bd73b-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

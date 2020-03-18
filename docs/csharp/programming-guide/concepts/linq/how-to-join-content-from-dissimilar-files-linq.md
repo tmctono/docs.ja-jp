@@ -2,20 +2,20 @@
 title: 異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345882"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169091"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="8e3e3-102">異種ファイルのコンテンツを結合する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="8e3e3-102">How to join content from dissimilar files (LINQ) (C#)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="97c68-102">異種ファイルのコンテンツを結合する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="97c68-102">How to join content from dissimilar files (LINQ) (C#)</span></span>
 
-<span data-ttu-id="8e3e3-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="8e3e3-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="8e3e3-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="97c68-103">この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="97c68-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="97c68-104">この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="97c68-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="97c68-105">この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。</span><span class="sxs-lookup"><span data-stu-id="97c68-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="8e3e3-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="8e3e3-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="97c68-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="97c68-106">To create the data files</span></span>
   
-1. <span data-ttu-id="8e3e3-107">次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="8e3e3-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="8e3e3-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="97c68-107">次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="97c68-107">Copy the following lines into a file that is named *scores.csv* and save it to your project folder.</span></span> <span data-ttu-id="97c68-108">このファイルは、スプレッドシートのデータを表しています。</span><span class="sxs-lookup"><span data-stu-id="97c68-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="97c68-109">列 1 は学生の ID、列 2 ～ 5 はテストの得点です。</span><span class="sxs-lookup"><span data-stu-id="97c68-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```csv  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "75345882"
     122, 94, 92, 91, 91  
     ```  
   
-2. <span data-ttu-id="8e3e3-110">次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="8e3e3-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="8e3e3-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="97c68-110">次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="97c68-110">Copy the following lines into a file that is named *names.csv* and save it to your project folder.</span></span> <span data-ttu-id="97c68-111">このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。</span><span class="sxs-lookup"><span data-stu-id="97c68-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```csv  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "75345882"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="8e3e3-112">例</span><span class="sxs-lookup"><span data-stu-id="8e3e3-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="97c68-112">例</span><span class="sxs-lookup"><span data-stu-id="97c68-112">Example</span></span>  
 
 ```csharp
 using System;
@@ -62,7 +62,7 @@ class JoinStrings
     {  
         // Join content from dissimilar files that contain  
         // related information. File names.csv contains the student  
-        // name plus an ID number. File scores.csv contains the ID   
+        // name plus an ID number. File scores.csv contains the ID
         // and a set of four test scores. The following query joins  
         // the scores to the student names by using ID as a  
         // matching key.  
@@ -84,7 +84,7 @@ class JoinStrings
             from id in scores  
             let scoreFields = id.Split(',')  
             where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
-            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
+            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
         // Pass a query variable to a method and execute it  
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8e3e3-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="8e3e3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97c68-113">参照</span><span class="sxs-lookup"><span data-stu-id="97c68-113">See also</span></span>
 
-- [<span data-ttu-id="8e3e3-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="8e3e3-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="8e3e3-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="8e3e3-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="97c68-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="97c68-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="97c68-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="97c68-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
