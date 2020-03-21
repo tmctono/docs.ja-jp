@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443871"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176202"
 ---
-# <a name="corattributetargets-enumeration"></a><span data-ttu-id="a2a38-102">CorAttributeTargets 列挙型</span><span class="sxs-lookup"><span data-stu-id="a2a38-102">CorAttributeTargets Enumeration</span></span>
-<span data-ttu-id="a2a38-103">属性を適用できるアプリケーション要素を指定します。</span><span class="sxs-lookup"><span data-stu-id="a2a38-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
+# <a name="corattributetargets-enumeration"></a><span data-ttu-id="5857c-102">CorAttributeTargets 列挙型</span><span class="sxs-lookup"><span data-stu-id="5857c-102">CorAttributeTargets Enumeration</span></span>
+<span data-ttu-id="5857c-103">属性を適用できるアプリケーション要素を指定します。</span><span class="sxs-lookup"><span data-stu-id="5857c-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2a38-104">構文</span><span class="sxs-lookup"><span data-stu-id="a2a38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5857c-104">構文</span><span class="sxs-lookup"><span data-stu-id="5857c-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorAttributeTargets  
@@ -44,53 +44,53 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a2a38-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="a2a38-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5857c-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="5857c-105">Members</span></span>  
   
-|<span data-ttu-id="a2a38-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="a2a38-106">Member</span></span>|<span data-ttu-id="a2a38-107">説明</span><span class="sxs-lookup"><span data-stu-id="a2a38-107">Description</span></span>|  
+|<span data-ttu-id="5857c-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="5857c-106">Member</span></span>|<span data-ttu-id="5857c-107">説明</span><span class="sxs-lookup"><span data-stu-id="5857c-107">Description</span></span>|  
 |------------|-----------------|  
-|`catAssembly`|<span data-ttu-id="a2a38-108">アセンブリに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-108">Attribute can be applied to an assembly.</span></span>|  
-|`catModule`|<span data-ttu-id="a2a38-109">属性は、移植可能な実行可能ファイル (.dll または .exe) モジュールに適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
-|`catClass`|<span data-ttu-id="a2a38-110">クラスに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-110">Attribute can be applied to a class.</span></span>|  
-|`catStruct`|<span data-ttu-id="a2a38-111">構造体に属性を適用できます。つまり、値型です。</span><span class="sxs-lookup"><span data-stu-id="a2a38-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
-|`catEnum`|<span data-ttu-id="a2a38-112">属性を列挙に適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-112">Attribute can be applied to an enumeration.</span></span>|  
-|`catConstructor`|<span data-ttu-id="a2a38-113">コンストラクターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-113">Attribute can be applied to a constructor.</span></span>|  
-|`catMethod`|<span data-ttu-id="a2a38-114">メソッドに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-114">Attribute can be applied to a method.</span></span>|  
-|`catProperty`|<span data-ttu-id="a2a38-115">属性をプロパティに適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-115">Attribute can be applied to a property.</span></span>|  
-|`catField`|<span data-ttu-id="a2a38-116">フィールドに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-116">Attribute can be applied to a field.</span></span>|  
-|`catEvent`|<span data-ttu-id="a2a38-117">イベントに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-117">Attribute can be applied to an event.</span></span>|  
-|`catInterface`|<span data-ttu-id="a2a38-118">インターフェイスに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-118">Attribute can be applied to an interface.</span></span>|  
-|`catParameter`|<span data-ttu-id="a2a38-119">パラメーターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-119">Attribute can be applied to a parameter.</span></span>|  
-|`catDelegate`|<span data-ttu-id="a2a38-120">デリゲートに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-120">Attribute can be applied to a delegate.</span></span>|  
-|`catGenericParameter`|<span data-ttu-id="a2a38-121">ジェネリックパラメーターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-121">Attribute can be applied to a generic parameter.</span></span>|  
-|`catAll`|<span data-ttu-id="a2a38-122">任意のアプリケーション要素に属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-122">Attribute can be applied to any application element.</span></span>|  
-|`catClassMembers`|<span data-ttu-id="a2a38-123">属性は、クラスのメンバーに適用できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-123">Attribute can be applied to a member of a class.</span></span>|  
+|`catAssembly`|<span data-ttu-id="5857c-108">アセンブリに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-108">Attribute can be applied to an assembly.</span></span>|  
+|`catModule`|<span data-ttu-id="5857c-109">属性は、ポータブル実行可能 (.dll または .exe) モジュールに適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
+|`catClass`|<span data-ttu-id="5857c-110">クラスに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-110">Attribute can be applied to a class.</span></span>|  
+|`catStruct`|<span data-ttu-id="5857c-111">構造体、つまり、値型に属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
+|`catEnum`|<span data-ttu-id="5857c-112">列挙体に属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-112">Attribute can be applied to an enumeration.</span></span>|  
+|`catConstructor`|<span data-ttu-id="5857c-113">コンストラクターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-113">Attribute can be applied to a constructor.</span></span>|  
+|`catMethod`|<span data-ttu-id="5857c-114">メソッドに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-114">Attribute can be applied to a method.</span></span>|  
+|`catProperty`|<span data-ttu-id="5857c-115">プロパティに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-115">Attribute can be applied to a property.</span></span>|  
+|`catField`|<span data-ttu-id="5857c-116">フィールドに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-116">Attribute can be applied to a field.</span></span>|  
+|`catEvent`|<span data-ttu-id="5857c-117">イベントに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-117">Attribute can be applied to an event.</span></span>|  
+|`catInterface`|<span data-ttu-id="5857c-118">インターフェイスに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-118">Attribute can be applied to an interface.</span></span>|  
+|`catParameter`|<span data-ttu-id="5857c-119">パラメーターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-119">Attribute can be applied to a parameter.</span></span>|  
+|`catDelegate`|<span data-ttu-id="5857c-120">デリゲートに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-120">Attribute can be applied to a delegate.</span></span>|  
+|`catGenericParameter`|<span data-ttu-id="5857c-121">ジェネリック パラメーターに属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-121">Attribute can be applied to a generic parameter.</span></span>|  
+|`catAll`|<span data-ttu-id="5857c-122">任意のアプリケーション要素に属性を適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-122">Attribute can be applied to any application element.</span></span>|  
+|`catClassMembers`|<span data-ttu-id="5857c-123">属性はクラスのメンバーに適用できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-123">Attribute can be applied to a member of a class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a2a38-124">コメント</span><span class="sxs-lookup"><span data-stu-id="a2a38-124">Remarks</span></span>  
- <span data-ttu-id="a2a38-125">`CorAttributeTargets` 列挙値をビットごとの OR 演算と組み合わせて、適切な組み合わせを取得できます。</span><span class="sxs-lookup"><span data-stu-id="a2a38-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5857c-124">解説</span><span class="sxs-lookup"><span data-stu-id="5857c-124">Remarks</span></span>  
+ <span data-ttu-id="5857c-125">列挙`CorAttributeTargets`値をビットごとの OR 演算と組み合わせて、優先する組み合わせを取得できます。</span><span class="sxs-lookup"><span data-stu-id="5857c-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
   
- <span data-ttu-id="a2a38-126">`CorAttributeTargets` は、マネージ <xref:System.AttributeTargets?displayProperty=nameWithType> 列挙体と同じです。</span><span class="sxs-lookup"><span data-stu-id="a2a38-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
+ <span data-ttu-id="5857c-126">マネージ`CorAttributeTargets`<xref:System.AttributeTargets?displayProperty=nameWithType>列挙体と並列処理を行います。</span><span class="sxs-lookup"><span data-stu-id="5857c-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2a38-127">要件</span><span class="sxs-lookup"><span data-stu-id="a2a38-127">Requirements</span></span>  
- <span data-ttu-id="a2a38-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a2a38-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5857c-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="5857c-127">Requirements</span></span>  
+ <span data-ttu-id="5857c-128">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5857c-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2a38-129">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="a2a38-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5857c-129">**ヘッダー:** コルドル.h</span><span class="sxs-lookup"><span data-stu-id="5857c-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="a2a38-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2a38-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5857c-130">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5857c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2a38-131">参照</span><span class="sxs-lookup"><span data-stu-id="a2a38-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5857c-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="5857c-131">See also</span></span>
 
-- [<span data-ttu-id="a2a38-132">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="a2a38-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5857c-132">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="5857c-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

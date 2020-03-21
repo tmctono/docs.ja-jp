@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94261b7796166cf482a7de990551890e4722dd3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431733"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177734"
 ---
-# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="3c47d-102">IMetaDataEmit::DefineModuleRef メソッド</span><span class="sxs-lookup"><span data-stu-id="3c47d-102">IMetaDataEmit::DefineModuleRef Method</span></span>
-<span data-ttu-id="3c47d-103">指定された名前を持つモジュールのメタデータシグネチャを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c47d-103">Creates the metadata signature for a module with the specified name.</span></span>  
+# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="fa2ae-102">IMetaDataEmit::DefineModuleRef メソッド</span><span class="sxs-lookup"><span data-stu-id="fa2ae-102">IMetaDataEmit::DefineModuleRef Method</span></span>
+<span data-ttu-id="fa2ae-103">指定した名前のモジュールのメタデータ シグネチャを作成します。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-103">Creates the metadata signature for a module with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c47d-104">構文</span><span class="sxs-lookup"><span data-stu-id="3c47d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa2ae-104">構文</span><span class="sxs-lookup"><span data-stu-id="fa2ae-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DefineModuleRef (     
-    [in]  LPCWSTR           szName,   
-    [out] mdModuleRef       *pmur   
+HRESULT DefineModuleRef (
+    [in]  LPCWSTR           szName,
+    [out] mdModuleRef       *pmur
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c47d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3c47d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa2ae-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fa2ae-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="3c47d-106">から他のメタデータファイルの名前 (通常は DLL)。</span><span class="sxs-lookup"><span data-stu-id="3c47d-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="3c47d-107">これはファイル名のみです。</span><span class="sxs-lookup"><span data-stu-id="3c47d-107">This is the file name only.</span></span> <span data-ttu-id="3c47d-108">完全なパス名は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="3c47d-108">Do not use a full path name.</span></span>  
+ <span data-ttu-id="fa2ae-106">[in]他のメタデータ ファイルの名前 (通常は DLL)。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="fa2ae-107">これはファイル名のみです。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-107">This is the file name only.</span></span> <span data-ttu-id="fa2ae-108">フル パス名は使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-108">Do not use a full path name.</span></span>  
   
  `pmur`  
- <span data-ttu-id="3c47d-109">入出力割り当てられた `mdModuleRef` トークン。</span><span class="sxs-lookup"><span data-stu-id="3c47d-109">[out] The assigned `mdModuleRef` token.</span></span>  
+ <span data-ttu-id="fa2ae-109">[アウト]割り`mdModuleRef`当てられたトークン。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-109">[out] The assigned `mdModuleRef` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c47d-110">要件</span><span class="sxs-lookup"><span data-stu-id="3c47d-110">Requirements</span></span>  
- <span data-ttu-id="3c47d-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c47d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa2ae-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="fa2ae-110">Requirements</span></span>  
+ <span data-ttu-id="fa2ae-111">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c47d-112">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="3c47d-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fa2ae-112">**ヘッダー:** コル・h</span><span class="sxs-lookup"><span data-stu-id="fa2ae-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3c47d-113">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="3c47d-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fa2ae-113">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="fa2ae-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3c47d-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c47d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fa2ae-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa2ae-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c47d-115">参照</span><span class="sxs-lookup"><span data-stu-id="3c47d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa2ae-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="fa2ae-115">See also</span></span>
 
-- [<span data-ttu-id="3c47d-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3c47d-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="3c47d-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3c47d-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="fa2ae-116">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fa2ae-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fa2ae-117">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fa2ae-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
