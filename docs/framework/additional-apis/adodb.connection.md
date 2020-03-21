@@ -1,5 +1,5 @@
 ---
-title: 接続のインターフェイス (adodb)
+title: 接続インターフェイス (adodb)
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,23 +9,23 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: f5c2fba0224b7e457f45dd4b31cfbcd2d89d5d6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb80fb7071398e07e1d86aa920fae1895ea34081
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706261"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156208"
 ---
-# <a name="connection-interface"></a><span data-ttu-id="c2900-102">接続のインターフェイス</span><span class="sxs-lookup"><span data-stu-id="c2900-102">Connection Interface</span></span>
+# <a name="connection-interface"></a><span data-ttu-id="8db39-102">接続のインターフェイス</span><span class="sxs-lookup"><span data-stu-id="8db39-102">Connection Interface</span></span>
 
 ```csharp
 [GuidAttribute("00000550-0000-0010-8000-00AA006D2EA4")]
-public interface Connection : _Connection, 
+public interface Connection : _Connection,
   ConnectionEvents_Event
 ```
 
-## <a name="requirements"></a><span data-ttu-id="c2900-103">必要条件</span><span class="sxs-lookup"><span data-stu-id="c2900-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8db39-103">必要条件</span><span class="sxs-lookup"><span data-stu-id="8db39-103">Requirements</span></span>
 
-<span data-ttu-id="c2900-104">**名前空間:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="c2900-104">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="8db39-104">**名前空間:**`adodb`</span><span class="sxs-lookup"><span data-stu-id="8db39-104">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="c2900-105">**アセンブリ:** adodb (で adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="c2900-105">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="8db39-105">**アセンブリ:** adodb (adodb.dll 内)</span><span class="sxs-lookup"><span data-stu-id="8db39-105">**Assembly:** adodb (in adodb.dll)</span></span>

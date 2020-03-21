@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175916"
 ---
-# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="0c1ec-102">IMetaDataDispenserEx::GetCORSystemDirectory メソッド</span><span class="sxs-lookup"><span data-stu-id="0c1ec-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
-<span data-ttu-id="0c1ec-103">現在の共通言語ランタイム (CLR) が格納されているディレクトリを取得します。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="0c1ec-104">このメソッドは、アウトプロセスデバッガーでの使用に対してのみサポートされています。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="0c1ec-105">別のコンポーネントから呼び出された場合は、E_NOTIMPL を返します。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-105">If called from another component, it will return E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexgetcorsystemdirectory-method"></a><span data-ttu-id="d5fb4-102">IMetaDataDispenserEx::GetCORSystemDirectory メソッド</span><span class="sxs-lookup"><span data-stu-id="d5fb4-102">IMetaDataDispenserEx::GetCORSystemDirectory Method</span></span>
+<span data-ttu-id="d5fb4-103">現在の共通言語ランタイム (CLR) を保持するディレクトリを取得します。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-103">Gets the directory that holds the current common language runtime (CLR).</span></span> <span data-ttu-id="d5fb4-104">このメソッドは、アウトプロセス デバッガーでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-104">This method is supported only for use by out-of-process debuggers.</span></span> <span data-ttu-id="d5fb4-105">別のコンポーネントから呼び出された場合、E_NOTIMPL返します。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-105">If called from another component, it will return E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0c1ec-106">構文</span><span class="sxs-lookup"><span data-stu-id="0c1ec-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d5fb4-106">構文</span><span class="sxs-lookup"><span data-stu-id="d5fb4-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
-    [out] LPWSTR      szBuffer,   
-    [in]  DWORD       cchBuffer,   
+    [out] LPWSTR      szBuffer,
+    [in]  DWORD       cchBuffer,
     [out] DWORD*      pchBuffer  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0c1ec-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="0c1ec-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d5fb4-107">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d5fb4-107">Parameters</span></span>  
  `szBuffer`  
- <span data-ttu-id="0c1ec-108">入出力ディレクトリ名を受け取るバッファー。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-108">[out] The buffer to receive the directory name.</span></span>  
+ <span data-ttu-id="d5fb4-108">[アウト]ディレクトリ名を受け取るバッファ。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-108">[out] The buffer to receive the directory name.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="0c1ec-109">から`szBuffer`のサイズ (バイト単位)。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
+ <span data-ttu-id="d5fb4-109">[in]のサイズ (バイト単位)`szBuffer`です。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-109">[in] The size, in bytes, of `szBuffer`.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="0c1ec-110">入出力実際に `szBuffer`に返されたバイト数。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
+ <span data-ttu-id="d5fb4-110">[アウト]で実際に返される`szBuffer`バイト数。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-110">[out] The number of bytes actually returned in `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c1ec-111">要件</span><span class="sxs-lookup"><span data-stu-id="0c1ec-111">Requirements</span></span>  
- <span data-ttu-id="0c1ec-112">**プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d5fb4-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="d5fb4-111">Requirements</span></span>  
+ <span data-ttu-id="d5fb4-112">**プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-112">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c1ec-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="0c1ec-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d5fb4-113">**ヘッダー:** コル・h</span><span class="sxs-lookup"><span data-stu-id="d5fb4-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0c1ec-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="0c1ec-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d5fb4-114">**ライブラリ:** MsCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="d5fb4-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0c1ec-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c1ec-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d5fb4-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5fb4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0c1ec-116">参照</span><span class="sxs-lookup"><span data-stu-id="0c1ec-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5fb4-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5fb4-116">See also</span></span>
 
-- [<span data-ttu-id="0c1ec-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0c1ec-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="0c1ec-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="0c1ec-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="d5fb4-117">IMetaDataDispenserEx インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d5fb4-117">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="d5fb4-118">IMetaDataDispenser インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d5fb4-118">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

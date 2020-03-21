@@ -1,6 +1,6 @@
 ---
-title: ResetSecurity 関数 (アンマネージ API リファレンス)
-description: ResetSecurity 関数は、現在のスレッドに偽装トークンを割り当てます。
+title: リセットセキュリティ関数 (アンマネージ API リファレンス)
+description: ResetSecurity 関数は、偽装トークンを現在のスレッドに割り当てます。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -14,44 +14,44 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ce74494455c6cc7fe382a4ea4ef2ff0c4e98c61b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174863"
 ---
-# <a name="resetsecurity-function"></a><span data-ttu-id="ee938-103">ResetSecurity 関数</span><span class="sxs-lookup"><span data-stu-id="ee938-103">ResetSecurity function</span></span>
-<span data-ttu-id="ee938-104">指定した偽装トークンが現在のスレッドに割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="ee938-104">Assigns the supplied impersonation token to the current thread.</span></span>   
+# <a name="resetsecurity-function"></a><span data-ttu-id="ebaea-103">ResetSecurity 関数</span><span class="sxs-lookup"><span data-stu-id="ebaea-103">ResetSecurity function</span></span>
+<span data-ttu-id="ebaea-104">指定した偽装トークンが現在のスレッドに割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="ebaea-104">Assigns the supplied impersonation token to the current thread.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="ee938-105">構文</span><span class="sxs-lookup"><span data-stu-id="ee938-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebaea-105">構文</span><span class="sxs-lookup"><span data-stu-id="ebaea-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ResetSecurity (
    [in] HANDLE token
-); 
+);
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="ee938-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ee938-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ebaea-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="ebaea-106">Parameters</span></span>
 
 `token`  
-<span data-ttu-id="ee938-107">から現在のスレッドに関連付ける偽装トークン。</span><span class="sxs-lookup"><span data-stu-id="ee938-107">[in] The impersonation token to associate with the current thread.</span></span> <span data-ttu-id="ee938-108">この値は `null` の場合もあります。</span><span class="sxs-lookup"><span data-stu-id="ee938-108">Its value can be `null`.</span></span> 
+<span data-ttu-id="ebaea-107">[in]現在のスレッドに関連付ける偽装トークン。</span><span class="sxs-lookup"><span data-stu-id="ebaea-107">[in] The impersonation token to associate with the current thread.</span></span> <span data-ttu-id="ebaea-108">この値は `null` の場合もあります。</span><span class="sxs-lookup"><span data-stu-id="ebaea-108">Its value can be `null`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ee938-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="ee938-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ebaea-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="ebaea-109">Return value</span></span>
 
-<span data-ttu-id="ee938-110">関数が成功した場合、戻り値は `S_OK` (0) になります。</span><span class="sxs-lookup"><span data-stu-id="ee938-110">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="ebaea-110">関数が成功した場合、戻り値は`S_OK`(0) になります。</span><span class="sxs-lookup"><span data-stu-id="ebaea-110">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="ee938-111">関数が失敗した場合、戻り値は0以外のエラーコードです。</span><span class="sxs-lookup"><span data-stu-id="ee938-111">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="ee938-112">拡張されたエラー情報を取得するには、 [GetErrorInfo](geterrorinfo.md)関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ee938-112">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="ebaea-111">関数が失敗した場合、戻り値は 0 以外のエラー コードです。</span><span class="sxs-lookup"><span data-stu-id="ebaea-111">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="ebaea-112">拡張エラー情報を取得するには[、GetErrorInfo](geterrorinfo.md)関数を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ebaea-112">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="ee938-113">［要件］</span><span class="sxs-lookup"><span data-stu-id="ee938-113">Requirements</span></span>  
- <span data-ttu-id="ee938-114">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ee938-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ebaea-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="ebaea-113">Requirements</span></span>  
+ <span data-ttu-id="ebaea-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ebaea-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee938-115">**ヘッダー:** WMINet_Utils</span><span class="sxs-lookup"><span data-stu-id="ee938-115">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ebaea-115">**ヘッダー:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ebaea-115">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="ee938-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ee938-116">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ebaea-116">**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ebaea-116">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee938-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ee938-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebaea-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="ebaea-117">See also</span></span>
 
-- [<span data-ttu-id="ee938-118">WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ee938-118">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="ebaea-118">WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)</span><span class="sxs-lookup"><span data-stu-id="ebaea-118">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

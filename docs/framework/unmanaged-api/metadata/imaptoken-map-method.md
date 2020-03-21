@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432152"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176072"
 ---
-# <a name="imaptokenmap-method"></a><span data-ttu-id="edd01-102">IMapToken::Map メソッド</span><span class="sxs-lookup"><span data-stu-id="edd01-102">IMapToken::Map Method</span></span>
-<span data-ttu-id="edd01-103">メタデータシグネチャを使用して、アセンブリ間のリレーションシップをマップします。</span><span class="sxs-lookup"><span data-stu-id="edd01-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
+# <a name="imaptokenmap-method"></a><span data-ttu-id="f8665-102">IMapToken::Map メソッド</span><span class="sxs-lookup"><span data-stu-id="f8665-102">IMapToken::Map Method</span></span>
+<span data-ttu-id="f8665-103">メタデータ シグネチャを使用してアセンブリ間のリレーションシップをマップします。</span><span class="sxs-lookup"><span data-stu-id="f8665-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edd01-104">構文</span><span class="sxs-lookup"><span data-stu-id="edd01-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8665-104">構文</span><span class="sxs-lookup"><span data-stu-id="f8665-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Map (  
-    [in]  mdToken tkImp,   
+    [in]  mdToken tkImp,
     [in]  mdToken tkEmit  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="edd01-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="edd01-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8665-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f8665-105">Parameters</span></span>  
  `tkImp`  
- <span data-ttu-id="edd01-106">からインポートされたコードオブジェクトを表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="edd01-106">[in] The metadata token that represents the imported code object.</span></span>  
+ <span data-ttu-id="f8665-106">[in]インポートされたコード オブジェクトを表すメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="f8665-106">[in] The metadata token that represents the imported code object.</span></span>  
   
  `tkEmit`  
- <span data-ttu-id="edd01-107">から出力されたコードオブジェクトを表すメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="edd01-107">[in] The metadata token that represents the emitted code object.</span></span>  
+ <span data-ttu-id="f8665-107">[in]出力されたコード オブジェクトを表すメタデータ トークン。</span><span class="sxs-lookup"><span data-stu-id="f8665-107">[in] The metadata token that represents the emitted code object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="edd01-108">コメント</span><span class="sxs-lookup"><span data-stu-id="edd01-108">Remarks</span></span>  
- <span data-ttu-id="edd01-109">マージ中にトークンの再マップが行われると、元のトークンはインポートされた (ソース) メタデータスコープ内でスコープが設定され、新しいトークンのスコープは、出力された (ターゲット) メタデータスコープに設定されます。</span><span class="sxs-lookup"><span data-stu-id="edd01-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8665-108">解説</span><span class="sxs-lookup"><span data-stu-id="f8665-108">Remarks</span></span>  
+ <span data-ttu-id="f8665-109">マージ中にトークンの再マップが発生すると、元のトークンはインポートされた (ソース) メタデータ スコープでスコープが設定され、新しいトークンは出力される (ターゲット) メタデータ スコープ内でスコープが設定されます。</span><span class="sxs-lookup"><span data-stu-id="f8665-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="edd01-110">要件</span><span class="sxs-lookup"><span data-stu-id="edd01-110">Requirements</span></span>  
- <span data-ttu-id="edd01-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="edd01-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8665-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="f8665-110">Requirements</span></span>  
+ <span data-ttu-id="f8665-111">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f8665-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="edd01-112">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="edd01-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f8665-112">**ヘッダー:** コル・h</span><span class="sxs-lookup"><span data-stu-id="f8665-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="edd01-113">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="edd01-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f8665-113">**ライブラリ:** MsCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="f8665-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="edd01-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edd01-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f8665-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8665-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="edd01-115">参照</span><span class="sxs-lookup"><span data-stu-id="edd01-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8665-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="f8665-115">See also</span></span>
 
-- [<span data-ttu-id="edd01-116">IMapToken インターフェイス</span><span class="sxs-lookup"><span data-stu-id="edd01-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [<span data-ttu-id="f8665-116">IMapToken インターフェイス</span><span class="sxs-lookup"><span data-stu-id="f8665-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

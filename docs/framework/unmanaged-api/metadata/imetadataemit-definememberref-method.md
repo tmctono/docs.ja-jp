@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175838"
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="4659a-102">IMetaDataEmit::DefineMemberRef メソッド</span><span class="sxs-lookup"><span data-stu-id="4659a-102">IMetaDataEmit::DefineMemberRef Method</span></span>
-<span data-ttu-id="4659a-103">現在のスコープ外のモジュールのメンバーへの参照を定義し、その参照定義へのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="4659a-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="8c858-102">IMetaDataEmit::DefineMemberRef メソッド</span><span class="sxs-lookup"><span data-stu-id="8c858-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+<span data-ttu-id="8c858-103">現在のスコープ外のモジュールのメンバーへの参照を定義し、その参照定義へのトークンを取得します。</span><span class="sxs-lookup"><span data-stu-id="8c858-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4659a-104">構文</span><span class="sxs-lookup"><span data-stu-id="4659a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c858-104">構文</span><span class="sxs-lookup"><span data-stu-id="8c858-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DefineMemberRef (   
-    [in]  mdToken           tkImport,   
-    [in]  LPCWSTR           szName,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
-    [out] mdMemberRef       *pmr   
+HRESULT DefineMemberRef (
+    [in]  mdToken           tkImport,
+    [in]  LPCWSTR           szName,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
+    [out] mdMemberRef       *pmr
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4659a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4659a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8c858-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="8c858-105">Parameters</span></span>  
  `tkImport`  
- <span data-ttu-id="4659a-106">からメンバーがグローバルでない場合は、ターゲットメンバーのクラスまたはインターフェイスのトークン。メンバーがグローバルの場合は、その他のファイルの `mdModuleRef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="4659a-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="8c858-106">[in]対象メンバのクラスまたはインターフェイスのトークン (グローバルでない場合)。メンバーがグローバルである場合は、`mdModuleRef`その他のファイルのトークン。</span><span class="sxs-lookup"><span data-stu-id="8c858-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="4659a-107">からターゲットメンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="4659a-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="8c858-107">[in]ターゲット メンバーの名前。</span><span class="sxs-lookup"><span data-stu-id="8c858-107">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="4659a-108">からターゲットメンバーのシグネチャ。</span><span class="sxs-lookup"><span data-stu-id="4659a-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="8c858-108">[in]ターゲット メンバーのシグネチャ。</span><span class="sxs-lookup"><span data-stu-id="8c858-108">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="4659a-109">から`pvSigBlob`内のバイト数。</span><span class="sxs-lookup"><span data-stu-id="4659a-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="8c858-109">[in]のバイト数`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="8c858-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="4659a-110">入出力割り当てられた `mdMemberRef` トークン。</span><span class="sxs-lookup"><span data-stu-id="4659a-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="8c858-110">[アウト]割`mdMemberRef`り当てられたトークン。</span><span class="sxs-lookup"><span data-stu-id="8c858-110">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4659a-111">要件</span><span class="sxs-lookup"><span data-stu-id="4659a-111">Requirements</span></span>  
- <span data-ttu-id="4659a-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4659a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c858-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="8c858-111">Requirements</span></span>  
+ <span data-ttu-id="8c858-112">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8c858-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4659a-113">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="4659a-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8c858-113">**ヘッダー:** コル・h</span><span class="sxs-lookup"><span data-stu-id="8c858-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4659a-114">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="4659a-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8c858-114">**ライブラリ:** MSCorEE.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="8c858-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4659a-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4659a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8c858-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c858-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4659a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="4659a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c858-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c858-116">See also</span></span>
 
-- [<span data-ttu-id="4659a-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4659a-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="4659a-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4659a-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="8c858-117">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8c858-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="8c858-118">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="8c858-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

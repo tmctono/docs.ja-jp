@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451851"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174291"
 ---
-# <a name="manipulating-data"></a><span data-ttu-id="14637-102">データの操作</span><span class="sxs-lookup"><span data-stu-id="14637-102">Manipulating Data</span></span>
-<span data-ttu-id="14637-103">複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。</span><span class="sxs-lookup"><span data-stu-id="14637-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="14637-104">さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。</span><span class="sxs-lookup"><span data-stu-id="14637-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="14637-105">以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。</span><span class="sxs-lookup"><span data-stu-id="14637-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
+# <a name="manipulating-data"></a><span data-ttu-id="8b62e-102">データの操作</span><span class="sxs-lookup"><span data-stu-id="8b62e-102">Manipulating Data</span></span>
+<span data-ttu-id="8b62e-103">複数のアクティブな結果セット (MARS) を導入する場合は、開発者が事前に複数の接続またはサーバー側のカーソルを使用して、特定のシナリオを解決しておく必要がありました。</span><span class="sxs-lookup"><span data-stu-id="8b62e-103">Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios.</span></span> <span data-ttu-id="8b62e-104">さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。</span><span class="sxs-lookup"><span data-stu-id="8b62e-104">In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required.</span></span> <span data-ttu-id="8b62e-105">次のシナリオは、MARS が有効になっている接続を、複数の接続の代わりに使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="8b62e-105">The following scenarios show how to use a MARS-enabled connection instead of multiple connections.</span></span>  
   
-## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="14637-106">MARS で複数のコマンドを使用する</span><span class="sxs-lookup"><span data-stu-id="14637-106">Using Multiple Commands with MARS</span></span>  
- <span data-ttu-id="14637-107">次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 2 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。</span><span class="sxs-lookup"><span data-stu-id="14637-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
+## <a name="using-multiple-commands-with-mars"></a><span data-ttu-id="8b62e-106">MARS で複数のコマンドを使用する</span><span class="sxs-lookup"><span data-stu-id="8b62e-106">Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="8b62e-107">次のコンソール アプリケーションは、MARS を有効にして、2 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="8b62e-107">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with two <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="14637-108">例</span><span class="sxs-lookup"><span data-stu-id="14637-108">Example</span></span>  
- <span data-ttu-id="14637-109">この例では、 **AdventureWorks**データベースへの単一の接続を開きます。</span><span class="sxs-lookup"><span data-stu-id="14637-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="14637-110"><xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="14637-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="14637-111">リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。</span><span class="sxs-lookup"><span data-stu-id="14637-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
+### <a name="example"></a><span data-ttu-id="8b62e-108">例</span><span class="sxs-lookup"><span data-stu-id="8b62e-108">Example</span></span>  
+ <span data-ttu-id="8b62e-109">この例では、**AdventureWorks** データベースへの 1 つの接続を開きます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-109">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="8b62e-110"><xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用することで、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-110">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="8b62e-111">そのリーダーが使用されるとき、最初の <xref:System.Data.SqlClient.SqlDataReader> のデータが 2 番目のリーダーの WHERE 句への入力として使用され、2 番目の <xref:System.Data.SqlClient.SqlDataReader> が開きます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-111">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="14637-112">次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。</span><span class="sxs-lookup"><span data-stu-id="14637-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="14637-113">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="14637-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="14637-114">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="14637-114">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="8b62e-112">次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。</span><span class="sxs-lookup"><span data-stu-id="8b62e-112">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="8b62e-113">サンプル コードに示されている接続文字列では、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="8b62e-113">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="8b62e-114">実際の環境の必要に応じて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="8b62e-114">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="14637-115">MARS によるデータの読み取りと更新</span><span class="sxs-lookup"><span data-stu-id="14637-115">Reading and Updating Data with MARS</span></span>  
- <span data-ttu-id="14637-116">MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。</span><span class="sxs-lookup"><span data-stu-id="14637-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="14637-117">この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="14637-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="14637-118">さらに、MARS では、サーバー側カーソルの使用を置き換えることができます。この場合、通常はより多くのリソースが消費されます。</span><span class="sxs-lookup"><span data-stu-id="14637-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="14637-119">最後に、複数の操作を単一の接続で実行できるので、同じトランザクション コンテキストを共有することにより、システムのストアド プロシージャである **sp_getbindtoken** と **sp_bindsession** を使用する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="14637-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
+## <a name="reading-and-updating-data-with-mars"></a><span data-ttu-id="8b62e-115">MARS によるデータの読み取りと更新</span><span class="sxs-lookup"><span data-stu-id="8b62e-115">Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="8b62e-116">MARS を使用すると、複数の保留中の操作を使用して、読み取り操作およびデータ操作言語 (DML) 操作の両方に対して接続を使用できます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-116">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="8b62e-117">この機能により、アプリケーションが接続ビジー エラーを処理する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="8b62e-117">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="8b62e-118">さらに、MARS はサーバー側カーソルの使用を置き換えることができます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-118">In addition, MARS can replace the use of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="8b62e-119">最後に、複数の操作を単一の接続で実行できるので、同じトランザクション コンテキストを共有することにより、システムのストアド プロシージャである **sp_getbindtoken** と **sp_bindsession** を使用する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="8b62e-119">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="14637-120">例</span><span class="sxs-lookup"><span data-stu-id="14637-120">Example</span></span>  
- <span data-ttu-id="14637-121">次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。</span><span class="sxs-lookup"><span data-stu-id="14637-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="14637-122">最初のコマンド オブジェクトでは、格付けが 5 のベンダーの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="14637-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="14637-123">2 番目のコマンド オブジェクトでは、<xref:System.Data.SqlClient.SqlDataReader> から提供されるベンダー ID を使用して特定のベンダーのすべての製品について 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="14637-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="14637-124">各製品のレコードは、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。</span><span class="sxs-lookup"><span data-stu-id="14637-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="14637-125">計算が実行され、新規 **OnOrderQty** を判定します。</span><span class="sxs-lookup"><span data-stu-id="14637-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="14637-126">3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。</span><span class="sxs-lookup"><span data-stu-id="14637-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="14637-127">このプロセスはすべて単一のトランザクションで行われ、最後にロールバックされます。</span><span class="sxs-lookup"><span data-stu-id="14637-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
+### <a name="example"></a><span data-ttu-id="8b62e-120">例</span><span class="sxs-lookup"><span data-stu-id="8b62e-120">Example</span></span>  
+ <span data-ttu-id="8b62e-121">次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="8b62e-121">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="8b62e-122">最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。</span><span class="sxs-lookup"><span data-stu-id="8b62e-122">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="8b62e-123">2 番目のコマンド オブジェクトは、<xref:System.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み込みます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-123">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="8b62e-124">各製品レコードには、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-124">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="8b62e-125">計算が実行され、新規 **OnOrderQty** を判定します。</span><span class="sxs-lookup"><span data-stu-id="8b62e-125">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="8b62e-126">3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。</span><span class="sxs-lookup"><span data-stu-id="8b62e-126">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="8b62e-127">このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。</span><span class="sxs-lookup"><span data-stu-id="8b62e-127">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="14637-128">次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。</span><span class="sxs-lookup"><span data-stu-id="14637-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="14637-129">サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="14637-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="14637-130">必要に応じて、お使いの環境に合わせて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="14637-130">Modify the connection string as necessary for your environment.</span></span>  
+> <span data-ttu-id="8b62e-128">次の例では、SQL Server に含まれるサンプルの **AdventureWorks** データベースを使用します。</span><span class="sxs-lookup"><span data-stu-id="8b62e-128">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="8b62e-129">サンプル コードに示されている接続文字列では、データベースがローカル コンピューターにインストールされ、使用可能であることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="8b62e-129">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="8b62e-130">実際の環境の必要に応じて接続文字列を変更してください。</span><span class="sxs-lookup"><span data-stu-id="8b62e-130">Modify the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,14 +395,14 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="14637-131">参照</span><span class="sxs-lookup"><span data-stu-id="14637-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b62e-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b62e-131">See also</span></span>
 
-- [<span data-ttu-id="14637-132">複数のアクティブな結果セット (MARS)</span><span class="sxs-lookup"><span data-stu-id="14637-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
-- [<span data-ttu-id="14637-133">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="14637-133">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="8b62e-132">複数のアクティブな結果セット (MARS)</span><span class="sxs-lookup"><span data-stu-id="8b62e-132">Multiple Active Result Sets (MARS)</span></span>](multiple-active-result-sets-mars.md)
+- [<span data-ttu-id="8b62e-133">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="8b62e-133">ADO.NET Overview</span></span>](../ado-net-overview.md)

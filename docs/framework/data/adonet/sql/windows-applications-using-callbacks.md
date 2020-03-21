@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 9f4aade2bdcbccf99c0b7259e8e2dc3a750855ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 571904d36293caa6d4330b2ffda2cff5aca8e6b2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174460"
 ---
-# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="cb608-102">コールバックを使用した Windows アプリケーション</span><span class="sxs-lookup"><span data-stu-id="cb608-102">Windows Applications Using Callbacks</span></span>
-<span data-ttu-id="cb608-103">非同期処理は多くの場合、データベース操作を開始し、データベース操作が完了するまで待つことなく、他のプロセスの実行を継続できるようにします。</span><span class="sxs-lookup"><span data-stu-id="cb608-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="cb608-104">ただし、ほとんどの場合、データベース操作の完了時に何らかの処理を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="cb608-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="cb608-105">たとえば、Windows アプリケーションでは、ユーザー インターフェイス スレッドの応答性を維持しながら、時間のかかる操作をバックグラウンド スレッドに委任することができます。</span><span class="sxs-lookup"><span data-stu-id="cb608-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="cb608-106">また一方、データベース操作の完了時に、この結果を使用してフォームを表示することができます。</span><span class="sxs-lookup"><span data-stu-id="cb608-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="cb608-107">このような場合、コールバックによって最適に実行されます。</span><span class="sxs-lookup"><span data-stu-id="cb608-107">This type of scenario is best implemented with a callback.</span></span>  
+# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="efe81-102">コールバックを使用した Windows アプリケーション</span><span class="sxs-lookup"><span data-stu-id="efe81-102">Windows Applications Using Callbacks</span></span>
+<span data-ttu-id="efe81-103">ほとんどの非同期処理シナリオでは、データベース操作を開始した後、そのデータベース操作の完了を待つことなく他のプロセスの実行に進む必要があります。</span><span class="sxs-lookup"><span data-stu-id="efe81-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="efe81-104">ただし、多くのシナリオでは、データベース操作が完了した後で何かを実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="efe81-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="efe81-105">たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任している間、ユーザー インターフェイス スレッドの応答性を維持することができます。</span><span class="sxs-lookup"><span data-stu-id="efe81-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="efe81-106">ただし、データベース操作が完了したら、その結果を使用してフォームにデータを入力する必要があります。</span><span class="sxs-lookup"><span data-stu-id="efe81-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="efe81-107">この種類のシナリオは、コールバックを使用した実装が最も適しています。</span><span class="sxs-lookup"><span data-stu-id="efe81-107">This type of scenario is best implemented with a callback.</span></span>  
   
- <span data-ttu-id="cb608-108">コールバックを定義するには、<xref:System.AsyncCallback> メソッド、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッド、または <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> メソッドで <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> デリゲートを指定します。</span><span class="sxs-lookup"><span data-stu-id="cb608-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="cb608-109">このデリゲートは、操作の完了時に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="cb608-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="cb608-110">デリゲートに <xref:System.Data.SqlClient.SqlCommand> 自身への参照を渡すことができるため、<xref:System.Data.SqlClient.SqlCommand> オブジェクトにアクセスしたり、グローバル変数を使用することなく適切な `End` メソッドを呼び出したりすることが容易になります。</span><span class="sxs-lookup"><span data-stu-id="cb608-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
+ <span data-ttu-id="efe81-108">コールバックは、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドで <xref:System.AsyncCallback> 委任を指定して定義します。</span><span class="sxs-lookup"><span data-stu-id="efe81-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="efe81-109">この委任は、操作が完了したときに呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="efe81-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="efe81-110">この委任に <xref:System.Data.SqlClient.SqlCommand> 自体への参照を渡すと、グローバル変数を使用しなくても、容易に <xref:System.Data.SqlClient.SqlCommand> オブジェクトにアクセスして適切な `End` メソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="efe81-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb608-111">例</span><span class="sxs-lookup"><span data-stu-id="cb608-111">Example</span></span>  
- <span data-ttu-id="cb608-112">次の Windows アプリケーションは、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドを使って、数秒の遅れを伴う (時間のかかるコマンドをエミュレートする) Transact-SQL ステートメントを実行する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="cb608-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
+## <a name="example"></a><span data-ttu-id="efe81-111">例</span><span class="sxs-lookup"><span data-stu-id="efe81-111">Example</span></span>  
+ <span data-ttu-id="efe81-112">次の Windows アプリケーションは、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドを使用して、数秒の遅延を含む Transact-SQL ステートメントを実行する方法 (実行時間の長いコマンドのエミュレーション) を示しています。</span><span class="sxs-lookup"><span data-stu-id="efe81-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
   
- <span data-ttu-id="cb608-113">この例では、別のスレッドからのフォームと対話するメソッドを呼び出す方法など、重要なテクニックを多数紹介しています。</span><span class="sxs-lookup"><span data-stu-id="cb608-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="cb608-114">また、この例は、ユーザーがコマンドを複数回同時に実行しないようにする方法と、コールバック プロシージャが呼び出される前にフォームが閉じないようにする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="cb608-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
+ <span data-ttu-id="efe81-113">この例は、別のスレッドからフォームを操作するメソッドの呼び出しなど、いくつかの重要な手法を示しています。</span><span class="sxs-lookup"><span data-stu-id="efe81-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="efe81-114">さらに、この例には、ユーザーがコマンドを複数回同時に実行しないようにブロックするための方法や、コールバック プロシージャが呼び出される前にフォームを閉じないようにするための方法が示されています。</span><span class="sxs-lookup"><span data-stu-id="efe81-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
   
- <span data-ttu-id="cb608-115">この例をセットアップするには、新しい Windows アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="cb608-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="cb608-116">フォーム上に、<xref:System.Windows.Forms.Button> コントロールと 2 つの <xref:System.Windows.Forms.Label> コントロールを配置します (各コントロールは既定の名前のまま使用します)。</span><span class="sxs-lookup"><span data-stu-id="cb608-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="cb608-117">お使いの環境に応じて接続文字列を変更し、次のコードをフォームのクラスに追加します。</span><span class="sxs-lookup"><span data-stu-id="cb608-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
+ <span data-ttu-id="efe81-115">この例を設定するには、新しい Windows アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="efe81-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="efe81-116">フォーム上に 1 つの <xref:System.Windows.Forms.Button> コントロールと 2 つの <xref:System.Windows.Forms.Label> コントロールを配置します (各コントロールの既定の名前をそのまま使用します)。</span><span class="sxs-lookup"><span data-stu-id="efe81-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="efe81-117">フォームのクラスに次のコードを追加し、実際の環境で必要に応じて接続文字列を変更します。</span><span class="sxs-lookup"><span data-stu-id="efe81-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 ' Add these to the top of the class:  
@@ -32,25 +32,25 @@ Imports System.Data.SqlClient
   
 ' Add this code to the form's class:  
   
-    ' You'll need this delegate in order to display text from a   
+    ' You'll need this delegate in order to display text from a
     ' thread other than the form's thread. See the HandleCallback  
     ' procedure for more information.  
-    ' This same delegate matches both the DisplayStatus   
+    ' This same delegate matches both the DisplayStatus
     ' and DisplayResults methods.  
     Private Delegate Sub DisplayInfoDelegate(ByVal Text As String)  
   
     ' This flag ensures that the user doesn't attempt  
-    ' to restart the command or close the form while the   
+    ' to restart the command or close the form while the
     ' asynchronous command is executing.  
     Private isExecuting As Boolean  
   
-    ' This example maintains the connection object   
+    ' This example maintains the connection object
     ' externally, so that it's available for closing.  
     Private connection As SqlConnection  
   
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
         ' If you have not included "Asynchronous Processing=true"  
         ' in the connection string, the command will not be able  
@@ -94,7 +94,7 @@ Imports System.Data.SqlClient
                 DisplayResults("")  
                 DisplayStatus("Connecting...")  
                 connection = New SqlConnection(GetConnectionString())  
-                ' To emulate a long-running query, wait for   
+                ' To emulate a long-running query, wait for
                 ' a few seconds before working with the data.  
                 ' This command doesn't do much, but that's the point--  
                 ' it doesn't change your data, in the long run.  
@@ -112,8 +112,8 @@ Imports System.Data.SqlClient
   
                 DisplayStatus("Executing...")  
                 isExecuting = True  
-                ' Although it's not required that you pass the   
-                ' SqlCommand object as the second parameter in the   
+                ' Although it's not required that you pass the
+                ' SqlCommand object as the second parameter in the
                 ' BeginExecuteNonQuery call, doing so makes it easier  
                 ' to call EndExecuteNonQuery in the callback procedure.  
                 Dim callback As New _  
@@ -152,32 +152,32 @@ Imports System.Data.SqlClient
   
             ' You may not interact with the form and its contents  
             ' from a different thread, and this callback procedure  
-            ' is all but guaranteed to be running from a different   
-            ' thread than the form. Therefore you cannot simply call   
+            ' is all but guaranteed to be running from a different
+            ' thread than the form. Therefore you cannot simply call
             ' code that displays the results, like this:  
             ' DisplayResults(rowText)  
   
             ' Instead, you must call the procedure from the form's  
-            ' thread. One simple way to accomplish this is to call   
-            ' the Invoke method of the form, which calls the delegate   
-            ' you supply from the form's thread.   
+            ' thread. One simple way to accomplish this is to call
+            ' the Invoke method of the form, which calls the delegate
+            ' you supply from the form's thread.
             Dim del As New _  
                 DisplayInfoDelegate(AddressOf DisplayResults)  
             Me.Invoke(del, rowText)  
   
         Catch ex As Exception  
-            ' Because you're now running code in a separate thread,   
-            ' if you don't handle the exception here, none of your   
-            ' other code will catch the exception. Because none of   
-            ' your code is on the call stack in this thread, there's   
-            ' nothing higher up the stack to catch the exception if   
-            ' you don't handle it here. You can either log the   
-            ' exception or invoke a delegate (as in the non-error   
-            ' case in this example) to display the error on the form.   
-            ' In no case can you simply display the error without   
+            ' Because you're now running code in a separate thread,
+            ' if you don't handle the exception here, none of your
+            ' other code will catch the exception. Because none of
+            ' your code is on the call stack in this thread, there's
+            ' nothing higher up the stack to catch the exception if
+            ' you don't handle it here. You can either log the
+            ' exception or invoke a delegate (as in the non-error
+            ' case in this example) to display the error on the form.
+            ' In no case can you simply display the error without
             ' executing a delegate as in the Try block here.  
   
-            ' You can create the delegate instance as you   
+            ' You can create the delegate instance as you
             ' invoke it, like this:  
             Me.Invoke(New _  
                 DisplayInfoDelegate(AddressOf DisplayStatus), _  
@@ -197,30 +197,30 @@ using System;
 using System.Data;  
 using System.Data.SqlClient;  
   
-// Hook up the form's Load event handler (you can double-click on   
-// the form's design surface in Visual Studio), and then add   
+// Hook up the form's Load event handler (you can double-click on
+// the form's design surface in Visual Studio), and then add
 // this code to the form's class:  
   
 // You'll need this delegate in order to display text from a thread  
 // other than the form's thread. See the HandleCallback  
 // procedure for more information.  
-// This same delegate matches both the DisplayStatus   
+// This same delegate matches both the DisplayStatus
 // and DisplayResults methods.  
 private delegate void DisplayInfoDelegate(string Text);  
   
 // This flag ensures that the user doesn't attempt  
-// to restart the command or close the form while the   
+// to restart the command or close the form while the
 // asynchronous command is executing.  
 private bool isExecuting;  
   
-// This example maintains the connection object   
+// This example maintains the connection object
 // externally, so that it's available for closing.  
 private SqlConnection connection;  
   
 private static string GetConnectionString()  
 {  
-    // To avoid storing the connection string in your code,              
-    // you can retrieve it from a configuration file.   
+    // To avoid storing the connection string in your code,
+    // you can retrieve it from a configuration file.
   
     // If you have not included "Asynchronous Processing=true" in the  
     // connection string, the command will not be able  
@@ -266,7 +266,7 @@ private void button1_Click(object sender, System.EventArgs e)
             DisplayResults("");  
             DisplayStatus("Connecting...");  
             connection = new SqlConnection(GetConnectionString());  
-            // To emulate a long-running query, wait for   
+            // To emulate a long-running query, wait for
             // a few seconds before working with the data.  
             // This command doesn't do much, but that's the point--  
             // it doesn't change your data, in the long run.  
@@ -284,8 +284,8 @@ private void button1_Click(object sender, System.EventArgs e)
   
             DisplayStatus("Executing...");  
             isExecuting = true;  
-            // Although it's not required that you pass the   
-            // SqlCommand object as the second parameter in the   
+            // Although it's not required that you pass the
+            // SqlCommand object as the second parameter in the
             // BeginExecuteNonQuery call, doing so makes it easier  
             // to call EndExecuteNonQuery in the callback procedure.  
             AsyncCallback callback = new AsyncCallback(HandleCallback);  
@@ -327,32 +327,32 @@ private void HandleCallback(IAsyncResult result)
         // You may not interact with the form and its contents  
         // from a different thread, and this callback procedure  
         // is all but guaranteed to be running from a different thread  
-        // than the form. Therefore you cannot simply call code that   
+        // than the form. Therefore you cannot simply call code that
         // displays the results, like this:  
         // DisplayResults(rowText)  
   
         // Instead, you must call the procedure from the form's thread.  
         // One simple way to accomplish this is to call the Invoke  
         // method of the form, which calls the delegate you supply  
-        // from the form's thread.   
-        DisplayInfoDelegate del =   
+        // from the form's thread.
+        DisplayInfoDelegate del =
          new DisplayInfoDelegate(DisplayResults);  
         this.Invoke(del, rowText);  
     }  
     catch (Exception ex)  
     {  
-        // Because you're now running code in a separate thread,   
+        // Because you're now running code in a separate thread,
         // if you don't handle the exception here, none of your other  
         // code will catch the exception. Because none of your  
         // code is on the call stack in this thread, there's nothing  
-        // higher up the stack to catch the exception if you don't   
-        // handle it here. You can either log the exception or   
-        // invoke a delegate (as in the non-error case in this   
+        // higher up the stack to catch the exception if you don't
+        // handle it here. You can either log the exception or
+        // invoke a delegate (as in the non-error case in this
         // example) to display the error on the form. In no case  
-        // can you simply display the error without executing a   
-        // delegate as in the try block here.   
+        // can you simply display the error without executing a
+        // delegate as in the try block here.
   
-        // You can create the delegate instance as you   
+        // You can create the delegate instance as you
         // invoke it, like this:  
         this.Invoke(new DisplayInfoDelegate(DisplayStatus),  
             $"Ready (last error: {ex.Message}");
@@ -375,7 +375,7 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb608-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="cb608-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efe81-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="efe81-118">See also</span></span>
 
-- [<span data-ttu-id="cb608-119">非同期操作</span><span class="sxs-lookup"><span data-stu-id="cb608-119">Asynchronous Operations</span></span>](asynchronous-operations.md)
-- [<span data-ttu-id="cb608-120">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="cb608-120">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="efe81-119">非同期操作</span><span class="sxs-lookup"><span data-stu-id="efe81-119">Asynchronous Operations</span></span>](asynchronous-operations.md)
+- [<span data-ttu-id="efe81-120">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="efe81-120">ADO.NET Overview</span></span>](../ado-net-overview.md)
