@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443777"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176189"
 ---
-# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="4f352-102">CorCheckDuplicatesFor 列挙型</span><span class="sxs-lookup"><span data-stu-id="4f352-102">CorCheckDuplicatesFor Enumeration</span></span>
-<span data-ttu-id="4f352-103">重複をチェックするメタデータトークンを指定します。</span><span class="sxs-lookup"><span data-stu-id="4f352-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
+# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="13e16-102">CorCheckDuplicatesFor 列挙型</span><span class="sxs-lookup"><span data-stu-id="13e16-102">CorCheckDuplicatesFor Enumeration</span></span>
+<span data-ttu-id="13e16-103">重複をチェックするメタデータ トークンを指定します。</span><span class="sxs-lookup"><span data-stu-id="13e16-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f352-104">構文</span><span class="sxs-lookup"><span data-stu-id="4f352-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13e16-104">構文</span><span class="sxs-lookup"><span data-stu-id="13e16-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCheckDuplicatesFor {  
@@ -57,52 +57,52 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4f352-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="4f352-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="13e16-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="13e16-105">Members</span></span>  
   
-|<span data-ttu-id="4f352-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="4f352-106">Member</span></span>|<span data-ttu-id="4f352-107">説明</span><span class="sxs-lookup"><span data-stu-id="4f352-107">Description</span></span>|  
+|<span data-ttu-id="13e16-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="13e16-106">Member</span></span>|<span data-ttu-id="13e16-107">説明</span><span class="sxs-lookup"><span data-stu-id="13e16-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDDupAll`|<span data-ttu-id="4f352-108">すべてのメタデータトークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-108">Check all metadata tokens for duplicates.</span></span>|  
-|`MDDupENC`|<span data-ttu-id="4f352-109">使用しません。</span><span class="sxs-lookup"><span data-stu-id="4f352-109">Not used.</span></span>|  
-|`MDNoDupChecks`|<span data-ttu-id="4f352-110">メタデータトークンの重複をチェックしないでください。</span><span class="sxs-lookup"><span data-stu-id="4f352-110">Do not check metadata tokens for duplicates.</span></span>|  
-|`MDDupTypeDef`|<span data-ttu-id="4f352-111">`mdTypeDef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
-|`MDDupInterfaceImpl`|<span data-ttu-id="4f352-112">`mdInterfaceImpl` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
-|`MDDupMethodDef`|<span data-ttu-id="4f352-113">`mdMethodDef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
-|`MDDupTypeRef`|<span data-ttu-id="4f352-114">`mdTypeRef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
-|`MDDupMemberRef`|<span data-ttu-id="4f352-115">`mdMemberRef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
-|`MDDupCustomAttribute`|<span data-ttu-id="4f352-116">`mdCustomAttribute` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
-|`MDDupParamDef`|<span data-ttu-id="4f352-117">`mdParamDef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
-|`MDDupPermission`|<span data-ttu-id="4f352-118">`mdPermission` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
-|`MDDupProperty`|<span data-ttu-id="4f352-119">`mdProperty` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
-|`MDDupEvent`|<span data-ttu-id="4f352-120">`mdEvent` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
-|`MDDupFieldDef`|<span data-ttu-id="4f352-121">`mdFieldDef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
-|`MDDupSignature`|<span data-ttu-id="4f352-122">`mdSignature` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
-|`MDDupModuleRef`|<span data-ttu-id="4f352-123">`mdModuleRef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
-|`MDDupTypeSpec`|<span data-ttu-id="4f352-124">`mdTypeSpec` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
-|`MDDupImplMap`|<span data-ttu-id="4f352-125">`mdImplMap` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
-|`MDDupAssemblyRef`|<span data-ttu-id="4f352-126">`mdAssemblyRef` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
-|`MDDupFile`|<span data-ttu-id="4f352-127">`mdFile` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-127">Check for duplicates of `mdFile` tokens.</span></span>|  
-|`MDDupExportedType`|<span data-ttu-id="4f352-128">`mdExportedType` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
-|`MDDupManifestResource`|<span data-ttu-id="4f352-129">`mdManifestResource` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
-|`MDDupGenericParam`|<span data-ttu-id="4f352-130">`mdGenericParam` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
-|`MDDupMethodSpec`|<span data-ttu-id="4f352-131">`mdMethodSpec` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
-|`MDDupGenericParamConstraint`|<span data-ttu-id="4f352-132">`mdGenericParamConstraint` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
-|`MDDupAssembly`|<span data-ttu-id="4f352-133">`mdAssembly` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
-|`MDDupDefault`|<span data-ttu-id="4f352-134">`mdMemberRef`、`mdTypeRef`、`mdSignature`、`mdTypeSpec`、および `mdMethodSpec` トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="4f352-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
+|`MDDupAll`|<span data-ttu-id="13e16-108">すべてのメタデータ トークンに重複がないか確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-108">Check all metadata tokens for duplicates.</span></span>|  
+|`MDDupENC`|<span data-ttu-id="13e16-109">使用されていません。</span><span class="sxs-lookup"><span data-stu-id="13e16-109">Not used.</span></span>|  
+|`MDNoDupChecks`|<span data-ttu-id="13e16-110">メタデータ トークンの重複をチェックしないでください。</span><span class="sxs-lookup"><span data-stu-id="13e16-110">Do not check metadata tokens for duplicates.</span></span>|  
+|`MDDupTypeDef`|<span data-ttu-id="13e16-111">`mdTypeDef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
+|`MDDupInterfaceImpl`|<span data-ttu-id="13e16-112">`mdInterfaceImpl`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
+|`MDDupMethodDef`|<span data-ttu-id="13e16-113">`mdMethodDef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
+|`MDDupTypeRef`|<span data-ttu-id="13e16-114">`mdTypeRef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
+|`MDDupMemberRef`|<span data-ttu-id="13e16-115">`mdMemberRef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
+|`MDDupCustomAttribute`|<span data-ttu-id="13e16-116">`mdCustomAttribute`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
+|`MDDupParamDef`|<span data-ttu-id="13e16-117">`mdParamDef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
+|`MDDupPermission`|<span data-ttu-id="13e16-118">`mdPermission`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
+|`MDDupProperty`|<span data-ttu-id="13e16-119">`mdProperty`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
+|`MDDupEvent`|<span data-ttu-id="13e16-120">`mdEvent`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
+|`MDDupFieldDef`|<span data-ttu-id="13e16-121">`mdFieldDef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
+|`MDDupSignature`|<span data-ttu-id="13e16-122">`mdSignature`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
+|`MDDupModuleRef`|<span data-ttu-id="13e16-123">`mdModuleRef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
+|`MDDupTypeSpec`|<span data-ttu-id="13e16-124">`mdTypeSpec`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
+|`MDDupImplMap`|<span data-ttu-id="13e16-125">`mdImplMap`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
+|`MDDupAssemblyRef`|<span data-ttu-id="13e16-126">`mdAssemblyRef`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
+|`MDDupFile`|<span data-ttu-id="13e16-127">`mdFile`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-127">Check for duplicates of `mdFile` tokens.</span></span>|  
+|`MDDupExportedType`|<span data-ttu-id="13e16-128">`mdExportedType`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
+|`MDDupManifestResource`|<span data-ttu-id="13e16-129">`mdManifestResource`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
+|`MDDupGenericParam`|<span data-ttu-id="13e16-130">`mdGenericParam`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
+|`MDDupMethodSpec`|<span data-ttu-id="13e16-131">`mdMethodSpec`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
+|`MDDupGenericParamConstraint`|<span data-ttu-id="13e16-132">`mdGenericParamConstraint`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
+|`MDDupAssembly`|<span data-ttu-id="13e16-133">`mdAssembly`トークンの重複を確認します。</span><span class="sxs-lookup"><span data-stu-id="13e16-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
+|`MDDupDefault`|<span data-ttu-id="13e16-134">、 `mdMemberRef`、 `mdTypeRef`、、`mdSignature``mdTypeSpec`および`mdMethodSpec`トークンの重複をチェックします。</span><span class="sxs-lookup"><span data-stu-id="13e16-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4f352-135">要件</span><span class="sxs-lookup"><span data-stu-id="4f352-135">Requirements</span></span>  
- <span data-ttu-id="4f352-136">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4f352-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13e16-135">必要条件</span><span class="sxs-lookup"><span data-stu-id="13e16-135">Requirements</span></span>  
+ <span data-ttu-id="13e16-136">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="13e16-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f352-137">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="4f352-137">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="13e16-137">**ヘッダー:** コルドル.h</span><span class="sxs-lookup"><span data-stu-id="13e16-137">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4f352-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f352-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="13e16-138">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13e16-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f352-139">参照</span><span class="sxs-lookup"><span data-stu-id="4f352-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13e16-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="13e16-139">See also</span></span>
 
-- [<span data-ttu-id="4f352-140">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="4f352-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="13e16-140">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="13e16-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

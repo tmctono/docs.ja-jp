@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 7a0e2b69bbec0eb03d40bee2c8e2d4bc9c3558f9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d960eaae2aa479e0be74e9a5e4fdbfec8ff411c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742014"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182184"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="9e164-102">方法 : クリックされた TreeView ノード (Windows フォーム) を判別する</span><span class="sxs-lookup"><span data-stu-id="9e164-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
-<span data-ttu-id="9e164-103">Windows フォーム <xref:System.Windows.Forms.TreeView> コントロールを使用する場合の一般的なタスクは、どのノードがクリックされたかを判断し、適切に対応することです。</span><span class="sxs-lookup"><span data-stu-id="9e164-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="64205-102">方法 : クリックされた TreeView ノード (Windows フォーム) を判別する</span><span class="sxs-lookup"><span data-stu-id="64205-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
+<span data-ttu-id="64205-103">Windows フォーム<xref:System.Windows.Forms.TreeView>コントロールを操作する場合、一般的なタスクは、クリックされたノードを特定し、適切に応答することです。</span><span class="sxs-lookup"><span data-stu-id="64205-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="9e164-104">クリックされた TreeView ノードを確認するには</span><span class="sxs-lookup"><span data-stu-id="9e164-104">To determine which TreeView node was clicked</span></span>  
+### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="64205-104">クリックされたツリー ビュー ノードを確認するには</span><span class="sxs-lookup"><span data-stu-id="64205-104">To determine which TreeView node was clicked</span></span>  
   
-1. <span data-ttu-id="9e164-105"><xref:System.EventArgs> オブジェクトを使用して、クリックされたノードオブジェクトへの参照を返します。</span><span class="sxs-lookup"><span data-stu-id="9e164-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
+1. <span data-ttu-id="64205-105">オブジェクトを<xref:System.EventArgs>使用して、クリックされたノード オブジェクトへの参照を返します。</span><span class="sxs-lookup"><span data-stu-id="64205-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
   
-2. <span data-ttu-id="9e164-106">イベントに関連するデータを含む <xref:System.Windows.Forms.TreeViewEventArgs> クラスを確認して、どのノードがクリックされたかを確認します。</span><span class="sxs-lookup"><span data-stu-id="9e164-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
+2. <span data-ttu-id="64205-106">イベントに関連するデータを含むクラス<xref:System.Windows.Forms.TreeViewEventArgs>をチェックして、どのノードがクリックされたかを確認します。</span><span class="sxs-lookup"><span data-stu-id="64205-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -37,7 +37,7 @@ ms.locfileid: "76742014"
     ```  
   
     ```csharp  
-    protected void treeView1_AfterSelect (object sender,   
+    protected void treeView1_AfterSelect (object sender,
     System.Windows.Forms.TreeViewEventArgs e)  
     {  
        // Determine by checking the Text property.  
@@ -56,8 +56,8 @@ ms.locfileid: "76742014"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="9e164-107">別の方法として、<xref:System.Windows.Forms.Control.MouseDown> または <xref:System.Windows.Forms.Control.MouseUp> イベントの <xref:System.Windows.Forms.MouseEventArgs> を使用して、クリックが発生した <xref:System.Drawing.Point.Y%2A> の <xref:System.Drawing.Point.X%2A> と <xref:System.Drawing.Point> の座標値を取得することもできます。</span><span class="sxs-lookup"><span data-stu-id="9e164-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="9e164-108">次に、<xref:System.Windows.Forms.TreeView> コントロールの <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> メソッドを使用して、どのノードがクリックされたかを確認します。</span><span class="sxs-lookup"><span data-stu-id="9e164-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
+    > <span data-ttu-id="64205-107">または<xref:System.Windows.Forms.MouseEventArgs><xref:System.Windows.Forms.Control.MouseDown><xref:System.Windows.Forms.Control.MouseUp>イベントの を使用して、クリック<xref:System.Drawing.Point.X%2A><xref:System.Drawing.Point.Y%2A><xref:System.Drawing.Point>が発生した場所の 座標値と座標値を取得することもできます。</span><span class="sxs-lookup"><span data-stu-id="64205-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="64205-108">次に、コントロール<xref:System.Windows.Forms.TreeView>の<xref:System.Windows.Forms.TreeView.GetNodeAt%2A>メソッドを使用して、クリックされたノードを特定します。</span><span class="sxs-lookup"><span data-stu-id="64205-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e164-109">参照</span><span class="sxs-lookup"><span data-stu-id="9e164-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64205-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="64205-109">See also</span></span>
 
-- [<span data-ttu-id="9e164-110">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="9e164-110">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="64205-110">TreeView コントロール</span><span class="sxs-lookup"><span data-stu-id="64205-110">TreeView Control</span></span>](treeview-control-windows-forms.md)

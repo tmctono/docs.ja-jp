@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784267"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150782"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="41904-102">DataSet と XmlDataDocument の同期</span><span class="sxs-lookup"><span data-stu-id="41904-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
-<span data-ttu-id="41904-103">このセクションでは、<xref:System.Xml.XmlDataDocument> と同期され、厳密に型指定された <xref:System.Data.DataSet> を使用して、注文書を処理する手順の 1 ステップを例に説明します。</span><span class="sxs-lookup"><span data-stu-id="41904-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="41904-104">次の例では、ソース XML ドキュメントの一部にのみ一致する、最小化されたスキーマを使用して**データセット**を作成します。</span><span class="sxs-lookup"><span data-stu-id="41904-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="41904-105">この例では、 **XmlDataDocument**を使用してソース xml ドキュメントの忠実性を維持し、xml ドキュメントのサブセットを公開するために**データセット**を使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="41904-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="0190a-102">DataSet と XmlDataDocument の同期</span><span class="sxs-lookup"><span data-stu-id="0190a-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
+<span data-ttu-id="0190a-103">このセクションでは、<xref:System.Xml.XmlDataDocument> と同期され、厳密に型指定された <xref:System.Data.DataSet> を使用して、注文書を処理する手順の 1 ステップを例に説明します。</span><span class="sxs-lookup"><span data-stu-id="0190a-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="0190a-104">次の例では、ソース XML ドキュメントの一部に一致する最小化されたスキーマを持つ**DataSet**を作成します。</span><span class="sxs-lookup"><span data-stu-id="0190a-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="0190a-105">この例では **、XmlDataDocument を**使用してソース XML ドキュメントの忠実性を保持し **、DataSet**を使用して XML ドキュメントのサブセットを公開できるようにします。</span><span class="sxs-lookup"><span data-stu-id="0190a-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
   
- <span data-ttu-id="41904-106">注文書に関する情報 (顧客情報、発注品目、出荷情報など) をすべて含む XML ドキュメントの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="41904-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
+ <span data-ttu-id="0190a-106">注文書に関する情報 (顧客情報、発注品目、出荷情報など) をすべて含む XML ドキュメントの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="0190a-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -109,15 +109,15 @@ ms.locfileid: "70784267"
 </PurchaseOrder>  
 ```  
   
- <span data-ttu-id="41904-107">前述の XML ドキュメントに含まれている注文書の情報を処理する手順の 1 ステップとして、企業の現在の在庫のデータを使用してこの注文書が処理されます。</span><span class="sxs-lookup"><span data-stu-id="41904-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="41904-108">企業の倉庫で注文を処理する従業員は、注文書の内容をすべて確認する必要はありません。確認する必要がある情報は、注文書の製品情報だけです。</span><span class="sxs-lookup"><span data-stu-id="41904-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="41904-109">XML ドキュメントから製品情報のみを公開するには、XML スキーマ定義言語 (XSD) スキーマとして記述されたスキーマを使用して、厳密に型指定された**データセット**を作成します。このスキーマは、順序付けされた製品と数量にマップされます。</span><span class="sxs-lookup"><span data-stu-id="41904-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="41904-110">厳密に型指定された**dataset**オブジェクトの詳細については、「[型付き dataset](typed-datasets.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="41904-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](typed-datasets.md).</span></span>  
+ <span data-ttu-id="0190a-107">前述の XML ドキュメントに含まれている注文書の情報を処理する手順の 1 ステップとして、企業の現在の在庫のデータを使用してこの注文書が処理されます。</span><span class="sxs-lookup"><span data-stu-id="0190a-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="0190a-108">企業の倉庫で注文を処理する従業員は、注文書の内容をすべて確認する必要はありません。確認する必要がある情報は、注文書の製品情報だけです。</span><span class="sxs-lookup"><span data-stu-id="0190a-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="0190a-109">XML ドキュメントから製品情報だけを公開するには、厳密に型指定された**DataSet**を作成し、XML スキーマ定義言語 (XSD) スキーマとして記述されたスキーマを使用して、注文された製品と数量にマップします。</span><span class="sxs-lookup"><span data-stu-id="0190a-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="0190a-110">厳密に型指定された**データセット**オブジェクトの詳細については、「[型指定されたデータセット](typed-datasets.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0190a-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](typed-datasets.md).</span></span>  
   
- <span data-ttu-id="41904-111">次のコードは、このサンプルの厳密に型指定された**DataSet**の生成元となるスキーマを示しています。</span><span class="sxs-lookup"><span data-stu-id="41904-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
+ <span data-ttu-id="0190a-111">次のコードは、このサンプルに対して厳密に型指定された**DataSet**の生成元のスキーマを示しています。</span><span class="sxs-lookup"><span data-stu-id="0190a-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
-<xs:schema id="OrderDetail" xmlns=""   
-                            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"   
+<xs:schema id="OrderDetail" xmlns=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
                             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="OrderDetail" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -157,11 +157,11 @@ ms.locfileid: "70784267"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="41904-112">**データセット**のスキーマには、元の XML ドキュメントの**OrderDetails**要素と**Products**要素からの情報のみが含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="41904-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="41904-113">**Dataset**を**XmlDataDocument**と同期することで、**データセット**に含まれていない要素が XML ドキュメントで保持されるようになります。</span><span class="sxs-lookup"><span data-stu-id="41904-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
+ <span data-ttu-id="0190a-112">元の XML ドキュメントの**OrderDetails**要素および**Products**要素からの情報のみが**DataSet**のスキーマに含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="0190a-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="0190a-113">**データセット**を**XmlDataDocument**と同期させると、**データセット**に含まれていない要素が XML ドキュメントと共に保持されるようになります。</span><span class="sxs-lookup"><span data-stu-id="0190a-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
   
- <span data-ttu-id="41904-114">XML スキーマから生成された厳密に型指定された**データセット**( **Northwind. fillorder**の名前空間を持つ) を使用して、**データセット**と読み込まれた**XmlDataDocument**を同期して、元の xml ドキュメントの一部を公開できます。ソース XML ドキュメントから。</span><span class="sxs-lookup"><span data-stu-id="41904-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="41904-115">スキーマから生成されたデータ**セット**には構造が含まれていますが、データは含まれていません。</span><span class="sxs-lookup"><span data-stu-id="41904-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="41904-116">データは、XML を**XmlDataDocument**に読み込むときに入力されます。</span><span class="sxs-lookup"><span data-stu-id="41904-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="41904-117">既にデータが含まれているデータ**セット**と同期された**XmlDataDocument**を読み込もうとすると、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="41904-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
+ <span data-ttu-id="0190a-114">XML スキーマから生成された厳密に型指定**されたデータセット** **(Northwind.FillOrder**の名前空間を使用) を使用すると、元の XML ドキュメントの一部を、ソース XML ドキュメントから読み込まれた**XmlDataDocument**と同期させることで、その**データセット**を公開できます。</span><span class="sxs-lookup"><span data-stu-id="0190a-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="0190a-115">スキーマから生成された**DataSet には**構造が含まれていますが、データは含みなくなります。</span><span class="sxs-lookup"><span data-stu-id="0190a-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="0190a-116">XML を**XmlDataDocument**に読み込むと、データが入力されます。</span><span class="sxs-lookup"><span data-stu-id="0190a-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="0190a-117">既にデータを含む**データセット**と同期されている**XmlDataDocument**を読み込もうとすると、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="0190a-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
   
- <span data-ttu-id="41904-118">**データセット**(および**XmlDataDocument**) が更新された後、 **XmlDataDocument**は、次に示すように、**データセット**によって無視された要素を含む変更された XML ドキュメントを書き出すことができます。</span><span class="sxs-lookup"><span data-stu-id="41904-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="41904-119">注文書の処理手順では、注文品目の入力後に、変更された XML ドキュメントが注文処理の次のステップ (社内の出荷部門) に渡されます。</span><span class="sxs-lookup"><span data-stu-id="41904-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
+ <span data-ttu-id="0190a-118">**データセット**(および**XmlDataDocument)** が更新された後 **、XmlDataDocument**は、次に示すように、**データセット**によって無視される要素を含む変更された XML ドキュメントを書き出すことができます。</span><span class="sxs-lookup"><span data-stu-id="0190a-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="0190a-119">注文書の処理手順では、注文品目の入力後に、変更された XML ドキュメントが注文処理の次のステップ (社内の出荷部門) に渡されます。</span><span class="sxs-lookup"><span data-stu-id="0190a-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
   
 ```vb  
 Imports System  
@@ -174,7 +174,7 @@ Public class Sample
   
     Dim orderDS As OrderDetail = New OrderDetail  
   
-    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)   
+    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)
   
     xmlDocument.Load("Order.xml")  
   
@@ -208,9 +208,9 @@ public class Sample
 {  
   public static void Main()  
   {  
-    OrderDetail orderDS = new OrderDetail();   
+    OrderDetail orderDS = new OrderDetail();
   
-    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);   
+    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);
   
     xmlDocument.Load("Order.xml");  
   
@@ -231,7 +231,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="41904-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="41904-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0190a-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="0190a-120">See also</span></span>
 
-- [<span data-ttu-id="41904-121">DataSet と XmlDataDocument の同期</span><span class="sxs-lookup"><span data-stu-id="41904-121">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="41904-122">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="41904-122">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="0190a-121">DataSet と XmlDataDocument の同期</span><span class="sxs-lookup"><span data-stu-id="0190a-121">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="0190a-122">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="0190a-122">ADO.NET Overview</span></span>](../ado-net-overview.md)

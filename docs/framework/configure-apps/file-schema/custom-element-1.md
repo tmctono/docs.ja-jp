@@ -1,69 +1,68 @@
 ---
-title: SingleTagSectionHandler のカスタム要素
+title: カスタム要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214787"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155155"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a><span data-ttu-id="9ca1c-102">SingleTagSectionHandler のカスタム要素</span><span class="sxs-lookup"><span data-stu-id="9ca1c-102">Custom element for SingleTagSectionHandler</span></span>
+# <a name="custom-element-for-singletagsectionhandler"></a><span data-ttu-id="3de6c-102">カスタム要素</span><span class="sxs-lookup"><span data-stu-id="3de6c-102">Custom element for SingleTagSectionHandler</span></span>
 
-<span data-ttu-id="9ca1c-103">\<セクション > 要素で定義され、<xref:System.Configuration.SingleTagSectionHandler> クラスを使用するカスタム構成セクションの設定を定義します。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-103">Defines settings in a custom configuration section that is defined by a \<section> element and uses the <xref:System.Configuration.SingleTagSectionHandler> class.</span></span>
+<span data-ttu-id="3de6c-103">要素の\<セクションで定義され、クラスを使用するカスタム構成セクション>設定を定義<xref:System.Configuration.SingleTagSectionHandler>します。</span><span class="sxs-lookup"><span data-stu-id="3de6c-103">Defines settings in a custom configuration section that is defined by a \<section> element and uses the <xref:System.Configuration.SingleTagSectionHandler> class.</span></span>
 
-<span data-ttu-id="9ca1c-104">[ **\<configuration>** ](configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="9ca1c-104">[**\<configuration>**](configuration-element.md) </span></span>  
-<span data-ttu-id="9ca1c-105">&nbsp;&nbsp; *\<sectionName >*</span><span class="sxs-lookup"><span data-stu-id="9ca1c-105">&nbsp;&nbsp;*\<sectionName>*</span></span>
+<span data-ttu-id="3de6c-104">&nbsp;[**\<構成>**](configuration-element.md)&nbsp;*セクション名>\<*</span><span class="sxs-lookup"><span data-stu-id="3de6c-104">[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;*\<sectionName>*</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9ca1c-106">構文</span><span class="sxs-lookup"><span data-stu-id="9ca1c-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3de6c-105">構文</span><span class="sxs-lookup"><span data-stu-id="3de6c-105">Syntax</span></span>
 
 ```xml
 <sectionName key="value" key2="value2" ... />
 ```
 
-## <a name="attributes"></a><span data-ttu-id="9ca1c-107">属性</span><span class="sxs-lookup"><span data-stu-id="9ca1c-107">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="3de6c-106">属性</span><span class="sxs-lookup"><span data-stu-id="3de6c-106">Attributes</span></span>
 
-<span data-ttu-id="9ca1c-108">属性と属性値はユーザーが定義します。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-108">Attributes and attribute values are user defined.</span></span>
+<span data-ttu-id="3de6c-107">属性と属性値はユーザー定義です。</span><span class="sxs-lookup"><span data-stu-id="3de6c-107">Attributes and attribute values are user defined.</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="9ca1c-109">親要素</span><span class="sxs-lookup"><span data-stu-id="9ca1c-109">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="3de6c-108">親要素</span><span class="sxs-lookup"><span data-stu-id="3de6c-108">Parent element</span></span>
 
-|     | <span data-ttu-id="9ca1c-110">説明</span><span class="sxs-lookup"><span data-stu-id="9ca1c-110">Description</span></span> |
+|     | <span data-ttu-id="3de6c-109">説明</span><span class="sxs-lookup"><span data-stu-id="3de6c-109">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="9ca1c-111"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="9ca1c-111">**\<configuration>**</span></span>](configuration-element.md) | <span data-ttu-id="9ca1c-112">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-112">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="3de6c-110">**\<構成>**</span><span class="sxs-lookup"><span data-stu-id="3de6c-110">**\<configuration>**</span></span>](configuration-element.md) | <span data-ttu-id="3de6c-111">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="3de6c-111">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="9ca1c-113">子要素</span><span class="sxs-lookup"><span data-stu-id="9ca1c-113">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="3de6c-112">子要素</span><span class="sxs-lookup"><span data-stu-id="3de6c-112">Child elements</span></span>
 
-<span data-ttu-id="9ca1c-114">なし</span><span class="sxs-lookup"><span data-stu-id="9ca1c-114">None</span></span>
+<span data-ttu-id="3de6c-113">なし</span><span class="sxs-lookup"><span data-stu-id="3de6c-113">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="9ca1c-115">コメント</span><span class="sxs-lookup"><span data-stu-id="9ca1c-115">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3de6c-114">解説</span><span class="sxs-lookup"><span data-stu-id="3de6c-114">Remarks</span></span>
 
-<span data-ttu-id="9ca1c-116">**\<sectionName >** 要素は、 [ **\<configsections >** ](configsections-element-for-configuration.md)要素の[ **\<セクション >** ](section-element.md)タグで定義されたカスタム要素です。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-116">The **\<sectionName>** element is a custom element defined by a [**\<section>**](section-element.md) tag in the [**\<configSections>**](configsections-element-for-configuration.md) element.</span></span> <span data-ttu-id="9ca1c-117"><xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>を呼び出すと、構成システムによって <xref:System.Collections.IDictionary> オブジェクトが返されます。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-117">The configuration system returns a <xref:System.Collections.IDictionary> object when you call <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="3de6c-115">セクション名>要素は、セクション>要素要素の[**\<タグ**](section-element.md)によって定義される**\<**[**\<カスタム要素>。**](configsections-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="3de6c-115">The **\<sectionName>** element is a custom element defined by a [**\<section>**](section-element.md) tag in the [**\<configSections>**](configsections-element-for-configuration.md) element.</span></span> <span data-ttu-id="3de6c-116">構成システムは、<xref:System.Collections.IDictionary>を呼び出<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>すとオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="3de6c-116">The configuration system returns a <xref:System.Collections.IDictionary> object when you call <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9ca1c-118">例</span><span class="sxs-lookup"><span data-stu-id="9ca1c-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3de6c-117">例</span><span class="sxs-lookup"><span data-stu-id="3de6c-117">Example</span></span>
 
-<span data-ttu-id="9ca1c-119">次の例では、<xref:System.Configuration.SingleTagSectionHandler> クラスによって読み取られる設定を含む **\<sampleSection >** という名前のカスタム要素を宣言します。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-119">The following example declares a custom element called **\<sampleSection>** that contains settings read by the <xref:System.Configuration.SingleTagSectionHandler> class:</span></span>
+<span data-ttu-id="3de6c-118">次の例では、クラスによって読み取られた設定を含む**\<sampleSection>** と呼ばれるカスタム要素を<xref:System.Configuration.SingleTagSectionHandler>宣言します。</span><span class="sxs-lookup"><span data-stu-id="3de6c-118">The following example declares a custom element called **\<sampleSection>** that contains settings read by the <xref:System.Configuration.SingleTagSectionHandler> class:</span></span>
 
 ```xml
 <configuration>
   <configSections>
-    <section name="sampleSection" 
+    <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="9ca1c-120">［構成ファイル］</span><span class="sxs-lookup"><span data-stu-id="9ca1c-120">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="3de6c-119">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="3de6c-119">Configuration file</span></span>
 
-<span data-ttu-id="9ca1c-121">この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。</span><span class="sxs-lookup"><span data-stu-id="9ca1c-121">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="3de6c-120">この要素は、アプリケーションディレクトリレベルではないアプリケーション構成ファイル、マシン構成ファイル (*Machine.config*) および*Web.config*ファイルで使用できます。</span><span class="sxs-lookup"><span data-stu-id="3de6c-120">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9ca1c-122">参照</span><span class="sxs-lookup"><span data-stu-id="9ca1c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3de6c-121">関連項目</span><span class="sxs-lookup"><span data-stu-id="3de6c-121">See also</span></span>
 
-- [<span data-ttu-id="9ca1c-123">.NET Framework の構成ファイルスキーマ</span><span class="sxs-lookup"><span data-stu-id="9ca1c-123">Configuration file schema for the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="3de6c-122">.NET Framework の構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="3de6c-122">Configuration file schema for the .NET Framework</span></span>](index.md)

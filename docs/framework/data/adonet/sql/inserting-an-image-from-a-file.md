@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794150"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148609"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="aca07-102">ファイルからの画像の挿入</span><span class="sxs-lookup"><span data-stu-id="aca07-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="aca07-103">データ ソースのフィールドの型に応じて、バイナリ データまたは文字データとして、BLOB (バイナリ ラージ オブジェクト) をデータベースに書き込むことができます。</span><span class="sxs-lookup"><span data-stu-id="aca07-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="aca07-104">BLOB は `text`、`ntext`、および `image` データ型を示す一般的な用語であり、通常ドキュメントとピクチャが含まれています。</span><span class="sxs-lookup"><span data-stu-id="aca07-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="ac829-102">ファイルからの画像の挿入</span><span class="sxs-lookup"><span data-stu-id="ac829-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="ac829-103">バイナリ ラージ オブジェクト (BLOB) は、データ ソースのフィールドの種類に応じて、バイナリ データまたは文字データとしてデータベースに書き込むことができます。</span><span class="sxs-lookup"><span data-stu-id="ac829-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="ac829-104">BLOB は、`text`、`ntext`、および `image` データ型をのことを指す一般用語であり、通常はドキュメントと画像が含まれます。</span><span class="sxs-lookup"><span data-stu-id="ac829-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="aca07-105">BLOB 値をデータベースに書き込むには、適切な INSERT または UPDATE ステートメントを実行し、BLOB 値を入力パラメーターとして渡します (「[パラメーターとパラメーターデータ型の構成](../configuring-parameters-and-parameter-data-types.md)」を参照してください)。</span><span class="sxs-lookup"><span data-stu-id="aca07-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="aca07-106">BLOB が、SQL Server の `text` フィールドなどのようにテキストとして格納される場合は、文字列パラメーターとして BLOB を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="aca07-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="aca07-107">BLOB が、SQL Server の `image` フィールドなどのようにバイナリ形式で格納される場合は、バイナリ パラメーターとして `byte` 型の配列を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="aca07-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="ac829-105">BLOB 値をデータベースに書き込むには、適切な INSERT ステートメントまたは UPDATE ステートメントを発行し、BLOB 値を入力パラメーターとして渡します ([パラメーターおよびパラメーター・データ・タイプの構成を](../configuring-parameters-and-parameter-data-types.md)参照してください)。</span><span class="sxs-lookup"><span data-stu-id="ac829-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="ac829-106">BLOB を SQL Server `text` フィールドなどのテキストとして格納する場合は、BLOB を文字列パラメーターとして渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="ac829-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="ac829-107">BLOB を SQL Server `image` フィールドなどのバイナリ形式で格納する場合は、`byte` 型の配列をバイナリ パラメーターとして渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="ac829-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aca07-108">例</span><span class="sxs-lookup"><span data-stu-id="aca07-108">Example</span></span>  
- <span data-ttu-id="aca07-109">Northwind データベースの Employees テーブルに従業員情報を追加するコード サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="aca07-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="aca07-110">従業員の写真がファイルから読み取られ、テーブルの Photo フィールド (イメージ フィールド) に追加されます。</span><span class="sxs-lookup"><span data-stu-id="aca07-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="ac829-108">例</span><span class="sxs-lookup"><span data-stu-id="ac829-108">Example</span></span>  
+ <span data-ttu-id="ac829-109">次のコード例では、Northwind データベースの Employees テーブルに従業員情報を追加します。</span><span class="sxs-lookup"><span data-stu-id="ac829-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="ac829-110">従業員の写真がファイルから読み取られ、テーブルの Photo フィールド (画像フィールド) に追加されます。</span><span class="sxs-lookup"><span data-stu-id="ac829-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -39,7 +39,7 @@ Public Shared Sub AddEmployee( _
     "INSERT INTO Employees (LastName, FirstName, Title, " & _  
     "HireDate, ReportsTo, Photo) " & _  
     "Values(@LastName, @FirstName, @Title, " & _  
-    "@HireDate, @ReportsTo, @Photo)", connection)   
+    "@HireDate, @ReportsTo, @Photo)", connection)
   
   command.Parameters.Add("@LastName",  _  
     SqlDbType.NVarChar, 20).Value = lastName  
@@ -77,12 +77,12 @@ End Function
   
 ```csharp  
 public static void AddEmployee(  
-  string lastName,   
-  string firstName,   
-  string title,   
-  DateTime hireDate,   
-  int reportsTo,   
-  string photoFilePath,   
+  string lastName,
+  string firstName,
+  string title,
+  DateTime hireDate,
+  int reportsTo,
+  string photoFilePath,
   string connectionString)  
 {  
   byte[] photo = GetPhoto(photoFilePath);  
@@ -94,17 +94,17 @@ public static void AddEmployee(
     "INSERT INTO Employees (LastName, FirstName, " +  
     "Title, HireDate, ReportsTo, Photo) " +  
     "Values(@LastName, @FirstName, @Title, " +  
-    "@HireDate, @ReportsTo, @Photo)", connection);   
+    "@HireDate, @ReportsTo, @Photo)", connection);
   
-  command.Parameters.Add("@LastName",    
+  command.Parameters.Add("@LastName",
      SqlDbType.NVarChar, 20).Value = lastName;  
-  command.Parameters.Add("@FirstName",   
+  command.Parameters.Add("@FirstName",
       SqlDbType.NVarChar, 10).Value = firstName;  
-  command.Parameters.Add("@Title",       
+  command.Parameters.Add("@Title",
       SqlDbType.NVarChar, 30).Value = title;  
-  command.Parameters.Add("@HireDate",   
+  command.Parameters.Add("@HireDate",
        SqlDbType.DateTime).Value = hireDate;  
-  command.Parameters.Add("@ReportsTo",   
+  command.Parameters.Add("@ReportsTo",
       SqlDbType.Int).Value = reportsTo;  
   
   command.Parameters.Add("@Photo",  
@@ -130,10 +130,10 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aca07-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="aca07-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac829-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="ac829-111">See also</span></span>
 
-- [<span data-ttu-id="aca07-112">コマンドを使用したデータ変更</span><span class="sxs-lookup"><span data-stu-id="aca07-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
-- [<span data-ttu-id="aca07-113">バイナリ データの取得</span><span class="sxs-lookup"><span data-stu-id="aca07-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
-- [<span data-ttu-id="aca07-114">SQL Server のバイナリ データと大きな値のデータ</span><span class="sxs-lookup"><span data-stu-id="aca07-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
-- [<span data-ttu-id="aca07-115">SQL Server データ型のマッピング</span><span class="sxs-lookup"><span data-stu-id="aca07-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
-- [<span data-ttu-id="aca07-116">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="aca07-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="ac829-112">コマンドを使用したデータ変更</span><span class="sxs-lookup"><span data-stu-id="ac829-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
+- [<span data-ttu-id="ac829-113">バイナリ データの取得</span><span class="sxs-lookup"><span data-stu-id="ac829-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
+- [<span data-ttu-id="ac829-114">SQL Server のバイナリ データと大きな値のデータ</span><span class="sxs-lookup"><span data-stu-id="ac829-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
+- [<span data-ttu-id="ac829-115">SQL Server データ型のマッピング</span><span class="sxs-lookup"><span data-stu-id="ac829-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
+- [<span data-ttu-id="ac829-116">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="ac829-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
