@@ -1,5 +1,5 @@
 ---
-title: '方法: ダイアログボックスを表示する'
+title: '[方法] ダイアログ ボックスを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3625080c7c322e297a9de92e4f95a40c0caf3e72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739462"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181970"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="a22a6-102">方法 : Windows フォームのダイアログ ボックスを表示する</span><span class="sxs-lookup"><span data-stu-id="a22a6-102">How to: Display Dialog Boxes for Windows Forms</span></span>
-<span data-ttu-id="a22a6-103">アプリケーションで他のフォームを表示する場合と同じ方法でダイアログボックスを表示します。</span><span class="sxs-lookup"><span data-stu-id="a22a6-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="a22a6-104">スタートアップフォームは、アプリケーションの実行時に自動的に読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="a22a6-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="a22a6-105">アプリケーションに2つ目のフォームまたはダイアログボックスが表示されるようにするには、それを読み込んで表示するためのコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="a22a6-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="a22a6-106">同様に、フォームまたはダイアログボックスが表示されないようにするには、アンロードまたは非表示にするコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="a22a6-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a><span data-ttu-id="23f05-102">方法 : Windows フォームのダイアログ ボックスを表示する</span><span class="sxs-lookup"><span data-stu-id="23f05-102">How to: Display Dialog Boxes for Windows Forms</span></span>
+<span data-ttu-id="23f05-103">ダイアログ ボックスは、アプリケーションで他のフォームを表示する場合と同じ方法で表示します。</span><span class="sxs-lookup"><span data-stu-id="23f05-103">You display a dialog box in the same way you display any other form in an application.</span></span> <span data-ttu-id="23f05-104">アプリケーションの実行時にスタートアップ フォームが自動的に読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="23f05-104">The startup form loads automatically when the application is run.</span></span> <span data-ttu-id="23f05-105">アプリケーションに 2 番目のフォームまたはダイアログ ボックスを表示するには、読み込んで表示するコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="23f05-105">To make a second form or dialog box appear in the application, write code to load and display it.</span></span> <span data-ttu-id="23f05-106">同様に、フォームまたはダイアログ ボックスを非表示にするには、アンロードまたは非表示にするコードを記述します。</span><span class="sxs-lookup"><span data-stu-id="23f05-106">Similarly, to make the form or dialog box disappear, write code to unload or hide it.</span></span>  
   
-### <a name="to-display-a-dialog-box"></a><span data-ttu-id="a22a6-107">ダイアログボックスを表示するには</span><span class="sxs-lookup"><span data-stu-id="a22a6-107">To display a dialog box</span></span>  
+### <a name="to-display-a-dialog-box"></a><span data-ttu-id="23f05-107">ダイアログ ボックスを表示するには</span><span class="sxs-lookup"><span data-stu-id="23f05-107">To display a dialog box</span></span>  
   
-1. <span data-ttu-id="a22a6-108">ダイアログボックスを開くイベントハンドラーに移動します。</span><span class="sxs-lookup"><span data-stu-id="a22a6-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="a22a6-109">これは、メニューコマンドが選択されている場合、ボタンがクリックされた場合、または他のイベントが発生した場合に発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a22a6-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
+1. <span data-ttu-id="23f05-108">ダイアログ ボックスを開くイベント ハンドラーに移動します。</span><span class="sxs-lookup"><span data-stu-id="23f05-108">Navigate to the event handler with which you want to open the dialog box.</span></span> <span data-ttu-id="23f05-109">これは、メニュー コマンドが選択されたとき、ボタンがクリックされたとき、またはその他のイベントが発生したときに発生します。</span><span class="sxs-lookup"><span data-stu-id="23f05-109">This can happen when a menu command is selected, when a button is clicked, or when any other event occurs.</span></span>  
   
-2. <span data-ttu-id="a22a6-110">イベントハンドラーで、ダイアログボックスを開くためのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="a22a6-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="a22a6-111">この例では、ボタンクリックイベントを使用してダイアログボックスを表示しています。</span><span class="sxs-lookup"><span data-stu-id="a22a6-111">In this example, a button-click event is used to show the dialog box:</span></span>  
+2. <span data-ttu-id="23f05-110">イベント ハンドラーで、ダイアログ ボックスを開くコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="23f05-110">In the event handler, add code to open the dialog box.</span></span> <span data-ttu-id="23f05-111">この例では、ボタンクリックイベントを使用してダイアログ ボックスを表示します。</span><span class="sxs-lookup"><span data-stu-id="23f05-111">In this example, a button-click event is used to show the dialog box:</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -35,7 +35,7 @@ ms.locfileid: "76739462"
     ```  
   
     ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)   
+    private void button1_Click(object sender, System.EventArgs e)
     {  
        Form dlg1 = new Form();  
        dlg1.ShowDialog();  
@@ -43,7 +43,7 @@ ms.locfileid: "76739462"
     ```  
   
     ```cpp  
-    private:   
+    private:
       void button1_Click(System::Object ^ sender,  
         System::EventArgs ^ e)  
       {  

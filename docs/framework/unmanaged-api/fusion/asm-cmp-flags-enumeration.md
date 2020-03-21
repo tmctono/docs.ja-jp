@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109326"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178332"
 ---
-# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="543c5-102">ASM_CMP_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="543c5-102">ASM_CMP_FLAGS Enumeration</span></span>
-<span data-ttu-id="543c5-103">[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md)メソッドによって比較される2つのアセンブリのバージョン、ビルド、カルチャ、署名などを示します。</span><span class="sxs-lookup"><span data-stu-id="543c5-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
+# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="dd71e-102">ASM_CMP_FLAGS 列挙型</span><span class="sxs-lookup"><span data-stu-id="dd71e-102">ASM_CMP_FLAGS Enumeration</span></span>
+<span data-ttu-id="dd71e-103">[IAssemblyName::IsEqual](iassemblyname-isequal-method.md)メソッドによって比較される 2 つのアセンブリのバージョン、ビルド、カルチャ、シグネチャなどを示します。</span><span class="sxs-lookup"><span data-stu-id="dd71e-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="543c5-104">構文</span><span class="sxs-lookup"><span data-stu-id="543c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd71e-104">構文</span><span class="sxs-lookup"><span data-stu-id="dd71e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,10 +35,10 @@ typedef enum {
     ASM_CMPF_BUILD_NUMBER           = 0x8,  
     ASM_CMPF_REVISION_NUMBER        = 0x10,  
   
-    ASM_CMPF_VERSION                =   
-                 ASM_CMPF_MAJOR_VERSION |   
-                 ASM_CMPF_MINOR_VERSION |   
-                 ASM_CMPF_BUILD_NUMBER  |   
+    ASM_CMPF_VERSION                =
+                 ASM_CMPF_MAJOR_VERSION |
+                 ASM_CMPF_MINOR_VERSION |
+                 ASM_CMPF_BUILD_NUMBER  |
                  ASM_CMPF_REVISION_NUMBER,  
   
     ASM_CMPF_PUBLIC_KEY_TOKEN       = 0x20,  
@@ -51,30 +51,30 @@ typedef enum {
     ASM_CMPF_MVID                   = 0x1000,  
     ASM_CMPF_SIGNATURE              = 0x2000,  
   
-    ASM_CMPF_IL_ALL                 =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_VERSION          |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_ALL                 =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_VERSION          |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE,  
   
-    ASM_CMPF_IL_NO_VERSION          =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_NO_VERSION          =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE  
   
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="543c5-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="543c5-105">Requirements</span></span>  
- <span data-ttu-id="543c5-106">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="543c5-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd71e-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="dd71e-105">Requirements</span></span>  
+ <span data-ttu-id="dd71e-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dd71e-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="543c5-107">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="543c5-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="dd71e-107">**ヘッダー:** フュージョン.h</span><span class="sxs-lookup"><span data-stu-id="dd71e-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="543c5-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="543c5-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dd71e-108">**ライブラリ:** MsCorEE.dll にリソースとして含まれる</span><span class="sxs-lookup"><span data-stu-id="dd71e-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="543c5-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="543c5-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dd71e-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd71e-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="543c5-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="543c5-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd71e-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="dd71e-110">See also</span></span>
 
-- [<span data-ttu-id="543c5-111">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="543c5-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="543c5-112">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="543c5-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="dd71e-111">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dd71e-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="dd71e-112">fusion 列挙体</span><span class="sxs-lookup"><span data-stu-id="dd71e-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

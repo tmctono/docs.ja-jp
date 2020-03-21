@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99db077b41a59fe9263f7283b58b8c31959c7c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182078"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="3ed05-102">方法: ツール バー ボタンのメニュー イベントをトリガーする</span><span class="sxs-lookup"><span data-stu-id="3ed05-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="ce2d8-102">方法: ツール バー ボタンのメニュー イベントをトリガーする</span><span class="sxs-lookup"><span data-stu-id="ce2d8-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
-> <span data-ttu-id="3ed05-103"><xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="3ed05-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+> <span data-ttu-id="ce2d8-103"><xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="3ed05-104">Windows フォームにツールバーボタン<xref:System.Windows.Forms.ToolBar>を持つコントロールが機能する場合は、ユーザーがクリックしたボタンを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3ed05-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="ce2d8-104">Windows フォームにツール<xref:System.Windows.Forms.ToolBar>バー ボタンを備えたコントロールがある場合は、ユーザーがクリックしたボタンを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="3ed05-105">コントロールのイベントでは、 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラスの<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>プロパティを評価できます。 <xref:System.Windows.Forms.ToolBar.ButtonClick> <xref:System.Windows.Forms.ToolBar></span><span class="sxs-lookup"><span data-stu-id="3ed05-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="3ed05-106">次の例では、クリックされたボタンを示すメッセージ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3ed05-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="3ed05-107">詳細については、「<xref:System.Windows.Forms.MessageBox>」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3ed05-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="ce2d8-105">コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベントで、クラスのプロパティを<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A><xref:System.Windows.Forms.ToolBarButtonClickEventArgs>評価できます。 <xref:System.Windows.Forms.ToolBar></span><span class="sxs-lookup"><span data-stu-id="ce2d8-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="ce2d8-106">次の例では、クリックされたボタンを示すメッセージ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="ce2d8-107">詳細については、<xref:System.Windows.Forms.MessageBox> を参照してください。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="3ed05-108">次の例では<xref:System.Windows.Forms.ToolBar> 、コントロールが Windows フォームに追加されていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="3ed05-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="ce2d8-108">次の例では、<xref:System.Windows.Forms.ToolBar>コントロールが Windows フォームに追加されていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="3ed05-109">ツール バーの Click イベントを処理するには</span><span class="sxs-lookup"><span data-stu-id="3ed05-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="ce2d8-109">ツール バーの Click イベントを処理するには</span><span class="sxs-lookup"><span data-stu-id="ce2d8-109">To handle the Click event on a toolbar</span></span>  
   
-1. <span data-ttu-id="3ed05-110">プロシージャで、 <xref:System.Windows.Forms.ToolBar>コントロールにツールバーボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="3ed05-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1. <span data-ttu-id="ce2d8-110">プロシージャで、コントロールにツール バー<xref:System.Windows.Forms.ToolBar>ボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -45,13 +45,13 @@ ms.locfileid: "69956036"
     ```  
   
     ```csharp  
-    public void ToolBarConfig()   
+    public void ToolBarConfig()
     {  
        toolBar1.Buttons.Add(new ToolBarButton("One"));  
        toolBar1.Buttons.Add(new ToolBarButton("Two"));  
        toolBar1.Buttons.Add(new ToolBarButton("Three"));  
   
-       toolBar1.ButtonClick +=   
+       toolBar1.ButtonClick +=
           new ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);  
     }  
     ```  
@@ -64,16 +64,16 @@ ms.locfileid: "69956036"
           toolBar1->Buttons->Add(gcnew ToolBarButton("Two"));  
           toolBar1->Buttons->Add(gcnew ToolBarButton("Three"));  
   
-          toolBar1->ButtonClick +=   
+          toolBar1->ButtonClick +=
              gcnew ToolBarButtonClickEventHandler(this,  
              &Form1::toolBar1_ButtonClick);  
        }  
     ```  
   
-2. <span data-ttu-id="3ed05-111"><xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベントのイベントハンドラーを追加します。</span><span class="sxs-lookup"><span data-stu-id="3ed05-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="3ed05-112">ケース切り替えステートメントと<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラスを使用して、クリックされたツールバーボタンを決定します。</span><span class="sxs-lookup"><span data-stu-id="3ed05-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="3ed05-113">この結果に基づいて、適切なメッセージ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3ed05-113">Based on this, show an appropriate message box.</span></span>  
+2. <span data-ttu-id="ce2d8-111">コントロールのイベント ハンドラーを<xref:System.Windows.Forms.ToolBar>追加<xref:System.Windows.Forms.ToolBar.ButtonClick>します。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="ce2d8-112">ケース切り替えステートメントと<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラスを使用して、クリックされたツールバー ボタンを決定します。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="ce2d8-113">この結果に基づいて、適切なメッセージ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="3ed05-114">この例では、メッセージ ボックスは、プレースホルダーとして単独で使用されています。</span><span class="sxs-lookup"><span data-stu-id="3ed05-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="3ed05-115">ツール バーのボタンがクリックされたときに実行するコードは、自由に追加できます。</span><span class="sxs-lookup"><span data-stu-id="3ed05-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    > <span data-ttu-id="ce2d8-114">この例では、メッセージ ボックスは、プレースホルダーとして単独で使用されています。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="ce2d8-115">ツール バーのボタンがクリックされたときに実行するコードは、自由に追加できます。</span><span class="sxs-lookup"><span data-stu-id="ce2d8-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,9 +134,9 @@ ms.locfileid: "69956036"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3ed05-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="3ed05-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce2d8-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="ce2d8-116">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="3ed05-117">方法: ツールバーコントロールにボタンを追加する</span><span class="sxs-lookup"><span data-stu-id="3ed05-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
-- [<span data-ttu-id="3ed05-118">方法: ツールバーボタンのアイコンを定義する</span><span class="sxs-lookup"><span data-stu-id="3ed05-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="3ed05-119">ToolBar コントロール</span><span class="sxs-lookup"><span data-stu-id="3ed05-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="ce2d8-117">方法: ToolBar コントロールにボタンを追加する</span><span class="sxs-lookup"><span data-stu-id="ce2d8-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="ce2d8-118">方法: ToolBar ボタンのアイコンを定義する</span><span class="sxs-lookup"><span data-stu-id="ce2d8-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="ce2d8-119">ToolBar コントロール</span><span class="sxs-lookup"><span data-stu-id="ce2d8-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

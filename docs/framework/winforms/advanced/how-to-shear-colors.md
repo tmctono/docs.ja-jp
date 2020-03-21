@@ -1,5 +1,5 @@
 ---
-title: '方法: 色を傾斜する'
+title: '方法 : 色を傾斜する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593203"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142395"
 ---
-# <a name="how-to-shear-colors"></a><span data-ttu-id="f9a13-102">方法: 色を傾斜する</span><span class="sxs-lookup"><span data-stu-id="f9a13-102">How to: Shear Colors</span></span>
-<span data-ttu-id="f9a13-103">傾斜増加またはカラー コンポーネントを別の色コンポーネントに比例した量ずつ減少します。</span><span class="sxs-lookup"><span data-stu-id="f9a13-103">Shearing increases or decreases a color component by an amount proportional to another color component.</span></span> <span data-ttu-id="f9a13-104">たとえば、赤のコンポーネントを増加して青のコンポーネントの値の半分して変換を検討してください。</span><span class="sxs-lookup"><span data-stu-id="f9a13-104">For example, consider the transformation where the red component is increased by one half the value of the blue component.</span></span> <span data-ttu-id="f9a13-105">このような変換では、(0.2, 0.5, 1) の色になります (0.7, 0.5, 1)。</span><span class="sxs-lookup"><span data-stu-id="f9a13-105">Under such a transformation, the color (0.2, 0.5, 1) would become (0.7, 0.5, 1).</span></span> <span data-ttu-id="f9a13-106">新しいの赤のコンポーネントが 0.2 + (1/2)(1) 0.7 を = です。</span><span class="sxs-lookup"><span data-stu-id="f9a13-106">The new red component is 0.2 + (1/2)(1) = 0.7.</span></span>  
+# <a name="how-to-shear-colors"></a><span data-ttu-id="c9ac6-102">方法 : 色を傾斜する</span><span class="sxs-lookup"><span data-stu-id="c9ac6-102">How to: Shear Colors</span></span>
+<span data-ttu-id="c9ac6-103">せん断は、カラー成分を別の色成分に比例する量だけ増減します。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-103">Shearing increases or decreases a color component by an amount proportional to another color component.</span></span> <span data-ttu-id="c9ac6-104">たとえば、赤の成分が青成分の半分の値増加する変換を考えてみます。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-104">For example, consider the transformation where the red component is increased by one half the value of the blue component.</span></span> <span data-ttu-id="c9ac6-105">このような変換では、色(0.2、0.5、1)は(0.7、0.5、1)になります。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-105">Under such a transformation, the color (0.2, 0.5, 1) would become (0.7, 0.5, 1).</span></span> <span data-ttu-id="c9ac6-106">新しい赤の成分は 0.2 + (1/2)(1) = 0.7 です。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-106">The new red component is 0.2 + (1/2)(1) = 0.7.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f9a13-107">例</span><span class="sxs-lookup"><span data-stu-id="f9a13-107">Example</span></span>  
- <span data-ttu-id="f9a13-108">次の例では、構築、 <xref:System.Drawing.Image> ColorBars4.bmp ファイルからのオブジェクト。</span><span class="sxs-lookup"><span data-stu-id="f9a13-108">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars4.bmp.</span></span> <span data-ttu-id="f9a13-109">コードは、イメージ内の各ピクセルに前の段落で説明されている傾斜変換を適用します。</span><span class="sxs-lookup"><span data-stu-id="f9a13-109">Then the code applies the shearing transformation described in the preceding paragraph to each pixel in the image.</span></span>  
+## <a name="example"></a><span data-ttu-id="c9ac6-107">例</span><span class="sxs-lookup"><span data-stu-id="c9ac6-107">Example</span></span>  
+ <span data-ttu-id="c9ac6-108">次の例では、ColorBars4.bmp ファイルから<xref:System.Drawing.Image>オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-108">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars4.bmp.</span></span> <span data-ttu-id="c9ac6-109">次に、前の段落で説明したせん断変換をイメージ内の各ピクセルに適用します。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-109">Then the code applies the shearing transformation described in the preceding paragraph to each pixel in the image.</span></span>  
   
- <span data-ttu-id="f9a13-110">次の図は、右側の左側に、元のイメージと傾斜のイメージを示します。</span><span class="sxs-lookup"><span data-stu-id="f9a13-110">The following illustration shows the original image on the left and the sheared image on the right:</span></span> 
+ <span data-ttu-id="c9ac6-110">次の図は、左側に元のイメージを、右にせよげイメージを示しています。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-110">The following illustration shows the original image on the left and the sheared image on the right:</span></span>
   
- ![カラー ストライプ化 - サイド示す元のイメージと傾斜のイメージを 2 マスします。](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![原画とシレ画像を並べて色付きストライプを持つ2つの正方形。](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- <span data-ttu-id="f9a13-112">次の表は、傾斜変換の前後に 4 つのバーの色のベクターを示します。</span><span class="sxs-lookup"><span data-stu-id="f9a13-112">The following table lists the color vectors for the four bars before and after the shearing transformation.</span></span>  
+ <span data-ttu-id="c9ac6-112">次の表は、せん断変換の前後の 4 つのバーのカラー ベクトルを示しています。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-112">The following table lists the color vectors for the four bars before and after the shearing transformation.</span></span>  
   
-|<span data-ttu-id="f9a13-113">元</span><span class="sxs-lookup"><span data-stu-id="f9a13-113">Original</span></span>|<span data-ttu-id="f9a13-114">傾斜</span><span class="sxs-lookup"><span data-stu-id="f9a13-114">Sheared</span></span>|  
+|<span data-ttu-id="c9ac6-113">変更元</span><span class="sxs-lookup"><span data-stu-id="c9ac6-113">Original</span></span>|<span data-ttu-id="c9ac6-114">せん断</span><span class="sxs-lookup"><span data-stu-id="c9ac6-114">Sheared</span></span>|  
 |--------------|-------------|  
-|<span data-ttu-id="f9a13-115">(0, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-115">(0, 0, 1, 1)</span></span>|<span data-ttu-id="f9a13-116">(0.5, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-116">(0.5, 0, 1, 1)</span></span>|  
-|<span data-ttu-id="f9a13-117">(0.5, 1, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-117">(0.5, 1, 0.5, 1)</span></span>|<span data-ttu-id="f9a13-118">(0.75, 1, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-118">(0.75, 1, 0.5, 1)</span></span>|  
-|<span data-ttu-id="f9a13-119">(1, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-119">(1, 1, 0, 1)</span></span>|<span data-ttu-id="f9a13-120">(1, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-120">(1, 1, 0, 1)</span></span>|  
-|<span data-ttu-id="f9a13-121">(0.4, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-121">(0.4, 0.4, 0.4, 1)</span></span>|<span data-ttu-id="f9a13-122">(0.6, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="f9a13-122">(0.6, 0.4, 0.4, 1)</span></span>|  
+|<span data-ttu-id="c9ac6-115">(0, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-115">(0, 0, 1, 1)</span></span>|<span data-ttu-id="c9ac6-116">(0.5, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-116">(0.5, 0, 1, 1)</span></span>|  
+|<span data-ttu-id="c9ac6-117">(0.5, 1, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-117">(0.5, 1, 0.5, 1)</span></span>|<span data-ttu-id="c9ac6-118">(0.75, 1, 0.5, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-118">(0.75, 1, 0.5, 1)</span></span>|  
+|<span data-ttu-id="c9ac6-119">(1, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-119">(1, 1, 0, 1)</span></span>|<span data-ttu-id="c9ac6-120">(1, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-120">(1, 1, 0, 1)</span></span>|  
+|<span data-ttu-id="c9ac6-121">(0.4, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-121">(0.4, 0.4, 0.4, 1)</span></span>|<span data-ttu-id="c9ac6-122">(0.6, 0.4, 0.4, 1)</span><span class="sxs-lookup"><span data-stu-id="c9ac6-122">(0.6, 0.4, 0.4, 1)</span></span>|  
   
  [!code-csharp[System.Drawing.Misc3#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#9)]
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f9a13-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="f9a13-123">Compiling the Code</span></span>  
- <span data-ttu-id="f9a13-124">前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。</span><span class="sxs-lookup"><span data-stu-id="f9a13-124">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="f9a13-125">置換`ColorBars.bmp`イメージ名とパス、システムでは無効です。</span><span class="sxs-lookup"><span data-stu-id="f9a13-125">Replace `ColorBars.bmp` with an image name and path valid on your system.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c9ac6-123">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c9ac6-123">Compiling the Code</span></span>  
+ <span data-ttu-id="c9ac6-124">上記の例は Windows フォームで使用するように設計されており、<xref:System.Windows.Forms.PaintEventArgs>`e`<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーのパラメーターである が必要です。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-124">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="c9ac6-125">システム`ColorBars.bmp`で有効なイメージ名とパスで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c9ac6-125">Replace `ColorBars.bmp` with an image name and path valid on your system.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9a13-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9a13-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9ac6-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="c9ac6-126">See also</span></span>
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [<span data-ttu-id="f9a13-127">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="f9a13-127">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="f9a13-128">イメージの色の変更</span><span class="sxs-lookup"><span data-stu-id="f9a13-128">Recoloring Images</span></span>](recoloring-images.md)
+- [<span data-ttu-id="c9ac6-127">Windows フォームにおけるグラフィックスと描画</span><span class="sxs-lookup"><span data-stu-id="c9ac6-127">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="c9ac6-128">イメージの色の変更</span><span class="sxs-lookup"><span data-stu-id="c9ac6-128">Recoloring Images</span></span>](recoloring-images.md)

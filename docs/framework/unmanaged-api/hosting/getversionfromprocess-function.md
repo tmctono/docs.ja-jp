@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127033"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178130"
 ---
-# <a name="getversionfromprocess-function"></a><span data-ttu-id="f60d7-102">GetVersionFromProcess 関数</span><span class="sxs-lookup"><span data-stu-id="f60d7-102">GetVersionFromProcess Function</span></span>
-<span data-ttu-id="f60d7-103">指定したプロセスハンドルに関連付けられている共通言語ランタイム (CLR) のバージョン番号を取得します。</span><span class="sxs-lookup"><span data-stu-id="f60d7-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
+# <a name="getversionfromprocess-function"></a><span data-ttu-id="e88dc-102">GetVersionFromProcess 関数</span><span class="sxs-lookup"><span data-stu-id="e88dc-102">GetVersionFromProcess Function</span></span>
+<span data-ttu-id="e88dc-103">指定したプロセス ハンドルに関連付けられている共通言語ランタイム (CLR) のバージョン番号を取得します。</span><span class="sxs-lookup"><span data-stu-id="e88dc-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
   
- <span data-ttu-id="f60d7-104">この関数は .NET Framework 4 で非推奨とされました。</span><span class="sxs-lookup"><span data-stu-id="f60d7-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="e88dc-104">この関数は、.NET Framework 4 では廃止されました。</span><span class="sxs-lookup"><span data-stu-id="e88dc-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f60d7-105">構文</span><span class="sxs-lookup"><span data-stu-id="f60d7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e88dc-105">構文</span><span class="sxs-lookup"><span data-stu-id="e88dc-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
-    [in]  HANDLE  hProcess,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  HANDLE  hProcess,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *dwLength  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f60d7-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="f60d7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e88dc-106">パラメーター</span><span class="sxs-lookup"><span data-stu-id="e88dc-106">Parameters</span></span>  
  `hProcess`  
- <span data-ttu-id="f60d7-107">からプロセスを処理するハンドル。</span><span class="sxs-lookup"><span data-stu-id="f60d7-107">[in] A handle to a process.</span></span>  
+ <span data-ttu-id="e88dc-107">[in]プロセスへのハンドル。</span><span class="sxs-lookup"><span data-stu-id="e88dc-107">[in] A handle to a process.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="f60d7-108">入出力メソッドが正常に完了したときのバージョン番号の文字列を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="f60d7-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
+ <span data-ttu-id="e88dc-108">[アウト]メソッドが正常に完了したときに、バージョン番号文字列を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="e88dc-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="f60d7-109">からバージョンバッファーの長さ。</span><span class="sxs-lookup"><span data-stu-id="f60d7-109">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="e88dc-109">[in]バージョン バッファーの長さ。</span><span class="sxs-lookup"><span data-stu-id="e88dc-109">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="f60d7-110">入出力バージョン番号文字列の長さへのポインター。</span><span class="sxs-lookup"><span data-stu-id="f60d7-110">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="e88dc-110">[アウト]バージョン番号文字列の長さへのポインター。</span><span class="sxs-lookup"><span data-stu-id="e88dc-110">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f60d7-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="f60d7-111">Return Value</span></span>  
- <span data-ttu-id="f60d7-112">このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。</span><span class="sxs-lookup"><span data-stu-id="f60d7-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e88dc-111">戻り値</span><span class="sxs-lookup"><span data-stu-id="e88dc-111">Return Value</span></span>  
+ <span data-ttu-id="e88dc-112">このメソッドは、WinError.h で定義されている次の値に加えて、標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。</span><span class="sxs-lookup"><span data-stu-id="e88dc-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="f60d7-113">リターン コード</span><span class="sxs-lookup"><span data-stu-id="f60d7-113">Return code</span></span>|<span data-ttu-id="f60d7-114">説明</span><span class="sxs-lookup"><span data-stu-id="f60d7-114">Description</span></span>|  
+|<span data-ttu-id="e88dc-113">リターン コード</span><span class="sxs-lookup"><span data-stu-id="e88dc-113">Return code</span></span>|<span data-ttu-id="e88dc-114">説明</span><span class="sxs-lookup"><span data-stu-id="e88dc-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="f60d7-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="f60d7-115">S_OK</span></span>|<span data-ttu-id="f60d7-116">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="f60d7-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="f60d7-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f60d7-117">E_INVALIDARG</span></span>|<span data-ttu-id="f60d7-118">`pVersion` が null で `cchBuffer` が null ではないか、またはその逆です。</span><span class="sxs-lookup"><span data-stu-id="f60d7-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="f60d7-119">-または-</span><span class="sxs-lookup"><span data-stu-id="f60d7-119">-or-</span></span><br /><br /> <span data-ttu-id="f60d7-120">`hProcess` がプロセスに対して有効なハンドルではありません。</span><span class="sxs-lookup"><span data-stu-id="f60d7-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="f60d7-121">-または-</span><span class="sxs-lookup"><span data-stu-id="f60d7-121">-or-</span></span><br /><br /> <span data-ttu-id="f60d7-122">CLR が読み込まれていません。</span><span class="sxs-lookup"><span data-stu-id="f60d7-122">The CLR is not loaded.</span></span>|  
-|<span data-ttu-id="f60d7-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="f60d7-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="f60d7-124">`cchBuffer` が null であるか、またはバージョン文字列の長さを下回っています。</span><span class="sxs-lookup"><span data-stu-id="f60d7-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
-|<span data-ttu-id="f60d7-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="f60d7-125">E_NOTIMPL</span></span>|<span data-ttu-id="f60d7-126">この方法は、Microsoft Windows 95、Microsoft Windows 98、または Microsoft Windows Millennium Edition オペレーティングシステムでは使用できません。</span><span class="sxs-lookup"><span data-stu-id="f60d7-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
+|<span data-ttu-id="e88dc-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="e88dc-115">S_OK</span></span>|<span data-ttu-id="e88dc-116">メソッドは正常に完了しました。</span><span class="sxs-lookup"><span data-stu-id="e88dc-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="e88dc-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="e88dc-117">E_INVALIDARG</span></span>|<span data-ttu-id="e88dc-118">`pVersion`は null`cchBuffer`で、null ではないか、またはその逆です。</span><span class="sxs-lookup"><span data-stu-id="e88dc-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="e88dc-119">または</span><span class="sxs-lookup"><span data-stu-id="e88dc-119">-or-</span></span><br /><br /> <span data-ttu-id="e88dc-120">`hProcess`はプロセスへの有効なハンドルではありません。</span><span class="sxs-lookup"><span data-stu-id="e88dc-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="e88dc-121">または</span><span class="sxs-lookup"><span data-stu-id="e88dc-121">-or-</span></span><br /><br /> <span data-ttu-id="e88dc-122">CLR が読み込まれていません。</span><span class="sxs-lookup"><span data-stu-id="e88dc-122">The CLR is not loaded.</span></span>|  
+|<span data-ttu-id="e88dc-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="e88dc-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="e88dc-124">`cchBuffer`は、バージョン文字列の長さより null か、より小さい値です。</span><span class="sxs-lookup"><span data-stu-id="e88dc-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
+|<span data-ttu-id="e88dc-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="e88dc-125">E_NOTIMPL</span></span>|<span data-ttu-id="e88dc-126">この方法は、Windows 95、Windows 98、またはマイクロソフトの Windows ミレニアム エディションのオペレーティング システムでは使用できません。</span><span class="sxs-lookup"><span data-stu-id="e88dc-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f60d7-127">［要件］</span><span class="sxs-lookup"><span data-stu-id="f60d7-127">Requirements</span></span>  
- <span data-ttu-id="f60d7-128">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f60d7-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e88dc-127">必要条件</span><span class="sxs-lookup"><span data-stu-id="e88dc-127">Requirements</span></span>  
+ <span data-ttu-id="e88dc-128">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e88dc-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f60d7-129">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="f60d7-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e88dc-129">**ヘッダー:** msCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e88dc-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f60d7-130">**ライブラリ:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="f60d7-130">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="e88dc-130">**ライブラリ:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e88dc-130">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f60d7-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f60d7-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e88dc-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e88dc-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f60d7-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="f60d7-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e88dc-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="e88dc-132">See also</span></span>
 
-- [<span data-ttu-id="f60d7-133">GetRequestedRuntimeInfo 関数</span><span class="sxs-lookup"><span data-stu-id="f60d7-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="f60d7-134">GetRequestedRuntimeVersion 関数</span><span class="sxs-lookup"><span data-stu-id="f60d7-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="f60d7-135">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="f60d7-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="e88dc-133">GetRequestedRuntimeInfo 関数</span><span class="sxs-lookup"><span data-stu-id="e88dc-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="e88dc-134">GetRequestedRuntimeVersion 関数</span><span class="sxs-lookup"><span data-stu-id="e88dc-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="e88dc-135">非推奨の CLR ホスト関数</span><span class="sxs-lookup"><span data-stu-id="e88dc-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
