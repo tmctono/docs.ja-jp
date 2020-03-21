@@ -1,5 +1,5 @@
 ---
-title: '方法: ToolStripMenuItems に拡張機能を追加する'
+title: '方法 : ToolStripMenuItems に拡張機能を追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,71 +24,71 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 9e95c3623bf9bad8395f586392a0557ad1cde880
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61a79b9bbe101d7bf694240bdffdecee5187adf2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912582"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182321"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a><span data-ttu-id="095ff-102">方法: ToolStripMenuItems に拡張機能を追加する</span><span class="sxs-lookup"><span data-stu-id="095ff-102">How to: Add Enhancements to ToolStripMenuItems</span></span>
-<span data-ttu-id="095ff-103">次の方法で、および<xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ContextMenuStrip>コントロールの使いやすさを向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="095ff-103">You can enhance the usability of <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> controls in the following ways:</span></span>  
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a><span data-ttu-id="19dc3-102">方法 : ToolStripMenuItems に拡張機能を追加する</span><span class="sxs-lookup"><span data-stu-id="19dc3-102">How to: Add Enhancements to ToolStripMenuItems</span></span>
+<span data-ttu-id="19dc3-103">以下の方法で、コントロールと<xref:System.Windows.Forms.MenuStrip><xref:System.Windows.Forms.ContextMenuStrip>コントロールの操作性を向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-103">You can enhance the usability of <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> controls in the following ways:</span></span>  
   
-- <span data-ttu-id="095ff-104">チェックマークを追加して、機能を有効にするかどうかを指定します。たとえば、ワードプロセッシングアプリケーションの余白に沿ってルーラーを表示するかどうか、ファイルの一覧に表示されるファイル ( **[ウィンドウ]** メニューなど) を指定します。</span><span class="sxs-lookup"><span data-stu-id="095ff-104">Add check marks to designate whether a feature is turned on or off, such as whether a ruler is displayed along the margin of a word-processing application, or to indicate which file in a list of files is being displayed, such as on a **Window** menu.</span></span>  
+- <span data-ttu-id="19dc3-104">ワープロ アプリケーションの余白にルーラーを表示するかどうか、またはウィンドウ**メニューなど**、ファイルの一覧のどのファイルを表示するかを示すなど、機能をオンまたはオフにするかどうかを指定するチェック マークを追加します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-104">Add check marks to designate whether a feature is turned on or off, such as whether a ruler is displayed along the margin of a word-processing application, or to indicate which file in a list of files is being displayed, such as on a **Window** menu.</span></span>  
   
-- <span data-ttu-id="095ff-105">メニューコマンドを視覚的に表すイメージを追加します。</span><span class="sxs-lookup"><span data-stu-id="095ff-105">Add images that visually represent menu commands.</span></span>  
+- <span data-ttu-id="19dc3-105">メニュー コマンドを視覚的に表すイメージを追加します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-105">Add images that visually represent menu commands.</span></span>  
   
-- <span data-ttu-id="095ff-106">ショートカットキーを表示して、コマンドを実行するためのキーボード代替手段をマウスに提供します。</span><span class="sxs-lookup"><span data-stu-id="095ff-106">Display shortcut keys to provide a keyboard alternative to the mouse for performing commands.</span></span> <span data-ttu-id="095ff-107">たとえば、CTRL キーを押しながら C キーを押すと、 **Copy**コマンドが実行されます。</span><span class="sxs-lookup"><span data-stu-id="095ff-107">For example, pressing CTRL+C performs the **Copy** command.</span></span>  
+- <span data-ttu-id="19dc3-106">ショートカット キーを表示して、コマンドを実行するためのマウスの代わりにキーボードを提供します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-106">Display shortcut keys to provide a keyboard alternative to the mouse for performing commands.</span></span> <span data-ttu-id="19dc3-107">たとえば、Ctrl キーを押しながら C キーを押すと **、コピー**コマンドが実行されます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-107">For example, pressing CTRL+C performs the **Copy** command.</span></span>  
   
-- <span data-ttu-id="095ff-108">アクセスキーを表示して、メニューナビゲーション用のマウスの代わりにキーボードを使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="095ff-108">Display access keys to provide a keyboard alternative to the mouse for menu navigation.</span></span> <span data-ttu-id="095ff-109">たとえば、ALT キーを押しながら F キーを押すと、 **[ファイル]** メニューが選択されます。</span><span class="sxs-lookup"><span data-stu-id="095ff-109">For example, pressing ALT+F chooses the **File** menu.</span></span>  
+- <span data-ttu-id="19dc3-108">アクセス キーを表示して、メニュー ナビゲーション用のマウスに代わるキーボードを提供します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-108">Display access keys to provide a keyboard alternative to the mouse for menu navigation.</span></span> <span data-ttu-id="19dc3-109">たとえば、Alt キーを押しながら F キーを押すと、[**ファイル]** メニューが選択されます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-109">For example, pressing ALT+F chooses the **File** menu.</span></span>  
   
-- <span data-ttu-id="095ff-110">区分線を表示して関連するコマンドをグループ化し、メニューを読みやすくします。</span><span class="sxs-lookup"><span data-stu-id="095ff-110">Show separator bars to group related commands and make menus more readable.</span></span>  
+- <span data-ttu-id="19dc3-110">関連するコマンドをグループ化し、メニューを読みやすくする区切りバーを表示します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-110">Show separator bars to group related commands and make menus more readable.</span></span>  
   
-### <a name="to-display-a-check-mark-on-a-menu-command"></a><span data-ttu-id="095ff-111">メニューコマンドにチェックマークを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-111">To display a check mark on a menu command</span></span>  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a><span data-ttu-id="19dc3-111">メニュー コマンドにチェック マークを表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-111">To display a check mark on a menu command</span></span>  
   
-- <span data-ttu-id="095ff-112">プロパティをに`true`設定します。 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A></span><span class="sxs-lookup"><span data-stu-id="095ff-112">Set its <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property to `true`.</span></span>  
+- <span data-ttu-id="19dc3-112">プロパティを<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>に`true`設定します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-112">Set its <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property to `true`.</span></span>  
   
-     <span data-ttu-id="095ff-113">これにより、 <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A>プロパティも`true`に設定されます。</span><span class="sxs-lookup"><span data-stu-id="095ff-113">This also sets the <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> property to `true`.</span></span> <span data-ttu-id="095ff-114">この手順は、メニューコマンドが選択されているかどうかに関係なく、既定でオンになっている場合にのみ使用してください。</span><span class="sxs-lookup"><span data-stu-id="095ff-114">Use this procedure only if you want the menu command to appear as checked by default, regardless of whether it is selected.</span></span>  
+     <span data-ttu-id="19dc3-113">このプロパティもに<xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A>設定`true`されます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-113">This also sets the <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> property to `true`.</span></span> <span data-ttu-id="19dc3-114">この手順は、メニュー コマンドが選択されているかどうかに関係なく、既定でオンに表示される場合にのみ使用します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-114">Use this procedure only if you want the menu command to appear as checked by default, regardless of whether it is selected.</span></span>  
   
-### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a><span data-ttu-id="095ff-115">各クリックで状態を変更するチェックマークを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-115">To display a check mark that changes state with each click</span></span>  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a><span data-ttu-id="19dc3-115">クリックするたびに状態が変化するチェック マークを表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-115">To display a check mark that changes state with each click</span></span>  
   
-- <span data-ttu-id="095ff-116">メニューコマンドの<xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>プロパティをに`true`設定します。</span><span class="sxs-lookup"><span data-stu-id="095ff-116">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property to `true`.</span></span>  
+- <span data-ttu-id="19dc3-116">メニュー コマンドの<xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A>プロパティを に`true`設定します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-116">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> property to `true`.</span></span>  
   
-### <a name="to-add-an-image-to-a-menu-command"></a><span data-ttu-id="095ff-117">メニューコマンドにイメージを追加するには</span><span class="sxs-lookup"><span data-stu-id="095ff-117">To add an image to a menu command</span></span>  
+### <a name="to-add-an-image-to-a-menu-command"></a><span data-ttu-id="19dc3-117">メニュー コマンドにイメージを追加するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-117">To add an image to a menu command</span></span>  
   
-- <span data-ttu-id="095ff-118">メニューコマンドの<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティをイメージの名前に設定します。</span><span class="sxs-lookup"><span data-stu-id="095ff-118">Set the menu command's <xref:System.Windows.Forms.ToolStripItem.Image%2A> property to the name of the image.</span></span> <span data-ttu-id="095ff-119">このメニューコマンドの<xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> <xref:System.Windows.Forms.ToolStripItemDisplayStyle>プロパティがまたはに設定されている場合は、イメージを表示できません。</span><span class="sxs-lookup"><span data-stu-id="095ff-119">If the <xref:System.Windows.Forms.ToolStripItemDisplayStyle> property of this menu command is set to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> or <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, the image cannot be displayed.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="095ff-120">画像の余白では、選択した場合にチェックマークを表示することもできます。</span><span class="sxs-lookup"><span data-stu-id="095ff-120">The image margin can also show a check mark if you so choose.</span></span> <span data-ttu-id="095ff-121">また、イメージの<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>プロパティをに`true`設定すると、実行時にイメージがハッチ境界線で囲まれて表示されます。</span><span class="sxs-lookup"><span data-stu-id="095ff-121">Also, you can set the <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property of the image to `true`, and the image will appear with a hatched border around it at run time.</span></span>  
-  
-### <a name="to-display-a-shortcut-key-for-a-menu-command"></a><span data-ttu-id="095ff-122">メニューコマンドのショートカットキーを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-122">To display a shortcut key for a menu command</span></span>  
-  
-- <span data-ttu-id="095ff-123">メニューコマンドの<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>プロパティを、[メニューを**開く**] コマンドの CTRL + O などの目的のキーボードの組み合わせに設定し<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 、プロパティ`true`をに設定します。</span><span class="sxs-lookup"><span data-stu-id="095ff-123">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> property to the desired keyboard combination, such as CTRL+O for the **Open** menu command, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
-  
-### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a><span data-ttu-id="095ff-124">メニューコマンドのカスタムショートカットキーを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-124">To display custom shortcut keys for a menu command</span></span>  
-  
-- <span data-ttu-id="095ff-125">メニューコマンドの<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A>プロパティに、shift + CTRL + o ではなく、ctrl + shift + o などの目的のキーボードの組み合わせを設定し<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 、プロパティ`true`をに設定します。</span><span class="sxs-lookup"><span data-stu-id="095ff-125">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> property to the desired keyboard combination, such as CTRL+SHIFT+O rather than SHIFT+CTRL+O, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
-  
-### <a name="to-display-an-access-key-for-a-menu-command"></a><span data-ttu-id="095ff-126">メニューコマンドのアクセスキーを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-126">To display an access key for a menu command</span></span>  
-  
-- <span data-ttu-id="095ff-127">メニューコマンドの<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを設定するときに、アクセスキーとして下線を付ける文字の前にアンパサンド (&) を入力します。</span><span class="sxs-lookup"><span data-stu-id="095ff-127">When you set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property for the menu command, enter an ampersand (&) before the letter you want to be underlined as the access key.</span></span> <span data-ttu-id="095ff-128">たとえば、メニュー項目`&Open`の<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティとして「」と入力すると、メニューコマンドが<u>O</u>ペンとして表示されます。</span><span class="sxs-lookup"><span data-stu-id="095ff-128">For example, typing `&Open` as the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of a menu item will result in a menu command that appears as <u>O</u>pen.</span></span>
-  
-     <span data-ttu-id="095ff-129">このメニューコマンドに移動するには<xref:System.Windows.Forms.MenuStrip>、ALT キーを押してにフォーカスを移し、メニュー名のアクセスキーを押します。</span><span class="sxs-lookup"><span data-stu-id="095ff-129">To navigate to this menu command, press ALT to give focus to the <xref:System.Windows.Forms.MenuStrip>, and press the access key of the menu name.</span></span> <span data-ttu-id="095ff-130">メニューが開き、アクセスキーを持つ項目が表示されたら、アクセスキーを押してメニューコマンドを選択するだけです。</span><span class="sxs-lookup"><span data-stu-id="095ff-130">When the menu opens and shows items with access keys, you only need to press the access key to select the menu command.</span></span>  
+- <span data-ttu-id="19dc3-118">メニュー コマンドの<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティをイメージの名前に設定します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-118">Set the menu command's <xref:System.Windows.Forms.ToolStripItem.Image%2A> property to the name of the image.</span></span> <span data-ttu-id="19dc3-119">このメニュー<xref:System.Windows.Forms.ToolStripItemDisplayStyle>コマンドのプロパティが or<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text><xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>に設定されている場合、イメージを表示できません。</span><span class="sxs-lookup"><span data-stu-id="19dc3-119">If the <xref:System.Windows.Forms.ToolStripItemDisplayStyle> property of this menu command is set to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> or <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, the image cannot be displayed.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="095ff-131">同じメニューシステムで ALT + F を2回定義するなど、重複するアクセスキーを定義することは避けてください。</span><span class="sxs-lookup"><span data-stu-id="095ff-131">Avoid defining duplicate access keys, such as defining ALT+F twice in the same menu system.</span></span> <span data-ttu-id="095ff-132">重複するアクセスキーの選択順序を保証することはできません。</span><span class="sxs-lookup"><span data-stu-id="095ff-132">The selection order of duplicate access keys cannot be guaranteed.</span></span>  
+> <span data-ttu-id="19dc3-120">選択した場合、画像の余白にもチェック マークを表示できます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-120">The image margin can also show a check mark if you so choose.</span></span> <span data-ttu-id="19dc3-121">また、イメージの<xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A>プロパティを に`true`設定すると、実行時に画像の周囲にハッチング境界が表示されます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-121">Also, you can set the <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> property of the image to `true`, and the image will appear with a hatched border around it at run time.</span></span>  
   
-### <a name="to-display-a-separator-bar-between-menu-commands"></a><span data-ttu-id="095ff-133">メニューコマンドの間に区切りバーを表示するには</span><span class="sxs-lookup"><span data-stu-id="095ff-133">To display a separator bar between menu commands</span></span>  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a><span data-ttu-id="19dc3-122">メニュー コマンドのショートカット キーを表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-122">To display a shortcut key for a menu command</span></span>  
   
-- <span data-ttu-id="095ff-134"><xref:System.Windows.Forms.MenuStrip>とそれに含まれる項目を定義したら、メソッド<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>または<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>メソッドを使用して、 <xref:System.Windows.Forms.MenuStrip>メニュー <xref:System.Windows.Forms.ToolStripSeparator>コマンドとコントロールを目的の順序でに追加します。</span><span class="sxs-lookup"><span data-stu-id="095ff-134">After you define your <xref:System.Windows.Forms.MenuStrip> and the items it will contain, use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> or <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add the menu commands and <xref:System.Windows.Forms.ToolStripSeparator> controls to the <xref:System.Windows.Forms.MenuStrip> in the order you want.</span></span>  
+- <span data-ttu-id="19dc3-123">メニュー<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>コマンドのプロパティを、目的のキーボードの組み合わせ ([**開く**] メニュー コマンドの<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>Ctrl+ `true`O など) に設定し、プロパティを に設定します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-123">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> property to the desired keyboard combination, such as CTRL+O for the **Open** menu command, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
+  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a><span data-ttu-id="19dc3-124">メニュー コマンドのカスタム ショートカット キーを表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-124">To display custom shortcut keys for a menu command</span></span>  
+  
+- <span data-ttu-id="19dc3-125">メニュー コマンドの<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A>プロパティを、Shift キーを押しながら Ctrl キーを押しながら O キーを押すのではなく、Ctrl キー<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>を押`true`しながら Shift キーを押しながら O キーを押すなどのキーボードの組み合わせを設定し、プロパティを に設定します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-125">Set the menu command's <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> property to the desired keyboard combination, such as CTRL+SHIFT+O rather than SHIFT+CTRL+O, and set the <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> property to `true`.</span></span>  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a><span data-ttu-id="19dc3-126">メニュー コマンドのアクセス キーを表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-126">To display an access key for a menu command</span></span>  
+  
+- <span data-ttu-id="19dc3-127">メニュー コマンドの<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを設定する場合は、アクセス キーとして下線を付ける文字の前にアンパサンド (&) を入力します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-127">When you set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property for the menu command, enter an ampersand (&) before the letter you want to be underlined as the access key.</span></span> <span data-ttu-id="19dc3-128">たとえば、メニュー項目`&Open`の<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティとして入力すると、メニュー コマンドは<u>O</u>ペンとして表示されます。</span><span class="sxs-lookup"><span data-stu-id="19dc3-128">For example, typing `&Open` as the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of a menu item will result in a menu command that appears as <u>O</u>pen.</span></span>
+  
+     <span data-ttu-id="19dc3-129">このメニュー コマンドに移動するには、 Alt キーを押<xref:System.Windows.Forms.MenuStrip>して にフォーカスを移動し、メニュー名のアクセス キーを押します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-129">To navigate to this menu command, press ALT to give focus to the <xref:System.Windows.Forms.MenuStrip>, and press the access key of the menu name.</span></span> <span data-ttu-id="19dc3-130">メニューが開き、アクセスキーを持つ項目が表示されたら、アクセスキーを押してメニューコマンドを選択するだけです。</span><span class="sxs-lookup"><span data-stu-id="19dc3-130">When the menu opens and shows items with access keys, you only need to press the access key to select the menu command.</span></span>  
+  
+> [!NOTE]
+> <span data-ttu-id="19dc3-131">同じメニュー システムで Alt + F を 2 回定義するなど、重複するアクセス キーを定義しないようにします。</span><span class="sxs-lookup"><span data-stu-id="19dc3-131">Avoid defining duplicate access keys, such as defining ALT+F twice in the same menu system.</span></span> <span data-ttu-id="19dc3-132">重複アクセス キーの選択順序は保証できません。</span><span class="sxs-lookup"><span data-stu-id="19dc3-132">The selection order of duplicate access keys cannot be guaranteed.</span></span>  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a><span data-ttu-id="19dc3-133">メニュー コマンドの間に区切り線を表示するには</span><span class="sxs-lookup"><span data-stu-id="19dc3-133">To display a separator bar between menu commands</span></span>  
+  
+- <span data-ttu-id="19dc3-134"><xref:System.Windows.Forms.MenuStrip>を定義し、そのアイテムに含める項目を定義したら<xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A>、<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>または メソッドを使用して<xref:System.Windows.Forms.ToolStripSeparator>、メニュー<xref:System.Windows.Forms.MenuStrip>コマンドとコントロールを目的の順序で に追加します。</span><span class="sxs-lookup"><span data-stu-id="19dc3-134">After you define your <xref:System.Windows.Forms.MenuStrip> and the items it will contain, use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> or <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add the menu commands and <xref:System.Windows.Forms.ToolStripSeparator> controls to the <xref:System.Windows.Forms.MenuStrip> in the order you want.</span></span>  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  
     Me.menuStrip1.Items.Add(New ToolStripMenuItem() _  
     {Me.fileToolStripMenuItem})  
   
-    ' This code adds the New and Open menu commands, a separator bar,   
-    ' and the Save and Exit menu commands to the top-level File menu,   
+    ' This code adds the New and Open menu commands, a separator bar,
+    ' and the Save and Exit menu commands to the top-level File menu,
     ' in that order.  
     Me.fileToolStripMenuItem.DropDownItems.AddRange(New _  
     ToolStripMenuItem() {Me.newToolStripMenuItem, _  
@@ -101,8 +101,8 @@ ms.locfileid: "69912582"
     this.menuStrip1.Items.Add(new ToolStripItem[]_  
     {this.fileToolStripMenuItem});  
   
-    // This code adds the New and Open menu commands, a separator bar,   
-    // and the Save and Exit menu commands to the top-level File menu,   
+    // This code adds the New and Open menu commands, a separator bar,
+    // and the Save and Exit menu commands to the top-level File menu,
     // in that order.  
     this.fileToolStripMenuItem.DropDownItems.AddRange(new _  
     ToolStripItem[] {  
@@ -113,8 +113,8 @@ ms.locfileid: "69912582"
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="095ff-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="095ff-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19dc3-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="19dc3-135">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [<span data-ttu-id="095ff-136">MenuStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="095ff-136">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="19dc3-136">MenuStrip コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="19dc3-136">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109149"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178312"
 ---
-# <a name="asm_name-enumeration"></a><span data-ttu-id="dadad-102">ASM_NAME 列挙型</span><span class="sxs-lookup"><span data-stu-id="dadad-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="dadad-103">[IAssemblyName](iassemblyname-interface.md)メソッドによって取得または設定されるプロパティを持つアセンブリのバージョン、ビルド、カルチャ、署名などを示します。</span><span class="sxs-lookup"><span data-stu-id="dadad-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
+# <a name="asm_name-enumeration"></a><span data-ttu-id="65c4b-102">ASM_NAME 列挙型</span><span class="sxs-lookup"><span data-stu-id="65c4b-102">ASM_NAME Enumeration</span></span>
+<span data-ttu-id="65c4b-103">[IAssemblyName](iassemblyname-interface.md)メソッドによってプロパティを取得または設定するアセンブリのバージョン、ビルド、カルチャ、シグネチャなどを示します。</span><span class="sxs-lookup"><span data-stu-id="65c4b-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dadad-104">構文</span><span class="sxs-lookup"><span data-stu-id="dadad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65c4b-104">構文</span><span class="sxs-lookup"><span data-stu-id="65c4b-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -62,16 +62,16 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dadad-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="dadad-105">Requirements</span></span>  
- <span data-ttu-id="dadad-106">**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dadad-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65c4b-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="65c4b-105">Requirements</span></span>  
+ <span data-ttu-id="65c4b-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="65c4b-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dadad-107">**ヘッダー:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="dadad-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="65c4b-107">**ヘッダー:** フュージョン.h</span><span class="sxs-lookup"><span data-stu-id="65c4b-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="dadad-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="dadad-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="65c4b-108">**ライブラリ:** MsCorEE.dll にリソースとして含まれる</span><span class="sxs-lookup"><span data-stu-id="65c4b-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dadad-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dadad-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="65c4b-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65c4b-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dadad-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="dadad-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65c4b-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="65c4b-110">See also</span></span>
 
-- [<span data-ttu-id="dadad-111">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="dadad-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="dadad-112">Fusion 列挙型</span><span class="sxs-lookup"><span data-stu-id="dadad-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="65c4b-111">IAssemblyName インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65c4b-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="65c4b-112">fusion 列挙体</span><span class="sxs-lookup"><span data-stu-id="65c4b-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

@@ -5,68 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980289"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111804"
 ---
-# <a name="adonet-code-examples"></a><span data-ttu-id="f2ee6-102">ADO.NET のコード例</span><span class="sxs-lookup"><span data-stu-id="f2ee6-102">ADO.NET code examples</span></span>
-<span data-ttu-id="f2ee6-103">このトピックにリストされたコードは、次の ADO.NET テクノロジを使用してデータベースからデータを取得する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>
+# <a name="adonet-code-examples"></a><span data-ttu-id="065a4-102">ADO.NETコード例</span><span class="sxs-lookup"><span data-stu-id="065a4-102">ADO.NET code examples</span></span>
 
-- <span data-ttu-id="f2ee6-104">ADO.NET データ プロバイダー:</span><span class="sxs-lookup"><span data-stu-id="f2ee6-104">ADO.NET data providers:</span></span>
+<span data-ttu-id="065a4-103">このページのコードリストでは、次のADO.NETテクノロジを使用してデータベースからデータを取得する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="065a4-103">The code listings on this page demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>
 
-  - <span data-ttu-id="f2ee6-105">[SqlClient](#sqlclient) (`System.Data.SqlClient`)</span><span class="sxs-lookup"><span data-stu-id="f2ee6-105">[SqlClient](#sqlclient) (`System.Data.SqlClient`)</span></span>
+- <span data-ttu-id="065a4-104">ADO.NET データ プロバイダー: </span><span class="sxs-lookup"><span data-stu-id="065a4-104">ADO.NET data providers:</span></span>
 
-  - <span data-ttu-id="f2ee6-106">[OleDb](#oledb) (`System.Data.OleDb`)</span><span class="sxs-lookup"><span data-stu-id="f2ee6-106">[OleDb](#oledb) (`System.Data.OleDb`)</span></span>
+  - <span data-ttu-id="065a4-105">[Sql](#sqlclient)クライアント`System.Data.SqlClient`( )</span><span class="sxs-lookup"><span data-stu-id="065a4-105">[SqlClient](#sqlclient) (`System.Data.SqlClient`)</span></span>
 
-  - <span data-ttu-id="f2ee6-107">[Odbc](#odbc) (`System.Data.Odbc`)</span><span class="sxs-lookup"><span data-stu-id="f2ee6-107">[Odbc](#odbc) (`System.Data.Odbc`)</span></span>
+  - <span data-ttu-id="065a4-106">[OleDb](#oledb) `System.Data.OleDb`( )</span><span class="sxs-lookup"><span data-stu-id="065a4-106">[OleDb](#oledb) (`System.Data.OleDb`)</span></span>
 
-  - <span data-ttu-id="f2ee6-108">[System.data.oracleclient](#oracleclient) (`System.Data.OracleClient`)</span><span class="sxs-lookup"><span data-stu-id="f2ee6-108">[OracleClient](#oracleclient) (`System.Data.OracleClient`)</span></span>
+  - <span data-ttu-id="065a4-107">[Odbc](#odbc) `System.Data.Odbc`( )</span><span class="sxs-lookup"><span data-stu-id="065a4-107">[Odbc](#odbc) (`System.Data.Odbc`)</span></span>
 
-- <span data-ttu-id="f2ee6-109">ADO.NET Entity Framework:</span><span class="sxs-lookup"><span data-stu-id="f2ee6-109">ADO.NET Entity Framework:</span></span>
+  - <span data-ttu-id="065a4-108">[オラクルクライアント](#oracleclient)(`System.Data.OracleClient`)</span><span class="sxs-lookup"><span data-stu-id="065a4-108">[OracleClient](#oracleclient) (`System.Data.OracleClient`)</span></span>
 
-  - [<span data-ttu-id="f2ee6-110">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="f2ee6-110">LINQ to Entities</span></span>](#linq-to-entities)
+- <span data-ttu-id="065a4-109">ADO.NET Entity Framework:</span><span class="sxs-lookup"><span data-stu-id="065a4-109">ADO.NET Entity Framework:</span></span>
 
-  - [<span data-ttu-id="f2ee6-111">型指定された ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="f2ee6-111">Typed ObjectQuery</span></span>](#typed-objectquery)
+  - [<span data-ttu-id="065a4-110">エンティティへの LINQ</span><span class="sxs-lookup"><span data-stu-id="065a4-110">LINQ to Entities</span></span>](#linq-to-entities)
 
-  - <span data-ttu-id="f2ee6-112">[EntityClient](#entityclient) (`System.Data.EntityClient`)</span><span class="sxs-lookup"><span data-stu-id="f2ee6-112">[EntityClient](#entityclient) (`System.Data.EntityClient`)</span></span>
+  - [<span data-ttu-id="065a4-111">型指定された ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="065a4-111">Typed ObjectQuery</span></span>](#typed-objectquery)
 
-- [<span data-ttu-id="f2ee6-113">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="f2ee6-113">LINQ to SQL</span></span>](#linq-to-sql)
+  - <span data-ttu-id="065a4-112">[エンティティクライアント](#entityclient)`System.Data.EntityClient`( )</span><span class="sxs-lookup"><span data-stu-id="065a4-112">[EntityClient](#entityclient) (`System.Data.EntityClient`)</span></span>
 
-## <a name="adonet-data-provider-examples"></a><span data-ttu-id="f2ee6-114">ADO.NET data provider の例</span><span class="sxs-lookup"><span data-stu-id="f2ee6-114">ADO.NET data provider examples</span></span>
-<span data-ttu-id="f2ee6-115">以下に示した各コードは、ADO.NET データ プロバイダーを使用してデータベースからデータを取得する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-115">The following code listings demonstrate how to retrieve data from a database using ADO.NET data providers.</span></span> <span data-ttu-id="f2ee6-116">データは `DataReader` で返されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-116">The data is returned in a `DataReader`.</span></span> <span data-ttu-id="f2ee6-117">詳細については、「 [DataReader を使用したデータの取得](retrieving-data-using-a-datareader.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-117">For more information, see [Retrieving Data Using a DataReader](retrieving-data-using-a-datareader.md).</span></span>
+- [<span data-ttu-id="065a4-113">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="065a4-113">LINQ to SQL</span></span>](#linq-to-sql)
 
-### <a name="sqlclient"></a><span data-ttu-id="f2ee6-118">SqlClient</span><span class="sxs-lookup"><span data-stu-id="f2ee6-118">SqlClient</span></span>
-<span data-ttu-id="f2ee6-119">この例のコードでは、Microsoft SQL Server 上の `Northwind` サンプルデータベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-119">The code in this example assumes that you can connect to the `Northwind` sample database on Microsoft SQL Server.</span></span> <span data-ttu-id="f2ee6-120">このコードは <xref:System.Data.SqlClient.SqlCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.SqlClient.SqlParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-120">The code creates a <xref:System.Data.SqlClient.SqlCommand> to select rows from the Products table, adding a <xref:System.Data.SqlClient.SqlParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="f2ee6-121"><xref:System.Data.SqlClient.SqlConnection> は `using` ブロック内で開かれます。これにより、コードが終了したときにリソースが閉じられ、破棄されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-121">The <xref:System.Data.SqlClient.SqlConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="f2ee6-122">コードは <xref:System.Data.SqlClient.SqlDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-122">The code executes the command by using a <xref:System.Data.SqlClient.SqlDataReader>, and displays the results in the console window.</span></span>
+## <a name="adonet-data-provider-examples"></a><span data-ttu-id="065a4-114">データ プロバイダーの例をADO.NETする</span><span class="sxs-lookup"><span data-stu-id="065a4-114">ADO.NET data provider examples</span></span>
+<span data-ttu-id="065a4-115">以下に示した各コードは、ADO.NET データ プロバイダーを使用してデータベースからデータを取得する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="065a4-115">The following code listings demonstrate how to retrieve data from a database using ADO.NET data providers.</span></span> <span data-ttu-id="065a4-116">データは `DataReader` で返されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-116">The data is returned in a `DataReader`.</span></span> <span data-ttu-id="065a4-117">詳細については、「 [DataReader を使用したデータの取得](retrieving-data-using-a-datareader.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-117">For more information, see [Retrieving Data Using a DataReader](retrieving-data-using-a-datareader.md).</span></span>
+
+### <a name="sqlclient"></a><span data-ttu-id="065a4-118">SqlClient</span><span class="sxs-lookup"><span data-stu-id="065a4-118">SqlClient</span></span>
+<span data-ttu-id="065a4-119">この例のコードでは、Sql Server 上の`Northwind`サンプル データベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="065a4-119">The code in this example assumes that you can connect to the `Northwind` sample database on Microsoft SQL Server.</span></span> <span data-ttu-id="065a4-120">このコードは <xref:System.Data.SqlClient.SqlCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.SqlClient.SqlParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="065a4-120">The code creates a <xref:System.Data.SqlClient.SqlCommand> to select rows from the Products table, adding a <xref:System.Data.SqlClient.SqlParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="065a4-121">ブロック<xref:System.Data.SqlClient.SqlConnection>内で`using`開かれるので、コードが終了したときにリソースが閉じられ、破棄されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-121">The <xref:System.Data.SqlClient.SqlConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="065a4-122">コードは <xref:System.Data.SqlClient.SqlDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="065a4-122">The code executes the command by using a <xref:System.Data.SqlClient.SqlDataReader>, and displays the results in the console window.</span></span>
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
 
-### <a name="oledb"></a><span data-ttu-id="f2ee6-123">OleDb</span><span class="sxs-lookup"><span data-stu-id="f2ee6-123">OleDb</span></span>
-<span data-ttu-id="f2ee6-124">このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-124">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="f2ee6-125">このコードは <xref:System.Data.OleDb.OleDbCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.OleDb.OleDbParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-125">The code creates a <xref:System.Data.OleDb.OleDbCommand> to select rows from the Products table, adding a <xref:System.Data.OleDb.OleDbParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="f2ee6-126"><xref:System.Data.OleDb.OleDbConnection> は `using` ブロック内に開かれ、これによってコードが終了したときにリソースが閉じられ破棄されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-126">The <xref:System.Data.OleDb.OleDbConnection> is opened inside of a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="f2ee6-127">コードは <xref:System.Data.OleDb.OleDbDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-127">The code executes the command by using a <xref:System.Data.OleDb.OleDbDataReader>, and displays the results in the console window.</span></span>
+### <a name="oledb"></a><span data-ttu-id="065a4-123">OleDb</span><span class="sxs-lookup"><span data-stu-id="065a4-123">OleDb</span></span>
+<span data-ttu-id="065a4-124">このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="065a4-124">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="065a4-125">このコードは <xref:System.Data.OleDb.OleDbCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.OleDb.OleDbParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="065a4-125">The code creates a <xref:System.Data.OleDb.OleDbCommand> to select rows from the Products table, adding a <xref:System.Data.OleDb.OleDbParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="065a4-126"><xref:System.Data.OleDb.OleDbConnection> は `using` ブロック内に開かれ、これによってコードが終了したときにリソースが閉じられ破棄されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-126">The <xref:System.Data.OleDb.OleDbConnection> is opened inside of a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="065a4-127">コードは <xref:System.Data.OleDb.OleDbDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="065a4-127">The code executes the command by using a <xref:System.Data.OleDb.OleDbDataReader>, and displays the results in the console window.</span></span>
 
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
-### <a name="odbc"></a><span data-ttu-id="f2ee6-128">Odbc</span><span class="sxs-lookup"><span data-stu-id="f2ee6-128">Odbc</span></span>
-<span data-ttu-id="f2ee6-129">このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-129">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="f2ee6-130">このコードは <xref:System.Data.Odbc.OdbcCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.Odbc.OdbcParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-130">The code creates a <xref:System.Data.Odbc.OdbcCommand> to select rows from the Products table, adding a <xref:System.Data.Odbc.OdbcParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="f2ee6-131"><xref:System.Data.Odbc.OdbcConnection> は `using` ブロック内で開かれます。これにより、コードが終了したときにリソースが閉じられ、破棄されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-131">The <xref:System.Data.Odbc.OdbcConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="f2ee6-132">コードは <xref:System.Data.Odbc.OdbcDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-132">The code executes the command by using a <xref:System.Data.Odbc.OdbcDataReader>, and displays the results in the console window.</span></span>
+### <a name="odbc"></a><span data-ttu-id="065a4-128">Odbc</span><span class="sxs-lookup"><span data-stu-id="065a4-128">Odbc</span></span>
+<span data-ttu-id="065a4-129">このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="065a4-129">The code in this example assumes that you can connect to the Microsoft Access Northwind sample database.</span></span> <span data-ttu-id="065a4-130">このコードは <xref:System.Data.Odbc.OdbcCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.Odbc.OdbcParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。</span><span class="sxs-lookup"><span data-stu-id="065a4-130">The code creates a <xref:System.Data.Odbc.OdbcCommand> to select rows from the Products table, adding a <xref:System.Data.Odbc.OdbcParameter> to restrict the results to rows with a UnitPrice greater than the specified parameter value, in this case 5.</span></span> <span data-ttu-id="065a4-131">ブロック<xref:System.Data.Odbc.OdbcConnection>内で`using`開かれるので、コードが終了したときにリソースが閉じられ、破棄されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-131">The <xref:System.Data.Odbc.OdbcConnection> is opened inside a `using` block, which ensures that resources are closed and disposed when the code exits.</span></span> <span data-ttu-id="065a4-132">コードは <xref:System.Data.Odbc.OdbcDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。</span><span class="sxs-lookup"><span data-stu-id="065a4-132">The code executes the command by using a <xref:System.Data.Odbc.OdbcDataReader>, and displays the results in the console window.</span></span>
 
-[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
-[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
+[!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)]
+[!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
 
-### <a name="oracleclient"></a><span data-ttu-id="f2ee6-133">OracleClient</span><span class="sxs-lookup"><span data-stu-id="f2ee6-133">OracleClient</span></span>
-<span data-ttu-id="f2ee6-134">このコード例では、Oracle サーバー上の DEMO.CUSTOMER との接続を前提としています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-134">The code in this example assumes a connection to DEMO.CUSTOMER on an Oracle server.</span></span> <span data-ttu-id="f2ee6-135">また、System.Data.OracleClient.dll への参照を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-135">You must also add a reference to the System.Data.OracleClient.dll.</span></span> <span data-ttu-id="f2ee6-136">このコードは、データを <xref:System.Data.OracleClient.OracleDataReader> で返します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-136">The code returns the data in an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>
+### <a name="oracleclient"></a><span data-ttu-id="065a4-133">OracleClient</span><span class="sxs-lookup"><span data-stu-id="065a4-133">OracleClient</span></span>
+<span data-ttu-id="065a4-134">このコード例では、Oracle サーバー上の DEMO.CUSTOMER との接続を前提としています。</span><span class="sxs-lookup"><span data-stu-id="065a4-134">The code in this example assumes a connection to DEMO.CUSTOMER on an Oracle server.</span></span> <span data-ttu-id="065a4-135">また、System.Data.OracleClient.dll への参照を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="065a4-135">You must also add a reference to the System.Data.OracleClient.dll.</span></span> <span data-ttu-id="065a4-136">このコードは、データを <xref:System.Data.OracleClient.OracleDataReader> で返します。</span><span class="sxs-lookup"><span data-stu-id="065a4-136">The code returns the data in an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
-## <a name="entity-framework-examples"></a><span data-ttu-id="f2ee6-137">Entity Framework の例</span><span class="sxs-lookup"><span data-stu-id="f2ee6-137">Entity Framework examples</span></span>
-<span data-ttu-id="f2ee6-138">以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-138">The following code listings demonstrate how to retrieve data from a data source by querying entities in an Entity Data Model (EDM).</span></span> <span data-ttu-id="f2ee6-139">これらの例では、Northwind サンプルデータベースに基づくモデルを使用します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-139">These examples use a model based on the Northwind sample database.</span></span> <span data-ttu-id="f2ee6-140">Entity Framework の詳細については、「 [Entity Framework の概要](./ef/overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-140">For more information about Entity Framework, see [Entity Framework Overview](./ef/overview.md).</span></span>
+## <a name="entity-framework-examples"></a><span data-ttu-id="065a4-137">エンティティ フレームワークの例</span><span class="sxs-lookup"><span data-stu-id="065a4-137">Entity Framework examples</span></span>
+<span data-ttu-id="065a4-138">以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="065a4-138">The following code listings demonstrate how to retrieve data from a data source by querying entities in an Entity Data Model (EDM).</span></span> <span data-ttu-id="065a4-139">これらの例では、Northwind サンプル データベースに基づくモデルを使用します。</span><span class="sxs-lookup"><span data-stu-id="065a4-139">These examples use a model based on the Northwind sample database.</span></span> <span data-ttu-id="065a4-140">エンティティ フレームワークの詳細については、「[エンティティ フレームワークの概要](./ef/overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-140">For more information about Entity Framework, see [Entity Framework Overview](./ef/overview.md).</span></span>
 
-### <a name="linq-to-entities"></a><span data-ttu-id="f2ee6-141">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="f2ee6-141">LINQ to Entities</span></span>
-<span data-ttu-id="f2ee6-142">この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-142">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="f2ee6-143">詳細については、「 [LINQ to Entities の概要](./ef/language-reference/linq-to-entities.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-143">For more information, see [LINQ to Entities Overview](./ef/language-reference/linq-to-entities.md).</span></span>
+### <a name="linq-to-entities"></a><span data-ttu-id="065a4-141">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="065a4-141">LINQ to Entities</span></span>
+<span data-ttu-id="065a4-142">この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-142">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="065a4-143">詳細については、「 [LINQ to Entities の概要](./ef/language-reference/linq-to-entities.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-143">For more information, see [LINQ to Entities Overview](./ef/language-reference/linq-to-entities.md).</span></span>
 
 ```csharp
 using System;
@@ -135,8 +136,8 @@ Class LinqSample
 End Class
 ```
 
-### <a name="typed-objectquery"></a><span data-ttu-id="f2ee6-144">型指定された ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="f2ee6-144">Typed ObjectQuery</span></span>
-<span data-ttu-id="f2ee6-145">この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-145">The code in this example uses an <xref:System.Data.Objects.ObjectQuery%601> to return data as Categories objects.</span></span> <span data-ttu-id="f2ee6-146">詳細については、「[オブジェクトクエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-146">For more information, see [Object Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).</span></span>
+### <a name="typed-objectquery"></a><span data-ttu-id="065a4-144">型指定された ObjectQuery</span><span class="sxs-lookup"><span data-stu-id="065a4-144">Typed ObjectQuery</span></span>
+<span data-ttu-id="065a4-145">この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。</span><span class="sxs-lookup"><span data-stu-id="065a4-145">The code in this example uses an <xref:System.Data.Objects.ObjectQuery%601> to return data as Categories objects.</span></span> <span data-ttu-id="065a4-146">詳細については、「オブジェクト[クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-146">For more information, see [Object Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).</span></span>
 
 ```csharp
 using System;
@@ -151,7 +152,7 @@ class ObjectQuerySample
         {
             ObjectQuery<Categories> categoryQuery = context.Categories;
 
-            foreach (Categories category in 
+            foreach (Categories category in
                 categoryQuery.Execute(MergeOption.AppendOnly))
             {
                 Console.WriteLine("\t{0}\t{1}",
@@ -184,8 +185,8 @@ Class ObjectQuerySample
 End Class
 ```
 
-### <a name="entityclient"></a><span data-ttu-id="f2ee6-147">EntityClient</span><span class="sxs-lookup"><span data-stu-id="f2ee6-147">EntityClient</span></span>
-<span data-ttu-id="f2ee6-148">この例のコードは <xref:System.Data.EntityClient.EntityCommand> を使用し、Entity SQL クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-148">The code in this example uses an <xref:System.Data.EntityClient.EntityCommand> to execute an Entity SQL query.</span></span> <span data-ttu-id="f2ee6-149">このクエリは、カテゴリ エンティティ型のインスタンスを示すレコードのリストを返します。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-149">This query returns a list of records that represent instances of the Categories entity type.</span></span> <span data-ttu-id="f2ee6-150"><xref:System.Data.EntityClient.EntityDataReader> を使用して、結果セットのデータ レコードにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-150">An <xref:System.Data.EntityClient.EntityDataReader> is used to access data records in the result set.</span></span> <span data-ttu-id="f2ee6-151">詳細については、「 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-151">For more information, see [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).</span></span>
+### <a name="entityclient"></a><span data-ttu-id="065a4-147">EntityClient</span><span class="sxs-lookup"><span data-stu-id="065a4-147">EntityClient</span></span>
+<span data-ttu-id="065a4-148">この例のコードは <xref:System.Data.EntityClient.EntityCommand> を使用し、Entity SQL クエリを実行します。</span><span class="sxs-lookup"><span data-stu-id="065a4-148">The code in this example uses an <xref:System.Data.EntityClient.EntityCommand> to execute an Entity SQL query.</span></span> <span data-ttu-id="065a4-149">このクエリは、カテゴリ エンティティ型のインスタンスを示すレコードのリストを返します。</span><span class="sxs-lookup"><span data-stu-id="065a4-149">This query returns a list of records that represent instances of the Categories entity type.</span></span> <span data-ttu-id="065a4-150"><xref:System.Data.EntityClient.EntityDataReader> を使用して、結果セットのデータ レコードにアクセスします。</span><span class="sxs-lookup"><span data-stu-id="065a4-150">An <xref:System.Data.EntityClient.EntityDataReader> is used to access data records in the result set.</span></span> <span data-ttu-id="065a4-151">詳細については、「 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-151">For more information, see [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).</span></span>
 
 ```csharp
 using System;
@@ -199,7 +200,7 @@ class EntityClientSample
     public static void ExecuteQuery()
     {
         string queryString =
-            @"SELECT c.CategoryID, c.CategoryName 
+            @"SELECT c.CategoryID, c.CategoryName
                 FROM NorthwindEntities.Categories AS c";
 
         using (EntityConnection conn =
@@ -210,7 +211,7 @@ class EntityClientSample
                 conn.Open();
                 using (EntityCommand query = new EntityCommand(queryString, conn))
                 {
-                    using (DbDataReader rdr = 
+                    using (DbDataReader rdr =
                         query.ExecuteReader(CommandBehavior.SequentialAccess))
                     {
                         while (rdr.Read())
@@ -262,13 +263,13 @@ Class EntityClientSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-        End Using 
+        End Using
     End Sub
 End Class
 ```
 
-## <a name="linq-to-sql"></a><span data-ttu-id="f2ee6-152">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="f2ee6-152">LINQ to SQL</span></span>
-<span data-ttu-id="f2ee6-153">この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-153">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="f2ee6-154">この例は Northwind データ コンテキストを基にしています。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-154">This example is based on the Northwind data context.</span></span> <span data-ttu-id="f2ee6-155">詳細については、[概要](./sql/linq/getting-started.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f2ee6-155">For more information, see [Getting Started](./sql/linq/getting-started.md).</span></span>
+## <a name="linq-to-sql"></a><span data-ttu-id="065a4-152">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="065a4-152">LINQ to SQL</span></span>
+<span data-ttu-id="065a4-153">この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。</span><span class="sxs-lookup"><span data-stu-id="065a4-153">The code in this example uses a LINQ query to return data as Categories objects, which are projected as an anonymous type that contains only the CategoryID and CategoryName properties.</span></span> <span data-ttu-id="065a4-154">この例は Northwind データ コンテキストを基にしています。</span><span class="sxs-lookup"><span data-stu-id="065a4-154">This example is based on the Northwind data context.</span></span> <span data-ttu-id="065a4-155">詳細については、「[はじめに](./sql/linq/getting-started.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="065a4-155">For more information, see [Getting Started](./sql/linq/getting-started.md).</span></span>
 
 ```csharp
 using System;
@@ -334,15 +335,15 @@ Class LinqSqlSample
             Catch ex As Exception
                 Console.WriteLine(ex.Message)
             End Try
-            End Using 
+            End Using
     End Sub
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f2ee6-156">関連項目</span><span class="sxs-lookup"><span data-stu-id="f2ee6-156">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="065a4-156">関連項目</span><span class="sxs-lookup"><span data-stu-id="065a4-156">See also</span></span>
 
-- [<span data-ttu-id="f2ee6-157">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="f2ee6-157">ADO.NET Overview</span></span>](ado-net-overview.md)
-- [<span data-ttu-id="f2ee6-158">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="f2ee6-158">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
-- <span data-ttu-id="f2ee6-159">[データ アプリケーションの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="f2ee6-159">[Creating Data Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span></span>
-- <span data-ttu-id="f2ee6-160">[Entity Data Model のクエリ (Entity Framework タスク)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="f2ee6-160">[Querying an Entity Data Model (Entity Framework Tasks)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span></span>
-- <span data-ttu-id="f2ee6-161">[方法: 匿名型オブジェクトを返すクエリを実行する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="f2ee6-161">[How to: Execute a Query that Returns Anonymous Type Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span></span>
+- [<span data-ttu-id="065a4-157">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="065a4-157">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="065a4-158">ADO.NET でのデータの取得および変更</span><span class="sxs-lookup"><span data-stu-id="065a4-158">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- <span data-ttu-id="065a4-159">[データ アプリケーションの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="065a4-159">[Creating Data Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))</span></span>
+- <span data-ttu-id="065a4-160">[Entity Data Model のクエリ (Entity Framework タスク)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="065a4-160">[Querying an Entity Data Model (Entity Framework Tasks)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))</span></span>
+- <span data-ttu-id="065a4-161">[方法: 匿名型のコレクションを返すクエリを実行する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="065a4-161">[How to: Execute a Query that Returns Anonymous Type Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))</span></span>

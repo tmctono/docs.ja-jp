@@ -2,28 +2,28 @@
 title: '方法: マネージ コード DCOM を WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217176"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181388"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="342a7-102">方法: マネージ コード DCOM を WCF に移行する</span><span class="sxs-lookup"><span data-stu-id="342a7-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
-<span data-ttu-id="342a7-103">Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。</span><span class="sxs-lookup"><span data-stu-id="342a7-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="342a7-104">この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a><span data-ttu-id="99c93-102">方法: マネージ コード DCOM を WCF に移行する</span><span class="sxs-lookup"><span data-stu-id="99c93-102">How to: Migrate Managed-Code DCOM to WCF</span></span>
+<span data-ttu-id="99c93-103">Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。</span><span class="sxs-lookup"><span data-stu-id="99c93-103">Windows Communication Foundation (WCF) is the recommended and secure choice over Distributed Component Object Model (DCOM) for managed code calls between servers and clients in a distributed environment.</span></span> <span data-ttu-id="99c93-104">この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-104">This article shows how you to migrate code from DCOM to WCF for the following scenarios.</span></span>  
   
-- <span data-ttu-id="342a7-105">リモート サービスからクライアントに値渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="342a7-105">The remote service returns an object by-value to the client</span></span>  
+- <span data-ttu-id="99c93-105">リモート サービスからクライアントに値渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="99c93-105">The remote service returns an object by-value to the client</span></span>  
   
-- <span data-ttu-id="342a7-106">クライアントからリモート サービスに値渡しでオブジェクトを送信する</span><span class="sxs-lookup"><span data-stu-id="342a7-106">The client sends an object by-value to the remote service</span></span>  
+- <span data-ttu-id="99c93-106">クライアントからリモート サービスに値渡しでオブジェクトを送信する</span><span class="sxs-lookup"><span data-stu-id="99c93-106">The client sends an object by-value to the remote service</span></span>  
   
-- <span data-ttu-id="342a7-107">リモート サービスからクライアントに参照渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="342a7-107">The remote service returns an object by-reference to the client</span></span>  
+- <span data-ttu-id="99c93-107">リモート サービスからクライアントに参照渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="99c93-107">The remote service returns an object by-reference to the client</span></span>  
   
- <span data-ttu-id="342a7-108">セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。</span><span class="sxs-lookup"><span data-stu-id="342a7-108">For security reasons, sending an object by-reference from the client to the service is not allowed in WCF.</span></span> <span data-ttu-id="342a7-109">クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。</span><span class="sxs-lookup"><span data-stu-id="342a7-109">A scenario that requires a conversation back and forth between client and server can be achieved in WCF using a duplex service.</span></span>  <span data-ttu-id="342a7-110">双方向サービスの詳細については、「[双方向サービス](../wcf/feature-details/duplex-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="342a7-110">For more information about duplex services, see [Duplex Services](../wcf/feature-details/duplex-services.md).</span></span>  
+ <span data-ttu-id="99c93-108">セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。</span><span class="sxs-lookup"><span data-stu-id="99c93-108">For security reasons, sending an object by-reference from the client to the service is not allowed in WCF.</span></span> <span data-ttu-id="99c93-109">クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。</span><span class="sxs-lookup"><span data-stu-id="99c93-109">A scenario that requires a conversation back and forth between client and server can be achieved in WCF using a duplex service.</span></span>  <span data-ttu-id="99c93-110">双方向サービスの詳細については、「[双方向サービス](../wcf/feature-details/duplex-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99c93-110">For more information about duplex services, see [Duplex Services](../wcf/feature-details/duplex-services.md).</span></span>  
   
- <span data-ttu-id="342a7-111">WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../wcf/building-clients.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="342a7-111">For more details about creating WCF services and clients for those services, see [Basic WCF Programming](../wcf/basic-wcf-programming.md), [Designing and Implementing Services](../wcf/designing-and-implementing-services.md), and [Building Clients](../wcf/building-clients.md).</span></span>  
+ <span data-ttu-id="99c93-111">WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../wcf/building-clients.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99c93-111">For more details about creating WCF services and clients for those services, see [Basic WCF Programming](../wcf/basic-wcf-programming.md), [Designing and Implementing Services](../wcf/designing-and-implementing-services.md), and [Building Clients](../wcf/building-clients.md).</span></span>  
   
-## <a name="dcom-example-code"></a><span data-ttu-id="342a7-112">DCOM コード例</span><span class="sxs-lookup"><span data-stu-id="342a7-112">DCOM example code</span></span>  
- <span data-ttu-id="342a7-113">これらのシナリオでは、WCF を使用して示されている DCOM インターフェイスに、以下の構造があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-113">For these scenarios, the DCOM interfaces that are illustrated using WCF have the following structure:</span></span>  
+## <a name="dcom-example-code"></a><span data-ttu-id="99c93-112">DCOM コード例</span><span class="sxs-lookup"><span data-stu-id="99c93-112">DCOM example code</span></span>  
+ <span data-ttu-id="99c93-113">これらのシナリオでは、WCF を使用して示されている DCOM インターフェイスに、以下の構造があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-113">For these scenarios, the DCOM interfaces that are illustrated using WCF have the following structure:</span></span>  
   
 ```csharp  
 [ComVisible(true)]  
@@ -46,8 +46,8 @@ public class Customer
 }  
 ```  
   
-## <a name="the-service-returns-an-object-by-value"></a><span data-ttu-id="342a7-114">サービスから値渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="342a7-114">The service returns an object by-value</span></span>  
- <span data-ttu-id="342a7-115">このシナリオでは、サービスを呼び出し、そのメソッドがオブジェクトを返します。オブジェクトはサーバーからクライアントに値で渡されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-115">For this scenario, you make a call to a service and it method returns an object, which is passed by-value from the server to the client.</span></span> <span data-ttu-id="342a7-116">このシナリオは、次の COM 呼び出しを表しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-116">This scenario represents the following COM call:</span></span>  
+## <a name="the-service-returns-an-object-by-value"></a><span data-ttu-id="99c93-114">サービスから値渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="99c93-114">The service returns an object by-value</span></span>  
+ <span data-ttu-id="99c93-115">このシナリオでは、サービスを呼び出し、そのメソッドがオブジェクトを返します。オブジェクトはサーバーからクライアントに値で渡されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-115">For this scenario, you make a call to a service and it method returns an object, which is passed by-value from the server to the client.</span></span> <span data-ttu-id="99c93-116">このシナリオは、次の COM 呼び出しを表しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-116">This scenario represents the following COM call:</span></span>  
   
 ```csharp  
 public interface IRemoteService  
@@ -56,15 +56,15 @@ public interface IRemoteService
 }  
 ```  
   
- <span data-ttu-id="342a7-117">このシナリオでは、クライアントは、リモート サービスからオブジェクトの逆シリアル化されたコピーを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="342a7-117">In this scenario, the client receives a deserialized copy of an object from the remote service.</span></span> <span data-ttu-id="342a7-118">クライアントは、サービスにコールバックしなくても、このローカル コピーと対話できます。</span><span class="sxs-lookup"><span data-stu-id="342a7-118">The client can interact with this local copy without calling back to the service.</span></span>  <span data-ttu-id="342a7-119">つまり、ローカル コピーのメソッドが呼び出されるときに、サービスはまったく関与しないことがクライアントに保証されています。</span><span class="sxs-lookup"><span data-stu-id="342a7-119">In other words, the client is guaranteed the service will not be involved in any way when methods on the local copy are called.</span></span> <span data-ttu-id="342a7-120">WCF は常にサービスから値渡しでオブジェクトを返すため、次の各手順では、通常の WCF サービスを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="342a7-120">WCF always returns objects from the service by value, so the following steps describe creating a regular WCF service.</span></span>  
+ <span data-ttu-id="99c93-117">このシナリオでは、クライアントは、リモート サービスからオブジェクトの逆シリアル化されたコピーを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="99c93-117">In this scenario, the client receives a deserialized copy of an object from the remote service.</span></span> <span data-ttu-id="99c93-118">クライアントは、サービスにコールバックしなくても、このローカル コピーと対話できます。</span><span class="sxs-lookup"><span data-stu-id="99c93-118">The client can interact with this local copy without calling back to the service.</span></span>  <span data-ttu-id="99c93-119">つまり、ローカル コピーのメソッドが呼び出されるときに、サービスはまったく関与しないことがクライアントに保証されています。</span><span class="sxs-lookup"><span data-stu-id="99c93-119">In other words, the client is guaranteed the service will not be involved in any way when methods on the local copy are called.</span></span> <span data-ttu-id="99c93-120">WCF は常にサービスから値渡しでオブジェクトを返すため、次の各手順では、通常の WCF サービスを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="99c93-120">WCF always returns objects from the service by value, so the following steps describe creating a regular WCF service.</span></span>  
   
-### <a name="step-1-define-the-wcf-service-interface"></a><span data-ttu-id="342a7-121">手順 1: WCF サービスのインターフェイスを定義する</span><span class="sxs-lookup"><span data-stu-id="342a7-121">Step 1: Define the WCF service interface</span></span>  
- <span data-ttu-id="342a7-122">WCF サービスのパブリック インターフェイスを定義し、[<xref:System.ServiceModel.ServiceContractAttribute>] 属性でマークします。</span><span class="sxs-lookup"><span data-stu-id="342a7-122">Define a public interface for the WCF service and mark it with the [<xref:System.ServiceModel.ServiceContractAttribute>] attribute.</span></span>  <span data-ttu-id="342a7-123">クライアントに公開するメソッドを [<xref:System.ServiceModel.OperationContractAttribute>] 属性でマークします。</span><span class="sxs-lookup"><span data-stu-id="342a7-123">Mark the methods you want to expose to clients with the [<xref:System.ServiceModel.OperationContractAttribute>] attribute.</span></span> <span data-ttu-id="342a7-124">次の例は、これらの属性を使用して、サーバー側のインターフェイスと、クライアントが呼び出すことのできるインターフェイス メソッドとを識別する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-124">The following example shows using these attributes to identify the server-side interface and interface methods a client can call.</span></span> <span data-ttu-id="342a7-125">このシナリオで使用されるメソッドは、太字で示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-125">The method used for this scenario is shown in bold.</span></span>  
+### <a name="step-1-define-the-wcf-service-interface"></a><span data-ttu-id="99c93-121">手順 1: WCF サービスのインターフェイスを定義する</span><span class="sxs-lookup"><span data-stu-id="99c93-121">Step 1: Define the WCF service interface</span></span>  
+ <span data-ttu-id="99c93-122">WCF サービスのパブリック インターフェイスを定義し、[<xref:System.ServiceModel.ServiceContractAttribute>] 属性でマークします。</span><span class="sxs-lookup"><span data-stu-id="99c93-122">Define a public interface for the WCF service and mark it with the [<xref:System.ServiceModel.ServiceContractAttribute>] attribute.</span></span>  <span data-ttu-id="99c93-123">クライアントに公開するメソッドを [<xref:System.ServiceModel.OperationContractAttribute>] 属性でマークします。</span><span class="sxs-lookup"><span data-stu-id="99c93-123">Mark the methods you want to expose to clients with the [<xref:System.ServiceModel.OperationContractAttribute>] attribute.</span></span> <span data-ttu-id="99c93-124">次の例は、これらの属性を使用して、サーバー側のインターフェイスと、クライアントが呼び出すことのできるインターフェイス メソッドとを識別する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-124">The following example shows using these attributes to identify the server-side interface and interface methods a client can call.</span></span> <span data-ttu-id="99c93-125">このシナリオで使用されるメソッドは、太字で示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-125">The method used for this scenario is shown in bold.</span></span>  
   
 ```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
-using System.ServiceModel.Web;   
+using System.ServiceModel.Web;
 . . .  
 [ServiceContract]  
 public interface ICustomerManager  
@@ -72,15 +72,15 @@ public interface ICustomerManager
     [OperationContract]  
     void StoreCustomer(Customer customer);  
   
-    [OperationContract]     Customer GetCustomer(string firstName, string lastName);   
+    [OperationContract]     Customer GetCustomer(string firstName, string lastName);
   
 }  
 ```  
   
-### <a name="step-2-define-the-data-contract"></a><span data-ttu-id="342a7-126">手順 2: データ コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="342a7-126">Step 2: Define the data contract</span></span>  
- <span data-ttu-id="342a7-127">次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-127">Next you should create a data contract for the service, which will describe how the data will be exchanged between the service and its clients.</span></span>  <span data-ttu-id="342a7-128">データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-128">Classes described in the data contract should be marked with the [<xref:System.Runtime.Serialization.DataContractAttribute>] attribute.</span></span> <span data-ttu-id="342a7-129">クライアントとサーバーの両方に対して表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-129">The individual properties or fields you want visible to both client and server should be marked with the [<xref:System.Runtime.Serialization.DataMemberAttribute>] attribute.</span></span> <span data-ttu-id="342a7-130">データ コントラクト内のクラスから派生した型を許可するには、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを区別する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-130">If you want types derived from a class in the data contract to be allowed, you must identify them with the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute.</span></span> <span data-ttu-id="342a7-131">WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="342a7-131">WCF will only serialize or deserialize types in the service interface and types identified as known types.</span></span> <span data-ttu-id="342a7-132">既知の型ではない型を使用しようとすると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="342a7-132">If you attempt to use a type that is not a known type, an exception will occur.</span></span>  
+### <a name="step-2-define-the-data-contract"></a><span data-ttu-id="99c93-126">手順 2: データ コントラクトを定義する</span><span class="sxs-lookup"><span data-stu-id="99c93-126">Step 2: Define the data contract</span></span>  
+ <span data-ttu-id="99c93-127">次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-127">Next you should create a data contract for the service, which will describe how the data will be exchanged between the service and its clients.</span></span>  <span data-ttu-id="99c93-128">データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-128">Classes described in the data contract should be marked with the [<xref:System.Runtime.Serialization.DataContractAttribute>] attribute.</span></span> <span data-ttu-id="99c93-129">クライアントとサーバーの両方に対して表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-129">The individual properties or fields you want visible to both client and server should be marked with the [<xref:System.Runtime.Serialization.DataMemberAttribute>] attribute.</span></span> <span data-ttu-id="99c93-130">データ コントラクト内のクラスから派生した型を許可するには、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを区別する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-130">If you want types derived from a class in the data contract to be allowed, you must identify them with the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute.</span></span> <span data-ttu-id="99c93-131">WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。</span><span class="sxs-lookup"><span data-stu-id="99c93-131">WCF will only serialize or deserialize types in the service interface and types identified as known types.</span></span> <span data-ttu-id="99c93-132">既知の型ではない型を使用しようとすると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="99c93-132">If you attempt to use a type that is not a known type, an exception will occur.</span></span>  
   
- <span data-ttu-id="342a7-133">データ コントラクトの詳細については、「[データ コントラクト](../wcf/samples/data-contracts.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="342a7-133">For more information about data contracts, see [Data Contracts](../wcf/samples/data-contracts.md).</span></span>  
+ <span data-ttu-id="99c93-133">データ コントラクトの詳細については、「[データ コントラクト](../wcf/samples/data-contracts.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99c93-133">For more information about data contracts, see [Data Contracts](../wcf/samples/data-contracts.md).</span></span>  
   
 ```csharp  
 [DataContract]  
@@ -119,11 +119,11 @@ public class Address
 }  
 ```  
   
-### <a name="step-3-implement-the-wcf-service"></a><span data-ttu-id="342a7-134">手順 3: WCF サービスを実装する</span><span class="sxs-lookup"><span data-stu-id="342a7-134">Step 3: Implement the WCF service</span></span>  
- <span data-ttu-id="342a7-135">次に、前の手順で定義したインターフェイスを実装する、WCF サービス クラスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-135">Next, you should implement the WCF service class that implements the interface you defined in the previous step.</span></span>  
+### <a name="step-3-implement-the-wcf-service"></a><span data-ttu-id="99c93-134">手順 3: WCF サービスを実装する</span><span class="sxs-lookup"><span data-stu-id="99c93-134">Step 3: Implement the WCF service</span></span>  
+ <span data-ttu-id="99c93-135">次に、前の手順で定義したインターフェイスを実装する、WCF サービス クラスを実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-135">Next, you should implement the WCF service class that implements the interface you defined in the previous step.</span></span>  
   
 ```csharp  
-public class CustomerService: ICustomerManager    
+public class CustomerService: ICustomerManager
 {  
     public void StoreCustomer(Customer customer)  
     {  
@@ -136,15 +136,15 @@ public class CustomerService: ICustomerManager
 }  
 ```  
   
-### <a name="step-4-configure-the-service-and-the-client"></a><span data-ttu-id="342a7-136">手順 4: サービスとクライアントを構成する</span><span class="sxs-lookup"><span data-stu-id="342a7-136">Step 4: Configure the service and the client</span></span>  
- <span data-ttu-id="342a7-137">WCF サービスを実行するには、特定の WCF バインドを使用して特定の URL で上記のサービス インターフェイスを公開するエンドポイントを宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-137">To run a WCF service, you need to declare an endpoint that exposes that service interface at a specific URL using a specific WCF binding.</span></span> <span data-ttu-id="342a7-138">バインディングは、クライアントとサーバーが通信するための、トランスポート、エンコード、およびプロトコルの詳細を指定します。</span><span class="sxs-lookup"><span data-stu-id="342a7-138">A binding specifies the transport, encoding and protocol details for the clients and server to communicate.</span></span> <span data-ttu-id="342a7-139">通常、サービス プロジェクトの構成ファイル (web.config) にバインドを追加します。</span><span class="sxs-lookup"><span data-stu-id="342a7-139">You typically add bindings to the service project’s configuration file (web.config).</span></span> <span data-ttu-id="342a7-140">サービス例のためのバインド エントリを以下に示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-140">The following shows a binding entry for the example service:</span></span>  
+### <a name="step-4-configure-the-service-and-the-client"></a><span data-ttu-id="99c93-136">手順 4: サービスとクライアントを構成する</span><span class="sxs-lookup"><span data-stu-id="99c93-136">Step 4: Configure the service and the client</span></span>  
+ <span data-ttu-id="99c93-137">WCF サービスを実行するには、特定の WCF バインドを使用して特定の URL で上記のサービス インターフェイスを公開するエンドポイントを宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-137">To run a WCF service, you need to declare an endpoint that exposes that service interface at a specific URL using a specific WCF binding.</span></span> <span data-ttu-id="99c93-138">バインディングは、クライアントとサーバーが通信するための、トランスポート、エンコード、およびプロトコルの詳細を指定します。</span><span class="sxs-lookup"><span data-stu-id="99c93-138">A binding specifies the transport, encoding and protocol details for the clients and server to communicate.</span></span> <span data-ttu-id="99c93-139">通常、サービス プロジェクトの構成ファイル (web.config) にバインドを追加します。</span><span class="sxs-lookup"><span data-stu-id="99c93-139">You typically add bindings to the service project’s configuration file (web.config).</span></span> <span data-ttu-id="99c93-140">サービス例のためのバインド エントリを以下に示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-140">The following shows a binding entry for the example service:</span></span>  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <services>  
       <service name="Server.CustomerService">  
-        <endpoint address="http://localhost:8083/CustomerManager"   
+        <endpoint address="http://localhost:8083/CustomerManager"
                   binding="basicHttpBinding"  
                   contract="Shared.ICustomerManager" />  
       </service>  
@@ -153,43 +153,43 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
- <span data-ttu-id="342a7-141">次に、サービスによって指定されたバインド情報と一致するように、クライアントを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-141">Next, you need to configure the client to match the binding information specified by the service.</span></span> <span data-ttu-id="342a7-142">そのためには、クライアントのアプリケーション構成 (app.config) ファイルに以下を追加します。</span><span class="sxs-lookup"><span data-stu-id="342a7-142">To do so, add the following to the client’s application configuration (app.config) file.</span></span>  
+ <span data-ttu-id="99c93-141">次に、サービスによって指定されたバインド情報と一致するように、クライアントを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-141">Next, you need to configure the client to match the binding information specified by the service.</span></span> <span data-ttu-id="99c93-142">そのためには、クライアントのアプリケーション構成 (app.config) ファイルに以下を追加します。</span><span class="sxs-lookup"><span data-stu-id="99c93-142">To do so, add the following to the client’s application configuration (app.config) file.</span></span>  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="customermanager"   
-                address="http://localhost:8083/CustomerManager"   
-                binding="basicHttpBinding"   
+      <endpoint name="customermanager"
+                address="http://localhost:8083/CustomerManager"
+                binding="basicHttpBinding"
                 contract="Shared.ICustomerManager"/>  
     </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
-### <a name="step-5-run-the-service"></a><span data-ttu-id="342a7-143">手順 5: サービスを実行する</span><span class="sxs-lookup"><span data-stu-id="342a7-143">Step 5: Run the service</span></span>  
- <span data-ttu-id="342a7-144">最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。</span><span class="sxs-lookup"><span data-stu-id="342a7-144">Finally, you can self-host it in a console application by adding the following lines to the service app, and starting the app.</span></span> <span data-ttu-id="342a7-145">WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../wcf/hosting-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="342a7-145">For more information about other ways to host a WCF service application, [Hosting Services](../wcf/hosting-services.md).</span></span>  
+### <a name="step-5-run-the-service"></a><span data-ttu-id="99c93-143">手順 5: サービスを実行する</span><span class="sxs-lookup"><span data-stu-id="99c93-143">Step 5: Run the service</span></span>  
+ <span data-ttu-id="99c93-144">最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。</span><span class="sxs-lookup"><span data-stu-id="99c93-144">Finally, you can self-host it in a console application by adding the following lines to the service app, and starting the app.</span></span> <span data-ttu-id="99c93-145">WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../wcf/hosting-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99c93-145">For more information about other ways to host a WCF service application, [Hosting Services](../wcf/hosting-services.md).</span></span>  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
 customerServiceHost.Open();  
 ```  
   
-### <a name="step-6-call-the-service-from-the-client"></a><span data-ttu-id="342a7-146">手順 6: クライアントからサービスを呼び出す</span><span class="sxs-lookup"><span data-stu-id="342a7-146">Step 6: Call the service from the client</span></span>  
- <span data-ttu-id="342a7-147">クライアントからのサービスを呼び出すには、サービスのチャネル ファクトリを作成し、チャネルを要求する必要があります。これにより、クライアントから `GetCustomer` メソッドを直接呼び出すことができるようになります。</span><span class="sxs-lookup"><span data-stu-id="342a7-147">To call the service from the client, you need to create a channel factory for the service, and request a channel, which will enable you to directly call the `GetCustomer` method directly from the client.</span></span> <span data-ttu-id="342a7-148">チャネルはサービスのインターフェイスを実装し、基になる要求/応答のロジックを処理します。</span><span class="sxs-lookup"><span data-stu-id="342a7-148">The channel implements the service’s interface and handles the underlying request/reply logic for you.</span></span>  <span data-ttu-id="342a7-149">このメソッドの呼び出しからの戻り値は、サービス応答の逆シリアル化されたコピーです。</span><span class="sxs-lookup"><span data-stu-id="342a7-149">The return value from that method call is the deserialized copy of the service response.</span></span>  
+### <a name="step-6-call-the-service-from-the-client"></a><span data-ttu-id="99c93-146">手順 6: クライアントからサービスを呼び出す</span><span class="sxs-lookup"><span data-stu-id="99c93-146">Step 6: Call the service from the client</span></span>  
+ <span data-ttu-id="99c93-147">クライアントからのサービスを呼び出すには、サービスのチャネル ファクトリを作成し、チャネルを要求する必要があります。これにより、クライアントから `GetCustomer` メソッドを直接呼び出すことができるようになります。</span><span class="sxs-lookup"><span data-stu-id="99c93-147">To call the service from the client, you need to create a channel factory for the service, and request a channel, which will enable you to directly call the `GetCustomer` method directly from the client.</span></span> <span data-ttu-id="99c93-148">チャネルはサービスのインターフェイスを実装し、基になる要求/応答のロジックを処理します。</span><span class="sxs-lookup"><span data-stu-id="99c93-148">The channel implements the service’s interface and handles the underlying request/reply logic for you.</span></span>  <span data-ttu-id="99c93-149">このメソッドの呼び出しからの戻り値は、サービス応答の逆シリアル化されたコピーです。</span><span class="sxs-lookup"><span data-stu-id="99c93-149">The return value from that method call is the deserialized copy of the service response.</span></span>  
   
 ```csharp  
-ChannelFactory<ICustomerManager> factory =   
+ChannelFactory<ICustomerManager> factory =
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
 Customer customer = service.GetCustomer("Mary", "Smith");  
 ```  
   
-## <a name="the-client-sends-a-by-value-object-to-the-server"></a><span data-ttu-id="342a7-150">クライアントからサーバーに値渡しのオブジェクトを送信する</span><span class="sxs-lookup"><span data-stu-id="342a7-150">The client sends a by-value object to the server</span></span>  
- <span data-ttu-id="342a7-151">このシナリオでは、クライアントがサーバーに値渡しでオブジェクトを送信します。</span><span class="sxs-lookup"><span data-stu-id="342a7-151">In this scenario, the client sends an object to the server, by-value.</span></span> <span data-ttu-id="342a7-152">つまり、サーバーは、オブジェクトの逆シリアル化されたコピーを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="342a7-152">This means that the server will receive a deserialized copy of the object.</span></span>  <span data-ttu-id="342a7-153">サーバーは、そのコピーのメソッドを呼び出すことができ、クライアント コードにコールバックがないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-153">The server can call methods on that copy and be guaranteed there is no callback into client code.</span></span> <span data-ttu-id="342a7-154">前述のとおり、WCF での通常のデータ交換は、値渡しでなされます。</span><span class="sxs-lookup"><span data-stu-id="342a7-154">As mentioned previously, normal WCF exchanges of data are by-value.</span></span>  <span data-ttu-id="342a7-155">これにより、これらのいずれかのオブジェクトのメソッドの呼び出しはローカルでのみ実行され、クライアントではコードは呼び出されないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-155">This guarantees that calling methods on one of these objects executes locally only – it will not invoke code on the client.</span></span>  
+## <a name="the-client-sends-a-by-value-object-to-the-server"></a><span data-ttu-id="99c93-150">クライアントからサーバーに値渡しのオブジェクトを送信する</span><span class="sxs-lookup"><span data-stu-id="99c93-150">The client sends a by-value object to the server</span></span>  
+ <span data-ttu-id="99c93-151">このシナリオでは、クライアントがサーバーに値渡しでオブジェクトを送信します。</span><span class="sxs-lookup"><span data-stu-id="99c93-151">In this scenario, the client sends an object to the server, by-value.</span></span> <span data-ttu-id="99c93-152">つまり、サーバーは、オブジェクトの逆シリアル化されたコピーを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="99c93-152">This means that the server will receive a deserialized copy of the object.</span></span>  <span data-ttu-id="99c93-153">サーバーは、そのコピーのメソッドを呼び出すことができ、クライアント コードにコールバックがないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-153">The server can call methods on that copy and be guaranteed there is no callback into client code.</span></span> <span data-ttu-id="99c93-154">前述のとおり、WCF での通常のデータ交換は、値渡しでなされます。</span><span class="sxs-lookup"><span data-stu-id="99c93-154">As mentioned previously, normal WCF exchanges of data are by-value.</span></span>  <span data-ttu-id="99c93-155">これにより、これらのいずれかのオブジェクトのメソッドの呼び出しはローカルでのみ実行され、クライアントではコードは呼び出されないことが保証されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-155">This guarantees that calling methods on one of these objects executes locally only – it will not invoke code on the client.</span></span>  
   
- <span data-ttu-id="342a7-156">このシナリオは、次の COM メソッドの呼び出しを表しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-156">This scenario represents the following COM method call:</span></span>  
+ <span data-ttu-id="99c93-156">このシナリオは、次の COM メソッドの呼び出しを表しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-156">This scenario represents the following COM method call:</span></span>  
   
 ```csharp  
 public interface IRemoteService  
@@ -198,7 +198,7 @@ public interface IRemoteService
 }  
 ```  
   
- <span data-ttu-id="342a7-157">このシナリオでは、最初の例で示すものと同じサービス インターフェイスおよびデータ コントラクトを使用します。</span><span class="sxs-lookup"><span data-stu-id="342a7-157">This scenario uses the same service interface and data contract as shown in the first example.</span></span> <span data-ttu-id="342a7-158">さらに、クライアントとサービスが同じ方法で構成されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-158">In addition, the client and service will be configured in the same way.</span></span> <span data-ttu-id="342a7-159">この例では、オブジェクトを送信するためにチャネルが作成されて、同じ方法で実行されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-159">In this example, a channel is created to send the object and run the same way.</span></span> <span data-ttu-id="342a7-160">ただし、この例では、値渡しでオブジェクトを送信して、サービスを呼び出すクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="342a7-160">However, for this example, you will create a client that calls the service, passing an object by-value.</span></span> <span data-ttu-id="342a7-161">クライアントがサービス コントラクトで呼び出すサービス メソッドは、太字で示されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-161">The service method the client will call in the service contract is shown in bold:</span></span>  
+ <span data-ttu-id="99c93-157">このシナリオでは、最初の例で示すものと同じサービス インターフェイスおよびデータ コントラクトを使用します。</span><span class="sxs-lookup"><span data-stu-id="99c93-157">This scenario uses the same service interface and data contract as shown in the first example.</span></span> <span data-ttu-id="99c93-158">さらに、クライアントとサービスが同じ方法で構成されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-158">In addition, the client and service will be configured in the same way.</span></span> <span data-ttu-id="99c93-159">この例では、オブジェクトを送信するためにチャネルが作成されて、同じ方法で実行されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-159">In this example, a channel is created to send the object and run the same way.</span></span> <span data-ttu-id="99c93-160">ただし、この例では、値渡しでオブジェクトを送信して、サービスを呼び出すクライアントを作成します。</span><span class="sxs-lookup"><span data-stu-id="99c93-160">However, for this example, you will create a client that calls the service, passing an object by-value.</span></span> <span data-ttu-id="99c93-161">クライアントがサービス コントラクトで呼び出すサービス メソッドは、太字で示されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-161">The service method the client will call in the service contract is shown in bold:</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -211,10 +211,10 @@ public interface ICustomerManager
 }  
 ```  
   
-### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a><span data-ttu-id="342a7-162">値渡しのオブジェクトを送信するクライアントにコードを追加する</span><span class="sxs-lookup"><span data-stu-id="342a7-162">Add code to the client that sends a by-value object</span></span>  
- <span data-ttu-id="342a7-163">次のコードは、クライアントが値渡しの customer オブジェクトを新規に作成する方法、`ICustomerManager` サービスと通信するチャネルを作成する方法、およびそこに customer オブジェクトを送信する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-163">The following code shows how the client creates a new by-value customer object, creates a channel to communicate with the `ICustomerManager` service, and sends the customer object to it.</span></span>  
+### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a><span data-ttu-id="99c93-162">値渡しのオブジェクトを送信するクライアントにコードを追加する</span><span class="sxs-lookup"><span data-stu-id="99c93-162">Add code to the client that sends a by-value object</span></span>  
+ <span data-ttu-id="99c93-163">次のコードは、クライアントが値渡しの customer オブジェクトを新規に作成する方法、`ICustomerManager` サービスと通信するチャネルを作成する方法、およびそこに customer オブジェクトを送信する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-163">The following code shows how the client creates a new by-value customer object, creates a channel to communicate with the `ICustomerManager` service, and sends the customer object to it.</span></span>  
   
- <span data-ttu-id="342a7-164">Customer オブジェクトはシリアル化され、サービスに送信されて、サービスによりそのオブジェクトの新しいコピーへと逆シリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-164">The customer object will be serialized, and sent to the service, where it is deserialized by the service into a new copy of that object.</span></span>  <span data-ttu-id="342a7-165">このオブジェクトに対してサービスが呼び出すメソッドはすべて、サーバー上でローカルでのみ実行されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-165">Any methods the service calls on this object will execute only locally on the server.</span></span> <span data-ttu-id="342a7-166">このコードは派生型の送信を示していることに注意してください (`PremiumCustomer`)。</span><span class="sxs-lookup"><span data-stu-id="342a7-166">It’s important to note that this code illustrates sending a derived type (`PremiumCustomer`).</span></span>  <span data-ttu-id="342a7-167">サービス コントラクトは `Customer` オブジェクトを想定していますが、サービス データ コントラクトは [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性を使用して `PremiumCustomer` も許可されることを示しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-167">The service contract expects a `Customer` object, but the service data contract uses the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute to indicate that `PremiumCustomer` is also allowed.</span></span>  <span data-ttu-id="342a7-168">このサービス インターフェイスを介して他の型をシリアル化または逆シリアル化しようとしても、WCF は失敗します。</span><span class="sxs-lookup"><span data-stu-id="342a7-168">WCF will fail attempts to serialize or deserialize any other type via this service interface.</span></span>  
+ <span data-ttu-id="99c93-164">Customer オブジェクトはシリアル化され、サービスに送信されて、サービスによりそのオブジェクトの新しいコピーへと逆シリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-164">The customer object will be serialized, and sent to the service, where it is deserialized by the service into a new copy of that object.</span></span>  <span data-ttu-id="99c93-165">このオブジェクトに対してサービスが呼び出すメソッドはすべて、サーバー上でローカルでのみ実行されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-165">Any methods the service calls on this object will execute only locally on the server.</span></span> <span data-ttu-id="99c93-166">このコードは派生型の送信を示していることに注意してください (`PremiumCustomer`)。</span><span class="sxs-lookup"><span data-stu-id="99c93-166">It’s important to note that this code illustrates sending a derived type (`PremiumCustomer`).</span></span>  <span data-ttu-id="99c93-167">サービス コントラクトは `Customer` オブジェクトを想定していますが、サービス データ コントラクトは [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性を使用して `PremiumCustomer` も許可されることを示しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-167">The service contract expects a `Customer` object, but the service data contract uses the [<xref:System.Runtime.Serialization.KnownTypeAttribute>] attribute to indicate that `PremiumCustomer` is also allowed.</span></span>  <span data-ttu-id="99c93-168">このサービス インターフェイスを介して他の型をシリアル化または逆シリアル化しようとしても、WCF は失敗します。</span><span class="sxs-lookup"><span data-stu-id="99c93-168">WCF will fail attempts to serialize or deserialize any other type via this service interface.</span></span>  
   
 ```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
@@ -231,16 +231,16 @@ ICustomerManager customerManager = factory.CreateChannel();
 customerManager.StoreCustomer(customer);  
 ```  
   
-## <a name="the-service-returns-an-object-by-reference"></a><span data-ttu-id="342a7-169">サービスから参照渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="342a7-169">The service returns an object by reference</span></span>  
- <span data-ttu-id="342a7-170">このシナリオでは、クライアント アプリがリモート サービスを呼び出し、メソッドがオブジェクトを返します。オブジェクトはサービスからクライアントに参照によって渡されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-170">For this scenario, the client app makes a call to the remote service and the method returns an object, which is passed by reference from the service to the client.</span></span>  
+## <a name="the-service-returns-an-object-by-reference"></a><span data-ttu-id="99c93-169">サービスから参照渡しでオブジェクトを返す</span><span class="sxs-lookup"><span data-stu-id="99c93-169">The service returns an object by reference</span></span>  
+ <span data-ttu-id="99c93-170">このシナリオでは、クライアント アプリがリモート サービスを呼び出し、メソッドがオブジェクトを返します。オブジェクトはサービスからクライアントに参照によって渡されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-170">For this scenario, the client app makes a call to the remote service and the method returns an object, which is passed by reference from the service to the client.</span></span>  
   
- <span data-ttu-id="342a7-171">前述のとおり、WCF サービスは常に値でオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="342a7-171">As mentioned previously, WCF services always return object by value.</span></span>  <span data-ttu-id="342a7-172">ただし、<xref:System.ServiceModel.EndpointAddress10> クラスを使用して同様の結果を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="342a7-172">However, you can achieve a similar result by using the <xref:System.ServiceModel.EndpointAddress10> class.</span></span>  <span data-ttu-id="342a7-173"><xref:System.ServiceModel.EndpointAddress10> は、サーバー上のセッションフルな参照渡しのオブジェクトを取得するためにクライアントが使用できる、シリアル化可能な値渡しのオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="342a7-173">The <xref:System.ServiceModel.EndpointAddress10> is a serializable by-value object that can be used by the client to obtain a sessionful by-reference object on the server.</span></span>  
+ <span data-ttu-id="99c93-171">前述のとおり、WCF サービスは常に値でオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="99c93-171">As mentioned previously, WCF services always return object by value.</span></span>  <span data-ttu-id="99c93-172">ただし、<xref:System.ServiceModel.EndpointAddress10> クラスを使用して同様の結果を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="99c93-172">However, you can achieve a similar result by using the <xref:System.ServiceModel.EndpointAddress10> class.</span></span>  <span data-ttu-id="99c93-173"><xref:System.ServiceModel.EndpointAddress10> は、サーバー上のセッションフルな参照渡しのオブジェクトを取得するためにクライアントが使用できる、シリアル化可能な値渡しのオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="99c93-173">The <xref:System.ServiceModel.EndpointAddress10> is a serializable by-value object that can be used by the client to obtain a sessionful by-reference object on the server.</span></span>  
   
- <span data-ttu-id="342a7-174">このシナリオで示される WCF の参照渡しのオブジェクトの動作は、DCOM とは異なります。</span><span class="sxs-lookup"><span data-stu-id="342a7-174">The behavior of the by-reference object in WCF shown in this scenario is different than DCOM.</span></span>  <span data-ttu-id="342a7-175">DCOM では、サーバーが参照渡しのオブジェクトをクライアントに直接返すことができ、クライアントはそのオブジェクトのメソッドを呼び出して、サーバーで実行することができます。</span><span class="sxs-lookup"><span data-stu-id="342a7-175">In DCOM, the server can return a by-reference object to the client directly, and the client can call that object’s methods, which execute on the server.</span></span>  <span data-ttu-id="342a7-176">しかし WCF では、オブジェクトが常に値渡しで返されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-176">In WCF, however, the object returned is always by-value.</span></span>  <span data-ttu-id="342a7-177">クライアントは、<xref:System.ServiceModel.EndpointAddress10> によって表されるその値渡しのオブジェクトを取得し、それを使用して独自の参照渡しのセッションフル オブジェクトを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-177">The client must take that by-value object, represented by <xref:System.ServiceModel.EndpointAddress10> and use it to create its own sessionful by-reference object.</span></span>  <span data-ttu-id="342a7-178">セッションフル オブジェクトのクライアント メソッド呼び出しは、サーバーで実行されます。つまり、WCF でのこの参照渡しのオブジェクトは、セッションフルとなるように構成された通常の WCF サービスです。</span><span class="sxs-lookup"><span data-stu-id="342a7-178">The client method calls on the sessionful object execute on the server.In other words, this by-reference object in WCF is a normal WCF service that is configured to be sessionful.</span></span>  
+ <span data-ttu-id="99c93-174">このシナリオで示される WCF の参照渡しのオブジェクトの動作は、DCOM とは異なります。</span><span class="sxs-lookup"><span data-stu-id="99c93-174">The behavior of the by-reference object in WCF shown in this scenario is different than DCOM.</span></span>  <span data-ttu-id="99c93-175">DCOM では、サーバーが参照渡しのオブジェクトをクライアントに直接返すことができ、クライアントはそのオブジェクトのメソッドを呼び出して、サーバーで実行することができます。</span><span class="sxs-lookup"><span data-stu-id="99c93-175">In DCOM, the server can return a by-reference object to the client directly, and the client can call that object’s methods, which execute on the server.</span></span>  <span data-ttu-id="99c93-176">しかし WCF では、オブジェクトが常に値渡しで返されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-176">In WCF, however, the object returned is always by-value.</span></span>  <span data-ttu-id="99c93-177">クライアントは、<xref:System.ServiceModel.EndpointAddress10> によって表されるその値渡しのオブジェクトを取得し、それを使用して独自の参照渡しのセッションフル オブジェクトを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-177">The client must take that by-value object, represented by <xref:System.ServiceModel.EndpointAddress10> and use it to create its own sessionful by-reference object.</span></span>  <span data-ttu-id="99c93-178">セッションフル オブジェクトのクライアント メソッド呼び出しは、サーバーで実行されます。つまり、WCF でのこの参照渡しのオブジェクトは、セッションフルとなるように構成された通常の WCF サービスです。</span><span class="sxs-lookup"><span data-stu-id="99c93-178">The client method calls on the sessionful object execute on the server.In other words, this by-reference object in WCF is a normal WCF service that is configured to be sessionful.</span></span>  
   
- <span data-ttu-id="342a7-179">WCF では、セッションは 2 つのエンドポイント間で送信される複数のメッセージを関連付ける方法です。</span><span class="sxs-lookup"><span data-stu-id="342a7-179">In WCF, a session is a way of correlating multiple messages sent between two endpoints.</span></span>  <span data-ttu-id="342a7-180">つまり、クライアントがこのサービスへの接続を確保すると、クライアントとサーバーの間でセッションが確立されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-180">This means that once a client obtains a connection to this service, a session will be established between the client and the server.</span></span>  <span data-ttu-id="342a7-181">クライアントは、サーバー側オブジェクトの単一で一意のインスタンスを、この 1 つのセッション内でのすべてのやり取りに使用することになります。</span><span class="sxs-lookup"><span data-stu-id="342a7-181">The client will use a single unique instance of the server-side object for all its interactions within this single session.</span></span> <span data-ttu-id="342a7-182">セッションフル WCF コントラクトは、接続指向ネットワークの要求/応答パターンに似ています。</span><span class="sxs-lookup"><span data-stu-id="342a7-182">Sessionful WCF contracts are similar to connection-oriented network request/response patterns.</span></span>  
+ <span data-ttu-id="99c93-179">WCF では、セッションは 2 つのエンドポイント間で送信される複数のメッセージを関連付ける方法です。</span><span class="sxs-lookup"><span data-stu-id="99c93-179">In WCF, a session is a way of correlating multiple messages sent between two endpoints.</span></span>  <span data-ttu-id="99c93-180">つまり、クライアントがこのサービスへの接続を確保すると、クライアントとサーバーの間でセッションが確立されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-180">This means that once a client obtains a connection to this service, a session will be established between the client and the server.</span></span>  <span data-ttu-id="99c93-181">クライアントは、サーバー側オブジェクトの単一で一意のインスタンスを、この 1 つのセッション内でのすべてのやり取りに使用することになります。</span><span class="sxs-lookup"><span data-stu-id="99c93-181">The client will use a single unique instance of the server-side object for all its interactions within this single session.</span></span> <span data-ttu-id="99c93-182">セッションフル WCF コントラクトは、接続指向ネットワークの要求/応答パターンに似ています。</span><span class="sxs-lookup"><span data-stu-id="99c93-182">Sessionful WCF contracts are similar to connection-oriented network request/response patterns.</span></span>  
   
- <span data-ttu-id="342a7-183">このシナリオは、以下の DCOM メソッドによって表されます。</span><span class="sxs-lookup"><span data-stu-id="342a7-183">This scenario is represented by the following DCOM method.</span></span>  
+ <span data-ttu-id="99c93-183">このシナリオは、以下の DCOM メソッドによって表されます。</span><span class="sxs-lookup"><span data-stu-id="99c93-183">This scenario is represented by the following DCOM method.</span></span>  
   
 ```csharp  
 public interface IRemoteService  
@@ -249,10 +249,10 @@ public interface IRemoteService
 }  
 ```  
   
-### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a><span data-ttu-id="342a7-184">手順 1: セッションフル WCF サービスのインターフェイスと実装を定義する</span><span class="sxs-lookup"><span data-stu-id="342a7-184">Step 1: Define the Sessionful WCF service interface and implementation</span></span>  
- <span data-ttu-id="342a7-185">最初に、セッションフル オブジェクトを含む WCF サービスのインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="342a7-185">First, define a WCF service interface that contains the sessionful object.</span></span>  
+### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a><span data-ttu-id="99c93-184">手順 1: セッションフル WCF サービスのインターフェイスと実装を定義する</span><span class="sxs-lookup"><span data-stu-id="99c93-184">Step 1: Define the Sessionful WCF service interface and implementation</span></span>  
+ <span data-ttu-id="99c93-185">最初に、セッションフル オブジェクトを含む WCF サービスのインターフェイスを定義します。</span><span class="sxs-lookup"><span data-stu-id="99c93-185">First, define a WCF service interface that contains the sessionful object.</span></span>  
   
- <span data-ttu-id="342a7-186">このコードでは、セッションフル オブジェクトが `ServiceContract` 属性でマークされ、通常の WCF サービスのインターフェイスとして示されています。</span><span class="sxs-lookup"><span data-stu-id="342a7-186">In this code, the sessionful object is marked with the `ServiceContract` attribute, which identifies it as a regular WCF service interface.</span></span>  <span data-ttu-id="342a7-187">さらに、<xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティが設定されて、セッションフル サービスとなることが示されています。</span><span class="sxs-lookup"><span data-stu-id="342a7-187">In addition, the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> property is set to indicate it will be a sessionful service.</span></span>  
+ <span data-ttu-id="99c93-186">このコードでは、セッションフル オブジェクトが `ServiceContract` 属性でマークされ、通常の WCF サービスのインターフェイスとして示されています。</span><span class="sxs-lookup"><span data-stu-id="99c93-186">In this code, the sessionful object is marked with the `ServiceContract` attribute, which identifies it as a regular WCF service interface.</span></span>  <span data-ttu-id="99c93-187">さらに、<xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティが設定されて、セッションフル サービスとなることが示されています。</span><span class="sxs-lookup"><span data-stu-id="99c93-187">In addition, the <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> property is set to indicate it will be a sessionful service.</span></span>  
   
 ```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -266,9 +266,9 @@ public interface ISessionBoundObject
 }  
 ```  
   
- <span data-ttu-id="342a7-188">サービスの実装を次のコードに示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-188">The following code shows the service implementation.</span></span>  
+ <span data-ttu-id="99c93-188">サービスの実装を次のコードに示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-188">The following code shows the service implementation.</span></span>  
   
- <span data-ttu-id="342a7-189">サービスは [ServiceBehavior] 属性でマークされ、InstanceContextMode プロパティが InstanceContextMode.PerSessions に設定されて、セッションごとにこの型の一意のインスタンスを作成する必要があることを示しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-189">The service is marked with the [ServiceBehavior] attribute, and its InstanceContextMode property set to InstanceContextMode.PerSessions to indicate that a unique instance of this type should be created for each session.</span></span>  
+ <span data-ttu-id="99c93-189">サービスは [ServiceBehavior] 属性でマークされ、InstanceContextMode プロパティが InstanceContextMode.PerSessions に設定されて、セッションごとにこの型の一意のインスタンスを作成する必要があることを示しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-189">The service is marked with the [ServiceBehavior] attribute, and its InstanceContextMode property set to InstanceContextMode.PerSessions to indicate that a unique instance of this type should be created for each session.</span></span>  
   
 ```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -289,8 +289,8 @@ public interface ISessionBoundObject
     }  
 ```  
   
-### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a><span data-ttu-id="342a7-190">手順 2: セッションフル オブジェクトの WCF ファクトリ サービスを定義する</span><span class="sxs-lookup"><span data-stu-id="342a7-190">Step 2: Define the WCF factory service for the sessionful object</span></span>  
- <span data-ttu-id="342a7-191">セッションフル オブジェクトを作成するサービスを定義して実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-191">The service that creates the sessionful object must be defined and implemented.</span></span> <span data-ttu-id="342a7-192">この方法を次のコードに示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-192">The following code shows how to do this.</span></span> <span data-ttu-id="342a7-193">このコードは、<xref:System.ServiceModel.EndpointAddress10> オブジェクトとして返される別の WCF サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="342a7-193">This code creates another WCF service that returns an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  <span data-ttu-id="342a7-194">これはセッションフル オブジェクトの作成に使用できる、エンドポイントのシリアル化可能な形式です。</span><span class="sxs-lookup"><span data-stu-id="342a7-194">This is a serializable form of an endpoint the can use to create the session-full object.</span></span>  
+### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a><span data-ttu-id="99c93-190">手順 2: セッションフル オブジェクトの WCF ファクトリ サービスを定義する</span><span class="sxs-lookup"><span data-stu-id="99c93-190">Step 2: Define the WCF factory service for the sessionful object</span></span>  
+ <span data-ttu-id="99c93-191">セッションフル オブジェクトを作成するサービスを定義して実装する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-191">The service that creates the sessionful object must be defined and implemented.</span></span> <span data-ttu-id="99c93-192">この方法を次のコードに示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-192">The following code shows how to do this.</span></span> <span data-ttu-id="99c93-193">このコードは、<xref:System.ServiceModel.EndpointAddress10> オブジェクトとして返される別の WCF サービスを作成します。</span><span class="sxs-lookup"><span data-stu-id="99c93-193">This code creates another WCF service that returns an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  <span data-ttu-id="99c93-194">これはセッションフル オブジェクトの作成に使用できる、エンドポイントのシリアル化可能な形式です。</span><span class="sxs-lookup"><span data-stu-id="99c93-194">This is a serializable form of an endpoint the can use to create the session-full object.</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -301,12 +301,12 @@ public interface ISessionBoundObject
     }  
 ```  
   
- <span data-ttu-id="342a7-195">このサービスの実装を次に示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-195">The following is the implementation of this service.</span></span> <span data-ttu-id="342a7-196">この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。</span><span class="sxs-lookup"><span data-stu-id="342a7-196">This implementation maintains a singleton channel factory to create sessionful objects.</span></span>  <span data-ttu-id="342a7-197">チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="342a7-197">When `GetInstanceAddress` is called, it creates a channel and creates an <xref:System.ServiceModel.EndpointAddress10> object that points to the remote address associated with this channel.</span></span>   <span data-ttu-id="342a7-198"><xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。</span><span class="sxs-lookup"><span data-stu-id="342a7-198"><xref:System.ServiceModel.EndpointAddress10> is a data type that can be returned to the client by-value.</span></span>
+ <span data-ttu-id="99c93-195">このサービスの実装は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="99c93-195">The following is the implementation of this service.</span></span> <span data-ttu-id="99c93-196">この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。</span><span class="sxs-lookup"><span data-stu-id="99c93-196">This implementation maintains a singleton channel factory to create sessionful objects.</span></span>  <span data-ttu-id="99c93-197">チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="99c93-197">When `GetInstanceAddress` is called, it creates a channel and creates an <xref:System.ServiceModel.EndpointAddress10> object that points to the remote address associated with this channel.</span></span>   <span data-ttu-id="99c93-198"><xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。</span><span class="sxs-lookup"><span data-stu-id="99c93-198"><xref:System.ServiceModel.EndpointAddress10> is a data type that can be returned to the client by-value.</span></span>
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
-        public static ChannelFactory<ISessionBoundObject> _factory =   
+        public static ChannelFactory<ISessionBoundObject> _factory =
             new ChannelFactory<ISessionBoundObject>("sessionbound");  
   
         public SessionBoundFactory()  
@@ -321,14 +321,14 @@ public class SessionBoundFactory : ISessionBoundFactory
     }  
 ```  
   
-### <a name="step-3-configure-and-start-the-wcf-services"></a><span data-ttu-id="342a7-199">手順 3: WCF サービスを構成して開始する</span><span class="sxs-lookup"><span data-stu-id="342a7-199">Step 3: Configure and start the WCF services</span></span>  
- <span data-ttu-id="342a7-200">これらのサービスをホストするには、サーバーの構成ファイル (web.config) に以下を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-200">To host these services, you will need to make the following additions to the server’s configuration file (web.config).</span></span>  
+### <a name="step-3-configure-and-start-the-wcf-services"></a><span data-ttu-id="99c93-199">手順 3: WCF サービスを構成して開始する</span><span class="sxs-lookup"><span data-stu-id="99c93-199">Step 3: Configure and start the WCF services</span></span>  
+ <span data-ttu-id="99c93-200">これらのサービスをホストするには、サーバーの構成ファイル (web.config) に以下を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-200">To host these services, you will need to make the following additions to the server’s configuration file (web.config).</span></span>  
   
-1. <span data-ttu-id="342a7-201">セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。</span><span class="sxs-lookup"><span data-stu-id="342a7-201">Add a `<client>` section that describes the endpoint for the sessionful object.</span></span>  <span data-ttu-id="342a7-202">このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="342a7-202">In this scenario, the server also acts as a client and must be configured to enable this.</span></span>  
+1. <span data-ttu-id="99c93-201">セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。</span><span class="sxs-lookup"><span data-stu-id="99c93-201">Add a `<client>` section that describes the endpoint for the sessionful object.</span></span>  <span data-ttu-id="99c93-202">このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="99c93-202">In this scenario, the server also acts as a client and must be configured to enable this.</span></span>  
   
-2. <span data-ttu-id="342a7-203">`<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="342a7-203">In the `<services>` section, declare service endpoints for the factory and sessionful object.</span></span>  <span data-ttu-id="342a7-204">これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。</span><span class="sxs-lookup"><span data-stu-id="342a7-204">This enables the client to communicate with the service endpoints, acquire the <xref:System.ServiceModel.EndpointAddress10> and create the sessionful channel.</span></span>  
+2. <span data-ttu-id="99c93-203">`<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。</span><span class="sxs-lookup"><span data-stu-id="99c93-203">In the `<services>` section, declare service endpoints for the factory and sessionful object.</span></span>  <span data-ttu-id="99c93-204">これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。</span><span class="sxs-lookup"><span data-stu-id="99c93-204">This enables the client to communicate with the service endpoints, acquire the <xref:System.ServiceModel.EndpointAddress10> and create the sessionful channel.</span></span>  
   
- <span data-ttu-id="342a7-205">これらの設定を含む構成ファイルの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-205">The following is an example configuration file with these settings:</span></span>  
+ <span data-ttu-id="99c93-205">次に、これらの設定を含む構成ファイルの例を示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-205">The following is an example configuration file with these settings:</span></span>  
   
 ```xml  
 <configuration>  
@@ -343,12 +343,12 @@ public class SessionBoundFactory : ISessionBoundFactory
     <services>  
       <service name="Server.MySessionBoundObject">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundObject"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundObject" />  
       </service>  
       <service name="Server.SessionBoundFactory">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundFactory"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundFactory" />  
       </service>  
     </services>  
@@ -356,7 +356,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 </configuration>  
 ```  
   
- <span data-ttu-id="342a7-206">以下の行をコンソール アプリケーションに追加し、サービスを自己ホストして、アプリを開始します。</span><span class="sxs-lookup"><span data-stu-id="342a7-206">Add the following lines to a console application, to self-host the service, and start the app.</span></span>  
+ <span data-ttu-id="99c93-206">以下の行をコンソール アプリケーションに追加し、サービスを自己ホストして、アプリを開始します。</span><span class="sxs-lookup"><span data-stu-id="99c93-206">Add the following lines to a console application, to self-host the service, and start the app.</span></span>  
   
 ```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
@@ -367,35 +367,35 @@ typeof(MySessionBoundObject));
 sessionBoundServiceHost.Open();  
 ```  
   
-### <a name="step-4-configure-the-client-and-call-the-service"></a><span data-ttu-id="342a7-207">手順 4: クライアントを構成してサービスを呼び出す</span><span class="sxs-lookup"><span data-stu-id="342a7-207">Step 4: Configure the client and call the service</span></span>  
- <span data-ttu-id="342a7-208">プロジェクトのアプリケーション構成ファイル (app.config) に以下のエントリを作成して、クライアントが WCF サービスと通信するように構成します。</span><span class="sxs-lookup"><span data-stu-id="342a7-208">Configure the client to communicate with the WCF services by making the following entries in the project’s application configuration file (app.config).</span></span>  
+### <a name="step-4-configure-the-client-and-call-the-service"></a><span data-ttu-id="99c93-207">手順 4: クライアントを構成してサービスを呼び出す</span><span class="sxs-lookup"><span data-stu-id="99c93-207">Step 4: Configure the client and call the service</span></span>  
+ <span data-ttu-id="99c93-208">プロジェクトのアプリケーション構成ファイル (app.config) に以下のエントリを作成して、クライアントが WCF サービスと通信するように構成します。</span><span class="sxs-lookup"><span data-stu-id="99c93-208">Configure the client to communicate with the WCF services by making the following entries in the project’s application configuration file (app.config).</span></span>  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="sessionbound"   
-                address="net.tcp://localhost:8081/SessionBoundObject"   
-                binding="netTcpBinding"   
+      <endpoint name="sessionbound"
+                address="net.tcp://localhost:8081/SessionBoundObject"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundObject"/>  
-      <endpoint name="factory"   
-                address="net.tcp://localhost:8081/SessionBoundFactory"   
-                binding="netTcpBinding"   
+      <endpoint name="factory"
+                address="net.tcp://localhost:8081/SessionBoundFactory"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundFactory"/>  
-    </client>    
+    </client>
   </system.serviceModel>  
 </configuration>  
 ```  
   
- <span data-ttu-id="342a7-209">サービスを呼び出すには、クライアントにコードを追加して、以下を実行するようにします。</span><span class="sxs-lookup"><span data-stu-id="342a7-209">To call the service, add the code to the client to do the following:</span></span>  
+ <span data-ttu-id="99c93-209">サービスを呼び出すには、クライアントにコードを追加して、以下を実行するようにします。</span><span class="sxs-lookup"><span data-stu-id="99c93-209">To call the service, add the code to the client to do the following:</span></span>  
   
-1. <span data-ttu-id="342a7-210">`ISessionBoundFactory` サービスへのチャネルを作成します。</span><span class="sxs-lookup"><span data-stu-id="342a7-210">Create a channel to the `ISessionBoundFactory` service.</span></span>  
+1. <span data-ttu-id="99c93-210">`ISessionBoundFactory` サービスへのチャネルを作成します。</span><span class="sxs-lookup"><span data-stu-id="99c93-210">Create a channel to the `ISessionBoundFactory` service.</span></span>  
   
-2. <span data-ttu-id="342a7-211">チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="342a7-211">Use the channel to invoke the `ISessionBoundFactory` service an obtain an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  
+2. <span data-ttu-id="99c93-211">チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="99c93-211">Use the channel to invoke the `ISessionBoundFactory` service an obtain an <xref:System.ServiceModel.EndpointAddress10> object.</span></span>  
   
-3. <span data-ttu-id="342a7-212"><xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="342a7-212">Use the <xref:System.ServiceModel.EndpointAddress10> to create a channel to obtain a sessionful object.</span></span>  
+3. <span data-ttu-id="99c93-212"><xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="99c93-212">Use the <xref:System.ServiceModel.EndpointAddress10> to create a channel to obtain a sessionful object.</span></span>  
   
-4. <span data-ttu-id="342a7-213">`SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。</span><span class="sxs-lookup"><span data-stu-id="342a7-213">Call the `SetCurrentValue` and `GetCurrentValue` methods to demonstrate it remains the same object instance is used across multiple calls.</span></span>  
+4. <span data-ttu-id="99c93-213">`SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。</span><span class="sxs-lookup"><span data-stu-id="99c93-213">Call the `SetCurrentValue` and `GetCurrentValue` methods to demonstrate it remains the same object instance is used across multiple calls.</span></span>  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -420,9 +420,9 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="342a7-214">参照</span><span class="sxs-lookup"><span data-stu-id="342a7-214">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99c93-214">関連項目</span><span class="sxs-lookup"><span data-stu-id="99c93-214">See also</span></span>
 
-- [<span data-ttu-id="342a7-215">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="342a7-215">Basic WCF Programming</span></span>](../wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="342a7-216">サービスの設計と実装</span><span class="sxs-lookup"><span data-stu-id="342a7-216">Designing and Implementing Services</span></span>](../wcf/designing-and-implementing-services.md)
-- [<span data-ttu-id="342a7-217">クライアントを構築する</span><span class="sxs-lookup"><span data-stu-id="342a7-217">Building Clients</span></span>](../wcf/building-clients.md)
-- [<span data-ttu-id="342a7-218">双方向サービス</span><span class="sxs-lookup"><span data-stu-id="342a7-218">Duplex Services</span></span>](../wcf/feature-details/duplex-services.md)
+- [<span data-ttu-id="99c93-215">基本的な WCF プログラミング</span><span class="sxs-lookup"><span data-stu-id="99c93-215">Basic WCF Programming</span></span>](../wcf/basic-wcf-programming.md)
+- [<span data-ttu-id="99c93-216">サービスの設計と実装</span><span class="sxs-lookup"><span data-stu-id="99c93-216">Designing and Implementing Services</span></span>](../wcf/designing-and-implementing-services.md)
+- [<span data-ttu-id="99c93-217">クライアントを構築する</span><span class="sxs-lookup"><span data-stu-id="99c93-217">Building Clients</span></span>](../wcf/building-clients.md)
+- [<span data-ttu-id="99c93-218">双方向サービス</span><span class="sxs-lookup"><span data-stu-id="99c93-218">Duplex Services</span></span>](../wcf/feature-details/duplex-services.md)
