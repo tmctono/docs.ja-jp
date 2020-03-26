@@ -1,21 +1,21 @@
 ---
-title: '方法 : 要素の値を取得する (LINQ to XML)'
+title: '方法: 要素の値を取得する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352422"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248935"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="2f67b-102">方法: 要素の値を取得する (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f67b-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="2f67b-103">このトピックでは、要素の値を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="2f67b-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="2f67b-104">これには主に 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="2f67b-104">There are two main ways to do this.</span></span> <span data-ttu-id="2f67b-105">1 つは <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> を目的の型にキャストする方法です。</span><span class="sxs-lookup"><span data-stu-id="2f67b-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="2f67b-106">その後、明示的な変換演算子によって、要素または属性のコンテンツが指定した型に変換され、変数に代入されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="2f67b-107">もう 1 つは、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> プロパティを使用する方法です。</span><span class="sxs-lookup"><span data-stu-id="2f67b-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="eb629-102">方法: 要素の値を取得する (XML への LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb629-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="eb629-103">このトピックでは、要素の値を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="eb629-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="eb629-104">これには主に 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="eb629-104">There are two main ways to do this.</span></span> <span data-ttu-id="eb629-105">1 つは <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> を目的の型にキャストする方法です。</span><span class="sxs-lookup"><span data-stu-id="eb629-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="eb629-106">その後、明示的な変換演算子によって、要素または属性のコンテンツが指定した型に変換され、変数に代入されます。</span><span class="sxs-lookup"><span data-stu-id="eb629-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="eb629-107">もう 1 つは、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> プロパティを使用する方法です。</span><span class="sxs-lookup"><span data-stu-id="eb629-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="2f67b-108">Visual Basic では、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティを使用する方法が最適です。</span><span class="sxs-lookup"><span data-stu-id="2f67b-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="eb629-108">Visual Basic では、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティを使用する方法が最適です。</span><span class="sxs-lookup"><span data-stu-id="eb629-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f67b-109">例</span><span class="sxs-lookup"><span data-stu-id="2f67b-109">Example</span></span>  
- <span data-ttu-id="2f67b-110">要素の値を取得するには、<xref:System.Xml.Linq.XElement> オブジェクトを目的の型にキャストします。</span><span class="sxs-lookup"><span data-stu-id="2f67b-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="2f67b-111">次に示すように、要素はいつでも文字列にキャストできます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-111">You can always cast an element to a string, as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="eb629-109">例</span><span class="sxs-lookup"><span data-stu-id="eb629-109">Example</span></span>  
+ <span data-ttu-id="eb629-110">要素の値を取得するには、<xref:System.Xml.Linq.XElement> オブジェクトを目的の型にキャストします。</span><span class="sxs-lookup"><span data-stu-id="eb629-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="eb629-111">次に示すように、要素はいつでも文字列にキャストできます。</span><span class="sxs-lookup"><span data-stu-id="eb629-111">You can always cast an element to a string, as follows:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -23,15 +23,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="2f67b-112">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="eb629-112">この例の結果は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="eb629-112">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="2f67b-113">例</span><span class="sxs-lookup"><span data-stu-id="2f67b-113">Example</span></span>  
- <span data-ttu-id="2f67b-114">文字列以外の型に要素をキャストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="2f67b-115">たとえば、次のコードに示すように、整数を含んだ要素を `int` にキャストできます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
+## <a name="example"></a><span data-ttu-id="eb629-113">例</span><span class="sxs-lookup"><span data-stu-id="eb629-113">Example</span></span>  
+ <span data-ttu-id="eb629-114">文字列以外の型に要素をキャストすることもできます。</span><span class="sxs-lookup"><span data-stu-id="eb629-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="eb629-115">たとえば、次のコードに示すように、整数を含んだ要素を `int` にキャストできます。</span><span class="sxs-lookup"><span data-stu-id="eb629-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
   
 ```vb  
 Dim e As XElement = <Age>44</Age>  
@@ -39,19 +39,19 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & CInt(e))  
 ```  
   
- <span data-ttu-id="2f67b-116">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="eb629-116">この例の結果は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="eb629-116">This example produces the following output:</span></span>  
   
 ```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="2f67b-117">では、`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID`、および `GUID?` というデータ型について明示的なキャスト演算子を用意しています。</span><span class="sxs-lookup"><span data-stu-id="2f67b-117">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="eb629-117">では、`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID`、および `GUID?` というデータ型について明示的なキャスト演算子を用意しています。</span><span class="sxs-lookup"><span data-stu-id="eb629-117">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
- <span data-ttu-id="2f67b-118">また、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、<xref:System.Xml.Linq.XAttribute> オブジェクトについても同様のキャスト演算子を用意しています。</span><span class="sxs-lookup"><span data-stu-id="2f67b-118">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
+ <span data-ttu-id="eb629-118">また、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、<xref:System.Xml.Linq.XAttribute> オブジェクトについても同様のキャスト演算子を用意しています。</span><span class="sxs-lookup"><span data-stu-id="eb629-118">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2f67b-119">例</span><span class="sxs-lookup"><span data-stu-id="2f67b-119">Example</span></span>  
- <span data-ttu-id="2f67b-120"><xref:System.Xml.Linq.XElement.Value%2A> プロパティを使用すると、要素のコンテンツを取得できます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
+## <a name="example"></a><span data-ttu-id="eb629-119">例</span><span class="sxs-lookup"><span data-stu-id="eb629-119">Example</span></span>  
+ <span data-ttu-id="eb629-120"><xref:System.Xml.Linq.XElement.Value%2A> プロパティを使用すると、要素のコンテンツを取得できます。</span><span class="sxs-lookup"><span data-stu-id="eb629-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -59,15 +59,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="2f67b-121">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="eb629-121">この例の結果は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="eb629-121">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="2f67b-122">例</span><span class="sxs-lookup"><span data-stu-id="2f67b-122">Example</span></span>  
- <span data-ttu-id="2f67b-123">存在しているかどうかが明確でない要素の値の取得を試行する場合があります。</span><span class="sxs-lookup"><span data-stu-id="2f67b-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="2f67b-124">この場合、NULL 値が許容される型 (`string` または .NET Framework での NULL 値が許容される型のいずれか) に、キャストされた要素を代入すると、要素が存在しない場合に、代入された変数が `Nothing` に設定されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the .NET Framework), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="2f67b-125">要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。</span><span class="sxs-lookup"><span data-stu-id="2f67b-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="eb629-122">例</span><span class="sxs-lookup"><span data-stu-id="eb629-122">Example</span></span>  
+ <span data-ttu-id="eb629-123">存在しているかどうかが明確でない要素の値の取得を試行する場合があります。</span><span class="sxs-lookup"><span data-stu-id="eb629-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="eb629-124">この場合、キャストされた要素を null 許容型 (.NET Framework`string`の null 許容値型のいずれか) に割り当てると、その要素が存在しない場合、割り`Nothing`当てられた変数は に設定されます。</span><span class="sxs-lookup"><span data-stu-id="eb629-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable value types in the .NET Framework), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="eb629-125">要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。</span><span class="sxs-lookup"><span data-stu-id="eb629-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -133,7 +133,7 @@ End If
 Console.WriteLine("v4:{0}", IIf(Not (v4.HasValue), "element does not exist", v4))  
 ```  
   
- <span data-ttu-id="2f67b-126">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="2f67b-126">This code produces the following output:</span></span>  
+ <span data-ttu-id="eb629-126">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="eb629-126">This code produces the following output:</span></span>  
   
 ```console  
 c1:child 1 content  
@@ -147,8 +147,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- <span data-ttu-id="2f67b-127">通常、要素や属性のコンテンツを取得するには、キャストを使用する方が単純なコードになります。</span><span class="sxs-lookup"><span data-stu-id="2f67b-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
+ <span data-ttu-id="eb629-127">通常、要素や属性のコンテンツを取得するには、キャストを使用する方が単純なコードになります。</span><span class="sxs-lookup"><span data-stu-id="eb629-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f67b-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="2f67b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb629-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="eb629-128">See also</span></span>
 
-- [<span data-ttu-id="2f67b-129">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f67b-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="eb629-129">LINQ to XML 軸 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb629-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
