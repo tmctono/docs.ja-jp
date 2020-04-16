@@ -2,18 +2,18 @@
 title: 構成ファイルにおける探索の構成
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185327"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464205"
 ---
-# <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="e7f8a-102">構成ファイルにおける探索の構成</span><span class="sxs-lookup"><span data-stu-id="e7f8a-102">Configuring Discovery in a Configuration File</span></span>
-<span data-ttu-id="e7f8a-103">探索で使用される構成設定は、4 つの主なグループに分類されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="e7f8a-104">このトピックでは、各グループについて簡単に説明し、各グループの構成方法の例を紹介します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="e7f8a-105">以下の各セクションは、各領域についてのより詳細なドキュメントにリンクされます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
+# <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="f75e1-102">構成ファイルにおける探索の構成</span><span class="sxs-lookup"><span data-stu-id="f75e1-102">Configuring Discovery in a Configuration File</span></span>
+<span data-ttu-id="f75e1-103">探索で使用される構成設定は、4 つの主なグループに分類されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="f75e1-104">このトピックでは、各グループについて簡単に説明し、各グループの構成方法の例を紹介します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="f75e1-105">以下の各セクションは、各領域についてのより詳細なドキュメントにリンクされます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  
   
-## <a name="behavior-configuration"></a><span data-ttu-id="e7f8a-106">動作の構成</span><span class="sxs-lookup"><span data-stu-id="e7f8a-106">Behavior Configuration</span></span>  
- <span data-ttu-id="e7f8a-107">探索では、サービスの動作とエンドポイントの動作が使用されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-107">Discovery uses service behaviors and endpoint behaviors.</span></span> <span data-ttu-id="e7f8a-108"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 動作により、サービスのすべてのエンドポイントの探索が有効になるだけでなく、アナウンス エンドポイントの指定が可能になります。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-108">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> behavior enables discovery for all of a service’s endpoints and allows you to specify announcement endpoints.</span></span>  <span data-ttu-id="e7f8a-109">次の例は、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> を追加し、アナウンス エンドポイントを指定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-109">The following example shows how to add the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and specify an announcement endpoint.</span></span>  
+## <a name="behavior-configuration"></a><span data-ttu-id="f75e1-106">動作の構成</span><span class="sxs-lookup"><span data-stu-id="f75e1-106">Behavior Configuration</span></span>  
+ <span data-ttu-id="f75e1-107">探索では、サービスの動作とエンドポイントの動作が使用されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-107">Discovery uses service behaviors and endpoint behaviors.</span></span> <span data-ttu-id="f75e1-108"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 動作により、サービスのすべてのエンドポイントの探索が有効になるだけでなく、アナウンス エンドポイントの指定が可能になります。</span><span class="sxs-lookup"><span data-stu-id="f75e1-108">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> behavior enables discovery for all of a service’s endpoints and allows you to specify announcement endpoints.</span></span>  <span data-ttu-id="f75e1-109">次の例は、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> を追加し、アナウンス エンドポイントを指定する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-109">The following example shows how to add the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and specify an announcement endpoint.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -26,9 +26,10 @@ ms.locfileid: "79185327"
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
- <span data-ttu-id="e7f8a-110">動作を指定したら、次のサンプルに示すように`service`、<>要素から参照します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-110">Once you specify the behavior, reference it from a <`service`> element as shown in the following sample.</span></span>  
+ <span data-ttu-id="f75e1-110">動作を指定したら、次のサンプルに示すように`service`、<>要素から参照します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-110">Once you specify the behavior, reference it from a <`service`> element as shown in the following sample.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -41,12 +42,13 @@ ms.locfileid: "79185327"
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
- <span data-ttu-id="e7f8a-111">サービスを探索可能にするには、探索エンドポイントを追加する必要もあります。上の例では、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 標準エンドポイントを追加しています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-111">In order for a service to be discoverable, you must also add a discovery endpoint, the example above adds a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard endpoint.</span></span>  
+ <span data-ttu-id="f75e1-111">サービスを探索可能にするには、探索エンドポイントを追加する必要もあります。上の例では、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 標準エンドポイントを追加しています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-111">In order for a service to be discoverable, you must also add a discovery endpoint, the example above adds a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard endpoint.</span></span>  
   
- <span data-ttu-id="e7f8a-112">アナウンス エンドポイントを追加する場合は、次の例に示すように、アナウンス`services`リスナー サービスを <> 要素にも追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-112">When you add announcement endpoints you must also add an announcement listener service to the <`services`> element as shown in the following example.</span></span>  
+ <span data-ttu-id="f75e1-112">アナウンス エンドポイントを追加する場合は、次の例に示すように、アナウンス`services`リスナー サービスを <> 要素にも追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f75e1-112">When you add announcement endpoints you must also add an announcement listener service to the <`services`> element as shown in the following example.</span></span>  
   
 ```xml  
 <services>  
@@ -62,9 +64,10 @@ ms.locfileid: "79185327"
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
- <span data-ttu-id="e7f8a-113"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作は、特定のエンドポイントの探索を有効または無効にするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-113">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is used to enable or disable discovery of a specific endpoint.</span></span>  <span data-ttu-id="e7f8a-114">次の例では、サービスに 2 つのアプリケーション エンドポイントを構成します。1 つのエンドポイントでは探索を有効し、もう 1 つでは探索を無効にします。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-114">The following example configures a service with two application endpoints, one with discovery enabled and one with discovery disabled.</span></span> <span data-ttu-id="e7f8a-115">それぞれのエンドポイントには <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作が追加されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-115">For each endpoint an <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is added.</span></span>  
+ <span data-ttu-id="f75e1-113"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作は、特定のエンドポイントの探索を有効または無効にするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-113">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is used to enable or disable discovery of a specific endpoint.</span></span>  <span data-ttu-id="f75e1-114">次の例では、サービスに 2 つのアプリケーション エンドポイントを構成します。1 つのエンドポイントでは探索を有効し、もう 1 つでは探索を無効にします。</span><span class="sxs-lookup"><span data-stu-id="f75e1-114">The following example configures a service with two application endpoints, one with discovery enabled and one with discovery disabled.</span></span> <span data-ttu-id="f75e1-115">それぞれのエンドポイントには <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作が追加されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-115">For each endpoint an <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior is added.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -87,7 +90,7 @@ ms.locfileid: "79185327"
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,9 +105,10 @@ ms.locfileid: "79185327"
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
- <span data-ttu-id="e7f8a-116"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作を使用すると、サービスから返されるエンドポイント メタデータにカスタム メタデータを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-116">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add custom metadata to the endpoint metadata returned by the service.</span></span> <span data-ttu-id="e7f8a-117">次の例は、その方法を示したものです。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-117">The following example shows how to do this.</span></span>  
+ <span data-ttu-id="f75e1-116"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作を使用すると、サービスから返されるエンドポイント メタデータにカスタム メタデータを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-116">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add custom metadata to the endpoint metadata returned by the service.</span></span> <span data-ttu-id="f75e1-117">次の例は、その方法を示したものです。</span><span class="sxs-lookup"><span data-stu-id="f75e1-117">The following example shows how to do this.</span></span>  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -120,7 +124,7 @@ ms.locfileid: "79185327"
 </behavior>  
 ```  
   
- <span data-ttu-id="e7f8a-118"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作を使用すると、クライアントがサービスの検索に使用するスコープと型を追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-118">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add scopes and types that clients use to search for services.</span></span> <span data-ttu-id="e7f8a-119">クライアント側の構成ファイルでこの構成を行う方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-119">The following example shows how to do this in a client side configuration file.</span></span>  
+ <span data-ttu-id="f75e1-118"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 動作を使用すると、クライアントがサービスの検索に使用するスコープと型を追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-118">The <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> behavior can also be used to add scopes and types that clients use to search for services.</span></span> <span data-ttu-id="f75e1-119">クライアント側の構成ファイルでこの構成を行う方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-119">The following example shows how to do this in a client side configuration file.</span></span>  
   
 ```xml  
 <behavior name="ep2Behavior">  
@@ -137,10 +141,10 @@ ms.locfileid: "79185327"
 </behavior>  
 ```  
   
- <span data-ttu-id="e7f8a-120">の詳細<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>については、「 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> WCF 探索の[概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-120">For more information about <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span>  
+ <span data-ttu-id="f75e1-120">の詳細<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>については、「 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> WCF 探索の[概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75e1-120">For more information about <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span>  
   
-## <a name="binding-element-configuration"></a><span data-ttu-id="e7f8a-121">バインド要素の構成</span><span class="sxs-lookup"><span data-stu-id="e7f8a-121">Binding Element Configuration</span></span>  
- <span data-ttu-id="e7f8a-122">バインディング要素の構成は、クライアント側で最も興味深い構成です。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-122">Binding element configuration is most interesting on the client side.</span></span> <span data-ttu-id="e7f8a-123">構成を使用して、WCF クライアント アプリケーションからのサービスの探索に使用する検索条件を指定できます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-123">You can use configuration to specify the find criteria used to discover services from a WCF client application.</span></span>  <span data-ttu-id="e7f8a-124">次の例では、<xref:System.ServiceModel.Discovery.DiscoveryClient> チャネルとのカスタム バインドを作成し、型とスコープを含む検索条件を指定しています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-124">The following example creates a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClient> channel and specifies find criteria that includes a type and scope.</span></span> <span data-ttu-id="e7f8a-125">また、<xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> プロパティと <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> プロパティの値も指定しています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-125">In addition it specifies values for the <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> and <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> properties.</span></span>  
+## <a name="binding-element-configuration"></a><span data-ttu-id="f75e1-121">バインド要素の構成</span><span class="sxs-lookup"><span data-stu-id="f75e1-121">Binding Element Configuration</span></span>  
+ <span data-ttu-id="f75e1-122">バインディング要素の構成は、クライアント側で最も興味深い構成です。</span><span class="sxs-lookup"><span data-stu-id="f75e1-122">Binding element configuration is most interesting on the client side.</span></span> <span data-ttu-id="f75e1-123">構成を使用して、WCF クライアント アプリケーションからのサービスの探索に使用する検索条件を指定できます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-123">You can use configuration to specify the find criteria used to discover services from a WCF client application.</span></span>  <span data-ttu-id="f75e1-124">次の例では、<xref:System.ServiceModel.Discovery.DiscoveryClient> チャネルとのカスタム バインドを作成し、型とスコープを含む検索条件を指定しています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-124">The following example creates a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClient> channel and specifies find criteria that includes a type and scope.</span></span> <span data-ttu-id="f75e1-125">また、<xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> プロパティと <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> プロパティの値も指定しています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-125">In addition it specifies values for the <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> and <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> properties.</span></span>  
   
 ```xml  
 <bindings>  
@@ -163,10 +167,12 @@ ms.locfileid: "79185327"
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
- <span data-ttu-id="e7f8a-126">このカスタム バインディング構成は、クライアント エンドポイントから参照される必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-126">This custom binding configuration must be referenced by a client endpoint:</span></span>  
+ <span data-ttu-id="f75e1-126">このカスタム バインディング構成は、クライアント エンドポイントから参照される必要があります。</span><span class="sxs-lookup"><span data-stu-id="f75e1-126">This custom binding configuration must be referenced by a client endpoint:</span></span>  
   
 ```xml  
 <client>  
@@ -174,13 +180,13 @@ ms.locfileid: "79185327"
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
- <span data-ttu-id="e7f8a-127">検索条件の詳細については、「[探索の検索と検索基準](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-127">For more information about find criteria see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span> <span data-ttu-id="e7f8a-128">検出およびバインディング要素の詳細については[、「WCF 探索の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-128">For more information about discovery and binding elements see, [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span></span>  
+ <span data-ttu-id="f75e1-127">検索条件の詳細については、「[探索の検索と検索基準](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75e1-127">For more information about find criteria see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span> <span data-ttu-id="f75e1-128">検出およびバインディング要素の詳細については[、「WCF 探索の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75e1-128">For more information about discovery and binding elements see, [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)</span></span>  
   
-## <a name="standard-endpoint-configuration"></a><span data-ttu-id="e7f8a-129">標準エンドポイントの構成</span><span class="sxs-lookup"><span data-stu-id="e7f8a-129">Standard Endpoint Configuration</span></span>  
- <span data-ttu-id="e7f8a-130">標準エンドポイントは定義済みのエンドポイントで、これには、1 つ以上のプロパティ (アドレス、バインディング、またはコントラクト) の既定値、または、変更できない 1 つ以上のプロパティ値が設定されています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-130">Standard endpoints are predefined endpoints that have default values for one or more properties (address, binding, or contract) or one or more property values that cannot change.</span></span> <span data-ttu-id="e7f8a-131">.NET 4 には、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>、および <xref:System.ServiceModel.Discovery.DynamicEndpoint> という 3 種類の探索関連の標準エンドポイントが用意されています。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-131">.NET 4 ships with 3 discovery related standard endpoints: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, and <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  <span data-ttu-id="e7f8a-132"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> は、UDP マルチキャスト バインディングを使用した探索操作用に事前に構成されている標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-132">The <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="e7f8a-133"><xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> は、UDP バインディングを使用したアナウンスの送信用に事前に構成されている標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-133">The <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> is a standard endpoint that is pre-configured to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="e7f8a-134"><xref:System.ServiceModel.Discovery.DynamicEndpoint> は、実行時に探索対象のサービスのエンドポイント アドレスを動的に検索するために探索が使用する標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-134">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> is a standard endpoint that uses discovery to find the endpoint address of a discovered service dynamically at runtime.</span></span>  <span data-ttu-id="e7f8a-135">標準バインディングは、追加する標準エンドポイント`endpoint`の型を指定した kind 属性を含む <> 要素で指定されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-135">Standard bindings are specified with an <`endpoint`> element that contains kind attribute that specified the type of standard endpoint to add.</span></span> <span data-ttu-id="e7f8a-136"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> および <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> を追加する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-136">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
+## <a name="standard-endpoint-configuration"></a><span data-ttu-id="f75e1-129">標準エンドポイントの構成</span><span class="sxs-lookup"><span data-stu-id="f75e1-129">Standard Endpoint Configuration</span></span>  
+ <span data-ttu-id="f75e1-130">標準エンドポイントは定義済みのエンドポイントで、これには、1 つ以上のプロパティ (アドレス、バインディング、またはコントラクト) の既定値、または、変更できない 1 つ以上のプロパティ値が設定されています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-130">Standard endpoints are predefined endpoints that have default values for one or more properties (address, binding, or contract) or one or more property values that cannot change.</span></span> <span data-ttu-id="f75e1-131">.NET 4 には、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>、<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>、および <xref:System.ServiceModel.Discovery.DynamicEndpoint> という 3 種類の探索関連の標準エンドポイントが用意されています。</span><span class="sxs-lookup"><span data-stu-id="f75e1-131">.NET 4 ships with 3 discovery related standard endpoints: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, and <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  <span data-ttu-id="f75e1-132"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> は、UDP マルチキャスト バインディングを使用した探索操作用に事前に構成されている標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="f75e1-132">The <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="f75e1-133"><xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> は、UDP バインディングを使用したアナウンスの送信用に事前に構成されている標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="f75e1-133">The <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> is a standard endpoint that is pre-configured to send announcement messages over a UDP binding.</span></span> <span data-ttu-id="f75e1-134"><xref:System.ServiceModel.Discovery.DynamicEndpoint> は、実行時に探索対象のサービスのエンドポイント アドレスを動的に検索するために探索が使用する標準エンドポイントです。</span><span class="sxs-lookup"><span data-stu-id="f75e1-134">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> is a standard endpoint that uses discovery to find the endpoint address of a discovered service dynamically at runtime.</span></span>  <span data-ttu-id="f75e1-135">標準バインディングは、追加する標準エンドポイント`endpoint`の型を指定した kind 属性を含む <> 要素で指定されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-135">Standard bindings are specified with an <`endpoint`> element that contains kind attribute that specified the type of standard endpoint to add.</span></span> <span data-ttu-id="f75e1-136"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> および <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> を追加する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-136">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and a <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
 ```xml  
 <services>  
@@ -194,7 +200,7 @@ ms.locfileid: "79185327"
 </services>  
 ```  
   
- <span data-ttu-id="e7f8a-137">標準エンドポイントは、<>`standardEndpoints`要素で構成されます。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-137">Standard endpoints are configured in a <`standardEndpoints`> element.</span></span> <span data-ttu-id="e7f8a-138"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> および <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> を構成する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-138">The following example shows how to configure the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and the <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
+ <span data-ttu-id="f75e1-137">標準エンドポイントは、<>`standardEndpoints`要素で構成されます。</span><span class="sxs-lookup"><span data-stu-id="f75e1-137">Standard endpoints are configured in a <`standardEndpoints`> element.</span></span> <span data-ttu-id="f75e1-138"><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> および <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> を構成する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-138">The following example shows how to configure the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> and the <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.</span></span>  
   
 ```xml  
 <standardEndpoints>  
@@ -223,10 +229,11 @@ ms.locfileid: "79185327"
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
- <span data-ttu-id="e7f8a-139">標準エンドポイント構成を追加したら、次のサンプルに示すように、各エンドポイント`endpoint`の<>要素の構成を参照します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-139">Once you’ve added the standard endpoint configuration, reference the configuration in the <`endpoint`> element for each endpoint as shown in the following sample.</span></span>  
+ <span data-ttu-id="f75e1-139">標準エンドポイント構成を追加したら、次のサンプルに示すように、各エンドポイント`endpoint`の<>要素の構成を参照します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-139">Once you’ve added the standard endpoint configuration, reference the configuration in the <`endpoint`> element for each endpoint as shown in the following sample.</span></span>  
   
 ```xml  
 <services>  
@@ -240,7 +247,7 @@ ms.locfileid: "79185327"
 </services>  
 ```  
   
- <span data-ttu-id="e7f8a-140">探索で使用されるその他の標準エンドポイントとは異なり、<xref:System.ServiceModel.Discovery.DynamicEndpoint> にはバインディングとコントラクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-140">Unlike the other standard endpoints used in discovery, you specify a binding and contract for <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span> <span data-ttu-id="e7f8a-141"><xref:System.ServiceModel.Discovery.DynamicEndpoint> を追加し、構成する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-141">The following example shows how to add and configure a <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
+ <span data-ttu-id="f75e1-140">探索で使用されるその他の標準エンドポイントとは異なり、<xref:System.ServiceModel.Discovery.DynamicEndpoint> にはバインディングとコントラクトを指定します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-140">Unlike the other standard endpoints used in discovery, you specify a binding and contract for <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span> <span data-ttu-id="f75e1-141"><xref:System.ServiceModel.Discovery.DynamicEndpoint> を追加し、構成する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="f75e1-141">The following example shows how to add and configure a <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -269,4 +276,4 @@ ms.locfileid: "79185327"
 </system.ServiceModel>  
 ```  
   
- <span data-ttu-id="e7f8a-142">標準エンドポイントの詳細については、「[標準エンドポイント](standard-endpoints.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7f8a-142">For more information about standard endpoints see [Standard Endpoints](standard-endpoints.md).</span></span>
+ <span data-ttu-id="f75e1-142">標準エンドポイントの詳細については、「[標準エンドポイント](standard-endpoints.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f75e1-142">For more information about standard endpoints see [Standard Endpoints](standard-endpoints.md).</span></span>
