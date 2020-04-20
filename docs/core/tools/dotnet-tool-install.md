@@ -2,128 +2,131 @@
 title: dotnet tool install コマンド
 description: dotnet tool install コマンドでは、お使いのコンピューター上に指定された .NET Core ツールをインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e142773d1f981a8dc3b552d5a23d2864cdd82c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146464"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463360"
 ---
-# <a name="dotnet-tool-install"></a><span data-ttu-id="16f60-103">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="16f60-103">dotnet tool install</span></span>
+# <a name="dotnet-tool-install"></a><span data-ttu-id="811c2-103">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="811c2-103">dotnet tool install</span></span>
 
-<span data-ttu-id="16f60-104">**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="16f60-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
+<span data-ttu-id="811c2-104">**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン</span><span class="sxs-lookup"><span data-stu-id="811c2-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="16f60-105">名前</span><span class="sxs-lookup"><span data-stu-id="16f60-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="811c2-105">名前</span><span class="sxs-lookup"><span data-stu-id="811c2-105">Name</span></span>
 
-<span data-ttu-id="16f60-106">`dotnet tool install` - お使いのコンピューター上に指定された [.NET Core ツール](global-tools.md)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-106">`dotnet tool install` - Installs the specified [.NET Core tool](global-tools.md) on your machine.</span></span>
+<span data-ttu-id="811c2-106">`dotnet tool install` - お使いのコンピューター上に指定された [.NET Core ツール](global-tools.md)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-106">`dotnet tool install` - Installs the specified [.NET Core tool](global-tools.md) on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="16f60-107">構文</span><span class="sxs-lookup"><span data-stu-id="16f60-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="811c2-107">構文</span><span class="sxs-lookup"><span data-stu-id="811c2-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet tool install <PACKAGE_NAME> <-g|--global>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> -g|--global
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <PACKAGE_NAME> <--tool-path>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> --tool-path <PATH>
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
 dotnet tool install <PACKAGE_NAME>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <-h|--help>
+dotnet tool install -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="16f60-108">説明</span><span class="sxs-lookup"><span data-stu-id="16f60-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="811c2-108">説明</span><span class="sxs-lookup"><span data-stu-id="811c2-108">Description</span></span>
 
-<span data-ttu-id="16f60-109">`dotnet tool install` コマンドでは、お使いのコンピューター上に .NET Core ツールをインストールする方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="16f60-109">The `dotnet tool install` command provides a way for you to install .NET Core tools on your machine.</span></span> <span data-ttu-id="16f60-110">コマンドを使用するには、次のいずれかのインストール オプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="16f60-110">To use the command, you specify one of the following installation options:</span></span>
+<span data-ttu-id="811c2-109">`dotnet tool install` コマンドでは、お使いのコンピューター上に .NET Core ツールをインストールする方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="811c2-109">The `dotnet tool install` command provides a way for you to install .NET Core tools on your machine.</span></span> <span data-ttu-id="811c2-110">コマンドを使用するには、次のいずれかのインストール オプションを指定します。</span><span class="sxs-lookup"><span data-stu-id="811c2-110">To use the command, you specify one of the following installation options:</span></span>
 
-* <span data-ttu-id="16f60-111">既定の場所にグローバル ツールをインストールするには、`--global` オプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="16f60-111">To install a global tool in the default location, use the `--global` option.</span></span>
-* <span data-ttu-id="16f60-112">カスタムの場所にグローバル ツールをインストールするには、`--tool-path` オプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="16f60-112">To install a global tool in a custom location,  use the `--tool-path` option.</span></span>
-* <span data-ttu-id="16f60-113">ローカル ツールをインストールするには、`--global` および `--tool-path` オプションを省略します。</span><span class="sxs-lookup"><span data-stu-id="16f60-113">To install a local tool, omit the `--global` and `--tool-path` options.</span></span>
+* <span data-ttu-id="811c2-111">既定の場所にグローバル ツールをインストールするには、`--global` オプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="811c2-111">To install a global tool in the default location, use the `--global` option.</span></span>
+* <span data-ttu-id="811c2-112">カスタムの場所にグローバル ツールをインストールするには、`--tool-path` オプションを使用します。</span><span class="sxs-lookup"><span data-stu-id="811c2-112">To install a global tool in a custom location,  use the `--tool-path` option.</span></span>
+* <span data-ttu-id="811c2-113">ローカル ツールをインストールするには、`--global` および `--tool-path` オプションを省略します。</span><span class="sxs-lookup"><span data-stu-id="811c2-113">To install a local tool, omit the `--global` and `--tool-path` options.</span></span>
 
-<span data-ttu-id="16f60-114">**ローカル ツールは .NET Core SDK 3.0 以降で使用できます。**</span><span class="sxs-lookup"><span data-stu-id="16f60-114">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
+<span data-ttu-id="811c2-114">**ローカル ツールは .NET Core SDK 3.0 以降で使用できます。**</span><span class="sxs-lookup"><span data-stu-id="811c2-114">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-<span data-ttu-id="16f60-115">グローバル ツールは、`-g` または `--global` オプションを指定した場合、既定で次のディレクトリにインストールされます。</span><span class="sxs-lookup"><span data-stu-id="16f60-115">Global tools are installed in the following directories by default when you specify the `-g` or `--global` option:</span></span>
+<span data-ttu-id="811c2-115">グローバル ツールは、`-g` または `--global` オプションを指定した場合、既定で次のディレクトリにインストールされます。</span><span class="sxs-lookup"><span data-stu-id="811c2-115">Global tools are installed in the following directories by default when you specify the `-g` or `--global` option:</span></span>
 
-| <span data-ttu-id="16f60-116">OS</span><span class="sxs-lookup"><span data-stu-id="16f60-116">OS</span></span>          | <span data-ttu-id="16f60-117">パス</span><span class="sxs-lookup"><span data-stu-id="16f60-117">Path</span></span>                          |
+| <span data-ttu-id="811c2-116">OS</span><span class="sxs-lookup"><span data-stu-id="811c2-116">OS</span></span>          | <span data-ttu-id="811c2-117">パス</span><span class="sxs-lookup"><span data-stu-id="811c2-117">Path</span></span>                          |
 |-------------|-------------------------------|
-| <span data-ttu-id="16f60-118">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="16f60-118">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
-| <span data-ttu-id="16f60-119">Windows</span><span class="sxs-lookup"><span data-stu-id="16f60-119">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
+| <span data-ttu-id="811c2-118">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="811c2-118">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
+| <span data-ttu-id="811c2-119">Windows</span><span class="sxs-lookup"><span data-stu-id="811c2-119">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
 
-<span data-ttu-id="16f60-120">ローカル ツールは、現在のディレクトリ下にある *.config*ディレクトリ内の *tool-manifest.json* ファイルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="16f60-120">Local tools are added to a *tool-manifest.json* file in a *.config* directory under the current directory.</span></span> <span data-ttu-id="16f60-121">マニフェスト ファイルがまだ存在しない場合は、次のコマンドを実行して作成します。</span><span class="sxs-lookup"><span data-stu-id="16f60-121">If a manifest file doesn't exist yet, create it by running the following command:</span></span>
+<span data-ttu-id="811c2-120">ローカル ツールは、現在のディレクトリ下にある *.config*ディレクトリ内の *tool-manifest.json* ファイルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="811c2-120">Local tools are added to a *tool-manifest.json* file in a *.config* directory under the current directory.</span></span> <span data-ttu-id="811c2-121">マニフェスト ファイルがまだ存在しない場合は、次のコマンドを実行して作成します。</span><span class="sxs-lookup"><span data-stu-id="811c2-121">If a manifest file doesn't exist yet, create it by running the following command:</span></span>
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-<span data-ttu-id="16f60-122">詳細については、「[ローカル ツールのインストール](global-tools.md#install-a-local-tool)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="16f60-122">For more information, see [Install a local tool](global-tools.md#install-a-local-tool).</span></span>
+<span data-ttu-id="811c2-122">詳細については、「[ローカル ツールのインストール](global-tools.md#install-a-local-tool)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="811c2-122">For more information, see [Install a local tool](global-tools.md#install-a-local-tool).</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="16f60-123">引数</span><span class="sxs-lookup"><span data-stu-id="16f60-123">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="811c2-123">引数</span><span class="sxs-lookup"><span data-stu-id="811c2-123">Arguments</span></span>
 
 - **`PACKAGE_NAME`**
 
-  <span data-ttu-id="16f60-124">インストールする .NET Core ツールが格納されている NuGet パッケージの名前または ID。</span><span class="sxs-lookup"><span data-stu-id="16f60-124">Name/ID of the NuGet package that contains the .NET Core tool to install.</span></span>
+  <span data-ttu-id="811c2-124">インストールする .NET Core ツールが格納されている NuGet パッケージの名前または ID。</span><span class="sxs-lookup"><span data-stu-id="811c2-124">Name/ID of the NuGet package that contains the .NET Core tool to install.</span></span>
 
-## <a name="options"></a><span data-ttu-id="16f60-125">オプション</span><span class="sxs-lookup"><span data-stu-id="16f60-125">Options</span></span>
+## <a name="options"></a><span data-ttu-id="811c2-125">オプション</span><span class="sxs-lookup"><span data-stu-id="811c2-125">Options</span></span>
 
 - **`add-source <SOURCE>`**
 
-  <span data-ttu-id="16f60-126">インストール時に使用するために追加の NuGet パッケージ ソースを追加します。</span><span class="sxs-lookup"><span data-stu-id="16f60-126">Adds an additional NuGet package source to use during installation.</span></span>
+  <span data-ttu-id="811c2-126">インストール時に使用するために追加の NuGet パッケージ ソースを追加します。</span><span class="sxs-lookup"><span data-stu-id="811c2-126">Adds an additional NuGet package source to use during installation.</span></span>
 
 - **`configfile <FILE>`**
 
-  <span data-ttu-id="16f60-127">使用する NuGet 構成 (*nuget.config*) ファイル。</span><span class="sxs-lookup"><span data-stu-id="16f60-127">The NuGet configuration (*nuget.config*) file to use.</span></span>
+  <span data-ttu-id="811c2-127">使用する NuGet 構成 (*nuget.config*) ファイル。</span><span class="sxs-lookup"><span data-stu-id="811c2-127">The NuGet configuration (*nuget.config*) file to use.</span></span>
 
 - **`framework <FRAMEWORK>`**
 
-  <span data-ttu-id="16f60-128">ツールをインストールする[ターゲット フレームワーク](../../standard/frameworks.md)を指定します。</span><span class="sxs-lookup"><span data-stu-id="16f60-128">Specifies the [target framework](../../standard/frameworks.md) to install the tool for.</span></span> <span data-ttu-id="16f60-129">既定では、.NET Core SDK は最適なターゲット フレームワークの選択を試みます。</span><span class="sxs-lookup"><span data-stu-id="16f60-129">By default, the .NET Core SDK tries to choose the most appropriate target framework.</span></span>
+  <span data-ttu-id="811c2-128">ツールをインストールする[ターゲット フレームワーク](../../standard/frameworks.md)を指定します。</span><span class="sxs-lookup"><span data-stu-id="811c2-128">Specifies the [target framework](../../standard/frameworks.md) to install the tool for.</span></span> <span data-ttu-id="811c2-129">既定では、.NET Core SDK は最適なターゲット フレームワークの選択を試みます。</span><span class="sxs-lookup"><span data-stu-id="811c2-129">By default, the .NET Core SDK tries to choose the most appropriate target framework.</span></span>
 
 - **`-g|--global`**
 
-  <span data-ttu-id="16f60-130">ユーザー全体のインストールを指定します。</span><span class="sxs-lookup"><span data-stu-id="16f60-130">Specifies that the installation is user wide.</span></span> <span data-ttu-id="16f60-131">`--tool-path` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="16f60-131">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="16f60-132">`--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。</span><span class="sxs-lookup"><span data-stu-id="16f60-132">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span>
+  <span data-ttu-id="811c2-130">ユーザー全体のインストールを指定します。</span><span class="sxs-lookup"><span data-stu-id="811c2-130">Specifies that the installation is user wide.</span></span> <span data-ttu-id="811c2-131">`--tool-path` オプションと組み合わせることはできません。</span><span class="sxs-lookup"><span data-stu-id="811c2-131">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="811c2-132">`--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。</span><span class="sxs-lookup"><span data-stu-id="811c2-132">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="16f60-133">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="16f60-133">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="811c2-133">コマンドの短いヘルプを印刷します。</span><span class="sxs-lookup"><span data-stu-id="811c2-133">Prints out a short help for the command.</span></span>
 
 - **`tool-path <PATH>`**
 
-  <span data-ttu-id="16f60-134">グローバル ツールをインストールする場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="16f60-134">Specifies the location where to install the Global Tool.</span></span> <span data-ttu-id="16f60-135">PATH は絶対パスでも相対パスでもかまいません。</span><span class="sxs-lookup"><span data-stu-id="16f60-135">PATH can be absolute or relative.</span></span> <span data-ttu-id="16f60-136">PATH が存在しない場合、コマンドではパスの作成を試みます。</span><span class="sxs-lookup"><span data-stu-id="16f60-136">If PATH doesn't exist, the command tries to create it.</span></span> <span data-ttu-id="16f60-137">`--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。</span><span class="sxs-lookup"><span data-stu-id="16f60-137">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span>
+  <span data-ttu-id="811c2-134">グローバル ツールをインストールする場所を指定します。</span><span class="sxs-lookup"><span data-stu-id="811c2-134">Specifies the location where to install the Global Tool.</span></span> <span data-ttu-id="811c2-135">PATH は絶対パスでも相対パスでもかまいません。</span><span class="sxs-lookup"><span data-stu-id="811c2-135">PATH can be absolute or relative.</span></span> <span data-ttu-id="811c2-136">PATH が存在しない場合、コマンドではパスの作成を試みます。</span><span class="sxs-lookup"><span data-stu-id="811c2-136">If PATH doesn't exist, the command tries to create it.</span></span> <span data-ttu-id="811c2-137">`--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。</span><span class="sxs-lookup"><span data-stu-id="811c2-137">Omitting both `--global` and `--tool-path` specifies a local tool installation.</span></span>
 
 - **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="16f60-138">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="16f60-138">Sets the verbosity level of the command.</span></span> <span data-ttu-id="16f60-139">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="16f60-139">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="811c2-138">コマンドの詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="811c2-138">Sets the verbosity level of the command.</span></span> <span data-ttu-id="811c2-139">指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。</span><span class="sxs-lookup"><span data-stu-id="811c2-139">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 - **`--version <VERSION_NUMBER>`**
 
-  <span data-ttu-id="16f60-140">インストールするツールのバージョン。</span><span class="sxs-lookup"><span data-stu-id="16f60-140">The version of the tool to install.</span></span> <span data-ttu-id="16f60-141">既定では、安定した最新バージョンのパッケージがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="16f60-141">By default, the latest stable package version is installed.</span></span> <span data-ttu-id="16f60-142">このオプションを使用して、プレビューまたは古いバージョンのツールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-142">Use this option to install preview or older versions of the tool.</span></span>
+  <span data-ttu-id="811c2-140">インストールするツールのバージョン。</span><span class="sxs-lookup"><span data-stu-id="811c2-140">The version of the tool to install.</span></span> <span data-ttu-id="811c2-141">既定では、安定した最新バージョンのパッケージがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="811c2-141">By default, the latest stable package version is installed.</span></span> <span data-ttu-id="811c2-142">このオプションを使用して、プレビューまたは古いバージョンのツールをインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-142">Use this option to install preview or older versions of the tool.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="16f60-143">使用例</span><span class="sxs-lookup"><span data-stu-id="16f60-143">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="811c2-143">使用例</span><span class="sxs-lookup"><span data-stu-id="811c2-143">Examples</span></span>
 
 - **`dotnet tool install -g dotnetsay`**
 
-  <span data-ttu-id="16f60-144">既定の場所に [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-144">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in the default location.</span></span>
+  <span data-ttu-id="811c2-144">既定の場所に [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-144">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in the default location.</span></span>
 
 - **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-  <span data-ttu-id="16f60-145">特定の Windows ディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-145">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Windows directory.</span></span>
+  <span data-ttu-id="811c2-145">特定の Windows ディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-145">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Windows directory.</span></span>
 
 - **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-  <span data-ttu-id="16f60-146">特定の Linux/macOS ディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-146">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Linux/macOS directory.</span></span>
+  <span data-ttu-id="811c2-146">特定の Linux/macOS ディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-146">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool in a specific Linux/macOS directory.</span></span>
 
 - **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
-  <span data-ttu-id="16f60-147">バージョン 2.0.0 の [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-147">Installs version 2.0.0 of [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool.</span></span>
+  <span data-ttu-id="811c2-147">バージョン 2.0.0 の [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をグローバル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-147">Installs version 2.0.0 of [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a global tool.</span></span>
 
 - **`dotnet tool install dotnetsay`**
 
-  <span data-ttu-id="16f60-148">現在のディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をローカル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="16f60-148">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a local tool for the current directory.</span></span>
+  <span data-ttu-id="811c2-148">現在のディレクトリに [dotnetsay](https://www.nuget.org/packages/dotnetsay/) をローカル ツールとしてインストールします。</span><span class="sxs-lookup"><span data-stu-id="811c2-148">Installs [dotnetsay](https://www.nuget.org/packages/dotnetsay/) as a local tool for the current directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="16f60-149">関連項目</span><span class="sxs-lookup"><span data-stu-id="16f60-149">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="811c2-149">関連項目</span><span class="sxs-lookup"><span data-stu-id="811c2-149">See also</span></span>
 
-- [<span data-ttu-id="16f60-150">.NET Core ツール</span><span class="sxs-lookup"><span data-stu-id="16f60-150">.NET Core tools</span></span>](global-tools.md)
-- [<span data-ttu-id="16f60-151">チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する</span><span class="sxs-lookup"><span data-stu-id="16f60-151">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
-- [<span data-ttu-id="16f60-152">チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する</span><span class="sxs-lookup"><span data-stu-id="16f60-152">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
+- [<span data-ttu-id="811c2-150">.NET Core ツール</span><span class="sxs-lookup"><span data-stu-id="811c2-150">.NET Core tools</span></span>](global-tools.md)
+- [<span data-ttu-id="811c2-151">チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する</span><span class="sxs-lookup"><span data-stu-id="811c2-151">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
+- [<span data-ttu-id="811c2-152">チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する</span><span class="sxs-lookup"><span data-stu-id="811c2-152">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
