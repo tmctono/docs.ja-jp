@@ -6,18 +6,18 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095295"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389495"
 ---
-# <a name="built-in-types-c-reference"></a><span data-ttu-id="fc089-103">組み込み型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="fc089-103">Built-in types (C# reference)</span></span>
+# <a name="built-in-types-c-reference"></a><span data-ttu-id="c17fa-103">組み込み型 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="c17fa-103">Built-in types (C# reference)</span></span>
 
-<span data-ttu-id="fc089-104">C# の組み込みの[値](value-types.md)型を次の表に一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="fc089-104">The following table lists the C# built-in [value](value-types.md) types:</span></span>
+<span data-ttu-id="c17fa-104">C# の組み込みの[値](value-types.md)型を次の表に一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="c17fa-104">The following table lists the C# built-in [value](value-types.md) types:</span></span>
 
-|<span data-ttu-id="fc089-105">C# 型キーワード</span><span class="sxs-lookup"><span data-stu-id="fc089-105">C# type keyword</span></span>|<span data-ttu-id="fc089-106">.NET の種類</span><span class="sxs-lookup"><span data-stu-id="fc089-106">.NET type</span></span>|
+|<span data-ttu-id="c17fa-105">C# 型キーワード</span><span class="sxs-lookup"><span data-stu-id="c17fa-105">C# type keyword</span></span>|<span data-ttu-id="c17fa-106">.NET 型</span><span class="sxs-lookup"><span data-stu-id="c17fa-106">.NET type</span></span>|
 |--------------|-------------------------|
 |[`bool`](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|
 |[`byte`](integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|
@@ -33,22 +33,24 @@ ms.locfileid: "77095295"
 |[`short`](integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|
 |[`ushort`](integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|
 
-<span data-ttu-id="fc089-107">C# の組み込みの[参照](../keywords/reference-types.md)型を次の表に一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="fc089-107">The following table lists the C# built-in [reference](../keywords/reference-types.md) types:</span></span>
+<span data-ttu-id="c17fa-107">C# の組み込みの[参照](../keywords/reference-types.md)型を次の表に一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="c17fa-107">The following table lists the C# built-in [reference](../keywords/reference-types.md) types:</span></span>
 
-|<span data-ttu-id="fc089-108">C# 型キーワード</span><span class="sxs-lookup"><span data-stu-id="fc089-108">C# type keyword</span></span>|<span data-ttu-id="fc089-109">.NET の種類</span><span class="sxs-lookup"><span data-stu-id="fc089-109">.NET type</span></span>|
+|<span data-ttu-id="c17fa-108">C# 型キーワード</span><span class="sxs-lookup"><span data-stu-id="c17fa-108">C# type keyword</span></span>|<span data-ttu-id="c17fa-109">.NET 型</span><span class="sxs-lookup"><span data-stu-id="c17fa-109">.NET type</span></span>|
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 
-<span data-ttu-id="fc089-110">上の表の左の列にある各 C# 型キーワードは、対応する .NET 型の別名です。</span><span class="sxs-lookup"><span data-stu-id="fc089-110">In the preceding tables, each C# type keyword from the left column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="fc089-111">これらは交換可能です。</span><span class="sxs-lookup"><span data-stu-id="fc089-111">They are interchangeable.</span></span> <span data-ttu-id="fc089-112">たとえば、次の宣言では同じ型の変数が宣言されています。</span><span class="sxs-lookup"><span data-stu-id="fc089-112">For example, the following declarations declare variables of the same type:</span></span>
+<span data-ttu-id="c17fa-110">上の表の左の列にある各 C# 型キーワードは、対応する .NET 型の別名です。</span><span class="sxs-lookup"><span data-stu-id="c17fa-110">In the preceding tables, each C# type keyword from the left column is an alias for the corresponding .NET type.</span></span> <span data-ttu-id="c17fa-111">これらは交換可能です。</span><span class="sxs-lookup"><span data-stu-id="c17fa-111">They are interchangeable.</span></span> <span data-ttu-id="c17fa-112">たとえば、次の宣言では、同じ型の変数が宣言されています。</span><span class="sxs-lookup"><span data-stu-id="c17fa-112">For example, the following declarations declare variables of the same type:</span></span>
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-## <a name="see-also"></a><span data-ttu-id="fc089-113">参照</span><span class="sxs-lookup"><span data-stu-id="fc089-113">See also</span></span>
+<span data-ttu-id="c17fa-113">[`void`](void.md) キーワードで、値がないことが表されます。</span><span class="sxs-lookup"><span data-stu-id="c17fa-113">The [`void`](void.md) keyword represents the absence of a type.</span></span> <span data-ttu-id="c17fa-114">値を返さないメソッドの戻り値の型として使用します。</span><span class="sxs-lookup"><span data-stu-id="c17fa-114">You use it as the return type of a method that doesn't return a value.</span></span>
 
-- [<span data-ttu-id="fc089-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="fc089-114">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="fc089-115">C# 型の既定値</span><span class="sxs-lookup"><span data-stu-id="fc089-115">Default values of C# types</span></span>](default-values.md)
-- [<span data-ttu-id="fc089-116">`dynamic` キーワード</span><span class="sxs-lookup"><span data-stu-id="fc089-116">`dynamic` keyword</span></span>](reference-types.md#the-dynamic-type)
+## <a name="see-also"></a><span data-ttu-id="c17fa-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="c17fa-115">See also</span></span>
+
+- [<span data-ttu-id="c17fa-116">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="c17fa-116">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="c17fa-117">C# 型の既定値</span><span class="sxs-lookup"><span data-stu-id="c17fa-117">Default values of C# types</span></span>](default-values.md)
+- [<span data-ttu-id="c17fa-118">`dynamic` キーワード</span><span class="sxs-lookup"><span data-stu-id="c17fa-118">`dynamic` keyword</span></span>](reference-types.md#the-dynamic-type)
