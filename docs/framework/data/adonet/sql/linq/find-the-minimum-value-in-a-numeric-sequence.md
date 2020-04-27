@@ -7,37 +7,37 @@ dev_langs:
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
 ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
 ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2019
 ms.locfileid: "70793836"
 ---
-# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="8bee7-102">一連の数値の中の最小値の検出</span><span class="sxs-lookup"><span data-stu-id="8bee7-102">Find the Minimum Value in a Numeric Sequence</span></span>
-<span data-ttu-id="8bee7-103">一連の数値の中から最小値を返すには、<xref:System.Linq.Enumerable.Min%2A> 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="8bee7-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
+# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="53005-102">一連の数値の中の最小値の検出</span><span class="sxs-lookup"><span data-stu-id="53005-102">Find the Minimum Value in a Numeric Sequence</span></span>
+<span data-ttu-id="53005-103">一連の数値の中から最小値を返すには、<xref:System.Linq.Enumerable.Min%2A> 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="53005-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8bee7-104">例</span><span class="sxs-lookup"><span data-stu-id="8bee7-104">Example</span></span>  
- <span data-ttu-id="8bee7-105">次の例では、製品の最低単価を見つけます。</span><span class="sxs-lookup"><span data-stu-id="8bee7-105">The following example finds the lowest unit price of any product.</span></span>  
+## <a name="example"></a><span data-ttu-id="53005-104">例</span><span class="sxs-lookup"><span data-stu-id="53005-104">Example</span></span>  
+ <span data-ttu-id="53005-105">次の例では、製品の最低単価を見つけます。</span><span class="sxs-lookup"><span data-stu-id="53005-105">The following example finds the lowest unit price of any product.</span></span>  
   
- <span data-ttu-id="8bee7-106">Northwind サンプル データベースに対してこのクエリを実行した場合の出力は、`2.5000` です。</span><span class="sxs-lookup"><span data-stu-id="8bee7-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
+ <span data-ttu-id="53005-106">Northwind サンプル データベースに対してこのクエリを実行した場合の出力は、`2.5000` です。</span><span class="sxs-lookup"><span data-stu-id="53005-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#9)]
  [!code-vb[DLinqQueryExamples#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#9)]  
   
-## <a name="example"></a><span data-ttu-id="8bee7-107">例</span><span class="sxs-lookup"><span data-stu-id="8bee7-107">Example</span></span>  
- <span data-ttu-id="8bee7-108">次の例では、注文の最低配送料を見つけます。</span><span class="sxs-lookup"><span data-stu-id="8bee7-108">The following example finds the lowest freight amount for any order.</span></span>  
+## <a name="example"></a><span data-ttu-id="53005-107">例</span><span class="sxs-lookup"><span data-stu-id="53005-107">Example</span></span>  
+ <span data-ttu-id="53005-108">次の例では、注文の最低配送料を見つけます。</span><span class="sxs-lookup"><span data-stu-id="53005-108">The following example finds the lowest freight amount for any order.</span></span>  
   
- <span data-ttu-id="8bee7-109">Northwind サンプル データベースに対してこのクエリを実行した場合の出力は、`0.0200` です。</span><span class="sxs-lookup"><span data-stu-id="8bee7-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
+ <span data-ttu-id="53005-109">Northwind サンプル データベースに対してこのクエリを実行した場合の出力は、`0.0200` です。</span><span class="sxs-lookup"><span data-stu-id="53005-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#10)]
  [!code-vb[DLinqQueryExamples#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#10)]  
   
-## <a name="example"></a><span data-ttu-id="8bee7-110">例</span><span class="sxs-lookup"><span data-stu-id="8bee7-110">Example</span></span>  
- <span data-ttu-id="8bee7-111">次の例では、Min を使用して、各カテゴリ内で単価が最も安い `Products` を見つけます。</span><span class="sxs-lookup"><span data-stu-id="8bee7-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="8bee7-112">出力はカテゴリごとに行われます。</span><span class="sxs-lookup"><span data-stu-id="8bee7-112">The output is arranged by category.</span></span>  
+## <a name="example"></a><span data-ttu-id="53005-110">例</span><span class="sxs-lookup"><span data-stu-id="53005-110">Example</span></span>  
+ <span data-ttu-id="53005-111">次の例では、Min を使用して、各カテゴリ内で単価が最も安い `Products` を見つけます。</span><span class="sxs-lookup"><span data-stu-id="53005-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="53005-112">出力はカテゴリごとに行われます。</span><span class="sxs-lookup"><span data-stu-id="53005-112">The output is arranged by category.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#11](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#11)]
  [!code-vb[DLinqQueryExamples#11](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#11)]  
   
- <span data-ttu-id="8bee7-113">Northwind サンプル データベースに対してこのクエリを実行すると、結果は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="8bee7-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
+ <span data-ttu-id="53005-113">Northwind サンプル データベースに対してこのクエリを実行すると、結果は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="53005-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
   
  `1`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "70793836"
   
  `Konbu`  
   
-## <a name="see-also"></a><span data-ttu-id="8bee7-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="8bee7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53005-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="53005-114">See also</span></span>
 
-- [<span data-ttu-id="8bee7-115">集計クエリ</span><span class="sxs-lookup"><span data-stu-id="8bee7-115">Aggregate Queries</span></span>](aggregate-queries.md)
-- [<span data-ttu-id="8bee7-116">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="8bee7-116">Downloading Sample Databases</span></span>](downloading-sample-databases.md)
+- [<span data-ttu-id="53005-115">集計クエリ</span><span class="sxs-lookup"><span data-stu-id="53005-115">Aggregate Queries</span></span>](aggregate-queries.md)
+- [<span data-ttu-id="53005-116">サンプル データベースのダウンロード</span><span class="sxs-lookup"><span data-stu-id="53005-116">Downloading Sample Databases</span></span>](downloading-sample-databases.md)
