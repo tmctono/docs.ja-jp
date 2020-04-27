@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61785724"
 ---
-# <a name="images"></a><span data-ttu-id="5f7a1-102">イメージ</span><span class="sxs-lookup"><span data-stu-id="5f7a1-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="5f7a1-103">には、複数のイメージ形式、高品質な画像のレンダリング、およびコーデック拡張機能のサポートが組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="5f7a1-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="cdaef-102">イメージ</span><span class="sxs-lookup"><span data-stu-id="cdaef-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="cdaef-103">には、複数のイメージ形式、高品質な画像のレンダリング、およびコーデック拡張機能のサポートが組み込まれています。</span><span class="sxs-lookup"><span data-stu-id="cdaef-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5f7a1-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5f7a1-104">In This Section</span></span>  
- [<span data-ttu-id="5f7a1-105">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="5f7a1-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="5f7a1-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="5f7a1-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cdaef-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cdaef-104">In This Section</span></span>  
+ [<span data-ttu-id="cdaef-105">イメージングの概要</span><span class="sxs-lookup"><span data-stu-id="cdaef-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="cdaef-106">方法トピック</span><span class="sxs-lookup"><span data-stu-id="cdaef-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="5f7a1-107">参照</span><span class="sxs-lookup"><span data-stu-id="5f7a1-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cdaef-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="cdaef-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="5f7a1-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="5f7a1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdaef-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="cdaef-108">See also</span></span>
 
-- [<span data-ttu-id="5f7a1-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="5f7a1-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="5f7a1-110">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="5f7a1-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="cdaef-109">2D グラフィックスとイメージング</span><span class="sxs-lookup"><span data-stu-id="cdaef-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="cdaef-110">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="cdaef-110">Graphics and Multimedia</span></span>](index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67992d76-8bcc-456c-8232-03807803d69e
 ms.openlocfilehash: 2e81877eb41828a1d92edf0e8126c6e2ef966d20
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62028666"
 ---
-# <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="e9dc8-102">マークアップの互換性 (mc:)言語機能</span><span class="sxs-lookup"><span data-stu-id="e9dc8-102">Markup Compatibility (mc:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="e9dc8-103">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e9dc8-103">In This Section</span></span>  
- [<span data-ttu-id="e9dc8-104">mc:Ignorable 属性</span><span class="sxs-lookup"><span data-stu-id="e9dc8-104">mc:Ignorable Attribute</span></span>](mc-ignorable-attribute.md)  
-  [<span data-ttu-id="e9dc8-105">mc:ProcessContent 属性</span><span class="sxs-lookup"><span data-stu-id="e9dc8-105">mc:ProcessContent Attribute</span></span>](mc-processcontent-attribute.md)
+# <a name="markup-compatibility-mc-language-features"></a><span data-ttu-id="ab606-102">マークアップの互換性 (mc:)言語機能</span><span class="sxs-lookup"><span data-stu-id="ab606-102">Markup Compatibility (mc:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="ab606-103">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ab606-103">In This Section</span></span>  
+ [<span data-ttu-id="ab606-104">mc:Ignorable 属性</span><span class="sxs-lookup"><span data-stu-id="ab606-104">mc:Ignorable Attribute</span></span>](mc-ignorable-attribute.md)  
+  [<span data-ttu-id="ab606-105">mc:ProcessContent 属性</span><span class="sxs-lookup"><span data-stu-id="ab606-105">mc:ProcessContent Attribute</span></span>](mc-processcontent-attribute.md)

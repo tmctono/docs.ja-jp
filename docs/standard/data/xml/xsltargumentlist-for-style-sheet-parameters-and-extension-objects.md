@@ -8,54 +8,54 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160197"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="8c15a-102">スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="8c15a-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
-<span data-ttu-id="8c15a-103"><xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="8c15a-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="8c15a-104">これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a><span data-ttu-id="cf294-102">スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList</span><span class="sxs-lookup"><span data-stu-id="cf294-102">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>
+<span data-ttu-id="cf294-103"><xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cf294-103">The <xref:System.Xml.Xsl.XsltArgumentList> class contains Extensible Stylesheet Language for Transformations (XSLT) parameters and XSLT extension objects.</span></span> <span data-ttu-id="cf294-104">これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。</span><span class="sxs-lookup"><span data-stu-id="cf294-104">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8c15a-105">.NET Framework 2.0 では、<xref:System.Xml.Xsl.XslTransform> クラスと <xref:System.Xml.Xsl.XsltArgumentList> クラスが廃止されています。</span><span class="sxs-lookup"><span data-stu-id="8c15a-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="8c15a-106"><xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="8c15a-107">詳細については、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」と「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8c15a-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+> <span data-ttu-id="cf294-105">.NET Framework 2.0 では、<xref:System.Xml.Xsl.XslTransform> クラスと <xref:System.Xml.Xsl.XsltArgumentList> クラスが廃止されています。</span><span class="sxs-lookup"><span data-stu-id="cf294-105">The <xref:System.Xml.Xsl.XslTransform> and <xref:System.Xml.Xsl.XsltArgumentList> classes are obsolete in the .NET Framework 2.0.</span></span> <span data-ttu-id="cf294-106"><xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。</span><span class="sxs-lookup"><span data-stu-id="cf294-106">You can perform XSLT transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="cf294-107">詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="cf294-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="8c15a-108"><xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT パラメーターと XSLT 拡張オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="8c15a-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="8c15a-109">これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
+ <span data-ttu-id="cf294-108"><xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT パラメーターと XSLT 拡張オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="cf294-108">The <xref:System.Xml.Xsl.XsltArgumentList> class contains XSLT parameters and XSLT extension objects.</span></span> <span data-ttu-id="cf294-109">これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。</span><span class="sxs-lookup"><span data-stu-id="cf294-109">When passed into the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method, these parameters and extension objects can be invoked from style sheets.</span></span>  
   
- <span data-ttu-id="8c15a-110">埋め込みスクリプトを使用するのではなく、オブジェクトを渡す利点を次に示します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
+ <span data-ttu-id="cf294-110">埋め込みスクリプトを使用するのではなく、オブジェクトを渡す利点を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cf294-110">The following are advantages to passing an object rather than using an embedded script:</span></span>  
   
-- <span data-ttu-id="8c15a-111">クラスをより効果的にカプセル化および再利用できます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-111">Provides better encapsulation and reuse of classes.</span></span>  
+- <span data-ttu-id="cf294-111">クラスをより効果的にカプセル化および再利用できます。</span><span class="sxs-lookup"><span data-stu-id="cf294-111">Provides better encapsulation and reuse of classes.</span></span>  
   
-- <span data-ttu-id="8c15a-112">スタイル シートを小さくすることができ、管理が簡単になります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-112">Allows style sheets to be smaller and more maintainable.</span></span>  
+- <span data-ttu-id="cf294-112">スタイル シートを小さくすることができ、管理が簡単になります。</span><span class="sxs-lookup"><span data-stu-id="cf294-112">Allows style sheets to be smaller and more maintainable.</span></span>  
   
-- <span data-ttu-id="8c15a-113">サポートされている <xref:System> 名前空間のセット内で定義されているもの以外の名前空間に属しているクラスのメソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
+- <span data-ttu-id="cf294-113">サポートされている <xref:System> 名前空間のセット内で定義されているもの以外の名前空間に属しているクラスのメソッドを呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="cf294-113">Supports calling methods on classes belonging to namespaces other than those defined within the set of supported <xref:System> namespaces.</span></span>  
   
-- <span data-ttu-id="8c15a-114"><xref:System.Xml.XPath.XPathNodeIterator> を使用して結果ツリー フラグメントをスタイル シートに渡す操作がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
+- <span data-ttu-id="cf294-114"><xref:System.Xml.XPath.XPathNodeIterator> を使用して結果ツリー フラグメントをスタイル シートに渡す操作がサポートされます。</span><span class="sxs-lookup"><span data-stu-id="cf294-114">Supports passing result tree fragments to the style sheet with the use of the <xref:System.Xml.XPath.XPathNodeIterator>.</span></span>  
   
-## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="8c15a-115">XSLT スタイル シートのパラメーター</span><span class="sxs-lookup"><span data-stu-id="8c15a-115">XSLT Style Sheet Parameters</span></span>  
- <span data-ttu-id="8c15a-116">XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="8c15a-117">パラメーターが追加された時点で、修飾名と名前空間 URI (Uniform Resource Identifier) がそのパラメーター オブジェクトに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
+## <a name="xslt-style-sheet-parameters"></a><span data-ttu-id="cf294-115">XSLT スタイル シートのパラメーター</span><span class="sxs-lookup"><span data-stu-id="cf294-115">XSLT Style Sheet Parameters</span></span>  
+ <span data-ttu-id="cf294-116">XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="cf294-116">XSLT parameters are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method.</span></span> <span data-ttu-id="cf294-117">パラメーターが追加された時点で、修飾名と名前空間 URI (Uniform Resource Identifier) がそのパラメーター オブジェクトに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="cf294-117">A qualified name and namespace Uniform Resource Identifier (URI) are associated with the parameter object at that time.</span></span>  
   
- <span data-ttu-id="8c15a-118">パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="8c15a-119">対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらであるかを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
+ <span data-ttu-id="cf294-118">パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。</span><span class="sxs-lookup"><span data-stu-id="cf294-118">The parameter object should correspond to a World Wide Web Consortium (W3C) type.</span></span> <span data-ttu-id="cf294-119">対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらであるかを次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="cf294-119">The following table shows the corresponding W3C types, the equivalent .NET Framework classes (type), and whether the W3C type is an XML Path Language (XPath) type or XSLT type.</span></span>  
   
-|<span data-ttu-id="8c15a-120">W3C 型</span><span class="sxs-lookup"><span data-stu-id="8c15a-120">W3C Type</span></span>|<span data-ttu-id="8c15a-121">対応する .NET Framework クラス (型)</span><span class="sxs-lookup"><span data-stu-id="8c15a-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="8c15a-122">XPath 型または XSLT 型</span><span class="sxs-lookup"><span data-stu-id="8c15a-122">XPath type or XSLT type</span></span>|  
+|<span data-ttu-id="cf294-120">W3C 型</span><span class="sxs-lookup"><span data-stu-id="cf294-120">W3C Type</span></span>|<span data-ttu-id="cf294-121">対応する .NET Framework クラス (型)</span><span class="sxs-lookup"><span data-stu-id="cf294-121">Equivalent .NET Framework class (type)</span></span>|<span data-ttu-id="cf294-122">XPath 型または XSLT 型</span><span class="sxs-lookup"><span data-stu-id="cf294-122">XPath type or XSLT type</span></span>|  
 |--------------|----------------------------------------------|-----------------------------|  
-|<span data-ttu-id="8c15a-123">String</span><span class="sxs-lookup"><span data-stu-id="8c15a-123">String</span></span>|<span data-ttu-id="8c15a-124">System.String</span><span class="sxs-lookup"><span data-stu-id="8c15a-124">System.String</span></span>|<span data-ttu-id="8c15a-125">XPath</span><span class="sxs-lookup"><span data-stu-id="8c15a-125">XPath</span></span>|  
-|<span data-ttu-id="8c15a-126">Boolean</span><span class="sxs-lookup"><span data-stu-id="8c15a-126">Boolean</span></span>|<span data-ttu-id="8c15a-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="8c15a-127">System.Boolean</span></span>|<span data-ttu-id="8c15a-128">XPath</span><span class="sxs-lookup"><span data-stu-id="8c15a-128">XPath</span></span>|  
-|<span data-ttu-id="8c15a-129">Number</span><span class="sxs-lookup"><span data-stu-id="8c15a-129">Number</span></span>|<span data-ttu-id="8c15a-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="8c15a-130">System.Double</span></span>|<span data-ttu-id="8c15a-131">XPath</span><span class="sxs-lookup"><span data-stu-id="8c15a-131">XPath</span></span>|  
-|<span data-ttu-id="8c15a-132">Result Tree Fragment</span><span class="sxs-lookup"><span data-stu-id="8c15a-132">Result Tree Fragment</span></span>|<span data-ttu-id="8c15a-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="8c15a-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="8c15a-134">XSLT (XSLT)</span><span class="sxs-lookup"><span data-stu-id="8c15a-134">XSLT</span></span>|  
-|<span data-ttu-id="8c15a-135">Node Set</span><span class="sxs-lookup"><span data-stu-id="8c15a-135">Node Set</span></span>|<span data-ttu-id="8c15a-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="8c15a-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="8c15a-137">XPath</span><span class="sxs-lookup"><span data-stu-id="8c15a-137">XPath</span></span>|  
+|<span data-ttu-id="cf294-123">String</span><span class="sxs-lookup"><span data-stu-id="cf294-123">String</span></span>|<span data-ttu-id="cf294-124">System.String</span><span class="sxs-lookup"><span data-stu-id="cf294-124">System.String</span></span>|<span data-ttu-id="cf294-125">XPath</span><span class="sxs-lookup"><span data-stu-id="cf294-125">XPath</span></span>|  
+|<span data-ttu-id="cf294-126">ブール型</span><span class="sxs-lookup"><span data-stu-id="cf294-126">Boolean</span></span>|<span data-ttu-id="cf294-127">System.Boolean</span><span class="sxs-lookup"><span data-stu-id="cf294-127">System.Boolean</span></span>|<span data-ttu-id="cf294-128">XPath</span><span class="sxs-lookup"><span data-stu-id="cf294-128">XPath</span></span>|  
+|<span data-ttu-id="cf294-129">数値</span><span class="sxs-lookup"><span data-stu-id="cf294-129">Number</span></span>|<span data-ttu-id="cf294-130">System.Double</span><span class="sxs-lookup"><span data-stu-id="cf294-130">System.Double</span></span>|<span data-ttu-id="cf294-131">XPath</span><span class="sxs-lookup"><span data-stu-id="cf294-131">XPath</span></span>|  
+|<span data-ttu-id="cf294-132">Result Tree Fragment</span><span class="sxs-lookup"><span data-stu-id="cf294-132">Result Tree Fragment</span></span>|<span data-ttu-id="cf294-133">System.Xml.XPath.XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="cf294-133">System.Xml.XPath.XPathNavigator</span></span>|<span data-ttu-id="cf294-134">XSLT</span><span class="sxs-lookup"><span data-stu-id="cf294-134">XSLT</span></span>|  
+|<span data-ttu-id="cf294-135">Node Set</span><span class="sxs-lookup"><span data-stu-id="cf294-135">Node Set</span></span>|<span data-ttu-id="cf294-136">System.Xml.XPath.XPathNodeIterator</span><span class="sxs-lookup"><span data-stu-id="cf294-136">System.Xml.XPath.XPathNodeIterator</span></span>|<span data-ttu-id="cf294-137">XPath</span><span class="sxs-lookup"><span data-stu-id="cf294-137">XPath</span></span>|  
   
- <span data-ttu-id="8c15a-138">パラメーター オブジェクトが上に示したクラスでない場合は、クラスの種類に応じて、Double または String に強制的に変換されます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="8c15a-139">Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Decimal の各型は、強制的に Double に変換されます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="8c15a-140">その他すべての型は、`ToString` メソッドを使用して強制的に文字列に変換されます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-140">All other types are forced to a String using the `ToString` method.</span></span>  
+ <span data-ttu-id="cf294-138">パラメーター オブジェクトが上に示したクラスでない場合は、クラスの種類に応じて、Double または String に強制的に変換されます。</span><span class="sxs-lookup"><span data-stu-id="cf294-138">If the parameter object is not one of the above classes, it is forced to either a Double or String, as appropriate.</span></span> <span data-ttu-id="cf294-139">Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Decimal の各型は、強制的に Double に変換されます。</span><span class="sxs-lookup"><span data-stu-id="cf294-139">Int16, UInt16, Int32, UInt32, Int64, UInt64, Single and Decimal types are forced to a Double.</span></span> <span data-ttu-id="cf294-140">その他すべての型は、`ToString` メソッドを使用して強制的に文字列に変換されます。</span><span class="sxs-lookup"><span data-stu-id="cf294-140">All other types are forced to a String using the `ToString` method.</span></span>  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="8c15a-141">XSLT パラメーターを使用するために必要な処理</span><span class="sxs-lookup"><span data-stu-id="8c15a-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a><span data-ttu-id="cf294-141">XSLT パラメーターを使用するために必要な処理</span><span class="sxs-lookup"><span data-stu-id="cf294-141">To use the XSLT parameter, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="8c15a-142"><xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
+1. <span data-ttu-id="cf294-142"><xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="cf294-142">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the objects using <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.</span></span>  
   
-2. <span data-ttu-id="8c15a-143">スタイル シートからパラメーターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-143">Call the parameters from the style sheet.</span></span>  
+2. <span data-ttu-id="cf294-143">スタイル シートからパラメーターを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="cf294-143">Call the parameters from the style sheet.</span></span>  
   
-3. <span data-ttu-id="8c15a-144"><xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="cf294-144"><xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="cf294-144">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="8c15a-145">例</span><span class="sxs-lookup"><span data-stu-id="8c15a-145">Example</span></span>  
- <span data-ttu-id="8c15a-146">算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="8c15a-147">割引日は、発注日から 20 日後として算出されます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-147">The discount date is calculated to be 20 days from the order date.</span></span>  
+### <a name="example"></a><span data-ttu-id="cf294-145">例</span><span class="sxs-lookup"><span data-stu-id="cf294-145">Example</span></span>  
+ <span data-ttu-id="cf294-146">算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cf294-146">The following example uses the <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> method to create a parameter to hold a calculated discount date.</span></span> <span data-ttu-id="cf294-147">割引日は、発注日から 20 日後として算出されます。</span><span class="sxs-lookup"><span data-stu-id="cf294-147">The discount date is calculated to be 20 days from the order date.</span></span>  
   
 ```vb  
 Imports System  
@@ -137,8 +137,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="8c15a-148">入力</span><span class="sxs-lookup"><span data-stu-id="8c15a-148">Input</span></span>  
- <span data-ttu-id="8c15a-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="8c15a-149">order.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="cf294-148">入力</span><span class="sxs-lookup"><span data-stu-id="cf294-148">Input</span></span>  
+ <span data-ttu-id="cf294-149">order.xml</span><span class="sxs-lookup"><span data-stu-id="cf294-149">order.xml</span></span>  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -154,7 +154,7 @@ public class Sample
 </order>  
 ```  
   
- <span data-ttu-id="8c15a-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="8c15a-150">discount.xsl</span></span>  
+ <span data-ttu-id="cf294-150">discount.xsl</span><span class="sxs-lookup"><span data-stu-id="cf294-150">discount.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -169,7 +169,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="8c15a-151">Output</span><span class="sxs-lookup"><span data-stu-id="8c15a-151">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="cf294-151">Output</span><span class="sxs-lookup"><span data-stu-id="cf294-151">Output</span></span>  
   
 ```xml  
 <order>  
@@ -178,25 +178,25 @@ public class Sample
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a><span data-ttu-id="8c15a-152">XSLT 拡張オブジェクト</span><span class="sxs-lookup"><span data-stu-id="8c15a-152">XSLT Extension Objects</span></span>  
- <span data-ttu-id="8c15a-153">XSLT 拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="8c15a-154">その時点で、修飾名と名前空間 URI がその拡張オブジェクトに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+## <a name="xslt-extension-objects"></a><span data-ttu-id="cf294-152">XSLT 拡張オブジェクト</span><span class="sxs-lookup"><span data-stu-id="cf294-152">XSLT Extension Objects</span></span>  
+ <span data-ttu-id="cf294-153">XSLT 拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="cf294-153">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="cf294-154">その時点で、修飾名と名前空間 URI がその拡張オブジェクトに関連付けられます。</span><span class="sxs-lookup"><span data-stu-id="cf294-154">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
- <span data-ttu-id="8c15a-155">オブジェクトを追加する場合、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> の呼び出し元は、セキュリティ ポリシーで完全に信頼されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="8c15a-156">呼び出し元の信頼性が低いと、処理は失敗します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-156">If the caller is semi-trusted, the addition will fail.</span></span>  
+ <span data-ttu-id="cf294-155">オブジェクトを追加する場合、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> の呼び出し元は、セキュリティ ポリシーで完全に信頼されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="cf294-155">When an object is added, the caller of the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> must be fully trusted in the security policy.</span></span> <span data-ttu-id="cf294-156">呼び出し元の信頼性が低いと、処理は失敗します。</span><span class="sxs-lookup"><span data-stu-id="cf294-156">If the caller is semi-trusted, the addition will fail.</span></span>  
   
- <span data-ttu-id="8c15a-157">オブジェクトは正常に追加されますが、正常に実行されるかどうかは保証されません。</span><span class="sxs-lookup"><span data-stu-id="8c15a-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="8c15a-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドを呼び出すと、<xref:System.Xml.Xsl.XslTransform.Load%2A> の実行時に指定された証拠に基づいてアクセス許可が計算され、そのアクセス許可セットが変換処理全体に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="8c15a-159">拡張オブジェクトが、アクセス許可セットにないアクセス許可を必要とする処理を実行しようとすると、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="8c15a-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
+ <span data-ttu-id="cf294-157">オブジェクトは正常に追加されますが、正常に実行されるかどうかは保証されません。</span><span class="sxs-lookup"><span data-stu-id="cf294-157">Though an object is added successfully, it does not guarantee that the execution will be successful.</span></span> <span data-ttu-id="cf294-158"><xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドを呼び出すと、<xref:System.Xml.Xsl.XslTransform.Load%2A> の実行時に指定された証拠に基づいてアクセス許可が計算され、そのアクセス許可セットが変換処理全体に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="cf294-158">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at <xref:System.Xml.Xsl.XslTransform.Load%2A> time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="cf294-159">拡張オブジェクトが、アクセス許可セットにないアクセス許可を必要とする処理を実行しようとすると、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="cf294-159">If an extension object attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
- <span data-ttu-id="8c15a-160">拡張オブジェクトが返すデータ型は、4 つの基本 XPath 型である数値、文字列、ブール、ノード セットのうちのいずれかになります。</span><span class="sxs-lookup"><span data-stu-id="8c15a-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
+ <span data-ttu-id="cf294-160">拡張オブジェクトが返すデータ型は、4 つの基本 XPath 型である数値、文字列、ブール、ノード セットのうちのいずれかになります。</span><span class="sxs-lookup"><span data-stu-id="cf294-160">The data types returned from extension objects are one of the four basic XPath data types of number, string, Boolean, and node set.</span></span>  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="8c15a-161">XSLT 拡張オブジェクトを使用するために必要な処理</span><span class="sxs-lookup"><span data-stu-id="8c15a-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a><span data-ttu-id="cf294-161">XSLT 拡張オブジェクトを使用するために必要な処理</span><span class="sxs-lookup"><span data-stu-id="cf294-161">To use the XSLT extension object, the user needs to do the following:</span></span>  
   
-1. <span data-ttu-id="8c15a-162"><xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
+1. <span data-ttu-id="cf294-162"><xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。</span><span class="sxs-lookup"><span data-stu-id="cf294-162">Create an <xref:System.Xml.Xsl.XsltArgumentList> and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.</span></span>  
   
-2. <span data-ttu-id="8c15a-163">スタイル シートから拡張オブジェクトを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-163">Invoke the extension object from the style sheet.</span></span>  
+2. <span data-ttu-id="cf294-163">スタイル シートから拡張オブジェクトを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="cf294-163">Invoke the extension object from the style sheet.</span></span>  
   
-3. <span data-ttu-id="8c15a-164"><xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="cf294-164"><xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="cf294-164">Pass the <xref:System.Xml.Xsl.XsltArgumentList> to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="8c15a-165">例</span><span class="sxs-lookup"><span data-stu-id="8c15a-165">Example</span></span>  
- <span data-ttu-id="8c15a-166">半径が指定された円の円周を算出する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="8c15a-166">The following example calculates the circumference of a circle given its radius.</span></span>  
+### <a name="example"></a><span data-ttu-id="cf294-165">例</span><span class="sxs-lookup"><span data-stu-id="cf294-165">Example</span></span>  
+ <span data-ttu-id="cf294-166">半径が指定された円の円周を算出する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cf294-166">The following example calculates the circumference of a circle given its radius.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +305,8 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a><span data-ttu-id="8c15a-167">入力</span><span class="sxs-lookup"><span data-stu-id="8c15a-167">Input</span></span>  
- <span data-ttu-id="8c15a-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="8c15a-168">number.xml</span></span>  
+### <a name="input"></a><span data-ttu-id="cf294-167">入力</span><span class="sxs-lookup"><span data-stu-id="cf294-167">Input</span></span>  
+ <span data-ttu-id="cf294-168">number.xml</span><span class="sxs-lookup"><span data-stu-id="cf294-168">number.xml</span></span>  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -320,7 +320,7 @@ public class Sample
 </data>
 ```  
   
- <span data-ttu-id="8c15a-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="8c15a-169">circle.xsl</span></span>  
+ <span data-ttu-id="cf294-169">circle.xsl</span><span class="sxs-lookup"><span data-stu-id="cf294-169">circle.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -341,7 +341,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a><span data-ttu-id="8c15a-170">Output</span><span class="sxs-lookup"><span data-stu-id="8c15a-170">Output</span></span>  
+### <a name="output"></a><span data-ttu-id="cf294-170">Output</span><span class="sxs-lookup"><span data-stu-id="cf294-170">Output</span></span>  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a><span data-ttu-id="8c15a-171">参照</span><span class="sxs-lookup"><span data-stu-id="8c15a-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf294-171">関連項目</span><span class="sxs-lookup"><span data-stu-id="cf294-171">See also</span></span>
 
-- [<span data-ttu-id="8c15a-172">XslTransform クラスによる XSLT プロセッサの実装</span><span class="sxs-lookup"><span data-stu-id="8c15a-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="cf294-172">XslTransform クラスによる XSLT プロセッサの実装</span><span class="sxs-lookup"><span data-stu-id="cf294-172">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

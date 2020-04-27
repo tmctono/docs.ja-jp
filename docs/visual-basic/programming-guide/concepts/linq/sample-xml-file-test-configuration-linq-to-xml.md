@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
 ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61786933"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="0f9bb-102">サンプル XML ファイル:テスト構成 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0f9bb-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="0f9bb-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f9bb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="0f9bb-104">これはテスト構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="0f9bb-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="f4b98-102">サンプル XML ファイル:テスト構成 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f4b98-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="f4b98-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="f4b98-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f4b98-104">これはテスト構成ファイルです。</span><span class="sxs-lookup"><span data-stu-id="f4b98-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="0f9bb-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="0f9bb-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="f4b98-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="f4b98-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "61786933"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0f9bb-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="0f9bb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4b98-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="f4b98-106">See also</span></span>
 
-- [<span data-ttu-id="0f9bb-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0f9bb-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="f4b98-107">サンプル XML ドキュメント (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f4b98-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
