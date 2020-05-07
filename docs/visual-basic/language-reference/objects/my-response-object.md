@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
 ms.openlocfilehash: 522814ad48fb7548032b8a37779bb3ff6ca62413
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350658"
 ---
-# <a name="myresponse-object"></a><span data-ttu-id="1b74c-102">My.Response オブジェクト</span><span class="sxs-lookup"><span data-stu-id="1b74c-102">My.Response Object</span></span>
-<span data-ttu-id="1b74c-103"><xref:System.Web.UI.Page>に関連付けられている <xref:System.Web.HttpResponse> オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="1b74c-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="1b74c-104">このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="1b74c-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
+# <a name="myresponse-object"></a><span data-ttu-id="1ccd3-102">My.Response オブジェクト</span><span class="sxs-lookup"><span data-stu-id="1ccd3-102">My.Response Object</span></span>
+<span data-ttu-id="1ccd3-103"><xref:System.Web.UI.Page> に関連付けられた <xref:System.Web.HttpResponse> オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="1ccd3-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="1ccd3-104">このオブジェクトでは、HTTP 応答データをクライアントに送信し、その応答に関する情報を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="1ccd3-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1b74c-105">コメント</span><span class="sxs-lookup"><span data-stu-id="1b74c-105">Remarks</span></span>  
- <span data-ttu-id="1b74c-106">`My.Response` オブジェクトには、ページに関連付けられている現在の <xref:System.Web.HttpResponse> オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1b74c-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ccd3-105">Remarks</span><span class="sxs-lookup"><span data-stu-id="1ccd3-105">Remarks</span></span>  
+ <span data-ttu-id="1ccd3-106">`My.Response` オブジェクトには、ページに関連付けられている現在の <xref:System.Web.HttpResponse> オブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1ccd3-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- <span data-ttu-id="1b74c-107">`My.Response` オブジェクトは、ASP.NET アプリケーションでのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="1b74c-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
+ <span data-ttu-id="1ccd3-107">`My.Response` オブジェクトは、ASP.NET アプリケーションでのみ使うことができます。</span><span class="sxs-lookup"><span data-stu-id="1ccd3-107">The `My.Response` object is only available for ASP.NET applications.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b74c-108">例</span><span class="sxs-lookup"><span data-stu-id="1b74c-108">Example</span></span>  
- <span data-ttu-id="1b74c-109">次の例では、`My.Request` オブジェクトからヘッダーコレクションを取得し、`My.Response` オブジェクトを使用して ASP.NET ページに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="1b74c-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
+## <a name="example"></a><span data-ttu-id="1ccd3-108">例</span><span class="sxs-lookup"><span data-stu-id="1ccd3-108">Example</span></span>  
+ <span data-ttu-id="1ccd3-109">次の例では、`My.Request` オブジェクトからヘッダー コレクションを取得し、`My.Response` オブジェクトを使用して ASP.NET ページに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="1ccd3-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="1b74c-110">参照</span><span class="sxs-lookup"><span data-stu-id="1b74c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ccd3-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="1ccd3-110">See also</span></span>
 
 - <xref:System.Web.HttpResponse>
-- [<span data-ttu-id="1b74c-111">My.Request オブジェクト</span><span class="sxs-lookup"><span data-stu-id="1b74c-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [<span data-ttu-id="1ccd3-111">My.Request オブジェクト</span><span class="sxs-lookup"><span data-stu-id="1ccd3-111">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)
