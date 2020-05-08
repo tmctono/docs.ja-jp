@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
 ms.openlocfilehash: ed3de95a8224f0b4d8f3d5d913274417a6879942
 ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/04/2019
 ms.locfileid: "70247610"
 ---
-# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="ea3a7-102">挿入、更新、および削除の各操作のカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="ea3a7-102">Customizing Insert, Update, and Delete Operations</span></span>
-<span data-ttu-id="ea3a7-103">既定で、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、挿入、読み取り、更新、および削除の各操作を実装する動的な SQL を生成します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="ea3a7-104">ただし、実際の使用では、業務ニーズに合わせてアプリケーションをカスタマイズすることが多くなります。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
+# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="c8722-102">挿入、更新、および削除の各操作のカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="c8722-102">Customizing Insert, Update, and Delete Operations</span></span>
+<span data-ttu-id="c8722-103">既定で、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、挿入、読み取り、更新、および削除の各操作を実装する動的な SQL を生成します。</span><span class="sxs-lookup"><span data-stu-id="c8722-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="c8722-104">ただし、実際の使用では、業務ニーズに合わせてアプリケーションをカスタマイズすることが多くなります。</span><span class="sxs-lookup"><span data-stu-id="c8722-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ea3a7-105">Visual Studio を使用している場合は、オブジェクトリレーショナルデザイナーを使用して、挿入、更新、および削除の各操作をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
+> <span data-ttu-id="c8722-105">Visual Studio を使用している場合は、オブジェクト リレーショナル デザイナーを使用して、挿入、更新、および削除のアクションをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="c8722-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
   
- <span data-ttu-id="ea3a7-106">ここでは、挿入、読み取り、更新、および削除の各操作をアプリケーションでカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
+ <span data-ttu-id="c8722-106">ここでは、挿入、読み取り、更新、および削除の各操作をアプリケーションでカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8722-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ea3a7-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ea3a7-107">In This Section</span></span>  
- [<span data-ttu-id="ea3a7-108">操作のカスタマイズ:概要</span><span class="sxs-lookup"><span data-stu-id="ea3a7-108">Customizing Operations: Overview</span></span>](customizing-operations-overview.md)  
- <span data-ttu-id="ea3a7-109">挿入、読み取り、更新、および削除の各操作をカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c8722-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c8722-107">In This Section</span></span>  
+ [<span data-ttu-id="c8722-108">操作のカスタマイズ:概要</span><span class="sxs-lookup"><span data-stu-id="c8722-108">Customizing Operations: Overview</span></span>](customizing-operations-overview.md)  
+ <span data-ttu-id="c8722-109">挿入、読み取り、更新、および削除の各操作をカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8722-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
   
- [<span data-ttu-id="ea3a7-110">挿入、更新、および削除の各操作</span><span class="sxs-lookup"><span data-stu-id="ea3a7-110">Insert, Update, and Delete Operations</span></span>](insert-update-and-delete-operations.md)  
- <span data-ttu-id="ea3a7-111">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の既定のデータベース データ操作手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
+ [<span data-ttu-id="c8722-110">挿入、更新、および削除の各操作</span><span class="sxs-lookup"><span data-stu-id="c8722-110">Insert, Update, and Delete Operations</span></span>](insert-update-and-delete-operations.md)  
+ <span data-ttu-id="c8722-111">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の既定のデータベース データ操作手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8722-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
   
- [<span data-ttu-id="ea3a7-112">既定の動作をオーバーライドするときの開発者の責任</span><span class="sxs-lookup"><span data-stu-id="ea3a7-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](responsibilities-of-the-developer-in-overriding-default-behavior.md)  
- <span data-ttu-id="ea3a7-113">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって強制されない要件を実装するときの開発者の役割について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
+ [<span data-ttu-id="c8722-112">既定の動作をオーバーライドするときの開発者の責任</span><span class="sxs-lookup"><span data-stu-id="c8722-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ <span data-ttu-id="c8722-113">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって強制されない要件を実装するときの開発者の役割について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8722-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [<span data-ttu-id="ea3a7-114">部分メソッドによるビジネス ロジックの追加</span><span class="sxs-lookup"><span data-stu-id="ea3a7-114">Adding Business Logic By Using Partial Methods</span></span>](adding-business-logic-by-using-partial-methods.md)  
- <span data-ttu-id="ea3a7-115">自動生成されるメソッドをオーバーライドするために部分メソッドを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ea3a7-115">Describes how to use partial methods to override autogenerated methods.</span></span>
+ [<span data-ttu-id="c8722-114">部分メソッドによるビジネス ロジックの追加</span><span class="sxs-lookup"><span data-stu-id="c8722-114">Adding Business Logic By Using Partial Methods</span></span>](adding-business-logic-by-using-partial-methods.md)  
+ <span data-ttu-id="c8722-115">自動生成されるメソッドをオーバーライドするために部分メソッドを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c8722-115">Describes how to use partial methods to override autogenerated methods.</span></span>
