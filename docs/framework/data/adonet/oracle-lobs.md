@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149428"
 ---
-# <a name="oracle-lobs"></a><span data-ttu-id="7f928-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="7f928-102">Oracle LOBs</span></span>
-<span data-ttu-id="7f928-103">Oracle 用の .NET フレームワーク<xref:System.Data.OracleClient.OracleLob>データ プロバイダーには、Oracle **LOB**データ型を操作するために使用されるクラスが含まれています。</span><span class="sxs-lookup"><span data-stu-id="7f928-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
+# <a name="oracle-lobs"></a><span data-ttu-id="1e06c-102">Oracle LOB</span><span class="sxs-lookup"><span data-stu-id="1e06c-102">Oracle LOBs</span></span>
+<span data-ttu-id="1e06c-103">.NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleLob> クラスが含まれています。このクラスは、Oracle の **LOB** データ型を操作するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="1e06c-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle **LOB** data types.</span></span>  
   
- <span data-ttu-id="7f928-104">**OracleLob**は、次<xref:System.Data.OracleClient.OracleType>のいずれかのデータ型になります。</span><span class="sxs-lookup"><span data-stu-id="7f928-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
+ <span data-ttu-id="1e06c-104">**OracleLob** は、これらの <xref:System.Data.OracleClient.OracleType> データ型の 1 つです。</span><span class="sxs-lookup"><span data-stu-id="1e06c-104">An **OracleLob** may be one of these <xref:System.Data.OracleClient.OracleType> data types:</span></span>  
   
-|<span data-ttu-id="7f928-105">データ型</span><span class="sxs-lookup"><span data-stu-id="7f928-105">Data type</span></span>|<span data-ttu-id="7f928-106">説明</span><span class="sxs-lookup"><span data-stu-id="7f928-106">Description</span></span>|  
+|<span data-ttu-id="1e06c-105">データの種類</span><span class="sxs-lookup"><span data-stu-id="1e06c-105">Data type</span></span>|<span data-ttu-id="1e06c-106">説明</span><span class="sxs-lookup"><span data-stu-id="1e06c-106">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="7f928-107">[**BLOB**]</span><span class="sxs-lookup"><span data-stu-id="7f928-107">**Blob**</span></span>|<span data-ttu-id="7f928-108">最大サイズが 4 GB のバイナリ データを格納する Oracle **BLOB**データ型。</span><span class="sxs-lookup"><span data-stu-id="7f928-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="7f928-109">これは **、Byte**型の**配列**にマップされます。</span><span class="sxs-lookup"><span data-stu-id="7f928-109">This maps to an **Array** of type **Byte**.</span></span>|  
-|<span data-ttu-id="7f928-110">**Clob**</span><span class="sxs-lookup"><span data-stu-id="7f928-110">**Clob**</span></span>|<span data-ttu-id="7f928-111">サーバー上の既定の文字セットに基づいて、最大サイズが 4 ギガバイトの文字データを格納する Oracle **CLOB**データ型。</span><span class="sxs-lookup"><span data-stu-id="7f928-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="7f928-112">これは**文字列**にマップされます。</span><span class="sxs-lookup"><span data-stu-id="7f928-112">This maps to **String**.</span></span>|  
-|<span data-ttu-id="7f928-113">**Nclob**</span><span class="sxs-lookup"><span data-stu-id="7f928-113">**NClob**</span></span>|<span data-ttu-id="7f928-114">最大サイズが 4 ギガバイトのサーバー上の国別文字セットに基づく、文字データを格納する Oracle **NCLOB**データ型。</span><span class="sxs-lookup"><span data-stu-id="7f928-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="7f928-115">これは**文字列**にマップされます。</span><span class="sxs-lookup"><span data-stu-id="7f928-115">This maps to **String**.</span></span>|  
+|<span data-ttu-id="1e06c-107">**BLOB**</span><span class="sxs-lookup"><span data-stu-id="1e06c-107">**Blob**</span></span>|<span data-ttu-id="1e06c-108">最大 4 GB までのバイナリ データを含む Oracle の **BLOB** データ型です。</span><span class="sxs-lookup"><span data-stu-id="1e06c-108">An Oracle **BLOB** data type that contains binary data with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1e06c-109">**Byte** 型の **Array** にマップします。</span><span class="sxs-lookup"><span data-stu-id="1e06c-109">This maps to an **Array** of type **Byte**.</span></span>|  
+|<span data-ttu-id="1e06c-110">**Clob**</span><span class="sxs-lookup"><span data-stu-id="1e06c-110">**Clob**</span></span>|<span data-ttu-id="1e06c-111">Oracle の **CLOB** データ型です。サーバーの既定の文字セットに基づいて最大 4 GB までの文字データを含みます。</span><span class="sxs-lookup"><span data-stu-id="1e06c-111">An Oracle **CLOB** data type that contains character data, based on the default character set on the server, with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1e06c-112">**String** にマップします。</span><span class="sxs-lookup"><span data-stu-id="1e06c-112">This maps to **String**.</span></span>|  
+|<span data-ttu-id="1e06c-113">**NClob**</span><span class="sxs-lookup"><span data-stu-id="1e06c-113">**NClob**</span></span>|<span data-ttu-id="1e06c-114">Oracle の **NCLOB** データ型です。サーバーの各国語文字セットに基づいて最大 4 GB までの文字データを含みます。</span><span class="sxs-lookup"><span data-stu-id="1e06c-114">An Oracle **NCLOB** data type that contains character data, based on the national character set on the server with a maximum size of 4 gigabytes.</span></span> <span data-ttu-id="1e06c-115">**String** にマップします。</span><span class="sxs-lookup"><span data-stu-id="1e06c-115">This maps to **String**.</span></span>|  
   
- <span data-ttu-id="7f928-116">**OracleLob**は、オペレーティング・<xref:System.Data.OracleClient.OracleBFile>システムの物理ファイルではなく、サーバーにデータが保管される点とは異なります。</span><span class="sxs-lookup"><span data-stu-id="7f928-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="7f928-117">また **、OracleBFile**とは異なり、読み取り/書き込みオブジェクトを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="7f928-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
+ <span data-ttu-id="1e06c-116">**OracleLob** は、データがオペレーティング システムの物理ファイルにではなくサーバーに格納されるという点で、<xref:System.Data.OracleClient.OracleBFile> とは異なります。</span><span class="sxs-lookup"><span data-stu-id="1e06c-116">An **OracleLob** differs from an <xref:System.Data.OracleClient.OracleBFile> in that the data is stored on the server instead of in a physical file in the operating system.</span></span> <span data-ttu-id="1e06c-117">また、常に読み取り専用になっている **OracleBFile** とは異なり、読み書き可能なオブジェクトにもなります。</span><span class="sxs-lookup"><span data-stu-id="1e06c-117">It can also be a read-write object, unlike an **OracleBFile**, which is always read-only.</span></span>  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="7f928-118">LOB の作成、取得、および書き込み</span><span class="sxs-lookup"><span data-stu-id="7f928-118">Creating, Retrieving, and Writing to a LOB</span></span>  
- <span data-ttu-id="7f928-119">次の C# の例では、Oracle テーブルで LOB を作成し **、OracleLob**オブジェクトの形式で LOB を取得して書き込む方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7f928-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="7f928-120">この例<xref:System.Data.OracleClient.OracleDataReader>では、オブジェクトと**OracleLob** **の読み取り**および**書き込み**メソッドの使用方法を示します。</span><span class="sxs-lookup"><span data-stu-id="7f928-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="7f928-121">この例では、Oracle **BLOB** **、CLOB、NCLOB**データ型を使用します。 **NCLOB**</span><span class="sxs-lookup"><span data-stu-id="7f928-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a><span data-ttu-id="1e06c-118">LOB の作成、取得、および書き込み</span><span class="sxs-lookup"><span data-stu-id="1e06c-118">Creating, Retrieving, and Writing to a LOB</span></span>  
+ <span data-ttu-id="1e06c-119">次の C# の例では、Oracle テーブルに LOB を作成し、それらを取得して **OracleLob** オブジェクトの形式で書き込む方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1e06c-119">The following C# example demonstrates how you can create LOBs in an Oracle table, and then retrieve and write to them in the form of **OracleLob** objects.</span></span> <span data-ttu-id="1e06c-120">この例では、<xref:System.Data.OracleClient.OracleDataReader> オブジェクトと **OracleLob** の **Read** および **Write** メソッドを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1e06c-120">The example demonstrates using the <xref:System.Data.OracleClient.OracleDataReader> object and the **OracleLob** **Read** and **Write** methods.</span></span> <span data-ttu-id="1e06c-121">Oracle の **BLOB**、**CLOB**、**NCLOB** データ型を使用します。</span><span class="sxs-lookup"><span data-stu-id="1e06c-121">The example uses Oracle **BLOB**, **CLOB**, and **NCLOB** data types.</span></span>  
   
 ```csharp  
 using System;  
@@ -215,8 +215,8 @@ public class LobExample
 }  
 ```  
   
-## <a name="creating-a-temporary-lob"></a><span data-ttu-id="7f928-122">一時 LOB の作成</span><span class="sxs-lookup"><span data-stu-id="7f928-122">Creating a Temporary LOB</span></span>  
- <span data-ttu-id="7f928-123">次の C# の例では、一時 LOB の作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="7f928-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
+## <a name="creating-a-temporary-lob"></a><span data-ttu-id="1e06c-122">一時 LOB の作成</span><span class="sxs-lookup"><span data-stu-id="1e06c-122">Creating a Temporary LOB</span></span>  
+ <span data-ttu-id="1e06c-123">次の C# の例では、一時 LOB の作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1e06c-123">The following C# example demonstrates how to create a temporary LOB.</span></span>  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  
@@ -247,7 +247,7 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f928-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="7f928-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e06c-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="1e06c-124">See also</span></span>
 
-- [<span data-ttu-id="7f928-125">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7f928-125">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)
-- [<span data-ttu-id="7f928-126">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="7f928-126">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="1e06c-125">Oracle および ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1e06c-125">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)
+- [<span data-ttu-id="1e06c-126">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="1e06c-126">ADO.NET Overview</span></span>](ado-net-overview.md)

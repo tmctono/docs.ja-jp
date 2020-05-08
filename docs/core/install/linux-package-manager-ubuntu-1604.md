@@ -4,41 +4,41 @@ description: パッケージ マネージャーを使用して、Ubuntu 16.04 �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 9e99cd8649e907fbbf8ffac7bfc008610396a31c
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 140a9fea8229944f2a78fdc209b9d93830b24a9d
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134162"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595645"
 ---
-# <a name="ubuntu-1604-package-manager---install-net-core"></a><span data-ttu-id="ac777-103">Ubuntu 16.04 パッケージ マネージャー - .NET Core のインストール</span><span class="sxs-lookup"><span data-stu-id="ac777-103">Ubuntu 16.04 Package Manager - Install .NET Core</span></span>
+# <a name="ubuntu-1604-package-manager---install-net-core"></a><span data-ttu-id="1beaa-103">Ubuntu 16.04 パッケージ マネージャー - .NET Core のインストール</span><span class="sxs-lookup"><span data-stu-id="1beaa-103">Ubuntu 16.04 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="ac777-104">この記事では、パッケージ マネージャーを使用して Ubuntu 16.04 に .NET Core をインストールする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ac777-104">This article describes how to use a package manager to install .NET Core on Ubuntu 16.04.</span></span>
+<span data-ttu-id="1beaa-104">この記事では、パッケージ マネージャーを使用して Ubuntu 16.04 に .NET Core をインストールする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-104">This article describes how to use a package manager to install .NET Core on Ubuntu 16.04.</span></span>
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="ac777-105">Microsoft キーとフィードを登録する</span><span class="sxs-lookup"><span data-stu-id="ac777-105">Register Microsoft key and feed</span></span>
+## <a name="add-microsoft-repository-key-and-feed"></a><span data-ttu-id="1beaa-105">Microsoft リポジトリ キーとフィードを追加する</span><span class="sxs-lookup"><span data-stu-id="1beaa-105">Add Microsoft repository key and feed</span></span>
 
-<span data-ttu-id="ac777-106">.NET をインストールする前に、次のことを行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="ac777-106">Before installing .NET, you'll need to:</span></span>
+<span data-ttu-id="1beaa-106">.NET をインストールする前に、次のことを行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="1beaa-106">Before installing .NET, you'll need to:</span></span>
 
-- <span data-ttu-id="ac777-107">Microsoft キーを登録する。</span><span class="sxs-lookup"><span data-stu-id="ac777-107">Register the Microsoft key.</span></span>
-- <span data-ttu-id="ac777-108">製品リポジトリを登録する。</span><span class="sxs-lookup"><span data-stu-id="ac777-108">Register the product repository.</span></span>
-- <span data-ttu-id="ac777-109">必要な依存関係をインストールする。</span><span class="sxs-lookup"><span data-stu-id="ac777-109">Install required dependencies.</span></span>
+- <span data-ttu-id="1beaa-107">Microsoft パッケージ署名キーを信頼されたキーのリストに追加します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-107">Add the Microsoft package signing key to the list of trusted keys.</span></span>
+- <span data-ttu-id="1beaa-108">リポジトリをパッケージ マネージャーに追加します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-108">Add the repository to the package manager.</span></span>
+- <span data-ttu-id="1beaa-109">必要な依存関係をインストールする。</span><span class="sxs-lookup"><span data-stu-id="1beaa-109">Install required dependencies.</span></span>
 
-<span data-ttu-id="ac777-110">これは、コンピューターごとに 1 回実行する必要があるだけです。</span><span class="sxs-lookup"><span data-stu-id="ac777-110">This only needs to be done once per machine.</span></span>
+<span data-ttu-id="1beaa-110">これは、コンピューターごとに 1 回実行する必要があるだけです。</span><span class="sxs-lookup"><span data-stu-id="1beaa-110">This only needs to be done once per machine.</span></span>
 
-<span data-ttu-id="ac777-111">ターミナルを開き、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac777-111">Open a terminal and run the following commands.</span></span>
+<span data-ttu-id="1beaa-111">ターミナルを開き、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-111">Open a terminal and run the following commands.</span></span>
 
 ```bash
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="ac777-112">.NET Core SDK をインストールする</span><span class="sxs-lookup"><span data-stu-id="ac777-112">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="1beaa-112">.NET Core SDK をインストールする</span><span class="sxs-lookup"><span data-stu-id="1beaa-112">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="ac777-113">インストール可能な製品を更新してから、.NET Core SDK をインストールします。</span><span class="sxs-lookup"><span data-stu-id="ac777-113">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="ac777-114">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac777-114">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="1beaa-113">インストール可能な製品を更新してから、.NET Core SDK をインストールします。</span><span class="sxs-lookup"><span data-stu-id="1beaa-113">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="1beaa-114">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-114">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -48,11 +48,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac777-115">"**パッケージ dotnet-sdk-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac777-115">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="1beaa-115">"**パッケージ dotnet-sdk-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1beaa-115">If you receive an error message similar to **Unable to locate package dotnet-sdk-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="ac777-116">ASP.NET Core ランタイムをインストールする</span><span class="sxs-lookup"><span data-stu-id="ac777-116">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="1beaa-116">ASP.NET Core ランタイムをインストールする</span><span class="sxs-lookup"><span data-stu-id="1beaa-116">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="ac777-117">インストール可能な製品を更新してから、ASP.NET Core ランタイムをインストールします。</span><span class="sxs-lookup"><span data-stu-id="ac777-117">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="ac777-118">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac777-118">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="1beaa-117">インストール可能な製品を更新してから、ASP.NET Core ランタイムをインストールします。</span><span class="sxs-lookup"><span data-stu-id="1beaa-117">Update the products available for installation, then install the ASP.NET Core runtime.</span></span> <span data-ttu-id="1beaa-118">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-118">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac777-119">"**パッケージ aspnetcore-runtime-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac777-119">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="1beaa-119">"**パッケージ aspnetcore-runtime-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1beaa-119">If you receive an error message similar to **Unable to locate package aspnetcore-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="ac777-120">.NET Core ランタイムをインストールする</span><span class="sxs-lookup"><span data-stu-id="ac777-120">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="1beaa-120">.NET Core ランタイムをインストールする</span><span class="sxs-lookup"><span data-stu-id="1beaa-120">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="ac777-121">インストール可能な製品を更新してから、.NET Core ランタイムをインストールします。</span><span class="sxs-lookup"><span data-stu-id="ac777-121">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="ac777-122">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac777-122">In your terminal, run the following commands.</span></span>
+<span data-ttu-id="1beaa-121">インストール可能な製品を更新してから、.NET Core ランタイムをインストールします。</span><span class="sxs-lookup"><span data-stu-id="1beaa-121">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="1beaa-122">ご利用のターミナルで、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-122">In your terminal, run the following commands.</span></span>
 
 ```bash
 sudo apt-get update
@@ -76,19 +76,19 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="ac777-123">"**パッケージ dotnet-runtime-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="ac777-123">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
+> <span data-ttu-id="1beaa-123">"**パッケージ dotnet-runtime-3.1 が見つかりません**" のようなエラー メッセージが表示される場合は、「[パッケージ マネージャーのトラブルシューティング](#troubleshoot-the-package-manager)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1beaa-123">If you receive an error message similar to **Unable to locate package dotnet-runtime-3.1**, see the [Troubleshoot the package manager](#troubleshoot-the-package-manager) section.</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="ac777-124">その他のバージョンをインストールする方法</span><span class="sxs-lookup"><span data-stu-id="ac777-124">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="1beaa-124">その他のバージョンをインストールする方法</span><span class="sxs-lookup"><span data-stu-id="1beaa-124">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="ac777-125">パッケージ マネージャーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="ac777-125">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="1beaa-125">パッケージ マネージャーのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="1beaa-125">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="ac777-126">このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ac777-126">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="1beaa-126">このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-126">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="unable-to-locate"></a><span data-ttu-id="ac777-127">見つからない</span><span class="sxs-lookup"><span data-stu-id="ac777-127">Unable to locate</span></span>
+### <a name="unable-to-locate"></a><span data-ttu-id="1beaa-127">見つからない</span><span class="sxs-lookup"><span data-stu-id="1beaa-127">Unable to locate</span></span>
 
-<span data-ttu-id="ac777-128">"**パッケージ <.NET Core パッケージ> が見つかりません**" のようなエラー メッセージが表示される場合は、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac777-128">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
+<span data-ttu-id="1beaa-128">"**パッケージ <.NET Core パッケージ> が見つかりません**" のようなエラー メッセージが表示される場合は、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="1beaa-128">If you receive an error message similar to **Unable to locate package {the .NET Core package}**, run the following commands.</span></span>
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -96,11 +96,11 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-<span data-ttu-id="ac777-129">それでも解決しない場合は、次のコマンドを使用して手動インストールを実行できます。</span><span class="sxs-lookup"><span data-stu-id="ac777-129">If that doesn't work, you can run a manual install with the following commands.</span></span>
+<span data-ttu-id="1beaa-129">それでも解決しない場合は、次のコマンドを使用して手動インストールを実行できます。</span><span class="sxs-lookup"><span data-stu-id="1beaa-129">If that doesn't work, you can run a manual install with the following commands.</span></span>
 
 ```bash
 sudo apt-get install -y gpg
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/16.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
@@ -111,6 +111,6 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="ac777-130">フェッチできない</span><span class="sxs-lookup"><span data-stu-id="ac777-130">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="1beaa-130">フェッチできない</span><span class="sxs-lookup"><span data-stu-id="1beaa-130">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
