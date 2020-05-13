@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-ms.openlocfilehash: cb966a918c63b4fbc00dcf52819b9384427dfdaa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a33b6ff308f3444496e5a1cb2e04f28e80305db5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129588"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212582"
 ---
-# <a name="icordebugmodulegetfunctionfromtoken-method"></a><span data-ttu-id="eeac5-102">ICorDebugModule::GetFunctionFromToken メソッド</span><span class="sxs-lookup"><span data-stu-id="eeac5-102">ICorDebugModule::GetFunctionFromToken Method</span></span>
-<span data-ttu-id="eeac5-103">メタデータトークンによって指定された関数を取得します。</span><span class="sxs-lookup"><span data-stu-id="eeac5-103">Gets the function that is specified by the metadata token.</span></span>  
+# <a name="icordebugmodulegetfunctionfromtoken-method"></a><span data-ttu-id="3f03e-102">ICorDebugModule::GetFunctionFromToken メソッド</span><span class="sxs-lookup"><span data-stu-id="3f03e-102">ICorDebugModule::GetFunctionFromToken Method</span></span>
+<span data-ttu-id="3f03e-103">メタデータトークンによって指定された関数を取得します。</span><span class="sxs-lookup"><span data-stu-id="3f03e-103">Gets the function that is specified by the metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eeac5-104">構文</span><span class="sxs-lookup"><span data-stu-id="eeac5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f03e-104">構文</span><span class="sxs-lookup"><span data-stu-id="3f03e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromToken(  
@@ -34,21 +34,21 @@ HRESULT GetFunctionFromToken(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eeac5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="eeac5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f03e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="3f03e-105">Parameters</span></span>  
  `methodDef`  
- <span data-ttu-id="eeac5-106">から関数のメタデータを参照する `mdMethodDef` メタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="eeac5-106">[in] A `mdMethodDef` metadata token that references the function's metadata.</span></span>  
+ <span data-ttu-id="3f03e-106">から`mdMethodDef`関数のメタデータを参照するメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="3f03e-106">[in] A `mdMethodDef` metadata token that references the function's metadata.</span></span>  
   
  `ppFunction`  
- <span data-ttu-id="eeac5-107">入出力関数を表す、のオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="eeac5-107">[out] A pointer to the address of a ICorDebugFunction interface object that represents the function.</span></span>  
+ <span data-ttu-id="3f03e-107">入出力関数を表す、のオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="3f03e-107">[out] A pointer to the address of a ICorDebugFunction interface object that represents the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eeac5-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="eeac5-108">Remarks</span></span>  
- <span data-ttu-id="eeac5-109">`methodDef` で渡された値が Microsoft 中間言語 (MSIL) メソッドを参照していない場合、`GetFunctionFromToken` メソッドは CORDBG_E_FUNCTION_NOT_IL HRESULT を返します。</span><span class="sxs-lookup"><span data-stu-id="eeac5-109">The `GetFunctionFromToken` method returns a CORDBG_E_FUNCTION_NOT_IL HRESULT if the value passed in `methodDef` does not refer to a Microsoft intermediate language (MSIL) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f03e-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="3f03e-108">Remarks</span></span>  
+ <span data-ttu-id="3f03e-109">渡された `GetFunctionFromToken` 値 `methodDef` が Microsoft 中間言語 (MSIL) メソッドを参照していない場合、メソッドは CORDBG_E_FUNCTION_NOT_IL HRESULT を返します。</span><span class="sxs-lookup"><span data-stu-id="3f03e-109">The `GetFunctionFromToken` method returns a CORDBG_E_FUNCTION_NOT_IL HRESULT if the value passed in `methodDef` does not refer to a Microsoft intermediate language (MSIL) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eeac5-110">［要件］</span><span class="sxs-lookup"><span data-stu-id="eeac5-110">Requirements</span></span>  
- <span data-ttu-id="eeac5-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="eeac5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f03e-110">必要条件</span><span class="sxs-lookup"><span data-stu-id="3f03e-110">Requirements</span></span>  
+ <span data-ttu-id="3f03e-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f03e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eeac5-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eeac5-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f03e-112">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f03e-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eeac5-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eeac5-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f03e-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f03e-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eeac5-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eeac5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3f03e-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f03e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

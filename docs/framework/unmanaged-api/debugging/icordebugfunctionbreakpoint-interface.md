@@ -14,38 +14,38 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6a378e3579ab9ea8d9534a408d0e456373616cad
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777707"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213141"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="6e723-102">ICorDebugFunctionBreakpoint インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6e723-102">ICorDebugFunctionBreakpoint Interface</span></span>
+# <a name="icordebugfunctionbreakpoint-interface"></a><span data-ttu-id="a01ca-102">ICorDebugFunctionBreakpoint インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a01ca-102">ICorDebugFunctionBreakpoint Interface</span></span>
 
-<span data-ttu-id="6e723-103">ICorDebugBreakpoint インターフェイスを拡張して、関数内のブレークポイントをサポートします。</span><span class="sxs-lookup"><span data-stu-id="6e723-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
+<span data-ttu-id="a01ca-103">ICorDebugBreakpoint インターフェイスを拡張して、関数内のブレークポイントをサポートします。</span><span class="sxs-lookup"><span data-stu-id="a01ca-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6e723-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6e723-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a01ca-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="a01ca-104">Methods</span></span>  
   
-|<span data-ttu-id="6e723-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6e723-105">Method</span></span>|<span data-ttu-id="6e723-106">説明</span><span class="sxs-lookup"><span data-stu-id="6e723-106">Description</span></span>|  
+|<span data-ttu-id="a01ca-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="a01ca-105">Method</span></span>|<span data-ttu-id="a01ca-106">説明</span><span class="sxs-lookup"><span data-stu-id="a01ca-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6e723-107">GetFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="6e723-107">GetFunction Method</span></span>](icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="6e723-108">ブレークポイントが設定されている関数を参照する、のオブジェクトへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="6e723-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
-|[<span data-ttu-id="6e723-109">GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="6e723-109">GetOffset Method</span></span>](icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="6e723-110">関数内のブレークポイントのオフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="6e723-110">Gets the offset of the breakpoint within the function.</span></span>|  
+|[<span data-ttu-id="a01ca-107">GetFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="a01ca-107">GetFunction Method</span></span>](icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="a01ca-108">ブレークポイントが設定されている関数を参照する、のオブジェクトへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="a01ca-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
+|[<span data-ttu-id="a01ca-109">GetOffset メソッド</span><span class="sxs-lookup"><span data-stu-id="a01ca-109">GetOffset Method</span></span>](icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="a01ca-110">関数内のブレークポイントのオフセットを取得します。</span><span class="sxs-lookup"><span data-stu-id="a01ca-110">Gets the offset of the breakpoint within the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e723-111">コメント</span><span class="sxs-lookup"><span data-stu-id="6e723-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a01ca-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="a01ca-111">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="6e723-112">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="6e723-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="a01ca-112">このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="a01ca-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6e723-113">要件</span><span class="sxs-lookup"><span data-stu-id="6e723-113">Requirements</span></span>  
- <span data-ttu-id="6e723-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6e723-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a01ca-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="a01ca-113">Requirements</span></span>  
+ <span data-ttu-id="a01ca-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a01ca-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6e723-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6e723-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a01ca-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a01ca-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6e723-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6e723-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a01ca-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a01ca-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6e723-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e723-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a01ca-117">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a01ca-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e723-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="6e723-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a01ca-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="a01ca-118">See also</span></span>
 
-- [<span data-ttu-id="6e723-119">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6e723-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="a01ca-119">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="a01ca-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
